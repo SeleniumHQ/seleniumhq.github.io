@@ -1,0 +1,1107 @@
+<!doctype html><html lang=zh-cn class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>Selenium 1 (Selenium RC) :: Selenium 文档</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1617184292 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1617184292></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/zh-cn/legacy_docs/selenium_rc/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=搜索...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1617184292></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1617184292></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/zh-cn";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1617184292></script></div><div class=highlightable><ul class=topics><li data-nav-id=/zh-cn/getting_started/ title=入门指南 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started/>入门指南
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/getting_started/quick/ title=快速浏览 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started/quick/>快速浏览
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/introduction/ title=介绍 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/>介绍
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/introduction/the_selenium_project_and_tools/ title="Selenium 项目和工具" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/>Selenium 项目和工具
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/on_test_automation/ title=关于测试自动化 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/>关于测试自动化
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/types_of_testing/ title=测试的类型 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/>测试的类型
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/about_this_documentation/ title=关于这个文档 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/>关于这个文档
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/selenium_installation/ title="Selenium 安装" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/>Selenium 安装
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/selenium_installation/installing_selenium_libraries/ title="安装 Selenium 库" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_selenium_libraries/>安装 Selenium 库
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/selenium_installation/installing_webdriver_binaries/ title="安装 WebDriver 二进制文件" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/>安装 WebDriver 二进制文件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/selenium_installation/installing_standalone_server/ title=安装独立服务器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/>安装独立服务器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/getting_started_with_webdriver/ title="WebDriver 入门" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/>WebDriver 入门
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/getting_started_with_webdriver/browsers/ title=浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/>浏览器
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/ title=第三方驱动和插件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/>第三方驱动和插件
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/webdriver/ title=WebDriver class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/>WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/webdriver/understanding_the_components/ title=了解组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/>了解组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/driver_requirements/ title=驱动要求 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/driver_requirements/>驱动要求
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/bidi_apis/ title="WebDriver Bidi APIs" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/bidi_apis/>WebDriver Bidi APIs
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/locating_elements/ title=定位元素 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/locating_elements/>定位元素
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/browser_manipulation/ title=操控浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/>操控浏览器
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/waits/ title=等待 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/waits/>等待
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/support_classes/ title=支持的类 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/support_classes/>支持的类
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/js_alerts_prompts_and_confirmations/ title="JavaScript 警告框,提示框和确认框" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/>JavaScript 警告框,提示框和确认框
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/http_proxies/ title="Http 代理" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/http_proxies/>Http 代理
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/page_loading_strategy/ title=页面加载策略 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/>页面加载策略
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/web_element/ title=网络元素 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/web_element/>网络元素
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/keyboard/ title=Keyboard class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/>Keyboard
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/remote_webdriver/ title="远程 WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/remote_webdriver/>远程 WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/remote_webdriver/remote_webdriver_client/ title=远程WebDriver客户端 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/>远程WebDriver客户端
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/ title=指南和建议 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/>指南
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/guidelines_and_recommendations/page_object_models/ title=PO设计模式 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/>PO设计模式
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/domain_specific_language/ title=领域特定语言 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/>领域特定语言
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/generating_application_state/ title=生成应用程序状态 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/>生成应用程序状态
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/mock_external_services/ title=模拟外部服务 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/>模拟外部服务
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/improved_reporting/ title=改善报告 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/>改善报告
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/avoid_sharing_state/ title=避免共享状态 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/>避免共享状态
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/test_independency/ title=测试的独立性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/>测试的独立性
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/ title="考虑使用Fluent API" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/>考虑使用Fluent API
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/ title=每次测试都刷新浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/>每次测试都刷新浏览器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/worst_practices/ title=反模式 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/>反模式
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/worst_practices/two_factor_authentication/ title=双因素认证 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/>双因素认证
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/captchas/ title=验证码 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/captchas/>验证码
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/file_downloads/ title=文件下载 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/file_downloads/>文件下载
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/http_response_codes/ title=HTTP响应码 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/>HTTP响应码
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/gmail_email_and_facebook_logins/ title="Gmail, email 和 Facebook 登录" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/>Gmail, email and Facebook
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/test_dependency/ title=测试依赖 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/test_dependency/>测试依赖
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/performance_testing/ title=性能测试 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/performance_testing/>性能测试
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/link_spidering/ title=爬取链接 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/link_spidering/>爬取链接
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/ title=服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/>服务网格
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/purposes_and_main_functionalities/ title=目的和主要功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/>目的和主要功能
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/when_to_use_grid/ title=什么时候应该使用服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/>什么时候应该使用服务网格
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_3/ title="服务网格 3" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/>服务网格 3
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_3/components_of_a_grid/ title=服务网格的组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/components_of_a_grid/>服务网格的组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_3/setting_up_your_own_grid/ title=配置自己的服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/>配置自己的服务网格
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/ title="服务网格 4" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/>服务网格 4
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/components_of_a_grid/ title=服务网格的组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/>服务网格的组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/setting_up_your_own_grid/ title=配置自己的服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/>配置自己的服务网格
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/configuring_components/ title=配置组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/configuring_components/>配置组件
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/configuring_components/config_help/ title=配置帮助 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/configuring_components/config_help/>配置帮助
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/graphql_support/ title=GraphQL查询支持 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/graphql_support/>GraphQL查询支持
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/advanced_features/ title=高级功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/advanced_features/>高级功能
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/advanced_features/observability/ title=可观察性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/advanced_features/observability/>可观察性
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/grid_endpoints/ title=网格端点 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/grid_endpoints/>网格端点
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/zh-cn/driver_idiosyncrasies/ title=驱动特性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/>驱动特性
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/driver_idiosyncrasies/shared_capabilities/ title=共享的功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/>共享的功能
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/ title=驱动特定的功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/>驱动特定的功能
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/support_packages/ title=支持的包 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/>支持的包
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/support_packages/working_with_colours/ title=同颜色一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_colours/>同颜色一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/working_with_select_elements/ title=同选择元素一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/>同选择元素一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/ title=鼠标动作详细信息 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/>鼠标动作详细信息
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/working_with_cookies/ title=同cookies一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/>同cookies一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/chrome_devtools/ title=Chrome开发工具 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/chrome_devtools/>Chrome开发工具
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/legacy_docs/ title=Legacy class="dd-item
+parent"><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/>Legacy
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/legacy_docs/selenium_rc/ title="Selenium 1 (Selenium RC)" class="dd-item active"><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/>Selenium 1 (Selenium RC)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/ title=从RC迁移到WebDriver class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/>从RC迁移到WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/html-runner/ title="HTML runner" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/html-runner/>HTML runner
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/selenium_ide/ title="Legacy Selenium IDE" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_ide/>Legacy Selenium IDE
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/remote_webdriver_server/ title=远程WebDriver服务器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/remote_webdriver_server/>远程WebDriver服务器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/front_matter/ title=版权页 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/>版权页
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/front_matter/copyright_and_attributions/ title=版权和归属 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/>版权和归属
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/front_matter/typographical_conventions/ title=排版协议 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/>排版协议
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>更多</h3><ul><li><a class=padding href=https://www.selenium.dev/><i class="fas fa-home"></i>Selenium Home</a></li><li><a class=padding href=https://github.com/SeleniumHQ/seleniumhq.github.io><i class="fab fa-fw fa-github"></i>GitHub repo</a></li><li><a class=padding href=https://github.com/seleniumhq/seleniumhq.github.io/issues><i class="fas fa-fw fa-exclamation-triangle"></i>Report a bug</a></li><li><a class=padding href=https://www.selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions><i class="fas fa-fw fa-trophy"></i>Credits</a></li><li><a class=padding href=https://www.selenium.dev/documentation/zh-cn/contributing><i class="fas fa-fw fa-bullhorn"></i>How to contribute</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value;">
+<option id=de value=https://www.selenium.dev/documentation/de/legacy_docs/selenium_rc/>Deutsch</option>
+<option id=en value=https://www.selenium.dev/documentation/en/legacy_docs/selenium_rc/>English</option>
+<option id=pt-br value=https://www.selenium.dev/documentation/pt-br/legacy_docs/selenium_rc/>Português (Brasileiro)</option>
+<option id=es value=https://www.selenium.dev/documentation/es/legacy_docs/selenium_rc/>Español</option>
+<option id=nl value=https://www.selenium.dev/documentation/nl/legacy_docs/selenium_rc/>Nederlands</option>
+<option id=zh-cn value=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/ selected>中文简体</option>
+<option id=fr value=https://www.selenium.dev/documentation/fr/legacy_docs/selenium_rc/>Français</option>
+<option id=ja value=https://www.selenium.dev/documentation/ja/legacy_docs/selenium_rc/>日本語</option>
+<option id=ko value=https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/>한국어</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75" /></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i>清理历史记录</a></li></ul></section><section id=footer><p>&copy; 2013-2021</p><p>Software Freedom Conservancy (SFC)</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/SeleniumHQ/seleniumhq.github.io/edit/dev/docs_source_files/content/legacy_docs/selenium_rc.zh-cn.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=https://www.selenium.dev/documentation/zh-cn/>Selenium 浏览器自动化项目</a> > <a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/>Legacy</a> > Selenium 1 (Selenium RC)</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#介绍>介绍</a></li><li><a href=#selenium-rc-的工作原理>Selenium RC 的工作原理</a><ul><li><a href=#rc-组件>RC 组件</a></li><li><a href=#selenium-服务器>Selenium 服务器</a></li><li><a href=#客户端库>客户端库</a></li></ul></li><li><a href=#安装>安装</a><ul><li><a href=#安装selenium服务器>安装Selenium服务器</a></li><li><a href=#运行selenium服务器>运行Selenium服务器</a></li><li><a href=#使用java客户端驱动程序>使用Java客户端驱动程序</a></li><li><a href=#使用python客户端驱动程序>使用Python客户端驱动程序</a></li><li><a href=#使用net客户端驱动程序>使用.NET客户端驱动程序</a></li><li><a href=#使用ruby客户端驱动程序>使用Ruby客户端驱动程序</a></li></ul></li><li><a href=#从-selenese-到程序>从 Selenese 到程序</a><ul><li><a href=#示例测试脚本>示例测试脚本</a></li><li><a href=#selenese作为编程代码>Selenese作为编程代码</a></li></ul></li><li><a href=#编写测试程序>编写测试程序</a><ul><li><a href=#java-1>Java</a></li><li><a href=#c><code>C#</code></a></li><li><a href=#python-1>Python</a></li><li><a href=#ruby-1>Ruby</a></li><li><a href=#perl-php>Perl, PHP</a></li></ul></li><li><a href=#学习-api>学习 API</a><ul><li><a href=#启动浏览器>启动浏览器</a></li><li><a href=#运行命令>运行命令</a></li></ul></li><li><a href=#报告结果>报告结果</a><ul><li><a href=#测试框架报告工具>测试框架报告工具</a></li><li><a href=#测试报告库>测试报告库</a></li><li><a href=#最好的方法是什么>最好的方法是什么?</a></li><li><a href=#测试报告示例>测试报告示例</a></li></ul></li><li><a href=#为测试加料>为测试加料</a><ul><li><a href=#迭代>迭代</a></li><li><a href=#条件陈述>条件陈述</a></li><li><a href=#从测试中执行javascript>从测试中执行JavaScript</a></li></ul></li><li><a href=#服务器选项>服务器选项</a><ul><li><a href=#代理配置>代理配置</a></li><li><a href=#多窗口模式>多窗口模式</a></li><li><a href=#指定firefox配置文件>指定Firefox配置文件</a></li><li><a href=#使用-htmlsuite在服务器内直接运行selenese>使用-htmlSuite在服务器内直接运行Selenese</a></li><li><a href=#selenium-服务器日志>Selenium 服务器日志</a></li></ul></li><li><a href=#指定特定浏览器的路径>指定特定浏览器的路径</a></li><li><a href=#selenium-rc-架构>Selenium RC 架构</a><ul><li><a href=#同源策略>同源策略</a></li><li><a href=#代理注入>代理注入</a></li><li><a href=#特权浏览器>特权浏览器</a></li></ul></li><li><a href=#处理https和安全弹出窗口>处理HTTPS和安全弹出窗口</a><ul><li><a href=#安全证书说明>安全证书说明</a></li></ul></li><li><a href=#支持其他浏览器和浏览器配置>支持其他浏览器和浏览器配置</a><ul><li><a href=#使用不同的浏览器配置运行测试>使用不同的浏览器配置运行测试</a></li></ul></li><li><a href=#解决常见问题>解决常见问题</a><ul><li><a href=#无法连接到服务器>无法连接到服务器</a></li><li><a href=#无法加载浏览器>无法加载浏览器</a></li><li><a href=#selenium-找不到aut>Selenium 找不到AUT</a></li><li><a href=#firefox在准备配置文件时拒绝关闭>Firefox在准备配置文件时拒绝关闭</a></li><li><a href=#版本问题>版本问题</a></li><li><a href=#启动服务器时出现错误消息-不支持的majorminor版本490>启动服务器时出现错误消息: &ldquo;(不支持的major.minor版本49.0)&rdquo;</a></li><li><a href=#404-error-when-running-the-getnewbrowsersession-command>404 error when running the getNewBrowserSession command</a></li><li><a href=#权限被拒绝错误>权限被拒绝错误</a></li><li><a href=#处理浏览器弹出窗口>处理浏览器弹出窗口</a></li><li><a href=#在linux上-为什么我的firefox浏览器会话没有关闭>在Linux上, 为什么我的Firefox浏览器会话没有关闭?</a></li><li><a href=#firefox-chrome不适用于自定义配置文件>Firefox *chrome不适用于自定义配置文件</a></li><li><a href=#是否可以在加载父页面时加载自定义弹出窗口即-在父页面的javascript-windowonload函数运行之前>是否可以在加载父页面时加载自定义弹出窗口(即, 在父页面的javascript window.onload()函数运行之前)</a></li><li><a href=#linux上的firefox>Linux上的Firefox</a></li><li><a href=#ie和样式属性>IE和样式属性</a></li><li><a href=#遇到错误-随着googlechrome浏览器的关闭-无法将对象转换为原始值>遇到错误-随着*googlechrome浏览器的关闭, &ldquo;无法将对象转换为原始值&rdquo;</a></li><li><a href=#ie中遇到的错误-无法打开应用程序窗口弹出窗口阻止程序已启用>IE中遇到的错误-&ldquo;无法打开应用程序窗口；弹出窗口阻止程序已启用？&rdquo;</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Selenium 1 (Selenium RC)</h1><h2 id=介绍>介绍</h2><p>在WebDriver / Selenium合并产生功能更强大的Selenium 2之前,
+Selenium RC一直是Selenium的主要项目.
+再次特意强调的是, Selenium 1不再享有技术支持.</p><h2 id=selenium-rc-的工作原理>Selenium RC 的工作原理</h2><p>首先, 我们将描述Selenium RC的组件如何运行
+以及每个组件在运行测试脚本中所扮演的角色.</p><h3 id=rc-组件>RC 组件</h3><p>Selenium RC 组件包括:</p><ul><li>Selenium 服务器, 用于启动并关闭浏览器,
+解释运行从测试程序传递来的Selenese命令,
+并充当 <em>HTTP代理</em> ,
+拦截和验证在浏览器和AUT之间传递的HTTP消息.</li><li>客户端库, 提供每种编程语言和
+Selenium RC 服务器之间的接口.</li></ul><p>以下是一个简化的架构图:</p><p><img src=https://www.selenium.dev/documentation/images/legacy_docs/selenium_rc_architecture_diagram_simple.png alt="Architecture Diagram Simple"></p><p>该图显示了客户端库与服务器通信,
+并传递了用来执行的每个Selenium命令.
+然后, 服务器使用Selenium-Core的JavaScript命令
+将Selenium命令传递到浏览器.
+浏览器使用其JavaScript解释器执行Selenium命令.
+这将运行您在测试脚本中指定的Selenese操作或验证行为.</p><h3 id=selenium-服务器>Selenium 服务器</h3><p>Selenium 服务器从您的测试程序接收Selenium命令,
+对其进行解释,
+然后将运行这些测试的结果报告给您的程序.</p><p>RC服务器捆绑了Selenium Core并将其自动注入浏览器.
+当您的测试程序打开浏览器(使用客户端库API函数)时,
+会发生这种情况.
+Selenium-Core是一个JavaScript程序,
+实际上是一组JavaScript函数,
+这些函数使用浏览器的内置JavaScript解释器来解释
+和执行Selenese命令.</p><p>服务器使用简单的HTTP GET / POST请求从您的测试程序接收Selenese命令.
+这意味着您可以使用任何可以发送HTTP请求的编程语言
+来自动执行浏览器中的Selenium测试.</p><h3 id=客户端库>客户端库</h3><p>客户端库提供了编程支持,
+使您可以从自己设计的程序中运行Selenium命令.
+每种受支持的语言都有一个不同的客户端库.
+Selenium客户端库提供了一个编程接口(API),
+即一组函数, 可从您自己的程序中运行Selenium命令.
+在每个界面中, 都有一个支持每个Selenese命令的编程功能.</p><p>客户端库接受Selenese命令,
+并将其传递给Selenium 服务器,
+以针对被测应用程序(AUT)处理特定操作或测试.
+客户端库还接收该命令的结果, 并将其传递回您的程序.
+您的程序可以接收结果并将其存储到程序变量中,
+并将其报告为成功或失败,
+或者如果是意外错误,
+则可以采取纠正措施.</p><p>因此, 要创建测试程序,
+只需编写一个使用客户端库API运行一组Selenium命令的程序.
+并且, 可选地, 如果您已经在Selenium-IDE中创建了Selenese测试脚本,
+则可以 <em>生成Selenium RC代码</em> .
+Selenium-IDE可以(使用其"导出"菜单项)
+将其Selenium命令转换为客户端驱动程序的API函数调用.
+有关从Selenium-IDE导出RC代码的详细信息,
+请参见Selenium-IDE章节.</p><h2 id=安装>安装</h2><p>安装对于Selenium来说是谬称.
+Selenium具有一组可用您选择的编程语言提供的库. 您可以从 <a href=https://selenium.dev/downloads/>下载页面</a>下载它们.</p><p>选择了要使用的语言后, 您只需要:</p><ul><li>安装Selenium RC服务器.</li><li>使用特定语言的客户端驱动程序设置编程项目.</li></ul><h3 id=安装selenium服务器>安装Selenium服务器</h3><p>Selenium RC服务器只是一个Java <em>jar</em> 文件
+( <em>selenium-server-standalone-<version-number>.jar</em> ),
+不需要任何特殊的安装.
+只需下载zip文件并将服务器提取到所需目录中就足够了.</p><h3 id=运行selenium服务器>运行Selenium服务器</h3><p>在开始任何测试之前, 您必须启动服务器.
+转到Selenium RC服务器所在的目录,
+然后从命令行控制台运行以下命令.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>    java -jar selenium-server-standalone-&lt;version-number&gt;.jar
+</code></pre></div><p>通过创建包含上述命令的批处理或Shell可执行文件
+(Windows上为.bat, Linux上为.sh),
+可以简化此操作.
+然后在桌面上对该可执行文件创建快捷方式,
+只需双击该图标即可启动服务器.</p><p>为了使服务器运行,
+您需要安装Java并正确配置PATH环境变量才能从控制台运行它.
+您可以通过在控制台上运行以下命令来检查是否正确安装了Java.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>       java -version
+</code></pre></div><p>如果您查看到预期的版本号(必须为1.5或更高版本),
+就可以开始使用Selenium RC了.</p><h3 id=使用java客户端驱动程序>使用Java客户端驱动程序</h3><ul><li>从SeleniumHQ <a href=https://selenium.dev/downloads/>下载页面</a> 下载Selenium Java客户端驱动程序zip</li><li>解压 selenium-java-<version-number>.jar 文件</li><li>打开所需的Java IDE(Eclipse, NetBeans, IntelliJ, Netweaver等)</li><li>创建一个Java项目.</li><li>将selenium-java-.jar文件添加到您的项目中作为依赖.</li><li>将文件selenium-java-.jar添加到您的项目类路径中.</li><li>从Selenium-IDE中, 将脚本导出到Java文件并将其包含在Java项目中,
+或者使用selenium-java-client API用Java编写Selenium测试.
+该API将在本章稍后介绍.
+您可以使用JUnit或TestNg来运行测试,
+也可以编写自己的简单main()程序.
+这些概念将在本节稍后说明.</li><li>从控制台运行Selenium服务器.</li><li>从Java IDE或命令行执行测试.</li></ul><p>有关Java测试项目配置的详细信息,
+请参阅附录部分.
+使用Eclipse配置Selenium RC和使用Intellij配置Selenium RC.</p><h3 id=使用python客户端驱动程序>使用Python客户端驱动程序</h3><ul><li>通过PIP安装Selenium, 说明链接在SeleniumHQ <a href=https://selenium.dev/downloads/>下载页面</a></li><li>用Python编写Selenium测试
+或将脚本从Selenium-IDE导出到python文件.</li><li>从控制台运行Selenium服务器</li><li>从控制台或Python IDE执行测试</li></ul><p>有关Python客户端驱动程序配置的详细信息,
+请参见附录Python客户端驱动程序配置.</p><h3 id=使用net客户端驱动程序>使用.NET客户端驱动程序</h3><ul><li>从SeleniumHQ <a href=https://selenium.dev/downloads/>下载页面</a> 下载Selenium RC</li><li>解压缩文件夹</li><li>下载并安装<a href=https://nunit.org/download/>NUnit</a>
+(注意：您可以将NUnit用作测试引擎.
+如果您还不熟悉NUnit,
+还可以编写一个简单的main()函数来运行测试；
+但是NUnit作为测试引擎非常有用)</li><li>打开所需的.Net IDE(Visual Studio, SharpDevelop, MonoDevelop)</li><li>创建一个类库(.dll)</li><li>添加对以下DLL的引用：
+nmock.dll,
+nunit.core.dll,
+nunit.framework.dll,
+ThoughtWorks.Selenium.Core.dll,
+ThoughtWorks.Selenium.IntegrationTests.dll
+和ThoughtWorks.Selenium.UnitTests.dll</li><li>用.Net语言(C＃, VB.Net)编写Selenium测试,
+或将脚本从Selenium-IDE导出到C＃文件,
+然后将此代码复制到刚创建的类文件中.</li><li>编写自己的简单main()程序,
+或者可以在项目中包含NUnit来运行测试.
+这些概念将在本章稍后说明.</li><li>从控制台运行Selenium服务器</li><li>从IDE, NUnit GUI或命令行运行测试</li></ul><p>有关使用Visual Studio配置.NET客户端驱动程序的详细信息,
+请参阅附录.NET客户端驱动程序配置.</p><h3 id=使用ruby客户端驱动程序>使用Ruby客户端驱动程序</h3><ul><li>如果您还没有RubyGems, 请从RubyForge安装它.</li><li>运行 <code>gem install selenium-client</code></li><li>在测试脚本的顶部, 添加 <code>require "selenium/client"</code></li><li>使用任何Ruby测试工具
+(例如Test::Unit, Mini::Test或RSpec)编写测试脚本.</li><li>从控制台运行Selenium RC服务器.</li><li>以与运行其他任何Ruby脚本相同的方式执行测试.</li></ul><p>有关Ruby客户端驱动程序配置的详细信息, 请参见 <code>Selenium-Client documentation</code>_</p><h2 id=从-selenese-到程序>从 Selenese 到程序</h2><p>使用Selenium RC的主要任务
+是将您的Selenese转换为编程语言.
+在本节中, 我们提供了几种不同的特定于语言的示例.</p><h3 id=示例测试脚本>示例测试脚本</h3><p>让我们从一个Selenese测试脚本示例开始. 试想用Selenium-IDE录制以下测试.</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>open</td><td>/</td><td></td></tr><tr><td>type</td><td>q</td><td>selenium rc</td></tr><tr><td>clickAndWait</td><td>btnG</td><td></td></tr><tr><td>assertTextPresent</td><td>Results * for selenium rc</td><td></td></tr></tbody></table><p>注意：此示例适用于Google搜索页面 <a href=http://www.google.com>http://www.google.com</a></p><h3 id=selenese作为编程代码>Selenese作为编程代码</h3><p>这是(通过Selenium-IDE)导出到每种支持的编程语言的测试脚本.
+如果您具有基本的面向对象编程语言的基础知识,
+则可以通过阅读以下示例之一
+来了解Selenium如何运行Selenese命令.
+要查看特定语言的示例,
+请选择以下按钮之一.</p><h4 id=csharp>CSharp</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+        <span style=color:#719e07>using</span> System;
+        <span style=color:#719e07>using</span> System.Text;
+        <span style=color:#719e07>using</span> System.Text.RegularExpressions;
+        <span style=color:#719e07>using</span> System.Threading;
+        <span style=color:#719e07>using</span> NUnit.Framework;
+        <span style=color:#719e07>using</span> Selenium;
+
+        <span style=color:#719e07>namespace</span> SeleniumTests
+        {
+            [TestFixture]
+            <span style=color:#719e07>public</span> <span style=color:#719e07>class</span> <span style=color:#268bd2>NewTest</span>
+            {
+                <span style=color:#719e07>private</span> ISelenium selenium;
+                <span style=color:#719e07>private</span> StringBuilder verificationErrors;
+                
+                [SetUp]
+                <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> SetupTest()
+                {
+                    selenium = <span style=color:#719e07>new</span> DefaultSelenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>, <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>);
+                    selenium.Start();
+                    verificationErrors = <span style=color:#719e07>new</span> StringBuilder();
+                }
+                
+                [TearDown]
+                <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> TeardownTest()
+                {
+                    <span style=color:#719e07>try</span>
+                    {
+                        selenium.Stop();
+                    }
+                    <span style=color:#719e07>catch</span> (Exception)
+                    {
+                        <span style=color:#586e75>// Ignore errors if unable to close the browser
+</span><span style=color:#586e75></span>                    }
+                    Assert.AreEqual(<span style=color:#2aa198>&#34;&#34;</span>, verificationErrors.ToString());
+                }
+                
+                [Test]
+                <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> TheNewTest()
+                {
+                    selenium.Open(<span style=color:#2aa198>&#34;/&#34;</span>);
+                    selenium.Type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>);
+                    selenium.Click(<span style=color:#2aa198>&#34;btnG&#34;</span>);
+                    selenium.WaitForPageToLoad(<span style=color:#2aa198>&#34;30000&#34;</span>);
+                    Assert.AreEqual(<span style=color:#2aa198>&#34;selenium rc - Google Search&#34;</span>, selenium.GetTitle());
+                }
+            }
+        }
+
+</code></pre></div><h4 id=java>Java</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>      
+	  <span style=color:#586e75>/** Add JUnit framework to your classpath if not already there 
+</span><span style=color:#586e75>	   *  for this example to work
+</span><span style=color:#586e75>	  */</span>
+      <span style=color:#719e07>package</span> com.example.tests<span style=color:#719e07>;</span>
+
+      <span style=color:#719e07>import</span> com.thoughtworks.selenium.*<span style=color:#719e07>;</span>
+      <span style=color:#719e07>import</span> java.util.regex.Pattern<span style=color:#719e07>;</span>
+
+      <span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>NewTest</span> <span style=color:#268bd2>extends</span> SeleneseTestCase <span style=color:#719e07>{</span>
+          <span style=color:#268bd2>public</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>setUp</span><span style=color:#719e07>()</span> <span style=color:#268bd2>throws</span> Exception <span style=color:#719e07>{</span>
+              setUp<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;http://www.google.com/&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;*firefox&#34;</span><span style=color:#719e07>);</span>
+          <span style=color:#719e07>}</span>
+            <span style=color:#268bd2>public</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>testNew</span><span style=color:#719e07>()</span> <span style=color:#268bd2>throws</span> Exception <span style=color:#719e07>{</span>
+                selenium<span style=color:#719e07>.</span>open<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;/&#34;</span><span style=color:#719e07>);</span>
+                selenium<span style=color:#719e07>.</span>type<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;selenium rc&#34;</span><span style=color:#719e07>);</span>
+                selenium<span style=color:#719e07>.</span>click<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;btnG&#34;</span><span style=color:#719e07>);</span>
+                selenium<span style=color:#719e07>.</span>waitForPageToLoad<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;30000&#34;</span><span style=color:#719e07>);</span>
+                assertTrue<span style=color:#719e07>(</span>selenium<span style=color:#719e07>.</span>isTextPresent<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span><span style=color:#719e07>));</span>
+          <span style=color:#719e07>}</span>
+      <span style=color:#719e07>}</span>
+
+</code></pre></div><h4 id=php>Php</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>      <span style=color:#719e07>&lt;?php</span>
+
+      <span style=color:#719e07>require_once</span> <span style=color:#2aa198>&#39;PHPUnit/Extensions/SeleniumTestCase.php&#39;</span>;
+
+      <span style=color:#719e07>class</span> <span style=color:#268bd2>Example</span> <span style=color:#719e07>extends</span> PHPUnit_Extensions_SeleniumTestCase
+      {
+        <span style=color:#719e07>function</span> <span style=color:#268bd2>setUp</span>()
+        {
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>setBrowser(<span style=color:#2aa198>&#34;*firefox&#34;</span>);
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>setBrowserUrl(<span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>);
+        }
+
+        <span style=color:#719e07>function</span> <span style=color:#268bd2>testMyTestCase</span>()
+        {
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>open(<span style=color:#2aa198>&#34;/&#34;</span>);
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>);
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>click(<span style=color:#2aa198>&#34;btnG&#34;</span>);
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>waitForPageToLoad(<span style=color:#2aa198>&#34;30000&#34;</span>);
+          <span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>assertTrue(<span style=color:#268bd2>$this</span><span style=color:#719e07>-&gt;</span>isTextPresent(<span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span>));
+        }
+      }
+      <span style=color:#719e07>?&gt;</span>
+
+</code></pre></div><h4 id=python>Python</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+     <span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> selenium
+      <span style=color:#719e07>import</span> unittest<span style=color:#719e07>,</span> time<span style=color:#719e07>,</span> re
+
+      <span style=color:#719e07>class</span> <span style=color:#268bd2>NewTest</span>(unittest<span style=color:#719e07>.</span>TestCase):
+          <span style=color:#719e07>def</span> <span style=color:#268bd2>setUp</span>(<span style=color:#268bd2>self</span>):
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>verificationErrors <span style=color:#719e07>=</span> []
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium <span style=color:#719e07>=</span> selenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>,
+                      <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>)
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>start()
+         
+          <span style=color:#719e07>def</span> <span style=color:#268bd2>test_new</span>(<span style=color:#268bd2>self</span>):
+              sel <span style=color:#719e07>=</span> <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium
+              sel<span style=color:#719e07>.</span>open(<span style=color:#2aa198>&#34;/&#34;</span>)
+              sel<span style=color:#719e07>.</span>type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>)
+              sel<span style=color:#719e07>.</span>click(<span style=color:#2aa198>&#34;btnG&#34;</span>)
+              sel<span style=color:#719e07>.</span>wait_for_page_to_load(<span style=color:#2aa198>&#34;30000&#34;</span>)
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>failUnless(sel<span style=color:#719e07>.</span>is_text_present(<span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span>))
+         
+          <span style=color:#719e07>def</span> <span style=color:#268bd2>tearDown</span>(<span style=color:#268bd2>self</span>):
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>stop()
+              <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>assertEqual([], <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>verificationErrors)
+
+</code></pre></div><h4 id=ruby>Ruby</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+      <span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;selenium/client&#34;</span>
+      <span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;test/unit&#34;</span>
+
+      <span style=color:#719e07>class</span> <span style=color:#268bd2>NewTest</span> <span style=color:#719e07>&lt;</span> <span style=color:#cb4b16>Test</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Unit</span><span style=color:#719e07>::</span><span style=color:#cb4b16>TestCase</span>
+        <span style=color:#719e07>def</span> <span style=color:#268bd2>setup</span>
+          @verification_errors <span style=color:#719e07>=</span> <span style=color:#719e07>[]</span>
+          <span style=color:#719e07>if</span> $selenium
+            @selenium <span style=color:#719e07>=</span> $selenium
+          <span style=color:#719e07>else</span>
+            @selenium <span style=color:#719e07>=</span>  <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Client</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Driver</span><span style=color:#719e07>.</span>new(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>, <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>, <span style=color:#2aa198>60</span>);
+            @selenium<span style=color:#719e07>.</span>start
+          <span style=color:#719e07>end</span>
+          @selenium<span style=color:#719e07>.</span>set_context(<span style=color:#2aa198>&#34;test_new&#34;</span>)
+        <span style=color:#719e07>end</span>
+
+        <span style=color:#719e07>def</span> <span style=color:#268bd2>teardown</span>
+          @selenium<span style=color:#719e07>.</span>stop <span style=color:#719e07>unless</span> $selenium
+          assert_equal <span style=color:#719e07>[]</span>, @verification_errors
+        <span style=color:#719e07>end</span>
+
+        <span style=color:#719e07>def</span> <span style=color:#268bd2>test_new</span>
+          @selenium<span style=color:#719e07>.</span>open <span style=color:#2aa198>&#34;/&#34;</span>
+          @selenium<span style=color:#719e07>.</span>type <span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>
+          @selenium<span style=color:#719e07>.</span>click <span style=color:#2aa198>&#34;btnG&#34;</span>
+          @selenium<span style=color:#719e07>.</span>wait_for_page_to_load <span style=color:#2aa198>&#34;30000&#34;</span>
+          assert @selenium<span style=color:#719e07>.</span>is_text_present(<span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span>)
+        <span style=color:#719e07>end</span>
+      <span style=color:#719e07>end</span>
+
+</code></pre></div><p>在下一节中,
+我们将说明如何使用生成的代码来构建测试程序.</p><h2 id=编写测试程序>编写测试程序</h2><p>现在, 我们将使用每种受支持的编程语言的示例
+来说明如何对自己的测试进行编程.
+本质上有两个任务:</p><ul><li>从Selenium-IDE将脚本生成为代码,
+可以选择修改结果.</li><li>编写一个非常简单的执行生成代码的主程序.</li></ul><p>(可选)您可以采用测试引擎平台,
+例如JUnit或Java的TestNG,
+或使用NUnit的.NET
+(如果使用的是其中一种语言).</p><p>在这里, 我们显示特定于语言的示例.
+特定语言的API彼此之间往往有所不同,
+因此您会为每个API找到单独的解释</p><ul><li>Java</li><li>C#</li><li>Python</li><li>Ruby</li><li>Perl, PHP</li></ul><h3 id=java-1>Java</h3><p>对于Java, 人们使用JUnit或TestNG作为测试引擎.<br>某些开发环境(如Eclipse)通过插件直接支持这些环境.
+这使它变得更加容易.
+讲授JUnit或TestNG不在本文档的范围之内,
+但是可以在网上找到资料,
+并且可以找到出版物.
+如果您恰巧熟悉Java全家桶,
+那么您的开发人员将已经具有使用某种测试框架的经验.</p><p>您可能需要将测试类从&rdquo; NewTest"重命名为您自己选择的名称.
+另外, 您将需要在语句中更改浏览器打开参数:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>    selenium <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> DefaultSelenium<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;localhost&#34;</span><span style=color:#719e07>,</span> 4444<span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;*iehta&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span><span style=color:#719e07>);</span>
+</code></pre></div><p>Selenium-IDE生成的代码将如下所示.
+此示例具有手动添加的注释,
+以提高清晰度.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>   <span style=color:#719e07>package</span> com.example.tests<span style=color:#719e07>;</span>
+   <span style=color:#586e75>// We specify the package of our tests
+</span><span style=color:#586e75></span>
+   <span style=color:#719e07>import</span> com.thoughtworks.selenium.*<span style=color:#719e07>;</span>
+   <span style=color:#586e75>// This is the driver&#39;s import. You&#39;ll use this for instantiating a
+</span><span style=color:#586e75></span>   <span style=color:#586e75>// browser and making it do what you need.
+</span><span style=color:#586e75></span>
+   <span style=color:#719e07>import</span> java.util.regex.Pattern<span style=color:#719e07>;</span>
+   <span style=color:#586e75>// Selenium-IDE add the Pattern module because it&#39;s sometimes used for 
+</span><span style=color:#586e75></span>   <span style=color:#586e75>// regex validations. You can remove the module if it&#39;s not used in your 
+</span><span style=color:#586e75></span>   <span style=color:#586e75>// script.
+</span><span style=color:#586e75></span>
+   <span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>NewTest</span> <span style=color:#268bd2>extends</span> SeleneseTestCase <span style=color:#719e07>{</span>
+   <span style=color:#586e75>// We create our Selenium test case
+</span><span style=color:#586e75></span>
+         <span style=color:#268bd2>public</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>setUp</span><span style=color:#719e07>()</span> <span style=color:#268bd2>throws</span> Exception <span style=color:#719e07>{</span>
+           setUp<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;http://www.google.com/&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;*firefox&#34;</span><span style=color:#719e07>);</span>
+                <span style=color:#586e75>// We instantiate and start the browser
+</span><span style=color:#586e75></span>         <span style=color:#719e07>}</span>
+
+         <span style=color:#268bd2>public</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>testNew</span><span style=color:#719e07>()</span> <span style=color:#268bd2>throws</span> Exception <span style=color:#719e07>{</span>
+              selenium<span style=color:#719e07>.</span>open<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;/&#34;</span><span style=color:#719e07>);</span>
+              selenium<span style=color:#719e07>.</span>type<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;selenium rc&#34;</span><span style=color:#719e07>);</span>
+              selenium<span style=color:#719e07>.</span>click<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;btnG&#34;</span><span style=color:#719e07>);</span>
+              selenium<span style=color:#719e07>.</span>waitForPageToLoad<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;30000&#34;</span><span style=color:#719e07>);</span>
+              assertTrue<span style=color:#719e07>(</span>selenium<span style=color:#719e07>.</span>isTextPresent<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span><span style=color:#719e07>));</span>
+              <span style=color:#586e75>// These are the real test steps
+</span><span style=color:#586e75></span>        <span style=color:#719e07>}</span>
+   <span style=color:#719e07>}</span>
+</code></pre></div><h3 id=c><code>C#</code></h3><p>.NET客户端驱动程序可与Microsoft.NET一起使用.
+它可以与任何.NET测试框架(
+如NUnit或Visual Studio 2005 Team System)一起使用.</p><p>Selenium-IDE假定您将使用NUnit作为测试框架.
+您可以在下面的生成的代码中看到这一点.
+它包含NUnit的using语句以及相应的NUnit属性,
+这些属性标识测试类的每个成员函数的角色.</p><p>您可能必须将测试类从&rdquo; NewTest"重命名为您自己选择的名称.
+另外, 您将需要在语句中更改浏览器打开参数:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>    selenium = <span style=color:#719e07>new</span> DefaultSelenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*iehta&#34;</span>, <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>);
+</code></pre></div><p>生成的代码将类似于此.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+    <span style=color:#719e07>using</span> System;
+    <span style=color:#719e07>using</span> System.Text;
+    <span style=color:#719e07>using</span> System.Text.RegularExpressions;
+    <span style=color:#719e07>using</span> System.Threading;
+    <span style=color:#719e07>using</span> NUnit.Framework;
+    <span style=color:#719e07>using</span> Selenium;
+    
+    <span style=color:#719e07>namespace</span> SeleniumTests
+
+    {
+        [TestFixture]
+
+        <span style=color:#719e07>public</span> <span style=color:#719e07>class</span> <span style=color:#268bd2>NewTest</span>
+
+        {
+        <span style=color:#719e07>private</span> ISelenium selenium;
+
+        <span style=color:#719e07>private</span> StringBuilder verificationErrors;
+
+        [SetUp]
+
+        <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> SetupTest()
+
+        {
+            selenium = <span style=color:#719e07>new</span> DefaultSelenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*iehta&#34;</span>,
+            <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>);
+
+            selenium.Start();
+
+            verificationErrors = <span style=color:#719e07>new</span> StringBuilder();
+        }
+
+        [TearDown]
+
+        <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> TeardownTest()
+        {
+            <span style=color:#719e07>try</span>
+            {
+            selenium.Stop();
+            }
+
+            <span style=color:#719e07>catch</span> (Exception)
+            {
+            <span style=color:#586e75>// Ignore errors if unable to close the browser
+</span><span style=color:#586e75></span>            }
+
+            Assert.AreEqual(<span style=color:#2aa198>&#34;&#34;</span>, verificationErrors.ToString());
+        }
+        [Test]
+
+        <span style=color:#719e07>public</span> <span style=color:#719e07>void</span> TheNewTest()
+        {
+            <span style=color:#586e75>// Open Google search engine.        
+</span><span style=color:#586e75></span>            selenium.Open(<span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>); 
+            
+            <span style=color:#586e75>// Assert Title of page.
+</span><span style=color:#586e75></span>            Assert.AreEqual(<span style=color:#2aa198>&#34;Google&#34;</span>, selenium.GetTitle());
+            
+            <span style=color:#586e75>// Provide search term as &#34;Selenium OpenQA&#34;
+</span><span style=color:#586e75></span>            selenium.Type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;Selenium OpenQA&#34;</span>);
+            
+            <span style=color:#586e75>// Read the keyed search term and assert it.
+</span><span style=color:#586e75></span>            Assert.AreEqual(<span style=color:#2aa198>&#34;Selenium OpenQA&#34;</span>, selenium.GetValue(<span style=color:#2aa198>&#34;q&#34;</span>));
+            
+            <span style=color:#586e75>// Click on Search button.
+</span><span style=color:#586e75></span>            selenium.Click(<span style=color:#2aa198>&#34;btnG&#34;</span>);
+            
+            <span style=color:#586e75>// Wait for page to load.
+</span><span style=color:#586e75></span>            selenium.WaitForPageToLoad(<span style=color:#2aa198>&#34;5000&#34;</span>);
+            
+            <span style=color:#586e75>// Assert that &#34;www.openqa.org&#34; is available in search results.
+</span><span style=color:#586e75></span>            Assert.IsTrue(selenium.IsTextPresent(<span style=color:#2aa198>&#34;www.openqa.org&#34;</span>));
+            
+            <span style=color:#586e75>// Assert that page title is - &#34;Selenium OpenQA - Google Search&#34;
+</span><span style=color:#586e75></span>            Assert.AreEqual(<span style=color:#2aa198>&#34;Selenium OpenQA - Google Search&#34;</span>, 
+                         selenium.GetTitle());
+        }
+        }
+    }
+</code></pre></div><p>您可以允许NUnit管理测试的执行.
+或者, 您可以编写一个简单的 <code>main()</code> 程序,
+该程序实例化测试对象并依次运行三个方法 <code>SetupTest()</code>,
+<code>TheNewTest()</code>和 <code>TeardownTest()</code> .</p><h3 id=python-1>Python</h3><p>Pyunit是用于Python的测试框架.</p><p>基本测试结构是:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+   <span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> selenium
+   <span style=color:#586e75># This is the driver&#39;s import.  You&#39;ll use this class for instantiating a</span>
+   <span style=color:#586e75># browser and making it do what you need.</span>
+
+   <span style=color:#719e07>import</span> unittest<span style=color:#719e07>,</span> time<span style=color:#719e07>,</span> re
+   <span style=color:#586e75># This are the basic imports added by Selenium-IDE by default.</span>
+   <span style=color:#586e75># You can remove the modules if they are not used in your script.</span>
+
+   <span style=color:#719e07>class</span> <span style=color:#268bd2>NewTest</span>(unittest<span style=color:#719e07>.</span>TestCase):
+   <span style=color:#586e75># We create our unittest test case</span>
+
+       <span style=color:#719e07>def</span> <span style=color:#268bd2>setUp</span>(<span style=color:#268bd2>self</span>):
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>verificationErrors <span style=color:#719e07>=</span> []
+           <span style=color:#586e75># This is an empty array where we will store any verification errors</span>
+           <span style=color:#586e75># we find in our tests</span>
+
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium <span style=color:#719e07>=</span> selenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>,
+                   <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>)
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>start()
+           <span style=color:#586e75># We instantiate and start the browser</span>
+
+       <span style=color:#719e07>def</span> <span style=color:#268bd2>test_new</span>(<span style=color:#268bd2>self</span>):
+           <span style=color:#586e75># This is the test code.  Here you should put the actions you need</span>
+           <span style=color:#586e75># the browser to do during your test.</span>
+            
+           sel <span style=color:#719e07>=</span> <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium
+           <span style=color:#586e75># We assign the browser to the variable &#34;sel&#34; (just to save us from </span>
+           <span style=color:#586e75># typing &#34;self.selenium&#34; each time we want to call the browser).</span>
+            
+           sel<span style=color:#719e07>.</span>open(<span style=color:#2aa198>&#34;/&#34;</span>)
+           sel<span style=color:#719e07>.</span>type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>)
+           sel<span style=color:#719e07>.</span>click(<span style=color:#2aa198>&#34;btnG&#34;</span>)
+           sel<span style=color:#719e07>.</span>wait_for_page_to_load(<span style=color:#2aa198>&#34;30000&#34;</span>)
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>failUnless(sel<span style=color:#719e07>.</span>is_text_present(<span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span>))
+           <span style=color:#586e75># These are the real test steps</span>
+
+       <span style=color:#719e07>def</span> <span style=color:#268bd2>tearDown</span>(<span style=color:#268bd2>self</span>):
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>stop()
+           <span style=color:#586e75># we close the browser (I&#39;d recommend you to comment this line while</span>
+           <span style=color:#586e75># you are creating and debugging your tests)</span>
+
+           <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>assertEqual([], <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>verificationErrors)
+           <span style=color:#586e75># And make the test fail if we found that any verification errors</span>
+           <span style=color:#586e75># were found</span>
+</code></pre></div><h3 id=ruby-1>Ruby</h3><p>Selenium-IDE的旧版本(2.0之前的版本)生成
+需要旧Selenium gem的Ruby代码.
+因此, 建议如下更新IDE生成的所有Ruby脚本:</p><ol><li><p>在第一行, 修改 <code>require "selenium"</code> 为 <code>require "selenium/client"</code></p></li><li><p>在第十一行, 修改 <code>Selenium::SeleniumDriver.new</code> 为
+<code>Selenium::Client::Driver.new</code></p></li></ol><p>您可能还希望将类名更改为比"无标题"更具信息性的名称,
+并将测试方法的名称更改为
+&ldquo;test_untitled"以外的名称.</p><p>这是一个通过修改Selenium IDE
+生成的Ruby代码创建的简单示例,
+如上所述.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+   <span style=color:#586e75># load the Selenium-Client gem</span>
+   <span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;selenium/client&#34;</span>
+
+   <span style=color:#586e75># Load Test::Unit, Ruby&#39;s default test framework.</span>
+   <span style=color:#586e75># If you prefer RSpec, see the examples in the Selenium-Client</span>
+   <span style=color:#586e75># documentation.</span>
+   <span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;test/unit&#34;</span>
+
+   <span style=color:#719e07>class</span> <span style=color:#268bd2>Untitled</span> <span style=color:#719e07>&lt;</span> <span style=color:#cb4b16>Test</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Unit</span><span style=color:#719e07>::</span><span style=color:#cb4b16>TestCase</span>
+
+     <span style=color:#586e75># The setup method is called before each test.</span>
+     <span style=color:#719e07>def</span> <span style=color:#268bd2>setup</span>
+
+       <span style=color:#586e75># This array is used to capture errors and display them at the</span>
+       <span style=color:#586e75># end of the test run.</span>
+       @verification_errors <span style=color:#719e07>=</span> <span style=color:#719e07>[]</span>
+
+       <span style=color:#586e75># Create a new instance of the Selenium-Client driver.</span>
+       @selenium <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Client</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Driver</span><span style=color:#719e07>.</span>new \
+         <span style=color:#2aa198>:host</span> <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;localhost&#34;</span>,
+         <span style=color:#2aa198>:port</span> <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>4444</span>,
+         <span style=color:#2aa198>:browser</span> <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;*chrome&#34;</span>,
+         <span style=color:#2aa198>:url</span> <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>,
+         <span style=color:#2aa198>:timeout_in_second</span> <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>60</span>
+
+       <span style=color:#586e75># Start the browser session</span>
+       @selenium<span style=color:#719e07>.</span>start
+
+       <span style=color:#586e75># Print a message in the browser-side log and status bar</span>
+       <span style=color:#586e75># (optional).</span>
+       @selenium<span style=color:#719e07>.</span>set_context(<span style=color:#2aa198>&#34;test_untitled&#34;</span>)
+
+     <span style=color:#719e07>end</span>
+
+     <span style=color:#586e75># The teardown method is called after each test.</span>
+     <span style=color:#719e07>def</span> <span style=color:#268bd2>teardown</span>
+
+       <span style=color:#586e75># Stop the browser session.</span>
+       @selenium<span style=color:#719e07>.</span>stop
+
+       <span style=color:#586e75># Print the array of error messages, if any.</span>
+       assert_equal <span style=color:#719e07>[]</span>, @verification_errors
+     <span style=color:#719e07>end</span>
+
+     <span style=color:#586e75># This is the main body of your test.</span>
+     <span style=color:#719e07>def</span> <span style=color:#268bd2>test_untitled</span>
+     
+       <span style=color:#586e75># Open the root of the site we specified when we created the</span>
+       <span style=color:#586e75># new driver instance, above.</span>
+       @selenium<span style=color:#719e07>.</span>open <span style=color:#2aa198>&#34;/&#34;</span>
+
+       <span style=color:#586e75># Type &#39;selenium rc&#39; into the field named &#39;q&#39;</span>
+       @selenium<span style=color:#719e07>.</span>type <span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium rc&#34;</span>
+
+       <span style=color:#586e75># Click the button named &#34;btnG&#34;</span>
+       @selenium<span style=color:#719e07>.</span>click <span style=color:#2aa198>&#34;btnG&#34;</span>
+
+       <span style=color:#586e75># Wait for the search results page to load.</span>
+       <span style=color:#586e75># Note that we don&#39;t need to set a timeout here, because that</span>
+       <span style=color:#586e75># was specified when we created the new driver instance, above.</span>
+       @selenium<span style=color:#719e07>.</span>wait_for_page_to_load
+
+       <span style=color:#719e07>begin</span>
+
+          <span style=color:#586e75># Test whether the search results contain the expected text.</span>
+	  <span style=color:#586e75># Notice that the star (*) is a wildcard that matches any</span>
+	  <span style=color:#586e75># number of characters.</span>
+	  assert @selenium<span style=color:#719e07>.</span>is_text_present(<span style=color:#2aa198>&#34;Results * for selenium rc&#34;</span>)
+	  
+       <span style=color:#719e07>rescue</span> <span style=color:#cb4b16>Test</span><span style=color:#719e07>::</span><span style=color:#cb4b16>Unit</span><span style=color:#719e07>::</span><span style=color:#cb4b16>AssertionFailedError</span>
+       
+          <span style=color:#586e75># If the assertion fails, push it onto the array of errors.</span>
+	  @verification_errors <span style=color:#719e07>&lt;&lt;</span> $!
+
+       <span style=color:#719e07>end</span>
+     <span style=color:#719e07>end</span>
+   <span style=color:#719e07>end</span>
+
+</code></pre></div><h3 id=perl-php>Perl, PHP</h3><p>文档团队的成员尚未将Selenium RC与Perl或PHP一起使用.
+如果您将Selenium RC和这两种语言一起使用,
+请联系文档团队(请参阅贡献一章).
+我们很乐意提供一些您的经验和示例, 以支持Perl和PHP用户.</p><h2 id=学习-api>学习 API</h2><p>Selenium RC API使用命名约定,
+假设您了解Selenese,
+则大部分接口将是不言自明的.
+但是, 在这里,
+我们解释了最关键且可能不太明显的方面.</p><h3 id=启动浏览器>启动浏览器</h3><h4 id=csharp-1>CSharp</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>      selenium = <span style=color:#719e07>new</span> DefaultSelenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>, <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>);
+      selenium.Start();
+</code></pre></div><h4 id=java-2>Java</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+      setUp<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;http://www.google.com/&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;*firefox&#34;</span><span style=color:#719e07>);</span>
+</code></pre></div><h4 id=perl>Perl</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-perl data-lang=perl>      <span style=color:#719e07>my</span> <span style=color:#268bd2>$sel</span> <span style=color:#719e07>=</span> Test::WWW::Selenium<span style=color:#719e07>-&gt;</span><span style=color:#719e07>new</span>( host <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;localhost&#34;</span>, 
+                                          port <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>4444</span>, 
+                                          browser <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;*firefox&#34;</span>, 
+                                          browser_url <span style=color:#719e07>=&gt;</span> <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span> );
+</code></pre></div><h4 id=php-1>Php</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>      $this-&gt;setBrowser(&#34;*firefox&#34;);
+      $this-&gt;setBrowserUrl(&#34;http://www.google.com/&#34;);
+</code></pre></div><h4 id=python-2>Python</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>      <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium <span style=color:#719e07>=</span> selenium(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>,
+                               <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>)
+      <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>start()
+</code></pre></div><h4 id=ruby-2>Ruby</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>      @selenium <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>ClientDriver</span><span style=color:#719e07>.</span>new(<span style=color:#2aa198>&#34;localhost&#34;</span>, <span style=color:#2aa198>4444</span>, <span style=color:#2aa198>&#34;*firefox&#34;</span>, <span style=color:#2aa198>&#34;http://www.google.com/&#34;</span>, <span style=color:#2aa198>10000</span>);
+      @selenium<span style=color:#719e07>.</span>start
+</code></pre></div><p>这些示例中的每一个都打开浏览器
+并通过为程序变量分配"浏览器实例"来表示该浏览器.
+然后, 该程序变量用于从浏览器调用方法.
+这些方法执行Selenium命令,
+即 <em>open</em> 或 <em>type</em> 或 <em>verify</em> 命令.</p><p>创建浏览器实例时所需的参数是:</p><ul><li><p><strong>host</strong>
+指定服务器所在计算机的IP地址.
+通常, 这是与客户端运行所在的计算机相同的主机,
+因此在这种情况下,
+将传递本地主机.
+在某些客户端中,
+这是可选参数</p></li><li><p><strong>port</strong>
+指定服务器正在侦听的TCP/IP套接字,
+以等待客户端建立连接.
+在某些客户端驱动程序中这也是可选的.</p></li><li><p><strong>browser</strong>
+您要在其中运行测试的浏览器.
+这是一个必需的参数.</p></li><li><p><strong>url</strong>
+被测应用程序的基本URL.
+这是所有客户端库所必需的,
+并且是启动浏览器-代理-AUT通信所必需的信息</p></li></ul><p>请注意, 某些客户端库要求通过调用浏览器的 <code>start()</code> 方法
+来明确启动浏览器.</p><h3 id=运行命令>运行命令</h3><p>将浏览器初始化并分配给变量(通常称为"Selenium&rdquo;)后,
+可以通过从浏览器变量调用相应的方法来使其运行Selenese命令.
+例如, 调用Selenium对象的 <em>type</em> 方法:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>    selenium.type(&#34;field-id&#34;,&#34;string to type&#34;)
+</code></pre></div><p>在后台, 浏览器实际上将执行 <em>type</em> 操作,
+该操作基本上与用户通过以下方式在浏览器中键入输入相同：
+使用定位符和您在方法调用期间指定的字符串.</p><h2 id=报告结果>报告结果</h2><p>Selenium RC没有自己的报告结果机制.
+相反, 它允许您使用所选编程语言的功能来构建根据需要定制的报告.
+太好了, 但是如果您只是想快速地为您完成某件事, 该怎么办？
+与开发自己的测试报告代码相比,
+现有的库或测试框架通常可以更快地满足您的需求.</p><h3 id=测试框架报告工具>测试框架报告工具</h3><p>测试框架可用于许多编程语言.
+这些功能以及提供用于执行测试的灵活测试引擎的主要功能,
+包括用于报告结果的库代码.
+例如, Java有两个常用的测试框架,
+即JUnit和TestNG.
+.NET也有自己的NUnit</p><p>我们不会在这里教框架本身；
+这超出了本用户指南的范围.
+我们将简单介绍与Selenium相关的框架功能以及您可以应用的一些技术.
+这些测试框架上都有不错的书籍,
+但是互联网上的信息也很多.</p><h3 id=测试报告库>测试报告库</h3><p>还提供了专门创建的第三方库,
+用于以您选择的编程语言报告测试结果.
+这些通常支持多种格式, 例如HTML或PDF.</p><h3 id=最好的方法是什么>最好的方法是什么?</h3><p>大多数测试框架的新手都将从框架的内置报告功能开始.
+从那里开始, 大多数人会检查任何可用的库,
+因为与开发自己的库相比, 这样做所花的时间更少.
+毫无疑问, 当您开始使用Selenium时,
+您将开始输入自己的"打印报表"来报告进度.
+这可能会逐渐导致您开发自己的报告,
+这可能与使用库或测试框架同时进行.
+无论如何, 经过最初但短暂的学习后,
+您自然会开发出最适合自己情况的方法.</p><h3 id=测试报告示例>测试报告示例</h3><p>为了说明, 我们将指导您使用Selenium支持的其他一些语言的一些特定工具.
+此处列出的是常用的,
+并且由本指南的作者广泛使用(因此建议使用).</p><h4 id=java测试报告>Java测试报告</h4><ul><li><p>如果使用JUnit开发了Selenium测试用例,
+则可以使用JUnit报告生成测试报告.</p></li><li><p>如果使用TestNG开发了Selenium测试用例,
+则无需外部任务即可生成测试报告.
+TestNG框架生成一个HTML报告,
+其中列出了测试的详细信息.</p></li><li><p>ReportNG是用于TestNG框架的HTML报告插件.
+它旨在替代默认的TestNG HTML报告.
+ReportNG提供了简单的, 以颜色编码的测试结果视图.</p></li></ul><h5 id=记录selenese命令>记录Selenese命令</h5><ul><li>记录Selenium可以用于生成测试中所有Selenese命令
+以及每个命令的成功或失败的报告.
+记录Selenium扩展了Java客户端驱动程序
+以添加此Selenese记录功能.</li></ul><h4 id=python测试报告>Python测试报告</h4><ul><li>使用Python客户端驱动程序时,
+可以使用HTMLTestRunner生成测试报告.</li></ul><h4 id=ruby测试报告>Ruby测试报告</h4><ul><li>如果RSpec框架用于在Ruby中编写Selenium测试用例,
+则其HTML报告可用于生成测试报告.</li></ul><h2 id=为测试加料>为测试加料</h2><p>现在, 我们将介绍使用Selenium RC的全部原因,
+并在测试中添加编程逻辑.
+与任何程序相同.
+程序流使用条件语句和迭代进行控制.
+另外, 您可以使用I/O报告进度信息.
+在本节中, 我们将展示一些示例,
+说明如何将编程语言构造与Selenium结合以解决常见的测试问题.</p><p>当您从对页面元素存在的简单测试
+过渡到涉及多个网页和变化数据的动态功能测试时,
+您将需要编程逻辑来验证预期结果.
+基本上, Selenium-IDE不支持迭代和标准条件语句.
+您可以通过将Javascript嵌入
+Selenese参数中来执行某些条件,
+但是迭代是不可能的, 并且大多数条件在编程语言.
+此外, 您可能需要进行异常处理才能恢复错误.
+出于这些原因及其他原因,
+我们在本节中进行了说明,
+以说明如何使用常见的编程技术为您的自动化测试提供更大的"验证能力&rdquo;.</p><p>本节中的示例使用C＃和Java编写,
+尽管代码很简单并且可以轻松地适应其他受支持的语言.
+如果您对面向对象的编程语言有一些基本的了解,
+那么本部分将不难理解.</p><h3 id=迭代>迭代</h3><p>迭代是人们在测试中需要做的最常见的事情之一.
+例如, 您可能要多次执行搜索.
+或者, 可能是为了验证测试结果,
+您需要处理从数据库返回的"结果集&rdquo;.</p><p>使用我们之前使用的相同Google搜索示例,
+让我们检查Selenium搜索结果.
+该测试可以使用Selenese:</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>open</td><td>/</td><td></td></tr><tr><td>type</td><td>q</td><td>selenium rc</td></tr><tr><td>clickAndWait</td><td>btnG</td><td></td></tr><tr><td>assertTextPresent</td><td>Results * for selenium rc</td><td></td></tr><tr><td>type</td><td>q</td><td>selenium ide</td></tr><tr><td>clickAndWait</td><td>btnG</td><td></td></tr><tr><td>assertTextPresent</td><td>Results * for selenium ide</td><td></td></tr><tr><td>type</td><td>q</td><td>selenium grid</td></tr><tr><td>clickAndWait</td><td>btnG</td><td></td></tr><tr><td>assertTextPresent</td><td>Results * for selenium grid</td><td></td></tr></tbody></table><p>该代码已重复执行3次相同的步骤.
+但是, 同一代码的多个副本不是良好的编程习惯,
+因为维护起来需要做更多的工作.
+通过使用编程语言,
+我们可以遍历搜索结果以提供更灵活和可维护的解决方案.</p><h4 id=在-c-中>在 <code>C#</code> 中</h4><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>   <span style=color:#586e75>// Collection of String values.
+</span><span style=color:#586e75></span>   String[] arr = {<span style=color:#2aa198>&#34;ide&#34;</span>, <span style=color:#2aa198>&#34;rc&#34;</span>, <span style=color:#2aa198>&#34;grid&#34;</span>};    
+        
+   <span style=color:#586e75>// Execute loop for each String in array &#39;arr&#39;.
+</span><span style=color:#586e75></span>   <span style=color:#719e07>foreach</span> (String s <span style=color:#719e07>in</span> arr) {
+       sel.open(<span style=color:#2aa198>&#34;/&#34;</span>);
+       sel.type(<span style=color:#2aa198>&#34;q&#34;</span>, <span style=color:#2aa198>&#34;selenium &#34;</span> +s);
+       sel.click(<span style=color:#2aa198>&#34;btnG&#34;</span>);
+       sel.waitForPageToLoad(<span style=color:#2aa198>&#34;30000&#34;</span>);
+       assertTrue(<span style=color:#2aa198>&#34;Expected text: &#34;</span> +s+ <span style=color:#2aa198>&#34; is missing on page.&#34;</span>
+       , sel.isTextPresent(<span style=color:#2aa198>&#34;Results * for selenium &#34;</span> + s));
+    }
+</code></pre></div><h3 id=条件陈述>条件陈述</h3><p>为了说明在测试中的使用条件,
+我们将从一个示例开始.
+当页面上没有预期的元素时,
+会发生运行Selenium测试时遇到的常见问题.
+例如, 当运行以下行时:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>   selenium.type(&#34;q&#34;, &#34;selenium &#34; +s);
+</code></pre></div><p>如果页面上没有元素"q&rdquo;,
+则抛出异常:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>   com<span style=color:#719e07>.</span>thoughtworks<span style=color:#719e07>.</span>selenium<span style=color:#719e07>.</span>SeleniumException<span style=color:#719e07>:</span> ERROR<span style=color:#719e07>:</span> Element q not found
+</code></pre></div><p>这可能会导致测试中止.
+对于某些测试, 这就是您想要的.
+但是通常这是不希望的,
+因为您的测试脚本还有许多其他后续测试需要执行.</p><p>更好的方法是先验证元素是否确实存在,
+然后在元素不存在时采取替代方法.
+让我们用Java看一下</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>   <span style=color:#586e75>// If element is available on page then perform type operation.
+</span><span style=color:#586e75></span>   <span style=color:#719e07>if</span><span style=color:#719e07>(</span>selenium<span style=color:#719e07>.</span>isElementPresent<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>))</span> <span style=color:#719e07>{</span>
+       selenium<span style=color:#719e07>.</span>type<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>,</span> <span style=color:#2aa198>&#34;Selenium rc&#34;</span><span style=color:#719e07>);</span>
+   <span style=color:#719e07>}</span> <span style=color:#719e07>else</span> <span style=color:#719e07>{</span>
+       System<span style=color:#719e07>.</span>out<span style=color:#719e07>.</span>printf<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Element: &#34;</span> <span style=color:#719e07>+</span>q<span style=color:#719e07>+</span> <span style=color:#2aa198>&#34; is not available on page.&#34;</span><span style=color:#719e07>)</span>
+   <span style=color:#719e07>}</span>
+</code></pre></div><p>这种方法的优点是即使页面上某些UI元素不可用,
+也可以继续执行测试.</p><h3 id=从测试中执行javascript>从测试中执行JavaScript</h3><p>在执行Selenium不直接支持的应用程序时,
+JavaScript非常方便.
+Selenium API的 <strong>getEval</strong> 方法.</p><p>考虑具有复选框的应用程序,
+该复选框没有静态标识符.
+在这种情况下,
+可以评估Selenium RC中的JavaScript以获取所有复选框的ID,
+然后执行它们.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>   <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> String<span style=color:#719e07>[]</span> <span style=color:#268bd2>getAllCheckboxIds</span> <span style=color:#719e07>()</span> <span style=color:#719e07>{</span> 
+		String script <span style=color:#719e07>=</span> <span style=color:#2aa198>&#34;var inputId  = new Array();&#34;</span><span style=color:#719e07>;</span><span style=color:#586e75>// Create array in java script.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;var cnt = 0;&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// Counter for check box ids.  
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;var inputFields  = new Array();&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// Create array in java script.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;inputFields = window.document.getElementsByTagName(&#39;input&#39;);&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// Collect input elements.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;for(var i=0; i&lt;inputFields.length; i++) {&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// Loop through the collected elements.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;if(inputFields[i].id !=null &#34;</span> <span style=color:#719e07>+</span>
+		<span style=color:#2aa198>&#34;&amp;&amp; inputFields[i].id !=&#39;undefined&#39; &#34;</span> <span style=color:#719e07>+</span>
+		<span style=color:#2aa198>&#34;&amp;&amp; inputFields[i].getAttribute(&#39;type&#39;) == &#39;checkbox&#39;) {&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// If input field is of type check box and input id is not null.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;inputId[cnt]=inputFields[i].id ;&#34;</span> <span style=color:#719e07>+</span> <span style=color:#586e75>// Save check box id to inputId array.
+</span><span style=color:#586e75></span>		<span style=color:#2aa198>&#34;cnt++;&#34;</span> <span style=color:#719e07>+</span> <span style=color:#586e75>// increment the counter.
+</span><span style=color:#586e75></span>		<span style=color:#2aa198>&#34;}&#34;</span> <span style=color:#719e07>+</span> <span style=color:#586e75>// end of if.
+</span><span style=color:#586e75></span>		<span style=color:#2aa198>&#34;}&#34;</span><span style=color:#719e07>;</span> <span style=color:#586e75>// end of for.
+</span><span style=color:#586e75></span>		script <span style=color:#719e07>+=</span> <span style=color:#2aa198>&#34;inputId.toString();&#34;</span> <span style=color:#719e07>;</span><span style=color:#586e75>// Convert array in to string.			
+</span><span style=color:#586e75></span>		String<span style=color:#719e07>[]</span> checkboxIds <span style=color:#719e07>=</span> selenium<span style=color:#719e07>.</span>getEval<span style=color:#719e07>(</span>script<span style=color:#719e07>).</span>split<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;,&#34;</span><span style=color:#719e07>);</span> <span style=color:#586e75>// Split the string.
+</span><span style=color:#586e75></span>		<span style=color:#719e07>return</span> checkboxIds<span style=color:#719e07>;</span>
+    <span style=color:#719e07>}</span>
+</code></pre></div><p>计算页面上的图像数量:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>   selenium<span style=color:#719e07>.</span>getEval<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;window.document.images.length;&#34;</span><span style=color:#719e07>);</span>
+</code></pre></div><p>记住要在DOM表达式的情况下使用window对象,
+因为默认情况下是指Selenium窗口,
+而不是测试窗口.</p><h2 id=服务器选项>服务器选项</h2><p>启动服务器时,
+命令行选项可用于更改默认服务器行为.</p><p>回想一下, 通过运行以下命令来启动服务器.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar
+</code></pre></div><p>要查看选项列表,
+请使用 <code>-h</code> 选项运行服务器.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar -h
+</code></pre></div><p>您会看到服务器可以使用的所有选项的列表
+以及每个选项的简要说明.
+提供的描述并不总是足够的,
+因此我们提供了一些更重要选项的解释.</p><h3 id=代理配置>代理配置</h3><p>如果您的AUT在需要身份验证的HTTP代理后面,
+则应使用以下命令配置http.proxyHost,
+http.proxyPort,
+http.proxyUser
+和http.proxyPassword.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar -Dhttp.proxyHost<span style=color:#719e07>=</span>proxy.com -Dhttp.proxyPort<span style=color:#719e07>=</span><span style=color:#2aa198>8080</span> -Dhttp.proxyUser<span style=color:#719e07>=</span>username -Dhttp.proxyPassword<span style=color:#719e07>=</span>password
+</code></pre></div><h3 id=多窗口模式>多窗口模式</h3><p>如果您使用的是Selenium 1.0,
+则可能会跳过本节, 因为多窗口模式是默认行为.
+但是, 在版本1.0之前,
+Selenium默认在子frame中运行测试中的应用程序,
+如下所示.</p><p><img src=https://www.selenium.dev/documentation/images/legacy_docs/selenium_rc_single_window_mode.png alt=单窗口模式></p><p>某些应用程序无法在子框架中正常运行,
+需要将其加载到窗口的顶部框架中.
+多窗口模式选项允许AUT在单独的窗口中运行,
+而不是在默认帧中运行,
+然后在默认帧中可以拥有所需的顶部帧.</p><p><img src=https://www.selenium.dev/documentation/images/legacy_docs/selenium_rc_multi_window_mode.png alt=多窗口模式></p><p>对于旧版本的Selenium,
+您必须使用以下选项明确指定多窗口模式:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   -multiwindow 
+</code></pre></div><p>从Selenium RC 1.0开始,
+如果您想在一个框架内运行测试(即使用早期Selenium版本的标准),
+则可以使用选项将此状态指定给Selenium服务器</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   -singlewindow 
+</code></pre></div><h3 id=指定firefox配置文件>指定Firefox配置文件</h3><p>除非您为每个实例分别指定一个配置文件,
+否则Firefox将不会同时运行两个实例.
+Selenium RC 1.0和更高版本会自动在单独的配置文件中运行,
+因此, 如果您使用的是Selenium 1.0, 则可以跳过本节.
+但是, 如果您使用的是旧版本的Selenium,
+或者需要使用特定的配置文件进行测试
+(例如添加https证书或安装了一些插件),
+则需要明确指定配置文件.</p><p>首先, 要创建一个单独的Firefox配置文件,
+请遵循以下步骤.
+打开Windows"开始"菜单, 选择"运行&rdquo;,
+然后键入并输入以下内容之一:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   firefox.exe -profilemanager 
+</code></pre></div><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   firefox.exe -P 
+</code></pre></div><p>使用对话框创建新的配置文件.
+然后, 当您运行Selenium服务器时,
+告诉它使用带有服务器命令行选项 <em>-firefoxProfileTemplate</em> 的
+新Firefox配置文件,
+并使用其文件名和目录路径指定配置文件的路径.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   -firefoxProfileTemplate <span style=color:#2aa198>&#34;path to the profile&#34;</span> 
+</code></pre></div><p><strong>注意</strong>: 确保将您的个人资料放在默认文件夹之外的新文件夹中！！！！
+如果删除配置文件,
+则Firefox配置文件管理器工具将删除文件夹中的所有文件,
+无论它们是否是配置文件.</p><p>有关Firefox配置文件的更多信息,
+请参见 <a href=http://support.mozilla.com/en/kb/Managing+profiles>Mozilla的知识库</a></p><h3 id=使用-htmlsuite在服务器内直接运行selenese>使用-htmlSuite在服务器内直接运行Selenese</h3><p>通过将html文件传递到服务器的命令行,
+可以直接在Selenium 服务器中运行Selenese html文件. 例如:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   java -jar selenium-server-standalone-&lt;version-number&gt;.jar -htmlSuite <span style=color:#2aa198>&#34;*firefox&#34;</span> 
+   <span style=color:#2aa198>&#34;http://www.google.com&#34;</span> <span style=color:#2aa198>&#34;c:\absolute\path\to\my\HTMLSuite.html&#34;</span> 
+   <span style=color:#2aa198>&#34;c:\absolute\path\to\my\results.html&#34;</span>
+</code></pre></div><p>这将自动启动您的HTML套件,
+运行所有测试并保存带有结果的漂亮HTML报告.</p><p><em>注意:</em> 使用此选项时,
+服务器将启动测试并等待指定的秒数以完成测试；
+否则, 服务器将停止测试.
+如果在这段时间内未完成测试,
+则该命令将以非零的退出代码退出,
+并且不会生成任何结果文件.</p><p>此命令行很长, 因此在键入时要小心.
+请注意, 这要求您传递HTML Selenese套件,
+而不是单个测试.
+另请注意-htmlSuite选项与 <code>-interactive</code>不兼容,
+您不能同时运行两者e.</p><h3 id=selenium-服务器日志>Selenium 服务器日志</h3><h4 id=服务端日志>服务端日志</h4><p>启动Selenium服务器时, <strong>-log</strong> 选项可用于
+将Selenium服务器报告的有价值的调试信息
+记录到文本文件中.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   java -jar selenium-server-standalone-&lt;version-number&gt;.jar -log selenium.log
+</code></pre></div><p>该日志文件比标准控制台日志更详细
+(它包含DEBUG级别的日志消息).
+日志文件还包括记录器名称和记录消息的线程的ID号. 例如:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   20:44:25 DEBUG <span style=color:#719e07>[</span>12<span style=color:#719e07>]</span> org.openqa.selenium.server.SeleniumDriverResourceHandler - 
+   Browser 465828/:top frame1 posted START NEW
+</code></pre></div><p>消息格式为</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   TIMESTAMP<span style=color:#719e07>(</span>HH:mm:ss<span style=color:#719e07>)</span> LEVEL <span style=color:#719e07>[</span>THREAD<span style=color:#719e07>]</span> LOGGER - MESSAGE
+</code></pre></div><p>此消息可能是多行.</p><h4 id=浏览器端日志>浏览器端日志</h4><p>浏览器端的JavaScript(Selenium Core)也记录重要消息.
+在许多情况下, 这些对于最终用户比常规的Selenium 服务器日志更有用.
+要访问浏览器端日志,
+请将 <strong>-browserSideLog</strong>参数传递给Selenium服务器.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   java -jar selenium-server-standalone-&lt;version-number&gt;.jar -browserSideLog
+</code></pre></div><p><strong>-browserSideLog</strong> 必须与 <strong>-log</strong> 参数结合使用,
+以将browserSideLogs(以及所有其他DEBUG级别的日志记录消息)记录到文件中.</p><h2 id=指定特定浏览器的路径>指定特定浏览器的路径</h2><p>您可以为Selenium RC指定到特定浏览器的路径.
+如果您使用同一浏览器的不同版本,
+并且希望使用特定的浏览器, 这将很有用.
+另外, 它用于允许您的测试在Selenium RC不直接支持的浏览器上运行.
+在指定运行模式时,
+请使用*custom说明符,
+后跟浏览器可执行文件的完整路径:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   *custom &lt;path to browser&gt; 
+</code></pre></div><h2 id=selenium-rc-架构>Selenium RC 架构</h2><p><em>注意:</em> 本主题试图说明Selenium RC背后的技术实现.
+Selenium用户了解这一点并不是基本知识,
+但对于理解您将来可能会发现的一些问题可能很有用.</p><p>要详细了解Selenium RC Server的工作原理
+以及为什么使用代理注入和增强特权模式,
+您必须首先了解 <code>同源政策</code>.</p><h3 id=同源策略>同源策略</h3><p>Selenium面临的主要限制是同源策略.
+此安全限制适用于市场上的每个浏览器,
+其目的是确保一个站点的内容永远不会被另一个站点的脚本访问.
+同源策略规定, 浏览器中加载的任何代码只能在该网站的域内运行.
+它无法在其他网站上执行功能.
+因此, 例如, 如果浏览器在加载www.mysite.com时加载了JavaScript代码,
+则即使该网站是您的另一个网站,
+也无法针对www.mysite2.com运行该加载的代码.
+如果可能的话, 如果您在其他标签上打开了帐户页面,
+则在您打开的任何网站上放置的脚本都将能够读取银行帐户上的信息.
+这称为XSS(跨站点脚本).</p><p>要在此政策下工作,
+必须将Selenium-Core(及其实现所有魔术的JavaScript命令)
+放置在与被测应用程序相同的来源(相同的URL)中.</p><p>从历史上看, Selenium-Core受此问题限制,
+因为它是用JavaScript实现的.
+但是, Selenium RC不受"同一来源"政策的限制.
+它使用Selenium服务器作为代理可以避免此问题.
+从本质上讲, 它告诉浏览器该浏览器正在服务器提供的单个"欺骗"网站上工作.</p><p><em>注意:</em> 您可以在Wikipedia页面上找到有关此主题的其他信息,
+这些信息与同源策略和XSS有关.</p><h3 id=代理注入>代理注入</h3><p>Selenium用来避免"同源策略"的第一种方法是代理注入.
+在代理注入模式下,
+Selenium 服务器充当客户端配置的 <strong>HTTP proxy</strong> <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>
+位于浏览器和Test<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>中.
+然后, 它在虚构的URL下掩盖AUT
+(嵌入Selenium-Core和测试集, 并像它们来自同一来源一样进行交付).</p><p>以下是架构图.</p><p><img src=https://www.selenium.dev/documentation/images/legacy_docs/selenium_rc_architecture_diagram_1.png alt="架构图 1"></p><p>当测试套件以您喜欢的语言开始时, 会发生以下情况:</p><ol><li>客户端/驱动程序与Selenium-RC服务器建立连接.</li><li>Selenium RC服务器启动带有URL的浏览器(或重用旧的浏览器),
+该URL将Selenium-Core的JavaScript注入浏览器加载的网页中.</li><li>客户端驱动程序将Selenese命令传递到服务器.</li><li>服务器解释命令, 然后触发相应的JavaScript执行以在浏览器中执行该命令.
+Selenium-Core指示浏览器按照第一条指令操作,
+通常会打开AUT的页面.</li><li>浏览器收到打开的请求,
+并从Selenium RC服务器
+(设置为供浏览器使用的HTTP代理)
+中请求网站的内容.</li><li>Selenium RC服务器与Web服务器进行通信以请求页面,
+并在收到页面后将页面发送给浏览器,
+以掩盖其来源, 以使页面看起来与Selenium-Core来自同一服务器
+(这使Selenium-Core可以遵从使用同源策略).</li><li>浏览器接收网页并将其呈现在为其保留的框架/窗口中.</li></ol><h3 id=特权浏览器>特权浏览器</h3><p>此方法中的此工作流程与代理注入非常相似,
+但主要区别在于浏览器以一种称为 <em>增强特权</em> 的特殊模式启动,
+该模式允许网站执行通常不允许的操作
+(例如XSS_或填充文件上传输入)和对Selenium非常有用的东西).
+通过使用这些浏览器模式,
+Selenium Core能够直接打开AUT并与其内容进行读取/交互,
+而不必将整个AUT传递给Selenium RC服务器.</p><p>以下是架构图.</p><p><img src=https://www.selenium.dev/documentation/images/legacy_docs/selenium_rc_architecture_diagram_2.png alt="架构图 1"></p><p>当测试套件以您喜欢的语言开始时,
+会发生以下情况:</p><ol><li>客户端/驱动程序与Selenium-RC服务器建立连接.</li><li>Selenium RC服务器启动一个带有URL的浏览器(或重用旧的浏览器),
+该URL将在网页中加载Selenium-Core.</li><li>Selenium-Core从客户端/驱动程序获取第一条指令
+(通过向Selenium RC服务器发出的另一个HTTP请求).</li><li>Selenium-Core对该第一条指令起作用,
+通常会打开AUT的页面.</li><li>浏览器收到打开请求,
+并向Web服务器询问该页面.
+浏览器收到网页后, 将其呈现在为其保留的框架/窗口中.</li></ol><h2 id=处理https和安全弹出窗口>处理HTTPS和安全弹出窗口</h2><p>当许多应用程序需要发送加密的信息(例如密码或信用卡信息)时,
+它们从使用HTTP切换到HTTPS.
+这在当今的许多网络应用程序中很常见.
+Selenium RC支持这一点.</p><p>为了确保HTTPS站点是真实的, 浏览器将需要安全证书.
+否则, 当浏览器使用HTTPS访问AUT时,
+将假定该应用程序不被"信任&rdquo;.
+发生这种情况时, 浏览器将显示安全弹出窗口,
+并且无法使用Selenium RC关闭这些弹出窗口</p><p>在Selenium RC测试中处理HTTPS时,
+必须使用支持该模式并为您处理安全证书的运行模式.
+您在测试程序初始化Selenium时指定运行模式.</p><p>在Selenium RC 1.0 beta 2和更高版本中,
+将*firefox或*iexplore用于运行模式.
+在早期版本中, 包括Selenium RC 1.0 beta 1,
+在运行模式中使用*chrome或*iehta.
+使用这些运行模式, 您将不需要安装任何特殊的安全证书.
+Selenium RC会为您处理.</p><p>在1.0版中, 建议使用运行模式*firefox或*iexplore.
+但是, 还有*iexploreproxy和*firefoxproxy的其他运行模式.
+提供这些仅是为了向后兼容,
+除非传统测试程序要求, 否则不应使用它们.
+如果您的应用程序打开其他浏览器窗口,
+则它们的使用将对安全证书处理和多个窗口的运行产生限制.</p><p>在早期版本的Selenium RC中,
+*chrome或*iehta是支持HTTPS和安全弹出窗口处理的运行模式.
+尽管它们变得相当稳定并且许多人使用了它们,
+但这些被认为是"实验模式&rdquo;.
+如果使用的是Selenium 1.0,
+则不需要, 也不应使用这些较早的运行模式.</p><h3 id=安全证书说明>安全证书说明</h3><p>通常, 浏览器将通过安装您已经拥有的安全证书来信任您正在测试的应用程序.
+您可以在浏览器的选项或Internet属性中进行检查
+(如果您不知道AUT的安全证书, 请咨询系统管理员).
+当Selenium加载浏览器时,
+它将注入代码以拦截浏览器和服务器之间的消息.
+浏览器现在认为不受信任的软件正试图看起来像您的应用程序.
+它通过弹出消息提醒您.</p><p>为解决此问题, Selenium RC(再次使用支持此功能的运行模式时)
+将在浏览器可以访问它的位置临时将其自己的安全证书安装到客户端计算机上.
+这会欺骗浏览器以使其正在访问的网站与您的AUT不同,
+从而有效地抑制了弹出窗口.</p><p>Selenium早期版本使用的另一种方法是安装Selenium安装随附的Cybervillians安全证书.
+但是, 大多数用户不再需要这样做.
+如果您以代理注入模式运行Selenium RC,
+则可能需要显式安装此安全证书.</p><h2 id=支持其他浏览器和浏览器配置>支持其他浏览器和浏览器配置</h2><p>除了Internet Explorer和Mozilla Firefox外,
+Selenium API还支持在多种浏览器上运行.
+请访问https://selenium.dev网站以获取受支持的浏览器.
+另外, 当不直接支持浏览器时,
+您仍然可以在测试应用程序启动时通过使用
+&ldquo;*custom"运行模式(即代替*firefox或*iexplore)
+对所选浏览器运行Selenium测试.
+这样, 您可以将路径传递到API调用内的浏览器可执行文件.
+也可以从服务器以交互方式完成此操作.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   <span style=color:#268bd2>cmd</span><span style=color:#719e07>=</span>getNewBrowserSession&amp;<span style=color:#268bd2>1</span><span style=color:#719e07>=</span>*custom c:<span style=color:#cb4b16>\P</span>rogram Files<span style=color:#cb4b16>\M</span>ozilla Firefox<span style=color:#cb4b16>\M</span>yBrowser.exe&amp;<span style=color:#268bd2>2</span><span style=color:#719e07>=</span>http://www.google.com
+</code></pre></div><h3 id=使用不同的浏览器配置运行测试>使用不同的浏览器配置运行测试</h3><p>通常, Selenium RC自动配置浏览器,
+但是如果您使用&rdquo;*custom"运行模式启动浏览器,
+则可以强制Selenium RC照原样启动浏览器,
+而无需使用自动配置.</p><p>例如, 您可以使用这样的自定义配置启动Firefox:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   <span style=color:#268bd2>cmd</span><span style=color:#719e07>=</span>getNewBrowserSession&amp;<span style=color:#268bd2>1</span><span style=color:#719e07>=</span>*custom c:<span style=color:#cb4b16>\P</span>rogram Files<span style=color:#cb4b16>\M</span>ozilla Firefox<span style=color:#cb4b16>\f</span>irefox.exe&amp;<span style=color:#268bd2>2</span><span style=color:#719e07>=</span>http://www.google.com
+</code></pre></div><p>请注意, 以这种方式启动浏览器时,
+必须手动配置浏览器以将Selenium服务器用作代理.
+通常, 这仅意味着打开浏览器首选项并将"localhost:4444"指定为HTTP代理,
+但是不同浏览器的说明可能会有根本不同.
+有关详细信息, 请查阅浏览器的文档.</p><p>请注意, Mozilla浏览器的启动和停止方式可能会有所不同.
+可能需要设置MOZ_NO_REMOTE环境变量,
+以使Mozilla浏览器的行为更加可预测.
+Unix用户应避免使用Shell脚本启动浏览器.
+通常最好直接使用二进制可执行文件(例如firefox-bin).</p><h2 id=解决常见问题>解决常见问题</h2><p>在开始使用Selenium RC时,
+通常会遇到一些潜在的问题.
+我们在这里介绍它们及其解决方案.</p><h3 id=无法连接到服务器>无法连接到服务器</h3><p>当您的测试程序无法连接到Selenium 服务器时,
+Selenium会在您的测试程序中引发异常.
+它应该显示此消息或类似的消息:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    <span style=color:#2aa198>&#34;Unable to connect to remote server (Inner Exception Message: 
+</span><span style=color:#2aa198>	No connection could be made because the target machine actively 
+</span><span style=color:#2aa198>	refused it )&#34;</span>
+    
+	<span style=color:#719e07>(</span>using .NET and XP Service Pack 2<span style=color:#719e07>)</span> 
+</code></pre></div><p>如果看到这样的消息, 请确保已启动Selenium服务器.
+如果是这样, 则Selenium客户端库和Selenium服务器之间的连接存在问题.</p><p>从Selenium RC开始时,
+大多数人开始是在同一台计算机上运行测试程序(带有Selenium客户端库)
+和Selenium服务器.
+为此, 请使用"localhost"作为连接参数.
+我们建议您以这种方式开始,
+因为它可以减少您入门时可能出现的网络问题的影响.
+假设您的操作系统具有典型的网络和TCP/IP设置,
+那么您应该没有什么困难.
+实际上, 许多人选择以这种方式运行测试.</p><p>但是, 如果您确实想在远程计算机上运行Selenium服务器,
+则假设两台计算机之间具有有效的TCP/IP连接,
+则连接应该很好.</p><p>如果连接困难, 可以使用常用的网络工具,
+例如<em>ping</em>,
+<em>telnet</em>, <em>ifconfig(Unix)/ipconfig</em> (Windows) 等,
+以确保您具有有效的网络连接.
+如果不熟悉这些, 则系统管理员可以为您提供帮助.</p><h3 id=无法加载浏览器>无法加载浏览器</h3><p>好的, 这并非友好的错误消息,
+很抱歉, 但是如果Selenium服务器无法加载浏览器,
+您可能会看到此错误.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    <span style=color:#719e07>(</span>500<span style=color:#719e07>)</span> Internal Server Error
+</code></pre></div><p>这可能是由于</p><ul><li>Firefox(Selenium 1.0之前的版本)无法启动,
+因为浏览器已经打开,
+并且您未指定单独的配置文件.
+请参阅"服务器选项"下有关Firefox配置文件的部分</li><li>您使用的运行模式与您计算机上的任何浏览器都不匹配.
+程序打开浏览器时检查您传递给Selenium的参数.</li><li>您已明确指定浏览器的路径(使用&rdquo;*custom&rdquo; –参见上文),
+但该路径不正确. 检查以确保路径正确.
+还要检查用户组, 以确保浏览器和&rdquo;*custom"参数没有已知问题.</li></ul><h3 id=selenium-找不到aut>Selenium 找不到AUT</h3><p>如果您的测试程序成功启动了浏览器,
+但是浏览器未显示您正在测试的网站,
+则最可能的原因是您的测试程序未使用正确的URL.</p><p>这很容易发生.
+当您使用Selenium-IDE导出脚本时,
+它会插入一个虚拟URL.
+您必须手动将URL更改为正确的URL才能测试您的应用程序.</p><h3 id=firefox在准备配置文件时拒绝关闭>Firefox在准备配置文件时拒绝关闭</h3><p>最常见的情况是在Firefox上运行Selenium RC测试程序,
+但是已经运行了Firefox浏览器会话,
+并且在启动Selenium服务器时未指定单独的配置文件.
+测试程序中的错误如下所示:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    Error:  java.lang.RuntimeException: Firefox refused shutdown <span style=color:#719e07>while</span> 
+    preparing a profile 
+</code></pre></div><p>以下是来自服务器的完整错误消息:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    16:20:03.919 INFO - Preparing Firefox profile... 
+    16:20:27.822 WARN - GET /selenium-server/driver/?cmd<span style=color:#719e07>=</span>getNewBrowserSession&amp;<span style=color:#268bd2>1</span><span style=color:#719e07>=</span>*fir 
+    efox&amp;<span style=color:#268bd2>2</span><span style=color:#719e07>=</span>http%3a%2f%2fsage-webapp1.qa.idc.com HTTP/1.1 
+    java.lang.RuntimeException: Firefox refused shutdown <span style=color:#719e07>while</span> preparing a profile 
+            at org.openqa.selenium.server.browserlaunchers.FirefoxCustomProfileLaunc 
+    her.waitForFullProfileToBeCreated<span style=color:#719e07>(</span>FirefoxCustomProfileLauncher.java:277<span style=color:#719e07>)</span> 
+    ... 
+    Caused by: org.openqa.selenium.server.browserlaunchers.FirefoxCustomProfileLaunc 
+    her<span style=color:#268bd2>$FileLockRemainedException</span>: Lock file still present! C:<span style=color:#cb4b16>\D</span>OCUME~1<span style=color:#cb4b16>\j</span>svec<span style=color:#cb4b16>\L</span>OCALS 
+    ~1<span style=color:#cb4b16>\T</span>emp<span style=color:#cb4b16>\c</span>ustomProfileDir203138<span style=color:#cb4b16>\p</span>arent.lock 
+</code></pre></div><p>要解决此问题,
+请参阅"指定单独的Firefox配置文件"部分</p><h3 id=版本问题>版本问题</h3><p>确保您的Selenium版本支持您的浏览器版本.
+例如, Selenium RC 0.92不支持Firefox3.
+有时您可能很幸运(例如我).
+但不要忘记检查您使用的Selenium版本支持哪些浏览器版本.
+如有疑问, 请使用最新版本的Selenium和浏览器使用最广泛的版本.</p><h3 id=启动服务器时出现错误消息-不支持的majorminor版本490>启动服务器时出现错误消息: &ldquo;(不支持的major.minor版本49.0)&rdquo;</h3><p>此错误表明您使用的Java版本不正确.
+Selenium服务器需要Java 1.5或更高版本.</p><p>要检查您的Java版本, 请从命令行运行.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   java -version
+</code></pre></div><p>您应该看到一条消息, 显示Java版本.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   java version <span style=color:#2aa198>&#34;1.5.0_07&#34;</span>
+   Java<span style=color:#719e07>(</span>TM<span style=color:#719e07>)</span> <span style=color:#2aa198>2</span> Runtime Environment, Standard Edition <span style=color:#719e07>(</span>build 1.5.0_07-b03<span style=color:#719e07>)</span>
+   Java HotSpot<span style=color:#719e07>(</span>TM<span style=color:#719e07>)</span> Client VM <span style=color:#719e07>(</span>build 1.5.0_07-b03, mixed mode<span style=color:#719e07>)</span>
+</code></pre></div><p>如果看到较低的版本号, 则可能需要更新JRE,
+或者只需将其添加到PATH环境变量中即可.</p><h3 id=404-error-when-running-the-getnewbrowsersession-command>404 error when running the getNewBrowserSession command</h3><p>如果尝试打开&rdquo; <a href=http://www.google.com/selenium-server/%22>http://www.google.com/selenium-server/"</a>上的页面时遇到404错误,
+则一定是因为Selenium服务器未正确配置为代理.
+Selenium-server"目录在google.com上不存在；
+仅当正确配置了代理后, 该目录才存在.
+代理配置在很大程度上取决于如何使用firefox,
+iexplore, opera或custom启动浏览器.</p><ul><li><p>iexplore：如果使用*iexplore启动浏览器,
+则可能是Internet Explorer的代理设置有问题.
+Selenium服务器尝试在Internet选项控制面板中配置全局代理设置.
+您必须确保在Selenium服务器启动浏览器时正确配置了这些配置.
+尝试查看&rdquo; Internet选项"控制面板.
+单击"连接"选项卡, 然后单击"局域网设置&rdquo;.</p><ul><li>如果您需要使用代理来访问要测试的应用程序,
+则需要使用&rdquo; -Dhttp.proxyHost"启动Selenium服务器.
+有关更多详细信息, 请参见 <code>代理配置</code> .</li><li>您也可以尝试手动配置代理, 然后使用*custom或*iehta浏览器启动器启动浏览器.</li></ul></li><li><p>custom: 使用*custom时, 必须正确(手动)配置代理,
+否则会出现404错误.
+仔细检查您是否正确配置了代理设置.
+要检查您是否正确配置了代理,
+则是试图故意不正确地配置浏览器.
+尝试将浏览器配置为使用错误的代理服务器主机名或错误的端口.
+如果您错误地成功配置了浏览器的代理设置,
+则浏览器将无法连接到Internet,
+这是一种确保正在调整相关设置的方法.</p></li><li><p>对于其他浏览器(*firefox, *opera),
+我们会自动为您硬编码代理,
+因此此功能没有已知问题.
+如果您遇到404错误,
+并已按照本用户指南进行操作,
+请仔细将结果发布到用户组,
+以获取用户社区的帮助.</p></li></ul><h3 id=权限被拒绝错误>权限被拒绝错误</h3><p>发生此错误的最常见原因是您的会话试图跨域
+(例如, 从http://domain1访问页面,
+然后从http://domain2访问页面)来违反同源策略.
+协议(从http://domainX移至https://domainX).</p><p>当JavaScript尝试查找尚不可用
+(在页面完全加载之前)或不再可用
+(在页面开始卸载之后)的UI对象时,
+也会发生此错误.
+最常见的情况是AJAX页面正在处理页面的某些部分
+或独立于较大页面而加载和/或重新加载的子frame.</p><p>该错误可能是间歇性的.
+通常, 用调试器不可能重现该问题,
+因为问题是由于竞争条件引起的,
+当将调试器的开销添加到系统中时,
+这些竞争条件是无法再现的.
+许可问题在本教程中进行了详细介绍.
+仔细阅读有关<code>同源策略</code>, <code>代理注入</code>的部分.</p><h3 id=处理浏览器弹出窗口>处理浏览器弹出窗口</h3><p>在Selenium测试中可以得到几种"弹出窗口&rdquo;.
+如果Selenium命令是由浏览器而不是AUT发起的,
+则可能无法通过运行Selenium命令来关闭这些弹出窗口.
+您可能需要知道如何进行管理.
+每种类型的弹出窗口都需要以不同的方式处理.</p><ul><li><p>HTTP基本身份验证对话框：
+这些对话框提示输入用户名/密码登录到站点.
+要登录到需要HTTP基本身份验证的站点,
+请使用 <code>RFC 1738</code>中所述的URL中的用户名和密码,
+如下所示：open
+(&rdquo; http//myusername:myuserpassword@myexample.com/blah/blah/blah&rdquo;).</p></li><li><p>SSL证书警告：
+当Selenium RC启用为代理时,
+它会自动尝试欺骗SSL证书.
+请参阅HTTPS部分中的更多内容.
+如果您的浏览器配置正确, 您将永远不会看到SSL证书警告,
+但是您可能需要将浏览器配置为信任我们危险的"CyberVillains&rdquo; SSL证书颁发机构.
+再次, 请参阅HTTPS部分以了解如何执行此操作.</p></li><li><p>模态JavaScript警报/确认/提示对话框：
+Selenium试图向您隐藏这些对话框
+(通过替换window.alert, window.confirm和window.prompt),
+以便它们不会停止您页面的执行.
+如果您看到警告弹出窗口,
+可能是因为它是在页面加载过程中触发的,
+对于我们而言, 保护该页面通常为时过早.
+Selenese包含用于断言或验证警报和确认弹出窗口的命令.
+请参阅第4章中有关这些主题的部分.</p></li></ul><h3 id=在linux上-为什么我的firefox浏览器会话没有关闭>在Linux上, 为什么我的Firefox浏览器会话没有关闭?</h3><p>在Unix/Linux上, 您必须直接调用"firefox-bin&rdquo;,
+因此请确保路径中包含可执行文件.
+如果通过外壳程序脚本执行Firefox, 则该终止浏览器了.
+SeleniumRC将终止该外壳程序脚本,
+使浏览器保持运行状态.
+您可以像这样直接指定firefox-bin的路径.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   <span style=color:#268bd2>cmd</span><span style=color:#719e07>=</span>getNewBrowserSession&amp;<span style=color:#268bd2>1</span><span style=color:#719e07>=</span>*firefox /usr/local/firefox/firefox-bin&amp;<span style=color:#268bd2>2</span><span style=color:#719e07>=</span>http://www.google.com
+</code></pre></div><h3 id=firefox-chrome不适用于自定义配置文件>Firefox *chrome不适用于自定义配置文件</h3><p>检查Firefox配置文件文件夹
+-> prefs.js-> &ldquo;//user_pref(&ldquo;browser.startup.page&rdquo;, 0);&rdquo;
+像这样注释此行："//user_pref(&ldquo;browser.startup.page&rdquo;, 0);&rdquo;
+然后再试一次.</p><h3 id=是否可以在加载父页面时加载自定义弹出窗口即-在父页面的javascript-windowonload函数运行之前>是否可以在加载父页面时加载自定义弹出窗口(即, 在父页面的javascript window.onload()函数运行之前)</h3><p>否. Selenium依靠拦截器来确定正在加载的窗口名称.
+如果在onload()函数之后加载窗口,
+则这些拦截器最适合捕获新窗口.
+Selenium可能无法识别在onload功能之前加载的Windows.</p><h3 id=linux上的firefox>Linux上的Firefox</h3><p>在Unix/Linux上, Selenium 1.0之前的版本需要直接调用"firefox-bin&rdquo;,
+因此, 如果您使用的是以前的版本,
+请确保路径中包含真正的可执行文件.</p><p>在大多数Linux发行版中, 真正的 <em>firefox-bin</em> 位于:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   /usr/lib/firefox-x.x.x/ 
+</code></pre></div><p>其中x.x.x是您当前拥有的版本号.
+因此, 要将该路径添加到用户的路径.
+您将必须将以下内容添加到您的.bashrc文件中:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   <span style=color:#b58900>export</span> <span style=color:#268bd2>PATH</span><span style=color:#719e07>=</span><span style=color:#2aa198>&#34;</span><span style=color:#268bd2>$PATH</span><span style=color:#2aa198>:/usr/lib/firefox-x.x.x/&#34;</span>
+</code></pre></div><p>如有必要, 您可以在测试中直接指定firefox-bin的路径, 如下所示:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   <span style=color:#2aa198>&#34;*firefox /usr/lib/firefox-x.x.x/firefox-bin&#34;</span>
+</code></pre></div><h3 id=ie和样式属性>IE和样式属性</h3><p>如果您在Internet Explorer上运行测试,
+则无法使用其 <code>style</code> 属性来查找元素. 例如:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    //td<span style=color:#719e07>[</span>@style<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;background-color:yellow&#34;</span><span style=color:#719e07>]</span>
+</code></pre></div><p>这将在Firefox, Opera或Safari中完美运行, 但不适用于IE.
+IE将 <code>@style</code> 中的键解释为大写.
+因此, 即使源代码是小写的, 您也应该使用:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    //td<span style=color:#719e07>[</span>@style<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;BACKGROUND-COLOR:yellow&#34;</span><span style=color:#719e07>]</span>
+</code></pre></div><p>如果您的测试打算在多个浏览器上运行,
+那么这将是一个问题,
+但是您可以轻松地对测试进行编码以检测情况
+并尝试仅在IE中运行的替代定位器.</p><h3 id=遇到错误-随着googlechrome浏览器的关闭-无法将对象转换为原始值>遇到错误-随着*googlechrome浏览器的关闭, &ldquo;无法将对象转换为原始值&rdquo;</h3><p>为避免此错误, 您必须使用禁用
+同源策略检查的选项启动浏览器:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>   selenium.start<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;commandLineFlags=--disable-web-security&#34;</span><span style=color:#719e07>)</span>;
+</code></pre></div><h3 id=ie中遇到的错误-无法打开应用程序窗口弹出窗口阻止程序已启用>IE中遇到的错误-&ldquo;无法打开应用程序窗口；弹出窗口阻止程序已启用？&rdquo;</h3><p>为避免此错误, 您必须配置浏览器：
+禁用弹出窗口阻止程序,
+并取消选中工具&#187;选项&#187;安全中的"启用保护模式"选项.</p><section class=footnotes role=doc-endnotes><hr><ol><li id=fn:1 role=doc-endnote><p>代理人是中间的第三人, 两人之间传球. 它充当将AUT传送到浏览器的"网络服务器&rdquo;. 作为代理, Selenium服务器可以"说谎"AUT的真实URL. <a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2 role=doc-endnote><p>启动浏览器时使用的配置文件将localhost:4444设置为HTTP代理, 这就是为什么浏览器执行的任何HTTP请求都将通过Selenium服务器并且响应将通过它而不是真实服务器通过的原因. <a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></section><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/>“Selenium 1 (Selenium RC)”</a> was last updated on: 31 Mar 2021 15:20:57 +0530: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/196b3d28449e0fa61bc9d2c3cdade6202b736ed9>Adding missing pt-br docs [deploy site] (196b3d2)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/ title=Legacy><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/ title=从RC迁移到WebDriver style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1617184292></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/learn.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1617184292></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1617184292 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1617184292></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

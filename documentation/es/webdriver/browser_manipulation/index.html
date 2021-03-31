@@ -1,0 +1,1427 @@
+<!doctype html><html lang=es class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>Manipulación de Navegadores :: Documentación de Selenium</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1617184290 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1617184290 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1617184290></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/es/webdriver/browser_manipulation/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Buscar...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1617184290></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1617184290></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/es";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1617184290></script></div><div class=highlightable><ul class=topics><li data-nav-id=/es/getting_started/ title=Empezando class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started/>Empezando
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/getting_started/quick/ title="Guía rápida" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started/quick/>Guía rápida
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/introduction/ title=Introducción class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/>Introducción
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/introduction/the_selenium_project_and_tools/ title="El proyecto Selenium y sus herramientas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/>El proyecto Selenium y sus herramientas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/introduction/on_test_automation/ title="Sobre automatización de pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/on_test_automation/>Sobre automatización de pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/introduction/types_of_testing/ title="Tipos de pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/types_of_testing/>Tipos de pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/introduction/about_this_documentation/ title="Acerca de esta documentación" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/about_this_documentation/>Acerca de esta documentación
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/selenium_installation/ title="Instalación de Selenium" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/>Instalación de Selenium
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/selenium_installation/installing_selenium_libraries/ title="Instalando las librerías de Selenium" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/>Instalando las librerías de Selenium
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/selenium_installation/installing_webdriver_binaries/ title="Instalando los binarios de WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/>Instalando los binarios de WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/selenium_installation/installing_standalone_server/ title="Instalación del servidor Standalone" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_standalone_server/>Instalación del servidor Standalone
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/getting_started_with_webdriver/ title="Iniciando con WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/>Iniciando con WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/getting_started_with_webdriver/browsers/ title=Navegadores class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/browsers/>Navegadores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/getting_started_with_webdriver/third_party_drivers_and_plugins/ title="Navegadores de terceros y plugins" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/>Navegadores de terceros y plugins
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/webdriver/ title=WebDriver class="dd-item
+parent"><a href=https://www.selenium.dev/documentation/es/webdriver/>WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/webdriver/understanding_the_components/ title="Entendiendo los componentes" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/understanding_the_components/>Entendiendo los componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/driver_requirements/ title="Requerimientos de los controladores" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/driver_requirements/>Requerimientos de los controladores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/locating_elements/ title="Localizando elementos" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/locating_elements/>Localizando elementos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/browser_manipulation/ title="Manipulación de Navegadores" class="dd-item active"><a href=https://www.selenium.dev/documentation/es/webdriver/browser_manipulation/>Manipulación de Navegadores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/bidi_apis/ title="WebDriver Bidi APIs" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/bidi_apis/>WebDriver Bidi APIs
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/waits/ title=Esperas class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/waits/>Esperas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/support_classes/ title="Clases de apoyo" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/support_classes/>Clases de apoyo
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/js_alerts_prompts_and_confirmations/ title="Alertas, avisos y confirmaciones de JavaScript" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/>Alertas, avisos y confirmaciones de JavaScript
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/http_proxies/ title="Proxies Http" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/http_proxies/>Proxies Http
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/page_loading_strategy/ title="Estrategia de carga de página" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/page_loading_strategy/>Estrategia de carga de página
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/web_element/ title="Elemento web" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/web_element/>Elemento web
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/webdriver/keyboard/ title=Teclado class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/keyboard/>Teclado
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/remote_webdriver/ title="WebDriver remoto" class=dd-item><a href=https://www.selenium.dev/documentation/es/remote_webdriver/>WebDriver remoto
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/remote_webdriver/remote_webdriver_client/ title="WebDriver remoto - cliente" class=dd-item><a href=https://www.selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/>WebDriver remoto - cliente
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/guidelines_and_recommendations/ title="Guías y recomendaciones" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/>Guías y recomendaciones
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/guidelines_and_recommendations/page_object_models/ title="Modelos de objetos de página" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/>Modelos de objetos de página
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/domain_specific_language/ title="Lenguaje de dominio específico" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/>Lenguaje de dominio específico
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/generating_application_state/ title="Generar el estado de la aplicación" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/>Generar el estado de la aplicación
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/mock_external_services/ title="Mock de servicios externos" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/>Mock de servicios externos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/improved_reporting/ title="Mejores reportes" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/>Mejores reportes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/avoid_sharing_state/ title="Evitar compartir estados" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/>Evitar compartir estados
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/test_independency/ title="Independencia en las pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/>Independencia en las pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/consider_using_a_fluent_api/ title="Considerar el uso de un API fluída" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/>Considerar el uso de un API fluída
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/guidelines_and_recommendations/fresh_browser_per_test/ title="Nueva instancia del navegador por prueba" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/>Nueva instancia del navegador por prueba
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/worst_practices/ title="Malas prácticas" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/>Malas prácticas
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/worst_practices/captchas/ title=Captchas class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/captchas/>Captchas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/two_factor_authentication/ title="Two Factor Authentication" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/two_factor_authentication/>Two Factor Authentication
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/file_downloads/ title="Descarga de archivos" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/file_downloads/>Descarga de archivos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/http_response_codes/ title="Códigos de respuesta HTTP" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/http_response_codes/>Códigos de respuesta HTTP
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/gmail_email_and_facebook_logins/ title="Autenticarse con Gmail, email y Facebook" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/>Gmail, email y Facebook
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/test_dependency/ title="Dependencia entre pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/test_dependency/>Dependencia entre pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/performance_testing/ title="Pruebas de rendimiento" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/performance_testing/>Pruebas de rendimiento
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/worst_practices/link_spidering/ title="Rastreo de enlaces" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/link_spidering/>Rastreo de enlaces
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/grid/ title=Grid class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/>Grid
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/grid/purposes_and_main_functionalities/ title="Objetivos y funcionalidades principales" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/purposes_and_main_functionalities/>Objetivos y funcionalidades principales
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/when_to_use_grid/ title="Cuando usar el Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/when_to_use_grid/>Cuando usar el Grid
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/grid_3/ title="Grid 3" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/>Grid 3
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/grid/grid_3/components_of_a_grid/ title=Componentes class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/components_of_a_grid/>Componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/grid_3/setting_up_your_own_grid/ title="Configurando tu propio Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/setting_up_your_own_grid/>Configurando tu propio Grid
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/grid/grid_4/ title="Grid 4" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/>Grid 4
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/grid/grid_4/components_of_a_grid/ title=Componentes class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/components_of_a_grid/>Componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/grid_4/setting_up_your_own_grid/ title="Configurando tu propio Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/setting_up_your_own_grid/>Configurando tu propio Grid
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/grid_4/configuring_components/ title="Configurar componentest" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/configuring_components/>Configurar componentest
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/grid/grid_4/configuring_components/config_help/ title="Ayuda de configuración" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/configuring_components/config_help/>Ayuda de configuración
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/grid/grid_4/advanced_features/ title="Características avanzadas" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/advanced_features/>Características avanzadas
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/grid/grid_4/advanced_features/observability/ title=Observabilidad class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/advanced_features/observability/>Observabilidad
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/grid/grid_4/graphql_support/ title="GraphQL querying support" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/graphql_support/>GraphQL querying support
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/grid/grid_4/grid_endpoints/ title="Puntos finales de cuadrícula" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/grid_endpoints/>Puntos finales de cuadrícula
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/es/driver_idiosyncrasies/ title="Comportamientos del controlador" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/>Comportamientos del controlador
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/driver_idiosyncrasies/shared_capabilities/ title="Shared capabilities" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/>Shared capabilities
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/driver_idiosyncrasies/driver_specific_capabilities/ title="Capacidades específicas de los Drivers" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/>Capacidades específicas de los Drivers
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/support_packages/ title="Paquetes de soporte" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/>Paquetes de soporte
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/support_packages/working_with_colours/ title="Trabajando con colores" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_colours/>Trabajando con colores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/support_packages/working_with_select_elements/ title="Trabajando con elementos select" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_select_elements/>Trabajando con elementos select
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/support_packages/mouse_and_keyboard_actions_in_detail/ title="Acciones del ratón en detalle" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/>Acciones del ratón en detalle
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/support_packages/working_with_cookies/ title="Trabajando con las cookies" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_cookies/>Trabajando con las cookies
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/support_packages/chrome_devtools/ title="Chrome Devtools" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/chrome_devtools/>Chrome Devtools
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/legacy_docs/ title=Legacy class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/>Legacy
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/legacy_docs/selenium_rc/ title="Selenium 1 (Selenium RC)" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/selenium_rc/>Selenium 1 (Selenium RC)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/legacy_docs/migrating_from_rc_to_webdriver/ title="Migrando de RC a WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/migrating_from_rc_to_webdriver/>Migrando de RC a WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/legacy_docs/html-runner/ title="HTML runner" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/html-runner/>HTML runner
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/legacy_docs/selenium_ide/ title="Legacy Selenium IDE" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/selenium_ide/>Legacy Selenium IDE
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/legacy_docs/remote_webdriver_server/ title="WebDriver remoto - servidor" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/remote_webdriver_server/>WebDriver remoto - servidor
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/es/front_matter/ title="Texto preliminar" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/>Texto preliminar
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/es/front_matter/copyright_and_attributions/ title="Derechos de autor y atribuciones" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions/>Derechos de autor
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/es/front_matter/typographical_conventions/ title="Convenciones tipográficas" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/typographical_conventions/>Convenciones tipográficas
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>Más</h3><ul><li><a class=padding href=https://www.selenium.dev/><i class="fas fa-home"></i>Selenium Home</a></li><li><a class=padding href=https://github.com/SeleniumHQ/seleniumhq.github.io><i class="fab fa-fw fa-github"></i>Repo en GitHub</a></li><li><a class=padding href=https://github.com/seleniumhq/seleniumhq.github.io/issues><i class="fas fa-fw fa-exclamation-triangle"></i>Reportar un problema</a></li><li><a class=padding href=https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions><i class="fas fa-fw fa-trophy"></i>Créditos</a></li><li><a class=padding href=https://www.selenium.dev/documentation/es/contributing><i class="fas fa-fw fa-bullhorn"></i>Cómo contribuír</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value;">
+<option id=de value=https://www.selenium.dev/documentation/de/webdriver/browser_manipulation/>Deutsch</option>
+<option id=en value=https://www.selenium.dev/documentation/en/webdriver/browser_manipulation/>English</option>
+<option id=pt-br value=https://www.selenium.dev/documentation/pt-br/webdriver/browser_manipulation/>Português (Brasileiro)</option>
+<option id=es value=https://www.selenium.dev/documentation/es/webdriver/browser_manipulation/ selected>Español</option>
+<option id=nl value=https://www.selenium.dev/documentation/nl/webdriver/browser_manipulation/>Nederlands</option>
+<option id=zh-cn value=https://www.selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/>中文简体</option>
+<option id=fr value=https://www.selenium.dev/documentation/fr/webdriver/browser_manipulation/>Français</option>
+<option id=ja value=https://www.selenium.dev/documentation/ja/webdriver/browser_manipulation/>日本語</option>
+<option id=ko value=https://www.selenium.dev/documentation/ko/webdriver/browser_manipulation/>한국어</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75" /></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i>Borrar Historial</a></li></ul></section><section id=footer><p>&copy; 2013-2021</p><p>Software Freedom Conservancy (SFC)</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Editar esta página" href=https://github.com/SeleniumHQ/seleniumhq.github.io/edit/dev/docs_source_files/content/webdriver/browser_manipulation.es.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Editar esta página</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=https://www.selenium.dev/documentation/es/>Selenium, el proyecto para automatizar navegadores</a> > <a href=https://www.selenium.dev/documentation/es/webdriver/>WebDriver</a> > Manipulación de Navegadores</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#ruby>Ruby</a></li><li><a href=#internet-explorer>Internet Explorer</a></li><li><a href=#manejo-de-los-navegadores-web>Manejo de los navegadores web</a><ul><li><a href=#navegar-hacia>Navegar hacia</a></li><li><a href=#obtener-la-url-actual>Obtener la URL actual</a></li><li><a href=#retroceder>Retroceder</a></li><li><a href=#avanzar>Avanzar</a></li><li><a href=#actualizar>Actualizar</a></li><li><a href=#obtener-el-título>Obtener el título</a></li></ul></li><li><a href=#ventanas-y-pestañas>Ventanas y pestañas</a><ul><li><a href=#obtener-el-controlador-de-ventanas>Obtener el controlador de ventanas</a></li><li><a href=#cambiar-entre-ventanas-o-pestañas>Cambiar entre ventanas o pestañas</a></li><li><a href=#crea-una-nueva-ventana-o-pestaña-y-cambia-a-ella>Crea una nueva ventana o pestaña y cambia a ella</a></li><li><a href=#cerrando-una-ventana-o-pestaña>Cerrando una ventana o pestaña</a></li><li><a href=#saliendo-del-navegador-al-final-de-una-sesión>Saliendo del navegador al final de una sesión</a></li></ul></li><li><a href=#frames-e-iframes>Frames e Iframes</a><ul><li><a href=#usando-un-webelement>Usando un WebElement</a></li><li><a href=#usando-el-nombre-o-el-id>Usando el nombre o el ID</a></li><li><a href=#por-indice>Por indice</a></li><li><a href=#saliendo-de-un-frame>Saliendo de un frame</a></li></ul></li><li><a href=#manejo-de-las-ventanas>Manejo de las ventanas</a><ul><li><a href=#obtener-el-tamaño-de-la-ventana>Obtener el tamaño de la ventana</a></li><li><a href=#fija-el-tamaño-de-la-ventana>Fija el tamaño de la ventana</a></li><li><a href=#obten-la-posicion-de-la-ventana>Obten la posicion de la ventana</a></li></ul></li><li><a href=#fija-la-posición-de-la-ventana>Fija la posición de la ventana</a><ul><li><a href=#maximizar-la-ventana>Maximizar la ventana</a></li><li><a href=#minimizar-la-ventana>Minimizar la ventana</a></li><li><a href=#modo-pantalla-completa>Modo pantalla completa</a></li><li><a href=#takescreenshot>TakeScreenshot</a></li><li><a href=#takeelementscreenshot>TakeElementScreenshot</a></li><li><a href=#execute-script>Execute Script</a></li><li><a href=#print-page>Print Page</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Manipulación de Navegadores</h1><div class="notices info"><p><i class="fas fa-language"></i>Page being translated from
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!</p></div><h2 id=ruby>Ruby</h2><p>Ruby no esta instalado por defecto en Windows. Puedes descargar la ultima
+<a href=//rubyinstaller.org/downloads>versión</a> y ejecutar el instalador. Puedes dejar
+todos los parámetros de configuración con los valores por defecto excepto el
+parámetro <em>Add Ruby executables to your PATH</em> de la pantalla de
+<em>Installation Destination and Optional Tasks</em>.
+Para manejar cualquier navegador tienes que instalar la gema de Ruby
+<code>selenium-webdriver</code>. Para instalarla abre una consola de comando y ejecuta el
+siguiente comando.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gem install selenium-webdriver
+</code></pre></div><p>O si usas <a href=//bundler.io>Bundler</a> añade esta linea al Gemfile de tu aplicación:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>gem <span style=color:#2aa198>&#34;selenium-webdriver&#34;</span>
+</code></pre></div><p>Y después ejecuta el siguiente comando en el terminal:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>bundle install
+</code></pre></div><h2 id=internet-explorer>Internet Explorer</h2><p>Internet Explorer viene instalado por defecto en Windows, por lo que no es
+necesario realizar ninguna instalación. Para manejar Internet Explorer en Windows
+tienes que descargar la ultima versión del
+<a href=https://selenium.dev/downloads/>driver de Internet Explorer</a> y añadirlo a un
+directorio que este incluido en el <code>PATH</code> del sistema. Para saber que directorios
+están incluidos en el <code>PATH</code> escribe el comando <code>echo %PATH%</code> en el terminal.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bat data-lang=bat>$ echo <span style=color:#268bd2>%PATH%</span>
+C:\Ruby200\bin<span style=color:#586e75>;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</span>
+</code></pre></div><p>Por ejemplo el directorio <code>C:\Ruby200\bin</code> parece un buen lugar. Descomprime el
+archivo <code>IEDriverServer</code> y mueve el ejecutable <code>IEDriverServer.exe</code> a esta carpeta.</p><p>Las lineas que se muestran a continuación deberían abrir una nueva ventana de
+Internet Explorer.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;selenium-webdriver&#34;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:internet_explorer</span>
+</code></pre></div><h2 id=manejo-de-los-navegadores-web>Manejo de los navegadores web</h2><h3 id=navegar-hacia>Navegar hacia</h3><p>La primera cosa que querrás hacer después de levantar un navegador es abrir una
+pagina web. Esto se puede lograr en una sola linea:</p><div class=tabset><input type=radio name=tabsetcode1 id=tab0code1 aria-controls=javacode1 checked>
+<label for=tab0code1>Java</label>
+<input type=radio name=tabsetcode1 id=tab1code1 aria-controls=pythoncode1>
+<label for=tab1code1>Python</label>
+<input type=radio name=tabsetcode1 id=tab2code1 aria-controls=cscode1>
+<label for=tab2code1>C#</label>
+<input type=radio name=tabsetcode1 id=tab3code1 aria-controls=rubycode1>
+<label for=tab3code1>Ruby</label>
+<input type=radio name=tabsetcode1 id=tab4code1 aria-controls=javascriptcode1>
+<label for=tab4code1>JavaScript</label>
+<input type=radio name=tabsetcode1 id=tab5code1 aria-controls=kotlincode1>
+<label for=tab5code1>Kotlin</label><div class=tab-panels><section id=javacode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Forma adecuada
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://selenium.dev&#34;</span><span style=color:#719e07>);</span>
+
+<span style=color:#586e75>//Forma extensa
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>to<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://selenium.dev&#34;</span><span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=pythoncode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;https://selenium.dev&#34;</span>)
+  </code></pre></div></section><section id=csharpcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+driver.Navigate().GoToUrl(<span style=color:#2aa198>@&#34;https://selenium.dev&#34;</span>);
+  
+</code></pre></div></section><section id=rubycode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#dc322f>//</span><span style=color:#cb4b16>Forma</span> adecuada
+driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://selenium.dev&#39;</span>
+
+<span style=color:#dc322f>//</span><span style=color:#cb4b16>Forma</span> extensa
+driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>to <span style=color:#2aa198>&#39;https://selenium.dev&#39;</span>
+  </code></pre></div></section><section id=javascriptcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+await driver.get(<span style=color:#2aa198>&#39;https://selenium.dev&#39;</span>);
+  
+</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Forma adecuada
+</span><span style=color:#586e75></span>driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://selenium.dev&#34;</span>)
+
+<span style=color:#586e75>//Forma extensa
+</span><span style=color:#586e75></span>driver.navigate().to(<span style=color:#2aa198>&#34;https://selenium.dev&#34;</span>)
+  </code></pre></div></section></div></div><h3 id=obtener-la-url-actual>Obtener la URL actual</h3><p>Puedes leer la URL actual desde la barra de direcciones del navegador usando:</p><div class=tabset><input type=radio name=tabsetcode2 id=tab0code2 aria-controls=javacode2 checked>
+<label for=tab0code2>Java</label>
+<input type=radio name=tabsetcode2 id=tab1code2 aria-controls=pythoncode2>
+<label for=tab1code2>Python</label>
+<input type=radio name=tabsetcode2 id=tab2code2 aria-controls=cscode2>
+<label for=tab2code2>C#</label>
+<input type=radio name=tabsetcode2 id=tab3code2 aria-controls=rubycode2>
+<label for=tab3code2>Ruby</label>
+<input type=radio name=tabsetcode2 id=tab4code2 aria-controls=javascriptcode2>
+<label for=tab4code2>JavaScript</label>
+<input type=radio name=tabsetcode2 id=tab5code2 aria-controls=kotlincode2>
+<label for=tab5code2>Kotlin</label><div class=tab-panels><section id=javacode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getCurrentUrl<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>current_url</code></pre></div></section><section id=csharpcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Url;
+</code></pre></div></section><section id=rubycode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>current_url</code></pre></div></section><section id=javascriptcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getCurrentUrl();
+</code></pre></div></section><section id=kotlincode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.currentUrl</code></pre></div></section></div></div><h3 id=retroceder>Retroceder</h3><p>Presionando el botón de retroceder del navegador:</p><div class=tabset><input type=radio name=tabsetcode3 id=tab0code3 aria-controls=javacode3 checked>
+<label for=tab0code3>Java</label>
+<input type=radio name=tabsetcode3 id=tab1code3 aria-controls=pythoncode3>
+<label for=tab1code3>Python</label>
+<input type=radio name=tabsetcode3 id=tab2code3 aria-controls=cscode3>
+<label for=tab2code3>C#</label>
+<input type=radio name=tabsetcode3 id=tab3code3 aria-controls=rubycode3>
+<label for=tab3code3>Ruby</label>
+<input type=radio name=tabsetcode3 id=tab4code3 aria-controls=javascriptcode3>
+<label for=tab4code3>JavaScript</label>
+<input type=radio name=tabsetcode3 id=tab5code3 aria-controls=kotlincode3>
+<label for=tab5code3>Kotlin</label><div class=tab-panels><section id=javacode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>back<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>back()</code></pre></div></section><section id=csharpcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Back();
+</code></pre></div></section><section id=rubycode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>back</code></pre></div></section><section id=javascriptcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().back();
+</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().back() </code></pre></div></section></div></div><h3 id=avanzar>Avanzar</h3><p>Presionando el botón de avanzar del navegador:</p><div class=tabset><input type=radio name=tabsetcode4 id=tab0code4 aria-controls=javacode4 checked>
+<label for=tab0code4>Java</label>
+<input type=radio name=tabsetcode4 id=tab1code4 aria-controls=pythoncode4>
+<label for=tab1code4>Python</label>
+<input type=radio name=tabsetcode4 id=tab2code4 aria-controls=cscode4>
+<label for=tab2code4>C#</label>
+<input type=radio name=tabsetcode4 id=tab3code4 aria-controls=rubycode4>
+<label for=tab3code4>Ruby</label>
+<input type=radio name=tabsetcode4 id=tab4code4 aria-controls=javascriptcode4>
+<label for=tab4code4>JavaScript</label>
+<input type=radio name=tabsetcode4 id=tab5code4 aria-controls=kotlincode4>
+<label for=tab5code4>Kotlin</label><div class=tab-panels><section id=javacode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>forward<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>forward()</code></pre></div></section><section id=csharpcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Forward();
+</code></pre></div></section><section id=rubycode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>forward</code></pre></div></section><section id=javascriptcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().forward();
+</code></pre></div></section><section id=kotlincode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().forward()</code></pre></div></section></div></div><h3 id=actualizar>Actualizar</h3><p>Recargando la pagina actual:</p><div class=tabset><input type=radio name=tabsetcode5 id=tab0code5 aria-controls=javacode5 checked>
+<label for=tab0code5>Java</label>
+<input type=radio name=tabsetcode5 id=tab1code5 aria-controls=pythoncode5>
+<label for=tab1code5>Python</label>
+<input type=radio name=tabsetcode5 id=tab2code5 aria-controls=cscode5>
+<label for=tab2code5>C#</label>
+<input type=radio name=tabsetcode5 id=tab3code5 aria-controls=rubycode5>
+<label for=tab3code5>Ruby</label>
+<input type=radio name=tabsetcode5 id=tab4code5 aria-controls=javascriptcode5>
+<label for=tab4code5>JavaScript</label>
+<input type=radio name=tabsetcode5 id=tab5code5 aria-controls=kotlincode5>
+<label for=tab5code5>Kotlin</label><div class=tab-panels><section id=javacode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>refresh<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>refresh()</code></pre></div></section><section id=csharpcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Refresh();
+</code></pre></div></section><section id=rubycode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>refresh</code></pre></div></section><section id=javascriptcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().refresh();
+</code></pre></div></section><section id=kotlincode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().refresh()</code></pre></div></section></div></div><h3 id=obtener-el-título>Obtener el título</h3><p>Puedes leer el título de la pagina actual desde el navegador:</p><div class=tabset><input type=radio name=tabsetcode6 id=tab0code6 aria-controls=javacode6 checked>
+<label for=tab0code6>Java</label>
+<input type=radio name=tabsetcode6 id=tab1code6 aria-controls=pythoncode6>
+<label for=tab1code6>Python</label>
+<input type=radio name=tabsetcode6 id=tab2code6 aria-controls=cscode6>
+<label for=tab2code6>C#</label>
+<input type=radio name=tabsetcode6 id=tab3code6 aria-controls=rubycode6>
+<label for=tab3code6>Ruby</label>
+<input type=radio name=tabsetcode6 id=tab4code6 aria-controls=javascriptcode6>
+<label for=tab4code6>JavaScript</label>
+<input type=radio name=tabsetcode6 id=tab5code6 aria-controls=kotlincode6>
+<label for=tab5code6>Kotlin</label><div class=tab-panels><section id=javacode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getTitle<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>title</code></pre></div></section><section id=csharpcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Title;
+</code></pre></div></section><section id=rubycode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>title</code></pre></div></section><section id=javascriptcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getTitle();
+</code></pre></div></section><section id=kotlincode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.title</code></pre></div></section></div></div><h2 id=ventanas-y-pestañas>Ventanas y pestañas</h2><h3 id=obtener-el-controlador-de-ventanas>Obtener el controlador de ventanas</h3><p>El WebDriver no hace distinción entre ventanas y pestañas. Si tu sitio web abre
+una nueva pestaña o ventana, Selenium te permitirá trabajar con ella usando un
+controlador de ventanas. Cada ventana tiene un identificador único el cual
+persiste en una sola sesión. Puedes obtener el controlador de la ventana de la
+ventana actual usando:</p><div class=tabset><input type=radio name=tabsetcode7 id=tab0code7 aria-controls=javacode7 checked>
+<label for=tab0code7>Java</label>
+<input type=radio name=tabsetcode7 id=tab1code7 aria-controls=pythoncode7>
+<label for=tab1code7>Python</label>
+<input type=radio name=tabsetcode7 id=tab2code7 aria-controls=cscode7>
+<label for=tab2code7>C#</label>
+<input type=radio name=tabsetcode7 id=tab3code7 aria-controls=rubycode7>
+<label for=tab3code7>Ruby</label>
+<input type=radio name=tabsetcode7 id=tab4code7 aria-controls=javascriptcode7>
+<label for=tab4code7>JavaScript</label>
+<input type=radio name=tabsetcode7 id=tab5code7 aria-controls=kotlincode7>
+<label for=tab5code7>Kotlin</label><div class=tab-panels><section id=javacode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getWindowHandle<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>current_window_handle</code></pre></div></section><section id=csharpcode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.CurrentWindowHandle;
+</code></pre></div></section><section id=rubycode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>window_handle</code></pre></div></section><section id=javascriptcode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getWindowHandle();
+</code></pre></div></section><section id=kotlincode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.windowHandle</code></pre></div></section></div></div><h3 id=cambiar-entre-ventanas-o-pestañas>Cambiar entre ventanas o pestañas</h3><p>Haciendo clic en un enlace el cual abre
+<a href=https://seleniumhq.github.io target=_blank>una nueva ventana</a>
+cambiará el foco a la nueva ventana o pestaña en la pantalla, pero el WebDriver
+no sabrá que ventana el sistema operativo considera activa. Para trabajar con la
+nueva ventana necesitaras cambiar a ella. Si solo tienes dos ventanas o pestañas
+abiertas y sabes en cual empezaste, por proceso de eliminación, puede recorrer
+las ventanas o pestañas que ve el WebDriver y cambiar a una de ellas que no sea
+la original.</p><p>Sin embargo Selenium 4 proporciona una nueva API
+<a href=https://selenium.dev/documentation/es/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch>NewWindow</a>
+la cual crea una nueva pestaña o ventana y automáticamente cambia a ella.</p><div class=tabset><input type=radio name=tabsetcode8 id=tab0code8 aria-controls=javacode8 checked>
+<label for=tab0code8>Java</label>
+<input type=radio name=tabsetcode8 id=tab1code8 aria-controls=pythoncode8>
+<label for=tab1code8>Python</label>
+<input type=radio name=tabsetcode8 id=tab2code8 aria-controls=cscode8>
+<label for=tab2code8>C#</label>
+<input type=radio name=tabsetcode8 id=tab3code8 aria-controls=rubycode8>
+<label for=tab3code8>Ruby</label>
+<input type=radio name=tabsetcode8 id=tab4code8 aria-controls=javascriptcode8>
+<label for=tab4code8>JavaScript</label>
+<input type=radio name=tabsetcode8 id=tab5code8 aria-controls=kotlincode8>
+<label for=tab5code8>Kotlin</label><div class=tab-panels><section id=javacode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Almacena el ID de la ventana original
+</span><span style=color:#586e75></span>String originalWindow <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>getWindowHandle<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>//Comprueba que no existen otras ventanas abiertas previamente
+</span><span style=color:#586e75></span><span style=color:#719e07>assert</span> driver<span style=color:#719e07>.</span>getWindowHandles<span style=color:#719e07>().</span>size<span style=color:#719e07>()</span> <span style=color:#719e07>==</span> 1<span style=color:#719e07>;</span>
+
+<span style=color:#586e75>//Haz clic en el enlace el cual abre una nueva ventana
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>linkText<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;new window&#34;</span><span style=color:#719e07>)).</span>click<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>//Espera a la nueva ventana o pestaña
+</span><span style=color:#586e75></span>wait<span style=color:#719e07>.</span>until<span style=color:#719e07>(</span>numberOfWindowsToBe<span style=color:#719e07>(</span>2<span style=color:#719e07>));</span>
+
+<span style=color:#586e75>//Recorrelas hasta encontrar el controlador de la nueva ventana
+</span><span style=color:#586e75></span><span style=color:#719e07>for</span> <span style=color:#719e07>(</span>String windowHandle <span style=color:#719e07>:</span> driver<span style=color:#719e07>.</span>getWindowHandles<span style=color:#719e07>())</span> <span style=color:#719e07>{</span>
+    <span style=color:#719e07>if</span><span style=color:#719e07>(!</span>originalWindow<span style=color:#719e07>.</span>contentEquals<span style=color:#719e07>(</span>windowHandle<span style=color:#719e07>))</span> <span style=color:#719e07>{</span>
+        driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>window<span style=color:#719e07>(</span>windowHandle<span style=color:#719e07>);</span>
+        <span style=color:#719e07>break</span><span style=color:#719e07>;</span>
+    <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+
+<span style=color:#586e75>//Espera a que la nueva ventana cargue su contenido
+</span><span style=color:#586e75></span>wait<span style=color:#719e07>.</span>until<span style=color:#719e07>(</span>titleIs<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Selenium documentation&#34;</span><span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.support.ui <span style=color:#719e07>import</span> WebDriverWait
+<span style=color:#719e07>from</span> selenium.webdriver.support <span style=color:#719e07>import</span> expected_conditions <span style=color:#719e07>as</span> EC
+
+<span style=color:#586e75># Instancia el driver</span>
+<span style=color:#719e07>with</span> webdriver<span style=color:#719e07>.</span>Firefox() <span style=color:#719e07>as</span> driver:
+    <span style=color:#586e75># Abre la URL</span>
+    driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;https://seleniumhq.github.io&#34;</span>)
+
+    <span style=color:#586e75># Configura una espera para despues</span>
+    wait <span style=color:#719e07>=</span> WebDriverWait(driver, <span style=color:#2aa198>10</span>)
+
+    <span style=color:#586e75># Almacena el ID de la ventana original</span>
+    original_window <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>current_window_handle
+
+    <span style=color:#586e75># Comprueba que no existen otras ventanas abiertas previamente</span>
+    <span style=color:#719e07>assert</span> <span style=color:#b58900>len</span>(driver<span style=color:#719e07>.</span>window_handles) <span style=color:#719e07>==</span> <span style=color:#2aa198>1</span>
+
+    <span style=color:#586e75># Haz clic en el enlace el cual abre una nueva ventana</span>
+    driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>LINK_TEXT, <span style=color:#2aa198>&#34;new window&#34;</span>)<span style=color:#719e07>.</span>click()
+
+    <span style=color:#586e75># Espera a la nueva ventana o pestaña</span>
+    wait<span style=color:#719e07>.</span>until(EC<span style=color:#719e07>.</span>number_of_windows_to_be(<span style=color:#2aa198>2</span>))
+
+    <span style=color:#586e75># Recorrelas hasta encontrar el controlador de la nueva ventana</span>
+    <span style=color:#719e07>for</span> window_handle <span style=color:#719e07>in</span> driver<span style=color:#719e07>.</span>window_handles:
+        <span style=color:#719e07>if</span> window_handle <span style=color:#719e07>!=</span> original_window:
+            driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>window(window_handle)
+            <span style=color:#719e07>break</span>
+
+    <span style=color:#586e75># Espera a que la nueva ventana carge su contenido</span>
+    wait<span style=color:#719e07>.</span>until(EC<span style=color:#719e07>.</span>title_is(<span style=color:#2aa198>&#34;SeleniumHQ Browser Automation&#34;</span>))
+  </code></pre></div></section><section id=csharpcode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Almacena el ID de la ventana original
+</span><span style=color:#586e75></span><span style=color:#dc322f>string</span> originalWindow = driver.CurrentWindowHandle;
+
+<span style=color:#586e75>//Comprueba que no existen otras ventanas abiertas previamente
+</span><span style=color:#586e75></span>Assert.AreEqual(driver.WindowHandles.Count, <span style=color:#2aa198>1</span>);
+
+<span style=color:#586e75>//Haz clic en el enlace el cual abre una nueva ventana
+</span><span style=color:#586e75></span>driver.FindElement(By.LinkText(<span style=color:#2aa198>&#34;new window&#34;</span>)).Click();
+
+<span style=color:#586e75>//Espera a la nueva ventana o pestaña
+</span><span style=color:#586e75></span>wait.Until(wd =&gt; wd.WindowHandles.Count == <span style=color:#2aa198>2</span>);
+
+<span style=color:#586e75>//Recorrelas hasta encontrar el controlador de la nueva ventana
+</span><span style=color:#586e75></span><span style=color:#719e07>foreach</span>(<span style=color:#dc322f>string</span> window <span style=color:#719e07>in</span> driver.WindowHandles)
+{
+    <span style=color:#719e07>if</span>(originalWindow != window)
+    {
+        driver.SwitchTo().Window(window);
+        <span style=color:#719e07>break</span>;
+    }
+}
+<span style=color:#586e75>//Espera a que la nueva ventana cargue su contenido
+</span><span style=color:#586e75></span>wait.Until(wd =&gt; wd.Title == <span style=color:#2aa198>&#34;Selenium documentation&#34;</span>);
+  
+</code></pre></div></section><section id=rubycode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75>#Almacena el ID de la ventana original</span>
+original_window <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>window_handle
+
+<span style=color:#586e75>#Comprueba que no existen otras ventanas abiertas previamente</span>
+assert(driver<span style=color:#719e07>.</span>window_handles<span style=color:#719e07>.</span>length <span style=color:#719e07>==</span> <span style=color:#2aa198>1</span>, <span style=color:#2aa198>&#39;Expected one window&#39;</span>)
+
+<span style=color:#586e75>#Haz clic en el enlace el cual abre una nueva ventana</span>
+driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>link</span>: <span style=color:#2aa198>&#39;new window&#39;</span>)<span style=color:#719e07>.</span>click
+
+<span style=color:#586e75>#Espera a la nueva ventana o pestaña</span>
+wait<span style=color:#719e07>.</span>until { driver<span style=color:#719e07>.</span>window_handles<span style=color:#719e07>.</span>length <span style=color:#719e07>==</span> <span style=color:#2aa198>2</span> }
+
+<span style=color:#586e75>#Recorrelas hasta encontrar el controlador de la nueva ventana</span>
+driver<span style=color:#719e07>.</span>window_handles<span style=color:#719e07>.</span>each <span style=color:#719e07>do</span> <span style=color:#719e07>|</span>handle<span style=color:#719e07>|</span>
+    <span style=color:#719e07>if</span> handle <span style=color:#719e07>!=</span> original_window
+        driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>window handle
+        <span style=color:#719e07>break</span>
+    <span style=color:#719e07>end</span>
+<span style=color:#719e07>end</span>
+
+<span style=color:#586e75>#Espera a que la nueva ventana carge su contenido</span>
+wait<span style=color:#719e07>.</span>until { driver<span style=color:#719e07>.</span>title <span style=color:#719e07>==</span> <span style=color:#2aa198>&#39;Selenium documentation&#39;</span>}
+  </code></pre></div></section><section id=javascriptcode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>//Almacena el ID de la ventana original
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> originalWindow <span style=color:#719e07>=</span> await driver.getWindowHandle();
+
+<span style=color:#586e75>//Comprueba que no existen otras ventanas abiertas previamente
+</span><span style=color:#586e75></span>assert((await driver.getAllWindowHandles()).length <span style=color:#719e07>===</span> <span style=color:#2aa198>1</span>);
+
+<span style=color:#586e75>//Haz clic en el enlace el cual abre una nueva ventana
+</span><span style=color:#586e75></span>await driver.findElement(By.linkText(<span style=color:#2aa198>&#39;new window&#39;</span>)).click();
+
+<span style=color:#586e75>//Espera a la nueva ventana o pestaña
+</span><span style=color:#586e75></span>await driver.wait(
+    async () =&gt; (await driver.getAllWindowHandles()).length <span style=color:#719e07>===</span> <span style=color:#2aa198>2</span>,
+    <span style=color:#2aa198>10000</span>
+  );
+
+<span style=color:#586e75>//Recorrelas hasta encontrar el controlador de la nueva ventana
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> windows <span style=color:#719e07>=</span> await driver.getAllWindowHandles();
+windows.forEach(async handle =&gt; {
+  <span style=color:#719e07>if</span> (handle <span style=color:#719e07>!==</span> originalWindow) {
+    await driver.switchTo().<span style=color:#b58900>window</span>(handle);
+  }
+});
+
+<span style=color:#586e75>//Espera a que la nueva ventana cargue su contenido
+</span><span style=color:#586e75></span>await driver.wait(until.titleIs(<span style=color:#2aa198>&#39;Selenium documentation&#39;</span>), <span style=color:#2aa198>10000</span>);
+  
+</code></pre></div></section><section id=kotlincode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Almacena el ID de la ventana original
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> originalWindow = driver.getWindowHandle()
+
+<span style=color:#586e75>//Comprueba que no existen otras ventanas abiertas previamente
+</span><span style=color:#586e75></span>assert(driver.getWindowHandles().size() === <span style=color:#2aa198>1</span>)
+
+<span style=color:#586e75>//Haz clic en el enlace el cual abre una nueva ventana
+</span><span style=color:#586e75></span>driver.findElement(By.linkText(<span style=color:#2aa198>&#34;new window&#34;</span>)).click()
+
+<span style=color:#586e75>//Espera a la nueva ventana o pestaña
+</span><span style=color:#586e75></span>wait.until(numberOfWindowsToBe(<span style=color:#2aa198>2</span>))
+
+<span style=color:#586e75>//Recorrelas hasta encontrar el controlador de la nueva ventana
+</span><span style=color:#586e75></span><span style=color:#719e07>for</span> (windowHandle <span style=color:#719e07>in</span> driver.getWindowHandles()) {
+    <span style=color:#719e07>if</span> (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        <span style=color:#719e07>break</span>
+    }
+}
+
+<span style=color:#586e75>//Espera a que la nueva ventana cargue su contenido
+</span><span style=color:#586e75></span>wait.until(titleIs(<span style=color:#2aa198>&#34;Selenium documentation&#34;</span>))
+
+  </code></pre></div></section></div></div><h3 id=crea-una-nueva-ventana-o-pestaña-y-cambia-a-ella>Crea una nueva ventana o pestaña y cambia a ella</h3><p>Crea una nueva ventana o pestaña y cambia el foco de la pantalla a la nueva
+ventana o pestaña.
+No necesitas cambiar el controlador para poder trabajar sobre la nueva ventana o
+pestaña. Si tienes mas de dos ventanas o pestañas abiertas diferentes de la nueva
+puedes recorrerlas y cambiar a la que no sea la original.</p><p><strong>Nota: Esta funcionalidad es específica de Selenium 4 y versiones posteriores.</strong><div class=tabset><input type=radio name=tabsetcode9 id=tab0code9 aria-controls=javacode9 checked>
+<label for=tab0code9>Java</label>
+<input type=radio name=tabsetcode9 id=tab1code9 aria-controls=pythoncode9>
+<label for=tab1code9>Python</label>
+<input type=radio name=tabsetcode9 id=tab2code9 aria-controls=cscode9>
+<label for=tab2code9>C#</label>
+<input type=radio name=tabsetcode9 id=tab3code9 aria-controls=rubycode9>
+<label for=tab3code9>Ruby</label>
+<input type=radio name=tabsetcode9 id=tab4code9 aria-controls=javascriptcode9>
+<label for=tab4code9>JavaScript</label>
+<input type=radio name=tabsetcode9 id=tab5code9 aria-controls=kotlincode9>
+<label for=tab5code9>Kotlin</label><div class=tab-panels><section id=javacode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Abre una nueva pestaña y cambia el controlador a ella
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>newWindow<span style=color:#719e07>(</span>WindowType<span style=color:#719e07>.</span>TAB<span style=color:#719e07>);</span>
+
+<span style=color:#586e75>// Abre una nueva ventana y cambia el controlar a ella
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>newWindow<span style=color:#719e07>(</span>WindowType<span style=color:#719e07>.</span>WINDOW<span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=pythoncode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Abre una nueva pestaña y cambia el controlador a ella</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>new_window(<span style=color:#2aa198>&#39;tab&#39;</span>)
+
+<span style=color:#586e75># Abre una nueva ventana y cambia el controlar a ella</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>new_window(<span style=color:#2aa198>&#39;window&#39;</span>)
+  </code></pre></div></section><section id=csharpcode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// Abre una nueva pestaña y cambia el controlador a ella
+</span><span style=color:#586e75></span>driver.SwitchTo().NewWindow(WindowType.Tab)
+
+<span style=color:#586e75>// Abre una nueva ventana y cambia el controlar a ella
+</span><span style=color:#586e75></span>driver.SwitchTo().NewWindow(WindowType.Window)
+  
+</code></pre></div></section><section id=rubycode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Nota: El API new_window en Ruby solo abre una nueva pestaña o ventana pero no</span>
+<span style=color:#586e75># cambiará el controlador automáticamente, el usuario tiene forzar el cambio a</span>
+<span style=color:#586e75># la nueva pestaña o ventana</span>
+
+<span style=color:#586e75># Abre una nueva pestaña</span>
+driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>new_window(<span style=color:#2aa198>:tab</span>)
+
+<span style=color:#586e75># Abre una nueva ventana</span>
+driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>new_window(<span style=color:#2aa198>:window</span>)
+  </code></pre></div></section><section id=javascriptcode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Abre una nueva pestaña y cambia el controlador a ella
+</span><span style=color:#586e75></span>await driver.switchTo().newWindow(<span style=color:#2aa198>&#39;tab&#39;</span>);
+
+<span style=color:#586e75>// Abre una nueva ventana y cambia el controlar a ella
+</span><span style=color:#586e75></span>await driver.switchTo().newWindow(<span style=color:#2aa198>&#39;window&#39;</span>);
+
+  
+</code></pre></div></section><section id=kotlincode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Abre una nueva pestaña y cambia el controlador a ella
+</span><span style=color:#586e75></span>driver.switchTo().newWindow(WindowType.TAB)
+
+<span style=color:#586e75>// Abre una nueva ventana y cambia el controlar a ella
+</span><span style=color:#586e75></span>driver.switchTo().newWindow(WindowType.WINDOW)
+  </code></pre></div></section></div></div></p><h3 id=cerrando-una-ventana-o-pestaña>Cerrando una ventana o pestaña</h3><p>Cuando hayas acabado con una ventana o una pestaña <em>y</em> no sea la única ventana o
+pestaña abierta en el navegador, debes cerrarla y cambiar el controlador de
+vuelta a la ventana o pestaña que usabas con anterioridad. Asumiendo que has
+seguido los ejemplos de código de la sección anterior dispondrás de una ventana
+almacenada en una variable. Si le añades el siguiente código obtendrás un ejemplo:</p><div class=tabset><input type=radio name=tabsetcode10 id=tab0code10 aria-controls=javacode10 checked>
+<label for=tab0code10>Java</label>
+<input type=radio name=tabsetcode10 id=tab1code10 aria-controls=pythoncode10>
+<label for=tab1code10>Python</label>
+<input type=radio name=tabsetcode10 id=tab2code10 aria-controls=cscode10>
+<label for=tab2code10>C#</label>
+<input type=radio name=tabsetcode10 id=tab3code10 aria-controls=rubycode10>
+<label for=tab3code10>Ruby</label>
+<input type=radio name=tabsetcode10 id=tab4code10 aria-controls=javascriptcode10>
+<label for=tab4code10>JavaScript</label>
+<input type=radio name=tabsetcode10 id=tab5code10 aria-controls=kotlincode10>
+<label for=tab5code10>Kotlin</label><div class=tab-panels><section id=javacode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Cierra una ventana o pestaña
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>close<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>//Cambia el controlador a la ventana o pestaña original
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>window<span style=color:#719e07>(</span>originalWindow<span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=pythoncode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75>#Cierra una ventana o pestaña</span>
+driver<span style=color:#719e07>.</span>close()
+
+<span style=color:#586e75>#Cambia el controlador a la ventana o pestaña original</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>window(original_window)
+  </code></pre></div></section><section id=csharpcode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Cierra una ventana o pestaña
+</span><span style=color:#586e75></span>driver.Close();
+
+<span style=color:#586e75>//Cambia el controlador a la ventana o pestaña original
+</span><span style=color:#586e75></span>driver.SwitchTo().Window(originalWindow);
+  
+</code></pre></div></section><section id=rubycode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75>#Cierra una ventana o pestaña</span>
+driver<span style=color:#719e07>.</span>close
+
+<span style=color:#586e75>#Cambia el controlador a la ventana o pestaña original</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>window original_window
+  </code></pre></div></section><section id=javascriptcode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>//Cierra una ventana o pestaña
+</span><span style=color:#586e75></span>await driver.close();
+
+<span style=color:#586e75>//Cambia el controlador a la ventana o pestaña original
+</span><span style=color:#586e75></span>await driver.switchTo().<span style=color:#b58900>window</span>(originalWindow);
+  
+</code></pre></div></section><section id=kotlincode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Cierra una ventana o pestaña
+</span><span style=color:#586e75></span>driver.close()
+
+<span style=color:#586e75>//Cambia el controlador a la ventana o pestaña original
+</span><span style=color:#586e75></span>driver.switchTo().window(originalWindow)
+
+  </code></pre></div></section></div></div><p>Si te olvidas de cambiar el controlador de vuelta a otra ventana después de
+cerrarla dejará al WebDriver ejecutando una ventana o pestaña cerrada, esto
+devolverá la excepción <strong>No Such Window Exception</strong>. Debes de cambiar el
+controlador de vuelta a una ventana o pestaña valida para continuar la
+ejecución.</p><h3 id=saliendo-del-navegador-al-final-de-una-sesión>Saliendo del navegador al final de una sesión</h3><p>Cuando hayas acabado una sesión del navegador debes llamar al método salir en
+lugar de cerrar:</p><div class=tabset><input type=radio name=tabsetcode11 id=tab0code11 aria-controls=javacode11 checked>
+<label for=tab0code11>Java</label>
+<input type=radio name=tabsetcode11 id=tab1code11 aria-controls=pythoncode11>
+<label for=tab1code11>Python</label>
+<input type=radio name=tabsetcode11 id=tab2code11 aria-controls=cscode11>
+<label for=tab2code11>C#</label>
+<input type=radio name=tabsetcode11 id=tab3code11 aria-controls=rubycode11>
+<label for=tab3code11>Ruby</label>
+<input type=radio name=tabsetcode11 id=tab4code11 aria-controls=javascriptcode11>
+<label for=tab4code11>JavaScript</label>
+<input type=radio name=tabsetcode11 id=tab5code11 aria-controls=kotlincode11>
+<label for=tab5code11>Kotlin</label><div class=tab-panels><section id=javacode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>quit()</code></pre></div></section><section id=csharpcode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Quit();
+</code></pre></div></section><section id=rubycode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>quit</code></pre></div></section><section id=javascriptcode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.quit();
+</code></pre></div></section><section id=kotlincode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.quit()</code></pre></div></section></div></div><ul><li>Salir hará:<ul><li>Cerrará todas las ventanas y pestañas asociadas a esa sesión del WebDriver.</li><li>Cerrará el proceso de navegador.</li><li>Cerrará el proceso en segundo plano del driver.</li><li>Notificará al Grid de Selenium que el navegador ya no esta en uso y que
+puede ser usado por otra sesión del Grid de Selenium.</li></ul></li></ul><p>Un fallo en la llamada del método salir dejará procesos corriendo en segundo
+plano y puertos abiertos en tu maquina lo que podría llevar a problemas en un
+futuro.</p><p>Algunos frameworks de pruebas ofrecen métodos y anotaciones a las cuales puedes
+llamar para salir de una sesión al finalizar las pruebas.</p><div class=tabset><input type=radio name=tabsetcode12 id=tab0code12 aria-controls=javacode12 checked>
+<label for=tab0code12>Java</label>
+<input type=radio name=tabsetcode12 id=tab1code12 aria-controls=pythoncode12>
+<label for=tab1code12>Python</label>
+<input type=radio name=tabsetcode12 id=tab2code12 aria-controls=cscode12>
+<label for=tab2code12>C#</label>
+<input type=radio name=tabsetcode12 id=tab3code12 aria-controls=rubycode12>
+<label for=tab3code12>Ruby</label>
+<input type=radio name=tabsetcode12 id=tab4code12 aria-controls=javascriptcode12>
+<label for=tab4code12>JavaScript</label>
+<input type=radio name=tabsetcode12 id=tab5code12 aria-controls=kotlincode12>
+<label for=tab5code12>Kotlin</label><div class=tab-panels><section id=javacode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>/**
+</span><span style=color:#586e75> * Ejemplo usando JUnit
+</span><span style=color:#586e75> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style=color:#586e75> */</span>
+<span style=color:#268bd2>@AfterAll</span>
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>tearDown</span><span style=color:#719e07>()</span> <span style=color:#719e07>{</span>
+    driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Ejemplo usando unittest</span>
+<span style=color:#586e75># https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown</span>
+<span style=color:#719e07>def</span> <span style=color:#268bd2>tearDown</span>(<span style=color:#268bd2>self</span>):
+    <span style=color:#268bd2>self</span><span style=color:#719e07>.</span>driver<span style=color:#719e07>.</span>quit()
+  </code></pre></div></section><section id=csharpcode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>/*
+</span><span style=color:#586e75>    Ejemplo usando UnitTesting de Visual Studio
+</span><span style=color:#586e75>    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+</span><span style=color:#586e75>*/</span>
+[TestCleanup]
+<span style=color:#719e07>public</span> <span style=color:#719e07>void</span> TearDown()
+{
+    driver.Quit();
+}
+  
+</code></pre></div></section><section id=rubycode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Ejemplo usando UnitTest</span>
+<span style=color:#586e75># https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase</span>
+<span style=color:#719e07>def</span> <span style=color:#268bd2>teardown</span>
+    @driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>/**
+</span><span style=color:#586e75> * Ejemplo usando Mocha
+</span><span style=color:#586e75> * https://mochajs.org/#hooks
+</span><span style=color:#586e75> */</span>
+after(<span style=color:#2aa198>&#39;Tear down&#39;</span>, async <span style=color:#268bd2>function</span> () {
+  await driver.quit();
+});
+  
+</code></pre></div></section><section id=kotlincode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+
+<span style=color:#586e75>/**
+</span><span style=color:#586e75> * Ejemplo usando JUnit
+</span><span style=color:#586e75> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style=color:#586e75> */</span>
+@AfterAll
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>tearDown</span>() {
+    driver.quit()
+}
+  </code></pre></div></section></div></div><p>Si no estas ejecutando el WebDriver en un contexto que no es de tests, puedes
+considerar el usar <code>try / finally</code> los cuales son soportadas por la gran
+mayoría de lenguajes de programacion de esta manera cuando aparezca una excepción
+la sesión del WebDriver saldrá correctamente.</p><div class=tabset><input type=radio name=tabsetcode13 id=tab0code13 aria-controls=javacode13 checked>
+<label for=tab0code13>Java</label>
+<input type=radio name=tabsetcode13 id=tab1code13 aria-controls=pythoncode13>
+<label for=tab1code13>Python</label>
+<input type=radio name=tabsetcode13 id=tab2code13 aria-controls=cscode13>
+<label for=tab2code13>C#</label>
+<input type=radio name=tabsetcode13 id=tab3code13 aria-controls=rubycode13>
+<label for=tab3code13>Ruby</label>
+<input type=radio name=tabsetcode13 id=tab4code13 aria-controls=javascriptcode13>
+<label for=tab4code13>JavaScript</label>
+<input type=radio name=tabsetcode13 id=tab5code13 aria-controls=kotlincode13>
+<label for=tab5code13>Kotlin</label><div class=tab-panels><section id=javacode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
+    <span style=color:#586e75>//Código del WebDriver aquí...
+</span><span style=color:#586e75></span><span style=color:#719e07>}</span> <span style=color:#719e07>finally</span> <span style=color:#719e07>{</span>
+    driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>try</span>:
+    <span style=color:#586e75>#Código del WebDriver aquí...</span>
+<span style=color:#719e07>finally</span>:
+    driver<span style=color:#719e07>.</span>quit()
+  </code></pre></div></section><section id=csharpcode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//Código del WebDriver aquí...
+</span><span style=color:#586e75></span>} <span style=color:#719e07>finally</span> {
+    driver.Quit();
+}
+  
+</code></pre></div></section><section id=rubycode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#719e07>begin</span>
+    <span style=color:#586e75>#Código del WebDriver aquí...</span>
+<span style=color:#719e07>ensure</span>
+    driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//Código del WebDriver aquí...
+</span><span style=color:#586e75></span>} <span style=color:#719e07>finally</span> {
+    await driver.quit();
+}
+  
+</code></pre></div></section><section id=kotlincode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//Código del WebDriver aquí...
+</span><span style=color:#586e75></span>} <span style=color:#719e07>finally</span> {
+    driver.quit()
+}
+  </code></pre></div></section></div></div><p>El WebDriver de Python ahora es soportado como gestor de contexto, lo que permite
+ser usado con la palabra clave <code>with</code> para que automáticamente se cierre al final
+de la ejecución.</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>with</span> webdriver<span style=color:#719e07>.</span>Firefox() <span style=color:#719e07>as</span> driver:
+  <span style=color:#586e75># Codigo del WebDriver aqui...</span>
+
+<span style=color:#586e75># El WebDriver saldrá automaticamente despues de la indentacion</span>
+
+</code></pre></div><h2 id=frames-e-iframes>Frames e Iframes</h2><p>El uso de frames esta desaprobado, estos se basaban en construir sitios desde
+múltiples documentos en el mismo dominio. Es poco probable que trabajes con esto
+a menos que estés desarrollando una aplicación web previa a la versión de HTML5.
+Los iframes te permiten la inserción de un documento desde un dominio diferente
+y aun son usados de manera común.</p><p>Si necesitas trabajar con iframes o frames, el WebDriver te permite hacerlo de
+la misma forma. Considera un iframe que contiene un botón. Si inspeccionamos el
+elemento usando las herramientas de desarrollo del navegador podríamos ver lo
+siguiente:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#268bd2>div</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;modal&#34;</span>&gt;
+  &lt;<span style=color:#268bd2>iframe</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;buttonframe&#34;</span> name<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;myframe&#34;</span>  src<span style=color:#719e07>=</span><span style=color:#2aa198>&#34;https://seleniumhq.github.io&#34;</span>&gt;
+   &lt;<span style=color:#268bd2>button</span>&gt;Click here&lt;/<span style=color:#268bd2>button</span>&gt;
+ &lt;/<span style=color:#268bd2>iframe</span>&gt;
+&lt;/<span style=color:#268bd2>div</span>&gt;
+</code></pre></div><p>Si no fuera por el iframe haríamos clic en el botón de una forma como esta:</p><div class=tabset><input type=radio name=tabsetcode14 id=tab0code14 aria-controls=javacode14 checked>
+<label for=tab0code14>Java</label>
+<input type=radio name=tabsetcode14 id=tab1code14 aria-controls=pythoncode14>
+<label for=tab1code14>Python</label>
+<input type=radio name=tabsetcode14 id=tab2code14 aria-controls=cscode14>
+<label for=tab2code14>C#</label>
+<input type=radio name=tabsetcode14 id=tab3code14 aria-controls=rubycode14>
+<label for=tab3code14>Ruby</label>
+<input type=radio name=tabsetcode14 id=tab4code14 aria-controls=javascriptcode14>
+<label for=tab4code14>JavaScript</label>
+<input type=radio name=tabsetcode14 id=tab5code14 aria-controls=kotlincode14>
+<label for=tab5code14>Kotlin</label><div class=tab-panels><section id=javacode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Esto no funcionará
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>tagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)).</span>click<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Esto no funcionará</span>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>TAG_NAME, <span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click()
+  </code></pre></div></section><section id=csharpcode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Esto no funcionará
+</span><span style=color:#586e75></span>driver.FindElement(By.TagName(<span style=color:#2aa198>&#34;button&#34;</span>)).Click();
+  
+</code></pre></div></section><section id=rubycode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Esto no funcionará</span>
+driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:tag_name</span>,<span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click
+  </code></pre></div></section><section id=javascriptcode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Esto no funcionará
+</span><span style=color:#586e75></span>await driver.findElement(By.css(<span style=color:#2aa198>&#39;button&#39;</span>)).click();
+  
+</code></pre></div></section><section id=kotlincode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Esto no funcionará
+</span><span style=color:#586e75></span>driver.findElement(By.tagName(<span style=color:#2aa198>&#34;button&#34;</span>)).click()
+  </code></pre></div></section></div></div><p>Sin embargo, como no existirían botones fuera del iframe obtendríamos una
+excepción del tipo <em>no such element</em>. Esto ocurriría por que Selenium solo esta
+al tanto de los elementos en los niveles superiores del documento. Para
+interactuar con el botón primero necesitaremos cambiar el foco al iframe, de una
+forma similar a lo que ocurría con las ventanas y pestañas. El WebDriver ofrece
+tres formas de cambiar el foco a un iframe.</p><h3 id=usando-un-webelement>Usando un WebElement</h3><p>Cambiar usando un WebElement es la forma mas flexible de todas. Puedes encontrar
+el iframe usando tu selector preferido y después cambiar el foco a el.</p><div class=tabset><input type=radio name=tabsetcode15 id=tab0code15 aria-controls=javacode15 checked>
+<label for=tab0code15>Java</label>
+<input type=radio name=tabsetcode15 id=tab1code15 aria-controls=pythoncode15>
+<label for=tab1code15>Python</label>
+<input type=radio name=tabsetcode15 id=tab2code15 aria-controls=cscode15>
+<label for=tab2code15>C#</label>
+<input type=radio name=tabsetcode15 id=tab3code15 aria-controls=rubycode15>
+<label for=tab3code15>Ruby</label>
+<input type=radio name=tabsetcode15 id=tab4code15 aria-controls=javascriptcode15>
+<label for=tab4code15>JavaScript</label>
+<input type=radio name=tabsetcode15 id=tab5code15 aria-controls=kotlincode15>
+<label for=tab5code15>Kotlin</label><div class=tab-panels><section id=javacode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Almacena el elemento web
+</span><span style=color:#586e75></span>WebElement iframe <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>cssSelector<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;#modal&gt;iframe&#34;</span><span style=color:#719e07>));</span>
+
+<span style=color:#586e75>//Cambia el foco al iframe
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span>iframe<span style=color:#719e07>);</span>
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>tagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)).</span>click<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Almacena el elemento web</span>
+iframe <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>CSS_SELECTOR, <span style=color:#2aa198>&#34;#modal &gt; iframe&#34;</span>)
+
+<span style=color:#586e75># Cambia el foco al iframe</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame(iframe)
+
+<span style=color:#586e75># Ahora podemos hacer clic en el botón</span>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>TAG_NAME, <span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click()
+  </code></pre></div></section><section id=csharpcode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Almacena el elemento web
+</span><span style=color:#586e75></span>IWebElement iframe = driver.FindElement(By.CssSelector(<span style=color:#2aa198>&#34;#modal&gt;iframe&#34;</span>));
+
+<span style=color:#586e75>//Cambia el foco al iframe
+</span><span style=color:#586e75></span>driver.SwitchTo().Frame(iframe);
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver.FindElement(By.TagName(<span style=color:#2aa198>&#34;button&#34;</span>)).Click();
+  
+</code></pre></div></section><section id=rubycode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Almacena el elemento web</span>
+iframe <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:css</span>,<span style=color:#2aa198>&#39;#modal &gt; iframe&#39;</span>)
+
+<span style=color:#586e75># Cambia el foco al iframe</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame iframe
+
+<span style=color:#586e75># Ahora podemos hacer clic en el botón</span>
+driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:tag_name</span>,<span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click
+  </code></pre></div></section><section id=javascriptcode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Almacena el elemento web
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> iframe <span style=color:#719e07>=</span> driver.findElement(By.css(<span style=color:#2aa198>&#39;#modal &gt; iframe&#39;</span>));
+
+<span style=color:#586e75>// Cambia el foco al iframe
+</span><span style=color:#586e75></span>await driver.switchTo().frame(iframe);
+
+<span style=color:#586e75>// Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>await driver.findElement(By.css(<span style=color:#2aa198>&#39;button&#39;</span>)).click();
+  
+</code></pre></div></section><section id=kotlincode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Almacena el elemento web
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> iframe = driver.findElement(By.cssSelector(<span style=color:#2aa198>&#34;#modal&gt;iframe&#34;</span>))
+
+<span style=color:#586e75>//Cambia el foco al iframe
+</span><span style=color:#586e75></span>driver.switchTo().frame(iframe)
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver.findElement(By.tagName(<span style=color:#2aa198>&#34;button&#34;</span>)).click()
+  </code></pre></div></section></div></div><h3 id=usando-el-nombre-o-el-id>Usando el nombre o el ID</h3><p>Si tu iframe o frame dispone de un atributo id o un nombre estos pueden ser
+usados para ello.
+Si los nombres o el id no fuesen únicos en la pagina este método cambiará el foco
+al primer iframe o frame que encuentre.</p><div class=tabset><input type=radio name=tabsetcode16 id=tab0code16 aria-controls=javacode16 checked>
+<label for=tab0code16>Java</label>
+<input type=radio name=tabsetcode16 id=tab1code16 aria-controls=pythoncode16>
+<label for=tab1code16>Python</label>
+<input type=radio name=tabsetcode16 id=tab2code16 aria-controls=cscode16>
+<label for=tab2code16>C#</label>
+<input type=radio name=tabsetcode16 id=tab3code16 aria-controls=rubycode16>
+<label for=tab3code16>Ruby</label>
+<input type=radio name=tabsetcode16 id=tab4code16 aria-controls=javascriptcode16>
+<label for=tab4code16>JavaScript</label>
+<input type=radio name=tabsetcode16 id=tab5code16 aria-controls=kotlincode16>
+<label for=tab5code16>Kotlin</label><div class=tab-panels><section id=javacode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Usando el ID
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;buttonframe&#34;</span><span style=color:#719e07>);</span>
+
+<span style=color:#586e75>//O usando el atributo nombre
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;myframe&#34;</span><span style=color:#719e07>);</span>
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>tagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)).</span>click<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Usando el ID</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame(<span style=color:#2aa198>&#39;buttonframe&#39;</span>)
+
+<span style=color:#586e75># Ahora podemos hacer clic en el botón</span>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>TAG_NAME, <span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click()
+  </code></pre></div></section><section id=csharpcode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Usando el ID
+</span><span style=color:#586e75></span>driver.SwitchTo().Frame(<span style=color:#2aa198>&#34;buttonframe&#34;</span>);
+
+<span style=color:#586e75>//O usando el atributo nombre
+</span><span style=color:#586e75></span>driver.SwitchTo().Frame(<span style=color:#2aa198>&#34;myframe&#34;</span>);
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver.FindElement(By.TagName(<span style=color:#2aa198>&#34;button&#34;</span>)).Click();
+  
+</code></pre></div></section><section id=rubycode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Usando el ID</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame <span style=color:#2aa198>&#39;buttonframe&#39;</span>
+
+<span style=color:#586e75># Ahora podemos hacer clic en el botón</span>
+driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:tag_name</span>,<span style=color:#2aa198>&#39;button&#39;</span>)<span style=color:#719e07>.</span>click
+  </code></pre></div></section><section id=javascriptcode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>//Usando el ID
+</span><span style=color:#586e75></span>await driver.switchTo().frame(<span style=color:#2aa198>&#39;buttonframe&#39;</span>);
+
+<span style=color:#586e75>// O usando el atributo nombre
+</span><span style=color:#586e75></span>await driver.switchTo().frame(<span style=color:#2aa198>&#39;myframe&#39;</span>);
+
+<span style=color:#586e75>// Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>await driver.findElement(By.css(<span style=color:#2aa198>&#39;button&#39;</span>)).click();
+  
+</code></pre></div></section><section id=kotlincode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Usando el ID
+</span><span style=color:#586e75></span>driver.switchTo().frame(<span style=color:#2aa198>&#34;buttonframe&#34;</span>)
+
+<span style=color:#586e75>//O usando el atributo nombre
+</span><span style=color:#586e75></span>driver.switchTo().frame(<span style=color:#2aa198>&#34;myframe&#34;</span>)
+
+<span style=color:#586e75>//Ahora podemos hacer clic en el botón
+</span><span style=color:#586e75></span>driver.findElement(By.tagName(<span style=color:#2aa198>&#34;button&#34;</span>)).click()
+  </code></pre></div></section></div></div><h3 id=por-indice>Por indice</h3><p>También es posible usar el indice del iframe para cambiar el foco a el, los
+indices pueden ser consultados utilizando la query de JavaScript <em>window.frames</em>.</p><div class=tabset><input type=radio name=tabsetcode17 id=tab0code17 aria-controls=javacode17 checked>
+<label for=tab0code17>Java</label>
+<input type=radio name=tabsetcode17 id=tab1code17 aria-controls=pythoncode17>
+<label for=tab1code17>Python</label>
+<input type=radio name=tabsetcode17 id=tab2code17 aria-controls=cscode17>
+<label for=tab2code17>C#</label>
+<input type=radio name=tabsetcode17 id=tab3code17 aria-controls=rubycode17>
+<label for=tab3code17>Ruby</label>
+<input type=radio name=tabsetcode17 id=tab4code17 aria-controls=javascriptcode17>
+<label for=tab4code17>JavaScript</label>
+<input type=radio name=tabsetcode17 id=tab5code17 aria-controls=kotlincode17>
+<label for=tab5code17>Kotlin</label><div class=tab-panels><section id=javacode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Cambia el foco al segundo frame
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span>1<span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=rubycode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Cambia el foco al segundo frame</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame(<span style=color:#2aa198>1</span>)
+  </code></pre></div></section><section id=csharpcode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// Cambia el foco al segundo frame
+</span><span style=color:#586e75></span>driver.SwitchTo().Frame(<span style=color:#2aa198>1</span>);
+  
+</code></pre></div></section><section id=pythoncode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Cambia el foco al segundo frame</span>
+iframe <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_elements_by_tag_name(<span style=color:#2aa198>&#39;iframe&#39;</span>)[<span style=color:#2aa198>1</span>]
+
+<span style=color:#586e75># Cambia el foco al iframe seleccionado</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>frame(iframe)
+  </code></pre></div></section><section id=javascriptcode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>//Cambia el foco al segundo frame
+</span><span style=color:#586e75></span>await driver.switchTo().frame(<span style=color:#2aa198>1</span>);
+  
+</code></pre></div></section><section id=kotlincode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Cambia el foco al segundo frame
+</span><span style=color:#586e75></span>driver.switchTo().frame(<span style=color:#2aa198>1</span>)
+  </code></pre></div></section></div></div><h3 id=saliendo-de-un-frame>Saliendo de un frame</h3><p>Para salir de un iframe o un frame y volver el foco al contenido original:</p><div class=tabset><input type=radio name=tabsetcode18 id=tab0code18 aria-controls=javacode18 checked>
+<label for=tab0code18>Java</label>
+<input type=radio name=tabsetcode18 id=tab1code18 aria-controls=pythoncode18>
+<label for=tab1code18>Python</label>
+<input type=radio name=tabsetcode18 id=tab2code18 aria-controls=cscode18>
+<label for=tab2code18>C#</label>
+<input type=radio name=tabsetcode18 id=tab3code18 aria-controls=rubycode18>
+<label for=tab3code18>Ruby</label>
+<input type=radio name=tabsetcode18 id=tab4code18 aria-controls=javascriptcode18>
+<label for=tab4code18>JavaScript</label>
+<input type=radio name=tabsetcode18 id=tab5code18 aria-controls=kotlincode18>
+<label for=tab5code18>Kotlin</label><div class=tab-panels><section id=javacode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Vuelve al nivel superior
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>defaultContent<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Vuelve al nivel superior</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>default_content()
+  </code></pre></div></section><section id=csharpcode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// Vuelve al nivel superior
+</span><span style=color:#586e75></span>driver.SwitchTo().DefaultContent();
+  
+</code></pre></div></section><section id=rubycode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Vuelve al nivel superior</span>
+driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</span>default_content
+  </code></pre></div></section><section id=javascriptcode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Vuelve al nivel superior
+</span><span style=color:#586e75></span>await driver.switchTo().defaultContent();
+  
+</code></pre></div></section><section id=kotlincode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Vuelve al nivel superior
+</span><span style=color:#586e75></span>driver.switchTo().defaultContent()
+  </code></pre></div></section></div></div><h2 id=manejo-de-las-ventanas>Manejo de las ventanas</h2><p>La resolución de las pantallas puede impactar en como tu aplicación se renderiza
+es por eso que el WebDriver provee de mecanismos para mover y cambiar el tamaño
+de la ventana del navegador.</p><h3 id=obtener-el-tamaño-de-la-ventana>Obtener el tamaño de la ventana</h3><p>Obtiene el tamaño de la ventana del navegador en pixeles.</p><div class=tabset><input type=radio name=tabsetcode19 id=tab0code19 aria-controls=javacode19 checked>
+<label for=tab0code19>Java</label>
+<input type=radio name=tabsetcode19 id=tab1code19 aria-controls=pythoncode19>
+<label for=tab1code19>Python</label>
+<input type=radio name=tabsetcode19 id=tab2code19 aria-controls=cscode19>
+<label for=tab2code19>C#</label>
+<input type=radio name=tabsetcode19 id=tab3code19 aria-controls=rubycode19>
+<label for=tab3code19>Ruby</label>
+<input type=radio name=tabsetcode19 id=tab4code19 aria-controls=javascriptcode19>
+<label for=tab4code19>JavaScript</label>
+<input type=radio name=tabsetcode19 id=tab5code19 aria-controls=kotlincode19>
+<label for=tab5code19>Kotlin</label><div class=tab-panels><section id=javacode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>//Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#dc322f>int</span> width <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getSize<span style=color:#719e07>().</span>getWidth<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> height <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getSize<span style=color:#719e07>().</span>getHeight<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>//O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span>Dimension size <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getSize<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> width1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>getWidth<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> height1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>getHeight<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Accede a cada dimensión individualmente</span>
+width <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_size()<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;width&#34;</span>)
+height <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_size()<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;height&#34;</span>)
+
+<span style=color:#586e75># O almacénalas para acceder a ellas mas tarde</span>
+size <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_size()
+width1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;width&#34;</span>)
+height1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;height&#34;</span>)
+  </code></pre></div></section><section id=csharpcode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#dc322f>int</span> width = driver.Manage().Window.Size.Width;
+<span style=color:#dc322f>int</span> height = driver.Manage().Window.Size.Height;
+
+<span style=color:#586e75>//O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span>System.Drawing.Size size = driver.Manage().Window.Size;
+<span style=color:#dc322f>int</span> width1 = size.Width;
+<span style=color:#dc322f>int</span> height1 = size.Height;
+  
+</code></pre></div></section><section id=rubycode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Accede a cada dimensión individualmente</span>
+width <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>size<span style=color:#719e07>.</span>width
+height <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>size<span style=color:#719e07>.</span>height
+
+<span style=color:#586e75># O almacénalas para acceder a ellas mas tarde</span>
+size <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>size
+width1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>width
+height1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span>height
+  </code></pre></div></section><section id=javascriptcode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> { width, height } <span style=color:#719e07>=</span> await driver.manage().<span style=color:#b58900>window</span>().getRect();
+
+<span style=color:#586e75>// O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> rect <span style=color:#719e07>=</span> await driver.manage().<span style=color:#b58900>window</span>().getRect();
+<span style=color:#268bd2>const</span> width1 <span style=color:#719e07>=</span> rect.width;
+<span style=color:#268bd2>const</span> height1 <span style=color:#719e07>=</span> rect.height;
+  
+</code></pre></div></section><section id=kotlincode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>//Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> width = driver.manage().window().size.width
+<span style=color:#719e07>val</span> height = driver.manage().window().size.height
+
+<span style=color:#586e75>//O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> size = driver.manage().window().size
+<span style=color:#719e07>val</span> width1 = size.width
+<span style=color:#719e07>val</span> height1 = size.height
+  </code></pre></div></section></div></div><h3 id=fija-el-tamaño-de-la-ventana>Fija el tamaño de la ventana</h3><p>Recupera la ventana y fija el tamaño de esta.<div class=tabset><input type=radio name=tabsetcode20 id=tab0code20 aria-controls=javacode20 checked>
+<label for=tab0code20>Java</label>
+<input type=radio name=tabsetcode20 id=tab1code20 aria-controls=pythoncode20>
+<label for=tab1code20>Python</label>
+<input type=radio name=tabsetcode20 id=tab2code20 aria-controls=cscode20>
+<label for=tab2code20>C#</label>
+<input type=radio name=tabsetcode20 id=tab3code20 aria-controls=rubycode20>
+<label for=tab3code20>Ruby</label>
+<input type=radio name=tabsetcode20 id=tab4code20 aria-controls=javascriptcode20>
+<label for=tab4code20>JavaScript</label>
+<input type=radio name=tabsetcode20 id=tab5code20 aria-controls=kotlincode20>
+<label for=tab5code20>Kotlin</label><div class=tab-panels><section id=javacode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>setSize<span style=color:#719e07>(</span><span style=color:#719e07>new</span> Dimension<span style=color:#719e07>(</span>1024<span style=color:#719e07>,</span> 768<span style=color:#719e07>));</span></code></pre></div></section><section id=pythoncode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>set_window_size(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>)</code></pre></div></section><section id=csharpcode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Size = <span style=color:#719e07>new</span> Size(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>);
+</code></pre></div></section><section id=rubycode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>resize_to(<span style=color:#2aa198>1024</span>,<span style=color:#2aa198>768</span>)</code></pre></div></section><section id=javascriptcode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().setRect({ width<span style=color:#719e07>:</span> <span style=color:#2aa198>1024</span>, height<span style=color:#719e07>:</span> <span style=color:#2aa198>768</span> });
+</code></pre></div></section><section id=kotlincode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().size = Dimension(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>)</code></pre></div></section></div></div></p><h3 id=obten-la-posicion-de-la-ventana>Obten la posicion de la ventana</h3><p>Obtiene la posiciones de las coordernadas en el sistema arriba izquierda de la
+ventana del navegador.<div class=tabset><input type=radio name=tabsetcode21 id=tab0code21 aria-controls=javacode21 checked>
+<label for=tab0code21>Java</label>
+<input type=radio name=tabsetcode21 id=tab1code21 aria-controls=pythoncode21>
+<label for=tab1code21>Python</label>
+<input type=radio name=tabsetcode21 id=tab2code21 aria-controls=cscode21>
+<label for=tab2code21>C#</label>
+<input type=radio name=tabsetcode21 id=tab3code21 aria-controls=rubycode21>
+<label for=tab3code21>Ruby</label>
+<input type=radio name=tabsetcode21 id=tab4code21 aria-controls=javascriptcode21>
+<label for=tab4code21>JavaScript</label>
+<input type=radio name=tabsetcode21 id=tab5code21 aria-controls=kotlincode21>
+<label for=tab5code21>Kotlin</label><div class=tab-panels><section id=javacode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#dc322f>int</span> x <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getPosition<span style=color:#719e07>().</span>getX<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> y <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getPosition<span style=color:#719e07>().</span>getY<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>// O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span>Point position <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getPosition<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> x1 <span style=color:#719e07>=</span> position<span style=color:#719e07>.</span>getX<span style=color:#719e07>();</span>
+<span style=color:#dc322f>int</span> y1 <span style=color:#719e07>=</span> position<span style=color:#719e07>.</span>getY<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Accede a cada dimensión individualmente</span>
+x <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_position()<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#39;x&#39;</span>)
+y <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_position()<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#39;y&#39;</span>)
+
+<span style=color:#586e75># O almacénalas para acceder a ellas mas tarde</span>
+position <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>get_window_position()
+x1 <span style=color:#719e07>=</span> position<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#39;x&#39;</span>)
+y1 <span style=color:#719e07>=</span> position<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#39;y&#39;</span>)
+  </code></pre></div></section><section id=csharpcode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>//Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#dc322f>int</span> x = driver.Manage().Window.Position.X;
+<span style=color:#dc322f>int</span> y = driver.Manage().Window.Position.Y;
+
+<span style=color:#586e75>//O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span>Point position = driver.Manage().Window.Position;
+<span style=color:#dc322f>int</span> x1 = position.X;
+<span style=color:#dc322f>int</span> y1 = position.Y;
+  
+</code></pre></div></section><section id=rubycode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75>#Accede a cada dimensión individualmente</span>
+x <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>position<span style=color:#719e07>.</span>x
+y <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>position<span style=color:#719e07>.</span>y
+
+<span style=color:#586e75># O almacénalas para acceder a ellas mas tarde</span>
+rect  <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>rect
+x1 <span style=color:#719e07>=</span> rect<span style=color:#719e07>.</span>x
+y1 <span style=color:#719e07>=</span> rect<span style=color:#719e07>.</span>y
+  </code></pre></div></section><section id=javascriptcode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> { x, y } <span style=color:#719e07>=</span> await driver.manage().<span style=color:#b58900>window</span>().getRect();
+
+<span style=color:#586e75>// O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span><span style=color:#268bd2>const</span> rect <span style=color:#719e07>=</span> await driver.manage().<span style=color:#b58900>window</span>().getRect();
+<span style=color:#268bd2>const</span> x1 <span style=color:#719e07>=</span> rect.x;
+<span style=color:#268bd2>const</span> y1 <span style=color:#719e07>=</span> rect.y;
+  
+</code></pre></div></section><section id=kotlincode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Accede a cada dimensión individualmente
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> x = driver.manage().window().position.x
+<span style=color:#719e07>val</span> y = driver.manage().window().position.y
+
+<span style=color:#586e75>// O almacénalas para acceder a ellas mas tarde
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> position = driver.manage().window().position
+<span style=color:#719e07>val</span> x1 = position.x
+<span style=color:#719e07>val</span> y1 = position.y
+
+  </code></pre></div></section></div></div></p><h2 id=fija-la-posición-de-la-ventana>Fija la posición de la ventana</h2><p>Mueve la ventana a la posición deseada.</p><div class=tabset><input type=radio name=tabsetcode22 id=tab0code22 aria-controls=javacode22 checked>
+<label for=tab0code22>Java</label>
+<input type=radio name=tabsetcode22 id=tab1code22 aria-controls=pythoncode22>
+<label for=tab1code22>Python</label>
+<input type=radio name=tabsetcode22 id=tab2code22 aria-controls=cscode22>
+<label for=tab2code22>C#</label>
+<input type=radio name=tabsetcode22 id=tab3code22 aria-controls=rubycode22>
+<label for=tab3code22>Ruby</label>
+<input type=radio name=tabsetcode22 id=tab4code22 aria-controls=javascriptcode22>
+<label for=tab4code22>JavaScript</label>
+<input type=radio name=tabsetcode22 id=tab5code22 aria-controls=kotlincode22>
+<label for=tab5code22>Kotlin</label><div class=tab-panels><section id=javacode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Mueve la ventana arriba izquierda del monitor principal
+</span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>setPosition<span style=color:#719e07>(</span><span style=color:#719e07>new</span> Point<span style=color:#719e07>(</span>0<span style=color:#719e07>,</span> 0<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Mueve la ventana arriba izquierda del monitor principal</span>
+driver<span style=color:#719e07>.</span>set_window_position(<span style=color:#2aa198>0</span>, <span style=color:#2aa198>0</span>)
+  </code></pre></div></section><section id=csharpcode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// Mueve la ventana arriba izquierda del monitor principal
+</span><span style=color:#586e75></span>driver.Manage().Window.Position = <span style=color:#719e07>new</span> Point(<span style=color:#2aa198>0</span>, <span style=color:#2aa198>0</span>);
+  
+</code></pre></div></section><section id=rubycode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>move_to(<span style=color:#2aa198>0</span>,<span style=color:#2aa198>0</span>)
+  </code></pre></div></section><section id=javascriptcode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Mueve la ventana arriba izquierda del monitor principal
+</span><span style=color:#586e75></span>await driver.manage().<span style=color:#b58900>window</span>().setRect({ x<span style=color:#719e07>:</span> <span style=color:#2aa198>0</span>, y<span style=color:#719e07>:</span> <span style=color:#2aa198>0</span> });
+  
+</code></pre></div></section><section id=kotlincode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Mueve la ventana arriba izquierda del monitor principal
+</span><span style=color:#586e75></span>driver.manage().window().position = Point(<span style=color:#2aa198>0</span>,<span style=color:#2aa198>0</span>)
+    </code></pre></div></section></div></div><h3 id=maximizar-la-ventana>Maximizar la ventana</h3><p>Maximiza la ventana. Para la gran mayoría de sistemas operativos, la ventana
+rellenará la pantalla, sin bloquear los menús propios y barras de herramientas
+de los sistemas operativos.</p><div class=tabset><input type=radio name=tabsetcode23 id=tab0code23 aria-controls=javacode23 checked>
+<label for=tab0code23>Java</label>
+<input type=radio name=tabsetcode23 id=tab1code23 aria-controls=pythoncode23>
+<label for=tab1code23>Python</label>
+<input type=radio name=tabsetcode23 id=tab2code23 aria-controls=cscode23>
+<label for=tab2code23>C#</label>
+<input type=radio name=tabsetcode23 id=tab3code23 aria-controls=rubycode23>
+<label for=tab3code23>Ruby</label>
+<input type=radio name=tabsetcode23 id=tab4code23 aria-controls=javascriptcode23>
+<label for=tab4code23>JavaScript</label>
+<input type=radio name=tabsetcode23 id=tab5code23 aria-controls=kotlincode23>
+<label for=tab5code23>Kotlin</label><div class=tab-panels><section id=javacode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>maximize<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>maximize_window()</code></pre></div></section><section id=csharpcode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Maximize();
+</code></pre></div></section><section id=rubycode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>maximize</code></pre></div></section><section id=javascriptcode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().maximize();
+</code></pre></div></section><section id=kotlincode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().maximize()</code></pre></div></section></div></div><h3 id=minimizar-la-ventana>Minimizar la ventana</h3><p>Minimiza la ventana del actual contexto del navegador.
+El comportamiento exacto de este comando es especifico individualmente de cada
+gestor de ventanas.</p><p>Minimizar la ventana típicamente oculta la ventana en la bandeja del sistema.</p><p><strong>Nota: Esta funcionalidad es específica de Selenium 4 y versiones posteriores.</strong></p><div class=tabset><input type=radio name=tabsetcode24 id=tab0code24 aria-controls=javacode24 checked>
+<label for=tab0code24>Java</label>
+<input type=radio name=tabsetcode24 id=tab1code24 aria-controls=pythoncode24>
+<label for=tab1code24>Python</label>
+<input type=radio name=tabsetcode24 id=tab2code24 aria-controls=cscode24>
+<label for=tab2code24>C#</label>
+<input type=radio name=tabsetcode24 id=tab3code24 aria-controls=rubycode24>
+<label for=tab3code24>Ruby</label>
+<input type=radio name=tabsetcode24 id=tab4code24 aria-controls=javascriptcode24>
+<label for=tab4code24>JavaScript</label>
+<input type=radio name=tabsetcode24 id=tab5code24 aria-controls=kotlincode24>
+<label for=tab5code24>Kotlin</label><div class=tab-panels><section id=javacode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>minimize<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>minimize_window()</code></pre></div></section><section id=csharpcode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Minimize();
+</code></pre></div></section><section id=rubycode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>minimize</code></pre></div></section><section id=javascriptcode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().minimize();
+</code></pre></div></section><section id=kotlincode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().minimize()</code></pre></div></section></div></div><h3 id=modo-pantalla-completa>Modo pantalla completa</h3><p>Llena la pantalla completamente, similar a presionar la tecla F11 en la gran
+mayoria de navegadores.</p><div class=tabset><input type=radio name=tabsetcode25 id=tab0code25 aria-controls=javacode25 checked>
+<label for=tab0code25>Java</label>
+<input type=radio name=tabsetcode25 id=tab1code25 aria-controls=pythoncode25>
+<label for=tab1code25>Python</label>
+<input type=radio name=tabsetcode25 id=tab2code25 aria-controls=cscode25>
+<label for=tab2code25>C#</label>
+<input type=radio name=tabsetcode25 id=tab3code25 aria-controls=rubycode25>
+<label for=tab3code25>Ruby</label>
+<input type=radio name=tabsetcode25 id=tab4code25 aria-controls=javascriptcode25>
+<label for=tab4code25>JavaScript</label>
+<input type=radio name=tabsetcode25 id=tab5code25 aria-controls=kotlincode25>
+<label for=tab5code25>Kotlin</label><div class=tab-panels><section id=javacode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>fullscreen<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>fullscreen_window()</code></pre></div></section><section id=csharpcode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.FullScreen();
+</code></pre></div></section><section id=rubycode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>full_screen</code></pre></div></section><section id=javascriptcode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().fullscreen();
+</code></pre></div></section><section id=kotlincode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().fullscreen()</code></pre></div></section></div></div><h3 id=takescreenshot>TakeScreenshot</h3><p>Used to capture screenshot for current browsing context.
+The WebDriver endpoint <a href=https://www.w3.org/TR/webdriver/#dfn-take-screenshot>screenshot</a>
+returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode26 id=tab0code26 aria-controls=javacode26 checked>
+<label for=tab0code26>Java</label>
+<input type=radio name=tabsetcode26 id=tab1code26 aria-controls=pythoncode26>
+<label for=tab1code26>Python</label>
+<input type=radio name=tabsetcode26 id=tab2code26 aria-controls=cscode26>
+<label for=tab2code26>C#</label>
+<input type=radio name=tabsetcode26 id=tab3code26 aria-controls=rubycode26>
+<label for=tab3code26>Ruby</label>
+<input type=radio name=tabsetcode26 id=tab4code26 aria-controls=javascriptcode26>
+<label for=tab4code26>JavaScript</label>
+<input type=radio name=tabsetcode26 id=tab5code26 aria-controls=kotlincode26>
+<label for=tab5code26>Kotlin</label><div class=tab-panels><section id=javacode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import</span> org.apache.commons.io.FileUtils<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> java.io.*<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.*<span style=color:#719e07>;</span>
+
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>SeleniumTakeScreenshot</span> <span style=color:#719e07>{</span>
+    <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>main</span><span style=color:#719e07>(</span>String args<span style=color:#719e07>[])</span> <span style=color:#268bd2>throws</span> IOException <span style=color:#719e07>{</span>
+        WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> ChromeDriver<span style=color:#719e07>();</span>
+        driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;http://www.example.com&#34;</span><span style=color:#719e07>);</span>
+        File scrFile <span style=color:#719e07>=</span> <span style=color:#719e07>((</span>TakesScreenshot<span style=color:#719e07>)</span>driver<span style=color:#719e07>).</span>getScreenshotAs<span style=color:#719e07>(</span>OutputType<span style=color:#719e07>.</span>FILE<span style=color:#719e07>);</span>
+        FileUtils<span style=color:#719e07>.</span>copyFile<span style=color:#719e07>(</span>scrFile<span style=color:#719e07>,</span> <span style=color:#719e07>new</span> File<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;./image.png&#34;</span><span style=color:#719e07>));</span>
+        driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Chrome()
+
+<span style=color:#586e75># Navigate to url</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.example.com&#34;</span>)
+
+<span style=color:#586e75># Returns and base64 encoded string into image</span>
+driver<span style=color:#719e07>.</span>save_screenshot(<span style=color:#2aa198>&#39;./image.png&#39;</span>)
+
+driver<span style=color:#719e07>.</span>quit()
+
+</code></pre></div></section><section id=csharpcode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+    <span style=color:#719e07>using</span> OpenQA.Selenium;
+    <span style=color:#719e07>using</span> OpenQA.Selenium.Chrome;
+    <span style=color:#719e07>using</span> OpenQA.Selenium.Support.UI;
+
+    <span style=color:#dc322f>var</span> driver = <span style=color:#719e07>new</span> ChromeDriver();
+    driver.Navigate().GoToUrl(<span style=color:#2aa198>&#34;http://www.example.com&#34;</span>);
+    Screenshot screenshot = (driver <span style=color:#719e07>as</span> ITakesScreenshot).GetScreenshot();
+    screenshot.SaveAsFile(<span style=color:#2aa198>&#34;screenshot.png&#34;</span>, ScreenshotImageFormat.Png); <span style=color:#586e75>// Format values are Bmp, Gif, Jpeg, Png, Tiff
+</span><span style=color:#586e75></span>   
+</code></pre></div></section><section id=rubycode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:chrome</span>
+
+<span style=color:#719e07>begin</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://example.com/&#39;</span>
+
+  <span style=color:#586e75># Takes and Stores the screenshot in specified path</span>
+  driver<span style=color:#719e07>.</span>save_screenshot(<span style=color:#2aa198>&#39;./image.png&#39;</span>)
+
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> {Builder} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
+<span style=color:#268bd2>let</span> fs <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;fs&#39;</span>);
+
+(async <span style=color:#268bd2>function</span> example() {
+    <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder()
+      .forBrowser(<span style=color:#2aa198>&#39;chrome&#39;</span>)
+      .build();
+
+    await driver.get(<span style=color:#2aa198>&#39;https://www.example.com&#39;</span>);
+    <span style=color:#586e75>// Returns base64 encoded string
+</span><span style=color:#586e75></span>    <span style=color:#268bd2>let</span> encodedString <span style=color:#719e07>=</span> await driver.takeScreenshot();
+    await fs.writeFileSync(<span style=color:#2aa198>&#39;./image.png&#39;</span>, encodedString, <span style=color:#2aa198>&#39;base64&#39;</span>);
+    await driver.quit();
+}())
+  
+</code></pre></div></section><section id=kotlincode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> com.oracle.tools.packager.IOUtils.copyFile
+<span style=color:#719e07>import</span> org.openqa.selenium.*
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style=color:#719e07>import</span> java.io.File
+
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>(){
+    <span style=color:#719e07>val</span> driver =  ChromeDriver()
+    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://www.example.com&#34;</span>)
+    <span style=color:#719e07>val</span> scrFile = (driver <span style=color:#719e07>as</span> TakesScreenshot).getScreenshotAs&lt;File&gt;(OutputType.FILE)
+    copyFile(scrFile, File(<span style=color:#2aa198>&#34;./image.png&#34;</span>))
+    driver.quit()
+}
+  </code></pre></div></section></div></div><h3 id=takeelementscreenshot>TakeElementScreenshot</h3><p>Used to capture screenshot of an element for current browsing context.
+The WebDriver endpoint <a href=https://www.w3.org/TR/webdriver/#take-element-screenshot>screenshot</a>
+returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode27 id=tab0code27 aria-controls=javacode27 checked>
+<label for=tab0code27>Java</label>
+<input type=radio name=tabsetcode27 id=tab1code27 aria-controls=pythoncode27>
+<label for=tab1code27>Python</label>
+<input type=radio name=tabsetcode27 id=tab2code27 aria-controls=cscode27>
+<label for=tab2code27>C#</label>
+<input type=radio name=tabsetcode27 id=tab3code27 aria-controls=rubycode27>
+<label for=tab3code27>Ruby</label>
+<input type=radio name=tabsetcode27 id=tab4code27 aria-controls=javascriptcode27>
+<label for=tab4code27>JavaScript</label>
+<input type=radio name=tabsetcode27 id=tab5code27 aria-controls=kotlincode27>
+<label for=tab5code27>Kotlin</label><div class=tab-panels><section id=javacode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import</span> org.apache.commons.io.FileUtils<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.*<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> java.io.File<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> java.io.IOException<span style=color:#719e07>;</span>
+
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>SeleniumelementTakeScreenshot</span> <span style=color:#719e07>{</span>
+  <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>main</span><span style=color:#719e07>(</span>String args<span style=color:#719e07>[])</span> <span style=color:#268bd2>throws</span> IOException <span style=color:#719e07>{</span>
+    WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> ChromeDriver<span style=color:#719e07>();</span>
+    driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://www.example.com&#34;</span><span style=color:#719e07>);</span>
+    WebElement element <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>cssSelector<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;h1&#34;</span><span style=color:#719e07>));</span>
+    File scrFile <span style=color:#719e07>=</span> element<span style=color:#719e07>.</span>getScreenshotAs<span style=color:#719e07>(</span>OutputType<span style=color:#719e07>.</span>FILE<span style=color:#719e07>);</span>
+    FileUtils<span style=color:#719e07>.</span>copyFile<span style=color:#719e07>(</span>scrFile<span style=color:#719e07>,</span> <span style=color:#719e07>new</span> File<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;./image.png&#34;</span><span style=color:#719e07>));</span>
+    driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+  <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.common.by <span style=color:#719e07>import</span> By
+
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Chrome()
+
+<span style=color:#586e75># Navigate to url</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.example.com&#34;</span>)
+
+ele <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>CSS_SELECTOR, <span style=color:#2aa198>&#39;h1&#39;</span>)
+
+<span style=color:#586e75># Returns and base64 encoded string into image</span>
+ele<span style=color:#719e07>.</span>screenshot(<span style=color:#2aa198>&#39;./image.png&#39;</span>)
+
+driver<span style=color:#719e07>.</span>quit()
+</code></pre></div></section><section id=csharpcode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+    <span style=color:#719e07>using</span> OpenQA.Selenium;
+    <span style=color:#719e07>using</span> OpenQA.Selenium.Chrome;
+    <span style=color:#719e07>using</span> OpenQA.Selenium.Support.UI;
+
+    <span style=color:#586e75>// Webdriver
+</span><span style=color:#586e75></span>    <span style=color:#dc322f>var</span> driver = <span style=color:#719e07>new</span> ChromeDriver();
+    driver.Navigate().GoToUrl(<span style=color:#2aa198>&#34;http://www.example.com&#34;</span>);
+
+    <span style=color:#586e75>// Fetch element using FindElement
+</span><span style=color:#586e75></span>    <span style=color:#dc322f>var</span> webElement = driver.FindElement(By.CssSelector(<span style=color:#2aa198>&#34;h1&#34;</span>));
+
+    <span style=color:#586e75>// Screenshot for the element
+</span><span style=color:#586e75></span>    <span style=color:#dc322f>var</span> elementScreenshot = (webElement <span style=color:#719e07>as</span> ITakesScreenshot).GetScreenshot();
+    elementScreenshot.SaveAsFile(<span style=color:#2aa198>&#34;screenshot_of_element.png&#34;</span>);
+  
+</code></pre></div></section><section id=rubycode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Works with Selenium4-alpha7 Ruby bindings and above</span>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:chrome</span>
+
+<span style=color:#719e07>begin</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://example.com/&#39;</span>
+  ele <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:css</span>, <span style=color:#2aa198>&#39;h1&#39;</span>)
+
+  <span style=color:#586e75># Takes and Stores the element screenshot in specified path</span>
+  ele<span style=color:#719e07>.</span>save_screenshot(<span style=color:#2aa198>&#39;./image.jpg&#39;</span>)
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> {Builder, By} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
+<span style=color:#268bd2>let</span> fs <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;fs&#39;</span>);
+
+(async <span style=color:#268bd2>function</span> example() {
+   <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder()
+       .forBrowser(<span style=color:#2aa198>&#39;chrome&#39;</span>)
+       .build();
+
+   await driver.get(<span style=color:#2aa198>&#39;https://www.example.com&#39;</span>);
+   <span style=color:#268bd2>let</span> ele <span style=color:#719e07>=</span> await driver.findElement(By.css(<span style=color:#2aa198>&#34;h1&#34;</span>));
+   <span style=color:#586e75>// Captures the element screenshot
+</span><span style=color:#586e75></span>   <span style=color:#268bd2>let</span> encodedString <span style=color:#719e07>=</span> await ele.takeScreenshot(<span style=color:#cb4b16>true</span>);
+   await fs.writeFileSync(<span style=color:#2aa198>&#39;./image.png&#39;</span>, encodedString, <span style=color:#2aa198>&#39;base64&#39;</span>);
+   await driver.quit();
+}())
+  
+</code></pre></div></section><section id=kotlincode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> org.apache.commons.io.FileUtils
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style=color:#719e07>import</span> org.openqa.selenium.*
+<span style=color:#719e07>import</span> java.io.File
+
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>() {
+    <span style=color:#719e07>val</span> driver = ChromeDriver()
+    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://www.example.com&#34;</span>)
+    <span style=color:#719e07>val</span> element = driver.findElement(By.cssSelector(<span style=color:#2aa198>&#34;h1&#34;</span>))
+    <span style=color:#719e07>val</span> scrFile: File = element.getScreenshotAs(OutputType.FILE)
+    FileUtils.copyFile(scrFile, File(<span style=color:#2aa198>&#34;./image.png&#34;</span>))
+    driver.quit()
+}
+  </code></pre></div></section></div></div><h3 id=execute-script>Execute Script</h3><p>Executes JavaScript code snippet in the
+current context of a selected frame or window.</p><div class=tabset><input type=radio name=tabsetcode28 id=tab0code28 aria-controls=javacode28 checked>
+<label for=tab0code28>Java</label>
+<input type=radio name=tabsetcode28 id=tab1code28 aria-controls=pythoncode28>
+<label for=tab1code28>Python</label>
+<input type=radio name=tabsetcode28 id=tab2code28 aria-controls=cscode28>
+<label for=tab2code28>C#</label>
+<input type=radio name=tabsetcode28 id=tab3code28 aria-controls=rubycode28>
+<label for=tab3code28>Ruby</label>
+<input type=radio name=tabsetcode28 id=tab4code28 aria-controls=javascriptcode28>
+<label for=tab4code28>JavaScript</label>
+<input type=radio name=tabsetcode28 id=tab5code28 aria-controls=kotlincode28>
+<label for=tab5code28>Kotlin</label><div class=tab-panels><section id=javacode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+    <span style=color:#586e75>//Creating the JavascriptExecutor interface object by Type casting
+</span><span style=color:#586e75></span>      JavascriptExecutor js <span style=color:#719e07>=</span> <span style=color:#719e07>(</span>JavascriptExecutor<span style=color:#719e07>)</span>driver<span style=color:#719e07>;</span>
+    <span style=color:#586e75>//Button Element
+</span><span style=color:#586e75></span>      WebElement button <span style=color:#719e07>=</span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>name<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;btnLogin&#34;</span><span style=color:#719e07>));</span>
+    <span style=color:#586e75>//Executing JavaScript to click on element
+</span><span style=color:#586e75></span>      js<span style=color:#719e07>.</span>executeScript<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;arguments[0].click();&#34;</span><span style=color:#719e07>,</span> element<span style=color:#719e07>);</span>
+    <span style=color:#586e75>//Get return value from script
+</span><span style=color:#586e75></span>      String text <span style=color:#719e07>=</span> <span style=color:#719e07>(</span>String<span style=color:#719e07>)</span> javascriptExecutor<span style=color:#719e07>.</span>executeScript<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;return arguments[0].innerText&#34;</span><span style=color:#719e07>,</span> element<span style=color:#719e07>);</span>
+    <span style=color:#586e75>//Executing JavaScript directly
+</span><span style=color:#586e75></span>      js<span style=color:#719e07>.</span>executeScript<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;console.log(&#39;hello world&#39;)&#34;</span><span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=pythoncode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+    <span style=color:#586e75># code sample not available please raise a PR</span>
+  </code></pre></div></section><section id=csharpcode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+    <span style=color:#586e75>// code sample not available please raise a PR
+</span><span style=color:#586e75></span>  
+</code></pre></div></section><section id=rubycode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+    <span style=color:#586e75># code sample not available please raise a PR</span>
+  </code></pre></div></section><section id=javascriptcode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Stores the header element
+</span><span style=color:#586e75></span><span style=color:#268bd2>let</span> header <span style=color:#719e07>=</span> await driver.findElement(By.css(<span style=color:#2aa198>&#39;h1&#39;</span>));
+
+<span style=color:#586e75>// Executing JavaScript to capture innerText of header element
+</span><span style=color:#586e75></span><span style=color:#268bd2>let</span> text <span style=color:#719e07>=</span> await driver.executeScript(<span style=color:#2aa198>&#39;return arguments[0].innerText&#39;</span>, header);
+  
+</code></pre></div></section><section id=kotlincode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+    <span style=color:#586e75>// code sample not available please raise a PR
+</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><h3 id=print-page>Print Page</h3><p>Prints the current page within the browser</p><p><em>Note: This requires Chromium Browsers to be in headless mode</em></p><div class=tabset><input type=radio name=tabsetcode29 id=tab0code29 aria-controls=javacode29 checked>
+<label for=tab0code29>Java</label>
+<input type=radio name=tabsetcode29 id=tab1code29 aria-controls=pythoncode29>
+<label for=tab1code29>Python</label>
+<input type=radio name=tabsetcode29 id=tab2code29 aria-controls=cscode29>
+<label for=tab2code29>C#</label>
+<input type=radio name=tabsetcode29 id=tab3code29 aria-controls=rubycode29>
+<label for=tab3code29>Ruby</label>
+<input type=radio name=tabsetcode29 id=tab4code29 aria-controls=javascriptcode29>
+<label for=tab4code29>JavaScript</label>
+<input type=radio name=tabsetcode29 id=tab5code29 aria-controls=kotlincode29>
+<label for=tab5code29>Kotlin</label><div class=tab-panels><section id=javacode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+   <span style=color:#719e07>import</span> org.openqa.selenium.print.PrintOptions<span style=color:#719e07>;</span>
+
+    driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://www.selenium.dev&#34;</span><span style=color:#719e07>);</span>
+    printer <span style=color:#719e07>=</span> <span style=color:#719e07>(</span>PrintsPage<span style=color:#719e07>)</span> driver<span style=color:#719e07>;</span>
+
+    PrintOptions printOptions <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> PrintOptions<span style=color:#719e07>();</span>
+    printOptions<span style=color:#719e07>.</span>setPageRanges<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;1-2&#34;</span><span style=color:#719e07>);</span>
+
+    Pdf pdf <span style=color:#719e07>=</span> printer<span style=color:#719e07>.</span>print<span style=color:#719e07>(</span>printOptions<span style=color:#719e07>);</span>
+    String content <span style=color:#719e07>=</span> pdf<span style=color:#719e07>.</span>getContent<span style=color:#719e07>();</span>
+  </code></pre></div></section><section id=pythoncode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+    <span style=color:#719e07>from</span> selenium.webdriver.common.print_page_options <span style=color:#719e07>import</span> PrintOptions
+
+    print_options <span style=color:#719e07>=</span> PrintOptions()
+    print_options<span style=color:#719e07>.</span>page_ranges <span style=color:#719e07>=</span> [<span style=color:#2aa198>&#39;1-2&#39;</span>]
+
+    driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;printPage.html&#34;</span>)
+
+    base64code <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>print_page(print_options)
+  </code></pre></div></section><section id=csharpcode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+    <span style=color:#586e75>// code sample not available please raise a PR
+</span><span style=color:#586e75></span>  
+</code></pre></div></section><section id=rubycode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+    driver<span style=color:#719e07>.</span>navigate_to <span style=color:#2aa198>&#39;https://www.selenium.dev&#39;</span>
+
+    base64encodedContent <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>print_page(<span style=color:#2aa198>orientation</span>: <span style=color:#2aa198>&#39;landscape&#39;</span>)
+  </code></pre></div></section><section id=javascriptcode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+  <span style=color:#268bd2>const</span> {Builder} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
+  <span style=color:#268bd2>const</span> chrome <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver/chrome&#39;</span>);
+  <span style=color:#268bd2>let</span> opts <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> chrome.Options();
+  <span style=color:#268bd2>let</span> fs <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;fs&#39;</span>);
+  (async <span style=color:#268bd2>function</span> example() {
+    <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> Builder()
+      .forBrowser(<span style=color:#2aa198>&#39;chrome&#39;</span>)
+      .setChromeOptions(opts.headless())
+      .build();
+    await driver.get(<span style=color:#2aa198>&#39;https://www.selenium.dev&#39;</span>);
+    <span style=color:#719e07>try</span> {
+      <span style=color:#268bd2>let</span> base64 <span style=color:#719e07>=</span> await driver.printPage({pageRanges<span style=color:#719e07>:</span>[<span style=color:#2aa198>&#34;1-2&#34;</span>]});
+      await fs.writeFileSync(<span style=color:#2aa198>&#39;./test.pdf&#39;</span>, base64, <span style=color:#2aa198>&#39;base64&#39;</span>);
+    } <span style=color:#719e07>catch</span> (e) {
+    console.log(e)
+    }
+    await driver.quit();
+  })();
+  
+</code></pre></div></section><section id=kotlincode29 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+    <span style=color:#586e75>// code sample not available please raise a PR
+</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/es/webdriver/browser_manipulation/>“Manipulación de Navegadores”</a> was last updated on: 31 Mar 2021 15:20:57 +0530: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/196b3d28449e0fa61bc9d2c3cdade6202b736ed9>Adding missing pt-br docs [deploy site] (196b3d2)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/es/webdriver/locating_elements/ title="Localizando elementos"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/es/webdriver/bidi_apis/ title="WebDriver Bidi APIs" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1617184290></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/learn.js?1617184290></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1617184290></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1617184290 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1617184290></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

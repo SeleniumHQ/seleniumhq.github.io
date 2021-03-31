@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>介绍 on Selenium 文档</title><link>https://www.selenium.dev/documentation/zh-cn/introduction/</link><description>Recent content in 介绍 on Selenium 文档</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/zh-cn/introduction/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium 项目和工具</title><link>https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</guid><description>Selenium 控制网页浏览器 Selenium 有很多功能， 但其核心是 web 浏览器自动化的一个工具集， 它使用最好的技术来远程控制浏览器实例， 并模拟用户与浏览器的交互。
+它允许用户模拟终端用户执行的常见活动；将文本输入到字段中，选择下拉值和复选框，并单击文档中的链接。 它还提供许多其他控件，比如鼠标移动、任意 JavaScript 执行等等。
+虽然 Selenium 主要用于网站的前端测试，但其核心是浏览器用户代理库。 这些接口在应用程序中无处不在，它们鼓励与其他库进行组合，以满足您的目的。
+一个接口来统治它们 该项目的指导原则之一是支持所有（主要）浏览器技术的通用接口。 Web 浏览器是非常复杂的，高度工程化的应用程序， 以完全不同的方式执行它们的操作，但是在执行这些操作时，它们通常看起来是一样的 即使文本以相同的字体呈现，图像也会显示在相同的位置，并且链接会将您带到相同的目的地。 下面发生的事情就像白天和黑夜一样不同。 Selenium “抽象”了这些差异，向编写代码的人隐藏了它们的细节和复杂性。 这允许您编写几行代码来执行一个复杂的工作流程， 但是这几行代码将在 Firefox、 Internet Explorer、 Chrome 和所有其他支持的浏览器上执行。
+工具和支持 Selenium 的极简设计方法使其具有通用性，可以作为更大应用程序中的组件。 Selenium 保护伞下提供的周边基础设施为您提供了组合自己的 浏览器 grid 的工具， 因此测试就可以跨一系列机器在不同的浏览器和多个操作系统上运行。
+想象一下， 服务器机房或数据中心的一组计算机同时启动浏览器，访问站点的链接、表单和表格 — 全天 24 小时测试应用程序。 通过为最常见的语言提供的简单编程接口， 这些测试将不知疲倦地并行运行， 当错误发生时向您报告。
+通过为用户提供工具和文档， 不仅可以控制浏览器， 还可以方便地扩展和部署这些 grid， 从而帮助您实现这一目标。
+通过为用户提供工具和文档，不仅可以控制浏览器， 还可以简化网格的伸缩和部署。 来帮助您实现这一目标， 这些工具和文档
+谁在使用 Selenium 世界上许多最重要的公司都在基于浏览器的测试中采用了 Selenium， 这常常取代了多年来涉及其他专有工具的工作。 随着它越来越受欢迎， 它的需求和挑战也成倍增加。
+随着网络变得越来越复杂，新的技术被添加到网站上， 这个项目的任务就是尽可能地跟上它们。 作为一个开源项目，这种支持是通过许多志愿者的慷慨捐赠来提供的， 每个志愿者都有一份“日常工作”。</description></item><item><title>关于测试自动化</title><link>https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/</guid><description>首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
+然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。 此外，它们通常需要大量的基础设施才能有效运行。 经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成， 还是使用较低级的方法完成，这是一个很好的规则。
+一旦确定您正在进行Web浏览器测试业务， 并且您的 Selenium 环境已经准备好开始编写测试， 您通常会执行以下三个步骤的组合：
+设置数据 执行一组离散的操作 评估结果 您需要尽可能缩短这些步骤; 一到两个操作在大多数时间内应该足够了。 浏览器自动化具有“脆弱”的美誉， 但实际上那是因为用户经常对它要求过高。 在后面的章节中，我们将回到您可以使用的技术， 为了缓解测试中明显的间歇性问题， 特别是如何克服 浏览器 和 WebDriver 之间的竞争条件。
+通过保持测试简短并仅在您完全没有替代方案时使用Web浏览器，您可以用最小的代码片段来完成很多测试。
+Selenium测试的一个显著优势是，它能够从用户的角度测试应用程序的所有组件（从后端到前端）。 因此，换句话说，虽然功能测试运行起来可能很昂贵，但它们同时也包含了大量关键业务部分。
+测试要求 如前所述，Selenium 测试运行起来可能很昂贵。 在多大程度上取决于您正在运行测试的浏览器， 但历史上浏览器的行为变化太大，以至于通常是针对多个浏览器进行交叉测试的既定目标。
+Selenium 允许您在多个操作系统上的多个浏览器上运行相同的指令， 但是对所有可能的浏览器、它们的不同版本以及它们所运行的许多操作系统的枚举将很快成为一项繁重的工作。
+让我们从一个例子开始 Larry 写了一个网站，允许用户订购他们自己定制的独角兽。
+一般的工作流程(我们称之为“幸福之路”)是这样的:
+创建一个账户 配置他们的独角兽 添加到购物车 检验并付款 给出关于他们独角兽的反馈 编写一个宏大的 Selenium 脚本来执行所有这些操作是很诱人的 — 很多人都会尝试这样做。 抵制诱惑！ 这样做会导致测试: a) 需要很长时间; b) 会受到一些与页面呈现时间问题有关的常见问题的影响; c) 如果失败，它不会给出一个简洁的、“可检查”的方法来诊断出了什么问题。
+测试此场景的首选策略是将其分解为一系列独立的、快速的测试，每个测试都有一个存在的“理由”。
+假设您想测试第二步： 配置您的独角兽。 它将执行以下操作:</description></item><item><title>测试的类型</title><link>https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid><description>验收测试 进行这种类型的测试以确定功能或系统是否满足客户的期望和要求. 这种测试通常涉及客户的合作或反馈, 是一种验证活动, 可以用于回答以下问题：
+我们是否在制造 正确的 产品?
+对于Web应用程序, 可以通过模拟用户期望的行为 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟. 注意：有些人可能还会提到, 验收测试是 功能测试 的子类型.
+功能测试 进行这种类型的测试是为了确定功能或系统是否正常运行而没有问题. 它会在不同级别检查系统, 以确保涵盖所有方案并且系统能够执行预期的 工作 . 这是一个验证活动, 它回答了以下问题：
+我们是否在 正确地 制造产品？
+这通常包括： 测试没有错误 (404, 异常…) , 以可用的方式 (正确的重定向) 正常运行, 以可访问的方式并匹配其规格 (请参见前述的 验收测试 ) .
+对于Web应用程序, 可以通过模拟预期的结果, 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放或通过本文档中说明的各种支持的语言来完成此模拟.
+性能测试 顾名思义, 进行性能测试是为了衡量应用程序的性能.
+性能测试主要有两种类型:
+负载测试 进行了负载测试, 以验证应用程序在各种特定的负载 (通常是同时连接一定数量的用户) 下的运行状况
+压力测试 进行压力测试, 以验证应用程序在压力 (或高于最大支持负载) 下的运行状况.
+通常, 性能测试是通过执行一些Selenium书写的测试来完成的, 这些测试模拟了不同的用户 使用Web应用程序的特定功能 并检索了一些有意义的指标.
+通常, 这是由其他检索指标的工具完成的.</description></item><item><title>关于这个文档</title><link>https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</guid><description>这些文档，就像代码本身一样，100% 由 Selenium 社区中的志愿者维护。 许多人自成立以来一直在使用它，但更多人只是在短时间内使用它，并且已经花时间帮助改善新用户的入门体验。
+如果文档有问题，我们想知道！ 沟通问题的最佳方式是访问 https://github.com/seleniumhq/seleniumhq.github.io/issues 并搜索问题是否已经提交。 如果没有，请随意打开一个！
+社区的许多成员经常光顾 irc.freenode.net 的 #selenium IRC 频道。 请随时来访并提出问题，如果您得到了您认为在这些文档中可能有用的帮助，请务必添加您的贡献！ 我们可以更新这些文档，但当我们从普通提交者之外获得贡献时，对每个人来说都容易得多。</description></item></channel></rss>

@@ -1,0 +1,465 @@
+<!doctype html><html lang=de class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>Elemente lokalisieren :: Dokumentation für Selenium</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1617184285 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1617184285 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1617184285></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/de/webdriver/locating_elements/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1617184285></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1617184285></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/de";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1617184285></script></div><div class=highlightable><ul class=topics><li data-nav-id=/de/getting_started/ title="Erste Schritte" class=dd-item><a href=https://www.selenium.dev/documentation/de/getting_started/>Erste Schritte
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/getting_started/quick/ title="Kurze Einführung" class=dd-item><a href=https://www.selenium.dev/documentation/de/getting_started/quick/>Kurze Einführung
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/introduction/ title=Einführung class=dd-item><a href=https://www.selenium.dev/documentation/de/introduction/>Einführung
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/introduction/the_selenium_project_and_tools/ title="Das Seleniumprojekt und die Tools" class=dd-item><a href=https://www.selenium.dev/documentation/de/introduction/the_selenium_project_and_tools/>Das Seleniumprojekt und die Tools
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/introduction/on_test_automation/ title=Testautomatisierung class=dd-item><a href=https://www.selenium.dev/documentation/de/introduction/on_test_automation/>Testautomatisierung
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/introduction/types_of_testing/ title=Testarten class=dd-item><a href=https://www.selenium.dev/documentation/de/introduction/types_of_testing/>Testarten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/introduction/about_this_documentation/ title="Über diese Dokumentation" class=dd-item><a href=https://www.selenium.dev/documentation/de/introduction/about_this_documentation/>Über diese Dokumentation
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/selenium_installation/ title="Selenium installieren" class=dd-item><a href=https://www.selenium.dev/documentation/de/selenium_installation/>Selenium installieren
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/selenium_installation/installing_selenium_libraries/ title="Bibliotheken installieren" class=dd-item><a href=https://www.selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/>Bibliotheken installieren
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/selenium_installation/installing_webdriver_binaries/ title="WebDriver Binaries installieren" class=dd-item><a href=https://www.selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/>WebDriver Binaries installieren
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/selenium_installation/installing_standalone_server/ title="Standalone Server installieren" class=dd-item><a href=https://www.selenium.dev/documentation/de/selenium_installation/installing_standalone_server/>Standalone Server installieren
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/getting_started_with_webdriver/ title="Erste Schritte mit WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/de/getting_started_with_webdriver/>Erste Schritte mit WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/getting_started_with_webdriver/browsers/ title=Browsers class=dd-item><a href=https://www.selenium.dev/documentation/de/getting_started_with_webdriver/browsers/>Browsers
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/getting_started_with_webdriver/third_party_drivers_and_plugins/ title="Driverimplementierungen anderer Anbieter und Plugins" class=dd-item><a href=https://www.selenium.dev/documentation/de/getting_started_with_webdriver/third_party_drivers_and_plugins/>Driverimplementierungen anderer Anbieter und Plugins
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/webdriver/ title=WebDriver class="dd-item
+parent"><a href=https://www.selenium.dev/documentation/de/webdriver/>WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/webdriver/understanding_the_components/ title="Erklärung der Komponenten" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/understanding_the_components/>Erklärung der Komponenten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/driver_requirements/ title="Driver Vorraussetzungen" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/driver_requirements/>Driver Vorraussetzungen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/browser_manipulation/ title="Browser Manipulation" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/browser_manipulation/>Browser Manipulation
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/locating_elements/ title="Elemente lokalisieren" class="dd-item active"><a href=https://www.selenium.dev/documentation/de/webdriver/locating_elements/>Elemente lokalisieren
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/bidi_apis/ title="WebDriver Bidi APIs" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/bidi_apis/>WebDriver Bidi APIs
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/waits/ title=Waits class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/waits/>Waits
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/support_classes/ title="Supporter Klassen" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/support_classes/>Supporter Klassen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/js_alerts_prompts_and_confirmations/ title="JavaScript-Warnungen, Fragen und Bestätigungen" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/js_alerts_prompts_and_confirmations/>JavaScript-Warnungen, Fragen und Bestätigungen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/http_proxies/ title="Http Proxies" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/http_proxies/>Http Proxies
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/page_loading_strategy/ title="Strategien beim Laden von Webseiten" class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/page_loading_strategy/>Strategien beim Laden von Webseiten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/web_element/ title=Webelement class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/web_element/>Webelement
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/webdriver/keyboard/ title=Tastatur class=dd-item><a href=https://www.selenium.dev/documentation/de/webdriver/keyboard/>Tastatur
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/remote_webdriver/ title="Remote WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/de/remote_webdriver/>Remote WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/remote_webdriver/remote_webdriver_client/ title="Remote WebDriver Client" class=dd-item><a href=https://www.selenium.dev/documentation/de/remote_webdriver/remote_webdriver_client/>Remote WebDriver Client
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/guidelines_and_recommendations/ title="Anleitungen und Empfehlungen" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/>Anleitungen
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/guidelines_and_recommendations/page_object_models/ title="'Page object' Modell" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/page_object_models/>'Page object' Modell
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/domain_specific_language/ title="Domänenspezifische Sprache" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/domain_specific_language/>Domänenspezifische Sprache
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/generating_application_state/ title="Erstellen eines Applikations Zustandes" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/generating_application_state/>Erstellen eines Applikations Zustandes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/mock_external_services/ title="Mocken von externen Services" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/mock_external_services/>Mocken von externen Services
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/improved_reporting/ title="Detailiertes Reporting" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/improved_reporting/>Detailiertes Reporting
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/avoid_sharing_state/ title="Vermeiden von geteilten Testdaten" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/avoid_sharing_state/>Vermeiden von geteilten Testdaten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/test_independency/ title="Unabhängige Tests" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/test_independency/>Unabhängige Tests
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/consider_using_a_fluent_api/ title="Consider using a fluent API" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/consider_using_a_fluent_api/>Consider using a fluent API
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/guidelines_and_recommendations/fresh_browser_per_test/ title="Neuer Browser pro Test" class=dd-item><a href=https://www.selenium.dev/documentation/de/guidelines_and_recommendations/fresh_browser_per_test/>Neuer Browser pro Test
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/worst_practices/ title="Wie man es nicht machen sollte" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/>Wie man es nicht machen sollte
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/worst_practices/captchas/ title=Captchas class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/captchas/>Captchas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/two_factor_authentication/ title="Two Factor Authentication" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/two_factor_authentication/>Two Factor Authentication
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/file_downloads/ title=Dateidownloads class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/file_downloads/>Dateidownloads
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/http_response_codes/ title="HTTP Antwortcodes" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/http_response_codes/>HTTP Antwortcodes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/gmail_email_and_facebook_logins/ title="Gmail, Email und Facebook Logins" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/gmail_email_and_facebook_logins/>Gmail, Email und Facebook
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/test_dependency/ title="Test Abhängigkeiten" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/test_dependency/>Test Abhängigkeiten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/performance_testing/ title=Effizienztests class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/performance_testing/>Effizienztests
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/worst_practices/link_spidering/ title="Link Suche" class=dd-item><a href=https://www.selenium.dev/documentation/de/worst_practices/link_spidering/>Link Suche
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/grid/ title=Grid class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/>Grid
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/grid/purposes_and_main_functionalities/ title="Zweck und hauptsächlich genutze Funktionalität" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/purposes_and_main_functionalities/>Zweck und Funktionen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/when_to_use_grid/ title="Einsatz eines Grid" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/when_to_use_grid/>Einsatz eines Grid
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/grid_3/ title="Grid 3" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_3/>Grid 3
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/grid/grid_3/components_of_a_grid/ title=Komponenten class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_3/components_of_a_grid/>Komponenten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/grid_3/setting_up_your_own_grid/ title="Aufsetzen eines Grid" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_3/setting_up_your_own_grid/>Aufsetzen eines Grid
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/grid/grid_4/ title="Grid 4" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/>Grid 4
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/grid/grid_4/components_of_a_grid/ title=Komponenten class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/components_of_a_grid/>Komponenten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/grid_4/setting_up_your_own_grid/ title=Aufsetzen class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/setting_up_your_own_grid/>Aufsetzen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/grid_4/configuring_components/ title="Komponenten konfigurieren" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/configuring_components/>Komponenten konfigurieren
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/grid/grid_4/configuring_components/config_help/ title=Konfigurationshilfe class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/configuring_components/config_help/>Konfigurationshilfe
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/grid/grid_4/advanced_features/ title="Erweiterte Funktionen" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/advanced_features/>Erweiterte Funktionen
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/grid/grid_4/advanced_features/observability/ title=Beobachtbarkeit class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/advanced_features/observability/>Beobachtbarkeit
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/grid/grid_4/graphql_support/ title="GraphQL querying support" class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/graphql_support/>GraphQL querying support
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/grid/grid_4/grid_endpoints/ title=Rasterendpunkte class=dd-item><a href=https://www.selenium.dev/documentation/de/grid/grid_4/grid_endpoints/>Rasterendpunkte
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/de/driver_idiosyncrasies/ title="Eigenheiten der Driver" class=dd-item><a href=https://www.selenium.dev/documentation/de/driver_idiosyncrasies/>Eigenheiten der Driver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/driver_idiosyncrasies/shared_capabilities/ title="Allgemeine capabilities" class=dd-item><a href=https://www.selenium.dev/documentation/de/driver_idiosyncrasies/shared_capabilities/>Allgemeine capabilities
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/driver_idiosyncrasies/driver_specific_capabilities/ title="Driver spezifische Capabilities" class=dd-item><a href=https://www.selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/>Driver spezifische Capabilities
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/support_packages/ title="Support packages" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/>Support packages
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/support_packages/working_with_colours/ title="Arbeiten mit Farben" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/working_with_colours/>Arbeiten mit Farben
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/support_packages/working_with_select_elements/ title="Arbeiten mit Auswahlelementen" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/working_with_select_elements/>Arbeiten mit Auswahlelementen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/support_packages/mouse_and_keyboard_actions_in_detail/ title="Mausaktionen im Detail" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/>Mausaktionen im Detail
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/support_packages/working_with_cookies/ title="Handling von Cookies" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/working_with_cookies/>Handling von Cookies
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/support_packages/chrome_devtools/ title="Chrome Devtools" class=dd-item><a href=https://www.selenium.dev/documentation/de/support_packages/chrome_devtools/>Chrome Devtools
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/legacy_docs/ title="Archivierte Komponenten" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/>Archivierte Komponenten
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/legacy_docs/selenium_rc/ title="Selenium 1 (Selenium RC)" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/selenium_rc/>Selenium 1 (Selenium RC)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/legacy_docs/migrating_from_rc_to_webdriver/ title="Migration von RC zu WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/migrating_from_rc_to_webdriver/>Migration von RC zu WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/legacy_docs/html-runner/ title="HTML runner" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/html-runner/>HTML runner
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/legacy_docs/selenium_ide/ title="Alte Selenium IDE" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/selenium_ide/>Alte Selenium IDE
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/legacy_docs/remote_webdriver_server/ title="Remote WebDriver Server" class=dd-item><a href=https://www.selenium.dev/documentation/de/legacy_docs/remote_webdriver_server/>Remote WebDriver Server
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/de/front_matter/ title=Hinweise class=dd-item><a href=https://www.selenium.dev/documentation/de/front_matter/>Hinweise
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/de/front_matter/copyright_and_attributions/ title="Copyright und Unterstützung" class=dd-item><a href=https://www.selenium.dev/documentation/de/front_matter/copyright_and_attributions/>Copyright und Unterstützung
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/de/front_matter/typographical_conventions/ title="Typographische Richtlinien" class=dd-item><a href=https://www.selenium.dev/documentation/de/front_matter/typographical_conventions/>Typographische Richtlinien
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>Mehr</h3><ul><li><a class=padding href=https://www.selenium.dev><i class="fas fa-home"></i>Selenium Home</a></li><li><a class=padding href=https://github.com/SeleniumHQ/seleniumhq.github.io><i class="fab fa-fw fa-github"></i>GitHub repo</a></li><li><a class=padding href=https://github.com/seleniumhq/seleniumhq.github.io/issues><i class="fas fa-fw fa-exclamation-triangle"></i>Fehler einmelden</a></li><li><a class=padding href=https://www.selenium.dev/documentation/de/front_matter/copyright_and_attributions><i class="fas fa-fw fa-trophy"></i>Impressum</a></li><li><a class=padding href=https://www.selenium.dev/documentation/de/contributing><i class="fas fa-fw fa-bullhorn"></i>Wie kann ich beitragen?</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value;">
+<option id=de value=https://www.selenium.dev/documentation/de/webdriver/locating_elements/ selected>Deutsch</option>
+<option id=pt-br value=https://www.selenium.dev/documentation/pt-br/webdriver/locating_elements/>Português (Brasileiro)</option>
+<option id=en value=https://www.selenium.dev/documentation/en/webdriver/locating_elements/>English</option>
+<option id=es value=https://www.selenium.dev/documentation/es/webdriver/locating_elements/>Español</option>
+<option id=nl value=https://www.selenium.dev/documentation/nl/webdriver/locating_elements/>Nederlands</option>
+<option id=zh-cn value=https://www.selenium.dev/documentation/zh-cn/webdriver/locating_elements/>中文简体</option>
+<option id=fr value=https://www.selenium.dev/documentation/fr/webdriver/locating_elements/>Français</option>
+<option id=ja value=https://www.selenium.dev/documentation/ja/webdriver/locating_elements/>日本語</option>
+<option id=ko value=https://www.selenium.dev/documentation/ko/webdriver/locating_elements/>한국어</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75" /></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i>Verlauf löschen</a></li></ul></section><section id=footer><p>&copy; 2013-2021</p><p>Software Freedom Conservancy (SFC)</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Bearbeite diese Seite" href=https://github.com/SeleniumHQ/seleniumhq.github.io/edit/dev/docs_source_files/content/webdriver/locating_elements.de.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Bearbeite diese Seite</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=https://www.selenium.dev/documentation/de/>Das Selenium Browser Automations Projekt</a> > <a href=https://www.selenium.dev/documentation/de/webdriver/>WebDriver</a> > Elemente lokalisieren</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#locating-one-element>Locating one element</a></li><li><a href=#finden-mehrerer-elemente>Finden mehrerer Elemente</a></li><li><a href=#strategien-der-elementsuche>Strategien der Elementsuche</a></li><li><a href=#tips-zur-verwendung-von-selektoren>Tips zur Verwendung von Selektoren</a></li></ul></li><li><a href=#relative-suchstrategien>Relative Suchstrategien</a><ul><li><a href=#wie-funktionieren-die-relativen-suchemethoden>Wie funktionieren die relativen Suchemethoden</a></li><li><a href=#above---oberhalb>above() - oberhalb</a></li><li><a href=#below---unterhalb>below() - unterhalb</a></li><li><a href=#toleftof---links-davon>toLeftOf() - links davon</a></li><li><a href=#torightof---rechts-davon>toRightOf() - rechts davon</a></li><li><a href=#near---in-der-nähe-von>near() - in der Nähe von</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Elemente lokalisieren</h1><h3 id=locating-one-element>Locating one element</h3><p>Eine der grundlegendsten Techniken, die bei der Verwendung des WebDriver
+erlernt werden müssen, ist wie man Elemente auf der Webseite findet. WebDriver
+bietet eine Reihe von verschiedenen Möglichkeiten um Elemente zu finden,
+darunter die Suche nach einem Element anhand des ID-Attributs:</p><div class=tabset><input type=radio name=tabsetcode0 id=tab0code0 aria-controls=javacode0 checked>
+<label for=tab0code0>Java</label>
+<input type=radio name=tabsetcode0 id=tab1code0 aria-controls=pythoncode0>
+<label for=tab1code0>Python</label>
+<input type=radio name=tabsetcode0 id=tab2code0 aria-controls=cscode0>
+<label for=tab2code0>C#</label>
+<input type=radio name=tabsetcode0 id=tab3code0 aria-controls=rubycode0>
+<label for=tab3code0>Ruby</label>
+<input type=radio name=tabsetcode0 id=tab4code0 aria-controls=javascriptcode0>
+<label for=tab4code0>JavaScript</label>
+<input type=radio name=tabsetcode0 id=tab5code0 aria-controls=kotlincode0>
+<label for=tab5code0>Kotlin</label><div class=tab-panels><section id=javacode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+WebElement cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;cheese&#34;</span><span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;cheese&#34;</span>)
+  </code></pre></div></section><section id=csharpcode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+IWebElement element = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;cheese&#34;</span>));
+  
+</code></pre></div></section><section id=rubycode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>id</span>: <span style=color:#2aa198>&#39;cheese&#39;</span>)
+  </code></pre></div></section><section id=javascriptcode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> cheese <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#39;cheese&#39;</span>));
+  
+</code></pre></div></section><section id=kotlincode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> cheese: WebElement = driver.findElement(By.id(<span style=color:#2aa198>&#34;cheese&#34;</span>))
+  </code></pre></div></section></div></div><p>Wie das Beispiel zeigt, wird die Lokalisierung der Elemente
+mit dem WebDriver direkt an einer Instanz des <code>WebDriver</code> Objektes
+durchgeführt. Die <code>findElement(By)</code> Methode liefert ein Objekt des
+Types <code>ẀebElement</code>.</p><ul><li><code>WebDriver</code> repräsentiert den Browser</li><li><code>WebElement</code> repräsentiert einen bestimmten DOM Knoten
+(z.B. einen Link, ein Eingabefeld, etc.)</li></ul><p>Ab dem Zeitpunkt, ab dem eine Referenz zu einem WebElement &ldquo;gefunden&rdquo;
+wurde, kann der Suchumfang auf dieses Element eingeschränkt werden. Es
+können weitere eingegrenzte Suchen auf Basis des ausgewählten Elements
+durchgeführt werden, indem die gleiche Methode angewandt wird:</p><div class=tabset><input type=radio name=tabsetcode1 id=tab0code1 aria-controls=javacode1 checked>
+<label for=tab0code1>Java</label>
+<input type=radio name=tabsetcode1 id=tab1code1 aria-controls=pythoncode1>
+<label for=tab1code1>Python</label>
+<input type=radio name=tabsetcode1 id=tab2code1 aria-controls=cscode1>
+<label for=tab2code1>C#</label>
+<input type=radio name=tabsetcode1 id=tab3code1 aria-controls=rubycode1>
+<label for=tab3code1>Ruby</label>
+<input type=radio name=tabsetcode1 id=tab4code1 aria-controls=javascriptcode1>
+<label for=tab4code1>JavaScript</label>
+<input type=radio name=tabsetcode1 id=tab5code1 aria-controls=kotlincode1>
+<label for=tab5code1>Kotlin</label><div class=tab-panels><section id=javacode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+WebElement cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;cheese&#34;</span><span style=color:#719e07>));</span>
+WebElement cheddar <span style=color:#719e07>=</span> cheese<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;cheddar&#34;</span><span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;cheese&#34;</span>)
+cheddar <span style=color:#719e07>=</span> cheese<span style=color:#719e07>.</span>find_elements_by_id(<span style=color:#2aa198>&#34;cheddar&#34;</span>)
+  </code></pre></div></section><section id=csharpcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+IWebElement cheese = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;cheese&#34;</span>));
+IWebElement cheddar = cheese.FindElement(By.Id(<span style=color:#2aa198>&#34;cheddar&#34;</span>));
+  
+</code></pre></div></section><section id=rubycode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>id</span>: <span style=color:#2aa198>&#39;cheese&#39;</span>)
+cheddar <span style=color:#719e07>=</span> cheese<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>id</span>: <span style=color:#2aa198>&#39;cheddar&#39;</span>)
+  </code></pre></div></section><section id=javascriptcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> cheese <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#39;cheese&#39;</span>));
+<span style=color:#268bd2>const</span> cheddar <span style=color:#719e07>=</span> cheese.findElement(By.id(<span style=color:#2aa198>&#39;cheddar&#39;</span>));
+  
+</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> cheese = driver.findElement(By.id(<span style=color:#2aa198>&#34;cheese&#34;</span>))
+<span style=color:#719e07>val</span> cheddar = cheese.findElement(By.id(<span style=color:#2aa198>&#34;cheddar&#34;</span>))
+  </code></pre></div></section></div></div><p>Dies wird ermöglicht weil sowohl der <em>WebDriver</em> als auch das
+<em>WebElement</em> das Interface <a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html><em>SearchContext</em></a>
+implementieren. Wir verstehen dies im WebDriver als <em>role-based interface</em>
+(rollenbasiertes Interface). Dieses Interface ermöglicht um herauszufinden ob eine
+driver Implementierung ein bestimmtes Feature unterstützt oder nicht.
+Diese Schnittstellen (Interface) sind klar definiert und versuchen daran festzuhalten, dass
+es nur eine Verantwortlichkeit dafür gibt. Mehr über den Aufbau und die
+Verantwortlichkeiten der Driver können hier nachgelesen werden <a href=#>Link zu einer Sektion die noch definiert werden muss</a></p><p>Folglich untersützt das <em>By</em> Interface zahlreich zusätzliche Suchstrategien.
+Eine verschachtelte Suche ist nicht die effektivste Methode um die den gewünschten
+Käse zu finden. Es werden zwei getrennte Befehle an den Browser gesendet. Der
+erste der den gesamten DOM nach dem Element mit der ID &ldquo;cheese&rdquo; sucht, gefolgt
+von der Suche nach &ldquo;cheddar&rdquo; mit einem eingeschränkten Kontext.</p><p>Um die Effektivität zu erhöhen sollte ein präziserer Locator (Identifizierungsstrategie)
+gewählt werden; WebDriver unterstützt die Suche nach Elementen auch mit Hilfe eines
+CSS-locators, mit dem es auch möglich ist Kombinationen in einer einzelnen Suche
+durchzuführen:</p><div class=tabset><input type=radio name=tabsetcode2 id=tab0code2 aria-controls=javacode2 checked>
+<label for=tab0code2>Java</label>
+<input type=radio name=tabsetcode2 id=tab1code2 aria-controls=pythoncode2>
+<label for=tab1code2>Python</label>
+<input type=radio name=tabsetcode2 id=tab2code2 aria-controls=cscode2>
+<label for=tab2code2>C#</label>
+<input type=radio name=tabsetcode2 id=tab3code2 aria-controls=rubycode2>
+<label for=tab3code2>Ruby</label>
+<input type=radio name=tabsetcode2 id=tab4code2 aria-controls=javascriptcode2>
+<label for=tab4code2>JavaScript</label>
+<input type=radio name=tabsetcode2 id=tab5code2 aria-controls=kotlincode2>
+<label for=tab5code2>Kotlin</label><div class=tab-panels><section id=javacode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>cssSelector<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;#cheese #cheddar&#34;</span><span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+cheddar <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element_by_css_selector(<span style=color:#2aa198>&#34;#cheese #cheddar&#34;</span>)
+  </code></pre></div></section><section id=csharpcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+driver.FindElement(By.CssSelector(<span style=color:#2aa198>&#34;#cheese #cheddar&#34;</span>));
+  
+</code></pre></div></section><section id=rubycode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>css</span>: <span style=color:#2aa198>&#39;#cheese #cheddar&#39;</span>)
+  </code></pre></div></section><section id=javascriptcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> cheddar <span style=color:#719e07>=</span> driver.findElement(By.css(<span style=color:#2aa198>&#39;#cheese #cheddar&#39;</span>));
+  
+</code></pre></div></section><section id=kotlincode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+driver.findElement(By.cssSelector(<span style=color:#2aa198>&#34;#cheese #cheddar&#34;</span>))
+  </code></pre></div></section></div></div><h3 id=finden-mehrerer-elemente>Finden mehrerer Elemente</h3><p>Angenommen das Dokument in dem wir suchen wollen beinhaltet eine sortierte
+Liste mit Käsesorten die uns am besten schmecken:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#268bd2>ol</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>cheese</span>&gt;
+ &lt;<span style=color:#268bd2>li</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>cheddar</span>&gt;…
+ &lt;<span style=color:#268bd2>li</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>brie</span>&gt;…
+ &lt;<span style=color:#268bd2>li</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>rochefort</span>&gt;…
+ &lt;<span style=color:#268bd2>li</span> id<span style=color:#719e07>=</span><span style=color:#2aa198>camembert</span>&gt;…
+&lt;/<span style=color:#268bd2>ol</span>&gt;
+</code></pre></div><p>Es steht außer Frage, je mehr Käse desto besser, es wäre aber umständlich
+jedes Element einzeln abrufen zu müssen. Daher gibt es die Möglichkeit
+mit <code>findElements(By)</code> mehrere Elemente gleichzeitig zu finden. Diese Methode liefert
+eine Sammlung (Collection) von WebElementen. Wird nur ein Element gefunden, wird trotzdem
+eine Sammlung (mit einem Element) retourniert. Wird kein Element gefunden
+ist die Liste leer.</p><div class=tabset><input type=radio name=tabsetcode3 id=tab0code3 aria-controls=javacode3 checked>
+<label for=tab0code3>Java</label>
+<input type=radio name=tabsetcode3 id=tab1code3 aria-controls=pythoncode3>
+<label for=tab1code3>Python</label>
+<input type=radio name=tabsetcode3 id=tab2code3 aria-controls=cscode3>
+<label for=tab2code3>C#</label>
+<input type=radio name=tabsetcode3 id=tab3code3 aria-controls=rubycode3>
+<label for=tab3code3>Ruby</label>
+<input type=radio name=tabsetcode3 id=tab4code3 aria-controls=javascriptcode3>
+<label for=tab4code3>JavaScript</label>
+<input type=radio name=tabsetcode3 id=tab5code3 aria-controls=kotlincode3>
+<label for=tab5code3>Kotlin</label><div class=tab-panels><section id=javacode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+List<span style=color:#719e07>&lt;</span>WebElement<span style=color:#719e07>&gt;</span> muchoCheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElements<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>cssSelector<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;#cheese li&#34;</span><span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+mucho_cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_elements_by_css_selector(<span style=color:#2aa198>&#34;#cheese li&#34;</span>)
+  </code></pre></div></section><section id=csharpcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+IReadOnlyList&lt;IWebElement&gt; muchoCheese = driver.FindElements(By.CssSelector(<span style=color:#2aa198>&#34;#cheese li&#34;</span>));
+  
+</code></pre></div></section><section id=rubycode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+mucho_cheese <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_elements(<span style=color:#2aa198>css</span>: <span style=color:#2aa198>&#39;#cheese li&#39;</span>)
+  </code></pre></div></section><section id=javascriptcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> muchoCheese <span style=color:#719e07>=</span> driver.findElements(By.css(<span style=color:#2aa198>&#39;#cheese li&#39;</span>));
+  
+</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> muchoCheese: List&lt;WebElement&gt;  = driver.findElements(By.cssSelector(<span style=color:#2aa198>&#34;#cheese li&#34;</span>))
+  </code></pre></div></section></div></div><h3 id=strategien-der-elementsuche>Strategien der Elementsuche</h3><p>Im WebDriver existieren acht unterschiedliche Möglichkeiten um Elemente zu lokalisieren:</p><table><thead><tr><th>Lokator/Suchmethode (locator)</th><th>Beschreibung</th></tr></thead><tbody><tr><td>class name</td><td>Lokalisiert Elemente mit dem gewünschten Klassennamen (Zusammengesetzte Klassennamen sind nicht erlaubt)</td></tr><tr><td>css selector</td><td>Lokalisiert Elemente die dem CSS-Selektor entsprechen</td></tr><tr><td>id</td><td>Lokalisiert Elemente deren ID dem Suchwert entsprechen</td></tr><tr><td>name</td><td>Lokalisiert Elemente die den entsprechenden Wert im NAME Attribut haben</td></tr><tr><td>link text</td><td>Lokalisiert Link-Elemente deren sichtbarer Text dem Suchwert entsprechen</td></tr><tr><td>partial link text</td><td>Lokalisiert Link-Elemente die den Suchwert im sichtbaren Text vorkommt</td></tr><tr><td>tag name</td><td>Lokalisiert Elemente mit den entsprechenden HTML-Tags</td></tr><tr><td>xpath</td><td>Lokalisiert Elemente die auf dem xpath-Selektor entsprechen</td></tr></tbody></table><h3 id=tips-zur-verwendung-von-selektoren>Tips zur Verwendung von Selektoren</h3><p>Die bevorzugte Methode um Elemente zu identifizieren ist mit Sicherheit
+mit Hilfe der HTML IDs. Diese sind eindeutig, konsitent und vorhersehbar,
+weiters arbeitet diese Methode sehr schnell, da hierbei auf komplizierte
+DOM Verarbeitungen verzichtet wird.</p><p>Wenn eindeutige IDs nicht verfügbar sind, ist ein gut definierter
+CSS selector die bevorzugte Methode um Elemente zu lokalisieren.
+XPath-Suchen funktionieren gleich dem CSS-Selektoren, allerdings ist die
+Syntax komplizierter und schwieriger zu debuggen. Obwohl XPath-Selektoren
+sehr flexibel sind, sind sie in der Regel nicht von den Browser-Herstellern
+auf Leistung getestet und sind tendenziell recht langsam.</p><p>Selektorstrategien die <em>linkText</em> oder <em>partialLinkText</em> verwenden
+haben den Nachteil das diese nur für Link-Elemente angewandt werden
+können. Weiters werden diese Selektoren intern im WebDriver als
+XPath-Selektoren aufgelöst.</p><p>Den HTML-Tag als Identifizierungsmerkmal zu verwenden kann gefährlich
+sein. Meistens sind viele Elemente mit dem gleichen HTML-Tag auf einer
+Webseite. Eine sinnvolle Verwendung könnte sein, diese Strategie mit der
+<em>findElements(By)</em> Methode zu verwenden, die eine Sammlung von WebElementen
+retourniert.</p><p>Empfohlen wird die Suchen so kompackt und einfach lesbar wie möglich zu halten.
+Den DOM abzufragen ist eine aufwändige Operation für den WebDriver,
+und je präziser der Suchbegriff ist, desto besser.</p><h2 id=relative-suchstrategien>Relative Suchstrategien</h2><p><strong>Selenium 4</strong> führt relative Locators ein, die zuvor als
+<em>Friendly Locators</em> bekannt waren. Diese Funktionalität wurde
+hinzugefügt um Elemente zu finden, die sicht in der Nähe zu anderen
+Elementen befinden.
+Folgende relative Locators sind verfügbar:</p><ul><li><em>above</em> (oberhalb)</li><li><em>below</em> (unterhalb)</li><li><em>toLeftOf</em> (links)</li><li><em>toRightOf</em> (rechts)</li><li><em>near</em> (nahe/nächst)</li></ul><p><em>findElement</em> Methode akzeptiert nun eine weitere Möglichkeit
+<code>withTagName()</code> die einen relativen Locator liefert.</p><p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
+which returns a RelativeLocator.</p><h3 id=wie-funktionieren-die-relativen-suchemethoden>Wie funktionieren die relativen Suchemethoden</h3><p>Selenium verwendet folgende JavaScript Funktion
+<a href=https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect>getBoundingClientRect()</a>
+um das entsprechende Element zu finden. Diese
+Funktion retourniert Eigenschaften eines Elements
+wie z.B right, left, bottom und top (links, rechts, oben, unten)</p><p>Betrachten wir das folgende Beispiel um die
+Funktionalität der relativen Locators besser zu verstehen:</p><p><img src="https://www.selenium.dev/documentation/images/relative_locators.png?width=400px" alt="Relative Locators"></p><h3 id=above---oberhalb>above() - oberhalb</h3><p>Liefert das WebElement, welches sich über dem spezifiziertem Element befindet.</p><div class=tabset><input type=radio name=tabsetcode4 id=tab0code4 aria-controls=javacode4 checked>
+<label for=tab0code4>Java</label>
+<input type=radio name=tabsetcode4 id=tab1code4 aria-controls=pythoncode4>
+<label for=tab1code4>Python</label>
+<input type=radio name=tabsetcode4 id=tab2code4 aria-controls=cscode4>
+<label for=tab2code4>C#</label>
+<input type=radio name=tabsetcode4 id=tab3code4 aria-controls=rubycode4>
+<label for=tab3code4>Ruby</label>
+<input type=radio name=tabsetcode4 id=tab4code4 aria-controls=javascriptcode4>
+<label for=tab4code4>JavaScript</label>
+<input type=radio name=tabsetcode4 id=tab5code4 aria-controls=kotlincode4>
+<label for=tab5code4>Kotlin</label><div class=tab-panels><section id=javacode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import static</span> org.openqa.selenium.support.locators.RelativeLocator.withTagName<span style=color:#719e07>;</span>
+
+WebElement passwordField<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;password&#34;</span><span style=color:#719e07>));</span>
+WebElement emailAddressField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>withTagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;input&#34;</span><span style=color:#719e07>)</span>
+                                                  <span style=color:#719e07>.</span>above<span style=color:#719e07>(</span>passwordField<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium.webdriver.support.relative_locator <span style=color:#719e07>import</span> with_tag_name
+
+passwordField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;password&#34;</span>)
+emailAddressField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(with_tag_name(<span style=color:#2aa198>&#34;input&#34;</span>)<span style=color:#719e07>.</span>above(passwordField))
+
+  </code></pre></div></section><section id=csharpcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> static OpenQA.Selenium.RelativeBy;
+
+IWebElement passwordField = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;password&#34;</span>));
+IWebElement emailAddressField = driver.FindElement(WithTagName(<span style=color:#2aa198>&#34;input&#34;</span>)
+                                                   .Above(passwordField));
+  
+</code></pre></div></section><section id=rubycode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+password_field<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:id</span>, <span style=color:#2aa198>&#34;password&#34;</span>)
+email_address_field <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>relative</span>: {<span style=color:#2aa198>tag_name</span>: <span style=color:#2aa198>&#39;input&#39;</span>, <span style=color:#2aa198>above</span>:password_field})
+  </code></pre></div></section><section id=javascriptcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> passwordField <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#39;password&#39;</span>));
+<span style=color:#268bd2>let</span> emailAddressField <span style=color:#719e07>=</span> await driver.findElements(withTagName(<span style=color:#2aa198>&#39;input&#39;</span>).above(passwordField));
+  
+</code></pre></div></section><section id=kotlincode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> passwordField = driver.findElement(By.id(<span style=color:#2aa198>&#34;password&#34;</span>))
+<span style=color:#719e07>val</span> emailAddressField = driver.findElement(withTagName(<span style=color:#2aa198>&#34;input&#34;</span>).above(passwordField))
+  </code></pre></div></section></div></div><h3 id=below---unterhalb>below() - unterhalb</h3><p>Findet das WebElement, welches sich unter dem
+spezifiziertem Element befindet.</p><div class=tabset><input type=radio name=tabsetcode5 id=tab0code5 aria-controls=javacode5 checked>
+<label for=tab0code5>Java</label>
+<input type=radio name=tabsetcode5 id=tab1code5 aria-controls=pythoncode5>
+<label for=tab1code5>Python</label>
+<input type=radio name=tabsetcode5 id=tab2code5 aria-controls=cscode5>
+<label for=tab2code5>C#</label>
+<input type=radio name=tabsetcode5 id=tab3code5 aria-controls=rubycode5>
+<label for=tab3code5>Ruby</label>
+<input type=radio name=tabsetcode5 id=tab4code5 aria-controls=javascriptcode5>
+<label for=tab4code5>JavaScript</label>
+<input type=radio name=tabsetcode5 id=tab5code5 aria-controls=kotlincode5>
+<label for=tab5code5>Kotlin</label><div class=tab-panels><section id=javacode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import static</span> org.openqa.selenium.support.locators.RelativeLocator.withTagName<span style=color:#719e07>;</span>
+
+WebElement emailAddressField<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;email&#34;</span><span style=color:#719e07>));</span>
+WebElement passwordField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>withTagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;input&#34;</span><span style=color:#719e07>)</span>
+	                                          <span style=color:#719e07>.</span>below<span style=color:#719e07>(</span>emailAddressField<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium.webdriver.support.relative_locator <span style=color:#719e07>import</span> with_tag_name
+
+emailAddressField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;email&#34;</span>)
+passwordField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(with_tag_name(<span style=color:#2aa198>&#34;input&#34;</span>)<span style=color:#719e07>.</span>below(emailAddressField))
+  </code></pre></div></section><section id=csharpcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> static OpenQA.Selenium.RelativeBy;  
+
+IWebElement emailAddressField = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;email&#34;</span>));
+IWebElement passwordField = driver.FindElement(WithTagName(<span style=color:#2aa198>&#34;input&#34;</span>)
+                                               .Below(emailAddressField));
+  
+</code></pre></div></section><section id=rubycode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+email_address_field<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:id</span>, <span style=color:#2aa198>&#34;email&#34;</span>)
+password_field <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>relative</span>: {<span style=color:#2aa198>tag_name</span>: <span style=color:#2aa198>&#39;input&#39;</span>, <span style=color:#2aa198>below</span>: email_address_field})
+  </code></pre></div></section><section id=javascriptcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> emailAddressField <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#39;email&#39;</span>));
+<span style=color:#268bd2>let</span> passwordField <span style=color:#719e07>=</span> await driver.findElements(withTagName(<span style=color:#2aa198>&#39;input&#39;</span>).below(emailAddressField));
+  
+</code></pre></div></section><section id=kotlincode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> emailAddressField = driver.findElement(By.id(<span style=color:#2aa198>&#34;email&#34;</span>))
+<span style=color:#719e07>val</span> passwordField = driver.findElement(withTagName(<span style=color:#2aa198>&#34;input&#34;</span>).below(emailAddressField))
+  </code></pre></div></section></div></div><h3 id=toleftof---links-davon>toLeftOf() - links davon</h3><p>Liefert das WebElement, welches sich links vom spezifizierten Element
+befindet.</p><div class=tabset><input type=radio name=tabsetcode6 id=tab0code6 aria-controls=javacode6 checked>
+<label for=tab0code6>Java</label>
+<input type=radio name=tabsetcode6 id=tab1code6 aria-controls=pythoncode6>
+<label for=tab1code6>Python</label>
+<input type=radio name=tabsetcode6 id=tab2code6 aria-controls=cscode6>
+<label for=tab2code6>C#</label>
+<input type=radio name=tabsetcode6 id=tab3code6 aria-controls=rubycode6>
+<label for=tab3code6>Ruby</label>
+<input type=radio name=tabsetcode6 id=tab4code6 aria-controls=javascriptcode6>
+<label for=tab4code6>JavaScript</label>
+<input type=radio name=tabsetcode6 id=tab5code6 aria-controls=kotlincode6>
+<label for=tab5code6>Kotlin</label><div class=tab-panels><section id=javacode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import static</span> org.openqa.selenium.support.locators.RelativeLocator.withTagName<span style=color:#719e07>;</span>
+
+WebElement submitButton<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;submit&#34;</span><span style=color:#719e07>));</span>
+WebElement cancelButton<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>withTagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)</span>
+                                            <span style=color:#719e07>.</span>toLeftOf<span style=color:#719e07>(</span>submitButton<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium.webdriver.support.relative_locator <span style=color:#719e07>import</span> with_tag_name
+
+submitButton <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;submit&#34;</span>)
+cancelButton <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(with_tag_name(<span style=color:#2aa198>&#34;button&#34;</span>)<span style=color:#719e07>.</span>
+                                   to_left_of(submitButton))
+  </code></pre></div></section><section id=csharpcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> static OpenQA.Selenium.RelativeBy;
+
+IWebElement submitButton = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;submit&#34;</span>));
+IWebElement cancelButton = driver.FindElement(WithTagName(<span style=color:#2aa198>&#34;button&#34;</span>)
+                                              .LeftOf(submitButton));
+  
+</code></pre></div></section><section id=rubycode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+submit_button<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:id</span>, <span style=color:#2aa198>&#34;submit&#34;</span>)
+cancel_button <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>relative</span>: {<span style=color:#2aa198>tag_name</span>: <span style=color:#2aa198>&#39;button&#39;</span>, <span style=color:#2aa198>left</span>:submit_button})
+  </code></pre></div></section><section id=javascriptcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> submitButton <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#34;submit&#34;</span>));
+<span style=color:#268bd2>let</span> cancelButton <span style=color:#719e07>=</span> await driver.findElements(withTagName(<span style=color:#2aa198>&#34;button&#34;</span>).toLeftOf(submitButton));
+  
+</code></pre></div></section><section id=kotlincode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> submitButton= driver.findElement(By.id(<span style=color:#2aa198>&#34;submit&#34;</span>))
+<span style=color:#719e07>val</span> cancelButton= driver.findElement(withTagName(<span style=color:#2aa198>&#34;button&#34;</span>).toLeftOf(submitButton))
+  </code></pre></div></section></div></div><h3 id=torightof---rechts-davon>toRightOf() - rechts davon</h3><p>Liefert das WebElement, das sich rechts des spezifierten Elements befindet.</p><div class=tabset><input type=radio name=tabsetcode7 id=tab0code7 aria-controls=javacode7 checked>
+<label for=tab0code7>Java</label>
+<input type=radio name=tabsetcode7 id=tab1code7 aria-controls=pythoncode7>
+<label for=tab1code7>Python</label>
+<input type=radio name=tabsetcode7 id=tab2code7 aria-controls=cscode7>
+<label for=tab2code7>C#</label>
+<input type=radio name=tabsetcode7 id=tab3code7 aria-controls=rubycode7>
+<label for=tab3code7>Ruby</label>
+<input type=radio name=tabsetcode7 id=tab4code7 aria-controls=javascriptcode7>
+<label for=tab4code7>JavaScript</label>
+<input type=radio name=tabsetcode7 id=tab5code7 aria-controls=kotlincode7>
+<label for=tab5code7>Kotlin</label><div class=tab-panels><section id=javacode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import static</span> org.openqa.selenium.support.locators.RelativeLocator.withTagName<span style=color:#719e07>;</span>
+
+WebElement cancelButton<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;cancel&#34;</span><span style=color:#719e07>));</span>
+WebElement submitButton<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>withTagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)</span>
+                                            <span style=color:#719e07>.</span>toRightOf<span style=color:#719e07>(</span>cancelButton<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium.webdriver.support.relative_locator <span style=color:#719e07>import</span> with_tag_name
+
+cancelButton <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;cancel&#34;</span>)
+submitButton <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(with_tag_name(<span style=color:#2aa198>&#34;button&#34;</span>)<span style=color:#719e07>.</span>
+                                   to_right_of(cancelButton))
+  </code></pre></div></section><section id=csharpcode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> static OpenQA.Selenium.RelativeBy;
+
+IWebElement cancelButton = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;cancel&#34;</span>));
+IWebElement submitButton = driver.FindElement(WithTagName(<span style=color:#2aa198>&#34;button&#34;</span>)
+                                              .RightOf(cancelButton));
+  
+</code></pre></div></section><section id=rubycode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+cancel_button <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:id</span>, <span style=color:#2aa198>&#34;cancel&#34;</span>)
+submit_button <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>relative</span>: {<span style=color:#2aa198>tag_name</span>: <span style=color:#2aa198>&#39;button&#39;</span>, <span style=color:#2aa198>right</span>:cancel_button})
+  </code></pre></div></section><section id=javascriptcode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> cancelButton <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#39;cancel&#39;</span>));
+<span style=color:#268bd2>let</span> submitButton <span style=color:#719e07>=</span> await driver.findElements(withTagName(<span style=color:#2aa198>&#39;button&#39;</span>).toRightOf(cancelButton));
+  
+</code></pre></div></section><section id=kotlincode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> cancelButton= driver.findElement(By.id(<span style=color:#2aa198>&#34;cancel&#34;</span>))
+<span style=color:#719e07>val</span> submitButton= driver.findElement(withTagName(<span style=color:#2aa198>&#34;button&#34;</span>).toRightOf(cancelButton))
+  </code></pre></div></section></div></div><h3 id=near---in-der-nähe-von>near() - in der Nähe von</h3><p>Liefert das WebElement, welches maximal <code>50px</code> vom spezifizierten
+Element entfernt ist.</p><div class=tabset><input type=radio name=tabsetcode8 id=tab0code8 aria-controls=javacode8 checked>
+<label for=tab0code8>Java</label>
+<input type=radio name=tabsetcode8 id=tab1code8 aria-controls=pythoncode8>
+<label for=tab1code8>Python</label>
+<input type=radio name=tabsetcode8 id=tab2code8 aria-controls=cscode8>
+<label for=tab2code8>C#</label>
+<input type=radio name=tabsetcode8 id=tab3code8 aria-controls=rubycode8>
+<label for=tab3code8>Ruby</label>
+<input type=radio name=tabsetcode8 id=tab4code8 aria-controls=javascriptcode8>
+<label for=tab4code8>JavaScript</label>
+<input type=radio name=tabsetcode8 id=tab5code8 aria-controls=kotlincode8>
+<label for=tab5code8>Kotlin</label><div class=tab-panels><section id=javacode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import static</span> org.openqa.selenium.support.locators.RelativeLocator.withTagName<span style=color:#719e07>;</span>
+
+WebElement emailAddressLabel<span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>id<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;lbl-email&#34;</span><span style=color:#719e07>));</span>
+WebElement emailAddressField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>withTagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;input&#34;</span><span style=color:#719e07>)</span>
+                                               <span style=color:#719e07>.</span>near<span style=color:#719e07>(</span>emailAddressLabel<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium.webdriver.support.relative_locator <span style=color:#719e07>import</span> with_tag_name
+
+emailAddressLabel <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>ID, <span style=color:#2aa198>&#34;lbl-email&#34;</span>)
+emailAddressField <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(with_tag_name(<span style=color:#2aa198>&#34;input&#34;</span>)<span style=color:#719e07>.</span>
+                                       near(emailAddressLabel))
+  </code></pre></div></section><section id=csharpcode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> static OpenQA.Selenium.RelativeBy;
+
+IWebElement emailAddressLabel = driver.FindElement(By.Id(<span style=color:#2aa198>&#34;lbl-email&#34;</span>));
+IWebElement emailAddressField = driver.FindElement(WithTagName(<span style=color:#2aa198>&#34;input&#34;</span>)
+                                                   .Near(emailAddressLabel));
+  
+</code></pre></div></section><section id=rubycode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+email_address_label <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:id</span>, <span style=color:#2aa198>&#34;lbl-email&#34;</span>)
+email_address_field <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>relative</span>: {<span style=color:#2aa198>tag_name</span>: <span style=color:#2aa198>&#39;input&#39;</span>, <span style=color:#2aa198>near</span>: email_address_label})
+  </code></pre></div></section><section id=javascriptcode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>let</span> emailAddressLabel <span style=color:#719e07>=</span> driver.findElement(By.id(<span style=color:#2aa198>&#34;lbl-email&#34;</span>));
+<span style=color:#268bd2>let</span> emailAddressField <span style=color:#719e07>=</span> await driver.findElements(withTagName(<span style=color:#2aa198>&#34;input&#34;</span>).near(emailAddressLabel));
+  
+</code></pre></div></section><section id=kotlincode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>val</span> emailAddressLabel = driver.findElement(By.id(<span style=color:#2aa198>&#34;lbl-email&#34;</span>))
+<span style=color:#719e07>val</span> emailAddressField = driver.findElement(withTagName(<span style=color:#2aa198>&#34;input&#34;</span>).near(emailAddressLabel))
+  </code></pre></div></section></div></div><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/de/webdriver/locating_elements/>“Elemente lokalisieren”</a> was last updated on: 31 Mar 2021 15:20:57 +0530: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/196b3d28449e0fa61bc9d2c3cdade6202b736ed9>Adding missing pt-br docs [deploy site] (196b3d2)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/de/webdriver/browser_manipulation/ title="Browser Manipulation"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/de/webdriver/bidi_apis/ title="WebDriver Bidi APIs" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1617184286></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/learn.js?1617184286></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1617184286></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1617184286 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1617184286></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

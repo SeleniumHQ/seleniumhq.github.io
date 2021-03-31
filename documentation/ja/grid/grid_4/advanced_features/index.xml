@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>高度な機能 on Seleniumドキュメント</title><link>https://www.selenium.dev/documentation/ja/grid/grid_4/advanced_features/</link><description>Recent content in 高度な機能 on Seleniumドキュメント</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/ja/grid/grid_4/advanced_features/index.xml" rel="self" type="application/rss+xml"/><item><title>可観測性</title><link>https://www.selenium.dev/documentation/ja/grid/grid_4/advanced_features/observability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/grid/grid_4/advanced_features/observability/</guid><description>目次 Selenium Grid 可観測性 分散トレース イベントログ グリッドの可観測性 トレースの視覚化 イベントログの活用 参考文献 Selenium Grid グリッドは、さまざまなブラウザーとオペレーティングシステムの組み合わせでテストを実行することにより、テストのスケーリングと割り当てを支援します。
+可観測性 可観測性には、トレース、メトリック、ログの3つの柱があります。 Selenium Grid 4は完全に分散されるように設計されているため、可観測性により、内部の理解とデバッグが容易になります。
+分散トレース 1つのリクエストまたはトランザクションは、複数のサービスとコンポーネントにまたがっています。 トレースは、各サービスがリクエストを実行するときにリクエストのライフサイクルを追跡します。 エラーシナリオでのデバッグに役立ちます。 トレースコンテキストで使用されるいくつかの重要な用語は次のとおりです。
+トレース トレースを使用すると、発信元から最終的な宛先まで、複数のサービスを介してリクエストをトレースできます。 このリクエストの過程は、デバッグ、エンドツーエンドフローの監視、および障害の特定に役立ちます。 トレースは、エンドツーエンドのリクエストフローを示しています。 各トレースには、識別子として一意のIDがあります。
+スパン 各トレースは、スパンと呼ばれる時限操作で構成されています。 スパンには開始時刻と終了時刻があり、サービスによって実行される操作を表します。 スパンの粒度は、計測方法によって異なります。 各スパンには一意の識別子があります。 トレース内のすべてのスパンは同じトレースIDを持ちます。
+スパン属性 スパン属性は、各スパンに関する追加情報を提供するキーと値のペアです。
+イベント イベントは、スパン内のタイムスタンプ付きログです。 それらは、既存のスパンに追加のコンテキストを提供します。 イベントには、イベント属性としてキーと値のペアも含まれます。
+イベントログ アプリケーションをデバッグするには、ロギングが不可欠です。 ロギングは、多くの場合、人間が読める形式で行われます。 ただし、マシンがログを検索および分析するには、明確に定義された形式である必要があります。 構造化ロギングは、ログを固定形式で一貫して記録する一般的な方法です。 通常、次のようなフィールドが含まれます。
+Timestamp Logging level Logger class Log message (これはさらに、ログが記録された操作に関連するフィールドに分類されます) ログとイベントは密接に関連しています。 イベントは、単一の作業単位を実行するために利用可能なすべての可能な情報をカプセル化します。 ログは基本的にイベントのサブセットです。 重要なのは、どちらもデバッグに役立つことです。 詳細については、次のリソースを参照してください。
+https://www.</description></item></channel></rss>

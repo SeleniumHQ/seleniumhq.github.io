@@ -1,0 +1,126 @@
+<!doctype html><link rel=stylesheet href=/css/header.css><html><head><title>Public Project Meeting - January 14, 2021</title><link rel=icon href=/favicon.ico type=image/png><meta name=viewport content="width=device-width,initial-scale=1"></head><header id=header class=header><a href=https://selenium.dev class=headerLink><img class="logo logo-large" src=/images/selenium_logo_large.png>
+<img class="logo logo-small" src=/images/selenium_logo_square_green.png>
+<img class="logo logo-small logo-hide" src=/images/selenium_logo_square_white.png></a>
+<a id=dropdownButton class=dropdownButton onclick=toggleMenu()>MENU +</a><nav id=navbar class=navbar><div class=nav-item onclick=toggleAboutNav()><span>About</span><div id=aboutArrow class=arrow-down></div></div><ul id=aboutSubnav class=about-subnav><div class="subnav subnav-item"><a href=/about>About</a></div><div class="subnav subnav-item"><a href=/project>Governance</a></div><div class="subnav subnav-item"><a href=/events>Events</a></div><div class="subnav subnav-item"><a href=/ecosystem>Ecosystem</a></div><div class="subnav subnav-item"><a href=/history>History</a></div><div class="subnav subnav-item"><a href=/getinvolved>Get Involved</a></div><div class="subnav subnav-item"><a href=/sponsors>Sponsors</a></div></ul><a class=nav-item href=/downloads>Downloads</a>
+<a class=nav-item href=/projects>Projects</a>
+<a class=nav-item href=/documentation>Documentation</a>
+<a class=nav-item href=/support>Support</a>
+<a class=nav-item href=/blog>Blog</a><div class=nav-item><div class=search-bar-container><script>(function(){var cx='018435082943254453647:ktxsp1-jcb8';var gcse=document.createElement('script');gcse.type='text/javascript';gcse.async=true;gcse.src='https://cse.google.com/cse.js?cx='+cx;var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse,s);})();</script><gcse:searchbox-only></gcse:searchbox-only><img class=search-icon src=/images/search.png></div></div></nav></header><body><script>function activateSearch(){console.log('ACTIVATE')}
+function toggleMenu(){const navbarItems=document.getElementsByClassName("nav-item");const navbarElements=[...navbarItems];const smallLogos=document.getElementsByClassName("logo logo-small");const logoElements=[...smallLogos];const header=document.getElementById("header");const dropdownButton=document.getElementById("dropdownButton");const subnavs=document.getElementsByClassName("about-subnav");const subnavElements=[...subnavs];const aboutArrow=document.getElementById("aboutArrow");if(dropdownButton.innerText==="MENU +"){dropdownButton.innerText="MENU -"}else dropdownButton.innerText="MENU +"
+navbarElements.forEach(element=>{if(element.className==="nav-item"){element.className+=" dropdown-active"}else{element.className="nav-item"}})
+subnavElements.forEach(element=>{element.className="about-subnav";});aboutArrow.className="arrow-down";logoElements.forEach(element=>{if(element.className.includes("logo-hide")){element.className="logo logo-small"}else{element.className+=" logo-hide"}})
+if(header.className==="header"){header.className+=" dropdown-active"}else{header.className="header"}}
+function toggleAboutNav(){const aboutSubnav=document.getElementById("aboutSubnav");const aboutArrow=document.getElementById("aboutArrow");if(aboutSubnav.className==="about-subnav"){aboutSubnav.className+=" about-subnav-active";}else{aboutSubnav.className="about-subnav"}
+if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else aboutArrow.className="arrow-up";}</script><link rel=stylesheet href=/css/blog.css><link rel=stylesheet href=/css/main.css><link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel=stylesheet><body><section class=hero><a href=/blog><h1>Selenium Blog</h1></a></section><div class=blog-container><div class=blog-content><div class="container dark-background">January 14, 2021 by <a href=https://twitter.com/sri_harsha509>Sri Harsha</a>
+<a href=https://selenium.dev/blog/2021/public-project-meeting-20210114/><h2>Public Project Meeting - January 14, 2021</h2></a><p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on January 14, 2021,5:30 PM CET.(Below times are on IST)</p><p>Meetings are held on the <code>#selenium-tlc</code> channel on <a href=https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y>Selenium Slack</a>.</p><hr><p><em>Diego Molina 10:02 PM</em></p><p>Alright, :wave: everyone, let me share the agenda</p><p><em>10:02 PM</em></p><ul><li>Overall announcements? New people on committees, with the commit bit, etc?</li><li>Anything new to report from the last PLC/SFC call?</li><li>Pending work that needs to be done for the first Beta?</li><li>CoC, next steps?</li><li>Any other topics?</li></ul><p><em>10:04 PM</em></p><p>pinging @titusfortner, @AutomatedTester, @mmerrell, @barancev</p><p>who else?</p><p><em>Simon Stewart 10:04 PM</em></p><p>@jimevans
+@p0deje
+@harsha509</p><p><em>Jim Evans 10:05 PM</em></p><p>i’m already in another meeting at the moment.</p><p>Sri Harsha 10:05 PM</p><p>m available</p><p><em>Diego Molina 10:05 PM</em></p><p>ok, let’s bring the first topic:
+Overall announcements? New people on committees, with the commit bit, etc?</p><p><em>David Burns 10:05 PM</em></p><p>here</p><p><em>Diego Molina 10:06 PM</em></p><p>So, I asked both to the TLC members about adding @luke as a committer,
+and I also reached out to Luke, both sides are happy with it.</p><p><em>David Burns 10:06 PM</em></p><p>cool!</p><p><em>Diego Molina 10:07 PM</em></p><p>Then, I will add Luke during the next couple of days
+and follow the steps we have in the Governance model</p><p><em>Simon Stewart 10:08 PM</em></p><p>Congratulations, @luke!
+:tada:</p><p><em>Diego Molina 10:09 PM</em></p><p>great!
+So, I think we have nothing else to add to this point?</p><p><em>Marcus Merrell 10:09 PM</em></p><p>I&rsquo;ve got approval emails out to SFC to get the new contractor on the Code of Conduct. It&rsquo;s time to poke again.
+We&rsquo;ve tentatively selected dates for a Chicago SeConf (sometime in September, I believe).
+We&rsquo;re still hopeful that with the vaccine, this will be possible. we&rsquo;ll look to make a final decision, based on numbers, in ~April
+:parrot:</p><p><em>10:11 PM</em></p><p>We need to consider whether or not to run a virtual conference in the case that it doesn&rsquo;t work out to have an irl conference</p><p><em>Simon Stewart 10:11 PM</em></p><p>Can that decision also be delayed until April?</p><p><em>Marcus Merrell 10:11 PM</em></p><p>I&rsquo;m a little uncomfortable waiting that long&ndash;not for the hotel and
+the risk of losing the deposit $$, but because of marketing/CFP stuff
+let&rsquo;s say &ldquo;early April&rdquo;</p><p><em>Diego Molina 10:12 PM</em></p><p>Great news about the CoC!
+ok, seems we covered also the “Anything new to report from the last PLC/SFC call?” topic as well, right?</p><p><em>Simon Stewart 10:14 PM</em></p><p>I think so</p><p><em>Diego Molina 10:15 PM</em></p><p>ok, so let’s jump to “Pending work that needs to be done for the first Beta?”</p><p><em>Simon Stewart 10:15 PM</em></p><p>There’s a few things</p><p><em>10:16 PM</em></p><p>I’ve a PR out for the new RemoteWebDriverBuilder, which is one piece.
+The other big bit for me is the pluggable locators, tying up the local and remote ends bits we already have.
+That’ll be easier with the RemoteWebDriverBuilder in place.</p><p><em>10:17 PM</em></p><p>(As it’s essentially creating new decorators of the CommandExecutor)
+I’d also like to ensure that things like the relative locators and script pinning work as advertised, but that’s a relatively slim tranche of work
+My next hacking days are Monday and Tuesday next week</p><p><em>Diego Molina 10:18 PM</em></p><p>here is a list from the previous status meeting:
+Client facing changes:</p><ul><li>Make relative locators return elements sorted by proximity</li><li>Fix Java Module System problems</li><li>Allow locator strategies to be pluggable
+Enable fallbacks for commands</li><li>Server changes:</li><li>Enable retries of commands where necessary using failsafe</li><li>Get the Grid UI looking nice, and returning useful data</li><li>Allow locator strategies to be pluggable</li><li>Pipe VNC connectors through the websocket plumbing for live video</li></ul><p><em>10:19 PM</em></p><p>I think this is (partly?) done “Allow locator strategies to be pluggable”
+and I remember @simonstewart did this “Make relative locators return elements sorted by proximity”</p><p><em>Simon Stewart 10:19 PM</em></p><p>I did
+The Java Module System thing is a good point, but not a huge amount of work</p><p><em>10:20 PM</em></p><p>Though it’s a little fiddly</p><p><em>Titus Fortner 10:20 PM</em></p><p>is the &ldquo;pluggable&rdquo; part a Java specific thing, or something new that the server is going to support that opens up new opportunities for dynamic languages?</p><p><em>David Burns 10:20 PM</em></p><p>@Puja Jagani could probably look at the Java Module work</p><p><em>Puja Jagani</em></p><p>Sure! I can take that up</p><p><em>Simon Stewart 10:20 PM</em></p><p>I can discuss the changes with her</p><p><em>10:21 PM</em></p><p>@titusfortner the remote end bits of the pluggable locators allow us to avoid sending large payloads across the wire for (eg) finding by react
+But it requires the local end to know in advance that it can use that mechanism
+Tying the pieces together with a fallback allows the local end to try the efficient way first and then fallback to the inefficient way</p><p><em>10:22 PM</em></p><p>It shouldn’t be a particularly challenging thing to do once the pieces are all nicely lined up, but getting the pieces lined up has taken time :slightly_smiling_face:</p><p><em>Diego Molina 10:24 PM</em></p><p>I am slowly getting more time to work on some open issues and getting some items from that list on the server done, like using failsafe for retries</p><p><em>Puja Jagani</em></p><p>I created a PR to get started on that front for transient errors, please have a look when time permits. I think that might serve as the starting point.</p><p><em>Diego Molina</em></p><p>perfect, will do</p><p><em>Simon Stewart 10:24 PM</em></p><p>I think the BrowserStack folks (particularly @rajendra?) are hacking on the Grid UI and can give an update on that
+I’m happy to punt the failsafe stuff for the beta, but it really should be in place for the 4.0 release</p><p><em>Diego Molina 10:24 PM</em></p><p>I saw one or two GH issues related to that, if I am faster than @rajendra I can tackle it and get familiar with the UI
+I would leave this one out as well
+Pipe VNC connectors through the websocket plumbing for live video</p><p><em>10:25 PM</em>
+for beta 1
+hopefully it could be there for the 4.0 release</p><p><em>Simon Stewart 10:25 PM</em></p><p>I think that’s just a case of adding the video URL to the se:options in the server
+Should be in the same place as we add the bit for cdp</p><p><em>David Burns 10:26 PM</em></p><p>I had a quick look at the grid-ui in a stream&mldr; my CSS sucksbut happy to pair up and fix</p><p><em>Diego Molina 10:26 PM</em></p><p>ah, so the scope is way smaller than what I was thinking</p><p><em>Simon Stewart 10:26 PM</em></p><p>The WebSocket forwarding either works or it doesn’t. If it doesn’t, CDP over the Grid is broken
+And I already got the CDP over Grid working :slightly_smiling_face:</p><p><em>David Burns 10:26 PM</em></p><p>@Puja Jagani is looking at adding a few more issues with graphql that we can surface</p><p><em>Diego Molina 10:27 PM</em></p><p>so we offer the WebSocket endpoint and the user can use it to stream</p><p><em>Simon Stewart 10:27 PM</em></p><p>Can we “drain” using GraphQL yet?</p><p><em>David Burns</em></p><p>I dont think so</p><p><em>David Burns</em></p><p>we can get the grid ui to call a normal url</p><p><em>Simon Stewart</em></p><p>The idea would be to use GraphQL for the entire UI….</p><p><em>David Burns</em></p><p>We can add it &ldquo;soon&rdquo; but since it works we don&rsquo;t need to block a beta on it. Let&rsquo;s have a stretch for it</p><p><em>Simon Stewart</em></p><p>But it doesn’t work if you have a distributed grid</p><p><em>Simon Stewart</em></p><p>It’s one of the “tracer bullets” of the graphql stuff, and really does need to be in</p><p><em>Simon Stewart</em></p><p>I want the beta as much as anyone, but there are some corners we should avoid cutting</p><p><em>Simon Stewart 10:27 PM</em></p><p>@diemol it’s a tiny bit more than that, but, yeah</p><p><em>Diego Molina 10:27 PM</em></p><p>I thought we wanted to put that in the Grid UI</p><p><em>Simon Stewart 10:27 PM</em></p><p>We do before 4.0</p><p><em>Diego Molina 10:27 PM</em></p><p>we would need to embed a VNC client in the UI for that</p><p><em>Simon Stewart 10:27 PM</em></p><p>But for the alpha, I’m happy with the endpoint being exposed and being able to wire up a vnc viewer locally that goes through the grid
+@diemol what did zalenium use?</p><p><em>Diego Molina 10:28 PM</em></p><p>noVNC, but that was something that you need to install on the host, IIRC</p><p><em>10:29 PM</em></p><p>ah, I think it also has a JS library, it “should” work
+there is also an alternative called “Guacamole”</p><p><em>Simon Stewart 10:29 PM</em></p><p><a href=http://guacamole.apache.org>http://guacamole.apache.org</a> might be useful
+Ha!</p><p><em>Diego Molina 10:30 PM</em></p><p>right, so I can look at that at some point</p><p><em>Simon Stewart 10:30 PM</em></p><p>Awesome. Thank you</p><p><em>Diego Molina 10:30 PM</em></p><p>coming back to pluggable locators, it is working in Java
+but we would need the other bindings to implement it, right?</p><p><em>Simon Stewart 10:31 PM</em></p><p>When it’s working in Java, yes :slightly_smiling_face:
+But I think it’s enough to get them in one binding for the beta, and the others can follow</p><p><em>Diego Molina 10:31 PM</em></p><p>Also, the reworked logic for relative locators has been implemented only in Java?</p><p><em>Simon Stewart 10:32 PM</em></p><p>The reworked logic was in the atom.
+Everyone has it
+Yay for the atoms!</p><p><em>10:32</em></p><p>:slightly_smiling_face:</p><p><em>Diego Molina 10:32 PM</em></p><p>That’s great!
+Do we have anything else?
+I will (for sure) this time create GitHub issues for the different items</p><p><em>Simon Stewart 10:34 PM</em></p><p>And add them to the project plan, please!</p><p><em>Diego Molina 10:34 PM</em></p><p>absolutely</p><p><em>Simon Stewart 10:35 PM</em></p><p>Thank you</p><p><em>Diego Molina 10:36 PM</em></p><p>Well, I think we do not have other topics, should we cut it short?
+New</p><p><em>Simon Stewart 10:38 PM</em></p><p>I’m down with that. Thanking for running this!
+Unless @jimevans has something to add? I see he’s typing</p><p><em>Jim Evans 10:38 PM</em></p><p>re pluggable locators: that’s just having findElement(s) call down the wire using the end point without validating the using and value params, yeah?</p><p><em>Simon Stewart 10:39 PM</em></p><p>That’s what the java code does at the moment</p><p><em>Jim Evans 10:39 PM</em></p><p>cool. .NET can do that too right now, i think (will have to confirm)</p><p><em>Simon Stewart 10:39 PM</em></p><p>I want to land a few more smarts</p><p><em>David Burns 10:39 PM</em></p><p>I expect the python and ruby code can do it to since monkey patching is easy
+and then add smarts too
+improve docs ftw</p><p><em>Diego Molina 10:43 PM</em></p><p>ok, seems we are done with the status meeting, thank you everyone!</p><p><em>Jim Evans 10:45 PM</em></p><p>re beta readiness: i have a refactor to .NET i want to do to make CDP via RemoteWebDriver easier/more correct, but it can wait until post-beta1</p><p><em>10:45</em></p><p>otherwise, i think .NET is ready for beta.</p><p><b>Tags</b></p><divs><a href=https://selenium.dev/tags/slack/>slack</a>
+<a href=https://selenium.dev/tags/meeting/>meeting</a>
+<a href=https://selenium.dev/tags/tlc/>tlc</a></divs><p><b>Categories</b></p><div><a href=https://selenium.dev/categories/general/>general</a>
+<a href=https://selenium.dev/categories/governance/>governance</a></div><div class=share-container><h3>Share this:</h3><a href="mailto:?&subject=Selenium Blog - Public%20Project%20Meeting%20-%20January%2014%2c%202021&body=https%3a%2f%2fselenium.dev%2fblog%2f2021%2fpublic-project-meeting-20210114%2f"><img class=social-icon src=/images/mail.png></a>
+<a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2021%2fpublic-project-meeting-20210114%2f"><img class=social-icon src=/images/twitter.png></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class=social-icon src=/images/facebook.png></a></div></div></div></div><div class=filter-container><div class=blog-filter><div class=filter-section><h3>Search blog</h3><div class=search-container><div class=search-bar-container><script>(function(){var cx='018435082943254453647:ktxsp1-jcb8';var gcse=document.createElement('script');gcse.type='text/javascript';gcse.async=true;gcse.src='https://cse.google.com/cse.js?cx='+cx;var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse,s);})();</script><gcse:searchbox-only></gcse:searchbox-only></div></div></div><div class=filter-section><h3>Archive</h3><div class=archive-link-container><a href=/blog/2020>2020</a>
+<a href=/blog/2019>2019</a>
+<a href=/blog/2018>2018</a>
+<a href=/blog/2017>2017</a>
+<a href=/blog/2016>2016</a>
+<a href=/blog/2015>2015</a>
+<a href=/blog/2014>2014</a>
+<a href=/blog/2013>2013</a>
+<a href=/blog/2012>2012</a>
+<a href=/blog/2011>2011</a>
+<a href=/blog/2010>2010</a></div></div><div class=filter-section><h3>Tags</h3><div class=links-container><a href=https://selenium.dev/tags/beta/>beta</a>(12)
+<a href=https://selenium.dev/tags/bug-bash/>bug-bash</a>(2)
+<a href=https://selenium.dev/tags/chromedriver/>chromedriver</a>(1)
+<a href=https://selenium.dev/tags/conference/>conference</a>(19)
+<a href=https://selenium.dev/tags/decisions/>decisions</a>(3)
+<a href=https://selenium.dev/tags/future/>future</a>(1)
+<a href=https://selenium.dev/tags/grid/>grid</a>(4)
+<a href=https://selenium.dev/tags/hangout/>hangout</a>(5)
+<a href=https://selenium.dev/tags/ide/>ide</a>(8)
+<a href=https://selenium.dev/tags/intellij/>intellij</a>(2)
+<a href=https://selenium.dev/tags/jetbrains/>jetbrains</a>(2)
+<a href=https://selenium.dev/tags/maven/>maven</a>(2)
+<a href=https://selenium.dev/tags/meeting/>meeting</a>(16)
+<a href=https://selenium.dev/tags/meetup/>meetup</a>(1)
+<a href=https://selenium.dev/tags/mobile/>mobile</a>(2)
+<a href=https://selenium.dev/tags/operadriver/>operadriver</a>(1)
+<a href=https://selenium.dev/tags/rc/>rc</a>(1)
+<a href=https://selenium.dev/tags/selenium/>selenium</a>(55)
+<a href=https://selenium.dev/tags/selenium-rc/>selenium-rc</a>(2)
+<a href=https://selenium.dev/tags/sfc/>sfc</a>(1)
+<a href=https://selenium.dev/tags/slack/>slack</a>(16)
+<a href=https://selenium.dev/tags/smattering/>smattering</a>(145)
+<a href=https://selenium.dev/tags/source-control/>source-control</a>(1)
+<a href=https://selenium.dev/tags/status/>status</a>(2)
+<a href=https://selenium.dev/tags/stories/>stories</a>(2)
+<a href=https://selenium.dev/tags/support/>support</a>(2)
+<a href=https://selenium.dev/tags/survey/>survey</a>(1)
+<a href=https://selenium.dev/tags/technical/>technical</a>(2)
+<a href=https://selenium.dev/tags/tlc/>tlc</a>(16)
+<a href=https://selenium.dev/tags/webdriver/>webdriver</a>(2)</div></div><div class=filter-section><h3>Categories</h3><div class=links-container><a href=https://selenium.dev/categories/conference/>conference</a>(20)
+<a href=https://selenium.dev/categories/general/>general</a>(223)
+<a href=https://selenium.dev/categories/governance/>governance</a>(21)
+<a href=https://selenium.dev/categories/meetup/>meetup</a>(1)
+<a href=https://selenium.dev/categories/releases/>releases</a>(41)
+<a href=https://selenium.dev/categories/technical/>technical</a>(5)</div></div></div></div></body><!doctype html><link rel=stylesheet href=/css/main.css><div class="selenium-backers separator"><h2>Selenium Level Sponsors</h2><div class=backers><div class=backer-logo><a href=https://www.perfecto.io/><img class=backer-logo src=/images/sponsors/perfecto-perforce.jpg></a></div><div class=backer-logo><a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral"><img class=backer-logo src=/images/sponsors/browserstack.png></a></div><div class=backer-logo><a href=http://saucelabs.com><img class=backer-logo src=/images/sponsors/saucelabs.png></a></div><div class=backer-logo><a href=http://bit.ly/36uZ7ad><img class=backer-logo src=/images/sponsors/experitest.png></a></div><div class=backer-logo><a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo"><img class=backer-logo src=/images/sponsors/synthetics.png></a></div><div class=backer-logo><a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp"><img class=backer-logo src=/images/sponsors/CBT.png></a></div><div class=backer-logo><a href=https://applitools.com/><img class=backer-logo src=/images/sponsors/applitools.png></a></div><div class=backer-logo><a href=https://www.ranorex.com/selocity/browser-extension.html><img class=backer-logo src=/images/sponsors/selocity_banner_seleniumhq.png></a></div><div class=backer-logo><a href=https://software.microfocus.com/en-us/software/leanft><img class=backer-logo src=/images/sponsors/microfocus_logo.png></a></div><div class=backer-logo><a href="https://www.subject-7.com/?utm_source=SeleniumHQ&utm_medium=referral&utm_campaign=product"><img class=backer-logo src=/images/sponsors/subject7_logo.png></a></div></div></div><!doctype html><link rel=stylesheet href=/css/footer.css><html><head><meta name=viewport content="width=device-width,initial-scale=1"></head><footer><div onclick=toggleSitemap() class=toggle-container>Sitemap<div id=sitemapArrow class=arrow-down></div></div><div id=navLinks class=nav-links><div class=footer-section><a href=/about><h3>About</h3></a><a href=/events>Events</a>
+<a href=/blog>News</a>
+<a href=/history>History</a>
+<a href=/sponsor>Contribute</a>
+<a href=/sponsors>Sponsors</a>
+<a href=/getinvolved>Get Involved</a>
+<a href=/ecosystem>Ecosystem</a>
+<a href=https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license>License</a></div><div class=footer-section><a href=/downloads><h3>Downloads</h3></a><a href=/maven>Maven</a>
+<a href=https://github.com/SeleniumHQ/selenium>Source Code</a></div><div class=footer-section><a href=/projects><h3>Projects</h3></a><a href=/projects/#selenium-webdriver>Selenium WebDriver</a>
+<a href=/projects/#selenium-grid>Selenium Grid</a>
+<a href=/projects/#selenium-ide>Selenium IDE</a></div><div class=footer-section><a href=/support><h3>Support</h3></a><a href=/blog>Blog</a>
+<a href=/documentation>Documentation</a>
+<a href=/project>Governance</a></div></div><div class=social>Follow us on twitter to keep up-to-date with all Selenium development and community activity!<div class=social-icons><a href=mailto:selenium@sfconservancy.org><img class=social-icon src=/images/mail.png></a>
+<a href=https://github.com/SeleniumHQ/selenium><img class=social-icon src=/images/github.png></a>
+<a href=https://twitter.com/SeleniumHQ><img class=social-icon src=/images/twitter.png></a>
+<a href=https://www.facebook.com/Selenium2.WebDriver><img class=social-icon src=/images/facebook.png></a>
+<a href=https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw><img class=social-icon src=/images/youtube.png></a>
+<a href=/blog/index.xml><img class=social-icon src=/images/rss.png></a></div></div></footer><div class=sfc><p style=text-align:center>All rights reserved, Software Freedom Conservancy</p></div><body><script>function toggleSitemap(){const sitemapArrow=document.getElementById("sitemapArrow");const navLinks=document.getElementById("navLinks");if(sitemapArrow.className==='arrow-down'){sitemapArrow.className='arrow-up'}else{sitemapArrow.className='arrow-down'}
+if(navLinks.className==='nav-links'){navLinks.className='nav-links show'}else{navLinks.className='nav-links'}}</script>

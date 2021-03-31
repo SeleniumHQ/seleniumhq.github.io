@@ -1,0 +1,393 @@
+<!doctype html><html lang=zh-cn class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>关于测试自动化 :: Selenium 文档</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1617184292 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1617184292 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1617184292></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/zh-cn/introduction/on_test_automation/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=搜索...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1617184292></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1617184292></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/zh-cn";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1617184292></script></div><div class=highlightable><ul class=topics><li data-nav-id=/zh-cn/getting_started/ title=入门指南 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started/>入门指南
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/getting_started/quick/ title=快速浏览 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started/quick/>快速浏览
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/introduction/ title=介绍 class="dd-item
+parent"><a href=https://www.selenium.dev/documentation/zh-cn/introduction/>介绍
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/introduction/the_selenium_project_and_tools/ title="Selenium 项目和工具" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/>Selenium 项目和工具
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/on_test_automation/ title=关于测试自动化 class="dd-item active"><a href=https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/>关于测试自动化
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/types_of_testing/ title=测试的类型 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/>测试的类型
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/introduction/about_this_documentation/ title=关于这个文档 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/>关于这个文档
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/selenium_installation/ title="Selenium 安装" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/>Selenium 安装
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/selenium_installation/installing_selenium_libraries/ title="安装 Selenium 库" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_selenium_libraries/>安装 Selenium 库
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/selenium_installation/installing_webdriver_binaries/ title="安装 WebDriver 二进制文件" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/>安装 WebDriver 二进制文件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/selenium_installation/installing_standalone_server/ title=安装独立服务器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/>安装独立服务器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/getting_started_with_webdriver/ title="WebDriver 入门" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/>WebDriver 入门
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/getting_started_with_webdriver/browsers/ title=浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/>浏览器
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/ title=第三方驱动和插件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/>第三方驱动和插件
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/webdriver/ title=WebDriver class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/>WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/webdriver/understanding_the_components/ title=了解组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/>了解组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/driver_requirements/ title=驱动要求 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/driver_requirements/>驱动要求
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/bidi_apis/ title="WebDriver Bidi APIs" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/bidi_apis/>WebDriver Bidi APIs
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/locating_elements/ title=定位元素 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/locating_elements/>定位元素
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/browser_manipulation/ title=操控浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/>操控浏览器
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/waits/ title=等待 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/waits/>等待
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/support_classes/ title=支持的类 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/support_classes/>支持的类
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/js_alerts_prompts_and_confirmations/ title="JavaScript 警告框,提示框和确认框" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/>JavaScript 警告框,提示框和确认框
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/http_proxies/ title="Http 代理" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/http_proxies/>Http 代理
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/page_loading_strategy/ title=页面加载策略 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/>页面加载策略
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/web_element/ title=网络元素 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/web_element/>网络元素
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/webdriver/keyboard/ title=Keyboard class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/>Keyboard
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/remote_webdriver/ title="远程 WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/remote_webdriver/>远程 WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/remote_webdriver/remote_webdriver_client/ title=远程WebDriver客户端 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/>远程WebDriver客户端
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/ title=指南和建议 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/>指南
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/guidelines_and_recommendations/page_object_models/ title=PO设计模式 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/>PO设计模式
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/domain_specific_language/ title=领域特定语言 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/>领域特定语言
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/generating_application_state/ title=生成应用程序状态 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/>生成应用程序状态
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/mock_external_services/ title=模拟外部服务 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/>模拟外部服务
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/improved_reporting/ title=改善报告 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/>改善报告
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/avoid_sharing_state/ title=避免共享状态 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/>避免共享状态
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/test_independency/ title=测试的独立性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/>测试的独立性
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/ title="考虑使用Fluent API" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/>考虑使用Fluent API
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/ title=每次测试都刷新浏览器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/>每次测试都刷新浏览器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/worst_practices/ title=反模式 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/>反模式
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/worst_practices/two_factor_authentication/ title=双因素认证 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/>双因素认证
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/captchas/ title=验证码 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/captchas/>验证码
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/file_downloads/ title=文件下载 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/file_downloads/>文件下载
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/http_response_codes/ title=HTTP响应码 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/>HTTP响应码
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/gmail_email_and_facebook_logins/ title="Gmail, email 和 Facebook 登录" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/>Gmail, email and Facebook
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/test_dependency/ title=测试依赖 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/test_dependency/>测试依赖
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/performance_testing/ title=性能测试 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/performance_testing/>性能测试
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/worst_practices/link_spidering/ title=爬取链接 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/worst_practices/link_spidering/>爬取链接
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/ title=服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/>服务网格
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/purposes_and_main_functionalities/ title=目的和主要功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/>目的和主要功能
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/when_to_use_grid/ title=什么时候应该使用服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/>什么时候应该使用服务网格
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_3/ title="服务网格 3" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/>服务网格 3
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_3/components_of_a_grid/ title=服务网格的组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/components_of_a_grid/>服务网格的组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_3/setting_up_your_own_grid/ title=配置自己的服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/>配置自己的服务网格
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/ title="服务网格 4" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/>服务网格 4
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/components_of_a_grid/ title=服务网格的组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/>服务网格的组件
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/setting_up_your_own_grid/ title=配置自己的服务网格 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/>配置自己的服务网格
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/configuring_components/ title=配置组件 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/configuring_components/>配置组件
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/configuring_components/config_help/ title=配置帮助 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/configuring_components/config_help/>配置帮助
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/graphql_support/ title=GraphQL查询支持 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/graphql_support/>GraphQL查询支持
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/grid/grid_4/advanced_features/ title=高级功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/advanced_features/>高级功能
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/grid/grid_4/advanced_features/observability/ title=可观察性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/advanced_features/observability/>可观察性
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/grid/grid_4/grid_endpoints/ title=网格端点 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/grid/grid_4/grid_endpoints/>网格端点
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/zh-cn/driver_idiosyncrasies/ title=驱动特性 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/>驱动特性
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/driver_idiosyncrasies/shared_capabilities/ title=共享的功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/>共享的功能
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/ title=驱动特定的功能 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/>驱动特定的功能
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/support_packages/ title=支持的包 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/>支持的包
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/support_packages/working_with_colours/ title=同颜色一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_colours/>同颜色一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/working_with_select_elements/ title=同选择元素一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/>同选择元素一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/ title=鼠标动作详细信息 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/>鼠标动作详细信息
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/working_with_cookies/ title=同cookies一起工作 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/>同cookies一起工作
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/support_packages/chrome_devtools/ title=Chrome开发工具 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/support_packages/chrome_devtools/>Chrome开发工具
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/legacy_docs/ title=Legacy class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/>Legacy
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/legacy_docs/selenium_rc/ title="Selenium 1 (Selenium RC)" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/>Selenium 1 (Selenium RC)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/ title=从RC迁移到WebDriver class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/>从RC迁移到WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/html-runner/ title="HTML runner" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/html-runner/>HTML runner
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/selenium_ide/ title="Legacy Selenium IDE" class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_ide/>Legacy Selenium IDE
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/legacy_docs/remote_webdriver_server/ title=远程WebDriver服务器 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/legacy_docs/remote_webdriver_server/>远程WebDriver服务器
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/zh-cn/front_matter/ title=版权页 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/>版权页
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/zh-cn/front_matter/copyright_and_attributions/ title=版权和归属 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/>版权和归属
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/zh-cn/front_matter/typographical_conventions/ title=排版协议 class=dd-item><a href=https://www.selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/>排版协议
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>更多</h3><ul><li><a class=padding href=https://www.selenium.dev/><i class="fas fa-home"></i>Selenium Home</a></li><li><a class=padding href=https://github.com/SeleniumHQ/seleniumhq.github.io><i class="fab fa-fw fa-github"></i>GitHub repo</a></li><li><a class=padding href=https://github.com/seleniumhq/seleniumhq.github.io/issues><i class="fas fa-fw fa-exclamation-triangle"></i>Report a bug</a></li><li><a class=padding href=https://www.selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions><i class="fas fa-fw fa-trophy"></i>Credits</a></li><li><a class=padding href=https://www.selenium.dev/documentation/zh-cn/contributing><i class="fas fa-fw fa-bullhorn"></i>How to contribute</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value;">
+<option id=en value=https://www.selenium.dev/documentation/en/introduction/on_test_automation/>English</option>
+<option id=pt-br value=https://www.selenium.dev/documentation/pt-br/introduction/on_test_automation/>Português (Brasileiro)</option>
+<option id=de value=https://www.selenium.dev/documentation/de/introduction/on_test_automation/>Deutsch</option>
+<option id=es value=https://www.selenium.dev/documentation/es/introduction/on_test_automation/>Español</option>
+<option id=nl value=https://www.selenium.dev/documentation/nl/introduction/on_test_automation/>Nederlands</option>
+<option id=zh-cn value=https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/ selected>中文简体</option>
+<option id=fr value=https://www.selenium.dev/documentation/fr/introduction/on_test_automation/>Français</option>
+<option id=ja value=https://www.selenium.dev/documentation/ja/introduction/on_test_automation/>日本語</option>
+<option id=ko value=https://www.selenium.dev/documentation/ko/introduction/on_test_automation/>한국어</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75" /></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i>清理历史记录</a></li></ul></section><section id=footer><p>&copy; 2013-2021</p><p>Software Freedom Conservancy (SFC)</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/SeleniumHQ/seleniumhq.github.io/edit/dev/docs_source_files/content/introduction/on_test_automation.zh-cn.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=https://www.selenium.dev/documentation/zh-cn/>Selenium 浏览器自动化项目</a> > <a href=https://www.selenium.dev/documentation/zh-cn/introduction/>介绍</a> > 关于测试自动化</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#测试要求>测试要求</a></li><li><a href=#让我们从一个例子开始>让我们从一个例子开始</a></li><li><a href=#是否自动化>是否自动化?</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>关于测试自动化</h1><p>首先，问问自己是否真的需要使用浏览器。
+在某些情况下，如果您正在开发一个复杂的 web 应用程序，
+您需要打开一个浏览器并进行实际测试，这种可能性是很大的。</p><p>然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。
+此外，它们通常需要大量的基础设施才能有效运行。
+经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成，
+还是使用较低级的方法完成，这是一个很好的规则。</p><p>一旦确定您正在进行Web浏览器测试业务，
+并且您的 Selenium 环境已经准备好开始编写测试，
+您通常会执行以下三个步骤的组合：</p><ul><li>设置数据</li><li>执行一组离散的操作</li><li>评估结果</li></ul><p>您需要尽可能缩短这些步骤;
+一到两个操作在大多数时间内应该足够了。
+浏览器自动化具有“脆弱”的美誉，
+但实际上那是因为用户经常对它要求过高。
+在后面的章节中，我们将回到您可以使用的技术，
+为了缓解测试中明显的间歇性问题，
+特别是如何克服 浏览器 和 WebDriver 之间的<a href=https://www.selenium.dev/documentation/zh-cn/webdriver/waits/>竞争条件</a>。</p><p>通过保持测试简短并仅在您完全没有替代方案时使用Web浏览器，您可以用最小的代码片段来完成很多测试。</p><p>Selenium测试的一个显著优势是，它能够从用户的角度测试应用程序的所有组件（从后端到前端）。
+因此，换句话说，虽然功能测试运行起来可能很昂贵，但它们同时也包含了大量关键业务部分。</p><h3 id=测试要求>测试要求</h3><p>如前所述，Selenium 测试运行起来可能很昂贵。
+在多大程度上取决于您正在运行测试的浏览器，
+但历史上浏览器的行为变化太大，以至于通常是针对多个浏览器进行交叉测试的既定目标。</p><p>Selenium 允许您在多个操作系统上的多个浏览器上运行相同的指令，
+但是对所有可能的浏览器、它们的不同版本以及它们所运行的许多操作系统的枚举将很快成为一项繁重的工作。</p><h3 id=让我们从一个例子开始>让我们从一个例子开始</h3><p>Larry 写了一个网站，允许用户订购他们自己定制的独角兽。</p><p>一般的工作流程(我们称之为“幸福之路”)是这样的:</p><ul><li>创建一个账户</li><li>配置他们的独角兽</li><li>添加到购物车</li><li>检验并付款</li><li>给出关于他们独角兽的反馈</li></ul><p>编写一个宏大的 Selenium 脚本来执行所有这些操作是很诱人的 — 很多人都会尝试这样做。
+<strong>抵制诱惑！</strong>
+这样做会导致测试:
+a) 需要很长时间;
+b) 会受到一些与页面呈现时间问题有关的常见问题的影响;
+c) 如果失败，它不会给出一个简洁的、“可检查”的方法来诊断出了什么问题。</p><p>测试此场景的首选策略是将其分解为一系列独立的、快速的测试，每个测试都有一个存在的“理由”。</p><p>假设您想测试第二步：
+配置您的独角兽。
+它将执行以下操作:</p><ul><li>创建一个帐户</li><li>配置一个独角兽</li></ul><p>请注意，我们跳过了这些步骤的其余部分，
+在完成这一步之后，我们将在其他小的、离散的测试用例中测试工作流的其余部分。</p><p>首先，您需要创建一个帐户。在这里您可以做出一些选择：</p><ul><li>您想使用现有帐户吗?</li><li>您想创建一个新帐户吗?</li><li>在配置开始之前，是否需要考虑有任何特殊属性的用户需要吗?</li></ul><p>不管您如何回答这个问题，
+解决方案是让它成为测试中“设置数据”部分的一部分 - 如果 Larry 公开了一个 API，
+使您(或任何人)能够创建和更新用户帐户，
+一定要用它来回答这个问题
+请确保使用这个 API 来回答这个问题 — 如果可能的话，
+您希望只有在您拥有一个用户之后才启动浏览器，您可以使用该用户的凭证进行登录。</p><p>如果每个工作流的每个测试都是从创建用户帐户开始的，那么每个测试的执行都会增加许多秒。
+调用 API 并与数据库进行通信是快速、“无头”的操作，
+不需要打开浏览器、导航到正确页面、点击并等待表单提交等昂贵的过程。</p><p>理想情况下，您可以在一行代码中处理这个设置阶段，这些代码将在任何浏览器启动之前执行:</p><div class=tabset><input type=radio name=tabsetcode1 id=tab0code1 aria-controls=javacode1 checked>
+<label for=tab0code1>Java</label>
+<input type=radio name=tabsetcode1 id=tab1code1 aria-controls=pythoncode1>
+<label for=tab1code1>Python</label>
+<input type=radio name=tabsetcode1 id=tab2code1 aria-controls=cscode1>
+<label for=tab2code1>C#</label>
+<input type=radio name=tabsetcode1 id=tab3code1 aria-controls=rubycode1>
+<label for=tab3code1>Ruby</label>
+<input type=radio name=tabsetcode1 id=tab4code1 aria-controls=javascriptcode1>
+<label for=tab4code1>JavaScript</label>
+<input type=radio name=tabsetcode1 id=tab5code1 aria-controls=kotlincode1>
+<label for=tab5code1>Kotlin</label><div class=tab-panels><section id=javacode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// Create a user who has read-only permissions--they can configure a unicorn,
+</span><span style=color:#586e75>// but they do not have payment information set up, nor do they have
+</span><span style=color:#586e75>// administrative privileges. At the time the user is created, its email
+</span><span style=color:#586e75>// address and password are randomly generated--you don&#39;t even need to
+</span><span style=color:#586e75>// know them.
+</span><span style=color:#586e75></span>User user <span style=color:#719e07>=</span> UserFactory<span style=color:#719e07>.</span>createCommonUser<span style=color:#719e07>();</span> <span style=color:#586e75>//This method is defined elsewhere.
+</span><span style=color:#586e75></span>
+<span style=color:#586e75>// Log in as this user.
+</span><span style=color:#586e75>// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
+</span><span style=color:#586e75>// AccountPage object is returned by the loginAs method, allowing you to then
+</span><span style=color:#586e75>// perform actions from the AccountPage.
+</span><span style=color:#586e75></span>AccountPage accountPage <span style=color:#719e07>=</span> loginAs<span style=color:#719e07>(</span>user<span style=color:#719e07>.</span>getEmail<span style=color:#719e07>(),</span> user<span style=color:#719e07>.</span>getPassword<span style=color:#719e07>());</span>
+  </code></pre></div></section><section id=pythoncode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># Create a user who has read-only permissions--they can configure a unicorn,</span>
+<span style=color:#586e75># but they do not have payment information set up, nor do they have</span>
+<span style=color:#586e75># administrative privileges. At the time the user is created, its email</span>
+<span style=color:#586e75># address and password are randomly generated--you don&#39;t even need to</span>
+<span style=color:#586e75># know them.</span>
+user <span style=color:#719e07>=</span> user_factory<span style=color:#719e07>.</span>create_common_user() <span style=color:#586e75>#This method is defined elsewhere.</span>
+
+<span style=color:#586e75># Log in as this user.</span>
+<span style=color:#586e75># Logging in on this site takes you to your personal &#34;My Account&#34; page, so the</span>
+<span style=color:#586e75># AccountPage object is returned by the loginAs method, allowing you to then</span>
+<span style=color:#586e75># perform actions from the AccountPage.</span>
+account_page <span style=color:#719e07>=</span> login_as(user<span style=color:#719e07>.</span>get_email(), user<span style=color:#719e07>.</span>get_password())
+  </code></pre></div></section><section id=csharpcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// Create a user who has read-only permissions--they can configure a unicorn,
+</span><span style=color:#586e75>// but they do not have payment information set up, nor do they have
+</span><span style=color:#586e75>// administrative privileges. At the time the user is created, its email
+</span><span style=color:#586e75>// address and password are randomly generated--you don&#39;t even need to
+</span><span style=color:#586e75>// know them.
+</span><span style=color:#586e75></span>User user = UserFactory.CreateCommonUser(); <span style=color:#586e75>//This method is defined elsewhere.
+</span><span style=color:#586e75></span>
+<span style=color:#586e75>// Log in as this user.
+</span><span style=color:#586e75>// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
+</span><span style=color:#586e75>// AccountPage object is returned by the loginAs method, allowing you to then
+</span><span style=color:#586e75>// perform actions from the AccountPage.
+</span><span style=color:#586e75></span>AccountPage accountPage = LoginAs(user.Email, user.Password);
+  
+</code></pre></div></section><section id=rubycode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># Create a user who has read-only permissions--they can configure a unicorn,</span>
+<span style=color:#586e75># but they do not have payment information set up, nor do they have</span>
+<span style=color:#586e75># administrative privileges. At the time the user is created, its email</span>
+<span style=color:#586e75># address and password are randomly generated--you don&#39;t even need to</span>
+<span style=color:#586e75># know them.</span>
+user <span style=color:#719e07>=</span> <span style=color:#cb4b16>UserFactory</span><span style=color:#719e07>.</span>create_common_user <span style=color:#586e75>#This method is defined elsewhere.</span>
+
+<span style=color:#586e75># Log in as this user.</span>
+<span style=color:#586e75># Logging in on this site takes you to your personal &#34;My Account&#34; page, so the</span>
+<span style=color:#586e75># AccountPage object is returned by the loginAs method, allowing you to then</span>
+<span style=color:#586e75># perform actions from the AccountPage.</span>
+account_page <span style=color:#719e07>=</span> login_as(user<span style=color:#719e07>.</span>email, user<span style=color:#719e07>.</span>password)
+  </code></pre></div></section><section id=javascriptcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// Create a user who has read-only permissions--they can configure a unicorn,
+</span><span style=color:#586e75>// but they do not have payment information set up, nor do they have
+</span><span style=color:#586e75>// administrative privileges. At the time the user is created, its email
+</span><span style=color:#586e75>// address and password are randomly generated--you don&#39;t even need to
+</span><span style=color:#586e75>// know them.
+</span><span style=color:#586e75></span><span style=color:#268bd2>var</span> user <span style=color:#719e07>=</span> userFactory.createCommonUser(); <span style=color:#586e75>//This method is defined elsewhere.
+</span><span style=color:#586e75></span>
+<span style=color:#586e75>// Log in as this user.
+</span><span style=color:#586e75>// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
+</span><span style=color:#586e75>// AccountPage object is returned by the loginAs method, allowing you to then
+</span><span style=color:#586e75>// perform actions from the AccountPage.
+</span><span style=color:#586e75></span><span style=color:#268bd2>var</span> accountPage <span style=color:#719e07>=</span> loginAs(user.email, user.password);
+  
+</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// Create a user who has read-only permissions--they can configure a unicorn,
+</span><span style=color:#586e75>// but they do not have payment information set up, nor do they have
+</span><span style=color:#586e75>// administrative privileges. At the time the user is created, its email
+</span><span style=color:#586e75>// address and password are randomly generated--you don&#39;t even need to
+</span><span style=color:#586e75>// know them.
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> user = UserFactory.createCommonUser() <span style=color:#586e75>//This method is defined elsewhere.
+</span><span style=color:#586e75></span>
+<span style=color:#586e75>// Log in as this user.
+</span><span style=color:#586e75>// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
+</span><span style=color:#586e75>// AccountPage object is returned by the loginAs method, allowing you to then
+</span><span style=color:#586e75>// perform actions from the AccountPage.
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> accountPage = loginAs(user.getEmail(), user.getPassword())
+  </code></pre></div></section></div></div><p>您可以想象，<code>UserFactory</code>可以扩展为提供诸如<code>createAdminUser()</code>、<code>createUserWithPayment()</code>的方法。
+关键是，这两行代码不会分散您对此测试的最终目的的注意力：
+配置独角兽。</p><p><a href=https://www.selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/>页面对象模型</a>
+的复杂性将在后面的章节中讨论，但我们将在这里介绍这个概念：</p><p>您的测试应该由操作组成，从用户的角度出发，在站点的页面上下文中执行。
+这些页面被存储为对象，
+其中包含关于 web 页面如何组成以及如何执行操作的特定信息 — 作为测试人员，您应该很少关注这些信息。</p><p>您想要什么样的独角兽?
+您可能想要粉红色，但不一定。
+紫色最近很流行。
+她需要太阳镜吗?
+明星纹身?
+这些选择虽然困难，但是作为测试人员，
+您的主要关注点是 — 您需要确保您的订单履行中心将正确的独角兽发送给正确的人，而这就要从这些选择开始。</p><p>请注意，我们在该段落中没有讨论按钮，字段，下拉菜单，单选按钮或 Web 表单。
+<strong>您的测试也不应该！</strong>
+您希望像尝试解决问题的用户一样编写代码。
+这是一种方法（从前面的例子继续）：</p><div class=tabset><input type=radio name=tabsetcode3 id=tab0code3 aria-controls=javacode3 checked>
+<label for=tab0code3>Java</label>
+<input type=radio name=tabsetcode3 id=tab1code3 aria-controls=pythoncode3>
+<label for=tab1code3>Python</label>
+<input type=radio name=tabsetcode3 id=tab2code3 aria-controls=cscode3>
+<label for=tab2code3>C#</label>
+<input type=radio name=tabsetcode3 id=tab3code3 aria-controls=rubycode3>
+<label for=tab3code3>Ruby</label>
+<input type=radio name=tabsetcode3 id=tab4code3 aria-controls=javascriptcode3>
+<label for=tab4code3>JavaScript</label>
+<input type=radio name=tabsetcode3 id=tab5code3 aria-controls=kotlincode3>
+<label for=tab5code3>Kotlin</label><div class=tab-panels><section id=javacode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// The Unicorn is a top-level Object--it has attributes, which are set here.
+</span><span style=color:#586e75>// This only stores the values; it does not fill out any web forms or interact
+</span><span style=color:#586e75>// with the browser in any way.
+</span><span style=color:#586e75></span>Unicorn sparkles <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> Unicorn<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Sparkles&#34;</span><span style=color:#719e07>,</span> UnicornColors<span style=color:#719e07>.</span>PURPLE<span style=color:#719e07>,</span> UnicornAccessories<span style=color:#719e07>.</span>SUNGLASSES<span style=color:#719e07>,</span> UnicornAdornments<span style=color:#719e07>.</span>STAR_TATTOOS<span style=color:#719e07>);</span>
+
+<span style=color:#586e75>// Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the
+</span><span style=color:#586e75>// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
+</span><span style=color:#586e75>// takes us there.
+</span><span style=color:#586e75></span>AddUnicornPage addUnicornPage <span style=color:#719e07>=</span> accountPage<span style=color:#719e07>.</span>addUnicorn<span style=color:#719e07>();</span>
+
+<span style=color:#586e75>// Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to
+</span><span style=color:#586e75>// its createUnicorn() method. This method will take Sparkles&#39; attributes,
+</span><span style=color:#586e75>// fill out the form, and click submit.
+</span><span style=color:#586e75></span>UnicornConfirmationPage unicornConfirmationPage <span style=color:#719e07>=</span> addUnicornPage<span style=color:#719e07>.</span>createUnicorn<span style=color:#719e07>(</span>sparkles<span style=color:#719e07>);</span>
+  </code></pre></div></section><section id=pythoncode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># The Unicorn is a top-level Object--it has attributes, which are set here.</span>
+<span style=color:#586e75># This only stores the values; it does not fill out any web forms or interact</span>
+<span style=color:#586e75># with the browser in any way.</span>
+sparkles <span style=color:#719e07>=</span> Unicorn(<span style=color:#2aa198>&#34;Sparkles&#34;</span>, UnicornColors<span style=color:#719e07>.</span>PURPLE, UnicornAccessories<span style=color:#719e07>.</span>SUNGLASSES, UnicornAdornments<span style=color:#719e07>.</span>STAR_TATTOOS)
+
+<span style=color:#586e75># Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the</span>
+<span style=color:#586e75># actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method</span>
+<span style=color:#586e75># takes us there.</span>
+add_unicorn_page <span style=color:#719e07>=</span> account_page<span style=color:#719e07>.</span>add_unicorn()
+
+<span style=color:#586e75># Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to</span>
+<span style=color:#586e75># its createUnicorn() method. This method will take Sparkles&#39; attributes,</span>
+<span style=color:#586e75># fill out the form, and click submit.</span>
+unicorn_confirmation_page <span style=color:#719e07>=</span> add_unicorn_page<span style=color:#719e07>.</span>create_unicorn(sparkles)
+  </code></pre></div></section><section id=csharpcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// The Unicorn is a top-level Object--it has attributes, which are set here. 
+</span><span style=color:#586e75>// This only stores the values; it does not fill out any web forms or interact
+</span><span style=color:#586e75>// with the browser in any way.
+</span><span style=color:#586e75></span>Unicorn sparkles = <span style=color:#719e07>new</span> Unicorn(<span style=color:#2aa198>&#34;Sparkles&#34;</span>, UnicornColors.Purple, UnicornAccessories.Sunglasses, UnicornAdornments.StarTattoos);
+
+<span style=color:#586e75>// Since we are already &#34;on&#34; the account page, we have to use it to get to the
+</span><span style=color:#586e75>// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
+</span><span style=color:#586e75>// takes us there.
+</span><span style=color:#586e75></span>AddUnicornPage addUnicornPage = accountPage.AddUnicorn();
+
+<span style=color:#586e75>// Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to
+</span><span style=color:#586e75>// its createUnicorn() method. This method will take Sparkles&#39; attributes,
+</span><span style=color:#586e75>// fill out the form, and click submit.
+</span><span style=color:#586e75></span>UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.CreateUnicorn(sparkles);
+  
+</code></pre></div></section><section id=rubycode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># The Unicorn is a top-level Object--it has attributes, which are set here.</span>
+<span style=color:#586e75># This only stores the values; it does not fill out any web forms or interact</span>
+<span style=color:#586e75># with the browser in any way.</span>
+sparkles <span style=color:#719e07>=</span> <span style=color:#cb4b16>Unicorn</span><span style=color:#719e07>.</span>new(<span style=color:#2aa198>&#39;Sparkles&#39;</span>, <span style=color:#cb4b16>UnicornColors</span><span style=color:#719e07>.</span>PURPLE, <span style=color:#cb4b16>UnicornAccessories</span><span style=color:#719e07>.</span>SUNGLASSES, <span style=color:#cb4b16>UnicornAdornments</span><span style=color:#719e07>.</span>STAR_TATTOOS)
+
+<span style=color:#586e75># Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the</span>
+<span style=color:#586e75># actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method</span>
+<span style=color:#586e75># takes us there.</span>
+add_unicorn_page <span style=color:#719e07>=</span> account_page<span style=color:#719e07>.</span>add_unicorn
+
+<span style=color:#586e75># Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to</span>
+<span style=color:#586e75># its createUnicorn() method. This method will take Sparkles&#39; attributes,</span>
+<span style=color:#586e75># fill out the form, and click submit.</span>
+unicorn_confirmation_page <span style=color:#719e07>=</span> add_unicorn_page<span style=color:#719e07>.</span>create_unicorn(sparkles)
+  </code></pre></div></section><section id=javascriptcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// The Unicorn is a top-level Object--it has attributes, which are set here.
+</span><span style=color:#586e75>// This only stores the values; it does not fill out any web forms or interact
+</span><span style=color:#586e75>// with the browser in any way.
+</span><span style=color:#586e75></span><span style=color:#268bd2>var</span> sparkles <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> Unicorn(<span style=color:#2aa198>&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
+
+<span style=color:#586e75>// Since we are already &#34;on&#34; the account page, we have to use it to get to the
+</span><span style=color:#586e75>// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
+</span><span style=color:#586e75>// takes us there.
+</span><span style=color:#586e75></span>
+<span style=color:#268bd2>var</span> addUnicornPage <span style=color:#719e07>=</span> accountPage.addUnicorn();
+
+<span style=color:#586e75>// Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to
+</span><span style=color:#586e75>// its createUnicorn() method. This method will take Sparkles&#39; attributes,
+</span><span style=color:#586e75>// fill out the form, and click submit.
+</span><span style=color:#586e75></span><span style=color:#268bd2>var</span> unicornConfirmationPage <span style=color:#719e07>=</span> addUnicornPage.createUnicorn(sparkles);
+
+  
+</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// The Unicorn is a top-level Object--it has attributes, which are set here. 
+</span><span style=color:#586e75>// This only stores the values; it does not fill out any web forms or interact
+</span><span style=color:#586e75>// with the browser in any way.
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> sparkles = Unicorn(<span style=color:#2aa198>&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
+
+<span style=color:#586e75>// Since we are already &#34;on&#34; the account page, we have to use it to get to the
+</span><span style=color:#586e75>// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
+</span><span style=color:#586e75>// takes us there.
+</span><span style=color:#586e75></span><span style=color:#719e07>val</span> addUnicornPage = accountPage.addUnicorn()
+
+<span style=color:#586e75>// Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to
+</span><span style=color:#586e75>// its createUnicorn() method. This method will take Sparkles&#39; attributes,
+</span><span style=color:#586e75>// fill out the form, and click submit.
+</span><span style=color:#586e75></span>unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
+
+  </code></pre></div></section></div></div><p>既然您已经配置好了独角兽，
+您需要进入第三步:确保它确实有效。</p><div class=tabset><input type=radio name=tabsetcode4 id=tab0code4 aria-controls=javacode4 checked>
+<label for=tab0code4>Java</label>
+<input type=radio name=tabsetcode4 id=tab1code4 aria-controls=pythoncode4>
+<label for=tab1code4>Python</label>
+<input type=radio name=tabsetcode4 id=tab2code4 aria-controls=cscode4>
+<label for=tab2code4>C#</label>
+<input type=radio name=tabsetcode4 id=tab3code4 aria-controls=rubycode4>
+<label for=tab3code4>Ruby</label>
+<input type=radio name=tabsetcode4 id=tab4code4 aria-controls=javascriptcode4>
+<label for=tab4code4>JavaScript</label>
+<input type=radio name=tabsetcode4 id=tab5code4 aria-controls=kotlincode4>
+<label for=tab5code4>Kotlin</label><div class=tab-panels><section id=javacode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#586e75>// The exists() method from UnicornConfirmationPage will take the Sparkles
+</span><span style=color:#586e75>// object--a specification of the attributes you want to see, and compare
+</span><span style=color:#586e75>// them with the fields on the page.
+</span><span style=color:#586e75></span>Assert<span style=color:#719e07>.</span>assertTrue<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;Sparkles should have been created, with all attributes intact&#34;</span><span style=color:#719e07>,</span> unicornConfirmationPage<span style=color:#719e07>.</span>exists<span style=color:#719e07>(</span>sparkles<span style=color:#719e07>));</span>
+  </code></pre></div></section><section id=pythoncode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#586e75># The exists() method from UnicornConfirmationPage will take the Sparkles</span>
+<span style=color:#586e75># object--a specification of the attributes you want to see, and compare</span>
+<span style=color:#586e75># them with the fields on the page.</span>
+<span style=color:#719e07>assert</span> unicorn_confirmation_page<span style=color:#719e07>.</span>exists(sparkles), <span style=color:#2aa198>&#34;Sparkles should have been created, with all attributes intact&#34;</span>
+  </code></pre></div></section><section id=csharpcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#586e75>// The exists() method from UnicornConfirmationPage will take the Sparkles 
+</span><span style=color:#586e75>// object--a specification of the attributes you want to see, and compare
+</span><span style=color:#586e75>// them with the fields on the page.
+</span><span style=color:#586e75></span>Assert.True(unicornConfirmationPage.Exists(sparkles), <span style=color:#2aa198>&#34;Sparkles should have been created, with all attributes intact&#34;</span>);
+  
+</code></pre></div></section><section id=rubycode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#586e75># The exists() method from UnicornConfirmationPage will take the Sparkles</span>
+<span style=color:#586e75># object--a specification of the attributes you want to see, and compare</span>
+<span style=color:#586e75># them with the fields on the page.</span>
+expect(unicorn_confirmation_page<span style=color:#719e07>.</span>exists?(sparkles))<span style=color:#719e07>.</span>to be, <span style=color:#2aa198>&#39;Sparkles should have been created, with all attributes intact&#39;</span>
+  </code></pre></div></section><section id=javascriptcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#586e75>// The exists() method from UnicornConfirmationPage will take the Sparkles
+</span><span style=color:#586e75>// object--a specification of the attributes you want to see, and compare
+</span><span style=color:#586e75>// them with the fields on the page.
+</span><span style=color:#586e75></span>assert(unicornConfirmationPage.exists(sparkles), <span style=color:#2aa198>&#34;Sparkles should have been created, with all attributes intact&#34;</span>);
+
+  
+</code></pre></div></section><section id=kotlincode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#586e75>// The exists() method from UnicornConfirmationPage will take the Sparkles 
+</span><span style=color:#586e75>// object--a specification of the attributes you want to see, and compare
+</span><span style=color:#586e75>// them with the fields on the page.
+</span><span style=color:#586e75></span>assertTrue(<span style=color:#2aa198>&#34;Sparkles should have been created, with all attributes intact&#34;</span>, unicornConfirmationPage.exists(sparkles))
+  </code></pre></div></section></div></div><p>请注意，测试人员在这段代码中除了谈论独角兽之外还没有做任何事情 — 没有按钮、定位器和浏览器控件。
+这种对应用程序建模的方法允许您保持这些测试级别的命令不变，
+即使 Larry 下周决定不再喜欢 Ruby-on-Rails，
+并决定用最新的带有 Fortran 前端的 Haskell 绑定重新实现整个站点。</p><p>为了符合站点的重新设计，您的页面对象需要进行一些小的维护，但是这些测试将保持不变。
+采用这一基本设计，您将希望继续使用尽可能少的面向浏览器的步骤来完成您的工作流。
+您的下一个工作流程将包括在购物车中添加独角兽。
+您可能需要多次迭代此测试，以确保购物车正确地保持其状态：
+在开始之前，购物车中是否有多个独角兽?
+购物车能装多少?
+如果您创建多个具有相同名称或特性，它会崩溃吗?
+它将只保留现有的一个还是添加另一个?</p><p>每次通过工作流时，您都希望尽量避免创建帐户、以用户身份登录和配置独角兽。
+理想情况下，您将能够创建一个帐户，并通过 API 或数据库预先配置独角兽。
+然后，您只需作为用户登录，找到 Sparkles，并将它添加到购物车中。</p><h3 id=是否自动化>是否自动化?</h3><p>自动化总是有优势吗? 什么时候应该决定去自动化测试用例?</p><p>自动化测试用例并不总是有利的. 有时候手动测试可能更合适. 例如，如果应用程序的用户界面，在不久的将来会发生很大变化，那么任何自动化都可能需要重写. 此外，有时根本没有足够的时间来构建自动化测试. 从短期来看，手动测试可能更有效. 如果应用程序的截止日期非常紧迫，当前没有可用的自动化测试，并且必须在特定时间范围内完成，那么手动测试是最好的解决方案.</p><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/>“关于测试自动化”</a> was last updated on: 31 Mar 2021 15:20:57 +0530: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/196b3d28449e0fa61bc9d2c3cdade6202b736ed9>Adding missing pt-br docs [deploy site] (196b3d2)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/ title="Selenium 项目和工具"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/ title=测试的类型 style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1617184292></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/learn.js?1617184292></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1617184292></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1617184292 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1617184292></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>
