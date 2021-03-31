@@ -1,5 +1,8 @@
 #!/bin/bash
+# Print commands
 set -x
+# Exit on error
+set -e
 
 if [[ -z "${DEPLOY_PRIME_URL}" ]]; then
   USE_BASE_URL_SITE=""
