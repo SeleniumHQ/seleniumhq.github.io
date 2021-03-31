@@ -314,4 +314,4 @@ More information can be found at:
 * Configuring OpenTelemetry:
   https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
-* [Selenium Grid Observability]({{< ref "grid/grid_4/advanced_features/observability.zh-cn.md" >}})
+* [Selenium Grid Observability]({{< ref "grid/grid_4/advanced_features/observability.pt-br.md" >}})
