@@ -3,6 +3,12 @@ title: "Cliente do WebDriver remoto"
 weight: 2
 ---
 
+{{% notice %}}
+<i class="fas fa-language"></i> Page being translated from
+English to Portuguese. Do you speak Portuguese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Para executar um cliente WebDriver remoto, primeiro precisamos nos conectar ao RemoteWebDriver.
 Fazemos isso apontando a URL para o endereço do servidor que está executando nossos testes.
 Para personalizar nossa configuração, definimos os recursos desejados.
