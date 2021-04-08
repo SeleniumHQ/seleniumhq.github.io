@@ -30,7 +30,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar hub
 ### ノードを登録する
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
+java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
 ```
 
 ### Seleniumグリッドをクエリする
@@ -82,7 +82,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 * Step 6: 最後に、ノードを追加します。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
+        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
     ```
 
 ## Dockerイメージを介してスタンドアロングリッドを開始する
