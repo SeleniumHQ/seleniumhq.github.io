@@ -122,7 +122,10 @@ With Selenium and devtools integration, you can automate the input of basic auth
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-# Please raise a PR to add code sample
+Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
+
+driver.register(uriPredicate, UsernameAndPassword.of("admin", "password"));
+driver.get("https://your-domain.com/login");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR to add code sample
