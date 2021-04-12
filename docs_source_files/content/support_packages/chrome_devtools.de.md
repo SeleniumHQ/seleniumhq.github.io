@@ -125,8 +125,7 @@ With Selenium and devtools integration, you can automate the input of basic auth
   {{< code-panel language="java" >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
-ChromiumDriver driver = new ChromeDriver();
-driver.register(uriPredicate, UsernameAndPassword.of("admin", "password"));
+((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
 driver.get("https://your-domain.com/login");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}

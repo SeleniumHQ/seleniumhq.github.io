@@ -121,8 +121,7 @@ fun main() {
   {{< code-panel language="java" >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
-ChromiumDriver driver = new ChromeDriver();
-driver.register(uriPredicate, UsernameAndPassword.of("admin", "password"));
+((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
 driver.get("https://your-domain.com/login");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
