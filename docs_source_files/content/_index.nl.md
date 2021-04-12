@@ -52,7 +52,7 @@ public class HelloSelenium {
         try {
             driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
-            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>div")));
+            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3")));
             System.out.println(firstResult.getAttribute("textContent"));
         } finally {
             driver.quit();
@@ -72,7 +72,7 @@ with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
     driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
-    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
+    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3")))
     print(first_result.get_attribute("textContent"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -87,8 +87,8 @@ class HelloSelenium {
       WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
       driver.Navigate().GoToUrl("https://www.google.com/ncr");
       driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-      wait.Until(webDriver => webDriver.FindElement(By.CssSelector("h3>div")).Displayed);
-      IWebElement firstResult = driver.FindElement(By.CssSelector("h3>div"));
+      wait.Until(webDriver => webDriver.FindElement(By.CssSelector("h3")).Displayed);
+      IWebElement firstResult = driver.FindElement(By.CssSelector("h3"));
       Console.WriteLine(firstResult.GetAttribute("textContent"));
     }
   }
@@ -103,7 +103,7 @@ wait = Selenium::WebDriver::Wait.new(timeout: 10)
 begin
   driver.get 'https://google.com/ncr'
   driver.find_element(name: 'q').send_keys 'cheese', :return
-  first_result = wait.until { driver.find_element(css: 'h3>div') }
+  first_result = wait.until { driver.find_element(css: 'h3') }
   puts first_result.attribute('textContent')
 ensure
   driver.quit
@@ -121,7 +121,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Enter text "cheese" and perform keyboard action "Enter"
         await driver.findElement(By.name('q')).sendKeys('cheese', Key.ENTER);
 
-        let firstResult = await driver.wait(until.elementLocated(By.css('h3>div')), 10000);
+        let firstResult = await driver.wait(until.elementLocated(By.css('h3')), 10000);
 
         console.log(await firstResult.getAttribute('textContent'));
     }
@@ -144,7 +144,7 @@ fun main() {
     try {
         driver.get("https://google.com/ncr")
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
-        val firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>div")))
+        val firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3")))
         println(firstResult.getAttribute("textContent"))
     } finally {
         driver.quit()
