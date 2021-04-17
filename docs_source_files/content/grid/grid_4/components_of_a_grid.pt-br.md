@@ -3,6 +3,12 @@ title: "Componentes"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Portuguese. Do you speak Portuguese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ![Grid](/images/grid_4.png)
 
 ## Roteador
