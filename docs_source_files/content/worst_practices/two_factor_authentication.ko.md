@@ -1,26 +1,13 @@
 ---
-title: "Two Factor Authentication"
+title: "2단계 인증"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+2FA(Two Factor Authentication)라고 알려진 2단계 인증은 인증을 위해 구글 인증기, 마이크로소프트 인증기와 같은 인증기 모바일 앱, 혹은 SMS, email 등에 의해 생성되는 1회용 비밀번호(OTP)를 사용하는 인증 방식입니다.
 
-Two Factor Authentication shortly know as _2FA_ is a authorization 
-mechanism where One Time Password(OTP) is generated using "Authenticator" 
-mobile apps such as "Google Authenticator", "Microsoft Authenticator" 
-etc., or by SMS, e-mail to authenticate. Automating this seamlessly 
-and consistently is a big challenge in Selenium. There are some ways 
-to automate this process. But that will be another layer on top of our 
-Selenium tests and not secured as well.  So, you can avoid automating 2FA.
+Selenium에서 이 인증 단계를 끊김없이, 연속적으로 자동화는 것은 큰 도전입니다. 이 과정을 자동화하는 몇가지 방법이 있습니다. 하지만 Selenium 테스트 단계 위의 또 다른 계층이 될 것이며, Selenium 테스트는 안전하지도 않을 것입니다. 그러니 2단계 인증 자동화는 피하십시오.
 
-There are few options to get around 2FA checks:
-
-* Disable 2FA for certain Users in the test environment, so that you can 
-use those user credentials in the automation.
-* Disable 2FA in your test environment.
-* Disable 2FA if you login from certain IPs. That way we can configure our 
-test machine IPs to avoid this.
+2단계 인증을 해결하기 위한 몇가지 옵션이 있습니다:
+* 테스트 환경의 특정 사용자를 대상으로 2단계 인증을 비활성화하여, 해당 사용자 인증 정보를 자동화에 사용합니다.
+* 테스트 환경에서 2단계 인증을 비활성화 합니다.
+* 특정 IP에서 로그인할 때 2단계 인증을 비활성화 합니다. 2단계 인증을 피하기 위해 이 방법으로 테스트 머신의 IP를 구성할 수 있습니다.
