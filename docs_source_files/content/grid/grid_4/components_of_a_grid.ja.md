@@ -3,6 +3,12 @@ title: "グリッドのコンポーネント"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> There are certain paragaraphs needs translation from 
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ![Grid](/images/grid_4.png)
 
 ## ルーター
@@ -46,17 +52,45 @@ SafariおよびInternet Explorerの場合、作成されるスロットは1つ�
 たとえば、WindowsノードにはInternet Explorerをブラウザーオプションとして提供する機能がありますが、
 これはLinuxまたはMacでは不可能です。
 
-## セッションマップ
+## Session Map
 
-セッションマップは、セッションIDとセッションが実行されているノードの情報を保持するデータストアです。 
-これは、リクエストをノードに転送するプロセスにおけるルーターのサポートとして機能します。 
-ルーターは、セッションIDに関連付けられたノードをセッションマップに要求します。 
-完全分散モードでGridを開始する場合、セッションマップは、開始する必要がある最初のコンポーネントです。
+The Session Map is a data store that keeps the information of the session id and the Node 
+where the session is running. It serves as a support for the Router in the process of 
+forwarding a request to the Node. The Router will ask the Session Map for the Node 
+associated to a session id.
 
-## イベントバス
+## New Session Queuer, New Session Queue
 
-イベントバスは、ノード、ディストリビュータ、およびセッションマップ間の通信パスとして機能します。 
-Gridは、メッセージを介して内部通信の大部分を行い、高価なHTTP呼び出しを回避します。
+The New Session Queuer is the only
+component which can communicate with the New Session Queue. It handles all queue operations like
+add to manipulate the queue. It has configurable parameters for setting 
+the request timeout and request retry interval.
+
+The New Session Queuer receives the new session request from the Router and adds it to the queue. 
+The queuer waits until it receives the response for the request. 
+If the request times out, the request is rejected immediately and not added to the queue. 
+
+Upon successfully adding the request to the queue, Event Bus triggers an event. 
+The Distributor picks up this event and polls the queue. It now attempts to create a session.
+
+If the requested capabilities do not exist in any of the registered Nodes, then the request is rejected
+immediately and the client receives a response.
+
+If the requested capabilities match the capabilities of any of Node slots, Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queuer to add the request 
+to the front of the queue. The Distributor receives the request again after the request retry interval. 
+It will attempt retries until the request is successful or has timed out. 
+If request times out while retrying or adding to the front of the queue its rejected.
+
+After getting an available slot and session creation, the Distributor passes the new session response 
+to the New Session Queuer via the Event Bus. The New Session Queuer will respond to the client when it
+receives the event.
+
+## Event Bus
+
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
+The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
+When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
 ## Gridの役割
 

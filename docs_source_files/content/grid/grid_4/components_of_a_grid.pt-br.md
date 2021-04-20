@@ -3,6 +3,13 @@ title: "Componentes"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> There are certain paragaraphs needs translation from 
+English to Portuguese. Do you speak Portuguese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
+
 ![Grid](/images/grid_4.png)
 
 ## Roteador
@@ -48,13 +55,12 @@ o mesmo sistema operacional que os outros componentes. Por exemplo, um nó do Wi
 pode ter a capacidade de oferecer o Internet Explorer como uma opção de navegador,
 considerando que isso não seria possível no Linux ou Mac.
 
-## Mapa de Sessão
+## Session Map
 
-O Mapa da Sessão é um armazenamento de dados que mantém as informações do ID da sessão e do Nó
-onde a sessão está sendo executada. Serve como suporte para o Roteador no processo de
-encaminhamento de uma solicitação para o Nó. O Roteador irá pedir o mapa da sessão para o nó
-associado a um ID de sessão. Ao iniciar a Grid em seu modo totalmente distribuído,
-o Mapa da Sessão é o primeiro componente que deve ser iniciado.
+The Session Map is a data store that keeps the information of the session id and the Node 
+where the session is running. It serves as a support for the Router in the process of 
+forwarding a request to the Node. The Router will ask the Session Map for the Node 
+associated to a session id.
 
 ## Enfileirador de Sessão, Fila de Sessão
 
@@ -85,8 +91,9 @@ recebe o evento.
 
 ## Event Bus
 
-O Event Bus serve como um caminho de comunicação entre os nós, o distribuidor, o enfileirador de sessão e o mapa da sessão.
-A Grid faz a maior parte de sua comunicação interna por meio de mensagens, evitando chamadas HTTP caras.
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
+The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
+When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
 ## Funções na Grid
 

@@ -56,8 +56,7 @@ whereas this would not be possible on Linux or Mac.
 The Session Map is a data store that keeps the information of the session id and the Node 
 where the session is running. It serves as a support for the Router in the process of 
 forwarding a request to the Node. The Router will ask the Session Map for the Node 
-associated to a session id. When starting the Grid in its fully distributed mode, the
-Session Map is the first component that should be started.
+associated to a session id.
 
 ## New Session Queuer, New Session Queue
 
@@ -89,7 +88,8 @@ receives the event.
 ## Event Bus
 
 The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
-The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
+The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
+When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
 ## Roles in Grid
 
