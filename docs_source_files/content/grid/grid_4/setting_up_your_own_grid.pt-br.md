@@ -26,7 +26,7 @@ java -jar selenium-server-4.0.0-alpha-6.jar hub
 ### Registre o Nó:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers true
 ```
 
 ### Faça a busca na Selenium Grid:
@@ -73,7 +73,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 * Step 6: Finalmente, adicione um Nó
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+        java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers true
     ```
 
 ## Inicie a Standalone Grid via imagens Docker

@@ -32,7 +32,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar hub
 ### 注册Node:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
+java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
 ```
 
 ### 查询Selenium网格:
@@ -86,7 +86,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 * 第6步: 最终，添加节点.
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
+        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
     ```
 
 ## 通过Docker映像启动独立网格
