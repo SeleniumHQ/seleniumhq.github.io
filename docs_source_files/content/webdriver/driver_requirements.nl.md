@@ -18,8 +18,8 @@ although not all browsers have official support for remote control.
 WebDriver's aim is to emulate a real user's interaction
 with the browser as closely as possible.
 This is possible at varying levels in different browsers.
-For more details on the different driver idiosyncracies,
-please see _[Driver Idiosyncracies]({{< ref "/driver_idiosyncrasies/_index.nl.md" >}})_.
+For more details on the different driver idiosyncrasies,
+please see _[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.nl.md" >}})_.
 
 Even though all the drivers share a single user-facing interface
 for controlling the browser,
