@@ -13,7 +13,7 @@ L'objectif de WebDriver est d'émuler l'interaction d'un utilisateur réel
 avec le navigateur le plus près possible.
 Cela est possible à différents niveaux dans différents navigateurs.
 Pour plus de détails sur les différentes particularités des pilotes,
-veuillez consulter _[Idiosyncracies des pilotes]({{<ref "/driver_idiosyncrasies/_index.md">}})_.
+veuillez consulter _[Idiosyncrasies des pilotes]({{<ref "/driver_idiosyncrasies/_index.md">}})_.
 
 Même si tous les pilotes partagent une seule interface utilisateur
 pour contrôler le navigateur,
