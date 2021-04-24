@@ -263,7 +263,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', above:pa
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let passwordField = driver.findElement(By.id('password'));
-let emailAddressField = await driver.findElements(withTagName('input').above(passwordField));
+let emailAddressField = await driver.findElement(withTagName('input').above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val passwordField = driver.findElement(By.id("password"))
@@ -303,7 +303,7 @@ password_field = driver.find_element(relative: {tag_name: 'input', below: email_
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let emailAddressField = driver.findElement(By.id('email'));
-let passwordField = await driver.findElements(withTagName('input').below(emailAddressField));
+let passwordField = await driver.findElement(withTagName('input').below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressField = driver.findElement(By.id("email"))
@@ -344,7 +344,7 @@ cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_b
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let submitButton = driver.findElement(By.id("submit"));
-let cancelButton = await driver.findElements(withTagName("button").toLeftOf(submitButton));
+let cancelButton = await driver.findElement(withTagName("button").toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val submitButton= driver.findElement(By.id("submit"))
@@ -385,7 +385,7 @@ submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let cancelButton = driver.findElement(By.id('cancel'));
-let submitButton = await driver.findElements(withTagName('button').toRightOf(cancelButton));
+let submitButton = await driver.findElement(withTagName('button').toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cancelButton= driver.findElement(By.id("cancel"))
@@ -426,7 +426,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', near: em
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let emailAddressLabel = driver.findElement(By.id("lbl-email"));
-let emailAddressField = await driver.findElements(withTagName("input").near(emailAddressLabel));
+let emailAddressField = await driver.findElement(withTagName("input").near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressLabel = driver.findElement(By.id("lbl-email"))
