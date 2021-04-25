@@ -649,6 +649,7 @@ using something like:
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
+from selenium.webdriver.common.by import By
 # This Wont work
 driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
