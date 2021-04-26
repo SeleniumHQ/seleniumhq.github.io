@@ -42,7 +42,7 @@ Internet Explorer, Chrome et tous les autres navigateurs pris en charge.
 
 ### Outils et support
 
-L'approche de conception minimaliste de Selenium lui confère
+L'approche de conception minimaliste de Selenium lui confère une
 polyvalence à inclure en tant que composant dans des applications plus importantes.
 L'infrastructure environnante fournie sous l'égide du sélénium
 vous donne les outils pour assembler
@@ -55,7 +55,7 @@ allumer tous les navigateurs en même temps
 frapper les liens, les formulaires de votre site,
 et tables & mdash; tester votre application 24h / 24.
 Grâce à l'interface de programmation simple
-fourni pour les langues les plus courantes,
+fournie pour les langues les plus courantes,
 ces tests se dérouleront sans relâche en parallèle,
 vous faire rapport en cas d'erreur.
 
@@ -64,7 +64,7 @@ en fournissant aux utilisateurs des outils et de la
 documentation pour non seulement contrôler les navigateurs,
 mais pour faciliter la mise à l'échelle et le déploiement de telles grilles.
 
-### Qui utilise le sélénium
+### Qui utilise le selenium
 
 Beaucoup des entreprises les plus importantes au monde
 ont adopté Selenium pour leurs tests sur navigateur,
@@ -83,7 +83,7 @@ plus de volontaires pour participer à cet effort,
 et construire une communauté forte
 afin que le projet puisse continuer à 
 suivre les technologies émergentes
-et restent une plate-forme dominante pour 
+et qui puisse rester une plate-forme dominante pour 
 l'automatisation des tests fonctionnels.
 
 
@@ -101,7 +101,7 @@ et de faire certaines observations côté client que vous ne seriez pas en mesur
 il ne répond pas à la capacité de reproduire naturellement les interactions d'un utilisateur
 comme si la souris et le clavier étaient utilisés.
 
-Depuis lors, le sélénium a grandi et mûri beaucoup,
+Depuis lors, le selenium a grandi et mûri beaucoup,
 dans un outil largement utilisé par de nombreux & mdash; sinon la plupart des & mdash;
 les plus grandes organisations du monde.
 Selenium est passé d'une boîte à outils d'automatisation de tests homebrewed développée à Thoughtworks
