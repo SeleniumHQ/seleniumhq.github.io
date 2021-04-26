@@ -4,7 +4,7 @@ weight: 1
 ---
 
 Two Factor Authentication shortly know as _2FA_ is a authorization 
-mechanism where One Time Password(OTP) is generated using "Authenticator" 
+mechanism where One Time Password (OTP) is generated using "Authenticator" 
 mobile apps such as "Google Authenticator", "Microsoft Authenticator" 
 etc., or by SMS, e-mail to authenticate. Automating this seamlessly 
 and consistently is a big challenge in Selenium. There are some ways 
