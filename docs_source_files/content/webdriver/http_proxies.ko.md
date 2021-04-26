@@ -1,33 +1,23 @@
 ---
-title: "Http proxies"
+title: "Http 프록시"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+프록시 서버는 클라이언트와 서버 간 요청(request)을 중개하는 역할을 합니다. 
+즉, 트래픽이 대상 주소를 오갈 때 프록시 서버를 거쳐서 이동한다는 것입니다.
 
-A proxy server acts as an intermediary for 
-requests between a client and a server. In simple, 
-the traffic flows through the proxy server on 
-its way to the address you requested and back.
+Selenium 자동화 스크립트를 위해 프록시 서버를 구성하면 다음과 같은 이점이 
+있습니다.
 
-A proxy server for automation scripts 
-with Selenium could be helpful for:
+* 네트워크 트래픽을 들여다보고 확인할 수 있습니다.
+* 웹 사이트의 서버 호출을 모사(mock)할 수 있습니다.
+* 복잡하게 구성된 네트워크 환경에서나 엄격한 규칙과 정책이 있는 회사에서 
+대상 웹 사이트에 접근할 수 있습니다.
 
-* Capture network traffic
-* Mock backend calls made by the website
-* Access the required website under complex network 
-topologies or strict corporate restrictions/policies.
+회사 내에서 어떤 URL에 접근하는 데 실패했다면, 그 이유는 대개 프록시가 
+필요한 환경이기 때문일 겁니다.
 
-If you are in a corporate environment, and a 
-browser fails to connect to a URL, this is most 
-likely because the environment needs a 
-proxy to be accessed.
-
-Selenium WebDriver provides a way to proxy settings:
+Selenium WebDriver로 다음과 같이 프록시를 설정할 수 있습니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -62,7 +52,7 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-    # Open URL
+    # URL 열기
     driver.get("https://selenium.dev")
 
   {{< / code-panel >}}
@@ -85,7 +75,7 @@ public class ProxyTest{
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# this code was written with Selenium 4
+# 이 코드는 Selenium 4를 사용하여 작성되었습니다.
 
 proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
 cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
