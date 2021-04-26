@@ -32,9 +32,9 @@ Web browsers are incredibly complex, highly engineered applications,
 performing their operations in completely different ways
 but which frequently look the same while doing so.
 Even though the text is rendered in the same fonts,
-the images are displayed in the same place
-and the links take you to the same destination.
-What is happening underneath is as different as night and day.
+the images are displayed in the same place,
+and the links take you to the same destination,
+what is happening underneath is as different as night and day.
 Selenium “abstracts” these differences,
 hiding their details and intricacies from the person writing the code.
 This allows you to write several lines of code to perform a complicated workflow,
