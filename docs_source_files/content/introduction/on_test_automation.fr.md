@@ -99,7 +99,7 @@ Vous avez ici quelques choix à faire:
 * Voulez-vous utiliser un compte existant?
 * Voulez-vous créer un nouveau compte?
 * Y a-t-il des propriétés spéciales d'un tel utilisateur qui doivent être
-  pris en compte avant le début de la configuration?
+ pris en compte avant le début de la configuration?
 
 Quelle que soit la façon dont vous répondez à cette question,
 la solution consiste à l'intégrer à la partie "configurer les données" du test.
