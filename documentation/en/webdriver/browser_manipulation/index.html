@@ -1,5 +1,5 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>Browser manipulation :: Documentation for Selenium</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1619451034 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1619451034 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1619451034></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/en/webdriver/browser_manipulation/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1619451034></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1619451034></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/en";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1619451034></script></div><div class=highlightable><ul class=topics><li data-nav-id=/en/getting_started/ title="Getting started" class=dd-item><a href=https://www.selenium.dev/documentation/en/getting_started/>Getting started
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/images/favicon.png type=image/png><title>Browser manipulation :: Documentation for Selenium</title><link href=https://www.selenium.dev/documentation/css/nucleus.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/fontawesome-all.min.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hybrid.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/featherlight.min.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/perfect-scrollbar.min.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/auto-complete.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/atom-one-dark-reasonable.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/hugo-theme.css?1619516168 rel=stylesheet><link href=https://www.selenium.dev/documentation/css/theme-selenium.css?1619516168 rel=stylesheet><script src=https://www.selenium.dev/documentation/js/jquery-3.3.1.min.js?1619516168></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/en/webdriver/browser_manipulation/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/js/lunr.min.js?1619516168></script><script type=text/javascript src=https://www.selenium.dev/documentation/js/auto-complete.js?1619516168></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/en";</script><script type=text/javascript src=https://www.selenium.dev/documentation/js/search.js?1619516168></script></div><div class=highlightable><ul class=topics><li data-nav-id=/en/getting_started/ title="Getting started" class=dd-item><a href=https://www.selenium.dev/documentation/en/getting_started/>Getting started
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/getting_started/quick/ title="Quick tour" class=dd-item><a href=https://www.selenium.dev/documentation/en/getting_started/quick/>Quick tour
 <i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/en/introduction/ title=Introduction class=dd-item><a href=https://www.selenium.dev/documentation/en/introduction/>Introduction
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/en/introduction/the_selenium_project_and_tools/ title="The Selenium project and tools" class=dd-item><a href=https://www.selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/>The Selenium project and tools
@@ -110,17 +110,17 @@ C:\Ruby200\bin<span style=color:#586e75>;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDO
 move <code>IEDriverServer.exe</code> there.</p><p>This should open a new Internet Explorer window:</p><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#b58900>require</span> <span style=color:#2aa198>&#34;selenium-webdriver&#34;</span>
 driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:internet_explorer</span>
 </code></pre></div><h2 id=browser-navigation>Browser navigation</h2><h3 id=navigate-to>Navigate to</h3><p>The first thing you will want to do after launching a browser is to
-open your website. This can be achieved in a single line:</p><div class=tabset><input type=radio name=tabsetcode0 id=tab0code0 aria-controls=javacode0 checked>
+open your website. This can be achieved in a single line:</p><div class=tabset><input type=radio name=tabsetcode0 class=tabjava id=tab0code0 aria-controls=javacode0 onclick=handleClick(this); value=java checked>
 <label for=tab0code0>Java</label>
-<input type=radio name=tabsetcode0 id=tab1code0 aria-controls=pythoncode0>
+<input type=radio name=tabsetcode0 class=tabpython id=tab1code0 aria-controls=pythoncode0 onclick=handleClick(this); value=python>
 <label for=tab1code0>Python</label>
-<input type=radio name=tabsetcode0 id=tab2code0 aria-controls=cscode0>
+<input type=radio name=tabsetcode0 class=tabcs id=tab2code0 aria-controls=cscode0 onclick=handleClick(this); value=cs>
 <label for=tab2code0>C#</label>
-<input type=radio name=tabsetcode0 id=tab3code0 aria-controls=rubycode0>
+<input type=radio name=tabsetcode0 class=tabruby id=tab3code0 aria-controls=rubycode0 onclick=handleClick(this); value=ruby>
 <label for=tab3code0>Ruby</label>
-<input type=radio name=tabsetcode0 id=tab4code0 aria-controls=javascriptcode0>
+<input type=radio name=tabsetcode0 class=tabjavascript id=tab4code0 aria-controls=javascriptcode0 onclick=handleClick(this); value=javascript>
 <label for=tab4code0>JavaScript</label>
-<input type=radio name=tabsetcode0 id=tab5code0 aria-controls=kotlincode0>
+<input type=radio name=tabsetcode0 class=tabkotlin id=tab5code0 aria-controls=kotlincode0 onclick=handleClick(this); value=kotlin>
 <label for=tab5code0>Kotlin</label><div class=tab-panels><section id=javacode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Convenient
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://selenium.dev&#34;</span><span style=color:#719e07>);</span>
@@ -147,86 +147,86 @@ await driver.get(<span style=color:#2aa198>&#39;https://selenium.dev&#39;</span>
 
 <span style=color:#586e75>//Longer way
 </span><span style=color:#586e75></span>driver.navigate().to(<span style=color:#2aa198>&#34;https://selenium.dev&#34;</span>)
-  </code></pre></div></section></div></div><h3 id=get-current-url>Get current URL</h3><p>You can read the current URL from the browser&rsquo;s address bar using:</p><div class=tabset><input type=radio name=tabsetcode1 id=tab0code1 aria-controls=javacode1 checked>
+  </code></pre></div></section></div></div><h3 id=get-current-url>Get current URL</h3><p>You can read the current URL from the browser&rsquo;s address bar using:</p><div class=tabset><input type=radio name=tabsetcode1 class=tabjava id=tab0code1 aria-controls=javacode1 onclick=handleClick(this); value=java checked>
 <label for=tab0code1>Java</label>
-<input type=radio name=tabsetcode1 id=tab1code1 aria-controls=pythoncode1>
+<input type=radio name=tabsetcode1 class=tabpython id=tab1code1 aria-controls=pythoncode1 onclick=handleClick(this); value=python>
 <label for=tab1code1>Python</label>
-<input type=radio name=tabsetcode1 id=tab2code1 aria-controls=cscode1>
+<input type=radio name=tabsetcode1 class=tabcs id=tab2code1 aria-controls=cscode1 onclick=handleClick(this); value=cs>
 <label for=tab2code1>C#</label>
-<input type=radio name=tabsetcode1 id=tab3code1 aria-controls=rubycode1>
+<input type=radio name=tabsetcode1 class=tabruby id=tab3code1 aria-controls=rubycode1 onclick=handleClick(this); value=ruby>
 <label for=tab3code1>Ruby</label>
-<input type=radio name=tabsetcode1 id=tab4code1 aria-controls=javascriptcode1>
+<input type=radio name=tabsetcode1 class=tabjavascript id=tab4code1 aria-controls=javascriptcode1 onclick=handleClick(this); value=javascript>
 <label for=tab4code1>JavaScript</label>
-<input type=radio name=tabsetcode1 id=tab5code1 aria-controls=kotlincode1>
+<input type=radio name=tabsetcode1 class=tabkotlin id=tab5code1 aria-controls=kotlincode1 onclick=handleClick(this); value=kotlin>
 <label for=tab5code1>Kotlin</label><div class=tab-panels><section id=javacode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getCurrentUrl<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>current_url</code></pre></div></section><section id=csharpcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Url;
 </code></pre></div></section><section id=rubycode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>current_url</code></pre></div></section><section id=javascriptcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getCurrentUrl();
-</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.currentUrl</code></pre></div></section></div></div><h3 id=back>Back</h3><p>Pressing the browser&rsquo;s back button:</p><div class=tabset><input type=radio name=tabsetcode2 id=tab0code2 aria-controls=javacode2 checked>
+</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.currentUrl</code></pre></div></section></div></div><h3 id=back>Back</h3><p>Pressing the browser&rsquo;s back button:</p><div class=tabset><input type=radio name=tabsetcode2 class=tabjava id=tab0code2 aria-controls=javacode2 onclick=handleClick(this); value=java checked>
 <label for=tab0code2>Java</label>
-<input type=radio name=tabsetcode2 id=tab1code2 aria-controls=pythoncode2>
+<input type=radio name=tabsetcode2 class=tabpython id=tab1code2 aria-controls=pythoncode2 onclick=handleClick(this); value=python>
 <label for=tab1code2>Python</label>
-<input type=radio name=tabsetcode2 id=tab2code2 aria-controls=cscode2>
+<input type=radio name=tabsetcode2 class=tabcs id=tab2code2 aria-controls=cscode2 onclick=handleClick(this); value=cs>
 <label for=tab2code2>C#</label>
-<input type=radio name=tabsetcode2 id=tab3code2 aria-controls=rubycode2>
+<input type=radio name=tabsetcode2 class=tabruby id=tab3code2 aria-controls=rubycode2 onclick=handleClick(this); value=ruby>
 <label for=tab3code2>Ruby</label>
-<input type=radio name=tabsetcode2 id=tab4code2 aria-controls=javascriptcode2>
+<input type=radio name=tabsetcode2 class=tabjavascript id=tab4code2 aria-controls=javascriptcode2 onclick=handleClick(this); value=javascript>
 <label for=tab4code2>JavaScript</label>
-<input type=radio name=tabsetcode2 id=tab5code2 aria-controls=kotlincode2>
+<input type=radio name=tabsetcode2 class=tabkotlin id=tab5code2 aria-controls=kotlincode2 onclick=handleClick(this); value=kotlin>
 <label for=tab5code2>Kotlin</label><div class=tab-panels><section id=javacode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>back<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>back()</code></pre></div></section><section id=csharpcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Back();
 </code></pre></div></section><section id=rubycode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>back</code></pre></div></section><section id=javascriptcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().back();
-</code></pre></div></section><section id=kotlincode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().back() </code></pre></div></section></div></div><h3 id=forward>Forward</h3><p>Pressing the browser&rsquo;s forward button:</p><div class=tabset><input type=radio name=tabsetcode3 id=tab0code3 aria-controls=javacode3 checked>
+</code></pre></div></section><section id=kotlincode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().back() </code></pre></div></section></div></div><h3 id=forward>Forward</h3><p>Pressing the browser&rsquo;s forward button:</p><div class=tabset><input type=radio name=tabsetcode3 class=tabjava id=tab0code3 aria-controls=javacode3 onclick=handleClick(this); value=java checked>
 <label for=tab0code3>Java</label>
-<input type=radio name=tabsetcode3 id=tab1code3 aria-controls=pythoncode3>
+<input type=radio name=tabsetcode3 class=tabpython id=tab1code3 aria-controls=pythoncode3 onclick=handleClick(this); value=python>
 <label for=tab1code3>Python</label>
-<input type=radio name=tabsetcode3 id=tab2code3 aria-controls=cscode3>
+<input type=radio name=tabsetcode3 class=tabcs id=tab2code3 aria-controls=cscode3 onclick=handleClick(this); value=cs>
 <label for=tab2code3>C#</label>
-<input type=radio name=tabsetcode3 id=tab3code3 aria-controls=rubycode3>
+<input type=radio name=tabsetcode3 class=tabruby id=tab3code3 aria-controls=rubycode3 onclick=handleClick(this); value=ruby>
 <label for=tab3code3>Ruby</label>
-<input type=radio name=tabsetcode3 id=tab4code3 aria-controls=javascriptcode3>
+<input type=radio name=tabsetcode3 class=tabjavascript id=tab4code3 aria-controls=javascriptcode3 onclick=handleClick(this); value=javascript>
 <label for=tab4code3>JavaScript</label>
-<input type=radio name=tabsetcode3 id=tab5code3 aria-controls=kotlincode3>
+<input type=radio name=tabsetcode3 class=tabkotlin id=tab5code3 aria-controls=kotlincode3 onclick=handleClick(this); value=kotlin>
 <label for=tab5code3>Kotlin</label><div class=tab-panels><section id=javacode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>forward<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>forward()</code></pre></div></section><section id=csharpcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Forward();
 </code></pre></div></section><section id=rubycode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>forward</code></pre></div></section><section id=javascriptcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().forward();
-</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().forward()</code></pre></div></section></div></div><h3 id=refresh>Refresh</h3><p>Refresh the current page:</p><div class=tabset><input type=radio name=tabsetcode4 id=tab0code4 aria-controls=javacode4 checked>
+</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().forward()</code></pre></div></section></div></div><h3 id=refresh>Refresh</h3><p>Refresh the current page:</p><div class=tabset><input type=radio name=tabsetcode4 class=tabjava id=tab0code4 aria-controls=javacode4 onclick=handleClick(this); value=java checked>
 <label for=tab0code4>Java</label>
-<input type=radio name=tabsetcode4 id=tab1code4 aria-controls=pythoncode4>
+<input type=radio name=tabsetcode4 class=tabpython id=tab1code4 aria-controls=pythoncode4 onclick=handleClick(this); value=python>
 <label for=tab1code4>Python</label>
-<input type=radio name=tabsetcode4 id=tab2code4 aria-controls=cscode4>
+<input type=radio name=tabsetcode4 class=tabcs id=tab2code4 aria-controls=cscode4 onclick=handleClick(this); value=cs>
 <label for=tab2code4>C#</label>
-<input type=radio name=tabsetcode4 id=tab3code4 aria-controls=rubycode4>
+<input type=radio name=tabsetcode4 class=tabruby id=tab3code4 aria-controls=rubycode4 onclick=handleClick(this); value=ruby>
 <label for=tab3code4>Ruby</label>
-<input type=radio name=tabsetcode4 id=tab4code4 aria-controls=javascriptcode4>
+<input type=radio name=tabsetcode4 class=tabjavascript id=tab4code4 aria-controls=javascriptcode4 onclick=handleClick(this); value=javascript>
 <label for=tab4code4>JavaScript</label>
-<input type=radio name=tabsetcode4 id=tab5code4 aria-controls=kotlincode4>
+<input type=radio name=tabsetcode4 class=tabkotlin id=tab5code4 aria-controls=kotlincode4 onclick=handleClick(this); value=kotlin>
 <label for=tab5code4>Kotlin</label><div class=tab-panels><section id=javacode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>().</span>refresh<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>refresh()</code></pre></div></section><section id=csharpcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Navigate().Refresh();
 </code></pre></div></section><section id=rubycode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>navigate<span style=color:#719e07>.</span>refresh</code></pre></div></section><section id=javascriptcode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.navigate().refresh();
-</code></pre></div></section><section id=kotlincode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().refresh()</code></pre></div></section></div></div><h3 id=get-title>Get title</h3><p>You can read the current page title from the browser:</p><div class=tabset><input type=radio name=tabsetcode5 id=tab0code5 aria-controls=javacode5 checked>
+</code></pre></div></section><section id=kotlincode4 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.navigate().refresh()</code></pre></div></section></div></div><h3 id=get-title>Get title</h3><p>You can read the current page title from the browser:</p><div class=tabset><input type=radio name=tabsetcode5 class=tabjava id=tab0code5 aria-controls=javacode5 onclick=handleClick(this); value=java checked>
 <label for=tab0code5>Java</label>
-<input type=radio name=tabsetcode5 id=tab1code5 aria-controls=pythoncode5>
+<input type=radio name=tabsetcode5 class=tabpython id=tab1code5 aria-controls=pythoncode5 onclick=handleClick(this); value=python>
 <label for=tab1code5>Python</label>
-<input type=radio name=tabsetcode5 id=tab2code5 aria-controls=cscode5>
+<input type=radio name=tabsetcode5 class=tabcs id=tab2code5 aria-controls=cscode5 onclick=handleClick(this); value=cs>
 <label for=tab2code5>C#</label>
-<input type=radio name=tabsetcode5 id=tab3code5 aria-controls=rubycode5>
+<input type=radio name=tabsetcode5 class=tabruby id=tab3code5 aria-controls=rubycode5 onclick=handleClick(this); value=ruby>
 <label for=tab3code5>Ruby</label>
-<input type=radio name=tabsetcode5 id=tab4code5 aria-controls=javascriptcode5>
+<input type=radio name=tabsetcode5 class=tabjavascript id=tab4code5 aria-controls=javascriptcode5 onclick=handleClick(this); value=javascript>
 <label for=tab4code5>JavaScript</label>
-<input type=radio name=tabsetcode5 id=tab5code5 aria-controls=kotlincode5>
+<input type=radio name=tabsetcode5 class=tabkotlin id=tab5code5 aria-controls=kotlincode5 onclick=handleClick(this); value=kotlin>
 <label for=tab5code5>Kotlin</label><div class=tab-panels><section id=javacode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getTitle<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>title</code></pre></div></section><section id=csharpcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Title;
 </code></pre></div></section><section id=rubycode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>title</code></pre></div></section><section id=javascriptcode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getTitle();
 </code></pre></div></section><section id=kotlincode5 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.title</code></pre></div></section></div></div><h2 id=windows-and-tabs>Windows and tabs</h2><h3 id=get-window-handle>Get window handle</h3><p>WebDriver does not make the distinction between windows and tabs. If
 your site opens a new tab or window, Selenium will let you work with it
 using a window handle. Each window has a unique identifier which remains
 persistent in a single session. You can get the window handle of the
-current window by using:</p><div class=tabset><input type=radio name=tabsetcode6 id=tab0code6 aria-controls=javacode6 checked>
+current window by using:</p><div class=tabset><input type=radio name=tabsetcode6 class=tabjava id=tab0code6 aria-controls=javacode6 onclick=handleClick(this); value=java checked>
 <label for=tab0code6>Java</label>
-<input type=radio name=tabsetcode6 id=tab1code6 aria-controls=pythoncode6>
+<input type=radio name=tabsetcode6 class=tabpython id=tab1code6 aria-controls=pythoncode6 onclick=handleClick(this); value=python>
 <label for=tab1code6>Python</label>
-<input type=radio name=tabsetcode6 id=tab2code6 aria-controls=cscode6>
+<input type=radio name=tabsetcode6 class=tabcs id=tab2code6 aria-controls=cscode6 onclick=handleClick(this); value=cs>
 <label for=tab2code6>C#</label>
-<input type=radio name=tabsetcode6 id=tab3code6 aria-controls=rubycode6>
+<input type=radio name=tabsetcode6 class=tabruby id=tab3code6 aria-controls=rubycode6 onclick=handleClick(this); value=ruby>
 <label for=tab3code6>Ruby</label>
-<input type=radio name=tabsetcode6 id=tab4code6 aria-controls=javascriptcode6>
+<input type=radio name=tabsetcode6 class=tabjavascript id=tab4code6 aria-controls=javascriptcode6 onclick=handleClick(this); value=javascript>
 <label for=tab4code6>JavaScript</label>
-<input type=radio name=tabsetcode6 id=tab5code6 aria-controls=kotlincode6>
+<input type=radio name=tabsetcode6 class=tabkotlin id=tab5code6 aria-controls=kotlincode6 onclick=handleClick(this); value=kotlin>
 <label for=tab5code6>Kotlin</label><div class=tab-panels><section id=javacode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>getWindowHandle<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>current_window_handle</code></pre></div></section><section id=csharpcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.CurrentWindowHandle;
 </code></pre></div></section><section id=rubycode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>window_handle</code></pre></div></section><section id=javascriptcode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.getWindowHandle();
 </code></pre></div></section><section id=kotlincode6 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.windowHandle</code></pre></div></section></div></div><h3 id=switching-windows-or-tabs>Switching windows or tabs</h3><p>Clicking a link which opens in a
@@ -238,17 +238,17 @@ and you know which window you start with, by the process of elimination
 you can loop over both windows or tabs that WebDriver can see, and switch
 to the one which is not the original.</p><p>However, Selenium 4 provides a new api
 <a href=https://selenium.dev/documentation/en/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch>NewWindow</a>
-which creates a new tab (or) new window and automatically switches to it.</p><div class=tabset><input type=radio name=tabsetcode7 id=tab0code7 aria-controls=javacode7 checked>
+which creates a new tab (or) new window and automatically switches to it.</p><div class=tabset><input type=radio name=tabsetcode7 class=tabjava id=tab0code7 aria-controls=javacode7 onclick=handleClick(this); value=java checked>
 <label for=tab0code7>Java</label>
-<input type=radio name=tabsetcode7 id=tab1code7 aria-controls=pythoncode7>
+<input type=radio name=tabsetcode7 class=tabpython id=tab1code7 aria-controls=pythoncode7 onclick=handleClick(this); value=python>
 <label for=tab1code7>Python</label>
-<input type=radio name=tabsetcode7 id=tab2code7 aria-controls=cscode7>
+<input type=radio name=tabsetcode7 class=tabcs id=tab2code7 aria-controls=cscode7 onclick=handleClick(this); value=cs>
 <label for=tab2code7>C#</label>
-<input type=radio name=tabsetcode7 id=tab3code7 aria-controls=rubycode7>
+<input type=radio name=tabsetcode7 class=tabruby id=tab3code7 aria-controls=rubycode7 onclick=handleClick(this); value=ruby>
 <label for=tab3code7>Ruby</label>
-<input type=radio name=tabsetcode7 id=tab4code7 aria-controls=javascriptcode7>
+<input type=radio name=tabsetcode7 class=tabjavascript id=tab4code7 aria-controls=javascriptcode7 onclick=handleClick(this); value=javascript>
 <label for=tab4code7>JavaScript</label>
-<input type=radio name=tabsetcode7 id=tab5code7 aria-controls=kotlincode7>
+<input type=radio name=tabsetcode7 class=tabkotlin id=tab5code7 aria-controls=kotlincode7 onclick=handleClick(this); value=kotlin>
 <label for=tab5code7>Kotlin</label><div class=tab-panels><section id=javacode7 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Store the ID of the original window
 </span><span style=color:#586e75></span>String originalWindow <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>getWindowHandle<span style=color:#719e07>();</span>
@@ -407,17 +407,17 @@ windows.forEach(async handle =&gt; {
   </code></pre></div></section></div></div><h3 id=create-new-window-or-new-tab-and-switch>Create new window (or) new tab and switch</h3><p>Creates a new window (or) tab and will focus the new window or tab on screen.
 You don&rsquo;t need to switch to work with the new window (or) tab. If you have more than two windows
 (or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
-and switch to the one which is not the original.</p><p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p><div class=tabset><input type=radio name=tabsetcode8 id=tab0code8 aria-controls=javacode8 checked>
+and switch to the one which is not the original.</p><p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p><div class=tabset><input type=radio name=tabsetcode8 class=tabjava id=tab0code8 aria-controls=javacode8 onclick=handleClick(this); value=java checked>
 <label for=tab0code8>Java</label>
-<input type=radio name=tabsetcode8 id=tab1code8 aria-controls=pythoncode8>
+<input type=radio name=tabsetcode8 class=tabpython id=tab1code8 aria-controls=pythoncode8 onclick=handleClick(this); value=python>
 <label for=tab1code8>Python</label>
-<input type=radio name=tabsetcode8 id=tab2code8 aria-controls=cscode8>
+<input type=radio name=tabsetcode8 class=tabcs id=tab2code8 aria-controls=cscode8 onclick=handleClick(this); value=cs>
 <label for=tab2code8>C#</label>
-<input type=radio name=tabsetcode8 id=tab3code8 aria-controls=rubycode8>
+<input type=radio name=tabsetcode8 class=tabruby id=tab3code8 aria-controls=rubycode8 onclick=handleClick(this); value=ruby>
 <label for=tab3code8>Ruby</label>
-<input type=radio name=tabsetcode8 id=tab4code8 aria-controls=javascriptcode8>
+<input type=radio name=tabsetcode8 class=tabjavascript id=tab4code8 aria-controls=javascriptcode8 onclick=handleClick(this); value=javascript>
 <label for=tab4code8>JavaScript</label>
-<input type=radio name=tabsetcode8 id=tab5code8 aria-controls=kotlincode8>
+<input type=radio name=tabsetcode8 class=tabkotlin id=tab5code8 aria-controls=kotlincode8 onclick=handleClick(this); value=kotlin>
 <label for=tab5code8>Kotlin</label><div class=tab-panels><section id=javacode8 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>// Opens a new tab and switches to new tab
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>newWindow<span style=color:#719e07>(</span>WindowType<span style=color:#719e07>.</span>TAB<span style=color:#719e07>);</span>
@@ -464,17 +464,17 @@ driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>
 last window or tab open in your browser, you should close it and switch
 back to the window you were using previously. Assuming you followed the
 code sample in the previous section you will have the previous window
-handle stored in a variable. Put this together and you will get:</p><div class=tabset><input type=radio name=tabsetcode9 id=tab0code9 aria-controls=javacode9 checked>
+handle stored in a variable. Put this together and you will get:</p><div class=tabset><input type=radio name=tabsetcode9 class=tabjava id=tab0code9 aria-controls=javacode9 onclick=handleClick(this); value=java checked>
 <label for=tab0code9>Java</label>
-<input type=radio name=tabsetcode9 id=tab1code9 aria-controls=pythoncode9>
+<input type=radio name=tabsetcode9 class=tabpython id=tab1code9 aria-controls=pythoncode9 onclick=handleClick(this); value=python>
 <label for=tab1code9>Python</label>
-<input type=radio name=tabsetcode9 id=tab2code9 aria-controls=cscode9>
+<input type=radio name=tabsetcode9 class=tabcs id=tab2code9 aria-controls=cscode9 onclick=handleClick(this); value=cs>
 <label for=tab2code9>C#</label>
-<input type=radio name=tabsetcode9 id=tab3code9 aria-controls=rubycode9>
+<input type=radio name=tabsetcode9 class=tabruby id=tab3code9 aria-controls=rubycode9 onclick=handleClick(this); value=ruby>
 <label for=tab3code9>Ruby</label>
-<input type=radio name=tabsetcode9 id=tab4code9 aria-controls=javascriptcode9>
+<input type=radio name=tabsetcode9 class=tabjavascript id=tab4code9 aria-controls=javascriptcode9 onclick=handleClick(this); value=javascript>
 <label for=tab4code9>JavaScript</label>
-<input type=radio name=tabsetcode9 id=tab5code9 aria-controls=kotlincode9>
+<input type=radio name=tabsetcode9 class=tabkotlin id=tab5code9 aria-controls=kotlincode9 onclick=handleClick(this); value=kotlin>
 <label for=tab5code9>Kotlin</label><div class=tab-panels><section id=javacode9 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Close the tab or window
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>close<span style=color:#719e07>();</span>
@@ -518,34 +518,34 @@ driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</sp
 window will leave WebDriver executing on the now closed page, and will
 trigger a <strong>No Such Window Exception</strong>. You must switch
 back to a valid window handle in order to continue execution.</p><h3 id=quitting-the-browser-at-the-end-of-a-session>Quitting the browser at the end of a session</h3><p>When you are finished with the browser session you should call quit,
-instead of close:</p><div class=tabset><input type=radio name=tabsetcode10 id=tab0code10 aria-controls=javacode10 checked>
+instead of close:</p><div class=tabset><input type=radio name=tabsetcode10 class=tabjava id=tab0code10 aria-controls=javacode10 onclick=handleClick(this); value=java checked>
 <label for=tab0code10>Java</label>
-<input type=radio name=tabsetcode10 id=tab1code10 aria-controls=pythoncode10>
+<input type=radio name=tabsetcode10 class=tabpython id=tab1code10 aria-controls=pythoncode10 onclick=handleClick(this); value=python>
 <label for=tab1code10>Python</label>
-<input type=radio name=tabsetcode10 id=tab2code10 aria-controls=cscode10>
+<input type=radio name=tabsetcode10 class=tabcs id=tab2code10 aria-controls=cscode10 onclick=handleClick(this); value=cs>
 <label for=tab2code10>C#</label>
-<input type=radio name=tabsetcode10 id=tab3code10 aria-controls=rubycode10>
+<input type=radio name=tabsetcode10 class=tabruby id=tab3code10 aria-controls=rubycode10 onclick=handleClick(this); value=ruby>
 <label for=tab3code10>Ruby</label>
-<input type=radio name=tabsetcode10 id=tab4code10 aria-controls=javascriptcode10>
+<input type=radio name=tabsetcode10 class=tabjavascript id=tab4code10 aria-controls=javascriptcode10 onclick=handleClick(this); value=javascript>
 <label for=tab4code10>JavaScript</label>
-<input type=radio name=tabsetcode10 id=tab5code10 aria-controls=kotlincode10>
+<input type=radio name=tabsetcode10 class=tabkotlin id=tab5code10 aria-controls=kotlincode10 onclick=handleClick(this); value=kotlin>
 <label for=tab5code10>Kotlin</label><div class=tab-panels><section id=javacode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>quit()</code></pre></div></section><section id=csharpcode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Quit();
 </code></pre></div></section><section id=rubycode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>quit</code></pre></div></section><section id=javascriptcode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.quit();
 </code></pre></div></section><section id=kotlincode10 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.quit()</code></pre></div></section></div></div><ul><li>Quit will:<ul><li>Close all the windows and tabs associated with that WebDriver
 session</li><li>Close the browser process</li><li>Close the background driver process</li><li>Notify Selenium Grid that the browser is no longer in use so it can
 be used by another session (if you are using Selenium Grid)</li></ul></li></ul><p>Failure to call quit will leave extra background processes and ports
 running on your machine which could cause you problems later.</p><p>Some test frameworks offer methods and annotations which you can hook
-into to tear down at the end of a test.</p><div class=tabset><input type=radio name=tabsetcode11 id=tab0code11 aria-controls=javacode11 checked>
+into to tear down at the end of a test.</p><div class=tabset><input type=radio name=tabsetcode11 class=tabjava id=tab0code11 aria-controls=javacode11 onclick=handleClick(this); value=java checked>
 <label for=tab0code11>Java</label>
-<input type=radio name=tabsetcode11 id=tab1code11 aria-controls=pythoncode11>
+<input type=radio name=tabsetcode11 class=tabpython id=tab1code11 aria-controls=pythoncode11 onclick=handleClick(this); value=python>
 <label for=tab1code11>Python</label>
-<input type=radio name=tabsetcode11 id=tab2code11 aria-controls=cscode11>
+<input type=radio name=tabsetcode11 class=tabcs id=tab2code11 aria-controls=cscode11 onclick=handleClick(this); value=cs>
 <label for=tab2code11>C#</label>
-<input type=radio name=tabsetcode11 id=tab3code11 aria-controls=rubycode11>
+<input type=radio name=tabsetcode11 class=tabruby id=tab3code11 aria-controls=rubycode11 onclick=handleClick(this); value=ruby>
 <label for=tab3code11>Ruby</label>
-<input type=radio name=tabsetcode11 id=tab4code11 aria-controls=javascriptcode11>
+<input type=radio name=tabsetcode11 class=tabjavascript id=tab4code11 aria-controls=javascriptcode11 onclick=handleClick(this); value=javascript>
 <label for=tab4code11>JavaScript</label>
-<input type=radio name=tabsetcode11 id=tab5code11 aria-controls=kotlincode11>
+<input type=radio name=tabsetcode11 class=tabkotlin id=tab5code11 aria-controls=kotlincode11 onclick=handleClick(this); value=kotlin>
 <label for=tab5code11>Kotlin</label><div class=tab-panels><section id=javacode11 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>/**
 </span><span style=color:#586e75> * Example using JUnit
@@ -598,17 +598,17 @@ after(<span style=color:#2aa198>&#39;Tear down&#39;</span>, async <span style=co
 }
   </code></pre></div></section></div></div><p>If not running WebDriver in a test context, you may consider using
 <code>try / finally</code> which is offered by most languages so that an exception
-will still clean up the WebDriver session.</p><div class=tabset><input type=radio name=tabsetcode12 id=tab0code12 aria-controls=javacode12 checked>
+will still clean up the WebDriver session.</p><div class=tabset><input type=radio name=tabsetcode12 class=tabjava id=tab0code12 aria-controls=javacode12 onclick=handleClick(this); value=java checked>
 <label for=tab0code12>Java</label>
-<input type=radio name=tabsetcode12 id=tab1code12 aria-controls=pythoncode12>
+<input type=radio name=tabsetcode12 class=tabpython id=tab1code12 aria-controls=pythoncode12 onclick=handleClick(this); value=python>
 <label for=tab1code12>Python</label>
-<input type=radio name=tabsetcode12 id=tab2code12 aria-controls=cscode12>
+<input type=radio name=tabsetcode12 class=tabcs id=tab2code12 aria-controls=cscode12 onclick=handleClick(this); value=cs>
 <label for=tab2code12>C#</label>
-<input type=radio name=tabsetcode12 id=tab3code12 aria-controls=rubycode12>
+<input type=radio name=tabsetcode12 class=tabruby id=tab3code12 aria-controls=rubycode12 onclick=handleClick(this); value=ruby>
 <label for=tab3code12>Ruby</label>
-<input type=radio name=tabsetcode12 id=tab4code12 aria-controls=javascriptcode12>
+<input type=radio name=tabsetcode12 class=tabjavascript id=tab4code12 aria-controls=javascriptcode12 onclick=handleClick(this); value=javascript>
 <label for=tab4code12>JavaScript</label>
-<input type=radio name=tabsetcode12 id=tab5code12 aria-controls=kotlincode12>
+<input type=radio name=tabsetcode12 class=tabkotlin id=tab5code12 aria-controls=kotlincode12 onclick=handleClick(this); value=kotlin>
 <label for=tab5code12>Kotlin</label><div class=tab-panels><section id=javacode12 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
     <span style=color:#586e75>//WebDriver code here...
@@ -665,17 +665,17 @@ see the following:</p><div class=highlight><pre style=color:#93a1a1;background-c
  &lt;/<span style=color:#268bd2>iframe</span>&gt;
 &lt;/<span style=color:#268bd2>div</span>&gt;
 </code></pre></div><p>If it was not for the iframe we would expect to click on the button
-using something like:</p><div class=tabset><input type=radio name=tabsetcode13 id=tab0code13 aria-controls=javacode13 checked>
+using something like:</p><div class=tabset><input type=radio name=tabsetcode13 class=tabjava id=tab0code13 aria-controls=javacode13 onclick=handleClick(this); value=java checked>
 <label for=tab0code13>Java</label>
-<input type=radio name=tabsetcode13 id=tab1code13 aria-controls=pythoncode13>
+<input type=radio name=tabsetcode13 class=tabpython id=tab1code13 aria-controls=pythoncode13 onclick=handleClick(this); value=python>
 <label for=tab1code13>Python</label>
-<input type=radio name=tabsetcode13 id=tab2code13 aria-controls=cscode13>
+<input type=radio name=tabsetcode13 class=tabcs id=tab2code13 aria-controls=cscode13 onclick=handleClick(this); value=cs>
 <label for=tab2code13>C#</label>
-<input type=radio name=tabsetcode13 id=tab3code13 aria-controls=rubycode13>
+<input type=radio name=tabsetcode13 class=tabruby id=tab3code13 aria-controls=rubycode13 onclick=handleClick(this); value=ruby>
 <label for=tab3code13>Ruby</label>
-<input type=radio name=tabsetcode13 id=tab4code13 aria-controls=javascriptcode13>
+<input type=radio name=tabsetcode13 class=tabjavascript id=tab4code13 aria-controls=javascriptcode13 onclick=handleClick(this); value=javascript>
 <label for=tab4code13>JavaScript</label>
-<input type=radio name=tabsetcode13 id=tab5code13 aria-controls=kotlincode13>
+<input type=radio name=tabsetcode13 class=tabkotlin id=tab5code13 aria-controls=kotlincode13 onclick=handleClick(this); value=kotlin>
 <label for=tab5code13>Kotlin</label><div class=tab-panels><section id=javacode13 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//This won&#39;t work
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>tagName<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;button&#34;</span><span style=color:#719e07>)).</span>click<span style=color:#719e07>();</span>
@@ -702,17 +702,17 @@ only aware of the elements in the top level document. To interact with
 the button, we will need to first switch to the frame, in a similar way
 to how we switch windows. WebDriver offers three ways of switching to
 a frame.</p><h3 id=using-a-webelement>Using a WebElement</h3><p>Switching using a WebElement is the most flexible option. You can
-find the frame using your preferred selector and switch to it.</p><div class=tabset><input type=radio name=tabsetcode14 id=tab0code14 aria-controls=javacode14 checked>
+find the frame using your preferred selector and switch to it.</p><div class=tabset><input type=radio name=tabsetcode14 class=tabjava id=tab0code14 aria-controls=javacode14 onclick=handleClick(this); value=java checked>
 <label for=tab0code14>Java</label>
-<input type=radio name=tabsetcode14 id=tab1code14 aria-controls=pythoncode14>
+<input type=radio name=tabsetcode14 class=tabpython id=tab1code14 aria-controls=pythoncode14 onclick=handleClick(this); value=python>
 <label for=tab1code14>Python</label>
-<input type=radio name=tabsetcode14 id=tab2code14 aria-controls=cscode14>
+<input type=radio name=tabsetcode14 class=tabcs id=tab2code14 aria-controls=cscode14 onclick=handleClick(this); value=cs>
 <label for=tab2code14>C#</label>
-<input type=radio name=tabsetcode14 id=tab3code14 aria-controls=rubycode14>
+<input type=radio name=tabsetcode14 class=tabruby id=tab3code14 aria-controls=rubycode14 onclick=handleClick(this); value=ruby>
 <label for=tab3code14>Ruby</label>
-<input type=radio name=tabsetcode14 id=tab4code14 aria-controls=javascriptcode14>
+<input type=radio name=tabsetcode14 class=tabjavascript id=tab4code14 aria-controls=javascriptcode14 onclick=handleClick(this); value=javascript>
 <label for=tab4code14>JavaScript</label>
-<input type=radio name=tabsetcode14 id=tab5code14 aria-controls=kotlincode14>
+<input type=radio name=tabsetcode14 class=tabkotlin id=tab5code14 aria-controls=kotlincode14 onclick=handleClick(this); value=kotlin>
 <label for=tab5code14>Kotlin</label><div class=tab-panels><section id=javacode14 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Store the web element
 </span><span style=color:#586e75></span>WebElement iframe <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>cssSelector<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;#modal&gt;iframe&#34;</span><span style=color:#719e07>));</span>
@@ -771,17 +771,17 @@ driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:
 </span><span style=color:#586e75></span>driver.findElement(By.tagName(<span style=color:#2aa198>&#34;button&#34;</span>)).click()
   </code></pre></div></section></div></div><h3 id=using-a-name-or-id>Using a name or ID</h3><p>If your frame or iframe has an id or name attribute, this can be used
 instead. If the name or ID is not unique on the page, then the first
-one found will be switched to.</p><div class=tabset><input type=radio name=tabsetcode15 id=tab0code15 aria-controls=javacode15 checked>
+one found will be switched to.</p><div class=tabset><input type=radio name=tabsetcode15 class=tabjava id=tab0code15 aria-controls=javacode15 onclick=handleClick(this); value=java checked>
 <label for=tab0code15>Java</label>
-<input type=radio name=tabsetcode15 id=tab1code15 aria-controls=pythoncode15>
+<input type=radio name=tabsetcode15 class=tabpython id=tab1code15 aria-controls=pythoncode15 onclick=handleClick(this); value=python>
 <label for=tab1code15>Python</label>
-<input type=radio name=tabsetcode15 id=tab2code15 aria-controls=cscode15>
+<input type=radio name=tabsetcode15 class=tabcs id=tab2code15 aria-controls=cscode15 onclick=handleClick(this); value=cs>
 <label for=tab2code15>C#</label>
-<input type=radio name=tabsetcode15 id=tab3code15 aria-controls=rubycode15>
+<input type=radio name=tabsetcode15 class=tabruby id=tab3code15 aria-controls=rubycode15 onclick=handleClick(this); value=ruby>
 <label for=tab3code15>Ruby</label>
-<input type=radio name=tabsetcode15 id=tab4code15 aria-controls=javascriptcode15>
+<input type=radio name=tabsetcode15 class=tabjavascript id=tab4code15 aria-controls=javascriptcode15 onclick=handleClick(this); value=javascript>
 <label for=tab4code15>JavaScript</label>
-<input type=radio name=tabsetcode15 id=tab5code15 aria-controls=kotlincode15>
+<input type=radio name=tabsetcode15 class=tabkotlin id=tab5code15 aria-controls=kotlincode15 onclick=handleClick(this); value=kotlin>
 <label for=tab5code15>Kotlin</label><div class=tab-panels><section id=javacode15 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Using the ID
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;buttonframe&#34;</span><span style=color:#719e07>);</span>
@@ -833,17 +833,17 @@ driver<span style=color:#719e07>.</span>find_element(<span style=color:#2aa198>:
 <span style=color:#586e75>//Now we can click the button
 </span><span style=color:#586e75></span>driver.findElement(By.tagName(<span style=color:#2aa198>&#34;button&#34;</span>)).click()
   </code></pre></div></section></div></div><h3 id=using-an-index>Using an index</h3><p>It is also possible to use the index of the frame, such as can be
-queried using <em>window.frames</em> in JavaScript.</p><div class=tabset><input type=radio name=tabsetcode16 id=tab0code16 aria-controls=javacode16 checked>
+queried using <em>window.frames</em> in JavaScript.</p><div class=tabset><input type=radio name=tabsetcode16 class=tabjava id=tab0code16 aria-controls=javacode16 onclick=handleClick(this); value=java checked>
 <label for=tab0code16>Java</label>
-<input type=radio name=tabsetcode16 id=tab1code16 aria-controls=pythoncode16>
+<input type=radio name=tabsetcode16 class=tabpython id=tab1code16 aria-controls=pythoncode16 onclick=handleClick(this); value=python>
 <label for=tab1code16>Python</label>
-<input type=radio name=tabsetcode16 id=tab2code16 aria-controls=cscode16>
+<input type=radio name=tabsetcode16 class=tabcs id=tab2code16 aria-controls=cscode16 onclick=handleClick(this); value=cs>
 <label for=tab2code16>C#</label>
-<input type=radio name=tabsetcode16 id=tab3code16 aria-controls=rubycode16>
+<input type=radio name=tabsetcode16 class=tabruby id=tab3code16 aria-controls=rubycode16 onclick=handleClick(this); value=ruby>
 <label for=tab3code16>Ruby</label>
-<input type=radio name=tabsetcode16 id=tab4code16 aria-controls=javascriptcode16>
+<input type=radio name=tabsetcode16 class=tabjavascript id=tab4code16 aria-controls=javascriptcode16 onclick=handleClick(this); value=javascript>
 <label for=tab4code16>JavaScript</label>
-<input type=radio name=tabsetcode16 id=tab5code16 aria-controls=kotlincode16>
+<input type=radio name=tabsetcode16 class=tabkotlin id=tab5code16 aria-controls=kotlincode16 onclick=handleClick(this); value=kotlin>
 <label for=tab5code16>Kotlin</label><div class=tab-panels><section id=javacode16 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>// Switches to the second frame
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>frame<span style=color:#719e07>(</span>1<span style=color:#719e07>);</span>
@@ -868,17 +868,17 @@ driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</sp
 <span style=color:#586e75>// Switches to the second frame
 </span><span style=color:#586e75></span>driver.switchTo().frame(<span style=color:#2aa198>1</span>)
   </code></pre></div></section></div></div><h3 id=leaving-a-frame>Leaving a frame</h3><p>To leave an iframe or frameset, switch back to the default content
-like so:</p><div class=tabset><input type=radio name=tabsetcode17 id=tab0code17 aria-controls=javacode17 checked>
+like so:</p><div class=tabset><input type=radio name=tabsetcode17 class=tabjava id=tab0code17 aria-controls=javacode17 onclick=handleClick(this); value=java checked>
 <label for=tab0code17>Java</label>
-<input type=radio name=tabsetcode17 id=tab1code17 aria-controls=pythoncode17>
+<input type=radio name=tabsetcode17 class=tabpython id=tab1code17 aria-controls=pythoncode17 onclick=handleClick(this); value=python>
 <label for=tab1code17>Python</label>
-<input type=radio name=tabsetcode17 id=tab2code17 aria-controls=cscode17>
+<input type=radio name=tabsetcode17 class=tabcs id=tab2code17 aria-controls=cscode17 onclick=handleClick(this); value=cs>
 <label for=tab2code17>C#</label>
-<input type=radio name=tabsetcode17 id=tab3code17 aria-controls=rubycode17>
+<input type=radio name=tabsetcode17 class=tabruby id=tab3code17 aria-controls=rubycode17 onclick=handleClick(this); value=ruby>
 <label for=tab3code17>Ruby</label>
-<input type=radio name=tabsetcode17 id=tab4code17 aria-controls=javascriptcode17>
+<input type=radio name=tabsetcode17 class=tabjavascript id=tab4code17 aria-controls=javascriptcode17 onclick=handleClick(this); value=javascript>
 <label for=tab4code17>JavaScript</label>
-<input type=radio name=tabsetcode17 id=tab5code17 aria-controls=kotlincode17>
+<input type=radio name=tabsetcode17 class=tabkotlin id=tab5code17 aria-controls=kotlincode17 onclick=handleClick(this); value=kotlin>
 <label for=tab5code17>Kotlin</label><div class=tab-panels><section id=javacode17 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>// Return to the top level
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>switchTo<span style=color:#719e07>().</span>defaultContent<span style=color:#719e07>();</span>
@@ -901,17 +901,17 @@ driver<span style=color:#719e07>.</span>switch_to<span style=color:#719e07>.</sp
 </span><span style=color:#586e75></span>driver.switchTo().defaultContent()
   </code></pre></div></section></div></div><h2 id=window-management>Window management</h2><p>Screen resolution can impact how your web application renders, so
 WebDriver provides mechanisms for moving and resizing the browser
-window.</p><h3 id=get-window-size>Get window size</h3><p>Fetches the size of the browser window in pixels.</p><div class=tabset><input type=radio name=tabsetcode18 id=tab0code18 aria-controls=javacode18 checked>
+window.</p><h3 id=get-window-size>Get window size</h3><p>Fetches the size of the browser window in pixels.</p><div class=tabset><input type=radio name=tabsetcode18 class=tabjava id=tab0code18 aria-controls=javacode18 onclick=handleClick(this); value=java checked>
 <label for=tab0code18>Java</label>
-<input type=radio name=tabsetcode18 id=tab1code18 aria-controls=pythoncode18>
+<input type=radio name=tabsetcode18 class=tabpython id=tab1code18 aria-controls=pythoncode18 onclick=handleClick(this); value=python>
 <label for=tab1code18>Python</label>
-<input type=radio name=tabsetcode18 id=tab2code18 aria-controls=cscode18>
+<input type=radio name=tabsetcode18 class=tabcs id=tab2code18 aria-controls=cscode18 onclick=handleClick(this); value=cs>
 <label for=tab2code18>C#</label>
-<input type=radio name=tabsetcode18 id=tab3code18 aria-controls=rubycode18>
+<input type=radio name=tabsetcode18 class=tabruby id=tab3code18 aria-controls=rubycode18 onclick=handleClick(this); value=ruby>
 <label for=tab3code18>Ruby</label>
-<input type=radio name=tabsetcode18 id=tab4code18 aria-controls=javascriptcode18>
+<input type=radio name=tabsetcode18 class=tabjavascript id=tab4code18 aria-controls=javascriptcode18 onclick=handleClick(this); value=javascript>
 <label for=tab4code18>JavaScript</label>
-<input type=radio name=tabsetcode18 id=tab5code18 aria-controls=kotlincode18>
+<input type=radio name=tabsetcode18 class=tabkotlin id=tab5code18 aria-controls=kotlincode18 onclick=handleClick(this); value=kotlin>
 <label for=tab5code18>Kotlin</label><div class=tab-panels><section id=javacode18 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>//Access each dimension individually
 </span><span style=color:#586e75></span><span style=color:#dc322f>int</span> width <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getSize<span style=color:#719e07>().</span>getWidth<span style=color:#719e07>();</span>
@@ -967,30 +967,30 @@ height1 <span style=color:#719e07>=</span> size<span style=color:#719e07>.</span
 </span><span style=color:#586e75></span><span style=color:#719e07>val</span> size = driver.manage().window().size
 <span style=color:#719e07>val</span> width1 = size.width
 <span style=color:#719e07>val</span> height1 = size.height
-  </code></pre></div></section></div></div><h3 id=set-window-size>Set window size</h3><p>Restores the window and sets the window size.<div class=tabset><input type=radio name=tabsetcode19 id=tab0code19 aria-controls=javacode19 checked>
+  </code></pre></div></section></div></div><h3 id=set-window-size>Set window size</h3><p>Restores the window and sets the window size.<div class=tabset><input type=radio name=tabsetcode19 class=tabjava id=tab0code19 aria-controls=javacode19 onclick=handleClick(this); value=java checked>
 <label for=tab0code19>Java</label>
-<input type=radio name=tabsetcode19 id=tab1code19 aria-controls=pythoncode19>
+<input type=radio name=tabsetcode19 class=tabpython id=tab1code19 aria-controls=pythoncode19 onclick=handleClick(this); value=python>
 <label for=tab1code19>Python</label>
-<input type=radio name=tabsetcode19 id=tab2code19 aria-controls=cscode19>
+<input type=radio name=tabsetcode19 class=tabcs id=tab2code19 aria-controls=cscode19 onclick=handleClick(this); value=cs>
 <label for=tab2code19>C#</label>
-<input type=radio name=tabsetcode19 id=tab3code19 aria-controls=rubycode19>
+<input type=radio name=tabsetcode19 class=tabruby id=tab3code19 aria-controls=rubycode19 onclick=handleClick(this); value=ruby>
 <label for=tab3code19>Ruby</label>
-<input type=radio name=tabsetcode19 id=tab4code19 aria-controls=javascriptcode19>
+<input type=radio name=tabsetcode19 class=tabjavascript id=tab4code19 aria-controls=javascriptcode19 onclick=handleClick(this); value=javascript>
 <label for=tab4code19>JavaScript</label>
-<input type=radio name=tabsetcode19 id=tab5code19 aria-controls=kotlincode19>
+<input type=radio name=tabsetcode19 class=tabkotlin id=tab5code19 aria-controls=kotlincode19 onclick=handleClick(this); value=kotlin>
 <label for=tab5code19>Kotlin</label><div class=tab-panels><section id=javacode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>setSize<span style=color:#719e07>(</span><span style=color:#719e07>new</span> Dimension<span style=color:#719e07>(</span>1024<span style=color:#719e07>,</span> 768<span style=color:#719e07>));</span></code></pre></div></section><section id=pythoncode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>set_window_size(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>)</code></pre></div></section><section id=csharpcode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Size = <span style=color:#719e07>new</span> Size(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>);
 </code></pre></div></section><section id=rubycode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>resize_to(<span style=color:#2aa198>1024</span>,<span style=color:#2aa198>768</span>)</code></pre></div></section><section id=javascriptcode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().setRect({ width<span style=color:#719e07>:</span> <span style=color:#2aa198>1024</span>, height<span style=color:#719e07>:</span> <span style=color:#2aa198>768</span> });
-</code></pre></div></section><section id=kotlincode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().size = Dimension(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>)</code></pre></div></section></div></div></p><h3 id=get-window-position>Get window position</h3><p>Fetches the coordinates of the top left coordinate of the browser window.</p><div class=tabset><input type=radio name=tabsetcode20 id=tab0code20 aria-controls=javacode20 checked>
+</code></pre></div></section><section id=kotlincode19 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().size = Dimension(<span style=color:#2aa198>1024</span>, <span style=color:#2aa198>768</span>)</code></pre></div></section></div></div></p><h3 id=get-window-position>Get window position</h3><p>Fetches the coordinates of the top left coordinate of the browser window.</p><div class=tabset><input type=radio name=tabsetcode20 class=tabjava id=tab0code20 aria-controls=javacode20 onclick=handleClick(this); value=java checked>
 <label for=tab0code20>Java</label>
-<input type=radio name=tabsetcode20 id=tab1code20 aria-controls=pythoncode20>
+<input type=radio name=tabsetcode20 class=tabpython id=tab1code20 aria-controls=pythoncode20 onclick=handleClick(this); value=python>
 <label for=tab1code20>Python</label>
-<input type=radio name=tabsetcode20 id=tab2code20 aria-controls=cscode20>
+<input type=radio name=tabsetcode20 class=tabcs id=tab2code20 aria-controls=cscode20 onclick=handleClick(this); value=cs>
 <label for=tab2code20>C#</label>
-<input type=radio name=tabsetcode20 id=tab3code20 aria-controls=rubycode20>
+<input type=radio name=tabsetcode20 class=tabruby id=tab3code20 aria-controls=rubycode20 onclick=handleClick(this); value=ruby>
 <label for=tab3code20>Ruby</label>
-<input type=radio name=tabsetcode20 id=tab4code20 aria-controls=javascriptcode20>
+<input type=radio name=tabsetcode20 class=tabjavascript id=tab4code20 aria-controls=javascriptcode20 onclick=handleClick(this); value=javascript>
 <label for=tab4code20>JavaScript</label>
-<input type=radio name=tabsetcode20 id=tab5code20 aria-controls=kotlincode20>
+<input type=radio name=tabsetcode20 class=tabkotlin id=tab5code20 aria-controls=kotlincode20 onclick=handleClick(this); value=kotlin>
 <label for=tab5code20>Kotlin</label><div class=tab-panels><section id=javacode20 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>// Access each dimension individually
 </span><span style=color:#586e75></span><span style=color:#dc322f>int</span> x <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>getPosition<span style=color:#719e07>().</span>getX<span style=color:#719e07>();</span>
@@ -1047,17 +1047,17 @@ y1 <span style=color:#719e07>=</span> rect<span style=color:#719e07>.</span>y
 <span style=color:#719e07>val</span> x1 = position.x
 <span style=color:#719e07>val</span> y1 = position.y
 
-  </code></pre></div></section></div></div><h2 id=set-window-position>Set window position</h2><p>Moves the window to the chosen position.</p><div class=tabset><input type=radio name=tabsetcode21 id=tab0code21 aria-controls=javacode21 checked>
+  </code></pre></div></section></div></div><h2 id=set-window-position>Set window position</h2><p>Moves the window to the chosen position.</p><div class=tabset><input type=radio name=tabsetcode21 class=tabjava id=tab0code21 aria-controls=javacode21 onclick=handleClick(this); value=java checked>
 <label for=tab0code21>Java</label>
-<input type=radio name=tabsetcode21 id=tab1code21 aria-controls=pythoncode21>
+<input type=radio name=tabsetcode21 class=tabpython id=tab1code21 aria-controls=pythoncode21 onclick=handleClick(this); value=python>
 <label for=tab1code21>Python</label>
-<input type=radio name=tabsetcode21 id=tab2code21 aria-controls=cscode21>
+<input type=radio name=tabsetcode21 class=tabcs id=tab2code21 aria-controls=cscode21 onclick=handleClick(this); value=cs>
 <label for=tab2code21>C#</label>
-<input type=radio name=tabsetcode21 id=tab3code21 aria-controls=rubycode21>
+<input type=radio name=tabsetcode21 class=tabruby id=tab3code21 aria-controls=rubycode21 onclick=handleClick(this); value=ruby>
 <label for=tab3code21>Ruby</label>
-<input type=radio name=tabsetcode21 id=tab4code21 aria-controls=javascriptcode21>
+<input type=radio name=tabsetcode21 class=tabjavascript id=tab4code21 aria-controls=javascriptcode21 onclick=handleClick(this); value=javascript>
 <label for=tab4code21>JavaScript</label>
-<input type=radio name=tabsetcode21 id=tab5code21 aria-controls=kotlincode21>
+<input type=radio name=tabsetcode21 class=tabkotlin id=tab5code21 aria-controls=kotlincode21 onclick=handleClick(this); value=kotlin>
 <label for=tab5code21>Kotlin</label><div class=tab-panels><section id=javacode21 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#586e75>// Move the window to the top left of the primary monitor
 </span><span style=color:#586e75></span>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>setPosition<span style=color:#719e07>(</span><span style=color:#719e07>new</span> Point<span style=color:#719e07>(</span>0<span style=color:#719e07>,</span> 0<span style=color:#719e07>));</span>
@@ -1079,60 +1079,60 @@ driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>
 </span><span style=color:#586e75></span>driver.manage().window().position = Point(<span style=color:#2aa198>0</span>,<span style=color:#2aa198>0</span>)
     </code></pre></div></section></div></div><h3 id=maximize-window>Maximize window</h3><p>Enlarges the window. For most operating systems, the window will fill
 the screen, without blocking the operating system&rsquo;s own menus and
-toolbars.</p><div class=tabset><input type=radio name=tabsetcode22 id=tab0code22 aria-controls=javacode22 checked>
+toolbars.</p><div class=tabset><input type=radio name=tabsetcode22 class=tabjava id=tab0code22 aria-controls=javacode22 onclick=handleClick(this); value=java checked>
 <label for=tab0code22>Java</label>
-<input type=radio name=tabsetcode22 id=tab1code22 aria-controls=pythoncode22>
+<input type=radio name=tabsetcode22 class=tabpython id=tab1code22 aria-controls=pythoncode22 onclick=handleClick(this); value=python>
 <label for=tab1code22>Python</label>
-<input type=radio name=tabsetcode22 id=tab2code22 aria-controls=cscode22>
+<input type=radio name=tabsetcode22 class=tabcs id=tab2code22 aria-controls=cscode22 onclick=handleClick(this); value=cs>
 <label for=tab2code22>C#</label>
-<input type=radio name=tabsetcode22 id=tab3code22 aria-controls=rubycode22>
+<input type=radio name=tabsetcode22 class=tabruby id=tab3code22 aria-controls=rubycode22 onclick=handleClick(this); value=ruby>
 <label for=tab3code22>Ruby</label>
-<input type=radio name=tabsetcode22 id=tab4code22 aria-controls=javascriptcode22>
+<input type=radio name=tabsetcode22 class=tabjavascript id=tab4code22 aria-controls=javascriptcode22 onclick=handleClick(this); value=javascript>
 <label for=tab4code22>JavaScript</label>
-<input type=radio name=tabsetcode22 id=tab5code22 aria-controls=kotlincode22>
+<input type=radio name=tabsetcode22 class=tabkotlin id=tab5code22 aria-controls=kotlincode22 onclick=handleClick(this); value=kotlin>
 <label for=tab5code22>Kotlin</label><div class=tab-panels><section id=javacode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>maximize<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>maximize_window()</code></pre></div></section><section id=csharpcode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Maximize();
 </code></pre></div></section><section id=rubycode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>maximize</code></pre></div></section><section id=javascriptcode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().maximize();
 </code></pre></div></section><section id=kotlincode22 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().maximize()</code></pre></div></section></div></div><h3 id=minimize-window>Minimize window</h3><p>Minimizes the window of current browsing context.
 The exact behavior of this command is specific to
-individual window managers.</p><p>Minimize Window typically hides the window in the system tray.</p><p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p><div class=tabset><input type=radio name=tabsetcode23 id=tab0code23 aria-controls=javacode23 checked>
+individual window managers.</p><p>Minimize Window typically hides the window in the system tray.</p><p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p><div class=tabset><input type=radio name=tabsetcode23 class=tabjava id=tab0code23 aria-controls=javacode23 onclick=handleClick(this); value=java checked>
 <label for=tab0code23>Java</label>
-<input type=radio name=tabsetcode23 id=tab1code23 aria-controls=pythoncode23>
+<input type=radio name=tabsetcode23 class=tabpython id=tab1code23 aria-controls=pythoncode23 onclick=handleClick(this); value=python>
 <label for=tab1code23>Python</label>
-<input type=radio name=tabsetcode23 id=tab2code23 aria-controls=cscode23>
+<input type=radio name=tabsetcode23 class=tabcs id=tab2code23 aria-controls=cscode23 onclick=handleClick(this); value=cs>
 <label for=tab2code23>C#</label>
-<input type=radio name=tabsetcode23 id=tab3code23 aria-controls=rubycode23>
+<input type=radio name=tabsetcode23 class=tabruby id=tab3code23 aria-controls=rubycode23 onclick=handleClick(this); value=ruby>
 <label for=tab3code23>Ruby</label>
-<input type=radio name=tabsetcode23 id=tab4code23 aria-controls=javascriptcode23>
+<input type=radio name=tabsetcode23 class=tabjavascript id=tab4code23 aria-controls=javascriptcode23 onclick=handleClick(this); value=javascript>
 <label for=tab4code23>JavaScript</label>
-<input type=radio name=tabsetcode23 id=tab5code23 aria-controls=kotlincode23>
+<input type=radio name=tabsetcode23 class=tabkotlin id=tab5code23 aria-controls=kotlincode23 onclick=handleClick(this); value=kotlin>
 <label for=tab5code23>Kotlin</label><div class=tab-panels><section id=javacode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>minimize<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>minimize_window()</code></pre></div></section><section id=csharpcode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.Minimize();
 </code></pre></div></section><section id=rubycode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>minimize</code></pre></div></section><section id=javascriptcode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().minimize();
-</code></pre></div></section><section id=kotlincode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().minimize()</code></pre></div></section></div></div><h3 id=fullscreen-window>Fullscreen window</h3><p>Fills the entire screen, similar to pressing F11 in most browsers.</p><div class=tabset><input type=radio name=tabsetcode24 id=tab0code24 aria-controls=javacode24 checked>
+</code></pre></div></section><section id=kotlincode23 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().minimize()</code></pre></div></section></div></div><h3 id=fullscreen-window>Fullscreen window</h3><p>Fills the entire screen, similar to pressing F11 in most browsers.</p><div class=tabset><input type=radio name=tabsetcode24 class=tabjava id=tab0code24 aria-controls=javacode24 onclick=handleClick(this); value=java checked>
 <label for=tab0code24>Java</label>
-<input type=radio name=tabsetcode24 id=tab1code24 aria-controls=pythoncode24>
+<input type=radio name=tabsetcode24 class=tabpython id=tab1code24 aria-controls=pythoncode24 onclick=handleClick(this); value=python>
 <label for=tab1code24>Python</label>
-<input type=radio name=tabsetcode24 id=tab2code24 aria-controls=cscode24>
+<input type=radio name=tabsetcode24 class=tabcs id=tab2code24 aria-controls=cscode24 onclick=handleClick(this); value=cs>
 <label for=tab2code24>C#</label>
-<input type=radio name=tabsetcode24 id=tab3code24 aria-controls=rubycode24>
+<input type=radio name=tabsetcode24 class=tabruby id=tab3code24 aria-controls=rubycode24 onclick=handleClick(this); value=ruby>
 <label for=tab3code24>Ruby</label>
-<input type=radio name=tabsetcode24 id=tab4code24 aria-controls=javascriptcode24>
+<input type=radio name=tabsetcode24 class=tabjavascript id=tab4code24 aria-controls=javascriptcode24 onclick=handleClick(this); value=javascript>
 <label for=tab4code24>JavaScript</label>
-<input type=radio name=tabsetcode24 id=tab5code24 aria-controls=kotlincode24>
+<input type=radio name=tabsetcode24 class=tabkotlin id=tab5code24 aria-controls=kotlincode24 onclick=handleClick(this); value=kotlin>
 <label for=tab5code24>Kotlin</label><div class=tab-panels><section id=javacode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>().</span>window<span style=color:#719e07>().</span>fullscreen<span style=color:#719e07>();</span></code></pre></div></section><section id=pythoncode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>driver<span style=color:#719e07>.</span>fullscreen_window()</code></pre></div></section><section id=csharpcode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>driver.Manage().Window.FullScreen();
 </code></pre></div></section><section id=rubycode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>driver<span style=color:#719e07>.</span>manage<span style=color:#719e07>.</span>window<span style=color:#719e07>.</span>full_screen</code></pre></div></section><section id=javascriptcode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>await driver.manage().<span style=color:#b58900>window</span>().fullscreen();
 </code></pre></div></section><section id=kotlincode24 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>driver.manage().window().fullscreen()</code></pre></div></section></div></div><h3 id=takescreenshot>TakeScreenshot</h3><p>Used to capture screenshot for current browsing context.
 The WebDriver endpoint <a href=https://www.w3.org/TR/webdriver/#dfn-take-screenshot>screenshot</a>
-returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode25 id=tab0code25 aria-controls=javacode25 checked>
+returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode25 class=tabjava id=tab0code25 aria-controls=javacode25 onclick=handleClick(this); value=java checked>
 <label for=tab0code25>Java</label>
-<input type=radio name=tabsetcode25 id=tab1code25 aria-controls=pythoncode25>
+<input type=radio name=tabsetcode25 class=tabpython id=tab1code25 aria-controls=pythoncode25 onclick=handleClick(this); value=python>
 <label for=tab1code25>Python</label>
-<input type=radio name=tabsetcode25 id=tab2code25 aria-controls=cscode25>
+<input type=radio name=tabsetcode25 class=tabcs id=tab2code25 aria-controls=cscode25 onclick=handleClick(this); value=cs>
 <label for=tab2code25>C#</label>
-<input type=radio name=tabsetcode25 id=tab3code25 aria-controls=rubycode25>
+<input type=radio name=tabsetcode25 class=tabruby id=tab3code25 aria-controls=rubycode25 onclick=handleClick(this); value=ruby>
 <label for=tab3code25>Ruby</label>
-<input type=radio name=tabsetcode25 id=tab4code25 aria-controls=javascriptcode25>
+<input type=radio name=tabsetcode25 class=tabjavascript id=tab4code25 aria-controls=javascriptcode25 onclick=handleClick(this); value=javascript>
 <label for=tab4code25>JavaScript</label>
-<input type=radio name=tabsetcode25 id=tab5code25 aria-controls=kotlincode25>
+<input type=radio name=tabsetcode25 class=tabkotlin id=tab5code25 aria-controls=kotlincode25 onclick=handleClick(this); value=kotlin>
 <label for=tab5code25>Kotlin</label><div class=tab-panels><section id=javacode25 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#719e07>import</span> org.apache.commons.io.FileUtils<span style=color:#719e07>;</span>
 <span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver<span style=color:#719e07>;</span>
@@ -1213,17 +1213,17 @@ driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</sp
 }
    </code></pre></div></section></div></div><h3 id=takeelementscreenshot>TakeElementScreenshot</h3><p>Used to capture screenshot of an element for current browsing context.
 The WebDriver endpoint <a href=https://www.w3.org/TR/webdriver/#take-element-screenshot>screenshot</a>
-returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode26 id=tab0code26 aria-controls=javacode26 checked>
+returns screenshot which is encoded in Base64 format.</p><div class=tabset><input type=radio name=tabsetcode26 class=tabjava id=tab0code26 aria-controls=javacode26 onclick=handleClick(this); value=java checked>
 <label for=tab0code26>Java</label>
-<input type=radio name=tabsetcode26 id=tab1code26 aria-controls=pythoncode26>
+<input type=radio name=tabsetcode26 class=tabpython id=tab1code26 aria-controls=pythoncode26 onclick=handleClick(this); value=python>
 <label for=tab1code26>Python</label>
-<input type=radio name=tabsetcode26 id=tab2code26 aria-controls=cscode26>
+<input type=radio name=tabsetcode26 class=tabcs id=tab2code26 aria-controls=cscode26 onclick=handleClick(this); value=cs>
 <label for=tab2code26>C#</label>
-<input type=radio name=tabsetcode26 id=tab3code26 aria-controls=rubycode26>
+<input type=radio name=tabsetcode26 class=tabruby id=tab3code26 aria-controls=rubycode26 onclick=handleClick(this); value=ruby>
 <label for=tab3code26>Ruby</label>
-<input type=radio name=tabsetcode26 id=tab4code26 aria-controls=javascriptcode26>
+<input type=radio name=tabsetcode26 class=tabjavascript id=tab4code26 aria-controls=javascriptcode26 onclick=handleClick(this); value=javascript>
 <label for=tab4code26>JavaScript</label>
-<input type=radio name=tabsetcode26 id=tab5code26 aria-controls=kotlincode26>
+<input type=radio name=tabsetcode26 class=tabkotlin id=tab5code26 aria-controls=kotlincode26 onclick=handleClick(this); value=kotlin>
 <label for=tab5code26>Kotlin</label><div class=tab-panels><section id=javacode26 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
 <span style=color:#719e07>import</span> org.apache.commons.io.FileUtils<span style=color:#719e07>;</span>
 <span style=color:#719e07>import</span> org.openqa.selenium.*<span style=color:#719e07>;</span>
@@ -1316,17 +1316,17 @@ driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</sp
     driver.quit()
 }
   </code></pre></div></section></div></div><h3 id=execute-script>Execute Script</h3><p>Executes JavaScript code snippet in the
-current context of a selected frame or window.</p><div class=tabset><input type=radio name=tabsetcode27 id=tab0code27 aria-controls=javacode27 checked>
+current context of a selected frame or window.</p><div class=tabset><input type=radio name=tabsetcode27 class=tabjava id=tab0code27 aria-controls=javacode27 onclick=handleClick(this); value=java checked>
 <label for=tab0code27>Java</label>
-<input type=radio name=tabsetcode27 id=tab1code27 aria-controls=pythoncode27>
+<input type=radio name=tabsetcode27 class=tabpython id=tab1code27 aria-controls=pythoncode27 onclick=handleClick(this); value=python>
 <label for=tab1code27>Python</label>
-<input type=radio name=tabsetcode27 id=tab2code27 aria-controls=cscode27>
+<input type=radio name=tabsetcode27 class=tabcs id=tab2code27 aria-controls=cscode27 onclick=handleClick(this); value=cs>
 <label for=tab2code27>C#</label>
-<input type=radio name=tabsetcode27 id=tab3code27 aria-controls=rubycode27>
+<input type=radio name=tabsetcode27 class=tabruby id=tab3code27 aria-controls=rubycode27 onclick=handleClick(this); value=ruby>
 <label for=tab3code27>Ruby</label>
-<input type=radio name=tabsetcode27 id=tab4code27 aria-controls=javascriptcode27>
+<input type=radio name=tabsetcode27 class=tabjavascript id=tab4code27 aria-controls=javascriptcode27 onclick=handleClick(this); value=javascript>
 <label for=tab4code27>JavaScript</label>
-<input type=radio name=tabsetcode27 id=tab5code27 aria-controls=kotlincode27>
+<input type=radio name=tabsetcode27 class=tabkotlin id=tab5code27 aria-controls=kotlincode27 onclick=handleClick(this); value=kotlin>
 <label for=tab5code27>Kotlin</label><div class=tab-panels><section id=javacode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
     <span style=color:#586e75>//Creating the JavascriptExecutor interface object by Type casting
 </span><span style=color:#586e75></span>      JavascriptExecutor js <span style=color:#719e07>=</span> <span style=color:#719e07>(</span>JavascriptExecutor<span style=color:#719e07>)</span>driver<span style=color:#719e07>;</span>
@@ -1354,17 +1354,17 @@ current context of a selected frame or window.</p><div class=tabset><input type=
   
 </code></pre></div></section><section id=kotlincode27 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
     <span style=color:#586e75>// code sample not available please raise a PR
-</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><h3 id=print-page>Print Page</h3><p>Prints the current page within the browser.</p><p><em>Note: This requires Chromium Browsers to be in headless mode</em></p><div class=tabset><input type=radio name=tabsetcode28 id=tab0code28 aria-controls=javacode28 checked>
+</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><h3 id=print-page>Print Page</h3><p>Prints the current page within the browser.</p><p><em>Note: This requires Chromium Browsers to be in headless mode</em></p><div class=tabset><input type=radio name=tabsetcode28 class=tabjava id=tab0code28 aria-controls=javacode28 onclick=handleClick(this); value=java checked>
 <label for=tab0code28>Java</label>
-<input type=radio name=tabsetcode28 id=tab1code28 aria-controls=pythoncode28>
+<input type=radio name=tabsetcode28 class=tabpython id=tab1code28 aria-controls=pythoncode28 onclick=handleClick(this); value=python>
 <label for=tab1code28>Python</label>
-<input type=radio name=tabsetcode28 id=tab2code28 aria-controls=cscode28>
+<input type=radio name=tabsetcode28 class=tabcs id=tab2code28 aria-controls=cscode28 onclick=handleClick(this); value=cs>
 <label for=tab2code28>C#</label>
-<input type=radio name=tabsetcode28 id=tab3code28 aria-controls=rubycode28>
+<input type=radio name=tabsetcode28 class=tabruby id=tab3code28 aria-controls=rubycode28 onclick=handleClick(this); value=ruby>
 <label for=tab3code28>Ruby</label>
-<input type=radio name=tabsetcode28 id=tab4code28 aria-controls=javascriptcode28>
+<input type=radio name=tabsetcode28 class=tabjavascript id=tab4code28 aria-controls=javascriptcode28 onclick=handleClick(this); value=javascript>
 <label for=tab4code28>JavaScript</label>
-<input type=radio name=tabsetcode28 id=tab5code28 aria-controls=kotlincode28>
+<input type=radio name=tabsetcode28 class=tabkotlin id=tab5code28 aria-controls=kotlincode28 onclick=handleClick(this); value=kotlin>
 <label for=tab5code28>Kotlin</label><div class=tab-panels><section id=javacode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
     <span style=color:#719e07>import</span> org.openqa.selenium.print.PrintOptions<span style=color:#719e07>;</span>
 
@@ -1414,4 +1414,5 @@ current context of a selected frame or window.</p><div class=tabset><input type=
   
 </code></pre></div></section><section id=kotlincode28 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
     <span style=color:#586e75>// code sample not available please raise a PR
-</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/en/webdriver/browser_manipulation/>“Browser manipulation”</a> was last updated on: 26 Apr 2021 11:30:14 -0400: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/b94f7f1b87600ea8972aff27dd60004d51896b6f>French grammatical errors fixed (#670) [deploy site] (b94f7f1)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/en/webdriver/driver_requirements/ title="Driver requirements"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/en/webdriver/locating_elements/ title="Locating elements" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1619451035></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/learn.js?1619451035></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1619451035></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1619451035 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1619451035></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>
+</span><span style=color:#586e75></span>  </code></pre></div></section></div></div><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/en/webdriver/browser_manipulation/>“Browser manipulation”</a> was last updated on: 27 Apr 2021 15:05:45 +0530: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/ddfb1085f0c6266a01f49a161f2733d20e4af0bf>Adding feature to persist lang change in samples (#673) [deploy site] (ddfb108)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/en/webdriver/driver_requirements/ title="Driver requirements"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/en/webdriver/locating_elements/ title="Locating elements" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/js/clipboard.min.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.min.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/perfect-scrollbar.jquery.min.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/jquery.sticky.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/featherlight.min.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/highlight.pack.js?1619516168></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/js/modernizr.custom-3.6.0.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/learn.js?1619516168></script><script src=https://www.selenium.dev/documentation/js/hugo-learn.js?1619516168></script><link href=https://www.selenium.dev/documentation/mermaid/mermaid.css?1619516168 rel=stylesheet><script src=https://www.selenium.dev/documentation/mermaid/mermaid.js?1619516168></script><script>mermaid.initialize({startOnLoad:true});</script><script>if(typeof(Storage)!=="undefined"){const activeLanguage=localStorage.getItem("active_language");if(activeLanguage){document.querySelectorAll(".tab"+activeLanguage).forEach(element=>{element.checked=true;});}}
+function handleClick(languageRadio){if(typeof(Storage)!=="undefined"){localStorage.setItem("active_language",languageRadio.value);document.querySelectorAll(".tab"+languageRadio.value).forEach(element=>{element.checked=true;});}}</script></body></html>
