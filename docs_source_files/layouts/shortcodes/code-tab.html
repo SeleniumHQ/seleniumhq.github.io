@@ -4,9 +4,9 @@
 <div class="tabset">
   {{ range $index, $language := $languages }}
     {{ if eq $index 0 }}
-      <input type="radio" name="tabset{{$codeTabId}}" id="tab{{$index}}{{$codeTabId}}" aria-controls="{{$language}}{{$codeTabId}}" checked>
+      <input type="radio" name="tabset{{$codeTabId}}" class="tab{{$language}}" id="tab{{$index}}{{$codeTabId}}" aria-controls="{{$language}}{{$codeTabId}}" onclick="handleClick(this);" value="{{$language}}" checked>
     {{ else }}
-      <input type="radio" name="tabset{{$codeTabId}}" id="tab{{$index}}{{$codeTabId}}" aria-controls="{{$language}}{{$codeTabId}}">
+      <input type="radio" name="tabset{{$codeTabId}}" class="tab{{$language}}" id="tab{{$index}}{{$codeTabId}}" aria-controls="{{$language}}{{$codeTabId}}" onclick="handleClick(this);" value="{{$language}}">
     {{ end }}
     <label for="tab{{$index}}{{$codeTabId}}">{{index $languagesNice $index}}</label>
     {{ end }}  

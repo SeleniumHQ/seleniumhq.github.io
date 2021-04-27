@@ -1,5 +1,18 @@
-<!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript) 
 <script>
-    console.log("running some javascript");
+  if (typeof (Storage) !== "undefined") {
+    const activeLanguage = localStorage.getItem("active_language");
+    if (activeLanguage) {
+      document.querySelectorAll(".tab" + activeLanguage).forEach(element => {
+        element.checked = true;
+      });
+    }
+  }
+  function handleClick(languageRadio) {
+    if (typeof (Storage) !== "undefined") {
+      localStorage.setItem("active_language", languageRadio.value);
+      document.querySelectorAll(".tab" + languageRadio.value).forEach(element => {
+        element.checked = true;
+      });
+    }
+  }
 </script>
--->
