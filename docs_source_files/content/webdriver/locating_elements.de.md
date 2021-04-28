@@ -1,13 +1,13 @@
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to German. Do you speak German? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ---
 title: "Elemente lokalisieren"
 weight: 3
 ---
+
+{{% notice %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to German. Do you speak German? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 ### Locating one element
 

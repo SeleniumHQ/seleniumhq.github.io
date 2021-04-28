@@ -1,14 +1,13 @@
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ---
 title: "要素を探す"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 ### 一つの要素を探す
 
