@@ -53,7 +53,7 @@ l'application fonctionne sous différentes charges définies
 (généralement un nombre particulier d'utilisateurs connectés en même temps)
 
 #### Tests de résistance
-Des tests de résistance sont effectués pour vérifier la
+Des tests de résistance sont effectués pour vérifier que
 l'application fonctionne sous contrainte (ou au-dessus de la charge maximale supportée).
 
 En règle générale, les tests de performances sont effectués en exécutant certains
