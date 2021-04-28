@@ -169,6 +169,12 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 _findElement_ 方法现在支持`witTagName()`新方法其可返回RelativeLocator相对定位对象。
 
+备注：目前的稳定版为Selenium 3. 请自行添加版本号以安装 **Selenium 4** 。最新的测试版本 （2021年4月28日）为：
+
+```shell
+4.0.0.b3
+```
+
 ### 如何工作
 
 Selenium是通过使用JavaScript函数
@@ -202,7 +208,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement passwordField = driver.FindElement(By.Id("password"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Above(passwordField));
+                                                   .Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 password_field= driver.find_element(:id, "password")
@@ -239,11 +245,11 @@ emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;  
 
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
 IWebElement passwordField = driver.FindElement(WithTagName("input")
-                                               .Below(emailAddressField));
+                                               .Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_field= driver.find_element(:id, "email")
@@ -284,7 +290,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
 IWebElement cancelButton = driver.FindElement(WithTagName("button")
-                                              .LeftOf(submitButton));
+                                              .LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 submit_button= driver.find_element(:id, "submit")
@@ -325,7 +331,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
 IWebElement submitButton = driver.FindElement(WithTagName("button")
-                                              .RightOf(cancelButton));
+                                              .RightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cancel_button = driver.find_element(:id, "cancel")
@@ -365,7 +371,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Near(emailAddressLabel));
+                                                   .Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_label = driver.find_element(:id, "lbl-email")

@@ -1,3 +1,9 @@
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ---
 title: "Element 찾기"
 weight: 3
@@ -167,6 +173,12 @@ Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천
 
 _findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
 
+Note: The current stable release is Selenium 3. Please install **Selenium 4** libraries by specifying the version. The latest available version (As at April 28, 2021) is:
+
+```shell
+4.0.0.b3
+```
+
 ### 어떻게 작동하는가
 
 셀레니움은 자바스크립트 함수 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 를 사용해서 releative element를 찾습니다. 이 함수는 right(오른쪽), left(왼쪽), bottom(아래), top(위)와 같은 element의 속성들을 반환합니다.
@@ -198,7 +210,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement passwordField = driver.FindElement(By.Id("password"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Above(passwordField));
+                                                   .Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 password_field= driver.find_element(:id, "password")
@@ -234,11 +246,11 @@ emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;  
 
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
 IWebElement passwordField = driver.FindElement(WithTagName("input")
-                                               .Below(emailAddressField));
+                                               .Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_field= driver.find_element(:id, "email")
@@ -279,7 +291,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
 IWebElement cancelButton = driver.FindElement(WithTagName("button")
-                                              .LeftOf(submitButton));
+                                              .LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 submit_button= driver.find_element(:id, "submit")
@@ -320,7 +332,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
 IWebElement submitButton = driver.FindElement(WithTagName("button")
-                                              .RightOf(cancelButton));
+                                              .RightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cancel_button = driver.find_element(:id, "cancel")
@@ -360,7 +372,7 @@ using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Near(emailAddressLabel));
+                                                   .Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_label = driver.find_element(:id, "lbl-email")
