@@ -184,7 +184,7 @@ _findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다.
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement passwordField= driver.findElement(By.id("password"));
-WebElement emailAddressField = driver.findElement(withTagName("input")
+WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -224,7 +224,7 @@ val emailAddressField = driver.findElement(withTagName("input").above(passwordFi
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement emailAddressField= driver.findElement(By.id("email"));
-WebElement passwordField = driver.findElement(withTagName("input")
+WebElement passwordField = driver.findElement(with(By.tagName("input"))
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -264,7 +264,7 @@ val passwordField = driver.findElement(withTagName("input").below(emailAddressFi
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement submitButton= driver.findElement(By.id("submit"));
-WebElement cancelButton= driver.findElement(withTagName("button")
+WebElement cancelButton= driver.findElement(with(By.tagName("button"))
                                             .toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -305,7 +305,7 @@ val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement cancelButton= driver.findElement(By.id("cancel"));
-WebElement submitButton= driver.findElement(withTagName("button")
+WebElement submitButton= driver.findElement(with(By.tagName("button"))
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -345,7 +345,7 @@ val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButto
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
-WebElement emailAddressField = driver.findElement(withTagName("input")
+WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}

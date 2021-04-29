@@ -234,7 +234,7 @@ above to the specified element
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement passwordField= driver.findElement(By.id("password"));
-WebElement emailAddressField = driver.findElement(withTagName("input")
+WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -275,7 +275,7 @@ below to the specified element
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement emailAddressField= driver.findElement(By.id("email"));
-WebElement passwordField = driver.findElement(withTagName("input")
+WebElement passwordField = driver.findElement(with(By.tagName("input"))
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -316,7 +316,7 @@ to left of specified element
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement submitButton= driver.findElement(By.id("submit"));
-WebElement cancelButton= driver.findElement(withTagName("button")
+WebElement cancelButton= driver.findElement(with(By.tagName("button"))
                                             .toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -358,7 +358,7 @@ to right of the specified element
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement cancelButton= driver.findElement(By.id("cancel"));
-WebElement submitButton= driver.findElement(withTagName("button")
+WebElement submitButton= driver.findElement(with(By.tagName("button"))
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -399,7 +399,7 @@ at most `50px` away from the specified element.
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
-WebElement emailAddressField = driver.findElement(withTagName("input")
+WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
