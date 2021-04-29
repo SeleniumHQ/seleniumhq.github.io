@@ -186,6 +186,10 @@ WebDriverでDOM構造のトラバースを行うのは重い処理となりま�
 
 _findElement_ メソッドは、レラティブ ロケーター を返す新しいメソッド `withTagName（）` を受け入れるようになりました。
 
+**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
+locator of their choice like _By.id_, _By.cssSelector_  etc.
+This feature landed in **Selenium4 - beta3**
+
 ### どのように機能するか
 
 Seleniumは、JavaScript関数 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) を使用して相対要素を見つけます。

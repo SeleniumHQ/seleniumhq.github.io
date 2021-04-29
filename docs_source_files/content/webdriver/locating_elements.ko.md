@@ -167,6 +167,10 @@ Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천
 
 _findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
 
+**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
+locator of their choice like _By.id_, _By.cssSelector_  etc.
+This feature landed in **Selenium4 - beta3**
+
 ### 어떻게 작동하는가
 
 셀레니움은 자바스크립트 함수 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 를 사용해서 releative element를 찾습니다. 이 함수는 right(오른쪽), left(왼쪽), bottom(아래), top(위)와 같은 element의 속성들을 반환합니다.

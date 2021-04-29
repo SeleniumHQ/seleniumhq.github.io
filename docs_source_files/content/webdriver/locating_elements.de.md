@@ -216,8 +216,9 @@ Folgende relative Locators sind verfügbar:
 _findElement_ Methode akzeptiert nun eine weitere Möglichkeit
 `withTagName()` die einen relativen Locator liefert.
 
-_findElement_ method now accepts a new method `withTagName()`
-which returns a RelativeLocator.
+**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick 
+locator of their choice like _By.id_, _By.cssSelector_  etc. 
+This feature landed in **Selenium4 - beta3**
 
 ### Wie funktionieren die relativen Suchemethoden
 Selenium verwendet folgende JavaScript Funktion
