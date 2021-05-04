@@ -264,7 +264,7 @@ let emailAddressField = await driver.findElement(withTagName('input').above(pass
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val passwordField = driver.findElement(By.id("password"))
-val emailAddressField = driver.findElement(withTagName("input").above(passwordField))
+val emailAddressField = driver.findElement(with(By.tagName("input")).above(passwordField))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -305,7 +305,7 @@ let passwordField = await driver.findElement(withTagName('input').below(emailAdd
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressField = driver.findElement(By.id("email"))
-val passwordField = driver.findElement(withTagName("input").below(emailAddressField))
+val passwordField = driver.findElement(with(By.tagName("input")).below(emailAddressField))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -347,7 +347,7 @@ let cancelButton = await driver.findElement(withTagName("button").toLeftOf(submi
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val submitButton= driver.findElement(By.id("submit"))
-val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton))
+val cancelButton= driver.findElement(with(By.tagName("button")).toLeftOf(submitButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -389,7 +389,7 @@ let submitButton = await driver.findElement(withTagName('button').toRightOf(canc
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cancelButton= driver.findElement(By.id("cancel"))
-val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButton))
+val submitButton= driver.findElement(with(By.tagName("button")).toRightOf(cancelButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -430,6 +430,6 @@ let emailAddressField = await driver.findElement(withTagName("input").near(email
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressLabel = driver.findElement(By.id("lbl-email"))
-val emailAddressField = driver.findElement(withTagName("input").near(emailAddressLabel))
+val emailAddressField = driver.findElement(with(By.tagName("input")).near(emailAddressLabel))
   {{< / code-panel >}}
 {{< / code-tab >}}
