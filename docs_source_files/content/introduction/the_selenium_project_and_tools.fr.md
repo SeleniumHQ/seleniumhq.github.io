@@ -53,7 +53,7 @@ sur une gamme de machines.
 Imaginez une banque d'ordinateurs dans votre salle de serveurs ou votre centre de données
 allumer tous les navigateurs en même temps
 frapper les liens, les formulaires de votre site,
-et tables & mdash; tester votre application 24h / 24.
+et tables&mdash;tester votre application 24h / 24.
 Grâce à l'interface de programmation simple
 fournie pour les langues les plus courantes,
 ces tests se dérouleront sans relâche en parallèle,
