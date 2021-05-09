@@ -123,8 +123,8 @@ to `getWindowRect` command which accepts **width**, **height**,
 **x**, **y** as _optional_ arguments.
 
 During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
+with window states, which describe the visibility 
+of the browser window. The window states are
 
 * maximized
 * minimized
@@ -132,14 +132,14 @@ state of the browser window. The window states are
 * fullscreen
 
 Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
+window size will exactly match that which was requested. This is because 
 some drivers may not be able to resize in single-pixel increments.
 Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+may not match the values set in the browser.
 
 ## strictFileInteractability
 
-The new capabilitiy indicates if strict interactability checks 
+This new capability indicates if strict interactability checks 
 should be applied to _input type=file_ elements. As strict interactability 
 checks are off by default, there is a change in behaviour 
 when using _Element Send Keys_ with hidden file upload controls.

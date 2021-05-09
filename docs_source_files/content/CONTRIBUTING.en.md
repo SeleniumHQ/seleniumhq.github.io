@@ -30,7 +30,7 @@ Selenium software, its site and/or documentation.
 
 All of the Selenium components change quite fast over time, so this
 might cause the documentation to be out of date. If you find this to
-be the case, as mentioned, don't doubt to create an issue for that.
+be the case, as mentioned, don't hesitate to create an issue for that.
 It also might be possible that you know how to bring up to date the
 documentation, so please send us a pull request with the related
 changes.
@@ -175,7 +175,7 @@ Use `git rebase` (not `git merge`) to sync your work from time to time.
 ### Step 6: Test
 
 Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
-with this you can be safe that your changes have not broken anything.
+with this you can be sure that your changes have not broken anything.
 
 ### Step 7: Push
 
