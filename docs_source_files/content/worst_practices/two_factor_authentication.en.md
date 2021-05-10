@@ -3,13 +3,13 @@ title: "Two Factor Authentication"
 weight: 1
 ---
 
-Two Factor Authentication shortly know as _2FA_ is a authorization 
-mechanism where One Time Password (OTP) is generated using "Authenticator" 
+Two Factor Authentication (2FA) is an authorization 
+mechanism where a One Time Password (OTP) is generated using "Authenticator" 
 mobile apps such as "Google Authenticator", "Microsoft Authenticator" 
 etc., or by SMS, e-mail to authenticate. Automating this seamlessly 
 and consistently is a big challenge in Selenium. There are some ways 
 to automate this process. But that will be another layer on top of our 
-Selenium tests and not secured as well.  So, you can avoid automating 2FA.
+Selenium tests and not as secure. So, you should avoid automating 2FA.
 
 There are few options to get around 2FA checks:
 

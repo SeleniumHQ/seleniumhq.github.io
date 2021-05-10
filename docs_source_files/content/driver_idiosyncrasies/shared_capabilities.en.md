@@ -4,26 +4,26 @@ weight: 1
 ---
 
 In order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
+the local end should provide the basic capabilities to the remote end. 
 The remote end uses the same set of capabilities to 
 create a session and describes the current session features. 
 
 WebDriver provides capabilities that each remote 
 end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+The following capabilities are supported by WebDriver:
 
 ## browserName:
 
 This capability is used to set the `browserName` for a given session. 
 If the specified browser is not installed at the 
-remote end, the session creation will fail
+remote end, the session creation will fail.
 
 ## browserVersion: 
 
 This capability is optional, this is used to 
 set the available browser version at remote end. 
 For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+only has 80 installed, the session creation will fail.
 
 ## pageLoadStrategy:
 
@@ -105,7 +105,7 @@ Defaults to **dismiss and notify state**
 ### User Prompt Handler
 
 This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
+user prompt encounters at the remote-end. This is defined by 
 `unhandledPromptBehavior` capability and has the following states:
 
 * dismiss
@@ -122,8 +122,8 @@ to `getWindowRect` command which accepts **width**, **height**,
 **x**, **y** as _optional_ arguments.
 
 During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
+with window states, which describe the visibility 
+of the browser window. The window states are
 
 * maximized
 * minimized
@@ -131,14 +131,14 @@ state of the browser window. The window states are
 * fullscreen
 
 Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
+window size will exactly match that which was requested. This is because 
 some drivers may not be able to resize in single-pixel increments.
 Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+may not match the values set in the browser.
 
 ## strictFileInteractability
 
-The new capability indicates if strict interactability checks 
+This new capability indicates if strict interactability checks 
 should be applied to _input type=file_ elements. As strict interactability 
 checks are off by default, there is a change in behaviour 
 when using _Element Send Keys_ with hidden file upload controls.

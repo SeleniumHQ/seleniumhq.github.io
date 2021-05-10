@@ -1,26 +1,25 @@
 ---
-title: "Two Factor Authentication"
+title: "Authentication à double facteur"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+L'authentification à double facteur (A2F) est un mécanisme d'autorisation dans
+lequel un mot de passe unique, basé sur le temps (One Time Password - OTP),
+est généré par un programme externe accessible (souvent
+mobile) comme "Google Authenticator", "Microsoft Authenticator", etc. ; ou par
+la réception d'un SMS ou courriel pour permettre l'authentification.
 
-Two Factor Authentication shortly know as _2FA_ is a authorization 
-mechanism where One Time Password(OTP) is generated using "Authenticator" 
-mobile apps such as "Google Authenticator", "Microsoft Authenticator" 
-etc., or by SMS, e-mail to authenticate. Automating this seamlessly 
-and consistently is a big challenge in Selenium. There are some ways 
-to automate this process. But that will be another layer on top of our 
-Selenium tests and not secured as well.  So, you can avoid automating 2FA.
+Automatiser ce mécanisme harmonieusement et de manière fluide relève du
+défi avec Selenium. Il existe quelques moyens pour automatiser ce
+processus, mais cela impliquerait d'ajouter une couche supplémentaire aux
+tests Selenium et ce ne serait pas sécurisé. Il vaut mieux donc éviter
+l'automatisation de l'authentification à double facteur.
 
-There are few options to get around 2FA checks:
+Voici quelques solutions pour contouner la vérification A2F :
 
-* Disable 2FA for certain Users in the test environment, so that you can 
-use those user credentials in the automation.
-* Disable 2FA in your test environment.
-* Disable 2FA if you login from certain IPs. That way we can configure our 
-test machine IPs to avoid this.
+* Désactiver la A2F pour certains utilisateurs, dans l'environnement de
+test, afin de pouvoir utiliser leurs identifiants dans l'automatisation.
+* Désactiver la A2F dans l'environnement de test.
+* Désactiver la A2F si la connexion s'effectue depuis certaines adresses
+IP. De cette manière, en renseignant Selenium avec ces adresses IP, il
+pourra exclure la A2F.
