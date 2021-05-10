@@ -22,4 +22,4 @@ test, afin de pouvoir utiliser leurs identifiants dans l'automatisation.
 * Désactiver la A2F dans l'environnement de test.
 * Désactiver la A2F si la connexion s'effectue depuis certaines adresses
 IP. De cette manière, en renseignant Selenium avec ces adresses IP, il
-pourra à exclure la A2F.
+pourra exclure la A2F.
