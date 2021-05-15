@@ -12,11 +12,8 @@ it by sending us pull requests!
 
 # Grid 4
 
-_Selenium Grid 4_ is a fresh implementation and does not share the codebase
-the previous version had.
+_Selenium Grid 4_ es una nueva implementación y no comparte el código base que versiones anteriores tenían.
 
-Grid 4 has an approach to take advantage of a number of new technologies in order 
-to facilitate scaling up, while still allowing local execution.
+Grid 4 pretende sacar ventaja de un cierto número de nuevas tecnologías para facilitar la escalada mientras que permiten ejecución en local.
 
-To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse thorough the following sections.
+Para tener todos los detalles de los componentes de Grid 4, entender como funciona, y como instalar la tuya propia, por favor busca a través de las secciones a continuación.
