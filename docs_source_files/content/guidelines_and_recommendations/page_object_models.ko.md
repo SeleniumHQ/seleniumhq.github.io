@@ -185,7 +185,7 @@ A page object does not necessarily need to represent all the parts of a
 page itself. The same principles used for page objects can be used to
 create "Page _Component_ Objects" that represent discrete chunks of the
 page and can be included in page objects. These component objects can
-provide references the elements inside those discrete chunks, and
+provide references to the elements inside those discrete chunks, and
 methods to leverage the functionality provided by them. You can even
 nest component objects inside other component objects for more complex
 pages. If a page in the AUT has multiple components, or common
