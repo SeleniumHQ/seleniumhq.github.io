@@ -17,7 +17,7 @@ we are moving our IRC Channel over to [Libera.chat](https://libera.chat). It is 
 by the team that previously maintained Freenode.
 
 We are in the process of moving our bridge over and hopefully the matrix bridge will be created
-soo so that we can have a free and inclusive project on the new IRC Servers. There may be a few
+soon so that we can have a free and inclusive project on the new IRC Servers. There may be a few
 hiccups so if you could bare with us.
 
 If you have any questions please feel free to reach out to me on [twitter](https://twitter.com/automatedtester)
