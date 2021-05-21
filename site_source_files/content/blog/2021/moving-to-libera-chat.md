@@ -12,7 +12,7 @@ Yesterday, 19 May 2021, all the staff of Freenode, the IRC network, [collectivel
 resigned as staff because of what they felt was a hostile takeover](https://fuchsnet.ch/freenode-resign-letter.txt).
 
 Freenode has always been seen as the home of Free and Open Software, so
- it was natural that you could find us on the #selenium channel there To maintain this openness, and inclusivity,
+ it was natural that you could find us on the #selenium channel there. To maintain this openness, and inclusivity,
 we are moving our IRC Channel over to [Libera.chat](https://libera.chat). It is has been created
 by the team that previously maintained Freenode.
 
