@@ -259,3 +259,46 @@ await driver.executeScript('console.log("here")')
 # Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Override Device Mode
+
+Using Selenium's integration with CDP, one can override the current device mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor are required parameters. Optional parameters include scale, screenWidth, screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
+
+{{< code-tab >}}
+{{< code-panel language="java" >}}
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void deviceSimulationTest() {
+ChromeDriver driver = (ChromeDriver) Driver.getDriver();
+tools = driver.getDevTools();
+tools.createSession();
+
+    Map deviceMetrics = new HashMap()
+    {{
+        put("width", 600);
+        put("height", 1000);
+        put("mobile", true);
+        put("deviceScaleFactor", 50);
+    }};
+
+    driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
+    driver.get("https://www.google.com");
+}
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< / code-tab >}}
