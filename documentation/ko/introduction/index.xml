@@ -2,9 +2,9 @@
 브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의 상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.
 최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.
 필드에 텍스트 입력, 드롭 다운 및 체크 박스 선택, 링크 클릭, 마우스 이동, 임의의 JavaScript 실행 등의 기능이 제공됩니다.
-웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description></item><item><title>On test automation</title><link>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
-First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description></item><item><title>테스트의 종류</title><link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid><description>적합 테스트 이러한 유형의 테스트는 기능이나 시스템이
+웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description></item><item><title>테스트 자동화</title><link>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</guid><description>먼저 정말로 브라우저를 사용할 것인지 스스로 물어보는 것부터 시작합니다. 복잡한 웹 응용 프로그램에서 작업하는 경우 브라우저를 열고 실제로 테스트해야할 필요가 있습니다.
+그러나 셀레니움 테스트와 같은 최종 사용자 테스트는 실행 비용이 많이 듭니다. 게다가 일반적으로 효율적인 운영을 위해서는 상당한 인프라가 구현되어야 합니다. 즉, unit test와 같은 보다 가벼운 테스트 접근 방식을 사용하거나 낮은 수준의 접근 방식을 사용해서 테스트할 수 있는지 항상 자문하는 것이 좋습니다.
+당신이 웹 브라우저 테스트 업무를 하고 있고 셀레니움 환경에서 테스트를 할 준비가 되어 있다면, 일반적으로 다음 세 단계의 조합을 수행할 것입니다.</description></item><item><title>테스트의 종류</title><link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid><description>적합 테스트 이러한 유형의 테스트는 기능이나 시스템이
 고객의 기대와 요구사항을 충족하는지 판단하기 위해 수행됩니다.
 이러한 유형의 테스트는 일반적으로 고객의 협조나 피드백을 포함하며,
 이는 다음 질문에 대한 답을 제공하는 검증활동입니다.
