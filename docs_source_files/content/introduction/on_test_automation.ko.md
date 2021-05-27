@@ -1,131 +1,74 @@
 ---
-title: "On test automation"
+title: "테스트 자동화"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-First, start by asking yourself whether or not you really need to use a browser.
-Odds are that, at some point, if you are working on a complex web application,
-you will need to open a browser and actually test it.
-
-Functional end-user tests such as Selenium tests are expensive to run, however.
-Furthermore, they typically require substantial infrastructure
-to be in place to be run effectively.
-It is a good rule to always ask yourself if what you want to test
-can be done using more lightweight test approaches such as unit tests
-or with a lower-level approach.
-
-Once you have made the determination that you are in the web browser testing business,
-and you have your Selenium environment ready to begin writing tests,
-you will generally perform some combination of three steps:
-
-* Set up the data
-* Perform a discrete set of actions
-* Evaluate the results
-
-You will want to keep these steps as short as possible;
-one or two operations should be enough most of the time.
-Browser automation has the reputation of being “flaky”,
-but in reality, that is because users frequently demand too much of it.
-In later chapters, we will return to techniques you can use
-to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.ko.md" >}})
-between the browser and WebDriver.
-
-By keeping your tests short
-and using the web browser only when you have absolutely no alternative,
-you can have many tests with minimal flake.
-
-A distinct advantage of Selenium tests
-is their inherent ability to test all components of the application,
-from backend to frontend, from a user's perspective.
-So in other words, whilst functional tests may be expensive to run,
-they also encompass large business-critical portions at one time.
+먼저 정말로 브라우저를 사용할 것인지 스스로 물어보는 것부터 시작합니다.
+복잡한 웹 응용 프로그램에서 작업하는 경우 브라우저를 열고 실제로 테스트해야할 필요가 있습니다.
 
 
-### Testing requirements
+그러나 셀레니움 테스트와 같은 최종 사용자 테스트는 실행 비용이 많이 듭니다. 
+게다가 일반적으로 효율적인 운영을 위해서는 상당한 인프라가 구현되어야 합니다.
+즉, unit test와 같은 보다 가벼운 테스트 접근 방식을 사용하거나 낮은 수준의 접근 방식을 사용해서 테스트할 수 있는지 항상 자문하는 것이 좋습니다.
 
-As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you are running the tests against,
-but historically browsers' behaviour has varied so much that it has often
-been a stated goal to cross-test against multiple browsers.
+당신이 웹 브라우저 테스트 업무를 하고 있고 셀레니움 환경에서 테스트를 할 준비가 되어 있다면, 일반적으로 다음 세 단계의 조합을 수행할 것입니다.
 
-Selenium allows you to run the same instructions against multiple browsers
-on multiple operating systems,
-but the enumeration of all the possible browsers,
-their different versions, and the many operating systems they run on
-will quickly become a non-trivial undertaking.
+* 데이터 설정
+* 개별 작업 수행
+* 결과 평가
 
-
-### Let’s start with an example
-
-Larry has written a web site which allows users to order their 
-custom unicorns.
-
-The general workflow (what we will call the “happy path”) is something
-like this:
-
-* Create an account
-* Configure the unicorn
-* Add it to the shopping cart
-* Check out and pay
-* Give feedback about the unicorn
+아마 당신은 위 단계를 한 두번 내로 끝내기를 원할 겁니다. 브라우저 자동화는 "신뢰할 수 없는" 평판을 가지고 있지만 실제로 그것은 사용자가 너무 많은 것을 요구하기 때문입니다. 이 후 챕터에서는 테스트에서 드러나는 간헐적 문제를 완화하기 위해 사용할 수 있는 기술, 특히 브라우저와 웹 드라이버 간의 [경쟁상태 극복]({{< ref "/webdriver/waits.ko.md" >}})방법을 살펴보겠습니다.
 
 
-It would be tempting to write one grand Selenium script
-to perform all these operations–many will try.
-**Resist the temptation!**
-Doing so will result in a test that 
-a) takes a long time,
-b) will be subject to some common issues around page rendering timing issues, and
-c) is such that if it fails, 
-it will not give you a concise, “glanceable” method for diagnosing what went wrong.
+대안이 전혀 없는 경우에 테스트를 짧게 유지하고 웹 브라우저만 사용함으로써 최소한의 Flake로 많은 테스트를 수행할 수 있습니다.
 
-The preferred strategy for testing this scenario would be
-to break it down to a series of independent, speedy tests,
-each of which has one “reason” to exist.
+셀레니움 테스트의 고유한 장점은 백엔드부터 프런트엔드까지 애플리케이션의 모든 구성요소를 사용자의 관점에서 테스트할 수 있다는 것입니다. 즉, 기능 테스트를 실행하는 데 비용이 많이 들 수 있지만 동시에 업무상 중요한 많은 부분을 포괄하기도 한다는 것입니다.
 
-Let us pretend you want to test the second step:
-Configuring your unicorn.
-It will perform the following actions:
 
-* Create an account
-* Configure a unicorn
+### 테스트 요구사항
 
-Note that we are skipping the rest of these steps, 
-we will test the rest of the workflow in other small, discrete test cases 
-after we are done with this one.
+앞서 언급했듯이 셀레니움 테스트는 실행비용이 많이 듭니다. 테스트를 실행하는 브라우저에 따라 어느 정도가 달라지지만, 역사적으로 브라우저의 동작은 너무 다양하여 여러 브라우저에 대해 교차 테스트하는 것이 종종 명시되어 왔습니다.
 
-To start, you need to create an account.
-Here you have some choices to make:
+셀레니움을 사용하면 여러 운영 체제에서 여러 브라우저에 대해 동일한 명령을 내릴 수 있지만, 서로 다른 버전의 가능한 모든 브라우저 및 이러한 브라우저가 실행되는 많은 운영 체제의 열거는 사소한 작업이 아닙니다.
 
-* Do you want to use an existing account?
-* Do you want to create a new account?
-* Are there any special properties of such a user that need to be
-  taken into account before configuration begins?
 
-Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test.
-If Larry has exposed an API that enables you (or anyone)
-to create and update user accounts,
-be sure to use that to answer this question.
-If possible, you want to launch the browser only after you have a user "in hand",
-whose credentials you can just log in with.
+### 예를 들면,
 
-If each test for each workflow begins with the creation of a user account,
-many seconds will be added to the execution of each test.
-Calling an API and talking to a database are quick,
-“headless” operations that don't require the expensive process of
-opening a browser, navigating to the right pages,
-clicking and waiting for the forms to be submitted, etc.
+Larry는 사용자들이 그들의 커스텀 유니콘을 주문할 수 있는 웹사이트를 만들었습니다.
 
-Ideally, you can address this set-up phase in one line of code,
-which will execute before any browser is launched:
+일반적인 workflow (이하 "happy path"이라 함)는 다음과 같습니다.
+
+* 계정 만들기
+* 유니콘 구성하기
+* 장바구니에 추가
+* 체크아웃 후 결제
+* 유니콘에 대한 피드백 주기
+
+
+많은 사람들은 셀레니움 스크립트을 하나 짜서 모든 작업을 수행하는 것이 구미가 당길 것입니다. 
+**하지만 유혹을 뿌리쳐야 합니다!**
+만일 스크립트를 작성해서 작업을 수행하면, a) 시간이 오래 걸리는 테스트, b) 페이지 렌더링 타이밍 문제와 관련된 몇 가지 일반적인 문제가 발생할 수 있으며 c) 테스트가 실패할 경우 무엇이 잘못되었는지 진단하는 간결하고 "일람 가능한" 방법이 제공되지 않을 수 있습니다
+
+이 시나리오를 테스트하기 위한 선호 전략은 일련의 독립적이고 속도 높은 테스트로 세분화하는 것이고, 각각의 테스트는 하나의 "이유"가 존재합니다.
+
+두 번째 단계인 유니콘 구성을 테스트해 보겠습니다. 다음 작업을 수행합니다.
+
+* 계정 만들기
+* 유니콘 구성하기
+
+나머지 단계는 건너뛰고 이 단계를 완료한 후 다른 소규모 개별 테스트 사례에서 나머지 워크플로를 테스트합니다.
+
+시작하려면 계정을 만들어야 합니다. 다음 몇 가지 선택 사항이 있습니다.
+
+* 기존 계정을 사용하시겠습니까?
+* 새 계정을 생성하시겠습니까?
+* 구성을 시작하기 전에 사용자의 특수한 properties을 고려해야 합니까?
+
+이 문제의 답변에 관계없이 해결책은 이 질문을 테스트의 "데이터 설정" 부분에 포함시키는 것입니다. Larry가 사용자 계정을 만들고 업데이트할 수 있는 API를 노출한 경우, 이 질문에 답변하기 위해 해당 API를 사용해야 합니다. 가능한 경우, 신원 확인이 된 로그인할 수 있는 사용자가 있는 경우에만 브라우저를 시작합니다.
+
+각 워크플로에 대한 각 테스트가 사용자 계정 생성으로 시작되면 각 테스트 실행에 몇 초가 추가됩니다. API를 호출하고 데이터베이스와 통신하는 것은 빠르고 브라우저를 열고, 올바른 페이지로 이동하고, 양식이 제출 될 때까지 클릭하고 대기하는 등의 비용이 많이 드는 프로세스가 필요없는 "headless"작업입니다.
+
+브라우저가 시작되기 전에 실행되는 코드 한 줄에서 이 설정 단계를 해결하는 것이 이상적입니다 :
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -214,36 +157,18 @@ val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As you can imagine, the `UserFactory` can be extended
-to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
-The point is, these two lines of code do not distract you from the ultimate purpose of this test:
-configuring a unicorn.
+생각하신 대로 UserFactory를 확장하여 createAdminUser() 및 createUserWithPayment()와 같은 메소드를 제공할 수 있습니다. 요점은, 이 두 줄의 코드가 이 테스트의 궁극적인 목적, 즉 유니콘을 구성하는 것을 방해하지 않는다는 것입니다.
 
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.ko.md" >}})
-will be discussed in later chapters, but we will introduce the concept here:
+[페이지 오브젝트 모델]({{< ref "/guidelines_and_recommendations/page_object_models.ko.md" >}})의 복잡성은 뒤에서 설명하겠지만, 여기서는 개념만 소개하겠습니다.
 
-Your tests should be composed of actions,
-performed from the user's point of view,
-within the context of pages in the site.
-These pages are stored as objects,
-which will contain specific information about how the web page is composed
-and how actions are performed–
-very little of which should concern you as a tester.
 
-What kind of unicorn do you want?
-You might want pink, but not necessarily.
-Purple has been quite popular lately.
-Does she need sunglasses? Star tattoos?
-These choices, while difficult, are your primary concern as a tester–
-you need to ensure that your order fulfillment center
-sends out the right unicorn to the right person,
-and that starts with these choices.
+테스트는 사이트의 페이지 컨텍스트 내에서 사용자의 관점에서 수행되는 작업으로 구성되어야 합니다. 이러한 페이지는 개체로 저장되며, 여기에는 웹 페이지의 구성 방법과 수행 방법에 대한 특정 정보가 포함됩니다. 이 중 대부분은 테스터와 관련이 없습니다.
 
-Notice that nowhere in that paragraph do we talk about buttons,
-fields, drop-downs, radio buttons, or web forms.
-**Neither should your tests!**
-You want to write your code like the user trying to solve their problem.
-Here is one way of doing this (continuing from the previous example):
+어떤 유니콘을 원하십니까? 당신은 분홍색을 원할지 모르지만 꼭 그렇지는 않습니다. 보라색은 최근에 꽤 인기가 있습니다. 그녀가 선글라스가 필요합니까? 별 타투? 이러한 선택은 어렵기는 하지만 검사자로서 가장 중요한 관심사입니다. 주문 이행 센터에서 적절한 유니콘을 적절한 사람에게 발송할 수 있도록 해야 합니다. 이러한 선택에서부터 시작합니다.
+
+이 단락 어디에서도 buttons, fields, drop-downs, radio buttons 또는 웹 양식에 대해 이야기하지 않습니다.
+**테스트도 마찬가지입니다!**
+사용자가 문제를 해결하려는 것처럼 코드를 작성하려고 합니다. 다음은 이 작업을 수행하는 한 가지 방법입니다(이전 예시에서 이어집니다) :
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -390,45 +315,15 @@ assertTrue("Sparkles should have been created, with all attributes intact", unic
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still has not done anything but talk about unicorns in this code–
-no buttons, no locators, no browser controls.
-This method of _modelling_ the application
-allows you to keep these test-level commands in place and unchanging,
-even if Larry decides next week that he no longer likes Ruby-on-Rails
-and decides to re-implement the entire site
-in the latest Haskell bindings with a Fortran front-end.
+테스터는 여전히 이 코드에서 유니콘에 대해 아무것도 하지 않고 있습니다. buttons, locators, 브라우저 컨트롤도 없습니다. 애플리케이션을 모델링하는 이 방법을 사용하면 다음 주에 Larry가 Ruby-on-Rails를 더 이상 좋아하지 않는다고 결정하고 Fortran 프런트 엔드로 최신 Haskell 바인딩에서 전체 사이트를 다시 구현하기로 결정하더라도 테스트 레벨 명령을 그대로 유지할 수 있습니다.
 
-Your page objects will require some small maintenance in order to 
-conform to the site redesign,
-but these tests will remain the same.
-Taking this basic design,
-you will want to keep going through your workflows with the fewest browser-facing steps possible.
-Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
-Is there more than one unicorn in the cart before you start?
-How many can fit in the shopping cart?
-If you create more than one with the same name and/or features, will it break?
-Will it only keep the existing one or will it add another?
+페이지 객체는 사이트 재설계를 준수하기 위해 약간의 유지보수가 필요하지만, 이러한 테스트는 그대로 유지됩니다. 이 기본 설계를 사용하면 브라우저 지향 단계를 최소화하면서 workflows를 계속 진행할 수 있습니다. 다음 workflows에는 쇼핑 카트에 유니콘을 추가하는 작업이 포함됩니다. 카트의 상태를 올바르게 유지하기 위해 이 테스트를 여러 번 반복해야 할 것입니다. 시작하기 전에 카트에 유니콘이 한 개 이상 있습니까? 쇼핑 카트에 몇 개나 들어갈 수 있나요? 이름 및/또는 기능이 같은 두 개 이상 생성될 경우 중단됩니까? 기존 항목만 유지할 것입니까, 아니면 다른 항목만 추가할 것입니까?
 
-Each time you move through the workflow,
-you want to try to avoid having to create an account,
-login as the user, and configure the unicorn.
-Ideally, you will be able to create an account
-and pre-configure a unicorn via the API or database.
-Then all you have to do is log in as the user, locate Sparkles,
-and add her to the cart.
+Workflow를 이동할 때마다 계정을 생성하고 사용자로 로그인하고 유니콘을 구성할 필요가 없습니다. 이상적으로 계정을 생성하고 API 또는 데이터베이스를 통해 유니콘을 미리 구성할 수 있습니다. 그런 다음 사용자로 로그인하여 스파클을 찾은 다음 카트에 추가하기만 하면 됩니다.
 
 
-### To automate or not to automate?
+### 자동화를 할까요, 말까요?
 
-Is automation always advantageous? When should one decide to automate test
-cases?
+자동화가 항상 유리할까요? 언제 테스트 케이스를 자동화하기로 결정해야 할까요?
 
-It is not always advantageous to automate test cases. There are times when
-manual testing may be more appropriate. For instance, if the application’s user
-interface will change considerably in the near future, then any automation
-might need to be rewritten anyway. Also, sometimes there simply is not enough
-time to build test automation. For the short term, manual testing may be more
-effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing gets done within
-that time frame, then manual testing is the best solution.
+테스트 사례를 자동화하는 것이 항상 유리한 것은 아닙니다. 수동 테스트가 더 적절할 수 있는 경우가 있습니다. 예를 들어, 애플리케이션의 사용자 인터페이스가 가까운 시일에 크게 변화할 경우, 모든 자동화를 다시 작성해야 할 수 있습니다. 또한 테스트 자동화를 구축하기 위한 시간이 충분하지 않은 경우도 있습니다. 단기적으로는 수동 시험이 더 효과적일 수 있습니다. 애플리케이션의 마감 시간이 매우 빠듯할 경우, 현재 사용 가능한 테스트 자동화가 없으며, 반드시 해당 기간 내에 테스트를 수행해야 합니다. 따라서 이 때는 수동 테스트가 가장 적합한 솔루션입니다.
