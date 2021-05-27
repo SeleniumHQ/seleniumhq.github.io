@@ -9,7 +9,7 @@
   "author": "SeleniumHQ",
   "license": "Apache-2.0",
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.2.6",
     "postcss-cli": "^8.1.0"
   }
 }
