@@ -226,10 +226,10 @@ public void consoleLogTest() {
 
     devTools.send(Log.enable());
     devTools.addListener(Log.entryAdded(),
-            logEntry -> {
-                System.out.println("log: "+logEntry.getText());
-                System.out.println("level: "+logEntry.getLevel());
-            });
+        logEntry -> {
+            System.out.println("log: "+logEntry.getText());
+            System.out.println("level: "+logEntry.getLevel());
+        });
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -266,15 +266,15 @@ public void deviceSimulationTest() {
     ChromeDriver driver = (ChromeDriver) Driver.getDriver();
     tools = driver.getDevTools();
     tools.createSession();
-
+    
     Map deviceMetrics = new HashMap()
-    {{
+    {{  
         put("width", 600);
         put("height", 1000);
         put("mobile", true);
         put("deviceScaleFactor", 50);
     }};
-
+    
     driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
     driver.get("https://www.google.com");
 }
