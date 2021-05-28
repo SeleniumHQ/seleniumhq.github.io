@@ -221,7 +221,22 @@ await element.click()
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-# Please raise a PR to add code sample
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v87.log.Log;
+
+public void consoleLogTest() {
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+
+    devTools.send(Log.enable());
+    devTools.addListener(Log.entryAdded(),
+            logEntry -> {
+                System.out.println("log: "+logEntry.getText());
+                System.out.println("level: "+logEntry.getLevel());
+            });
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR to add code sample
