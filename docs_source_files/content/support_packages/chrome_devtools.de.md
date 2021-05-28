@@ -281,7 +281,7 @@ public void deviceSimulationTest() {
       put("mobile", true);
       put("deviceScaleFactor", 50);
   }};
-  
+      
   driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
   driver.get("https://www.google.com");
 }

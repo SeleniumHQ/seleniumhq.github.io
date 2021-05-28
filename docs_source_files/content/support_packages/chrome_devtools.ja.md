@@ -230,16 +230,16 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v87.log.Log;
 
 public void consoleLogTest() {
-  ChromeDriver driver = new ChromeDriver();
-  DevTools devTools = driver.getDevTools();
-  devTools.createSession();
-  
-  devTools.send(Log.enable());
-  devTools.addListener(Log.entryAdded(),
-    logEntry -> {
-        System.out.println("log: "+logEntry.getText());
-        System.out.println("level: "+logEntry.getLevel());
-    });
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    
+    devTools.send(Log.enable());
+    devTools.addListener(Log.entryAdded(),
+        logEntry -> {
+            System.out.println("log: "+logEntry.getText());
+            System.out.println("level: "+logEntry.getLevel());
+        });
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -273,20 +273,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
 public void deviceSimulationTest() {
-  ChromeDriver driver = (ChromeDriver) Driver.getDriver();
-  tools = driver.getDevTools();
-  tools.createSession();
-  
-  Map deviceMetrics = new HashMap()
-  {{
+    ChromeDriver driver = (ChromeDriver) Driver.getDriver();
+    tools = driver.getDevTools();
+    tools.createSession();
+    
+    Map deviceMetrics = new HashMap()
+    {{
       put("width", 600);
       put("height", 1000);
       put("mobile", true);
       put("deviceScaleFactor", 50);
-  }};
-  
-  driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
-  driver.get("https://www.google.com");
+    }};
+    
+    driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
+    driver.get("https://www.google.com");
 }
 {{< / code-panel >}}
 {{< code-panel language="python" >}}

@@ -223,7 +223,7 @@ public void consoleLogTest() {
     ChromeDriver driver = new ChromeDriver();
     DevTools devTools = driver.getDevTools();
     devTools.createSession();
-
+    
     devTools.send(Log.enable());
     devTools.addListener(Log.entryAdded(),
         logEntry -> {
