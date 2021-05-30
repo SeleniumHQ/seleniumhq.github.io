@@ -4,30 +4,19 @@ weight: 3
 ---
 
 
-{{% notice %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium 4では、新しいEvented APIが導入され、WebDriverが他のAPIに
+使用していた従来のリクエスト/レスポンスのアプローチを使用するのではなく、
+発生時にブラウザーからイベントをキャプチャできるようになりました。
 
-In Selenium 4, new Evented APIs were introduced that
-allow users to be able to capture events from the
-browser as they happen rather than using the
-traditional approach of Request/Response that
-WebDriver has used for other APIs.
+内部的にWebDriverは、送信されるイベントとコマンドのためにブラウザーへのWebSocket接続を作成します。
 
-Internally WebDriver will create a WebSocket connection
-to the browser for events and commands to be transmitted.
-
-The following list of APIs will be growing as the Selenium
-project works through supporting real world use cases. If there
-is a missing API, please raise a [feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+次のAPIのリストは、Seleniumプロジェクトが現実世界のユースケースをサポートを通じて機能するにつれて、増えていきます。
+不足している API がある場合は、 [機能リクエスト](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md) を提出してください。
 
 ## Mutation Observation
 
-Mutation Observation is the ability to capture events via
-WebDriver BiDi when there are DOM mutations on a specific
-element in the DOM.
+Mutation Observation は、DOM 内の特定の要素に DOM の変更がある場合に、
+WebDriver BiDi を介してイベントをキャプチャする機能です。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
