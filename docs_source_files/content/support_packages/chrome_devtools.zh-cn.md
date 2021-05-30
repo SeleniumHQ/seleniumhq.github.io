@@ -236,7 +236,6 @@ devTools.createSession();
                 System.out.println("log: "+logEntry.getText());
                 System.out.println("level: "+logEntry.getLevel());
             });
-}     });
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
