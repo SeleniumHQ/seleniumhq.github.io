@@ -1307,9 +1307,9 @@ current context of a selected frame or window.
     //Button Element
       WebElement button =driver.findElement(By.name("btnLogin"));
     //Executing JavaScript to click on element
-      js.executeScript("arguments[0].click();", element);
+      js.executeScript("arguments[0].click();", button);
     //Get return value from script
-      String text = (String) javascriptExecutor.executeScript("return arguments[0].innerText", element);
+      String text = (String) js.executeScript("return arguments[0].innerText", button);
     //Executing JavaScript directly
       js.executeScript("console.log('hello world')");
   {{< / code-panel >}}
