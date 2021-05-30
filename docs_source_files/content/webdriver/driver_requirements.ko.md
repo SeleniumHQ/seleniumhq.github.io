@@ -228,8 +228,15 @@ Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
   {{< code-panel language="javascript" >}}
 const firefox = require('selenium-webdriver/firefox');
 
-const options = new firefox.Options();
-options.setBinary("/path/to/geckodriver");
+const serviceBuilder = new firefox.ServiceBuilder("/path/to/geckodriver");
+
+(async function myFunction() {
+    let driver = await new Builder()
+        .forBrowser('firefox')
+        .setFirefoxService(serviceBuilder)
+        .build();
+        //your code inside this block
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
