@@ -270,20 +270,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
 public void deviceSimulationTest() {
-  ChromeDriver driver = (ChromeDriver) Driver.getDriver();
-  tools = driver.getDevTools();
-  tools.createSession();
-  
-  Map deviceMetrics = new HashMap()
-  {{
-      put("width", 600);
-      put("height", 1000);
-      put("mobile", true);
-      put("deviceScaleFactor", 50);
-  }};
-      
-  driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
-  driver.get("https://www.google.com");
+    ChromeDriver driver = (ChromeDriver) Driver.getDriver();
+    tools = driver.getDevTools();
+    tools.createSession();
+    
+    Map deviceMetrics = new HashMap()
+    {{
+        put("width", 600);
+        put("height", 1000);
+        put("mobile", true);
+        put("deviceScaleFactor", 50);
+    }};
+        
+    driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
+    driver.get("https://www.google.com");
 }
 {{< / code-panel >}}
 {{< code-panel language="python" >}}
