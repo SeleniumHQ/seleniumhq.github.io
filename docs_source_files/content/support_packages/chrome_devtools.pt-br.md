@@ -54,7 +54,7 @@ namespace dotnet_test {
     public static void Main(string[] args) {
       GeoLocation().GetAwaiter().GetResult();
     }
-        
+
     public static async Task GeoLocation() {
       ChromeDriver driver = new ChromeDriver();
       DevToolsSession devToolsSession = driver.CreateDevToolsSession();
@@ -184,7 +184,32 @@ Using Selenium's integration with CDP, one can listen to the JS Exceptions and r
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-# Please raise a PR to add code sample
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void jsExceptionsExample() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+
+    List<JavascriptException> jsExceptionsList = new ArrayList<>();
+    Consumer<JavascriptException> addEntry = jsExceptionsList::add;
+    devTools.getDomains().events().addJavascriptExceptionListener(addEntry);
+
+    driver.get("<your site url>");
+
+    WebElement link2click = driver.findElement(By.linkText("<your link text>"));
+    ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
+        link2click, "onclick", "throw new Error('Hello, world!')");
+    link2click.click();
+
+    for (JavascriptException jsException : jsExceptionsList) {
+        System.out.println("JS exception message: " + jsException.getMessage());
+        System.out.println("JS exception system information: " + jsException.getSystemInformation());
+        jsException.printStackTrace();
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR to add code sample
@@ -266,7 +291,7 @@ public void deviceSimulationTest() {
     ChromeDriver driver = (ChromeDriver) Driver.getDriver();
     tools = driver.getDevTools();
     tools.createSession();
-    
+
     Map deviceMetrics = new HashMap()
     {{
         put("width", 600);
@@ -274,7 +299,7 @@ public void deviceSimulationTest() {
         put("mobile", true);
         put("deviceScaleFactor", 50);
     }};
-    
+
     driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
     driver.get("https://www.google.com");
 }
