@@ -1244,7 +1244,11 @@ String text = (String) js.executeScript("return arguments[0].innerText", button)
 js.executeScript("console.log('hello world')");
 {{< / code-panel >}}
 {{< code-panel language="python" >}}
-# code sample not available please raise a PR
+# Stores the header element
+header = driver.find_element(By.CSS_SELECTOR, "h1")
+
+# Executing JavaScript to capture innerText of header element
+driver.execute_script('return arguments[0].innerText', header)
 {{< / code-panel >}}
 {{< code-panel language="csharp" >}}
 // code sample not available please raise a PR
