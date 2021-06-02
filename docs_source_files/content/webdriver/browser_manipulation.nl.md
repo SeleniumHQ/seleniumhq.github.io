@@ -1336,7 +1336,14 @@ let header = await driver.findElement(By.css('h1'));
 let text = await driver.executeScript('return arguments[0].innerText', header);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR
+// Stores the header element
+val header = driver.findElement(By.cssSelector("h1"))
+
+// Get return value from script
+val result = driver.executeScript("return arguments[0].innerText", header)
+
+// Executing JavaScript directly
+driver.executeScript("alert('hello world')")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
