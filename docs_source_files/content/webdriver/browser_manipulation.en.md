@@ -1324,7 +1324,14 @@ driver.execute_script('return arguments[0].innerText', header)
     // code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # code sample not available please raise a PR
+# Stores the header element
+header = driver.find_element(css: 'h1')
+
+# Get return value from script
+result = driver.execute_script("return arguments[0].innerText", header)
+
+# Executing JavaScript directly
+driver.execute_script("alert('hello world')")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Stores the header element
