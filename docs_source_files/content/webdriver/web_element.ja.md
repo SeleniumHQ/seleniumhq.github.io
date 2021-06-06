@@ -542,12 +542,11 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Enabled
+## 要素が有効か
 
-This method is used to check if the connected Element
-is enabled or disabled on a webpage.
-Returns a boolean value, **True** if the connected element is
-**enabled** in the current browsing context else returns **false**.
+このメソッドは、接続された要素がWebページで有効または無効になっているかどうかを確認するために使います。 
+ブール値を返し、現在のブラウジングコンテキストで接続されている要素が 
+**有効（enabled）** になっている場合は **True** 、そうでない場合は **false** を返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -597,14 +596,12 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Selected
+## 要素が選択されているかどうか
 
-This method determines if the referenced Element
-is _Selected_ or not. This method is widely used on
-Check boxes, radio buttons, input elements, and option elements.
+このメソッドは、参照された要素が選択されているかどうかを判断します。 
+このメソッドは、チェックボックス、ラジオボタン、入力要素、およびオプション要素で広く使われています。
 
-Returns a boolean value, **True** if referenced element is
-**selected** in the current browsing context else returns **false**.
+ブール値を返し、現在のブラウジングコンテキストで参照された要素が **選択されている** 場合は **True** 、そうでない場合は **false** を返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -651,10 +648,10 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element TagName
+## 要素のタグ名を取得
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
-of the referenced Element which has the focus in the current browsing context.
+これは、現在のブラウジングコンテキストにフォーカスがある参照された要素の
+[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) を取得するために使います。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -701,16 +698,15 @@ let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Rect
+## 要素矩形を取得
 
-It is used to fetch the dimensions and coordinates
-of the referenced element.
+参照される要素の寸法と座標を取得するために使います。
 
-The fetched data body contain the following details:
-* X-axis position from the top-left corner of the element
-* y-axis position from the top-left corner of the element
-* Height of the element
-* Width of the element
+取得データのbodyには、次の詳細が含まれます。
+* 要素の左上隅からのx軸の位置
+* 要素の左上隅からのy軸の位置
+* 要素の高さ
+* 要素の幅
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -766,10 +762,9 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## 要素のCSSの値を取得
 
-Retrieves the value of specified computed style property
-of an element in the current browsing context.
+現在のブラウジングコンテキスト内の要素の指定された計算したスタイル属性の値を取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -826,9 +821,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## 要素テキストを取得
 
-Retrieves the rendered text of the specified element.
+指定された要素のレンダリングされたテキストを取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

@@ -3,13 +3,6 @@ title: "ブラウザー操作"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 
@@ -1059,11 +1052,11 @@ __注：この機能は、Selenium 4以降のバージョンで機能します�
   {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### TakeScreenshot
+### スクリーンショットの取得
 
-Used to capture screenshot for current browsing context.
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot)
-returns screenshot which is encoded in Base64 format.
+現在のブラウジング コンテキストのスクリーンショットをキャプチャするために使います。  
+WebDriver エンドポイントの [スクリーンショット](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) は、
+Base64 形式でエンコードされたスクリーンショットを返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1150,11 +1143,11 @@ fun main(){
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-###  TakeElementScreenshot
+###  要素のスクリーンショットの取得
 
-Used to capture screenshot of an element for current browsing context.
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot)
-returns screenshot which is encoded in Base64 format.
+現在のブラウジング コンテキストの要素のスクリーンショットをキャプチャするために使います。 
+WebDriver エンドポイントの [スクリーンショット](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) は、
+Base64 形式でエンコードされたスクリーンショットを返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1254,10 +1247,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Execute Script
+### スクリプトの実行
 
-Executes JavaScript code snippet in the
-current context of a selected frame or window.
+選択したフレームまたはウィンドウの現在のコンテキストで、JavaScript コードスニペットを実行します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1311,11 +1303,11 @@ driver.executeScript("alert('hello world')")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Print Page
+### ページの印刷
 
-Prints the current page within the browser
+ブラウザ内の現在のページを印刷します。
 
-_Note: This requires Chromium Browsers to be in headless mode_
+_Note: Chromium ブラウザがヘッドレスモードである必要があります。_
 
 
 {{< code-tab >}}
