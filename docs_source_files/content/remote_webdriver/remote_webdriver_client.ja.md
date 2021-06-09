@@ -211,20 +211,25 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Tracing client requests
+## クライアントのリクエストをトレースする
 
-This feature is only available for Java client binding (Beta onwards). The Remote WebDriver client sends requests to the Selenium Grid server, which passes them to the WebDriver. Tracing should be enabled at the server and client-side to trace the HTTP requests end-to-end. Both ends should have a trace exporter setup pointing to the visualization framework. 
-By default, tracing is enabled for both client and server. 
-To set up the visualization framework Jaeger UI and Selenium Grid 4, please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for the desired version.
+この機能は、Java クライアント バインディング (ベータ版以降) でのみ利用できます。 
+Remote WebDriver クライアントは Selenium Grid サーバーにリクエストを送信し、
+Selenium Grid サーバーはリクエストを WebDriver に渡します。 
+HTTP リクエストをエンド ツー エンドでトレースするには、サーバー側とクライアント側でトレースを有効にする必要があります。 
+両端には、視覚化フレームワークを指すトレース エクスポーターのセットアップが必要です。 
+デフォルトでは、トレースはクライアントとサーバーの両方で有効になっています。 
+視覚化フレームワークの Jaeger UI と Selenium Grid 4 を設定するには、目的のバージョンの 
+[トレースのセットアップ](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) を参照してください。
 
-For client-side setup, follow the steps below.
+クライアント側のセットアップについては、以下の手順に従ってください。
 
 ### Beta 1 
 
-#### Add the required dependencies
+#### 必要な依存関係を追加する
 
-Installation of external libraries for tracing exporter can be done using Maven.
-Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+トレーシング エクスポーターの外部ライブラリのインストールは、Maven を使って実行できます。 
+プロジェクト pom.xml に _opentelemetry-exporter-jaeger_ および _grpc-netty_ の依存関係を追加します。
 
 ```xml
   <dependency>
@@ -240,7 +245,7 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
 ``` 
 
  
-#### Add/pass the required system properties while running the client
+#### クライアントの実行中に必要なシステムプロパティを追加/渡す
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -262,10 +267,10 @@ driver.quit();
 
 ### Beta 2 onwards 
 
-#### Add the required dependencies
+#### 必要な依存関係を追加する
 
-Installation of external libraries for tracing exporter can be done using Maven.
-Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+トレーシング エクスポーターの外部ライブラリのインストールは、Maven を使って実行できます。 
+プロジェクト pom.xml に _opentelemetry-exporter-jaeger_ および _grpc-netty_ の依存関係を追加します。
 
 ```xml
   <dependency>
@@ -280,7 +285,7 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
     </dependency>
 ``` 
  
-#### Add/pass the required system properties while running the client
+#### クライアントの実行中に必要なシステムプロパティを追加/渡す
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -299,13 +304,14 @@ driver.quit();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for more information on external dependencies versions required for the desired Selenium version.
+ご希望のSeleniumのバージョンに必要な外部依存関係のバージョンの詳細については、
+[トレースのセットアップ](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) を参照してください。
 
-More information can be found at:
+詳細については、下記URLを参照してください。
 
 * OpenTelemetry: https://opentelemetry.io
 * Configuring OpenTelemetry:
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
-* [Selenium Grid Observability]({{< ref "grid/grid_4/advanced_features/observability.ja.md" >}}) 
+* [Selenium Grid 可観測性]({{< ref "grid/grid_4/advanced_features/observability.ja.md" >}}) 
 
