@@ -284,7 +284,24 @@ await driver.onLogEvent(cdpConnection, function(event) {
 await driver.executeScript('console.log("here")')
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinConsoleLogExample() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+
+    val logConsole = { c: ConsoleEvent -> print("Console log message is: " + c.messages)}
+    devTools.domains.events().addConsoleListener(logConsole)
+
+    driver.get("https://www.google.com")
+
+    val executor = driver as JavascriptExecutor
+    executor.executeScript("console.log('Hello World')")
+
+    val input = driver.findElement(By.name("q"))
+    input.sendKeys("Selenium 4")
+    input.sendKeys(Keys.RETURN)
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
