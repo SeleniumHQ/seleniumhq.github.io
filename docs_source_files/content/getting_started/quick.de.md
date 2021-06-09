@@ -26,13 +26,7 @@ vertraut zu machen.
 
 ## Grid
 
-Selenium Grid allows you to run test cases in different 
-machines across different platforms. The control of 
-triggering the test cases is on the local end, and 
-when the test cases are triggered, they are automatically 
-executed by the remote end.
+Mit Selenium Grid können Tests auf verschiedenen Maschinen auf unterschiedlichen Plattformen ausgeführt werden. 
+Das Starten der Tests findet lokal statt, die automatische Ausführung serverseitig. 
 
-After the development of the WebDriver tests, you may face 
-the need of running your tests on multiple browser and 
-operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.
+Sollen erstellte WebDriver-Tests in mehreren Browsern und Betriebssystemen ausgeführt werden, kann dafür _[Grid]({{< ref "/grid/_index.md" >}})_ genutzt werden.
