@@ -66,7 +66,7 @@ with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
     driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
-    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
+    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3")))
     print(first_result.get_attribute("textContent"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -97,7 +97,7 @@ wait = Selenium::WebDriver::Wait.new(timeout: 10)
 begin
   driver.get 'https://google.com/ncr'
   driver.find_element(name: 'q').send_keys 'cheese', :return
-  first_result = wait.until { driver.find_element(css: 'h3>div') }
+  first_result = wait.until { driver.find_element(css: 'h3') }
   puts first_result.attribute('textContent')
 ensure
   driver.quit
