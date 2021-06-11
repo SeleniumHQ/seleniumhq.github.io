@@ -851,11 +851,7 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Navigate to url
-driver.Url="https://example.com";
 
-// Retrieves the text of the element
-String text = driver.FindElement(By.cssSelector("h1")).Text;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url
