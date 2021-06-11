@@ -404,6 +404,7 @@ namespace FindElementsFromElement {
 
   (async function example() {
       let driver = new Builder()
+
           .forBrowser('chrome')
           .build();
 
@@ -533,6 +534,7 @@ Wird verwendet um das Element, das den Fokus hat zu finden oder um es zu verfolg
   {{< code-panel language="kotlin" >}}
   import org.openqa.selenium.By
   import org.openqa.selenium.chrome.ChromeDriver
+
 
   fun main() {
       val driver = ChromeDriver()
@@ -855,7 +857,12 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please provide a pr for code sample
+
+// Navigate to url
+driver.Url="https://example.com";
+
+// Retrieves the text of the element
+String text = driver.FindElement(By.cssSelector("h1")).Text;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url

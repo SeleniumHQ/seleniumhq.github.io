@@ -1,19 +1,20 @@
 ---
-title: "Web element"
+title: "网络元素"
 weight: 9
 ---
 
-WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant
-racine du document à l'aide d'une instance WebDriver ou en recherchant sous une autre
-WebElement
 
-L'API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont
-basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
+WebElement表示DOM元素.
+可以通过使用WebDriver实例从文档根节点进行搜索,
+或者在另一个WebElement下进行搜索来找到WebElement.
+
+WebDriver API提供了内置方法来查找基于不同属性的WebElement
+(例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
 
 ## Find Element
 
-Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante,
-qui peut être utilisé pour de futures actions d'élément
+此方法用于查找元素并返回第一个匹配的单个WebElement引用,
+该元素可用于进一步的元素操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -96,8 +97,9 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similaire à "Rechercher un élément", mais renvoie une liste de WebElements correspondants. Pour utiliser un WebElement particulier de la liste,
-vous devez parcourir la liste des éléments pour effectuer une action sur l'élément sélectionné.
+与"Find Element"相似, 但返回的是匹配WebElement列表.
+要使用列表中的特定WebElement,
+您需要遍历元素列表以对选定元素执行操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -223,8 +225,9 @@ fun main() {
 
 ## Find Element From Element
 
-Il est utilisé pour rechercher un élément enfant dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec 'findElement' pour accéder aux éléments enfants
+此方法用于在父元素的上下文中查找子元素.
+为此, 父WebElement与"findElement"链接并访问子元素.
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -301,8 +304,8 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements From Element
 
-Il est utilisé pour rechercher la liste des WebElements enfants correspondants dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec "findElements" pour accéder aux éléments enfants
+此方法用于在父元素的上下文中查找匹配子WebElement的列表.
+为此, 父WebElement与"findElements"链接并访问子元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -440,7 +443,7 @@ namespace FindElementsFromElement {
 
 ## Get Active Element
 
-Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le contexte de navigation actuel.
+此方法用于追溯或查找当前页面上下文中具有焦点的DOM元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -547,10 +550,10 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
 
 ## Is Element Enabled
 
-This method is used to check if the connected Element
-is enabled or disabled on a webpage.
-Returns a boolean value, **True** if the connected element is
-**enabled** in the current browsing context else returns **false**.
+此方法用于检查网页上连接的元素是否被启用或禁用.
+返回一个布尔值,
+如果在当前浏览上下文中`启用`了连接的元素, 则返回True；
+否则返回`false` .
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -602,12 +605,12 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
 
 ## Is Element Selected
 
-This method determines if the referenced Element
-is _Selected_ or not. This method is widely used on
-Check boxes, radio buttons, input elements, and option elements.
+此方法确定是否 _已选择_ 引用的元素.
+此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
 
-Returns a boolean value, **True** if referenced element is
-**selected** in the current browsing context else returns **false**.
+返回一个布尔值,
+如果在当前浏览上下文中 **已选择** 引用的元素,
+则返回 **True**, 否则返回 **False**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -656,8 +659,9 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
 
 ## Get Element TagName
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
-of the referenced Element which has the focus in the current browsing context.
+此方法用于获取在当前浏览上下文中
+具有焦点的被引用元素的
+[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) .
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -706,14 +710,13 @@ let value = await driver.findElement(By.css('h1')).getTagName();
 
 ## Get Element Rect
 
-It is used to fetch the dimensions and coordinates
-of the referenced element.
+用于获取参考元素的尺寸和坐标.
 
-The fetched data body contain the following details:
-* X-axis position from the top-left corner of the element
-* y-axis position from the top-left corner of the element
-* Height of the element
-* Width of the element
+提取的数据主体包含以下详细信息:
+* 元素左上角的X轴位置
+* 元素左上角的y轴位置
+* 元素的高度
+* 元素宽度
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -769,10 +772,9 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## 获取元素CSS值
 
-Retrieves the value of specified computed style property
-of an element in the current browsing context.
+获取当前浏览上下文中元素的特定计算样式属性的值.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -829,9 +831,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## 获取元素文本
 
-Retrieves the rendered text of the specified element.
+获取特定元素渲染后的文本.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -849,11 +851,7 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Navigate to url
-driver.Url="https://example.com";
-
-// Retrieves the text of the element
-String text = driver.FindElement(By.cssSelector("h1")).Text;
+// Please provide a pr for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url

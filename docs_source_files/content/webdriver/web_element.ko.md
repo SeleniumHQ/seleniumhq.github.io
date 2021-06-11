@@ -337,6 +337,7 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
           }
       }
   }
+
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
@@ -855,7 +856,11 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please provide a pr for code sample
+// Navigate to url
+driver.Url="https://example.com";
+
+// Retrieves the text of the element
+String text = driver.FindElement(By.cssSelector("h1")).Text;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url

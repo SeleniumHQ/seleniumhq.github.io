@@ -1,19 +1,17 @@
 ---
-title: "Web element"
+title: "Web要素"
 weight: 9
 ---
 
-WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant
-racine du document à l'aide d'une instance WebDriver ou en recherchant sous une autre
-WebElement
+Web要素はDOM要素を表します。
+Web要素は、WebDriverインスタンスを使用してドキュメントルートから検索するか、別のWeb要素の下で検索することで見つけることができます。
 
-L'API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont
-basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
+WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
 
-## Find Element
+## 要素の検索
 
-Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante,
-qui peut être utilisé pour de futures actions d'élément
+要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。
+これは、将来の要素アクションに使用できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -94,10 +92,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements
+## 複数の要素の検索
 
-Similaire à "Rechercher un élément", mais renvoie une liste de WebElements correspondants. Pour utiliser un WebElement particulier de la liste,
-vous devez parcourir la liste des éléments pour effectuer une action sur l'élément sélectionné.
+'要素の検索'に似ていますが、一致するWeb要素のリストを返します。
+リストから特定のWeb要素を使用するには、要素のリストをループして、選択した要素に対してアクションを実行する必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -220,11 +218,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+## 要素から要素の検索
 
-## Find Element From Element
-
-Il est utilisé pour rechercher un élément enfant dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec 'findElement' pour accéder aux éléments enfants
+親要素のコンテキスト内で子要素を見つけるために使用します。
+これを実現するには、親Web要素を'findElement'と連鎖して、子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -299,10 +296,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements From Element
+## 要素から複数の要素の検索
 
-Il est utilisé pour rechercher la liste des WebElements enfants correspondants dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec "findElements" pour accéder aux éléments enfants
+親要素のコンテキスト内で一致する子Web要素のリストを見つけるために使用します。
+これを実現するために、親Web要素は’findElements'と連鎖して子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -438,9 +435,9 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Active Element
+## アクティブな要素の取得
 
-Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le contexte de navigation actuel.
+現在のブラウジングコンテキストにフォーカスがあるDOM要素を追跡（または）検索するために使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -545,12 +542,11 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Enabled
+## 要素が有効か
 
-This method is used to check if the connected Element
-is enabled or disabled on a webpage.
-Returns a boolean value, **True** if the connected element is
-**enabled** in the current browsing context else returns **false**.
+このメソッドは、接続された要素がWebページで有効または無効になっているかどうかを確認するために使います。 
+ブール値を返し、現在のブラウジングコンテキストで接続されている要素が 
+**有効（enabled）** になっている場合は **True** 、そうでない場合は **false** を返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -600,14 +596,12 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Selected
+## 要素が選択されているかどうか
 
-This method determines if the referenced Element
-is _Selected_ or not. This method is widely used on
-Check boxes, radio buttons, input elements, and option elements.
+このメソッドは、参照された要素が選択されているかどうかを判断します。 
+このメソッドは、チェックボックス、ラジオボタン、入力要素、およびオプション要素で広く使われています。
 
-Returns a boolean value, **True** if referenced element is
-**selected** in the current browsing context else returns **false**.
+ブール値を返し、現在のブラウジングコンテキストで参照された要素が **選択されている** 場合は **True** 、そうでない場合は **false** を返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -654,10 +648,10 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element TagName
+## 要素のタグ名を取得
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
-of the referenced Element which has the focus in the current browsing context.
+これは、現在のブラウジングコンテキストにフォーカスがある参照された要素の
+[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) を取得するために使います。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -704,16 +698,15 @@ let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Rect
+## 要素矩形を取得
 
-It is used to fetch the dimensions and coordinates
-of the referenced element.
+参照される要素の寸法と座標を取得するために使います。
 
-The fetched data body contain the following details:
-* X-axis position from the top-left corner of the element
-* y-axis position from the top-left corner of the element
-* Height of the element
-* Width of the element
+取得データのbodyには、次の詳細が含まれます。
+* 要素の左上隅からのx軸の位置
+* 要素の左上隅からのy軸の位置
+* 要素の高さ
+* 要素の幅
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -769,10 +762,9 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## 要素のCSSの値を取得
 
-Retrieves the value of specified computed style property
-of an element in the current browsing context.
+現在のブラウジングコンテキスト内の要素の指定された計算したスタイル属性の値を取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -829,9 +821,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## 要素テキストを取得
 
-Retrieves the rendered text of the specified element.
+指定された要素のレンダリングされたテキストを取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -849,11 +841,7 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Navigate to url
-driver.Url="https://example.com";
-
-// Retrieves the text of the element
-String text = driver.FindElement(By.cssSelector("h1")).Text;
+// Please provide a pr for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url

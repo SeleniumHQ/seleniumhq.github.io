@@ -1,19 +1,20 @@
 ---
-title: "Web element"
+title: "Webelement"
 weight: 9
 ---
 
-WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant
-racine du document à l'aide d'une instance WebDriver ou en recherchant sous une autre
-WebElement
+WebElement repräsentiert ein Element im DOM. WebElemente können ausgehend
+vom Wurzelknoten (root) gesucht werden oder ausgehend von einem anderen WebElement.
 
-L'API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont
-basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
+Die WebDriver API stellt Methoden zur Verfügung, die es ermöglichen WebElemente,
+aufgrund ihrer Eigenschaften zu finden wie z.B. ID, Name, Class (CSS-Klasse), Xpath,
+CSS Selektoren, Text einer Verlinkung, etc.
 
-## Find Element
+## Elemente finden
 
-Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante,
-qui peut être utilisé pour de futures actions d'élément
+findElement wird verwendet, um ein WebElement zu finden. Die Funktion liefert
+als Rückgabewert die Referenz auf ein einzelnes WebElement, dieses kann
+dann für weitere Aktionen verwendet werden.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -94,10 +95,11 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements
+## Finden einer Liste von Elementen
 
-Similaire à "Rechercher un élément", mais renvoie une liste de WebElements correspondants. Pour utiliser un WebElement particulier de la liste,
-vous devez parcourir la liste des éléments pour effectuer une action sur l'élément sélectionné.
+Äquivalent zu 'Find Element' liefert die Funktion findElements eine Liste von
+WebElementen. Um ein bestimmtes Element aus der Liste zu verwenden, ist es notwendig
+über die Liste zu iterieren, um eine Aktion an den einzelnen Elementen auszuführen.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -221,10 +223,12 @@ fun main() {
 {{< / code-tab >}}
 
 
-## Find Element From Element
+## Finden eines Elements innerhalb anderer Elemente
 
-Il est utilisé pour rechercher un élément enfant dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec 'findElement' pour accéder aux éléments enfants
+Es ist auch möglich Elemente zu suchen, basierend auf einem existierenden
+Webelemente, sogenannte "Kinder" bzw. "Nachfahren".
+Um dies durchzuführen, wird die 'findElement' Methode direkt vom Elternknoten
+ausgeführt, um nach entsprechenden Kinder-Elementen zu suchen.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -299,10 +303,11 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements From Element
+## Finden von mehreren Elementen innerhalb eines anderen Elements
 
-Il est utilisé pour rechercher la liste des WebElements enfants correspondants dans le contexte de l'élément parent.
-Pour ce faire, le WebElement parent est chaîné avec "findElements" pour accéder aux éléments enfants
+findElements wird verwenden um entsprechende WebElemente im Kontext eines
+Eltern-Elementen zu finden. Um dies durchzuführen wird die 'findElements'-Methode
+vom entsprechenden WebElement ausgeführt.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -399,6 +404,7 @@ namespace FindElementsFromElement {
 
   (async function example() {
       let driver = new Builder()
+
           .forBrowser('chrome')
           .build();
 
@@ -438,9 +444,9 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Active Element
+## Aktives Element
 
-Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le contexte de navigation actuel.
+Wird verwendet um das Element, das den Fokus hat zu finden oder um es zu verfolgen.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -529,6 +535,7 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
   import org.openqa.selenium.By
   import org.openqa.selenium.chrome.ChromeDriver
 
+
   fun main() {
       val driver = ChromeDriver()
       try {
@@ -545,19 +552,19 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Enabled
+## Element aktiviert?
 
-This method is used to check if the connected Element
-is enabled or disabled on a webpage.
-Returns a boolean value, **True** if the connected element is
-**enabled** in the current browsing context else returns **false**.
+Die Methode dient dazu, um festzustellen, ob das referenzierte
+Element prüfen ob es aktiviert oder deaktiviert ist. Der Rückgabewert
+ist ein Boolean, **Wahr** wenn das Element **aktiv** (enabled)
+ist, andernfalls **Falsch**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
   //navigates to url
   driver.get("https://www.google.com/");
 
-  //returns true if element is enabled else returns false
+  // Returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -600,14 +607,15 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Is Element Selected
+## Element ausgewählt?
 
-This method determines if the referenced Element
-is _Selected_ or not. This method is widely used on
-Check boxes, radio buttons, input elements, and option elements.
+Die Methode stellt fest of das referenzierte Element ausgewählt (_Selected_)
+ist oder nicht. Die Methode wird häufig verwendet mit WebElementen vom Typ
+Checkbox, Radiobutton, Eingabefelder und anderen Elementen die auswählbare
+Optionen anbieten.
 
-Returns a boolean value, **True** if referenced element is
-**selected** in the current browsing context else returns **false**.
+Der Rückgabewert ist ein Boolean, **Wahr** wenn das Element im aktuellen
+Browserkontext **selektiert** ist, andernfalls den Wert **Falsch**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -654,10 +662,10 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element TagName
+## TagName des Elements ermitteln
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
-of the referenced Element which has the focus in the current browsing context.
+Wird verwendet um den [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
+des referenzierten Elements, zu ermitteln.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -704,16 +712,16 @@ let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Rect
+## Ermitteln des Elementbereichs (Rect)
 
-It is used to fetch the dimensions and coordinates
-of the referenced element.
+Wird verwendet um die Dimension und die Koordinaten des
+entsprechenden Elementes zu ermitteln.
 
-The fetched data body contain the following details:
-* X-axis position from the top-left corner of the element
-* y-axis position from the top-left corner of the element
-* Height of the element
-* Width of the element
+Der Rückgabewert liefert folgende Werte:
+* X-Koordinate des Elementes ausgehend von der linken oberen Ecke
+* Y-Koordinate des Elementes ausgehend von der linken oberen Ecke
+* Höhe des Elementes
+* Breite des Elementes
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -769,10 +777,10 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## Ermitteln von CSS Werten
 
-Retrieves the value of specified computed style property
-of an element in the current browsing context.
+Liefert den Wert einer spezifischen CSS Eigenschaft des entsprechenden
+Elementes im aktuellen Browserkontext.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -829,9 +837,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## Ermitteln des Textes
 
-Retrieves the rendered text of the specified element.
+Liefert den Text des spezifischen Elementes.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -849,6 +857,7 @@ driver.get("https://www.example.com")
 text = driver.find_element(By.CSS_SELECTOR, "h1").text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
+// Please provide a pr for code sample
 // Navigate to url
 driver.Url="https://example.com";
 
