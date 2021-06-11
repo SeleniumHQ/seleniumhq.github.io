@@ -3,20 +3,17 @@ title: "Arbeiten mit Farben"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-You will occasionally want to validate the colour of something as part of your tests;
-the problem is that colour definitions on the web are not constant.
-Would it not be nice if there was an easy way to compare
-a HEX representation of a colour with a RGB representation of a colour,
-or a RGBA representation of a colour with a HSLA representation of a colour?
 
-Worry not. There is a solution: the _Color_ class!
+Vielleicht möchten Sie im Rahmen Ihrer Tests die Farbe von etwas überprüfen. 
+Das Problem ist, dass die Farbdefinitionen im Web nicht einheitlich sind. 
+Wäre es nicht schön, wenn es einen einfachen Vergleich gäbe eine 
+HEX-Darstellung einer Farbe mit einer RGB-Darstellung einer Farbe, 
+oder eine RGBA-Darstellung einer Farbe mit der einer HSLA-Darstellung einer Farbe? 
 
-First of all, you will need to import the class:
+Mach dir keine Sorgen. Es gibt eine Lösung: die _Color_ Klasse! 
+
+Zuerst müssen Sie die Klasse importieren:
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -37,10 +34,10 @@ include Selenium::WebDriver::Support
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now start creating colour objects.
-Every colour object will need to be created from a string representation of
-your colour.
-Supported colour representations are:
+Sie können nun mit dem Erstellen von Farbobjekten beginnen.
+Jedes Farbobjekt muss aus einem string erstellt werden der 
+deine Farbe repräsentiert.
+Unterstützte Farbdarstellungen sind:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -87,8 +84,7 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Color class also supports all of the base colour definitions
-specified in
+Die Color-Klasse unterstützt auch alle Basisfarbdefinitionen die spezifiziert sind in
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< code-tab >}}
@@ -120,9 +116,9 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Sometimes browsers will return a colour value of "transparent"
-if no colour has been set on an element.
-The Color class also supports this:
+Manchmal geben Browser den Farbwert "transparent" zurück 
+wenn für ein Element keine Farbe festgelegt wurde. 
+Die Color-Klasse unterstützt dies auch:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -145,10 +141,10 @@ private val TRANSPARENT = Color.fromString("transparent")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now safely query an element
-to get its colour/background colour knowing that
-any response will be correctly parsed
-and converted into a valid Color object:
+Sie können jetzt ein Element sicher abfragen 
+um seine Farbe/Hintergrundfarbe zu erhalten, 
+Mit dem Wissen, dass jede Antwort korrekt 
+geparst wird und in ein gültiges Color-Objekt umgewandelt wird:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -179,8 +175,7 @@ val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("log
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then directly compare colour objects:
-
+Anschließend können Sie Farbobjekte direkt vergleichen:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -205,6 +200,9 @@ assert(loginButtonBackgroundColour.equals(HOTPINK))
 
 Or you can convert the colour into one of the following formats
 and perform a static validation:
+
+Oder Sie können die Farbe in eines der folgenden Formate konvertieren 
+und eine statische Validierung durchführen:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -235,4 +233,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Colours are no longer a problem.
+Farben sind kein Problem mehr.
