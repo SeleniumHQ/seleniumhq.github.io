@@ -236,7 +236,25 @@ let element = driver.findElement({id: 'throwing-mouseover'})
 await element.click()
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinJsErrorListener() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+
+    val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
+    devTools.domains.events().addJavascriptExceptionListener(logJsError)
+
+    driver.get("https://www.google.com")
+
+    val link2click = driver.findElement(By.name("q"))
+    (driver as JavascriptExecutor).executeScript(
+      "arguments[0].setAttribute(arguments[1], arguments[2]);",
+      link2click, "onclick", "throw new Error('Hello, world!')"
+    )
+    link2click.click()
+
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
