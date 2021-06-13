@@ -344,6 +344,21 @@ public void deviceSimulationTest() {
 # Please raise a PR to add code sample
 {{< / code-panel >}}
 {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinOverridDeviceMode() {
+  val driver = ChromeDriver()
+
+  val deviceMetrics: Map<String, Any> = object : HashMap<String, Any>() {
+    init {
+        put("width", 600)
+        put("height", 1000)
+        put("mobile", true)
+        put("deviceScaleFactor", 50)
+    }
+  }
+
+  driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
+  driver.get("https://www.google.com")
+  driver.quit()
+}
 {{< / code-panel >}}
 {{< / code-tab >}}
