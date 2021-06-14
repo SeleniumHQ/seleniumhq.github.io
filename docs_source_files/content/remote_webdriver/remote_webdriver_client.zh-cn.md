@@ -219,20 +219,28 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Tracing client requests
+## 追踪客户端请求
 
-This feature is only available for Java client binding (Beta onwards). The Remote WebDriver client sends requests to the Selenium Grid server, which passes them to the WebDriver. Tracing should be enabled at the server and client-side to trace the HTTP requests end-to-end. Both ends should have a trace exporter setup pointing to the visualization framework. 
-By default, tracing is enabled for both client and server. 
-To set up the visualization framework Jaeger UI and Selenium Grid 4, please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for the desired version.
+此功能仅适用于Java客户端绑定 (Beta版以后).
+远程WebDriver客户端向Selenium网格服务器发送请求, 
+后者将请求传递给WebDriver.
+应该在服务器端和客户端启用跟踪, 
+以便端到端地追踪HTTP请求.
+两端都应该有一个指向可视化框架的追踪导出器设置.
+默认情况下, 
+对客户端和服务器都启用追踪.
+若设置可视化框架Jaeger UI及Selenium Grid 4, 
+请参阅所需版本的[追踪设置](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) .
 
-For client-side setup, follow the steps below.
+对于客户端设置, 请执行以下步骤.
 
 ### Beta 1 
 
-#### Add the required dependencies
+#### 添加所需依赖
 
-Installation of external libraries for tracing exporter can be done using Maven.
-Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+可以使用Maven安装追踪导出器的外部库.
+在项目pom.xml中添加 _opentelemetry-exporter-jaeger_ 
+和 _grpc-netty_ 的依赖项：
 
 ```xml
   <dependency>
@@ -248,7 +256,7 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
 ``` 
 
  
-#### Add/pass the required system properties while running the client
+#### 在运行客户端时添加/传递所需的系统属性
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -268,12 +276,13 @@ driver.quit();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Beta 2 onwards 
+### Beta 2 及以后
 
-#### Add the required dependencies
+#### 添加所需依赖
 
-Installation of external libraries for tracing exporter can be done using Maven.
-Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+可以使用Maven安装追踪导出器的外部库.
+在项目pom.xml中添加 _opentelemetry-exporter-jaeger_
+和 _grpc-netty_ 的依赖项：
 
 ```xml
   <dependency>
@@ -288,7 +297,7 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
     </dependency>
 ``` 
  
-#### Add/pass the required system properties while running the client
+#### 在运行客户端时添加/传递所需的系统属性
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -307,13 +316,15 @@ driver.quit();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for more information on external dependencies versions required for the desired Selenium version.
+有关所需Selenium版本
+及其外部依赖关系版本等更多信息, 
+请参阅[追踪设置](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) .
 
-More information can be found at:
+更多信息请访问:
 
 * OpenTelemetry: https://opentelemetry.io
-* Configuring OpenTelemetry:
+* 配置OpenTelemetry:
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
-* [Selenium Grid Observability]({{< ref "grid/grid_4/advanced_features/observability.zh-cn.md" >}}) 
+* [Selenium Grid 可观测性]({{< ref "grid/grid_4/advanced_features/observability.zh-cn.md" >}}) 
 
