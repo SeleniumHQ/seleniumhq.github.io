@@ -240,7 +240,25 @@ let element = driver.findElement({id: 'throwing-mouseover'})
 await element.click()
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinJsErrorListener() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+
+    val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
+    devTools.domains.events().addJavascriptExceptionListener(logJsError)
+
+    driver.get("https://www.google.com")
+
+    val link2click = driver.findElement(By.name("q"))
+    (driver as JavascriptExecutor).executeScript(
+        "arguments[0].setAttribute(arguments[1], arguments[2]);",
+        link2click, "onclick", "throw new Error('Hello, world!')"
+    )
+    link2click.click()
+
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -284,7 +302,24 @@ await driver.onLogEvent(cdpConnection, function(event) {
 await driver.executeScript('console.log("here")')
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinConsoleLogExample() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+
+    val logConsole = { c: ConsoleEvent -> print("Console log message is: " + c.messages)}
+    devTools.domains.events().addConsoleListener(logConsole)
+
+    driver.get("https://www.google.com")
+
+    val executor = driver as JavascriptExecutor
+    executor.executeScript("console.log('Hello World')")
+
+    val input = driver.findElement(By.name("q"))
+    input.sendKeys("Selenium 4")
+    input.sendKeys(Keys.RETURN)
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -327,6 +362,21 @@ public void deviceSimulationTest() {
 # Please raise a PR to add code sample
 {{< / code-panel >}}
 {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinOverridDeviceMode() {
+  val driver = ChromeDriver()
+
+  val deviceMetrics: Map<String, Any> = object : HashMap<String, Any>() {
+    init {
+        put("width", 600)
+        put("height", 1000)
+        put("mobile", true)
+        put("deviceScaleFactor", 50)
+    }
+  }
+
+  driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
+  driver.get("https://www.google.com")
+  driver.quit()
+}
 {{< / code-panel >}}
 {{< / code-tab >}}
