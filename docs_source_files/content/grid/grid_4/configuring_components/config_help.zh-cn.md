@@ -3,70 +3,73 @@ title: "配置帮助"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-The help commands display information based on the current code implementation.
-Hence, it will provide accurate information in case the documentation is not updated. 
-It is the easiest way to learn about Grid 4 configuration for any new version.
+Help命令显示基于当前代码实现的信息.
+因此, 如果文档没有更新, 它将提供准确的信息.
+这是了解任何新版本Grid4配置的最便捷方法.
 
-## Info Command
+## 信息命令
 
-The info command provides detailed docs on the following topics:
-* Configuring Selenium
-* Security
-* Session Map setup
-* Tracing
+Info命令提供以下主题的详细文档:
+* 配置Selenium
+* 安全
+* 会话表配置
+* 追踪
 
-### Config help 
+### 配置帮助 
 
-Quick config help and overview is provided by running:
+通过运行以下命令快速获取配置帮助:
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info config
 ```
 
-### Security
+### 安全
 
-To get details on setting up the Grid servers for secure communication and node registration:
+获取构建网格服务器的详细信息, 
+用于安全通信和节点注册.
+
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info security
 ```
 
-### Session Map setup
+### 会话表配置
 
-By default, Grid uses a local session map to store session information. 
-Grid supports additional storage options like Redis and JDBC - SQL supported databases. 
-To set up different session storage, use the following command to get setup steps:
+默认情况下, 
+网格使用本地会话表来存储会话信息. 
+网格支持额外的存储选项, 
+比如Redis和JDBC-SQL支持的数据库. 
+要设置不同的会话存储, 
+请使用以下命令获取设置步骤:
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
 ```
 
-### Setting up tracing with OpenTelemetry and Jaeger
+### 基于OpenTelemetry和Jaeger的追踪配置
 
-By default, tracing is enabled. To export traces and visualize them via Jaeger, use the following command for instructions:
+默认情况下, 追踪是启用的. 
+要通过Jaeger导出追踪并将其可视化, 
+请使用以下命令进行说明:
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info tracing
 ```
 
-## List the Selenium Grid commands  
+## 列出Selenium网格的命令  
  
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar --config-help
 ```
 
-It will show all the available commands and description for each one.
+上述命令将显示所有可用的命令及其描述.
 
-## Component help commands
+## 组件帮助命令
 
-Pass --help config option after the Selenium role to get component-specific config information.
+在Selenium后面键入--help的配置选项, 
+以获取特定组件的配置信息.
 
 ### Standalone 
 
@@ -85,7 +88,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar hub --help
 java -jar selenium-server-4.0.0-alpha-7.jar sessions --help
 ```
 
-### New Session Queuer
+### 队列器
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer --help
