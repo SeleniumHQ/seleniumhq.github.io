@@ -15,7 +15,7 @@ La meilleure façon de communiquer un problème est de visiter
 et de vérifier si ce problème a déjà été remonté.
 Si ce n'est pas le cas, n'hésitez pas à ouvrir une nouvel issue !
 
-De nombreux membre de la communauté fréquentent le canal IRC [irc.freenode.net](//freenode.net/). 
+De nombreux membre de la communauté fréquentent le canal Libera [Libera.chat](https://libera.chat/). 
 N'hésitez pas à passer et poser vos questions. 
 Si vous recevez de l'aide et pensez que cela devrait faire partie de la documentation, 
 votre contribution sera plus que bienvenue !

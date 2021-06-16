@@ -11,7 +11,7 @@ weight: 4
 問題を伝える最良の方法は、[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues)にアクセスし、問題が既に報告されているかどうかを検索することです。
 そうでない場合は、自由に開いてください！
 
-コミュニティの多くのメンバーは、[irc.freenode.net](//freenode.net/)で _#selenium_ IRCチャンネルに頻繁にアクセスします。
+コミュニティの多くのメンバーは、[Libera.chat](https://libera.chat/) で _#selenium_ Liberaチャンネルに頻繁にアクセスします。
 気軽に立ち寄って質問してください。
 これらのドキュメントで役立つと思われるヘルプを受け取った場合は、必ず貢献を追加してください。
 これらのドキュメントを更新することはできますが、通常のコミッター以外から投稿を受け取ると、誰にとってもずっと簡単になります。
