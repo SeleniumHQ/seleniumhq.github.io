@@ -3,6 +3,26 @@ title: "Types of testing"
 weight: 3
 ---
 
+**_Below there are some of the test types that can be performed with Selenium._**
+
+## Functional testing
+This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does _what_ it's 
+supposed to do. It's a verification activity that
+answers the question:
+>Are we building the product **_right?_**
+             
+This generally includes: the tests work without errors 
+(404, exceptions...), in a usable way (correct redirections),   
+in an accessible way and matching its specifications.
+
+For web applications, the automation of this testing can be
+done directly with Selenium by simulating expected returns.     
+This simulation could be done by record/playback or through 
+the different supported languages as explained in this documentation.
+
 ### Acceptance testing
 This type of testing is done to determine if a feature or system
 meets the customer expectations and requirements. 
@@ -15,41 +35,26 @@ For web applications, the automation of this testing can be done
 directly with Selenium by simulating user expected behaviour.
 This simulation could be done by record/playback or through the
 different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
+
+### Regression testing
+This testing is generally done after a change, fix or feature addition. 
+
+To ensure that the change has not broken any of the existing 
+functionality, some already executed tests are executed again. 
             
-### Functional testing
-This type of testing is done to determine if a
-feature or system functions properly without issues. It checks
-the system at different levels to ensure that all scenarios
-are covered and that the system does _what_ it's 
-supposed to do. It's a verification activity that
-answers the question:
->Are we building the product **_right?_**
-             
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
-(see **_acceptance testing_** above).
+The set of re-executed tests can be full or partial
+and can include several different types, depending
+on the application and development team.
 
-For web applications, the automation of this testing can be
-done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through 
-the different supported languages as explained in this documentation.
+## Non-Functional testing
 
-### Performance testing
-As its name indicates, performance tests are done 
-to measure how well an application is performing.
-
-There are two main sub-types for performance testing:
-
-#### Load testing
-Load testing is done to verify how well the 
+### Load testing
+As a sub-type of Performance testing, Load testing is done to verify how well the 
 application works under different defined loads 
 (usually a particular number of users connected at once).
 
-#### Stress testing
-Stress testing is done to verify how well the
+### Stress testing
+As a sub-type of Performance testing, stress testing is done to verify how well the
 application works under stress (or above the maximum supported load).
 
 Generally, performance tests are done by executing some 
@@ -66,20 +71,12 @@ throughput, latency, data loss, individual component loading times...
 Note 1: All browsers have a performance tab in their
 developers' tools section (accessible by pressing F12)
 
-Note 2: is a subtype of **_non-functional testing_**
-as this is generally measured per system and not per function/feature.
-            
-### Regression testing
-This testing is generally done after a change, fix or feature addition. 
+Note 2: this is generally measured per system and not per function/feature.
+ 
+_____________________ 
+**_Below there are some of the testing methods (according to ISTQB Agile Extension syllabus) that can be implemented through Selenium._**
 
-To ensure that the change has not broken any of the existing 
-functionality, some already executed tests are executed again. 
-            
-The set of re-executed tests can be full or partial
-and can include several different types, depending
-on the application and development team.
-            
-### Test driven development (TDD)
+## Test driven development (TDD)
 Rather than a test type _per se_, TDD is an iterative
 development methodology in which tests drive the design of a feature.
 
@@ -93,7 +90,7 @@ and this process continues until all tests are passing.
 This aims to speed up the development of an application
 based on the fact that defects are less costly the earlier they are found.
 
-### Behavior-driven development (BDD)
+## Behavior-driven development (BDD)
 BDD is also an iterative development methodology
 based on the above TDD, in which the goal is to involve
 all the parties in the development of an application.
