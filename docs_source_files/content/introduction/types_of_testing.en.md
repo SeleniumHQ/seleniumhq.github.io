@@ -54,10 +54,10 @@ application works under different defined loads
 (usually a particular number of users connected at once).
 
 ### Stress testing
-As a sub-type of Performance testing, stress testing is done to verify how well the
+As a sub-type of Performance testing, Stress testing is done to verify how well the
 application works under stress (or above the maximum supported load).
 
-Generally, performance tests are done by executing some 
+Generally, Performance tests are done by executing some 
 Selenium written tests simulating different users 
 hitting a particular function on the web app and 
 retrieving some meaningful measurements. 
@@ -71,7 +71,7 @@ throughput, latency, data loss, individual component loading times...
 Note 1: All browsers have a performance tab in their
 developers' tools section (accessible by pressing F12)
 
-Note 2: this is generally measured per system and not per function/feature.
+Note 2: This is generally measured per system and not per function/feature.
  
 _____________________ 
 **_Below there are some of the testing methods (according to ISTQB Agile Extension syllabus) that can be implemented through Selenium._**
