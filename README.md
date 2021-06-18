@@ -67,6 +67,7 @@ Files are living under [website_hugo_files](website_hugo_files).
  
 Steps needed to have this working locally and work on it:
 
+- Follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) instructions from Docsy
 - Clone this repository
 - Run `git submodule update --init --recursive`
 - `cd website_hugo_files`
