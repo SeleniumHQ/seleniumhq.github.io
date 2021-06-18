@@ -17,8 +17,8 @@ Bitte überzeuge Dich zuerst mit Hilfe der Suchfunktion ob der Fehler
 schon eingemeldet wurde oder nicht. Falls nicht, hab keine Scheu diesen
 einzumelden.
 
-Viele Nutzer der Selenium Community nutzen täglich den _#selenium_ IRC 
-Chat bei [irc.freenode.net](//freenode.net/).
+Viele Nutzer der Selenium Community nutzen täglich den _#selenium_ Libera 
+Chat bei [Libera.chat](https://libera.chat/).
 Hier kannst Du Fragen stellen und wenn Dir geholfen wird und Du der Meinung
 bist das könnte auch für andere Benutzer hilfreich sein, dann solltest
 Du dies auch anderen zur Verfügung stellen.
