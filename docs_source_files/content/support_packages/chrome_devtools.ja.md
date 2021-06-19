@@ -380,3 +380,44 @@ fun kotlinOverridDeviceMode() {
 }
 {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Collect Performance Metrics
+
+Using Selenium's integration with CDP, one can collect various performance metrics while navigating the application.
+
+{{< code-tab >}}
+{{< code-panel language="java" >}}
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void performanceMetricsExample() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
+
+    driver.get("https://google.com");
+    driver.quit();
+
+    for(Metric m : metricList) {
+        System.out.println(m.getName() + " = " + m.getValue());
+    }
+}
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< / code-tab >}}
