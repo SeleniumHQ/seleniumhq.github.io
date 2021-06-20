@@ -16,8 +16,9 @@ The best way to communicate an issue is to visit
 and search to see whether or not the issue has been filed already.
 If not, feel free to open one!
 
-Many members of the community frequent
-the _#selenium_ IRC channel at [irc.freenode.net](//freenode.net/). 
+Many members of the community 
+are present at the #selenium 
+Libera chat at [Libera.chat](https://libera.chat/).
 Feel free to drop in and ask questions
 and if you get help which you think could be of use within these documents,
 be sure to add your contribution!

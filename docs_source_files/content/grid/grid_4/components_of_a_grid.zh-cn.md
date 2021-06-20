@@ -3,13 +3,6 @@ title: "服务网格的组件"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> There are certain paragaraphs needs translation from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-
 ![Grid](/images/grid_4.png)
 
 ## Router
@@ -47,7 +40,7 @@ it by sending us pull requests!
 节点会自动注册运行它的计算机路径上所有可用的浏览器驱动程序.
 它还为基于Chromium的浏览器和Firefox的每个可用的CPU都创建插槽.
 对于Safari和Internet Explorer,
-则仅创建一个插槽。
+则仅创建一个插槽.
 通过特定的配置, 
 它可以在Docker容器中运行会话.
 您可以在下一 [章节]({{< ref "/grid/grid_4/setting_up_your_own_grid.zh-cn.md" >}}) 
@@ -59,47 +52,58 @@ it by sending us pull requests!
 例如, Windows节点可以具有将Internet Explorer作为浏览器选项的功能,
 而在Linux或Mac上则无法实现.
 
-## Session Map
+## 会话表
 
-The Session Map is a data store that keeps the information of the session id and the Node 
-where the session is running. It serves as a support for the Router in the process of 
-forwarding a request to the Node. The Router will ask the Session Map for the Node 
-associated to a session id.
+会话表是一种数据存储的方式, 
+用于保存会话id和会话运行的节点的信息.
+它作为路由支持, 
+在向节点转发请求的过程中起作用.
+路由将通过会话表获取与会话id关联的节点.
 
-## New Session Queuer, New Session Queue
+## 新的会话队列器, 新的会话队列
 
-The New Session Queuer is the only
-component which can communicate with the New Session Queue. It handles all queue operations like
-add to manipulate the queue. It has configurable parameters for setting 
-the request timeout and request retry interval.
+新的会话队列器是唯一可以与新会话队列通信的组件.
+它处理所有的诸如添加这样操纵队列的操作.
+它具有用于设置请求超时和请求重试间隔的可配置参数.
 
-The New Session Queuer receives the new session request from the Router and adds it to the queue. 
-The queuer waits until it receives the response for the request. 
-If the request times out, the request is rejected immediately and not added to the queue. 
+新的会话队列器从路由器接收新会话请求
+并将其添加到队列中.
+队列一直等待直到获取了请求的响应.
+如果请求超时, 
+请求将立即被拒绝, 
+并且不会添加到队列中. 
 
-Upon successfully adding the request to the queue, Event Bus triggers an event. 
-The Distributor picks up this event and polls the queue. It now attempts to create a session.
+成功地将请求添加到队列后, 
+事件总线将触发一个事件.
+分发服务器接收此事件并轮询队列.
+此时, 将尝试创建一个会话.
 
-If the requested capabilities do not exist in any of the registered Nodes, then the request is rejected
-immediately and the client receives a response.
+如果所请求的功能不存在于任何已注册的节点中, 
+那么请求将立即被拒绝, 
+并且客户端将收到响应.
 
-If the requested capabilities match the capabilities of any of Node slots, Distributor attempts to get the
-available slot. If all the slots are busy, the Distributor will ask the queuer to add the request 
-to the front of the queue. The Distributor receives the request again after the request retry interval. 
-It will attempt retries until the request is successful or has timed out. 
-If request times out while retrying or adding to the front of the queue its rejected.
+如果请求的功能与任何节点插槽的功能匹配, 
+分发服务器将尝试获取可用插槽.
+如果所有插槽都很忙, 
+分发服务器将要求队列器将请求添加到队列前面.
+分发服务器在请求重试间隔之后再次接收请求.
+它将尝试重试, 
+直到请求成功或超时.
+如果请求在重试或添加到队列前面时超时, 
+则其将被拒绝.
 
-After getting an available slot and session creation, the Distributor passes the new session response 
-to the New Session Queuer via the Event Bus. The New Session Queuer will respond to the client when it
-receives the event.
+在获得可用的插槽和会话创建之后, 
+分发服务器通过事件总线将新会话响应传递给新会话队列器.
+新的会话队列器将在接收到事件时响应给客户端. 
 
-## Event Bus
+## 事件总线
 
-The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
-The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
-When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
+事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
+网格通过消息进行大部分内部通信, 避免了昂贵的HTTP调用.
+当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.
 
-## Roles in Grid
+
+## 网格中的角色
 
 在网格3中, 组件是集线器和节点, 
 可以通过以独立模式启动网格来一起运行它们.
