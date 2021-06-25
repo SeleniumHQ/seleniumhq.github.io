@@ -65,7 +65,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
   分发服务器从队列中接收请求.
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer
+        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueue
     ```
 
 * 第4步: 启动分配器.
@@ -73,14 +73,14 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
   负责在会话的创建时分配节点.
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
     ```
 
 * 第5步:下一步是启动路由器,
   你将暴露给网络一个地址.
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
+        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
     ```
 
 * 第6步: 最终，添加节点.
