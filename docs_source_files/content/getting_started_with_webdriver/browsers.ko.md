@@ -9,7 +9,7 @@ Selenium 프레임워크는 공식적으로 다음과 같은 브라우저를 지
 
 | 브라우저 | 관리자 | 지원 버전 |
 | -------- | ---------- | ------------------ |
-| Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 모든 버전 |
+| Chrome | [Chromium](//sites.google.com/chromium.org/driver/) | 모든 버전 |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 이상 |
 | Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84 이상 |
 | Internet Explorer | Selenium | 6 이상 |

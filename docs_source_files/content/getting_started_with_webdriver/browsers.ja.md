@@ -10,7 +10,7 @@ Seleniumフレームワークは公式に以下のブラウザをサポートし
 
 | ブラウザ | メンテナ | サポートバージョン |
 | -------- | ---------- | ------------------ |
-| Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 全てのバージョン |
+| Chrome | [Chromium](//sites.google.com/chromium.org/driver/) | 全てのバージョン |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 以上 |
 | Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84 以上 |
 | Internet Explorer | Selenium | 6 以上 |
