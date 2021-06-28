@@ -170,6 +170,17 @@ $selenium-blue-color: #0033A0;
   background-color: $white;
 }
 
+.selenium-button.selenium-white-green {
+  color: $white;
+  border-color: $white;
+  transition: 0.3s;
+}
+
+.selenium-button.selenium-white-green:hover {
+  color: $primary;
+  background-color: $white;
+}
+
 .selenium-link {
   color: $primary;
   border-bottom: 2px solid;
