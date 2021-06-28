@@ -10,8 +10,8 @@ you will need to open a browser and actually test it.
 Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
 to be in place to be run effectively.
-It is a good rule to always ask yourself if what you want to test
-can be done using more lightweight test approaches such as unit tests
+It is a good rule to always ask yourself if your test
+can be performed using more lightweight test approaches such as unit tests
 or with a lower-level approach.
 
 Once you have made the determination that you are in the web browser testing business,
