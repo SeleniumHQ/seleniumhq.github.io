@@ -279,7 +279,44 @@ public void consoleLogTest() {
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-# Please raise a PR to add code sample
+  
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+using System;
+using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
+
+
+namespace Selenium4Sample
+{
+    public class Example
+    {
+
+        protected IDevToolsSession session;
+        protected IWebDriver driver;
+        protected DevToolsSessionDomains devToolsSession;
+
+        public void ConsoleLogTest()
+        {
+            driver = new ChromeDriver();
+            //Get DevTools
+            IDevTools devTools = driver as IDevTools;
+            //DevTools Session
+            session = devTools.GetDevToolsSession();
+
+            devToolsSession.Log.Enable();
+            devToolsSession.Log.EntryAdded += Log_EntryAdded;
+        }
+
+        private void Log_EntryAdded(object sender, OpenQA.Selenium.DevTools.V91.Log.EntryAddedEventArgs e)
+        {
+            Console.WriteLine("log: " + e.Entry.Text);
+            Console.WriteLine("level: " + e.Entry.Level);
+        }
+
+    }
+}  
+
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample
