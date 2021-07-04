@@ -26,7 +26,11 @@ vertraut zu machen.
 
 ## Grid
 
-Mit Selenium Grid können Tests auf verschiedenen Maschinen auf unterschiedlichen Plattformen ausgeführt werden. 
-Das Starten der Tests findet lokal statt, die automatische Ausführung serverseitig. 
+Mit Selenium Grid können Tests auf verschiedenen Maschinen auf 
+unterschiedlichen Plattformen ausgeführt werden. 
+Das Starten der Tests findet lokal statt, 
+die automatische Ausführung serverseitig. 
 
-Sollen erstellte WebDriver-Tests in mehreren Browsern und Betriebssystemen ausgeführt werden, kann dafür _[Grid]({{< ref "/grid/_index.md" >}})_ genutzt werden.
+Sollen erstellte WebDriver-Tests in mehreren 
+Browsern und Betriebssystemen ausgeführt werden, 
+kann dafür _[Grid]({{< ref "/grid/_index.md" >}})_ genutzt werden.
