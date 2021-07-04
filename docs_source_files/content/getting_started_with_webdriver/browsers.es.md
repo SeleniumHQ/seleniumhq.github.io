@@ -9,7 +9,7 @@ El framework de Selenium soporta oficialmente los siguientes navegadores:
 
 | Navegador | Mantenedor | Versiones Soportadas |
 | -------- | ---------- | ------------------ |
-| Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Todas las Versiones |
+| Chrome | [Chromium](//sites.google.com/chromium.org/driver/) | Todas las Versiones |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 y más recientes |
 | Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84 y más recientes |
 | Internet Explorer | Selenium | 6 y más recientes |

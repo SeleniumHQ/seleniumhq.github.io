@@ -1323,7 +1323,18 @@ header = driver.find_element(By.CSS_SELECTOR, "h1")
 driver.execute_script('return arguments[0].innerText', header)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR
+    //creating Chromedriver instance
+	IWebDriver driver = new ChromeDriver();
+	//Creating the JavascriptExecutor interface object by Type casting
+	IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+	//Button Element
+	IWebElement button = driver.FindElement(By.Name("btnLogin"));
+	//Executing JavaScript to click on element
+	js.ExecuteScript("arguments[0].click();", button);
+	//Get return value from script
+	String text = (String)js.ExecuteScript("return arguments[0].innerText", button);
+	//Executing JavaScript directly
+	js.ExecuteScript("console.log('hello world')");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Stores the header element
