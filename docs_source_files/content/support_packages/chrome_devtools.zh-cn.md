@@ -235,7 +235,25 @@ let element = driver.findElement({id: 'throwing-mouseover'})
 await element.click()
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+fun kotlinJsErrorListener() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+
+    val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
+    devTools.domains.events().addJavascriptExceptionListener(logJsError)
+
+    driver.get("https://www.google.com")
+
+    val link2click = driver.findElement(By.name("q"))
+    (driver as JavascriptExecutor).executeScript(
+        "arguments[0].setAttribute(arguments[1], arguments[2]);",
+        link2click, "onclick", "throw new Error('Hello, world!')"
+    )
+    link2click.click()
+
+    driver.quit()
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -325,6 +343,62 @@ public void deviceSimulationTest() {
 
     driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
     driver.get("https://www.google.com");
+}
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
+# Please raise a PR to add code sample
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
+fun kotlinOverridDeviceMode() {
+  val driver = ChromeDriver()
+
+  val deviceMetrics: Map<String, Any> = object : HashMap<String, Any>() {
+    init {
+        put("width", 600)
+        put("height", 1000)
+        put("mobile", true)
+        put("deviceScaleFactor", 50)
+    }
+  }
+
+  driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
+  driver.get("https://www.google.com")
+  driver.quit()
+}
+{{< / code-panel >}}
+{{< / code-tab >}}
+
+## Collect Performance Metrics
+
+Using Selenium's integration with CDP, one can collect various performance metrics while navigating the application.
+
+{{< code-tab >}}
+{{< code-panel language="java" >}}
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void performanceMetricsExample() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
+
+    driver.get("https://google.com");
+    driver.quit();
+
+    for(Metric m : metricList) {
+        System.out.println(m.getName() + " = " + m.getValue());
+    }
 }
 {{< / code-panel >}}
 {{< code-panel language="python" >}}

@@ -62,7 +62,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 ディストリビューターはキューからリクエストを受け取ります。
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer
+        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueue
     ```
 
 * Step 4: ディストリビューターを起動します。
@@ -70,13 +70,13 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 セッションの作成要求が呼び出されたときに、ノードを割り当てる必要があります。
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
     ```
 
 * Step 5: 次に、Webに公開するアドレスであるルーターを起動します。
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
+        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
     ```
 
 * Step 6: 最後に、ノードを追加します。

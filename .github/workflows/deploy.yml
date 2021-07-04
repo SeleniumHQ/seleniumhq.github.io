@@ -9,7 +9,7 @@ jobs:
   deploy:
     # Skip job based on the commit message
     if: contains(toJson(github.event.commits), '[skip ci]') == false
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2

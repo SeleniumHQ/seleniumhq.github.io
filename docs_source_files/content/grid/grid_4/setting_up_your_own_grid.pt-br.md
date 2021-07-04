@@ -55,19 +55,19 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 * Passo 3: Inicie o novo enfileirador de sessão, ele adiciona a nova solicitação de sessão a uma fila local. O distribuidor atende o pedido da fila.
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-6.jar sessionqueuer
+        java -jar selenium-server-4.0.0-alpha-6.jar sessionqueue
     ```
 
 * Passo 4: Inicie o Distribuidor. Todos os Nós são anexados como parte do processo do Distribuidor. É responsável por atribuir um nó, quando um pedido de criação de sessão é invocado.
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
     ```
 
 * Passo 5: A próxima etapa é iniciar o Roteador, um endereço que você exporia à web
 
     ```shell
-        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
+        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
     ```
 
 * Step 6: Finalmente, adicione um Nó

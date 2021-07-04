@@ -1,0 +1,36 @@
+{{ $icon := .Get "icon" }}
+{{ $col_id := .Get "color" | default "dark" }}
+{{ $url_text := .Get "url_text" }}
+<div class="col-lg-4 mb-5 mb-lg-0 text-center bg-transparent">
+  <div class="card h-100 border-0 bg-transparent">
+    <div class="card-body">
+      <div class="mb-4 h1">
+        <span class="selenium-logo">{{ with resources.Get $icon }}{{ ( . | minify).Content | safeHTML }}{{ end }}</span>
+      </div>
+      <h4 class="h3 mb-3 {{ $col_id }}">
+        {{ if eq .Page.File.Ext "md" }}
+          {{ .Get "title" | markdownify }}
+        {{ else }}
+          {{ .Get "title" | htmlUnescape | safeHTML }}
+        {{ end }}
+      </h4>
+      <p class="mb-0">
+        {{ if eq .Page.File.Ext "md" }}
+          {{ .Inner | markdownify }}
+        {{ else }}
+          {{ .Inner | htmlUnescape | safeHTML }}
+        {{ end }}
+      </p>
+    </div>
+    <div class="card-footer bg-white p-0 border-0 bg-transparent">
+      {{ with .Get "url" }}
+      <div class="selenium-button-container">
+        <a href="{{ . }}" class="selenium-button {{ $col_id }} text-uppercase font-weight-bold">
+          {{ with $url_text }}{{ $url_text }}{{ else }}{{ T "ui_read_more" }}{{ end }}
+          <i class="pl-3 fas fa-caret-right"></i>
+        </a>
+      </div>
+      {{ end }}        
+    </div>
+  </div>
+</div>

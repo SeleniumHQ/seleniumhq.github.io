@@ -12,6 +12,6 @@ weight: 4
 并搜索问题是否已经提交。
 如果没有，请随意打开一个！
 
-社区的许多成员经常光顾 [irc.freenode.net](//freenode.net/) 的 _#selenium_ IRC 频道。
+社区的许多成员经常光顾 [Libera.chat](https://libera.chat/) 的 _#selenium_ Libera 频道。
 请随时来访并提出问题，如果您得到了您认为在这些文档中可能有用的帮助，请务必添加您的贡献！
 我们可以更新这些文档，但当我们从普通提交者之外获得贡献时，对每个人来说都容易得多。
