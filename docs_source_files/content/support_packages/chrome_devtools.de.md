@@ -286,7 +286,28 @@ devTools.createSession();
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-# Please raise a PR to add code sample
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+using System;
+using OpenQA.Selenium.DevTools.V91.Emulation;
+using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
+namespace Selenium4Sample
+{
+    public class Example
+    {
+        public void ConsoleLogTest()
+        {
+            var driver = new ChromeDriver();
+            var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession().GetVersionSpecificDomains<DevToolsSessionDomains>();
+            devToolsSessionDomains.Log.Enable();
+            devToolsSessionDomains.Log.EntryAdded += (sender, e) =>
+            {
+                Console.WriteLine("log: " + e.Entry.Text);
+                Console.WriteLine("level: " + e.Entry.Level);
+            };
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample
