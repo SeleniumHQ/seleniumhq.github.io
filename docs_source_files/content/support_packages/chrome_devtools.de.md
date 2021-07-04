@@ -286,6 +286,7 @@ devTools.createSession();
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
+
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
 using System;
