@@ -282,8 +282,8 @@ public void consoleLogTest() {
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
 using System;
-using OpenQA.Selenium.DevTools.V91.Emulation;
 using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
+
 namespace Selenium4Sample
 {
     public class Example
@@ -291,7 +291,8 @@ namespace Selenium4Sample
         public void ConsoleLogTest()
         {
             var driver = new ChromeDriver();
-            var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession().GetVersionSpecificDomains<DevToolsSessionDomains>();
+            var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession()
+                .GetVersionSpecificDomains<DevToolsSessionDomains>();
             devToolsSessionDomains.Log.Enable();
             devToolsSessionDomains.Log.EntryAdded += (sender, e) =>
             {
