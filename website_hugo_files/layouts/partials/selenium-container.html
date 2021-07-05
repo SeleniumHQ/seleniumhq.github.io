@@ -1,0 +1,34 @@
+{{ $regularPages := .regularPages }}
+{{ $col_bg := .color_bg }}
+{{ $col_button := .color_btn }}
+{{ $button_text := .btn_text }}
+<div class="row justify-content-center pt-2 pb-3 -bg-{{ $col_bg }}">
+	<div class="card text-center border-0 bg-transparent py-5">
+		<div class="card-body">
+			<h2 class="card-title">
+        {{ if eq .Page.File.Ext "md" }}
+          {{ .title | markdownify }}
+        {{ else }}
+          {{ .title | htmlUnescape | safeHTML }}
+        {{ end }}
+			</h2>
+			<p class="card-text">
+        {{ if eq .Page.File.Ext "md" }}
+          {{ .text | markdownify }}
+        {{ else }}
+          {{ .text | htmlUnescape | safeHTML }}
+        {{ end }}				
+			</p>
+			<div class="selenium-button-container">
+				<a href="{{"sponsors" | relURL}}" class="selenium-button {{ $col_button }} text-uppercase font-weight-bold">
+					{{ if eq .Page.File.Ext "md" }}
+						{{ $button_text | markdownify }}
+					{{ else }}
+						{{ $button_text | htmlUnescape | safeHTML }}
+					{{ end }}				
+					<i class="pl-3 fas fa-caret-right"></i>
+				</a>
+			</div>			
+		</div>
+	</div>
+</div>

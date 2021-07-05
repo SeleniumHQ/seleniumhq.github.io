@@ -1,7 +1,8 @@
 <div class="row justify-content-center p-5 td-box--100">
   <h2 class="selenium">News</h2>
 </div>
-{{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+{{ $regular_pages := .regular_pages }}
+{{ range first 3 (where $regular_pages "Type" "blog") }}
 <div class="row td-box--100 pb-4">
   <div class="col-sm-4 pl-5 pr-5">
     <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
