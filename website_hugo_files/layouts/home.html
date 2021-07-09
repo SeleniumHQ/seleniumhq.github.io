@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ with .Content }}
+{{ . }}
+{{ partial "selenium-level-sponsors.html" . }}
+{{ partial "platinum-level-sponsors.html" . }}
+{{ partial "news-feed.html" (dict "regular_pages" $.Site.RegularPages) }}
+{{ partial "selenium-container.html" (dict "title" "Support the Selenium Project" "text " 
+"Want to support the Selenium project? Learn more or view the full list of sponsors." 
+"color_bg" "selenium-cyan" "color_btn" "selenium-white-cyan" "btn_text" "Learn more") }}
+{{ partial "donate-to-selenium.html" . }}
+{{ end }}
+{{ end }}

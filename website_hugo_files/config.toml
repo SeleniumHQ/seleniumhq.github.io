@@ -196,3 +196,20 @@ enable = false
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
 
+
+[[menus.main]]
+identifier = "About"
+name = "About"
+weight = 10
+
+[[menus.main]]
+name = "About Selenium"
+parent = "About"
+url = "/about"
+weight = 1
+
+[[menus.main]]
+name = "Structure and Governance"
+parent = "About"
+url = "/about/project"
+weight = 10
