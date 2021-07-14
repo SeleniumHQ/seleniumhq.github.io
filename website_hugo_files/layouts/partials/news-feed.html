@@ -8,9 +8,9 @@
     <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
       <div class="card-body px-0">
         <h4 class="card-title font-weight-bold">{{ .Title }}</h4>
-        <p class="card-text mb-1">{{ .Date.Format "Monday, January 02, 2006" }}</a></p>
+        <p class="card-text mb-1">{{ .Date.Format "Monday, January 02, 2006" }}</p>
         {{ with .Params.author }}
-        <p class="card-text">{{ T "post_byline_by" }} {{ . | markdownify }}</a></p>
+        <p class="card-text">{{ T "post_byline_by" }} {{ . | markdownify }}</p>
         {{ end}}
       </div>
     </div>
