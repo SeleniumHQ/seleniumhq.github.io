@@ -213,3 +213,9 @@ name = "Structure and Governance"
 parent = "About"
 url = "/about/project"
 weight = 10
+
+[[menus.main]]
+name = "Events"
+parent = "About"
+url = "/about/events"
+weight = 20
