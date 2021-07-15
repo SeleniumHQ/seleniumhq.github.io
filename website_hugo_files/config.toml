@@ -211,29 +211,35 @@ weight = 1
 [[menus.main]]
 name = "Structure and Governance"
 parent = "About"
-url = "/about/project"
+url = "/project"
 weight = 10
 
 [[menus.main]]
 name = "Events"
 parent = "About"
-url = "/about/events"
+url = "/events"
 weight = 20
 
 [[menus.main]]
 name = "Ecosystem"
 parent = "About"
-url = "/about/ecosystem"
+url = "/ecosystem"
 weight = 30
 
 [[menus.main]]
 name = "History"
 parent = "About"
-url = "/about/history"
+url = "/history"
 weight = 40
 
 [[menus.main]]
 name = "Get Involved"
 parent = "About"
-url = "/about/getinvolved"
+url = "/getinvolved"
 weight = 50
+
+[[menus.main]]
+name = "Sponsors"
+parent = "About"
+url = "/sponsors"
+weight = 60
