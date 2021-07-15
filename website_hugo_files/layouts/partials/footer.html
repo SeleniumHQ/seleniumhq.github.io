@@ -1,5 +1,5 @@
 {{/* Avoiding showing extra sections for home page */}}
-{{ if ne .Kind "home" }}
+{{ if and (ne .Kind "home") ( and (eq .Kind "section" ) (ne .Section "sponsors" ) ) }}
 {{ partial "selenium-level-sponsors.html" . }}
 {{ partial "selenium-container.html" (dict "title" "Support the Selenium Project" "text " 
 "Want to support the Selenium project? Learn more or view the full list of sponsors." 
