@@ -88,7 +88,7 @@ $gray-900: #6F757A;
 
 $primary: #43B02A;
 $selenium-webdriver-color: #C8102E;
-$selenium-grid-color: #615E9B;
+$selenium-purple-color: #615E9B;
 $selenium-cyan-color: #59CBE8;
 $selenium-blue-color: #0033A0;
 $selenium-orange-color: #FE5000;
@@ -112,7 +112,7 @@ $selenium-orange-color: #FE5000;
 }
 
 .selenium-grid {
-  color: $selenium-grid-color;
+  color: $selenium-purple-color;
 }
 
 .selenium-button-container {
@@ -171,14 +171,14 @@ $selenium-orange-color: #FE5000;
 }
 
 .selenium-button.selenium-grid {
-  color: $selenium-grid-color;
-  border-color: $selenium-grid-color;
+  color: $selenium-purple-color;
+  border-color: $selenium-purple-color;
   transition: 0.3s;
 }
 
 .selenium-button.selenium-grid:hover {
   color: $white;
-  background-color: $selenium-grid-color;
+  background-color: $selenium-purple-color;
 }
 
 .selenium-button.selenium-white-cyan {
@@ -301,5 +301,14 @@ img {
   border-width: 0 0 0 8px !important;
   .alert-heading {
     color: $selenium-blue-color !important;
+  }
+}
+
+.alert-purple {
+  border-style: solid !important;
+  border-color: $selenium-purple-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-purple-color !important;
   }
 }

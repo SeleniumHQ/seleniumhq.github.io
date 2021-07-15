@@ -231,3 +231,9 @@ name = "History"
 parent = "About"
 url = "/about/history"
 weight = 40
+
+[[menus.main]]
+name = "Get Involved"
+parent = "About"
+url = "/about/getinvolved"
+weight = 50
