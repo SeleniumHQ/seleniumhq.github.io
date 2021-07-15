@@ -225,3 +225,9 @@ name = "Ecosystem"
 parent = "About"
 url = "/about/ecosystem"
 weight = 30
+
+[[menus.main]]
+name = "History"
+parent = "About"
+url = "/about/history"
+weight = 40

@@ -88,10 +88,10 @@ $gray-900: #6F757A;
 
 $primary: #43B02A;
 $selenium-webdriver-color: #C8102E;
-$selenium-ide-color: #0033A0;
 $selenium-grid-color: #615E9B;
 $selenium-cyan-color: #59CBE8;
 $selenium-blue-color: #0033A0;
+$selenium-orange-color: #FE5000;
 
 .selenium-logo {
   display: inline-block;
@@ -108,7 +108,7 @@ $selenium-blue-color: #0033A0;
 }
 
 .selenium-ide {
-  color: $selenium-ide-color;
+  color: $selenium-blue-color;
 }
 
 .selenium-grid {
@@ -160,14 +160,14 @@ $selenium-blue-color: #0033A0;
 }
 
 .selenium-button.selenium-ide {
-  color: $selenium-ide-color;
-  border-color: $selenium-ide-color;
+  color: $selenium-blue-color;
+  border-color: $selenium-blue-color;
   transition: 0.3s;
 }
 
 .selenium-button.selenium-ide:hover {
   color: $white;
-  background-color: $selenium-ide-color;
+  background-color: $selenium-blue-color;
 }
 
 .selenium-button.selenium-grid {
@@ -268,3 +268,38 @@ img {
   }
 }
 
+.alert-green {
+  border-style: solid !important;
+  border-color: $primary !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $primary !important;
+  }
+}
+
+.alert-orange {
+  border-style: solid !important;
+  border-color: $selenium-orange-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-orange-color !important;
+  }
+}
+
+.alert-cyan {
+  border-style: solid !important;
+  border-color: $selenium-cyan-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-cyan-color !important;
+  }
+}
+
+.alert-blue {
+  border-style: solid !important;
+  border-color: $selenium-blue-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-blue-color !important;
+  }
+}
