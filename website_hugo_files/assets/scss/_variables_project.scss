@@ -312,3 +312,11 @@ img {
     color: $selenium-purple-color !important;
   }
 }
+
+button[aria-expanded=true] .show-collapsed {
+  display: none;
+}
+
+button[aria-expanded=false] .show-expanded {
+  display: none;
+}
