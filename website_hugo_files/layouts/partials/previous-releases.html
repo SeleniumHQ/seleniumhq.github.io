@@ -1,0 +1,81 @@
+<div class="row justify-content-left p-5 td-box--100">
+  <div class="card border-0 w-100 bg-transparent">
+    <div class="card-body">
+      <h2 class="card-title">
+        Previous Releases
+      </h2>
+      <p class="card-text w-lg-75">
+        You can also find a complete list of previous Selenium releases        
+        <!-- Link trigger modal -->
+        <a href="#previous-releases" data-toggle="modal" data-target="#previous-releases">here</a>.        
+        <!-- Modal -->
+        <div class="modal fade" id="previous-releases" tabindex="-1" aria-labelledby="previous-releases-label" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="previous-releases-label">Previous Releases</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                {{ $.Scratch.Set "counter" 0 }}
+                {{ range .Site.Data.releases }}
+                <!-- Expand / Collapse -->
+                {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+                {{ $counter := $.Scratch.Get "counter" }}
+                <p>
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
+                    <i class="fas fa-plus-circle show-collapsed pr-2"></i>
+                    <i class="fas fa-minus-circle show-expanded pr-2"></i>
+                    {{ .version }}
+                  </button>
+                </p>
+                <div class="collapse" id="release-{{ $counter }}">
+                  <div class="card card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Version</th>
+                            <th scope="col">Last Modified</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">ETag</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{ range .links }}
+                          <tr>
+                            <th scope="row">
+                              <p>
+                                <a href="{{ .url }}">{{ .name }}</a>
+                              </p>
+                            </th>
+                            <td>{{ .version }}</td>
+                            <td>{{ .lastModified }}</td>
+                            <td>{{ .size }}</td>
+                            <td>{{ .etag }}</td>
+                          </tr>
+                          {{ end }}
+                        </tbody>
+                      </table>
+                    </div>                    
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+              <div class="modal-footer selenium-button-container">
+                <a href="#previous-releases" class="selenium-button selenium text-uppercase font-weight-bold" data-dismiss="modal">
+                  Close
+                  <i class="pl-3 fas fa-caret-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </p>      
+    </div>
+  </div>  
+</div>
