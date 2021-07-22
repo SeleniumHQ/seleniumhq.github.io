@@ -313,6 +313,15 @@ img {
   }
 }
 
+.alert-webdriver {
+  border-style: solid !important;
+  border-color: $selenium-webdriver-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-webdriver-color !important;
+  }
+}
+
 button[aria-expanded=true] .show-collapsed {
   display: none;
 }

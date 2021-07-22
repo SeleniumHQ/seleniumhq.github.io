@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Selenium Browser Automation"
+title = "Selenium"
 
 enableRobotsTXT = true
 
@@ -53,7 +53,7 @@ anchor = "smart"
 
 [languages]
 [languages.en]
-title = "Selenium Browser Automation"
+title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="English"
 # Weight used for sorting.
@@ -249,3 +249,9 @@ identifier = "Downloads"
 name = "Downloads"
 url = "/downloads"
 weight = 20
+
+[[menus.main]]
+identifier = "Projects"
+name = "Projects"
+url = "/projects"
+weight = 30
