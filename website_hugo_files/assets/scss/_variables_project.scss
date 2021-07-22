@@ -329,3 +329,7 @@ button[aria-expanded=true] .show-collapsed {
 button[aria-expanded=false] .show-expanded {
   display: none;
 }
+
+.no-focus {
+  box-shadow: none !important;
+}

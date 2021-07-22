@@ -25,23 +25,23 @@
                 {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
                 {{ $counter := $.Scratch.Get "counter" }}
                 <p>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
-                    <i class="fas fa-plus-circle show-collapsed pr-2"></i>
-                    <i class="fas fa-minus-circle show-expanded pr-2"></i>
-                    {{ .version }}
+                  <button class="btn btn-link no-focus" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
+                    <i class="fas fa-plus-circle show-collapsed selenium-ide pr-2"></i>
+                    <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>                    
+                    <span class="-text-900 font-weight-bold">{{ .version }}</span>
                   </button>
                 </p>
-                <div class="collapse" id="release-{{ $counter }}">
+                <div class="collapse pb-3" id="release-{{ $counter }}">
                   <div class="card card-body">
                     <div class="table-responsive">
-                      <table class="table">
+                      <table class="table m-0">
                         <thead>
                           <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Version</th>
-                            <th scope="col">Last Modified</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">ETag</th>
+                            <th scope="col" class="selenium-ide">Name</th>
+                            <th scope="col" class="selenium-ide">Version</th>
+                            <th scope="col" class="selenium-ide">Last Modified</th>
+                            <th scope="col" class="selenium-ide">Size</th>
+                            <th scope="col" class="selenium-ide">ETag</th>
                           </tr>
                         </thead>
                         <tbody>
