@@ -255,3 +255,9 @@ identifier = "Projects"
 name = "Projects"
 url = "/projects"
 weight = 30
+
+[[menus.main]]
+identifier = "Support"
+name = "Support"
+url = "/support"
+weight = 50
