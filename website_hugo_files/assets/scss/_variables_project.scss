@@ -214,13 +214,13 @@ $selenium-yellow-color: #FFBF3F;
   color: $selenium-cyan-color;
 }
 
-p > a {
+p > a, main a {
   color: $primary !important;
   border-bottom: 2px solid;
   transition: 0.3s;
 }
 
-p > a:hover {
+p > a:hover, main a:hover {
   color: $selenium-cyan-color !important;
 }
 
