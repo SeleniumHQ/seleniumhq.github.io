@@ -92,6 +92,7 @@ $selenium-purple-color: #615E9B;
 $selenium-cyan-color: #59CBE8;
 $selenium-blue-color: #0033A0;
 $selenium-orange-color: #FE5000;
+$selenium-yellow-color: #FFBF3F;
 
 .selenium-logo {
   display: inline-block;
@@ -319,6 +320,15 @@ img {
   border-width: 0 0 0 8px !important;
   .alert-heading {
     color: $selenium-webdriver-color !important;
+  }
+}
+
+.alert-yellow {
+  border-style: solid !important;
+  border-color: $selenium-yellow-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-yellow-color !important;
   }
 }
 
