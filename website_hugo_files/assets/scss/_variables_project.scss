@@ -139,69 +139,69 @@ $selenium-yellow-color: #FFBF3F;
 }
 
 .selenium-button.selenium {
-  color: $primary;
-  border-color: $primary;
-  transition: 0.3s;
+  color: $primary !important;
+  border-color: $primary !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium:hover {
-  color: $white;
-  background-color: $primary;
+  color: $white !important;
+  background-color: $primary !important;
 }
 
 .selenium-button.selenium-webdriver {
-  color: $selenium-webdriver-color;
-  border-color: $selenium-webdriver-color;
-  transition: 0.3s;
+  color: $selenium-webdriver-color !important;
+  border-color: $selenium-webdriver-color !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium-webdriver:hover {
-  color: $white;
-  background-color: $selenium-webdriver-color;
+  color: $white !important;
+  background-color: $selenium-webdriver-color !important;
 }
 
 .selenium-button.selenium-ide {
-  color: $selenium-blue-color;
-  border-color: $selenium-blue-color;
-  transition: 0.3s;
+  color: $selenium-blue-color !important;
+  border-color: $selenium-blue-color !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium-ide:hover {
-  color: $white;
-  background-color: $selenium-blue-color;
+  color: $white !important;
+  background-color: $selenium-blue-color !important;
 }
 
 .selenium-button.selenium-grid {
-  color: $selenium-purple-color;
-  border-color: $selenium-purple-color;
-  transition: 0.3s;
+  color: $selenium-purple-color !important;
+  border-color: $selenium-purple-color !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium-grid:hover {
-  color: $white;
-  background-color: $selenium-purple-color;
+  color: $white !important;
+  background-color: $selenium-purple-color !important;
 }
 
 .selenium-button.selenium-white-cyan {
-  color: $white;
-  border-color: $white;
-  transition: 0.3s;
+  color: $white !important;
+  border-color: $white !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium-white-cyan:hover {
-  color: $selenium-cyan-color;
-  background-color: $white;
+  color: $selenium-cyan-color !important;
+  background-color: $white !important;
 }
 
 .selenium-button.selenium-white-green {
-  color: $white;
-  border-color: $white;
-  transition: 0.3s;
+  color: $white !important;
+  border-color: $white !important;
+  transition: 0.3s !important;
 }
 
 .selenium-button.selenium-white-green:hover {
-  color: $primary;
-  background-color: $white;
+  color: $primary !important;
+  background-color: $white !important;
 }
 
 .selenium-link {

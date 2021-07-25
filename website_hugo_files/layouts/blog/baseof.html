@@ -9,14 +9,15 @@
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main">
+        {{ .Content }}
         <div class="row flex-xl-nowrap">
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
             {{ partial "sidebar.html" . }}
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            {{ partial "taxonomy_terms_clouds.html" . }}
-            <hr>
             {{ partial "toc.html" . }}
+            <hr>
+            {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
             {{ with .CurrentSection.OutputFormats.Get "rss" -}}
