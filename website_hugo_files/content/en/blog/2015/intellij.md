@@ -2,8 +2,8 @@
 title: "IntelliJ"
 linkTitle: "IntelliJ"
 date: 2015-02-08
-tags: ["selenium"]
-categories: ["conference"]
+tags: ["jetbrains","intellij"]
+categories: ["general"]
 author: Simon Stewart ([@shs96c](https://twitter.com/shs96c))
 description: >
   Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project.
