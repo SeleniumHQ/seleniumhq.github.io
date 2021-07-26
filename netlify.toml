@@ -1,19 +1,19 @@
 [build]
-publish = "website_hugo_files/public"
-command = "cd website_hugo_files/themes/docsy && git submodule update -f --init && cd ../.. && hugo"
+publish = "site_source_files/public"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]
 HUGO_VERSION = "0.83.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "cd website_hugo_files/themes/docsy && git submodule update -f --init && cd ../.. && hugo"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.83.1"
 
 [context.branch-deploy]
-command = "cd website_hugo_files/themes/docsy && git submodule update -f --init && cd ../.. && hugo"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.83.1"
