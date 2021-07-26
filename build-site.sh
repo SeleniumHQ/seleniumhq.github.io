@@ -11,8 +11,6 @@ else
   USE_BASE_URL_SITE="--baseURL ${DEPLOY_PRIME_URL}"
 fi
 
-"cd website_hugo_files/themes/docsy && git submodule update -f --init && cd ../.. && hugo"
-
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
 rm -rf website_hugo_files/public
 
