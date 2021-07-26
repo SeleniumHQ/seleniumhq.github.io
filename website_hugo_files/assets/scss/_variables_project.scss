@@ -235,6 +235,9 @@ p > a:hover, main a:hover {
   .w-lg-75 {
     width: 75% !important;
   }
+  .td-max-width-on-larger-screens {
+    max-width: 100% !important;
+  }
 }
 
 img {
@@ -327,6 +330,17 @@ img {
   .wide-photo-container > img {
     width: 100%;
     height: 100%;
+  }
+
+  .selenium-button {
+    height: 35px;
+    width: 130px;
+    font-size: 0.7rem;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
   }
 }
 
