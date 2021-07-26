@@ -141,6 +141,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium {
   color: $primary !important;
   border-color: $primary !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -152,6 +153,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium-webdriver {
   color: $selenium-webdriver-color !important;
   border-color: $selenium-webdriver-color !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -163,6 +165,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium-ide {
   color: $selenium-blue-color !important;
   border-color: $selenium-blue-color !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -174,6 +177,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium-grid {
   color: $selenium-purple-color !important;
   border-color: $selenium-purple-color !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -185,6 +189,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium-white-cyan {
   color: $white !important;
   border-color: $white !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -196,6 +201,7 @@ $selenium-yellow-color: #FFBF3F;
 .selenium-button.selenium-white-green {
   color: $white !important;
   border-color: $white !important;
+  border-width: 3px !important;
   transition: 0.3s !important;
 }
 
@@ -251,6 +257,61 @@ img {
     height: 100% !important;
   }  
 
+}
+
+.td-cover-block--height-min {
+    min-height: 300px !important;
+}
+
+.td-cover-block--height-med {
+    min-height: 400px !important;
+}
+
+.td-cover-block--height-max {
+    min-height: 500px !important;
+}
+
+.td-cover-block--height-full {
+    min-height: 100vh !important;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+  // The outer page container for the default base template.
+  .td-blog {
+    .td-main {
+        > section:first-of-type {
+          padding-top: 8rem;
+        }
+    }
+  } 
+
+  .td-default {
+    main {
+        > section:first-of-type {
+              padding-top: 8rem;
+        }
+    }
+  }
+
+  .td-cover-block--height-min {
+    min-height: 300px !important;
+  }
+
+  .td-cover-block--height-med {
+    min-height: 500px !important;
+  }
+
+  .td-cover-block--height-max {
+    min-height: 650px !important;
+  }
+
+}
+
+.td-cover-block {
+  padding-top: 3rem !important;
+  padding-bottom: 1rem !important;
 }
 
 // Extra small devices (portrait phones, less than 576px)
