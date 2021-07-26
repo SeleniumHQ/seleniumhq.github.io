@@ -14,14 +14,11 @@ fi
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
 rm -rf website_hugo_files/public
 
-echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
-cd website_hugo_files/themes/docsy
-
 echo -e "\033[0;32mGit init for Docsy...\033[0m"
-git submodule update -f --init
+git submodule update -f --init --recursive
 
-echo -e "\033[0;32mGoing back to site root directory...\033[0m"
-cd ../..
+echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
+cd website_hugo_files && npm install postcss-cli
 
 echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
 hugo --minify ${USE_BASE_URL_SITE}
