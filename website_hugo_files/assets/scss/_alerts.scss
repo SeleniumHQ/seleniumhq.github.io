@@ -1,0 +1,62 @@
+.alert-green {
+  border-style: solid !important;
+  border-color: $primary !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $primary !important;
+  }
+}
+
+.alert-orange {
+  border-style: solid !important;
+  border-color: $selenium-orange-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-orange-color !important;
+  }
+}
+
+.alert-cyan {
+  border-style: solid !important;
+  border-color: $selenium-cyan-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-cyan-color !important;
+  }
+}
+
+.alert-blue {
+  border-style: solid !important;
+  border-color: $selenium-blue-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-blue-color !important;
+  }
+}
+
+.alert-purple {
+  border-style: solid !important;
+  border-color: $selenium-purple-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-purple-color !important;
+  }
+}
+
+.alert-webdriver {
+  border-style: solid !important;
+  border-color: $selenium-webdriver-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-webdriver-color !important;
+  }
+}
+
+.alert-yellow {
+  border-style: solid !important;
+  border-color: $selenium-yellow-color !important;
+  border-width: 0 0 0 8px !important;
+  .alert-heading {
+    color: $selenium-yellow-color !important;
+  }
+}

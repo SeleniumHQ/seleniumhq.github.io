@@ -1,0 +1,115 @@
+.selenium-button-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selenium-button-container a {
+  text-decoration: none;
+}
+
+.selenium-button {
+  height: 50px;
+  width: 200px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.selenium-button.selenium {
+  color: $primary !important;
+  border-color: $primary !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium:hover {
+  color: $white !important;
+  background-color: $primary !important;
+}
+
+.selenium-button.selenium-webdriver {
+  color: $selenium-webdriver-color !important;
+  border-color: $selenium-webdriver-color !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-webdriver:hover {
+  color: $white !important;
+  background-color: $selenium-webdriver-color !important;
+}
+
+.selenium-button.selenium-ide {
+  color: $selenium-blue-color !important;
+  border-color: $selenium-blue-color !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-ide:hover {
+  color: $white !important;
+  background-color: $selenium-blue-color !important;
+}
+
+.selenium-button.selenium-grid {
+  color: $selenium-purple-color !important;
+  border-color: $selenium-purple-color !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-grid:hover {
+  color: $white !important;
+  background-color: $selenium-purple-color !important;
+}
+
+.selenium-button.selenium-white-cyan {
+  color: $white !important;
+  border-color: $white !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-white-cyan:hover {
+  color: $selenium-cyan-color !important;
+  background-color: $white !important;
+}
+
+.selenium-button.selenium-white-green {
+  color: $white !important;
+  border-color: $white !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-white-green:hover {
+  color: $primary !important;
+  background-color: $white !important;
+}
+
+button[aria-expanded=true] .show-collapsed {
+  display: none;
+}
+
+button[aria-expanded=false] .show-expanded {
+  display: none;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(xs) {
+  .selenium-button {
+    height: 35px;
+    width: 130px;
+    font-size: 0.7rem;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }  
+}

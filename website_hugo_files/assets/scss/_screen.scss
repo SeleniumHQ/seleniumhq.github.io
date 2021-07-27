@@ -1,0 +1,64 @@
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+  .w-lg-75 {
+    width: 75% !important;
+  }
+  // Sets the content width in blog and docs
+  .td-max-width-on-larger-screens {
+    max-width: 100% !important;
+  }
+}
+
+// Overwriting height and padding used for cover blocks
+.td-cover-block {
+  padding-top: 3rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.td-cover-block--height-min {
+    min-height: 300px !important;
+}
+
+.td-cover-block--height-med {
+    min-height: 400px !important;
+}
+
+.td-cover-block--height-max {
+    min-height: 500px !important;
+}
+
+.td-cover-block--height-full {
+    min-height: 100vh !important;
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+  .td-cover-block--height-min {
+    min-height: 300px !important;
+  }
+
+  .td-cover-block--height-med {
+    min-height: 500px !important;
+  }
+
+  .td-cover-block--height-max {
+    min-height: 650px !important;
+  }
+
+  // Padding for the blog cover
+  .td-blog {
+    .td-main {
+        > section:first-of-type {
+          padding-top: 8rem;
+        }
+    }
+  } 
+}
+
+.no-focus {
+  box-shadow: none !important;
+}
+
+.pagination {
+  justify-content: center;
+}

@@ -1,0 +1,32 @@
+img {
+  object-fit: cover;
+}
+
+.img-collage {
+  width: 100% !important;
+  height: 300px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+  .wide-photo-container {
+    height: 100% !important;
+  }
+  .wide-photo-container > img {
+    height: 100% !important;
+  }  
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(xs) {
+  .wide-photo-container {
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box; 
+    margin: unset;
+  }
+  .wide-photo-container > img {
+    width: 100%;
+    height: 100%;
+  }
+}
