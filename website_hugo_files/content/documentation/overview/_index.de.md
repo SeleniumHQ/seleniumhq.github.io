@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-weight: 5
+weight: 1
 description: >
   Is Selenium for you? See an overview of the different project components.
 ---
