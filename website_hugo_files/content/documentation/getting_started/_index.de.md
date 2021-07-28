@@ -1,7 +1,7 @@
 ---
 title: "Erste Schritte"
 linkTitle: "Erste Schritte"
-weight: 3
+weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
 ---
