@@ -5,6 +5,14 @@ cascade:
 - type: docs
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Diese Seite wird von Englisch 
+   auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+   zu übersetzen indem Du uns einen Pull Reqeust schickst!
+</p>
+{{% /pageinfo %}}
 
 Selenium ist ein Sammlung von Projekten für einige Werkzeuge und Programmbibliotheken
 die es ermöglichen Webbrowser zu automatisieren.
@@ -24,7 +32,7 @@ Selenium fördert Disskussionen in Bezug Automation der Webplattform mit Browser
 Ingeneure und Enthusiasten. Jedes Jahr wird vom Projekt eine [Konferenz](//seleniumconf.com/) 
 organisiert um Wissen zu vermitteln und die Community zu fördern.
 
-Das Herzstück von Selenium ist der _[WebDriver]({{< ref "/webdriver.md" >}})_. Es 
+Das Herzstück von Selenium ist der [WebDriver]({{< ref "/webdriver.md" >}}). Es 
 handelt sich um ein Interface um das es ermöglicht Befehle für eine Vielzahl von Browsern
 auszuführen. Hier ein einfaches Beispiel welche Möglichkeiten geboten werden: 
 
@@ -151,10 +159,11 @@ fun main() {
 
 
 
-Sie Dir die _[Kurzeinführung]({{< ref "/overview.md" >}})_ an um detailierte
-Informationen zu erhalten was im Hintergrund passiert wenn Du diesen Code ausführst.
-Du solltest mit der [Einführung]({{</* ref "/introduction/_index.md" */>}}) fortsetzen
-um die [Installation]({{</* ref "/selenium_installation/_index.md" */>}}) 
-zu verstehen und um Selenium erfolgreich einzusetzen, Testsets in größeren
-Umfang einzusetzen auf vielen verschiedenen Browsern und unterschiedlichen Betriebssystemen.
+See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
+components and decide if Selenium is the right tool for you.
+
+You should continue on to [Getting Started]({{</* ref "/getting_started.md" */>}})
+to understand how you can install Selenium and successfully use it as a test 
+automation tool, and scaling simple tests like this to run in large, distributed 
+environments on multiple browsers, on several different operating systems.
 

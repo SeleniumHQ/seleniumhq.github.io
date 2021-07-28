@@ -25,7 +25,7 @@ to further an open discussion around automation of the web platform.
 The project organises [an annual conference](//seleniumconf.com/)
 to teach and nurture the community.
 
-At the core of Selenium is _[WebDriver](/documentation/webdriver)_, 
+At the core of Selenium is [WebDriver](/documentation/webdriver), 
 an interface to write instruction sets that can be run interchangeably in many 
 browsers. Here is one of the simplest instructions you can make:
 
@@ -149,14 +149,13 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-See the _[Overview]({{< ref "/overview.md" >}})_ for a full explanation
-of what goes on behind the scenes when you run this code.
-You should continue on to the [narrative documentation]({{</* ref "/introduction/_index.md" */>}})
-to understand how you can [install]({{</* ref "/selenium_installation/_index.md" */>}}) and
-successfully use Selenium as a test automation tool,
-and scaling simple tests like this to run
-in large, distributed environments on multiple browsers,
-on several different operating systems.
+See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
+components and decide if Selenium is the right tool for you.
+
+You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
+to understand how you can install Selenium and successfully use it as a test 
+automation tool, and scaling simple tests like this to run in large, distributed 
+environments on multiple browsers, on several different operating systems.
 
 
 
