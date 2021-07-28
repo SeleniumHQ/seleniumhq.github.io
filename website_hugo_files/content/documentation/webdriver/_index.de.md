@@ -15,8 +15,6 @@ description: >
 </p>
 {{% /pageinfo %}}
 
-# WebDriver
-
 Der WebDriver steuert einen Browser so, wie es ein Benutzer tun würde, 
 entweder lokal oder auf einem entfernten Rechner unter Verwendung des 
 Selenium Servers. Dies ist ein Meilenstein in der Automatisierung von Browsern.
