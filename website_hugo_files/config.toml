@@ -10,7 +10,7 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
+# contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
@@ -59,6 +59,12 @@ description = "Selenium automates browsers. That's it!"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
+[languages.de]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Deutsch"
+# Weight used for sorting.
+weight = 2
 
 [markup]
   [markup.goldmark]
@@ -115,6 +121,7 @@ github_branch= "dev"
 
 # Enable Lunr.js offline search
 offlineSearch = true
+offlineSearchMaxResults = 30
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -148,7 +155,7 @@ sidebar_menu_truncate = 80
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
-enable = true
+enable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
@@ -260,10 +267,22 @@ url = "/projects"
 weight = 30
 
 [[menus.main]]
+identifier = "Documentation"
+name = "Documentation"
+url = "/documentation"
+weight = 30
+
+[[menus.main]]
 identifier = "Support"
 name = "Support"
 url = "/support"
 weight = 50
+
+[[menus.main]]
+identifier = "Blog"
+name = "Blog"
+url = "/blog"
+weight = 60
 
 [taxonomies]
 tag = "tags"
