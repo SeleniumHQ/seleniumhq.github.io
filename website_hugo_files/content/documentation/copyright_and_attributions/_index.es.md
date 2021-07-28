@@ -1,7 +1,10 @@
 ---
 title: "Derechos de autor y atribuciones"
-menuTitle: "Derechos de autor"
-weight: 1
+linkTitle: "Derechos de autor y atribuciones"
+weight: 8
+description: >
+  Copyright, contributions and all attributions for the different projects
+  under the Selenium umbrella.
 ---
 
 {{% pageinfo color="warning" %}}
@@ -28,8 +31,6 @@ to the use of the information contained herein.
 
 
 ## Attributions
-
-### Thanks to:
 
 #### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 

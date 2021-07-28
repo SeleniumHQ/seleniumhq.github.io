@@ -59,12 +59,18 @@ description = "Selenium automates browsers. That's it!"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
+[languages.es]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Español"
+# Weight used for sorting.
+weight = 2
 [languages.de]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="Deutsch"
 # Weight used for sorting.
-weight = 2
+weight = 3
 
 [markup]
   [markup.goldmark]
