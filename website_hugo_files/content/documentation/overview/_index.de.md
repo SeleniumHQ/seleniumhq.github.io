@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-weight: 5
+weight: 1
 description: >
   Is Selenium for you? See an overview of the different project components.
 ---
@@ -21,7 +21,7 @@ Selenium ist nicht ein einzelnes Tool oder eine API, es besteht aus mehreren Too
 ## WebDriver
 
 Startest Du mit dem automatisieren von Websiten, dann wirst Du die WebDriver APIs verwenden.
-_[WebDriver]({{< ref "/webdriver.md" >}})_ verwendet die von den Browsern
+[WebDriver]({{< ref "/webdriver.md" >}}) verwendet die von den Browsern
 Herstellern zur Verfügung gestellten APIs um den Browser zu steuern und Test
 auszuführen. Die Ausführung simuliert einen echten Benutzer. Da der WebDriver eigenständig
 ist und nicht mit der Applikation kompiliert werden muss, handelt es sich um eine minimal 
@@ -29,7 +29,7 @@ invasive Methode. Es kann exakt die Applikation getestet werden die später ver�
 
 ## IDE
 
-_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment = Entwicklungsumgebung)
+[IDE](https://selenium.dev/selenium-ide) (Integrated Development Environment = Entwicklungsumgebung)
 ist ein Werkzeug um Seleniumtests zu erstellen. Es ist eine einfach zu handhabende 
 Erweiterung für Chrome und Firefox und in der Regel ist dies die effizienteste Weg
 um Testfälle zu erstellen. Benutzerinteraktionen werden aufgezeichnet mit Hilfe von 
@@ -47,4 +47,4 @@ die automatische Ausführung serverseitig.
 go-html-template
 Sollen erstellte WebDriver-Tests in mehreren 
 Browsern und Betriebssystemen ausgeführt werden, 
-kann dafür "_[Grid]({{</* ref "/grid/_index.md" */>}})_" genutzt werden.
+kann dafür [Grid]({{</* ref "/grid/_index.md" */>}}) genutzt werden.

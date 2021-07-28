@@ -1,6 +1,6 @@
 ---
-title: "Das Selenium Browser Automations Projekt"
-linkTitle: "Dokumentation"
+title: "Selenium, el proyecto para automatizar navegadores"
+linkTitle: "Documentación"
 cascade:
 - type: docs
 ---
@@ -8,33 +8,34 @@ cascade:
 {{% pageinfo color="warning" %}}
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
-   Diese Seite wird von Englisch 
-   auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-   zu übersetzen indem Du uns einen Pull Reqeust schickst!
+   Page being translated from 
+   English to Spanish. Do you speak Spanish? Help us to translate
+   it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-Selenium ist ein Sammlung von Projekten für einige Werkzeuge und Programmbibliotheken
-die es ermöglichen Webbrowser zu automatisieren.
+Selenium es un proyecto que alberga un abanico de herramientas y librerías que
+permiten y apoyan la automatización de navegadores web.
 
-Selenium bietet Erweiterungen um Benutzereingaben in Browsern zu simulieren,
-einen Server um eine vielzahl von Browsern anzusprechen und eine Infrastruktur
-um die [W3C WebDriver Spezifikation](//www.w3.org/TR/webdriver/) welche 
-es ermöglicht die meistgenutzen Browser mit dem gleichen Programmcode
-zu steuern.
+Proporciona extensiones que permiten emular las interacciones que realizan los
+usuarios con los navegadores, un servidor que permite distribuir la asignación
+de navegadores de forma escalable, y la infraestructura necesaria para las 
+implementaciones de la [especificación del WebDriver del W3C](//www.w3.org/TR/webdriver/), 
+el cual permite escribir código intercambiable para los navegadores web mas usados.
 
-Das Projekt wird durch viele Freiwillige Unterstützer möglich gemacht, sie haben
-tausende von Stunden ihrer Freizeit investiert und haben den Programmcode für 
-jeden [öffentlich zugänglich gemacht]({{< ref "/copyright_and_attributions.md#lizenz" >}})
-für jeden um diesen zu verwenden und ihn zu verbessern.
+Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
+han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
+esté [disponible de manera gratuita]({{< ref "/copyright_and_attributions.md#license" >}})
+para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
 
-Selenium fördert Disskussionen in Bezug Automation der Webplattform mit Browserhersteller, 
-Ingeneure und Enthusiasten. Jedes Jahr wird vom Projekt eine [Konferenz](//seleniumconf.com/) 
-organisiert um Wissen zu vermitteln und die Community zu fördern.
+Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para 
+promover un debate abierto sobre la automatización de plataformas web.
+El proyecto organiza [una conferencia anual](//seleniumconf.com/) con el fin de
+enseñar y nutrir a la comunidad.
 
-Das Herzstück von Selenium ist der [WebDriver]({{< ref "/webdriver.md" >}}). Es 
-handelt sich um ein Interface um das es ermöglicht Befehle für eine Vielzahl von Browsern
-auszuführen. Hier ein einfaches Beispiel welche Möglichkeiten geboten werden: 
+El corazón de Selenium es el [WebDriver]({{< ref "/webdriver.md" >}}), una
+interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
+manera indistinta en muchos navegadores.
 
 
 {{< tabpane langEqualsHeader=true >}}

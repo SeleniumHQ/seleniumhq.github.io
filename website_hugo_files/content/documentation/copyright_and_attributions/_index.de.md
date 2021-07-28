@@ -1,4 +1,3 @@
-
 ---
 title: "Copyright und Unterstützung"
 linkTitle: "Copyright und Unterstützung"
