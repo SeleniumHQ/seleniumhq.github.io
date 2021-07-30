@@ -1,6 +1,6 @@
 ---
-title: "Empezando"
-linkTitle: "Empezando"
+title: "入门指南"
+linkTitle: "入门指南"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
@@ -10,18 +10,15 @@ description: >
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Chinese. Do you speak Chinese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
+Selenium 设置与其他商业工具的设置完全不同。
+要在自动化项目中使用 Selenium，您需要为您选择的语言安装语言绑定库。
+此外，对于要自动运行并运行测试的浏览器，您将需要 WebDriver 二进制文件。
 
-La configuración de Selenium es bastante diferente de la configuración
-de otras herramientas comerciales.
-Para usar Selenium en tu proyecto de automatización,
-necesitas instalar las librerías de enlace de tu lenguaje de preferencia.
-Además necesitarás los binarios de WebDriver para los navegadores 
-en los que deseas automatizar y ejecutar pruebas.
 
 Intalling Selenium can be divided in three steps:
 
@@ -32,16 +29,15 @@ Intalling Selenium can be divided in three steps:
 If you wish to start with a low-code/record and playback tool, please check 
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-## Instalando las librerías de Selenium
+## 安装 Selenium 库
 
-Primero debes instalar las librerías de enlace Selenium para tu
-proyecto de automatización.
-El proceso de instalación de las librerías depende del lenguaje 
-que elijas usar.
+首先，您需要为自动化项目安装 Selenium 绑定库。
+库的安装过程取决于您选择使用的语言。
 
 ### Java
-La instalación de las librerías Selenium para Java se puede hacer usando Maven.
-Agrega la dependencia de _selenium-java_ en el pom.xml de tu proyecto:
+
+可以使用 Maven 安装 Java 的 Selenium 库。
+在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
 ```xml
 <dependency>
@@ -51,13 +47,9 @@ Agrega la dependencia de _selenium-java_ en el pom.xml de tu proyecto:
 </dependency>
 ```
 
-La dependencia _selenium-java_ permite la ejecución de tu proyecto de
-automatización en todos los navegadores compatibles con Selenium. 
-Si quieres ejecutar pruebas en un navegador en específico, 
-puedes agregar la dependencia para ese navegador
-en el archivo _pom.xml_.
-Por ejemplo, debes agregar la siguiente dependencia en tu
-archivo _pom.xml_ para ejecutar tus pruebas solamente en Firefox:
+_selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自动化项目。
+如果只想在特定的浏览器中运行测试，可以在 _pom.xml_ 文件中添加该浏览器的依赖项。
+例如，您应该在 _pom.xml_ 文件中添加以下依赖项，以便于只在 Firefox 中运行测试：
 
 ```xml
 <dependency>
@@ -67,8 +59,7 @@ archivo _pom.xml_ para ejecutar tus pruebas solamente en Firefox:
 </dependency>
 ```
 
-De igual manera, si quieres ejecutar las pruebas solamente
-en Chrome, debes agregar la siguiente dependencia:   
+同样，如果您只想在 Chrome 上运行测试，您应该添加以下依赖项：
 
 ```xml
 <dependency>
@@ -79,50 +70,50 @@ en Chrome, debes agregar la siguiente dependencia:
 ```
 
 ### Python
-La instalación de las librerías de Selenium en Python
-se puede hacer usando pip:
+
+可以使用 pip 安装 Python 的 Selenium 库：
 
 ```shell
 pip install selenium
 ```
 
-Alternativamente, puedes descargar el [archivo fuente PyPI](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) e instalarlo usando _setup.py_:
+或者，您也可以下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) 并使用 _setup.py_ 进行安装：
 
 ```shell
 python setup.py install
 ```
 
 ### C#
-La instalación de las librerías de Selenium para C# se puede
-hacer usando NuGet:
+
+可以使用 NuGet 安装 C# 的 Selenium 库：
 
 ```shell
-# Usando el manejador de paquetess
+# Using package manager
 Install-Package Selenium.WebDriver
-# o usando el CLI de .Net
+# or using .Net CLI
 dotnet add package Selenium.WebDriver
 ```
 
 ### Ruby
-La instalación de las librerías de Selenium para Ruby se puede
-hacer usando gem:
+
+可以使用 gem 安装 Ruby 的 Selenium 库：
 
 ```shell
 gem install selenium-webdriver
 ```
 
 ### JavaScript
-La instalación de las librerías de Selenium para JavaScript se puede
-hacer usando npm:
+
+可以使用 npm 安装 JavaScript 的 Selenium 库
 
 ```shell
 npm install selenium-webdriver
 ```
 
 ### Kotlin
-Debido a la falta de librerías de enlace de idioma nativas para Kotlin, 
-debe usar las de Java, p. ej. con Maven [Java](#java)
+Due to missing native language bindings for Kotlin, you have to use the 
+Java Bindings, e.g. with maven [Java](#java)
 
 
 ## Set up the browser driver
@@ -138,6 +129,6 @@ the following links to read the instructions for your desired browser.
 - Internet Explorer ([Internet Explorer Driver Server](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver))
 
 After completing the setup, you can run the code snippet shown at the 
-[starting page](/de/documentation) in our docs. Then head to the 
+[starting page](/zh-cn/documentation) in our docs. Then head to the 
 [WebDriver]({{< ref "/webdriver.md" >}}) section to learn more about
 browser automation with Selenium.
