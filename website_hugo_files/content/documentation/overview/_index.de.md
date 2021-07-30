@@ -44,7 +44,6 @@ unterschiedlichen Plattformen ausgeführt werden.
 Das Starten der Tests findet lokal statt, 
 die automatische Ausführung serverseitig. 
 
-go-html-template
 Sollen erstellte WebDriver-Tests in mehreren 
 Browsern und Betriebssystemen ausgeführt werden, 
 kann dafür [Grid]({{</* ref "/grid/_index.md" */>}}) genutzt werden.

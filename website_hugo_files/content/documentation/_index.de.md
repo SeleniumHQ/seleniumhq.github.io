@@ -162,7 +162,7 @@ fun main() {
 See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
 components and decide if Selenium is the right tool for you.
 
-You should continue on to [Getting Started]({{</* ref "/getting_started.md" */>}})
+You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.
