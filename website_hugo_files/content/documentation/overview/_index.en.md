@@ -23,7 +23,7 @@ same application which you push live.
 
 ## IDE
 
-[IDE](https://selenium.dev/selenium-ide) (Integrated Development Environment) 
+[IDE](//selenium.dev/selenium-ide) (Integrated Development Environment) 
 is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome 
 and Firefox extension and is generally the most efficient way to develop 
 test cases. It records the users' actions in the browser for you, using 
