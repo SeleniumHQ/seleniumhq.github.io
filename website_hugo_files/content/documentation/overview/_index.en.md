@@ -42,4 +42,4 @@ executed by the remote end.
 After the development of the WebDriver tests, you may face 
 the need of running your tests on multiple browser and 
 operating system combinations.
-This is where [Grid]({{</* ref "/grid/_index.md" */>}}) comes into the picture.
+This is where [Grid](/documentation/grid) comes into the picture.

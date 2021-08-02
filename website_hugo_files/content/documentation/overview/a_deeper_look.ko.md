@@ -60,7 +60,7 @@ El diseño minimalista de Selenium le da la versatilidad para que se
 pueda incluir como un componente en otras aplicaciones. La
 infraestructura proporcionada debajo del catálogo de Selenium te da
 las herramientas para que puedas ensamblar tu [grid de
-navegadores]({{</* ref "/grid/_index.md" */>}}) de modo que tus pruebas
+navegadores]({{< ref "/grid.md" >}}) de modo que tus pruebas
 se puedan ejecutar en diferentes navegadores a través de diferente
 sistemas operativos y plataformas.
 

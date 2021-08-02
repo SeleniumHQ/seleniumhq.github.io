@@ -48,4 +48,4 @@ hayan disparado, automáticamente serán ejecutados en la parte remota.
 
 Poco después del desarrollo de las pruebas de WebDriver, es posible que deba ejecutar sus 
 pruebas en múltiples combinaciones de navegador y sistema operativo. Aquí es donde 
-[Grid]({{</* ref "/grid/_index.md" */>}}) viene al rescate.
+[Grid]({{< ref "/grid.md" >}}) viene al rescate.
