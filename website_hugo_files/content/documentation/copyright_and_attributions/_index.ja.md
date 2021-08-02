@@ -1,7 +1,7 @@
 ---
 title: "著作権と帰属"
 linkTitle: "著作権と帰属"
-weight: 8
+weight: 13
 description: >
   Copyright, contributions and all attributions for the different projects
   under the Selenium umbrella.

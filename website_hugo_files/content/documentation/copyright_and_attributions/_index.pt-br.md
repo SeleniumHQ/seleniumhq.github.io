@@ -1,7 +1,7 @@
 ---
 title: "Direitos autorais e atribuições"
 linkTitle: "Direitos autorais e atribuições"
-weight: 8
+weight: 13
 description: >
   Copyright, contributions and all attributions for the different projects
   under the Selenium umbrella.
