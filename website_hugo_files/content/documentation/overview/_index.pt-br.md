@@ -51,4 +51,4 @@ executados pela extremidade remota.
 Após o desenvolvimento dos testes WebDriver, você pode enfrentar
 a necessidade de executar seus testes em vários navegadores e
 combinações de sistemas operacionais.
-É aqui que o [Grid]({{</* ref "/grid/_index.md" */>}}) entra em cena.
+É aqui que o [Grid]({{< ref "/grid.md" >}}) entra em cena.

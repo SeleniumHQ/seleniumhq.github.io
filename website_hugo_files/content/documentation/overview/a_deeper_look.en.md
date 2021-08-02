@@ -52,7 +52,7 @@ Selenium's minimalist design approach gives it the
 versatility to be included as a component in bigger applications.
 The surrounding infrastructure provided under the Selenium umbrella
 gives you the tools to put together
-your [grid of browsers]({{</* ref "/grid/_index.md" */>}})
+your [grid of browsers](/documentation/grid)
 so tests can be run on different browsers and multiple operating systems
 across a range of machines.
 

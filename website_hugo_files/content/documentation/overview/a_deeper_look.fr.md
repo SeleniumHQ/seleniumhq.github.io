@@ -58,7 +58,7 @@ L'approche de conception minimaliste de Selenium lui confère une
 polyvalence à inclure en tant que composant dans des applications plus importantes.
 L'infrastructure environnante fournie sous l'égide du sélénium
 vous donne les outils pour assembler
-votre [grille de navigateurs]({{</* ref "/grid/_index.md" */>}})
+votre [grille de navigateurs]({{< ref "/grid.md" >}})
 afin que les tests puissent être exécutés sur différents navigateurs et plusieurs systèmes d'exploitation
 sur une gamme de machines.
 

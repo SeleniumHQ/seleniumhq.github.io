@@ -48,4 +48,4 @@ exécutés sur le serveur distant.
 
 Après le développement des tests WebDriver, vous pouvez être confronté
 à la nécessité de lancer vos tests sur toutes combinaisons de navigateurs et systèmes d'exploitation.
-C'est là que [Grid]({{</* ref "/grid/_index.md" */>}}) entre en scène.
+C'est là que [Grid]({{< ref "/grid.md" >}}) entre en scène.

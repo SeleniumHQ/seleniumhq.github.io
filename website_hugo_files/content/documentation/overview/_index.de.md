@@ -46,4 +46,4 @@ die automatische Ausführung serverseitig.
 
 Sollen erstellte WebDriver-Tests in mehreren 
 Browsern und Betriebssystemen ausgeführt werden, 
-kann dafür [Grid]({{</* ref "/grid/_index.md" */>}}) genutzt werden.
+kann dafür [Grid]({{< ref "/grid.md" >}}) genutzt werden.

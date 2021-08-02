@@ -58,7 +58,7 @@ unterstützen Browsern lauffähig sind.
 Dieser minimalistische Designansatz verleiht Selenium die Vielseitigkeit,
 um als Komponenten in größeren Applikationen eingesetzt zu werden.
 Weitere Werkzeuge die unter der Schirmherrschaft von Selenium stehen
-bieten Werkzeuge um [grid of browsers]({{</* ref "/grid/_index.md" */>}}) zu 
+bieten Werkzeuge um [grid of browsers]({{< ref "/grid.md" >}}) zu 
 erstellen.
 Somit können Tests auf unterschiedlichen Browsern und unterschiedlichen
 Betriebssystemen verteilt auf mehrere Rechner ausgeführt werden.

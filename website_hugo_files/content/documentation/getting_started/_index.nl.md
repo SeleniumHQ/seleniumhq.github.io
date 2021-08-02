@@ -25,7 +25,7 @@ Intalling Selenium can be divided in three steps:
 
 1. Installing the Selenium library for your desired programming language
 2. Set up the browser driver to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid]({{</* ref "/grid/_index.md" */>}}) if you want to scale up your tests
+3. (Optional) Set up and configure [Selenium Grid]({{< ref "/grid.md" >}}) if you want to scale up your tests
 
 If you wish to start with a low-code/record and playback tool, please check 
 [Selenium IDE](https://selenium.dev/selenium-ide)
