@@ -1,22 +1,11 @@
 ---
 title: "Copyright and attributions"
 linkTitle: "Copyright and attributions"
-weight: 13
+weight: 1
 description: >
   Copyright, contributions and all attributions for the different projects
   under the Selenium umbrella.
 ---
-
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Korean. Do you speak Korean? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 
 ## **The Documentation of Selenium**
 
@@ -33,8 +22,6 @@ to the use of the information contained herein.
 
 
 ## Attributions
-
-### Thanks to:
 
 #### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 
@@ -67,6 +54,7 @@ to the use of the information contained herein.
 | -------- | ------- | ------- |
 | [Hugo](//gohugo.io/) | v0.83.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
+
 
 ## License
 

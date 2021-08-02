@@ -1,7 +1,7 @@
 ---
-title: "版权和归属"
-linkTitle: "版权和归属"
-weight: 13
+title: "Derechos de autor y atribuciones"
+linkTitle: "Derechos de autor y atribuciones"
+weight: 1
 description: >
   Copyright, contributions and all attributions for the different projects
   under the Selenium umbrella.
@@ -11,21 +11,26 @@ description: >
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
+   English to Spanish. Do you speak Spanish? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-## **Selenium文档**
+## **The Documentation of Selenium**
 
-我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用.
-信息提供是基于“as-is”的.
-若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任.
-不承担任何与使用本文信息相关的专利责任.
+Every effort has been made to make this documentation
+as complete and as accurate as possible,
+but no warranty or fitness is implied.
+The information provided is on an “as-is” basis.
+The authors and the publisher shall have
+neither liability nor responsibility to any person or entity
+with respect to any loss or damages arising
+from the information contained in this book.
+No patent liability is assumed with respect
+to the use of the information contained herein.
 
-## 归属
 
-### 感谢:
+## Attributions
 
 #### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 
@@ -51,22 +56,25 @@ description: >
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
-## Selenium文档项目使用的第三方软件:
 
-| 软件 | 版本 | 许可 |
+## Third-Party software used by Selenium documentation project:
+
+| Software | Version | License |
 | -------- | ------- | ------- |
 | [Hugo](//gohugo.io/) | v0.83.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
 
-## 许可
 
-源自Selenium项目的所有代码和文档均基于Apache2.0的许可,
-由 [Software Freedom Conservancy](//sfconservancy.org/)
-作为版权所有者.
+## License
 
-为方便起见, 此处包含许可证,
-您也可以在此查看
-[Apache 基金会站点](//apache.org/licenses/LICENSE-2.0.html):
+All code and documentation originating from the Selenium project
+is licensed under the Apache 2.0 license,
+with the [Software Freedom Conservancy](//sfconservancy.org/)
+as the copyright holder.
+
+The license is included here for convenience,
+but you can also find it on the
+[Apache Foundation's websites](//apache.org/licenses/LICENSE-2.0.html):
 
 ```markdown
                                  Apache License
