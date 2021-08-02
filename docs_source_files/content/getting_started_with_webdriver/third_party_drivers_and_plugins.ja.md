@@ -12,7 +12,7 @@ Seleniumはプラグインを通して拡張することができます。ここ
 |ブラウザ|最新版|変更履歴|イシュートラッカー|
 |--- |--- |--- |--- |
 |[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[最新版](https://github.com/mozilla/geckodriver/releases)|[変更履歴](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[イシュートラッカー](https://github.com/mozilla/geckodriver/issues)|
-|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[最新版](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[変更履歴](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[イシュートラッカー](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Google Chrome Driver](https://chromedriver.chromium.org/)|[最新版](https://chromedriver.chromium.org/downloads)|[変更履歴](https://chromedriver.chromium.org/downloads)|[イシュートラッカー](https://bugs.chromium.org/p/chromedriver/issues/list)|
 |[Opera](http://choice.opera.com/developer/tools/operadriver/)|[最新版](https://github.com/operasoftware/operachromiumdriver/releases)|-|[イシュートラッカー](https://github.com/operasoftware/operachromiumdriver/issues)|
 |[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[最新版](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[イシュートラッカー](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
 |[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|ビルトイン|-|[イシュートラッカー](https://bugreport.apple.com/)|

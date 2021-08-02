@@ -123,7 +123,7 @@ the following links to read the instructions for your desired browser.
 
 - Firefox ([Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/))
 - Edge ([Microsoft EdgeDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/))
-- Chrome ([Google ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/))
+- Chrome ([Google ChromeDriver](https://chromedriver.chromium.org/))
 - Opera ([Opera ChromiumDriver](https://github.com/operasoftware/operachromiumdriver))
 - Safari ([Apple SafariDriver](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari))
 - Internet Explorer ([Internet Explorer Driver Server](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver))
