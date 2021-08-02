@@ -22,7 +22,7 @@ Os componentes do Selenium RC são:
 
 Aqui está um diagrama de arquitetura simplificado:
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+![Architecture Diagram Simple](/images/documentation/legacy/selenium_rc_architecture_diagram_simple.png) 
 
 O diagrama mostra que as bibliotecas cliente se comunicam com o
 servidor passando cada comando Selenium para execução. Então o servidor passa o
@@ -1069,14 +1069,14 @@ Se você estiver usando Selenium 1.0, você provavelmente pode pular esta seçã
 o comportamento padrão. No entanto, antes da versão 1.0, o Selenium executava por padrão o
 aplicativo em teste em um subquadro, conforme mostrado aqui.
 
-![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![Single window mode](/images/documentation/legacy/selenium_rc_single_window_mode.png)
 
 Alguns aplicativos não funcionavam corretamente em um subquadro e precisavam ser
 carregados no quadro superior da janela. A opção de modo multi-janela permitida
 a aplicação testada ser executada em uma janela separada, em vez do quadro
 padrão onde poderia então ter o quadro superior necessário.
 
-![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![Multiwindow Mode](/images/documentation/legacy/selenium_rc_multi_window_mode.png)
 
 Para versões mais antigas do Selenium você deve especificar o modo multijanela explicitamente
 com a seguinte opção:
@@ -1261,7 +1261,7 @@ da mesma origem).
 
 Aqui está um diagrama da arquitetura. 
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+![Architectural Diagram 1](/images/documentation/legacy/selenium_rc_architecture_diagram_1.png)
 
 Quando um conjunto de testes começa em sua linguagem favorita, acontece o seguinte:
 
@@ -1293,7 +1293,7 @@ através do servidor Selenium RC.
 
 Aqui está um diagrama da arquitetura. 
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+![Architectural Diagram 1](/images/documentation/legacy/selenium_rc_architecture_diagram_2.png)
 
 Quando um conjunto de testes começa em sua linguagem favorita, acontece o seguinte:
 

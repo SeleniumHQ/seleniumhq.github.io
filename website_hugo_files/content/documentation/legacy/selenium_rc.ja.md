@@ -21,7 +21,7 @@ SeleniumRCコンポーネントは、以下のとおりです。
 
 これは簡略化されたアーキテクチャ図です。
 
-![簡略化されたアーキテクチャ図](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+![簡略化されたアーキテクチャ図](/images/documentation/legacy/selenium_rc_architecture_diagram_simple.png) 
 
 この図は、クライアントライブラリが実行される各Seleniumコマンドを渡すサーバーと通信することを示しています。
 次に、サーバーはSelenium-Core JavaScriptコマンドを使用してSeleniumコマンドをブラウザーに渡します。
@@ -985,12 +985,12 @@ AUTが認証を必要とするHTTPプロキシの後ろにある場合、次の�
 Selenium 1.0を使用している場合は、マルチウィンドウモードがデフォルトの動作であるため、おそらくこのセクションをスキップできます。
 ただし、バージョン1.0より前は、Seleniumはデフォルトで、ここに示すようにサブフレームでテスト対象のアプリケーションを実行していました。
 
-![シングルウィンドウモード](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![シングルウィンドウモード](/images/documentation/legacy/selenium_rc_single_window_mode.png)
 
 一部のアプリケーションはサブフレームで正しく実行されず、ウィンドウの上部フレームにロードする必要がありました。
 マルチウィンドウモードオプションにより、AUTはデフォルトフレームではなく別のウィンドウで実行でき、そこで必要なトップフレームを取得できました。
 
-![マルチウィンドウモード](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![マルチウィンドウモード](/images/documentation/legacy/selenium_rc_multi_window_mode.png)
 
 Seleniumの古いバージョンでは、次のオプションで明示的にマルチウィンドウモードを指定する必要があります。
 
@@ -1146,7 +1146,7 @@ AUTをブラウザに配信する"Webサーバー"として機能します。
 
 これがアーキテクチャ図です。
 
-![これがアーキテクチャ図 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+![これがアーキテクチャ図 1](/images/documentation/legacy/selenium_rc_architecture_diagram_1.png)
 
 お気に入りの言語でテストスイートが開始されると、次のようになります。
 
@@ -1166,7 +1166,7 @@ AUTをブラウザに配信する"Webサーバー"として機能します。
 
 これがアーキテクチャ図です。 
 
-![アーキテクチャ図 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+![アーキテクチャ図 1](/images/documentation/legacy/selenium_rc_architecture_diagram_2.png)
 
 お気に入りの言語でテストスイートが開始されると、次のようになります。
 

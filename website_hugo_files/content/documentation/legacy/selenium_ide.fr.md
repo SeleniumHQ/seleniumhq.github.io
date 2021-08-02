@@ -35,21 +35,21 @@ Firefox will protect you from installing addons from unfamiliar locations, so
 you will need to click ‘Allow’ to proceed with the installation, as shown in
 the following screenshot.
 
-![Selenium IDE Installation 1](/images/legacy_docs/selenium_ide_installation_1.png)
+![Selenium IDE Installation 1](/images/documentation/legacy/selenium_ide_installation_1.png)
 
 When downloading from Firefox, you’ll be presented with the following window.
 
-![Selenium IDE Installation 2](/images/legacy_docs/selenium_ide_installation_2.png)
+![Selenium IDE Installation 2](/images/documentation/legacy/selenium_ide_installation_2.png)
 
 Select Install Now. The Firefox Add-ons window pops up, first showing a progress bar, 
 and when the download is complete, displays the following.
 
-![Selenium IDE Installation 3](/images/legacy_docs/selenium_ide_installation_3.png)
+![Selenium IDE Installation 3](/images/documentation/legacy/selenium_ide_installation_3.png)
 
 Restart Firefox. After Firefox reboots you will find the Selenium-IDE listed under 
 the Firefox Tools menu.
 
-![Selenium IDE Installation 4](/images/legacy_docs/selenium_ide_installation_4.png)
+![Selenium IDE Installation 4](/images/documentation/legacy/selenium_ide_installation_4.png)
 
 ## Opening the IDE
 
@@ -57,7 +57,7 @@ To run the Selenium-IDE, simply select it from the Firefox Tools menu. It opens
 as follows with an empty script-editing window and a menu for loading, or
 creating new test cases.
 
-![Selenium IDE Open](/images/legacy_docs/selenium_ide_open.png)
+![Selenium IDE Open](/images/documentation/legacy/selenium_ide_open.png)
 
 ## IDE Features
 
@@ -82,31 +82,31 @@ The toolbar contains buttons for controlling the execution of your test cases,
 including a step feature for debugging your test cases. The right-most button,
 the one with the red-dot, is the record button.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_1.png)
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_2.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_1.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_2.png)
 
 Speed Control: controls how fast your test case runs.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_3.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_3.png)
 
 Run All: Runs the entire test suite when a test suite with multiple test cases is loaded.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_4.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_4.png)
 
 Run: Runs the currently selected test. When only a single test is loaded 
 this button and the Run All button have the same effect.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_5.png)
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_6.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_5.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_6.png)
 
 Pause/Resume: Allows stopping and re-starting of a running test case.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_7.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_7.png)
 
 Step: Allows you to “step” through a test case by running it one command at a time. 
 Use for debugging test cases.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_8.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_8.png)
 
 TestRunner Mode: Allows you to run the test case in a browser loaded with the
 Selenium-Core TestRunner. The TestRunner is not commonly used now and is likely
@@ -114,13 +114,13 @@ to be deprecated. This button is for evaluating test cases for backwards
 compatibility with the TestRunner. Most users will probably not need this
 button.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_9.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_9.png)
  
 Apply Rollup Rules: This advanced feature allows repetitive sequences of
 Selenium commands to be grouped into a single action. Detailed documentation on
 rollup rules can be found in the UI-Element Documentation on the Help menu.
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_10.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_10.png)
 
 
 ### Test Case Pane
@@ -128,7 +128,7 @@ rollup rules can be found in the UI-Element Documentation on the Help menu.
 Your script is displayed in the test case pane. It has two tabs, one for
 displaying the command and their parameters in a readable “table” format.
 
-![Selenium IDE Image Pane](/images/legacy_docs/selenium_ide_image_pane.png)
+![Selenium IDE Image Pane](/images/documentation/legacy/selenium_ide_image_pane.png)
 
 The other tab - Source displays the test case in the native format in which the
 file will be stored. By default, this is HTML although it can be changed to a
@@ -143,7 +143,7 @@ the Reference tab of the bottom pane always goes in the Target field. If a
 second parameter is specified by the Reference tab, it always goes in the Value
 field.
 
-![Selenium IDE Entry Fields](/images/legacy_docs/selenium_ide_entry_fields.png)
+![Selenium IDE Entry Fields](/images/documentation/legacy/selenium_ide_entry_fields.png)
 
 If you start typing in the Command field, a drop-down list will be populated
 based on the first characters you type; you can then select your desired
@@ -162,7 +162,7 @@ select the Log tab. These messages are often useful for test case debugging.
 Notice the Clear button for clearing the Log. Also notice the Info button is a
 drop-down allowing selection of different levels of information to log.
 
-![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box.png)
+![Selenium IDE Bottom Box](/images/documentation/legacy/selenium_ide_bottom_box.png)
 
 
 #### Reference
@@ -178,7 +178,7 @@ parameters provided must match the order specified, and the type of parameters
 provided must match the type specified. If there is a mismatch in any of these
 three areas, the command will not run correctly.
 
-![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box_ref.png)
+![Selenium IDE Bottom Box](/images/documentation/legacy/selenium_ide_bottom_box_ref.png)
 
 While the Reference tab is invaluable as a quick reference, it is still often
 necessary to consult the Selenium Reference document.
@@ -384,12 +384,12 @@ Selenium-IDE will then create an absolute URL by appending the open command’s
 argument onto the end of the value of Base URL. For example, the test case
 below would be run against http://news.portal.com/about.html:
 
-![Selenium IDE Prod URL](/images/legacy_docs/selenium_ide_base_url_prod.png)
+![Selenium IDE Prod URL](/images/documentation/legacy/selenium_ide_base_url_prod.png)
 
 This same test case with a modified Base URL setting would be run against 
 http://beta.news.portal.com/about.html:
 
-![Selenium IDE Beta URL](/images/legacy_docs/selenium_ide_base_url_beta.png)
+![Selenium IDE Beta URL](/images/documentation/legacy/selenium_ide_base_url_beta.png)
 
 ## Selenium Commands – “Selenese”
 
@@ -1555,7 +1555,7 @@ contents of this drop-down for one command.  Note that the first column of
 the drop-down provides alternative locators, whereas the second column
 indicates the type of each alternative.
 
-![Selenium Locator Assistance](/images/legacy_docs/selenium_ide_locator_assistance.png)
+![Selenium Locator Assistance](/images/documentation/legacy/selenium_ide_locator_assistance.png)
 
 
 ## Writing a Test Suite 
@@ -1632,7 +1632,7 @@ To install this extension, put the pathname to its location on your
 computer in the **Selenium Core extensions** field of Selenium-IDE's
 Options=>Options=>General tab.
 
-![Selenium IDE Extensions Install](/images/legacy_docs/selenium_ide_extensions_install.png)
+![Selenium IDE Extensions Install](/images/documentation/legacy/selenium_ide_extensions_install.png)
 
 After selecting the **OK** button, you must close and reopen Selenium-IDE
 in order for the extensions file to be read.  Any change you make to an
@@ -1697,7 +1697,7 @@ An enhancement request has been raised to improve this error message. See
 
 ------------------
 
-![Selenium IDE Trouble Timing](/images/legacy_docs/selenium_ide_trouble_timing.png)
+![Selenium IDE Trouble Timing](/images/documentation/legacy/selenium_ide_trouble_timing.png)
 
 This type of **error** may indicate a timing problem, i.e., the element 
 specified by a locator in your command wasn't fully loaded when the command 
@@ -1707,7 +1707,7 @@ appropriate **waitFor\*** or **\*AndWait** command before the failing command.
 
 ------------------
 
-![Selenium IDE Trouble Param](/images/legacy_docs/selenium_ide_trouble_param.png)
+![Selenium IDE Trouble Param](/images/documentation/legacy/selenium_ide_trouble_param.png)
 
 Whenever your attempt to use variable substitution fails as is the
 case for the **open** command above, it indicates
@@ -1738,7 +1738,7 @@ An enhancement request has been raised to improve this error message. See
 
 ----------
 
-![Selenium IDE Trouble Extension](/images/legacy_docs/selenium_ide_trouble_extension.png)
+![Selenium IDE Trouble Extension](/images/documentation/legacy/selenium_ide_trouble_extension.png)
 
 Your extension file's contents have not been read by Selenium-IDE.  Be 
 sure you have specified the proper pathname to the extensions file via 
