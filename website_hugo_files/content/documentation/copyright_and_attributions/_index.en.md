@@ -1,4 +1,3 @@
-
 ---
 title: "Copyright and attributions"
 linkTitle: "Copyright and attributions"

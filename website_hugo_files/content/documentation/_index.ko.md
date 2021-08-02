@@ -1,6 +1,6 @@
 ---
-title: "Selenium, el proyecto para automatizar navegadores"
-linkTitle: "Documentación"
+title: "Selenium 브라우저 자동화 프로젝트"
+linkTitle: "문서"
 cascade:
 - type: docs
 ---
@@ -9,7 +9,7 @@ cascade:
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Korean. Do you speak Korean? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}

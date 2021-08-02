@@ -1,6 +1,6 @@
 ---
-title: "Selenium, el proyecto para automatizar navegadores"
-linkTitle: "Documentación"
+title: "Seleniumブラウザー自動化プロジェクト"
+linkTitle: "ドキュメント"
 cascade:
 - type: docs
 ---
@@ -9,34 +9,21 @@ cascade:
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Japanese. Do you speak Japanese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-Selenium es un proyecto que alberga un abanico de herramientas y librerías que
-permiten y apoyan la automatización de navegadores web.
+Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群プロジェクトです。
 
-Proporciona extensiones que permiten emular las interacciones que realizan los
-usuarios con los navegadores, un servidor que permite distribuir la asignación
-de navegadores de forma escalable, y la infraestructura necesaria para las 
-implementaciones de la [especificación del WebDriver del W3C](//www.w3.org/TR/webdriver/), 
-el cual permite escribir código intercambiable para los navegadores web mas usados.
+ユーザーとブラウザーのやり取りのエミュレーション、ブラウザーの割当を増強したり縮減する分散型サーバー、そしてすべてのメジャーなブラウザー用に置換可能なコードの実装を可能にする[W3C WebDriver 仕様](//www.w3.org/TR/webdriver/)インフラの提供します。
 
-Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
-han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
-esté [disponible de manera gratuita]({{< ref "/copyright_and_attributions.md#license" >}})
-para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+このプロジェクトは多くの有志貢献者の何千時間に及ぶ個々の時間を費やした事とソースコード[自由に利用可能]({{< ref "/copyright_and_attributions.md#license" >}})を誰にでも利用、楽しめ、そして改良できることによって実現しました。
 
-Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para 
-promover un debate abierto sobre la automatización de plataformas web.
-El proyecto organiza [una conferencia anual](//seleniumconf.com/) con el fin de
-enseñar y nutrir a la comunidad.
+Seleniumはウェブプラットフォームの自動化のより開かれた議論をするためブラウザーベンダー、エンジニア、愛好家をまとめます。このプロジェクトはコミュニティーを導きと育成のために[年次カンファレンス](//seleniumconf.com/)開催します。
 
-El corazón de Selenium es el [WebDriver]({{< ref "/webdriver.md" >}}), una
-interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
-manera indistinta en muchos navegadores.
-
+Seleniumの中核は[WebDriver]({{< ref "/webdriver.md" >}})であり、様々なブラウザーを変えてインストラクション集を実行できるインターフェースです。これは作りえる一番基本的な
+インストラクションの一つです:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

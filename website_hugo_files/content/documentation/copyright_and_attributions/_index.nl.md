@@ -1,6 +1,10 @@
 ---
 title: "Copyright and attributions"
-weight: 1
+linkTitle: "Copyright and attributions"
+weight: 8
+description: >
+  Copyright, contributions and all attributions for the different projects
+  under the Selenium umbrella.
 ---
 
 {{% pageinfo color="warning" %}}

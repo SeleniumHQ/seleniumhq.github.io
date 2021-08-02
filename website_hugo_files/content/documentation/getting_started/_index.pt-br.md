@@ -1,6 +1,6 @@
 ---
-title: "Empezando"
-linkTitle: "Empezando"
+title: "Começando"
+linkTitle: "Começando"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
@@ -10,18 +10,15 @@ description: >
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Portuguese. Do you speak Portuguese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-
-La configuración de Selenium es bastante diferente de la configuración
-de otras herramientas comerciales.
-Para usar Selenium en tu proyecto de automatización,
-necesitas instalar las librerías de enlace de tu lenguaje de preferencia.
-Además necesitarás los binarios de WebDriver para los navegadores 
-en los que deseas automatizar y ejecutar pruebas.
+A configuração do Selenium é bastante diferente da configuração de outras ferramentas comerciais.
+Para usar Selenium em seu projeto de automação, você precisa instalar as
+bibliotecas de linguagem para sua linguagem de escolha. Além disso, você precisará dos
+binários WebDriver para os navegadores que você deseja automatizar e executar testes.
 
 Intalling Selenium can be divided in three steps:
 
@@ -32,16 +29,16 @@ Intalling Selenium can be divided in three steps:
 If you wish to start with a low-code/record and playback tool, please check 
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-## Instalando las librerías de Selenium
 
-Primero debes instalar las librerías de enlace Selenium para tu
-proyecto de automatización.
-El proceso de instalación de las librerías depende del lenguaje 
-que elijas usar.
+
+## Instalando bibliotecas do Selenium
+
+Primeiro você precisa instalar as ligações Selenium para seu projeto de automação.
+O processo de instalação de bibliotecas depende da linguagem que você escolher usar.
 
 ### Java
-La instalación de las librerías Selenium para Java se puede hacer usando Maven.
-Agrega la dependencia de _selenium-java_ en el pom.xml de tu proyecto:
+A instalação de bibliotecas Selenium para Java pode ser feita usando Maven.
+Adicione a dependência selenium-java em seu pom.xml:
 
 ```xml
 <dependency>
@@ -51,13 +48,12 @@ Agrega la dependencia de _selenium-java_ en el pom.xml de tu proyecto:
 </dependency>
 ```
 
-La dependencia _selenium-java_ permite la ejecución de tu proyecto de
-automatización en todos los navegadores compatibles con Selenium. 
-Si quieres ejecutar pruebas en un navegador en específico, 
-puedes agregar la dependencia para ese navegador
-en el archivo _pom.xml_.
-Por ejemplo, debes agregar la siguiente dependencia en tu
-archivo _pom.xml_ para ejecutar tus pruebas solamente en Firefox:
+A dependência _selenium-java_ suporta a execução de sua automação com todos os navegadores 
+com suporte Selenium. Se você quiser fazer testes
+apenas em um navegador específico, você pode adicionar a dependência para esse navegador
+em seu arquivo _pom.xml_.
+Por exemplo, você deve adicionar a seguinte dependência em seu _pom.xml_
+arquivo para executar seus testes apenas no Firefox:
 
 ```xml
 <dependency>
@@ -66,9 +62,9 @@ archivo _pom.xml_ para ejecutar tus pruebas solamente en Firefox:
   <version>4.X</version>
 </dependency>
 ```
-
-De igual manera, si quieres ejecutar las pruebas solamente
-en Chrome, debes agregar la siguiente dependencia:   
+   
+De maneira semelhante, se você deseja executar testes apenas no Chrome,
+você deve adicionar a seguinte dependência:
 
 ```xml
 <dependency>
@@ -79,50 +75,45 @@ en Chrome, debes agregar la siguiente dependencia:
 ```
 
 ### Python
-La instalación de las librerías de Selenium en Python
-se puede hacer usando pip:
+A instalação de bibliotecas Selenium para Python pode ser feita usando pip:
 
 ```shell
 pip install selenium
 ```
 
-Alternativamente, puedes descargar el [archivo fuente PyPI](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) e instalarlo usando _setup.py_:
+Como alternativa, você pode baixar o [arquivo de origem do PyPI](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) e instale-o usando _setup.py_:
 
 ```shell
 python setup.py install
 ```
 
 ### C#
-La instalación de las librerías de Selenium para C# se puede
-hacer usando NuGet:
+A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:
 
 ```shell
-# Usando el manejador de paquetess
+# Using package manager
 Install-Package Selenium.WebDriver
-# o usando el CLI de .Net
+# or using .Net CLI
 dotnet add package Selenium.WebDriver
 ```
 
 ### Ruby
-La instalación de las librerías de Selenium para Ruby se puede
-hacer usando gem:
+A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
 ### JavaScript
-La instalación de las librerías de Selenium para JavaScript se puede
-hacer usando npm:
+A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
 ### Kotlin
-Debido a la falta de librerías de enlace de idioma nativas para Kotlin, 
-debe usar las de Java, p. ej. con Maven [Java](#java)
+Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)
 
 
 ## Set up the browser driver

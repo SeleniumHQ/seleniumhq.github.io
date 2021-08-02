@@ -1,6 +1,6 @@
 ---
-title: "Selenium, el proyecto para automatizar navegadores"
-linkTitle: "Documentación"
+title: "The Selenium Browser Automation Project"
+linkTitle: "Documentation"
 cascade:
 - type: docs
 ---
@@ -9,34 +9,34 @@ cascade:
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Dutch. Do you speak Dutch? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-Selenium es un proyecto que alberga un abanico de herramientas y librerías que
-permiten y apoyan la automatización de navegadores web.
+Selenium is an umbrella project for a range of tools and libraries 
+that enable and support the automation of web browsers. 
 
-Proporciona extensiones que permiten emular las interacciones que realizan los
-usuarios con los navegadores, un servidor que permite distribuir la asignación
-de navegadores de forma escalable, y la infraestructura necesaria para las 
-implementaciones de la [especificación del WebDriver del W3C](//www.w3.org/TR/webdriver/), 
-el cual permite escribir código intercambiable para los navegadores web mas usados.
+It provides extensions to emulate user interaction with browsers,
+a distribution server for scaling browser allocation,
+and the infrastructure for implementations of the 
+[W3C WebDriver specification](//www.w3.org/TR/webdriver/)
+that lets you write interchangeable code for all major web browsers.
 
-Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
-han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
-esté [disponible de manera gratuita]({{< ref "/copyright_and_attributions.md#license" >}})
-para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+This project is made possible by volunteer contributors
+who have put in thousands of hours of their own time,
+and made the source code 
+[freely available]({{< ref "/copyright_and_attributions.md#license" >}})
+for anyone to use, enjoy, and improve.
 
-Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para 
-promover un debate abierto sobre la automatización de plataformas web.
-El proyecto organiza [una conferencia anual](//seleniumconf.com/) con el fin de
-enseñar y nutrir a la comunidad.
+Selenium brings together browser vendors, engineers, and enthusiasts
+to further an open discussion around automation of the web platform.
+The project organises [an annual conference](//seleniumconf.com/)
+to teach and nurture the community.
 
-El corazón de Selenium es el [WebDriver]({{< ref "/webdriver.md" >}}), una
-interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
-manera indistinta en muchos navegadores.
-
+At the core of Selenium is [WebDriver](/documentation/webdriver), 
+an interface to write instruction sets that can be run interchangeably in many 
+browsers. Here is one of the simplest instructions you can make:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -158,8 +158,6 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-
-
 See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
 components and decide if Selenium is the right tool for you.
 
@@ -167,4 +165,6 @@ You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.
+
+
 

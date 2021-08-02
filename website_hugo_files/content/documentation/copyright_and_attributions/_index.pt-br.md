@@ -1,11 +1,29 @@
 ---
 title: "Direitos autorais e atribuições"
-weight: 1
+linkTitle: "Direitos autorais e atribuições"
+weight: 8
+description: >
+  Copyright, contributions and all attributions for the different projects
+  under the Selenium umbrella.
 ---
+
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Portuguese. Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
 ## **A Documentação do Selenium**
 
-Todo esforço foi feito para tornar esta documentação a mais completa e precisa possível, mas nenhuma garantia ou adequação está implícita. As informações fornecidas são "no estado em que se encontram". Os autores e a editora não terão qualquer responsabilidade para com qualquer pessoa ou entidade com relação a quaisquer perdas ou danos decorrentes das informações contidas neste livro. Nenhuma responsabilidade de patente é assumida com relação ao uso das informações aqui contidas.
+Todo esforço foi feito para tornar esta documentação a mais completa e precisa possível, 
+mas nenhuma garantia ou adequação está implícita. As informações fornecidas são 
+"no estado em que se encontram". Os autores e a editora não terão qualquer responsabilidade 
+para com qualquer pessoa ou entidade com relação a quaisquer perdas ou danos decorrentes 
+das informações contidas neste livro. Nenhuma responsabilidade de patente é assumida com 
+relação ao uso das informações aqui contidas.
 
 
 ## Atribuições

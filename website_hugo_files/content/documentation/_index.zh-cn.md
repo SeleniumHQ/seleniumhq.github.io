@@ -1,6 +1,6 @@
 ---
-title: "Selenium, el proyecto para automatizar navegadores"
-linkTitle: "Documentación"
+title: "Selenium 浏览器自动化项目"
+linkTitle: "文档"
 cascade:
 - type: docs
 ---
@@ -9,33 +9,25 @@ cascade:
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
+   English to Chinese. Do you speak Chinese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-Selenium es un proyecto que alberga un abanico de herramientas y librerías que
-permiten y apoyan la automatización de navegadores web.
+Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目。
 
-Proporciona extensiones que permiten emular las interacciones que realizan los
-usuarios con los navegadores, un servidor que permite distribuir la asignación
-de navegadores de forma escalable, y la infraestructura necesaria para las 
-implementaciones de la [especificación del WebDriver del W3C](//www.w3.org/TR/webdriver/), 
-el cual permite escribir código intercambiable para los navegadores web mas usados.
+它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器，
+以及用于实现 [W3C WebDriver 规范](//www.w3.org/TR/webdriver/) 的基础结构，
+该 规范 允许您为所有主要 Web 浏览器编写可互换的代码。
 
-Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
-han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
-esté [disponible de manera gratuita]({{< ref "/copyright_and_attributions.md#license" >}})
-para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+这个项目是由志愿者贡献者实现的，他们投入了自己数千小时的时间，
+并使源代码[免费提供]({{< ref "/copyright_and_attributions.md#license" >}})给任何人使用、享受和改进。
 
-Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para 
-promover un debate abierto sobre la automatización de plataformas web.
-El proyecto organiza [una conferencia anual](//seleniumconf.com/) con el fin de
-enseñar y nutrir a la comunidad.
+Selenium 汇集了浏览器供应商，工程师和爱好者，以进一步围绕 Web 平台自动化进行公开讨论。
+该项目组织了[一次年度会议](//seleniumconf.com/)，以教学和培养社区。
 
-El corazón de Selenium es el [WebDriver]({{< ref "/webdriver.md" >}}), una
-interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
-manera indistinta en muchos navegadores.
+Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编写指令集的接口，可以在许多浏览器中互换运行。
+这里有一个最简单的说明：
 
 
 {{< tabpane langEqualsHeader=true >}}

@@ -31,7 +31,7 @@ intrusiva. Por lo tanto, está probando la misma aplicación que está en vivo.
 
 ## IDE
 
-[IDE](https://selenium.dev/selenium-ide) (Integrated Development Environment) 
+[IDE](//selenium.dev/selenium-ide) (Integrated Development Environment) 
 es la herramienta que usas para desarrollar tus casos de prueba con Selenium.
 Es una extensión para Chrome y Firefox muy sencilla de usar y es generalmente la 
 forma mas eficiente de desarrollar casos de prueba. Esta graba las acciones del
