@@ -27,7 +27,7 @@ Selenium RC 服务器之间的接口.
 
 以下是一个简化的架构图:
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+![Architecture Diagram Simple](/images/documentation/legacy/selenium_rc_architecture_diagram_simple.png) 
 
 该图显示了客户端库与服务器通信, 
 并传递了用来执行的每个Selenium命令. 
@@ -1136,7 +1136,7 @@ http.proxyUser
 Selenium默认在子frame中运行测试中的应用程序, 
 如下所示.
 
-![单窗口模式](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![单窗口模式](/images/documentation/legacy/selenium_rc_single_window_mode.png)
 
 某些应用程序无法在子框架中正常运行, 
 需要将其加载到窗口的顶部框架中. 
@@ -1144,7 +1144,7 @@ Selenium默认在子frame中运行测试中的应用程序,
 而不是在默认帧中运行, 
 然后在默认帧中可以拥有所需的顶部帧.
 
-![多窗口模式](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![多窗口模式](/images/documentation/legacy/selenium_rc_multi_window_mode.png)
 
 对于旧版本的Selenium, 
 您必须使用以下选项明确指定多窗口模式:
@@ -1344,7 +1344,7 @@ Selenium 服务器充当客户端配置的 **HTTP proxy** [^1]
 
 以下是架构图. 
 
-![架构图 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+![架构图 1](/images/documentation/legacy/selenium_rc_architecture_diagram_1.png)
 
 当测试套件以您喜欢的语言开始时, 会发生以下情况:
 
@@ -1377,7 +1377,7 @@ Selenium Core能够直接打开AUT并与其内容进行读取/交互,
 
 以下是架构图. 
 
-![架构图 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+![架构图 1](/images/documentation/legacy/selenium_rc_architecture_diagram_2.png)
 
 当测试套件以您喜欢的语言开始时, 
 会发生以下情况:

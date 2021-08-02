@@ -21,29 +21,29 @@ Firefoxを使用して、最初にSeleniumHQ[ダウンロードページ](https:
 
 Firefoxは、不慣れな場所からアドオンをインストールしないように保護するため、次のスクリーンショットに示すように、インストールを続行するには'許可'をクリックする必要があります。
 
-![Selenium IDE Installation 1](/images/legacy_docs/selenium_ide_installation_1.png)
+![Selenium IDE Installation 1](/images/documentation/legacy/selenium_ide_installation_1.png)
 
 Firefoxからダウンロードすると、次のウィンドウが表示されます。
 
-![Selenium IDE Installation 2](/images/legacy_docs/selenium_ide_installation_2.png)
+![Selenium IDE Installation 2](/images/documentation/legacy/selenium_ide_installation_2.png)
 
 「今すぐインストール」を選択します。
 Firefoxの「アドオン」ウィンドウがポップアップし、最初にプログレスバーが表示されます。
 ダウンロードが完了すると、次のような画面になります。
 
-![Selenium IDE Installation 3](/images/legacy_docs/selenium_ide_installation_3.png)
+![Selenium IDE Installation 3](/images/documentation/legacy/selenium_ide_installation_3.png)
 
 Firefoxを再起動します。
 Firefoxの再起動後、Firefoxの「ツール」メニューには、「Selenium-IDE」が表示されます。
 
-![Selenium IDE Installation 4](/images/legacy_docs/selenium_ide_installation_4.png)
+![Selenium IDE Installation 4](/images/documentation/legacy/selenium_ide_installation_4.png)
 
 ## IDEを開く
 
 Selenium-IDEを実行するには、Firefoxの「ツール」メニューから「Selenium-IDE」を選択するだけです。
 空のスクリプト編集ウィンドウと、テストケースを読み込んだり新規作成したりするメニューのある Selenium-IDE のウィンドウが表示されます。
 
-![Selenium IDE Open](/images/legacy_docs/selenium_ide_open.png)
+![Selenium IDE Open](/images/documentation/legacy/selenium_ide_open.png)
 
 ## IDEの機能
 
@@ -64,32 +64,32 @@ Selenium-IDEを実行するには、Firefoxの「ツール」メニューから�
 ツールバーには、テストケースをデバッグするためのステップ実行機能をはじめ、テストケースの実行をコントロールするためのさまざまなボタンが並んでいます。
 右端の赤い丸のボタンは、「Record」(記録) ボタンです。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_1.png)
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_2.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_1.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_2.png)
 
 「Speed Control」 (速度調節): テストケースの実行速度を調節します。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_3.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_3.png)
 
 「Run All」 (すべて実行): 複数のテストケースを持つテストスイートが読み込まれているときにテストスイート全体を実行します。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_4.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_4.png)
 
 「Run」 (実行): 現在選択されているテストを実行します。
 テストが1つしか読み込まれていない場合、このボタンと「Run All」ボタンの動作は同じです。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_5.png)
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_6.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_5.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_6.png)
 
 「Pause」 / 「Resume」 (一時停止/再開) : 実行中のテストを一時停止または再開します。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_7.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_7.png)
 
 「Step」(ステップ実行): コマンドを1つずつ実行し、テストケースの「1ステップ実行」を行います。
 テストケースをデバッグするときに使います。
 
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_8.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_8.png)
 
 「TestRunner Mode」 (TestRunner モード): テストケースを Selenium-Core TestRunner で読み込んでブラウザで実行することができます。
 TestRunner は今はあまり使われておらず、いずれ非推奨となるでしょう。
@@ -97,12 +97,12 @@ TestRunner は今はあまり使われておらず、いずれ非推奨となる
 ほとんどのユーザーは、このボタンを使う必要はないでしょう。
 
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_9.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_9.png)
  
 「Apply Rollup Rules」(ロールアップルールを適用): この高度な機能を利用すると、一連の Selenium コマンドの繰り返しを 1 つのアクションにまとめることができます。
 ロールアップルールの詳細については、「ヘルプ」 メニューの [UI-Element Documentation] を参照してください。
 
-![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_10.png)
+![Selenium IDE Features](/images/documentation/legacy/selenium_ide_features_10.png)
 
 
 ### テストケース ペイン
@@ -111,7 +111,7 @@ TestRunner は今はあまり使われておらず、いずれ非推奨となる
 ペインには2つのタブがあります。
 次に示すのは、コマンドとそのパラメータを読みやすい「テーブル」形式で表示するための [「テーブル」タブです。
 
-![Selenium IDE Image Pane](/images/legacy_docs/selenium_ide_image_pane.png)
+![Selenium IDE Image Pane](/images/documentation/legacy/selenium_ide_image_pane.png)
 
 もう 1 つの「ソース」タブには、テストケースがネイティブ形式で表示されます。
 ファイルはこのネイティブ形式で保存されます。
@@ -124,7 +124,7 @@ TestRunner は今はあまり使われておらず、いずれ非推奨となる
 一番下のペインの 「リファレンス」 タブで、コマンドに対して指定されている 1 つ目のパラメータは、必ず 「対象」 フィールドに入力します。
 「リファレンス」 タブで 2 つ目のパラメータが指定されている場合、このパラメータは 「値」 フィールドに入力します。
 
-![Selenium IDE Entry Fields](/images/legacy_docs/selenium_ide_entry_fields.png)
+![Selenium IDE Entry Fields](/images/documentation/legacy/selenium_ide_entry_fields.png)
 
 「コマンド」フィールドに文字を入力すると、入力した文字に応じてドロップダウンリストに項目が表示されるので、このリストから目的のコマンドを選択できます。
 
@@ -141,7 +141,7 @@ TestRunner は今はあまり使われておらず、いずれ非推奨となる
 「情報」 ボタンをクリックすると、ドロップダウンリストが表示されます。
 リストで目的の項目を選択すれば、画面に表示する情報のレベルを指定できます。
 
-![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box.png)
+![Selenium IDE Bottom Box](/images/documentation/legacy/selenium_ide_bottom_box.png)
 
 
 #### リファレンス
@@ -153,7 +153,7 @@ TestRunner は今はあまり使われておらず、いずれ非推奨となる
 さらに、指定するパラメータの型も、「リファレンス」 ペインで指定されている型と一致していなければなりません。
 これら 3つのうち、1つでも一致しないものがあれば、コマンドは正常に実行されません。
 
-![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box_ref.png)
+![Selenium IDE Bottom Box](/images/documentation/legacy/selenium_ide_bottom_box_ref.png)
 
 「リファレンス」 タブはクイックリファレンスとして大いに役立ちますが、Seleniumリファレンスを参照することもしばしば必要になります。
 
@@ -327,11 +327,11 @@ Selenium-IDE ウィンドウの上部にある 「Base URL」 フィールドを
 すると、Selenium-IDE は、[Base URL] フィールドに入力された値の最後に、 open コマンドの引数を追加して、絶対 URL を作成します。
 たとえば次のテストケースは、 http://news.portal.com/about.html を対象に実行されます。
 
-![Selenium IDE Prod URL](/images/legacy_docs/selenium_ide_base_url_prod.png)
+![Selenium IDE Prod URL](/images/documentation/legacy/selenium_ide_base_url_prod.png)
 
 ここで、「Base URL」 フィールドの設定を変更してテストケースを実行すれば、同じテストケースが今度は http://beta.news.portal.com/about.html を対象に実行されます。
 
-![Selenium IDE Beta URL](/images/legacy_docs/selenium_ide_base_url_beta.png)
+![Selenium IDE Beta URL](/images/documentation/legacy/selenium_ide_base_url_beta.png)
 
 ## Selenium コマンド- "Selenese"
 
@@ -1315,7 +1315,7 @@ Selenium-IDE は、ロケータ型引数を記録するたびに追加情報を�
 次に示すのは、あるコマンドのドロップダウンリストの内容です。
 ドロップダウンリストの最初の列には、代わりに使用できるロケータが表示され、2 列目にはそれぞれの型が表示されることに注意してください。
 
-![Selenium Locator Assistance](/images/legacy_docs/selenium_ide_locator_assistance.png)
+![Selenium Locator Assistance](/images/documentation/legacy/selenium_ide_locator_assistance.png)
 
 
 ## テストスイートの作成
@@ -1376,7 +1376,7 @@ Selenium-IDE は、ロケータ型引数を記録するたびに追加情報を�
 
 この拡張スクリプトをインストールするには、Selenium-IDE の "オプション" メニューで "設定" をクリックし、 "一般" タブの **Selenium Core 拡張スクリプト (user-extension.js) のパス** フィールドに、ファイルのパス名を入力します。
 
-![Selenium IDE Extensions Install](/images/legacy_docs/selenium_ide_extensions_install.png)
+![Selenium IDE Extensions Install](/images/documentation/legacy/selenium_ide_extensions_install.png)
 
 **OK** ボタンをクリックしたら、拡張スクリプトを読み込むために、Selenium-IDE をいったん閉じて開く必要があります。
 また、拡張スクリプトに変更を加えた場合も、Selenium-IDE をいったん閉じて開く必要があります。
@@ -1428,7 +1428,7 @@ Table view is not available with this format.
 
 ------------------
 
-![Selenium IDE Trouble Timing](/images/legacy_docs/selenium_ide_trouble_timing.png)
+![Selenium IDE Trouble Timing](/images/documentation/legacy/selenium_ide_trouble_timing.png)
 
 このタイプの **エラー** は、タイミングの問題を示している可能性があります。
 つまり、コマンドのロケーターによって指定された要素が、コマンドの実行時に完全にロードされていません。
@@ -1437,7 +1437,7 @@ Table view is not available with this format.
 
 ------------------
 
-![Selenium IDE Trouble Param](/images/legacy_docs/selenium_ide_trouble_param.png)
+![Selenium IDE Trouble Param](/images/documentation/legacy/selenium_ide_trouble_param.png)
 
 上記の **open** コマンドの場合のように変数置換を使用しようとして失敗した場合は、アクセスしようとしている値を持つ変数を実際に作成していないことを示します。
 これは、変数を **Target** フィールドに配置する必要がある場合に **Value** フィールドに配置するか、その逆の場合があります。
@@ -1460,7 +1460,7 @@ chrome://selenium-ide/content/file-utils.js :: anonymous :: line 48" data: no]*
 
 ----------
 
-![Selenium IDE Trouble Extension](/images/legacy_docs/selenium_ide_trouble_extension.png)
+![Selenium IDE Trouble Extension](/images/documentation/legacy/selenium_ide_trouble_extension.png)
 
 拡張ファイルの内容が、Selenium-IDEによって読み取られていません。
 Selenium-IDE の *“オプション” メニューで “設定” をクリックし、 “一般” タブ* の **Selenium Core 拡張スクリプト (user-extension.js) のパス** フィールドに適切なパス名を指定していることを確認してください。

@@ -14,8 +14,6 @@ weight: 6
 </p>
 {{% /pageinfo %}}
 
-# Grid 3
-
 _Selenium Grid_ es un servidor inteligente que efectúa de proxy que permite a los
 tests de Selenium enrutar sus comandos hacia instancias remotas de navegadores
 web.

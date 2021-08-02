@@ -1,6 +1,6 @@
 ---
-title: "Grid 3"
-linkTitle: "Grid 3"
+title: "服务网格 3"
+linkTitle: "服务网格 3"
 weight: 6
 ---
 
@@ -14,7 +14,6 @@ weight: 6
 </p>
 {{% /pageinfo %}}
 
-# 服务网格 3
 
 _Selenium服务网格_ 是一个能够让Selenium的测试把命令传送到一个远程浏览器实例的职能代理服务器。
 他的目的是提供一个简便的方法来在多台终端上并行的执行测试任务。

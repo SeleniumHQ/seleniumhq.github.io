@@ -13,7 +13,6 @@ weight: 6
    the community nor the project.
 </p>
 {{% /pageinfo %}}
-# Grid 3
 
 _Selenium Grid_ is a smart proxy server
 that allows Selenium tests to route commands to remote web browser instances.

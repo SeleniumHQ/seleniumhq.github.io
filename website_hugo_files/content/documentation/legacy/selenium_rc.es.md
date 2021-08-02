@@ -28,7 +28,7 @@ los mensajes HTTP pasados entre el navegador y el AUT.
 
 Aquí hay un diagrama simplificado de la arquitectura:
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png)
+![Architecture Diagram Simple](/images/documentation/legacy/selenium_rc_architecture_diagram_simple.png)
 
 El diagrama muestra que las librerías del cliente se comunican con el
 el servidor pasando cada comando Selenium para su ejecución.
@@ -1104,11 +1104,11 @@ Si estás utilizando Selenium 1.0, probablemente puedas omitir esta sección,
 ya que el modo de ventanas múltiples es el comportamiento predeterminado.
 Sin embargo, antes de la versión 1.0, Selenium ejecutaba la aplicación bajo prueba en un sub-marco como se muestra aquí:
 
-![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![Single window mode](/images/documentation/legacy/selenium_rc_single_window_mode.png)
 
 Algunas aplicaciones no se ejecutaban correctamente en un sub-marcoo y debían ser cargadas en el marco superior de la ventana. La opción modo de ventana múltiple permitia al AUT ejecutarse en una ventana separada en lugar de en el marco predeterminado donde entonces podía tener el marco superior requerido.
 
-![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![Multiwindow Mode](/images/documentation/legacy/selenium_rc_multi_window_mode.png)
 
 Para versiones anteriores de Selenium, debes especificar explícitamente el modo de ventanas múltiples con la siguiente opción:
 
@@ -1308,7 +1308,7 @@ desde el servidor real.
 
 Aquí hay un diagrama arquitectónico.
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+![Architectural Diagram 1](/images/documentation/legacy/selenium_rc_architecture_diagram_1.png)
 
 Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
 sucede lo siguiente:
@@ -1347,7 +1347,7 @@ RC.
 
 Aquí hay un diagrama arquitectónico.
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+![Architectural Diagram 1](/images/documentation/legacy/selenium_rc_architecture_diagram_2.png)
 
 Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
 sucede lo siguiente:
