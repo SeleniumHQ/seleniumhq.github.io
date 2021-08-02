@@ -1,6 +1,6 @@
 ---
-title: "Support packages"
-linkTitle: "Support packages"
+title: "Support Packages"
+linkTitle: "Support Packages"
 weight: 11
 description: >
   Set of packages and functionalities to simplify automation with Selenium.
