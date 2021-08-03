@@ -198,7 +198,7 @@ Seleniumは、JavaScript関数 [getBoundingClientRect()](https://developer.mozil
 
 レラティブ ロケーターを理解するために、以下の例を考えてみましょう。
 
-![Relative Locators](/images/relative_locators.png?width=400px)
+{{< figure src="/images/documentation/webdriver/relative_locators.png" class="img-responsive text-center" alt="Relative Locators">}}
 
 ### above()
 

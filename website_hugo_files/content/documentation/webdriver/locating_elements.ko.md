@@ -178,7 +178,7 @@ This feature landed in **Selenium4 - beta3**
 
 아래 사진을 예시로 relative locator에 대해 알아봅시다.
 
-![Relative Locators](/images/relative_locators.png?width=400px)
+{{< figure src="/images/documentation/webdriver/relative_locators.png" class="img-responsive text-center" alt="Relative Locators">}}
 
 ### above()
 
