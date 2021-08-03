@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Selenium Browser Automation"
+title = "Selenium"
 
 enableRobotsTXT = true
 
@@ -10,13 +10,13 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
+# contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+# disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -29,7 +29,8 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+blog = "/:section/:year/:filename/"
+# blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
 [blackfriday]
@@ -53,11 +54,52 @@ anchor = "smart"
 
 [languages]
 [languages.en]
-title = "Selenium Browser Automation"
+title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="English"
-# Weight used for sorting.
 weight = 1
+[languages.es]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Español"
+weight = 2
+[languages.de]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Deutsch"
+weight = 3
+[languages.pt-br]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Português (Brasileiro)"
+weight = 4
+[languages.nl]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Nederlands"
+weight = 5
+[languages.zh-cn]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName = "中文简体"
+weight = 6
+[languages.fr]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName = "Français"
+weight = 7
+[languages.ja]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName = "日本語"
+weight = 8
+[languages.ko]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName = "한국어"
+weight = 9
+
+
 
 [markup]
   [markup.goldmark]
@@ -114,6 +156,7 @@ github_branch= "dev"
 
 # Enable Lunr.js offline search
 offlineSearch = true
+offlineSearchMaxResults = 30
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -121,7 +164,7 @@ prism_syntax_highlighting = false
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = false
+sidebar_menu_compact = true
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
@@ -130,6 +173,8 @@ sidebar_search_disable = false
 navbar_logo = true
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
+# Max amount of entries on the side bar
+sidebar_menu_truncate = 80
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
@@ -211,5 +256,70 @@ weight = 1
 [[menus.main]]
 name = "Structure and Governance"
 parent = "About"
-url = "/about/project"
+url = "/project"
 weight = 10
+
+[[menus.main]]
+name = "Events"
+parent = "About"
+url = "/events"
+weight = 20
+
+[[menus.main]]
+name = "Ecosystem"
+parent = "About"
+url = "/ecosystem"
+weight = 30
+
+[[menus.main]]
+name = "History"
+parent = "About"
+url = "/history"
+weight = 40
+
+[[menus.main]]
+name = "Get Involved"
+parent = "About"
+url = "/getinvolved"
+weight = 50
+
+[[menus.main]]
+name = "Sponsors"
+parent = "About"
+url = "/sponsors"
+weight = 60
+
+[[menus.main]]
+identifier = "Downloads"
+name = "Downloads"
+url = "/downloads"
+weight = 20
+
+[[menus.main]]
+identifier = "Projects"
+name = "Projects"
+url = "/projects"
+weight = 30
+
+[[menus.main]]
+identifier = "Documentation"
+name = "Documentation"
+url = "/documentation"
+weight = 30
+
+[[menus.main]]
+identifier = "Support"
+name = "Support"
+url = "/support"
+weight = 50
+
+[[menus.main]]
+identifier = "Blog"
+name = "Blog"
+url = "/blog"
+weight = 60
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+year = "year"

@@ -238,7 +238,7 @@ Liefert das WebElement, welches sich über dem spezifiziertem Element befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 WebElement passwordField= driver.findElement(By.id("password"));
 WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
@@ -255,8 +255,7 @@ emailAddressField = driver.find_element(with_tag_name("input").above(passwordFie
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement passwordField = driver.FindElement(By.Id("password"));
-IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Above(passwordField));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input").Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 password_field= driver.find_element(:id, "password")
@@ -279,7 +278,7 @@ spezifiziertem Element befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 WebElement emailAddressField= driver.findElement(By.id("email"));
 WebElement passwordField = driver.findElement(with(By.tagName("input"))
@@ -292,11 +291,10 @@ emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
-IWebElement passwordField = driver.FindElement(WithTagName("input")
-                                               .Below(emailAddressField));
+IWebElement passwordField = driver.FindElement(WithTagName("input").Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_field= driver.find_element(:id, "email")
@@ -319,11 +317,11 @@ befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 WebElement submitButton= driver.findElement(By.id("submit"));
-WebElement cancelButton= driver.findElement(with(By.tagName("button"))
-                                            .toLeftOf(submitButton));
+WebElement cancelButton= driver.findElement(with(By.tagName("button")).toLeftOf(submitButton));
+
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium.webdriver.support.relative_locator import with_tag_name
@@ -336,8 +334,7 @@ cancelButton = driver.find_element(with_tag_name("button").
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
-IWebElement cancelButton = driver.FindElement(WithTagName("button")
-                                              .LeftOf(submitButton));
+IWebElement cancelButton = driver.FindElement(WithTagName("button").LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 submit_button= driver.find_element(:id, "submit")
@@ -360,7 +357,7 @@ Liefert das WebElement, das sich rechts des spezifierten Elements befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 WebElement cancelButton= driver.findElement(By.id("cancel"));
 WebElement submitButton= driver.findElement(with(By.tagName("button"))
@@ -377,8 +374,7 @@ submitButton = driver.find_element(with_tag_name("button").
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
-IWebElement submitButton = driver.FindElement(WithTagName("button")
-                                              .RightOf(cancelButton));
+IWebElement submitButton = driver.FindElement(WithTagName("button").RightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cancel_button = driver.find_element(:id, "cancel")
@@ -401,7 +397,7 @@ Element entfernt ist.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
 WebElement emailAddressField = driver.findElement(with(By.tagName("input"))
@@ -418,8 +414,7 @@ emailAddressField = driver.find_element(with_tag_name("input").
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
-IWebElement emailAddressField = driver.FindElement(WithTagName("input")
-                                                   .Near(emailAddressLabel));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input").Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 email_address_label = driver.find_element(:id, "lbl-email")

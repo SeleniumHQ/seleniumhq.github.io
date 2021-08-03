@@ -21,7 +21,7 @@ respectivo(s) desarrollador(es).
 |Navegador|Más reciente|Registro de cambios|Seguimiento de Incidentes|
 |--- |--- |--- |--- |
 |[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[más reciente](https://github.com/mozilla/geckodriver/releases)|[registro de cambios](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[seguimiento de incidentes](https://github.com/mozilla/geckodriver/issues)|
-|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[más reciente](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[registro de cambios](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[seguimiento de incidentes](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Google Chrome Driver](https://chromedriver.chromium.org/)|[más reciente](https://chromedriver.chromium.org/downloads)|[registro de cambios](https://chromedriver.chromium.org/downloads)|[seguimiento de incidentes](https://bugs.chromium.org/p/chromedriver/issues/list)|
 |[Opera](http://choice.opera.com/developer/tools/operadriver/)|[más reciente](https://github.com/operasoftware/operachromiumdriver/releases)|-|[seguimiento de incidentes](https://github.com/operasoftware/operachromiumdriver/issues)|
 |[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[más reciente](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[seguimiento de incidentes](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
 |[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Incorporado|-|[seguimiento de incidentes](https://bugreport.apple.com/)|
