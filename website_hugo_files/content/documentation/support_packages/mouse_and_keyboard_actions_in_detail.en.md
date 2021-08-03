@@ -1,7 +1,7 @@
 ---
 title: "Mouse actions in detail"
 linkTitle: "Mouse actions in detail"
-weight: 4
+weight: 3
 description: >
   Mouse represents a mouse event. Mouse actions are performed 
   by using low-level interface which allows us to 

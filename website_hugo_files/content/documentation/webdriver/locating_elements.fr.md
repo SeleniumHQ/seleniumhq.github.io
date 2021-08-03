@@ -227,7 +227,7 @@ right, left, bottom, and top.
 
 Let us consider the below example for understanding the relative locators.
 
-![Relative Locators](/images/relative_locators.png?width=400px)
+{{< figure src="/images/documentation/webdriver/relative_locators.png" class="img-responsive text-center" alt="Relative Locators">}}
 
 ### above()
 

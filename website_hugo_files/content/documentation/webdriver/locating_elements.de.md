@@ -231,7 +231,7 @@ wie z.B right, left, bottom und top (links, rechts, oben, unten)
 Betrachten wir das folgende Beispiel um die
 Funktionalität der relativen Locators besser zu verstehen:
 
-![Relative Locators](/images/relative_locators.png?width=400px)
+{{< figure src="/images/documentation/webdriver/relative_locators.png" class="img-responsive text-center" alt="Relative Locators">}}
 
 ### above() - oberhalb
 

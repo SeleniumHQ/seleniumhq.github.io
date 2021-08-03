@@ -182,7 +182,7 @@ Selenium是通过使用JavaScript函数
 
 通过下面的例子我们来理解一下关于相对定位的使用
 
-![Relative Locators](/images/relative_locators.png?width=400px)
+{{< figure src="/images/documentation/webdriver/relative_locators.png" class="img-responsive text-center" alt="Relative Locators">}}
 
 ### above() 元素上
 

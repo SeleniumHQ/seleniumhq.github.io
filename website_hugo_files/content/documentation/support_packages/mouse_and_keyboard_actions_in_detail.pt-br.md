@@ -1,7 +1,7 @@
 ---
 title: "Ações do mouse em detalhe"
 linkTitle: "Ações do mouse em detalhe"
-weight: 4
+weight: 3
 description: >
   Mouse representa um evento do mouse. Ações do mouse são realizadas
   usando interface de baixo nível que nos permite
