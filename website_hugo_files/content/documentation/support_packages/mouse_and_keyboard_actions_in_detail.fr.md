@@ -1,7 +1,7 @@
 ---
 title: "Actions de la souris en détail"
 linkTitle: "Actions de la souris en détail"
-weight: 4
+weight: 3
 description: >
   La souris représente un événement de souris. Les actions 
   de la souris sont effectuées en utilisant une interface 
