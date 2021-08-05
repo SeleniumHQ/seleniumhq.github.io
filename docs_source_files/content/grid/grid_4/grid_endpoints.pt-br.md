@@ -139,12 +139,12 @@ No modo Standalone, a URL queuer é o endereço do servidor Standalone.
 No modo Hub-Node, a URL do enfileirador é o endereço do servidor Hub.
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 No modo totalmente distribuído, a URL do enfileirador é o endereço do servidor do Enfileirador de Sessões.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 ### Get New Session Queue Requests

@@ -140,12 +140,12 @@ In the Standalone mode, the queuer URL is the Standalone server address.
 In the Hub-Node mode, the queuer URL is the Hub server address.
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 In the fully distributed mode, the queuer URL is New Session Queuer server address.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 ### Get New Session Queue Requests
