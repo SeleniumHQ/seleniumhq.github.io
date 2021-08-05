@@ -155,6 +155,11 @@ In the fully distributed mode, the queuer URL is New Session Queuer server addre
 cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
+If no registration secret has been configured while setting up the Grid, then use 
+```shell
+cURL --request DELETE 'http://<URL>/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET;'
+```
+
 ### Get New Session Queue Requests
 
 New Session Request Queue holds the new session requests. 
