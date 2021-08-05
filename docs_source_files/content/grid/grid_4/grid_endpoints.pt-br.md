@@ -107,7 +107,7 @@ cURL --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --hea
 ```
 Se nenhum segredo de registro foi configurado durante a configuração da Grid, use 
 ```shell
-cURL --request GET 'http://<bode-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 Ele retornará true se a sessão pertencer ao Nó, caso contrário, retornará false.
