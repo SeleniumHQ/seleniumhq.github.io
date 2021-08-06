@@ -4,6 +4,15 @@ linkTitle: "Rotas da Grid"
 weight: 3
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Portuguese. Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
 ## Grid 
 
 ### Status da Grid
@@ -108,7 +117,7 @@ cURL --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --hea
 ```
 Se nenhum segredo de registro foi configurado durante a configuração da Grid, use 
 ```shell
-cURL --request GET 'http://<bode-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 Ele retornará true se a sessão pertencer ao Nó, caso contrário, retornará false.
@@ -140,12 +149,17 @@ No modo Standalone, a URL queuer é o endereço do servidor Standalone.
 No modo Hub-Node, a URL do enfileirador é o endereço do servidor Hub.
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 No modo totalmente distribuído, a URL do enfileirador é o endereço do servidor do Enfileirador de Sessões.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+```
+
+If no registration secret has been configured while setting up the Grid, then use 
+```shell
+cURL --request DELETE 'http://<URL>/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Get New Session Queue Requests

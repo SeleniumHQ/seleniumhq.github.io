@@ -108,7 +108,7 @@ cURL --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --hea
 ```
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request GET 'http://<bode-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 It will return true if the session belongs to the Node else it will return false.
@@ -140,12 +140,17 @@ In the Standalone mode, the queuer URL is the Standalone server address.
 In the Hub-Node mode, the queuer URL is the Hub server address.
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 In the fully distributed mode, the queuer URL is New Session Queuer server address.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+```
+
+If no registration secret has been configured while setting up the Grid, then use 
+```shell
+cURL --request DELETE 'http://<URL>/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Get New Session Queue Requests
