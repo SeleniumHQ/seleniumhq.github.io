@@ -3,6 +3,7 @@ title: "Selenium 브라우저 자동화 프로젝트"
 linkTitle: "문서"
 cascade:
 - type: docs
+aliases: ["/documentation/ko/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -3,6 +3,7 @@ title: "Selenium, el proyecto para automatizar navegadores"
 linkTitle: "Documentación"
 cascade:
 - type: docs
+aliases: ["/documentation/es/"]
 ---
 
 {{% pageinfo color="warning" %}}

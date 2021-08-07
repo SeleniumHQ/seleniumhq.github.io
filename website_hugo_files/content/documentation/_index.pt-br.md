@@ -3,6 +3,7 @@ title: "O Projeto Selenium de Automação de Navegadores"
 linkTitle: "Documentação"
 cascade:
 - type: docs
+aliases: ["/documentation/pt-br/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -3,6 +3,7 @@ title: "Seleniumブラウザー自動化プロジェクト"
 linkTitle: "ドキュメント"
 cascade:
 - type: docs
+aliases: ["/documentation/ja/"]
 ---
 
 {{% pageinfo color="warning" %}}

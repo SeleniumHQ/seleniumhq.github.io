@@ -3,6 +3,7 @@ title: "Le Projet d'Automatisation de Navigateur Selenium"
 linkTitle: "Documentation"
 cascade:
 - type: docs
+aliases: ["/documentation/fr/"]
 ---
 
 {{% pageinfo color="warning" %}}
