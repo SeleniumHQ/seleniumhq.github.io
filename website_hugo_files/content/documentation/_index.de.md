@@ -3,6 +3,7 @@ title: "Das Selenium Browser Automations Projekt"
 linkTitle: "Dokumentation"
 cascade:
 - type: docs
+aliases: ["/documentation/de/"]
 ---
 
 {{% pageinfo color="warning" %}}

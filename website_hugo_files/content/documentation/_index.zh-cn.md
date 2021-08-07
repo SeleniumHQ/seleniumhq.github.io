@@ -3,6 +3,7 @@ title: "Selenium 浏览器自动化项目"
 linkTitle: "文档"
 cascade:
 - type: docs
+aliases: ["/documentation/zh-cn/"]
 ---
 
 {{% pageinfo color="warning" %}}
