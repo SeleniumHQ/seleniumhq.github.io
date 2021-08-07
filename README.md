@@ -8,20 +8,21 @@ This is the repository used to build and publish the official Selenium [website]
 
 ## Quick start
 
-We use [Hugo](https://gohugo.io/) to build and render the site and docs,
-which are two separate Hugo projects.
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
 
-After cloning the repository, if you want to make changes to the
-site, work on the `site_source_files` directory. To make changes to the docs,
-switch to the `docs_source_files` directory. To see a live preview of your
-changes, run `hugo server` on each directory.
+Steps needed to have this working locally and work on it:
 
-```shell
-% cd site_source_files/docs_source_files
-% hugo server
-```
+- Follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) instructions from Docsy
+- Clone this repository
+- Run `git submodule update --init --recursive`
+- Run `cd website_and_docs`
+- Run `npm install`
+- Run `hugo server`
 
-A full contribution guideline can be seen at [contributing](https://selenium.dev/documentation/en/contributing/)
+A full contribution guideline can be seen at [contributing](https://selenium.dev/documentation/about/contributing/)
 
 ## How to get involved?
 
@@ -31,7 +32,7 @@ Please check all the information available at https://selenium.dev/getinvolved/
 
 ### How does the site and docs get build?
 
-GitHub actions runs for every commit on each PR and protected branch. The regular CI execution will just
+GitHub actions runs for every commit on each PR and protected branch. The regular CI execution will
 build the site with Hugo to verify that the commit works. The description of these steps can be seen
 at the actions configuration file, [one for testing a PR](./.github/workflows/test.yml), and 
 [one for deploying the site](./.github/workflows/deploy.yml)
@@ -43,13 +44,13 @@ is executed for deployment. This script checks for the string `[deploy site]` in
 
 If the commit message contains that string, and the commit is in `dev`, a 
 [GitHub action](./.github/workflows/deploy.yml) is triggered to build and deploy the site. 
-The site and docs will be built, and the changes will
-be committed to the branch `publish` by the user [Selenium-CI](https://github.com/selenium-ci/).
+The site and docs will be built, and the changes will be committed to the branch `publish` 
+by the user [Selenium-CI](https://github.com/selenium-ci/).
 
 *What is important to take into account is that the source files for the site are in the `dev`
 branch, and the files that get deployed are pushed to the `publish` branch.*
 
-The site and docs are deployed using GitHub pages, and the configuration for this can be seen at the
+The site is deployed using GitHub pages, and the configuration for this can be seen at the
 repo [settings](https://github.com/SeleniumHQ/seleniumhq.github.io/settings) (if you are a maintainer
 you should be able to access the link).
 
@@ -60,17 +61,6 @@ members, who can help you with that.
 If for any reason, you need to setup the domain redirection again,
 we followed this [guide](http://spector.io/how-to-set-up-github-pages-with-a-custom-domain-on-gandi/),
 but any tutorial/guide showing how to redirect a domain to GitHub pages should do.   
-
-## (WIP) Moving to Hugo [Docsy theme](https://www.docsy.dev/)
-
-Files are living under [website_and_docs](website_and_docs).
  
-Steps needed to have this working locally and work on it:
-
-- Follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) instructions from Docsy
-- Clone this repository
-- Run `git submodule update --init --recursive`
-- `cd website_and_docs`
-- `npm install`
 
 
