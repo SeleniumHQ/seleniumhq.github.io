@@ -7,9 +7,7 @@ on:
 
 jobs:
   test_build:
-    # Skip job based on the commit message
-    if: contains(toJson(github.event.commits), '[skip ci]') == false
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -17,8 +15,9 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.83.1'
-      - name: Build documentation site
-        run: cd docs_source_files && hugo
+          extended: true
+      - name: Build
+        run: chmod +x build-site.sh && ./build-site.sh
         env:
           SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
       - name: Build website

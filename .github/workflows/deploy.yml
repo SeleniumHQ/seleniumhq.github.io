@@ -7,8 +7,6 @@ on:
 
 jobs:
   deploy:
-    # Skip job based on the commit message
-    if: contains(toJson(github.event.commits), '[skip ci]') == false
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repo
@@ -17,6 +15,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.83.1'
+          extended: true
       - name: Build
         run: chmod +x build-site.sh && ./build-site.sh
         env:
