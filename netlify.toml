@@ -1,19 +1,19 @@
 [build]
-publish = "site_source_files/public"
+publish = "website_hugo_files/public"
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]
-HUGO_VERSION = "0.66.0"
+HUGO_VERSION = "0.83.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.66.0"
+HUGO_VERSION = "0.83.1"
 
 [context.branch-deploy]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.66.0"
+HUGO_VERSION = "0.83.1"
