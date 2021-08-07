@@ -4,6 +4,7 @@ linkTitle: "Overview"
 weight: 1
 description: >
   Is Selenium for you? See an overview of the different project components.
+aliases: ["/documentation/en/introduction/"]
 ---
 
 

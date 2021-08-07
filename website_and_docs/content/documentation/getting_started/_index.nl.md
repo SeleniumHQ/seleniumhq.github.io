@@ -4,6 +4,13 @@ linkTitle: "Getting Started"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+aliases: 
+        [
+          "/documentation/nl/getting_started/", 
+          "/documentation/nl/getting_started/quick/",
+          "/documentation/nl/selenium_installation/",
+          "/documentation/nl/getting_started_with_webdriver/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -4,6 +4,13 @@ linkTitle: "시작하기"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+aliases: 
+        [
+          "/documentation/ko/getting_started/", 
+          "/documentation/ko/getting_started/quick/",
+          "/documentation/ko/selenium_installation/",
+          "/documentation/ko/getting_started_with_webdriver/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

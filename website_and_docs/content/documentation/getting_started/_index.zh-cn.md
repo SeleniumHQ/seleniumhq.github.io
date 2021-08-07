@@ -4,6 +4,13 @@ linkTitle: "入门指南"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+aliases: 
+        [
+          "/documentation/zh-cn/getting_started/", 
+          "/documentation/zh-cn/getting_started/quick/",
+          "/documentation/zh-cn/selenium_installation/",
+          "/documentation/zh-cn/getting_started_with_webdriver/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

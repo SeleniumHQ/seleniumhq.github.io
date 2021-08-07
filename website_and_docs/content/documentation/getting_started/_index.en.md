@@ -4,6 +4,13 @@ linkTitle: "Getting Started"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+aliases: 
+        [
+          "/documentation/en/getting_started/", 
+          "/documentation/en/getting_started/quick/",
+          "/documentation/en/selenium_installation/",
+          "/documentation/en/getting_started_with_webdriver/"
+        ]
 ---
 
 Selenium supports automation of all the major browsers in the market

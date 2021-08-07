@@ -4,6 +4,13 @@ linkTitle: "Empezando"
 weight: 2
 description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+aliases: 
+        [
+          "/documentation/es/getting_started/", 
+          "/documentation/es/getting_started/quick/",
+          "/documentation/es/selenium_installation/",
+          "/documentation/es/getting_started_with_webdriver/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}
@@ -54,6 +61,6 @@ If you wish to start with a low-code/record and playback tool, please check
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
 After completing the setup, you can run the code snippet shown at the 
-[starting page](/de/documentation) in our docs. Then head to the 
+[starting page](/es/documentation) in our docs. Then head to the 
 [WebDriver]({{< ref "/webdriver.md" >}}) section to learn more about
 browser automation with Selenium.
