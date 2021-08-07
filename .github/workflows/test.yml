@@ -20,5 +20,3 @@ jobs:
         run: chmod +x build-site.sh && ./build-site.sh
         env:
           SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
-      - name: Build website
-        run: cd site_source_files && hugo

@@ -25,7 +25,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.SELENIUM_CI_TOKEN }}
-          publish_dir: ./site_source_files/public
+          publish_dir: ./website_and_docs/public
           publish_branch: publish
           user_name: 'Selenium CI Bot'
           user_email: 'selenium-ci@users.noreply.github.com'

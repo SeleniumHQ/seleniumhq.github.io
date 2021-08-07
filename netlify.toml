@@ -1,5 +1,5 @@
 [build]
-publish = "website_hugo_files/public"
+publish = "website_and_docs/public"
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]

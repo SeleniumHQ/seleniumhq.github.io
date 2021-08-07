@@ -63,14 +63,14 @@ but any tutorial/guide showing how to redirect a domain to GitHub pages should d
 
 ## (WIP) Moving to Hugo [Docsy theme](https://www.docsy.dev/)
 
-Files are living under [website_hugo_files](website_hugo_files).
+Files are living under [website_and_docs](website_and_docs).
  
 Steps needed to have this working locally and work on it:
 
 - Follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) instructions from Docsy
 - Clone this repository
 - Run `git submodule update --init --recursive`
-- `cd website_hugo_files`
+- `cd website_and_docs`
 - `npm install`
 
 

@@ -12,13 +12,13 @@ else
 fi
 
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
-rm -rf website_hugo_files/public
+rm -rf website_and_docs/public
 
 echo -e "\033[0;32mGit init for Docsy...\033[0m"
 git submodule update -f --init --recursive
 
 echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
-cd website_hugo_files && npm install
+cd website_and_docs && npm install
 
 echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
 hugo --minify ${USE_BASE_URL_SITE}
