@@ -4,6 +4,7 @@ linkTitle: "Selenium 라이브러리 설치"
 weight: 1
 description: >
   Setting up the Selenium library for your favourite programming language.
+aliases: ["/documentation/ko/selenium_installation/installing_selenium_libraries/"]    
 ---
 
 {{% pageinfo color="warning" %}}

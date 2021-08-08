@@ -4,6 +4,7 @@ linkTitle: "Installing Selenium libraries"
 weight: 1
 description: >
   Setting up the Selenium library for your favourite programming language.
+aliases: ["/documentation/en/selenium_installation/installing_selenium_libraries/"]    
 ---
 
 First you need to install the Selenium bindings for your automation project.

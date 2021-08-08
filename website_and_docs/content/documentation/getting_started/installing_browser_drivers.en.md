@@ -4,6 +4,7 @@ linkTitle: "Installing browser drivers"
 weight: 2
 description: >
   Setting up your browser to be automated.
+aliases: ["/documentation/en/selenium_installation/installing_webdriver_binaries/"]        
 ---
 
 Through WebDriver, Selenium supports all major browsers on the market

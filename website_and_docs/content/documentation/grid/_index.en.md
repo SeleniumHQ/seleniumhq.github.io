@@ -4,6 +4,7 @@ linkTitle: "Grid"
 weight: 9
 description: >
   Want to run tests in parallel across multiple machines? Then, Grid is for you.
+aliases: ["/documentation/en/selenium_installation/installing_standalone_server/"]
 ---
 
 Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual

@@ -4,6 +4,7 @@ linkTitle: "Instalando bibliotecas do Selenium"
 weight: 1
 description: >
   Setting up the Selenium library for your favourite programming language.
+aliases: ["/documentation/pt-br/selenium_installation/installing_selenium_libraries/"]    
 ---
 
 {{% pageinfo color="warning" %}}
