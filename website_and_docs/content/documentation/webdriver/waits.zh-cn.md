@@ -2,6 +2,7 @@
 title: "等待"
 linkTitle: "等待"
 weight: 4
+aliases: ["/documentation/zh-cn/webdriver/waits/"]
 ---
 
 WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器做什么的进程外库，而且web平台本质上是异步的，所以WebDriver不跟踪DOM的实时活动状态。这伴随着一些我们将在这里讨论的挑战。

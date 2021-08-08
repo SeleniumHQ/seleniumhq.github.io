@@ -2,6 +2,7 @@
 title: "Alerts, prompts et confirmations Javascript"
 linkTitle: "Alerts, prompts et confirmations Javascript"
 weight: 6
+aliases: ["/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 WebDriver fournit une API pour travailler avec 

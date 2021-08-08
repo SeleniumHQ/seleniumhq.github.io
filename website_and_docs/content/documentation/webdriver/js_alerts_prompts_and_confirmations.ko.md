@@ -2,6 +2,7 @@
 title: "JavaScript의 alert, prompt, confirm 대화 상자"  
 linkTitle: "JavaScript의 alert, prompt, confirm 대화 상자"  
 weight: 6
+aliases: ["/documentation/ko/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 WebDriver에는 JavaScript의 세 가지 대화 상자를 제어하는 API가 있습니다. 

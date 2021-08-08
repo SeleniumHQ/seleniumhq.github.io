@@ -2,6 +2,7 @@
 title: "Webelement"
 linkTitle: "Webelement"
 weight: 9
+aliases: ["/documentation/de/webdriver/web_element/"]
 ---
 
 WebElement repräsentiert ein Element im DOM. WebElemente können ausgehend

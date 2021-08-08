@@ -2,6 +2,7 @@
 title: "Httpプロキシ"
 linkTitle: "Httpプロキシ"
 weight: 7
+aliases: ["/documentation/ja/webdriver/http_proxies/"]
 ---
 
 プロキシサーバーは、クライアントとサーバー間の要求の仲介役として機能します。

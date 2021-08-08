@@ -2,6 +2,7 @@
 title: "Elemente lokalisieren"
 linkTitle: "Elemente lokalisieren"
 weight: 3
+aliases: ["/documentation/de/webdriver/locating_elements/"]
 ---
 
 ### Locating one element

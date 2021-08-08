@@ -2,6 +2,7 @@
 title: "JavaScript alerts, prompts and confirmations"
 linkTitle: "JavaScript alerts, prompts and confirmations"
 weight: 6
+aliases: ["/documentation/nl/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 {{% pageinfo color="warning" %}}

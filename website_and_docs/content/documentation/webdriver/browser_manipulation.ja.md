@@ -2,10 +2,8 @@
 title: "ブラウザー操作"
 linkTitle: "ブラウザー操作"
 weight: 2
+aliases: ["/documentation/ja/webdriver/browser_manipulation/"]
 ---
-
-<!-- #codeExamples -->
-<!-- Remember to cover profile and extensions here -->
 
 ## Ruby
 

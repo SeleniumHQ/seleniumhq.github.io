@@ -2,6 +2,7 @@
 title: "ページ読み込み戦略"
 linkTitle: "ページ読み込み戦略"
 weight: 8
+aliases: ["/documentation/ja/webdriver/page_loading_strategy/"]
 ---
 
 現在のセッションのページ読み込み戦略を定義します。

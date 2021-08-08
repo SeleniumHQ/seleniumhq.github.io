@@ -2,6 +2,7 @@
 title: "Locating elements"
 linkTitle: "Locating elements"
 weight: 3
+aliases: ["/documentation/en/webdriver/locating_elements/"]
 ---
 
 ### Locating one element

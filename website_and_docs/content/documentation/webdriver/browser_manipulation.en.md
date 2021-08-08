@@ -2,6 +2,7 @@
 title: "Browser manipulation"
 linkTitle: "Browser manipulation"
 weight: 2
+aliases: ["/documentation/en/webdriver/browser_manipulation/"]
 ---
 
 ## Ruby

@@ -2,6 +2,7 @@
 title: "구성 요소 이해"
 linkTitle: "구성 요소 이해"
 weight: 1
+aliases: ["/documentation/ko/webdriver/understanding_the_components/"]
 ---
 
 WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다.

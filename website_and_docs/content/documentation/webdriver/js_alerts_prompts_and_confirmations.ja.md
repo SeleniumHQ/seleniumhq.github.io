@@ -2,6 +2,7 @@
 title: "JavaScript アラート、プロンプトおよび確認"
 linkTitle: "JavaScript アラート、プロンプトおよび確認"
 weight: 6
+aliases: ["/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。

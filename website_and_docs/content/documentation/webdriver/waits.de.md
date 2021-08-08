@@ -2,6 +2,7 @@
 title: "Waits"
 linkTitle: "Waits"
 weight: 4
+aliases: ["/documentation/de/webdriver/waits/"]
 ---
 
 {{% pageinfo color="warning" %}}

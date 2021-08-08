@@ -2,6 +2,7 @@
 title: "Tastatur"
 linkTitle: "Tastatur"
 weight: 10
+aliases: ["/documentation/de/webdriver/keyboard/"]
 ---
 
 Tastatur repräsentiert Tastaturaktionen. Tastatur "Actions" werden mit Hilfe

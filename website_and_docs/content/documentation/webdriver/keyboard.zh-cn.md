@@ -2,6 +2,7 @@
 title: "Keyboard"
 linkTitle: "Keyboard"
 weight: 10
+aliases: ["/documentation/zh-cn/webdriver/keyboard/"]
 ---
 
 Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.

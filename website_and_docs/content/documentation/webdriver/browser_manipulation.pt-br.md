@@ -2,10 +2,8 @@
 title: "Manipulação do Browser"
 linkTitle: "Manipulação do Browser"
 weight: 2
+aliases: ["/documentation/pt-br/webdriver/browser_manipulation/"]
 ---
-
-<!-- #codeExamples -->
-<!-- Remember to cover profile and extensions here -->
 
 ## Ruby
 

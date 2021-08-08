@@ -2,6 +2,7 @@
 title: "Waits"
 linkTitle: "Waits"
 weight: 4
+aliases: ["/documentation/en/webdriver/waits/"]
 ---
 
 WebDriver can generally be said to have a blocking API.

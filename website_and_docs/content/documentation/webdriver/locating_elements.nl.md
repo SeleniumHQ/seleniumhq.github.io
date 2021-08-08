@@ -2,6 +2,7 @@
 title: "Locating elements"
 linkTitle: "Locating elements"
 weight: 3
+aliases: ["/documentation/nl/webdriver/locating_elements/"]
 ---
 
 {{% pageinfo color="warning" %}}

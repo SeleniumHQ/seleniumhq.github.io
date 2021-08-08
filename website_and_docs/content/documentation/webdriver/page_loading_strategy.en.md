@@ -2,6 +2,7 @@
 title: "Page loading strategy"
 linkTitle: "Page loading strategy"
 weight: 8
+aliases: ["/documentation/en/webdriver/page_loading_strategy/"]
 ---
 
 Defines the current session's page loading strategy. 

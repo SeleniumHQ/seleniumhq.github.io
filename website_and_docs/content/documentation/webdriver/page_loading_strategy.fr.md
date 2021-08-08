@@ -2,6 +2,7 @@
 title: "Stratégie de chargement de la page"
 linkTitle: "Stratégie de chargement de la page"
 weight: 8
+aliases: ["/documentation/fr/webdriver/page_loading_strategy/"]
 ---
 
 Définit la stratégie de chargement des pages de la session en cours.

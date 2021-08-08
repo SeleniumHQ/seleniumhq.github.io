@@ -2,6 +2,7 @@
 title: "Proxys HTTP"
 linkTitle: "Proxys HTTP"
 weight: 7
+aliases: ["/documentation/fr/webdriver/http_proxies/"]
 ---
 
 Un serveur proxy sert d'intermédiaire pour les demandes entre

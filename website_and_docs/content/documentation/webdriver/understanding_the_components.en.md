@@ -2,6 +2,7 @@
 title: "Understanding the components"
 linkTitle: "Understanding the components"
 weight: 1
+aliases: ["/documentation/en/webdriver/understanding_the_components/"]
 ---
 
 Building a test suite using WebDriver will require you to understand and 

@@ -2,6 +2,7 @@
 title: "Http 代理"
 linkTitle: "Http 代理"
 weight: 7
+aliases: ["/documentation/zh-cn/webdriver/http_proxies/"]
 ---
 
 代理服务器充当客户端和服务器之间的请求中介.

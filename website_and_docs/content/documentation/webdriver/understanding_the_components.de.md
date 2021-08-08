@@ -2,6 +2,7 @@
 title: "Erklärung der Komponenten"
 linkTitle: "Erklärung der Komponenten"
 weight: 1
+aliases: ["/documentation/de/webdriver/understanding_the_components/"]
 ---
 
 Um eine Testsuite mit Hilfe des WebDrivers zu erstellen, ist es notwendig

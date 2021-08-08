@@ -2,6 +2,7 @@
 title: "Keyboard"
 linkTitle: "Keyboard"
 weight: 10
+aliases: ["/documentation/ko/webdriver/keyboard/"]
 ---
 
 {{% pageinfo color="warning" %}}

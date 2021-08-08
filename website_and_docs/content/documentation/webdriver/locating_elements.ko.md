@@ -2,6 +2,7 @@
 title: "Element 찾기"
 linkTitle: "Element 찾기"
 weight: 3
+aliases: ["/documentation/ko/webdriver/locating_elements/"]
 ---
 
 ### 하나의 element 찾기

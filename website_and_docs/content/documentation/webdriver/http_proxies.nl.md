@@ -2,6 +2,7 @@
 title: "Http proxies"
 linkTitle: "Http proxies"
 weight: 7
+aliases: ["/documentation/nl/webdriver/http_proxies/"]
 ---
 
 {{% pageinfo color="warning" %}}

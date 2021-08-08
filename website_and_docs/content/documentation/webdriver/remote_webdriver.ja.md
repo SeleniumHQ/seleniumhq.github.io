@@ -2,6 +2,12 @@
 title: "Remote WebDriver"
 linkTitle: "Remote WebDriver"
 weight: 11
+aliases: 
+        [
+          "/documentation/ja/remote_webdriver/",
+          "/documentation/ja/remote_webdriver/remote_webdriver_client/"
+        ]
+
 ---
 
 WebDriverは、ローカルで使用するのと同じ方法でリモートで使用できます。

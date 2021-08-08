@@ -2,6 +2,7 @@
 title: "WebDriver Bidi APIs"
 linkTitle: "WebDriver Bidi APIs"
 weight: 11
+aliases: ["/documentation/pt-br/webdriver/bidi_apis/"]
 ---
 
 {{% pageinfo color="warning" %}}

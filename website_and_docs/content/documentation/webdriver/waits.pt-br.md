@@ -2,6 +2,7 @@
 title: "Esperas"
 linkTitle: "Esperas"
 weight: 4
+aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 
 Geralmente, pode-se dizer que o WebDriver tem uma API de blocante.

@@ -2,6 +2,7 @@
 title: "Web element"
 linkTitle: "Web element"
 weight: 9
+aliases: ["/documentation/nl/webdriver/web_element/"]
 ---
 
 {{% pageinfo color="warning" %}}

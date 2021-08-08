@@ -2,6 +2,7 @@
 title: "キーボード"
 linkTitle: "キーボード"
 weight: 10
+aliases: ["/documentation/ja/webdriver/keyboard/"]
 ---
 
 キーボードはキーボードイベントを表します。

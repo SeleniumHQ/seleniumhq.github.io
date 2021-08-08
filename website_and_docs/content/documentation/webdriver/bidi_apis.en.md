@@ -2,6 +2,7 @@
 title: "WebDriver Bidi APIs"
 linkTitle: "WebDriver Bidi APIs"
 weight: 11
+aliases: ["/documentation/en/webdriver/bidi_apis/"]
 ---
 
 In Selenium 4, new Evented APIs were introduced that

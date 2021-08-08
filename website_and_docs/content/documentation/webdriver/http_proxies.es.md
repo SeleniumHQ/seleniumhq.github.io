@@ -2,6 +2,7 @@
 title: "Proxies Http"
 linkTitle: "Proxies Http"
 weight: 7
+aliases: ["/documentation/es/webdriver/http_proxies/"]
 ---
 
 Un servidor proxy actúa como intermediario para

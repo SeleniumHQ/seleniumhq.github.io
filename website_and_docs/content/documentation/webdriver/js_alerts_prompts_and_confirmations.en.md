@@ -2,6 +2,7 @@
 title: "JavaScript alerts, prompts and confirmations"
 linkTitle: "JavaScript alerts, prompts and confirmations"
 weight: 6
+aliases: ["/documentation/en/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 WebDriver provides an API for working with the three types of native

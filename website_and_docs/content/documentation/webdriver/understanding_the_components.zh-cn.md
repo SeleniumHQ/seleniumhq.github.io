@@ -2,6 +2,7 @@
 title: "了解组件"
 linkTitle: "了解组件"
 weight: 1
+aliases: ["/documentation/zh-cn/webdriver/understanding_the_components/"]
 ---
 
 使用 WebDriver 构建测试套件需要您理解并有效地使用许多不同的组件。就像软件中的一切一样，

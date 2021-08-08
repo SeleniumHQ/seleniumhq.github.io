@@ -2,6 +2,7 @@
 title: "页面加载策略"
 linkTitle: "页面加载策略"
 weight: 8
+aliases: ["/documentation/zh-cn/webdriver/page_loading_strategy/"]
 ---
 
 定义当前会话的页面加载策略. 

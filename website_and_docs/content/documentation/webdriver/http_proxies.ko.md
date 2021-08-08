@@ -2,6 +2,7 @@
 title: "Http 프록시"
 linkTitle: "Http 프록시"
 weight: 7
+aliases: ["/documentation/ko/webdriver/http_proxies/"]
 ---
 
 프록시 서버는 클라이언트와 서버 간 요청(request)을 중개하는 역할을 합니다. 

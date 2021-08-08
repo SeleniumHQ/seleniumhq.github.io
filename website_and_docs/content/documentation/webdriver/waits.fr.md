@@ -2,6 +2,7 @@
 title: "Waits"
 linkTitle: "Waits"
 weight: 4
+aliases: ["/documentation/fr/webdriver/waits/"]
 ---
 
 WebDriver peut généralement être considéré comme ayant une API de blocage.

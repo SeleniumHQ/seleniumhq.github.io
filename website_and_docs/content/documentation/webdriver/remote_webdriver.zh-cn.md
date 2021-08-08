@@ -2,6 +2,12 @@
 title: "Remote WebDriver"
 linkTitle: "Remote WebDriver"
 weight: 11
+aliases: 
+        [
+          "/documentation/zh-cn/remote_webdriver/",
+          "/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
+        ]
+
 ---
 
 您可以如本地一样, 使用远程WebDriver.

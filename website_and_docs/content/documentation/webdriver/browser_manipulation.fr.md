@@ -2,6 +2,7 @@
 title: "Browser manipulation"
 linkTitle: "Browser manipulation"
 weight: 2
+aliases: ["/documentation/fr/webdriver/browser_manipulation/"]
 ---
 
 {{% pageinfo color="warning" %}}

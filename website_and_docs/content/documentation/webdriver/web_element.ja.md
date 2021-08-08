@@ -2,6 +2,7 @@
 title: "Web要素"
 linkTitle: "Web要素"
 weight: 9
+aliases: ["/documentation/ja/webdriver/web_element/"]
 ---
 
 Web要素はDOM要素を表します。

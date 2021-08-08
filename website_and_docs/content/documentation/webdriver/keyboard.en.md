@@ -2,6 +2,7 @@
 title: "Keyboard"
 linkTitle: "Keyboard"
 weight: 10
+aliases: ["/documentation/en/webdriver/keyboard/"]
 ---
 
 Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level

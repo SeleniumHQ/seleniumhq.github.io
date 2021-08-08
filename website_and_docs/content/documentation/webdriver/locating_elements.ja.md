@@ -2,6 +2,7 @@
 title: "要素を探す"
 linkTitle: "要素を探す"
 weight: 3
+aliases: ["/documentation/ja/webdriver/locating_elements/"]
 ---
 
 

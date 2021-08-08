@@ -2,6 +2,7 @@
 title: "Http Proxies"
 linkTitle: "Http Proxies"
 weight: 7
+aliases: ["/documentation/de/webdriver/http_proxies/"]
 ---
 
 Ein Proxy-Server fungiert als Zwischenstation für Anfragen zwischen

@@ -2,6 +2,7 @@
 title: "待機"
 linkTitle: "待機"
 weight: 4
+aliases: ["/documentation/ja/webdriver/waits/"]
 ---
 
 WebDriverは一般にブロッキングAPIを持っていると言えます。

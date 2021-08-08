@@ -2,6 +2,7 @@
 title: "定位元素"
 linkTitle: "定位元素"
 weight: 3
+aliases: ["/documentation/zh-cn/webdriver/locating_elements/"]
 ---
 
 ### 定位元素

@@ -2,6 +2,7 @@
 title: "Page loading strategy"
 linkTitle: "Page loading strategy"
 weight: 8
+aliases: ["/documentation/es/webdriver/page_loading_strategy/"]
 ---
 
 {{% pageinfo color="warning" %}}

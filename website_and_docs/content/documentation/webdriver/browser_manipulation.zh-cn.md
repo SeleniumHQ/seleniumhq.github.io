@@ -2,6 +2,7 @@
 title: "操控浏览器"
 linkTitle: "操控浏览器"
 weight: 2
+aliases: ["/documentation/zh-cn/webdriver/browser_manipulation/"]
 ---
 
 

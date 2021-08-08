@@ -2,6 +2,7 @@
 title: "Entendendo os componentes"
 linkTitle: "Entendendo os componentes"
 weight: 1
+aliases: ["/documentation/pt-br/webdriver/understanding_the_components/"]
 ---
 
 Construir um conjunto de testes usando WebDriver exigirá que você entenda e

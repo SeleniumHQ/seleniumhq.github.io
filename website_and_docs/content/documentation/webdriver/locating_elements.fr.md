@@ -2,6 +2,7 @@
 title: "Localiser des éléments"
 linkTitle: "Localiser des éléments"
 weight: 3
+aliases: ["/documentation/fr/webdriver/locating_elements/"]
 ---
 
 ### Localiser des éléments

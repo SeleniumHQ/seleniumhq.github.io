@@ -4,7 +4,11 @@ linkTitle: "Installing browser drivers"
 weight: 2
 description: >
   Setting up your browser to be automated.
-aliases: ["/documentation/es/selenium_installation/installing_webdriver_binaries/"]        
+aliases: 
+        [
+          "/documentation/es/selenium_installation/installing_webdriver_binaries/",
+          "/documentation/es/webdriver/driver_requirements/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

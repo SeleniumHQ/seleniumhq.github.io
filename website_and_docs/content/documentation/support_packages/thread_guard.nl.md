@@ -2,6 +2,7 @@
 title: "ThreadGuard"
 linkTitle: "ThreadGuard"
 weight: 6
+aliases: ["/documentation/nl/webdriver/support_classes/"]
 ---
 
 {{% pageinfo color="warning" %}}

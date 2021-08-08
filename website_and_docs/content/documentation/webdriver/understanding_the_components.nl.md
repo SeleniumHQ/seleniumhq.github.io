@@ -2,6 +2,7 @@
 title: "Understanding the components"
 linkTitle: "Understanding the components"
 weight: 1
+aliases: ["/documentation/nl/webdriver/understanding_the_components/"]
 ---
 
 {{% pageinfo color="warning" %}}

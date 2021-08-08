@@ -2,6 +2,7 @@
 title: "JavaScript 警告框,提示框和确认框"
 linkTitle: "JavaScript 警告框,提示框和确认框"
 weight: 6
+aliases: ["/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"]
 ---
 
 WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.

@@ -2,6 +2,7 @@
 title: "Teclado"
 linkTitle: "Teclado"
 weight: 10
+aliases: ["/documentation/es/webdriver/keyboard/"]
 ---
 
 Keyboard representa un evento del teclado. Las acciones del teclado

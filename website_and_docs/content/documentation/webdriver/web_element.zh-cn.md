@@ -2,6 +2,7 @@
 title: "网络元素"
 linkTitle: "网络元素"
 weight: 9
+aliases: ["/documentation/zh-cn/webdriver/web_element/"]
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Clavier"
 linkTitle: "Clavier"
 weight: 10
+aliases: ["/documentation/fr/webdriver/keyboard/"]
 ---
 
 Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l'aide de bas niveau

@@ -2,6 +2,7 @@
 title: "Comprendre les composants"
 linkTitle: "Comprendre les composants"
 weight: 1
+aliases: ["/documentation/fr/webdriver/understanding_the_components/"]
 ---
 
 Pour créer une suite de tests à l'aide de WebDriver, vous devrez comprendre et

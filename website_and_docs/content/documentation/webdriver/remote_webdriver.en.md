@@ -2,6 +2,12 @@
 title: "Remote WebDriver"
 linkTitle: "Remote WebDriver"
 weight: 11
+aliases: 
+        [
+          "/documentation/en/remote_webdriver/",
+          "/documentation/en/remote_webdriver/remote_webdriver_client/"
+        ]
+
 ---
 
 You can use WebDriver remotely the same way you would use it

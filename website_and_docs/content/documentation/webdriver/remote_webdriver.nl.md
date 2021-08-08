@@ -2,6 +2,12 @@
 title: "Remote WebDriver"
 linkTitle: "Remote WebDriver"
 weight: 11
+aliases: 
+        [
+          "/documentation/nl/remote_webdriver/",
+          "/documentation/nl/remote_webdriver/remote_webdriver_client/"
+        ]
+
 ---
 
 {{% pageinfo color="warning" %}}
