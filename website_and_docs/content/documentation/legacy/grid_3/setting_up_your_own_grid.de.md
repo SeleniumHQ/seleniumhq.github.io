@@ -2,6 +2,7 @@
 title: "Aufsetzen eines Grid"
 linkTitle: "Aufsetzen eines Grid"
 weight: 2
+aliases: ["/documentation/de/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 {{% pageinfo color="warning" %}}

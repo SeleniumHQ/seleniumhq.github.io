@@ -2,6 +2,7 @@
 title: "Setting up your own"
 linkTitle: "Setting up your own"
 weight: 2
+aliases: ["/documentation/en/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 To use Selenium Grid,

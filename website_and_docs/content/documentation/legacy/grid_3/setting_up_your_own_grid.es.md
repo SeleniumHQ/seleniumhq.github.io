@@ -2,6 +2,7 @@
 title: "Configurando tu propio Grid"
 linkTitle: "Configurando tu propio Grid"
 weight: 2
+aliases: ["/documentation/es/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 Para usar Selenium Grid, necesitas mantener tu propia infraestructura para los

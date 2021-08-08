@@ -2,6 +2,7 @@
 title: "Mettre en place votre propre Grid"
 linkTitle: "Mettre en place votre propre Grid"
 weight: 2
+aliases: ["/documentation/fr/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 Pour utiliser la grille de Selenium,

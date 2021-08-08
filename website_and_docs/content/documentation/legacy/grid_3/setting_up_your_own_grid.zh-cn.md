@@ -2,6 +2,7 @@
 title: "配置自己的服务网格"
 linkTitle: "配置自己的服务网格"
 weight: 2
+aliases: ["/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 使用Selenium网格，

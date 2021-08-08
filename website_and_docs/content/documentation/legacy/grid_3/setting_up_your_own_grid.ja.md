@@ -2,6 +2,7 @@
 title: "独自のグリッドを設定する"
 linkTitle: "独自のグリッドを設定する"
 weight: 2
+aliases: ["/documentation/ja/grid/grid_3/setting_up_your_own_grid/"]
 ---
 
 
