@@ -2,6 +2,7 @@
 title: "Modelos de objetos de página"
 linkTitle: "Modelos de objetos de página"
 weight: 3
+aliases: ["/documentation/pt-br/guidelines_and_recommendations/page_object_models/"]  
 ---
 
 Objeto de página é um padrão de design que se tornou popular na automação de teste para

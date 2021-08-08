@@ -2,6 +2,7 @@
 title: "避免共享状态"
 linkTitle: "避免共享状态"
 weight: 8
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"]  
 ---
 
 尽管在多个地方都提到过, 但这点仍值得被再次提及. 确保测试相互隔离.

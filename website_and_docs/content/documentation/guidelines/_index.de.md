@@ -4,6 +4,7 @@ linkTitle: "Anleitungen"
 weight: 7
 description: >
   Some guidelines and recommendations on testing from the Selenium project.
+aliases: ["/documentation/de/guidelines_and_recommendations/"]  
 ---
 
 {{% pageinfo color="warning" %}}

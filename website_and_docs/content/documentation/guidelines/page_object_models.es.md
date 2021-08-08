@@ -2,6 +2,7 @@
 title: "Page object models"
 linkTitle: "Page object models"
 weight: 3
+aliases: ["/documentation/es/guidelines_and_recommendations/page_object_models/"]  
 ---
 
 {{% pageinfo color="warning" %}}

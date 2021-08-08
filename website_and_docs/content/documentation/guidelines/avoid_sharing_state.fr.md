@@ -2,6 +2,7 @@
 title: "Eviter de partager l'état"
 linkTitle: "Eviter de partager l'état"
 weight: 8
+aliases: ["/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/"]  
 ---
 
 Bien que mentionné à plusieurs endroits, il convient de le mentionner à nouveau. Assurer

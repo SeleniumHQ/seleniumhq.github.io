@@ -2,6 +2,7 @@
 title: "Reporting amélioré"
 linkTitle: "Reporting amélioré"
 weight: 7
+aliases: ["/documentation/fr/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 Le sélénium n'est pas conçu pour rendre compte de l'état des cas de test

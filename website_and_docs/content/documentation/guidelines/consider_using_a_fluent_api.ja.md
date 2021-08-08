@@ -2,6 +2,7 @@
 title: "Fluent APIの使用を検討する"
 linkTitle: "Fluent APIの使用を検討する"
 weight: 10
+aliases: ["/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/"]  
 ---
 
 

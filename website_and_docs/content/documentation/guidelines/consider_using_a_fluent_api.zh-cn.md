@@ -2,6 +2,7 @@
 title: "考虑使用Fluent API"
 linkTitle: "考虑使用Fluent API"
 weight: 10
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"]  
 ---
 
 Martin Fowler创造了术语 ["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html). 

@@ -2,6 +2,7 @@
 title: "Improved reporting"
 linkTitle: "Improved reporting"
 weight: 7
+aliases: ["/documentation/en/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 Selenium is not designed to report on the status of test cases

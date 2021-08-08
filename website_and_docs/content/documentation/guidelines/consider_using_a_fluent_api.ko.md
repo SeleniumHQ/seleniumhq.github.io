@@ -2,6 +2,7 @@
 title: "Consider using a fluent API"
 linkTitle: "Consider using a fluent API"
 weight: 10
+aliases: ["/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/"]  
 ---
 
 {{% pageinfo color="warning" %}}

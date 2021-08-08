@@ -2,6 +2,7 @@
 title: "Nouveau navigateur par test"
 linkTitle: "Nouveau navigateur par test"
 weight: 11
+aliases: ["/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/"]  
 ---
 
 Commencez chaque test à partir d'un état connu propre.

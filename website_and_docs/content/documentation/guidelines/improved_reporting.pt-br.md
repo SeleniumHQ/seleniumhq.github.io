@@ -2,6 +2,7 @@
 title: "Relatórios melhorados"
 linkTitle: "Relatórios melhorados"
 weight: 7
+aliases: ["/documentation/pt-br/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 O Selenium não foi projetado para relatar sobre o status de casos de teste. Aproveitar 

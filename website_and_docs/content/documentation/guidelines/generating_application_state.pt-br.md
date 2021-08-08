@@ -2,6 +2,7 @@
 title: "Gerando estado da aplicação"
 linkTitle: "Gerando estado da aplicação"
 weight: 5
+aliases: ["/documentation/pt-br/guidelines_and_recommendations/generating_application_state/"]  
 ---
 
 Selenium não deve ser usado para preparar um caso de teste. Tudo as

@@ -2,6 +2,7 @@
 title: "Neuer Browser pro Test"
 linkTitle: "Neuer Browser pro Test"
 weight: 11
+aliases: ["/documentation/de/guidelines_and_recommendations/fresh_browser_per_test/"]  
 ---
 
 Starte jeden Test mit einem definierten und "sauberen" Status.

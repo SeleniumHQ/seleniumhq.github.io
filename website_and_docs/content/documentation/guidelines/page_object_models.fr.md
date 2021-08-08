@@ -2,6 +2,7 @@
 title: "Page object models"
 linkTitle: "Page object models"
 weight: 3
+aliases: ["/documentation/fr/guidelines_and_recommendations/page_object_models/"]  
 ---
 
 L'objet de page est un modèle de conception qui est devenu populaire dans l'automatisation des tests pour

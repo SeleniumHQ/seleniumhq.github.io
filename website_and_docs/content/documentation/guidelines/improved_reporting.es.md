@@ -2,6 +2,7 @@
 title: "Mejores reportes"
 linkTitle: "Mejores reportes"
 weight: 7
+aliases: ["/documentation/es/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 Selenium no está diseñado para informar sobre el estado de los 

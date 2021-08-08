@@ -2,6 +2,7 @@
 title: "Test independency"
 linkTitle: "Test independency"
 weight: 9
+aliases: ["/documentation/ko/guidelines_and_recommendations/test_independency/"]  
 ---
 
 {{% pageinfo color="warning" %}}

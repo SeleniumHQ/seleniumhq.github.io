@@ -2,6 +2,7 @@
 title: "Fresh browser per test"
 linkTitle: "Fresh browser per test"
 weight: 11
+aliases: ["/documentation/en/guidelines_and_recommendations/fresh_browser_per_test/"]  
 ---
 
 Start each test from a clean known state.

@@ -2,6 +2,7 @@
 title: "Detailiertes Reporting"
 linkTitle: "Detailiertes Reporting"
 weight: 7
+aliases: ["/documentation/de/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 Selenium wurde nicht dafür gemacht, um Berichte über den Status von Testfällen

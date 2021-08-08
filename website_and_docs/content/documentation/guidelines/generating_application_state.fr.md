@@ -2,6 +2,7 @@
 title: "Generer l'état de l'application"
 linkTitle: "Generer l'état de l'application"
 weight: 5
+aliases: ["/documentation/fr/guidelines_and_recommendations/generating_application_state/"]  
 ---
 
 Le sélénium ne doit pas être utilisé pour préparer un cas de test. Tous répétitifs

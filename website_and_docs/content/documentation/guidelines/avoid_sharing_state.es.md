@@ -2,6 +2,7 @@
 title: "Evitar compartir estados"
 linkTitle: "Evitar compartir estados"
 weight: 8
+aliases: ["/documentation/es/guidelines_and_recommendations/avoid_sharing_state/"]  
 ---
 
 Aunque se menciona en varios lugares, vale la pena mencionarlo 

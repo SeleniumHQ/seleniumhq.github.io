@@ -2,6 +2,7 @@
 title: "Independencia en las pruebas"
 linkTitle: "Independencia en las pruebas"
 weight: 9
+aliases: ["/documentation/es/guidelines_and_recommendations/test_independency/"]  
 ---
 
 Escribe cada prueba como su propia unidad. Escribe las pruebas 

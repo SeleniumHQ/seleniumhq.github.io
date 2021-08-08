@@ -2,6 +2,7 @@
 title: "Generating application state"
 linkTitle: "Generating application state"
 weight: 5
+aliases: ["/documentation/en/guidelines_and_recommendations/generating_application_state/"]  
 ---
 
 Selenium should not be used to prepare a test case.  All repetitive

@@ -2,6 +2,7 @@
 title: "测试的独立性"
 linkTitle: "测试的独立性"
 weight: 9
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/test_independency/"]  
 ---
 
 将每个测试编写为独立的单元.

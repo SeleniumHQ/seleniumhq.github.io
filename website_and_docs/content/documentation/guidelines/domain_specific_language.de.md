@@ -2,6 +2,7 @@
 title: "Domain specific language"
 linkTitle: "Domain specific language"
 weight: 4
+aliases: ["/documentation/de/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 {{% pageinfo color="warning" %}}

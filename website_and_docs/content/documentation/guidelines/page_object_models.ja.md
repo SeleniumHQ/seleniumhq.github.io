@@ -2,6 +2,7 @@
 title: "ページオブジェクトモデル"
 linkTitle: "ページオブジェクトモデル"
 weight: 3
+aliases: ["/documentation/ja/guidelines_and_recommendations/page_object_models/"]  
 ---
 
 ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。

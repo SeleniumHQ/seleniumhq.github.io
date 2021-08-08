@@ -2,6 +2,7 @@
 title: "Langue spécifique au domaine"
 linkTitle: "Langue spécifique au domaine"
 weight: 4
+aliases: ["/documentation/fr/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 Une langue spécifique au domaine (DSL) est un système qui fournit à l'utilisateur

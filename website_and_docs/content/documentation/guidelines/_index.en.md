@@ -4,6 +4,7 @@ linkTitle: "Guidelines"
 weight: 7
 description: >
   Some guidelines and recommendations on testing from the Selenium project.
+aliases: ["/documentation/en/guidelines_and_recommendations/"]  
 ---
 
 A note on "Best Practices": We've intentionally avoided the phrase "Best

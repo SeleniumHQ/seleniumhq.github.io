@@ -2,6 +2,7 @@
 title: "Considerer l'utilisation d'une API fluent"
 linkTitle: "Considerer l'utilisation d'une API fluent"
 weight: 10
+aliases: ["/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/"]  
 ---
 
 Martin Fowler a inventé le terme ["Fluent API"](// www.martinfowler.com/bliki/FluentInterface.html). 

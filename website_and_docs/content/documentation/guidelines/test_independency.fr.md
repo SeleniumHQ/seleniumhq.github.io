@@ -2,6 +2,7 @@
 title: "Indépendence des tests"
 linkTitle: "Indépendence des tests"
 weight: 9
+aliases: ["/documentation/fr/guidelines_and_recommendations/test_independency/"]  
 ---
 
 Écrivez chaque test comme sa propre unité. Écrivez les tests d'une manière qui ne sera pas

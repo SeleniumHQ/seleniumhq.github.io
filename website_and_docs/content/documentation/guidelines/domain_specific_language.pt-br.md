@@ -2,6 +2,7 @@
 title: "Linguagem específica de domínio (DSL)"
 linkTitle: "Linguagem específica de domínio (DSL)"
 weight: 4
+aliases: ["/documentation/pt-br/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 Uma linguagem específica de domínio (DSL) é um sistema que fornece ao usuário

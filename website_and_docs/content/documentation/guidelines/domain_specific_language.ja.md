@@ -2,6 +2,7 @@
 title: "ドメイン固有言語（DSL）"
 linkTitle: "ドメイン固有言語（DSL）"
 weight: 4
+aliases: ["/documentation/ja/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。

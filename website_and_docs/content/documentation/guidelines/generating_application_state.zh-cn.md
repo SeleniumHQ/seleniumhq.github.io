@@ -2,6 +2,7 @@
 title: "生成应用程序状态"
 linkTitle: "生成应用程序状态"
 weight: 5
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/"]  
 ---
  
 

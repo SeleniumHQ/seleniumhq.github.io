@@ -2,6 +2,7 @@
 title: "Generating application state"
 linkTitle: "Generating application state"
 weight: 5
+aliases: ["/documentation/ko/guidelines_and_recommendations/generating_application_state/"]  
 ---
 
 {{% pageinfo color="warning" %}}

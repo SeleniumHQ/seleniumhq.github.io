@@ -2,6 +2,7 @@
 title: "Lenguaje de dominio específico"
 linkTitle: "Lenguaje de dominio específico"
 weight: 4
+aliases: ["/documentation/es/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 Un lenguaje de dominio específico (DSL) es un sistema que 

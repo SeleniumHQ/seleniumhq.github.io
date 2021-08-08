@@ -2,6 +2,7 @@
 title: "アプリケーション状態の生成"
 linkTitle: "アプリケーション状態の生成"
 weight: 5
+aliases: ["/documentation/ja/guidelines_and_recommendations/generating_application_state/"]  
 ---
 
 Seleniumはテストケースの準備に使用しないでください。

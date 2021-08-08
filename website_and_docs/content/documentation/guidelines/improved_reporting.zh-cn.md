@@ -2,6 +2,7 @@
 title: "改善报告"
 linkTitle: "改善报告"
 weight: 7
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 Selenium并非旨在报告测试用例的运行状态. 

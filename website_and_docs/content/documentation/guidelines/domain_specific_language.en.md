@@ -2,6 +2,7 @@
 title: "Domain specific language"
 linkTitle: "Domain specific language"
 weight: 4
+aliases: ["/documentation/en/guidelines_and_recommendations/domain_specific_language/"]  
 ---
 
 A domain specific language (DSL) is a system which provides the user with

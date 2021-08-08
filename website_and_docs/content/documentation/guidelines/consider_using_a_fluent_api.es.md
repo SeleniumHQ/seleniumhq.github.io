@@ -2,6 +2,7 @@
 title: "Considerar el uso de un API fluída"
 linkTitle: "Considerar el uso de un API fluída"
 weight: 10
+aliases: ["/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/"]  
 ---
 
 Martin Fowler acuñó el término ["API fluido"](//www.martinfowler.com/bliki/FluentInterface.html). 

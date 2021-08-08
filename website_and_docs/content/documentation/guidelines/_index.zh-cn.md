@@ -4,6 +4,7 @@ linkTitle: "指南"
 weight: 7
 description: >
   Some guidelines and recommendations on testing from the Selenium project.
+aliases: ["/documentation/zh-cn/guidelines_and_recommendations/"]  
 ---
 
 {{% pageinfo color="warning" %}}

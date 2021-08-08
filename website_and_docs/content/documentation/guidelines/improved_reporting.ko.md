@@ -2,6 +2,7 @@
 title: "Improved reporting"
 linkTitle: "Improved reporting"
 weight: 7
+aliases: ["/documentation/ko/guidelines_and_recommendations/improved_reporting/"]  
 ---
 
 {{% pageinfo color="warning" %}}

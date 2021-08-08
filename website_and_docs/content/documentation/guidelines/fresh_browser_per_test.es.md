@@ -2,6 +2,7 @@
 title: "Nueva instancia del navegador por prueba"
 linkTitle: "Nueva instancia del navegador por prueba"
 weight: 11
+aliases: ["/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/"]  
 ---
 
 Comienza cada prueba desde un estado limpio conocido.

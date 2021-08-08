@@ -2,6 +2,7 @@
 title: "テストの独立性"
 linkTitle: "テストの独立性"
 weight: 9
+aliases: ["/documentation/ja/guidelines_and_recommendations/test_independency/"]  
 ---
 
 各テストを独自のユニットとして記述します。

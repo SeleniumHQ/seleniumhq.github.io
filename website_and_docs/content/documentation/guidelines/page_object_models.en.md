@@ -2,6 +2,7 @@
 title: "Page object models"
 linkTitle: "Page object models"
 weight: 3
+aliases: ["/documentation/en/guidelines_and_recommendations/page_object_models/"]  
 ---
 
 Page Object is a Design Pattern which has become popular in test automation for

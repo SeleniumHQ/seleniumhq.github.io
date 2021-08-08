@@ -2,6 +2,7 @@
 title: "Avoid sharing state"
 linkTitle: "Avoid sharing state"
 weight: 8
+aliases: ["/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/"]  
 ---
 
 {{% pageinfo color="warning" %}}

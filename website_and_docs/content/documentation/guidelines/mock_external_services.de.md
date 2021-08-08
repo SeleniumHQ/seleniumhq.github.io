@@ -2,6 +2,7 @@
 title: "Mock external services"
 linkTitle: "Mock external services"
 weight: 6
+aliases: ["/documentation/de/guidelines_and_recommendations/mock_external_services/"]  
 ---
 
 {{% pageinfo color="warning" %}}
