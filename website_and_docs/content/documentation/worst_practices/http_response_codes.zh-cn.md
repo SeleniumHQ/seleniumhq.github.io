@@ -2,6 +2,7 @@
 title: "HTTP响应码"
 linkTitle: "HTTP响应码"
 weight: 3
+aliases: ["/documentation/zh-cn/worst_practices/http_response_codes/"]
 ---
 
 对于Selenium RC中的某些浏览器配置，

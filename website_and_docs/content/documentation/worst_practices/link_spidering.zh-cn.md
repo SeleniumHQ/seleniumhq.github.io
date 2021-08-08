@@ -2,6 +2,7 @@
 title: "爬取链接"
 linkTitle: "爬取链接"
 weight: 7
+aliases: ["/documentation/zh-cn/worst_practices/link_spidering/"]
 ---
 
 建议您不要使用WebDriver来通过链接进行爬网，

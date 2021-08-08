@@ -2,6 +2,7 @@
 title: "실험 의존성"
 linkTitle: "실험 의존성"
 weight: 5
+aliases: ["/documentation/ko/worst_practices/test_dependency/"]
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Autenticarse con Gmail, email y Facebook"
 linkTitle: "Gmail, email y Facebook"
 weight: 4
+aliases: ["/documentation/es/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 Por múltiples razones, autenticarse en sitios como Gmail y Facebook usando el 

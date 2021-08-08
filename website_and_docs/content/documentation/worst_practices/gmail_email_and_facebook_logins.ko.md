@@ -2,6 +2,7 @@
 title: "Gmail, 이메일과 Facebook logins"
 linkTitle: "Gmail, 이메일과 페이스북"
 weight: 4
+aliases: ["/documentation/ko/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 여러 가지 이유로, WebDriver를 사용하여 Gmail이나 Facebook과 같은 사이트에 로그인하는 것은 권장되지 않는다.

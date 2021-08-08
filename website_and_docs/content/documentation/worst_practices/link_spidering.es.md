@@ -2,6 +2,7 @@
 title: "Rastreo de enlaces"
 linkTitle: "Rastreo de enlaces"
 weight: 7
+aliases: ["/documentation/es/worst_practices/link_spidering/"]
 ---
 
 Usando WebDriver para arañar una web a través de enlaces

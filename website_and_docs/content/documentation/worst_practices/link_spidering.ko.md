@@ -2,6 +2,7 @@
 title: "링크 이동"
 linkTitle: "링크 이동"
 weight: 7
+aliases: ["/documentation/ko/worst_practices/link_spidering/"]
 ---
 
 WebDriver를 링크를 통해 이동하는 것은 권장되는 연습이 아니다. 

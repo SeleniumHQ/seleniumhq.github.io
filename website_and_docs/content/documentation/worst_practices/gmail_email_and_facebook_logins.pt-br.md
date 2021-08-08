@@ -2,6 +2,7 @@
 title: "Login via Gmail, email e Facebook"
 linkTitle: "Login via Gmail, email e Facebook"
 weight: 4
+aliases: ["/documentation/pt-br/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 Por vários motivos, fazer login em sites como Gmail e Facebook

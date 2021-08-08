@@ -2,6 +2,7 @@
 title: "자동화 튜링 테스트"
 linkTitle: "자동화 튜링 테스트"
 weight: 1
+aliases: ["/documentation/ko/worst_practices/captchas/"]    
 ---
 
 캡차(CAPTCHA)는 컴퓨터와 인간을 구분하기 위한 완전 자동화된 공공 튜링 테스트(Completely Automated 

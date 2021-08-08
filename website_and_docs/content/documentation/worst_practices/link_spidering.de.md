@@ -2,6 +2,7 @@
 title: "Link spidering"
 linkTitle: "Link spidering"
 weight: 7
+aliases: ["/documentation/de/worst_practices/link_spidering/"]
 ---
 
 {{% pageinfo color="warning" %}}

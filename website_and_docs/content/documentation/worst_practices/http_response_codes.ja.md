@@ -2,6 +2,7 @@
 title: "HTTPレスポンスコード"
 linkTitle: "HTTPレスポンスコード"
 weight: 3
+aliases: ["/documentation/ja/worst_practices/http_response_codes/"]
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Two Factor Authentication"
 linkTitle: "Two Factor Authentication"
 weight: 8
+aliases: ["/documentation/nl/worst_practices/two_factor_authentication/"]
 ---
 
 {{% pageinfo color="warning" %}}

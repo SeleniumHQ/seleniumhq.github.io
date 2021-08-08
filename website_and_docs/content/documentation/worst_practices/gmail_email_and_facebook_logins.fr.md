@@ -2,6 +2,7 @@
 title: "Connexion à Gmail, Facebook et les emails"
 linkTitle: "Gmail, email and Facebook"
 weight: 4
+aliases: ["/documentation/fr/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 Pour plusieurs raisons, la connexion à des sites comme Gmail et

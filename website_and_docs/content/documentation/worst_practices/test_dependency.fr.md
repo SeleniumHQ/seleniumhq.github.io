@@ -2,6 +2,7 @@
 title: "Dépendance des tests"
 linkTitle: "Dépendance des tests"
 weight: 5
+aliases: ["/documentation/fr/worst_practices/test_dependency/"]
 ---
 
 Une courante et fausse idée à propos des tests automatisés

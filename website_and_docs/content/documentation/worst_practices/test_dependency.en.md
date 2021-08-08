@@ -2,6 +2,7 @@
 title: "Test dependency"
 linkTitle: "Test dependency"
 weight: 5
+aliases: ["/documentation/en/worst_practices/test_dependency/"]
 ---
 
 A common idea and misconception about automated testing is regarding a

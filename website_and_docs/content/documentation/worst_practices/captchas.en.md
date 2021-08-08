@@ -2,6 +2,7 @@
 title: "Captchas"
 linkTitle: "Captchas"
 weight: 1
+aliases: ["/documentation/en/worst_practices/captchas/"]    
 ---
 
 CAPTCHA, short for _Completely Automated Public Turing test

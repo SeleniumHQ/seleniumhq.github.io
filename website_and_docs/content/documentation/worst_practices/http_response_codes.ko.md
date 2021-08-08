@@ -2,6 +2,7 @@
 title: "HTTP 응답 코드"
 linkTitle: "HTTP 응답 코드"
 weight: 3
+aliases: ["/documentation/ko/worst_practices/http_response_codes/"]
 ---
 
 Selenium RC의 일부 브라우저 구성에서 Selenium은 자동화되고 있는 브라우저와 

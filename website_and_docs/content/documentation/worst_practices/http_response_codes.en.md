@@ -2,6 +2,7 @@
 title: "HTTP response codes"
 linkTitle: "HTTP response codes"
 weight: 3
+aliases: ["/documentation/en/worst_practices/http_response_codes/"]
 ---
 
 For some browser configurations in Selenium RC,

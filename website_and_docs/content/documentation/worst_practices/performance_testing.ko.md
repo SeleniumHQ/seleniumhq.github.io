@@ -2,6 +2,7 @@
 title: "성능 테스트"
 linkTitle: "성능 테스트"
 weight: 6
+aliases: ["/documentation/ko/worst_practices/performance_testing/"]
 ---
 
 Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다.

@@ -2,6 +2,7 @@
 title: "Link spidering"
 linkTitle: "Link spidering"
 weight: 7
+aliases: ["/documentation/en/worst_practices/link_spidering/"]
 ---
 
 Using WebDriver to spider through links

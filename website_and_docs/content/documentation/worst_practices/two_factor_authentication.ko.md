@@ -2,6 +2,7 @@
 title: "2단계 인증"
 linkTitle: "2단계 인증"
 weight: 8
+aliases: ["/documentation/ko/worst_practices/two_factor_authentication/"]
 ---
 
 2FA(Two Factor Authentication)라고 알려진 2단계 인증은 인증을 위해 구글 인증기, 마이크로소프트 인증기와 같은 인증기 모바일 앱, 혹은 SMS, email 등에 의해 생성되는 1회용 비밀번호(OTP)를 사용하는 인증 방식입니다.

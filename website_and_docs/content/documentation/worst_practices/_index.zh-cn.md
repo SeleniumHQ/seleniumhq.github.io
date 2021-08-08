@@ -4,6 +4,7 @@ linkTitle: "反模式"
 weight: 8
 description: >
   Things to avoid when automating browsers with Selenium.
+aliases: ["/documentation/zh-cn/worst_practices/"]    
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,6 +2,7 @@
 title: "Downloads de arquivo"
 linkTitle: "Downloads de arquivo"
 weight: 2
+aliases: ["/documentation/pt-br/worst_practices/file_downloads/"]
 ---
 
 Embora seja possível iniciar um download

@@ -2,6 +2,7 @@
 title: "リンクスパイダー"
 linkTitle: "リンクスパイダー"
 weight: 7
+aliases: ["/documentation/ja/worst_practices/link_spidering/"]
 ---
 
 

@@ -2,6 +2,7 @@
 title: "双因素认证"
 linkTitle: "双因素认证"
 weight: 8
+aliases: ["/documentation/zh-cn/worst_practices/two_factor_authentication/"]
 ---
 
 双因素认证通常简写成 _2FA_ 是一种一次性密码（OTP）通常用在移动应用上例如“谷歌认证器”，

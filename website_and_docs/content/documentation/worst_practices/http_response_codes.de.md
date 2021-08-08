@@ -2,6 +2,7 @@
 title: "HTTP response codes"
 linkTitle: "HTTP response codes"
 weight: 3
+aliases: ["/documentation/de/worst_practices/http_response_codes/"]
 ---
 
 {{% pageinfo color="warning" %}}

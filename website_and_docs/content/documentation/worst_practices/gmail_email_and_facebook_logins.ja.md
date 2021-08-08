@@ -2,6 +2,7 @@
 title: "Gmail、Eメール、Facebookログイン"
 linkTitle: "Gmail、Eメール、Facebook"
 weight: 4
+aliases: ["/documentation/ja/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 

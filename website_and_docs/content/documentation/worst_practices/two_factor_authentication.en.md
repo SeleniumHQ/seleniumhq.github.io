@@ -2,6 +2,7 @@
 title: "Two Factor Authentication"
 linkTitle: "Two Factor Authentication"
 weight: 8
+aliases: ["/documentation/en/worst_practices/two_factor_authentication/"]
 ---
 
 Two Factor Authentication (2FA) is an authorization 

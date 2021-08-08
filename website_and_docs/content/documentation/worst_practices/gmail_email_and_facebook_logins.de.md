@@ -2,6 +2,7 @@
 title: "Gmail, email and Facebook logins"
 linkTitle: "Gmail, email and Facebook"
 weight: 4
+aliases: ["/documentation/de/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 {{% pageinfo color="warning" %}}

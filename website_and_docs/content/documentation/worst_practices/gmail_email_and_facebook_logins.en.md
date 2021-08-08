@@ -2,6 +2,7 @@
 title: "Gmail, email and Facebook logins"
 linkTitle: "Gmail, email and Facebook"
 weight: 4
+aliases: ["/documentation/en/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 For multiple reasons, logging into sites like Gmail and Facebook

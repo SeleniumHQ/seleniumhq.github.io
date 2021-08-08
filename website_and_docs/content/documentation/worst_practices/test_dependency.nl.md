@@ -2,6 +2,7 @@
 title: "Test dependency"
 linkTitle: "Test dependency"
 weight: 5
+aliases: ["/documentation/nl/worst_practices/test_dependency/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,6 +2,7 @@
 title: "File downloads"
 linkTitle: "File downloads"
 weight: 2
+aliases: ["/documentation/de/worst_practices/file_downloads/"]
 ---
 
 {{% pageinfo color="warning" %}}

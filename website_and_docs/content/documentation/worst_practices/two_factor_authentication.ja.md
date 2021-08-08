@@ -2,6 +2,7 @@
 title: "二要素認証"
 linkTitle: "二要素認証"
 weight: 8
+aliases: ["/documentation/ja/worst_practices/two_factor_authentication/"]
 ---
 
 _2FA_ として知られている2要素認証は、"Google Authenticator" 、

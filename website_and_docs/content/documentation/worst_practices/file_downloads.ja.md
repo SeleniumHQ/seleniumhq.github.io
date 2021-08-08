@@ -2,6 +2,7 @@
 title: "ファイルダウンロード"
 linkTitle: "ファイルダウンロード"
 weight: 2
+aliases: ["/documentation/ja/worst_practices/file_downloads/"]
 ---
 
 

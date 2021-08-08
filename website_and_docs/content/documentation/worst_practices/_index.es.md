@@ -4,6 +4,7 @@ linkTitle: "Malas prácticas"
 weight: 8
 description: >
   Things to avoid when automating browsers with Selenium.
+aliases: ["/documentation/es/worst_practices/"]    
 ---
 
 {{% pageinfo color="warning" %}}

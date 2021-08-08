@@ -2,6 +2,7 @@
 title: "파일 다운로드"
 linkTitle: "파일 다운로드"
 weight: 2
+aliases: ["/documentation/ko/worst_practices/file_downloads/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,6 +2,7 @@
 title: "Captchas"
 linkTitle: "Captchas"
 weight: 1
+aliases: ["/documentation/de/worst_practices/captchas/"]    
 ---
 
 {{% pageinfo color="warning" %}}

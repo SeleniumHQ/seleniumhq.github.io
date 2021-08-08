@@ -2,6 +2,7 @@
 title: "Captchas"
 linkTitle: "Captchas"
 weight: 1
+aliases: ["/documentation/nl/worst_practices/captchas/"]    
 ---
 
 CAPTCHA, afkorting voor _Completely Automated Public Turing test 

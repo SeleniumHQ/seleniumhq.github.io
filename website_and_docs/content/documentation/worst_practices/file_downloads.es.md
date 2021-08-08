@@ -2,6 +2,7 @@
 title: "Descarga de archivos"
 linkTitle: "Descarga de archivos"
 weight: 2
+aliases: ["/documentation/es/worst_practices/file_downloads/"]
 ---
 
 Mientras que es posible empezar una descarga haciendo clic en el enlace, con el

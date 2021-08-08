@@ -2,6 +2,7 @@
 title: "Gmail, email 和 Facebook 登录"
 linkTitle: "Gmail, email and Facebook"
 weight: 4
+aliases: ["/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
 

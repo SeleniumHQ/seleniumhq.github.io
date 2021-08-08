@@ -2,6 +2,7 @@
 title: "Performance testing"
 linkTitle: "Performance testing"
 weight: 6
+aliases: ["/documentation/nl/worst_practices/performance_testing/"]
 ---
 
 {{% pageinfo color="warning" %}}

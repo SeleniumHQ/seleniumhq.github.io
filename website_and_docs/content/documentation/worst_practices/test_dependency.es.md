@@ -2,6 +2,7 @@
 title: "Dependencia entre pruebas"
 linkTitle: "Dependencia entre pruebas"
 weight: 5
+aliases: ["/documentation/es/worst_practices/test_dependency/"]
 ---
 
 Una idea muy común y equivocada sobre la automatización de pruebas es en lo

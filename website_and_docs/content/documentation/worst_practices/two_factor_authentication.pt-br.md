@@ -2,6 +2,7 @@
 title: "Autenticação de Dois Fatores (2FA)"
 linkTitle: "Autenticação de Dois Fatores (2FA)"
 weight: 8
+aliases: ["/documentation/pt-br/worst_practices/two_factor_authentication/"]
 ---
 
 A autenticação de dois fatores, conhecida como _2FA_, é um mecanismo de autorização

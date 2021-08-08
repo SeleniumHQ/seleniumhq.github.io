@@ -2,6 +2,7 @@
 title: "Authentication à double facteur"
 linkTitle: "Authentication à double facteur"
 weight: 8
+aliases: ["/documentation/fr/worst_practices/two_factor_authentication/"]
 ---
 
 L'authentification à double facteur (A2F) est un mécanisme d'autorisation dans

@@ -4,6 +4,7 @@ linkTitle: "좋지 않은 관행"
 weight: 8
 description: >
   Things to avoid when automating browsers with Selenium.
+aliases: ["/documentation/ko/worst_practices/"]    
 ---
 
 {{% pageinfo color="warning" %}}

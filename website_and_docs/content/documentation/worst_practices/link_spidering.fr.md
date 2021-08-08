@@ -2,6 +2,7 @@
 title: "Recherche de liens"
 linkTitle: "Recherche de liens"
 weight: 7
+aliases: ["/documentation/fr/worst_practices/link_spidering/"]
 ---
 
 L'utilisation de WebDriver pour parcourir des liens

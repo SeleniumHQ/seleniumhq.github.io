@@ -4,6 +4,7 @@ linkTitle: "最悪の慣行"
 weight: 8
 description: >
   Things to avoid when automating browsers with Selenium.
+aliases: ["/documentation/ja/worst_practices/"]    
 ---
 
 {{% pageinfo color="warning" %}}

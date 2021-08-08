@@ -2,6 +2,7 @@
 title: "Códigos de respuesta HTTP"
 linkTitle: "Códigos de respuesta HTTP"
 weight: 3
+aliases: ["/documentation/es/worst_practices/http_response_codes/"]
 ---
 
 

@@ -2,6 +2,7 @@
 title: "Codes réponse HTTP"
 liniTitle: "Codes réponse HTTP"
 weight: 3
+aliases: ["/documentation/fr/worst_practices/http_response_codes/"]
 ---
 
 Pour certaines configurations de navigateur dans Selenium RC,

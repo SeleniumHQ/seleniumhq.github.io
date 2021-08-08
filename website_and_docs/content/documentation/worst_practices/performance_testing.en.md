@@ -2,6 +2,7 @@
 title: "Performance testing"
 linkTitle: "Performance testing"
 weight: 6
+aliases: ["/documentation/en/worst_practices/performance_testing/"]
 ---
 
 Performance testing using Selenium and WebDriver

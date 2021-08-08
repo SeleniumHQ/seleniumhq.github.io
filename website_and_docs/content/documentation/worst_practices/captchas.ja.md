@@ -2,6 +2,7 @@
 title: "CAPTCHA（キャプチャ）"
 linkTitle: "CAPTCHA（キャプチャ）"
 weight: 1
+aliases: ["/documentation/ja/worst_practices/captchas/"]    
 ---
 
 CAPTCHA（キャプチャ）は、 _Completely Automated Public Turing test
