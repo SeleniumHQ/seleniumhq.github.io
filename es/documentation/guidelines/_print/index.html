@@ -1,0 +1,728 @@
+<!doctype html><html lang=es class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=generator content="Hugo 0.83.1"><link rel=canonical type=text/html href=/es/documentation/guidelines/><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>Guías y recomendaciones | Selenium</title><meta name=description content="Selenium automates browsers. That's it!"><meta property="og:title" content="Guías y recomendaciones"><meta property="og:description" content="Some guidelines and recommendations on testing from the Selenium project.
+"><meta property="og:type" content="website"><meta property="og:url" content="/es/documentation/guidelines/"><meta property="og:site_name" content="Selenium"><meta itemprop=name content="Guías y recomendaciones"><meta itemprop=description content="Some guidelines and recommendations on testing from the Selenium project.
+"><meta name=twitter:card content="summary"><meta name=twitter:title content="Guías y recomendaciones"><meta name=twitter:description content="Some guidelines and recommendations on testing from the Selenium project.
+"><link rel=preload href=/scss/main.min.1534c29bd9e5fdb4036df0c0b7a8552db9b03ad7cdaca01550afae9714dc2a02.css as=style><link href=/scss/main.min.1534c29bd9e5fdb4036df0c0b7a8552db9b03ad7cdaca01550afae9714dc2a02.css rel=stylesheet integrity><script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script><script src=https://unpkg.com/lunr@2.3.8/lunr.min.js integrity=sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY crossorigin=anonymous></script></head><body class=td-section><header><nav class="js-navbar-scroll navbar navbar-expand-lg navbar-dark td-navbar"><a class=navbar-brand href=/es/><span class=navbar-logo><svg id="selenium_logo" data-name="Selenium Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-selenium_logo{fill:#fff}</style></defs><title>Selenium</title><path class="cls-selenium_logo" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-selenium_logo" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-selenium_logo" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-selenium_logo" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-selenium_logo" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-selenium_logo" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0.93.93.0 01-1.06 1zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-selenium_logo" d="M110.81 26.34q-3.14.0-3.14-3.47v-9.5h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-selenium_logo" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-selenium_logo" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09 2.41 2.41.0 00-2.56-2.22z"/><path class="cls-selenium_logo" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4L17.5 8.5a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></span></a><button class=navbar-toggler type=button data-toggle=collapse data-target=#main_navbar aria-controls=main_navbar aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-end" id=main_navbar><ul class="navbar-nav mr-4 mb-2 mb-lg-0 pl-4 pl-lg-2"><li class="nav-item mr-4 mb-2 mb-lg-0"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>About</a><div class=dropdown-menu aria-labelledby=navbarDropdown><a class=dropdown-item href=/es/about>About Selenium</a>
+<a class=dropdown-item href=/es/project>Structure and Governance</a>
+<a class=dropdown-item href=/es/events>Events</a>
+<a class=dropdown-item href=/es/ecosystem>Ecosystem</a>
+<a class=dropdown-item href=/es/history>History</a>
+<a class=dropdown-item href=/es/getinvolved>Get Involved</a>
+<a class=dropdown-item href=/es/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/es/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/es/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/es/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/es/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/es/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Español</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/guidelines/>English</a>
+<a class=dropdown-item href=/de/documentation/guidelines/>Deutsch</a>
+<a class=dropdown-item href=/pt-br/documentation/guidelines/>Português (Brasileiro)</a>
+<a class=dropdown-item href=/nl/documentation/guidelines/>Nederlands</a>
+<a class=dropdown-item href=/zh-cn/documentation/guidelines/>中文简体</a>
+<a class=dropdown-item href=/fr/documentation/guidelines/>Français</a>
+<a class=dropdown-item href=/ja/documentation/guidelines/>日本語</a>
+<a class=dropdown-item href=/ko/documentation/guidelines/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar" aria-label=Buscar autocomplete=off data-offline-search-index-json-src=/offline-search-index.4b5e6f89a64b869d1aade03ca865912b.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>Versión imprimible multipagina.
+<a href=# onclick="return print(),!1">Haga click aquí para imprimir</a>.</p><p><a href=/es/documentation/guidelines/>Volver a la vista normal de esta página</a>.</p></div><h1 class=title>Guías y recomendaciones</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-9e0d5ec8d47000cb25d808f830911a1b>Sobre automatización de pruebas</a></li><li>2: <a href=#pg-755108bb773011f011e5440c17fe2787>Tipos de pruebas</a></li><li>3: <a href=#pg-41ad0e5c96644beae25a5ffb3b209653>Page object models</a></li><li>4: <a href=#pg-9b50cbcb8c6444045e153a46cef02832>Lenguaje de dominio específico</a></li><li>5: <a href=#pg-bb9f5b974e15eb6381b4d961a7f07d91>Generar el estado de la aplicación</a></li><li>6: <a href=#pg-b7719c82790de290a5a5b8ca5cf22c2c>Mock de servicios externos</a></li><li>7: <a href=#pg-fa30b64f651b889a95fcfcddd8e0652c>Mejores reportes</a></li><li>8: <a href=#pg-5380c530a10551f44cff9fa05ea5874d>Evitar compartir estados</a></li><li>9: <a href=#pg-ee2c60d2a4946907ff8b7cb11430cd05>Independencia en las pruebas</a></li><li>10: <a href=#pg-0cef590e83b0f1803d5d0c49afe22363>Considerar el uso de un API fluída</a></li><li>11: <a href=#pg-a8b4939c889268ec3abb7062a26b6470>Nueva instancia del navegador por prueba</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!</p></div><p>Una nota sobre &ldquo;Mejores prácticas&rdquo;: hemos evitado
+intencionalmente la frase &ldquo;Mejores Prácticas&rdquo; en esta
+documentación. Ningún enfoque funciona para todas las
+situaciones. Preferimos la idea de &ldquo;Directrices y
+recomendaciones&rdquo;. Te alentamos a leer a través de estos y
+decidir cuidadosamente cuales enfoques funcionarían para ti en tu
+entorno particular.</p><p>Las pruebas funcionales son difíciles de realizar por muchas
+razones. Como si el estado de la aplicación, la complejidad y
+las dependencias no dificultaran las pruebas, tratar con
+navegadores (especialmente con incompatibilidades entre
+navegadores) hace que escribir buenas pruebas sea un desafío.</p><p>Selenium proporciona herramientas para facilitar la interacción
+funcional del usuario, pero no le ayuda a escribir conjuntos de
+pruebas bien diseñados. En este capítulo ofrecemos consejos,
+pautas y recomendaciones sobre cómo abordar la automatización
+funcional de páginas web.</p><p>Este capítulo registra los patrones de diseño de software
+populares entre muchos de los usuarios de Selenium que han
+demostrado tener éxito a lo largo de los años.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9e0d5ec8d47000cb25d808f830911a1b>1 - Sobre automatización de pruebas</h1><p>Primero, pregúntate si realmente necesitas o no usar un navegador. Lo
+más probable es que, en algún momento, si estás trabajando en una
+aplicación web compleja, necesitarás abrir un navegador y realmente
+probarlo.</p><p>Sin embargo, las pruebas funcionales de usuario final, como las
+pruebas de Selenium son caras de ejecutar. Además, normalmente
+requieren que una infraestructura considerable este disponible para
+estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre
+si lo que se quiere probar se puede hacer usando enfoques de prueba
+más livianos como las pruebas unitarias o con un enfoque de bajo
+nivel.</p><p>Una vez que hayas tomado la determinación de que estás en el negocio
+de hacer pruebas en el navegador, y que tengas tu ambiente de
+Selenium listo para empezar a escribir pruebas, generalmente
+realizaras alguna combinación de estos tres pasos:</p><ul><li>Preparar los datos</li><li>Realizar un conjunto discreto de acciones</li><li>Evaluar los resultados</li></ul><p>Querrás mantener estos pasos tan cortos como sea posible; una o dos
+operaciones deberían ser suficientes la mayor parte del tiempo. La
+automatización del navegador tiene la reputación de ser &ldquo;frágil&rdquo;,
+pero en realidad, esto se debe a que los usuarios suelen exigirle
+demasiado. En capítulos posteriores, volveremos a las técnicas que
+puedes utilizar para mitigar problemas aparentemente intermitentes en
+las pruebas, en particular como
+<a href=/es/documentation/webdriver/waits/>superar race conditions</a> entre el navegador y WebDriver.</p><p>Manteniendo tus pruebas cortas y usando el navegador web solo cuando
+no tienes absolutamente ninguna alternativa,
+Puedes tener muchas pruebas con fragilidades muy mínimas.</p><p>Una clara ventaja de las pruebas de Selenium es su capacidad
+inherente para probar todos los componentes de la aplicación, desde
+el backend hasta el frontend, desde la perspectiva del usuario. En
+otras palabras, aunque las pruebas funcionales pueden ser caras de
+ejecutar, también abarcan a la vez grandes porciones críticas para el
+negocio.</p><h3 id=requisitos-de-pruebas>Requisitos de pruebas</h3><p>Como se mencionó anteriormente, las pruebas de Selenium pueden ser
+costosas de ejecutar. Hasta qué punto, dependerá del navegador en el
+que estás ejecutando las pruebas, pero históricamente el
+comportamiento de los navegadores ha variado tanto que a menudo ha
+sido un objetivo claro realizar pruebas cruzadas contra múltiples
+navegadores.</p><p>Selenium te permite ejecutar las mismas instrucciones en múltiples
+navegadores en múltiples sistemas operativos, pero la enumeración de
+todos los navegadores posibles, sus diferentes versiones y los muchos
+sistemas operativos en los que se ejecutan se convertirá rápidamente
+en una misión no trivial.</p><h3 id=iniciemos-con-un-ejemplo>Iniciemos con un ejemplo</h3><p>Larry ha escrito un sitio web que le permite a los usuarios ordenar
+unicornios personalizados.</p><p>El flujo de trabajo principal (que llamaremos el &ldquo;camino feliz&rdquo;) es
+algo como esto:</p><ul><li>Crea una cuenta</li><li>Configura el unicornio</li><li>Agrégalo al carrito de compras</li><li>Envialo a caja y realiza el pago</li><li>Dar feedback sobre el unicornio</li></ul><p>Sería tentador escribir un gran script de Selenium para realizar
+todas estas operaciones, muchos lo intentarán. <strong>¡Resiste la
+tentación!</strong> Hacerlo dará como resultado una prueba que a) toma mucho
+tiempo, b) estará sujeta a algunos problemas comunes relacionados con
+los problemas de tiempo de representación de la página, y c) es tal
+que si falla, no te dará un método conciso y &ldquo;fácil de ver&rdquo; para
+diagnosticar lo que salió mal.</p><p>La estrategia preferida para probar este escenario sería dividirlo en
+una serie de pruebas rápidas e independientes, cada una de las cuales
+tenga una &ldquo;razón&rdquo; para existir.</p><p>Supongamos que deseas probar el segundo paso: Configurando tu
+unicornio. Realizará las siguientes acciones:</p><ul><li>Crea una cuenta</li><li>Configura el unicornio</li></ul><p>Ten en cuenta que nos estamos saltando el resto de los pasos,
+probaremos el resto del flujo en otros casos de prueba pequeños y
+discretos, después de que hayamos terminado con este.</p><p>Para comenzar, debes crear una cuenta. Aquí tienes que tomar algunas
+decisiones:</p><ul><li>¿Quieres usar una cuenta existente?</li><li>¿Quieres crear una nueva cuenta?</li><li>¿Hay alguna propiedad especial de dicho usuario que deba ser
+  tomado en cuenta antes de que comience la configuración?</li></ul><p>Independientemente de cómo respondas esta pregunta, la solución es
+hacer que forme parte del paso de &ldquo;preparar los datos&rdquo; de la prueba. Si
+Larry ha expuesto una API que te permite a ti (o cualquier persona) crear
+y actualizar cuentas de usuario, asegúrate de usar eso para responder
+esta pregunta. Si es posible, debes iniciar el navegador solo después
+de tener un usuario &ldquo;en la mano&rdquo;, cuyas credenciales pueden iniciar
+sesión.</p><p>Si cada prueba para cada flujo de trabajo comienza con la creación de
+una cuenta de usuario, se agregarán muchos segundos a la ejecución de
+cada prueba. Llamar a una API y hablar con una base de datos son
+operaciones &ldquo;sin cabeza&rdquo; rápidas, que no requieren el costoso proceso
+de abrir un navegador, navegar a las páginas correctas, hacer clic y
+esperar que se envíen los formularios, etc.</p><p>Idealmente, puedes abordar esta fase de configuración en una sola
+línea de código, que se ejecutará antes de que se inicie cualquier
+navegador:</p><ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-1-0-tab data-toggle=tab href=#tabs-1-0 role=tab aria-controls=tabs-1-0 aria-selected=true>Java</a></li><li class=nav-item><a class=nav-link id=tabs-1-1-tab data-toggle=tab href=#tabs-1-1 role=tab aria-controls=tabs-1-1 aria-selected=false>Python</a></li><li class=nav-item><a class=nav-link id=tabs-1-2-tab data-toggle=tab href=#tabs-1-2 role=tab aria-controls=tabs-1-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class=nav-link id=tabs-1-3-tab data-toggle=tab href=#tabs-1-3 role=tab aria-controls=tabs-1-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class=nav-link id=tabs-1-4-tab data-toggle=tab href=#tabs-1-4 role=tab aria-controls=tabs-1-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class=nav-link id=tabs-1-5-tab data-toggle=tab href=#tabs-1-5 role=tab aria-controls=tabs-1-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-1-content><div class="tab-pane fade show active" id=tabs-1-0 role=tabpanel aria-labelled-by=tabs-1-0-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#8f5902;font-style:italic>// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+</span><span style=color:#8f5902;font-style:italic>// pero no tienen configurada la información de pago, ni tienen
+</span><span style=color:#8f5902;font-style:italic>// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+</span><span style=color:#8f5902;font-style:italic>// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+</span><span style=color:#8f5902;font-style:italic>// conocerlos.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>User</span> <span style=color:#000>user</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>UserFactory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>createCommonUser</span><span style=color:#ce5c00;font-weight:700>();</span> <span style=color:#8f5902;font-style:italic>//Este método se define en otro lugar.
+</span><span style=color:#8f5902;font-style:italic></span>
+<span style=color:#8f5902;font-style:italic>// Inicia sesión como este usuario.
+</span><span style=color:#8f5902;font-style:italic>// Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que
+</span><span style=color:#8f5902;font-style:italic>// el método loginAs devuelve el objeto AccountPage, lo que le permite
+</span><span style=color:#8f5902;font-style:italic>// realizar acciones de AccountPage.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>AccountPage</span> <span style=color:#000>accountPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>loginAs</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getEmail</span><span style=color:#ce5c00;font-weight:700>(),</span> <span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getPassword</span><span style=color:#ce5c00;font-weight:700>());</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-1 role=tabpanel aria-labelled-by=tabs-1-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#8f5902;font-style:italic># Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,</span>
+<span style=color:#8f5902;font-style:italic># pero no tienen configurada la información de pago, ni tienen</span>
+<span style=color:#8f5902;font-style:italic># privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico</span>
+<span style=color:#8f5902;font-style:italic># la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas</span>
+<span style=color:#8f5902;font-style:italic># conocerlos.</span>
+<span style=color:#000>user</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>user_factory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>create_common_user</span><span style=color:#000;font-weight:700>()</span> <span style=color:#8f5902;font-style:italic>#Este método se define en otro lugar.</span>
+
+<span style=color:#8f5902;font-style:italic># Inicia sesión como este usuario.</span>
+<span style=color:#8f5902;font-style:italic># Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que</span>
+<span style=color:#8f5902;font-style:italic># el método loginAs devuelve el objeto AccountPage, lo que le permite</span>
+<span style=color:#8f5902;font-style:italic># realizar acciones de AccountPage</span>
+<span style=color:#000>account_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>login_as</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>get_email</span><span style=color:#000;font-weight:700>(),</span> <span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>get_password</span><span style=color:#000;font-weight:700>())</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-2 role=tabpanel aria-labelled-by=tabs-1-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#8f5902;font-style:italic>// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+</span><span style=color:#8f5902;font-style:italic>// pero no tienen configurada la información de pago, ni tienen
+</span><span style=color:#8f5902;font-style:italic>// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+</span><span style=color:#8f5902;font-style:italic>// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+</span><span style=color:#8f5902;font-style:italic>// conocerlos.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>User</span> <span style=color:#000>user</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>UserFactory</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>CreateCommonUser</span><span style=color:#000;font-weight:700>();</span> <span style=color:#8f5902;font-style:italic>//Este método se define en otro lugar.
+</span><span style=color:#8f5902;font-style:italic></span>
+<span style=color:#8f5902;font-style:italic>// Inicia sesión como este usuario.
+</span><span style=color:#8f5902;font-style:italic>// Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que
+</span><span style=color:#8f5902;font-style:italic>// el método loginAs devuelve el objeto AccountPage, lo que le permite
+</span><span style=color:#8f5902;font-style:italic>// realizar acciones de AccountPage.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>AccountPage</span> <span style=color:#000>accountPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>LoginAs</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Email</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Password</span><span style=color:#000;font-weight:700>);</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-3 role=tabpanel aria-labelled-by=tabs-1-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#8f5902;font-style:italic># Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,</span>
+<span style=color:#8f5902;font-style:italic># pero no tienen configurada la información de pago, ni tienen</span>
+<span style=color:#8f5902;font-style:italic># privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico</span>
+<span style=color:#8f5902;font-style:italic># la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas</span>
+<span style=color:#8f5902;font-style:italic># conocerlos.</span>
+<span style=color:#000>user</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>UserFactory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>create_common_user</span> <span style=color:#8f5902;font-style:italic>#Este método se define en otro lugar.</span>
+
+<span style=color:#8f5902;font-style:italic># Inicia sesión como este usuario.</span>
+<span style=color:#8f5902;font-style:italic># Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que</span>
+<span style=color:#8f5902;font-style:italic># el método loginAs devuelve el objeto AccountPage, lo que le permite</span>
+<span style=color:#8f5902;font-style:italic># realizar acciones de AccountPage</span>
+<span style=color:#000>account_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>login_as</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>email</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>user</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>password</span><span style=color:#000;font-weight:700>)</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#8f5902;font-style:italic>// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+</span><span style=color:#8f5902;font-style:italic>// pero no tienen configurada la información de pago, ni tienen
+</span><span style=color:#8f5902;font-style:italic>// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+</span><span style=color:#8f5902;font-style:italic>// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+</span><span style=color:#8f5902;font-style:italic>// conocerlos.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>user</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>userFactory</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>createCommonUser</span><span style=color:#000;font-weight:700>();</span> <span style=color:#8f5902;font-style:italic>//Este método se define en otro lugar.
+</span><span style=color:#8f5902;font-style:italic></span>
+<span style=color:#8f5902;font-style:italic>// Inicia sesión como este usuario.
+</span><span style=color:#8f5902;font-style:italic>// Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que
+</span><span style=color:#8f5902;font-style:italic>// el método loginAs devuelve el objeto AccountPage, lo que le permite
+</span><span style=color:#8f5902;font-style:italic>// realizar acciones de AccountPage.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>accountPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>loginAs</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>email</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>password</span><span style=color:#000;font-weight:700>);</span>
+  
+</code></pre></div></div><div class="tab-pane fade" id=tabs-1-5 role=tabpanel aria-labelled-by=tabs-1-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#8f5902;font-style:italic>// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+</span><span style=color:#8f5902;font-style:italic>// pero no tienen configurada la información de pago, ni tienen
+</span><span style=color:#8f5902;font-style:italic>// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+</span><span style=color:#8f5902;font-style:italic>// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+</span><span style=color:#8f5902;font-style:italic>// conocerlos.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>user</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>UserFactory</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>createCommonUser</span><span style=color:#000;font-weight:700>()</span> <span style=color:#8f5902;font-style:italic>//Este método se define en otro lugar.
+</span><span style=color:#8f5902;font-style:italic></span>
+<span style=color:#8f5902;font-style:italic>// Inicia sesión como este usuario.
+</span><span style=color:#8f5902;font-style:italic>// Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que
+</span><span style=color:#8f5902;font-style:italic>// el método loginAs devuelve el objeto AccountPage, lo que le permite
+</span><span style=color:#8f5902;font-style:italic>// realizar acciones de AccountPage.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>accountPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>loginAs</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getEmail</span><span style=color:#000;font-weight:700>(),</span> <span style=color:#000>user</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getPassword</span><span style=color:#000;font-weight:700>())</span>
+  </code></pre></div></div></div><p>Como puedes imaginar, la <code>UserFactory</code> puede ampliarse para
+proporcionar métodos como <code>createAdminUser()</code> y <code>createUserWithPayment()</code>.
+El punto es, que estas dos líneas de código
+no te distraigan del propósito final de esta prueba: configurar un
+unicornio.</p><p>Las complejidades del
+<a href=/es/documentation/guidelines/page_object_models/>Modelo Page Object</a>
+serán discutidas en capítulos posteriores, pero introduciremos el concepto aquí:</p><p>Tus pruebas deben estar compuestas de acciones, realizadas desde el
+punto de vista del usuario, dentro del contexto de las páginas en el
+sitio web. Estas páginas se almacenan como objetos, que contendrán
+información específica sobre cómo está compuesta la página web y cómo
+se realizan las acciones– muy poco de lo que cual debería preocuparte
+como probador.</p><p>¿Qué tipo de unicornio quieres? Es posible que desees rosa, pero no
+necesariamente. El morado es muy popular últimamente. ¿Ella necesita
+gafas de sol? ¿Tatuajes de estrellas? Estas elecciones, aunque
+difíciles, son tu principal preocupación como probador: debes
+asegurarte de que tu centro de distribución de pedidos envíe el
+unicornio correcto a la persona correcta, y eso comienza con estas
+elecciones.</p><p>Observa que en ninguna parte de este párrafo hablamos de botones,
+campos, menús desplegables, botones de opción o formularios web.
+<strong>¡Tampoco deberían tus pruebas!</strong> Debes escribir tu código como el
+usuario que intenta resolver su problema. Aquí hay una forma de
+hacerlo (continuando con el ejemplo anterior):</p><ul class="nav nav-tabs" id=tabs-3 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-3-0-tab data-toggle=tab href=#tabs-3-0 role=tab aria-controls=tabs-3-0 aria-selected=true>Java</a></li><li class=nav-item><a class=nav-link id=tabs-3-1-tab data-toggle=tab href=#tabs-3-1 role=tab aria-controls=tabs-3-1 aria-selected=false>Python</a></li><li class=nav-item><a class=nav-link id=tabs-3-2-tab data-toggle=tab href=#tabs-3-2 role=tab aria-controls=tabs-3-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class=nav-link id=tabs-3-3-tab data-toggle=tab href=#tabs-3-3 role=tab aria-controls=tabs-3-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class=nav-link id=tabs-3-4-tab data-toggle=tab href=#tabs-3-4 role=tab aria-controls=tabs-3-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class=nav-link id=tabs-3-5-tab data-toggle=tab href=#tabs-3-5 role=tab aria-controls=tabs-3-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-3-content><div class="tab-pane fade show active" id=tabs-3-0 role=tabpanel aria-labelled-by=tabs-3-0-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#8f5902;font-style:italic>// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+</span><span style=color:#8f5902;font-style:italic>// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+</span><span style=color:#8f5902;font-style:italic>// con el navegador de ninguna manera.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>Unicorn</span> <span style=color:#000>sparkles</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Unicorn</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>PURPLE</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>SUNGLASSES</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>STAR_TATTOOS</span><span style=color:#ce5c00;font-weight:700>);</span>
+
+<span style=color:#8f5902;font-style:italic>// Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
+</span><span style=color:#8f5902;font-style:italic>// lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;
+</span><span style=color:#8f5902;font-style:italic>// nos llevará allí.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>AddUnicornPage</span> <span style=color:#000>addUnicornPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>accountPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>addUnicorn</span><span style=color:#ce5c00;font-weight:700>();</span>
+
+<span style=color:#8f5902;font-style:italic>// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a
+</span><span style=color:#8f5902;font-style:italic>// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+</span><span style=color:#8f5902;font-style:italic>// completara el formulario y hará clic en enviar.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>UnicornConfirmationPage</span> <span style=color:#000>unicornConfirmationPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>addUnicornPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>createUnicorn</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#ce5c00;font-weight:700>);</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-1 role=tabpanel aria-labelled-by=tabs-3-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#8f5902;font-style:italic># El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.</span>
+<span style=color:#8f5902;font-style:italic># Esto solo almacena los valores; no llena ningún formulario web ni interactúa</span>
+<span style=color:#8f5902;font-style:italic># con el navegador de ninguna manera.</span>
+<span style=color:#000>sparkles</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>PURPLE</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>SUNGLASSES</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>STAR_TATTOOS</span><span style=color:#000;font-weight:700>)</span>
+
+<span style=color:#8f5902;font-style:italic># Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al</span>
+<span style=color:#8f5902;font-style:italic># lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;</span>
+<span style=color:#8f5902;font-style:italic># nos llevará allí.</span>
+<span style=color:#000>add_unicorn_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>account_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>add_unicorn</span><span style=color:#000;font-weight:700>()</span>
+
+<span style=color:#8f5902;font-style:italic># Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a</span>
+<span style=color:#8f5902;font-style:italic># su método createUnicorn(). Este método tomará los atributos de Sparkles</span>
+<span style=color:#8f5902;font-style:italic># completara el formulario y hará clic en enviar.</span>
+<span style=color:#000>unicorn_confirmation_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>add_unicorn_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>create_unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>)</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-2 role=tabpanel aria-labelled-by=tabs-3-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#8f5902;font-style:italic>// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+</span><span style=color:#8f5902;font-style:italic>// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+</span><span style=color:#8f5902;font-style:italic>// con el navegador de ninguna manera.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>Unicorn</span> <span style=color:#000>sparkles</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Purple</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Sunglasses</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>StarTattoos</span><span style=color:#000;font-weight:700>);</span>
+
+<span style=color:#8f5902;font-style:italic>// Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
+</span><span style=color:#8f5902;font-style:italic>// lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;
+</span><span style=color:#8f5902;font-style:italic>// nos llevará allí.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>AddUnicornPage</span> <span style=color:#000>addUnicornPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>accountPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AddUnicorn</span><span style=color:#000;font-weight:700>();</span>
+
+<span style=color:#8f5902;font-style:italic>// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a
+</span><span style=color:#8f5902;font-style:italic>// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+</span><span style=color:#8f5902;font-style:italic>// completara el formulario y hará clic en enviar.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>UnicornConfirmationPage</span> <span style=color:#000>unicornConfirmationPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>addUnicornPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>CreateUnicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>);</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-3 role=tabpanel aria-labelled-by=tabs-3-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#8f5902;font-style:italic># El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.</span>
+<span style=color:#8f5902;font-style:italic># Esto solo almacena los valores; no llena ningún formulario web ni interactúa</span>
+<span style=color:#8f5902;font-style:italic># con el navegador de ninguna manera.</span>
+<span style=color:#000>sparkles</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>Unicor</span>
+<span style=color:#000>sparkles</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Unicorn</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>new</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;Sparkles&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>PURPLE</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>SUNGLASSES</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>STAR_TATTOOS</span><span style=color:#000;font-weight:700>)</span>
+
+<span style=color:#8f5902;font-style:italic># Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al</span>
+<span style=color:#8f5902;font-style:italic># lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;</span>
+<span style=color:#8f5902;font-style:italic># nos llevará allí.</span>
+<span style=color:#000>add_unicorn_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>account_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>add_unicorn</span>
+
+<span style=color:#8f5902;font-style:italic># Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a</span>
+<span style=color:#8f5902;font-style:italic># su método createUnicorn(). Este método tomará los atributos de Sparkles</span>
+<span style=color:#8f5902;font-style:italic># completara el formulario y hará clic en enviar.</span>
+<span style=color:#000>unicorn_confirmation_page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>add_unicorn_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>create_unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>)</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-4 role=tabpanel aria-labelled-by=tabs-3-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#8f5902;font-style:italic>// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+</span><span style=color:#8f5902;font-style:italic>// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+</span><span style=color:#8f5902;font-style:italic>// con el navegador de ninguna manera.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>sparkles</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>PURPLE</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>SUNGLASSES</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>STAR_TATTOOS</span><span style=color:#000;font-weight:700>);</span>
+
+<span style=color:#8f5902;font-style:italic>// Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
+</span><span style=color:#8f5902;font-style:italic>// lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;
+</span><span style=color:#8f5902;font-style:italic>// nos llevará allí.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>addUnicornPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>accountPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>addUnicorn</span><span style=color:#000;font-weight:700>();</span>
+
+<span style=color:#8f5902;font-style:italic>// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a
+</span><span style=color:#8f5902;font-style:italic>// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+</span><span style=color:#8f5902;font-style:italic>// completara el formulario y hará clic en enviar..
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>unicornConfirmationPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>addUnicornPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>createUnicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>);</span>
+
+  
+</code></pre></div></div><div class="tab-pane fade" id=tabs-3-5 role=tabpanel aria-labelled-by=tabs-3-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#8f5902;font-style:italic>// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+</span><span style=color:#8f5902;font-style:italic>// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+</span><span style=color:#8f5902;font-style:italic>// con el navegador de ninguna manera.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>sparkles</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>Unicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornColors</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>PURPLE</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAccessories</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>SUNGLASSES</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>UnicornAdornments</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>STAR_TATTOOS</span><span style=color:#000;font-weight:700>)</span>
+
+<span style=color:#8f5902;font-style:italic>// Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
+</span><span style=color:#8f5902;font-style:italic>// lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;
+</span><span style=color:#8f5902;font-style:italic>// nos llevará allí..
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>addUnicornPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>accountPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>addUnicorn</span><span style=color:#000;font-weight:700>()</span>
+
+<span style=color:#8f5902;font-style:italic>// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a
+</span><span style=color:#8f5902;font-style:italic>// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+</span><span style=color:#8f5902;font-style:italic>// completara el formulario y hará clic en enviar.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>unicornConfirmationPage</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>addUnicornPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>createUnicorn</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>)</span>
+
+  </code></pre></div></div></div><p>Ahora que has configurado tu unicornio,
+debes avanzar al paso 3: asegurarte de que realmente funcionó.</p><ul class="nav nav-tabs" id=tabs-4 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-4-0-tab data-toggle=tab href=#tabs-4-0 role=tab aria-controls=tabs-4-0 aria-selected=true>Java</a></li><li class=nav-item><a class=nav-link id=tabs-4-1-tab data-toggle=tab href=#tabs-4-1 role=tab aria-controls=tabs-4-1 aria-selected=false>Python</a></li><li class=nav-item><a class=nav-link id=tabs-4-2-tab data-toggle=tab href=#tabs-4-2 role=tab aria-controls=tabs-4-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class=nav-link id=tabs-4-3-tab data-toggle=tab href=#tabs-4-3 role=tab aria-controls=tabs-4-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class=nav-link id=tabs-4-4-tab data-toggle=tab href=#tabs-4-4 role=tab aria-controls=tabs-4-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class=nav-link id=tabs-4-5-tab data-toggle=tab href=#tabs-4-5 role=tab aria-controls=tabs-4-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-4-content><div class="tab-pane fade show active" id=tabs-4-0 role=tabpanel aria-labelled-by=tabs-4-0-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#8f5902;font-style:italic>// El método exist() de UnicornConfirmationPage tomará el objeto
+</span><span style=color:#8f5902;font-style:italic>// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+</span><span style=color:#8f5902;font-style:italic>// con los campos en la página.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>Assert</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>unicornConfirmationPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>exists</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#ce5c00;font-weight:700>));</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-4-1 role=tabpanel aria-labelled-by=tabs-4-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#8f5902;font-style:italic># El método exist() de UnicornConfirmationPage tomará el objeto</span>
+<span style=color:#8f5902;font-style:italic># Sparkles--una especificación de los atributos que deseas ver, y los va a comparar</span>
+<span style=color:#8f5902;font-style:italic># con los campos en la página.</span>
+<span style=color:#204a87;font-weight:700>assert</span> <span style=color:#000>unicorn_confirmation_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>),</span> <span style=color:#4e9a06>&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-4-2 role=tabpanel aria-labelled-by=tabs-4-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#8f5902;font-style:italic>// El método exist() de UnicornConfirmationPage tomará el objeto
+</span><span style=color:#8f5902;font-style:italic>// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+</span><span style=color:#8f5902;font-style:italic>// con los campos en la página.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>Assert</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>True</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>unicornConfirmationPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>),</span> <span style=color:#4e9a06>&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span><span style=color:#000;font-weight:700>);</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-4-3 role=tabpanel aria-labelled-by=tabs-4-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#8f5902;font-style:italic># El método exist() de UnicornConfirmationPage tomará el objeto</span>
+<span style=color:#8f5902;font-style:italic># Sparkles--una especificación de los atributos que deseas ver, y los va a comparar</span>
+<span style=color:#8f5902;font-style:italic># con los campos en la página.</span>
+<span style=color:#000>expect</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>unicorn_confirmation_page</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>exists?</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>))</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>to</span> <span style=color:#000>be</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;Sparkles debe haberse creado, con todos los atributos intactos&#39;</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-4-4 role=tabpanel aria-labelled-by=tabs-4-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#8f5902;font-style:italic>// El método exist() de UnicornConfirmationPage tomará el objeto
+</span><span style=color:#8f5902;font-style:italic>// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+</span><span style=color:#8f5902;font-style:italic>// con los campos en la página.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>assert</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>unicornConfirmationPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>),</span> <span style=color:#4e9a06>&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span><span style=color:#000;font-weight:700>);</span>
+
+  
+</code></pre></div></div><div class="tab-pane fade" id=tabs-4-5 role=tabpanel aria-labelled-by=tabs-4-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#8f5902;font-style:italic>// El método exist() de UnicornConfirmationPage tomará el objeto
+</span><span style=color:#8f5902;font-style:italic>// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+</span><span style=color:#8f5902;font-style:italic>// con los campos en la página.
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>assertTrue</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>unicornConfirmationPage</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>sparkles</span><span style=color:#000;font-weight:700>))</span>
+  </code></pre></div></div></div><p>Ten en cuenta que el probador aún no ha hecho nada más que hablar de
+unicornios en este código&ndash; nada de botones, nada de localizadores,
+nada de controles del navegador. Este método de <em>modelar</em> la
+aplicación te permite mantener estos comandos de nivel-de-prueba en
+su lugar y sin cambios, incluso si Larry decide la próxima semana que
+ya no le gusta Ruby-on-Rails y decide volver a implementar todo el
+sitio en las últimas librerías de enlace de Haskell con un front-end de Fortran.</p><p>Los objetos de tu página requerirán un pequeño mantenimiento para
+poder cumplir con el rediseño del sitio, pero estas pruebas seguirán
+siendo iguales. Tomando este diseño básico, querrás continuar con tus
+flujos de trabajo con la menor cantidad posible de pasos orientados
+al navegador. Tu próximo flujo de trabajo implicará agregar un
+unicornio al carrito de compras. Probablemente querrás muchas
+iteraciones de esta prueba para asegurarte de que el carrito mantiene
+su estado correctamente: ¿Hay más de un unicornio en el carrito antes
+de comenzar? ¿Cuántos pueden caber en el carrito de compras? Si crea
+más de uno con el mismo nombre y/o características, ¿se romperá?
+¿Conservará solo el existente o agregará otro?</p><p>Cada vez que te mueves por el flujo de trabajo, deseas evitar tener
+que crear una cuenta, iniciar sesión como usuario y configurar el
+unicornio. Idealmente, podrás crear una cuenta y preconfigurar un
+unicornio a través de la API o de la base de datos. Luego, todo lo
+que tienes que hacer es iniciar sesión como usuario, ubicar Sparkles,
+y agrégarla al carrito.</p><h3 id=automatizar-o-no-automatizar>¿Automatizar o no automatizar?</h3><p>Es la automatización siempre ventajosa? Cuando uno debería decidir
+automatizar casos de prueba?</p><p>No siempre es ventajoso automatizar casos de prueba. Hay veces que
+las pruebas manuales pueden ser mas apropiadas. Por ejemplo, si la
+interface de usuario de la aplicación va a cambiar considerablemente
+en el futuro, entonces no habria que reescribir ninguna
+automatizacion. Tambien, algunas veces simplemente no hay tiempo
+suficiente para construir la automatización de las pruebas. A corto
+plazo, las pruebas manuales pueden ser mas efectivas. Si una
+aplicación tiene una fecha limite muy ajustada, actualmente no hay
+ningún tipo de automatización de pruebas, y es imperativo que las
+pruebas se realicen dentro de la fecha limite, entonces las pruebas es la
+mejor solución.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-755108bb773011f011e5440c17fe2787>2 - Tipos de pruebas</h1><h3 id=pruebas-de-aceptación>Pruebas de aceptación</h3><p>Este tipo de prueba se realiza para determinar si una funcionalidad
+o un sistema cumple con las expectativas y requerimientos del cliente.
+Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente,
+siendo una actividad de validación que responde la pregunta:</p><blockquote><p>¿Estamos construyendo el producto <strong><em>correcto</em></strong>?.</p></blockquote><p>Para aplicaciones web, la automatización de esta prueba se puede
+hacer directamente con Selenium simulando el comportamiento esperado
+del usuario. Esta simulación podría hacerse mediante grabación/
+reproducción o mediante los diferentes lenguajes soportados como se explica
+en esta documentación. Nota: Las pruebas de aceptación son un subtipo
+de <strong><em>pruebas funcionales</em></strong>, a lo que algunas personas también
+podrían referirse.</p><h3 id=pruebas-funcionales>Pruebas funcionales</h3><p>Este tipo de prueba se realiza para determinar si una
+funcionalidad o sistema funciona correctamente y sin problemas.
+Se comprueba el sistema en diferentes niveles para garantizar que
+todos los escenarios están cubiertos y que el sistema hace <em>lo que</em>
+se supone que debe de hacer. Es una actividad de verificación que
+responde la pregunta:</p><blockquote><p>¿Estamos construyendo el producto <strong><em>correctamente?</em></strong>.</p></blockquote><p>Para aplicaciones web, la automatización de esta prueba puede ser
+hecha directamente con Selenium simulando los retornos esperados.
+Esta simulación podría hacerse mediante grabación/reproducción o
+mediante los diferentes lenguajes soportados como se explica en esta
+documentación.</p><h3 id=pruebas-de-rendimiento>Pruebas de rendimiento</h3><p>Como su nombre indica, se realizan pruebas
+de rendimiento para medir qué tan bien está funcionando una
+aplicación.</p><p>Hay dos subtipos principales para las pruebas de rendimiento:</p><h4 id=pruebas-de-carga>Pruebas de carga</h4><p>La prueba de carga se realiza para verificar qué
+tan bien la aplicación funciona bajo diferentes cargas definidas (
+generalmente un número particular de usuarios conectados a la vez).</p><h4 id=pruebas-de-estrés>Pruebas de estrés</h4><p>Se realizan pruebas de estrés para verificar
+qué tan bien la aplicación funciona bajo estrés (o por encima de la
+carga máxima soportada).</p><p>En general, las pruebas de rendimiento se realizan ejecutando algunas
+pruebas de Selenium que simulan diferentes usuarios golpeando
+una función particular en la aplicación web y obteniendo algunas
+medidas significativas.</p><p>En general, esto lo hacen otras herramientas que obtienen las
+métricas. Una de esas herramientas es <strong><em>JMeter</em></strong>.</p><p>Para una aplicación web, los detalles a medir incluyen rendimiento,
+latencia, pérdida de datos, tiempos de carga de componentes
+individuales&mldr;</p><p>Nota 1: Todos los navegadores tienen una pestaña de rendimiento en su
+sección de herramientas para desarrolladores (accesible presionando
+F12)</p><p>Nota 2: es un subtipo de <strong><em>pruebas no funcionales</em></strong> ya que esto
+generalmente se mide por sistema y no por función/funcionalidad.</p><h3 id=pruebas-de-regresión>Pruebas de regresión</h3><p>Esta prueba generalmente se realiza después
+de un cambio, corrección o adición de funcionalidad.</p><p>Para garantizar que el cambio no ha roto ninguna de las funcionalidades
+existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.<br>El conjunto de pruebas ejecutadas nuevamente puede ser total o
+parcial, y puede incluir varios tipos diferentes, dependiendo del
+equipo de desarrollo y la aplicación.</p><h3 id=desarrollo-guiado-por-pruebas-tdd>Desarrollo guiado por pruebas (TDD)</h3><p>En lugar de un tipo de prueba <em>per se</em>, TDD es una
+metodología iterativa de desarrollo en la que las pruebas guían el
+diseño de una funcionalidad.</p><p>Cada ciclo comienza creando un conjunto de pruebas unitarias que la
+funcionalidad debería pasar finalmente (deberían fallar la primera
+vez que se ejecuta).</p><p>Después de esto, se lleva a cabo el desarrollo para pasar las
+pruebas. Las pruebas se ejecutan nuevamente, comenzando otro ciclo y
+este proceso continúa hasta que todas las pruebas pasen.</p><p>El objetivo es acelerar el desarrollo de una aplicación basado en el
+hecho de que los defectos son menos costosos cuanto más antes se
+encuentran.</p><h3 id=desarrollo-guiado-por-comportamiento-bdd>Desarrollo guiado por comportamiento (BDD)</h3><p>BDD es también una metodología de desarrollo iterativo basado en
+el TDD anterior, en el que el objetivo es involucrar todas las
+partes en el desarrollo de una aplicación.</p><p>Cada ciclo comienza creando algunas especificaciones (que deberían
+fallar). Luego creando las pruebas unitarias fallidas (que también deberían
+fallar) y luego hacer el desarrollo.</p><p>Este ciclo se repite hasta que pasan todos los tipos de pruebas.</p><p>Para realizar esto, se usa un lenguaje de especificación. Debe ser
+simple y entendible por todas las partes, estándar y explícito. La
+mayoría de las herramientas usan <strong><em>Gherkin</em></strong> como este
+lenguaje.</p><p>El objetivo es poder detectar aún más errores que TDD, apuntando
+también a posibles errores de aceptación y a facilitar la comunicación
+entre las partes.</p><p>Actualmente hay un conjunto de herramientas disponibles para
+escribir las especificaciones y relacionarlas con funciones de
+código, como <strong>Cucumber</strong> o <strong><em>SpecFlow.</em></strong></p><p>Un conjunto de herramientas se han construido encima de Selenium para realizar
+este proceso aún más rápido al transformar directamente las
+especificaciones de BDD en código ejecutable. Algunas de estas son
+<strong><em>JBehave, Capybara y Robot Framework</em></strong>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-41ad0e5c96644beae25a5ffb3b209653>3 - Page object models</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!</p></div><p>Page Object is a Design Pattern which has become popular in test automation for
+enhancing test maintenance and reducing code duplication. A page object is an
+object-oriented class that serves as an interface to a page of your AUT. The
+tests then use the methods of this page object class whenever they need to
+interact with the UI of that page. The benefit is that if the UI changes for
+the page, the tests themselves don’t need to change, only the code within the
+page object needs to change. Subsequently all changes to support that new UI
+are located in one place.</p><p>The Page Object Design Pattern provides the following advantages:</p><ul><li>There is a clean separation between test code and page specific code such as
+locators (or their use if you’re using a UI Map) and layout.</li><li>There is a single repository for the services or operations offered by the page
+rather than having these services scattered throughout the tests.</li></ul><p>In both cases this allows any modifications required due to UI changes to all
+be made in one place. Useful information on this technique can be found on
+numerous blogs as this ‘test design pattern’ is becoming widely used. We
+encourage the reader who wishes to know more to search the internet for blogs
+on this subject. Many have written on this design pattern and can provide
+useful tips beyond the scope of this user guide. To get you started, though,
+we’ll illustrate page objects with a simple example.</p><p>First, consider an example, typical of test automation, that does not use a
+page object:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8f5902;font-style:italic>/***
+</span><span style=color:#8f5902;font-style:italic> * Tests login feature
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>Login</span> <span style=color:#ce5c00;font-weight:700>{</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>testLogin</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#8f5902;font-style:italic>// fill login data on sign-in page
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;user_name&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;testUser&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;password&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;my supersecret password&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;sign-in&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+
+    <span style=color:#8f5902;font-style:italic>// verify h1 tag is &#34;Hello userName&#34; after login
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>tagName</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>isDisplayed</span><span style=color:#ce5c00;font-weight:700>();</span>
+    <span style=color:#000>assertThat</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>tagName</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>getText</span><span style=color:#ce5c00;font-weight:700>(),</span> <span style=color:#000>is</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Hello userName&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>There are two problems with this approach.</p><ul><li>There is no separation between the test method and the AUT’s locators (IDs in
+this example); both are intertwined in a single method. If the AUT’s UI changes
+its identifiers, layout, or how a login is input and processed, the test itself
+must change.</li><li>The ID-locators would be spread in multiple tests, in all tests that had to
+use this login page.</li></ul><p>Applying the page object techniques, this example could be rewritten like this
+in the following example of a page object for a Sign-in page.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+<span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+<span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic> * Page Object encapsulates the Sign-in page.
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>SignInPage</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// &lt;input name=&#34;user_name&#34; type=&#34;text&#34; value=&#34;&#34;&gt;
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>By</span> <span style=color:#000>usernameBy</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;user_name&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#8f5902;font-style:italic>// &lt;input name=&#34;password&#34; type=&#34;password&#34; value=&#34;&#34;&gt;
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>By</span> <span style=color:#000>passwordBy</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;password&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#8f5902;font-style:italic>// &lt;input name=&#34;sign_in&#34; type=&#34;submit&#34; value=&#34;SignIn&#34;&gt;
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>By</span> <span style=color:#000>signinBy</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;sign_in&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>SignInPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>){</span>
+    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic>    * Login as valid user
+</span><span style=color:#8f5902;font-style:italic>    *
+</span><span style=color:#8f5902;font-style:italic>    * @param userName
+</span><span style=color:#8f5902;font-style:italic>    * @param password
+</span><span style=color:#8f5902;font-style:italic>    * @return HomePage object
+</span><span style=color:#8f5902;font-style:italic>    */</span>
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>HomePage</span> <span style=color:#000>loginValidUser</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>userName</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>usernameBy</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>userName</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>passwordBy</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>signinBy</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>HomePage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>and page object for a Home page could look like this.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+<span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+<span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic> * Page Object encapsulates the Home Page
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>HomePage</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// &lt;h1&gt;Hello userName&lt;/h1&gt;
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>By</span> <span style=color:#000>messageBy</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>tagName</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>HomePage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>){</span>
+    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(!</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getTitle</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>equals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Home Page of logged in user&#34;</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#ce5c00;font-weight:700>{</span>
+      <span style=color:#204a87;font-weight:700>throw</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>IllegalStateException</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;This is not Home Page of logged in user,&#34;</span> <span style=color:#ce5c00;font-weight:700>+</span>
+            <span style=color:#4e9a06>&#34; current page is: &#34;</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>());</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic>    * Get message (h1 tag)
+</span><span style=color:#8f5902;font-style:italic>    *
+</span><span style=color:#8f5902;font-style:italic>    * @return String message text
+</span><span style=color:#8f5902;font-style:italic>    */</span>
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>String</span> <span style=color:#000>getMessageText</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>messageBy</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>getText</span><span style=color:#ce5c00;font-weight:700>();</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>HomePage</span> <span style=color:#000>manageProfile</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#8f5902;font-style:italic>// Page encapsulation to manage profile functionality
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>HomePage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#8f5902;font-style:italic>/* More methods offering the services represented by Home Page
+</span><span style=color:#8f5902;font-style:italic>  of Logged User. These methods in turn might return more Page Objects
+</span><span style=color:#8f5902;font-style:italic>  for example click on Compose mail button could return ComposeMail class object */</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>So now, the login test would use these two page objects as follows.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8f5902;font-style:italic>/***
+</span><span style=color:#8f5902;font-style:italic> * Tests login feature
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>TestLogin</span> <span style=color:#ce5c00;font-weight:700>{</span>
+
+  <span style=color:#5c35cc;font-weight:700>@Test</span>
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>testLogin</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>SignInPage</span> <span style=color:#000>signInPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>SignInPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>HomePage</span> <span style=color:#000>homePage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>signInPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>loginValidUser</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;userName&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;password&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#000>assertThat</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>homePage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getMessageText</span><span style=color:#ce5c00;font-weight:700>(),</span> <span style=color:#000>is</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Hello userName&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>There is a lot of flexibility in how the page objects may be designed, but
+there are a few basic rules for getting the desired maintainability of your
+test code.</p><p>Page objects themselves should never make verifications or assertions. This is
+part of your test and should always be within the test’s code, never in an page
+object. The page object will contain the representation of the page, and the
+services the page provides via methods but no code related to what is being
+tested should be within the page object.</p><p>There is one, single, verification which can, and should, be within the page
+object and that is to verify that the page, and possibly critical elements on
+the page, were loaded correctly. This verification should be done while
+instantiating the page object. In the examples above, both the SignInPage and
+HomePage constructors check that the expected page is available and ready for
+requests from the test.</p><p>A page object does not necessarily need to represent all the parts of a
+page itself. The same principles used for page objects can be used to
+create &ldquo;Page <em>Component</em> Objects&rdquo; that represent discrete chunks of the
+page and can be included in page objects. These component objects can
+provide references to the elements inside those discrete chunks, and
+methods to leverage the functionality provided by them. You can even
+nest component objects inside other component objects for more complex
+pages. If a page in the AUT has multiple components, or common
+components used throughout the site (e.g. a navigation bar), then it
+may improve maintainability and reduce code duplication.</p><p>There are other design patterns that also may be used in testing. Some use a
+Page Factory for instantiating their page objects. Discussing all of these is
+beyond the scope of this user guide. Here, we merely want to introduce the
+concepts to make the reader aware of some of the things that can be done. As
+was mentioned earlier, many have blogged on this topic and we encourage the
+reader to search for blogs on these topics.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9b50cbcb8c6444045e153a46cef02832>4 - Lenguaje de dominio específico</h1><p>Un lenguaje de dominio específico (DSL) es un sistema que
+proporciona al usuario un medio expresivo para resolver un
+problema. Permite a un usuario interactuar con el sistema en sus
+términos, no solo en jerga del programador.</p><p>A tus usuarios, en general, no les importa cómo se ve su sitio.
+Ellos no se preocupan por la decoración, animaciones o gráficos.
+Ellos desean utilizar tu sistema para impulsar a sus nuevos
+empleados a través del proceso con mínima dificultad; quieren
+reservar un viaje a Alaska; quieren configurar y comprar
+unicornios con descuento. Tu trabajo como el probador debe
+acercarse lo más que pueda a &ldquo;capturar&rdquo; esta mentalidad. Con eso
+en mente, nos propusimos &ldquo;modelar&rdquo; la aplicación con que
+estas trabajando, de modo que los scripts de prueba (el único
+proxy pre-lanzamiento del usuario ) &ldquo;hablen&rdquo; por, y representen al
+usuario.</p><p>Con Selenium, el DSL generalmente se representa por métodos,
+escritos para hacer la API simple y legible: permiten un informe
+entre desarrolladores y partes interesadas (usuarios, dueños
+de producto, especialistas en inteligencia de negocios, etc).</p><h2 id=beneficios>Beneficios</h2><ul><li><strong>Legible:</strong> Las partes interesadas del negocio pueden entenderlo.</li><li><strong>Escribible:</strong> Fácil de escribir, evita duplicaciones innecesarias.</li><li><strong>Extensible:</strong> Se puede agregar funcionalidad (razonablemente)
+sin romper los contratos y la funcionalidad existente.</li><li><strong>Mantenible:</strong> Al dejar los detalles de implementación fuera de
+casos de prueba, está bien aislado contra cambios en el AUT*.</li></ul><h2 id=java>Java</h2><p>Aquí hay un ejemplo de un método DSL razonable en Java.
+En aras de la brevedad, se supone que el objeto <code>driver</code> está predefinido
+y disponible para el método.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic> * Toma un nombre de usuario y una contraseña, completa los campos y hace clic en &#34;iniciar sesión&#34;.
+</span><span style=color:#8f5902;font-style:italic> * @return Una instancia de AccountPage
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>AccountPage</span> <span style=color:#000>loginAsUser</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  <span style=color:#000>WebElement</span> <span style=color:#000>loginField</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;loginField&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+  <span style=color:#000>loginField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>clear</span><span style=color:#ce5c00;font-weight:700>();</span>
+  <span style=color:#000>loginField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>);</span>
+  
+  <span style=color:#8f5902;font-style:italic>// Completa el campo de contraseña. El localizador que estamos usando es &#34;By.id&#34;, y deberíamos
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// tenerlo definido en otra parte de la clase.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>WebElement</span> <span style=color:#000>passwordField</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;password&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+  <span style=color:#000>passwordField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>clear</span><span style=color:#ce5c00;font-weight:700>();</span>
+  <span style=color:#000>passwordField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>);</span>
+
+  <span style=color:#8f5902;font-style:italic>// Haz clic en el botón de inicio de sesión, que tiene el id &#34;enviar&#34;.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;submit&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+
+  <span style=color:#8f5902;font-style:italic>// Crea y devuelve una nueva instancia de AccountPage (a través del PageFactory
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// incorporado a Selenium).
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>PageFactory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>newInstance</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>AccountPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>);</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>Este método abstrae completamente los conceptos de campos de entrada,
+botones, clics e incluso páginas de tu código de prueba. Usando este
+enfoque, todo lo que un probador tiene que hacer es llamar a este método.
+Esto da una ventaja de mantenimiento: si los campos de inicio de sesión
+alguna vez cambian, solo tendrías que cambiar este método, no tus pruebas.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>loginTest</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>loginAsUser</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;cbrown&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;cl0wn3&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+
+   <span style=color:#8f5902;font-style:italic>// Ahora que hemos iniciado sesión, haz otras cosas, ya que utilizamos un DSL para admitir
+</span><span style=color:#8f5902;font-style:italic></span>   <span style=color:#8f5902;font-style:italic>// nuestros probadore, es tan fácil como elegir entre los métodos disponibles.
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#204a87;font-weight:700>do</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>something</span><span style=color:#ce5c00;font-weight:700>();</span>
+    <span style=color:#204a87;font-weight:700>do</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>somethingElse</span><span style=color:#ce5c00;font-weight:700>();</span>
+    <span style=color:#000>Assert</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Something should have been done!&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>something</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>wasDone</span><span style=color:#ce5c00;font-weight:700>());</span>
+
+    <span style=color:#8f5902;font-style:italic>// Ten en cuenta que todavía no nos hemos referido a un botón o control web en ninguna parte de este
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#8f5902;font-style:italic>// script...
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><p>Vale la pena repetirlo: uno de tus objetivos principales debe ser escribir un
+API que permite que tus pruebas aborden <strong>el problema en cuestión, y NO
+el problema de la interfaz de usuario</strong>. La interfaz de usuario es una
+preocupación secundaria para tus usuarios: no les importa la interfaz de usuario,
+solo quieren obtener su trabajo hecho.
+Tus scripts de prueba deben leerse como una lista de cosas
+el usuario quiere HACER, y las cosas que quiere SABER. Las pruebas
+no deben preocuparse por CÓMO la IU requiere que vayas
+al respecto.</p><p>*<strong>AUT</strong>: Application under test</p></div><div class=td-content style=page-break-before:always><h1 id=pg-bb9f5b974e15eb6381b4d961a7f07d91>5 - Generar el estado de la aplicación</h1><p>Selenium no debe usarse para preparar un caso de prueba. Todas
+las acciones repetitivas y los preparativos para un caso de
+prueba deben realizarse a través de otros métodos. Por ejemplo,
+la mayoría de las IU web tienen autenticación (por ejemplo, un
+formulario de inicio de sesión). Eliminar el inicio de sesión a través
+del navegador web antes de cada prueba mejora tanto la
+velocidad como la estabilidad de la prueba. Un método debe ser
+creado para obtener acceso al AUT* (por ejemplo, usando una API
+para iniciar sesión y establecer un cookie). Además, crear
+métodos para precargar datos para las pruebas no deben
+realizarse con Selenium. Como se mencionó previamente, las API
+existentes se deben aprovechar para crear datos para el AUT*.</p><p>*<strong>AUT</strong>: Application Under Test (aplicación bajo prueba)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-b7719c82790de290a5a5b8ca5cf22c2c>6 - Mock de servicios externos</h1><p>Eliminar las dependencias de servicios externos
+mejorará en gran medida la velocidad y la estabilidad
+de tus pruebas.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-fa30b64f651b889a95fcfcddd8e0652c>7 - Mejores reportes</h1><p>Selenium no está diseñado para informar sobre el estado de los
+casos de prueba ejecutados. Aprovechando las capacidades de
+reporte incorporadas en la mayoría de los frameworks de pruebas
+unitarias es un buen comienzo. La mayoría de los frameworks de
+pruebas unitarias tienen utilidades que
+pueden generar reportes con formato xUnit o HTML. Los reportes
+xUnit son populares para importar resultados a una
+integración continua (CI) como Jenkins, Travis, Bamboo, etc.
+Aquí hay algunos enlaces para obtener más información sobre la
+generación de los reportes para varios lenguajes.</p><p><a href=//github.com/nunit/docs/wiki/Console-Runner>NUnit 3 Console Runner</a></p><p><a href=//github.com/nunit/docs/wiki/Console-Command-Line>NUnit 3 Console Command Line</a></p><p><a href=//xunit.net/docs/getting-test-results-in-teamcity>xUnit getting test results in TeamCity</a></p><p><a href=//xunit.net/docs/getting-test-results-in-ccnet>xUnit getting test results in CruiseControl.NET</a></p><p><a href=//xunit.net/docs/getting-test-results-in-azure-devops>xUnit getting test results in Azure DevOps</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-5380c530a10551f44cff9fa05ea5874d>8 - Evitar compartir estados</h1><p>Aunque se menciona en varios lugares, vale la pena mencionarlo
+nuevamente. Asegurate de que las pruebas estén aisladas unas de otras.</p><ul><li><p>No compartas datos de prueba. Imagina varias pruebas en la que cada una
+consulta a la base de datos para pedidos válidos antes de elegir
+uno para realizar una acción. Si dos pruebas eligen el mismo
+pedido es probable que obtengas un comportamiento
+inesperado.</p></li><li><p>Limpia los datos obsoletos en la aplicación que podrían ser
+recogidos por otra prueba p. ej. registros de pedidos inválidos.</p></li><li><p>Crear una nueva instancia de WebDriver por prueba. Esto ayuda
+a garantizar el aislamiento de la prueba y simplifica la
+paralelización.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-ee2c60d2a4946907ff8b7cb11430cd05>9 - Independencia en las pruebas</h1><p>Escribe cada prueba como su propia unidad. Escribe las pruebas
+de una manera que no dependan de otras pruebas para
+completarse:</p><p>Digamos que hay un sistema de gestión de contenido con el que
+puedes crear algún contenido personalizado que luego después
+publicar aparece en tu sitio web como un módulo, y puede llevar
+algún tiempo sincronizar entre el CMS y y la aplicación.</p><p>Una forma incorrecta de probar tu módulo es que el contenido
+está creado y publicado en una prueba y luego verificando el
+módulo en otra prueba. Esta no es factible ya que el contenido
+puede no estar disponible de inmediato para otra prueba después
+de la publicación.</p><p>En cambio, puedes crear un contenido auxiliar que se puede
+activar y desactivar dentro de la prueba afectada y úsarla para
+validar el módulo. Sin embargo, para la creación de contenido,
+aún puedes tener una prueba por separado.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-0cef590e83b0f1803d5d0c49afe22363>10 - Considerar el uso de un API fluída</h1><p>Martin Fowler acuñó el término <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;API fluido&rdquo;</a>.
+Selenium ya implementa algo como esto en su clase <code>FluentWait</code>, que
+se entiende como una alternativa a la clase estándar <code>Wait</code>.
+Puedes habilitar el patrón de diseño Fluent API en tu objeto de página
+y luego consulta la página de búsqueda de Google con un fragmento de código como este:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#4e9a06>&#34;http://www.google.com/webhp?hl=en&amp;amp;tab=ww&#34;</span> <span style=color:#ce5c00;font-weight:700>);</span>
+<span style=color:#000>GoogleSearchPage</span> <span style=color:#000>gsp</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>GoogleSearchPage</span><span style=color:#ce5c00;font-weight:700>();</span>
+<span style=color:#000>gsp</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>withFluent</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>setSearchString</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>clickSearchButton</span><span style=color:#ce5c00;font-weight:700>();</span>
+</code></pre></div><p>La clase de objeto de página de Google con este comportamiento fluido
+podría verse así:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>GoogleSearchPage</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>GoogleSearchPage</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>GSPFluentInterface</span> <span style=color:#000>gspfi</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>GSPFluentInterface</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>GoogleSearchPage</span> <span style=color:#000>gsp</span><span style=color:#ce5c00;font-weight:700>;</span>
+
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>GSPFluentInterface</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>GoogleSearchPage</span> <span style=color:#000>googleSearchPage</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+        <span style=color:#000>gsp</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>googleSearchPage</span><span style=color:#ce5c00;font-weight:700>;</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>GSPFluentInterface</span> <span style=color:#000>clickSearchButton</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+        <span style=color:#000>gsp</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>searchButton</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>;</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>GSPFluentInterface</span> <span style=color:#000>setSearchString</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>String</span> <span style=color:#000>sstr</span> <span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+        <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>gsp</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>searchField</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>sstr</span> <span style=color:#ce5c00;font-weight:700>);</span>
+        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>;</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#5c35cc;font-weight:700>@FindBy</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>id</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#34;gbqfq&#34;</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>WebElement</span> <span style=color:#000>searchField</span><span style=color:#ce5c00;font-weight:700>;</span>
+  <span style=color:#5c35cc;font-weight:700>@FindBy</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>id</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#34;gbqfb&#34;</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>WebElement</span> <span style=color:#000>searchButton</span><span style=color:#ce5c00;font-weight:700>;</span>
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>GoogleSearchPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>gspfi</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>GSPFluentInterface</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#204a87;font-weight:700>this</span> <span style=color:#ce5c00;font-weight:700>);</span>
+    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>();</span> <span style=color:#8f5902;font-style:italic>// Si load() falla, se llama a isLoaded() hasta que la página termine de cargarse
+</span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>PageFactory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>initElements</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>);</span> <span style=color:#8f5902;font-style:italic>// Inicializa los WebElements en la pagina
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>GSPFluentInterface</span> <span style=color:#000>withFluent</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>gspfi</span><span style=color:#ce5c00;font-weight:700>;</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>clickSearchButton</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>searchButton</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>setSearchString</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>String</span> <span style=color:#000>sstr</span> <span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>searchField</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>sstr</span> <span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#5c35cc;font-weight:700>@Override</span>
+  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>isLoaded</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#204a87;font-weight:700>throws</span> <span style=color:#000>Error</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#000>Assert</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Google search page is not yet loaded.&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>isSearchFieldVisible</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>);</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+
+  <span style=color:#5c35cc;font-weight:700>@Override</span>
+  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>isSFieldPresent</span> <span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+      <span style=color:#000>Wait</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>WebDriver</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#000>wait</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>WebDriverWait</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>Duration</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>ofSeconds</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>3</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>);</span>
+      <span style=color:#000>wait</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>until</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>visibilityOfElementLocated</span><span style=color:#ce5c00;font-weight:700>(</span> <span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;gbqfq&#34;</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-a8b4939c889268ec3abb7062a26b6470>11 - Nueva instancia del navegador por prueba</h1><p>Comienza cada prueba desde un estado limpio conocido.
+Idealmente, ejecuta una nueva máquina virtual para cada prueba.
+Si ejecutar una nueva máquina virtual no es práctico,
+al menos inicia un nuevo WebDriver para cada prueba.
+Para Firefox, inicia un WebDriver con su perfil conocido.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#000>FirefoxProfile</span> <span style=color:#000>profile</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>FirefoxProfile</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>File</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;pathToFirefoxProfile&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+<span style=color:#000>WebDriver</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>FirefoxDriver</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>profile</span><span style=color:#ce5c00;font-weight:700>);</span>
+</code></pre></div></div></main></div></div><div class="row justify-content-center p-5"><h2 class="selenium text-center">Selenium Level Sponsors</h2></div><div class="row justify-content-around pt-4 pb-5 px-5"><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral" class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/browserstack.png alt=BrowserStack></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://saucelabs.com class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/saucelabs.png alt="Sauce Labs"></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://bit.ly/36uZ7ad class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/experitest.png alt=Experitest></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://applitools.com/ class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/applitools.png alt=Applitools></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.perfecto.io/ class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/perfecto-perforce.jpg alt=Perfecto></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.lambdatest.com/selenium-automation class=border-0><img class="w-100 shadow-1-strong rounded" src=/images/sponsors/lambda-test.png alt=LambdaTest></a></div></div><div class="row justify-content-center pt-2 pb-3 -bg-selenium-cyan"><div class="card text-center border-0 bg-transparent py-5"><div class=card-body><h2 class=card-title>Support the Selenium Project</h2><p class=card-text></p><div class=selenium-button-container><a href=/sponsors class="selenium-button selenium-white-cyan text-uppercase font-weight-bold">Learn more
+<i class="pl-3 fas fa-caret-right"></i></a></div></div></div></div><footer class="bg-dark py-5 row d-print-none"><div class="container-fluid mx-sm-5"><div class=row><div class="col-6 col-sm-4 text-xs-center order-sm-2"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="User mailing list" aria-label="User mailing list"><a class=text-white target=_blank rel=noopener href=http://groups.google.com/group/selenium-users aria-label="User mailing list"><i class="fas fa-mail-bulk"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Selenium in Twitter" aria-label="Selenium in Twitter"><a class=text-white target=_blank rel=noopener href=https://twitter.com/SeleniumHQ aria-label="Selenium in Twitter"><i class="fab fa-twitter"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="SeleniumConf YouTube Channel" aria-label="SeleniumConf YouTube Channel"><a class=text-white target=_blank rel=noopener href=https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw aria-label="SeleniumConf YouTube Channel"><i class="fab fa-youtube"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Selenium in Facebook" aria-label="Selenium in Facebook"><a class=text-white target=_blank rel=noopener href=https://www.facebook.com/Selenium2.WebDriver aria-label="Selenium in Facebook"><i class="fab fa-facebook"></i></a></li></ul></div><div class="col-6 col-sm-4 text-right text-xs-center order-sm-3"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Software Freedom Conservancy" aria-label="Software Freedom Conservancy"><a class=text-white target=_blank rel=noopener href=mailto:selenium@sfconservancy.org aria-label="Software Freedom Conservancy"><i class="fas fa-envelope-square"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub><a class=text-white target=_blank rel=noopener href=https://github.com/seleniumhq/selenium aria-label=GitHub><i class="fab fa-github"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Slack aria-label=Slack><a class=text-white target=_blank rel=noopener href=https://example.org/slack aria-label=Slack><i class="fab fa-slack"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=IRC aria-label=IRC><a class=text-white target=_blank rel=noopener href=https://example.org/irc aria-label=IRC><i class="fas fa-comments"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Developer mailing list" aria-label="Developer mailing list"><a class=text-white target=_blank rel=noopener href=https://groups.google.com/g/selenium-developers aria-label="Developer mailing list"><i class="fa fa-envelope"></i></a></li></ul></div><div class="col-12 col-sm-4 text-center py-2 order-sm-2"><small class=text-white>&copy; 2021 Software Freedom Conservancy Derechos reservados</small><p class=mt-2><a href=/es/documentation/about/>About this documentation</a></p></div></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script><script src=/js/main.min.3b172c13b62c2bea8b1c9d2599cddc8cf89718a92d792c680871c81ba43d8c85.js integrity="sha256-OxcsE7YsK+qLHJ0lmc3cjPiXGKkteSxoCHHIG6Q9jIU=" crossorigin=anonymous></script></body></html>

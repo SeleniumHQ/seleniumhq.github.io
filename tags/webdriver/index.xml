@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webdriver on SeleniumHQ Browser Automation</title><link>https://selenium.dev/tags/webdriver/</link><description>Recent content in webdriver on SeleniumHQ Browser Automation</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://selenium.dev/tags/webdriver/index.xml" rel="self" type="application/rss+xml"/><item><title>Browser Testing and Tools WG Meeting @ TPAC 2020</title><link>https://selenium.dev/blog/2020/webdriver-tpac-meeting-2020/</link><pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate><guid>https://selenium.dev/blog/2020/webdriver-tpac-meeting-2020/</guid><description>It&amp;rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that are being worked on.
-Within the Browser Testing and Tools Working Group, there are 2 different standards.
-We have:
-WebDriver WebDriver-Bidi The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.</description></item><item><title>Atoms have come to Selenium IDE</title><link>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</link><pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate><guid>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</guid><description/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – webdriver</title><link>/tags/webdriver/</link><description>Recent content in webdriver on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/webdriver/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Results of the first ever selenium survey</title><link>/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-survey-results/</guid><description>
+&lt;p>Below is a summary of the Selenium survey that was collected.&lt;/p>
+&lt;h2 id="batteries-included">Batteries included&lt;/h2>
+&lt;h3 id="browser-management">Browser Management&lt;/h3>
+&lt;p>Unsurprisingly, people find having to manage browsers a task they wish they didn’t have to do and wish that Selenium did this. 59.5% of respondents want Selenium to manage the browsers for them. This, though the question didn’t ask this, is to include the browser drivers.&lt;/p>
+&lt;h3 id="frameworks">Frameworks&lt;/h3>
+&lt;p>The results show an interesting view into framework usage. 61% of users use a framework. When we look closer at some of the responses there could be a little language bias in there. Some responses in the “both” category are “depends on the language” or “depends on the project”. Frameworks, from a couple responses seem to be around JavaScript mostly.&lt;/p>
+&lt;h2 id="how-tests-are-run">How tests are run&lt;/h2>
+&lt;p>One of the questions that was the most surprising was that people dislike running their tests in headless. 57% of people don’t want headless. This is surprising since puppeteer and playwright are up and coming tools that default to headless.&lt;/p>
+&lt;h3 id="browsers">Browsers&lt;/h3>
+&lt;p>People tend to favour evergreen, or the latest version from auto updating browsers, with over 55% of people wanting that. When we look at the data closer then people tend to do evergreen and then a specific version for IE.&lt;/p>
+&lt;p>People are also, overwhelmingly I should add, wanting to test on multiple browsers. 78% of people test with multiple browsers. This goes against the Chrome only support that we see on social media. The most used browsers for testing are (Percentage of respondents testing with browser):&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Google Chrome (98%)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Firefox (67%)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Microsoft Edge (33%)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Safari (29%)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>IE (13.5%)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>One thing that is clear is that Testing against multiple browsers is hard. 51.6% say it’s hard and a further 27.3% being 3 out of 5. This is likely where some frameworks are becoming popular as it removes some of the need to understand the asynchronicity of browsers. This still has its problems in puppeteer and playwright as they add similar wait libraries to what Selenium has.&lt;/p>
+&lt;h3 id="mobile-browsers">Mobile Browsers&lt;/h3>
+&lt;p>One of the most surprising things to have come out of survey was the want to use mobile browsers more.&lt;/p>
+&lt;p>Of the 410 respondents 367 want to test on mobile. Interestingly, this goes well past just Chrome for Android and Safari for iOS.&lt;/p>
+&lt;p>Below is a list of browsers and percentage of users wanting to use it. Questions were designed for Android unless it said iOS. See note at the end of the section.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Firefox for Android: 38%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Chrome: 91%*&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Microsoft Edge: 14%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Samsung Internet: 16.6%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Safari on iOS: 69%&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>*Note that the questionaire only mentioned Chrome so it could be a conflation between platforms here. 1 Person used the other field to add Chrome for iOS.&lt;/p>
+&lt;h3 id="language-support">Language support&lt;/h3>
+&lt;p>Language support is what one would suspect with most users using Java or python.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>java: 67%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>python: 31%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ruby: 6.1%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>.NET: 17.6%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JavaScript: 21.4%&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PHP: 1.5%&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="improvements">Improvements&lt;/h2>
+&lt;p>After reviewing the “What one thing would you improve about Selenium I was able to narrow most of the responses down to similar types.&lt;/p>
+&lt;p>Below is a breakdown of the issues that people would like to see improved.&lt;/p>
+&lt;figure>
+&lt;img src="/images/blog/2021/breakdown_of_answers.png"
+alt="Breakdown of answers of areas needing improvement. Main 3 areas are flakiness, documentation, Browser Management, Shadow DOM"/>
+&lt;/figure>
+&lt;h2 id="happiness">Happiness&lt;/h2>
+&lt;p>Of the 410 respondents, 219 had something nice to say about Selenium and were thankful for the product being around.&lt;/p>
+&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: Browser Testing and Tools WG Meeting @ TPAC 2020</title><link>/blog/2020/webdriver-tpac-meeting-2020/</link><pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate><guid>/blog/2020/webdriver-tpac-meeting-2020/</guid><description>
+&lt;p>It&amp;rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that
+are being worked on.&lt;/p>
+&lt;p>Within the Browser Testing and Tools Working Group, there are 2 different standards.&lt;/p>
+&lt;p>We have:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://w3c.github.io/webdriver/">WebDriver&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://w3c.github.io/webdriver-bidi">WebDriver-Bidi&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.&lt;/p>
+&lt;p>As the world has moved on we have felt the need to add new APIs and move Selenium to be more event-driven. This is where we are learning, and collaborating, with projects like Puppeteer to make sure that we can improve the Browser Automation space. This is where the &lt;a href="https://w3c.github.io/webdriver-bidi">WebDriver-Bidi&lt;/a> Specification comes in. It has broad support from the browser vendors so you can use official browsers and not be limited by the JavaScript sandbox. Some of the newer frameworks can&amp;rsquo;t guarantee that.&lt;/p>
+&lt;p>If you&amp;rsquo;re curious about we discussed this week, feel free to read it up on the &lt;a href="https://www.w3.org/wiki/WebDriver/2020-TPAC">W3 Wiki&lt;/a>.&lt;/p>
+&lt;p>This post was originally shared on David Burns' &lt;a href="https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/">Blog&lt;/a>&lt;/p></description></item><item><title>Blog: Atoms have come to Selenium IDE</title><link>/blog/2010/atoms-have-come-to-selenium-ide/</link><pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate><guid>/blog/2010/atoms-have-come-to-selenium-ide/</guid><description>
+&lt;p>As mentioned in Simon’s &lt;a href="/blog/2010/going-atomic-why/">Going Atomic: Why?&lt;/a> and &lt;a href="/blog/2010/going-atomic-how/">Going Atomic: How&lt;/a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, ‘atoms’ is now included.&lt;/p>
+&lt;p>Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the ‘why’ and suggests how to fix them as well.&lt;/p>
+&lt;p>The HTML spec has the notion of a &lt;em>boolean attribute&lt;/em> which is one that does something just by being there rather than by its value; &lt;em>checked&lt;/em> and &lt;em>selected&lt;/em> are two such examples of this. Optionally, you could give these boolean attributes a value that is the same as their name (checked=”checked”) and your page would still validate, but really, the browsers only care that the attribute exist.&lt;/p>
+&lt;p>Prior to 1.0.10, it was not uncommon for people to do something like&lt;/p>
+&lt;pre>&lt;code> assertAttribute | checkbox@checked | checked
+&lt;/code>&lt;/pre>&lt;p>which fetches the value of the checked attribute on the checkbox with the id or name of checkbox and fails the script is the value is not checked.&lt;/p>
+&lt;p>In 1.0.10 though, that will fail &lt;em>even if it is checked&lt;/em>. This is because checked is a boolean attribute and will now return either true or throw an exception saying the attribute doesn’t exist. Redoing the above step check that the boolean attribute is set results in:&lt;/p>
+&lt;pre>&lt;code> assertAttribute | checkbox@checked | true
+&lt;/code>&lt;/pre>&lt;p>Thankfully, most of the real-world interaction with boolean attributes is focused on checked, disabled, hidden and selected and in these cases using assertAttribute is not really the right thing to do. Instead, the Selenium API provides wrappers for you to use.&lt;br />&lt;/p>
+&lt;table>
+&lt;tr>
+&lt;td>checked&lt;/td>
+&lt;td>assertChecked(locator), assertNotChecked(locator), verifyChecked(locator), verifyNotChecked(locator)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>disabled&lt;/td>
+&lt;td>assertEditable(locator), assertNotEditable(locator), verifyEditable(locator), verifyNotEditable(locator)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hidden&lt;/td>
+&lt;td>assertVisible(locator), assertNotVisible(locator), verifyVisible(locator), verifyNotVisible(locator)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>selected&lt;/td>
+&lt;td>assertSelected*(locator, pattern), assertNotSelected*(locator, pattern), verifySelected*(locator, pattern), verifyNotSelected*(locator, pattern)&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;p>Checking for the absence of a boolean attribute that doesn’t have a nice wrapper is a bit of a pain though. In this example I am checking that the boolean attribute &lt;em>multiple&lt;/em> is not on the select element with the name elephants.&lt;/p>
+&lt;pre>&lt;code> assertEval | this.browserbot.findElement(&amp;quot;css=select[name=elephants]&amp;quot;).getAttribute(&amp;quot;multiple&amp;quot;); | null
+&lt;/code>&lt;/pre>&lt;p>If you find yourself doing this very often, I suggest you wrap it up in a user-extension inside a &lt;a href="http://seleniumhq.org/projects/ide/plugins.html">plugin&lt;/a> as something like&lt;/p>
+&lt;pre>&lt;code> assertBooleanAttribute | css=select[name=elephants]@multiple | false
+assertBooleanAttribute | css=select[name=elephants]@multiple | true
+&lt;/code>&lt;/pre>&lt;p>Hopefully this addresses some of the eventual ‘why the heck did my script break!?!?!’ problems that will no double crop up once Selenium IDE 1.0.10 gets wider distribution.&lt;/p></description></item></channel></rss>
