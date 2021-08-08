@@ -2,6 +2,7 @@
 title: "关于这个文档"
 linkTitle: "关于这个文档"
 weight: 13
+aliases: ["/documentation/zh-cn/introduction/about_this_documentation/"]  
 ---
 
 这些文档，就像代码本身一样，100% 由 Selenium 社区中的志愿者维护。

@@ -4,6 +4,7 @@ linkTitle: "A Deeper Look"
 weight: 2
 description: >
   Selenium est un projet englobant un ensemble d'outil et de librairies rendant possible l'automatisation de navigateur web. 
+aliases: ["/documentation/fr/introduction/the_selenium_project_and_tools/"]  
 ---
 
 {{% pageinfo color="warning" %}}

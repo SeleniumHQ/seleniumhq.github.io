@@ -2,6 +2,7 @@
 title: "Tipos de pruebas"
 linkTitle: "Tipos de pruebas"
 weight: 2
+aliases: ["/documentation/es/introduction/types_of_testing/"]  
 ---
 
 ### Pruebas de aceptación 

@@ -2,6 +2,7 @@
 title: "A propos du test automatisé"
 linkTitle: "A propos du test automatisé"
 weight: 1
+aliases: ["/documentation/fr/introduction/on_test_automation/"]  
 ---
 
 Commencez par vous demander si vous avez vraiment besoin ou non d'un navigateur.

@@ -2,6 +2,7 @@
 title: "On test automation"
 linkTitle: "On test automation"
 weight: 1
+aliases: ["/documentation/nl/introduction/on_test_automation/"]  
 ---
 
 {{% pageinfo color="warning" %}}

@@ -5,6 +5,7 @@ weight: 2
 description: >
   Selenium ist ein Überbegriff für eine Sammlung von Werkzeugen und Programmbibliotheken 
   die es ermöglichen Webbrowser zu automatisieren.
+aliases: ["/documentation/de/introduction/the_selenium_project_and_tools/"]  
 ---
 
 {{% pageinfo color="warning" %}}

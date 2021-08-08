@@ -2,6 +2,7 @@
 title: "テスト自動化について"
 linkTitle: "テスト自動化について"
 weight: 1
+aliases: ["/documentation/ja/introduction/on_test_automation/"]  
 ---
 
 

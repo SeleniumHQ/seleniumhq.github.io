@@ -2,6 +2,7 @@
 title: "Sobre esta documentação"
 linkTitle: "Sobre esta documentação"
 weight: 13
+aliases: ["/documentation/pt-br/introduction/about_this_documentation/"]  
 ---
 
 Essa documentação, como o próprio código, são mantidos 100% por voluntários

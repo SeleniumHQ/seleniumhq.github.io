@@ -2,6 +2,7 @@
 title: "このドキュメントについて"
 linkTitle: "このドキュメントについて"
 weight: 13
+aliases: ["/documentation/ja/introduction/about_this_documentation/"]  
 ---
 
 

@@ -2,6 +2,7 @@
 title: "On test automation"
 linkTitle: "On test automation"
 weight: 1
+aliases: ["/documentation/en/introduction/on_test_automation/"]  
 ---
 
 First, start by asking yourself whether or not you really need to use a browser.

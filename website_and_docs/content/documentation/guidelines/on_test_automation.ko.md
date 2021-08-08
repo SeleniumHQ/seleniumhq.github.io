@@ -2,6 +2,7 @@
 title: "테스트 자동화"
 linkTitle: "테스트 자동화"
 weight: 1
+aliases: ["/documentation/ko/introduction/on_test_automation/"]  
 ---
 
 먼저 정말로 브라우저를 사용할 것인지 스스로 물어보는 것부터 시작합니다.

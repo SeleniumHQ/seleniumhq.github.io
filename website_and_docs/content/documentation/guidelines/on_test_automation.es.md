@@ -2,6 +2,7 @@
 title: "Sobre automatización de pruebas"
 linkTitle: "Sobre automatización de pruebas"
 weight: 1
+aliases: ["/documentation/es/introduction/on_test_automation/"]  
 ---
 
 Primero, pregúntate si realmente necesitas o no usar un navegador. Lo 

@@ -2,6 +2,7 @@
 title: "Über diese Dokumentation"
 linkTitle: "Über diese Dokumentation"
 weight: 13
+aliases: ["/documentation/de/introduction/about_this_documentation/"]  
 ---
 
 Diese Dokumentation wird so wie auch der Sourcecode von Selenium zu 100% 

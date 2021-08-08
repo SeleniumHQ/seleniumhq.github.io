@@ -2,6 +2,7 @@
 title: "About this documentation"
 linkTitle: "About this documentation"
 weight: 13
+aliases: ["/documentation/nl/introduction/about_this_documentation/"]  
 ---
 
 {{% pageinfo color="warning" %}}

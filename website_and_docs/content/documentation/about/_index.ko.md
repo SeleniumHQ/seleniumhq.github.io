@@ -2,6 +2,7 @@
 title: "이 문서에 대하여"
 linkTitle: "이 문서에 대하여"
 weight: 13
+aliases: ["/documentation/ko/introduction/about_this_documentation/"]  
 ---
 
 이 문서들은 Selenium의 코드와 마찬가지로 자원 봉사자들에 의해 100% 유지됩니다.  

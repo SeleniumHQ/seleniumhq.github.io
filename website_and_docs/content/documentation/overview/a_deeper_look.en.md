@@ -5,6 +5,7 @@ weight: 2
 description: >
   Selenium is an umbrella project for a range of tools and libraries that enable
   and support the automation of web browsers. 
+aliases: ["/documentation/en/introduction/the_selenium_project_and_tools/"]  
 ---
 
 ### Selenium controls web browsers

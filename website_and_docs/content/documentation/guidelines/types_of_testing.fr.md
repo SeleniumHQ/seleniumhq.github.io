@@ -2,6 +2,7 @@
 title: "Types de test"
 linkTitle: "Types de test"
 weight: 2
+aliases: ["/documentation/fr/introduction/types_of_testing/"]  
 ---
 
 ### Test d'acceptation

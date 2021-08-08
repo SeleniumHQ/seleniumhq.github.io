@@ -2,6 +2,7 @@
 title: "Types of testing"
 linkTitle: "Types of testing"
 weight: 2
+aliases: ["/documentation/nl/introduction/types_of_testing/"]  
 ---
 
 {{% pageinfo color="warning" %}}

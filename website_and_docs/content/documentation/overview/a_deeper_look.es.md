@@ -5,6 +5,7 @@ weight: 2
 description: >
   Selenium es un proyecto que alberga un catálogo de herramientas y librerías que
   permiten y sustentan la automatización de navegadores web.
+aliases: ["/documentation/es/introduction/the_selenium_project_and_tools/"]  
 ---
 
 {{% pageinfo color="warning" %}}

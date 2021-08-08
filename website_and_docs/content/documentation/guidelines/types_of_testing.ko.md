@@ -2,6 +2,7 @@
 title: "테스트의 종류"
 linkTitle: "테스트의 종류"
 weight: 2
+aliases: ["/documentation/ko/introduction/types_of_testing/"]  
 ---
 
 ### 적합 테스트

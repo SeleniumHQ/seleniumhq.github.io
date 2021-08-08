@@ -4,6 +4,7 @@ linkTitle: "A Deeper Look"
 weight: 2
 description: >
   Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群のプロジェクトです。
+aliases: ["/documentation/ja/introduction/the_selenium_project_and_tools/"]  
 ---
 
 {{% pageinfo color="warning" %}}
