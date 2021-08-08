@@ -4,6 +4,7 @@ linkTitle: "什么时候应该使用服务网格"
 weight: 2
 description: >
   Is Grid the right tool for you?
+aliases: ["/documentation/zn-ch/grid/when_to_use_grid/"]
 ---
 
 {{% pageinfo color="warning" %}}

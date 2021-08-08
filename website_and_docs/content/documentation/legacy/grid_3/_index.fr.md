@@ -2,6 +2,7 @@
 title: "Grid 3"
 linkTitle: "Grid 3"
 weight: 6
+aliases: ["/documentation/fr/grid/grid_3/"]
 ---
 
 {{% pageinfo color="warning" %}}

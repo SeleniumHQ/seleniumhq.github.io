@@ -4,7 +4,13 @@ linkTitle: "Grid"
 weight: 9
 description: >
   Want to run tests in parallel across multiple machines? Then, Grid is for you.
-aliases: ["/documentation/zh-cn/selenium_installation/installing_standalone_server/"]
+aliases: 
+        [
+          "/documentation/zh-cn/selenium_installation/installing_standalone_server/",
+          "/documentation/zh-cn/grid/",
+          "/documentation/zh-cn/grid/grid_4/",
+          "/documentation/zh-cn/grid/purposes_and_main_functionalities/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

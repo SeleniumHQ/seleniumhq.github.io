@@ -2,6 +2,7 @@
 title: "服务网格 3"
 linkTitle: "服务网格 3"
 weight: 6
+aliases: ["/documentation/zh-cn/grid/grid_3/"]
 ---
 
 {{% pageinfo color="warning" %}}

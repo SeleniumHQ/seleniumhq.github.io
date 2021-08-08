@@ -4,6 +4,7 @@ linkTitle: "Cuando usar Grid"
 weight: 2
 description: >
   Is Grid the right tool for you?
+aliases: ["/documentation/es/grid/when_to_use_grid/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,6 +2,7 @@
 title: "Grid 3"
 linkTitle: "Grid 3"
 weight: 6
+aliases: ["/documentation/en/grid/grid_3/"]
 ---
 
 _Selenium Grid_ is a smart proxy server
