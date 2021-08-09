@@ -2,6 +2,11 @@
 title: "Selenium 사이트와 문서에 기여하기"
 linkTitle: "Selenium 사이트와 문서에 기여하기"
 weight: 2
+aliases: 
+        [
+          "/documentation/ko/contributing/",
+          "/documentation/ko/front_matter/typographical_conventions/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

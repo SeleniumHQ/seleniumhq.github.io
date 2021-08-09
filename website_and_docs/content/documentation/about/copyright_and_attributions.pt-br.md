@@ -5,6 +5,7 @@ weight: 1
 description: >
   Copyright, contributions and all attributions for the different projects
   under the Selenium umbrella.
+aliases: ["/documentation/pt-br/front_matter/copyright_and_attributions/"]
 ---
 
 {{% pageinfo color="warning" %}}

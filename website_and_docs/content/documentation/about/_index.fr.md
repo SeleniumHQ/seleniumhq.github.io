@@ -2,7 +2,11 @@
 title: "A propos de cette documentation"
 linkTitle: "A propos de cette documentation"
 weight: 13
-aliases: ["/documentation/fr/introduction/about_this_documentation/"]  
+aliases: 
+        [
+          "/documentation/fr/introduction/about_this_documentation/",
+          "/documentation/fr/front_matter/"
+        ]  
 ---
 
 Cette documentation, tout comme le code lui-même, est maintenue à 100% 

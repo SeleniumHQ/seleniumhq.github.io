@@ -2,6 +2,11 @@
 title: "Contributing to the Selenium Site & Documentation"
 linkTitle: "Contributing to the Selenium Site & Documentation"
 weight: 2
+aliases: 
+        [
+          "/documentation/fr/contributing/",
+          "/documentation/fr/front_matter/typographical_conventions/"
+        ]
 ---
 
 Selenium est un gros projet logiciel, son 

@@ -2,6 +2,11 @@
 title: "Contribuindo com o Site e Documentação do Selenium"
 linkTitle: "Contribuindo com o Site e Documentação do Selenium"
 weight: 2
+aliases: 
+        [
+          "/documentation/pt-br/contributing/",
+          "/documentation/pt-br/front_matter/typographical_conventions/"
+        ]
 ---
 
 Selenium é um grande projeto de software, seu site e documentação são fundamentais

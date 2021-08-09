@@ -2,6 +2,11 @@
 title: 为 Selenium 文档做贡献
 linkTitle: 为 Selenium 文档做贡献
 weight: 2
+aliases: 
+        [
+          "/documentation/zh-cn/contributing/",
+          "/documentation/zh-cn/front_matter/typographical_conventions/"
+        ]
 ---
 
 

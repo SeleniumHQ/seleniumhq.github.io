@@ -2,7 +2,11 @@
 title: "About this documentation"
 linkTitle: "About this documentation"
 weight: 13
-aliases: ["/documentation/es/introduction/about_this_documentation/"]  
+aliases: 
+        [
+          "/documentation/es/introduction/about_this_documentation/",
+          "/documentation/es/front_matter/"
+        ]  
 ---
 
 These docs, like the code itself, are maintained 100% by volunteers

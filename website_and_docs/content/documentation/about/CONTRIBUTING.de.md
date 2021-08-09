@@ -2,6 +2,11 @@
 title: "Contributing to the Selenium Site & Documentation"
 linkTitle: "Contributing to the Selenium Site & Documentation"
 weight: 2
+aliases: 
+        [
+          "/documentation/de/contributing/",
+          "/documentation/de/front_matter/typographical_conventions/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}

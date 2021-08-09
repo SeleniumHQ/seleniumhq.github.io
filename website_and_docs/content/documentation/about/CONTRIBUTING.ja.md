@@ -2,6 +2,11 @@
 title: "Seleniumのサイトとドキュメントに貢献する"
 linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
+aliases: 
+        [
+          "/documentation/ja/contributing/",
+          "/documentation/ja/front_matter/typographical_conventions/"
+        ]
 ---
 
 {{% pageinfo color="warning" %}}
