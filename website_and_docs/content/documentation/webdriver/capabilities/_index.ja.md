@@ -2,6 +2,7 @@
 title: "Capabilities"
 linkTitle: "Capabilities"
 weight: 14
+aliases: ["/documentation/ja/driver_idiosyncrasies/"]
 ---
 
 {{% pageinfo color="warning" %}}

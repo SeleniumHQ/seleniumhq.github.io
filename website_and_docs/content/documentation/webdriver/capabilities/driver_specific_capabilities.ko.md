@@ -2,6 +2,7 @@
 title: "Driver specific capabilities"
 linkTitle: "Driver specific capabilities"
 weight: 2
+aliases: ["/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/"]
 ---
 
 {{% pageinfo color="warning" %}}

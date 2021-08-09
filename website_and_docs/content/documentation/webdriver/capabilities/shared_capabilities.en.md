@@ -2,6 +2,7 @@
 title: "Shared capabilities"
 linkTitle: "Shared capabilities"
 weight: 1
+aliases: ["/documentation/en/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 In order to create a new session by Selenium WebDriver, 

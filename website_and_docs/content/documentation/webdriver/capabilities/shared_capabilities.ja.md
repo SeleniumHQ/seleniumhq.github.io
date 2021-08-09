@@ -2,6 +2,7 @@
 title: "共有Capabilities"
 linkTitle: "共有Capabilities"
 weight: 1
+aliases: ["/documentation/ja/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。

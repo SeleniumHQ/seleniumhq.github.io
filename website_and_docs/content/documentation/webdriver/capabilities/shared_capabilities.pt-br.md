@@ -2,6 +2,7 @@
 title: "Recursos compartilhados"
 linkTitle: "Recursos compartilhados"
 weight: 1
+aliases: ["/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 Para criar uma nova sessão por Selenium WebDriver,

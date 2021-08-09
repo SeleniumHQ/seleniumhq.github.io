@@ -2,6 +2,7 @@
 title: "ドライバー固有の機能"
 linkTitle: "ドライバー固有の機能"
 weight: 2
+aliases: ["/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/"]
 ---
 
 ## Firefox

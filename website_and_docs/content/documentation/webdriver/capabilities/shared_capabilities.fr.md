@@ -2,6 +2,7 @@
 title: "Capabilities partagées"
 linkTitle: "Capabilities partagées"
 weight: 1
+aliases: ["/documentation/fr/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 Afin de créer une nouvelle session par 

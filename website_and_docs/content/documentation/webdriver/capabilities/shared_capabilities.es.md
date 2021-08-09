@@ -2,6 +2,7 @@
 title: "Shared capabilities"
 linkTitle: "Shared capabilities"
 weight: 1
+aliases: ["/documentation/es/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 Con el fin de crear una nueva sesión del _WebDriver_ de _Selenium_,

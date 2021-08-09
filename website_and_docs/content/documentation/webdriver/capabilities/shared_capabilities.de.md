@@ -2,6 +2,7 @@
 title: "Allgemeine capabilities"
 linkTitle: "Allgemeine capabilities"
 weight: 1
+aliases: ["/documentation/de/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 Um eine neue Sitzung mit dem Selenium WebDriver zu erstellen,

@@ -2,6 +2,7 @@
 title: "驱动特定的功能"
 linkTitle: "驱动特定的功能"
 weight: 2
+aliases: ["/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"]
 ---
 
 ## Firefox

@@ -2,6 +2,7 @@
 title: "Capacidades específicas de los Drivers"
 linkTitle: "Capacidades específicas de los Drivers"
 weight: 2
+aliases: ["/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/"]
 ---
 
 ## Firefox

@@ -2,6 +2,7 @@
 title: "共享的功能"
 linkTitle: "共享的功能"
 weight: 1
+aliases: ["/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/"]
 ---
  
 为了通过Selenium WebDriver创建新会话, 

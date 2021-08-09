@@ -2,6 +2,7 @@
 title: "Shared capabilities"
 linkTitle: "Shared capabilities"
 weight: 1
+aliases: ["/documentation/nl/driver_idiosyncrasies/shared_capabilities/"]
 ---
 
 {{% pageinfo color="warning" %}}
