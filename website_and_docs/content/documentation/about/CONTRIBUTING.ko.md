@@ -59,10 +59,13 @@ Selenium 프로젝트는 새로운 기여자를 환영합니다. 꾸준히 중�
 
 #### 의존성: Hugo
 
-우리는 [Hugo](https://gohugo.io/) 를 사용해 사이트와 문서를 빌드하고 렌더링합니다.
-바뀐 내용을 커밋하기 전에 로컬에서 확인하기 위해,
-[Hugo 설치](https://gohugo.io/getting-started/installing/) 하고, 익숙해지셨다면 [로컬 서버 실행](https://gohugo.io/getting-started/usage/#livereload)
-를 통해 사이트를 렌더링해 확인해주시기 바랍니다. 자세한 설명은 다음 단계에서 보실 수 있습니다.
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### 2 단계: Branch
 
@@ -76,22 +79,18 @@ Selenium 프로젝트는 새로운 기여자를 환영합니다. 꾸준히 중�
 
 ### 3 단계: Make changes
 
-Repository는 사이트와 문서의 서로 다른 2개의 Hugo 프로젝트로 구성되어 있습니다.
-사이트를 변경하시려면 `site_source_files` 디렉토리에서 작업해주시기 바랍니다.
-변경된 모습을 미리 보시려면 사이트의 루트 디렉토리에서 `hugo server` 를 실행하시면 됩니다.
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
-
-문서를 변경하시려면, `docs_source_files` 디렉토리로 변경하시기 바랍니다. 
-
-```shell
-% cd docs_source_files
-% hugo server
-```
-
 #### Capitalisation of titles
 
 One should avoid title capitalisation,

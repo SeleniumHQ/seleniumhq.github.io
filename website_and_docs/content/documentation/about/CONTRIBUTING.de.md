@@ -73,12 +73,13 @@ and check out your copy locally.
 
 #### Dependencies: Hugo
 
-We use [Hugo](https://gohugo.io/) to build and render the site and docs.
-To verify everything locally before even committing any changes, please
-[install Hugo](https://gohugo.io/getting-started/installing/), get familiar
-with it and [run the local server](https://gohugo.io/getting-started/usage/#livereload)
-to render the site locally (detailed instructions can be found in the 
-next steps).
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### Step 2: Branch
 
@@ -89,24 +90,20 @@ Create a feature branch and start hacking:
 ```
 
 We practice HEAD-based development, which means all changes are applied
-directly on top of `trunk`.
+directly on top of `dev`.
 
 ### Step 3: Make changes
 
-The repository contains the site and docs, which are two separate Hugo 
-projects. If you want to make changes to the site, work on the
-`site_source_files` directory. To see a live preview of your changes,
-run `hugo server` on the site's root directory.
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
-% hugo server
-```
-
-To make changes to the docs, switch to the `docs_source_files` directory. 
-
-```shell
-% cd docs_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
 

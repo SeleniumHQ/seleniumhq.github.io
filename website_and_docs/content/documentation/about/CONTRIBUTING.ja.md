@@ -57,8 +57,13 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 #### 依存関係: Hugo
 
-本プロジェクトでは、サイトとドキュメントのビルド及びレンダリングに[Hugo](https://gohugo.io/)を使用しています。
-何らかの変更をコミットする前にローカルで検証を行うには、[Hugoをインストール](https://gohugo.io/getting-started/installing/)し、慣れたうえで、[ローカルサーバーを起動](https://gohugo.io/getting-started/usage/#livereload)してローカルでサイトをレンダリングしてください。（詳細な方法は次の手順で説明します。）
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### ステップ 2: ブランチの作成
 
@@ -72,18 +77,16 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 ### ステップ 3: 変更を加える
 
-リポジトリには、サイトとドキュメントの２つの異なるHugoプロジェクトが含まれます。
-サイトを変更したい場合は、`site_source_files` ディレクトリで作業します。 変更のライブプレビューを確認したい場合は、サイトのルートディレクトリで`hugo server`を実行します。
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
-% hugo server
-```
-
-ドキュメントを変更したい場合は、`docs_source_files` ディレクトリに移動します。
-
-```shell
-% cd docs_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
 
