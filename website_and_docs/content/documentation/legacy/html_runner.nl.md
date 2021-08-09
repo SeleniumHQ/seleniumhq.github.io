@@ -2,25 +2,27 @@
 title: "HTML runner"
 linkTitle: "HTML runner"
 weight: 3
+aliases: ["/documentation/nl/legacy_docs/html-runner/"]
 ---
 
-_Selenium HTML-runner_ permite que você execute suítes de teste da
-linha de comando. Suítes de teste são exportações de HTML do Selenium IDE ou
-ferramentas compatíveis.
+Met de _Selenium HTML-runner_ kan je Test Suites starten vanaf de command
+line. Test Suites zijn HTML exports vanuit Selenium IDE of andere compatiebele
+tools.
+
+## Algemene informatie
+
+* De combinatie van geckodriver / firefox / selenium-html-runner 
+is belangrijk. Er is mogelijks ergens een matrix die de
+compatibiliteit toelicht.
+* selenium-html-runner voert enkel Test Suites uit (geen Test Case -
+wat bijvoorbeeld een export van Monitis Transaction Monitor is). 
+Wees zeker dat je hieraan voldoet.
+* html-runner moet met een virtuele display (xfvb) gestart worden
+op Linux distributies die niet over een display beschikken.
 
 
-## Informação comum
-
-* Combinação de lançamentos de geckodriver / firefox /
-selenium-html-runner são importantes. Pode haver um software
-matriz de compatibilidade em algum lugar.
-* selenium-html-runner executa apenas suítes de teste (não casos de teste -
-por exemplo, uma exportação do Monitis Transaction Monitor). Certifique-se de cumprir isso.
-* Para usuários Linux sem DISPLAY - você precisa iniciar o html-runner
-com display virtual (procure por xvfb)
-
-## Exemplo de ambiente Linux
-Instale / baixe os seguintes pacotes:
+## Voorbeeld Linux omgeving
+Installeer / download volgende software pakketten:
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -33,7 +35,7 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-Exemplo de suíte de testes:
+Test Suite voorbeeld:
 
 ```html
 [user@localhost ~]$ cat testsuite.html
@@ -47,18 +49,18 @@ Exemplo de suíte de testes:
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="YOUR-TEST-SCENARIO.html">YOUR-TEST-SCENARIO</a></td></tr>
+<tr><td><a href="JOU-TEST-SCENARIO.html">JOU-TEST-SCENARIO</a></td></tr>
 </tbody></table>
 </body>
 </html>
 ```
 
 
-## Como rodar o selenium-html-runner headless
+## Selenium-html-runner headless starten
 
-Agora, a parte mais importante, um exemplo de como executar o
-selenium-html-runner! Sua experiência pode variar dependendo das combinações
-de software - versões geckodriver / FF / html-runner.
+Hieronder vind je een voorbeeld van hoe je de selenium-html-runner
+start. Het resultaat van onderstaand voorbeeld is sterk afhankelijk
+van de geckodriver / firefox / html-runner combinatie.
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

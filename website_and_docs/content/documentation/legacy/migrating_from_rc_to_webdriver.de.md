@@ -2,6 +2,7 @@
 title: "Migration von RC zu WebDriver"
 linkTitle: "Migration von RC zu WebDriver"
 weight: 2
+aliases: ["/documentation/de/legacy_docs/migrating_from_rc_to_webdriver/"]
 ---
 
 {{% pageinfo color="warning" %}}

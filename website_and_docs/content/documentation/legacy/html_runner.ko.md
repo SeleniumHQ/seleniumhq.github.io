@@ -1,23 +1,38 @@
 ---
-title: "HTMLランナー"
-linkTitle: "HTMLランナー"
+title: "HTML runner"
+linkTitle: "HTML runner"
 weight: 3
+aliases: ["/documentation/ko/legacy_docs/html-runner/"]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Most of the documentation found in this section is still in English.
+   Please note we are not accepting pull requests to translate this content
+   as translating documentation of legacy components does not add value to
+   the community nor the project.
+</p>
+{{% /pageinfo %}}
 
-_Selenium HTMLランナー_ を使用すると、コマンドラインからテストスイートを実行できます。
-テストスイートは、Selenium IDEまたは互換性ツールからのHTMLエクスポートです。
+_Selenium HTML-runner_ allows you to run Test Suites from a
+command line. Test Suites are HTML exports from Selenium IDE or
+campatible tools.
 
-## 共通情報
 
-* geckodriver / firefox / selenium-html-runnerのリリースの組み合わせが重要です。
-どこかにソフトウェア互換性マトリックスがあるかもしれません。
-* selenium-html-runnerはテストスイートのみを実行します（テストケースではなく、Monitis Transaction Monitorからのエクスポートなど）。
-必ずこれを順守してください。
-* DISPLAYのないLinuxユーザーの場合-仮想ディスプレイでhtml-runnerを起動する必要があります（xvfbを検索）。
+## Common information
 
-## Linux環境の例
-次のソフトウェアパッケージをインストール/ダウンロードします。
+* Combination of releases of geckodriver / firefox /
+selenium-html-runner matters. There might be a software
+compatibility matrix somewhere.
+* selenium-html-runner runs only Test Suite (not Test Case - 
+for example an export from Monitis Transaction Monitor). Be
+sure you comply with this.
+* For Linux users with no DISPLAY - you need to start html-runner
+with Virtual display (search for xvfb)
+
+## Example Linux environment
+Install / download following software packages:
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -30,7 +45,7 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-テストスイートの例
+Test Suite example:
 
 ```html
 [user@localhost ~]$ cat testsuite.html
@@ -51,10 +66,11 @@ java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
 
-## selenium-html-runnerをヘッドレスで実行する方法
+## How to run selenium-html-runner headless
 
-さて、最も重要な部分、selenium-html-runnerの実行方法の例！
-経験によってソフトウェアの組み合わせ、- geckodriver / FF / html-runnerリリースによって異なる場合があります。
+Now, the most important part, an example of how to run the
+selenium-html-runner! Your experience might vary depending on software
+combinations - geckodriver/FF/html-runner releases.
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

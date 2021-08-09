@@ -2,6 +2,7 @@
 title: "WebDriver remoto - servidor"
 linkTitle: "WebDriver remoto - servidor"
 weight: 5
+aliases: ["/documentation/es/legacy_docs/remote_webdriver_server/"]
 ---
 
 El servidor siempre se ejecutará en la máquina con el navegador que deseas

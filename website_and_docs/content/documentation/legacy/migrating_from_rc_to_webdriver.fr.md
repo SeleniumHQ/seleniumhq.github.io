@@ -2,6 +2,7 @@
 title: "Migrating from RC to WebDriver"
 linkTitle: "Migrating from RC to WebDriver"
 weight: 2
+aliases: ["/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/"]
 ---
 
 ## Comment migrer vers Selenium WebDriver

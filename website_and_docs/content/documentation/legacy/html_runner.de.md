@@ -2,6 +2,7 @@
 title: "HTML runner"
 linkTitle: "HTML runner"
 weight: 3
+aliases: ["/documentation/de/legacy_docs/html-runner/"]
 ---
 
 _Selenium HTML-runner_ allows you to run Test Suites from a

@@ -2,6 +2,7 @@
 title: "从RC迁移到WebDriver"
 linkTitle: "从RC迁移到WebDriver"
 weight: 2
+aliases: ["/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/"]
 ---
 
 

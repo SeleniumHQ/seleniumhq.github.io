@@ -2,6 +2,7 @@
 title: "リモートWebDriverサーバー"
 linkTitle: "リモートWebDriverサーバー"
 weight: 5
+aliases: ["/documentation/ja/legacy_docs/remote_webdriver_server/"]
 ---
 
 サーバーは、テストするブラウザーがインストールされたマシンで常に実行されます。

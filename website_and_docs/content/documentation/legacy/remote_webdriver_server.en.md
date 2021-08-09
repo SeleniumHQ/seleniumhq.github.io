@@ -2,6 +2,7 @@
 title: "Remote WebDriver server"
 linkTitle: "Remote WebDriver Server"
 weight: 5
+aliases: ["/documentation/en/legacy_docs/remote_webdriver_server/"]
 ---
 
 The server will always run on the machine with the browser you want to

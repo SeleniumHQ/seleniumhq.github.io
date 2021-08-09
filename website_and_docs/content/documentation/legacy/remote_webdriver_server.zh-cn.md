@@ -2,6 +2,7 @@
 title: "远程WebDriver服务器"
 linkTitle: "远程WebDriver服务器"
 weight: 5
+aliases: ["/documentation/zh-cn/legacy_docs/remote_webdriver_server/"]
 ---
 
 服务器将始终在安装了待测浏览器的机器上运行. 

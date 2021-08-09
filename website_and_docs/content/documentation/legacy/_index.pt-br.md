@@ -6,6 +6,7 @@ description: >
   Nesta seção você pode encontrar toda a documentação relacionada aos componentes legados do Selenium.
   Isso deve ser mantido puramente por razões históricas e não como um incentivo para o uso obsoleto
   componentes.
+aliases: ["/documentation/pt-br/legacy_docs/"]
 ---
 
 {{% pageinfo color="warning" %}}

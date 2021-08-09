@@ -2,6 +2,7 @@
 title: "Selenium 1 (Selenium RC)"
 linkTitle: "Selenium 1 (Selenium RC)"
 weight: 1
+aliases: ["/documentation/es/legacy_docs/selenium_rc/"]
 ---
 
 ## Introducción

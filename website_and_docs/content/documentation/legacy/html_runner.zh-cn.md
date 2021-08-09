@@ -2,26 +2,23 @@
 title: "HTML runner"
 linkTitle: "HTML runner"
 weight: 3
+aliases: ["/documentation/zh-cn/legacy_docs/html-runner/"]
 ---
 
-_Selenium HTML-runner_ allows you to run Test Suites from a
-command line. Test Suites are HTML exports from Selenium IDE or
-campatible tools.
+_Selenium HTML-runner_ 允许您从命令行运行 Test Suites。
+Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
 
+## 公共信息
 
-## Common information
+* geckodriver / firefox / selenium-html-runner 版本的组合很重要。
+可能在某个地方有一个软件兼容性矩阵。
+* selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
 
-* Combination of releases of geckodriver / firefox /
-selenium-html-runner matters. There might be a software
-compatibility matrix somewhere.
-* selenium-html-runner runs only Test Suite (not Test Case - 
-for example an export from Monitis Transaction Monitor). Be
-sure you comply with this.
-* For Linux users with no DISPLAY - you need to start html-runner
-with Virtual display (search for xvfb)
+* 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
 
-## Example Linux environment
-Install / download following software packages:
+## 示例 Linux 环境
+
+安装 / 下载以下软件包：
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -34,7 +31,7 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-Test Suite example:
+Test Suite 示例：
 
 ```html
 [user@localhost ~]$ cat testsuite.html
@@ -54,12 +51,10 @@ Test Suite example:
 </html>
 ```
 
+## 如何运行 selenium-html-runner headless
 
-## How to run selenium-html-runner headless
-
-Now, the most important part, an example of how to run the
-selenium-html-runner! Your experience might vary depending on software
-combinations - geckodriver/FF/html-runner releases.
+现在，最重要的部分，一个如何运行 selenium-html-runner 的例子！
+您的体验可能因软件组合而异 - geckodriver / FF / html-runner 版本。
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

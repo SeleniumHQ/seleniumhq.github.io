@@ -2,6 +2,7 @@
 title: "Remote WebDriver server"
 linkTitle: "Remote WebDriver server"
 weight: 5
+aliases: ["/documentation/nl/legacy_docs/remote_webdriver_server/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,17 +2,8 @@
 title: "HTML runner"
 linkTitle: "HTML runner"
 weight: 3
+aliases: ["/documentation/en/legacy_docs/html-runner/"]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Most of the documentation found in this section is still in English.
-   Please note we are not accepting pull requests to translate this content
-   as translating documentation of legacy components does not add value to
-   the community nor the project.
-</p>
-{{% /pageinfo %}}
 
 _Selenium HTML-runner_ allows you to run Test Suites from a
 command line. Test Suites are HTML exports from Selenium IDE or

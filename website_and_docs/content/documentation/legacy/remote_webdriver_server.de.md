@@ -2,6 +2,7 @@
 title: "Remote WebDriver Server"
 linkTitle: "Remote WebDriver Server"
 weight: 5
+aliases: ["/documentation/de/legacy_docs/remote_webdriver_server/"]
 ---
 
 Der Server wird immer auf der Maschine ausgeführt, der den gewünschten 

@@ -2,6 +2,7 @@
 title: "Le serveur Remote WebDriver"
 linkTitle: "Le serveur Remote WebDriver"
 weight: 5
+aliases: ["/documentation/fr/legacy_docs/remote_webdriver_server/"]
 ---
 
 Le serveur fonctionnera toujours sur la machine avec le navigateur que vous souhaitez

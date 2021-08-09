@@ -2,6 +2,7 @@
 title: "Selenium IDE Legado"
 linkTitle: "Selenium IDE Legado"
 weight: 4
+aliases: ["/documentation/pt-br/legacy_docs/selenium_ide/"]
 ---
 
 ## Introdução
