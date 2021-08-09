@@ -62,6 +62,26 @@ where the session is running. It serves as a support for the Router in the proce
 forwarding a request to the Node. The Router will ask the Session Map for the Node 
 associated to a session id.
 
+## New Session Queue
+
+New Session Queue holds all the new session requests in a FIFO order. 
+It has configurable parameters for setting the request timeout and request retry interval.
+
+The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out, 
+if so the request is rejected and removed immediately.
+
+The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.
+
+Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue. 
+If request times out while retrying or adding to the front of the queue it is rejected.
+
+After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client. 
+
 ## Enfileirador de Sessão, Fila de Sessão
 
 O Enfileirador de Sessão é o único
