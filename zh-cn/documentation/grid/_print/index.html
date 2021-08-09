@@ -15,7 +15,7 @@
 <a class=dropdown-item href=/nl/documentation/grid/>Nederlands</a>
 <a class=dropdown-item href=/fr/documentation/grid/>Français</a>
 <a class=dropdown-item href=/ja/documentation/grid/>日本語</a>
-<a class=dropdown-item href=/ko/documentation/grid/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.5d79494f254110d21e16341111b7d0a6.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
+<a class=dropdown-item href=/ko/documentation/grid/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2a649a7e5fb5f63a9366360eaa5e720e.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/zh-cn/documentation/grid/>Return to the regular view of this page</a>.</p></div><h1 class=title>Grid</h1><div class=lead>Want to run tests in parallel across multiple machines? Then, Grid is for you.</div><ul><li>1: <a href=#pg-513aea440f7a5dcdf2fd2cf091439f36>服务网格的组件</a></li><li>2: <a href=#pg-0dfead81648fd92f1f69064ff55127bf>什么时候应该使用服务网格</a></li><li>3: <a href=#pg-e4d0a1214d8f6a629e7384fac3d5e30e>配置自己的服务网格</a></li><li>4: <a href=#pg-205f46aaf95b789941fbfb3037361a44>配置组件</a></li><ul><li>4.1: <a href=#pg-3ce7ee4b29b4aa8de1776db740cf2434>配置帮助</a></li></ul><li>5: <a href=#pg-9586edf2b9ce7e57a4873d12c1cb49bf>高级功能</a></li><ul><li>5.1: <a href=#pg-58fa36fce0115e0cac81fa0157f35027>Observability</a></li><li>5.2: <a href=#pg-5accfc3d64bfa8a3f37b3a48872e2e2d>GraphQL查询支持</a></li><li>5.3: <a href=#pg-1e74293b60642ddab77bb57253bc8cce>Grid Endpoints</a></li></ul></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to German. Do you speak German? Help us to translate
@@ -30,15 +30,20 @@ Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚�
 并且不共享之前版本的代码库.</p><p>Grid 4有一种实现可以利用许多新技术来促进扩展,
 同时仍然允许本地执行.</p><p>关于Grid 4组件的所有详细信息,
 了解其工作原理以及如何设置自己的组件,
-请浏览以下章节.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-513aea440f7a5dcdf2fd2cf091439f36>1 - 服务网格的组件</h1><figure class="img-responsive text-center"><img src=/images/documentation/grid/components.png alt=Grid></figure><h2 id=router>Router</h2><p>路由器负责将请求转发到正确的组件.</p><p>它是网格的入口,所有外部请求都将借此被网格接收.
-路由器的行为取决于请求.
-如果是新的会话请求,
-则路由器会将其转发到分发服务器 (将在其中处理并创建新的会话).
-如果请求属于存量会话,则路由器会将会话ID发送到会话集合,
-会话集合将返回会话正在运行的节点.
-此后, 路由器会将请求转发到节点.</p><p>路由器旨在通过将请求发送到能够更好地处理请求的组件,
-来平衡网格中的负载,
-从而避免过程中任何组件无谓地过载.</p><h2 id=distributor>Distributor</h2><p>分发器知道所有节点及其功能.
+请浏览以下章节.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-513aea440f7a5dcdf2fd2cf091439f36>1 - 服务网格的组件</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from
+English to Chinese. Do you speak Chinese? Help us to translate
+it by sending us pull requests!</p></div><figure class="img-responsive text-center"><img src=/images/documentation/grid/components.png alt=Grid></figure><h2 id=router>Router</h2><p>The Router takes care of forwarding the request to the correct component.</p><p>It is the entry point of the Grid, all external requests will be received by it.
+The Router behaves differently depending on the request.
+If it is a new session request, the Router will add it to the New Session Queue.
+The Distributor regularly checks if there is a free slot.
+If so, the first matching request is removed from the New Session Queue.
+If the request belongs to an existing session, the
+Router will send the session id to the Session Map, and the Session Map will
+return the Node where the session is running. After this, the Router will
+forward the request to the Node.</p><p>The Router aims to balance the load in the Grid by sending the requests to the
+component that is able to handle them better, without overloading any component
+that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>分发器知道所有节点及其功能.
 它的主要作用是接收新的会话请求
 并找到可以在其中创建会话的适当节点.
 创建会话后, 分发器在会话集合中存储会话ID与正在执行会话的节点之间的关系.</p><h2 id=node>Node</h2><p>一个节点可以在网格中出现多次.
@@ -59,29 +64,15 @@ Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚�
 用于保存会话id和会话运行的节点的信息.
 它作为路由支持,
 在向节点转发请求的过程中起作用.
-路由将通过会话表获取与会话id关联的节点.</p><h2 id=新的会话队列器-新的会话队列>新的会话队列器, 新的会话队列</h2><p>新的会话队列器是唯一可以与新会话队列通信的组件.
-它处理所有的诸如添加这样操纵队列的操作.
-它具有用于设置请求超时和请求重试间隔的可配置参数.</p><p>新的会话队列器从路由器接收新会话请求
-并将其添加到队列中.
-队列一直等待直到获取了请求的响应.
-如果请求超时,
-请求将立即被拒绝,
-并且不会添加到队列中.</p><p>成功地将请求添加到队列后,
-事件总线将触发一个事件.
-分发服务器接收此事件并轮询队列.
-此时, 将尝试创建一个会话.</p><p>如果所请求的功能不存在于任何已注册的节点中,
-那么请求将立即被拒绝,
-并且客户端将收到响应.</p><p>如果请求的功能与任何节点插槽的功能匹配,
-分发服务器将尝试获取可用插槽.
-如果所有插槽都很忙,
-分发服务器将要求队列器将请求添加到队列前面.
-分发服务器在请求重试间隔之后再次接收请求.
-它将尝试重试,
-直到请求成功或超时.
-如果请求在重试或添加到队列前面时超时,
-则其将被拒绝.</p><p>在获得可用的插槽和会话创建之后,
-分发服务器通过事件总线将新会话响应传递给新会话队列器.
-新的会话队列器将在接收到事件时响应给客户端.</p><h2 id=事件总线>事件总线</h2><p>事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
+路由将通过会话表获取与会话id关联的节点.</p><h2 id=new-session-queue>New Session Queue</h2><p>New Session Queue holds all the new session requests in a FIFO order.
+It has configurable parameters for setting the request timeout and request retry interval.</p><p>The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out,
+if so the request is rejected and removed immediately.</p><p>The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.</p><p>Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue.
+If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client.</p><h2 id=事件总线>事件总线</h2><p>事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
 网格通过消息进行大部分内部通信, 避免了昂贵的HTTP调用.
 当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.</p><h2 id=网格中的角色>网格中的角色</h2><p>在网格3中, 组件是集线器和节点,
 可以通过以独立模式启动网格来一起运行它们.

@@ -15,7 +15,7 @@
 <a class=dropdown-item href=/zh-cn/documentation/grid/>中文简体</a>
 <a class=dropdown-item href=/fr/documentation/grid/>Français</a>
 <a class=dropdown-item href=/ja/documentation/grid/>日本語</a>
-<a class=dropdown-item href=/ko/documentation/grid/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.5d79494f254110d21e16341111b7d0a6.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
+<a class=dropdown-item href=/ko/documentation/grid/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.2a649a7e5fb5f63a9366360eaa5e720e.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/documentation/grid/>Return to the regular view of this page</a>.</p></div><h1 class=title>Grid</h1><div class=lead>Want to run tests in parallel across multiple machines? Then, Grid is for you.</div><ul><li>1: <a href=#pg-432345bb07a51aa930d9b6d42480b8c3>Components</a></li><li>2: <a href=#pg-e9bffefc8fd8507d6ef60412007b9245>Setting up your own</a></li><li>3: <a href=#pg-56e8317e27f817da8959e95814a246ea>When to use Grid</a></li><li>4: <a href=#pg-bd39eac102a4692b8516fd389bcc89a5>Configuring Components</a></li><ul><li>4.1: <a href=#pg-ae3bb9b9e59d3efea9b83bc79c7b8268>Config help</a></li></ul><li>5: <a href=#pg-1465ecf2a8678709289c8f006dc23784>Advanced Features</a></li><ul><li>5.1: <a href=#pg-31c8fbb2badbe02b79aa5e8066e4dbb4>Observability</a></li><li>5.2: <a href=#pg-76186a5d24597c9acf1bcb112d5b8cb6>GraphQL Query Support</a></li><li>5.3: <a href=#pg-a021ae0b78356a74a40b739ce5f8f27e>Grid Endpoints</a></li></ul></ul><div class=content><p>Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual
 or real) by routing commands sent by the client to remote browser instances.
 It aims to provide an easy way to run tests in parallel on multiple machines.</p><p>Selenium Grid allows us to run tests in parallel on multiple machines,
@@ -27,10 +27,10 @@ and might not suit your specific needs.</p><h2 id=purposes-and-main-functionalit
 the previous version had.</p><p>Grid 4 has an approach to take advantage of a number of new technologies in order
 to facilitate scaling up, while still allowing local execution.</p><p>To get all the details of Grid 4 components, understand how it works, and how to set
 up you own, please browse thorough the following sections.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-432345bb07a51aa930d9b6d42480b8c3>1 - Components</h1><figure class="img-responsive text-center"><img src=/images/documentation/grid/components.png alt=Grid></figure><h2 id=router>Router</h2><p>The Router takes care of forwarding the request to the correct component.</p><p>It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the New Session Queuer, which will add it to
-the New Session Queue. The New Session Queuer will trigger an event through the Event Bus.
-The Distributor (where the new session creation will be handled)
+The Router behaves differently depending on the request.
+If it is a new session request, the Router will add it to the New Session Queue.
+The Distributor regularly checks if there is a free slot.
+If so, the first matching request is removed from the New Session Queue.
 will receive the event and poll the New Session Queuer to get the new session request.
 If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will
@@ -53,20 +53,15 @@ might have the capability of offering Internet Explorer as a browser option,
 whereas this would not be possible on Linux or Mac.</p><h2 id=session-map>Session Map</h2><p>The Session Map is a data store that keeps the information of the session id and the Node
 where the session is running. It serves as a support for the Router in the process of
 forwarding a request to the Node. The Router will ask the Session Map for the Node
-associated to a session id.</p><h2 id=new-session-queuer-new-session-queue>New Session Queuer, New Session Queue</h2><p>The New Session Queuer is the only
-component which can communicate with the New Session Queue. It handles all queue operations like
-add to manipulate the queue. It has configurable parameters for setting
-the request timeout and request retry interval.</p><p>The New Session Queuer receives the new session request from the Router and adds it to the queue.
-The queuer waits until it receives the response for the request.
-If the request times out, the request is rejected immediately and not added to the queue.</p><p>Upon successfully adding the request to the queue, Event Bus triggers an event.
-The Distributor picks up this event and polls the queue. It now attempts to create a session.</p><p>If the requested capabilities do not exist in any of the registered Nodes, then the request is rejected
-immediately and the client receives a response.</p><p>If the requested capabilities match the capabilities of any of Node slots, Distributor attempts to get the
-available slot. If all the slots are busy, the Distributor will ask the queuer to add the request
-to the front of the queue. The Distributor receives the request again after the request retry interval.
-It will attempt retries until the request is successful or has timed out.
-If request times out while retrying or adding to the front of the queue its rejected.</p><p>After getting an available slot and session creation, the Distributor passes the new session response
-to the New Session Queuer via the Event Bus. The New Session Queuer will respond to the client when it
-receives the event.</p><h2 id=event-bus>Event Bus</h2><p>The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map.
+associated to a session id.</p><h2 id=new-session-queue>New Session Queue</h2><p>New Session Queue holds all the new session requests in a FIFO order.
+It has configurable parameters for setting the request timeout and request retry interval.</p><p>The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out,
+if so the request is rejected and removed immediately.</p><p>The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.</p><p>Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue.
+If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map.
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started.</p><h2 id=roles-in-grid>Roles in Grid</h2><p>In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
 Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
