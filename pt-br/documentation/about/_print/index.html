@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/zh-cn/documentation/about/>中文简体</a>
 <a class=dropdown-item href=/fr/documentation/about/>Français</a>
 <a class=dropdown-item href=/ja/documentation/about/>日本語</a>
-<a class=dropdown-item href=/ko/documentation/about/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.5fd747e6245287eade1da8e374aff2ec.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
+<a class=dropdown-item href=/ko/documentation/about/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off data-offline-search-index-json-src=/offline-search-index.fd42f7aed2a1827a11c7c673bf3127e4.json data-offline-search-base-href=/ data-offline-search-max-results=30></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/about/>Return to the regular view of this page</a>.</p></div><h1 class=title>Sobre esta documentação</h1><ul><li>1: <a href=#pg-55901d4446e7689fc9e8eb9ea8c82546>Direitos autorais e atribuições</a></li><li>2: <a href=#pg-d857f0daa2c0995ff8bf3909f223b167>Contribuindo com o Site e Documentação do Selenium</a></li></ul><div class=content><p>Essa documentação, como o próprio código, são mantidos 100% por voluntários
 dentro da comunidade Selenium.
 Muitos têm usado desde o seu início,
@@ -501,7 +501,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>362 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>340 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>343 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
@@ -1247,18 +1247,19 @@ contribuições significativas e valiosas ao longo do tempo são transformados e
 e recebem acesso de commit ao projeto.</p><p>Este guia irá guiá-lo através do processo de contribuição.</p><h3 id=passo-1-fork>Passo 1: Fork</h3><p>Faça um fork do projeto <a href=https://github.com/seleniumhq/seleniumhq.github.io>no Github</a>
 e faça checkout na sua cópia localmente.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % <span style=color:#204a87>cd</span> seleniumhq.github.io
-</code></pre></div><h4 id=dependências-hugo>Dependências: Hugo</h4><p>Usamos <a href=https://gohugo.io/>Hugo</a> para construir e renderizar o site e documentação.
-Para verificar tudo localmente antes mesmo de fazer qualquer alteração, por favor
-<a href=https://gohugo.io/getting-started/installing/>instale Hugo</a>, familiarize-se
-com ele e <a href=https://gohugo.io/getting-started/usage/#livereload>execute o servidor local</a>
-para renderizar o site localmente (instruções detalhadas podem ser encontradas no
-próximos passos).</p><h3 id=passo-2-branch>Passo 2: Branch</h3><p>Crie uma branch e comece a hackear:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% git checkout -b my-feature-branch
+</code></pre></div><h4 id=dependências-hugo>Dependências: Hugo</h4><p>We use <a href=https://gohugo.io/>Hugo</a> and the <a href=https://www.docsy.dev/>Docsy theme</a>
+to build and render the site. You will need the “extended”
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.</p><p>Please follow the <a href=https://www.docsy.dev/docs/getting-started/#install-hugo>Install Hugo</a>
+instructions from Docsy.</p><h3 id=passo-2-branch>Passo 2: Branch</h3><p>Crie uma branch e comece a hackear:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% git checkout -b my-feature-branch
 </code></pre></div><p>Praticamos o desenvolvimento baseado em HEAD, o que significa que todas as mudanças são aplicadas
-diretamente no topo do <code>trunk</code>.</p><h3 id=passo-3-faça-mudanças>Passo 3: Faça mudanças</h3><p>O repositório contém o site e documentação, que são dois projetos Hugo separados. Se você quiser fazer alterações no site, trabalhe no
-diretório <code>site_source_files</code>. Para ver uma prévia ao vivo de suas alterações,
-execute <code>hugo server</code> no diretório raiz do site.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% <span style=color:#204a87>cd</span> site_source_files
-% hugo server
-</code></pre></div><p>Para fazer alterações na documentação, vá para o diretório <code>docs_source_files</code>.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% <span style=color:#204a87>cd</span> docs_source_files
+diretamente no topo do <code>dev</code>.</p><h3 id=passo-3-faça-mudanças>Passo 3: Faça mudanças</h3><p>The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site,
+work on the <code>website_and_docs</code> directory. To see a live preview of
+your changes, run <code>hugo server</code> on the site&rsquo;s root directory.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% git submodule update --init --recursive
+% <span style=color:#204a87>cd</span> website_and_docs
+% npm install
 % hugo server
 </code></pre></div><h4 id=capitalização-de-títulos>Capitalização de títulos</h4><p>Deve-se evitar a capitalização do título,
 como <em>Um Título Muito Estiloso</em>,
