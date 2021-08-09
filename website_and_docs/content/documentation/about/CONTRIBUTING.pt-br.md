@@ -62,12 +62,13 @@ e faça checkout na sua cópia localmente.
 
 #### Dependências: Hugo
 
-Usamos [Hugo](https://gohugo.io/) para construir e renderizar o site e documentação.
-Para verificar tudo localmente antes mesmo de fazer qualquer alteração, por favor
-[instale Hugo](https://gohugo.io/getting-started/installing/), familiarize-se
-com ele e [execute o servidor local](https://gohugo.io/getting-started/usage/#livereload)
-para renderizar o site localmente (instruções detalhadas podem ser encontradas no
-próximos passos).
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### Passo 2: Branch
 
@@ -78,23 +79,20 @@ Crie uma branch e comece a hackear:
 ```
 
 Praticamos o desenvolvimento baseado em HEAD, o que significa que todas as mudanças são aplicadas
-diretamente no topo do `trunk`.
+diretamente no topo do `dev`.
 
 ### Passo 3: Faça mudanças
 
-O repositório contém o site e documentação, que são dois projetos Hugo separados. Se você quiser fazer alterações no site, trabalhe no
-diretório `site_source_files`. Para ver uma prévia ao vivo de suas alterações,
-execute `hugo server` no diretório raiz do site.
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
-% hugo server
-```
-
-Para fazer alterações na documentação, vá para o diretório `docs_source_files`. 
-
-```shell
-% cd docs_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
 

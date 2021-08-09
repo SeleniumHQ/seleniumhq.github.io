@@ -68,14 +68,15 @@ et vérifiez votre copie localement.
 % cd seleniumhq.github.io
 ```
 
-#### Dépendances: Hugo
+#### Dependencies: Hugo
 
-Nous utilisons [Hugo](https://gohugo.io/) pour construire et rendre le site et les documents.
-Pour tout vérifier localement avant même de commettre des modifications, veuillez
-[installez Hugo](https://gohugo.io/getting-started/installing/), familiarisez-vous
-avec elle et [exécutez le serveur local](https://gohugo.io/getting-started/usage/#livereload)
-pour rendre le site localement (des instructions détaillées peuvent être trouvées dans le
-prochaines étapes).
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### Step 2: Branch
 
@@ -91,25 +92,19 @@ directement sur le dessus du maître.
 
 ### Step 3: Faire des changements
 
-Le référentiel contient le site et les documents, 
-qui sont deux Hugo séparés projets. Si vous souhaitez 
-apporter des modifications au site, travaillez sur le
-répertoire `site_source_files`. Pour voir un aperçu 
-en direct de vos modifications,
-exécutez `hugo server` sur le répertoire racine du site.
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
 
-Pour apporter des modifications aux documents, 
-basculez vers le répertoire `docs_source_files`.
-
-```shell
-% cd docs_source_files
-% hugo server
-```
 
 #### Capitalisation des titres
 

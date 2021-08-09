@@ -68,11 +68,13 @@ Selenium项目欢迎新的贡献者.
 
 #### 依赖: Hugo
 
-我们使用 [Hugo](https://gohugo.io/) 来构建和渲染网站和文档. 
-需要在提交任何更改之前, 在本地验证所有内容, 
-请[安装 Hugo](https://gohugo.io/getting-started/installing/), 
-熟悉它并[运行本地服务器](https://gohugo.io/getting-started/usage/#livereload)
-以在本地呈现该网站(详细说明可在后续步骤中找到).
+We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
+to build and render the site. You will need the “extended” 
+Sass/SCSS version of the Hugo binary to work on this site. We recommend
+to use Hugo 0.83.1 or higher.
+
+Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+instructions from Docsy.
 
 ### 步骤 2: 分支
 
@@ -86,19 +88,16 @@ Selenium项目欢迎新的贡献者.
 
 ### 步骤 3: 做出改变
 
-仓库包含站点和文档, 这是两个独立的Hugo项目. 
-如果要更改站点, 请在 `site_source_files` 目录上工作. 
-要查看更改的实时预览, 请在网站的根目录上运行 `hugo server` 命令.
+The repository contains the site and docs. Before jumping into
+making changes, please initialize the submodules and install the
+needed dependecies (see commands below). To make changes to the site, 
+work on the `website_and_docs` directory. To see a live preview of 
+your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% cd site_source_files
-% hugo server
-```
-
-要更改文档, 请切换到 `docs_source_files` 目录. 
-
-```shell
-% cd docs_source_files
+% git submodule update --init --recursive
+% cd website_and_docs
+% npm install
 % hugo server
 ```
 
