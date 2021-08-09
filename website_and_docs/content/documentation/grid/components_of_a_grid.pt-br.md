@@ -5,26 +5,34 @@ weight: 1
 aliases: ["/documentation/pt-br/grid/grid_4/components_of_a_grid/"]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Portuguese. Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
 {{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}
 
 ## Roteador
 
-O roteador se encarrega de encaminhar a solicitação para o componente correto.
+The Router takes care of forwarding the request to the correct component.
 
-É o ponto de entrada da Grid, todas as solicitações externas serão recebidas por ele.
-O roteador se comporta de maneira diferente dependendo da solicitação. Se for uma nova sessão,
-o roteador irá encaminhá-la para o enfileirador de sessão, que irá adicioná-la a nova fila de sessão.
-O Enfileirador de Sessão irá disparar um evento através do Event Bus.
-O Distribuidor (onde a criação da nova sessão será tratada)
-irá receber o evento e pesquisar o Enfileirador de Sessão para obter a nova solicitação de sessão.
-Se a solicitação pertencer a uma sessão existente, o
-roteador irá enviar a ID da sessão para o Mapa da Sessão, e o Mapa da Sessão irá
-retornar o Nó onde a sessão está rodando. Depois disso, o roteador irá
-encaminhar a solicitação ao Nó.
+It is the entry point of the Grid, all external requests will be received by it.
+The Router behaves differently depending on the request.
+If it is a new session request, the Router will add it to the New Session Queue. 
+The Distributor regularly checks if there is a free slot. 
+If so, the first matching request is removed from the New Session Queue.
+If the request belongs to an existing session, the
+Router will send the session id to the Session Map, and the Session Map will 
+return the Node where the session is running. After this, the Router will
+forward the request to the Node.
 
-O Roteador visa equilibrar a carga na Rede, enviando as solicitações para o
-componente que é capaz de lidar melhor com eles, sem sobrecarregar nenhum componente
-que não é necessário no processo.
+The Router aims to balance the load in the Grid by sending the requests to the
+component that is able to handle them better, without overloading any component
+that is not needed in the process.
 
 ## Distribuidor
 
@@ -57,32 +65,25 @@ where the session is running. It serves as a support for the Router in the proce
 forwarding a request to the Node. The Router will ask the Session Map for the Node 
 associated to a session id.
 
-## Enfileirador de Sessão, Fila de Sessão
+## New Session Queue
 
-O Enfileirador de Sessão é o único
-componente que pode se comunicar com a nova fila de sessão. Ele lida com todas as operações de fila (como
-*add*) para manipular a fila. Possui parâmetros configuráveis ​​para definir
-o tempo limite da solicitação e o intervalo de repetição da solicitação.
+New Session Queue holds all the new session requests in a FIFO order. 
+It has configurable parameters for setting the request timeout and request retry interval.
 
-A Fila de Sessão recebe a nova solicitação de sessão do Roteador e a adiciona à fila.
-O enfileirador espera até receber a resposta para a solicitação.
-Se a solicitação expirar, ela será rejeitada imediatamente e não adicionada à fila.
+The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out, 
+if so the request is rejected and removed immediately.
 
-Ao adicionar com sucesso a solicitação à fila, o Event Bus aciona um evento.
-O Distribuidor seleciona este evento e pesquisa a fila. Agora ele tenta criar uma sessão.
+The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.
 
-Se os recursos solicitados não existirem em nenhum dos nós registrados, a solicitação será rejeitada
-imediatamente e o cliente recebe uma resposta.
+Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue. 
+If request times out while retrying or adding to the front of the queue it is rejected.
 
-Se os recursos solicitados corresponderem aos recursos de qualquer um dos slots de Nó, o Distribuidor tenta obter o
-slot disponível. Se todos os slots estiverem ocupados, o Distribuidor pedirá ao enfileirador para adicionar o pedido
-para o início da fila. O Distribuidor recebe a solicitação novamente após o intervalo de repetição da solicitação.
-Ele tentará novas tentativas até que a solicitação seja bem-sucedida ou tenha expirado.
-Se a solicitação atingir o tempo limite ao tentar novamente ou adicionar à frente da fila, ela será rejeitada.
-
-Depois de obter um slot disponível e a criação de sessão, o Distribuidor passa a nova resposta de sessão
-para a nova fila de espera de sessão por meio do Event Bus. Enfileirador de Sessão responderá ao cliente quando ele
-recebe o evento.
+After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client.
 
 ## Event Bus
 
