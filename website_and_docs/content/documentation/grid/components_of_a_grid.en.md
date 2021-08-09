@@ -12,10 +12,10 @@ aliases: ["/documentation/en/grid/grid_4/components_of_a_grid/"]
 The Router takes care of forwarding the request to the correct component.
 
 It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the New Session Queuer, which will add it to
-the New Session Queue. The New Session Queuer will trigger an event through the Event Bus. 
-The Distributor (where the new session creation will be handled) 
+The Router behaves differently depending on the request.
+If it is a new session request, the Router will add it to the New Session Queue. 
+The Distributor regularly checks if there is a free slot. 
+If so, the first matching request is removed from the New Session Queue.
 will receive the event and poll the New Session Queuer to get the new session request.
 If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will 
@@ -60,32 +60,25 @@ where the session is running. It serves as a support for the Router in the proce
 forwarding a request to the Node. The Router will ask the Session Map for the Node 
 associated to a session id.
 
-## New Session Queuer, New Session Queue
+## New Session Queue
 
-The New Session Queuer is the only
-component which can communicate with the New Session Queue. It handles all queue operations like
-add to manipulate the queue. It has configurable parameters for setting 
-the request timeout and request retry interval.
+New Session Queue holds all the new session requests in a FIFO order. 
+It has configurable parameters for setting the request timeout and request retry interval.
 
-The New Session Queuer receives the new session request from the Router and adds it to the queue. 
-The queuer waits until it receives the response for the request. 
-If the request times out, the request is rejected immediately and not added to the queue. 
+The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out, 
+if so the request is rejected and removed immediately.
 
-Upon successfully adding the request to the queue, Event Bus triggers an event. 
-The Distributor picks up this event and polls the queue. It now attempts to create a session.
+The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.
 
-If the requested capabilities do not exist in any of the registered Nodes, then the request is rejected
-immediately and the client receives a response.
+Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue. 
+If request times out while retrying or adding to the front of the queue it is rejected.
 
-If the requested capabilities match the capabilities of any of Node slots, Distributor attempts to get the
-available slot. If all the slots are busy, the Distributor will ask the queuer to add the request 
-to the front of the queue. The Distributor receives the request again after the request retry interval. 
-It will attempt retries until the request is successful or has timed out. 
-If request times out while retrying or adding to the front of the queue its rejected.
-
-After getting an available slot and session creation, the Distributor passes the new session response 
-to the New Session Queuer via the Event Bus. The New Session Queuer will respond to the client when it
-receives the event.
+After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client. 
 
 ## Event Bus
 
