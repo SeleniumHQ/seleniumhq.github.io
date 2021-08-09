@@ -2,6 +2,7 @@
 title: "Chrome Devtools"
 linkTitle: "Chrome Devtools"
 weight: 5
+aliases: ["/documentation/en/support_packages/chrome_devtools/"]
 ---
 
 Selenium 4 alpha versions have much awaited native support for Chrome DevTools 

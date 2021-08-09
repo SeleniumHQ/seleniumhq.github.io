@@ -2,6 +2,7 @@
 title: "Travailler avec des cookies"
 linkTitle: "Travailler avec des cookies"
 weight: 4
+aliases: ["/documentation/fr/support_packages/working_with_cookies/"]
 ---
 
 Un cookie est un petit morceau de données qui est envoyé 

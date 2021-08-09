@@ -2,6 +2,7 @@
 title: "選択要素の操作"
 linkTitle: "選択要素の操作"
 weight: 2
+aliases: ["/documentation/ja/support_packages/working_with_select_elements/"]
 ---
 
 

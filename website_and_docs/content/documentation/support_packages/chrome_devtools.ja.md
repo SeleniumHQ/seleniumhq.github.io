@@ -2,6 +2,7 @@
 title: "Chrome デベロッパーツール"
 linkTitle: "Chrome デベロッパーツール"
 weight: 5
+aliases: ["/documentation/ja/support_packages/chrome_devtools/"]
 ---
 
 Selenium 4 alphaバージョンには、"DevTools" インターフェースを介した

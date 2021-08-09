@@ -2,6 +2,7 @@
 title: "Travailler avec les couleurs"
 linkTitle: "Travailler avec les couleurs"
 weight: 1
+aliases: ["/documentation/fr/support_packages/working_with_colours/"]
 ---
 
 Vous voudrez parfois valider la couleur de quelque 

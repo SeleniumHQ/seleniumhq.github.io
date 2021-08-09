@@ -2,6 +2,7 @@
 title: "Trabajando con colores"
 linkTitle: "Trabajando con colores"
 weight: 1
+aliases: ["/documentation/es/support_packages/working_with_colours/"]
 ---
 
 

@@ -5,6 +5,7 @@ weight: 3
 description: >
   マウスは、マウスイベントを表します。
   マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
+aliases: ["/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/"]
 ---
 
 

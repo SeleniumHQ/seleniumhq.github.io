@@ -4,5 +4,6 @@ linkTitle: "支持的包"
 weight: 11
 description: >
   Set of packages and functionalities to simplify automation with Selenium.
+aliases: ["/documentation/zh-cn/support_packages/"]
 ---
 

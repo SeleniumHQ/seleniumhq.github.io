@@ -2,6 +2,7 @@
 title: "Chrome Devtools"
 linkTitle: "Chrome Devtools"
 weight: 5
+aliases: ["/documentation/pt-br/support_packages/chrome_devtools/"]
 ---
 
 {{% pageinfo color="warning" %}}

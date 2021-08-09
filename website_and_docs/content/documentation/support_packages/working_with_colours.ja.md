@@ -2,6 +2,7 @@
 title: "色を扱う"
 linkTitle: "色を扱う"
 weight: 1
+aliases: ["/documentation/ja/support_packages/working_with_colours/"]
 ---
 
 

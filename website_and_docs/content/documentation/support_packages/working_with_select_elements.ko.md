@@ -2,6 +2,7 @@
 title: "Working with select elements"
 linkTitle: "Working with select elements"
 weight: 2
+aliases: ["/documentation/ko/support_packages/working_with_select_elements/"]
 ---
 
 {{% pageinfo color="warning" %}}

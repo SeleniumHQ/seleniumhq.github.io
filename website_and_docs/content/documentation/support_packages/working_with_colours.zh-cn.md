@@ -2,6 +2,7 @@
 title: "同颜色一起工作"
 linkTitle: "同颜色一起工作"
 weight: 1
+aliases: ["/documentation/zh-cn/support_packages/working_with_colours/"]
 ---
  
 在测试中, 您偶尔会需要验证某事物的颜色；问题是网络上的颜色定义不是个常量.

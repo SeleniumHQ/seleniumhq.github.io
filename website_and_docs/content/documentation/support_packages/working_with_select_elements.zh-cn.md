@@ -2,6 +2,7 @@
 title: "同选择元素一起工作"
 linkTitle: "同选择元素一起工作"
 weight: 2
+aliases: ["/documentation/zh-cn/support_packages/working_with_select_elements/"]
 ---
  
 选择元素可能需要大量样板代码才能自动化.

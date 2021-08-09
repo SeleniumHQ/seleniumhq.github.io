@@ -2,6 +2,7 @@
 title: "Working with colours"
 linkTitle: "Working with colours"
 weight: 1
+aliases: ["/documentation/en/support_packages/working_with_colours/"]
 ---
 
 You will occasionally want to validate the colour of something as part of your tests;

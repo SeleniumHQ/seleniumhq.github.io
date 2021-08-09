@@ -2,6 +2,7 @@
 title: "Working with select elements"
 linkTitle: "Working with select elements"
 weight: 2
+aliases: ["/documentation/en/support_packages/working_with_select_elements/"]
 ---
 
 Select elements can require quite a bit of boiler plate code to automate.

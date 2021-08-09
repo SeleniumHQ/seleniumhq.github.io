@@ -6,6 +6,7 @@ description: >
   Mouse representa um evento do mouse. Ações do mouse são realizadas
   usando interface de baixo nível que nos permite
   fornecer ação de entrada de dispositivo virtualizado para o navegador da web.
+aliases: ["/documentation/pt-br/support_packages/mouse_and_keyboard_actions_in_detail/"]
 ---
 
 ## clickAndHold

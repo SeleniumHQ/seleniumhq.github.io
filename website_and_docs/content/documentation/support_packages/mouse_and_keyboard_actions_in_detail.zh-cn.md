@@ -4,6 +4,7 @@ linkTitle: "鼠标动作详细信息"
 weight: 3
 description: >
   Mouse表示鼠标事件. 鼠标操作是通过使用底层接口执行的, 其允许我们向Web浏览器提供虚拟化的设备输入操作.
+aliases: ["/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/"]
 ---
 
 ## clickAndHold

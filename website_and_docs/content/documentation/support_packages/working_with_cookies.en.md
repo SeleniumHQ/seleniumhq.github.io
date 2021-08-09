@@ -2,6 +2,7 @@
 title: "Working with cookies"
 linkTitle: "Working with cookies"
 weight: 4
+aliases: ["/documentation/en/support_packages/working_with_cookies/"]
 ---
 
 A cookie is a small piece of data that is sent from a website and stored in your computer. 

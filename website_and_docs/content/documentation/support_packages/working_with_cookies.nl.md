@@ -2,6 +2,7 @@
 title: "Working with cookies"
 linkTitle: "Working with cookies"
 weight: 4
+aliases: ["/documentation/nl/support_packages/working_with_cookies/"]
 ---
 
 {{% pageinfo color="warning" %}}

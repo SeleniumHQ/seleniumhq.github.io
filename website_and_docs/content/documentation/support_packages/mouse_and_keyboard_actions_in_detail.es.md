@@ -6,6 +6,7 @@ description: >
   El ratón representa eventos del ratón. Las acciones del ratón son realizadas
   a través de una interfaz de bajo nivel la cual nos permite introducir acciones de
   dispositivos virtualizados al navegador web.
+aliases: ["/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/"]
 ---
 
 ## clickAndHold

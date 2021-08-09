@@ -7,6 +7,7 @@ description: >
   de la souris sont effectuées en utilisant une interface 
   de bas niveau qui nous permet de fournir une action de saisie 
   de périphérique virtualisé au navigateur Web.
+aliases: ["/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/"]
 ---
 
 ## clickAndHold

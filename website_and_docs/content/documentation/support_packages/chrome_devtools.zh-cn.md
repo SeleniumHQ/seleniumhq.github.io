@@ -2,6 +2,7 @@
 title: "Chrome开发工具"
 linkTitle: "Chrome开发工具"
 weight: 5
+aliases: ["/documentation/zh-cn/support_packages/chrome_devtools/"]
 ---
 
 在Selenium 4 alpha版本通过对Chrome开发工具协议（Chrome DevTools Protocol）

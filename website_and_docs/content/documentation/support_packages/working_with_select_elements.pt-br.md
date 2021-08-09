@@ -2,6 +2,7 @@
 title: "Trabalhando com elementos select"
 linkTitle: "Trabalhando com elementos select"
 weight: 2
+aliases: ["/documentation/pt-br/support_packages/working_with_select_elements/"]
 ---
 
 Os elementos *select* podem exigir um pouco de código padrão para serem automatizados.

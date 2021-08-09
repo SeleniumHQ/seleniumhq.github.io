@@ -2,6 +2,7 @@
 title: "Trabajando con elementos select"
 linkTitle: "Trabajando con elementos select"
 weight: 2
+aliases: ["/documentation/es/support_packages/working_with_select_elements/"]
 ---
 
 
