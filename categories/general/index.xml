@@ -1,4 +1,28 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: IRC channels are moving to Libera.chat</title><link>/blog/2021/moving-to-libera-chat/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/moving-to-libera-chat/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+&lt;p>We have been working hard during the last few weeks redoing our
+&lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
+with the community and we are hoping to get as much feedback as
+possible!&lt;/p>
+&lt;p>We did a major revamp to our website two years ago. However, this
+revamp had some &amp;ldquo;technical debt&amp;rdquo; in it&amp;hellip;&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">We&amp;#39;re happy to announce that we have (finally!) refreshed our site. Head on over to &lt;a href="https://t.co/0xAiKdHrPj">https://t.co/0xAiKdHrPj&lt;/a> and have a browse! Thanks to &lt;a href="https://twitter.com/diegofmolina?ref_src=twsrc%5Etfw">@diegofmolina&lt;/a> and &lt;a href="https://twitter.com/manoj9788?ref_src=twsrc%5Etfw">@manoj9788&lt;/a> for making this happen.&lt;/p>&amp;mdash; Selenium (@SeleniumHQ) &lt;a href="https://twitter.com/SeleniumHQ/status/1194205732347887616?ref_src=twsrc%5Etfw">November 12, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to generate our website, and to
+build a website with Hugo, one normally needs to select a
+&lt;a href="https://themes.gohugo.io/">Hugo theme&lt;/a>. Our previous website was
+being built using two different Hugo themes, which was less than
+ideal. Having two Hugo themes was hard to maintain and accepting
+contributions was tricky in some cases.&lt;/p>
+&lt;p>This new website version is using the &lt;a href="https://github.com/google/docsy">Docsy&lt;/a>
+theme, made by some folks at Google and used by other popular projects
+such as &lt;a href="https://airflow.apache.org/">Apache Airflow&lt;/a> and
+&lt;a href="https://kubernetes.io/">Kubernetes&lt;/a>. Using Docsy helps us to focus
+more on the website&amp;rsquo;s content rather than spending lots of time
+maintaining the underlying details of it.&lt;/p>
+&lt;p>We all hope you will like the new look and please check our
+&lt;a href="/documentation/about/contributing/">contribution guidelines&lt;/a> if
+you want to contribute to the Selenium website.&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: IRC channels are moving to Libera.chat</title><link>/blog/2021/moving-to-libera-chat/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/moving-to-libera-chat/</guid><description>
 &lt;p>Yesterday, 19 May 2021, all the staff of Freenode, the IRC network, &lt;a href="https://fuchsnet.ch/freenode-resign-letter.txt">collectively
 resigned as staff because of what they felt was a hostile takeover&lt;/a>.&lt;/p>
 &lt;p>Freenode has always been seen as the home of Free and Open Software, so
@@ -1041,17 +1065,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>&lt;a href="http://blogs.gnome.org/danni/2012/11/19/extending-selenium-with-jquery/">Extending Selenium with jQuery&lt;/a> is something else I intend to steal&lt;/li>
 &lt;li>From the same person is &lt;a href="http://blogs.gnome.org/danni/2012/11/15/combining-py-test-and-selenium-to-test-webapps/">Combining py.test and Selenium to test webapps&lt;/a> which shows off some of what py.test can do with fixtures. Not how I would do it, but cool none the less.&lt;/li>
 &lt;li>Let me say this again; the officially blessed solution for getting response codes is to route your calls through a proxy (like the BrowserMob Proxy) and then ask it what they were. But if you are bound and determined to craft ‘solutions’ that only work in a single browser, or a single language, or require changing your application then &lt;a href="http://www.ninthavenue.com.au/how-to-get-the-http-status-code-in-selenium-webdriver">How To Get The HTTP Status Code In Selenium WebDriver&lt;/a> will make good breakfast reading. North American time that is…&lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #129</title><link>/blog/2012/a-smattering-of-selenium-129/</link><pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate><guid>/blog/2012/a-smattering-of-selenium-129/</guid><description>
-&lt;p>A hardy welcome back to work to our American friends who spent Thursday being thankful for what they had, then getting into fist fights at stores for things they thought they didn’t need the next day.&lt;/p>
-&lt;ul>
-&lt;li>You know what would be grand? If various widget makers would provide automation hooks for their stuff so we, as automators, don’t have to write them ourselves. Like for High Charts (&lt;a href="https://github.com/Ardesco/Powder-Monkey/tree/master/src/main/java/com/lazerycode/selenium/graphs">in Java&lt;/a>)&lt;/li>
-&lt;li>&lt;a href="http://codeclimber.net.nz/archive/2012/11/19/Why-you-should-never-use-a-boolean-field-use-an.aspx">Why you should never use a boolean field (use an Enum instead)&lt;/a> is food for thought when designing your page objects&lt;/li>
-&lt;li>Do you work for Google? No? They why do you think you need to automate GMail?!!? Not a new rant of course, but &lt;a href="http://pypi.python.org/pypi/imapIO/0.9.5">imapIO&lt;/a> looks like it might not suck too too much if you are solving this problem in Python and must get an email out of GMail&lt;/li>
-&lt;li>&lt;a href="https://gist.github.com/3361208">windows.h.js&lt;/a>. Yes. .js. And no, I have no idea what you would use it for.&lt;/li>
-&lt;li>Someday I will find the time to learn &lt;a href="http://blog.tddium.com/2012/11/20/profiling-ruby/">Profiling Ruby, or, How I Made Rails Start Up Faster&lt;/a> for Python and/or PHP if just so I &lt;em>really&lt;/em> understand what goes on under the hood. (And you should too. Understand that is…)&lt;/li>
-&lt;li>Two more OTA API examples; &lt;a href="http://fijiaaron.wordpress.com/2012/11/20/creating-a-bug-in-quality-center-using-the-ota-api/">Creating a Bug in Quality Center using the OTA API&lt;/a>, &lt;a href="http://fijiaaron.wordpress.com/2012/11/20/executing-tests-in-quality-center-using-the-ota-api/">Executing Tests in Quality Center using the OTA API&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://craigkerstiens.com/2012/11/17/how-i-write-sql/">How I Write SQL&lt;/a>. Mmmmm pretty. And the killer part is right at the end; &lt;em>While very long, this should ideally be quite legible&lt;/em> and legibility trumps length every day.&lt;/li>
-&lt;li>Before you whinge, understand &lt;em>why&lt;/em> something is. Like say, &lt;a href="http://jimevansmusic.blogspot.ca/2012/11/are-you-kidding-me-ie-driver-another.html">Are you kidding me, IE Driver? Another freaking thing to download?&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://pivotallabs.com/users/patn/blog/articles/717-run-javascript-in-selenium-tests-easily-">Run JavaScript in Selenium tests. Easily&lt;/a>. And by Selenium they mean WebDriver and by WebDriver they mean Webrat.&lt;/li>
-&lt;li>&lt;a href="http://www.youtube.com/MobileTestingSummit">Mobile Testing Summit videos are up!&lt;/a> for those of us that couldn’t make it. Or could have made it were it not for speaking commitments bookending it on the other side of the continent.&lt;/li>
 &lt;/ul></description></item></channel></rss>

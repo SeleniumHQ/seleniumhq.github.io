@@ -1,4 +1,28 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: IRC channels are moving to Libera.chat</title><link>/blog/2021/moving-to-libera-chat/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/moving-to-libera-chat/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+&lt;p>We have been working hard during the last few weeks redoing our
+&lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
+with the community and we are hoping to get as much feedback as
+possible!&lt;/p>
+&lt;p>We did a major revamp to our website two years ago. However, this
+revamp had some &amp;ldquo;technical debt&amp;rdquo; in it&amp;hellip;&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">We&amp;#39;re happy to announce that we have (finally!) refreshed our site. Head on over to &lt;a href="https://t.co/0xAiKdHrPj">https://t.co/0xAiKdHrPj&lt;/a> and have a browse! Thanks to &lt;a href="https://twitter.com/diegofmolina?ref_src=twsrc%5Etfw">@diegofmolina&lt;/a> and &lt;a href="https://twitter.com/manoj9788?ref_src=twsrc%5Etfw">@manoj9788&lt;/a> for making this happen.&lt;/p>&amp;mdash; Selenium (@SeleniumHQ) &lt;a href="https://twitter.com/SeleniumHQ/status/1194205732347887616?ref_src=twsrc%5Etfw">November 12, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to generate our website, and to
+build a website with Hugo, one normally needs to select a
+&lt;a href="https://themes.gohugo.io/">Hugo theme&lt;/a>. Our previous website was
+being built using two different Hugo themes, which was less than
+ideal. Having two Hugo themes was hard to maintain and accepting
+contributions was tricky in some cases.&lt;/p>
+&lt;p>This new website version is using the &lt;a href="https://github.com/google/docsy">Docsy&lt;/a>
+theme, made by some folks at Google and used by other popular projects
+such as &lt;a href="https://airflow.apache.org/">Apache Airflow&lt;/a> and
+&lt;a href="https://kubernetes.io/">Kubernetes&lt;/a>. Using Docsy helps us to focus
+more on the website&amp;rsquo;s content rather than spending lots of time
+maintaining the underlying details of it.&lt;/p>
+&lt;p>We all hope you will like the new look and please check our
+&lt;a href="/documentation/about/contributing/">contribution guidelines&lt;/a> if
+you want to contribute to the Selenium website.&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: IRC channels are moving to Libera.chat</title><link>/blog/2021/moving-to-libera-chat/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/moving-to-libera-chat/</guid><description>
 &lt;p>Yesterday, 19 May 2021, all the staff of Freenode, the IRC network, &lt;a href="https://fuchsnet.ch/freenode-resign-letter.txt">collectively
 resigned as staff because of what they felt was a hostile takeover&lt;/a>.&lt;/p>
 &lt;p>Freenode has always been seen as the home of Free and Open Software, so
@@ -752,20 +776,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;/ul>
 &lt;p>As with almost all releases, there are still some issues left to resolve, but we’re working hard to make Selenium 2.0 as good as it can be.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc2: The Better Working Release</title><link>/blog/2011/selenium-2-0rc2-the-better-working-release/</link><pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc2-the-better-working-release/</guid><description>
 &lt;p>You win some and you lose some. We’d been really pleased to get Selenium 2.0rc1 out, so we were pretty disappointed to hear that some of you were running into problems with the Java version of the IE driver not launching IE sometimes. That’s definitely not good, so we fixed the problems and have &lt;a href="http://code.google.com/p/selenium/downloads/list">released Selenium 2.0rc2&lt;/a>. It’s the same as rc1, but with fewer problems 🙂&lt;/p>
-&lt;p>We’re still very keen to hear your feedback! Let us know what you think!&lt;/p></description></item><item><title>Blog: Selenium 2.0rc1: The Grid Release</title><link>/blog/2011/selenium-2-0rc1-the-grid-release/</link><pubDate>Wed, 01 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc1-the-grid-release/</guid><description>
-&lt;p>We’re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! &lt;a href="http://code.google.com/p/selenium/downloads/list">Grab the downloads from the site&lt;/a>!&lt;/p>
-&lt;p>Highlights:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://code.google.com/p/selenium/wiki/Grid2">Grid 2&lt;/a>: A major feature of this release is Grid 2, an implementation of the Selenium Grid that supports WebDriver’s wire protocol, allowing tests using Selenium WebDriver to be distributed through it. There are some &lt;a href="http://code.google.com/p/selenium/wiki/Grid2">docs to help you get started&lt;/a> on the wiki.&lt;/li>
-&lt;li>New &lt;a href="http://code.google.com/p/selenium/wiki/ChromeDriver">ChromeDriver&lt;/a>: Following a complete rewrite of the ChromeDriver, Selenium 2 is now supported natively by the Chrome browser itself. In order to use this, you must download the &lt;a href="http://code.google.com/p/selenium/downloads/list">chromedriver executable&lt;/a> from the Selenium project site.&lt;/li>
-&lt;li>&lt;a href="http://www.opera.com/developer/tools/operadriver/">OperaDriver&lt;/a> support: We’ve bundled the most excellent OperaDriver into the release to make it easy to get started testing with &lt;a href="http://www.opera.com/browser/">Opera&lt;/a>.&lt;/li>
-&lt;li>Support for native events in Firefox 4.&lt;/li>
-&lt;li>&lt;a href="http://code.google.com/p/selenium/wiki/AdvancedUserInteractions">Advanced User Interactions&lt;/a>: An API that allows you to model complex user interactions, such as clicking on an element, holding the shift key, clicking on three more, and then dragging the four elements to a final destination. The entry point to this API is the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions&lt;/a> class.&lt;/li>
-&lt;/ul>
-&lt;p>We’ve also deleted all methods that were deprecated in 2.0b3 and have marked a number of methods and classes (notably &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/RenderedWebElement.html">RenderedWebElement&lt;/a> and &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getValue()">WebElement.getValue&lt;/a>) deprecated. These will be deleted in the next release.&lt;/p>
-&lt;p>Known issues:&lt;/p>
-&lt;ul>
-&lt;li>Native events on Linux may not work properly on tests that include alerts and prompts.&lt;/li>
-&lt;li>Mouse actions using the Advanced User Interactions API may not work properly for elements that have to be scrolled into view.&lt;/li>
-&lt;/ul>
-&lt;p>We plan on making our releases more frequent in the run up to 2.0final and polish off the bugs and issues. Stay tuned! This is going to be fun 🙂&lt;/p></description></item></channel></rss>
+&lt;p>We’re still very keen to hear your feedback! Let us know what you think!&lt;/p></description></item></channel></rss>

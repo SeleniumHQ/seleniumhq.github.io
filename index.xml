@@ -1,4 +1,28 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Public Project Meeting - July 15, 2021</title><link>/blog/2021/public-project-meeting-20210715/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210715/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+&lt;p>We have been working hard during the last few weeks redoing our
+&lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
+with the community and we are hoping to get as much feedback as
+possible!&lt;/p>
+&lt;p>We did a major revamp to our website two years ago. However, this
+revamp had some &amp;ldquo;technical debt&amp;rdquo; in it&amp;hellip;&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">We&amp;#39;re happy to announce that we have (finally!) refreshed our site. Head on over to &lt;a href="https://t.co/0xAiKdHrPj">https://t.co/0xAiKdHrPj&lt;/a> and have a browse! Thanks to &lt;a href="https://twitter.com/diegofmolina?ref_src=twsrc%5Etfw">@diegofmolina&lt;/a> and &lt;a href="https://twitter.com/manoj9788?ref_src=twsrc%5Etfw">@manoj9788&lt;/a> for making this happen.&lt;/p>&amp;mdash; Selenium (@SeleniumHQ) &lt;a href="https://twitter.com/SeleniumHQ/status/1194205732347887616?ref_src=twsrc%5Etfw">November 12, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to generate our website, and to
+build a website with Hugo, one normally needs to select a
+&lt;a href="https://themes.gohugo.io/">Hugo theme&lt;/a>. Our previous website was
+being built using two different Hugo themes, which was less than
+ideal. Having two Hugo themes was hard to maintain and accepting
+contributions was tricky in some cases.&lt;/p>
+&lt;p>This new website version is using the &lt;a href="https://github.com/google/docsy">Docsy&lt;/a>
+theme, made by some folks at Google and used by other popular projects
+such as &lt;a href="https://airflow.apache.org/">Apache Airflow&lt;/a> and
+&lt;a href="https://kubernetes.io/">Kubernetes&lt;/a>. Using Docsy helps us to focus
+more on the website&amp;rsquo;s content rather than spending lots of time
+maintaining the underlying details of it.&lt;/p>
+&lt;p>We all hope you will like the new look and please check our
+&lt;a href="/documentation/about/contributing/">contribution guidelines&lt;/a> if
+you want to contribute to the Selenium website.&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Public Project Meeting - July 15, 2021</title><link>/blog/2021/public-project-meeting-20210715/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210715/</guid><description>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on July 15, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -6150,11 +6174,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;/ul>
 &lt;p>You can see keynote &amp;amp; workshop info &lt;a href="http://year-2015.seleniumconf.org/">here&lt;/a>, and the selected talks &lt;a href="http://confengine.com/selenium-conf-2015/proposals">here&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>If you still need a ticket, the last block of tickets are on sale NOW&lt;/strong>.&lt;/p>
-&lt;p>If you want to attend the conference then register ASAP. Tickets will go quick and once they’re gone, they’re gone. To register go &lt;a href="http://www.eventbrite.com/e/selenium-conference-2015-tickets-17163911722">here&lt;/a> and purchase either a &lt;em>Last Call&lt;/em> or &lt;em>Last Call + Workshop&lt;/em> ticket.&lt;/p></description></item><item><title>Blog: Selenium Conf 2015 Details</title><link>/blog/2015/selenium-conf-2015-details/</link><pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate><guid>/blog/2015/selenium-conf-2015-details/</guid><description>
-&lt;p>&lt;a href="http://seleniumconf.org">The Selenium Conf 2015 website&lt;/a> is live!&lt;/p>
-&lt;p>You can now:&lt;/p>
-&lt;p>– purchase tickets (while supplies last)&lt;/p>
-&lt;p>– find out venue information&lt;/p>
-&lt;p>– submit a talk&lt;/p>
-&lt;p>– learn more about our talk selection process (tl;dr it is a blind review process to encourage diversity)&lt;/p>
-&lt;p>What are you waiting for? Go to &lt;a href="http://seleniumconf.org">the conference website&lt;/a> already!&lt;/p></description></item></channel></rss>
+&lt;p>If you want to attend the conference then register ASAP. Tickets will go quick and once they’re gone, they’re gone. To register go &lt;a href="http://www.eventbrite.com/e/selenium-conference-2015-tickets-17163911722">here&lt;/a> and purchase either a &lt;em>Last Call&lt;/em> or &lt;em>Last Call + Workshop&lt;/em> ticket.&lt;/p></description></item></channel></rss>
