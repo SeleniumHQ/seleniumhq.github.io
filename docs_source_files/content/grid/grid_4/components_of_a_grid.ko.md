@@ -16,7 +16,6 @@ it by sending us pull requests!
 The Router takes care of forwarding the request to the correct component.
 
 It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request.
 The Router behaves differently depending on the request. 
 If it is a new session request, the Router will add it to the New Session Queue. 
 The Distributor regularly checks if there is a free slot. 
