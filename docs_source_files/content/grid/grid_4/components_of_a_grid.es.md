@@ -16,9 +16,11 @@ it by sending us pull requests!
 The Router takes care of forwarding the request to the correct component.
 
 It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the Distributor (where the new session 
-creation will be handled). If the request belongs to an existing session, the
+The Router behaves differently depending on the request. 
+If it is a new session request, the Router will add it to the New Session Queue. 
+The Distributor regularly checks if there is a free slot. 
+If so, the first matching request is removed from the New Session Queue.
+If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will 
 return the Node where the session is running. After this, the Router will
 forward the request to the Node.
@@ -60,6 +62,26 @@ The Session Map is a data store that keeps the information of the session id and
 where the session is running. It serves as a support for the Router in the process of 
 forwarding a request to the Node. The Router will ask the Session Map for the Node 
 associated to a session id.
+
+## New Session Queue
+
+New Session Queue holds all the new session requests in a FIFO order. 
+It has configurable parameters for setting the request timeout and request retry interval.
+
+The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out, 
+if so the request is rejected and removed immediately.
+
+The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.
+
+Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue. 
+If request times out while retrying or adding to the front of the queue it is rejected.
+
+After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client. 
 
 ## Event Bus
 

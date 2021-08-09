@@ -5,24 +5,35 @@ weight: 1
 aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Chinese. Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
 {{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}
 
 
 ## Router
 
-路由器负责将请求转发到正确的组件.
+The Router takes care of forwarding the request to the correct component.
 
-它是网格的入口,所有外部请求都将借此被网格接收.
-路由器的行为取决于请求.
-如果是新的会话请求,
-则路由器会将其转发到分发服务器 (将在其中处理并创建新的会话). 
-如果请求属于存量会话,则路由器会将会话ID发送到会话集合,
-会话集合将返回会话正在运行的节点.
-此后, 路由器会将请求转发到节点.
+It is the entry point of the Grid, all external requests will be received by it.
+The Router behaves differently depending on the request.
+If it is a new session request, the Router will add it to the New Session Queue. 
+The Distributor regularly checks if there is a free slot. 
+If so, the first matching request is removed from the New Session Queue.
+If the request belongs to an existing session, the
+Router will send the session id to the Session Map, and the Session Map will 
+return the Node where the session is running. After this, the Router will
+forward the request to the Node.
 
-路由器旨在通过将请求发送到能够更好地处理请求的组件,
-来平衡网格中的负载,
-从而避免过程中任何组件无谓地过载.
+The Router aims to balance the load in the Grid by sending the requests to the
+component that is able to handle them better, without overloading any component
+that is not needed in the process.
 
 ## Distributor
 
@@ -63,41 +74,25 @@ aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 在向节点转发请求的过程中起作用.
 路由将通过会话表获取与会话id关联的节点.
 
-## 新的会话队列器, 新的会话队列
+## New Session Queue
 
-新的会话队列器是唯一可以与新会话队列通信的组件.
-它处理所有的诸如添加这样操纵队列的操作.
-它具有用于设置请求超时和请求重试间隔的可配置参数.
+New Session Queue holds all the new session requests in a FIFO order. 
+It has configurable parameters for setting the request timeout and request retry interval.
 
-新的会话队列器从路由器接收新会话请求
-并将其添加到队列中.
-队列一直等待直到获取了请求的响应.
-如果请求超时, 
-请求将立即被拒绝, 
-并且不会添加到队列中. 
+The Router adds the new session request to the New Session Queue and waits for the response.
+The New Session Queue regularly checks if any request in the queue has timed out, 
+if so the request is rejected and removed immediately.
 
-成功地将请求添加到队列后, 
-事件总线将触发一个事件.
-分发服务器接收此事件并轮询队列.
-此时, 将尝试创建一个会话.
+The Distributor regularly checks if a slot is available. If so, the Distributor requests the
+New Session Queue for the first matching request. The Distributor then attempts to create
+a new session.
 
-如果所请求的功能不存在于任何已注册的节点中, 
-那么请求将立即被拒绝, 
-并且客户端将收到响应.
+Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue. 
+If request times out while retrying or adding to the front of the queue it is rejected.
 
-如果请求的功能与任何节点插槽的功能匹配, 
-分发服务器将尝试获取可用插槽.
-如果所有插槽都很忙, 
-分发服务器将要求队列器将请求添加到队列前面.
-分发服务器在请求重试间隔之后再次接收请求.
-它将尝试重试, 
-直到请求成功或超时.
-如果请求在重试或添加到队列前面时超时, 
-则其将被拒绝.
-
-在获得可用的插槽和会话创建之后, 
-分发服务器通过事件总线将新会话响应传递给新会话队列器.
-新的会话队列器将在接收到事件时响应给客户端. 
+After a session is created successfully, the Distributor sends the session information to the New Session Queue.
+The New Session Queue sends the response back to the client.
 
 ## 事件总线
 
