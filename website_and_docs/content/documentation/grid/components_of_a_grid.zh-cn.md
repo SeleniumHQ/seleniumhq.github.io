@@ -2,6 +2,7 @@
 title: "服务网格的组件"
 linkTitle: "服务网格的组件"
 weight: 1
+aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 ---
 
 {{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}

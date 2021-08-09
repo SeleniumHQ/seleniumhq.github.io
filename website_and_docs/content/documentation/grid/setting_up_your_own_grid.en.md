@@ -2,6 +2,7 @@
 title: "Setting up your own"
 linkTitle: "Setting up your own"
 weight: 2
+aliases: ["/documentation/en/grid/grid_4/setting_up_your_own_grid/"]
 ---
 
 ## Different Modes of Grid setup in Selenium 4:

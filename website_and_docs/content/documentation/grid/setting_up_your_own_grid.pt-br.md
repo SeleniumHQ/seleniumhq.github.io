@@ -2,6 +2,7 @@
 title: "Configurando a sua"
 linkTitle: "Configurando a sua"
 weight: 2
+aliases: ["/documentation/pt-br/grid/grid_4/setting_up_your_own_grid/"]
 ---
 
 ## Diferentes modos de configuração de Grid no Selenium 4:

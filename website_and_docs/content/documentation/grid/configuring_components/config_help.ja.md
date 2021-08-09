@@ -2,6 +2,7 @@
 title: "構成ヘルプ"
 linkTitle: "構成ヘルプ"
 weight: 1
+aliases: ["/documentation/ja/grid/grid_4/configuring_components/config_help/"]
 ---
 
 ヘルプコマンドは、現在のコード実装に基づいて情報を表示します。

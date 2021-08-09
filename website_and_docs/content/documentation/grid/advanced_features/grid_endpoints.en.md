@@ -2,6 +2,7 @@
 title: "Grid Endpoints"
 linkTitle: "Grid Endpoints"
 weight: 3
+aliases: ["/documentation/en/grid/grid_4/grid_endpoints/"]
 ---
 
 ## Grid 

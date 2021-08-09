@@ -2,6 +2,7 @@
 title: "Config help"
 linkTitle: "Config help"
 weight: 1
+aliases: ["/documentation/ko/grid/grid_4/configuring_components/config_help/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -2,6 +2,7 @@
 title: "配置帮助"
 linkTitle: "配置帮助"
 weight: 1
+aliases: ["/documentation/zh-cn/grid/grid_4/configuring_components/config_help/"]
 ---
 
 

@@ -7,4 +7,5 @@ description: >
   了解其工作原理, 
   以及如何设置自己的功能, 
   请浏览以下部分.
+aliases: ["/documentation/zh-cn/grid/grid_4/advanced_features/"]
 ---

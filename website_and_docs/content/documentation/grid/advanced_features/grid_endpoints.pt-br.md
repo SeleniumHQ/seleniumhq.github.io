@@ -2,6 +2,7 @@
 title: "Rotas da Grid"
 linkTitle: "Rotas da Grid"
 weight: 3
+aliases: ["/documentation/pt-br/grid/grid_4/grid_endpoints/"]
 ---
 
 {{% pageinfo color="warning" %}}

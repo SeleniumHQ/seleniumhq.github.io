@@ -2,6 +2,7 @@
 title: "Observability"
 linkTitle: "Observability"
 weight: 1
+aliases: ["/documentation/zh-cn/grid/grid_4/advanced_features/observability/"]
 ---
 
 

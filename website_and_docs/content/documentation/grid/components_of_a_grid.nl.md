@@ -2,6 +2,7 @@
 title: "Components"
 linkTitle: "Components"
 weight: 1
+aliases: ["/documentation/nl/grid/grid_4/components_of_a_grid/"]
 ---
 
 {{% pageinfo color="warning" %}}

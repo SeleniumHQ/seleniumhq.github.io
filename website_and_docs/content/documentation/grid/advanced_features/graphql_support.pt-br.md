@@ -2,6 +2,7 @@
 title: "Suporte a buscas em GraphQL"
 linkTitle: "Suporte a buscas em GraphQL"
 weight: 2
+aliases: ["/documentation/pt-br/grid/grid_4/graphql_support/"]
 ---
 
 GraphQL é uma linguagem de consulta para APIs e um runtime para atender a essas consultas com seus dados existentes. Ele dá aos usuários o poder de pedir exatamente o que precisam e nada mais.

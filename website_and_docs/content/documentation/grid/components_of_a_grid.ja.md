@@ -2,6 +2,7 @@
 title: "グリッドのコンポーネント"
 linkTitle: "グリッドのコンポーネント"
 weight: 1
+aliases: ["/documentation/ja/grid/grid_4/components_of_a_grid/"]
 ---
 
 {{% pageinfo color="warning" %}}

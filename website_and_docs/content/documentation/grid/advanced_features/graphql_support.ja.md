@@ -2,6 +2,7 @@
 title: "GraphQLクエリのサポート"
 linkTitle: "GraphQLクエリのサポート"
 weight: 2
+aliases: ["/documentation/ja/grid/grid_4/graphql_support/"]
 ---
 
 GraphQLは、APIのクエリ言語であり、既存のデータでこれらのクエリを実行するためのランタイムです。

@@ -2,6 +2,7 @@
 title: "GraphQL Query Support"
 linkTitle: "GraphQL Query Support"
 weight: 2
+aliases: ["/documentation/es/grid/grid_4/graphql_support/"]
 ---
 
 {{% pageinfo color="warning" %}}

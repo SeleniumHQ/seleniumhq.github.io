@@ -2,6 +2,7 @@
 title: "GraphQL查询支持"
 linkTitle: "GraphQL查询支持"
 weight: 2
+aliases: ["/documentation/zh-cn/grid/grid_4/graphql_support/"]
 ---
 
 
