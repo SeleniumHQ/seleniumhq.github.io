@@ -33,8 +33,9 @@ such as [Apache Airflow](https://airflow.apache.org/) and
 more on the website's content rather than spending lots of time
 maintaining the underlying details of it. 
 
-We all hope you will like it and if you want to contribute to the Selenium website,
-please check our [contribution guidelines](/documentation/about/contributing/).
+We all hope you will like the new look and please check our 
+[contribution guidelines](/documentation/about/contributing/) if
+you want to contribute to the Selenium website.
 
 
 Happy testing!
