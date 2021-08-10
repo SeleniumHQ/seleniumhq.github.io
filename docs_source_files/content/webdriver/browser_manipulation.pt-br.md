@@ -1415,6 +1415,13 @@ _Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
   await driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR
+    driver.get("https://www.selenium.dev")
+    val printer = driver as PrintsPage
+
+    val printOptions = PrintOptions()
+    printOptions.setPageRanges("1-2")
+    
+    val pdf: Pdf = printer.print(printOptions)
+    val content = pdf.content
   {{< / code-panel >}}
 {{< / code-tab >}}
