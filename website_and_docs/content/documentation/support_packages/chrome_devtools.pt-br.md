@@ -110,7 +110,26 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Please raise a PR to add code sample  
+const { Builder } = require("selenium-webdriver");
+
+async function geoLocationTest() {
+  const driver = await new Builder().forBrowser("chrome").build();
+  await driver.get("http://www.google.com");
+  const pageCdpConnection = await driver.createCDPConnection("page");
+  //Latitude and longitude of Tokyo, Japan
+  const coordinates = {
+    latitude: 35.689487,
+    longitude: 139.691706,
+    accuracy: 100,
+  };
+  await pageCdpConnection.execute(
+    "Emulation.setGeolocationOverride",
+    1,
+    coordinates
+  );
+}
+
+geoLocationTest(); 
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
