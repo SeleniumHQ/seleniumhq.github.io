@@ -163,7 +163,12 @@ await driver.register('username', 'password', pageCdpConnection)
 await driver.get(server.url())
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-# Please raise a PR to add code sample
+val uriPredicate =
+    Predicate { uri: URI ->
+        uri.host.contains("your-domain.com")
+    }
+(driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
+driver.get("https://your-domain.com/login")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
