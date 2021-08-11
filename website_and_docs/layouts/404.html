@@ -1,8 +1,25 @@
 {{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title">Not found</h1>
-       <p>Oops! This page doesn't exist. Try going back to our <a href="{{ "/" | relURL }}">home page</a>.</p>
+  <div class="row py-5">
+    <div class="col-lg-12 col-md-12 pl-5 py-5 -bg-selenium-green">
+      <div class="card h-100 bg-transparent border-0">
+        <div class="card-body px-0">
+          <h1 class="card-title text-center">404</h1>
+          <h1 class="card-title text-center">Element not found</h1>
+          <h1 class="card-title text-center pt-5">Sorry, we meant page not found!</h1>
+          <h3 class="card-text py-4 text-center">
+            The page you are looking for might have been removed, had its name
+            changed or is temporarily unavailable.
+          </h3>
+        </div>
+        <div class="card-footer bg-transparent border-0">
+          <div class="selenium-button-container">
+            <a href="{{ "/" | relURL }}" class="selenium-button selenium-white-green text-uppercase font-weight-bold">
+            Let's go home
+            <i class="pl-3 fas fa-caret-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
+  </div>
 {{ end }}
