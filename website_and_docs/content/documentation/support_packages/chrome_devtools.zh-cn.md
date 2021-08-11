@@ -446,6 +446,17 @@ public void performanceMetricsExample() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
+val driver = ChromeDriver()
+val devTools = driver.devTools
+devTools.createSession()
+devTools.send(Performance.enable(Optional.empty()))
+val metricList: List<Metric> = devTools.send(Performance.getMetrics())
+
+driver["https://google.com"]
+driver.quit()
+
+for (m in metricList) {
+    println(m.name.toString() + " = " + m.value)
+}
 {{< /tab >}}
 {{< /tabpane >}}
