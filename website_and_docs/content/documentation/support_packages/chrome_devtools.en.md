@@ -167,7 +167,12 @@ await driver.register('username', 'password', pageCdpConnection)
 await driver.get(server.url())
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
+val uriPredicate =
+    Predicate { uri: URI ->
+        uri.host.contains("your-domain.com")
+    }
+(driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
+driver.get("https://your-domain.com/login")
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -445,6 +450,17 @@ public void performanceMetricsExample() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
+val driver = ChromeDriver()
+val devTools = driver.devTools
+devTools.createSession()
+devTools.send(Performance.enable(Optional.empty()))
+val metricList: List<Metric> = devTools.send(Performance.getMetrics())
+
+driver["https://google.com"]
+driver.quit()
+
+for (m in metricList) {
+    println(m.name.toString() + " = " + m.value)
+}
 {{< /tab >}}
 {{< /tabpane >}}
