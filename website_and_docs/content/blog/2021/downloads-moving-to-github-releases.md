@@ -18,18 +18,18 @@ desired.
 
 At the Selenium project, we have decided to upload all binaries to the corresponding release
 in [GitHub](https://github.com/SeleniumHQ/selenium/releases) in order to simplify the process
-of finding the right binary for each release. When we complete the upload of all binaries, we 
-will phase out the current Google Storage. 
+of finding the right binary for each release. We expect to complete this in the next couple 
+of weeks.
 
-We expect to complete this in the next couple of weeks and then announce the date where the 
-binaries won't be available in Google Storage anymore.
+All past releases will be available both in Google Storage and GitHub releases, but new ones will
+only be present in GitHub releases. 
 
 If you are a watcher of the Selenium [repo](https://github.com/SeleniumHQ/selenium), please note
 that there will be some noise in your inboxes. We need to create releases for old tags in order
 to upload the binaries to the release (as is the way GitHub releases work).
 
 If you have any questions or comments, please reach out through any of all the available options 
-shown at https://www.selenium.dev/support/.
+shown at our [support page](https://www.selenium.dev/support/).
 
 Stay tuned for updates by following [SeleniumHQ](https://twitter.com/seleniumhq)! 
 

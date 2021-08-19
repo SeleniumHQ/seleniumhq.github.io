@@ -7,6 +7,7 @@ categories: ["general"]
 author: Diego Molina ([@diegofmolina](https://twitter.com/diegofmolina))
 description: >
   We're very happy to announce the new look for the Selenium website!
+aliases: ["/blog/2021/new_look_for_selenium_site/"]
 ---
 
 We have been working hard during the last few weeks redoing our
