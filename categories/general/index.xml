@@ -1,4 +1,26 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
+&lt;p>Thanks to Google, &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
+has been the central place where we have been able to upload all binaries created for each
+Selenium release, and the place where the Selenium community can download them from. To do so,
+all people needed to do was visit our &lt;a href="https://www.selenium.dev/downloads/">downloads&lt;/a> page,
+find the release, and download from there!&lt;/p>
+&lt;p>The Selenium project hosts its source code on GitHub, and people who are familiar with GitHub
+know that they can go to the &lt;a href="https://github.com/SeleniumHQ/selenium/releases">&amp;ldquo;release&amp;rdquo;&lt;/a> page
+there to find any downloads for each release of a project.&lt;/p>
+&lt;p>Rather than hosting the downloads in two places, the Selenium project has decided to host
+everything on GitHub. We&amp;rsquo;ll still have links from the download page, but rather than pointing
+to Google Storage, these will now point to the downloads for each corresponding release tagged
+on GitHub.&lt;/p>
+&lt;p>All past releases will be available both in Google Storage and GitHub releases, but new ones
+will only be present in GitHub releases.&lt;/p>
+&lt;p>If you are a watcher of the Selenium &lt;a href="https://github.com/SeleniumHQ/selenium">repo&lt;/a>, please note
+that there will be some noise in your inboxes. We need to create releases for old tags in order
+to upload the binaries to the release (as is the way GitHub releases work), and we expect to
+complete this in the next couple of weeks.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new-look-for-selenium-site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new-look-for-selenium-site/</guid><description>
 &lt;p>We have been working hard during the last few weeks redoing our
 &lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
 with the community and we are hoping to get as much feedback as
@@ -1052,17 +1074,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>
 &lt;p>&lt;a href="http://www.triggeredmessaging.com/blog/server-monitoring-with-a-raspberry-pi-and-graphite">Low Power Server Monitoring with a Raspberry&lt;/a> is just cool&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #130</title><link>/blog/2012/a-smattering-of-selenium-130/</link><pubDate>Tue, 27 Nov 2012 00:00:00 +0000</pubDate><guid>/blog/2012/a-smattering-of-selenium-130/</guid><description>
-&lt;p>Can’t get enough Se bloggage? Have a look at &lt;a href="http://itkosmopolit.wordpress.com/2012/11/23/overview-of-selenium-blogs/">Overview of Selenium Blogs&lt;/a> — though I must say there has to be something wrong with the Alexa algorithm if I am that far down the list. And behind both David and Alister. 🙂&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/">Must Have Git Aliases: Advanced Examples&lt;/a> reminds me of someone I used to work with who likely couldn’t function on a clean unix system, but with all his aliases was mind blowing to watch&lt;/li>
-&lt;li>&lt;a href="http://techblog.safaribooksonline.com/2012/11/23/writing-a-selenium-test-framework-for-a-django-site-part-3/">Writing a Selenium Test Framework for a Django Site (Part 3)&lt;/a> has the usual myths and FUD around XPath and embeds locators in the script method but is the first thing I’ve seen that uses the Color class in Python so I’ll overlook those things. This time.&lt;/li>
-&lt;li>&lt;a href="https://makandracards.com/makandra/12661-how-to-solve-selenium-focus-issues">How to solve Selenium focus issues&lt;/a> introduced me to jQuery’s :focus pseudoselector&lt;/li>
-&lt;li>I’m sure there is something to be learned from &lt;a href="http://evan.tiggerpalace.com/articles/2012/11/21/use-rails-until-it-hurts/">Use Rails until it hurts&lt;/a>. Especially from the paragraph above the twitter inclusions&lt;/li>
-&lt;li>&lt;a href="http://watirmelon.com/2012/11/27/checking-an-image-is-actually-visible-using-webdriver/">Checking an image is actually visible using WebDriver&lt;/a> is something I plan on stealing.&lt;/li>
-&lt;li>&lt;a href="http://www.kirsle.net/blog/kirsle/android-4-0-in-virtualbox">Android 4.0 in VirtualBox&lt;/a> seems like a cool way to build out an android build farm&lt;/li>
-&lt;li>&lt;a href="http://phpmaster.com/autoloading-and-the-psr-0-standard/">Autoloading in PHP and the PSR-0 Standard&lt;/a> has some Symfony specific bits, but is generally useful&lt;/li>
-&lt;li>&lt;a href="http://blogs.gnome.org/danni/2012/11/19/extending-selenium-with-jquery/">Extending Selenium with jQuery&lt;/a> is something else I intend to steal&lt;/li>
-&lt;li>From the same person is &lt;a href="http://blogs.gnome.org/danni/2012/11/15/combining-py-test-and-selenium-to-test-webapps/">Combining py.test and Selenium to test webapps&lt;/a> which shows off some of what py.test can do with fixtures. Not how I would do it, but cool none the less.&lt;/li>
-&lt;li>Let me say this again; the officially blessed solution for getting response codes is to route your calls through a proxy (like the BrowserMob Proxy) and then ask it what they were. But if you are bound and determined to craft ‘solutions’ that only work in a single browser, or a single language, or require changing your application then &lt;a href="http://www.ninthavenue.com.au/how-to-get-the-http-status-code-in-selenium-webdriver">How To Get The HTTP Status Code In Selenium WebDriver&lt;/a> will make good breakfast reading. North American time that is…&lt;/li>
 &lt;/ul></description></item></channel></rss>

@@ -1,4 +1,26 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
+&lt;p>Thanks to Google, &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
+has been the central place where we have been able to upload all binaries created for each
+Selenium release, and the place where the Selenium community can download them from. To do so,
+all people needed to do was visit our &lt;a href="https://www.selenium.dev/downloads/">downloads&lt;/a> page,
+find the release, and download from there!&lt;/p>
+&lt;p>The Selenium project hosts its source code on GitHub, and people who are familiar with GitHub
+know that they can go to the &lt;a href="https://github.com/SeleniumHQ/selenium/releases">&amp;ldquo;release&amp;rdquo;&lt;/a> page
+there to find any downloads for each release of a project.&lt;/p>
+&lt;p>Rather than hosting the downloads in two places, the Selenium project has decided to host
+everything on GitHub. We&amp;rsquo;ll still have links from the download page, but rather than pointing
+to Google Storage, these will now point to the downloads for each corresponding release tagged
+on GitHub.&lt;/p>
+&lt;p>All past releases will be available both in Google Storage and GitHub releases, but new ones
+will only be present in GitHub releases.&lt;/p>
+&lt;p>If you are a watcher of the Selenium &lt;a href="https://github.com/SeleniumHQ/selenium">repo&lt;/a>, please note
+that there will be some noise in your inboxes. We need to create releases for old tags in order
+to upload the binaries to the release (as is the way GitHub releases work), and we expect to
+complete this in the next couple of weeks.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new-look-for-selenium-site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new-look-for-selenium-site/</guid><description>
 &lt;p>We have been working hard during the last few weeks redoing our
 &lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
 with the community and we are hoping to get as much feedback as
@@ -774,6 +796,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>The &lt;a href="http://www.opera.com/developer/tools/operadriver/">Opera driver&lt;/a>, developed by the lovely chaps at Opera Software, is bundled with this release.&lt;/li>
 &lt;li>Improvements in the way that mouse interactions are simulated, particularly when elements are outside the visible area of the page.&lt;/li>
 &lt;/ul>
-&lt;p>As with almost all releases, there are still some issues left to resolve, but we’re working hard to make Selenium 2.0 as good as it can be.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc2: The Better Working Release</title><link>/blog/2011/selenium-2-0rc2-the-better-working-release/</link><pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc2-the-better-working-release/</guid><description>
-&lt;p>You win some and you lose some. We’d been really pleased to get Selenium 2.0rc1 out, so we were pretty disappointed to hear that some of you were running into problems with the Java version of the IE driver not launching IE sometimes. That’s definitely not good, so we fixed the problems and have &lt;a href="http://code.google.com/p/selenium/downloads/list">released Selenium 2.0rc2&lt;/a>. It’s the same as rc1, but with fewer problems 🙂&lt;/p>
-&lt;p>We’re still very keen to hear your feedback! Let us know what you think!&lt;/p></description></item></channel></rss>
+&lt;p>As with almost all releases, there are still some issues left to resolve, but we’re working hard to make Selenium 2.0 as good as it can be.&lt;/p></description></item></channel></rss>

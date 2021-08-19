@@ -1,4 +1,26 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new_look_for_selenium_site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new_look_for_selenium_site/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
+&lt;p>Thanks to Google, &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
+has been the central place where we have been able to upload all binaries created for each
+Selenium release, and the place where the Selenium community can download them from. To do so,
+all people needed to do was visit our &lt;a href="https://www.selenium.dev/downloads/">downloads&lt;/a> page,
+find the release, and download from there!&lt;/p>
+&lt;p>The Selenium project hosts its source code on GitHub, and people who are familiar with GitHub
+know that they can go to the &lt;a href="https://github.com/SeleniumHQ/selenium/releases">&amp;ldquo;release&amp;rdquo;&lt;/a> page
+there to find any downloads for each release of a project.&lt;/p>
+&lt;p>Rather than hosting the downloads in two places, the Selenium project has decided to host
+everything on GitHub. We&amp;rsquo;ll still have links from the download page, but rather than pointing
+to Google Storage, these will now point to the downloads for each corresponding release tagged
+on GitHub.&lt;/p>
+&lt;p>All past releases will be available both in Google Storage and GitHub releases, but new ones
+will only be present in GitHub releases.&lt;/p>
+&lt;p>If you are a watcher of the Selenium &lt;a href="https://github.com/SeleniumHQ/selenium">repo&lt;/a>, please note
+that there will be some noise in your inboxes. We need to create releases for old tags in order
+to upload the binaries to the release (as is the way GitHub releases work), and we expect to
+complete this in the next couple of weeks.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: The Selenium website has a new look!</title><link>/blog/2021/new-look-for-selenium-site/</link><pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/new-look-for-selenium-site/</guid><description>
 &lt;p>We have been working hard during the last few weeks redoing our
 &lt;a href="//selenium.dev">website&lt;/a>. Today, we are very happy to share it
 with the community and we are hoping to get as much feedback as
@@ -6165,13 +6187,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>Where: Bangalore, India (at &lt;a href="http://www.chancerypavilion.com/">The Chancery Pavilion Hotel&lt;/a>)&lt;/p>
 &lt;p>Mark you calendars! We’ll have more details as they become available (e.g., call for speakers, ticket sales, etc.). To get the latest updates, be sure to &lt;a href="http://eepurl.com/bEGBvX">sign up for the Selenium Conf mailing list&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium Conf 2016</title><link>/blog/2015/selenium-conf-2016/</link><pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate><guid>/blog/2015/selenium-conf-2016/</guid><description>
 &lt;p>Interested in learning what’s in store for Se Conf 2016? Then be sure to read &lt;a href="http://year-2015.seleniumconf.org/next-year/">this write-up from the Conference Organizers&lt;/a>.&lt;/p>
-&lt;p>Also, if you want to receive email notifications about the conference (e.g., when and where it will be, call for speakers, ticket sales, etc.) then go &lt;a href="http://eepurl.com/bEGBvX">here&lt;/a> and complete the sign-up form.&lt;/p></description></item><item><title>Blog: Selenium Conf 2015 Update</title><link>/blog/2015/selenium-conf-2015-update/</link><pubDate>Sat, 08 Aug 2015 00:00:00 +0000</pubDate><guid>/blog/2015/selenium-conf-2015-update/</guid><description>
-&lt;p>Selenium 2015 is just around the corner (September 8-10). Since &lt;a href="/blog/2015/selenium-conf-2015-details/">our last post&lt;/a> we have:&lt;/p>
-&lt;ul>
-&lt;li>confirmed Keynote speakers&lt;/li>
-&lt;li>finalized workshop presenters&lt;/li>
-&lt;li>selected the talks for the conference&lt;/li>
-&lt;/ul>
-&lt;p>You can see keynote &amp;amp; workshop info &lt;a href="http://year-2015.seleniumconf.org/">here&lt;/a>, and the selected talks &lt;a href="http://confengine.com/selenium-conf-2015/proposals">here&lt;/a>.&lt;/p>
-&lt;p>&lt;strong>If you still need a ticket, the last block of tickets are on sale NOW&lt;/strong>.&lt;/p>
-&lt;p>If you want to attend the conference then register ASAP. Tickets will go quick and once they’re gone, they’re gone. To register go &lt;a href="http://www.eventbrite.com/e/selenium-conference-2015-tickets-17163911722">here&lt;/a> and purchase either a &lt;em>Last Call&lt;/em> or &lt;em>Last Call + Workshop&lt;/em> ticket.&lt;/p></description></item></channel></rss>
+&lt;p>Also, if you want to receive email notifications about the conference (e.g., when and where it will be, call for speakers, ticket sales, etc.) then go &lt;a href="http://eepurl.com/bEGBvX">here&lt;/a> and complete the sign-up form.&lt;/p></description></item></channel></rss>
