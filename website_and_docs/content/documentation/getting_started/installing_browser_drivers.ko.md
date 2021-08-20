@@ -76,7 +76,7 @@ Only local connections are allowed.
 | Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/Issues/list) |
 | Firefox | Windows/macOS/Linux | Mozilla | [DownLoads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/Issues) |
 | Edge | Windows 10 | Microsoft | [DownLoads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//developer.microsoft.com/en-us/microsoft-edge/platform/Issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium Project | [DownLoads](//selenium-release.storage.googleapis.com/index.html) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Internet Explorer | Windows | Selenium Project | [DownLoads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS El Capitan and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
 | Opera | Windows/macOS/Linux | Opera | [DownLoads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/Issues) |
 

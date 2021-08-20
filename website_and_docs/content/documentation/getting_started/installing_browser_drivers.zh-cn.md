@@ -73,7 +73,7 @@ Only local connections are allowed.
 | Chromium/Chrome | Windows/macOS/Linux | 谷歌 | [下载](//chromedriver.storage.googleapis.com/index.html) | [问题](//bugs.chromium.org/p/chromedriver/issues/list) |
 | 火狐 | Windows/macOS/Linux | Mozilla | [下载](//github.com/mozilla/geckodriver/releases) | [问题](//github.com/mozilla/geckodriver/issues) |
 | Edge | Windows 10 | 微软 | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [问题](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium 项目组 | [下载](//selenium-release.storage.googleapis.com/index.html) | [问题](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Internet Explorer | Windows | Selenium 项目组 | [下载](/downloads) | [问题](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS El Capitan 及更高版本 | 苹果 | 内置 | [问题](//bugreport.apple.com/logon) |
 | Opera | Windows/macOS/Linux | Opera | [下载](//github.com/operasoftware/operachromiumdriver/releases) | [问题](//github.com/operasoftware/operachromiumdriver/issues) |
 

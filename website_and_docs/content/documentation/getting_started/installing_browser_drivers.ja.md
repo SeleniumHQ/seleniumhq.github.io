@@ -79,7 +79,7 @@ Only local connections are allowed.
 | Chromium/Chrome | Windows/macOS/Linux | Google | [ダウンロード](//chromedriver.storage.googleapis.com/index.html) | [イシュートラッカー](//bugs.chromium.org/p/chromedriver/issues/list) |
 | Firefox | Windows/macOS/Linux | Mozilla | [ダウンロード](//github.com/mozilla/geckodriver/releases) | [イシュートラッカー](//github.com/mozilla/geckodriver/issues) |
 | Edge | Windows 10 | Microsoft | [ダウンロード](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [イシュートラッカー](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium Project | [ダウンロード](//selenium-release.storage.googleapis.com/index.html) | [イシュートラッカー](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Internet Explorer | Windows | Selenium Project | [ダウンロード](/downloads) | [イシュートラッカー](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS El Capitan and newer | Apple | ビルトイン | [イシュートラッカー](//bugreport.apple.com/logon) |
 | Opera | Windows/macOS/Linux | Opera | [ダウンロード](//github.com/operasoftware/operachromiumdriver/releases) | [イシュートラッカー](//github.com/operasoftware/operachromiumdriver/issues) |
 
