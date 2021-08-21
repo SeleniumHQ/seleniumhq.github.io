@@ -5,7 +5,7 @@
         Previous Releases
       </h2>
       <p class="card-text w-lg-75">
-        You can also find a complete list of previous Selenium releases
+        You can also find a more complete list of Selenium releases
         <!-- Link trigger modal -->
         <a href="#previous-releases" data-toggle="modal" data-target="#previous-releases">here</a>.
         <!-- Modal -->
@@ -37,7 +37,13 @@
                   <div class="card card-body">
                     <h6 class="card-title pl-2 pb-3">
                       <span class="selenium-ide font-weight-bold">Release date:</span>
-                      {{ .created_at }}
+                      <span>{{ .created_at }}</span>
+                      <span class="pl-4">
+                        <a href="{{ .html_url }}" target="_blank">
+                          Open in GitHub
+                          <i class="fas fa-external-link-alt pl-2"></i>
+                        </a>
+                      </span>
                     </h6>
                     <div class="table-responsive">
                       <table class="table m-0">
