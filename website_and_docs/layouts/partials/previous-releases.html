@@ -5,9 +5,9 @@
         Previous Releases
       </h2>
       <p class="card-text w-lg-75">
-        You can also find a complete list of previous Selenium releases        
+        You can also find a complete list of previous Selenium releases
         <!-- Link trigger modal -->
-        <a href="#previous-releases" data-toggle="modal" data-target="#previous-releases">here</a>.        
+        <a href="#previous-releases" data-toggle="modal" data-target="#previous-releases">here</a>.
         <!-- Modal -->
         <div class="modal fade" id="previous-releases" tabindex="-1" aria-labelledby="previous-releases-label" aria-hidden="true">
           <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -20,47 +20,48 @@
               </div>
               <div class="modal-body">
                 {{ $.Scratch.Set "counter" 0 }}
-                {{ range .Site.Data.releases }}
+                {{ $url := "https://api.github.com/repos/seleniumhq/selenium/releases?per_page=100" }}
+                {{ $releases := getJSON $url }}
+                {{ range sort $releases "created_at" "desc" }}
                 <!-- Expand / Collapse -->
                 {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
                 {{ $counter := $.Scratch.Get "counter" }}
                 <p>
                   <button class="btn btn-link no-focus" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
                     <i class="fas fa-plus-circle show-collapsed selenium-ide pr-2"></i>
-                    <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>                    
-                    <span class="-text-900 font-weight-bold">{{ .version }}</span>
+                    <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>
+                    <span class="-text-900 font-weight-bold">{{ .name }}</span>
                   </button>
                 </p>
                 <div class="collapse pb-3" id="release-{{ $counter }}">
                   <div class="card card-body">
+                    <h6 class="card-title pl-2 pb-3">
+                      <span class="selenium-ide font-weight-bold">Release date:</span>
+                      {{ .created_at }}
+                    </h6>
                     <div class="table-responsive">
                       <table class="table m-0">
                         <thead>
                           <tr>
                             <th scope="col" class="selenium-ide">Name</th>
-                            <th scope="col" class="selenium-ide">Version</th>
-                            <th scope="col" class="selenium-ide">Last Modified</th>
                             <th scope="col" class="selenium-ide">Size</th>
-                            <th scope="col" class="selenium-ide">ETag</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {{ range .links }}
+                          {{ range .assets }}
+                          {{ $size := (div .size (mul 1024 1024)) }}
                           <tr>
                             <th scope="row">
                               <p>
-                                <a href="{{ .url }}">{{ .name }}</a>
+                                <a href="{{ .browser_download_url }}">{{ .name }}</a>
                               </p>
                             </th>
-                            <td>{{ .version }}</td>
-                            <td>{{ .lastModified }}</td>
-                            <td>{{ .size }}</td>
-                            <td>{{ .etag }}</td>
+                            <td>{{ printf "%.1f" ($size) }} MB</td>
                           </tr>
                           {{ end }}
                         </tbody>
                       </table>
-                    </div>                    
+                    </div>
                   </div>
                 </div>
                 {{ end }}
@@ -75,7 +76,7 @@
           </div>
         </div>
 
-      </p>      
+      </p>
     </div>
-  </div>  
+  </div>
 </div>
