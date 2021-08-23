@@ -37,10 +37,9 @@
                   <div class="card card-body">
                     <h6 class="card-title pl-2 pb-3">
                       <span class="selenium-ide font-weight-bold">Release date:</span>
-                      <span>{{ .created_at }}</span>
-                      <span class="pl-4">
+                      <span class="pl-2">
                         <a href="{{ .html_url }}" target="_blank">
-                          Open in GitHub
+                          {{ time.Format "January 2, 2006" .created_at }}
                           <i class="fas fa-external-link-alt pl-2"></i>
                         </a>
                       </span>
