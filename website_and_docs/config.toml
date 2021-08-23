@@ -196,7 +196,7 @@ enable = false
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name = "User mailing list"
-	url = "http://groups.google.com/group/selenium-users"
+	url = "https://groups.google.com/group/selenium-users"
 	icon = "fas fa-mail-bulk"
         desc = "Discussion and help from your fellow users"
 [[params.links.user]]
@@ -227,12 +227,12 @@ enable = false
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://example.org/slack"
+	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-f7jwg1n7-RVw4v4sMA7Zjufira_~EVw"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://example.org/irc"
+	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]
