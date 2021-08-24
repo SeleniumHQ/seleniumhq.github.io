@@ -1,4 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 24 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: All Selenium downloads are now available onGitHub releases</title><link>/blog/2021/downloads-now-on-github-releases/</link><pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-now-on-github-releases/</guid><description>
+&lt;p>We announced on a previous &lt;a href="/blog/2021/downloads-moving-to-github-releases/">entry&lt;/a> our
+decision to move all binaries from &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
+to &lt;a href="https://github.com/SeleniumHQ/selenium/releases">GitHub releases&lt;/a>. Today, we would like to
+announce that this work has been completed and all binaries are also available to be downloaded
+in each one of the releases we have done in GitHub.&lt;/p>
+&lt;p>In addition to that, all links on our &lt;a href="https://www.selenium.dev/downloads/">downloads&lt;/a> page
+have been updated, as well as all references to Google Storage in the Selenium code base.&lt;/p>
+&lt;p>Please note that all past releases will be available both in Google Storage and GitHub releases,
+but new ones will only be present in GitHub releases. We recommend everyone to modify your
+download scripts to keep all tooling up to date.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
 &lt;p>Thanks to Google, &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
 has been the central place where we have been able to upload all binaries created for each
 Selenium release, and the place where the Selenium community can download them from. To do so,
@@ -1039,39 +1053,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>So what that it is over two months old, but &lt;a href="http://sebastian-bergmann.de/archives/923-PHPUnit-3.7.html">PHPUnit 3.7&lt;/a> lists some relevant information about the release&lt;/li>
 &lt;li>&lt;a href="https://github.com/nicegraham/SeleniumScreenSnapper">SeleniumScreenSnapper&lt;/a> seems pretty clever. Almost steal worthy in fact&lt;/li>
 &lt;li>&lt;a href="http://blog.ulf-wendel.de/2012/php-mysql-why-to-upgrade-extmysql/">Supercharging PHP MySQL applications using the best API&lt;/a> is useful when testing your app in general, but also remember that if you are trusting what the browser is telling you and not verifying it with the database you are asking for a world of hurt&lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #131</title><link>/blog/2012/a-smattering-of-selenium-131/</link><pubDate>Thu, 29 Nov 2012 00:00:00 +0000</pubDate><guid>/blog/2012/a-smattering-of-selenium-131/</guid><description>
-&lt;p>Not sure how widely broadcast this has been (cus, you know, we’re good at communicating and stuff), but if you are using 2.26.0 and Firefox 17 you will get a &lt;a href="http://code.google.com/p/selenium/issues/detail?id=4814">nasty bug&lt;/a>. 2.27.0 is in the works to address this (and a couple other things…) so if you &lt;em>need&lt;/em> FF right now, keep your install at the &lt;a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/16.0/">latest 16 release&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>This is pretty decent. Except the usual “Feh! We don’t need humans to test! Automate everything!” bias you see around. Psst kids! Even the poster children for Continuous Deployment actually do Continuous Delivery (humans! shocking!). Oh, and the usual gloss over ‘cluster immune system’ which is the only part of this tend that has an elegant solution.&lt;/p>
-&lt;p>&lt;strong>&lt;a href="http://www.slideshare.net/ashmaurya/continuous-deployment-5548801" title="Continuous Deployment - Lean LA">Continuous Deployment – Lean LA&lt;/a>&lt;/strong> from &lt;strong>&lt;a href="http://www.slideshare.net/ashmaurya">ashmaurya&lt;/a>&lt;/strong>&lt;/p>
-&lt;iframe src='https://www.slideshare.net/slideshow/embed_code/5548801' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen>&lt;/iframe>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://hindsighttesting.com/blog/2012/10/30/running-tests-in-parallel/">Running Automated Tests in Parallel – Part 1&lt;/a>‘s new bit to me was how to run groups of jUnit scripts from maven. Sure, I think I knew there was a way to do it but never had to think about it before. And as a bonus, &lt;a href="http://oredev.org/2012/sessions/cutting-testing-time-with-parallel-automated-functional-tests">here is the video that goes with the post&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://phpsadness.com">PHP Sadness&lt;/a> is kinda amusing from a language trolling perspective. But also actually really useful. Now for a Ruby Sadness and a Python Sadness. Of course, a Perl sadness would just be a one of those ‘try to click this moving box’ widgets…&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Following up on not automating GMail (aside through standard low-level protocols like IMAP or POP3) is a &lt;a href="https://gist.github.com/4149804">MailBox class for processing IMAP email (Gmail from Python example&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>I’ll admit that &lt;a href="http://gridinit.wordpress.com/2012/11/27/writing-jmeter-test-plans-in-ruby/">Writing JMeter test plans in Ruby&lt;/a> has me pretty excited&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>But if Ruby/JMeter doesn’t do it for you, then maybe Funload will – &lt;a href="http://ziade.org/2011/07/27/how-to-stress-test-your-app-using-funkload-part-1/">How to stress test your app using Funkload — part 1&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Search is one of those things a lot of automation get burned by since things are often going in parallel and not casually waiting for someone else to look for something that was just put in the index half a second ago – &lt;a href="http://webuild.envato.com/blog/moving-the-marketplaces-to-elasticsearch/">Moving the Marketplaces to Elasticsearch&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://www.thefriendlytester.co.uk/2012/11/i-call-them-controlobjects.html">I Call Them ControlObjects&lt;/a>; I call them Elements, or with increasing frequency ‘Unnecessary Designer Porn’ for the rash of js-widgets-that-look-like-standard-html&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>I’m kinda amazed I haven’t had to use the regex part of my brain in awhile, but everyone doing automation really needs to have that section tucked away somewhere – &lt;a href="http://simplythetest.tumblr.com/post/33474441938/a-practical-example-of-regular-expressions">A Practical Example of Regular Expressions&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://www.triggeredmessaging.com/blog/server-monitoring-with-a-raspberry-pi-and-graphite">Low Power Server Monitoring with a Raspberry&lt;/a> is just cool&lt;/p>
-&lt;/li>
 &lt;/ul></description></item></channel></rss>

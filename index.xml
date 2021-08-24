@@ -1,4 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: All Selenium downloads are now available onGitHub releases</title><link>/blog/2021/downloads-now-on-github-releases/</link><pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-now-on-github-releases/</guid><description>
+&lt;p>We announced on a previous &lt;a href="/blog/2021/downloads-moving-to-github-releases/">entry&lt;/a> our
+decision to move all binaries from &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
+to &lt;a href="https://github.com/SeleniumHQ/selenium/releases">GitHub releases&lt;/a>. Today, we would like to
+announce that this work has been completed and all binaries are also available to be downloaded
+in each one of the releases we have done in GitHub.&lt;/p>
+&lt;p>In addition to that, all links on our &lt;a href="https://www.selenium.dev/downloads/">downloads&lt;/a> page
+have been updated, as well as all references to Google Storage in the Selenium code base.&lt;/p>
+&lt;p>Please note that all past releases will be available both in Google Storage and GitHub releases,
+but new ones will only be present in GitHub releases. We recommend everyone to modify your
+download scripts to keep all tooling up to date.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium downloads will move to GitHub releases</title><link>/blog/2021/downloads-moving-to-github-releases/</link><pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate><guid>/blog/2021/downloads-moving-to-github-releases/</guid><description>
 &lt;p>Thanks to Google, &lt;a href="https://selenium-release.storage.googleapis.com/index.html">Google Storage&lt;/a>
 has been the central place where we have been able to upload all binaries created for each
 Selenium release, and the place where the Selenium community can download them from. To do so,
@@ -6185,6 +6199,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>Well, &lt;strong>we are pleased to announce the official dates and location for Selenium Conf India!&lt;/strong>&lt;/p>
 &lt;p>When: June 24th &amp;amp; 25th, 2016&lt;/p>
 &lt;p>Where: Bangalore, India (at &lt;a href="http://www.chancerypavilion.com/">The Chancery Pavilion Hotel&lt;/a>)&lt;/p>
-&lt;p>Mark you calendars! We’ll have more details as they become available (e.g., call for speakers, ticket sales, etc.). To get the latest updates, be sure to &lt;a href="http://eepurl.com/bEGBvX">sign up for the Selenium Conf mailing list&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium Conf 2016</title><link>/blog/2015/selenium-conf-2016/</link><pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate><guid>/blog/2015/selenium-conf-2016/</guid><description>
-&lt;p>Interested in learning what’s in store for Se Conf 2016? Then be sure to read &lt;a href="http://year-2015.seleniumconf.org/next-year/">this write-up from the Conference Organizers&lt;/a>.&lt;/p>
-&lt;p>Also, if you want to receive email notifications about the conference (e.g., when and where it will be, call for speakers, ticket sales, etc.) then go &lt;a href="http://eepurl.com/bEGBvX">here&lt;/a> and complete the sign-up form.&lt;/p></description></item></channel></rss>
+&lt;p>Mark you calendars! We’ll have more details as they become available (e.g., call for speakers, ticket sales, etc.). To get the latest updates, be sure to &lt;a href="http://eepurl.com/bEGBvX">sign up for the Selenium Conf mailing list&lt;/a>.&lt;/p></description></item></channel></rss>
