@@ -1,6 +1,6 @@
 ---
-title: "All Selenium downloads are now available onGitHub releases"
-linkTitle: "All Selenium downloads are now available onGitHub releases"
+title: "All Selenium downloads are now available on GitHub releases"
+linkTitle: "All Selenium downloads are now available on GitHub releases"
 date: 2021-08-24
 tags: ["selenium"]
 categories: ["general"]
