@@ -7,6 +7,14 @@ img {
   height: 300px;
 }
 
+.selenium-backer-logo {
+  max-width: 350px;
+}
+
+.backer-logo {
+  max-width: 300px;
+}
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
   .wide-photo-container {
@@ -14,7 +22,7 @@ img {
   }
   .wide-photo-container > img {
     height: 100% !important;
-  }  
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -22,7 +30,7 @@ img {
   .wide-photo-container {
     width: 100%;
     height: 500px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin: unset;
   }
   .wide-photo-container > img {
