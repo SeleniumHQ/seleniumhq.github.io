@@ -169,13 +169,14 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 * *toRightOf* 元素右
 * *near* 附近
 
-_findElement_ 方法现在支持`witTagName()`新方法其可返回RelativeLocator相对定位对象。
+_findElement_ 方法现在支持`withTagName()`新方法其可返回RelativeLocator相对定位对象。
 
 **NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
 locator of their choice like _By.id_, _By.cssSelector_  etc.
 This feature landed in **Selenium4 - beta3**
 
 ### 如何工作
+
 
 Selenium是通过使用JavaScript函数
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
