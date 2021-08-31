@@ -19,7 +19,6 @@ Steps needed to have this working locally and work on it:
 - Clone this repository
 - Run `git submodule update --init --recursive`
 - Run `cd website_and_docs`
-- Run `npm install`
 - Run `hugo server`
 
 A full contribution guideline can be seen at [contributing](https://selenium.dev/documentation/about/contributing/)
