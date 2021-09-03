@@ -325,8 +325,26 @@ public void consoleLogTest() {
   {{< tab header="Python" >}}
 # Please raise a PR to add code sample
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
+  {{< tab header="CSharp" >}} 
+  using OpenQA.Selenium.Chrome;
+  using OpenQA.Selenium.DevTools;
+  using System;
+  using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
+
+    namespace Selenium4Sample {
+      public class Example {
+        public void ConsoleLogTest() {
+          var driver = new ChromeDriver();
+          var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession()
+           .GetVersionSpecificDomains < DevToolsSessionDomains > ();
+          devToolsSessionDomains.Log.Enable();
+          devToolsSessionDomains.Log.EntryAdded += (sender, e) => {
+          Console.WriteLine("log: " + e.Entry.Text);
+          Console.WriteLine("level: " + e.Entry.Level);
+      };
+    }
+  }
+}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 # Please raise a PR to add code sample
