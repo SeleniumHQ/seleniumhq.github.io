@@ -402,7 +402,47 @@ public void deviceSimulationTest() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+using System.Threading.Tasks;
+using OpenQA.Selenium.DevTools.V91.Emulation;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
+using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
+
+namespace Selenium4Sample {
+public class ExampleDevice {
+
+    protected IDevToolsSession session;
+    protected IWebDriver driver;
+    protected DevToolsSessionDomains devToolsSession;
+
+    public async Task DeviceModeTest() {
+      new DriverManager().SetUpDriver(new ChromeConfig());
+      ChromeOptions chromeOptions = new ChromeOptions();
+      //Set ChromeDriver
+      driver = new ChromeDriver();
+      //Get DevTools
+      IDevTools devTools = driver as IDevTools;
+      //DevTools Session
+      session = devTools.GetDevToolsSession();
+
+      var deviceModeSetting = new SetDeviceMetricsOverrideCommandSettings();
+      deviceModeSetting.Width = 600;
+      deviceModeSetting.Height = 1000;
+      deviceModeSetting.Mobile = true;
+      deviceModeSetting.DeviceScaleFactor = 50;
+
+      await session
+            .GetVersionSpecificDomains < OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains > ()
+            .Emulation
+            .SetDeviceMetricsOverride(deviceModeSetting);
+
+      driver.Url = "<your site url>";
+    }
+}
+}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Please raise a PR to add code sample
