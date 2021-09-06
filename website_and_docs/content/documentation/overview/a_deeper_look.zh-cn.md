@@ -1,20 +1,12 @@
 ---
-title: "A Deeper Look"
-linkTitle: "A Deeper Look"
+title: "深度介绍"
+linkTitle: "深度介绍"
 weight: 2
 description: >
   Selenium 是一系列工具和库的综合项目，这些工具和库支持 web 浏览器的自动化。
 aliases: ["/documentation/zh-cn/introduction/the_selenium_project_and_tools/"]  
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 ### Selenium 控制网页浏览器
 
@@ -56,13 +48,8 @@ Selenium 保护伞下提供的周边基础设施为您提供了组合自己的
 
 通过为用户提供工具和文档，
 不仅可以控制浏览器，
-还可以方便地扩展和部署这些 grid，
+还可以方便地扩展和部署这些grid，
 从而帮助您实现这一目标。
-
-通过为用户提供工具和文档，不仅可以控制浏览器，
-还可以简化网格的伸缩和部署。
-来帮助您实现这一目标，
-这些工具和文档
 
 ### 谁在使用 Selenium
 
