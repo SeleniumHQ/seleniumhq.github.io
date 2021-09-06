@@ -1,6 +1,6 @@
 ---
-title: "Selenium 4 Release Candidate Released"
-linkTitle: "Selenium 4 Release Candidate Released"
+title: "Selenium 4 Release Candidate"
+linkTitle: "Selenium 4 Release Candidate"
 date: 2021-09-06
 tags: ["selenium", "status"]
 categories: ["general", "releases"]
