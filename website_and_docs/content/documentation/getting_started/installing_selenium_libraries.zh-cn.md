@@ -3,18 +3,9 @@ title: "安装 Selenium 库"
 linkTitle: "安装 Selenium 库"
 weight: 1
 description: >
-  Setting up the Selenium library for your favourite programming language.
+为您喜爱的编程语言设置Selenium库.
 aliases: ["/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"]    
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。
@@ -97,5 +88,4 @@ npm install selenium-webdriver
 ```
 
 ### Kotlin
-Due to missing native language bindings for Kotlin, you have to use the 
-Java Bindings, e.g. with maven [Java](#java)
+由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)

@@ -1,9 +1,9 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+title: "安装浏览器驱动"
+linkTitle: "安装浏览器驱动"
 weight: 2
 description: >
-  Setting up your browser ready to be automated.
+设置您的浏览器用于自动化.
 aliases: 
         [
           "/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",
@@ -11,14 +11,6 @@ aliases:
         ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、
 Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持，
