@@ -3,7 +3,7 @@ title: "安装 Selenium 库"
 linkTitle: "安装 Selenium 库"
 weight: 1
 description: >
-为您喜爱的编程语言设置Selenium库.
+  为您喜爱的编程语言设置Selenium库.
 aliases: ["/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"]    
 ---
 

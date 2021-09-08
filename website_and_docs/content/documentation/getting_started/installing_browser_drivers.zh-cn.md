@@ -3,7 +3,7 @@ title: "安装浏览器驱动"
 linkTitle: "安装浏览器驱动"
 weight: 2
 description: >
-设置您的浏览器用于自动化.
+  设置您的浏览器用于自动化.
 aliases: 
         [
           "/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",

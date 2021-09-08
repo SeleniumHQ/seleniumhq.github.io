@@ -6,15 +6,6 @@ cascade:
 aliases: ["/documentation/zh-cn/"]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目。
 
 它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器，
@@ -152,12 +143,15 @@ fun main() {
 {{< /tabpane >}}
 
 
+请参阅 [概述]({{< ref "/overview.md" >}}) 
+以检查不同的项目组件,
+并确定Selenium是否适合您.
 
-See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
-components and decide if Selenium is the right tool for you.
-
-You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
-to understand how you can install Selenium and successfully use it as a test 
-automation tool, and scaling simple tests like this to run in large, distributed 
-environments on multiple browsers, on several different operating systems.
+您应该继续阅读 [开始]({{< ref "/getting_started.md" >}}),
+以了解如何安装Selenium,
+将其成功用作测试自动化工具,
+并将这样的简单测试扩展为
+在大型分布式环境,
+以及不同操作系统上的环境上
+运行多个浏览器的测试.
 
