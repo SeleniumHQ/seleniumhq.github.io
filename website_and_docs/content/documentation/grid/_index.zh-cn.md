@@ -3,7 +3,7 @@ title: "Grid"
 linkTitle: "Grid"
 weight: 9
 description: >
-  Want to run tests in parallel across multiple machines? Then, Grid is for you.
+  要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.
 aliases: 
         [
           "/documentation/zh-cn/selenium_installation/installing_standalone_server/",
@@ -13,14 +13,6 @@ aliases:
         ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to German. Do you speak German? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 通过将客户端命令发送到远程浏览器的实例,
 Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚本.

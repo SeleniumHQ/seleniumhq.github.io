@@ -3,18 +3,10 @@ title: "指南和建议"
 linkTitle: "指南"
 weight: 7
 description: >
-  Some guidelines and recommendations on testing from the Selenium project.
+  Selenium项目的一些测试指南和建议.
 aliases: ["/documentation/zh-cn/guidelines_and_recommendations/"]  
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 关于"最佳实践"的注解：我们有意在本文档中避免使用"最佳实践"的说辞. 
 没有一种方法可以适用于所有情况. 
