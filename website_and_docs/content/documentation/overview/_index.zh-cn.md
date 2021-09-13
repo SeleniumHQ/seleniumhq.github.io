@@ -1,20 +1,12 @@
 ---
-title: "Overview"
-linkTitle: "Overview"
+title: "概述"
+linkTitle: "概述"
 weight: 1
 description: >
-  Is Selenium for you? See an overview of the different project components.
+  Selenium适合你吗? 请参见不同项目组件的概述.
 aliases: ["/documentation/zh-cn/introduction/"]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Selenium 不仅仅是一个工具或 API, 它还包含许多工具. 
 
