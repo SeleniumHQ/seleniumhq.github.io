@@ -81,7 +81,7 @@ instructions from Docsy.
 
 The repository contains the site and docs. Before jumping into
 making changes, please initialize the submodules and install the
-needed dependecies (see commands below). To make changes to the site, 
+needed dependencies (see commands below). To make changes to the site, 
 work on the `website_and_docs` directory. To see a live preview of 
 your changes, run `hugo server` on the site's root directory.
 

@@ -9,16 +9,6 @@ aliases:
         ]
 ---
 
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 Selenium是一个大型软件项目, 
 其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.
 
@@ -68,13 +58,13 @@ Selenium项目欢迎新的贡献者.
 
 #### 依赖: Hugo
 
-We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
-Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.83.1 or higher.
+我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
+用于构建和渲染本网站. 
+你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
+我们推荐使用0.83.1或更高版本的Hugo.
 
-Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
-instructions from Docsy.
+请参考来自Docsy的说明
+[安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .
 
 ### 步骤 2: 分支
 
@@ -88,11 +78,14 @@ instructions from Docsy.
 
 ### 步骤 3: 做出改变
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependecies (see commands below). To make changes to the site, 
-work on the `website_and_docs` directory. To see a live preview of 
-your changes, run `hugo server` on the site's root directory.
+本仓库包含站点和文档.
+在开始进行更改之前,
+请初始化子模块并安装所需的依赖项
+(请参阅下面的命令).
+要对网站进行更改, 
+请使用 `website_and_docs` 目录.
+要查看更改的实时预览, 
+请在站点的根目录上运行 `hugo server` .
 
 ```shell
 % git submodule update --init --recursive

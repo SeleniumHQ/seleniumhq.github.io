@@ -23,7 +23,7 @@ Tell us the detailed steps to reproduce it:
 
 ## Expected behavior
 
-What do you expected to happen? How should have it worked?
+What do you expect to happen? How should have it worked?
 
 ## Environment
 
