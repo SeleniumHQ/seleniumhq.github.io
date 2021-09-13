@@ -31,20 +31,19 @@ Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚�
 并且不共享之前版本的代码库.</p><p>Grid 4有一种实现可以利用许多新技术来促进扩展,
 同时仍然允许本地执行.</p><p>关于Grid 4组件的所有详细信息,
 了解其工作原理以及如何设置自己的组件,
-请浏览以下章节.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-513aea440f7a5dcdf2fd2cf091439f36>1 - 服务网格的组件</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!</p></div><figure class="img-responsive text-center"><img src=/images/documentation/grid/components.png alt=Grid></figure><h2 id=router>Router</h2><p>The Router takes care of forwarding the request to the correct component.</p><p>It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request.
-If it is a new session request, the Router will add it to the New Session Queue.
-The Distributor regularly checks if there is a free slot.
-If so, the first matching request is removed from the New Session Queue.
-If the request belongs to an existing session, the
-Router will send the session id to the Session Map, and the Session Map will
-return the Node where the session is running. After this, the Router will
-forward the request to the Node.</p><p>The Router aims to balance the load in the Grid by sending the requests to the
-component that is able to handle them better, without overloading any component
-that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>分发器知道所有节点及其功能.
+请浏览以下章节.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-513aea440f7a5dcdf2fd2cf091439f36>1 - 服务网格的组件</h1><figure class="img-responsive text-center"><img src=/images/documentation/grid/components.png alt=Grid></figure><h2 id=路由>路由</h2><p>路由负责将请求转发到正确的组件.</p><p>它是Grid的入口点, 所有外部请求都将由其接收.
+路由的行为因请求而异.
+当请求一个新的会话时, 路由将把它添加到新的会话队列中.
+分发器定期检查是否有空闲槽.
+若有, 则从新会话队列中删除第一个匹配请求.
+如果请求属于存量会话,
+这个路由将会话id发送到会话表,
+会话表将返回正在运行会话的节点.
+在此之后, 路由将
+将请求转发到节点.</p><p>为了更好地发挥效力,
+路由通过将请求发送到组件的方式,
+来平衡Grid的负载,
+从而使处理过程中不会有任何的过载组件.</p><h2 id=distributor>Distributor</h2><p>分发器知道所有节点及其功能.
 它的主要作用是接收新的会话请求
 并找到可以在其中创建会话的适当节点.
 创建会话后, 分发器在会话集合中存储会话ID与正在执行会话的节点之间的关系.</p><h2 id=node>Node</h2><p>一个节点可以在网格中出现多次.
@@ -65,15 +64,19 @@ that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>分�
 用于保存会话id和会话运行的节点的信息.
 它作为路由支持,
 在向节点转发请求的过程中起作用.
-路由将通过会话表获取与会话id关联的节点.</p><h2 id=new-session-queue>New Session Queue</h2><p>New Session Queue holds all the new session requests in a FIFO order.
-It has configurable parameters for setting the request timeout and request retry interval.</p><p>The Router adds the new session request to the New Session Queue and waits for the response.
-The New Session Queue regularly checks if any request in the queue has timed out,
-if so the request is rejected and removed immediately.</p><p>The Distributor regularly checks if a slot is available. If so, the Distributor requests the
-New Session Queue for the first matching request. The Distributor then attempts to create
-a new session.</p><p>Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
-available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue.
-If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the Distributor sends the session information to the New Session Queue.
-The New Session Queue sends the response back to the client.</p><h2 id=事件总线>事件总线</h2><p>事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
+路由将通过会话表获取与会话id关联的节点.</p><h2 id=新会话队列>新会话队列</h2><p>新会话队列以先进先出的顺序保存所有新会话请求.
+其具有用于设置请求超时和请求重试间隔的可配置参数.</p><p>路由将新会话请求添加到新会话队列并等待响应.
+新会话队列定期检查队列中的任何请求是否已超时,
+若有，则请求将被拒绝并立即删除.</p><p>分发器定期检查是否有可用槽.
+若有, 分发器将为第一个匹配的请求索取新会话队列.
+然后分发器会尝试创建新的会话.</p><p>一旦请求的功能与任何空闲节点槽匹配,
+分发器将尝试获取可用槽.
+如果没有空闲槽,
+分发器会要求队列将请求添加到队列前面.
+如果请求在重试或添加到队列头时超时,
+则该请求将被拒绝.</p><p>成功创建会话后,
+分发器将会话信息发送到新会话队列.
+新会话队列将响应发送回客户端.</p><h2 id=事件总线>事件总线</h2><p>事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
 网格通过消息进行大部分内部通信, 避免了昂贵的HTTP调用.
 当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.</p><h2 id=网格中的角色>网格中的角色</h2><p>在网格3中, 组件是集线器和节点,
 可以通过以独立模式启动网格来一起运行它们.
