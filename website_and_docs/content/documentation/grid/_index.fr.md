@@ -48,13 +48,20 @@ et peut ne pas répondre à vos besoins spécifiques.
 * Test multiplateforme
 * L'équilibrage de charge
 
-_Selenium Grid 4_ est une nouvelle implémentation et 
-ne partage pas la base de code la version précédente avait.
-
-Grid 4 a une approche pour tirer parti d'un 
+{{% alert title="Selenium Grid 4" color="primary" %}}
+Grid 4 a une approche pour tirer parti d'un
 certain nombre de nouvelles technologies afin
 pour faciliter la mise à l'échelle, tout en permettant l'exécution locale.
 
-Pour obtenir tous les détails des composants de Grid 4, 
+Selenium Grid 4 est une nouvelle implémentation et
+ne partage pas la base de code la version précédente avait.
+
+Pour obtenir tous les détails des composants de Grid 4,
 comprendre comment cela fonctionne et comment définir
 vous possédez, veuillez parcourir les sections ci-dessous.
+{{% /alert %}}
+
+
+
+
+

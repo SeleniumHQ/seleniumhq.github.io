@@ -45,11 +45,13 @@ and might not suit your specific needs.
 * 부하분산
 
 
-_Selenium Grid 4_ is a fresh implementation and does not share the codebase
+{{% alert title="Selenium Grid 4" color="primary" %}}
+Grid 4 takes advantage of a number of new technologies in order
+to facilitate scaling up while allowing local execution.
+
+Selenium Grid 4 is a fresh implementation and does not share the codebase
 the previous version had.
 
-Grid 4 has an approach to take advantage of a number of new technologies in order 
-to facilitate scaling up, while still allowing local execution.
-
 To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse the sections below.
+up you own, please browse thorough the following sections.
+{{% /alert %}}
