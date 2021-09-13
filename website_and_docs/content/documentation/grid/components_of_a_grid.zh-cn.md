@@ -2,11 +2,15 @@
 title: "服务网格的组件"
 linkTitle: "服务网格的组件"
 weight: 1
+description: >
+    Check the different Grid components to understand how to use them.
 aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 ---
 
 
-{{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}
+{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
+{{< /card >}}
 
 
 ## 路由
@@ -44,15 +48,11 @@ aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 节点通过事件总线将其自身注册到分发服务器,
 并且将其配置作为注册消息的组成部分一起发送.
 
-默认情况下, 
-节点会自动注册运行它的计算机路径上所有可用的浏览器驱动程序.
-它还为基于Chromium的浏览器和Firefox的每个可用的CPU都创建插槽.
-对于Safari和Internet Explorer,
-则仅创建一个插槽.
-通过特定的配置, 
-它可以在Docker容器中运行会话.
-您可以在下一 [章节]({{< ref "setting_up_your_own_grid.md" >}}) 
-中查看更多配置详细信息. 
+By default, the Node auto-registers all browser drivers available on the path of
+the machine where it runs. It also creates one slot per available CPU for Chromium
+based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
+Through a specific configuration, it can run sessions in Docker containers or relay commands.
+You can see more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
 
 节点仅执行接收到的命令, 
 它不进行评估、做出判断或控制任何事情.
@@ -99,30 +99,8 @@ aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.
 
 
-## 网格中的角色
-
-在网格3中, 组件是集线器和节点, 
-可以通过以独立模式启动网格来一起运行它们.
-Grid 4中提供了相同的概念, 
-可以通过对上述某些组件进行分组来运行集线器, 
-也可以在独立模式下一起运行所有组件.
-
-### Hub
-
-集线器是以下组件的结合:
-
-* 路由器
-* 分发器
-* 会话集合
-* 事件总线
-
-它启用传统集线器和节点(们)的设置.
-
-### Standalone
-
-如前所述, 独立模式是所有组件的结合, 
-并且在用户看来, 它们作为一个组件执行.
-这包括集线器的部分组件, 
-再加上一个节点.
-在独立模式下启动后, 
-可以使用一个功能齐全的网格.
+{{% alert title="Running your own Grid" color="primary" %}}
+Looking forward to using all these components and run your own Grid?
+Head to the ["Setting up your own"]({{< ref "setting_up_your_own_grid.md" >}})
+section to understand how to put all these pieces together.
+{{% /alert %}}

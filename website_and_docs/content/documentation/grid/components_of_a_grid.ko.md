@@ -2,6 +2,8 @@
 title: "Components"
 linkTitle: "Components"
 weight: 1
+description: >
+    Check the different Grid components to understand how to use them.
 aliases: ["/documentation/ko/grid/grid_4/components_of_a_grid/"]
 ---
 
@@ -14,7 +16,9 @@ aliases: ["/documentation/ko/grid/grid_4/components_of_a_grid/"]
 </p>
 {{% /pageinfo %}}
 
-{{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}
+{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
+{{< /card >}}
 
 ## Router
 
@@ -52,8 +56,8 @@ configuration is sent as part of the registration message.
 By default, the Node auto-registers all browser drivers available on the path of
 the machine where it runs. It also creates one slot per available CPU for Chromium
 based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
-Through a specific configuration, it can run sessions in Docker containers. You can see
-more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
+Through a specific configuration, it can run sessions in Docker containers or relay commands.
+You can see more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
 
 A Node only executes the received commands, it does not evaluate, make judgments,
 or control anything. The machines where the Node is running does not need to have
@@ -94,27 +98,8 @@ The Event Bus serves as a communication path between the Nodes, Distributor, New
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
-## Roles in Grid
-
-In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
-Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
-grouping some of the components described above, and it is also possible to run all components
-together in a Standalone mode. 
-
-### Hub
-
-Hub is the union of the following components:
-
-* Router
-* Distributor
-* Session Map
-* New Session Queuer
-* Event Bus
-
-It enables the classic Hub & Node(s) setup.
-
-### Standalone
-
-As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
-executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
-functional Grid of one is available after starting it in the Standalone mode.
+{{% alert title="Running your own Grid" color="primary" %}}
+Looking forward to using all these components and run your own Grid?
+Head to the ["Setting up your own"]({{< ref "setting_up_your_own_grid.md" >}})
+section to understand how to put all these pieces together.
+{{% /alert %}}

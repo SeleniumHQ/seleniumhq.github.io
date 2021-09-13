@@ -2,6 +2,8 @@
 title: "Componentes"
 linkTitle: "Componentes"
 weight: 1
+description: >
+    Check the different Grid components to understand how to use them.
 aliases: ["/documentation/pt-br/grid/grid_4/components_of_a_grid/"]
 ---
 
@@ -14,9 +16,11 @@ aliases: ["/documentation/pt-br/grid/grid_4/components_of_a_grid/"]
 </p>
 {{% /pageinfo %}}
 
-{{< figure src="/images/documentation/grid/components.png" class="img-responsive text-center" alt="Grid">}}
+{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
+{{< /card >}}
 
-## Roteador
+## Roteador (Router)
 
 The Router takes care of forwarding the request to the correct component.
 
@@ -34,23 +38,25 @@ The Router aims to balance the load in the Grid by sending the requests to the
 component that is able to handle them better, without overloading any component
 that is not needed in the process.
 
-## Distribuidor
+## Distribuidor (Distributor)
 
 O Distribuidor está ciente de todos os nós e suas capacidades. Seu papel principal é receber um novo pedido de sessão
 e encontrar um Nó adequado onde a sessão pode ser
 criada. Depois que a sessão é criada, o Distribuidor armazena no Mapa da Sessão
 a relação entre o ID da sessão e o nó onde a sessão está sendo executada.
 
-## Nó
+## Nó (Node)
 
 Um Nó pode estar presente várias vezes em uma Grid. Cada nó cuida de gerenciar
 os slots para os navegadores disponíveis da máquina onde está sendo executado.
 
 O Nó se registra no Distribuidor através do Event Bus, e sua configuração é enviada como parte da mensagem de registro.
 
-Por padrão, o Nó registra automaticamente todos os drivers de navegador disponíveis no PATH da máquina onde ele roda. Ele também cria um slot por CPU disponível para navegadores baseados em Chromium e Firefox. Para Safari e Internet Explorer, apenas um slot é criado.
-Por meio de uma configuração específica, ele pode executar sessões em contêineres Docker. Você pode ver
-mais detalhes de configuração na próxima [seção]({{< ref "setting_up_your_own_grid.md" >}}).
+By default, the Node auto-registers all browser drivers available on the path of
+the machine where it runs. It also creates one slot per available CPU for Chromium
+based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
+Through a specific configuration, it can run sessions in Docker containers or relay commands.
+You can see more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
 
 Um Nó apenas executa os comandos recebidos, não avalia, não faz julgamentos,
 ou controlar qualquer coisa. As máquinas onde o Nó está rodando não precisam ter
@@ -91,27 +97,8 @@ The Event Bus serves as a communication path between the Nodes, Distributor, New
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
-## Funções na Grid
-
-Na Grade 3, os componentes eram Hub e Nó, e era possível executá-los juntos iniciando a
-Grid em modo autônomo. O mesmo conceito está disponível na Grid 4, é possível executar um hub
-agrupando alguns dos componentes descritos acima, e também é possível executar todos os componentes
-juntos em um modo autônomo. 
-
-### Hub
-
-Hub é a união dos seguintes componentes:
-
-* Roteador
-* Distribuidor
-* Mapa da Sessão
-* Enfileirador de Sessão
-* Event Bus
-
-Habilita a configuração clássica de hub e nó(s).
-
-### Standalone
-
-Como mencionado antes, Standalone é a união de todos os componentes e, aos olhos do usuário, eles são
-executado como um. Isso inclui todos os componentes que fazem parte do hub, mais um nó. Totalmente
-Uma Grid totalmente funcional está disponível após iniciá-la no modo Standalone.
+{{% alert title="Running your own Grid" color="primary" %}}
+Looking forward to using all these components and run your own Grid?
+Head to the ["Setting up your own"]({{< ref "setting_up_your_own_grid.md" >}})
+section to understand how to put all these pieces together.
+{{% /alert %}}
