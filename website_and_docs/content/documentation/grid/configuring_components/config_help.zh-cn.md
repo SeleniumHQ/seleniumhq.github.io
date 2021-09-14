@@ -94,7 +94,7 @@ java -jar selenium-server-<version>.jar sessions --help
 ### 队列器
 
 ```shell
-java -jar selenium-server-<version>.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueue --help
 ```
 
 ### Distributor 

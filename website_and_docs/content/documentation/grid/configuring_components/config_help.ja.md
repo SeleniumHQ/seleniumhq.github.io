@@ -86,7 +86,7 @@ java -jar selenium-server-<version>.jar sessions --help
 ### 新しいセッションキューラー
 
 ```shell
-java -jar selenium-server-<version>.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueue --help
 ```
 
 ### ディストリビューター 

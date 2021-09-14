@@ -137,22 +137,22 @@ To clear the queue, use the cURL command enlisted below.
 Clearing the queue rejects all the requests in the queue. For each such request, the server returns an error response to the respective client.
 The result of the clear command is the total number of deleted requests.
 
-In the Standalone mode, the queuer URL is the Standalone server address. 
+In the Standalone mode, the Queue URL is the Standalone server address. 
 
-In the Hub-Node mode, the queuer URL is the Hub server address.
+In the Hub-Node mode, the Queue URL is the Hub server address.
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
-In the fully distributed mode, the queuer URL is New Session Queuer server address.
+In the fully distributed mode, the Queue URL is New Session Queue server address.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request DELETE 'http://<URL>/se/grid/newsessionqueuer/queue' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Get New Session Queue Requests
@@ -161,14 +161,14 @@ New Session Request Queue holds the new session requests.
 To get the current requests in the queue, use the cURL command enlisted below. 
 The response returns the total number of requests in the queue and the request payloads.
 
-In the Standalone mode, the queuer URL is the Standalone server address. 
+In the Standalone mode, the Queue URL is the Standalone server address. 
 
-In the Hub-Node mode, the queuer URL is the Hub server address.
+In the Hub-Node mode, the Queue URL is the Hub server address.
 
 ```shell
-cURL --request GET 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
 
-In the fully distributed mode, the queuer URL is New Session Queuer server address.
+In the fully distributed mode, the Queue URL is New Session Queue server address.
 ```shell
-cURL --request GET 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'

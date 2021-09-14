@@ -20,7 +20,7 @@ The Router behaves differently depending on the request.
 If it is a new session request, the Router will add it to the New Session Queue. 
 The Distributor regularly checks if there is a free slot. 
 If so, the first matching request is removed from the New Session Queue.
-will receive the event and poll the New Session Queuer to get the new session request.
+will receive the event and poll the New Session Queue to get the new session request.
 If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will 
 return the Node where the session is running. After this, the Router will
@@ -86,7 +86,7 @@ The New Session Queue sends the response back to the client.
 
 ## Event Bus
 
-The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queue, and Session Map. 
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 

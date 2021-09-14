@@ -91,10 +91,10 @@ java -jar selenium-server-<version>.jar hub --help
 java -jar selenium-server-<version>.jar sessions --help
 ```
 
-### New Session Queuer
+### New Session Queue
 
 ```shell
-java -jar selenium-server-<version>.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueue --help
 ```
 
 ### Distributor 

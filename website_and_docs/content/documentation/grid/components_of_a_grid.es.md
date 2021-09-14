@@ -93,7 +93,7 @@ The New Session Queue sends the response back to the client.
 
 ## Event Bus
 
-The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queue, and Session Map. 
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls. 
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started. 
 
