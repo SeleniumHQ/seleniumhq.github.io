@@ -2,104 +2,139 @@
 title: "独自のグリッドを設定する"
 linkTitle: "独自のグリッドを設定する"
 weight: 2
+description: >
+  Instructions, step by step, showing how to run a simple Selenium Grid.
 aliases: ["/documentation/ja/grid/grid_4/setting_up_your_own_grid/"]
 ---
 
-## Selenium4でのグリッド設定のさまざまなモード
-* スタンドアロン
-* ハブとノード
-* 分散
-* Docker
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Japanese. Do you speak Japanese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-## スタンドアロンモード
-新しいSeleniumServer Jarには、グリッドを実行するために必要なすべてのものが含まれています。
-Seleniumグリッドを起動するのも最も簡単なモードです。
-デフォルトでは、サーバーは http://localhost:4444 でリッスンします。
-これは、RemoteWebDriverテストを指定する必要があるURLです。
-サーバーは、システムパスから使用できる使用可能なドライバーを検出します。
+## Grid roles
+
+Several [components]({{< ref "components_of_a_grid.md" >}}) compose a Selenium Grid. Depending
+on your needs, you can start each one of them on its own, or a few at the same time by using a
+Grid role.
+
+### Standalone
+
+Standalone is the union of all components, and to the user's eyes, they are executed as one.
+A fully functional Grid of one is available after starting it in the Standalone mode.
+
+Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
+will be listening on `http://localhost:4444`, and that's the URL you should point your
+`RemoteWebDriver` tests. The server will detect the available drivers that it can use
+from the System `PATH`.
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar standalone
+java -jar selenium-server-<version>.jar standalone
 ```
 
-## ハブとノードモード
 
-### ハブを開始する
+### Hub and Node(s)
+
+It enables the classic Hub & Node(s) setup. These roles are suitable for small
+and middle-sized Grids.
+
+#### Hub
+
+A Hub is the union of the following components:
+
+* Router
+* Distributor
+* Session Map
+* New Session Queue
+* Event Bus
+
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar hub
+java -jar selenium-server-<version>.jar hub
 ```
 
-### ノードを登録する
+By default, the server will be listening on `http://localhost:4444`, and that's the URL
+you should point your `RemoteWebDriver` tests.
+
+#### Node(s)
+
+One or more Nodes can be started in this setup, and the server will detect the available
+drivers that it can use from the System `PATH`.
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
+java -jar selenium-server-<version>.jar node
 ```
 
-### Seleniumグリッドをクエリする
+### Distributed
 
-Selenium 4では、必要なデータを簡単にクエリしてまったく同じものを取得する新しい方法であるGraphQLを追加しました。
+On Distributed mode, each component needs to be started on its own. This setup is more suitable
+for large Grids.
+
+{{% alert color="primary" %}}
+The startup order of the components is not important, however, we recommend following these
+steps when starting a distributed Grid.
+{{% /alert %}}
+
+
+1. Event Bus: serves as a communication path to other Grid components in subsequent steps.
+
+```shell
+java -jar selenium-server-<version>.jar  event-bus
+```
+
+2. Session Map: responsible for mapping session IDs to the Node where the session is running.
+
+```shell
+java -jar selenium-server-<version>.jar sessions
+```
+
+3. New Session Queue: adds the new session request to a queue, then the distributor processes it.
+
+```shell
+java -jar selenium-server-<version>.jar sessionqueue
+```
+
+4. Distributor: Nodes register to it, and assigns a Node for a session request.
+
+```shell
+java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
+```
+
+5. Router: the Grid entrypoint, in charge of redirecting requests to the right component.
+
+```shell
+java -jar selenium-server-<version>.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
+```
+
+6. Node(s)
+
+```shell
+java -jar selenium-server-<version>.jar node 
+```
+
+## Querying Selenium Grid
+
+After starting a Grid, there are mainly two ways of querying its status, through the Grid
+UI or via an API call.
+
+The Grid UI can be reached by opening your preferred browser and heading to
+[http://localhost:4444](http://localhost:4444).
+
+API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
+endpoint or using GraphQL:
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
 ```
-<br><br>
 
-## 分散モード
-
-* Step 1: まず、イベントバスを開始します。
-これは、後続のステップで他のグリッドコンポーネントへの通信パスとして機能します。
-
-    ```shell
-    java -jar selenium-server-4.0.0-alpha-7.jar  event-bus
-    ```
-
-* Step 2: セッションマップを開始します。
-これは、セッションIDをセッションが実行されているノードにマッピングする役割を果たします。
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessions
-    ```
-
-* Step 3: 新しいセッションキューを起動すると、新しいセッション要求がローカルキューに追加されます。
-ディストリビューターはキューからリクエストを受け取ります。
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueue
-    ```
-
-* Step 4: ディストリビューターを起動します。
-すべてのノードは、ディストリビュータープロセスの一部として接続されます。
-セッションの作成要求が呼び出されたときに、ノードを割り当てる必要があります。
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
-    ```
-
-* Step 5: 次に、Webに公開するアドレスであるルーターを起動します。
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
-    ```
-
-* Step 6: 最後に、ノードを追加します。
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
-    ```
-
-## Dockerイメージを介してスタンドアロングリッドを開始する
-
-  次のコマンドでノードを起動できます。
-
-```shell
-    java -jar selenium-server-4.0.0-alpha-1.jar node -D selenium/standalone-firefox:latest '{"browserName": "firefox"}'
-```
-
-  Seleniumサーバーを起動し、Dockerに新しいインスタンスを作成することを委任できます。
-
-```shell
-     java -jar selenium-server-4.0.0-alpha-7.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
-```
+{{% pageinfo color="primary" %}}
+For simplicity, all command examples shown in this page assume that components are running
+locally. More detailed examples and usages can be found in the
+[Advanced Features]({{< ref "/advanced_features.md" >}}) section.
+{{% /pageinfo %}}
 
 ## 警告
 

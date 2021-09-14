@@ -2,6 +2,8 @@
 title: "Setting up your own"
 linkTitle: "Setting up your own"
 weight: 2
+description: >
+  Instructions, step by step, showing how to run a simple Selenium Grid.
 aliases: ["/documentation/ko/grid/grid_4/setting_up_your_own_grid/"]
 ---
 
@@ -14,96 +16,129 @@ aliases: ["/documentation/ko/grid/grid_4/setting_up_your_own_grid/"]
 </p>
 {{% /pageinfo %}}
 
-## Different Modes of Grid setup in Selenium 4:
-* Standalone
-* Hub and Node
-* Distributed
-* Docker
+## Grid roles
 
-## Standalone Mode:
-The new Selenium Server Jar contains everything you'd need to run a grid. It is also the easiest mode to spin up a Selenium Grid. By default the server will be listening on http://localhost:4444, and that's the URL you should point your RemoteWebDriver tests. The server will detect the available drivers that it can use from the System PATH
+Several [components]({{< ref "components_of_a_grid.md" >}}) compose a Selenium Grid. Depending
+on your needs, you can start each one of them on its own, or a few at the same time by using a
+Grid role.
 
-```shell
-java -jar selenium-server-4.0.0-alpha-7.jar standalone
-```
+### Standalone
 
-## Hub and Node Mode:
+Standalone is the union of all components, and to the user's eyes, they are executed as one.
+A fully functional Grid of one is available after starting it in the Standalone mode.
 
-### Start the Hub:
-```shell
-java -jar selenium-server-4.0.0-alpha-7.jar hub
-```
-
-### Register a Node:
+Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
+will be listening on `http://localhost:4444`, and that's the URL you should point your
+`RemoteWebDriver` tests. The server will detect the available drivers that it can use
+from the System `PATH`.
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
+java -jar selenium-server-<version>.jar standalone
 ```
 
-### Query Selenium Grid:
 
-In Selenium 4, we've also added GraphQL, a new way to query the necessary data easily and get exactly the same.
+### Hub and Node(s)
+
+It enables the classic Hub & Node(s) setup. These roles are suitable for small
+and middle-sized Grids.
+
+#### Hub
+
+A Hub is the union of the following components:
+
+* Router
+* Distributor
+* Session Map
+* New Session Queue
+* Event Bus
+
+```shell
+java -jar selenium-server-<version>.jar hub
+```
+
+By default, the server will be listening on `http://localhost:4444`, and that's the URL
+you should point your `RemoteWebDriver` tests.
+
+#### Node(s)
+
+One or more Nodes can be started in this setup, and the server will detect the available
+drivers that it can use from the System `PATH`.
+
+```shell
+java -jar selenium-server-<version>.jar node
+```
+
+### Distributed
+
+On Distributed mode, each component needs to be started on its own. This setup is more suitable
+for large Grids.
+
+{{% alert color="primary" %}}
+The startup order of the components is not important, however, we recommend following these
+steps when starting a distributed Grid.
+{{% /alert %}}
+
+
+1. Event Bus: serves as a communication path to other Grid components in subsequent steps.
+
+```shell
+java -jar selenium-server-<version>.jar  event-bus
+```
+
+2. Session Map: responsible for mapping session IDs to the Node where the session is running.
+
+```shell
+java -jar selenium-server-<version>.jar sessions
+```
+
+3. New Session Queue: adds the new session request to a queue, then the distributor processes it.
+
+```shell
+java -jar selenium-server-<version>.jar sessionqueue
+```
+
+4. Distributor: Nodes register to it, and assigns a Node for a session request.
+
+```shell
+java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
+```
+
+5. Router: the Grid entrypoint, in charge of redirecting requests to the right component.
+
+```shell
+java -jar selenium-server-<version>.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
+```
+
+6. Node(s)
+
+```shell
+java -jar selenium-server-<version>.jar node 
+```
+
+## Querying Selenium Grid
+
+After starting a Grid, there are mainly two ways of querying its status, through the Grid
+UI or via an API call.
+
+The Grid UI can be reached by opening your preferred browser and heading to
+[http://localhost:4444](http://localhost:4444).
+
+API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
+endpoint or using GraphQL:
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
 ```
-<br><br>
 
-## Distributed Mode:
-
-* Step 1: Firstly, start the Event Bus, it serves as a communication path to other Grid components in subsequent steps.
-
-    ```shell
-    java -jar selenium-server-4.0.0-alpha-7.jar  event-bus
-    ```
-
-* Step 2: Start the session map, which is responsible for mapping session IDs to the node the session is running on:
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessions
-    ```
-
-* Step 3: Start the new session queuer, it adds the new session request to a local queue. The distributor picks up the request from the queue.
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueue
-    ```
-
-* Step 4: Start the Distributor. All the nodes are attached as part of Distributor process. It is responsible for assigning a node, when a create session request in invoked.
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
-    ```
-
-* Step 5: Next step is to start the Router, an address that you'd expose to web
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
-    ```
-
-* Step 6: Finally, add a Node
-
-    ```shell
-        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers true
-    ```
-
-## Start Standalone Grid via Docker Images
-
-  You can just start a node by the following command:
-
-```shell
-    java -jar selenium-server-4.0.0-alpha-1.jar node -D selenium/standalone-firefox:latest '{"browserName": "firefox"}'
-```
-
-  You can start the Selenium server and delegate it to docker for creating new instances:
-
-```shell
-     java -jar selenium-server-4.0.0-alpha-7.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
-```
+{{% pageinfo color="primary" %}}
+For simplicity, all command examples shown in this page assume that components are running
+locally. More detailed examples and usages can be found in the
+[Advanced Features]({{< ref "/advanced_features.md" >}}) section.
+{{% /pageinfo %}}
 
 ## Warning
 
-The Selenium Grid must be protected from external access using appropriate
+Selenium Grid must be protected from external access using appropriate
 firewall permissions.
 
 Failure to protect your Grid could result in one or more of the following occurring:
