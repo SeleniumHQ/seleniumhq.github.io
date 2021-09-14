@@ -1,7 +1,7 @@
 ---
 title: "Quand utiliser Grid"
 linkTitle: "Quand utiliser Grid"
-weight: 2
+weight: 10
 description: >
   Is Grid the right tool for you?
 aliases: ["/documentation/fr/grid/when_to_use_grid/"]
