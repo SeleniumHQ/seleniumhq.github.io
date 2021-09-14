@@ -133,7 +133,7 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 {{% pageinfo color="primary" %}}
 For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-[Advanced Features]({{< ref "/advanced_features.md" >}}) section.
+[Configuring Components]({{< ref "/configuring_components.md" >}}) section.
 {{% /pageinfo %}}
 
 ## Warning
