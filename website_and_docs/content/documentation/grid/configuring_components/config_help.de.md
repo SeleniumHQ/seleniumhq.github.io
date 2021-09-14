@@ -2,6 +2,7 @@
 title: "Config help"
 linkTitle: "Config help"
 weight: 1
+description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/de/grid/grid_4/configuring_components/config_help/"]
 ---
 
@@ -31,7 +32,7 @@ The info command provides detailed docs on the following topics:
 Quick config help and overview is provided by running:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info config
+java -jar selenium-server-<version>.jar info config
 ```
 
 ### Security
@@ -39,7 +40,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar info config
 To get details on setting up the Grid servers for secure communication and node registration:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info security
+java -jar selenium-server-<version>.jar info security
 ```
 
 ### Session Map setup
@@ -49,7 +50,7 @@ Grid supports additional storage options like Redis and JDBC - SQL supported dat
 To set up different session storage, use the following command to get setup steps:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
+java -jar selenium-server-<version>.jar info sessionmap
 ```
 
 ### Setting up tracing with OpenTelemetry and Jaeger
@@ -57,14 +58,14 @@ java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
 By default, tracing is enabled. To export traces and visualize them via Jaeger, use the following command for instructions:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info tracing
+java -jar selenium-server-<version>.jar info tracing
 ```
 
 ## List the Selenium Grid commands  
  
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar --config-help
+java -jar selenium-server-<version>.jar --config-help
 ```
 
 It will show all the available commands and description for each one.
@@ -76,42 +77,42 @@ Pass --help config option after the Selenium role to get component-specific conf
 ### Standalone 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar standalone --help
+java -jar selenium-server-<version>.jar standalone --help
 ```
 ### Hub 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar hub --help
+java -jar selenium-server-<version>.jar hub --help
 ```
 
 ### Sessions 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessions --help
+java -jar selenium-server-<version>.jar sessions --help
 ```
 
 ### New Session Queuer
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueuer --help
 ```
 
 ### Distributor 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar distributor --help
+java -jar selenium-server-<version>.jar distributor --help
 ```
 
 ### Router 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar router --help
+java -jar selenium-server-<version>.jar router --help
 ```
 
 ### Node 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --help
+java -jar selenium-server-<version>.jar node --help
 ```
 
 

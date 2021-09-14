@@ -2,6 +2,7 @@
 title: "配置帮助"
 linkTitle: "配置帮助"
 weight: 1
+description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/zh-cn/grid/grid_4/configuring_components/config_help/"]
 ---
 
@@ -23,7 +24,7 @@ Info命令提供以下主题的详细文档:
 通过运行以下命令快速获取配置帮助:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info config
+java -jar selenium-server-<version>.jar info config
 ```
 
 ### 安全
@@ -33,7 +34,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar info config
 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info security
+java -jar selenium-server-<version>.jar info security
 ```
 
 ### 会话表配置
@@ -46,7 +47,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar info security
 请使用以下命令获取设置步骤:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
+java -jar selenium-server-<version>.jar info sessionmap
 ```
 
 ### 基于OpenTelemetry和Jaeger的追踪配置
@@ -56,14 +57,14 @@ java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
 请使用以下命令进行说明:
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info tracing
+java -jar selenium-server-<version>.jar info tracing
 ```
 
 ## 列出Selenium网格的命令  
  
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar --config-help
+java -jar selenium-server-<version>.jar --config-help
 ```
 
 上述命令将显示所有可用的命令及其描述.
@@ -76,40 +77,40 @@ java -jar selenium-server-4.0.0-alpha-7.jar --config-help
 ### Standalone 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar standalone --help
+java -jar selenium-server-<version>.jar standalone --help
 ```
 ### Hub 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar hub --help
+java -jar selenium-server-<version>.jar hub --help
 ```
 
 ### Sessions 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessions --help
+java -jar selenium-server-<version>.jar sessions --help
 ```
 
 ### 队列器
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueuer --help
 ```
 
 ### Distributor 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar distributor --help
+java -jar selenium-server-<version>.jar distributor --help
 ```
 
 ### Router 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar router --help
+java -jar selenium-server-<version>.jar router --help
 ```
 
 ### Node 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --help
+java -jar selenium-server-<version>.jar node --help
 ```

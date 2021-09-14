@@ -2,6 +2,7 @@
 title: "構成ヘルプ"
 linkTitle: "構成ヘルプ"
 weight: 1
+description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/ja/grid/grid_4/configuring_components/config_help/"]
 ---
 
@@ -23,7 +24,7 @@ infoコマンドは、次のトピックに関する詳細なドキュメント�
 クイック設定のヘルプと概要は、以下を実行することで提供されます。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info config
+java -jar selenium-server-<version>.jar info config
 ```
 
 ### セキュリティ
@@ -31,7 +32,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar info config
 安全な通信とノード登録のためのグリッドサーバーの設定の詳細を取得するには、以下を実行します。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info security
+java -jar selenium-server-<version>.jar info security
 ```
 
 ### セッションマップの設定
@@ -41,7 +42,7 @@ java -jar selenium-server-4.0.0-alpha-7.jar info security
 別のセッションストレージをセットアップするには、次のコマンドを使用してセットアップ手順を取得します。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
+java -jar selenium-server-<version>.jar info sessionmap
 ```
 
 ### OpenTelemetryとJaegerを使用したトレースの設定
@@ -50,13 +51,13 @@ java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
 トレースをエクスポートしてJaeger経由で視覚化するには、次のコマンドを使用して手順を実行します。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar info tracing
+java -jar selenium-server-<version>.jar info tracing
 ```
 
 ## SeleniumGridコマンドを一覧表示する  
  
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar --config-help
+java -jar selenium-server-<version>.jar --config-help
 ```
 
 使用可能なすべてのコマンドとそれぞれの説明が表示されます。
@@ -68,40 +69,40 @@ Seleniumロールの後に–help configオプションを渡して、コンポ�
 ### スタンドアロン 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar standalone --help
+java -jar selenium-server-<version>.jar standalone --help
 ```
 ### ハブ 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar hub --help
+java -jar selenium-server-<version>.jar hub --help
 ```
 
 ### セッション 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessions --help
+java -jar selenium-server-<version>.jar sessions --help
 ```
 
 ### 新しいセッションキューラー
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer --help
+java -jar selenium-server-<version>.jar sessionqueuer --help
 ```
 
 ### ディストリビューター 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar distributor --help
+java -jar selenium-server-<version>.jar distributor --help
 ```
 
 ### ルーター 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar router --help
+java -jar selenium-server-<version>.jar router --help
 ```
 
 ### ノード 
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-7.jar node --help
+java -jar selenium-server-<version>.jar node --help
 ```
