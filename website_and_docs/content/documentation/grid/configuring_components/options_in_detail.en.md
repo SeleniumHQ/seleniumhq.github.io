@@ -1,7 +1,8 @@
 ---
-title: "Configure Grid"
-linkTitle: "Configure Grid"
+title: "Options in detail"
+linkTitle: "Options in detail"
 weight: 1
+description: All Grid components configuration options in detail.
 aliases: ["/documentation/en/grid/grid_4/configuring_components/configure_grid/"]
 ---
 

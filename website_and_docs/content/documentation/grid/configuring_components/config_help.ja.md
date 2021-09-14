@@ -6,9 +6,12 @@ description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/ja/grid/grid_4/configuring_components/config_help/"]
 ---
 
+{{% pageinfo color="primary" %}}
 ヘルプコマンドは、現在のコード実装に基づいて情報を表示します。
 したがって、ドキュメントが更新されない場合に備えて、正確な情報を提供します。
 それは、新しいバージョンのグリッド4の構成について学習する最も簡単な方法です。
+{{% /pageinfo %}}
+
 
 ## Info コマンド
 

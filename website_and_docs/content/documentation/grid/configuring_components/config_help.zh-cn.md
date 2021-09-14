@@ -6,10 +6,12 @@ description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/zh-cn/grid/grid_4/configuring_components/config_help/"]
 ---
 
-
+{{% pageinfo color="primary" %}}
 Help命令显示基于当前代码实现的信息.
 因此, 如果文档没有更新, 它将提供准确的信息.
 这是了解任何新版本Grid4配置的最便捷方法.
+{{% /pageinfo %}}
+
 
 ## 信息命令
 

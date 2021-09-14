@@ -6,9 +6,11 @@ description: Get information about all the available options to configure Grid.
 aliases: ["/documentation/en/grid/grid_4/configuring_components/config_help/"]
 ---
 
+{{% pageinfo color="primary" %}}
 The help commands display information based on the current code implementation.
-Hence, it will provide accurate information in case the documentation is not updated. 
+Hence, it will provide accurate information in case the documentation is not updated.
 It is the easiest way to learn about Grid 4 configuration for any new version.
+{{% /pageinfo %}}
 
 ## Info Command
 
