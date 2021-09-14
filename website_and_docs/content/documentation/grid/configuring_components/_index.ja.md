@@ -3,8 +3,16 @@ title: "コンポーネントの構成"
 linkTitle: "コンポーネントの構成"
 weight: 3
 description: >
-  前のセクションで説明したように、各グリッドコンポーネントは特定の役割を果たします。
-  したがって、各グリッドコンポーネントを個別に構成することができます。
-  このセクションでは、一般的な構成値とコンポーネント固有の構成値について説明します。
+  Here you can see how each Grid component can be configured individually based on
+  common configuration values and component-specific configuration values.
 aliases: ["/documentation/ja/grid/grid_4/configuring_components/"]
 ---
+
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Japanese. Do you speak Japanese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
