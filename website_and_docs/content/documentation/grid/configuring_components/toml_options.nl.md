@@ -120,11 +120,11 @@ video-image = "selenium/video:latest"
 
 ### Relaying commands to a service endpoint that supports WebDriver
 
-It is useful to connect an external service that supports WebDriver to Selenium Grid. 
+It is useful to connect an external service that supports WebDriver to Selenium Grid.
 An example of such service could be a cloud provider or an Appium server. In this way,
 Grid can enable more coverage to platforms and versions not present locally.
 
-The following is a en example of connecting an Appium server to Grid. 
+The following is an en example of connecting an Appium server to Grid.
 
 ```toml
 [server]
@@ -142,3 +142,23 @@ configs = [
   "1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
 ]
 ```
+
+### Basic auth enabled
+
+It is possible to protect a Grid with basic auth by configuring the Router/Hub/Standalone with
+a username and password. This user/password combination will be needed when loading the Grid UI
+or starting a new session.
+
+```toml
+[router]
+username = "admin"
+password = "myStrongPassword"
+```
+
+Here is a Java example showing how to start a session using the configured user and password.
+
+```java
+URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");
+RemoteWebDriver webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
+```
+
