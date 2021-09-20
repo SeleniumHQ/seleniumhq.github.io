@@ -5,11 +5,11 @@
 	{{ .Content }}
 </div>
 
-{{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data ) }}
-{{ partial "platinum-level-sponsors.html" . }}
-{{ partial "gold-level-sponsors.html" . }}
-{{ partial "silver-level-sponsors.html" . }}
-{{ partial "bronze-level-sponsors.html" . }}
+{{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "platinum-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "gold-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "silver-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "bronze-level-sponsors.html" (dict "Data" $.Site.Data) }}
 
 <div class="row td-box--100 ">
   <div class="card border-0 w-100 bg-transparent p-5">
