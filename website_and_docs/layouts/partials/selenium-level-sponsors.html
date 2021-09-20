@@ -1,47 +1,14 @@
+{{ if .Data.sponsors.selenium.enable }}
 <div class="row justify-content-center p-5">
   <h2 class="selenium text-center">Selenium Level Sponsors</h2>
 </div>
 <div class="row justify-content-around pt-4 pb-5 px-5">
-  <!-- Sponsorship start date: July 30, 2014, renewed January 2020 -->
+  {{ range .Data.sponsors.selenium.item }}
   <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/browserstack.png" alt="BrowserStack"/>
+    <a href="{{ .url }}" class="border-0">
+      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="{{ .logo }}" alt="{{ .name }}"/>
     </a>
   </div>
-  <!-- Sponsorship start date: August 23, 2014 -->
-  <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="http://saucelabs.com" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/saucelabs.png" alt="Sauce Labs"/>
-    </a>
-  </div>
-  <!-- Sponsorship start date: June 24, 2015 -->
-  <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="http://bit.ly/36uZ7ad" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/experitest.png" alt="Experitest"/>
-    </a>
-  </div>
-  <!-- Sponsorship start date: March 21, 2017 -->
-  <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="https://applitools.com/" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/applitools.png" alt="Applitools"/>
-    </a>
-  </div>
-  <!-- Sponsorship start date: August 13, 2020 -->
-  <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="https://www.perfecto.io/" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/perfecto-perforce.jpg" alt="Perfecto"/>
-    </a>
-  </div>
-  <!-- Sponsorship start date: July 08, 2021 -->
-  <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="https://www.lambdatest.com/selenium-automation" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="/images/sponsors/lambda-test.png" alt="LambdaTest"/>
-    </a>
-  </div>
-    <!-- Added: December 17, 2017 -->
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
-    <a href="https://www.subject-7.com/?utm_source=SeleniumHQ&utm_medium=referral&utm_campaign=product" class="border-0">
-        <img class="w-100 shadow-1-strong rounded backer-logo" src="/images/sponsors/subject7_logo.png" alt="Subject7"/>
-    </a>
+  {{ end }}
 </div>
-</div>
+{{ end }}

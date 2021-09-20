@@ -5,7 +5,7 @@
 	{{ .Content }}
 </div>
 
-{{ partial "selenium-level-sponsors.html" . }}
+{{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data ) }}
 {{ partial "platinum-level-sponsors.html" . }}
 {{ partial "gold-level-sponsors.html" . }}
 {{ partial "silver-level-sponsors.html" . }}
@@ -19,7 +19,7 @@
 				Would you like your company to be listed on this page? <a href="/sponsor">Learn more about sponsoring Selenium.</a>
 			</p>
     </div>
-  </div>  
+  </div>
 </div>
 
 {{ end }}
