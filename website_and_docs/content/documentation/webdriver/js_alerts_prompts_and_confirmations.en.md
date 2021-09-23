@@ -36,7 +36,7 @@ alert.accept();
   {{< /tab >}}
   {{< tab header="Python" >}}
 # Click the link to activate the alert
-driver.find_element(By.LINK_TEXT, "See an example alert").click()
+driver.find_element_by_link_text("See an example alert").click()
 
 # Wait for the alert to be displayed and store it in a variable
 alert = wait.until(expected_conditions.alert_is_present())
