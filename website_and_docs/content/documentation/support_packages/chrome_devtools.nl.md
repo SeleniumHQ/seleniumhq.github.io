@@ -195,7 +195,19 @@ register callbacks to process the DOM event.
 # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+async def domMutation():
+  driver = webdriver.Chrome()
+
+  async with driver.bidi_connection() as session:
+      log = Log(driver, session)
+      async with log.mutation_events() as event:
+          driver.get("<your site url>")
+          # Perform operations on the website that cause DOM mutation
+      print(event["attribute_name"])
+      print(event["current_value"])
+      print(event["old_value"])
+
+  driver.quit()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 # Please raise a PR to add code sample
@@ -258,7 +270,18 @@ public void jsExceptionsExample() {
 }
   {{< /tab >}}
   {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+async def catchJSException():
+  chrome_options = webdriver.ChromeOptions()
+  driver = webdriver.Chrome()
+
+  async with driver.bidi_connection() as session:
+      driver.get("<your site url>")
+      log = Log(driver, session)
+      async with log.add_js_error_listener() as messages:
+          # Operation on the website that throws an JS error
+      print(messages)
+
+  driver.quit()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 # Please raise a PR to add code sample
@@ -323,7 +346,19 @@ public void consoleLogTest() {
 }
   {{< /tab >}}
   {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+async def printConsoleLogs():
+  chrome_options = webdriver.ChromeOptions()
+  driver = webdriver.Chrome()
+  driver.get("http://www.google.com")
+
+  async with driver.bidi_connection() as session:
+      log = Log(driver, session)
+      from selenium.webdriver.common.bidi.console import Console
+      async with log.add_listener(Console.ALL) as messages:
+          driver.execute_script("console.log('I love cheese')")
+      print(messages["message"])
+
+  driver.quit()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   using OpenQA.Selenium.Chrome;
