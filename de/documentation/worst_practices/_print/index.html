@@ -20,13 +20,12 @@
 <a href=# onclick="return print(),!1">Druckvorgang starten</a>.</p><p><a href=/de/documentation/worst_practices/>Zur Standardansicht zurückkehren</a>.</p></div><h1 class=title>Worst practices</h1><div class=lead>Things to avoid when automating browsers with Selenium.</div><ul><li>1: <a href=#pg-7dd5b7b5f121d9d5f6257917fb1c68a3>Captchas</a></li><li>2: <a href=#pg-5211b8ed9f2511dd679abb24e6f575ba>File downloads</a></li><li>3: <a href=#pg-255b62053d3b1ac6546afa5fa0378dca>HTTP response codes</a></li><li>4: <a href=#pg-8e0e241ed61c2982ec014b00eec45cd5>Gmail, email and Facebook logins</a></li><li>5: <a href=#pg-758e3739948151648dc8e57a4507034c>Test dependency</a></li><li>6: <a href=#pg-630e6e3360994f5d7ac34b18c061a229>Performance testing</a></li><li>7: <a href=#pg-97fb6dd4cda9dee863062f81775cedb6>Link spidering</a></li><li>8: <a href=#pg-3c7b72b441d4e6e9676a4a77e06d6332>Two Factor Authentication</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to German. Do you speak German? Help us to translate
-it by sending us pull requests!</p></div></div></div><div class=td-content><h1 id=pg-7dd5b7b5f121d9d5f6257917fb1c68a3>1 - Captchas</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to German. Do you speak German? Help us to translate
-it by sending us pull requests!</p></div><p>CAPTCHA, short for <em>Completely Automated Public Turing test
-to tell Computers and Humans Apart</em>,
-is explicitly designed to prevent automation, so do not try!
-There are two primary strategies to get around CAPTCHA checks:</p><ul><li>Disable CAPTCHAs in your test environment</li><li>Add a hook to allow tests to bypass the CAPTCHA</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-5211b8ed9f2511dd679abb24e6f575ba>2 - File downloads</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+it by sending us pull requests!</p></div></div></div><div class=td-content><h1 id=pg-7dd5b7b5f121d9d5f6257917fb1c68a3>1 - Captchas</h1><p>CAPTCHA ist die Abkürzung für <em>Completely Automated Public Turing
+test to tell Computers and Humans Apart</em> (Vollständig
+automatisierter öffentlicher Turing-Test zur Unterscheidung von
+Computern und Menschen) und wurde speziell entwickelt, um eine
+Automatisierung zu verhindern, also versuchen Sie es gar nicht
+erst! Es gibt zwei Hauptstrategien, um CAPTCHA-Prüfungen zu umgehen:</p><ul><li>Die CAPTCHAs in Ihrer Testumgebung deaktivieren</li><li>Einen Hook hinzufügen, damit Tests das CAPTCHA umgehen können</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-5211b8ed9f2511dd679abb24e6f575ba>2 - File downloads</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to German. Do you speak German? Help us to translate
 it by sending us pull requests!</p></div><p>Whilst it is possible to start a download
