@@ -5,19 +5,13 @@ weight: 1
 aliases: ["/documentation/de/worst_practices/captchas/"]    
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to German. Do you speak German? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+CAPTCHA ist die Abkürzung für _Completely Automated Public Turing 
+test to tell Computers and Humans Apart_ (Vollständig 
+automatisierter öffentlicher Turing-Test zur Unterscheidung von 
+Computern und Menschen) und wurde speziell entwickelt, um eine 
+Automatisierung zu verhindern, also versuchen Sie es gar nicht 
+erst! Es gibt zwei Hauptstrategien, um CAPTCHA-Prüfungen zu umgehen:
 
-CAPTCHA, short for _Completely Automated Public Turing test
-to tell Computers and Humans Apart_,
-is explicitly designed to prevent automation, so do not try!
-There are two primary strategies to get around CAPTCHA checks:
+* Die CAPTCHAs in Ihrer Testumgebung deaktivieren
+* Einen Hook hinzufügen, damit Tests das CAPTCHA umgehen können
 
-* Disable CAPTCHAs in your test environment
-* Add a hook to allow tests to bypass the CAPTCHA
