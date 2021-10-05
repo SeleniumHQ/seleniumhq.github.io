@@ -20,37 +20,34 @@ elements that you need to enter the user name and password, but
 handling sites that use [basic or digest
 authentication][authentication] has always been harder. When using
 Selenium 3, the advice has been to get the login cookie and set it on
-your session before accessing the site.
+your session before accessing the site, but you can now just call a
+`register` method to add a user name and password (or, in the future,
+other kinds of authentication credentials)
 
-In Selenium 4, the process has become less complicated. Perhaps an
-example will help?
+In short, in Selenium 4, the process has become less
+complicated. Perhaps an example will help?
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-// Tell Selenium how we want to authenticate
 // This "HasAuthentication" interface is the key!
+HasAuthentication authentication (HasAuthentication) driver;
 
-((HasAuthentication) driver).register(() -> new UsernameAndPassword("admin", "admin"));
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+// You can either register something for all sites
+authentication.register(() -> new UsernameAndPassword("admin", "admin"));
 
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-INetwork network = driver.Manage().Network;
-ICredentials credentials = new PasswordCredentials("admin", "admin");
-NetworkAuthenticationHandler handler = ...
-network.AddAuthenticationHandler(handler);
+// Or use something different for specific sites
+authentication.register(
+  uri -> uri.getHost().contains("mysite.com"),
+  new UsernameAndPassword("AzureDiamond", "hunter2"));
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 driver.register(username: 'admin', password: 'admin')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
 {{< /tabpane >}}
 
 Once you've done this, every time the `driver` loads a page that needs
-authentication, it will use the user name and password you've given
-it.
+authentication, it will automatically use the user name and password
+you've given it.
 
 This feature is currently implemented on top of Selenium 4's [CDP][]
 support, and so only works on those browser that support that
