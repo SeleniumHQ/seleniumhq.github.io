@@ -180,7 +180,27 @@ driver.get("https://your-domain.com/login")
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-# Please raise a PR to add code sample
+public void getDomEvents() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
+
+    CountDownLatch latch = new CountDownLatch(1);
+    ((HasLogEvents) driver).onLogEvent(domMutation(mutation -> {
+      seen.set(mutation);
+      latch.countDown();
+    }));
+
+    // Actions causing DOM mutation
+
+    boolean latchResult = latch.await(20, SECONDS);
+
+    if (latchResult) {
+      System.out.println("Works!");
+    }
+    driver.quit();
+  }
   {{< /tab >}}
   {{< tab header="Python" >}}
 # Please raise a PR to add code sample
@@ -207,7 +227,27 @@ let revealed = driver.findElement({id: 'revealed'});
 await driver.wait(until.elementIsVisible(revealed), 5000);
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
+fun main() {
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
+    val seen = AtomicReference<DomMutationEvent>()
+
+    val latch = CountDownLatch(1)
+    (driver as HasLogEvents).onLogEvent(CdpEventTypes.domMutation { mutation: DomMutationEvent ->
+        seen.set(mutation)
+        latch.countDown()
+    })
+
+    // Actions causing DOM mutation
+
+    val latchResult = latch.await(20, TimeUnit.SECONDS)
+
+    if (latchResult) {
+        println("Works!")
+    }
+    driver.quit()
+}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -445,7 +485,20 @@ public class ExampleDevice {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const pageCdpConnection = await driver.createCDPConnection('page');
+  const metrics = {
+    width: 300,
+    height: 200,
+    deviceScaleFactor: 50,
+    mobile: true,
+  };
+  await pageCdpConnection.execute(
+    "Emulation.setDeviceMetricsOverride",
+    1,
+    metrics
+  );
+await driver.get("https://www.google.com");
+await driver.quit();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
@@ -501,7 +554,14 @@ public void performanceMetricsExample() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+await driver.get("https://www.duckduckgo.com");
+
+await driver.sendAndGetDevToolsCommand('Performance.enable')
+
+let result = await driver.sendAndGetDevToolsCommand('Performance.getMetrics')
+console.log(result)
+
+await driver.quit();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 val driver = ChromeDriver()
