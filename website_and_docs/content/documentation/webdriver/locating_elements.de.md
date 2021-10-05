@@ -202,6 +202,8 @@ Empfohlen wird die Suchen so kompackt und einfach lesbar wie möglich zu halten.
 Den DOM abzufragen ist eine aufwändige Operation für den WebDriver,
 und je präziser der Suchbegriff ist, desto besser.
 
+
+
 ## Relative Suchstrategien
 **Selenium 4** führt relative Locators ein, die zuvor als
 _Friendly Locators_ bekannt waren. Diese Funktionalität wurde
@@ -209,18 +211,14 @@ hinzugefügt um Elemente zu finden, die sicht in der Nähe zu anderen
 Elementen befinden.
 Folgende relative Locators sind verfügbar:
 
-* *above*  (oberhalb)
-* *below*  (unterhalb)
-* *toLeftOf*  (links)
-* *toRightOf*  (rechts)
-* *near*  (nahe/nächst)
+* `above` (oberhalb)
+* `below` (unterhalb)
+* `toLeftOf` (links)
+* `toRightOf` (rechts)
+* `near` (nahe/nächst)
 
-_findElement_ Methode akzeptiert nun eine weitere Möglichkeit
-`withTagName()` die einen relativen Locator liefert.
-
-**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick 
-locator of their choice like _By.id_, _By.cssSelector_  etc. 
-This feature landed in **Selenium4 - beta3**
+Die `findElement` Methode akzeptiert nun eine weitere Möglichkeit
+`with(By)` die einen relativen Locator liefert.
 
 ### Wie funktionieren die relativen Suchemethoden
 Selenium verwendet folgende JavaScript Funktion

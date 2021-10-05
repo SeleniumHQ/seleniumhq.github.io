@@ -204,18 +204,14 @@ chamado de _Localizadores Amigáveis_. Esta funcionalidade foi
 adicionada para ajudá-lo a localizar elementos que estão próximos a outros elementos.
 Os localizadores relativos disponíveis são:
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+* `above`
+* `below`
+* `toLeftOf`
+* `toRightOf`
+* `near`
 
-O método _findElement_ agora aceita um novo método `withTagName()`
+O método `findElement` agora aceita um novo método `with(By)`
 que retorna um RelativeLocator.
-
-**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
-locator of their choice like _By.id_, _By.cssSelector_  etc.
-This feature landed in **Selenium4 - beta3**
 
 ### Como funciona
 

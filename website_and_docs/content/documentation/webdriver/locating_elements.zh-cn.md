@@ -163,17 +163,13 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 它可以帮助你通过某些元素作为参考来定位其附近的元素。
 现在可用的相对定位有：
 
-* *above* 元素上
-* *below* 元素下
-* *toLeftOf* 元素左
-* *toRightOf* 元素右
-* *near* 附近
+* `above` 元素上
+* `below` 元素下
+* `toLeftOf` 元素左
+* `toRightOf` 元素右
+* `near` 附近
 
-_findElement_ 方法现在支持`withTagName()`新方法其可返回RelativeLocator相对定位对象。
-
-**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
-locator of their choice like _By.id_, _By.cssSelector_  etc.
-This feature landed in **Selenium4 - beta3**
+`findElement` 方法现在支持`with(By)`新方法其可返回RelativeLocator相对定位对象。
 
 ### 如何工作
 
