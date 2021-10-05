@@ -1026,10 +1026,8 @@ legíveis quanto possível. Pedir ao WebDriver para percorrer a estrutura DOM
 sua pesquisa, melhor.</p><h2 id=localizadores-relativos>Localizadores relativos</h2><p><strong>Selenium 4</strong> traz localizadores relativos que eram anteriormente
 chamado de <em>Localizadores Amigáveis</em>. Esta funcionalidade foi
 adicionada para ajudá-lo a localizar elementos que estão próximos a outros elementos.
-Os localizadores relativos disponíveis são:</p><ul><li><em>above</em></li><li><em>below</em></li><li><em>toLeftOf</em></li><li><em>toRightOf</em></li><li><em>near</em></li></ul><p>O método <em>findElement</em> agora aceita um novo método <code>withTagName()</code>
-que retorna um RelativeLocator.</p><p><strong>NOTE</strong>: Java bindings now support <code>with(By)</code> instead of <code>withTagName()</code> allowing users to pick
-locator of their choice like <em>By.id</em>, <em>By.cssSelector</em> etc.
-This feature landed in <strong>Selenium4 - beta3</strong></p><h3 id=como-funciona>Como funciona</h3><p>Selenium usa a função JavaScript
+Os localizadores relativos disponíveis são:</p><ul><li><code>above</code></li><li><code>below</code></li><li><code>toLeftOf</code></li><li><code>toRightOf</code></li><li><code>near</code></li></ul><p>O método <code>findElement</code> agora aceita um novo método <code>with(By)</code>
+que retorna um RelativeLocator.</p><h3 id=como-funciona>Como funciona</h3><p>Selenium usa a função JavaScript
 <a href=https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect>getBoundingClientRect()</a>
 para encontrar os elementos relativos. Esta função retorna
 propriedades de um elemento, como

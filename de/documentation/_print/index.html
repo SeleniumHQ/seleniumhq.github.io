@@ -1673,10 +1673,8 @@ und je präziser der Suchbegriff ist, desto besser.</p><h2 id=relative-suchstrat
 <em>Friendly Locators</em> bekannt waren. Diese Funktionalität wurde
 hinzugefügt um Elemente zu finden, die sicht in der Nähe zu anderen
 Elementen befinden.
-Folgende relative Locators sind verfügbar:</p><ul><li><em>above</em> (oberhalb)</li><li><em>below</em> (unterhalb)</li><li><em>toLeftOf</em> (links)</li><li><em>toRightOf</em> (rechts)</li><li><em>near</em> (nahe/nächst)</li></ul><p><em>findElement</em> Methode akzeptiert nun eine weitere Möglichkeit
-<code>withTagName()</code> die einen relativen Locator liefert.</p><p><strong>NOTE</strong>: Java bindings now support <code>with(By)</code> instead of <code>withTagName()</code> allowing users to pick
-locator of their choice like <em>By.id</em>, <em>By.cssSelector</em> etc.
-This feature landed in <strong>Selenium4 - beta3</strong></p><h3 id=wie-funktionieren-die-relativen-suchemethoden>Wie funktionieren die relativen Suchemethoden</h3><p>Selenium verwendet folgende JavaScript Funktion
+Folgende relative Locators sind verfügbar:</p><ul><li><code>above</code> (oberhalb)</li><li><code>below</code> (unterhalb)</li><li><code>toLeftOf</code> (links)</li><li><code>toRightOf</code> (rechts)</li><li><code>near</code> (nahe/nächst)</li></ul><p>Die <code>findElement</code> Methode akzeptiert nun eine weitere Möglichkeit
+<code>with(By)</code> die einen relativen Locator liefert.</p><h3 id=wie-funktionieren-die-relativen-suchemethoden>Wie funktionieren die relativen Suchemethoden</h3><p>Selenium verwendet folgende JavaScript Funktion
 <a href=https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect>getBoundingClientRect()</a>
 um das entsprechende Element zu finden. Diese
 Funktion retourniert Eigenschaften eines Elements
@@ -10206,7 +10204,7 @@ Organisationen im Bezug auf entstehende Verluste oder Schäden die
 aus den Informationen dieser Website. Weiters kann keine Patenthaftung
 zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unterstützer>Unterstützer</h2><h4 id=selenium-main-repositorygithubcomseleniumhqselenium><a href=//github.com/SeleniumHQ/selenium/>Selenium Main Repository</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/shs96c>@shs96c</a></label>
-<span class=contributions>5100 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/617090?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>5101 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/617090?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/barancev>@barancev</a></label>
 <span class=contributions>3352 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/352840?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jimevans>@jimevans</a></label>
@@ -10466,7 +10464,7 @@ zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unter
 <label><a href=https://github.com/peter-kehl>@peter-kehl</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=docker-seleniumgithubcomseleniumhqdocker-selenium><a href=//github.com/SeleniumHQ/docker-selenium/>Docker Selenium</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>394 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2972876?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>395 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2972876?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ddavison>@ddavison</a></label>
 <span class=contributions>133 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/736870?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mtscout6>@mtscout6</a></label>
@@ -10704,6 +10702,8 @@ zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unter
 <label><a href=https://github.com/liushilive>@liushilive</a></label>
 <span class=contributions>6 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/26656275?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/nainappa>@nainappa</a></label>
+<span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/shs96c>@shs96c</a></label>
 <span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/9844339?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/hyanx>@hyanx</a></label>
 <span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/41889344?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -10714,8 +10714,6 @@ zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unter
 <label><a href=https://github.com/barancev>@barancev</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/11714052?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/kjayachandra2000>@kjayachandra2000</a></label>
-<span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/shs96c>@shs96c</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/51388219?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ant9112>@ant9112</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/45083857?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>

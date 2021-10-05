@@ -1049,10 +1049,9 @@ estructura del DOM es una operación costosa, y cuanto más se pueda
 reducir el alcance de tu búsqueda, mejor.</p><h2 id=relative-locators>Relative Locators</h2><p><strong>Selenium 4</strong> brings Relative Locators which are previously
 called as <em>Friendly Locators</em>. This functionality was
 added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:</p><ul><li><em>above</em></li><li><em>below</em></li><li><em>toLeftOf</em></li><li><em>toRightOf</em></li><li><em>near</em></li></ul><p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
-which returns a RelativeLocator.</p><p><strong>NOTE</strong>: Java bindings now support <code>with(By)</code> instead of <code>withTagName()</code> allowing users to pick
-locator of their choice like <em>By.id</em>, <em>By.cssSelector</em> etc.
-This feature landed in <strong>Selenium4 - beta3</strong></p><h3 id=how-does-it-work>How does it work</h3><p>Selenium uses the JavaScript function
+The Available Relative Locators are:</p><ul><li><code>above</code></li><li><code>below</code></li><li><code>toLeftOf</code></li><li><code>toRightOf</code></li><li><code>near</code></li></ul><p>The <code>findElement</code> method accepts a new method <code>with(By)</code> which returns
+a <code>RelativeLocator</code>. Users can pick a locator of their choice like
+<code>By.id</code>, <code>By.cssSelector</code>, etc.</p><h3 id=how-does-it-work>How does it work</h3><p>Selenium uses the JavaScript function
 <a href=https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect>getBoundingClientRect()</a>
 to find the relative elements. This function returns
 properties of an element such as
