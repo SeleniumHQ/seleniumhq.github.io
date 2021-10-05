@@ -159,7 +159,17 @@ driver.get("https://your-domain.com/login");
 # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.devtools.new
+  driver.register(username: 'username', password: 'password')
+  driver.get '<your site url>'
+ensure
+  driver.quit
+end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const pageCdpConnection = await driver.createCDPConnection('page')
@@ -192,7 +202,23 @@ Using Selenium's integration with CDP, one can listen to the DOM events and regi
 # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get '<your-site-url>'
+  
+  mutations = []
+  driver.on_log_event(:mutation) do |event|
+    mutations.push(event)
+    puts mutations.length
+  end
+
+# Actions causing DOM Mutation
+
+ensure
+  driver.quit
+end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const cdpConnection = await driver.createCDPConnection('page')
@@ -254,7 +280,22 @@ public void jsExceptionsExample() {
 # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get '<your-site-url>'
+  exceptions = []
+  driver.on_log_event(:exception) do |event|
+    exceptions.push(event)
+    puts exceptions.length
+  end
+
+  # Actions causing JS exceptions
+
+ensure
+  driver.quit
+end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const cdpConnection = await driver.createCDPConnection('page')
@@ -336,7 +377,22 @@ devTools.createSession();
 }
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get 'http://www.google.com'
+  logs = []
+  driver.on_log_event(:console) do |event|
+    logs.push(event)
+    puts logs.length
+  end
+
+  driver.execute_script('console.log("here")')
+
+ensure
+  driver.quit
+end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const cdpConnection = await driver.createCDPConnection('page')
@@ -440,7 +496,20 @@ public class ExampleDevice {
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  metrics = { width: 300,
+              height: 200,
+              mobile: true,
+              deviceScaleFactor: 50 }
+  driver.execute_cdp('Emulation.setDeviceMetricsOverride', metrics)
+  driver.get 'https://www.google.com'
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 # Please raise a PR to add code sample
@@ -496,7 +565,18 @@ public void performanceMetricsExample() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.duckduckgo.com'
+  driver.execute_cdp('Performance.enable', {})
+  metrics = driver.execute_cdp('Performance.getMetrics', {})
+  puts metrics
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 # Please raise a PR to add code sample
