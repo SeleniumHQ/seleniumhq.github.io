@@ -1,30 +1,37 @@
 ---
-title: "WebDriver Bidi APIs"
-linkTitle: "WebDriver Bidi APIs"
+title: "WebDriver BiDi APIs"
+linkTitle: "WebDriver BiDi APIs"
 weight: 11
 aliases: ["/documentation/en/webdriver/bidi_apis/"]
 ---
 
-Selenium is working with Browser Vendors to create the 
-[BiDirectional WebDriver Protocol](https://w3c.github.io/webdriver-bidi/) 
-as a means to provide a stable, cross-browser implementation of a subset of the functionality found
-[Chrome DevTools](../../support_packages/chrome_devtools).
-The traditional webdriver model of strict request/response commands will be supplemented with the ability to
-stream events from the user agent to the controlling software via WebSockets, better matching the evented nature of the browser DOM.
+Selenium is working with browser vendors to create the 
+[WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/) 
+as a means to provide a stable, cross-browser API that uses the bidirectional
+functionality useful for both browser automation generally and testing specifically. 
+Before now, users seeking this functionality have had to rely on 
+the [Chrome DevTools Protocol](../../support_packages/chrome_devtools), 
+with all of its frustrations and limitations.
 
-While this initiative is being developed, Selenium has implemented this API which is currently supported by
-Chrome, Edge and Firefox using the Chrome DevTools Protocol. 
-While the underlying implementation may change, the goal is for this API to remain constant.
+The traditional webdriver model of strict request/response commands will be supplemented with the ability to
+stream events from the user agent to the controlling software via WebSockets, 
+better matching the evented nature of the browser DOM.
+
+Because it's a bad idea to tie your tests to a specific version of a specific browser, 
+the Selenium project recommends using WebDriver BiDi wherever possible. 
+However, until the spec is complete there are many useful things that the CDP offers. 
+To help keep your tests independent and portable, Selenium offers some useful helper classes. 
+At the moment, these use the CDP, but when we shall be using WebDriver Bidi as soon as possible
 
 The following list of APIs will be growing as the Selenium
 project works through supporting real world use cases. If there
-is a missing API, please raise a [feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+is additional functionality you'd like to see, please raise a 
+[feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
 ## Register Basic Auth:
 
-Some applications require to keep some pages behind an auth and most of the time
-to keep things simple, a developer uses Basic Auth. With Selenium and devtools
-integration, you can automate the input of basic auth credentials whenever they arise.
+Some applications make use of browser authentication to secure pages. 
+With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -143,7 +150,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< tab header="Java" >}}
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v87.log.Log;
+import org.openqa.selenium.devtools.idealized.log.Log;
 
 public void consoleLogTest() {
 ChromeDriver driver = new ChromeDriver();
@@ -151,7 +158,7 @@ DevTools devTools = driver.getDevTools();
 devTools.createSession();
 
     devTools.send(Log.enable());
-    devTools.addListener(Log.entryAdded(),
+    devTools.getDomains().log().entryAdded(),
             logEntry -> {
                 System.out.println("log: "+logEntry.getText());
                 System.out.println("level: "+logEntry.getLevel());
@@ -162,25 +169,7 @@ devTools.createSession();
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools;
-using System;
-using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
-
-    namespace Selenium4Sample {
-      public class Example {
-        public void ConsoleLogTest() {
-          var driver = new ChromeDriver();
-          var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession()
-           .GetVersionSpecificDomains < DevToolsSessionDomains > ();
-          devToolsSessionDomains.Log.Enable();
-          devToolsSessionDomains.Log.EntryAdded += (sender, e) => {
-          Console.WriteLine("log: " + e.Entry.Text);
-          Console.WriteLine("level: " + e.Entry.Level);
-      };
-    }
-}
-}
+# Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Please raise a PR to add code sample

@@ -1,23 +1,28 @@
 ---
-title: "Chrome Devtools"
-linkTitle: "Chrome Devtools"
+title: "Chrome DevTools Protocol"
+linkTitle: "Chrome DevTools Protocol"
 weight: 5
 aliases: ["/documentation/en/support_packages/chrome_devtools/"]
 ---
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-  While Selenium 4 provides direct access to Chrome DevTools Protocol, it is highly encouraged that
+  While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is highly encouraged that
 you use the <a href="../../webdriver/bidi_apis">WebDriver Bidi APIs</a> instead.
 </p>
 {{% /pageinfo %}}
 
-Chrome DevTools is a set of web developer tools built directly into the Google
-Chrome browser. The implementation is not designed for testing, nor to have a stable API,
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that developers can use to 
+debug web apps and explore the performance of their pages. 
+Google Chrome's DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, 
 so functionality is highly dependent on the version of the browser.
-If there is DevTools functionality that is not yet covered by a Bidi API, though, you can
-use DevTools directly to access properties such as Application Cache, Fetch, Network, Performance, Profiler, 
-Resource Timing, Security and Target CDP domains, etc. Here are a couple examples.
+
+WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
+implemented by all browsers, but it's not yet complete. Until it is, 
+Selenium provides access to the CDP for those browsers that implement it 
+(such as Google Chrome, or Microsoft Edge, and Firefox), 
+allowing you to enhance your tests in interesting ways. Some examples of what you can do with it are given below.
 
 ## Emulate Geo Location
 
