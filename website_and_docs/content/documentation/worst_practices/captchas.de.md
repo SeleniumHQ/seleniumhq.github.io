@@ -14,3 +14,4 @@ erst! Es gibt zwei Hauptstrategien, um CAPTCHA-Prüfungen zu umgehen:
 
 * Die CAPTCHAs in Ihrer Testumgebung deaktivieren
 * Einen Hook hinzufügen, damit Tests das CAPTCHA umgehen können
+
