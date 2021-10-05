@@ -161,17 +161,13 @@ Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천
 
 사용가능한 Relative Locators들은 다음과 같습니다:
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+* `above`
+* `below`
+* `toLeftOf`
+* `toRightOf`
+* `near`
 
-_findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
-
-**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
-locator of their choice like _By.id_, _By.cssSelector_  etc.
-This feature landed in **Selenium4 - beta3**
+`findElement` 메소드는 또다른 메소드 `with(By)` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
 
 ### 어떻게 작동하는가
 

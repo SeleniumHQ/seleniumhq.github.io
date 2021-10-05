@@ -180,17 +180,13 @@ WebDriverでDOM構造のトラバースを行うのは重い処理となりま�
 この機能は、他の要素の近くにある要素を見つけるのに役立つように追加されました。
 使用可能なレラティブ ロケーターは次のとおりです。
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+* `above`
+* `below`
+* `toLeftOf`
+* `toRightOf`
+* `near`
 
-_findElement_ メソッドは、レラティブ ロケーター を返す新しいメソッド `withTagName（）` を受け入れるようになりました。
-
-**NOTE**: Java bindings now support `with(By)` instead of `withTagName()` allowing users to pick
-locator of their choice like _By.id_, _By.cssSelector_  etc.
-This feature landed in **Selenium4 - beta3**
+`findElement` メソッドは、レラティブ ロケーター を返す新しいメソッド `with(By)` を受け入れるようになりました。
 
 ### どのように機能するか
 
