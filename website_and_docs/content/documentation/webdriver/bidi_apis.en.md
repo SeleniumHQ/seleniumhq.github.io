@@ -1,7 +1,7 @@
 ---
-title: "WebDriver BiDi APIs"
-linkTitle: "WebDriver BiDi APIs"
-weight: 11
+title: "BiDi APIs"
+linkTitle: "BiDi APIs"
+weight: 12
 aliases: ["/documentation/en/webdriver/bidi_apis/"]
 ---
 
@@ -10,11 +10,11 @@ Selenium is working with browser vendors to create the
 as a means to provide a stable, cross-browser API that uses the bidirectional
 functionality useful for both browser automation generally and testing specifically. 
 Before now, users seeking this functionality have had to rely on 
-the [Chrome DevTools Protocol](../../support_packages/chrome_devtools), 
+the [Chrome DevTools Protocol]({{< ref "/chrome_devtools.md" >}}), 
 with all of its frustrations and limitations.
 
-The traditional webdriver model of strict request/response commands will be supplemented with the ability to
-stream events from the user agent to the controlling software via WebSockets, 
+The traditional webdriver model of strict request/response commands will be supplemented 
+with the ability to stream events from the user agent to the controlling software via WebSockets, 
 better matching the evented nature of the browser DOM.
 
 Because it's a bad idea to tie your tests to a specific version of a specific browser, 
@@ -53,10 +53,9 @@ driver.get("https://your-domain.com/login");
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val uriPredicate =
-Predicate { uri: URI ->
-uri.host.contains("your-domain.com")
-}
+val uriPredicate = Predicate { uri: URI ->
+        uri.host.contains("your-domain.com")
+    }
 (driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
 driver.get("https://your-domain.com/login")
 {{< /tab >}}
@@ -71,7 +70,6 @@ element in the DOM.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 WebDriver driver = new FirefoxDriver();
-
 
 HasLogEvents logger = (HasLogEvents) driver;
 
@@ -90,8 +88,6 @@ WebElement span = driver.findElement(By.cssSelector("span"));
 assertThat(latch.await(10, SECONDS)).isTrue();
 assertThat(seen.get().getAttributeName()).isEqualTo("cheese");
 assertThat(seen.get().getCurrentValue()).isEqualTo("gouda");
-
-
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -111,9 +107,7 @@ assert event["old_value"] == "display:none;"
 
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-IWebDriver driver = new FirefoxDriver();
-driver.Url = "http://www.google.com";
-// Please help with a .NET example
+# Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -136,13 +130,11 @@ end
 # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val driver = FirefoxDriver()
-driver.get("http://www.google.com")
-// Please help us create an example for Kotlin
+# Please raise a PR to add code sample
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Listen to console.log events
+## Listen to `console.log` events
 
 Listen to the `console.log` events and register callbacks to process the event.
 
@@ -153,10 +145,9 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.idealized.log.Log;
 
 public void consoleLogTest() {
-ChromeDriver driver = new ChromeDriver();
-DevTools devTools = driver.getDevTools();
-devTools.createSession();
-
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
     devTools.send(Log.enable());
     devTools.getDomains().log().entryAdded(),
             logEntry -> {
@@ -179,9 +170,9 @@ devTools.createSession();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinConsoleLogExample() {
-val driver = ChromeDriver()
-val devTools = driver.devTools
-devTools.createSession()
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
 
     val logConsole = { c: ConsoleEvent -> print("Console log message is: " + c.messages)}
     devTools.domains.events().addConsoleListener(logConsole)
@@ -211,9 +202,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
 public void jsExceptionsExample() {
-ChromeDriver driver = new ChromeDriver();
-DevTools devTools = driver.getDevTools();
-devTools.createSession();
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
 
     List<JavascriptException> jsExceptionsList = new ArrayList<>();
     Consumer<JavascriptException> addEntry = jsExceptionsList::add;
@@ -247,9 +238,9 @@ devTools.createSession();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinJsErrorListener() {
-val driver = ChromeDriver()
-val devTools = driver.devTools
-devTools.createSession()
+    val driver = ChromeDriver()
+    val devTools = driver.devTools
+    devTools.createSession()
 
     val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
     devTools.domains.events().addJavascriptExceptionListener(logJsError)
@@ -279,11 +270,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
 public void performanceMetricsExample() {
-ChromeDriver driver = new ChromeDriver();
-DevTools devTools = driver.getDevTools();
-devTools.createSession();
-devTools.send(Performance.enable(Optional.empty()));
-List<Metric> metricList = devTools.send(Performance.getMetrics());
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
 
     driver.get("https://google.com");
     driver.quit();
@@ -316,7 +307,7 @@ driver["https://google.com"]
 driver.quit()
 
 for (m in metricList) {
-println(m.name.toString() + " = " + m.value)
+    println(m.name.toString() + " = " + m.value)
 }
 {{< /tab >}}
 {{< /tabpane >}}
