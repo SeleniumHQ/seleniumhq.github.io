@@ -17,7 +17,7 @@
 <a class=dropdown-item href=/fr/documentation/grid/>Français</a>
 <a class=dropdown-item href=/ja/documentation/grid/>日本語</a>
 <a class=dropdown-item href=/ko/documentation/grid/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/zh-cn/documentation/grid/>Return to the regular view of this page</a>.</p></div><h1 class=title>Grid</h1><div class=lead>要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.</div><ul><li>1: <a href=#pg-513aea440f7a5dcdf2fd2cf091439f36>服务网格的组件</a></li><li>2: <a href=#pg-e4d0a1214d8f6a629e7384fac3d5e30e>配置自己的服务网格</a></li><li>3: <a href=#pg-205f46aaf95b789941fbfb3037361a44>配置组件</a></li><ul><li>3.1: <a href=#pg-3ce7ee4b29b4aa8de1776db740cf2434>配置帮助</a></li><li>3.2: <a href=#pg-2786434e316aa4608c870e967b14db83>CLI Options</a></li><li>3.3: <a href=#pg-ac4bcef9ce7714cb39ab579cdd145a35>Toml Options</a></li></ul><li>4: <a href=#pg-9586edf2b9ce7e57a4873d12c1cb49bf>高级功能</a></li><ul><li>4.1: <a href=#pg-58fa36fce0115e0cac81fa0157f35027>Observability</a></li><li>4.2: <a href=#pg-5accfc3d64bfa8a3f37b3a48872e2e2d>GraphQL查询支持</a></li><li>4.3: <a href=#pg-1e74293b60642ddab77bb57253bc8cce>Grid端点</a></li></ul><li>5: <a href=#pg-0dfead81648fd92f1f69064ff55127bf>什么时候应该使用服务网格</a></li></ul><div class=content><p>通过将客户端命令发送到远程浏览器的实例,
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/zh-cn/documentation/grid/>Return to the regular view of this page</a>.</p></div><h1 class=title>Grid</h1><div class=lead>要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.</div><ul><li>1: <a href=#pg-513aea440f7a5dcdf2fd2cf091439f36>服务网格的组件</a></li><li>2: <a href=#pg-e4d0a1214d8f6a629e7384fac3d5e30e>配置自己的服务网格</a></li><li>3: <a href=#pg-205f46aaf95b789941fbfb3037361a44>配置组件</a></li><ul><li>3.1: <a href=#pg-3ce7ee4b29b4aa8de1776db740cf2434>配置帮助</a></li><li>3.2: <a href=#pg-2786434e316aa4608c870e967b14db83>CLI Options</a></li><li>3.3: <a href=#pg-ac4bcef9ce7714cb39ab579cdd145a35>Toml选项</a></li></ul><li>4: <a href=#pg-9586edf2b9ce7e57a4873d12c1cb49bf>高级功能</a></li><ul><li>4.1: <a href=#pg-58fa36fce0115e0cac81fa0157f35027>Observability</a></li><li>4.2: <a href=#pg-5accfc3d64bfa8a3f37b3a48872e2e2d>GraphQL查询支持</a></li><li>4.3: <a href=#pg-1e74293b60642ddab77bb57253bc8cce>Grid端点</a></li></ul><li>5: <a href=#pg-0dfead81648fd92f1f69064ff55127bf>什么时候应该使用服务网格</a></li></ul><div class=content><p>通过将客户端命令发送到远程浏览器的实例,
 Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚本.
 它旨在提供一种在多台计算机上并行运行测试的简便方法.</p><p>Selenium Grid允许我们在多台计算机上并行运行测试,
 并集中管理不同的浏览器版本和浏览器配置
@@ -153,34 +153,42 @@ and follow the template below.</p><pre><code>java -jar selenium-server-&lt;versi
 </code></pre><h4 id=hub-setting-a-new-session-request-timeout-a-main-port-and-disabling-tracing>Hub, setting a new session request timeout, a main port, and disabling tracing</h4><pre><code>java -jar selenium-server-&lt;version&gt;.jar hub --session-request-timeout 500 --port 3333 --tracing false
 </code></pre><h4 id=node-with-4-max-sessions-with-debugfine-log-7777-as-port-and-only-with-firefox-and-edge>Node, with 4 max sessions, with debug(fine) log, 7777 as port, and only with Firefox and Edge</h4><pre><code>java -jar selenium-server-&lt;version&gt;.jar node --max-sessions 4 --log-level &quot;fine&quot; --port 7777 --driver-implementation &quot;firefox&quot; --driver-implementation &quot;edge&quot;
 </code></pre><h4 id=distributor-setting-session-map-server-url-session-queue-server-url-and-disabling-bus>Distributor, setting Session Map server url, Session Queue server url, and disabling bus</h4><pre><code>java -jar selenium-server-&lt;version&gt;.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
-</code></pre></div><div class=td-content style=page-break-before:always><h1 id=pg-ac4bcef9ce7714cb39ab579cdd145a35>3.3 - Toml Options</h1><div class=lead>Grid configuration examples using Toml files.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!</p></div><p>All the options shown in <a href=/zh-cn/documentation/grid/configuring_components/cli_options/>CLI options</a> can be configured through
-a <a href=https://github.com/toml-lang/toml>TOML</a> file. This page shows configuration examples for the
-different Grid components.</p><div class="pageinfo pageinfo-primary"><p>Note that this documentation could be outdated if an option was modified or added
-but has not been documented yet. In case you bump into this situation, please check
-the <a href=/zh-cn/documentation/grid/configuring_components/config_help/>&ldquo;Config help&rdquo;</a> section and feel free to send us a
-pull request updating this page.</p></div><h2 id=overview>Overview</h2><p>Selenium Grid uses <a href=https://github.com/toml-lang/toml>TOML</a> format for config files.
-The config file consists of sections and each section has options and its respective value(s).</p><p>Refer to the <a href=https://toml.io/en/>TOML documentation</a> for detailed usage guidance. In case of
-parsing errors, validate the config using <a href=https://www.toml-lint.com/>TOML linter</a>.</p><p>The general configuration structure has the following pattern:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>section1</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><div class=td-content style=page-break-before:always><h1 id=pg-ac4bcef9ce7714cb39ab579cdd145a35>3.3 - Toml选项</h1><div class=lead>使用Toml文件的Grid配置示例.</div><p><a href=/zh-cn/documentation/grid/configuring_components/cli_options/>CLI选项</a> 中
+显示的所有选项都可以通过
+<a href=https://github.com/toml-lang/toml>TOML</a> 文件进行配置.
+此页面显示不同Grid组件的配置示例.</p><div class="pageinfo pageinfo-primary"><p>请注意, 如果修改或添加了选项,
+但尚未记录, 则此文档可能已过时.
+如果您遇到这种情况,
+请查看 <a href=/zh-cn/documentation/grid/configuring_components/config_help/>&ldquo;配置帮助&rdquo;</a> 部分,
+并随时向我们发送更新此页面的请求.</p></div><h2 id=概述>概述</h2><p>Selenium Grid对配置文件使用 <a href=https://github.com/toml-lang/toml>TOML</a> 格式.
+配置文件由多个部分组成,
+每个部分都有选项及其各自的值.</p><p>有关详细的使用指南,
+请参阅<a href=https://toml.io/en/>TOML文档</a> .
+如果出现解析错误,
+请使用 <a href=https://www.toml-lint.com/>TOML linter</a> 验证配置.</p><p>一般配置结构具有以下模式:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>section1</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>option1</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;value&#34;</span>
 
 <span style=color:#000;font-weight:700>[</span><span style=color:#000>section2</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>option2</span><span style=color:#000;font-weight:700>=[</span><span style=color:#4e9a06>&#34;value1&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#34;value2&#34;</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>option3</span><span style=color:#000;font-weight:700>=</span><span style=color:#204a87;font-weight:700>true</span>
-</code></pre></div><p>Below are some examples of Grid components configured with a Toml file, the component can be
-started in the following way:</p><pre><code>java -jar selenium-server-&lt;version&gt;.jar &lt;component&gt; --config /path/to/file/&lt;file-name&gt;.toml
-</code></pre><h3 id=standalone>Standalone</h3><p>A Standalone server, running on port 4449, and a new session request timeout of 500 seconds.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>server</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><p>下面是一些使用Toml文件配置的
+Grid组件示例,
+该组件可以
+从下面的方式开始:</p><pre><code>java -jar selenium-server-&lt;version&gt;.jar &lt;component&gt; --config /path/to/file/&lt;file-name&gt;.toml
+</code></pre><h3 id=单机模式>单机模式</h3><p>单机服务器,
+在端口4449上运行,
+新会话请求超时500秒.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>server</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>port</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>4449</span>
 
 <span style=color:#000;font-weight:700>[</span><span style=color:#000>sessionqueue</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>session</span><span style=color:#a40000>-</span><span style=color:#000>request</span><span style=color:#a40000>-</span><span style=color:#000>timeout</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>500</span>
-</code></pre></div><h3 id=specific-browsers-and-a-limit-of-max-sessions>Specific browsers and a limit of max sessions</h3><p>A Standalone server or a Node which only has Firefox and Chrome enabled by default.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><h3 id=特定浏览器和最大会话数限制>特定浏览器和最大会话数限制</h3><p>默认情况下仅启用Firefox
+和Chrome的单机服务器或节点.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>drivers</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#34;chrome&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;firefox&#34;</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>max</span><span style=color:#a40000>-</span><span style=color:#000>sessions</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>3</span>
-</code></pre></div><h3 id=configuring-and-customising-drivers>Configuring and customising drivers</h3><p>Standalone or Node server with customised drivers, which allows things like having Firefox Beta
-or Nightly, and having different browser versions.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><h3 id=配置和定制驱动程序>配置和定制驱动程序</h3><p>具有定制驱动程序的单机或节点服务器,
+允许使用Firefox试用或者每日构建的功能,
+并且有不同的浏览器版本.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>detect</span><span style=color:#a40000>-</span><span style=color:#000>drivers</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>false</span>
 <span style=color:#000;font-weight:700>[[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>driver</span><span style=color:#a40000>-</span><span style=color:#000>configuration</span><span style=color:#000;font-weight:700>]]</span>
 <span style=color:#000>max</span><span style=color:#a40000>-</span><span style=color:#000>sessions</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>100</span>
@@ -193,9 +201,11 @@ or Nightly, and having different browser versions.</p><div class=highlight><pre 
 <span style=color:#000>display</span><span style=color:#a40000>-</span><span style=color:#000>name</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;Chrome Dev&#34;</span>
 <span style=color:#000>stereotype</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;{\&#34;browserName\&#34;: \&#34;chrome\&#34;, \&#34;browserVersion\&#34;: \&#34;95\&#34;, \&#34;platformName\&#34;: \&#34;MAC\&#34;, \&#34;goog:chromeOptions\&#34;: {\&#34;binary\&#34;: \&#34;/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev\&#34;}}&#34;</span>
 <span style=color:#000>webdriver</span><span style=color:#a40000>-</span><span style=color:#000>executable</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#39;/path/to/chromedriver/95/chromedriver&#39;</span>
-</code></pre></div><h3 id=standalone-or-node-with-docker>Standalone or Node with Docker</h3><p>A Standalone or Node server that is able to run each new session in a Docker container. Disabling
-drivers detection, having maximum 2 concurrent sessions. Stereotypes configured need to be mapped
-to a Docker image, and the Docker daemon needs to be exposed via http/tcp.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><h3 id=带docker的单机或节点>带Docker的单机或节点</h3><p>单机或节点服务器能够在Docker容器中运行每个新会话.
+禁用驱动程序检测,
+则最多有2个并发会话.
+原型配置需要映射一个Docker映像,
+Docker的守护进程需要通过http/tcp公开.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>detect</span><span style=color:#a40000>-</span><span style=color:#000>drivers</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>false</span>
 <span style=color:#000>max</span><span style=color:#a40000>-</span><span style=color:#000>sessions</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>2</span>
 
@@ -207,9 +217,11 @@ to a Docker image, and the Docker daemon needs to be exposed via http/tcp.</p><d
     <span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>url</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;http://localhost:2375&#34;</span>
 <span style=color:#000>video</span><span style=color:#a40000>-</span><span style=color:#000>image</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;selenium/video:latest&#34;</span>
-</code></pre></div><h3 id=relaying-commands-to-a-service-endpoint-that-supports-webdriver>Relaying commands to a service endpoint that supports WebDriver</h3><p>It is useful to connect an external service that supports WebDriver to Selenium Grid.
-An example of such service could be a cloud provider or an Appium server. In this way,
-Grid can enable more coverage to platforms and versions not present locally.</p><p>The following is an en example of connecting an Appium server to Grid.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>server</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><h3 id=将命令中继到支持webdriver的服务端点>将命令中继到支持WebDriver的服务端点</h3><p>连接到支持WebDriver外部服务
+的Selenium Grid非常有用.
+这种服务的一个例子可以是
+云提供商或Appium服务器. 这样,
+Grid可以实现对本地不存在的平台和版本的更多覆盖.</p><p>下面是一个将Appium服务器连接到Grid的示例.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>server</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>port</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>5555</span>
 
 <span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
@@ -223,12 +235,14 @@ Grid can enable more coverage to platforms and versions not present locally.</p>
 <span style=color:#000>configs</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>[</span>
   <span style=color:#4e9a06>&#34;1&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;{\&#34;browserName\&#34;: \&#34;chrome\&#34;, \&#34;platformName\&#34;: \&#34;android\&#34;, \&#34;appium:platformVersion\&#34;: \&#34;11\&#34;}&#34;</span>
 <span style=color:#000;font-weight:700>]</span>
-</code></pre></div><h3 id=basic-auth-enabled>Basic auth enabled</h3><p>It is possible to protect a Grid with basic auth by configuring the Router/Hub/Standalone with
-a username and password. This user/password combination will be needed when loading the Grid UI
-or starting a new session.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>router</span><span style=color:#000;font-weight:700>]</span>
+</code></pre></div><h3 id=启用基本身份验证>启用基本身份验证</h3><p>通过配置包含用户名和密码的
+路由器/集线器/单机的方式,
+可以使用这样的基本身份验证保护Grid.
+加载Grid UI或者开始一个新的会话时
+需要此用户/密码组合.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#000;font-weight:700>[</span><span style=color:#000>router</span><span style=color:#000;font-weight:700>]</span>
 <span style=color:#000>username</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;admin&#34;</span>
 <span style=color:#000>password</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;myStrongPassword&#34;</span>
-</code></pre></div><p>Here is a Java example showing how to start a session using the configured user and password.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#000>URL</span> <span style=color:#000>gridUrl</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>URL</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;http://admin:myStrongPassword@localhost:4444&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</code></pre></div><p>下面是一个Java示例, 演示如何使用配置的用户和密码启动会话.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#000>URL</span> <span style=color:#000>gridUrl</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>URL</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;http://admin:myStrongPassword@localhost:4444&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
 <span style=color:#000>RemoteWebDriver</span> <span style=color:#000>webDriver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>RemoteWebDriver</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>gridUrl</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ChromeOptions</span><span style=color:#ce5c00;font-weight:700>());</span>
 </code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9586edf2b9ce7e57a4873d12c1cb49bf>4 - 高级功能</h1><div class=lead>要获得高级功能的所有详细信息, 了解其工作原理, 以及如何设置自己的功能, 请浏览以下部分.</div></div><div class=td-content><h1 id=pg-58fa36fce0115e0cac81fa0157f35027>4.1 - Observability</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
