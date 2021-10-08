@@ -1,20 +1,11 @@
 ---
-title: "Overview"
-linkTitle: "Overview"
+title: "概要"
+linkTitle: "概要"
 weight: 1
 description: >
-  Is Selenium for you? See an overview of the different project components.
+  Seleniumはあなたに適していますか？さまざまなプロジェクトのコンポーネントの概要を参照してください。
 aliases: ["/documentation/ja/introduction/"]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Seleniumは一つのツールやAPIではありません。たくさんのツールから構成されています。
 
