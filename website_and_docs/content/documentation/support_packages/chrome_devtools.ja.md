@@ -1,27 +1,44 @@
 ---
-title: "Chrome デベロッパーツール"
-linkTitle: "Chrome デベロッパーツール"
+title: "Chrome DevTools Protocol"
+linkTitle: "Chrome DevTools Protocol"
 weight: 5
 aliases: ["/documentation/ja/support_packages/chrome_devtools/"]
 ---
 
-Selenium 4 alphaバージョンには、"DevTools" インターフェースを介した
-Chrome Dev Protocolのネイティブサポートが待望されています。
-これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、
-プロファイラー、リソースタイミング、セキュリティ、
-ターゲットCDPドメインなどのChrome開発プロパティを取得できます。
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+    Page being translated from English to Japanese. 
+    Do you speak Japanese? Help us to translate
+    it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-Chrome デベロッパーツールは、Google Chromeブラウザに直接組み込まれた一連のWeb開発ツールです。
-DevToolsは、ページをすぐに編集して問題をすばやく診断するのに役立ち、
-最終的にはより優れたWebサイトをより速く構築するのに役立ちます。
+{{% pageinfo color="warning" %}}
+<p class="lead">
+    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
+    highly encouraged that you use the <a href="{{< ref "/bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+</p>
+{{% /pageinfo %}}
 
-## ジオロケーションをエミュレート
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that developers can use to 
+debug web apps and explore the performance of their pages. 
+Google Chrome's DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, 
+so functionality is highly dependent on the version of the browser.
 
-一部のアプリケーションには、場所によって特徴や機能性が異なります。
-このようなアプリケーションの自動化は、ブラウザでSeleniumを使用して
-地理的位置をエミュレートすることが難しいため、困難です。
-しかし、デベロッパーツールの助けを借りて、それらを簡単にエミュレートできます。
-以下のコードスニペットはそのことを示しています。
+WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
+implemented by all browsers, but it's not yet complete. Until it is, 
+Selenium provides access to the CDP for those browsers that implement it 
+(such as Google Chrome, or Microsoft Edge, and Firefox), 
+allowing you to enhance your tests in interesting ways. Some examples of what you can do with it are given below.
+
+## Emulate Geo Location
+
+Some applications have different features and functionalities across different 
+locations. Automating such applications is difficult because it is hard to emulate 
+the geo locations in the browser using Selenium. But with the help of Devtools, 
+we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -45,14 +62,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 def geoLocationTest():
-driver = webdriver.Chrome()
-Map_coordinates = dict({
-"latitude": 41.8781,
-"longitude": -87.6298,
-"accuracy": 100
-})
-driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
-driver.get("<your site url>")
+    driver = webdriver.Chrome()
+    Map_coordinates = dict({
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "accuracy": 100
+        })
+    driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
+    driver.get("<your site url>")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System.Threading.Tasks;
@@ -142,8 +159,9 @@ fun main() {
 
 ## Register Basic Auth:
 
-Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
-With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
+Some applications require to keep some pages behind an auth and most of the time 
+to keep things simple, a developer uses Basic Auth. With Selenium and devtools 
+integration, you can automate the input of basic auth credentials whenever they arise.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -179,7 +197,8 @@ driver.get("https://your-domain.com/login")
 
 ## Listen to DOM events on a web page
 
-Using Selenium's integration with CDP, one can listen to the DOM events and register callbacks to process the DOM event.
+Using Selenium's integration with CDP, one can listen to the DOM events and 
+register callbacks to process the DOM event.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -256,7 +275,8 @@ fun main() {
 
 ## Listen to JS Exceptions on a web page
 
-Using Selenium's integration with CDP, one can listen to the JS Exceptions and register callbacks to process the exception details.
+Using Selenium's integration with CDP, one can listen to the JS Exceptions 
+and register callbacks to process the exception details.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -277,7 +297,7 @@ public void jsExceptionsExample() {
 
     WebElement link2click = driver.findElement(By.linkText("<your link text>"));
     ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
-        link2click, "onclick", "throw new Error('Hello, world!')");
+          link2click, "onclick", "throw new Error('Hello, world!')");
     link2click.click();
 
     for (JavascriptException jsException : jsExceptionsList) {
@@ -318,8 +338,8 @@ fun kotlinJsErrorListener() {
 
     val link2click = driver.findElement(By.name("q"))
     (driver as JavascriptExecutor).executeScript(
-        "arguments[0].setAttribute(arguments[1], arguments[2]);",
-        link2click, "onclick", "throw new Error('Hello, world!')"
+      "arguments[0].setAttribute(arguments[1], arguments[2]);",
+      link2click, "onclick", "throw new Error('Hello, world!')"
     )
     link2click.click()
 
@@ -330,7 +350,8 @@ fun kotlinJsErrorListener() {
 
 ## Listen to console.log events on a web page
 
-Using Selenium's integration with CDP, one can listen to the `console.log` events and register callbacks to process the event.
+Using Selenium's integration with CDP, one can listen to the `console.log` 
+events and register callbacks to process the event.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -339,9 +360,9 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v87.log.Log;
 
 public void consoleLogTest() {
-ChromeDriver driver = new ChromeDriver();
-DevTools devTools = driver.getDevTools();
-devTools.createSession();
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
 
     devTools.send(Log.enable());
     devTools.addListener(Log.entryAdded(),
@@ -354,7 +375,7 @@ devTools.createSession();
   {{< tab header="Python" >}}
 # Please raise a PR to add code sample
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" >}} 
   using OpenQA.Selenium.Chrome;
   using OpenQA.Selenium.DevTools;
   using System;
@@ -409,7 +430,10 @@ fun kotlinConsoleLogExample() {
 
 ## Override Device Mode
 
-Using Selenium's integration with CDP, one can override the current device mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor are required parameters. Optional parameters include scale, screenWidth, screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
+Using Selenium's integration with CDP, one can override the current device 
+mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor 
+are required parameters. Optional parameters include scale, screenWidth, 
+screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -422,11 +446,11 @@ public void deviceSimulationTest() {
     tools.createSession();
 
     Map deviceMetrics = new HashMap()
-    {{
-      put("width", 600);
-      put("height", 1000);
-      put("mobile", true);
-      put("deviceScaleFactor", 50);
+    {{  
+        put("width", 600);
+        put("height", 1000);
+        put("mobile", true);
+        put("deviceScaleFactor", 50);
     }};
 
     driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
@@ -518,9 +542,11 @@ fun kotlinOverridDeviceMode() {
 {{< /tab >}}
 {{< /tabpane >}}
 
+  
 ## Collect Performance Metrics
 
-Using Selenium's integration with CDP, one can collect various performance metrics while navigating the application.
+Using Selenium's integration with CDP, one can collect various performance 
+metrics while navigating the application.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}

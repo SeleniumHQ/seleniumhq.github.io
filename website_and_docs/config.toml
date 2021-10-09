@@ -163,7 +163,7 @@ offlineSearchMaxResults = 30
 algolia_docsearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
-prism_syntax_highlighting = false
+prism_syntax_highlighting = true
 
 # User interface configuration
 [params.ui]

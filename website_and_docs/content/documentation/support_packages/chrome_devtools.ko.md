@@ -1,6 +1,6 @@
 ---
-title: "Chrome Devtools"
-linkTitle: "Chrome Devtools"
+title: "Chrome DevTools Protocol"
+linkTitle: "Chrome DevTools Protocol"
 weight: 5
 aliases: ["/documentation/ko/support_packages/chrome_devtools/"]
 ---
@@ -14,16 +14,26 @@ aliases: ["/documentation/ko/support_packages/chrome_devtools/"]
 </p>
 {{% /pageinfo %}}
 
-Selenium 4 alpha versions have much awaited native support for Chrome DevTools 
-Protocol through "DevTools" interface. This helps us getting Chrome Development 
-properties such as Application Cache, Fetch, Network, Performance, Profiler, 
-Resource Timing, Security and Target CDP domains etc.
+{{% pageinfo color="warning" %}}
+<p class="lead">
+    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
+    highly encouraged that you use the <a href="{{< ref "/bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+</p>
+{{% /pageinfo %}}
 
-Chrome DevTools is a set of web developer tools built directly into the Google 
-Chrome browser. DevTools can help you edit pages on-the-fly and diagnose 
-problems quickly, which ultimately helps you build better websites, faster.
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that developers can use to 
+debug web apps and explore the performance of their pages. 
+Google Chrome's DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, 
+so functionality is highly dependent on the version of the browser.
 
-## Emulate Geo Location:
+WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
+implemented by all browsers, but it's not yet complete. Until it is, 
+Selenium provides access to the CDP for those browsers that implement it 
+(such as Google Chrome, or Microsoft Edge, and Firefox), 
+allowing you to enhance your tests in interesting ways. Some examples of what you can do with it are given below.
+
+## Emulate Geo Location
 
 Some applications have different features and functionalities across different 
 locations. Automating such applications is difficult because it is hard to emulate 
@@ -365,7 +375,7 @@ public void consoleLogTest() {
   {{< tab header="Python" >}}
 # Please raise a PR to add code sample
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" >}} 
   using OpenQA.Selenium.Chrome;
   using OpenQA.Selenium.DevTools;
   using System;
@@ -532,6 +542,7 @@ fun kotlinOverridDeviceMode() {
 {{< /tab >}}
 {{< /tabpane >}}
 
+  
 ## Collect Performance Metrics
 
 Using Selenium's integration with CDP, one can collect various performance 
