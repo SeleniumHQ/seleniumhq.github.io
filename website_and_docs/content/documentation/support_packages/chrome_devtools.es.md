@@ -17,7 +17,7 @@ aliases: ["/documentation/es/support_packages/chrome_devtools/"]
 {{% pageinfo color="warning" %}}
 <p class="lead">
     While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
-    highly encouraged that you use the <a href="{{< ref "/bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+    highly encouraged that you use the <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
 </p>
 {{% /pageinfo %}}
 
@@ -236,7 +236,20 @@ public class ExampleDevice {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const pageCdpConnection = await driver.createCDPConnection('page');
+  const metrics = {
+    width: 300,
+    height: 200,
+    deviceScaleFactor: 50,
+    mobile: true,
+  };
+  await pageCdpConnection.execute(
+    "Emulation.setDeviceMetricsOverride",
+    1,
+    metrics
+  );
+await driver.get("https://www.google.com");
+await driver.quit();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
@@ -254,6 +267,67 @@ fun kotlinOverridDeviceMode() {
   driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
   driver.get("https://www.google.com")
   driver.quit()
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
+  
+## Collect Performance Metrics
+
+Using Selenium's integration with CDP, one can collect various performance 
+metrics while navigating the application.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void performanceMetricsExample() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
+
+    driver.get("https://google.com");
+    driver.quit();
+
+    for(Metric m : metricList) {
+        System.out.println(m.getName() + " = " + m.getValue());
+    }
+}
+{{< /tab >}}
+{{< tab header="Python" >}}
+# Please raise a PR to add code sample
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+# Please raise a PR to add code sample
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+# Please raise a PR to add code sample
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+await driver.get("https://www.duckduckgo.com");
+
+await driver.sendAndGetDevToolsCommand('Performance.enable')
+
+let result = await driver.sendAndGetDevToolsCommand('Performance.getMetrics')
+console.log(result)
+
+await driver.quit();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+val driver = ChromeDriver()
+val devTools = driver.devTools
+devTools.createSession()
+devTools.send(Performance.enable(Optional.empty()))
+val metricList: List<Metric> = devTools.send(Performance.getMetrics())
+
+driver["https://google.com"]
+driver.quit()
+
+for (m in metricList) {
+    println(m.name.toString() + " = " + m.value)
 }
 {{< /tab >}}
 {{< /tabpane >}}
