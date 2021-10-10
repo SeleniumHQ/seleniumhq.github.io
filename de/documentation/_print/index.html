@@ -118,7 +118,7 @@ auszuführen. Hier ein einfaches Beispiel welche Möglichkeiten geboten werden:<
         <span style=color:#000>console</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>log</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>firstResult</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getAttribute</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;textContent&#39;</span><span style=color:#000;font-weight:700>));</span>
     <span style=color:#000;font-weight:700>}</span>
     <span style=color:#204a87;font-weight:700>finally</span><span style=color:#000;font-weight:700>{</span>
-        <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>();</span>
+       <span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>();</span>
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>})();</span>
   
@@ -3503,7 +3503,9 @@ eine der modifizierenden Tasten gedrückt wird (STRG, SHIFT, ALT).</p><ul class=
 <span style=color:#204a87;font-weight:700>ensure</span>
   <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>quit</span>
 <span style=color:#204a87;font-weight:700>end</span>
-  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>async</span> <span style=color:#204a87;font-weight:700>function</span> <span style=color:#000>example</span><span style=color:#000;font-weight:700>()</span> <span style=color:#000;font-weight:700>{</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#204a87;font-weight:700>const</span> <span style=color:#000;font-weight:700>{</span><span style=color:#000>Builder</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>By</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>Key</span><span style=color:#000;font-weight:700>}</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span><span style=color:#000;font-weight:700>);</span>
+
+<span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>async</span> <span style=color:#204a87;font-weight:700>function</span> <span style=color:#000>example</span><span style=color:#000;font-weight:700>()</span> <span style=color:#000;font-weight:700>{</span>
   <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Builder</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>forBrowser</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;chrome&#39;</span><span style=color:#000;font-weight:700>).</span><span style=color:#000>build</span><span style=color:#000;font-weight:700>();</span>
 
   <span style=color:#204a87;font-weight:700>try</span> <span style=color:#000;font-weight:700>{</span>
@@ -10122,7 +10124,7 @@ Organisationen im Bezug auf entstehende Verluste oder Schäden die
 aus den Informationen dieser Website. Weiters kann keine Patenthaftung
 zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unterstützer>Unterstützer</h2><h4 id=selenium-main-repositorygithubcomseleniumhqselenium><a href=//github.com/SeleniumHQ/selenium/>Selenium Main Repository</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/shs96c>@shs96c</a></label>
-<span class=contributions>5106 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/617090?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>5109 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/617090?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/barancev>@barancev</a></label>
 <span class=contributions>3352 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/352840?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jimevans>@jimevans</a></label>
@@ -10182,7 +10184,7 @@ zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unter
 <label><a href=https://github.com/alex-savchuk>@alex-savchuk</a></label>
 <span class=contributions>90 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>84 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>85 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andrashatvani>@andrashatvani</a></label>
 <span class=contributions>66 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1015125?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ajayk>@ajayk</a></label>
@@ -10602,11 +10604,11 @@ zur Verwendung der enthaltenen Informationen übernommen werden.</p><h2 id=unter
 <label><a href=https://github.com/jmartinezpoq>@jmartinezpoq</a></label>
 <span class=contributions>18 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/22507394?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ivanrodjr>@ivanrodjr</a></label>
-<span class=contributions>17 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
-<span class=contributions>16 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>17 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>15 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/69031386?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>16 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
+<span class=contributions>16 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/69031386?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/sindhudiddi>@sindhudiddi</a></label>
 <span class=contributions>12 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4995276?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/hiroksarker>@hiroksarker</a></label>
