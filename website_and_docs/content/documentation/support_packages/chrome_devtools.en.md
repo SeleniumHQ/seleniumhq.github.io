@@ -34,20 +34,15 @@ we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void geoLocationTest(){
-  ChromeDriver driver = new ChromeDriver();
-  Map coordinates = new HashMap()
-  {{
-      put("latitude", 50.2334);
-      put("longitude", 0.2334);
-      put("accuracy", 1);
-  }};    
-  driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
-  driver.get("<your site url>");
-}  
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+//52.50439314237997, 13.450101206136946
+devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
+                                               Optional.of(13.4501),
+                                               Optional.of(1)));
+driver.get("https://my-location.org/");
+driver.quit();
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -161,7 +156,6 @@ screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport,
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
 devTools.createSession();
-devTools.send(Log.enable());
 // iPhone 11 Pro dimensions
 devTools.send(Emulation.setDeviceMetricsOverride(375,
                                                  812,
