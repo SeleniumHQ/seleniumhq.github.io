@@ -117,7 +117,7 @@ const { Builder } = require("selenium-webdriver");
 async function geoLocationTest() {
   const driver = await new Builder().forBrowser("chrome").build();
   await driver.get("http://www.google.com");
-  const pageCdpConnection = await driver.createCDPConnection("page");
+  const pageCdpConnection = await driver.createCDPConnection();
   //Latitude and longitude of Tokyo, Japan
   const coordinates = {
     latitude: 35.689487,
@@ -241,7 +241,7 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-const pageCdpConnection = await driver.createCDPConnection('page');
+const pageCdpConnection = await driver.createCDPConnection();
   const metrics = {
     width: 300,
     height: 200,
