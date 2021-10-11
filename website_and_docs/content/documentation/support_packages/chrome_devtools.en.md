@@ -225,7 +225,20 @@ public class ExampleDevice {
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  metrics = { width: 300,
+              height: 200,
+              mobile: true,
+              deviceScaleFactor: 50 }
+  driver.execute_cdp('Emulation.setDeviceMetricsOverride', metrics)
+  driver.get 'https://www.google.com'
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 const pageCdpConnection = await driver.createCDPConnection('page');
