@@ -1,6 +1,6 @@
 ---
-title: "Chrome Devtools"
-linkTitle: "Chrome Devtools"
+title: "Chrome DevTools Protocol"
+linkTitle: "Chrome DevTools Protocol"
 weight: 5
 aliases: ["/documentation/pt-br/support_packages/chrome_devtools/"]
 ---
@@ -14,20 +14,31 @@ aliases: ["/documentation/pt-br/support_packages/chrome_devtools/"]
 </p>
 {{% /pageinfo %}}
 
-Selenium 4 alpha versions have much awaited native support for Chrome DevTools 
-Protocol through "DevTools" interface. This helps us getting Chrome Development 
-properties such as Application Cache, Fetch, Network, Performance, Profiler, 
-Resource Timing, Security and Target CDP domains etc.
+{{% pageinfo color="warning" %}}
+<p class="lead">
+    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
+    highly encouraged that you use the 
+    <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+</p>
+{{% /pageinfo %}}
 
-Chrome DevTools is a set of web developer tools built directly into the Google 
-Chrome browser. DevTools can help you edit pages on-the-fly and diagnose 
-problems quickly, which ultimately helps you build better websites, faster.
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
+developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
+DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
+is highly dependent on the version of the browser.
 
-## Emulate Geo Location:
+WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
+implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
+the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
+Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
+do with it are given below.
+
+## Emulate Geo Location
 
 Some applications have different features and functionalities across different 
 locations. Automating such applications is difficult because it is hard to emulate 
-the geo locations in the browser using Selenium. But with the help of Devtools, 
+the geo-locations in the browser using Selenium. But with the help of Devtools, 
 we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -147,277 +158,6 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Register Basic Auth:
-
-Some applications require to keep some pages behind an auth and most of the time 
-to keep things simple, a developer uses Basic Auth. With Selenium and devtools 
-integration, you can automate the input of basic auth credentials whenever they arise.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
-
-((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
-driver.get("https://your-domain.com/login");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.devtools.new
-  driver.register(username: 'username', password: 'password')
-  driver.get '<your site url>'
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const pageCdpConnection = await driver.createCDPConnection('page')
-
-await driver.register('username', 'password', pageCdpConnection)
-await driver.get(server.url())
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val uriPredicate =
-    Predicate { uri: URI ->
-        uri.host.contains("your-domain.com")
-    }
-(driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
-driver.get("https://your-domain.com/login")
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to DOM events on a web page
-
-Using Selenium's integration with CDP, one can listen to the DOM events and 
-register callbacks to process the DOM event.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.logMutationEvents(cdpConnection, function(event) {
-  assert.equal(event['attribute_name'], 'style')
-  assert.equal(event['current_value'], '')
-  assert.equal(event['old_value'], 'display:none;')
-})
-
-await driver.get(test.Pages.dynamicPage)
-
-let element = driver.findElement({id: 'reveal'})
-await element.click()
-let revealed = driver.findElement({id: 'revealed'});
-await driver.wait(until.elementIsVisible(revealed), 5000);
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to JS Exceptions on a web page
-
-Using Selenium's integration with CDP, one can listen to the JS Exceptions 
-and register callbacks to process the exception details.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void jsExceptionsExample() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-
-    List<JavascriptException> jsExceptionsList = new ArrayList<>();
-    Consumer<JavascriptException> addEntry = jsExceptionsList::add;
-    devTools.getDomains().events().addJavascriptExceptionListener(addEntry);
-
-    driver.get("<your site url>");
-
-    WebElement link2click = driver.findElement(By.linkText("<your link text>"));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
-          link2click, "onclick", "throw new Error('Hello, world!')");
-    link2click.click();
-
-    for (JavascriptException jsException : jsExceptionsList) {
-        System.out.println("JS exception message: " + jsException.getMessage());
-        System.out.println("JS exception system information: " + jsException.getSystemInformation());
-        jsException.printStackTrace();
-    }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :chrome
-begin
-  driver.get '<your-site-url>'
-  exceptions = []
-  driver.on_log_event(:exception) do |event|
-    exceptions.push(event)
-    puts exceptions.length
-  end
-
-  # Actions causing JS exceptions
-
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.onLogException(cdpConnection, function(event) {
-  assert.equal(event['exceptionDetails']['stackTrace']['callFrames'][0]['functionName'], 'onmouseover')
-})
-await driver.get(test.Pages.javascriptPage)
-let element = driver.findElement({id: 'throwing-mouseover'})
-await element.click()
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-fun kotlinJsErrorListener() {
-    val driver = ChromeDriver()
-    val devTools = driver.devTools
-    devTools.createSession()
-
-    val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
-    devTools.domains.events().addJavascriptExceptionListener(logJsError)
-
-    driver.get("https://www.google.com")
-
-    val link2click = driver.findElement(By.name("q"))
-    (driver as JavascriptExecutor).executeScript(
-      "arguments[0].setAttribute(arguments[1], arguments[2]);",
-      link2click, "onclick", "throw new Error('Hello, world!')"
-    )
-    link2click.click()
-
-    driver.quit()
-}
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to console.log events on a web page
-
-Using Selenium's integration with CDP, one can listen to the `console.log` 
-events and register callbacks to process the event.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v87.log.Log;
-
-public void consoleLogTest() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-
-    devTools.send(Log.enable());
-    devTools.addListener(Log.entryAdded(),
-            logEntry -> {
-                System.out.println("log: "+logEntry.getText());
-                System.out.println("level: "+logEntry.getLevel());
-            });
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-  using OpenQA.Selenium.Chrome;
-  using OpenQA.Selenium.DevTools;
-  using System;
-  using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
-
-    namespace Selenium4Sample {
-      public class Example {
-        public void ConsoleLogTest() {
-          var driver = new ChromeDriver();
-          var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession()
-           .GetVersionSpecificDomains < DevToolsSessionDomains > ();
-          devToolsSessionDomains.Log.Enable();
-          devToolsSessionDomains.Log.EntryAdded += (sender, e) => {
-          Console.WriteLine("log: " + e.Entry.Text);
-          Console.WriteLine("level: " + e.Entry.Level);
-      };
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :chrome
-begin
-  driver.get 'http://www.google.com'
-  logs = []
-  driver.on_log_event(:console) do |event|
-    logs.push(event)
-    puts logs.length
-  end
-
-  driver.execute_script('console.log("here")')
-
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.onLogEvent(cdpConnection, function(event) {
-  assert.equal(event['args'][0]['value'], 'here')
-})
-await driver.executeScript('console.log("here")')
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-fun kotlinConsoleLogExample() {
-    val driver = ChromeDriver()
-    val devTools = driver.devTools
-    devTools.createSession()
-
-    val logConsole = { c: ConsoleEvent -> print("Console log message is: " + c.messages)}
-    devTools.domains.events().addConsoleListener(logConsole)
-
-    driver.get("https://www.google.com")
-
-    val executor = driver as JavascriptExecutor
-    executor.executeScript("console.log('Hello World')")
-
-    val input = driver.findElement(By.name("q"))
-    input.sendKeys("Selenium 4")
-    input.sendKeys(Keys.RETURN)
-    driver.quit()
-}
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ## Override Device Mode
 
 Using Selenium's integration with CDP, one can override the current device 
@@ -510,7 +250,20 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const pageCdpConnection = await driver.createCDPConnection('page');
+  const metrics = {
+    width: 300,
+    height: 200,
+    deviceScaleFactor: 50,
+    mobile: true,
+  };
+  await pageCdpConnection.execute(
+    "Emulation.setDeviceMetricsOverride",
+    1,
+    metrics
+  );
+await driver.get("https://www.google.com");
+await driver.quit();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
@@ -528,70 +281,6 @@ fun kotlinOverridDeviceMode() {
   driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
   driver.get("https://www.google.com")
   driver.quit()
-}
-{{< /tab >}}
-{{< /tabpane >}}
-
-## Collect Performance Metrics
-
-Using Selenium's integration with CDP, one can collect various performance 
-metrics while navigating the application.
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void performanceMetricsExample() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-    devTools.send(Performance.enable(Optional.empty()));
-    List<Metric> metricList = devTools.send(Performance.getMetrics());
-
-    driver.get("https://google.com");
-    driver.quit();
-
-    for(Metric m : metricList) {
-        System.out.println(m.getName() + " = " + m.getValue());
-    }
-}
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.duckduckgo.com'
-  driver.execute_cdp('Performance.enable', {})
-  metrics = driver.execute_cdp('Performance.getMetrics', {})
-  puts metrics
-ensure
-  driver.quit
-end
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-val driver = ChromeDriver()
-val devTools = driver.devTools
-devTools.createSession()
-devTools.send(Performance.enable(Optional.empty()))
-val metricList: List<Metric> = devTools.send(Performance.getMetrics())
-
-driver["https://google.com"]
-driver.quit()
-
-for (m in metricList) {
-    println(m.name.toString() + " = " + m.value)
 }
 {{< /tab >}}
 {{< /tabpane >}}
