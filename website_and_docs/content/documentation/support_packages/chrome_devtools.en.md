@@ -158,25 +158,26 @@ screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport,
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void deviceSimulationTest() {
-    ChromeDriver driver = (ChromeDriver) Driver.getDriver();
-    tools = driver.getDevTools();
-    tools.createSession();
-
-    Map deviceMetrics = new HashMap()
-    {{  
-        put("width", 600);
-        put("height", 1000);
-        put("mobile", true);
-        put("deviceScaleFactor", 50);
-    }};
-
-    driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
-    driver.get("https://www.google.com");
-}
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+devTools.send(Log.enable());
+// iPhone 11 Pro dimensions
+devTools.send(Emulation.setDeviceMetricsOverride(375,
+                                                 812,
+                                                 50,
+                                                 true,
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty()));
+driver.get("https://selenium.dev/");
+driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Please raise a PR to add code sample
