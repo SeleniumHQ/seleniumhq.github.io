@@ -3,12 +3,12 @@ title: "服务网格的组件"
 linkTitle: "服务网格的组件"
 weight: 1
 description: >
-    Check the different Grid components to understand how to use them.
+    检查不同的Grid组件以了解如何使用它们.
 aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 ---
 
 
-{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
+{{< card header="**Grid组件**" footer="以完全分布式模式显示的Grid组件" >}}
 ![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
 {{< /card >}}
 
@@ -33,14 +33,14 @@ aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 来平衡Grid的负载,
 从而使处理过程中不会有任何的过载组件.
 
-## Distributor
+## 分发器
 
 分发器知道所有节点及其功能. 
 它的主要作用是接收新的会话请求
 并找到可以在其中创建会话的适当节点. 
 创建会话后, 分发器在会话集合中存储会话ID与正在执行会话的节点之间的关系. 
 
-## Node
+## 节点
 
 一个节点可以在网格中出现多次.
 每个节点负责管理其运行机器的可用浏览器的插槽.
@@ -48,11 +48,17 @@ aliases: ["/documentation/zh-cn/grid/grid_4/components_of_a_grid/"]
 节点通过事件总线将其自身注册到分发服务器,
 并且将其配置作为注册消息的组成部分一起发送.
 
-By default, the Node auto-registers all browser drivers available on the path of
-the machine where it runs. It also creates one slot per available CPU for Chromium
-based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
-Through a specific configuration, it can run sessions in Docker containers or relay commands.
-You can see more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
+默认情况下,
+节点自动注册其运行机器路径上的
+所有可用浏览器驱动程序. 
+它还为基于Chromium的浏览器和Firefox的
+每个可用CPU创建一个插槽. 
+对于Safari和Internet Explorer, 
+只创建一个插槽. 
+通过特定的配置,
+它可以在Docker容器或中继命令中运行会话. 
+您可以在下一 [章节]({{< ref "setting_up_your_own_grid.md" >}}) 
+中看到更多配置详细信息.
 
 节点仅执行接收到的命令, 
 它不进行评估、做出判断或控制任何事情.
@@ -99,8 +105,8 @@ You can see more configuration details in the next [section]({{< ref "setting_up
 当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.
 
 
-{{% alert title="Running your own Grid" color="primary" %}}
-Looking forward to using all these components and run your own Grid?
-Head to the ["Setting up your own"]({{< ref "setting_up_your_own_grid.md" >}})
-section to understand how to put all these pieces together.
+{{% alert title="运行你自己的Grid" color="primary" %}}
+期待使用所有组件并运行自己的Grid? 
+前往 ["配置自己的服务网格"]({{< ref "setting_up_your_own_grid.md" >}}) ,
+了解如何将所有零件组合在一起.
 {{% /alert %}}
