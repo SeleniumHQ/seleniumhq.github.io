@@ -46,7 +46,6 @@ we can easily emulate them. Below code snippet demonstrates that.
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
 devTools.createSession();
-//52.50439314237997, 13.450101206136946
 devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
                                                Optional.of(13.4501),
                                                Optional.of(1)));
