@@ -1,40 +1,37 @@
 ---
-title: "Toml Options"
-linkTitle: "Toml Options"
+title: "Toml选项"
+linkTitle: "Toml选项"
 weight: 3
-description: Grid configuration examples using Toml files.
+description: 使用Toml文件的Grid配置示例.
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
-All the options shown in [CLI options]({{< ref "cli_options.md" >}}) can be configured through
-a [TOML](https://github.com/toml-lang/toml) file. This page shows configuration examples for the
-different Grid components.
+[CLI选项]({{< ref "cli_options.md" >}}) 中
+显示的所有选项都可以通过
+[TOML](https://github.com/toml-lang/toml) 文件进行配置.
+此页面显示不同Grid组件的配置示例.
 
 {{% pageinfo color="primary" %}}
-Note that this documentation could be outdated if an option was modified or added
-but has not been documented yet. In case you bump into this situation, please check
-the ["Config help"]({{< ref "config_help.md" >}}) section and feel free to send us a
-pull request updating this page.
+请注意, 如果修改或添加了选项, 
+但尚未记录, 则此文档可能已过时.
+如果您遇到这种情况, 
+请查看 ["配置帮助"]({{< ref "config_help.md" >}}) 部分, 
+并随时向我们发送更新此页面的请求.
 {{% /pageinfo %}}
 
 
-## Overview
+## 概述
 
-Selenium Grid uses [TOML](https://github.com/toml-lang/toml) format for config files. 
-The config file consists of sections and each section has options and its respective value(s).
+Selenium Grid对配置文件使用 [TOML](https://github.com/toml-lang/toml) 格式.
+配置文件由多个部分组成, 
+每个部分都有选项及其各自的值.
 
-Refer to the [TOML documentation](https://toml.io/en/) for detailed usage guidance. In case of 
-parsing errors, validate the config using [TOML linter](https://www.toml-lint.com/).
+有关详细的使用指南, 
+请参阅[TOML文档](https://toml.io/en/) .
+如果出现解析错误, 
+请使用 [TOML linter](https://www.toml-lint.com/) 验证配置.
 
-The general configuration structure has the following pattern: 
+一般配置结构具有以下模式:
 
 ```toml
 [section1]
@@ -45,17 +42,21 @@ option2=["value1","value2"]
 option3=true
 ```
 
-Below are some examples of Grid components configured with a Toml file, the component can be
-started in the following way:
+下面是一些使用Toml文件配置的
+Grid组件示例, 
+该组件可以
+从下面的方式开始:
 
 ```
 java -jar selenium-server-<version>.jar <component> --config /path/to/file/<file-name>.toml
 ```
 
 
-### Standalone
+### 单机模式
 
-A Standalone server, running on port 4449, and a new session request timeout of 500 seconds. 
+单机服务器, 
+在端口4449上运行, 
+新会话请求超时500秒. 
 
 ```toml
 [server]
@@ -65,9 +66,10 @@ port = 4449
 session-request-timeout = 500
 ```
 
-### Specific browsers and a limit of max sessions
+### 特定浏览器和最大会话数限制
 
-A Standalone server or a Node which only has Firefox and Chrome enabled by default.
+默认情况下仅启用Firefox
+和Chrome的单机服务器或节点. 
 
 ```toml
 [node]
@@ -75,10 +77,11 @@ drivers = ["chrome", "firefox"]
 max-sessions = 3
 ```
 
-### Configuring and customising drivers
+### 配置和定制驱动程序
 
-Standalone or Node server with customised drivers, which allows things like having Firefox Beta 
-or Nightly, and having different browser versions. 
+具有定制驱动程序的单机或节点服务器, 
+允许使用Firefox试用或者每日构建的功能, 
+并且有不同的浏览器版本. 
 
 ```toml
 [node]
@@ -96,12 +99,13 @@ stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"95\", \"platfo
 webdriver-executable = '/path/to/chromedriver/95/chromedriver'
 ```
 
-### Standalone or Node with Docker
+### 带Docker的单机或节点
 
-A Standalone or Node server that is able to run each new session in a Docker container. Disabling 
-drivers detection, having maximum 2 concurrent sessions. Stereotypes configured need to be mapped 
-to a Docker image, and the Docker daemon needs to be exposed via http/tcp.
-
+单机或节点服务器能够在Docker容器中运行每个新会话. 
+禁用驱动程序检测, 
+则最多有2个并发会话. 
+原型配置需要映射一个Docker映像, 
+Docker的守护进程需要通过http/tcp公开. 
 
 ```toml
 [node]
@@ -118,13 +122,15 @@ url = "http://localhost:2375"
 video-image = "selenium/video:latest"
 ```
 
-### Relaying commands to a service endpoint that supports WebDriver
+### 将命令中继到支持WebDriver的服务端点
 
-It is useful to connect an external service that supports WebDriver to Selenium Grid.
-An example of such service could be a cloud provider or an Appium server. In this way,
-Grid can enable more coverage to platforms and versions not present locally.
+连接到支持WebDriver外部服务
+的Selenium Grid非常有用. 
+这种服务的一个例子可以是
+云提供商或Appium服务器. 这样,
+Grid可以实现对本地不存在的平台和版本的更多覆盖. 
 
-The following is an en example of connecting an Appium server to Grid.
+下面是一个将Appium服务器连接到Grid的示例.
 
 ```toml
 [server]
@@ -143,11 +149,13 @@ configs = [
 ]
 ```
 
-### Basic auth enabled
+### 启用基本身份验证
 
-It is possible to protect a Grid with basic auth by configuring the Router/Hub/Standalone with
-a username and password. This user/password combination will be needed when loading the Grid UI
-or starting a new session.
+通过配置包含用户名和密码的
+路由器/集线器/单机的方式, 
+可以使用这样的基本身份验证保护Grid. 
+加载Grid UI或者开始一个新的会话时
+需要此用户/密码组合.
 
 ```toml
 [router]
@@ -155,7 +163,7 @@ username = "admin"
 password = "myStrongPassword"
 ```
 
-Here is a Java example showing how to start a session using the configured user and password.
+下面是一个Java示例, 演示如何使用配置的用户和密码启动会话. 
 
 ```java
 URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");

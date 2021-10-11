@@ -182,6 +182,8 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+const {Builder, By, Key} = require('selenium-webdriver');
+
 (async function example() {
   let driver = await new Builder().forBrowser('chrome').build();
 

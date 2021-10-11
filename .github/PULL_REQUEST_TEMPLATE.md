@@ -15,7 +15,7 @@ Avoid large PRs, help reviewers by making them as simple and short as possible.
 
 ### Types of changes
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Change to the site (I am attaching a screenshot showing the before and after)
+- [ ] Change to the site (I have double-checked the Netlify deployment, and my changes look good)
 - [ ] Code example added (and I also added the example to all translated languages)
 - [ ] Improved translation
 - [ ] Added new translation (and I also added a notice to each document missing translation)

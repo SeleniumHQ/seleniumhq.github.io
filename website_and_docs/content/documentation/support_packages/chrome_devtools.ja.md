@@ -1,27 +1,45 @@
 ---
-title: "Chrome デベロッパーツール"
-linkTitle: "Chrome デベロッパーツール"
+title: "Chrome DevTools Protocol"
+linkTitle: "Chrome DevTools Protocol"
 weight: 5
 aliases: ["/documentation/ja/support_packages/chrome_devtools/"]
 ---
 
-Selenium 4 alphaバージョンには、"DevTools" インターフェースを介した
-Chrome Dev Protocolのネイティブサポートが待望されています。
-これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、
-プロファイラー、リソースタイミング、セキュリティ、
-ターゲットCDPドメインなどのChrome開発プロパティを取得できます。
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+    Page being translated from English to Japanese. 
+    Do you speak Japanese? Help us to translate
+    it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-Chrome デベロッパーツールは、Google Chromeブラウザに直接組み込まれた一連のWeb開発ツールです。
-DevToolsは、ページをすぐに編集して問題をすばやく診断するのに役立ち、
-最終的にはより優れたWebサイトをより速く構築するのに役立ちます。
+{{% pageinfo color="warning" %}}
+<p class="lead">
+    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
+    highly encouraged that you use the 
+    <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+</p>
+{{% /pageinfo %}}
 
-## ジオロケーションをエミュレート
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
+developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
+DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
+is highly dependent on the version of the browser.
 
-一部のアプリケーションには、場所によって特徴や機能性が異なります。
-このようなアプリケーションの自動化は、ブラウザでSeleniumを使用して
-地理的位置をエミュレートすることが難しいため、困難です。
-しかし、デベロッパーツールの助けを借りて、それらを簡単にエミュレートできます。
-以下のコードスニペットはそのことを示しています。
+WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
+implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
+the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
+Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
+do with it are given below.
+
+## Emulate Geo Location
+
+Some applications have different features and functionalities across different 
+locations. Automating such applications is difficult because it is hard to emulate 
+the geo-locations in the browser using Selenium. But with the help of Devtools, 
+we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -45,14 +63,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 def geoLocationTest():
-driver = webdriver.Chrome()
-Map_coordinates = dict({
-"latitude": 41.8781,
-"longitude": -87.6298,
-"accuracy": 100
-})
-driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
-driver.get("<your site url>")
+    driver = webdriver.Chrome()
+    Map_coordinates = dict({
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "accuracy": 100
+        })
+    driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
+    driver.get("<your site url>")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System.Threading.Tasks;
@@ -140,281 +158,12 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Register Basic Auth:
-
-Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
-With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
-
-((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
-driver.get("https://your-domain.com/login");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const pageCdpConnection = await driver.createCDPConnection('page')
-
-await driver.register('username', 'password', pageCdpConnection)
-await driver.get(server.url())
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val uriPredicate =
-    Predicate { uri: URI ->
-        uri.host.contains("your-domain.com")
-    }
-(driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
-driver.get("https://your-domain.com/login")
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to DOM events on a web page
-
-Using Selenium's integration with CDP, one can listen to the DOM events and register callbacks to process the DOM event.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.logMutationEvents(cdpConnection, function(event) {
-  assert.equal(event['attribute_name'], 'style')
-  assert.equal(event['current_value'], '')
-  assert.equal(event['old_value'], 'display:none;')
-})
-
-await driver.get(test.Pages.dynamicPage)
-
-let element = driver.findElement({id: 'reveal'})
-await element.click()
-let revealed = driver.findElement({id: 'revealed'});
-await driver.wait(until.elementIsVisible(revealed), 5000);
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to JS Exceptions on a web page
-
-Using Selenium's integration with CDP, one can listen to the JS Exceptions and register callbacks to process the exception details.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void jsExceptionsExample() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-
-    List<JavascriptException> jsExceptionsList = new ArrayList<>();
-    Consumer<JavascriptException> addEntry = jsExceptionsList::add;
-    devTools.getDomains().events().addJavascriptExceptionListener(addEntry);
-
-    driver.get("<your site url>");
-
-    WebElement link2click = driver.findElement(By.linkText("<your link text>"));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
-        link2click, "onclick", "throw new Error('Hello, world!')");
-    link2click.click();
-
-    for (JavascriptException jsException : jsExceptionsList) {
-        System.out.println("JS exception message: " + jsException.getMessage());
-        System.out.println("JS exception system information: " + jsException.getSystemInformation());
-        jsException.printStackTrace();
-    }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using System;
-using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools;
-using System.Threading.Tasks;
-// Replace the version to match the Chrome version
-using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V93.DevToolsSessionDomains;
-using ExceptionThrownEventArgs = OpenQA.Selenium.DevTools.V93.Runtime.ExceptionThrownEventArgs;
-
-namespace CDPJSException {
-    public class CDPJSExceptionTest {
-        ChromeDriver driver;
- 
-        [SetUp]
-        public void startBrowser() {
-            driver = new ChromeDriver("<path-to-chrome-executable>");
-        }
-
-        [Test]
-        public void jsExceptionTest()
-        {  
-            var devToolsSessionDomains = ((IDevTools)driver).GetDevToolsSession()
-           .GetVersionSpecificDomains<DevToolsSessionDomains>();
-
-            EventHandler <ExceptionThrownEventArgs> eventHandler =
-                (sender, e) => {
-                Assert.AreEqual("<your site url>", e.ExceptionDetails.Url);
-            };
-
-            enableRuntime(devToolsSessionDomains).GetAwaiter().GetResult();
-            devToolsSessionDomains.Runtime.ExceptionThrown += eventHandler;
-
-            driver.Url = new String("<your site url>");
-           // Operations that causes JS exception
-        }
-
-        public static async Task enableRuntime(DevToolsSessionDomains domains) {
-            await domains.Runtime.Enable();
-        }
-
-        [TearDown]
-        public void closeBrowser() {
-            driver.Close();
-        }
-    }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.onLogException(cdpConnection, function(event) {
-  assert.equal(event['exceptionDetails']['stackTrace']['callFrames'][0]['functionName'], 'onmouseover')
-})
-await driver.get(test.Pages.javascriptPage)
-let element = driver.findElement({id: 'throwing-mouseover'})
-await element.click()
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-fun kotlinJsErrorListener() {
-    val driver = ChromeDriver()
-    val devTools = driver.devTools
-    devTools.createSession()
-
-    val logJsError = { j: JavascriptException -> print("Javascript error: '" + j.localizedMessage + "'.") }
-    devTools.domains.events().addJavascriptExceptionListener(logJsError)
-
-    driver.get("https://www.google.com")
-
-    val link2click = driver.findElement(By.name("q"))
-    (driver as JavascriptExecutor).executeScript(
-        "arguments[0].setAttribute(arguments[1], arguments[2]);",
-        link2click, "onclick", "throw new Error('Hello, world!')"
-    )
-    link2click.click()
-
-    driver.quit()
-}
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Listen to console.log events on a web page
-
-Using Selenium's integration with CDP, one can listen to the `console.log` events and register callbacks to process the event.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v87.log.Log;
-
-public void consoleLogTest() {
-ChromeDriver driver = new ChromeDriver();
-DevTools devTools = driver.getDevTools();
-devTools.createSession();
-
-    devTools.send(Log.enable());
-    devTools.addListener(Log.entryAdded(),
-            logEntry -> {
-                System.out.println("log: "+logEntry.getText());
-                System.out.println("level: "+logEntry.getLevel());
-            });
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-  using OpenQA.Selenium.Chrome;
-  using OpenQA.Selenium.DevTools;
-  using System;
-  using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
-
-    namespace Selenium4Sample {
-      public class Example {
-        public void ConsoleLogTest() {
-          var driver = new ChromeDriver();
-          var devToolsSessionDomains = ((IDevTools) driver).GetDevToolsSession()
-           .GetVersionSpecificDomains < DevToolsSessionDomains > ();
-          devToolsSessionDomains.Log.Enable();
-          devToolsSessionDomains.Log.EntryAdded += (sender, e) => {
-          Console.WriteLine("log: " + e.Entry.Text);
-          Console.WriteLine("level: " + e.Entry.Level);
-      };
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page')
-await driver.onLogEvent(cdpConnection, function(event) {
-  assert.equal(event['args'][0]['value'], 'here')
-})
-await driver.executeScript('console.log("here")')
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-fun kotlinConsoleLogExample() {
-    val driver = ChromeDriver()
-    val devTools = driver.devTools
-    devTools.createSession()
-
-    val logConsole = { c: ConsoleEvent -> print("Console log message is: " + c.messages)}
-    devTools.domains.events().addConsoleListener(logConsole)
-
-    driver.get("https://www.google.com")
-
-    val executor = driver as JavascriptExecutor
-    executor.executeScript("console.log('Hello World')")
-
-    val input = driver.findElement(By.name("q"))
-    input.sendKeys("Selenium 4")
-    input.sendKeys(Keys.RETURN)
-    driver.quit()
-}
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ## Override Device Mode
 
-Using Selenium's integration with CDP, one can override the current device mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor are required parameters. Optional parameters include scale, screenWidth, screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
+Using Selenium's integration with CDP, one can override the current device 
+mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor 
+are required parameters. Optional parameters include scale, screenWidth, 
+screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -427,11 +176,11 @@ public void deviceSimulationTest() {
     tools.createSession();
 
     Map deviceMetrics = new HashMap()
-    {{
-      put("width", 600);
-      put("height", 1000);
-      put("mobile", true);
-      put("deviceScaleFactor", 50);
+    {{  
+        put("width", 600);
+        put("height", 1000);
+        put("mobile", true);
+        put("deviceScaleFactor", 50);
     }};
 
     driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
@@ -488,7 +237,20 @@ public class ExampleDevice {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const pageCdpConnection = await driver.createCDPConnection('page');
+  const metrics = {
+    width: 300,
+    height: 200,
+    deviceScaleFactor: 50,
+    mobile: true,
+  };
+  await pageCdpConnection.execute(
+    "Emulation.setDeviceMetricsOverride",
+    1,
+    metrics
+  );
+await driver.get("https://www.google.com");
+await driver.quit();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
@@ -506,109 +268,6 @@ fun kotlinOverridDeviceMode() {
   driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
   driver.get("https://www.google.com")
   driver.quit()
-}
-{{< /tab >}}
-{{< /tabpane >}}
-
-## Collect Performance Metrics
-
-Using Selenium's integration with CDP, one can collect various performance metrics while navigating the application.
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void performanceMetricsExample() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-    devTools.send(Performance.enable(Optional.empty()));
-    List<Metric> metricList = devTools.send(Performance.getMetrics());
-
-    driver.get("https://google.com");
-    driver.quit();
-
-    for(Metric m : metricList) {
-        System.out.println(m.getName() + " = " + m.getValue());
-    }
-}
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-using System;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools;
-// Replace the version to match the Chrome version
-using OpenQA.Selenium.DevTools.V93.Performance;
-using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V93.DevToolsSessionDomains;
-
-namespace CDPTests {
-    public class CDPGetMetricsTest {
-        ChromeDriver driver;
- 
-        [SetUp]
-        public void startBrowser() {
-            driver = new ChromeDriver("<path-to-chrome-executable>");
-        }
-
-        [Test]
-        public void test() {
-            DevToolsSession devToolsSession = driver.GetDevToolsSession(93);
-
-            driver.Navigate().GoToUrl("<your site url>");
-            var metrics = GetMetrics(devToolsSession).GetAwaiter().GetResult();
-
-            Assert.NotNull(metrics);
-            Assert.GreaterOrEqual(metrics.Metrics.Length, 1);
-
-            foreach (var metric in metrics.Metrics) {
-                Console.WriteLine($"{metric.Name} = {metric.Value}");
-            }
-        }
-
-        public static async Task<GetMetricsCommandResponse> GetMetrics(DevToolsSession devToolsSession) {
-            EnableCommandSettings enableCommandSettings = new EnableCommandSettings();
-            await devToolsSession.GetVersionSpecificDomains<DevToolsSessionDomains>().
-                Performance.
-                Enable(enableCommandSettings, System.Threading.CancellationToken.None, 50000, true);
-
-            var metrics = await devToolsSession
-                .GetVersionSpecificDomains<DevToolsSessionDomains>()
-                .Performance.GetMetrics();
-
-            return metrics;
-        }
-
-        [TearDown]
-        public void closeBrowser() {
-            driver.Close();
-        }
-    }
-}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-val driver = ChromeDriver()
-val devTools = driver.devTools
-devTools.createSession()
-devTools.send(Performance.enable(Optional.empty()))
-val metricList: List<Metric> = devTools.send(Performance.getMetrics())
-
-driver["https://google.com"]
-driver.quit()
-
-for (m in metricList) {
-    println(m.name.toString() + " = " + m.value)
 }
 {{< /tab >}}
 {{< /tabpane >}}
