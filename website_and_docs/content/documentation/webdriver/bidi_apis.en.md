@@ -60,7 +60,22 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const {Builder} = require('selenium-webdriver');
+
+(async function example() {
+try {
+let driver = await new Builder()
+.forBrowser('chrome')
+.build();
+
+        const pageCdpConnection = await driver.createCDPConnection();
+        await driver.register('username', 'password', pageCdpConnection);
+        await driver.get('https://the-internet.herokuapp.com/basic_auth');
+        await driver.quit();
+    }catch (e){
+        console.log(e)
+    }
+}())
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 val uriPredicate = Predicate { uri: URI ->
