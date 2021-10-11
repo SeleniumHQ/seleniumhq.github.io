@@ -1,4 +1,56 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4 Release Candidate 2</title><link>/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-2/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
+&lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
+some of the new features in-depth. Of course, all of the features
+we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
+you&amp;rsquo;re not one for reading blog posts, then feel free to dive in
+there!&lt;/p>
+&lt;p>The first thing I&amp;rsquo;d like to introduce you to is Selenium 4&amp;rsquo;s new-found
+ability to authenticate to websites. We&amp;rsquo;ve always been able to handle
+&amp;ldquo;form-based&amp;rdquo; authentication, where a login page has some &lt;code>INPUT&lt;/code>
+elements that you need to enter the user name and password, but
+handling sites that use &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication">basic or digest
+authentication&lt;/a> has always been harder. When using
+Selenium 3, the advice has been to get the login cookie and set it on
+your session before accessing the site, but you can now just call a
+&lt;code>register&lt;/code> method to add a user name and password (or, in the future,
+other kinds of authentication credentials)&lt;/p>
+&lt;p>In short, in Selenium 4, the process has become less
+complicated. Perhaps an example will help?&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Java"
+id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab" onclick="handleClick(&amp;#34;Java&amp;#34;);"
+aria-controls="tabs-0-0" aria-selected="true">
+Java
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Ruby"
+id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab" onclick="handleClick(&amp;#34;Ruby&amp;#34;);"
+aria-controls="tabs-0-1" aria-selected="false">
+Ruby
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">
+&lt;div class="tab-pane fade show active"
+id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Java" data-lang="Java">&lt;span style="color:#8f5902;font-style:italic">// This &amp;#34;HasAuthentication&amp;#34; interface is the key!
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span> &lt;span style="color:#000">authentication&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">// You can either register something for all sites
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">authentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">-&amp;gt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">UsernameAndPassword&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;admin&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;admin&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">// Or use something different for specific sites
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">authentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>
+&lt;span style="color:#000">uri&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">-&amp;gt;&lt;/span> &lt;span style="color:#000">uri&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getHost&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">contains&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;mysite.com&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">),&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">UsernameAndPassword&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;AzureDiamond&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;hunter2&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">register&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">username&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">password&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;p>Once you&amp;rsquo;ve done this, every time the &lt;code>driver&lt;/code> loads a page that needs
+authentication, it will automatically use the user name and password
+you&amp;rsquo;ve given it.&lt;/p>
+&lt;p>This feature is currently implemented on top of Selenium 4&amp;rsquo;s &lt;a href="https://chromedevtools.github.io/devtools-protocol/">CDP&lt;/a>
+support, and so only works on those browser that support that
+protocol, but as we push forwards with development of &lt;a href="https://w3c.github.io/webdriver-bidi/">WebDriver
+Bidi&lt;/a> implementations will switch to that when they can.&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate 2</title><link>/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-2/</guid><description>
 &lt;p>We&amp;rsquo;ve listeneed and responded to the feedback from the first release
 candidate of Selenium 4, and we&amp;rsquo;re now happy to announce the second
 release candidate of Selenium 4. This is shipping for .Net, Java,
@@ -855,7 +907,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>If you’re a Chrome user, then it’s a great idea to head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> to pick up the executable used by the ChromeDriver. It’s recently been updated, and now includes support for handling alerts and prompts! Thanks, Google!&lt;/p></description></item><item><title>Blog: Selenium 2.2 Released</title><link>/blog/2011/selenium-2-2-released/</link><pubDate>Tue, 26 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-2-released/</guid><description>
 &lt;p>The feedback from the last release was heard loud and clear: little and often it is!&lt;/p>
 &lt;p>We’re proud to announce the release of &lt;a href="http://seleniumhq.org/download/">Selenium 2.2&lt;/a>. What’s new this time? For many users, this is simply a bug fix release as there are no new major features. One thing you might appreciate is &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/IllegalLocatorException.html">better exceptions&lt;/a> being thrown when xpath searches return something other than a web element when using the WebDriver APIs, and we’re continuing to tweak the emulation of user events.&lt;/p>
-&lt;p>If you’re a .Net user, there is now an official &lt;a href="http://nuget.org/List/Packages/Selenium.WebDriver">NuGet package&lt;/a>, and if you’re a maven user then rest assured the release is heading to the central repo as quickly as we can manage.&lt;/p></description></item><item><title>Blog: Selenium 2.1 Released</title><link>/blog/2011/selenium-2-1-released/</link><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-1-released/</guid><description>
-&lt;p>Now that Selenium 2 has &lt;a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">been released&lt;/a>, one of the goals of the project is to provide regular updates to our users and the community. The aim is for these updates to be small and manageable, incrementally addressing issues and problems raised by you. Selenium 2.1, which is &lt;a href="http://seleniumhq.org/download/">launched today&lt;/a>, marks the first of these regular, small releases.&lt;/p>
-&lt;p>&lt;a href="http://seleniumhq.org/download/">Selenium 2.1&lt;/a> is largely focused on improving Grid with a host of minor improvements including better tracking of “orphaned” browser instances. There are also some bug fixes in the Firefox and IE WebDrivers, particularly when dealing with elements that are &lt;em>just&lt;/em> off screen, and in making the Selenium RC emulation in the Java bindings more robust when confronted with pages that haven’t started loading.&lt;/p>
-&lt;p>As you can see, this is a “bite size” release, but we’d love to know: would you prefer these small, swift releases or larger ones? Please answer in the comments, or on the &lt;a href="groups.google.com/group/selenium-users">mailing list&lt;/a>!&lt;/p></description></item></channel></rss>
+&lt;p>If you’re a .Net user, there is now an official &lt;a href="http://nuget.org/List/Packages/Selenium.WebDriver">NuGet package&lt;/a>, and if you’re a maven user then rest assured the release is heading to the central repo as quickly as we can manage.&lt;/p></description></item></channel></rss>

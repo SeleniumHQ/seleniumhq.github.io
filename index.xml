@@ -1,4 +1,56 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4 Release Candidate 2</title><link>/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-2/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
+&lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
+some of the new features in-depth. Of course, all of the features
+we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
+you&amp;rsquo;re not one for reading blog posts, then feel free to dive in
+there!&lt;/p>
+&lt;p>The first thing I&amp;rsquo;d like to introduce you to is Selenium 4&amp;rsquo;s new-found
+ability to authenticate to websites. We&amp;rsquo;ve always been able to handle
+&amp;ldquo;form-based&amp;rdquo; authentication, where a login page has some &lt;code>INPUT&lt;/code>
+elements that you need to enter the user name and password, but
+handling sites that use &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication">basic or digest
+authentication&lt;/a> has always been harder. When using
+Selenium 3, the advice has been to get the login cookie and set it on
+your session before accessing the site, but you can now just call a
+&lt;code>register&lt;/code> method to add a user name and password (or, in the future,
+other kinds of authentication credentials)&lt;/p>
+&lt;p>In short, in Selenium 4, the process has become less
+complicated. Perhaps an example will help?&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Java"
+id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab" onclick="handleClick(&amp;#34;Java&amp;#34;);"
+aria-controls="tabs-0-0" aria-selected="true">
+Java
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Ruby"
+id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab" onclick="handleClick(&amp;#34;Ruby&amp;#34;);"
+aria-controls="tabs-0-1" aria-selected="false">
+Ruby
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">
+&lt;div class="tab-pane fade show active"
+id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Java" data-lang="Java">&lt;span style="color:#8f5902;font-style:italic">// This &amp;#34;HasAuthentication&amp;#34; interface is the key!
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span> &lt;span style="color:#000">authentication&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">// You can either register something for all sites
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">authentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">-&amp;gt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">UsernameAndPassword&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;admin&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;admin&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">// Or use something different for specific sites
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">authentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>
+&lt;span style="color:#000">uri&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">-&amp;gt;&lt;/span> &lt;span style="color:#000">uri&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getHost&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">contains&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;mysite.com&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">),&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">UsernameAndPassword&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;AzureDiamond&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;hunter2&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">register&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">username&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">password&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;p>Once you&amp;rsquo;ve done this, every time the &lt;code>driver&lt;/code> loads a page that needs
+authentication, it will automatically use the user name and password
+you&amp;rsquo;ve given it.&lt;/p>
+&lt;p>This feature is currently implemented on top of Selenium 4&amp;rsquo;s &lt;a href="https://chromedevtools.github.io/devtools-protocol/">CDP&lt;/a>
+support, and so only works on those browser that support that
+protocol, but as we push forwards with development of &lt;a href="https://w3c.github.io/webdriver-bidi/">WebDriver
+Bidi&lt;/a> implementations will switch to that when they can.&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate 2</title><link>/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-2/</guid><description>
 &lt;p>We&amp;rsquo;ve listeneed and responded to the feedback from the first release
 candidate of Selenium 4, and we&amp;rsquo;re now happy to announce the second
 release candidate of Selenium 4. This is shipping for .Net, Java,
@@ -6253,12 +6305,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Support for Edge is provided by MS through their &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver server&lt;/a>.&lt;/li>
 &lt;li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as &lt;a href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support">MS no longer supports them&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then &lt;a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon&lt;/a> is a great place to start.&lt;/p></description></item><item><title>Blog: Fall Selenium Conf, Save the Date &amp; Call for Speakers!</title><link>/blog/2016/fall-selenium-conf-save-the-date/</link><pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate><guid>/blog/2016/fall-selenium-conf-save-the-date/</guid><description>
-&lt;p>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.&lt;/p>
-&lt;p>Our initial goal was to bring the event to a new country, but for a number of reasons that proved more challenging than we’d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we’re pleased to be bringing it back there this year!&lt;/p>
-&lt;p>The conference will be held at The Mermaid in downtown London on November 14-16:&lt;/p>
-&lt;ul>
-&lt;li>The 14th will be all-day pre-conference workshops&lt;/li>
-&lt;li>The 15th-16th will be the conference&lt;/li>
-&lt;/ul>
-&lt;p>Go &lt;a href="http://seleniumconf.co.uk/">here&lt;/a> to sign up for the email list for conference updates (e.g., when tickets go on sale) as well as submit a talk. Call for speakers are open from now until July 29th.&lt;/p></description></item></channel></rss>
+&lt;p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then &lt;a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon&lt;/a> is a great place to start.&lt;/p></description></item></channel></rss>
