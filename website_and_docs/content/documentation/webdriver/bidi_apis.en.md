@@ -47,7 +47,17 @@ driver.get("https://your-domain.com/login");
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.devtools.new
+  driver.register(username: 'username', password: 'password')
+  driver.get '<your site url>'
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 # Please raise a PR to add code sample
@@ -175,7 +185,22 @@ async def printConsoleLogs():
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get 'http://www.google.com'
+  logs = []
+  driver.on_log_event(:console) do |event|
+    logs.push(event)
+    puts logs.length
+  end
+
+  driver.execute_script('console.log("here")')
+
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 # Please raise a PR to add code sample
@@ -299,7 +324,22 @@ namespace CDPJSException {
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get '<your-site-url>'
+  exceptions = []
+  driver.on_log_event(:exception) do |event|
+    exceptions.push(event)
+    puts exceptions.length
+  end
+
+  # Actions causing JS exceptions
+
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 # Please raise a PR to add code sample
@@ -410,7 +450,18 @@ namespace CDPTests {
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.duckduckgo.com'
+  driver.execute_cdp('Performance.enable', {})
+  metrics = driver.execute_cdp('Performance.getMetrics', {})
+  puts metrics
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 await driver.get("https://www.duckduckgo.com");
