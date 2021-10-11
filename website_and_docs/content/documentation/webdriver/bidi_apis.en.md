@@ -79,25 +79,25 @@ element in the DOM.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-WebDriver driver = new FirefoxDriver();
-
-HasLogEvents logger = (HasLogEvents) driver;
+ChromeDriver driver = new ChromeDriver();
 
 AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
 CountDownLatch latch = new CountDownLatch(1);
-logger.onLogEvent(domMutation(mutation -> {
+((HasLogEvents) driver).onLogEvent(domMutation(mutation -> {
     seen.set(mutation);
     latch.countDown();
 }));
 
-driver.get("http://www.google.com");
+driver.get("https://www.google.com");
 WebElement span = driver.findElement(By.cssSelector("span"));
 
 ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('cheese', 'gouda');", span);
 
-assertThat(latch.await(10, SECONDS)).isTrue();
-assertThat(seen.get().getAttributeName()).isEqualTo("cheese");
-assertThat(seen.get().getCurrentValue()).isEqualTo("gouda");
+assertThat(latch.await(10, SECONDS), is(true));
+assertThat(seen.get().getAttributeName(), is("cheese"));
+assertThat(seen.get().getCurrentValue(), is("gouda"));
+
+driver.quit();
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -150,21 +150,18 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.idealized.log.Log;
-
-public void consoleLogTest() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-    devTools.send(Log.enable());
-    devTools.getDomains().log().entryAdded(),
-            logEntry -> {
-                System.out.println("log: "+logEntry.getText());
-                System.out.println("level: "+logEntry.getLevel());
-            });
-}
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+devTools.send(Log.enable());
+devTools.addListener(Log.entryAdded(),
+                           logEntry -> {
+                               System.out.println("log: "+logEntry.getText());
+                               System.out.println("level: "+logEntry.getLevel());
+                           });
+driver.get("http://the-internet.herokuapp.com/broken_images");
+// Check the terminal output for the browser console messages.
+driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
 async def printConsoleLogs():
