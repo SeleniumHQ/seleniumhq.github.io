@@ -17,27 +17,28 @@ aliases: ["/documentation/ja/support_packages/chrome_devtools/"]
 {{% pageinfo color="warning" %}}
 <p class="lead">
     While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
-    highly encouraged that you use the <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+    highly encouraged that you use the 
+    <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
 </p>
 {{% /pageinfo %}}
 
-Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that developers can use to 
-debug web apps and explore the performance of their pages. 
-Google Chrome's DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
-As the name suggests, this is not designed for testing, nor to have a stable API, 
-so functionality is highly dependent on the version of the browser.
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
+developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
+DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
+is highly dependent on the version of the browser.
 
 WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
-implemented by all browsers, but it's not yet complete. Until it is, 
-Selenium provides access to the CDP for those browsers that implement it 
-(such as Google Chrome, or Microsoft Edge, and Firefox), 
-allowing you to enhance your tests in interesting ways. Some examples of what you can do with it are given below.
+implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
+the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
+Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
+do with it are given below.
 
 ## Emulate Geo Location
 
 Some applications have different features and functionalities across different 
 locations. Automating such applications is difficult because it is hard to emulate 
-the geo locations in the browser using Selenium. But with the help of Devtools, 
+the geo-locations in the browser using Selenium. But with the help of Devtools, 
 we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -267,67 +268,6 @@ fun kotlinOverridDeviceMode() {
   driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics)
   driver.get("https://www.google.com")
   driver.quit()
-}
-{{< /tab >}}
-{{< /tabpane >}}
-
-  
-## Collect Performance Metrics
-
-Using Selenium's integration with CDP, one can collect various performance 
-metrics while navigating the application.
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void performanceMetricsExample() {
-    ChromeDriver driver = new ChromeDriver();
-    DevTools devTools = driver.getDevTools();
-    devTools.createSession();
-    devTools.send(Performance.enable(Optional.empty()));
-    List<Metric> metricList = devTools.send(Performance.getMetrics());
-
-    driver.get("https://google.com");
-    driver.quit();
-
-    for(Metric m : metricList) {
-        System.out.println(m.getName() + " = " + m.getValue());
-    }
-}
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-await driver.get("https://www.duckduckgo.com");
-
-await driver.sendAndGetDevToolsCommand('Performance.enable')
-
-let result = await driver.sendAndGetDevToolsCommand('Performance.getMetrics')
-console.log(result)
-
-await driver.quit();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-val driver = ChromeDriver()
-val devTools = driver.devTools
-devTools.createSession()
-devTools.send(Performance.enable(Optional.empty()))
-val metricList: List<Metric> = devTools.send(Performance.getMetrics())
-
-driver["https://google.com"]
-driver.quit()
-
-for (m in metricList) {
-    println(m.name.toString() + " = " + m.value)
 }
 {{< /tab >}}
 {{< /tabpane >}}
