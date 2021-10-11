@@ -251,7 +251,52 @@ async def catchJSException():
   driver.quit()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
+using System;
+using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+using System.Threading.Tasks;
+// Replace the version to match the Chrome version
+using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V93.DevToolsSessionDomains;
+using ExceptionThrownEventArgs = OpenQA.Selenium.DevTools.V93.Runtime.ExceptionThrownEventArgs;
+
+namespace CDPJSException {
+    public class CDPJSExceptionTest {
+        ChromeDriver driver;
+
+        [SetUp]
+        public void startBrowser() {
+            driver = new ChromeDriver("<path-to-chrome-executable>");
+        }
+
+        [Test]
+        public void jsExceptionTest()
+        {  
+            var devToolsSessionDomains = ((IDevTools)driver).GetDevToolsSession()
+           .GetVersionSpecificDomains<DevToolsSessionDomains>();
+
+            EventHandler <ExceptionThrownEventArgs> eventHandler =
+                (sender, e) => {
+                Assert.AreEqual("<your site url>", e.ExceptionDetails.Url);
+            };
+
+            enableRuntime(devToolsSessionDomains).GetAwaiter().GetResult();
+            devToolsSessionDomains.Runtime.ExceptionThrown += eventHandler;
+
+            driver.Url = new String("<your site url>");
+           // Operations that causes JS exception
+        }
+
+        public static async Task enableRuntime(DevToolsSessionDomains domains) {
+            await domains.Runtime.Enable();
+        }
+
+        [TearDown]
+        public void closeBrowser() {
+            driver.Close();
+        }
+    }
+}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Please raise a PR to add code sample
@@ -311,7 +356,58 @@ public void performanceMetricsExample() {
 # Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
+using System;
+using System.Threading.Tasks;
+using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+// Replace the version to match the Chrome version
+using OpenQA.Selenium.DevTools.V93.Performance;
+using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V93.DevToolsSessionDomains;
+
+namespace CDPTests {
+    public class CDPGetMetricsTest {
+        ChromeDriver driver;
+
+        [SetUp]
+        public void startBrowser() {
+            driver = new ChromeDriver("<path-to-chrome-executable>");
+        }
+
+        [Test]
+        public void test() {
+            DevToolsSession devToolsSession = driver.GetDevToolsSession(93);
+
+            driver.Navigate().GoToUrl("<your site url>");
+            var metrics = GetMetrics(devToolsSession).GetAwaiter().GetResult();
+
+            Assert.NotNull(metrics);
+            Assert.GreaterOrEqual(metrics.Metrics.Length, 1);
+
+            foreach (var metric in metrics.Metrics) {
+                Console.WriteLine($"{metric.Name} = {metric.Value}");
+            }
+        }
+
+        public static async Task<GetMetricsCommandResponse> GetMetrics(DevToolsSession devToolsSession) {
+            EnableCommandSettings enableCommandSettings = new EnableCommandSettings();
+            await devToolsSession.GetVersionSpecificDomains<DevToolsSessionDomains>().
+                Performance.
+                Enable(enableCommandSettings, System.Threading.CancellationToken.None, 50000, true);
+
+            var metrics = await devToolsSession
+                .GetVersionSpecificDomains<DevToolsSessionDomains>()
+                .Performance.GetMetrics();
+
+            return metrics;
+        }
+
+        [TearDown]
+        public void closeBrowser() {
+            driver.Close();
+        }
+    }
+}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Please raise a PR to add code sample
