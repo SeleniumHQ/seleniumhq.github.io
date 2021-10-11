@@ -1,8 +1,9 @@
 ---
 title: "A Tour of 4: Authentication"
 linkTitle: "A Tour of 4: Authentication"
-date: 2021-10-02
+date: 2021-10-10
 tags: ["selenium", "webdriver"]
+author: Simon Stewart ([@shs96c](https://twitter.com/shs96c))
 description: >
   Introducing how Selenium 4 handles authentication
 ---
