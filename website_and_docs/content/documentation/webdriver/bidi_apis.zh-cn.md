@@ -73,18 +73,18 @@ end
 const {Builder} = require('selenium-webdriver');
 
 (async function example() {
-try {
-let driver = await new Builder()
-.forBrowser('chrome')
-.build();
+  try {
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .build();
 
-        const pageCdpConnection = await driver.createCDPConnection();
-        await driver.register('username', 'password', pageCdpConnection);
-        await driver.get('https://the-internet.herokuapp.com/basic_auth');
-        await driver.quit();
-    }catch (e){
-        console.log(e)
-    }
+    const pageCdpConnection = await driver.createCDPConnection();
+    await driver.register('username', 'password', pageCdpConnection);
+    await driver.get('https://the-internet.herokuapp.com/basic_auth');
+    await driver.quit();
+  }catch (e){
+    console.log(e)
+  }
 }())
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
