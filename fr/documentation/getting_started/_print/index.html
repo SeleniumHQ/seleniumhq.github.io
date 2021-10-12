@@ -85,7 +85,7 @@ Java Bindings, e.g. with maven <a href=#java>Java</a></p></div><div class=td-con
 Page being translated from
 English to French. Do you speak French? Help us to translate
 it by sending us pull requests!</p></div><p>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché
-tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari.
+tels que Chrom(ium), Firefox, Internet Explorer, Edge, Opera et Safari.
 Dans la mesure du possible, WebDriver pilote le navigateur
 en utilisant la prise en charge intégrée du navigateur pour l&rsquo;automatisation,
 bien que tous les navigateurs n&rsquo;aient pas de support officiel pour la télécommande.</p><p>L&rsquo;objectif de WebDriver est d&rsquo;émuler l&rsquo;interaction d&rsquo;un utilisateur réel
@@ -105,10 +105,9 @@ ou inclus dans votre référentiel de code de test.</p><p>En ajoutant un dossier
 chemin d&rsquo;accès, Selenium pourra localiser les binaires supplémentaires sans
 nécessitant votre code de test pour localiser l&rsquo;emplacement exact du pilote.</p><ul><li><p>Créez un répertoire dans lequel placer les exécutables, comme
 <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></p></li><li><p>Ajoutez le répertoire à votre CHEMIN:</p><ul><li><p>Sous Windows - Ouvrez une invite de commande en tant qu&rsquo;administrateur
- et exécutez la commande suivante
- pour ajouter en permanence le répertoire à votre chemin
- pour tous les utilisateurs de votre machine:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx /m path <span style=color:#4e9a06>&#34;%path%;C:\WebDriver\bin\&#34;
-</span></code></pre></div></li><li><p>Utilisateurs Bash sur macOS et Linux - Dans un terminal:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
+et exécutez la commande suivante pour ajouter en permanence le répertoire
+à votre chemin pour tous les utilisateurs de votre machine:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx PATH <span style=color:#4e9a06>&#34;%PATH%;C:\WebDriver\bin&#34;</span>
+</code></pre></div></li><li><p>Utilisateurs Bash sur macOS et Linux - Dans un terminal:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
 </code></pre></div></li></ul></li><li><p>Vous êtes maintenant prêt à tester vos modifications. Fermez toutes
 les invites de commande ouvertes et ouvrez-en une nouvelle.
 Tapez le nom de l&rsquo;un des binaires

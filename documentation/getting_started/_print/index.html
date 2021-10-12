@@ -71,7 +71,7 @@ dotnet add package Selenium.WebDriver
 </code></pre></div><h3 id=javascript>JavaScript</h3><p>Installation of Selenium libraries for JavaScript can be done using npm:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>npm install selenium-webdriver
 </code></pre></div><h3 id=kotlin>Kotlin</h3><p>Due to missing native language bindings for Kotlin, you have to use the
 Java Bindings, e.g. with maven <a href=#java>Java</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-cf75bb883d74d11c29600ba3e5f573fe>2 - Installing browser drivers</h1><div class=lead>Setting up your browser to be automated.</div><p>Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
+such as Chrom(ium), Firefox, Internet Explorer, Edge, Opera, and Safari.
 Where possible, WebDriver drives the browser
 using the browser&rsquo;s built-in support for automation,
 although not all browsers have official support for remote control.</p><p>WebDriver&rsquo;s aim is to emulate a real user&rsquo;s interaction
@@ -93,8 +93,8 @@ requiring your test code to locate the exact location of the driver.</p><ul><li>
 <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></li><li>Add the directory to your PATH:<ul><li>On Windows - Open a command prompt as administrator
 and run the following command
 to permanently add the directory to your path
-for all users on your machine:</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx /m path <span style=color:#4e9a06>&#34;%path%;C:\WebDriver\bin\&#34;
-</span></code></pre></div><ul><li>Bash users on macOS and Linux - In a terminal:</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
+for all users on your machine:</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx PATH <span style=color:#4e9a06>&#34;%PATH%;C:\WebDriver\bin&#34;</span>
+</code></pre></div><ul><li>Bash users on macOS and Linux - In a terminal:</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
 </code></pre></div><ul><li><p>You are now ready to test your changes.
 Close all open command prompts and open a new one.
 Type out the name of one of the binaries

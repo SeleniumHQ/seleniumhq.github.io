@@ -84,7 +84,7 @@ diese können analg zu <a href=#java>Java</a> mittels maven eingebunden werden.<
 Diese Seite wird von Englisch
 auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
 zu übersetzen indem Du uns einen Pull Reqeust schickst!</p></div><p>Mit Hilfe des WebDrivers unterstützt Selenium alle wichtigen Webbrowser
-wie Chrom(ium), Firefox, Internet Explorer, Opera und Safari. Wenn möglich
+wie Chrom(ium), Firefox, Internet Explorer, Edge, Opera und Safari. Wenn möglich
 wird der Browser mit Hilfe des integrierten Support für Automation gesteuert,
 nicht für alle Browser existiert diese Möglichkeit der externe Steuerung.</p><p>Das Ziel von WebDriver ist es Interaktionen eines echten Benutzers
 so gut wie möglich mit dem Browser zu simulieren. Die unterschiedlichen
@@ -105,8 +105,8 @@ ohne das im Testcode der exakte Ordner angegeben werden muss.</p><ul><li>Erstell
 abgelegt werden wie z.B.
 <em>C:\WebDriver\bin</em> oder <em>/opt/WebDriver/bin</em></li><li>Füge das Verzeichnis der PATH - Variable hinzu:<ul><li>Unter Windows - Öffne die Eingabeaufforderung als Administrator
 und führe folgenden Befehl aus um den Ordnerpfad dauerhaft
-der PATH Variable für alle Benutzer des Rechners hinzuzufügen:</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx /m path <span style=color:#4e9a06>&#34;%path%;C:\WebDriver\bin\&#34;
-</span></code></pre></div><ul><li>Unter macOS und Linux führe in einem Terminal folgenden Befehl aus:</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
+der PATH Variable für alle Benutzer des Rechners hinzuzufügen:</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx PATH <span style=color:#4e9a06>&#34;%PATH%;C:\WebDriver\bin&#34;</span>
+</code></pre></div><ul><li>Unter macOS und Linux führe in einem Terminal folgenden Befehl aus:</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
 </code></pre></div><ul><li><p>Nun können die Änderungen getestet werden. Schließe alle
 geöffneten Eingabebeaufforderungen bzw. Terminals und öffnen
 dieses erneut. Tippe nun den Namen eines Drivers, der zuvor in

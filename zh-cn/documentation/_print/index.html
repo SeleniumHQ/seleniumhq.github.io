@@ -223,14 +223,14 @@ dotnet add package Selenium.WebDriver
 </code></pre></div><h3 id=ruby>Ruby</h3><p>可以使用 gem 安装 Ruby 的 Selenium 库：</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gem install selenium-webdriver
 </code></pre></div><h3 id=javascript>JavaScript</h3><p>可以使用 npm 安装 JavaScript 的 Selenium 库</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>npm install selenium-webdriver
 </code></pre></div><h3 id=kotlin>Kotlin</h3><p>由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven <a href=#java>Java</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-f3de539f7e6ec811226f57888af2ba93>2.2 - 安装浏览器驱动</h1><div class=lead>设置您的浏览器用于自动化.</div><p>通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、
-Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持，
+Internet Explorer、 Edge、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持，
 但 WebDriver 尽可能使用浏览器的内置自动化支持来驱动浏览器。</p><p>WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。<br>在不同的浏览器中，这可能有不同的级别。</p><p>尽管所有的驱动程序共享一个面向用户的界面来控制浏览器，但它们设置浏览器会话的方式略有不同。
 由于许多驱动程序实现是由第三方提供的，所以它们不包括在标准的 Selenium 发行版中。</p><p>驱动程序实例化、配置文件管理和各种特定于浏览器的设置都是具体参数的例子，这些参数根据浏览器有
 不同的需求。本节介绍了使用不同浏览器的基本要求。</p><h3 id=将可执行文件添加到-path-中>将可执行文件添加到 <code>PATH</code> 中</h3><p>大多数驱动程序需要 Selenium 额外的可执行文件才能与浏览器通信。您可以在启动 WebDriver
 之前手动指定可执行文件的存放位置，但这会使测试的可移植性降低，因为可执行文件必须位于每台
 计算机上的同一位置，或包含在测试代码存储库中。</p><p>通过将包含 WebDriver 二进制文件的文件夹添加到系统 path 环境变量中，Selenium
-将能够找到其他二进制文件，而无需您的测试代码来定位驱动程序的确切位置。</p><ul><li>创建一个目录来放置可执行文件，例如 <em>C:\WebDriver\bin</em> 或 <em>/opt/WebDriver/bin</em></li><li>将目录添加到您的 path 中：<ul><li>在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx /m path <span style=color:#4e9a06>&#34;%path%;C:\WebDriver\bin\&#34;
-</span></code></pre></div><ul><li>在 macOS 和 Linux 上的 Bash 用户 - 在终端中：</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
+将能够找到其他二进制文件，而无需您的测试代码来定位驱动程序的确切位置。</p><ul><li>创建一个目录来放置可执行文件，例如 <em>C:\WebDriver\bin</em> 或 <em>/opt/WebDriver/bin</em></li><li>将目录添加到您的 path 中：<ul><li>在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：</li></ul></li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>setx PATH <span style=color:#4e9a06>&#34;%PATH%;C:\WebDriver\bin&#34;</span>
+</code></pre></div><ul><li>在 macOS 和 Linux 上的 Bash 用户 - 在终端中：</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#204a87>export</span> <span style=color:#000>PATH</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
 </code></pre></div><ul><li>现在您可以测试更改了。关闭所有打开的命令提示符，然后打开一个新的提示符。
 输入您在上一步创建的文件夹中的某一个二进制文件的名称，例如：<div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>chromedriver
 </code></pre></div></li><li>如果您的 <code>PATH</code> 配置正确，您将看到一些有关驱动程序启动的输出：</li></ul><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
@@ -9628,7 +9628,7 @@ Firefox和Chrome都提供了可用的镜像。你可以在<a href=//github.com/S
 <label><a href=https://github.com/barancev>@barancev</a></label>
 <span class=contributions>3352 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/352840?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jimevans>@jimevans</a></label>
-<span class=contributions>2430 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/254985?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>2432 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/254985?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jleyba>@jleyba</a></label>
 <span class=contributions>1464 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jarib>@jarib</a></label>
@@ -9754,7 +9754,7 @@ Firefox和Chrome都提供了可用的镜像。你可以在<a href=//github.com/S
 <label><a href=https://github.com/RustyNail>@RustyNail</a></label>
 <span class=contributions>9 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4146725?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bwalderman>@bwalderman</a></label>
-<span class=contributions>8 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/457137?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>9 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/457137?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/tourdedave>@tourdedave</a></label>
 <span class=contributions>8 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16775850?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/glib-briia>@glib-briia</a></label>
@@ -10084,7 +10084,7 @@ Firefox和Chrome都提供了可用的镜像。你可以在<a href=//github.com/S
 <label><a href=https://github.com/amuthansakthivel>@amuthansakthivel</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=selenium-website--docsgithubcomseleniumhqseleniumhqgithubio><a href=//github.com/SeleniumHQ/seleniumhq.github.io/>Selenium Website & Docs</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>409 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>411 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>374 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
@@ -10098,10 +10098,10 @@ Firefox和Chrome都提供了可用的镜像。你可以在<a href=//github.com/S
 <label><a href=https://github.com/alenros>@alenros</a></label>
 <span class=contributions>28 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/6996743?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/AlexAndradeSan>@AlexAndradeSan</a></label>
-<span class=contributions>25 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1823178?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/manoj9788>@manoj9788</a></label>
-<span class=contributions>20 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>25 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
+<span class=contributions>21 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1823178?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/manoj9788>@manoj9788</a></label>
 <span class=contributions>20 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/47970682?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jmartinezpoq>@jmartinezpoq</a></label>
 <span class=contributions>18 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/22507394?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
