@@ -143,6 +143,163 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
+## Emulate Geo Location with the Remote WebDriver:
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+ChromeOptions chromeOptions = new ChromeOptions();
+WebDriver driver = new RemoteWebDriver(new URL("<grid-url>"), chromeOptions);
+driver = new Augmenter().augment(driver);
+
+DevTools devTools = ((HasDevTools) driver).getDevTools();
+devTools.createSession();
+
+devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
+                                               Optional.of(13.4501),
+                                               Optional.of(1)));
+ 
+driver.get("https://my-location.org/");
+driver.quit();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+from selenium import webdriver
+#Replace the version to match the Chrome version
+import selenium.webdriver.common.devtools.v93 as devtools
+
+async def geoLocationTest():
+    chrome_options = webdriver.ChromeOptions()
+    driver = webdriver.Remote(
+        command_executor='<grid-url>',
+        options=chrome_options
+    )
+
+    async with driver.bidi_connection() as session:
+        cdpSession = session.session
+        await cdpSession.execute(devtools.emulation.set_geolocation_override(latitude=41.8781,longitude=-87.6298,accuracy=100))
+    driver.get("https://my-location.org/")
+    driver.quit()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+using System.Threading.Tasks;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+// Replace the version to match the Chrome version
+using OpenQA.Selenium.DevTools.V87.Emulation;
+
+namespace dotnet_test {
+  class Program {
+    public static void Main(string[] args) {
+      GeoLocation().GetAwaiter().GetResult();
+    }
+
+    public static async Task GeoLocation() {
+      ChromeOptions chromeOptions = new ChromeOptions();
+      RemoteWebDriver driver = new RemoteWebDriver(new Uri("<grid-url>"), chromeOptions);
+      DevToolsSession devToolsSession = driver.CreateDevToolsSession();
+      var geoLocationOverrideCommandSettings = new SetGeolocationOverrideCommandSettings();
+
+      geoLocationOverrideCommandSettings.Latitude = 51.507351;
+      geoLocationOverrideCommandSettings.Longitude = -0.127758;
+      geoLocationOverrideCommandSettings.Accuracy = 1;
+
+      await devToolsSession
+        .GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V87.DevToolsSessionDomains>()
+        .Emulation
+        .SetGeolocationOverride(geoLocationOverrideCommandSettings);
+
+        driver.Url = "https://my-location.org/";
+        }
+    }
+}
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+
+driver = Selenium::WebDriver.for(
+:remote, 
+:url => "<grid-url>",
+:capabilities => :chrome)
+
+begin
+  # Latitude and longitude of Tokyo, Japan
+  coordinates = { latitude: 35.689487,
+                  longitude: 139.691706,
+                  accuracy: 100 }
+  devToolsSession = driver.devtools
+  devToolsSession.send_cmd('Emulation.setGeolocationOverride', coordinates)
+  driver.get 'https://my-location.org/'
+  puts res
+ensure
+  driver.quit
+end
+
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+const webdriver = require('selenium-webdriver');
+const BROWSER_NAME = webdriver.Browser.CHROME;
+
+async function getDriver() {
+  return new webdriver.Builder()
+  .usingServer('<grid-url>')
+  .forBrowser(BROWSER_NAME)
+  .build();
+}
+
+async function executeCDPCommands () {
+ let driver = await getDriver();
+
+ await driver.get("<your site url>");
+ 
+ const cdpConnection = await driver.createCDPConnection('page');
+  //Latitude and longitude of Tokyo, Japan
+  const coordinates = {
+    latitude: 35.689487,
+    longitude: 139.691706,
+    accuracy: 100,
+  };
+  await cdpConnection.execute(
+    "Emulation.setGeolocationOverride",
+    1,
+    coordinates
+  );
+ await driver.quit();
+}
+
+executeCDPCommands(); 
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.devtools.HasDevTools
+// Replace the version to match the Chrome version
+import org.openqa.selenium.devtools.v91.emulation.Emulation
+import org.openqa.selenium.remote.Augmenter
+import org.openqa.selenium.remote.RemoteWebDriver
+import java.net.URL
+import java.util.Optional
+
+fun main() {
+    val chromeOptions = ChromeOptions()
+    var driver: WebDriver = RemoteWebDriver(URL("<grid-url>"), chromeOptions)
+    driver = Augmenter().augment(driver)
+
+    val devTools = (driver as HasDevTools).devTools
+    devTools.createSession()
+
+    devTools.send(
+        Emulation.setGeolocationOverride(
+            Optional.of(52.5043),
+            Optional.of(13.4501),
+            Optional.of(1)
+        )
+    )
+
+    driver["https://my-location.org/"]
+    driver.quit()
+}
+
+  {{< /tab >}}
+{{< /tabpane >}}
+
 ## Override Device Mode
 
 Using Selenium's integration with CDP, one can override the current device 
