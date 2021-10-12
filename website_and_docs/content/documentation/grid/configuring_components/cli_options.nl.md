@@ -229,7 +229,7 @@ pull request updating this page.
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--service-url` | string | `http://localhost:4723` | URL for connecting to the service that supports WebDriver commands like and Appium server or a cloud service. |
+| `--service-url` | string | `http://localhost:4723` | URL for connecting to the service that supports WebDriver commands like an Appium server or a cloud service. |
 | `--service-host` | string | `localhost` | Host name where the service that supports WebDriver commands is running |
 | `--service-port` | int | `4723` | Port where the service that supports WebDriver commands is running |
 | `--service-status-endpoint` | string | `/status` | Optional, endpoint to query the WebDriver service status, an HTTP 200 response is expected |
