@@ -170,7 +170,31 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const {Builder, until} = require('selenium-webdriver');
+const assert = require("assert");
+
+(async function example() {
+  try {
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    const cdpConnection = await driver.createCDPConnection();
+    await driver.logMutationEvents(cdpConnection, event => {
+      assert.deepStrictEqual(event['attribute_name'], 'style');
+      assert.deepStrictEqual(event['current_value'], "");
+      assert.deepStrictEqual(event['old_value'], "display:none;");
+    });
+
+    await driver.get('dynamic.html');
+    await driver.findElement({id: 'reveal'}).click();
+    let revealed = driver.findElement({id: 'revealed'});
+    await driver.wait(until.elementIsVisible(revealed), 5000);
+    await driver.quit();
+  }catch (e){
+    console.log(e)
+  }
+}())
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 # Please raise a PR to add code sample
