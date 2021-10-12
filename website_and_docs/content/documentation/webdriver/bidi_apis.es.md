@@ -141,7 +141,32 @@ assert event["old_value"] == "display:none;"
 
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-# Please raise a PR to add code sample
+List<DomMutationData> attributeValueChanges = new List<DomMutationData>();
+DefaultWait<List<DomMutationData>> wait = new DefaultWait<List<DomMutationData>>(attributeValueChanges);
+wait.Timeout = TimeSpan.FromSeconds(3);
+
+IJavaScriptEngine monitor = new JavaScriptEngine(driver);
+monitor.DomMutated += (sender, e) =>
+{
+    attributeValueChanges.Add(e.AttributeData);
+};
+await monitor.StartEventMonitoring();
+
+driver.Navigate().GoToUrl("http://www.google.com");
+IWebElement span = driver.FindElement(By.CssSelector("span"));
+
+await monitor.EnableDomMutationMonitoring();
+((IJavaScriptExecutor) driver).ExecuteScript("arguments[0].setAttribute('cheese', 'gouda');", span);
+
+wait.Until((list) => list.Count > 0);
+Console.WriteLine("Found {0} DOM mutation events", attributeValueChanges.Count);
+foreach(var record in attributeValueChanges)
+{
+    Console.WriteLine("Attribute name: {0}", record.AttributeName);
+    Console.WriteLine("Attribute value: {0}", record.AttributeValue);
+}
+
+await monitor.DisableDomMutationMonitoring();
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
