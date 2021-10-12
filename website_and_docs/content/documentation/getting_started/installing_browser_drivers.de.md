@@ -21,7 +21,7 @@ aliases:
 {{% /pageinfo %}}
 
 Mit Hilfe des WebDrivers unterstützt Selenium alle wichtigen Webbrowser
-wie Chrom(ium), Firefox, Internet Explorer, Opera und Safari. Wenn möglich
+wie Chrom(ium), Firefox, Internet Explorer, Edge, Opera und Safari. Wenn möglich
 wird der Browser mit Hilfe des integrierten Support für Automation gesteuert, 
 nicht für alle Browser existiert diese Möglichkeit der externe Steuerung.
 
@@ -60,7 +60,7 @@ _C:\WebDriver\bin_ oder _/opt/WebDriver/bin_
     der PATH Variable für alle Benutzer des Rechners hinzuzufügen:
 
 ```shell
-setx /m path "%path%;C:\WebDriver\bin\"
+setx PATH "%PATH%;C:\WebDriver\bin"
 ```
   * Unter macOS und Linux führe in einem Terminal folgenden Befehl aus:
 

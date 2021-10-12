@@ -20,7 +20,7 @@ aliases:
 </p>
 {{% /pageinfo %}}
 
-SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。
+SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Edge、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。
 すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。
 
 WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。
@@ -48,7 +48,7 @@ _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
      次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
 
 ```shell
-setx /m path "%path%;C:\WebDriver\bin\"
+setx PATH "%PATH%;C:\WebDriver\bin"
 ```
   * macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
 

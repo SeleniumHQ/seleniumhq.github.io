@@ -22,7 +22,7 @@ aliases:
 
 
 A través del WebDriver, Selenium es capaz de soportar los navegadores mas usados 
-en el mercado como Chrom(ium), Firefox, Internet Explorer, Opera y Safari.
+en el mercado como Chrom(ium), Firefox, Internet Explorer, Edge, Opera y Safari.
 WebDriver maneja los navegadores, cuando es posible,  apoyándose en las propias 
 funciones que el navegador incorpora para la automatización.
 
