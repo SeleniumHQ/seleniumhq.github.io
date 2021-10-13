@@ -436,7 +436,6 @@ it with the following examples.
     import org.openqa.selenium.WebDriver;
     import org.openqa.selenium.devtools.HasDevTools;
     import org.openqa.selenium.devtools.NetworkInterceptor;
-    import org.openqa.selenium.environment.webserver.NettyAppServer;
     import org.openqa.selenium.remote.http.Contents;
     import org.openqa.selenium.remote.http.Filter;
     import org.openqa.selenium.remote.http.HttpResponse;
