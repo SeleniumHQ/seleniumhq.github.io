@@ -77,7 +77,7 @@ const {Builder} = require('selenium-webdriver');
       .forBrowser('chrome')
       .build();
 
-    const pageCdpConnection = await driver.createCDPConnection();
+    const pageCdpConnection = await driver.createCDPConnection('page');
     await driver.register('username', 'password', pageCdpConnection);
     await driver.get('https://the-internet.herokuapp.com/basic_auth');
     await driver.quit();
@@ -195,7 +195,7 @@ const assert = require("assert");
       .forBrowser('chrome')
       .build();
 
-    const cdpConnection = await driver.createCDPConnection();
+    const cdpConnection = await driver.createCDPConnection('page');
     await driver.logMutationEvents(cdpConnection, event => {
       assert.deepStrictEqual(event['attribute_name'], 'style');
       assert.deepStrictEqual(event['current_value'], "");
