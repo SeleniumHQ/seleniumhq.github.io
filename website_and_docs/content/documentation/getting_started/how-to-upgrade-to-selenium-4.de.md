@@ -1,13 +1,19 @@
 ---
 title: "How to upgrade to Selenium 4"
 linkTitle: "How to upgrade to Selenium 4"
-date: 2021-10-13
-tags: ["selenium"]
-categories: ["general"]
-author: Diego Molina ([@diegofmolina](https://twitter.com/diegofmolina))
+weight: 3
 description: >
-  Interested in Selenium 4? Here is a post that will help you upgrade to the latest release!
+  Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
 ---
+
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to German. Do you speak German? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
 Upgrading to Selenium 4 should be a painless process if you are using one of the officially 
 supported languages (Ruby, JavaScript, C#, Python, and Java). There might be some cases where 
