@@ -13,7 +13,70 @@
 <a class=dropdown-item href=/fr/>Français</a>
 <a class=dropdown-item href=/ja/>日本語</a>
 <a class=dropdown-item href=/ko/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/blog/2021/>Return to the regular view of this page</a>.</p></div><h1 class=title>Blog Posts - 2021</h1><ul><li><a href=#pg-84646027c054d153e71a0f23e0b8009c>A Tour of 4: Authentication</a></li><li><a href=#pg-5337bc0581bb7e8b2cf62bff21e87acc>Selenium 4 Release Candidate 2</a></li><li><a href=#pg-a3c71e37c5f2b0dd6e6cb437e7dd2daf>Selenium 4 Release Candidate</a></li><li><a href=#pg-aa8b644d5e668cc30d705828d5cc1732>All Selenium downloads are now available on GitHub releases</a></li><li><a href=#pg-5f7250a9c28b2fb04e5f41eff76077e7>Selenium downloads will move to GitHub releases</a></li><li><a href=#pg-f15ebd4e9184883dd8a9a1673d7efa02>The Selenium website has a new look!</a></li><li><a href=#pg-e874aa26a0e3a5f5f02cd126ceee573a>Public Project Meeting - July 15, 2021</a></li><li><a href=#pg-5777064ea6f7fc40a5274534526095d8>Public Project Meeting - June 17, 2021</a></li><li><a href=#pg-16f4bd0f87a7890cef0aae1d10797210>Public Project Meeting - June 03, 2021</a></li><li><a href=#pg-4192444ce5e2e060b9f987df10989dc3>IRC channels are moving to Libera.chat</a></li><li><a href=#pg-4ebc64b71fdb4254ee20b230b0e3b191>Public Project Meeting - May 20, 2021</a></li><li><a href=#pg-9559db9d73d55d3eb2541c8aad423924>Public Project Meeting - May 06, 2021</a></li><li><a href=#pg-e7e3bc1a3642f85754c638970101db30>Observability in Selenium 4</a></li><li><a href=#pg-babeb0792da4448a8f7068236a4f0871>Public Project Meeting - April 22, 2021</a></li><li><a href=#pg-7d1c92c18d1993a6f4e4f256809f8f9b>Public Project Meeting - April 08, 2021</a></li><li><a href=#pg-7710a6d00ce05eb93e784ee6a1df5bd1>Public Project Meeting - March 25, 2021</a></li><li><a href=#pg-43cd2dc7cfc3343c4a25d6f28b87c945>Public Project Meeting - March 11, 2021</a></li><li><a href=#pg-0b9912e936270d0e7ccf501469b378dd>Public Project Meeting - February 25, 2021</a></li><li><a href=#pg-2c206a3d634855a8cb05c4a7855388b1>Selenium 4 Beta 1 Released</a></li><li><a href=#pg-2dc3ff2c2e2d8f5be490c0dda06b79c8>Public Project Meeting - February 11, 2021</a></li><li><a href=#pg-fd933372576b9598f9e1f510364d6921>New Tricks in Selenium 4</a></li><li><a href=#pg-7269acc2d8f148671e90319fd28548ae>Public Project Meeting - January 28, 2021</a></li><li><a href=#pg-7ebd1d83a594de882b230badda257170>Public Project Meeting - January 14, 2021</a></li><li><a href=#pg-8d43181f104adf342838454a12cdd390>Results of the first ever selenium survey</a></li></ul><div class=content></div></div><div class=td-content><h1 id=pg-84646027c054d153e71a0f23e0b8009c>A Tour of 4: Authentication</h1><div class=lead>Introducing how Selenium 4 handles authentication</div><div class="td-byline mb-4">By <b>Simon Stewart (<a href=https://twitter.com/shs96c>@shs96c</a>)</b> |
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/blog/2021/>Return to the regular view of this page</a>.</p></div><h1 class=title>Blog Posts - 2021</h1><ul><li><a href=#pg-bb7a2f33ec36e9aeb8c78437b9ec5a64>Announcing Selenium 4</a></li><li><a href=#pg-84646027c054d153e71a0f23e0b8009c>A Tour of 4: Authentication</a></li><li><a href=#pg-5337bc0581bb7e8b2cf62bff21e87acc>Selenium 4 Release Candidate 2</a></li><li><a href=#pg-a3c71e37c5f2b0dd6e6cb437e7dd2daf>Selenium 4 Release Candidate</a></li><li><a href=#pg-aa8b644d5e668cc30d705828d5cc1732>All Selenium downloads are now available on GitHub releases</a></li><li><a href=#pg-5f7250a9c28b2fb04e5f41eff76077e7>Selenium downloads will move to GitHub releases</a></li><li><a href=#pg-f15ebd4e9184883dd8a9a1673d7efa02>The Selenium website has a new look!</a></li><li><a href=#pg-e874aa26a0e3a5f5f02cd126ceee573a>Public Project Meeting - July 15, 2021</a></li><li><a href=#pg-5777064ea6f7fc40a5274534526095d8>Public Project Meeting - June 17, 2021</a></li><li><a href=#pg-16f4bd0f87a7890cef0aae1d10797210>Public Project Meeting - June 03, 2021</a></li><li><a href=#pg-4192444ce5e2e060b9f987df10989dc3>IRC channels are moving to Libera.chat</a></li><li><a href=#pg-4ebc64b71fdb4254ee20b230b0e3b191>Public Project Meeting - May 20, 2021</a></li><li><a href=#pg-9559db9d73d55d3eb2541c8aad423924>Public Project Meeting - May 06, 2021</a></li><li><a href=#pg-e7e3bc1a3642f85754c638970101db30>Observability in Selenium 4</a></li><li><a href=#pg-babeb0792da4448a8f7068236a4f0871>Public Project Meeting - April 22, 2021</a></li><li><a href=#pg-7d1c92c18d1993a6f4e4f256809f8f9b>Public Project Meeting - April 08, 2021</a></li><li><a href=#pg-7710a6d00ce05eb93e784ee6a1df5bd1>Public Project Meeting - March 25, 2021</a></li><li><a href=#pg-43cd2dc7cfc3343c4a25d6f28b87c945>Public Project Meeting - March 11, 2021</a></li><li><a href=#pg-0b9912e936270d0e7ccf501469b378dd>Public Project Meeting - February 25, 2021</a></li><li><a href=#pg-2c206a3d634855a8cb05c4a7855388b1>Selenium 4 Beta 1 Released</a></li><li><a href=#pg-2dc3ff2c2e2d8f5be490c0dda06b79c8>Public Project Meeting - February 11, 2021</a></li><li><a href=#pg-fd933372576b9598f9e1f510364d6921>New Tricks in Selenium 4</a></li><li><a href=#pg-7269acc2d8f148671e90319fd28548ae>Public Project Meeting - January 28, 2021</a></li><li><a href=#pg-7ebd1d83a594de882b230badda257170>Public Project Meeting - January 14, 2021</a></li><li><a href=#pg-8d43181f104adf342838454a12cdd390>Results of the first ever selenium survey</a></li></ul><div class=content></div></div><div class=td-content><h1 id=pg-bb7a2f33ec36e9aeb8c78437b9ec5a64>Announcing Selenium 4</h1><div class=lead>Selenium 4.0.0 is released! Get it while it&rsquo;s hot!</div><div class="td-byline mb-4">By <b>Simon Stewart (<a href=https://twitter.com/shs96c>@shs96c</a>)</b> |
+<time datetime=2021-10-13 class=text-muted>Wednesday, October 13, 2021</time></div><p>It’s with very great pleasure that <strong>we are announcing the release of
+Selenium 4</strong>. This is available for Java, .Net, Python, Ruby, and
+Javascript. You can download it from your favourite package manager or
+right <a href=https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.0.0>from GitHub</a>!</p><p>If you’re already a Selenium user, this update should be as easy as
+just changing your dependency from 3.x to 4.0.0. We’ve worked hard to
+ensure that this is a “drop-in” upgrade, having focused on keeping the
+public APIs as stable as possible.</p><p>Of course, we’ve made changes, so if you relied on code that was
+marked as internal to Selenium, or that was deprecated, you might
+experience some hiccups. Please <a href=/documentation/getting_started/how_to_upgrade_to_selenium_4/>check our documentation</a> for
+advice on how to deal with each of the common problems we’re aware of.</p><p>But there’s more to Selenium 4 than just being a stable release of
+what was there before! It brings a whole host of new and exciting
+features that we hope will make your tests more fun to write, and more
+stable when you run them. Let’s take a look at some of them!</p><p>We’ve introduced “<a href=/documentation/webdriver/locating_elements/#relative-locators>relative locators</a>”. These allow you to specify
+where on the page an element can be found using language that people
+use too; things like “above that element”, or “to the right of this
+other element”. This will hopefully provide you all with a tool to
+fight against incredibly complex locators, making your tests read a
+little more clearly, and being more resilient to changes in the page’s
+DOM. We’re not the first ones to come up with this idea &ndash; that honour
+belongs to <a href=https://www.sahipro.com>Sahi</a> &ndash; but if you’ve not used them before, we hope
+you like them!</p><p>If you’re using <a href=https://www.mozilla.org/en-GB/firefox/new/>Firefox</a> or a browser that is derived from
+<a href=https://www.chromium.org/Home>Chromium</a>, we’ve added a slew of new capabilities
+too. These include ways of handling <a href=/documentation/webdriver/bidi_apis/#register-basic-auth>“basic” and “digest”
+authentication</a>, Network Interception (<a href=https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418>Are you an HTTP
+418?</a>), and also performing commonly requested tasks, like
+waiting for a <a href=/documentation/webdriver/bidi_apis/#mutation-observation>change in the DOM</a>, or providing a way to
+look at <a href=/documentation/webdriver/bidi_apis/#listen-to-js-exceptions>Javascript errors</a>.</p><p>We’ve added these new features in a way that fits in with our existing
+APIs. There’s no need to rewrite your tests: just use the new features
+when it feels right to you.</p><p>We have also rebuilt the <a href=/documentation/grid/>Selenium Grid</a>, taking lessons from
+successful projects such as <a href=https://opensource.zalando.com/zalenium/>Zalenium</a> and
+<a href=https://aerokube.com/selenoid/latest/>Selenoid</a> to enhance the capabilities. This new Grid runs
+just as well as a single process, running on a single machine, as it
+does in the traditional “hub and node” configuration, but it also
+supports a fully-distributed mode, for use in modern infrastructure
+running Kubernetes. It has better security baked-in, because we know
+that securing a Grid can be a difficult task. And at all of these
+scales and sizes, all the new features we’ve added to the language
+bindings will work as expected.</p><p>The Grid can also manage Docker containers on your local machine,
+pulling images such as the <a href=https://hub.docker.com/u/selenium>standalone firefox server</a> so your
+infrastructure maintenance becomes just a little bit less taxing.</p><p>Finally, the Grid is easier to manage. We’ve revamped the UI, placing
+it on top of a GraphQL model that anyone is free to query and make use
+of to create their own visualisations or monitors of the Grid. If
+you’d like to peek into a running session, there are live VNC previews
+you can open and interact with, providing even better insight into
+what’s been going on. And if you want even more information, we’ve
+integrated support for <a href=https://opentelemetry.io>OpenTelemetry</a> into the Grid, so now you
+can find out exactly what’s happening, where, and when.</p><p>I know it’s a cliche to say that it’s a “very great pleasure”, but,
+being honest with you, it genuinely is. Working on this new version of
+Selenium has been a chance to work with some amazing engineers, and to
+be part of a vibrant and energetic community. It’s been a lot of fun
+to write this code, with these people, and it feels right to say
+“thank you” to as many of them as possible here. So, without waiting
+any longer&mldr;.</p><p>We would like to thank all of our users who have helped Selenium be
+successful over the years. Without you we wouldn’t be where we are
+today. We would also like to thank all the contributors who have
+submitted <a href=https://github.com/SeleniumHQ/selenium/pulls>Pull Requests</a>, your contributions make Selenium better. For
+everyone who’s taken the time to file an issue, and to let us know
+where there’s been a problem: thank you. We only have a chance to
+improve when we know that there’s something that needs work!</p><p>And finally, thank you to all the Selenium Committers,
+<a href=https://www.browserstack.com/>BrowserStack</a>, <a href=https://saucelabs.com>Saucelabs</a>, and our
+<a href=https://www.selenium.dev/sponsors/>Selenium-Level sponsors</a> for getting this release ready for
+our users.</p><p><strong>We hope you enjoy Selenium 4, and we can’t wait to see what you do
+with it!</strong></p></div><div class=td-content style=page-break-before:always><h1 id=pg-84646027c054d153e71a0f23e0b8009c>A Tour of 4: Authentication</h1><div class=lead>Introducing how Selenium 4 handles authentication</div><div class="td-byline mb-4">By <b>Simon Stewart (<a href=https://twitter.com/shs96c>@shs96c</a>)</b> |
 <time datetime=2021-10-10 class=text-muted>Sunday, October 10, 2021</time></div><p>Before we ship Selenium 4, I thought it would be nice to introduce
 some of the new features in-depth. Of course, all of the features
 we&rsquo;re covering are in the main <a href=/documentation/webdriver/>WebDriver documentation</a>, so if

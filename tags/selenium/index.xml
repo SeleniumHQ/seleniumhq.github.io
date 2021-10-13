@@ -1,4 +1,80 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Announcing Selenium 4</title><link>/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/announcing-selenium-4/</guid><description>
+&lt;p>It’s with very great pleasure that &lt;strong>we are announcing the release of
+Selenium 4&lt;/strong>. This is available for Java, .Net, Python, Ruby, and
+Javascript. You can download it from your favourite package manager or
+right &lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.0.0">from GitHub&lt;/a>!&lt;/p>
+&lt;p>If you’re already a Selenium user, this update should be as easy as
+just changing your dependency from 3.x to 4.0.0. We’ve worked hard to
+ensure that this is a “drop-in” upgrade, having focused on keeping the
+public APIs as stable as possible.&lt;/p>
+&lt;p>Of course, we’ve made changes, so if you relied on code that was
+marked as internal to Selenium, or that was deprecated, you might
+experience some hiccups. Please &lt;a href="/documentation/getting_started/how_to_upgrade_to_selenium_4/">check our documentation&lt;/a> for
+advice on how to deal with each of the common problems we’re aware of.&lt;/p>
+&lt;p>But there’s more to Selenium 4 than just being a stable release of
+what was there before! It brings a whole host of new and exciting
+features that we hope will make your tests more fun to write, and more
+stable when you run them. Let’s take a look at some of them!&lt;/p>
+&lt;p>We’ve introduced “&lt;a href="/documentation/webdriver/locating_elements/#relative-locators">relative locators&lt;/a>”. These allow you to specify
+where on the page an element can be found using language that people
+use too; things like “above that element”, or “to the right of this
+other element”. This will hopefully provide you all with a tool to
+fight against incredibly complex locators, making your tests read a
+little more clearly, and being more resilient to changes in the page’s
+DOM. We’re not the first ones to come up with this idea &amp;ndash; that honour
+belongs to &lt;a href="https://www.sahipro.com">Sahi&lt;/a> &amp;ndash; but if you’ve not used them before, we hope
+you like them!&lt;/p>
+&lt;p>If you’re using &lt;a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox&lt;/a> or a browser that is derived from
+&lt;a href="https://www.chromium.org/Home">Chromium&lt;/a>, we’ve added a slew of new capabilities
+too. These include ways of handling &lt;a href="/documentation/webdriver/bidi_apis/#register-basic-auth">“basic” and “digest”
+authentication&lt;/a>, Network Interception (&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418">Are you an HTTP
+418?&lt;/a>), and also performing commonly requested tasks, like
+waiting for a &lt;a href="/documentation/webdriver/bidi_apis/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
+look at &lt;a href="/documentation/webdriver/bidi_apis/#listen-to-js-exceptions">Javascript errors&lt;/a>.&lt;/p>
+&lt;p>We’ve added these new features in a way that fits in with our existing
+APIs. There’s no need to rewrite your tests: just use the new features
+when it feels right to you.&lt;/p>
+&lt;p>We have also rebuilt the &lt;a href="/documentation/grid/">Selenium Grid&lt;/a>, taking lessons from
+successful projects such as &lt;a href="https://opensource.zalando.com/zalenium/">Zalenium&lt;/a> and
+&lt;a href="https://aerokube.com/selenoid/latest/">Selenoid&lt;/a> to enhance the capabilities. This new Grid runs
+just as well as a single process, running on a single machine, as it
+does in the traditional “hub and node” configuration, but it also
+supports a fully-distributed mode, for use in modern infrastructure
+running Kubernetes. It has better security baked-in, because we know
+that securing a Grid can be a difficult task. And at all of these
+scales and sizes, all the new features we’ve added to the language
+bindings will work as expected.&lt;/p>
+&lt;p>The Grid can also manage Docker containers on your local machine,
+pulling images such as the &lt;a href="https://hub.docker.com/u/selenium">standalone firefox server&lt;/a> so your
+infrastructure maintenance becomes just a little bit less taxing.&lt;/p>
+&lt;p>Finally, the Grid is easier to manage. We’ve revamped the UI, placing
+it on top of a GraphQL model that anyone is free to query and make use
+of to create their own visualisations or monitors of the Grid. If
+you’d like to peek into a running session, there are live VNC previews
+you can open and interact with, providing even better insight into
+what’s been going on. And if you want even more information, we’ve
+integrated support for &lt;a href="https://opentelemetry.io">OpenTelemetry&lt;/a> into the Grid, so now you
+can find out exactly what’s happening, where, and when.&lt;/p>
+&lt;p>I know it’s a cliche to say that it’s a “very great pleasure”, but,
+being honest with you, it genuinely is. Working on this new version of
+Selenium has been a chance to work with some amazing engineers, and to
+be part of a vibrant and energetic community. It’s been a lot of fun
+to write this code, with these people, and it feels right to say
+“thank you” to as many of them as possible here. So, without waiting
+any longer&amp;hellip;.&lt;/p>
+&lt;p>We would like to thank all of our users who have helped Selenium be
+successful over the years. Without you we wouldn’t be where we are
+today. We would also like to thank all the contributors who have
+submitted &lt;a href="https://github.com/SeleniumHQ/selenium/pulls">Pull Requests&lt;/a>, your contributions make Selenium better. For
+everyone who’s taken the time to file an issue, and to let us know
+where there’s been a problem: thank you. We only have a chance to
+improve when we know that there’s something that needs work!&lt;/p>
+&lt;p>And finally, thank you to all the Selenium Committers,
+&lt;a href="https://www.browserstack.com/">BrowserStack&lt;/a>, &lt;a href="https://saucelabs.com">Saucelabs&lt;/a>, and our
+&lt;a href="https://www.selenium.dev/sponsors/">Selenium-Level sponsors&lt;/a> for getting this release ready for
+our users.&lt;/p>
+&lt;p>&lt;strong>We hope you enjoy Selenium 4, and we can’t wait to see what you do
+with it!&lt;/strong>&lt;/p></description></item><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
 &lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
 some of the new features in-depth. Of course, all of the features
 we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
@@ -904,7 +980,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Merge of Google-contributed code into the underlying javascript libraries used by the drivers.&lt;/li>
 &lt;/ul>
 &lt;p>We’ve also fixed bugs, one of which was being a nuisance for users of IBM’s JRE. The complete changelog can be found in the zipped downloads or in &lt;a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">our source tree&lt;/a>.&lt;/p>
-&lt;p>If you’re a Chrome user, then it’s a great idea to head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> to pick up the executable used by the ChromeDriver. It’s recently been updated, and now includes support for handling alerts and prompts! Thanks, Google!&lt;/p></description></item><item><title>Blog: Selenium 2.2 Released</title><link>/blog/2011/selenium-2-2-released/</link><pubDate>Tue, 26 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-2-released/</guid><description>
-&lt;p>The feedback from the last release was heard loud and clear: little and often it is!&lt;/p>
-&lt;p>We’re proud to announce the release of &lt;a href="http://seleniumhq.org/download/">Selenium 2.2&lt;/a>. What’s new this time? For many users, this is simply a bug fix release as there are no new major features. One thing you might appreciate is &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/IllegalLocatorException.html">better exceptions&lt;/a> being thrown when xpath searches return something other than a web element when using the WebDriver APIs, and we’re continuing to tweak the emulation of user events.&lt;/p>
-&lt;p>If you’re a .Net user, there is now an official &lt;a href="http://nuget.org/List/Packages/Selenium.WebDriver">NuGet package&lt;/a>, and if you’re a maven user then rest assured the release is heading to the central repo as quickly as we can manage.&lt;/p></description></item></channel></rss>
+&lt;p>If you’re a Chrome user, then it’s a great idea to head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> to pick up the executable used by the ChromeDriver. It’s recently been updated, and now includes support for handling alerts and prompts! Thanks, Google!&lt;/p></description></item></channel></rss>

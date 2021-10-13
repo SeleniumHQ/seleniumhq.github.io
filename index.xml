@@ -1,4 +1,80 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Announcing Selenium 4</title><link>/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/announcing-selenium-4/</guid><description>
+&lt;p>It’s with very great pleasure that &lt;strong>we are announcing the release of
+Selenium 4&lt;/strong>. This is available for Java, .Net, Python, Ruby, and
+Javascript. You can download it from your favourite package manager or
+right &lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.0.0">from GitHub&lt;/a>!&lt;/p>
+&lt;p>If you’re already a Selenium user, this update should be as easy as
+just changing your dependency from 3.x to 4.0.0. We’ve worked hard to
+ensure that this is a “drop-in” upgrade, having focused on keeping the
+public APIs as stable as possible.&lt;/p>
+&lt;p>Of course, we’ve made changes, so if you relied on code that was
+marked as internal to Selenium, or that was deprecated, you might
+experience some hiccups. Please &lt;a href="/documentation/getting_started/how_to_upgrade_to_selenium_4/">check our documentation&lt;/a> for
+advice on how to deal with each of the common problems we’re aware of.&lt;/p>
+&lt;p>But there’s more to Selenium 4 than just being a stable release of
+what was there before! It brings a whole host of new and exciting
+features that we hope will make your tests more fun to write, and more
+stable when you run them. Let’s take a look at some of them!&lt;/p>
+&lt;p>We’ve introduced “&lt;a href="/documentation/webdriver/locating_elements/#relative-locators">relative locators&lt;/a>”. These allow you to specify
+where on the page an element can be found using language that people
+use too; things like “above that element”, or “to the right of this
+other element”. This will hopefully provide you all with a tool to
+fight against incredibly complex locators, making your tests read a
+little more clearly, and being more resilient to changes in the page’s
+DOM. We’re not the first ones to come up with this idea &amp;ndash; that honour
+belongs to &lt;a href="https://www.sahipro.com">Sahi&lt;/a> &amp;ndash; but if you’ve not used them before, we hope
+you like them!&lt;/p>
+&lt;p>If you’re using &lt;a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox&lt;/a> or a browser that is derived from
+&lt;a href="https://www.chromium.org/Home">Chromium&lt;/a>, we’ve added a slew of new capabilities
+too. These include ways of handling &lt;a href="/documentation/webdriver/bidi_apis/#register-basic-auth">“basic” and “digest”
+authentication&lt;/a>, Network Interception (&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418">Are you an HTTP
+418?&lt;/a>), and also performing commonly requested tasks, like
+waiting for a &lt;a href="/documentation/webdriver/bidi_apis/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
+look at &lt;a href="/documentation/webdriver/bidi_apis/#listen-to-js-exceptions">Javascript errors&lt;/a>.&lt;/p>
+&lt;p>We’ve added these new features in a way that fits in with our existing
+APIs. There’s no need to rewrite your tests: just use the new features
+when it feels right to you.&lt;/p>
+&lt;p>We have also rebuilt the &lt;a href="/documentation/grid/">Selenium Grid&lt;/a>, taking lessons from
+successful projects such as &lt;a href="https://opensource.zalando.com/zalenium/">Zalenium&lt;/a> and
+&lt;a href="https://aerokube.com/selenoid/latest/">Selenoid&lt;/a> to enhance the capabilities. This new Grid runs
+just as well as a single process, running on a single machine, as it
+does in the traditional “hub and node” configuration, but it also
+supports a fully-distributed mode, for use in modern infrastructure
+running Kubernetes. It has better security baked-in, because we know
+that securing a Grid can be a difficult task. And at all of these
+scales and sizes, all the new features we’ve added to the language
+bindings will work as expected.&lt;/p>
+&lt;p>The Grid can also manage Docker containers on your local machine,
+pulling images such as the &lt;a href="https://hub.docker.com/u/selenium">standalone firefox server&lt;/a> so your
+infrastructure maintenance becomes just a little bit less taxing.&lt;/p>
+&lt;p>Finally, the Grid is easier to manage. We’ve revamped the UI, placing
+it on top of a GraphQL model that anyone is free to query and make use
+of to create their own visualisations or monitors of the Grid. If
+you’d like to peek into a running session, there are live VNC previews
+you can open and interact with, providing even better insight into
+what’s been going on. And if you want even more information, we’ve
+integrated support for &lt;a href="https://opentelemetry.io">OpenTelemetry&lt;/a> into the Grid, so now you
+can find out exactly what’s happening, where, and when.&lt;/p>
+&lt;p>I know it’s a cliche to say that it’s a “very great pleasure”, but,
+being honest with you, it genuinely is. Working on this new version of
+Selenium has been a chance to work with some amazing engineers, and to
+be part of a vibrant and energetic community. It’s been a lot of fun
+to write this code, with these people, and it feels right to say
+“thank you” to as many of them as possible here. So, without waiting
+any longer&amp;hellip;.&lt;/p>
+&lt;p>We would like to thank all of our users who have helped Selenium be
+successful over the years. Without you we wouldn’t be where we are
+today. We would also like to thank all the contributors who have
+submitted &lt;a href="https://github.com/SeleniumHQ/selenium/pulls">Pull Requests&lt;/a>, your contributions make Selenium better. For
+everyone who’s taken the time to file an issue, and to let us know
+where there’s been a problem: thank you. We only have a chance to
+improve when we know that there’s something that needs work!&lt;/p>
+&lt;p>And finally, thank you to all the Selenium Committers,
+&lt;a href="https://www.browserstack.com/">BrowserStack&lt;/a>, &lt;a href="https://saucelabs.com">Saucelabs&lt;/a>, and our
+&lt;a href="https://www.selenium.dev/sponsors/">Selenium-Level sponsors&lt;/a> for getting this release ready for
+our users.&lt;/p>
+&lt;p>&lt;strong>We hope you enjoy Selenium 4, and we can’t wait to see what you do
+with it!&lt;/strong>&lt;/p></description></item><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
 &lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
 some of the new features in-depth. Of course, all of the features
 we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
@@ -6293,16 +6369,4 @@ Take a look at the project on &lt;a href="https://github.com/SeleniumHQ/selenium
 &lt;p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or later!). It’s strongly recommended that you do not do this unless you absolutely need to.&lt;br>
 If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project has made available for you to use that can be &lt;a href="http://www.seleniumhq.org/download/">downloaded&lt;/a> from the project’s website. It takes the same arguments as the old runner, and we’ve done our best to ensure the output of tests remains the same too.&lt;/p>
 &lt;p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As such, if you use Firefox for your testing, you’ll need to use the &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a>, which is an executable similar to the &lt;a href="https://chromedriver.chromium.org/">chromedriver&lt;/a> and the &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft WebDriver&lt;/a> for Edge. You’ll need to start using geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone’s working flat out to give you the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with Firefox.&lt;/p>
-&lt;p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.&lt;/p></description></item><item><title>Blog: Announcing Selenium 3.0-beta1</title><link>/blog/2016/announcing-selenium-3-0-beta1/</link><pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate><guid>/blog/2016/announcing-selenium-3-0-beta1/</guid><description>
-&lt;p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.&lt;/p>
-&lt;p>We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.0 itself! Please remember that this is a beta release, so your feedback is incredibly helpful and valuable in order to help us smooth any rough edges.&lt;/p>
-&lt;p>For the last six years we’ve been advising users to switch to the newer WebDriver APIs and to stop using the original RC APIs. With Selenium 3.0, the original implementation of RC has been removed, replaced by one that sits on top of WebDriver. For many users, this change will go completely unnoticed, as they’re no longer using the RC APIs. For those of you who still are, we’ve done our best to make the change as smooth as possible, but &lt;a href="https://github.com/seleniumhq/selenium/issues">we welcome high quality bug reports&lt;/a> to help us fix any problems that occur. Maven users will need to add a dependency on the new “&lt;a href="http://docs.seleniumhq.org/download/maven.jsp">leg-rc&lt;/a>” package to access the old RC APIs.&lt;/p>
-&lt;p>There are some other changes that you might need to be aware of:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>You’ll need to be running Java 8&lt;/strong> to use the Java pieces of Selenium. This is the oldest version of Java officially supported by Oracle, so hopefully you’re using it already!&lt;/li>
-&lt;li>Support for Firefox is via Mozilla’s &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a>.&lt;/li>
-&lt;li>Support for Safari is provided on macOS (Sierra or later) via Apple’s own &lt;a href="https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html">safaridriver&lt;/a>.&lt;/li>
-&lt;li>Support for Edge is provided by MS through their &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver server&lt;/a>.&lt;/li>
-&lt;li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as &lt;a href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support">MS no longer supports them&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then &lt;a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon&lt;/a> is a great place to start.&lt;/p></description></item></channel></rss>
+&lt;p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.&lt;/p></description></item></channel></rss>
