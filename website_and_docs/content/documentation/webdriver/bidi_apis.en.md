@@ -440,7 +440,7 @@ it with the following examples.
           .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
           .setContent(utf8String("Creamy, delicious cheese!"))));
 
-    driver.get(appServer.whereIs("/cheese"));
+   driver.get("https://example-sausages-site.com");
 
     String source = driver.getPageSource();
 
