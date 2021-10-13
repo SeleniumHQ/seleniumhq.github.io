@@ -91,7 +91,7 @@ where there’s been a problem: thank you. We only have a chance to
 improve when we know that there’s something that needs work!
 
 And finally, thank you to all the Selenium Committers,
-[BrowserStack][browserstack], [Saucelabs][saucelabs], and our
+[BrowserStack][browserstack], [Sauce Labs][saucelabs], and our
 [Selenium-Level sponsors][sponsors] for getting this release ready for
 our users.
 
