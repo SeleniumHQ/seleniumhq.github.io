@@ -392,20 +392,33 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-const pageCdpConnection = await driver.createCDPConnection('page');
-  const metrics = {
-    width: 300,
-    height: 200,
-    deviceScaleFactor: 50,
-    mobile: true,
-  };
-  await pageCdpConnection.execute(
-    "Emulation.setDeviceMetricsOverride",
-    1,
-    metrics
-  );
-await driver.get("https://www.google.com");
-await driver.quit();
+const {Builder} = require('selenium-webdriver');
+const firefox = require('selenium-webdriver/firefox');
+const options = new firefox.Options();
+// enable debugger for CDP
+options.enableDebugger();
+
+(async function example() {
+  try {
+    let driver = await new Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+    const pageCdpConnection = await driver.createCDPConnection('page');
+    const metrics = {
+      width: 300,
+      height: 200,
+      deviceScaleFactor: 50,
+      mobile: true,
+    };
+    await pageCdpConnection.execute(
+      "Emulation.setDeviceMetricsOverride",
+      1,
+      metrics
+    );
+    await driver.get("https://www.google.com");
+    await driver.quit();
+  } catch (e) {
+    console.log(e);
+  }
+})();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
