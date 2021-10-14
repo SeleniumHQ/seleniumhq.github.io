@@ -27,7 +27,7 @@ Ajoutez la dépendance _selenium-java_ dans votre projet pom.xml:
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>3.X</version>
+  <version>4.X</version>
 </dependency>
 ```
 
