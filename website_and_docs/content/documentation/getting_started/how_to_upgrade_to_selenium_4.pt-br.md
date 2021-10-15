@@ -1,30 +1,35 @@
 ---
-title: "How to upgrade to Selenium 4"
-linkTitle: "How to upgrade to Selenium 4"
+title: "Como atualizar para Selenium 4"
+linkTitle: "Como atualizar para Selenium 4"
 weight: 3
 description: >
   Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
+  Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!
 ---
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
    Page being translated from 
-   English to Dutch. Do you speak Dutch? Help us to translate
+   English to Portuguese. Do you speak Portuguese? Help us to translate
    it by sending us pull requests!
+</p>
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+  Esta página está sendo traduzido do Inglês para o Português.
+  Você fala Inglês? Nos ajude a traduzir esta pagina enviando pull requests!
 </p>
 {{% /pageinfo %}}
 
-Upgrading to Selenium 4 should be a painless process if you are using one of the officially 
-supported languages (Ruby, JavaScript, C#, Python, and Java). There might be some cases where 
-a few issues can happen, and this guide will help you to sort them out. We will go through 
-the steps to upgrade your project dependencies and understand the major deprecations and 
-changes the version upgrade brings.
+Atualizar para o Selenium 4 deve ser um processo sem dificuldades se você estiver usando uma das linguagens oficialmente suportadas
+(Ruby, JavaScript, C#, Python, and Java). Pode haver alguns casos em que alguns problemas podem acontecer,
+este guia irá ajudar você a resolvê-los. Vamos passar as etapas para atualizar as dependências do seu
+projeto e entender as depreciações e também as mudanças trazidas pela versão atualizada.
 
-These are the steps we will follow to upgrade to Selenium 4:
-* Preparing our test code
-* Upgrading dependencies
-* Potential errors and deprecation messages
+Estas são as etapas que seguiremos para atualizar para o Selenium 4:
+* Preparando nosso código de teste
+* Atualizando as dependências
+* Possíveis erros e mensagens de suspensão de uso
 
 Note: while Selenium 3.x versions were being developed, support for the W3C WebDriver standard 
 was implemented. Both this new protocol and the legacy JSON Wire Protocol were supported. Around 
