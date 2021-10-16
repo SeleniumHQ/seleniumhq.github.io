@@ -8,11 +8,10 @@ aliases: ["/documentation/pt-br/webdriver/browser_manipulation/"]
 ## Ruby
 
 Ruby não está instalado por padrão no Windows. Baixe a [versão mais recente](//rubyinstaller.org/downloads)
-e execute o instalador. Você podedeixar todas as configurações com os valores padrão, exceto na
+e execute o instalador. Você pode deixar todas as configurações com os valores padrão, exceto na
 tela _Installation Destination and Optional Tasks_ verifique onde você precisa marca a caixa de seleção
-_Add Ruby executables to your PATH_. Para utilizar qualquer navegador,
-você deve instalar a *gem* de Ruby `selenium-webdriver`. Para instalá-lo, abra o prompt de comando
-e digite isto:
+_Add Ruby executables to your PATH_. Para utilizar qualquer navegador, você deve instalar a *gem* de Ruby `selenium-webdriver`. 
+Para instalá-lo, abra o prompt de comando e digite isto:
 
 ```shell
 gem install selenium-webdriver
@@ -39,13 +38,13 @@ necessária. Para utilizar o Internet Explorer no Windows, você deve baixar o
 [driver mais recente do Internet Explorer](https://selenium.dev/downloads/) e colocar o arquivo
 em uma pasta que está no `PATH`. Para descobrir quais diretórios estão no `PATH`,
 digite `echo% PATH%` no prompt de comando.
-
+Algo parecido com isto deve ser apresentado:
 ```bat
 $ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
 ```
 
-`C:\Ruby200\bin` parece um bom lugar. Descompacte o arquivo `IEDriverServer` e
+Encorajamos a criar o seguinte caminho `C:\Ruby200\bin`. Descompacte o arquivo `IEDriverServer` baixado e
 mova `IEDriverServer.exe` para lá.
 
 Isso deve abrir uma nova janela do Internet Explorer:
@@ -60,7 +59,7 @@ driver = Selenium::WebDriver.for :internet_explorer
 ### Navegar para
 
 A primeira coisa que você vai querer fazer depois de iniciar um navegador é
-abrir o seu site. Isso pode ser feito em uma única linha:
+abrir o seu site. Isso pode ser feito em uma única linha, utilize o seguinte comando:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -163,13 +162,12 @@ Você pode ler o título da página atual no navegador:
 
 ## Janelas e guias
 
-### Pega o puxador da janela
+### Pegue o idenficador da janela
 
 O WebDriver não faz distinção entre janelas e guias. E se
 seu site abre uma nova guia ou janela, o Selenium permitirá que você trabalhe
-usando um puxador de janela. Cada janela tem um identificador único que permanece
-persistente em uma única sessão. Você pode pegar o puxador da
-janela atual usando:
+usando um identificador. Cada janela tem um identificador único que permanece
+persistente em uma única sessão. Você pode pegar o identificador atual usando:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
@@ -187,7 +185,7 @@ Clicar em um link que abre em uma
 focará a nova janela ou guia na tela, mas o WebDriver não saberá qual
 janela que o sistema operacional considera ativa. Para trabalhar com a nova janela
 você precisará mudar para ela. Se você tiver apenas duas guias ou janelas abertas,
-e você sabe com qual janela você começa, pelo processo de eliminação
+e você sabe com qual janela você iniciou, pelo processo de eliminação
 você pode percorrer as janelas ou guias que o WebDriver pode ver e alternar
 para aquela que não é o original.
 
@@ -416,7 +414,7 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 
 ### Fechando uma janela ou guia
 
-Quando você terminar com uma janela ou guia _e_ não é a
+Quando você fechar uma janela ou guia _e_ que não é a
 última janela ou guia aberta em seu navegador, você deve fechá-la e alternar
 de volta para a janela que você estava usando anteriormente. Supondo que você seguiu a
 amostra de código na seção anterior, você terá o identificador da janela
@@ -470,12 +468,12 @@ driver.switchTo().window(originalWindow)
 
 Esquecer de voltar para outro gerenciador de janela após fechar uma
 janela deixará o WebDriver em execução na página agora fechada e
-acionar uma **No Such Window Exception**. Você deve trocar
+acionara uma **No Such Window Exception**. Você deve trocar
 de volta para um identificador de janela válido para continuar a execução.
 
 ### Sair do navegador no final de uma sessão
 
-Quando você terminar a sessão do navegador, você deve chamar quit,
+Quando você terminar a sessão do navegador, você deve chamar a função _quit()_,
 em vez de fechar:
 
 {{< tabpane langEqualsHeader=true >}}
@@ -487,7 +485,7 @@ em vez de fechar:
   {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
 {{< /tabpane >}}
 
-* quit irá:
+* _quit()_ irá:
    * Fechar todas as janelas e guias associadas a essa sessão do WebDriver
    * Fechar o processo do navegador
    * Fechar o processo do driver em segundo plano
