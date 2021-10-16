@@ -7,39 +7,39 @@ aliases: ["/documentation/ko/webdriver/bidi_apis/"]
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
+   <i class="fas fa-language display-4"></i>
+   Page being translated from
    English to Korean. Do you speak Korean? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-Selenium is working with browser vendors to create the 
-[WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/) 
+Selenium is working with browser vendors to create the
+[WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/)
 as a means to provide a stable, cross-browser API that uses the bidirectional
-functionality useful for both browser automation generally and testing specifically. 
-Before now, users seeking this functionality have had to rely on 
-the [Chrome DevTools Protocol]({{< ref "/chrome_devtools.md" >}}), 
+functionality useful for both browser automation generally and testing specifically.
+Before now, users seeking this functionality have had to rely on
+the [Chrome DevTools Protocol]({{< ref "/chrome_devtools.md" >}}),
 with all of its frustrations and limitations.
 
-The traditional webdriver model of strict request/response commands will be supplemented 
-with the ability to stream events from the user agent to the controlling software via WebSockets, 
+The traditional webdriver model of strict request/response commands will be supplemented
+with the ability to stream events from the user agent to the controlling software via WebSockets,
 better matching the evented nature of the browser DOM.
 
-Because it's a bad idea to tie your tests to a specific version of a specific browser, 
-the Selenium project recommends using WebDriver BiDi wherever possible. 
-However, until the spec is complete there are many useful things that the CDP offers. 
-To help keep your tests independent and portable, Selenium offers some useful helper classes. 
+Because it's a bad idea to tie your tests to a specific version of a specific browser,
+the Selenium project recommends using WebDriver BiDi wherever possible.
+However, until the spec is complete there are many useful things that the CDP offers.
+To help keep your tests independent and portable, Selenium offers some useful helper classes.
 At the moment, these use the CDP, but when we shall be using WebDriver Bidi as soon as possible
 
 The following list of APIs will be growing as the Selenium
 project works through supporting real world use cases. If there
-is additional functionality you'd like to see, please raise a 
+is additional functionality you'd like to see, please raise a
 [feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
 ## Register Basic Auth
 
-Some applications make use of browser authentication to secure pages. 
+Some applications make use of browser authentication to secure pages.
 With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -425,6 +425,85 @@ fun kotlinJsErrorListener() {
 {{< /tab >}}
 {{< /tabpane >}}
 
+## Network Interception
+
+If you want to capture network events coming into the browser and you want manipulate them you are able to do
+it with the following examples.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.devtools.HasDevTools;
+    import org.openqa.selenium.devtools.NetworkInterceptor;
+    import org.openqa.selenium.remote.http.Contents;
+    import org.openqa.selenium.remote.http.Filter;
+    import org.openqa.selenium.remote.http.HttpResponse;
+    import org.openqa.selenium.remote.http.Route;
+
+    NetworkInterceptor interceptor = new NetworkInterceptor(
+      driver,
+      Route.matching(req -> true)
+        .to(() -> req -> new HttpResponse()
+          .setStatus(200)
+          .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
+          .setContent(utf8String("Creamy, delicious cheese!"))));
+
+   driver.get("https://example-sausages-site.com");
+
+    String source = driver.getPageSource();
+
+    assertThat(source).contains("delicious cheese!");
+{{< /tab >}}
+{{< tab header="Python" >}}
+# Currently unavailable in python due the inability to mix certain async and sync commands
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+driver.intercept do |request, &continue|
+    uri = URI(request.url)
+    if uri.path.end_with?('one.js')
+      uri.path = '/devtools_request_interception_test/two.js'
+      request.url = uri.to_s
+    end
+    continue.call(request)
+end
+driver.navigate.to url_for('devToolsRequestInterceptionTest.html')
+driver.find_element(tag_name: 'button').click
+expect(driver.find_element(id: 'result').text).to eq('two')
+{{< /tab >}}
+
+{{< tab header="JavaScript" >}}
+const connection = await driver.createCDPConnection()
+let url = fileServer.whereIs("/cheese")
+let httpResponse = new HttpResponse(url)
+httpResponse.addHeaders("Content-Type", "UTF-8")
+httpResponse.body = "sausages"
+await driver.onIntercept(connection, httpResponse, async function () {
+  let body = await driver.getPageSource()
+  assert.strictEqual(body.includes("sausages"), true, `Body contains: ${body}`)
+})
+driver.get(url)
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+val driver = ChromeDriver()
+val interceptor = new NetworkInterceptor(
+      driver,
+      Route.matching(req -> true)
+        .to(() -> req -> new HttpResponse()
+          .setStatus(200)
+          .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
+          .setContent(utf8String("Creamy, delicious cheese!"))))
+
+    driver.get(appServer.whereIs("/cheese"))
+
+    String source = driver.getPageSource()
+{{< /tab >}}
+
 ## Collect Performance Metrics
 
 Collect various performance
@@ -468,7 +547,7 @@ public async Task PerformanceMetricsExample()
     IDevTools devTools = driver as IDevTools;
     DevToolsSession session = devTools.GetDevToolsSession();
     await session.SendCommand<EnableCommandSettings>(new EnableCommandSettings());
-    var metricsResponse = 
+    var metricsResponse =
         await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
             new GetMetricsCommandSettings());
 
