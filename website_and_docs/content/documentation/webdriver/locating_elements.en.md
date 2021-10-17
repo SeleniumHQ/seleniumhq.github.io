@@ -425,7 +425,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', near: em
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailAddressLabel = driver.findElement(By.id("lbl-email"));
-let emailAddressField = await driver.findElement(with(By.tagName("input")).near(emailAddressLabel));
+let emailAddressField = await driver.findElement(locateWith(By.tagName("input")).near(emailAddressLabel));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 val emailAddressLabel = driver.findElement(By.id("lbl-email"))
