@@ -288,7 +288,23 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const {Builder} = require('selenium-webdriver');
+(async () => {
+  try {
+    let driver = new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    const cdpConnection = await driver.createCDPConnection('page');
+    await driver.onLogEvent(cdpConnection, function (event) {
+      console.log(event['args'][0]['value']);
+    });
+    await driver.executeScript('console.log("here")');
+    await driver.quit();
+  }catch (e){
+    console.log(e);
+  }
+})()
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinConsoleLogExample() {
