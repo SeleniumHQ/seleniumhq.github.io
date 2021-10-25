@@ -417,7 +417,26 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const {Builder, By} = require('selenium-webdriver');
+(async () => {
+  try {
+    let driver = new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    const cdpConnection = await driver.createCDPConnection('page')
+    await driver.onLogException(cdpConnection, function (event) {
+      console.log(event['exceptionDetails']);
+    })
+    await driver.get('https://the-internet.herokuapp.com');
+    const link = await driver.findElement(By.linkText('Checkboxes'));
+    await driver.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", link, "onclick","throw new Error('Hello, world!')");
+    await link.click();
+    await driver.quit();
+  }catch (e){
+    console.log(e);
+  }
+})()
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinJsErrorListener() {
