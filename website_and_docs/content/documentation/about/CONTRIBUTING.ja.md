@@ -86,7 +86,6 @@ your changes, run `hugo server` on the site's root directory.
 ```shell
 % git submodule update --init --recursive
 % cd website_and_docs
-% npm install
 % hugo server
 ```
 
