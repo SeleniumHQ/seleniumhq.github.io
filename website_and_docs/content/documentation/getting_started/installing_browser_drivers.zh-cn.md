@@ -13,7 +13,7 @@ aliases:
 
 
 通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、
-Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持，
+Internet Explorer、 Edge、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持，
 但 WebDriver 尽可能使用浏览器的内置自动化支持来驱动浏览器。
 
 WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。  
@@ -38,7 +38,7 @@ WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。
 * 将目录添加到您的 path 中：
   * 在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：
 ```shell
-setx /m path "%path%;C:\WebDriver\bin\"
+setx PATH "%PATH%;C:\WebDriver\bin"
 ```
   * 在 macOS 和 Linux 上的 Bash 用户 - 在终端中：
 ```shell

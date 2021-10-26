@@ -90,7 +90,6 @@ Selenium项目欢迎新的贡献者.
 ```shell
 % git submodule update --init --recursive
 % cd website_and_docs
-% npm install
 % hugo server
 ```
 

@@ -21,7 +21,7 @@ aliases:
 {{% /pageinfo %}}
 
 Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché
-tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari.
+tels que Chrom(ium), Firefox, Internet Explorer, Edge, Opera et Safari.
 Dans la mesure du possible, WebDriver pilote le navigateur
 en utilisant la prise en charge intégrée du navigateur pour l'automatisation,
 bien que tous les navigateurs n'aient pas de support officiel pour la télécommande.
@@ -57,12 +57,11 @@ nécessitant votre code de test pour localiser l'emplacement exact du pilote.
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
 * Ajoutez le répertoire à votre CHEMIN:
   * Sous Windows - Ouvrez une invite de commande en tant qu'administrateur
-     et exécutez la commande suivante
-     pour ajouter en permanence le répertoire à votre chemin
-     pour tous les utilisateurs de votre machine:
+    et exécutez la commande suivante pour ajouter en permanence le répertoire 
+    à votre chemin pour tous les utilisateurs de votre machine:
 
     ```shell
-    setx /m path "%path%;C:\WebDriver\bin\"
+    setx PATH "%PATH%;C:\WebDriver\bin"
     ```
   * Utilisateurs Bash sur macOS et Linux - Dans un terminal:
 

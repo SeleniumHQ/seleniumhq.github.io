@@ -8,45 +8,40 @@ aliases: ["/documentation/en/support_packages/chrome_devtools/"]
 {{% pageinfo color="warning" %}}
 <p class="lead">
     While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
-    highly encouraged that you use the <a href="{{< ref "/bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
+    highly encouraged that you use the 
+    <a href="{{< ref "bidi_apis.md" >}}">WebDriver Bidi APIs</a> instead.
 </p>
 {{% /pageinfo %}}
 
-Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that developers can use to 
-debug web apps and explore the performance of their pages. 
-Google Chrome's DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
-As the name suggests, this is not designed for testing, nor to have a stable API, 
-so functionality is highly dependent on the version of the browser.
+Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
+developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
+DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
+As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
+is highly dependent on the version of the browser.
 
 WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
-implemented by all browsers, but it's not yet complete. Until it is, 
-Selenium provides access to the CDP for those browsers that implement it 
-(such as Google Chrome, or Microsoft Edge, and Firefox), 
-allowing you to enhance your tests in interesting ways. Some examples of what you can do with it are given below.
+implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
+the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
+Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
+do with it are given below.
 
 ## Emulate Geo Location
 
 Some applications have different features and functionalities across different 
 locations. Automating such applications is difficult because it is hard to emulate 
-the geo locations in the browser using Selenium. But with the help of Devtools, 
+the geo-locations in the browser using Selenium. But with the help of Devtools, 
 we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void geoLocationTest(){
-  ChromeDriver driver = new ChromeDriver();
-  Map coordinates = new HashMap()
-  {{
-      put("latitude", 50.2334);
-      put("longitude", 0.2334);
-      put("accuracy", 1);
-  }};    
-  driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
-  driver.get("<your site url>");
-}  
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
+                                               Optional.of(13.4501),
+                                               Optional.of(1)));
+driver.get("https://my-location.org/");
+driver.quit();
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -113,24 +108,28 @@ end
   {{< tab header="JavaScript" >}}
 const { Builder } = require("selenium-webdriver");
 
-async function geoLocationTest() {
+(async function geoLocationTest() {
   const driver = await new Builder().forBrowser("chrome").build();
-  await driver.get("http://www.google.com");
-  const pageCdpConnection = await driver.createCDPConnection("page");
-  //Latitude and longitude of Tokyo, Japan
-  const coordinates = {
-    latitude: 35.689487,
-    longitude: 139.691706,
-    accuracy: 100,
-  };
-  await pageCdpConnection.execute(
-    "Emulation.setGeolocationOverride",
-    1,
-    coordinates
-  );
-}
-
-geoLocationTest(); 
+  try {
+    await driver.get("https://my-location.org/");
+    const pageCdpConnection = await driver.createCDPConnection('page');
+    //Latitude and longitude of Tokyo, Japan
+    const coordinates = {
+      latitude: 35.689487,
+      longitude: 139.691706,
+      accuracy: 100,
+    };
+      await pageCdpConnection.execute(
+        "Emulation.setGeolocationOverride",
+        1,
+        coordinates
+      );
+  } catch (e) {
+    console.log(e)
+  } finally {
+     await driver.quit();
+  }
+})();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
@@ -148,6 +147,163 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
+## Emulate Geo Location with the Remote WebDriver:
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+ChromeOptions chromeOptions = new ChromeOptions();
+WebDriver driver = new RemoteWebDriver(new URL("<grid-url>"), chromeOptions);
+driver = new Augmenter().augment(driver);
+
+DevTools devTools = ((HasDevTools) driver).getDevTools();
+devTools.createSession();
+
+devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
+                                               Optional.of(13.4501),
+                                               Optional.of(1)));
+ 
+driver.get("https://my-location.org/");
+driver.quit();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+from selenium import webdriver
+#Replace the version to match the Chrome version
+import selenium.webdriver.common.devtools.v93 as devtools
+
+async def geoLocationTest():
+    chrome_options = webdriver.ChromeOptions()
+    driver = webdriver.Remote(
+        command_executor='<grid-url>',
+        options=chrome_options
+    )
+
+    async with driver.bidi_connection() as session:
+        cdpSession = session.session
+        await cdpSession.execute(devtools.emulation.set_geolocation_override(latitude=41.8781,longitude=-87.6298,accuracy=100))
+    driver.get("https://my-location.org/")
+    driver.quit()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+using System.Threading.Tasks;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+// Replace the version to match the Chrome version
+using OpenQA.Selenium.DevTools.V87.Emulation;
+
+namespace dotnet_test {
+  class Program {
+    public static void Main(string[] args) {
+      GeoLocation().GetAwaiter().GetResult();
+    }
+
+    public static async Task GeoLocation() {
+      ChromeOptions chromeOptions = new ChromeOptions();
+      RemoteWebDriver driver = new RemoteWebDriver(new Uri("<grid-url>"), chromeOptions);
+      DevToolsSession devToolsSession = driver.CreateDevToolsSession();
+      var geoLocationOverrideCommandSettings = new SetGeolocationOverrideCommandSettings();
+
+      geoLocationOverrideCommandSettings.Latitude = 51.507351;
+      geoLocationOverrideCommandSettings.Longitude = -0.127758;
+      geoLocationOverrideCommandSettings.Accuracy = 1;
+
+      await devToolsSession
+        .GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V87.DevToolsSessionDomains>()
+        .Emulation
+        .SetGeolocationOverride(geoLocationOverrideCommandSettings);
+
+        driver.Url = "https://my-location.org/";
+        }
+    }
+}
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+
+driver = Selenium::WebDriver.for(
+:remote, 
+:url => "<grid-url>",
+:capabilities => :chrome)
+
+begin
+  # Latitude and longitude of Tokyo, Japan
+  coordinates = { latitude: 35.689487,
+                  longitude: 139.691706,
+                  accuracy: 100 }
+  devToolsSession = driver.devtools
+  devToolsSession.send_cmd('Emulation.setGeolocationOverride', coordinates)
+  driver.get 'https://my-location.org/'
+  puts res
+ensure
+  driver.quit
+end
+
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+const webdriver = require('selenium-webdriver');
+const BROWSER_NAME = webdriver.Browser.CHROME;
+
+async function getDriver() {
+  return new webdriver.Builder()
+  .usingServer('<grid-url>')
+  .forBrowser(BROWSER_NAME)
+  .build();
+}
+
+async function executeCDPCommands () {
+ let driver = await getDriver();
+
+ await driver.get("<your site url>");
+ 
+ const cdpConnection = await driver.createCDPConnection('page');
+  //Latitude and longitude of Tokyo, Japan
+  const coordinates = {
+    latitude: 35.689487,
+    longitude: 139.691706,
+    accuracy: 100,
+  };
+  await cdpConnection.execute(
+    "Emulation.setGeolocationOverride",
+    1,
+    coordinates
+  );
+ await driver.quit();
+}
+
+executeCDPCommands(); 
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.devtools.HasDevTools
+// Replace the version to match the Chrome version
+import org.openqa.selenium.devtools.v91.emulation.Emulation
+import org.openqa.selenium.remote.Augmenter
+import org.openqa.selenium.remote.RemoteWebDriver
+import java.net.URL
+import java.util.Optional
+
+fun main() {
+    val chromeOptions = ChromeOptions()
+    var driver: WebDriver = RemoteWebDriver(URL("<grid-url>"), chromeOptions)
+    driver = Augmenter().augment(driver)
+
+    val devTools = (driver as HasDevTools).devTools
+    devTools.createSession()
+
+    devTools.send(
+        Emulation.setGeolocationOverride(
+            Optional.of(52.5043),
+            Optional.of(13.4501),
+            Optional.of(1)
+        )
+    )
+
+    driver["https://my-location.org/"]
+    driver.quit()
+}
+
+  {{< /tab >}}
+{{< /tabpane >}}
+
 ## Override Device Mode
 
 Using Selenium's integration with CDP, one can override the current device 
@@ -157,25 +313,25 @@ screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport,
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-
-public void deviceSimulationTest() {
-    ChromeDriver driver = (ChromeDriver) Driver.getDriver();
-    tools = driver.getDevTools();
-    tools.createSession();
-
-    Map deviceMetrics = new HashMap()
-    {{  
-        put("width", 600);
-        put("height", 1000);
-        put("mobile", true);
-        put("deviceScaleFactor", 50);
-    }};
-
-    driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
-    driver.get("https://www.google.com");
-}
+ChromeDriver driver = new ChromeDriver();
+DevTools devTools = driver.getDevTools();
+devTools.createSession();
+// iPhone 11 Pro dimensions
+devTools.send(Emulation.setDeviceMetricsOverride(375,
+                                                 812,
+                                                 50,
+                                                 true,
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty(),
+                                                 Optional.empty()));
+driver.get("https://selenium.dev/");
+driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Please raise a PR to add code sample
@@ -224,10 +380,49 @@ public class ExampleDevice {
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  metrics = { width: 300,
+              height: 200,
+              mobile: true,
+              deviceScaleFactor: 50 }
+  driver.execute_cdp('Emulation.setDeviceMetricsOverride', metrics)
+  driver.get 'https://www.google.com'
+ensure
+  driver.quit
+end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-# Please raise a PR to add code sample
+const {Builder} = require('selenium-webdriver');
+const firefox = require('selenium-webdriver/firefox');
+const options = new firefox.Options();
+// enable debugger for CDP
+options.enableDebugger();
+
+(async function example() {
+  try {
+    let driver = await new Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+    const pageCdpConnection = await driver.createCDPConnection('page');
+    const metrics = {
+      width: 300,
+      height: 200,
+      deviceScaleFactor: 50,
+      mobile: true,
+    };
+    await pageCdpConnection.execute(
+      "Emulation.setDeviceMetricsOverride",
+      1,
+      metrics
+    );
+    await driver.get("https://www.google.com");
+    await driver.quit();
+  } catch (e) {
+    console.log(e);
+  }
+})();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {

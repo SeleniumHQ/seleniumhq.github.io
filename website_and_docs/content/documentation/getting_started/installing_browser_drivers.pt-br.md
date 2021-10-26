@@ -21,7 +21,7 @@ aliases:
 {{% /pageinfo %}}
 
 Por meio do WebDriver, o Selenium oferece suporte a todos os principais navegadores do mercado
-como Chrom(ium), Firefox, Internet Explorer, Opera e Safari.
+como Chrom(ium), Firefox, Internet Explorer, Edge, Opera e Safari.
 Sempre que possível, o WebDriver dirige o navegador
 usando o suporte integrado do navegador para automação,
 embora nem todos os navegadores tenham suporte oficial para controle remoto.
@@ -61,7 +61,7 @@ _C:\WebDriver\bin_ ou _/opt/WebDriver/bin_
       para todos os usuários em sua máquina:
 
 ```shell
-setx /m path "%path%;C:\WebDriver\bin\"
+setx PATH "%PATH%;C:\WebDriver\bin"
 ```
   * Usuários do Bash no macOS e Linux - Em um terminal:
 
