@@ -17,7 +17,7 @@
 <a class=dropdown-item href=/fr/documentation/worst_practices/>Français</a>
 <a class=dropdown-item href=/ja/documentation/worst_practices/>日本語</a>
 <a class=dropdown-item href=/ko/documentation/worst_practices/>한국어</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Diese Seite durchsuchen…" aria-label="Diese Seite durchsuchen…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>Das ist eine für den Ausdruck optimierte Ansicht des gesamten Kapitels inkl. Unterseiten.
-<a href=# onclick="return print(),!1">Druckvorgang starten</a>.</p><p><a href=/de/documentation/worst_practices/>Zur Standardansicht zurückkehren</a>.</p></div><h1 class=title>Worst practices</h1><div class=lead>Things to avoid when automating browsers with Selenium.</div><ul><li>1: <a href=#pg-7dd5b7b5f121d9d5f6257917fb1c68a3>Captchas</a></li><li>2: <a href=#pg-5211b8ed9f2511dd679abb24e6f575ba>File downloads</a></li><li>3: <a href=#pg-255b62053d3b1ac6546afa5fa0378dca>HTTP response codes</a></li><li>4: <a href=#pg-8e0e241ed61c2982ec014b00eec45cd5>Gmail, email and Facebook logins</a></li><li>5: <a href=#pg-758e3739948151648dc8e57a4507034c>Test dependency</a></li><li>6: <a href=#pg-630e6e3360994f5d7ac34b18c061a229>Performance testing</a></li><li>7: <a href=#pg-97fb6dd4cda9dee863062f81775cedb6>Link spidering</a></li><li>8: <a href=#pg-3c7b72b441d4e6e9676a4a77e06d6332>Two Factor Authentication</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=# onclick="return print(),!1">Druckvorgang starten</a>.</p><p><a href=/de/documentation/worst_practices/>Zur Standardansicht zurückkehren</a>.</p></div><h1 class=title>Worst practices</h1><div class=lead>Things to avoid when automating browsers with Selenium.</div><ul><li>1: <a href=#pg-7dd5b7b5f121d9d5f6257917fb1c68a3>Captchas</a></li><li>2: <a href=#pg-5211b8ed9f2511dd679abb24e6f575ba>File downloads</a></li><li>3: <a href=#pg-255b62053d3b1ac6546afa5fa0378dca>HTTP response codes</a></li><li>4: <a href=#pg-8e0e241ed61c2982ec014b00eec45cd5>Gmail, email und Facebook Einloggen</a></li><li>5: <a href=#pg-758e3739948151648dc8e57a4507034c>Test dependency</a></li><li>6: <a href=#pg-630e6e3360994f5d7ac34b18c061a229>Performance testing</a></li><li>7: <a href=#pg-97fb6dd4cda9dee863062f81775cedb6>Link spidering</a></li><li>8: <a href=#pg-3c7b72b441d4e6e9676a4a77e06d6332>Two Factor Authentication</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to German. Do you speak German? Help us to translate
 it by sending us pull requests!</p></div></div></div><div class=td-content><h1 id=pg-7dd5b7b5f121d9d5f6257917fb1c68a3>1 - Captchas</h1><p>CAPTCHA ist die Abkürzung für <em>Completely Automated Public Turing
@@ -77,29 +77,22 @@ vom Webserver zu manipulieren. Bei der Verwendung eines Proxys
 können Sie entscheiden, wie auf Response-Codes für die Weiterleitung
 reagiert werden soll. Außerdem stellt nicht jeder Browser die
 Response-Codes für WebDriver zur Verfügung. Mit einem Proxy
-haben Sie also eine Lösung, die für jeden Browser funktioniert.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-8e0e241ed61c2982ec014b00eec45cd5>4 - Gmail, email and Facebook logins</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to German. Do you speak German? Help us to translate
-it by sending us pull requests!</p></div><p>For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.</p><p>The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change,
-whereas webpages and HTML locators change often
-and require you to update your test framework.</p><p>Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.</p><p>WebDriver implementations that are
-<a href=//w3c.github.io/webdriver/webdriver-spec.html>W3C conformant</a>
-also annotate the <code>navigator</code> object
-with a <code>WebDriver</code> property
-so that Denial of Service attacks can be mitigated.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-758e3739948151648dc8e57a4507034c>5 - Test dependency</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+haben Sie also eine Lösung, die für jeden Browser funktioniert.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-8e0e241ed61c2982ec014b00eec45cd5>4 - Gmail, email und Facebook Einloggen</h1><p>Aus mehreren Gründen wird die Anmeldung auf Websites wie Google Mail
+und Facebook mit WebDriver nicht empfohlen. Abgesehen davon, dass Sie
+gegen die Nutzungsbedingungen dieser Websites verstoßen (wo Sie riskieren,
+dass der Account gebannt wird), ist es langsam und unzuverlässig.</p><p>Die optimale Weise ist, die APIs zu verwenden, die von E-Mail-Anbietern
+angeboten werden, oder im Falle von Facebook den Entwicklertools-Service,
+der eine API für die Erstellung von Test-Accounts, Freunden und so weiter
+macht, zu nutzen. Obwohl die Verwendung einer API wie etwas zusätzliche
+harte Arbeit erscheinen mag, werden Sie sich in Geschwindigkeit,
+Zuverlässigkeit und Stabilität zurückzahlen. Auch die API wird sich
+wahrscheinlich nicht ändern, während Websites und HTML-Lokatoren sich
+häufig ändern und Sie Ihr Testframework aktualisieren müssen.</p><p>Wenn Sie sich bei Websites Dritter mit WebDriver an jedem Punkt Ihres
+Tests anmelden, erhöht sich das Risiko, dass Ihr Test fehlschlägt, weil
+es Ihren Test verlängert. Eine allgemeine Faustregel lautet, dass längere
+Tests fragiler und unzuverlässiger sind.</p><p><a href=//w3c.github.io/webdriver/webdriver-spec.html>W3C-konforme</a> WebDriver-Implementierungen
+versehen das Navigator-Objekt mit einer WebDriver-Eigenschaft, sodass
+Denial-of-Service-Angriffe abgeschwächt werden können.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-758e3739948151648dc8e57a4507034c>5 - Test dependency</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to German. Do you speak German? Help us to translate
 it by sending us pull requests!</p></div><p>A common idea and misconception about automated testing is regarding a
