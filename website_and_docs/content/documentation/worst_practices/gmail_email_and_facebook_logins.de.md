@@ -1,42 +1,29 @@
 ---
-title: "Gmail, email and Facebook logins"
-linkTitle: "Gmail, email and Facebook"
+title: "Gmail, email und Facebook Einloggen"
+linkTitle: "Gmail, email und Facebook"
 weight: 4
 aliases: ["/documentation/de/worst_practices/gmail_email_and_facebook_logins/"]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to German. Do you speak German? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Aus mehreren Gründen wird die Anmeldung auf Websites wie Google Mail 
+und Facebook mit WebDriver nicht empfohlen. Abgesehen davon, dass Sie 
+gegen die Nutzungsbedingungen dieser Websites verstoßen (wo Sie riskieren, 
+dass der Account gebannt wird), ist es langsam und unzuverlässig.
 
-For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.
+Die optimale Weise ist, die APIs zu verwenden, die von E-Mail-Anbietern 
+angeboten werden, oder im Falle von Facebook den Entwicklertools-Service, 
+der eine API für die Erstellung von Test-Accounts, Freunden und so weiter 
+macht, zu nutzen. Obwohl die Verwendung einer API wie etwas zusätzliche 
+harte Arbeit erscheinen mag, werden Sie sich in Geschwindigkeit, 
+Zuverlässigkeit und Stabilität zurückzahlen. Auch die API wird sich 
+wahrscheinlich nicht ändern, während Websites und HTML-Lokatoren sich 
+häufig ändern und Sie Ihr Testframework aktualisieren müssen.
 
-The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change,
-whereas webpages and HTML locators change often
-and require you to update your test framework.
+Wenn Sie sich bei Websites Dritter mit WebDriver an jedem Punkt Ihres 
+Tests anmelden, erhöht sich das Risiko, dass Ihr Test fehlschlägt, weil 
+es Ihren Test verlängert. Eine allgemeine Faustregel lautet, dass längere 
+Tests fragiler und unzuverlässiger sind.
 
-Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.
-
-WebDriver implementations that are
-[W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
-also annotate the `navigator` object
-with a `WebDriver` property
-so that Denial of Service attacks can be mitigated.
+[W3C-konforme](//w3c.github.io/webdriver/webdriver-spec.html) WebDriver-Implementierungen 
+versehen das Navigator-Objekt mit einer WebDriver-Eigenschaft, sodass 
+Denial-of-Service-Angriffe abgeschwächt werden können.
