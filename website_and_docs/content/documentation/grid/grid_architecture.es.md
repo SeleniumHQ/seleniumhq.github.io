@@ -1,11 +1,19 @@
 ---
-title: "The Architecture of the Selenium Grid"
-linkTitle: "The Architecture of the Selenium Grid"
-weight: 2
-aliases: ["/documentation/en/grid/grid_4/grid_architecture/"]
+title: "Grid Architecture"
+linkTitle: "Grid Architecture"
+weight: 7
 ---
 
-The Grid is designed as a set of components that all fufill a role in
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Spanish. Do you speak Spanish? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
+The Grid is designed as a set of components that all fulfill a role in
 maintaining the Grid. It can seem quite complicated, but hopefully
 this document can help clear up any confusion.
 
@@ -81,7 +89,7 @@ response doesn't matter, then we prefer to use the event bus.
 One interesting thing to note is that the async calls are more
 decoupled from their listeners than the synchronous calls are.
 
-## Start Up Sequeunce and Dependencies Between Components
+## Start Up Sequence and Dependencies Between Components
 
 Although the Grid is designed to allow components to start up in any
 order, conceptually the order in which components starts is:
