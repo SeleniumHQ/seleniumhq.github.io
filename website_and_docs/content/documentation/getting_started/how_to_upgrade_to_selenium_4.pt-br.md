@@ -31,21 +31,21 @@ Estas são as etapas que seguiremos para atualizar para o Selenium 4:
 * Atualizando as dependências
 * Possíveis erros e mensagens de suspensão de uso
 
-Note: while Selenium 3.x versions were being developed, support for the W3C WebDriver standard 
-was implemented. Both this new protocol and the legacy JSON Wire Protocol were supported. Around 
-version 3.11, Selenium code became compliant with the level W3C 1 specification. The W3C compliant 
-code in the latest version of Selenium 3 will work as expected in Selenium 4.
+Nota: enquanto as versões do Selenium 3.x estavam sendo desenvolvidas, foi implementado o suporte padrão para W3C WebDriver.
+Este novo protocolo e o legado JSON Wire Protocol foram suportados. Através da versão 3.11, o código do Selenium passou a ser compátivel com o nível 1 da especificação W3C.
+A compatibilidade do código W3C na ultima versão do Selenium 3 irá funcionar como esperado na versão 4.
 
+## Preparando nosso código de teste
 
-## Preparing our test code
+Selenium 4 remove suporte para protocolos legados e usa o W3C Webdriver por padrão.
+Para a maioria das coisas, essa implementação não irá afetar usuários finais.
+As maiores exeções são `Capabilities` e a classe `Actions`.
 
-Selenium 4 removes support for the legacy protocol and uses the W3C WebDriver standard by 
-default under the hood. For most things, this implementation will not affect end users. 
-The major exceptions are `Capabilities` and the `Actions` class.
+### Recursos
 
-### Capabilities
-If the test capabilities are not structured to be W3C compliant, may cause a session to not 
-be started. Here is the list of W3C WebDriver standard capabilities:
+Se os recursos de teste não forem estruturados para serem compatíveis com W3C, pode fazer com que uma sessão não
+seja iniciada. Aqui está a lista de recursos padrão do W3C WebDriver:
+
 * `browserName`
 * `browserVersion` (replaces `version`)
 * `platformName` (replaces `platform`)
@@ -55,15 +55,15 @@ be started. Here is the list of W3C WebDriver standard capabilities:
 * `timeouts`
 * `unhandledPromptBehavior`
 
-An up-to-date list of standard capabilities can be found at 
+Uma lista atualizada de recursos padrão pode ser encontrada aqui: 
 [W3C WebDriver](https://www.w3.org/TR/webdriver1/#capabilities).
 
-Any capability that is not contained in the list above, needs to include a vendor prefix. 
-This applies to browser specific capabilities as well as cloud vendor specific capabilities. 
-For example, if your cloud vendor uses `build` and `name` capabilities for your tests, you need
-to wrap them in a `cloud:options` block (check with your cloud vendor for the appropriate prefix).
+Qualquer recurso que não esteja incluido na lista acima, precisa ser incluido um prefixo de fornecedor.
+Isso se aplica aos recursos específicos do navegador, bem como aos recursos específicos do fornecedor da nuvem.
+Por exemplo, se o seu fornecedor de nuvem usa os recursos `build` e `name` para seus testes, você precisa 
+envolvê-los em um bloco `cloud: options` (verifique com seu fornecedor de nuvem o prefixo apropriado).
 
-#### Before 
+#### Antes 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 DesiredCapabilities caps = DesiredCapabilities.firefox();
@@ -109,7 +109,7 @@ driver = webdriver.Remote(cloud_url, desired_capabilities=caps)
 {{< /tab >}}
 {{< /tabpane >}}
 
-#### After
+#### Depois
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 FirefoxOptions browserOptions = new FirefoxOptions();
@@ -165,11 +165,11 @@ driver = webdriver.Remote(cloud_url, options=options)
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Find element(s) utility methods in Java
-The utility methods to find elements in the Java bindings (`FindsBy` interfaces) have been removed 
-as they were meant for internal use only. The following code samples explain this better.
+### Utilitário para encontrar elemento (s) no Java
+O utilitário para localizar elementos no Java (interfaces `FindsBy`) foram removidos
+visto que se destinavam apenas a uso interno. Os exemplos de código a seguir explicam isso melhor.
 
-Finding a single element with `findElement*`
+Encontrando um único elemento com `findElement*`
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -198,8 +198,7 @@ driver.findElement(By.xpath("xPath"));
 {{< /card >}}
 {{< /cardpane >}}
 
-
-Finding a multiple elements with `findElements*`
+Encontrando multiplos elementos com `findElements*`
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -229,15 +228,12 @@ driver.findElements(By.xpath("xPath"));
 {{< /cardpane >}}
 
 
-## Upgrading dependencies
-
-Check the subsections below to install Selenium 4 and have your project dependencies upgraded.
+## Atualizando as dependências
+Verifique as subseções abaixo para isntalar o Selenium 4 e atualizar as dependências do seu projeto
 
 ### Java
 
-The process of upgrading Selenium depends on which build tool is being used. We will cover the 
-most common ones for Java, which are [Maven](https://maven.apache.org/) and 
-[Gradle](https://gradle.org/). The minimum Java version required is still 8.
+O processo de atualização do Selenium depende de  qual ferramenta de compilação está sendo usada. Vamos mostrar as mais comuns para Java, como  [Maven](https://maven.apache.org/) e [Gradle](https://gradle.org/). A versão minínma do Java ainda é 8.
 
 #### Maven
 
@@ -318,28 +314,24 @@ test {
 {{< /card >}}
 {{< /cardpane >}}
 
-After making the change, you could execute `./gradlew clean build`
-on the same directory where the `build.gradle` file is.
+Após realizar a mudança, você pode executar `./gradlew clean build` no mesmo diretório em o arquivo `build.gradle`está.
 
-To check all the Java releases, you can head to [MVNRepository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java).
+Para verifica todas as versões do Java, você pode ir até [MVNRepository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java).
 
 ### C#
 
-The place to get updates for Selenium 4 in C# is [NuGet](https://www.nuget.org/). Under the 
-[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.0.0) package you 
-can get the instructions to update to the latest version. Inside of Visual Studio, through the 
-NuGet Package Manager you can execute:
+O local para obter atualizações para Selenium 4 em C# é [NuGet](https://www.nuget.org/)
+Dentro do pacaote [`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.0.0) você pode seguir as instruções para atualizar para ultima versão.
+Dentro do Visual Studio, através do NuGet Package Manager você pode executar:
 
 ```shell
 PM> Install-Package Selenium.WebDriver -Version 4.0.0
 ```
 
 ### Python
-
-The most important change to use Python is the minimum required version. Selenium 4 will 
-require a minimum Python 3.7 or higher. More details can be found at the 
-[Python Package Index](https://pypi.org/project/selenium/4.0.0/). To upgrade from the 
-command line, you can execute:
+A mudança mais importante para usar o Python é a versão minima requerida. Para Selenium 4 a versão miníma requerida será Python3.7 ou superior.
+Mais detalhes podem ser encontrados aqui:[Python Package Index](https://pypi.org/project/selenium/4.0.0/).
+Para ataulizar através da linha de comando, você pode executar:
 
 ```shell
 pip install selenium==4.0.0
@@ -347,15 +339,14 @@ pip install selenium==4.0.0
 
 ### Ruby
 
-The update details for Selenium 4 can be seen at the 
-[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.0.0) 
-gem in RubyGems. To install the latest version, you can execute:
+Detalhes para atualizar para o Selenium 4 podem ser vistos aqui:
+[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.0.0)  gem in RubyGems
+Para instalar a ultima versão, você pode executar:
 
 ```shell
 gem install selenium-webdriver
 ```
-
-To add it to your Gemfile:
+Para adicioná-lo ao seu Gemfile:
 
 ```shell
 gem 'selenium-webdriver', '~> 4.0.0'
@@ -363,16 +354,15 @@ gem 'selenium-webdriver', '~> 4.0.0'
 
 ### JavaScript
 
-The selenium-webdriver package can be found at the Node package manager, 
-[npmjs](https://www.npmjs.com). Selenium 4 can be found 
-[here](https://www.npmjs.com/package/selenium-webdriver/v/4.0.0). To install it, you 
-could either execute:
+O pacote selenium-webdriver pode ser encontrado pelo Node package manager, 
+[npmjs](https://www.npmjs.com). Selenium 4 pode ser encontrado [aqui](https://www.npmjs.com/package/selenium-webdriver/v/4.0.0).
+Para instalar, você pode executar:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-Or, update your package.json and run` npm install`:
+Ou, atualize o seu package.json e execute `npm install`:
 
 ```json
 {
