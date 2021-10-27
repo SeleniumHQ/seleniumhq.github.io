@@ -1,4 +1,126 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Stepping Down, Stepping Up</title><link>/blog/2021/stepping-down-stepping-up/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/stepping-down-stepping-up/</guid><description>
+&lt;p>The short version is that I&amp;rsquo;m stepping down as the Selenium project
+lead, and will concentrating on pushing WebDriver Bidi
+forwards. Fortunately, the &lt;a href="/project/structure/#tlc">Selenium TLC&lt;/a> have already been
+steering the project for a while now, so it&amp;rsquo;s in excellent hands. With
+Selenium 4 now shipped, the project has a new energy and enthusiasm
+about it. The future is bright, and I&amp;rsquo;m looking forward to seeing what
+it holds.&lt;/p>
+&lt;p>The longer version? Well, that&amp;rsquo;s more personal. Let me start at the
+beginning&amp;hellip;.&lt;/p>
+&lt;p>On the 3rd January, 2007 I pushed the &lt;a href="https://github.com/SeleniumHQ/selenium/commit/29393a759063a0ea7a2d05c9592d687c4b6438a9">initial commit&lt;/a> of
+&amp;ldquo;WebDriver&amp;rdquo; to a public repo. I helped with the Selenium 1.0 release,
+and at the same time made sure that WebDriver emulated the original
+Selenium RC APIs (in code that lives on to this day). In 2009, &lt;a href="https://twitter.com/hugs">Jason
+Huggins&lt;/a> and I &lt;a href="https://youtu.be/Vlz-WmcrBL8">merged the Selenium and WebDriver
+projects&lt;/a>, and I took over the leadership of the
+project. I&amp;rsquo;ve been the lead for every version of Selenium since then,
+often being the person who tagged each release in source control, all
+the way up to the recent Selenium 4 release.&lt;/p>
+&lt;p>By the numbers, that&amp;rsquo;s&lt;/p>
+&lt;ul>
+&lt;li>14 years of WebDriver&lt;/li>
+&lt;li>12 years of Selenium for me
+&lt;ul>
+&lt;li>Though the first Selenium commits were in 2004&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>1 &lt;a href="https://www.thoughtworks.com/en-gb/insights/blog/happy-10th-birthday-selenium">10 year birthday celebration&lt;/a>&lt;/li>
+&lt;li>Approximately 130 Selenium releases.&lt;/li>
+&lt;li>I&amp;rsquo;ve landed just over 5100 commits
+&lt;ul>
+&lt;li>Which is about 20% of all the changes made to Selenium over the
+years.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>3 different source control systems&lt;/li>
+&lt;li>5 build systems&lt;/li>
+&lt;li>14 Selenium conferences&lt;/li>
+&lt;li>696 different people contributing to the project.&lt;/li>
+&lt;/ul>
+&lt;p>In a way, I blame Michael C for this. He and I worked together at
+ThoughtWorks in Australia, and had been working with
+&lt;a href="http://httpunit.sourceforge.net">HttpUnit&lt;/a>. My assertion was that its API was fine. His was
+that it should be more &lt;a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented&lt;/a>. To explore the idea, I
+started writing an OO wrapper around HttpUnit, and (of course!)
+Michael was right.&lt;/p>
+&lt;p>Or maybe it&amp;rsquo;s &lt;a href="https://github.com/joewalnes">Joe Walnes&lt;/a> who I should be talking
+about. At about the same, he&amp;rsquo;d been exploring a similar kind of
+design, but where my API had a &lt;code>Browser&lt;/code>, his had the far better
+sounding &lt;code>WebDriver&lt;/code>, and he was generous enough to allow me to use
+the same name in my next iteration of the idea.&lt;/p>
+&lt;p>Or, perhaps, it&amp;rsquo;s &lt;a href="https://paulhammant.com">Paul Hammant&lt;/a> and &lt;a href="https://www.thoughtworks.com">ThoughtWorks&lt;/a>. Paul was the
+one who suggested Open Sourcing what was then &amp;ldquo;WebDriver&amp;rdquo; under the
+Apache 2 license, and ThoughtWorks supported the decision to make the
+code available to the world.&lt;/p>
+&lt;p>In any case, on that day in 2007, I was sitting on the sofa with a
+glass of red wine, creating the project on &lt;a href="https://code.google.com/archive/">Google Code&lt;/a>,
+and thinking (if I was thinking deeply at all) that it&amp;rsquo;d be nice to
+get the code out there, and in six months it&amp;rsquo;ll probably be
+over. There was absolutely no way I could dream that the project would
+grow far beyond me, emerging from the &lt;a href="https://www.nhm.ac.uk/discover/news/2019/february/the-cambrian-explosion-was-far-shorter-than-thought.html">Cambrian explosion&lt;/a>
+of the early days of web testing to become first an industry-wide de
+facto standard, and then, through the work done in the W3C, an &lt;a href="https://w3c.github.io/webdriver/">actual
+standard&lt;/a>. It&amp;rsquo;s the only browser automation API that all the
+browser vendors support.&lt;/p>
+&lt;p>During these past 14 years, Selenium has been one of the constants of
+my life. I joke sometimes that I&amp;rsquo;ve known it longer than my wife and
+my son, but is it a joke if it&amp;rsquo;s true?&lt;/p>
+&lt;p>Why spend that much time and effort on Open Source? On something that
+you give away for free? Because it&amp;rsquo;s just been so incredibly
+rewarding. I&amp;rsquo;ve had a chance to meet people from all over the globe,
+work with amazing people from a range of companies I&amp;rsquo;d never have a
+chance of working with normally, learn and practice skills I wouldn&amp;rsquo;t
+have had a chance to exercise, and to write code that makes people&amp;rsquo;s
+lives just a little bit easier.&lt;/p>
+&lt;p>Most importantly, Selenium has been the way that I&amp;rsquo;ve met some of the
+best friends I have in my life. I&amp;rsquo;ve been very lucky.&lt;/p>
+&lt;p>I&amp;rsquo;ve also been lucky to have met and been part of the Selenium
+community. The conferences and meetups have been a fantastic way to
+hear about how people are using the tool, and I am constantly
+impressed by how inventive and thoughtful people can be. The
+conversations I&amp;rsquo;ve had at those events have changed how I think about
+all sorts of things, and not just code. The IRC and Slack channels are
+vibrant and interesting places to be. There are folks who are there
+regularly who I&amp;rsquo;ve never met in person, but who I feel I could count
+as friends.&lt;/p>
+&lt;p>Who knew that Open Source could be the source of so much that makes a
+life bright?&lt;/p>
+&lt;p>But today, I&amp;rsquo;m stepping down as the project lead, and will be away
+from the project until summer, though (in the true spirit of this
+project), I’m not sure which year.&lt;/p>
+&lt;p>Why, if all I said above is true, am I stepping down?&lt;/p>
+&lt;p>The major reason is that the things I like to do, and that I&amp;rsquo;m good
+at, are not the things that the project needs right now. It would be
+hubris to believe that no-one else could do as good a job,
+particularly when I know how amazing so many people on the project
+are.&lt;/p>
+&lt;p>The other reason is that I&amp;rsquo;m tired. For the past 14 years, much of my
+free time, as well as hours within work, has been spent working on
+Selenium. There are other projects and interests I&amp;rsquo;d like to pour some
+energy into (just ask me how my Turkish lessons are going!)&lt;/p>
+&lt;p>In my absence, the project&amp;rsquo;s &amp;ldquo;&lt;a href="/project/structure/#tlc">Technical Leadership Committee&lt;/a>&amp;rdquo;
+will continue to be setting the direction of the project. I&amp;rsquo;ve been
+listening to the discussions about where the project can go: it&amp;rsquo;s
+going to be brilliant.&lt;/p>
+&lt;p>That is, while I&amp;rsquo;m stepping down, the rest of the TLC will be stepping
+up. They&amp;rsquo;ve already been running the project for a while. They’ll
+continue the work we’ve started and carry it forwards and upwards. If
+you&amp;rsquo;re reading this, and want to get involved, step in and &lt;a href="/support/#ChatRoom">join the
+fun&lt;/a>. Now&amp;rsquo;s the perfect time.&lt;/p>
+&lt;p>When I took over as lead of the Selenium project, Paul joked that he
+had thrown me the keys and run in the opposite direction. I guess it’s
+my turn to do that now!&lt;/p>
+&lt;p>Before finishing, I&amp;rsquo;d just like to say a heartfelt &amp;ldquo;thank you&amp;rdquo; to
+everyone who&amp;rsquo;s been involved in the Selenium project. To everyone
+who&amp;rsquo;s contributed in some way, or used the code we&amp;rsquo;ve written, thank
+you. To everyone who&amp;rsquo;s filed a bug, thank you too. To all the people
+who I&amp;rsquo;ve had the pleasure of so many conversations with, that I would
+never have met without Selenium, thank you. To my family, who’ve
+supported me and understood with endless patience that Selenium is a
+part of our lives, thank you. And to my friends on the project, an
+extra meaningful thank you.&lt;/p>
+&lt;p>I won&amp;rsquo;t be here, but I won&amp;rsquo;t be far. See you all soon.&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the first release candidate of Selenium
 4. We&amp;rsquo;re shipping this for .Net, Java, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
@@ -1034,42 +1156,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>&lt;a href="http://ariya.ofilabs.com/2012/12/phantomjs-1-8-blue-winter-rose.html">PhantomJS 1.8 “Blue Winter Rose”&lt;/a> got lots of twitter love. As it should have.&lt;/li>
 &lt;li>&lt;a href="http://nikic.github.com/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html">Cooperative multitasking using coroutines (in PHP!)&lt;/a> is, I think, pretty awesome just by the my inability to fully grok what is going on. I also have no idea how to use this for automation purposes, but it seems like there should be some usage for it somewhere…&lt;/li>
 &lt;li>&lt;a href="http://www.littlehart.net/atthekeyboard/2012/12/17/so-you-want-to-write-tests">So You Want to Write Tests&lt;/a> is more mindset than code … but code has always been the easy part anyways.&lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #133</title><link>/blog/2013/a-smattering-of-selenium-133/</link><pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate><guid>/blog/2013/a-smattering-of-selenium-133/</guid><description>
-&lt;p>Since today is the start of ‘find a new contract’ I guess I don’t have an excuse to miss these for the next week or so.&lt;/p>
-&lt;p>(Oh, and Happy New Year, etc.)&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>This is snark, but just makes me laugh given the hype machine around ATDD/BDD;&lt;/p>
-&lt;blockquote>
-&lt;p>AS an angry userI WANT TO punch the developer in the faceSO THAT I CAN punch the developer in the face.&lt;/p>
-&lt;p>— Kristopher Johnson (@OldManKris) &lt;a href="https://twitter.com/OldManKris/status/275977400309932033">December 4, 2012&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;/li>
-&lt;li>
-&lt;p>Alright, this is also snark, but &lt;a href="http://responsiveurl.co.uk/while/were/making/every/damn/thing/responsive/lets/not/forget/the/url/">Why not make your URLs responsive?&lt;/a> is an interesting ‘how would I automate this?’ question&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://www.toolsjournal.com/testing-articles/item/1093-adoption-of-exploratory-testing-and-test-automation-on-rise">Adoption Of Exploratory Testing And Test Automation On The Rise&lt;/a> is kinda sales-y [which is fine given the context], but if you swap in ‘Selenium IDE’ or ‘Selenium Builder’ for ‘TestStudio’ then you have the case for those parts of the suite.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://github.com/konteck/wpp">web++&lt;/a> is a single file webserver — in c++&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://www.songkick.com/devblog/2012/07/16/from-15-hours-to-15-seconds-reducing-a-crushing-build-time/">From 15 hours to 15 seconds: reducing a crushing build time&lt;/a> is pretty good, though some very obvious developer tendencies sneaking in. The quick fix at the end, &lt;em>run the build entirely on the tmpfs in-memory file system&lt;/em> seems in intriguing as well.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Your periodic reminder that &lt;a href="http://spin.atomicobject.com/2012/12/06/writing-tests-is-not-tdd">Simply Writing Tests Is Not Test Driven Development&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://www.designyourway.net/blog/resources/javascript-html5-game-engines-libraries-51-examples/">Javascript &amp;amp; HTML5 Game Engines Libraries – 51 Examples&lt;/a> — and all will need their own unique automation efforts. Welcome to the JS Executor future. Honest, those aren’t thumbscrews you see on the counter over there. Why are you looking at the counter?!?!&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://my.opera.com/ODIN/blog/2012/12/13/html5-canvas-performance-drawing-circles">HTML5 canvas performance: Drawing circles&lt;/a> — timing is something we’ll also have to care about in HTML5 apps.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="http://pozorvlak.livejournal.com/174763.html">Falsehoods programmers believe about build systems&lt;/a>. Yes.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>And I thought my brain hurt before reading &lt;a href="http://laurakalbag.com/display-none/">display: none;&lt;/a>. I was wrong.&lt;/p>
-&lt;/li>
 &lt;/ul></description></item></channel></rss>
