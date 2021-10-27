@@ -119,8 +119,7 @@ components.
 The process of registering a new Node to the Grid is lightweight.
 
   1. When the Node starts, it should emit a "heart beat" event on a
-    regular basis. This heartbeat contains the [node status][node
-    status].
+    regular basis. This heartbeat contains the [node status].
   2. The Distributor listens for the heart beat events. When it sees
     one, it attempts to `GET` the `/status` endpoint of the Node. It
     is from this information that the Grid is set up.
