@@ -2,6 +2,7 @@
 title: "Installing browser drivers"
 linkTitle: "Installing browser drivers"
 weight: 2
+needsTranslation: true
 description: >
   Setting up your browser to be automated.
 aliases: [
