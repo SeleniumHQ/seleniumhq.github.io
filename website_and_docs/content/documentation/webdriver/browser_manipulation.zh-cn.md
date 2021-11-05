@@ -176,8 +176,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 要使用新窗口，您需要切换到它。 如果只有两个选项卡或窗口被打开，并且你知道从哪个窗口开始，
 则你可以遍历 WebDriver， 通过排除法可以看到两个窗口或选项卡，然后切换到你需要的窗口或选项卡。
 
-不过，Selenium 4 提供了一个新的 api
-<a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/#创建新窗口(或)新标签页并且切换"> NewWindow </a>，
+不过，Selenium 4 提供了一个新的 api [NewWindow](#创建新窗口或新标签页并且切换)
 它创建一个新选项卡 (或) 新窗口并自动切换到它。
 
 {{< tabpane langEqualsHeader=true >}}

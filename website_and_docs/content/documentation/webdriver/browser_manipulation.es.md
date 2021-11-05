@@ -205,8 +205,7 @@ abiertas y sabes en cual empezaste, por proceso de eliminación, puede recorrer
 las ventanas o pestañas que ve el WebDriver y cambiar a una de ellas que no sea
 la original.
 
-Sin embargo Selenium 4 proporciona una nueva API
-<a href="https://selenium.dev/documentation/es/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
+Sin embargo Selenium 4 proporciona una nueva API [NewWindow](#create-new-window-or-new-tab-and-switch)
 la cual crea una nueva pestaña o ventana y automáticamente cambia a ella.
 
 {{< tabpane langEqualsHeader=true >}}
