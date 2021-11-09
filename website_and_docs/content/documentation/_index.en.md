@@ -18,7 +18,7 @@ that lets you write interchangeable code for all major web browsers.
 This project is made possible by volunteer contributors
 who have put in thousands of hours of their own time,
 and made the source code 
-[freely available]({{< ref "/copyright_and_attributions.md#license" >}})
+[freely available]({{< ref "/copyright.md#license" >}})
 for anyone to use, enjoy, and improve.
 
 Selenium brings together browser vendors, engineers, and enthusiasts
@@ -150,10 +150,10 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
+See the [Overview]({{< ref "documentation/overview" >}}) to check the different project 
 components and decide if Selenium is the right tool for you.
 
-You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
+You should continue on to [Getting Started]({{< relref "webdriver/getting_started/" >}})
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.

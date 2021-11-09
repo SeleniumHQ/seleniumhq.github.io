@@ -1,7 +1,7 @@
 ---
 title: "Waits"
 linkTitle: "Waits"
-weight: 4
+weight: 6
 aliases: ["/documentation/en/webdriver/waits/"]
 ---
 
@@ -84,7 +84,7 @@ assert(element.text == "Hello from JavaScript!")
 {{< /tabpane >}}
 
 The issue here is that the default
-[page load strategy]({{< ref "/page_loading_strategy.md" >}})
+[page load strategy]({{< ref "/documentation/webdriver/capabilities/universal_capabilities#pageloadstrategy" >}})
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is
@@ -95,15 +95,13 @@ about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
 Fortunately, the normal instruction set available on
-the [_WebElement_]({{< ref "/web_element.md" >}}) interface—such
+the [_WebElement_]({{< relref "elements/" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
  in that the function calls will not return
  (or the callback will not trigger in callback-style languages)
  until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/keyboard.md" >}})
- and [_Mouse_]({{< ref "/mouse_and_keyboard_actions_in_detail.md" >}}),
+ The [advanced user interaction APIs]({{< ref "actions_api" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
