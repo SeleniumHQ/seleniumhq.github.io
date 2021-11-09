@@ -19,21 +19,12 @@ aliases: ["/documentation/ko/front_matter/copyright_and_attributions/"]
 {{% /pageinfo %}}
 
 
-## **The Documentation of Selenium**
+## **Selenium 설명서**
 
-Every effort has been made to make this documentation
-as complete and as accurate as possible,
-but no warranty or fitness is implied.
-The information provided is on an “as-is” basis.
-The authors and the publisher shall have
-neither liability nor responsibility to any person or entity
-with respect to any loss or damages arising
-from the information contained in this book.
-No patent liability is assumed with respect
-to the use of the information contained herein.
+이 설명서를 최대한 완전하고 정확하게 작성하기 위해 모든 노력을 기울였지만 보증이나 적합성은 함축되어 있지 않습니다. 제공된 정보는 "있는 그대로(As-is)"에 기초합니다. 저자와 출판사는 본 책에 포함된 정보로 인해 발생하는 손실이나 손해와 관련하여 어떤 개인이나 단체에 대해서도 책임이나 책임을 지지 않습니다. 여기에 포함된 정보의 사용과 관련하여 어떠한 특허 책임도 지지 않습니다.
 
 
-## Attributions
+## 속성
 
 ### Thanks to:
 
@@ -62,23 +53,18 @@ to the use of the information contained herein.
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
 
-## Third-Party software used by Selenium documentation project:
+## Selenium 설명서 프로젝트에서 사용하는 타사 소프트웨어:
 
 | Software | Version | License |
 | -------- | ------- | ------- |
 | [Hugo](//gohugo.io/) | v0.83.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
 
-## License
+## 라이선스
 
-All code and documentation originating from the Selenium project
-is licensed under the Apache 2.0 license,
-with the [Software Freedom Conservancy](//sfconservancy.org/)
-as the copyright holder.
+Selenium 프로젝트에서 비롯된 모든 코드 및 설명서는 Apache 2.0 라이센스에 따라 라이센스를 부여받았으며  [Software Freedom Conservancy](//sfconservancy.org/)는 저작권 소유자로 지정되어 있습니다.
 
-The license is included here for convenience,
-but you can also find it on the
-[Apache Foundation's websites](//apache.org/licenses/LICENSE-2.0.html):
+라이센스는 편의를 위해 여기에 포함되어 있지만 [Apache Foundation](//apache.org/licenses/LICENSE-2.0.html)에서도 찾을 수 있습니다:
 
 ```markdown
                                  Apache License
