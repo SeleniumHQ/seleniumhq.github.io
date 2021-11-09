@@ -39,13 +39,6 @@ aliases: ["/documentation/ko/introduction/"]
 
 ## 조합 격자 (Grid)
 
-Selenium Grid allows you to run test cases in different 
-machines across different platforms. The control of 
-triggering the test cases is on the local end, and 
-when the test cases are triggered, they are automatically 
-executed by the remote end.
+Selenium 그리드를 사용하면 여러 플랫폼에 걸쳐 서로 다른 컴퓨터에서 테스트 케이스를 실행할 수 있습니다. 테스트 케이스의 트리거 제어는 로컬 엔드에 있으며, 테스트 케이스가 트리거되면 원격 엔드에 의해 자동으로 실행됩니다.
 
-After the development of the WebDriver tests, you may face 
-the need of running your tests on multiple browser and 
-operating system combinations.
-This is where [Grid]({{< ref "/grid.md" >}}) comes into the picture.
+WebDriver 테스트가 개발된 후, 여러 브라우저와 운영 체제 조합에서 테스트를 실행해야 할 수도 있습니다.  [여기]({{< ref "/grid.md" >}})서 그리드가 나타납니다.
