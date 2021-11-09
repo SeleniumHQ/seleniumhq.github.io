@@ -16,86 +16,32 @@ aliases: ["/documentation/ko/introduction/the_selenium_project_and_tools/"]
 </p>
 {{% /pageinfo %}}
 
-### Selenium controla los navegadores web
+### Selenium은 웹 브라우저를 제어한다
+ 
+셀레늄은 여러 가지가 있지만 그 핵심은 브라우저 인스턴스를 원격으로 제어하고 브라우저와 사용자의 상호 작용을 실행하는 데 사용할 수 있는 최고의 기술을 사용하는 웹 브라우저 자동화를 위한 도구 세트입니다.
 
-_Selenium_ significa muchas cosas pero en su núcleo, es un conjunto
-de herramientas para la automatización de navegadores web que utiliza
-las mejores técnicas disponibles para controlar remotamente las
-instancias de los navegadores y emular la interacción del usuario con
-el navegador.
+사용자는 최종 사용자가 수행하는 일반적인 작업을 시뮬레이션할 수 있습니다. 필드에 텍스트를 입력하고 드롭다운 값을 선택하고 확인란을 선택하고 문서에서 링크를 클릭할 수 있습니다. 또한 마우스 이동, 임의 자바스크립트 실행 등과 같은 많은 다른 제어 기능도 제공합니다.
 
-Permite a los usuarios simular interacciones básicas realizadas por
-los usuarios finales; insertando texto en los campos, seleccionando
-valores de menús desplegables y casillas de verificación, y haciendo
-clics en los enlaces de los documentos. También provee muchos otros
-controles tales como el movimiento del mouse, la ejecución arbitraria
-de JavaScript, y mucho más.
-
-A pesar de que es usado principalmente para pruebas de front-end de
-sitios webs, Selenium es en esencia una _librería_ de agente de
-usuario para el navegador. Las interfaces son ubicuas a su
-aplicación, lo que fomenta la composición con otras librerías para
-adaptarse a su propósito.
+주로 웹 사이트의 프런트 엔드 테스트에 사용되지만, Selenium의 핵심은 브라우저 사용자 에이전트 라이브러리입니다. 인터페이스는 애플리케이션 어디에나 있으므로 목적에 맞게 다른 라이브러리와의 구성을 권장합니다.
 
 
-### Una interfaz para gobernarlos a todos
+### 하나의 인터페이스로 모든 것을 지배할 수 있다
 
-Uno de los principios fundamentales del proyecto es permitir una
-interfaz común para todas las tecnologías de los (principales)
-navegadores. Los navegadores web son aplicaciones increíblemente
-complejas y de mucha ingeniería, realizando operaciones completamente
-diferentes pero que usualmente se ven iguales al hacerlo. Aunque el
-texto se presente con las mismas fuentes, las imágenes se muestren en
-el mismo lugar y los enlaces te llevan al mismo destino. Lo que
-sucede por debajo es tan diferente como la noche y el día. Selenium
-abstrae estas diferencias, ocultando sus detalles y complejidades a
-la persona que escribe el código. Esto le permite escribir varias
-líneas de código para realizar un flujo de trabajo complicado, pero
-estas mismas líneas se ejecutarán en Firefox, Internet Explorer,
-Chrome y los demás navegadores compatibles.
+프로젝트의 지침 원칙 중 하나는 모든 (주요) 브라우저 기술에 대한 공통 인터페이스를 지원하는 것입니다. 웹 브라우저는 믿을 수 없을 정도로 복잡하고 고도로 조작된 애플리케이션으로, 완전히 다른 방식으로 작업을 수행하지만, 그렇게 하는 동안에도 종종 동일하게 보입니다. 텍스트가 동일한 글꼴로 렌더링되더라도 이미지는 동일한 위치에 표시되고 링크가 동일한 대상으로 이동합니다. 그 아래에서 일어나고 있는 일은 밤과 매우 다릅니다. 셀레늄은 코드를 작성하는 사람으로부터 세부사항과 복잡함을 숨기면서 이러한 차이를 "추상화"합니다. 이렇게 하면 복잡한 워크플로우를 수행하기 위해 여러 줄의 코드를 작성할 수 있지만 이러한 줄은 Firefox, Internet Explorer, Chrome 및 기타 지원되는 모든 브라우저에서 실행됩니다.
 
 
-### Herramientas y soporte
+### 도구 및 지원
 
-El diseño minimalista de Selenium le da la versatilidad para que se
-pueda incluir como un componente en otras aplicaciones. La
-infraestructura proporcionada debajo del catálogo de Selenium te da
-las herramientas para que puedas ensamblar tu [grid de
-navegadores]({{< ref "/grid.md" >}}) de modo que tus pruebas
-se puedan ejecutar en diferentes navegadores a través de diferente
-sistemas operativos y plataformas.
+Selenium의 미니멀리즘 디자인 접근 방식은 대형 애플리케이션에 구성요소로 포함될 수 있는 다용성을 제공합니다. Selenium의 우산 아래 제공되는 주변 인프라는 다양한 컴퓨터에 걸쳐 서로 다른 브라우저와 여러 운영 체제에서 테스트를 실행할 수 있도록 [브라우저 그리드]({{< ref "/grid.md" >}})를 결합할 수 있는 도구를 제공합니다.
 
-Imagina un banco de computadores en tu sala de servidores o en un
-centro de datos, todos ejecutando navegadores al mismo tiempo e
-interactuando con los enlaces en tu sitio web, formularios, y
-tablas&mdash;probando tu aplicación 24 horas al día. A través de la
-sencilla interfaz de programación proporcionada para los lenguajes
-más comunes, estas pruebas se ejecutarán incansablemente en paralelo,
-reportando cuando ocurran errores.
+서버룸이나 데이터 센터의 컴퓨터 뱅크가 사이트의 링크, 양식 및 테이블을 동시에 작동시켜 애플리케이션을 24시간 테스트한다고 상상해 보십시오. 가장 일반적인 언어로 제공되는 간단한 프로그래밍 인터페이스를 통해 이러한 테스트는 멈추지 않고 병렬로 실행되어 오류가 발생하면 사용자에게 보고됩니다.
 
-Es un objetivo ayudar a que esto sea una realidad para ti,
-proporcionando a los usuarios herramientas y documentación para
-controlar no solo los navegadores pero también para facilitar la
-escalabilidad e implementación de tales grids.
+사용자가 브라우저를 제어할 수 있는 도구와 설명서를 제공할 뿐만 아니라 이러한 그리드를 쉽게 확장하고 배치할 수 있도록 함으로써 이러한 기능을 현실화하는 것을 목표로 합니다.
 
+### Selenium을 사용하는 대상
 
-### Quien utiliza Selenium
+세계에서 가장 중요한 많은 기업들이 브라우저 기반 테스트에 Selenium을 채택했으며, 종종 다른 독점 툴과 관련된 수년간의 노력을 대체했다. 인기가 높아짐에 따라 요구 사항과 챌린지도 증가했습니다.
 
-Muchas de las empresas más importantes del mundo han adoptado
-Selenium para sus pruebas basadas en navegador, a menudo reemplazando
-esfuerzos de años que involucran otras herramientas propietarias. A
-medida que ha crecido en popularidad, también se han multiplicado sus
-requisitos y desafíos.
+웹이 점점 더 복잡해지고 새로운 기술들이 웹사이트에 추가되면서, 가능한 한 그것들을 따라가는 것이 이 프로젝트의 임무이다. 오픈 소스 프로젝트인 이 지원은 많은 자원봉사자들의 아낌없는 시간 기부를 통해 제공됩니다.
 
-A medida que la web se vuelve más complicada y se agregan nuevas
-tecnologías a los sitios web, la misión de este proyecto es
-mantenerse al día con ellos siempre que sea posible. Siendo un
-proyecto de código abierto, este apoyo se sustenta a través de la
-donación generosa de tiempo de muchos voluntarios, cada uno de los
-cuales tiene un "trabajo diurno".
-
-Otra misión del proyecto es alentar a más voluntarios a participar en
-este esfuerzo, y construir una comunidad fuerte para que el proyecto
-pueda seguir el ritmo de las tecnologías emergentes y seguir siendo
-una plataforma dominante para la automatización de pruebas
-funcionales.
+이 프로젝트의 또 다른 임무는 더 많은 자원봉사자들이 이러한 노력에 참여하도록 장려하고, 프로젝트가 계속 새로운 기술을 따라가고 기능 테스트 자동화를 위한 지배적인 플랫폼으로 남을 수 있도록 강력한 커뮤니티를 구축하는 것다.
