@@ -1,9 +1,9 @@
 ---
-title: "Overview"
-linkTitle: "Overview"
+title: "개요"
+linkTitle: "개요"
 weight: 1
 description: >
-  Is Selenium for you? See an overview of the different project components.
+  Selenium은 당신을 위한 건가요? 다양한 프로젝트 구성요소에 대한 개요를 참조하십시오.
 aliases: ["/documentation/ko/introduction/"]
 ---
 
