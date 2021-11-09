@@ -59,13 +59,9 @@ Selenium 프로젝트는 새로운 기여자를 환영합니다. 꾸준히 중�
 
 #### 의존성: Hugo
 
-We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
-Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.83.1 or higher.
+우리는 [Hugo](https://gohugo.io/)와 [Docsy theme](https://www.docsy.dev/) 테마를 사용하여 사이트를 구축하고 렌더링합니다. 이 사이트에서 작동하려면 Hugo 바이너리의 "확장된" Sass/SCSS 버전이 필요합니다. 휴고 0.83.1 이상을 사용하는 것이 좋습니다.
 
-Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
-instructions from Docsy.
+Docsy의 [Hugo 설치](https://www.docsy.dev/docs/getting-started/#install-hugo)  지침을 따르십시오.
 
 ### 2 단계: Branch
 
@@ -79,50 +75,22 @@ instructions from Docsy.
 
 ### 3 단계: Make changes
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependencies (see commands below). To make changes to the site, 
-work on the `website_and_docs` directory. To see a live preview of 
-your changes, run `hugo server` on the site's root directory.
+Repository에는 사이트와 문서가 포함되어 있습니다. 변경을 시작하기 전에 하위 모듈을 초기화하고 필요한 파일을 설치하십시오(아래 명령 참조). 사이트를 변경하려면 'website_and_docs' 디렉토리에서 작업하십시오. 변경 내용의 실시간 미리 보기를 보려면 사이트의 루트 디렉토리에서 'hugo server'를 실행하십시오.
 
 ```shell
 % git submodule update --init --recursive
 % cd website_and_docs
 % hugo server
 ```
-#### Capitalisation of titles
+#### 제목의 대문자화
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratuitous capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+제목 대문자(예: A Very Fine Title)를 사용하지 말고 매우 좋은 제목을 사용해야 합니다. 불필요한 대문자 표기 또는 제목 사용 사례는 맞춤법 규칙을 오해하거나 무시하는 경우가 많습니다. 우리는 문장 대소문자로 알려진 것을 선호하며, 시작에는 하나의 초기 대문자만 있습니다.
 
-#### Line length
+#### 줄 길이
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 72 characters.
+일반 HTML로 작성된 설명서의 원본을 편집할 때는 줄 길이를 72자 정도로 제한하십시오.
 
-Some of us take this one step further
-and use what is called
-[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
-
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+우리들 중 일부는 한 걸음 더 나아가서 [_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line)라고 불리는 것을 사용한다. 이것은 일반인들이 읽지 않는 HTML 소스 라인이 글의 '자연스러운 단절'에 의해 분할되는 기술다. 다시 말해서, 문장들은 절들 사이에 자연스럽게 갈라진다. 각 단락의 행이 모두 오른쪽 여백에 가깝게 끝나도록 호들갑을 떨지 않고, 생각 사이에 틈이 있는 곳이면 어디든지 행열을 추가할 수 있습니다.
 
 #### Translations
 
