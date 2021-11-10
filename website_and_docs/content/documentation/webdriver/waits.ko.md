@@ -1,5 +1,5 @@
 ---
-title: "Waits"
+title: "대기"
 linkTitle: "Waits"
 weight: 4
 aliases: ["/documentation/ko/webdriver/waits/"]
@@ -31,6 +31,16 @@ when trying to find an element.
 
 Consider the following document:
 
+웹드라이버는 일반적으로 차단 API를 가지고 있다고 말할 수 있습니다.
+브라우저가 수행할 작업을 _지시_ 하는 프로세스 중 라이브러리이기 때문에,
+그리고 웹 플랫폼은 본질적으로 비동기적인 특성을 가지고 있기 때문에, 웹드라이버는 DOM의 활성과 실시간 상태를 추적하지 않습니다.
+이에 대해 여기서 논의할 몇 가지 과제가 있습니다.
+
+경험에 비추어 볼 때, 셀레늄과 웹드라이버의 사용으로 인해 발생하는 가장 간헐적인 문제
+브라우저와 사용자의 지시사항 사이에 발생하는 _종족 조건_ 에 연결됩니다. 예를 들어 사용자가 브라우저에 페이지로 이동하도록 지시한 다음 요소를 찾으려고 할 때 **no this element** 오류가 나타날 수 있습니다.
+
+다음 문서를 고려하십시오:
+
 ```html
 <!doctype html>
 <meta charset=utf-8>
@@ -47,7 +57,7 @@ Consider the following document:
 </script>
 ```
 
-The WebDriver instructions might look innocent enough:
+WebDriver 지침은 잘못이 없어 보일 수 있습니다:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -93,7 +103,7 @@ assert(element.text == "Hello from JavaScript!")
 {{< /tabpane >}}
 
 The issue here is that the default
-[page load strategy]({{< ref "/page_loading_strategy.md" >}})
+[page load strategy]
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is
@@ -103,50 +113,23 @@ It “might” be intermittent because no guarantees can be made
 about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
-Fortunately, the normal instruction set available on
-the [_WebElement_]({{< ref "/web_element.md" >}}) interface—such
- as _WebElement.click_ and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls will not return
- (or the callback will not trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/keyboard.md" >}})
- and [_Mouse_]({{< ref "/mouse_and_keyboard_actions_in_detail.md" >}}),
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.
+여기서 문제는 WebDriver에 사용되는 기본 [페이지 로드 전략]({{< ref "/page_loading_strategy.md" >}}) 이 탐색을 위한 호출에서 돌아오기 전에 'document.readyState'를 '"complete"'로 변경한다는 것입니다. 문서 로드가 완료된 후 p 요소가 추가되기 때문에 이 WebDriver 스크립트는 간헐적일 수 있습니다. 해당 이벤트에 대해 명시적으로 대기하거나 차단하지 않고 비동기적으로 트리거하는 요소나 이벤트에 대해서는 보장이 불가능하기 때문에 "조금" 간헐적으로 발생합니다.
 
-Waiting is having the automated task execution
-elapse a certain amount of time before continuing with the next step.
+ 
+ 다행히  [_WebElement_]({{< ref "/web_element.md" >}}) 인터페이스(예: WebElement.click 및 WebElement)에서 사용할 수 있는 일반적인 명령 집합입니다.sendKeys—함수 호출이 브라우저에서 명령이 완료될 때까지 반환되지 않거나 콜백 스타일의 언어로 콜백이 트리거되지 않는다는 점에서 동기화가 보장됩니다. 고급 사용자 상호 작용 API인 [_키보드_]({{< ref "/keyboard.md" >}})와 [_마우스_]({{< ref "/mouse_and_keyboard_actions_in_detail.md" >}})는 명시적으로 "내가 말한 대로 하라" 비동기 명령으로 의도되었기 때문에 예외입니다.
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
+대기 중이란 다음 단계를 계속하기 전에 자동화된 작업 실행 시간이 일정 시간 경과하는 것입니다.
+
+브라우저와 웹드라이버 스크립트 사이의 경쟁 조건 문제를 극복하기 위해 대부분의 셀레늄 클라이언트는 대기 패키지와 함께 배송됩니다. 대기 기능을 사용할 때 일반적으로 [_명시적 대기_](#explicit-wait)라고 하는 것을 사용하는 것입니다.
 
 
-## Explicit wait
+## 명시적 대기
 
-_Explicit waits_ are available to Selenium clients
-for imperative, procedural languages.
-They allow your code to halt program execution,
-or freeze the thread,
-until the _condition_ you pass it resolves.
-The condition is called with a certain frequency
-until the timeout of the wait is elapsed.
-This means that for as long as the condition returns a falsy value,
-it will keep trying and waiting.
+Selenium 클라이언트는 명령형 절차 언어를 사용할 수 있습니다. 전달된 _조건_ 이 해결될 때까지 코드 실행을 중지하거나 스레드를 고정할 수 있습니다. 이 조건은 대기 시간이 경과될 때까지 특정 빈도로 호출됩니다. 이는 조건이 거짓 값을 반환하는 한 계속 시도하고 기다릴 것임을 의미합니다.
 
-Since explicit waits allow you to wait for a condition to occur,
-they make a good fit for synchronising the state between the browser and its DOM,
-and your WebDriver script.
+명시적 대기는 당신이 어떤 조건이 발생할 때까지 기다릴 수 있게 해주기 때문에, 그것들은 브라우저와 그것의 DOM, 그리고 당신의 WebDriver 스크립트 사이의 상태를 동기화하는데 적합합니다.
 
-To remedy our buggy instruction set from earlier,
-we could employ a wait to have the _findElement_ call
-wait until the dynamically added element from the script
-has been added to the DOM:
+이전 버전의 버그 명령 집합을 수정하기 위해 스크립트에서 동적으로 추가된 요소가 DOM에 추가될 때까지 _findElement_ 호출 대기 시간을 사용할 수 있습니다:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -217,15 +200,9 @@ println(firstResult.text)
   {{< /tab >}}
 {{< /tabpane >}}
 
-We pass in the _condition_ as a function reference
-that the _wait_ will run repeatedly until its return value is truthy.
-A “truthful” return value is anything that evaluates to boolean true
-in the language at hand, such as a string, number, a boolean,
-an object (including a _WebElement_),
-or a populated (non-empty) sequence or list.
-That means an _empty list_ evaluates to false.
-When the condition is truthful and the blocking wait is aborted,
-the return value from the condition becomes the return value of the wait.
+우리는 그 반환값이 truthy가 될 때까지 반복적으로 대기 상태가 실행되는 함수 참조로서 조건을 통과시킵니다. 진실 반환 값은 문자열, 숫자, 부울, 개체(_WebElement_ 포함) 또는 채워진 시퀀스 또는 목록과 같이 현재 언어에서 부울 true로 평가하는 모든 값입니다. 그것은 빈 리스트가 거짓으로 평가된다는 것을 의미합니다. 조건이 진실이고 차단 대기가 중단되면 조건으로부터의 반환 값이 대기 값의 반환 값이 됩니다.
+
+이러한 지식으로, 그리고 대기 유틸리티는 기본적으로 그러한 요소 오류를 무시하지 않기 때문에, 우리는 보다 간결하게 하기 위해 우리의 지시를 리팩터링할 수 있습니다.
 
 With this knowledge,
 and because the wait utility ignores _no such element_ errors by default,
@@ -272,32 +249,18 @@ assert(ele.text == "Hello from JavaScript!")
   {{< /tab >}}
 {{< /tabpane >}}
 
-In that example, we pass in an anonymous function
-(but we could also define it explicitly as we did earlier so it may be reused).
-The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_.
-In a multi-threaded environment, you should be careful
-to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.
+그 예에서, 우리는 익명 함수를 전달한다(그러나 우리는 또한 그것을 재사용될 수 있도록 하기 위해 우리가 전에 했던 것처럼 명시적으로 정의할 수도 있다). 우리의 조건에 전달되는 첫 번째이자 유일한 인수는 항상 우리의 드라이버 객체인 _WebDriver_ 에 대한 참조이다. 다중 스레드 환경에서는 외부 범위의 드라이버에 대한 참조가 아니라 조건에 전달된 드라이버 참조에 대해 작동해야 합니다.
 
-Because the wait will swallow _no such element_ errors
-that are raised when the element is not found,
-the condition will retry until the element is found.
-Then it will take the return value, a _WebElement_,
-and pass it back through to our script.
+요소를 찾을 수 없을 때 발생하는 요소 오류는 대기 중에 발생하지 않으므로 요소를 찾을 때까지 조건이 다시 시도합니다. 그런 다음 반환 값인 _WebElement_ 를 가져와서 스크립트로 다시 전달합니다.
 
-If the condition fails,
-e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a _timeout error_.
+조건이 실패하는 경우(예: 조건으로부터의 진실된 반환 값에 도달하지 못하는 경우, 대기 시간은 _시간 초과 오류_ 라고 하는 오류/예외를 던지거나 올립니다.
 
 
-### Options
+### 옵션
 
-The wait condition can be customised to match your needs.
-Sometimes it is unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.
+대기 조건을 필요에 맞게 사용자 정의할 수 있습니다. 경우에 따라 기본 시간 초과의 전체 범위를 기다릴 필요가 없습니다. 성공적인 조건에 도달하지 못할 경우 패널티가 비쌀 수 있습니다.
 
-The wait lets you pass in an argument to override the timeout:
+대기 중 인수를 전달하여 시간 초과를 재정의할 수 있습니다.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -322,28 +285,22 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Expected conditions
+### 예상 조건
 
-Because it is quite a common occurrence
-to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined _expected conditions_.
-As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.
+DOM과 지시사항을 동기화해야 하는 경우가 매우 흔하기 때문에 대부분의 클라이언트에는 미리 정의된 예상 조건 집합도 함께 제공됩니다. 이름에서 알 수 있듯이, 빈번한 대기 작업을 위해 미리 정의된 조건입니다.
 
-The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:
+다른 언어 바인딩에서 사용할 수 있는 조건은 다양하지만, 다음은 몇 가지에 대한 전체적이지 않은 목록입니다.
 
 <!-- TODO(ato): Fill in -->
-* alert is present
-* element exists
-* element is visible
-* title contains
-* title is
-* element staleness
-* visible text
+* 현재임을 인식
+* 존재하는 요소
+* 보이는 요소
+* 제목 포함
+* 제목은 ~
+* 넉넉한 element
+* 보이는 텍스트
 
-You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:
+각 클라이언트 바인딩에 대한 API 설명서를 참조하여 예상 조건의 전체 목록을 찾을 수 있습니다:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
@@ -351,33 +308,16 @@ to find an exhaustive list of expected conditions:
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 
-## Implicit wait
+## 암묵적 대기
 
-There is a second type of wait that is distinct from
-[explicit wait](#explicit-wait) called _implicit wait_.
-By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find _any_ element.
-This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.
 
-Implicit waiting for elements to appear is disabled by default
-and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit-wait) and implicit waits
-will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.
+
+_암묵적 대기_ 라고 하는 [명시적 대기](#explicit-wait)와는 구별되는 두 번째 대기 유형이 있습니다. 암시적으로 기다림으로써, WebDriver는 요소를 찾으려고 할 때 일정 기간 동안 DOM을 폴링합니다. 이 기능은 웹 페이지의 특정 요소를 즉시 사용할 수 없고 로드하는 데 시간이 필요한 경우에 유용할 수 있습니다.
 
 *Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
+암시적 대기와 명시적 대기 시간을 함께 사용하지 마십시오. 이렇게 하면 대기 시간을 예측할 수 없습니다. 예를 들어 암묵적 대기 시간을 10초로 설정하고 명시적 대기 시간을 15초로 설정하면 20초 후에 시간 초과가 발생할 수 있습니다.
 
-An implicit wait is to tell WebDriver to poll the DOM
-for a certain amount of time when trying to find an element or elements
-if they are not immediately available.
-The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.
+암묵적 대기란 웹드라이버가 요소나 요소를 즉시 사용할 수 없는 경우 요소를 찾으려고 할 때 일정 시간 동안 DOM을 폴링하도록 지시하는 것입니다. 기본 설정은 0이며, 비활성화됨을 의미합니다. 일단 설정하면 세션 수명 동안 암시적 대기가 설정됩니다.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -433,11 +373,9 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
 
 ## FluentWait
 
-FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.
+FluentWait 인스턴스는 조건을 확인하는 빈도뿐만 아니라 조건을 대기하는 최대 시간을 정의합니다.
 
-Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as `NoSuchElementException` when searching for an element on the page.
+사용자는 기다리는 동안 'NoSchElement' 와 같은 특정 유형의 예외를 무시하도록 대기 시간을 구성할 수 있습니다.페이지에서 요소를 검색할 때 예외입니다.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
