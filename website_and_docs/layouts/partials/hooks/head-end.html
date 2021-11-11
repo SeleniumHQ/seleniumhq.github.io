@@ -2,3 +2,7 @@
 <!-- stylesheet for algolia docsearch -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 {{ end }}
+
+{{ with .Site.Params.plausible_analytics }}
+<script defer data-domain="selenium.dev" src="https://plausible.io/js/plausible.js"></script>
+{{ end }}
