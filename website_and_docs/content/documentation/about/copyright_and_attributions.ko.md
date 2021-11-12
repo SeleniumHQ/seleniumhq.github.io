@@ -21,7 +21,10 @@ aliases: ["/documentation/ko/front_matter/copyright_and_attributions/"]
 
 ## **Selenium 설명서**
 
-이 설명서를 최대한 완전하고 정확하게 작성하기 위해 모든 노력을 기울였지만 보증이나 적합성은 함축되어 있지 않습니다. 제공된 정보는 "있는 그대로(As-is)"에 기초합니다. 저자와 출판사는 본 책에 포함된 정보로 인해 발생하는 손실이나 손해와 관련하여 어떤 개인이나 단체에 대해서도 책임이나 책임을 지지 않습니다. 여기에 포함된 정보의 사용과 관련하여 어떠한 특허 책임도 지지 않습니다.
+이 설명서를 최대한 완전하고 정확하게 작성하기 위해 모든 노력을 기울였지만 보증이나 적합성은 함축되어 
+있지 않습니다. 제공된 정보는 "있는 그대로(As-is)"에 기초합니다. 저자와 출판사는 본 책에 포함된 정보로
+인해 발생하는 손실이나 손해와 관련하여 어떤 개인이나 단체에 대해서도 책임이나 책임을 지지 않습니다.
+여기에 포함된 정보의 사용과 관련하여 어떠한 특허 책임도 지지 않습니다.
 
 
 ## 속성
@@ -62,9 +65,11 @@ aliases: ["/documentation/ko/front_matter/copyright_and_attributions/"]
 
 ## 라이선스
 
-Selenium 프로젝트에서 비롯된 모든 코드 및 설명서는 Apache 2.0 라이센스에 따라 라이센스를 부여받았으며  [Software Freedom Conservancy](//sfconservancy.org/)는 저작권 소유자로 지정되어 있습니다.
+Selenium 프로젝트에서 비롯된 모든 코드 및 설명서는 Apache 2.0 라이센스에 따라 라이센스를 부여받았으며 
+[Software Freedom Conservancy](//sfconservancy.org/)는 저작권 소유자로 지정되어 있습니다.
 
-라이센스는 편의를 위해 여기에 포함되어 있지만 [Apache Foundation](//apache.org/licenses/LICENSE-2.0.html)에서도 찾을 수 있습니다:
+라이센스는 편의를 위해 여기에 포함되어 있지만 [Apache Foundation](//apache.org/licenses/LICENSE-2.0.html)에
+서도 찾을 수 있습니다:
 
 ```markdown
                                  Apache License
