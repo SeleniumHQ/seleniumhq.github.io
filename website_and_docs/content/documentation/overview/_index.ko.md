@@ -21,7 +21,7 @@ aliases: ["/documentation/ko/introduction/"]
 ## 웹 드라이버(WebDriver)
 
 컴퓨터나 모바일 웹사이트 테스트를 자동화하는 것부터 시작하신다면,
-아마 웹 드라이버 APIs부터 쓰게 될 겁니다.  [웹 드라이버WebDriver]({{< ref "/webdriver.md" >}})
+아마 웹 드라이버 APIs부터 쓰게 될 겁니다.  [웹 드라이버]({{< ref "/webdriver.md" >}})
 는 브라우저를 조종하고 테스트를 진행할 수 있도록 제작사에서 제공하는 브라우저 자동화 API를 사용합니다.
 이는 진짜 사용자가 브라우저를 이용하는 것과 유사합니다.
 웹 드라이버 API를 애플리케이션의 코드로 컴파일할 필요가 없기 때문에, 독립적으로 작동합니다.
@@ -30,7 +30,7 @@ aliases: ["/documentation/ko/introduction/"]
 
 ## 통합개발환경 (IDE)
 
-[IDE](https://selenium.dev/selenium-ide) (통합개발환경 Integrated Development Environment) 
+[통합 개발 환경](https://selenium.dev/selenium-ide) (IDE, Integrated Development Environment) 
 은 자신만의 셀레니움 테스트 케이스를 개발하기 위해 사용할 도구입니다.
 크롬이나 파이어폭스 확장으로 사용하기 쉽고, 이는 보통 테스트 케이스를 개발하는데 가장 효율적인 방법이기도 
 합니다.
@@ -43,5 +43,5 @@ aliases: ["/documentation/ko/introduction/"]
 Selenium 그리드를 사용하면 여러 플랫폼에 걸쳐 서로 다른 컴퓨터에서 테스트 케이스를 실행할 수 있습니다. 
 테스트 케이스의 트리거 제어는 로컬 엔드에 있으며, 테스트 케이스가 트리거되면 원격 엔드에 의해 자동으로 실행됩니다.
 
-WebDriver 테스트가 개발된 후, 여러 브라우저와 운영 체제 조합에서 테스트를 실행해야 할 수도 있습니다.  
+웹 드라이버 테스트가 개발된 후, 여러 브라우저와 운영 체제 조합에서 테스트를 실행해야 할 수도 있습니다.  
 [여기]({{< ref "/grid.md" >}})서 그리드가 나타납니다.
