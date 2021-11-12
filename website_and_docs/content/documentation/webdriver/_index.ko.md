@@ -16,9 +16,11 @@ aliases: ["/documentation/ko/webdriver/"]
 </p>
 {{% /pageinfo %}}
 
-드라이버는 사용자가 셀레늄 서버를 사용하는 원격 머신이나 로컬에서처럼 브라우저 자동화의 측면에서 도약을 나타냅니다.
+드라이버는 사용자가 셀레늄 서버를 사용하는 원격 머신이나 로컬에서처럼 브라우저 
+자동화의 측면에서 도약을 나타냅니다.
 
-Selenium WebDriver는 언어 바인딩과 개별 브라우저 제어 코드의 구현 모두를 가리킵니다. 이것은 흔히 _웹드라이버_ 라고 불립니다.
+Selenium WebDriver는 언어 바인딩과 개별 브라우저 제어 코드의 구현 모두를 가리킵니다. 
+이것은 흔히 _웹드라이버_ 라고 불립니다.
 
 
 Selenium 웹드라이버는 [W3C Recommendation](https://www.w3.org/TR/webdriver1/)입니다.
