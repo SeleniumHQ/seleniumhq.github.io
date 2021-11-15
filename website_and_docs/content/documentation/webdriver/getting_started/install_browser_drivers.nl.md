@@ -6,10 +6,20 @@ description: >
   Setting up your browser to be automated.
 aliases: 
         [
-          "/documentation/en/selenium_installation/installing_webdriver_binaries/",
-          "/documentation/en/webdriver/driver_requirements/"
+            "/documentation/nl/selenium_installation/installing_webdriver_binaries/",
+            "/documentation/nl/webdriver/driver_requirements/",
+            "/nl/documentation/getting_started/installing_browser_drivers/"
         ]
 ---
+
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Dutch. Do you speak Dutch? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
 Through WebDriver, Selenium supports all major browsers on the market
 such as Chrom(ium), Firefox, Internet Explorer, Edge, Opera, and Safari.
@@ -35,9 +45,9 @@ for getting you started with the different browsers.
 ### Adding Executables to your `PATH`
 Most drivers require an extra executable for Selenium to communicate
 with the browser. You can manually specify where the executable lives
-before starting WebDriver, but this can make your tests less portable
+before starting WebDriver, but this can make your tests less portable,
 as the executables will need to be in the same place on every machine,
-or include the executable within your test code repository.
+or included within your test code repository.
 
 By adding a folder containing WebDriver's binaries to your system's
 path, Selenium will be able to locate the additional binaries without
@@ -47,7 +57,7 @@ requiring your test code to locate the exact location of the driver.
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
 * Add the directory to your PATH:
   * On Windows - Open a command prompt as administrator
-     and run the following command
+     and the run the following command
      to permanently add the directory to your path
      for all users on your machine:
 
@@ -64,7 +74,7 @@ export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
   Close all open command prompts and open a new one.
   Type out the name of one of the binaries
   in the folder you created in the previous step,
-  e.g.: 
+  e.g: 
 
   ```shell
   chromedriver
@@ -77,7 +87,7 @@ Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on 
 Only local connections are allowed.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
+You can regain control of your command prompt by pressing <kbd>Ctrl + C</kbd>
 
 
 ### Quick reference
@@ -108,7 +118,7 @@ $ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-To include chromedriver on the path, if it is not already,
+To include chromedriver on the path if it isn't already,
 make sure you include the chromedriver binary's parent directory.
 The following line will set the `PATH` environmental variable
 its current content, plus an additional path added after the colon:
@@ -193,8 +203,8 @@ System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
 {{< /tabpane >}}
 
 The chromedriver is implemented as a WebDriver remote server
-that instructs the browser what to do by exposing Chrome's 
-internal automation proxy interface.
+that by exposing Chrome's internal automation proxy interface
+instructs the browser what to do.
 
 
 ### Firefox
@@ -304,13 +314,13 @@ and specifying a desired capability of **marionette** as
 
 Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
 Updates to Edge are bundled with major Windows updates,
-so you will need to download a binary which matches the build number of your 
+so you'll need to download a binary which matches the build number of your 
 currently installed build of Windows.
 The [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 contains links to all the available binaries. Bugs against the EdgeDriver 
 implementation can be raised with 
 [Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver). 
-If you would like to run tests against Edge, but are not running Windows 10, Microsoft
+If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft
 offer free VMs for testers on the [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
 
 {{< tabpane langEqualsHeader=true >}}
@@ -461,10 +471,10 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe");
 Ie(executable_path='/path/to/IEDriverServer.exe')
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-new InternetExplorerDriver("C:/path/to/IEDriver.exe");
+new InternetExplorerDriver("/path/to/geckodriver");
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
+Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder} = require("selenium-webdriver");
@@ -484,7 +494,7 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
 
 Microsoft also offer a WebDriver binary for
 [Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069). 
-It has not been updated since 2014 and is based on a draft version of the 
+It has not been updated since 2014 and is based of a draft version of the 
 W3 specification. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
 has an excellent writeup on Microsoft's implementation.
 
@@ -640,7 +650,7 @@ PhantomJS is a headless browser based on Webkit, albeit a version much older
 than that used by Google Chrome or Safari. Whilst historically a popular 
 choice, it would now be wise to avoid PhantomJS. The project has been 
 unmaintained 
-[since the 5th of August 2017](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
+[since the 5th of August](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
 so whilst the web will continue to change, PhantomJS will not be updated. 
 This was after Google announced the ability to run Chrome headlessly, 
 something also now offered by Mozilla's Firefox.

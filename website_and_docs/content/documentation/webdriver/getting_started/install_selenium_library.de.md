@@ -1,21 +1,11 @@
 ---
-title: "Bibliotheken installieren"
-linkTitle: "Bibliotheken installieren"
+title: "Bibliothek installieren"
+linkTitle: "Bibliothek Installieren"
 weight: 1
 description: >
   Setting up the Selenium library for your favourite programming language.
 aliases: ["/documentation/de/selenium_installation/installing_selenium_libraries/"]    
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Diese Seite wird von Englisch 
-   auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-   zu übersetzen indem Du uns einen Pull Reqeust schickst!
-</p>
-{{% /pageinfo %}}
-
 
 Zu Beginn ist es notwendig das die Selenium Bindings für Dein 
 Automationsprojekt installiert werden. Der Installationsprozess ist von der

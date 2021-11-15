@@ -1,13 +1,14 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+title: "Install Browser Drivers"
+linkTitle: "Install Browser Drivers"
 weight: 2
 description: >
   Setting up your browser to be automated.
 aliases: 
         [
-          "/documentation/fr/selenium_installation/installing_webdriver_binaries/",
-          "/documentation/fr/webdriver/driver_requirements/"
+            "/documentation/fr/selenium_installation/installing_webdriver_binaries/",
+            "/documentation/fr/webdriver/driver_requirements/",
+            "/fr/documentation/getting_started/installing_browser_drivers/"
         ]
 ---
 

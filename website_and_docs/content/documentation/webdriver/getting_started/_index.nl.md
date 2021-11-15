@@ -6,10 +6,11 @@ description: >
   If you are new to Selenium, we have a few resources that can help you get up to speed right away.
 aliases: 
         [
-          "/documentation/nl/getting_started/", 
-          "/documentation/nl/getting_started/quick/",
-          "/documentation/nl/selenium_installation/",
-          "/documentation/nl/getting_started_with_webdriver/"
+            "/documentation/nl/getting_started/", 
+            "/documentation/nl/getting_started/quick/",
+            "/documentation/nl/selenium_installation/",
+            "/documentation/nl/getting_started_with_webdriver/",
+            "/nl/documentation/getting_started/"
         ]
 ---
 
@@ -47,8 +48,8 @@ WebDriver binaries for the browsers you want to automate and run test on.
 
 Installing Selenium can be divided in three steps:
 
-1. [Installing the Selenium library]({{< ref "/installing_selenium_libraries.md" >}}) for your desired programming language
-2. [Set up the browser driver]({{< ref "/installing_browser_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
+1. [Installing the Selenium library]({{< ref "/install_selenium_library" >}}) for your desired programming language
+2. [Set up the browser driver]({{< ref "/install_browser_drivers" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
 3. (Optional) Set up and configure [Selenium Grid]({{< ref "/grid.md" >}}) if you want to scale up your tests
 
 If you wish to start with a low-code/record and playback tool, please check 

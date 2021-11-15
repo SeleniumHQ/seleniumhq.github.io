@@ -1,6 +1,6 @@
 ---
-title: "How to upgrade to Selenium 4"
-linkTitle: "How to upgrade to Selenium 4"
+title: "Upgrade to Selenium 4"
+linkTitle: "Upgrade to Selenium 4"
 weight: 3
 description: >
   Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!

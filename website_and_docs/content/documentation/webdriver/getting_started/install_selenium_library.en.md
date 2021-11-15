@@ -1,6 +1,6 @@
 ---
-title: "Installing Selenium libraries"
-linkTitle: "Installing Selenium libraries"
+title: "Install Selenium Library"
+linkTitle: "Install Selenium Library"
 weight: 1
 description: >
   Setting up the Selenium library for your favourite programming language.

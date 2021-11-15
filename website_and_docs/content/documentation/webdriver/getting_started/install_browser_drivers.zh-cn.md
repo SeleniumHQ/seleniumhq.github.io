@@ -6,8 +6,9 @@ description: >
   设置您的浏览器用于自动化.
 aliases: 
         [
-          "/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",
-          "/documentation/zh-cn/webdriver/driver_requirements/"
+            "/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",
+            "/documentation/zh-cn/webdriver/driver_requirements/",
+            "/zh-cn/documentation/getting_started/installing_browser_drivers/"
         ]
 ---
 

@@ -6,10 +6,11 @@ description: >
   如果你是Selenium的新手, 我们有一些资源帮助你快速入门.
 aliases: 
         [
-          "/documentation/zh-cn/getting_started/", 
-          "/documentation/zh-cn/getting_started/quick/",
-          "/documentation/zh-cn/selenium_installation/",
-          "/documentation/zh-cn/getting_started_with_webdriver/"
+            "/documentation/zh-cn/getting_started/", 
+            "/documentation/zh-cn/getting_started/quick/",
+            "/documentation/zh-cn/selenium_installation/",
+            "/documentation/zh-cn/getting_started_with_webdriver/",
+            "/zh-cn/documentation/getting_started/"
         ]
 ---
 
@@ -34,8 +35,8 @@ Selenium 设置与其他商业工具的设置完全不同。
 
 安装Selenium可分为三个步骤:
 
-1. [安装Selenium类库]({{< ref "/installing_selenium_libraries.md" >}}) 为你最喜爱的编程语言
-2. [配置浏览器驱动]({{< ref "/installing_browser_drivers.md" >}}) 用以驱动你的浏览器 (例如GeckoDriver用于Firefox)
+1. [安装Selenium类库]({{< ref "/install_selenium_library" >}}) 为你最喜爱的编程语言
+2. [配置浏览器驱动]({{< ref "/install_browser_drivers" >}}) 用以驱动你的浏览器 (例如GeckoDriver用于Firefox)
 3. (可选) 设置和配置 [Selenium Grid]({{< ref "/grid.md" >}}) 如果你想要扩展你的测试
 
 如果您希望从低代码/录制和播放工具开始, 请检查

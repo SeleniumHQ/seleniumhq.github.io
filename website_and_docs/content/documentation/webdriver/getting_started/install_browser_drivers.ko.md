@@ -1,13 +1,14 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+title: "Install Browser Drivers"
+linkTitle: "Install Browser Drivers"
 weight: 2
 description: >
   Setting up your browser to be automated.
 aliases: 
         [
-          "/documentation/ko/selenium_installation/installing_webdriver_binaries/",
-          "/documentation/ko/webdriver/driver_requirements/"
+            "/documentation/ko/selenium_installation/installing_webdriver_binaries/",
+            "/documentation/ko/webdriver/driver_requirements/",
+            "/ko/documentation/getting_started/installing_browser_drivers/"
         ]
 ---
 
