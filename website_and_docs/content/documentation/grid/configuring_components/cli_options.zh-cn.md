@@ -185,7 +185,7 @@ pull request updating this page.
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--bind-bus` | boolean | `false` | Whether the connection string should be bound or connected. <br> When true, the component will be bound to the Event Bus (as in the Event Bus will also be started by the component, typically by the Distributor and the Hub). subscribe<br> When false, the component will connect to the Event Bus. |
+| `--bind-bus` | boolean | `false` | Whether the connection string should be bound or connected. <br> When true, the component will be bound to the Event Bus (as in the Event Bus will also be started by the component, typically by the Distributor and the Hub). <br> When false, the component will connect to the Event Bus. |
 | `--events-implementation` | string | `org.openqa.selenium.events.zeromq.ZeroMqEventBus` | Full class name of non-default event bus implementation |
 | `--publish-events` | string | `tcp://*:4442` | Connection string for publishing events to the event bus |
 | `--subscribe-events` | string | `tcp://*:4443` | Connection string for subscribing to events from the event bus |
