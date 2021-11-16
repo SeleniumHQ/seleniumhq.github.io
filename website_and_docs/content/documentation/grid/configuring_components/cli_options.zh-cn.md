@@ -185,7 +185,7 @@ pull request updating this page.
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--bind-bus` | boolean | `false` | Whether the connection string should be bound or connected. <br> When true, the component will be bound to the Event Bus (as in the Event Bus will also be started by the component, typically by the Distributor and the Hub). <br> When false, the component will connect to the Event Bus. |
+| `--bind-bus` | boolean | `false` | Whether the connection string should be bound or connected. <br> When true, the component will be bound to the Event Bus (as in the Event Bus will also be started by the component, typically by the Distributor and the Hub). subscribe<br> When false, the component will connect to the Event Bus. |
 | `--events-implementation` | string | `org.openqa.selenium.events.zeromq.ZeroMqEventBus` | Full class name of non-default event bus implementation |
 | `--publish-events` | string | `tcp://*:4442` | Connection string for publishing events to the event bus |
 | `--subscribe-events` | string | `tcp://*:4443` | Connection string for subscribing to events from the event bus |
@@ -224,6 +224,7 @@ pull request updating this page.
 | `--register-period` | int | `120` | How long, in seconds, will the Node try to register to the Distributor for the first time. After this period is completed, the Node will not attempt to register again. |
 | `--session-timeout` | int | `300` | Let X be the session-timeout in seconds. The Node will automatically kill a session that has not had any activity in the last X seconds. This will release the slot for other tests. |
 | `--vnc-env-var`| string | `START_XVFB` | Environment variable to check in order to determine if a vnc stream is available or not. |
+| `--hub` | string | `http://localhost:1234` | Configure event bus to the default ports. Setting `--grid-url`,`--publish-events` and `--subscribe-events` flags to their default values.|
 
 ### Relay
 
