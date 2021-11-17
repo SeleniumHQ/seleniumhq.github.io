@@ -528,6 +528,35 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 {{< /card >}}
 {{< /cardpane >}}
 
+### Python
+
+#### `executable_path has been deprecated, please pass in a Service object`
+
+In Selenium 4, you'll need to set the driver's ``executable_path`` from a Service object to prevent deprecation warnings. (Or don't set the path and instead make sure that the driver you need is on the System PATH.)
+
+{{< cardpane >}}
+{{< card header="Before" >}}
+```python
+from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
+```
+{{< /card >}}
+{{< card header="After" >}}
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+service = ChromeService(executable_path=CHROMEDRIVER_PATH)
+driver = webdriver.Chrome(service=service, options=options)
+```
+{{< /card >}}
+{{< /cardpane >}}
+
 ## Summary
 
 We went through the major changes to be taken into consideration when upgrading to Selenium 4. 

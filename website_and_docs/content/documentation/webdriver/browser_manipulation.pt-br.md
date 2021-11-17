@@ -189,8 +189,7 @@ e você sabe com qual janela você iniciou, pelo processo de eliminação
 você pode percorrer as janelas ou guias que o WebDriver pode ver e alternar
 para aquela que não é o original.
 
-No entanto, o Selenium 4 fornece uma nova API
-<a href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
+No entanto, o Selenium 4 fornece uma nova API [NewWindow](#criar-nova-janela-ou-nova-guia-e-alternar) 
 que cria uma nova guia (ou) nova janela e muda automaticamente para ela.
 
 {{< tabpane langEqualsHeader=true >}}
