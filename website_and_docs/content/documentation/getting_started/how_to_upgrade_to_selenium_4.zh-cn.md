@@ -561,6 +561,38 @@ browserOptions.AddAdditionalOption("cloud: options", cloudOptions);
 {{< /card >}}
 {{< /cardpane >}}
 
+### Python
+
+#### `executable_path 已弃用, 请传递一个服务对象`
+
+在Selenium 4中,  
+您需要从服务对象设置驱动程序的 ``可执行路径`` , 
+以防止出现弃用警告. 
+(或者不要设置路径, 而是确保所需的驱动程序位于系统路径上.)
+
+{{< cardpane >}}
+{{< card header="Before" >}}
+```python
+from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
+```
+{{< /card >}}
+{{< card header="After" >}}
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+service = ChromeService(executable_path=CHROMEDRIVER_PATH)
+driver = webdriver.Chrome(service=service, options=options)
+```
+{{< /card >}}
+{{< /cardpane >}}
+
 ## 总结
 
 我们已经过了升级到 Selenium 4 时要考虑的主要变化. 
