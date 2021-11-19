@@ -2296,7 +2296,7 @@ définie pour la durée de vie de la session.</p><ul class="nav nav-tabs" id=tab
 <span style=color:#000;font-weight:700>}());</span> 
   
 </code></pre></div></div><div class="tab-pane fade" id=tabs-8-5 role=tabpanel aria-labelled-by=tabs-8-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>driver</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>FirefoxDriver</span><span style=color:#000;font-weight:700>()</span>
-<span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>manage</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>timeouts</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>implicitlyWait</span><span style=color:#000;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>10</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>TimeUnit</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>SECONDS</span><span style=color:#000;font-weight:700>)</span>
+<span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>manage</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>timeouts</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>implicitlyWait</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>Duration</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>ofSeconds</span><span style=color:#000;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>10</span><span style=color:#000;font-weight:700>))</span>
 <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#204a87;font-weight:700>get</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;http://somedomain/url_that_delays_loading&#34;</span><span style=color:#000;font-weight:700>)</span>
 <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>myDynamicElement</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>id</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;myDynamicElement&#34;</span><span style=color:#000;font-weight:700>))</span>
   </code></pre></div></div></div><h2 id=fluentwait>FluentWait</h2><p>L&rsquo;instance FluentWait définit la durée
@@ -11002,17 +11002,17 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/illicitonion>@illicitonion</a></label>
 <span class=contributions>1162 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
-<span class=contributions>1150 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>1155 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
 <span class=contributions>599 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>513 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1072163?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>515 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1072163?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/eranmes>@eranmes</a></label>
 <span class=contributions>473 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/665846?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/p0deje>@p0deje</a></label>
-<span class=contributions>422 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>425 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>396 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/610?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>401 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/610?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mdub>@mdub</a></label>
 <span class=contributions>326 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/399120?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andreastt>@andreastt</a></label>
@@ -11028,7 +11028,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/lmtierney>@lmtierney</a></label>
 <span class=contributions>179 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>160 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17625?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>161 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17625?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ph7>@ph7</a></label>
 <span class=contributions>147 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/696749?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/freynaud>@freynaud</a></label>
@@ -11152,7 +11152,9 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/oddui>@oddui</a></label>
 <span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/6696690?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/adiohana>@adiohana</a></label>
-<span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/115442?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/279773?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/asolntsev>@asolntsev</a></label>
+<span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/115442?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/Zitrax>@Zitrax</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/172634?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/dbo>@dbo</a></label>
@@ -11184,8 +11186,6 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1497867?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/abotalov>@abotalov</a></label>
-<span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/70680?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/burg>@burg</a></label>
 <span class=contributions>4 commits</span></div></div><h4 id=selenium-idegithubcomseleniumhqselenium-ide><a href=//github.com/SeleniumHQ/selenium-ide/>Selenium IDE</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/888886?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/corevo>@corevo</a></label>
 <span class=contributions>2445 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/457137?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11452,7 +11452,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>422 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>384 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>385 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
