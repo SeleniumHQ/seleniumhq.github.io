@@ -394,7 +394,7 @@ définie pour la durée de vie de la session.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 WebDriver driver = new FirefoxDriver();
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.get("http://somedomain/url_that_delays_loading");
 WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
   {{< /tab >}}
