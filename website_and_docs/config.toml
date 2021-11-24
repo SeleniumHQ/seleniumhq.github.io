@@ -98,6 +98,11 @@ title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName = "한국어"
 weight = 9
+[languages.other]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Other"
+weight = 10
 
 
 
