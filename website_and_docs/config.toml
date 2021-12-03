@@ -98,6 +98,11 @@ title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName = "한국어"
 weight = 9
+[languages.other]
+title = "Selenium"
+description = "Selenium automates browsers. That's it!"
+languageName ="Other"
+weight = 10
 
 
 
@@ -161,6 +166,9 @@ offlineSearchMaxResults = 30
 
 # Enable Algolia DocSearch
 algolia_docsearch = true
+
+# Enable Plausible.io
+plausible_analytics = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true

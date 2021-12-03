@@ -192,8 +192,7 @@ and you know which window you start with, by the process of elimination
 you can loop over both windows or tabs that WebDriver can see, and switch
 to the one which is not the original.
 
-However, Selenium 4 provides a new api
-<a href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
+However, Selenium 4 provides a new api [NewWindow](#create-new-window-or-new-tab-and-switch) 
 which creates a new tab (or) new window and automatically switches to it.
 
 {{< tabpane langEqualsHeader=true >}}

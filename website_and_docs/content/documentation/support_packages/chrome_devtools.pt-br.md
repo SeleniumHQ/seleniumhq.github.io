@@ -117,24 +117,28 @@ end
   {{< tab header="JavaScript" >}}
 const { Builder } = require("selenium-webdriver");
 
-async function geoLocationTest() {
+(async function geoLocationTest() {
   const driver = await new Builder().forBrowser("chrome").build();
-  await driver.get("http://www.google.com");
-  const pageCdpConnection = await driver.createCDPConnection('page');
-  //Latitude and longitude of Tokyo, Japan
-  const coordinates = {
-    latitude: 35.689487,
-    longitude: 139.691706,
-    accuracy: 100,
-  };
-  await pageCdpConnection.execute(
-    "Emulation.setGeolocationOverride",
-    1,
-    coordinates
-  );
-}
-
-geoLocationTest(); 
+  try {
+    await driver.get("https://my-location.org/");
+    const pageCdpConnection = await driver.createCDPConnection('page');
+    //Latitude and longitude of Tokyo, Japan
+    const coordinates = {
+      latitude: 35.689487,
+      longitude: 139.691706,
+      accuracy: 100,
+    };
+      await pageCdpConnection.execute(
+        "Emulation.setGeolocationOverride",
+        1,
+        coordinates
+      );
+  } catch (e) {
+    console.log(e)
+  } finally {
+     await driver.quit();
+  }
+})();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
@@ -401,20 +405,33 @@ ensure
 end
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-const pageCdpConnection = await driver.createCDPConnection('page');
-  const metrics = {
-    width: 300,
-    height: 200,
-    deviceScaleFactor: 50,
-    mobile: true,
-  };
-  await pageCdpConnection.execute(
-    "Emulation.setDeviceMetricsOverride",
-    1,
-    metrics
-  );
-await driver.get("https://www.google.com");
-await driver.quit();
+const {Builder} = require('selenium-webdriver');
+const firefox = require('selenium-webdriver/firefox');
+const options = new firefox.Options();
+// enable debugger for CDP
+options.enableDebugger();
+
+(async function example() {
+  try {
+    let driver = await new Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+    const pageCdpConnection = await driver.createCDPConnection('page');
+    const metrics = {
+      width: 300,
+      height: 200,
+      deviceScaleFactor: 50,
+      mobile: true,
+    };
+    await pageCdpConnection.execute(
+      "Emulation.setDeviceMetricsOverride",
+      1,
+      metrics
+    );
+    await driver.get("https://www.google.com");
+    await driver.quit();
+  } catch (e) {
+    console.log(e);
+  }
+})();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 fun kotlinOverridDeviceMode() {
