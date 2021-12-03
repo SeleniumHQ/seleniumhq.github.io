@@ -1,4 +1,77 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Stepping Down, Stepping Up</title><link>/blog/2021/stepping-down-stepping-up/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/stepping-down-stepping-up/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 03 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Improving &amp; refining our Docs translations</title><link>/blog/2021/docs-translations/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>/blog/2021/docs-translations/</guid><description>
+&lt;p>A while ago, we started to make the Selenium &lt;a href="/documentation">documentation&lt;/a> available in more
+languages. This, in an effort to offer a more inclusive environment for Selenium users who do
+not have English as their mother tongue.&lt;/p>
+&lt;p>This effort grew organically, and we got many pull requests adding content for different
+languages. Over time, some translations got to a very good state, and others didn&amp;rsquo;t get much
+attention. This brought the situation where 9 different languages are available in the
+documentation, but only a few add value to the readers.&lt;/p>
+&lt;p>To understand which languages are getting visits, we started using
+&lt;a href="https://plausible.io">Plausible&lt;/a>. After a few weeks, we combined the information collected
+by the analytics tool with the translated percentage per language, and we got the following:&lt;/p>
+&lt;p>Here&amp;rsquo;s the number of visitors on the landing page for a given translation in the past 2 weeks,
+and the percent of documentation pages translated:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Language&lt;/th>
+&lt;th>Visitors&lt;/th>
+&lt;th>Translated&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ja&lt;/td>
+&lt;td>1,700&lt;/td>
+&lt;td>86%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>zh-cn&lt;/td>
+&lt;td>1,500&lt;/td>
+&lt;td>86%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>es&lt;/td>
+&lt;td>409&lt;/td>
+&lt;td>42%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fr&lt;/td>
+&lt;td>203&lt;/td>
+&lt;td>31%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pt-br&lt;/td>
+&lt;td>189&lt;/td>
+&lt;td>87%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>de&lt;/td>
+&lt;td>88&lt;/td>
+&lt;td>65%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ko&lt;/td>
+&lt;td>79&lt;/td>
+&lt;td>68%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nl&lt;/td>
+&lt;td>22&lt;/td>
+&lt;td>6%&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>This shows that the most used languages (aside from English) are Japanese and Chinese, and that
+the language that has translated most of the content is Portuguese.&lt;/p>
+&lt;p>Based on this data, we decided to create a new role in the Selenium project:
+&lt;a href="/project/structure/#docs_site_translators">translators&lt;/a>. This role will help the project
+keep in shape the different translations available. Together with that, we are also putting
+on hold the other available translations until we find volunteers for each language.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Stepping Down, Stepping Up</title><link>/blog/2021/stepping-down-stepping-up/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/stepping-down-stepping-up/</guid><description>
 &lt;p>The short version is that I&amp;rsquo;m stepping down as the Selenium project
 lead, and will concentrating on pushing WebDriver Bidi
 forwards. Fortunately, the &lt;a href="/project/structure/#tlc">Selenium TLC&lt;/a> have already been
@@ -1143,17 +1216,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>&lt;a href="http://jorgemanrubia.net/2010/01/16/using-macros-to-create-custom-example-groups-in-rspec/">Using macros to create custom example groups in RSpec&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://www.marcphilipp.de/blog/2013/01/02/hamcrest-quick-reference/">Hamcrest Quick Reference&lt;/a>. Print it out and pin it to your wall.&lt;/li>
 &lt;li>This. Is. Awesome. &lt;a href="https://blog.mozilla.org/it/2013/01/04/mozpool/">Mozpol – Provisioning Pandas&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #134</title><link>/blog/2013/a-smattering-of-selenium-134/</link><pubDate>Thu, 03 Jan 2013 00:00:00 +0000</pubDate><guid>/blog/2013/a-smattering-of-selenium-134/</guid><description>
-&lt;p>Hrm. Office is closed until Monday, but everyone is in. Very confusing…&lt;/p>
-&lt;ul>
-&lt;li>One reason I have heard people say they don’t use cloud instances is they are afraid they will just sit around idle when not needed. &lt;a href="http://atlee.ca/blog/2012/12/14/behind-the-clouds/">Behind the clouds: how RelEng do Firefox builds on AWS&lt;/a> has some useful scripts to find and teardown machines.&lt;/li>
-&lt;li>&lt;a href="http://blog.chriszacharias.com/page-weight-matters">Page Weight Matters&lt;/a> is a fun little insight into how/why YouTube shed some of its heft. And a reminder that what we need is more stuff coming out of bandwidth starved regions since we have forgotten how to program efficiently in North America / Europe.&lt;/li>
-&lt;li>&lt;a href="http://usetrace.com">Usetrace&lt;/a> looks like the newest player in the Selenium-in-the-cloud space. Seems to use the Python bindings as the scripting language and host the scripts too.&lt;/li>
-&lt;li>Did you know that you can modify the Se Server’s Grid functionality with plugins? Neither did I — or at least I don’t think I did… Here is a &lt;a href="https://github.com/freynaud/grid-plugin-tutorial">tutorial&lt;/a> and &lt;a href="https://github.com/AutomatedTester/speedy-gonzales-proxy">another example&lt;/a>.&lt;/li>
-&lt;li>The interesting part of &lt;a href="http://www.codeofhonor.com/blog/whose-bug-is-this-anyway">Whose bug is this anyway?!?&lt;/a> is ‘Your computer is broken’ bit. Oh, and make sure that build machine is updated to what your developers are running…&lt;/li>
-&lt;li>&lt;a href="http://synesthesiam.com/?p=218">Modeling How Programmers Read Code&lt;/a> is just cool.&lt;/li>
-&lt;li>Speaking of reading code; &lt;a href="http://spin.atomicobject.com/2012/12/23/code-reading">Code Reading&lt;/a>. I wonder if you gave this to a novice programmer if they would approach the above link differently.&lt;/li>
-&lt;li>&lt;a href="http://ariya.ofilabs.com/2012/12/phantomjs-1-8-blue-winter-rose.html">PhantomJS 1.8 “Blue Winter Rose”&lt;/a> got lots of twitter love. As it should have.&lt;/li>
-&lt;li>&lt;a href="http://nikic.github.com/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html">Cooperative multitasking using coroutines (in PHP!)&lt;/a> is, I think, pretty awesome just by the my inability to fully grok what is going on. I also have no idea how to use this for automation purposes, but it seems like there should be some usage for it somewhere…&lt;/li>
-&lt;li>&lt;a href="http://www.littlehart.net/atthekeyboard/2012/12/17/so-you-want-to-write-tests">So You Want to Write Tests&lt;/a> is more mindset than code … but code has always been the easy part anyways.&lt;/li>
 &lt;/ul></description></item></channel></rss>

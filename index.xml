@@ -1,4 +1,77 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Stepping Down, Stepping Up</title><link>/blog/2021/stepping-down-stepping-up/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/stepping-down-stepping-up/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Improving &amp; refining our Docs translations</title><link>/blog/2021/docs-translations/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>/blog/2021/docs-translations/</guid><description>
+&lt;p>A while ago, we started to make the Selenium &lt;a href="/documentation">documentation&lt;/a> available in more
+languages. This, in an effort to offer a more inclusive environment for Selenium users who do
+not have English as their mother tongue.&lt;/p>
+&lt;p>This effort grew organically, and we got many pull requests adding content for different
+languages. Over time, some translations got to a very good state, and others didn&amp;rsquo;t get much
+attention. This brought the situation where 9 different languages are available in the
+documentation, but only a few add value to the readers.&lt;/p>
+&lt;p>To understand which languages are getting visits, we started using
+&lt;a href="https://plausible.io">Plausible&lt;/a>. After a few weeks, we combined the information collected
+by the analytics tool with the translated percentage per language, and we got the following:&lt;/p>
+&lt;p>Here&amp;rsquo;s the number of visitors on the landing page for a given translation in the past 2 weeks,
+and the percent of documentation pages translated:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Language&lt;/th>
+&lt;th>Visitors&lt;/th>
+&lt;th>Translated&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ja&lt;/td>
+&lt;td>1,700&lt;/td>
+&lt;td>86%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>zh-cn&lt;/td>
+&lt;td>1,500&lt;/td>
+&lt;td>86%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>es&lt;/td>
+&lt;td>409&lt;/td>
+&lt;td>42%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fr&lt;/td>
+&lt;td>203&lt;/td>
+&lt;td>31%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pt-br&lt;/td>
+&lt;td>189&lt;/td>
+&lt;td>87%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>de&lt;/td>
+&lt;td>88&lt;/td>
+&lt;td>65%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ko&lt;/td>
+&lt;td>79&lt;/td>
+&lt;td>68%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nl&lt;/td>
+&lt;td>22&lt;/td>
+&lt;td>6%&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>This shows that the most used languages (aside from English) are Japanese and Chinese, and that
+the language that has translated most of the content is Portuguese.&lt;/p>
+&lt;p>Based on this data, we decided to create a new role in the Selenium project:
+&lt;a href="/project/structure/#docs_site_translators">translators&lt;/a>. This role will help the project
+keep in shape the different translations available. Together with that, we are also putting
+on hold the other available translations until we find volunteers for each language.&lt;/p>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Stepping Down, Stepping Up</title><link>/blog/2021/stepping-down-stepping-up/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/stepping-down-stepping-up/</guid><description>
 &lt;p>The short version is that I&amp;rsquo;m stepping down as the Selenium project
 lead, and will concentrating on pushing WebDriver Bidi
 forwards. Fortunately, the &lt;a href="/project/structure/#tlc">Selenium TLC&lt;/a> have already been
@@ -6502,19 +6575,4 @@ Take a look at the project on &lt;a href="https://github.com/SeleniumHQ/selenium
 &lt;p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking that committer for his time and effort. Thank you, Samit!&lt;/p>
 &lt;p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE using modern APIs, to be usable across more than just Firefox. The fine people at &lt;a href="https://applitools.com/">Applitools&lt;/a> are helping with this effort.&lt;/p>
 &lt;p>The third thing? That’s you. &lt;strong>You could help us&lt;/strong>.&lt;/p>
-&lt;p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer &lt;a href="https://seleniumhq.herokuapp.com/">Slack&lt;/a>, you can join us on that too. Or there’s the ever useful &lt;a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers&lt;/a> mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!&lt;/p></description></item><item><title>Blog: Hacking with IntelliJ</title><link>/blog/2017/hacking-with-intellij/</link><pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate><guid>/blog/2017/hacking-with-intellij/</guid><description>
-&lt;p>&lt;a href="https://www.jetbrains.com/">Jetbrains&lt;/a> have a &lt;a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects&lt;/a> which allows them to receive &lt;a href="https://www.jetbrains.com/idea/">IntelliJ IDEA&lt;/a> licenses. As part of that programme, which the Selenium project has participated in for many years, they’ve asked us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and state my biases up-front so you’re aware of them.&lt;/p>
-&lt;p>I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It’s still my favourite IDE for my Java work, and it’s plenty of fun to use. For some time, I’ve been using the (free) Community Edition, which is ample for many coding needs.&lt;/p>
-&lt;p>Most of my work is in Java, and that’s where I know IDEA best. I dabble in Ruby and Python, and I’ve written a reasonably large amount of Javascript, all in IDEA.&lt;/p>
-&lt;p>The Pros:&lt;/p>
-&lt;p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you’re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don’t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)&lt;/p>
-&lt;p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I’ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I’ll be honest, sometimes when they don’t). It’s made making use of lambdas a lot easier.&lt;/p>
-&lt;p>For a while, IDEA was becoming slower and more bloated, but I’m pleased to see that, partly thanks to the work of developers from &lt;a href="http://facebook.com/">Facebook&lt;/a>, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)&lt;/p>
-&lt;p>There’s a nice wide range of plugins available for IDEA. I’ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn’t have been possible, but having them there is incredibly useful and makes the IDE even more capable.&lt;/p>
-&lt;p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely — it’s fun to see what new language features we’ll be able to use in the future!&lt;/p>
-&lt;p>The Cons:&lt;/p>
-&lt;p>Although it’s a fine product, there are some niggles to be had.&lt;/p>
-&lt;p>Most annoyingly, the built in code analysis doesn’t always warn that some Java classes won’t compile. The most recent example was where IDEA didn’t flag that some lambdas couldn’t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release — certainly these same files compiled just fine with older Java releases.&lt;/p>
-&lt;p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it’ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this same capability was present in IDEA!&lt;/p>
-&lt;p>On the Selenium project, we use &lt;a href="http://buckbuild.com/">Buck&lt;/a> for our builds. The Buck plugin doesn’t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an &lt;a href="http://ant.apache.org/">Ant&lt;/a> step before a build is run, and it would be extremely useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s irksome to forget to run things!&lt;/p>
-&lt;p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind it supports OSS. What’s not to love?&lt;/p></description></item></channel></rss>
+&lt;p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer &lt;a href="https://seleniumhq.herokuapp.com/">Slack&lt;/a>, you can join us on that too. Or there’s the ever useful &lt;a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers&lt;/a> mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!&lt;/p></description></item></channel></rss>
