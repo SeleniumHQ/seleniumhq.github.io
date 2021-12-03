@@ -249,7 +249,7 @@ emailAddressField = driver.find_element(locate_with(By.TAG_NAME, "input").above(
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement passwordField = driver.FindElement(By.Id("password"));
-IWebElement emailAddressField = driver.FindElement(RelativeBy(By.TagName("input")).Above(passwordField));
+IWebElement emailAddressField = driver.FindElement(RelativeBy.WithLocator(By.TagName("input")).Above(passwordField));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 password_field= driver.find_element(:id, "password")
@@ -290,7 +290,7 @@ passwordField = driver.find_element(locate_with(By.TAG_NAME, "input").below(emai
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
-IWebElement passwordField = driver.FindElement(RelativeBy(By.TagName("input")).Below(emailAddressField));
+IWebElement passwordField = driver.FindElement(RelativeBy.WithLocator(By.TagName("input")).Below(emailAddressField));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 email_address_field = driver.find_element(:id, "email")
@@ -332,7 +332,7 @@ to_left_of(submitButton))
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
-IWebElement cancelButton = driver.FindElement(RelativeBy(By.TagName("button")).LeftOf(submitButton));
+IWebElement cancelButton = driver.FindElement(RelativeBy.WithLocator(By.TagName("button")).LeftOf(submitButton));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 submit_button= driver.find_element(:id, "submit")
@@ -373,7 +373,7 @@ to_right_of(cancelButton))
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
-IWebElement submitButton = driver.FindElement(RelativeBy(By.TagName("button")).RightOf(cancelButton));
+IWebElement submitButton = driver.FindElement(RelativeBy.WithLocator(By.TagName("button")).RightOf(cancelButton));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 cancel_button = driver.find_element(:id, "cancel")
@@ -413,7 +413,7 @@ near(emailAddressLabel))
 using static OpenQA.Selenium.RelativeBy;
 
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
-IWebElement emailAddressField = driver.FindElement(RelativeBy(By.TagName("input")).Near(emailAddressLabel));
+IWebElement emailAddressField = driver.FindElement(RelativeBy.WithLocator(By.TagName("input")).Near(emailAddressLabel));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 email_address_label = driver.find_element(:id, "lbl-email")
