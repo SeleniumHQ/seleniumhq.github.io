@@ -28,7 +28,7 @@ public class Login {
 
   public void testLogin() {
     // 在登录页面上填写登录数据
-    driver.findElement(By.name("user_name")).sendKeys("testUser");
+    driver.findElement(By.name("user_name")).sendKeys("userName");
     driver.findElement(By.name("password")).sendKeys("my supersecret password");
     driver.findElement(By.name("sign-in")).click();
 

@@ -32,7 +32,7 @@ public class Login {
 
   public void testLogin() {
     // fill login data on sign-in page
-    driver.findElement(By.name("user_name")).sendKeys("testUser");
+    driver.findElement(By.name("user_name")).sendKeys("userName");
     driver.findElement(By.name("password")).sendKeys("my supersecret password");
     driver.findElement(By.name("sign_in")).click();
 
