@@ -120,7 +120,60 @@ never have met without Selenium, thank you. To my family, who’ve
 supported me and understood with endless patience that Selenium is a
 part of our lives, thank you. And to my friends on the project, an
 extra meaningful thank you.&lt;/p>
-&lt;p>I won&amp;rsquo;t be here, but I won&amp;rsquo;t be far. See you all soon.&lt;/p></description></item><item><title>Blog: Announcing Selenium 4</title><link>/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/announcing-selenium-4/</guid><description>
+&lt;p>I won&amp;rsquo;t be here, but I won&amp;rsquo;t be far. See you all soon.&lt;/p></description></item><item><title>Blog: A Tour of 4: New Commands</title><link>/blog/2021/a-tour-of-4-new-commands/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-new-commands/</guid><description>
+&lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
+some of the new features in-depth. Of course, all of the features
+we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
+you&amp;rsquo;re not one for reading blog posts, then feel free to dive in
+there!&lt;/p>
+&lt;p>You may well be familiar with how to start a Selenium server: you just
+do something like &lt;code>java -jar selenium-server-4.0.0.jar standalone&lt;/code> and
+away you go! But with Selenium 4, there are some more things you can
+do with this jar.&lt;/p>
+&lt;p>Least obviously, the server jar is an exectuable on its own. If you&amp;rsquo;re
+using Linux or macOS, and have Java installed, you can make the jar
+executable (eg. &lt;code>chmod 755 selenium-server-4.0.0.jar&lt;/code>), rename it to
+something like &lt;code>selenium&lt;/code> and put it on your &lt;code>$PATH&lt;/code>. That way, rather
+than writing &lt;code>java -jar ...&lt;/code> you can simply run &lt;code>selenium&lt;/code>.&lt;/p>
+&lt;p>Now you&amp;rsquo;ve done that, if you run &lt;code>selenium&lt;/code> with &lt;code>selenium --help&lt;/code>
+you&amp;rsquo;ll get a handy list of the available sub-commands you can
+execute. There are the old favourites, such as &lt;code>standalone&lt;/code> (for
+starting a standalone selenium server), and &lt;code>hub&lt;/code> and &lt;code>node&lt;/code> (for
+starting a Selenium &lt;a href="/documentation/grid/setting_up_your_own_grid/#hub-and-nodes">Hub and Node&lt;/a> setup), but there are
+other interesting commands that are new to Selenium 4.&lt;/p>
+&lt;p>The first of these is &lt;code>info&lt;/code>. We&amp;rsquo;ve added this to provide easy to find
+and access documentation on common tasks when using the selenium
+server. If you run &lt;code>selenium info&lt;/code> on its own, you&amp;rsquo;ll see something
+like this:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#000">Info&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">====&lt;/span>
+You can find out more about topics concerning Selenium Grid by running the
+&lt;span style="color:#4e9a06">&amp;#34;info&amp;#34;&lt;/span> &lt;span style="color:#204a87">command&lt;/span> followed by:
+* config - Help on how to configure Selenium
+* tracing - Help on how distributed tracing works with selenium
+* security - Help on how how to secure communications to and within selenium
+* sessionmap - Help on different types of sessionmap and how to start them.
+Each topic will give you enough information to &lt;span style="color:#204a87">help&lt;/span> you get started, and contains
+some pointers on our site to provide more &lt;span style="color:#204a87">complete&lt;/span> information.
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>To get more information on a particular topic, just add the name of
+the topic, for example &lt;code>selenium info security&lt;/code>. The hope is that this
+will make it less daunting to deal with Selenium, and give you a great
+place to get started with some of the more complicated topics around
+running a Selenium Grid.&lt;/p>
+&lt;p>Although it&amp;rsquo;s incredibly flexible, the &lt;code>selenium&lt;/code> command offers a
+daunting list of command line flags. How are you supposed to remember
+them all? You&amp;rsquo;re not! Instead, let &lt;code>selenium completion&lt;/code> take the
+strain for you. If you&amp;rsquo;re a zsh user, then just &lt;code>source &amp;lt;(selenium completion zsh)&lt;/code>, and now you have tab completion for the
+sub-commands, as well as for all the flags, including examples of how
+to use them.&lt;/p>
+&lt;p>And, finally, there are some hidden flags. We hid them because they
+can be a little bit confusing to use or understand what they&amp;rsquo;re meant
+to do, but one that can be very useful when debugging how your Grid is
+configured is the &lt;code>--dump-config&lt;/code> flag. When run with a server command
+such as &lt;code>standalone&lt;/code> or &lt;code>hub&lt;/code>, it will dump the configuration options
+used by the Grid as a JSON blob. This can be helpful for tracking down
+subtle issues with configurations, especially when using environment
+properties for configuration.&lt;/p></description></item><item><title>Blog: Announcing Selenium 4</title><link>/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/announcing-selenium-4/</guid><description>
 &lt;p>It’s with very great pleasure that &lt;strong>we are announcing the release of
 Selenium 4&lt;/strong>. This is available for Java, .Net, Python, Ruby, and
 Javascript. You can download it from your favourite package manager or
@@ -6464,13 +6517,4 @@ Take a look at the project on &lt;a href="https://github.com/SeleniumHQ/selenium
 &lt;p>Most annoyingly, the built in code analysis doesn’t always warn that some Java classes won’t compile. The most recent example was where IDEA didn’t flag that some lambdas couldn’t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release — certainly these same files compiled just fine with older Java releases.&lt;/p>
 &lt;p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it’ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this same capability was present in IDEA!&lt;/p>
 &lt;p>On the Selenium project, we use &lt;a href="http://buckbuild.com/">Buck&lt;/a> for our builds. The Buck plugin doesn’t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an &lt;a href="http://ant.apache.org/">Ant&lt;/a> step before a build is run, and it would be extremely useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s irksome to forget to run things!&lt;/p>
-&lt;p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind it supports OSS. What’s not to love?&lt;/p></description></item><item><title>Blog: Selenium 3.0: Out Now!</title><link>/blog/2016/selenium-3-0-out-now/</link><pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate><guid>/blog/2016/selenium-3-0-out-now/</guid><description>
-&lt;p>We are very pleased to announce the release of &lt;a href="http://www.seleniumhq.org/download/">Selenium 3.0&lt;/a>. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:&lt;/p>
-&lt;p>As &lt;a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">we’ve said before&lt;/a>, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as &lt;a href="https://chromedriver.chromium.org/downloads">Chrome&lt;/a> and &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge&lt;/a> will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability. Selenium Grid users may require updates to their configuration as the json config file format has been updated, as have some of command line parameter options, but the upgrade should also be smooth.&lt;/p>
-&lt;p>The major change in Selenium 3.0 is we’re removing the original Selenium Core implementation and replacing it with one backed by WebDriver. This will affect all users of the &lt;a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium RC&lt;/a> APIs. For more information, please see the &lt;a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">previous post&lt;/a>.&lt;/p>
-&lt;p>A lot has changed in the 5 years between versions 2 and 3. When we &lt;a href="https://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">shipped Selenium 2&lt;/a>, the Selenium project was responsible for providing the driver for each browser. Now, we are happy to say that all the major browser vendors ship their own implementations (&lt;a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Apple&lt;/a>, &lt;a href="https://chromedriver.chromium.org/">Google&lt;/a>, &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft&lt;/a>, and &lt;a href="https://github.com/mozilla/geckodriver/releases">Mozilla&lt;/a>). Because the browser vendors know their browsers better than anyone, their WebDriver implementations can be tightly coupled to the browser, leading to a better testing experience for you.&lt;/p>
-&lt;p>The other notable change has been that there is now a &lt;a href="https://www.w3.org/TR/webdriver/">W3C specification&lt;/a> for browser automation, based on the Open Source WebDriver. This has yet to reach “recommendation” status, but the people working on it (including members of the Selenium project!) are now focusing on finishing the text and writing the implementations.&lt;/p>
-&lt;p>Mozilla has been a front-runner in implementing the W3C WebDriver protocol. On the plus side, this has exposed problems with the spec as it has evolved, but it also means that Firefox support is hard to track as their engineering efforts have been forward looking, rather than on supporting the current wire protocol used by Selenium WebDriver. For now, the best advice we can offer is for you to try the latest release of &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a> and Selenium together.&lt;/p>
-&lt;p>These are exciting times for browser automation! Selenium 3.0 is a major release and we’re looking forward to improving things further, as well as tracking the ongoing work of the W3C spec. Our goal is to keep the changes your tests need to deal with to an absolute minimum, to continue preserving the hard work that’s gone into writing your existing tests.&lt;/p>
-&lt;p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make Selenium 3 possible. That’s not just the developers and contributors to the Open Source project (past and present), but also the engineers from Google, Microsoft, Mozilla, and Apple, and everyone involved with the W3C spec. I’d also like to say thank you to everyone who’s taken the time to report bugs, our users and our community. The project is great fun to work on and you’re the reason for that. A final thank you is due to the Software Freedom Conservancy, who have provided invaluable help with the logistics of running a large OSS project.&lt;/p>
-&lt;p>Happy hacking, everyone! May your tests run fast and true!&lt;/p></description></item></channel></rss>
+&lt;p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind it supports OSS. What’s not to love?&lt;/p></description></item></channel></rss>
