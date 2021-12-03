@@ -379,7 +379,7 @@ sessão.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 WebDriver driver = new FirefoxDriver();
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.get("http://somedomain/url_that_delays_loading");
 WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
   {{< /tab >}}
@@ -422,7 +422,7 @@ let webElement = driver.findElement(By.id("myDynamicElement"));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val driver = FirefoxDriver()
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10))
 driver.get("http://somedomain/url_that_delays_loading")
 val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
   {{< /tab >}}
