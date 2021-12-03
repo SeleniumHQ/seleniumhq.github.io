@@ -58,51 +58,31 @@ title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="English"
 weight = 1
-[languages.es]
-title = "Selenium"
-description = "Selenium automates browsers. That's it!"
-languageName ="Español"
-weight = 2
 [languages.de]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="Deutsch"
-weight = 3
+weight = 2
 [languages.pt-br]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="Português (Brasileiro)"
-weight = 4
-[languages.nl]
-title = "Selenium"
-description = "Selenium automates browsers. That's it!"
-languageName ="Nederlands"
-weight = 5
+weight = 3
 [languages.zh-cn]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName = "中文简体"
-weight = 6
-[languages.fr]
-title = "Selenium"
-description = "Selenium automates browsers. That's it!"
-languageName = "Français"
-weight = 7
+weight = 4
 [languages.ja]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName = "日本語"
-weight = 8
-[languages.ko]
-title = "Selenium"
-description = "Selenium automates browsers. That's it!"
-languageName = "한국어"
-weight = 9
+weight = 5
 [languages.other]
 title = "Selenium"
 description = "Selenium automates browsers. That's it!"
 languageName ="Other"
-weight = 10
+weight = 6
 
 
 
