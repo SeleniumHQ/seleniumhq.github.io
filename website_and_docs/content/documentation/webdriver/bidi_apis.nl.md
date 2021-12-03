@@ -493,7 +493,7 @@ it with the following examples.
 # Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-
+# Please raise a PR to add code sample
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -538,11 +538,11 @@ val interceptor = new NetworkInterceptor(
 
     String source = driver.getPageSource()
 {{< /tab >}}
+{{< /tabpane >}}
 
 ## Collect Performance Metrics
 
-Collect various performance
-metrics while navigating the application.
+Collect various performance metrics while navigating the application.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
