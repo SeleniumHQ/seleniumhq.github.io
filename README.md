@@ -54,7 +54,7 @@ repo [settings](https://github.com/SeleniumHQ/seleniumhq.github.io/settings) (if
 you should be able to access the link).
 
 The selenium.dev domain is managed at https://www.gandi.net/en, if you need access to it, reach out to
-any of the [PLC](https://www.selenium.dev/structure/#plc) or [TLC](https://www.selenium.dev/structure/#tlc)
+any of the [PLC](https://www.selenium.dev/project/structure/#plc) or [TLC](https://www.selenium.dev/project/structure/#tlc)
 members, who can help you with that.
 
 If for any reason, you need to setup the domain redirection again,
