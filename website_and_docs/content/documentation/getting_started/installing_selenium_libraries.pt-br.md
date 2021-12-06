@@ -3,18 +3,9 @@ title: "Instalando bibliotecas do Selenium"
 linkTitle: "Instalando bibliotecas do Selenium"
 weight: 1
 description: >
-  Setting up the Selenium library for your favourite programming language.
+  Preparando biblioteca Selenium para a sua linguagem de programação favorita.
 aliases: ["/documentation/pt-br/selenium_installation/installing_selenium_libraries/"]    
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Primeiro você precisa instalar as ligações Selenium para seu projeto de automação.
 O processo de instalação de bibliotecas depende da linguagem que você escolher usar.

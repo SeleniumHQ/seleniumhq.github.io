@@ -3,23 +3,8 @@ title: "Como atualizar para Selenium 4"
 linkTitle: "Como atualizar para Selenium 4"
 weight: 3
 description: >
-  Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
   Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-  Esta página está sendo traduzido do Inglês para o Português.
-  Você fala Inglês? Nos ajude a traduzir esta pagina enviando pull requests!
-</p>
-{{% /pageinfo %}}
 
 Atualizar para o Selenium 4 deve ser um processo sem dificuldades se você estiver usando uma das linguagens oficialmente suportadas
 (Ruby, JavaScript, C#, Python, and Java). Pode haver alguns casos em que alguns problemas podem acontecer,
@@ -233,7 +218,7 @@ Verifique as subseções abaixo para isntalar o Selenium 4 e atualizar as depend
 
 ### Java
 
-O processo de atualização do Selenium depende de  qual ferramenta de compilação está sendo usada. Vamos mostrar as mais comuns para Java, como  [Maven](https://maven.apache.org/) e [Gradle](https://gradle.org/). A versão minínma do Java ainda é 8.
+O processo de atualização do Selenium depende de qual ferramenta de compilação está sendo usada. Vamos mostrar as mais comuns para Java, como  [Maven](https://maven.apache.org/) e [Gradle](https://gradle.org/). A versão miníma do Java ainda é 8.
 
 #### Maven
 
@@ -266,8 +251,8 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
 {{< /card >}}
 {{< /cardpane >}}
 
-After making the change, you could execute `mvn clean compile` on the same directory where the 
-`pom.xml` file is.
+Após ter efectuado as alterações, deve executar `mvn clean compile` 
+na mesma pasta onde o ficheiro `pom.xml` está.
 
 #### Gradle
 
@@ -373,18 +358,16 @@ Ou, atualize o seu package.json e execute `npm install`:
   }
 }
 ```
+## Erros potenciais e mensagens de deprecation
 
-## Potential errors and deprecation messages
-
-Here is a set of code examples that will help to overcome the deprecation messages you might 
-encounter after upgrading to Selenium 4.
+Estes são alguns exemplo que permitem ultrapassar mensagens de deprecation
+que possa encontrar após fazer upgrade para Selenium 4.
 
 ### Java
 
 #### Waits and Timeout
 
-The parameters received in Timeout have switched from expecting `(long time, TimeUnit unit)` to 
-expect `(Duration duration)`.
+Os parâmetros nos métodos Timeout mudaram de `(long time, TimeUnit unit)` para `(Duration duration)`.
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -403,10 +386,10 @@ driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 {{< /card >}}
 {{< /cardpane >}}
 
-Waits are also expecting different parameters now. `WebDriverWait` is now expecting a `Duration` 
-instead of a `long` for timeout in seconds and milliseconds. The `withTimeout` and `pollingEvery` 
-utility methods from `FluentWait` have switched from expecting `(long time, TimeUnit unit)` to 
-expect `(Duration duration)`.
+Os métodos Wait também esperam parâmetros diferentes. `WebDriverWait` espera 
+por `Duration` em vez de `long` para segundos e millisegundos. 
+Os métodos utilitários `withTimeout` e `pollingEvery` de `FluentWait` mudaram de
+ `(long time, TimeUnit unit)` para `(Duration duration)`.
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -435,6 +418,8 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
 
 #### Merging capabilities is no longer changing the calling object
 
+__TODO__
+
 It was possible to merge a different set of capabilities into another set, and it was 
 mutating the calling object. Now, the result of the merge operation needs to be assigned.
 
@@ -461,14 +446,15 @@ The result of the `merge` call needs to be assigned to an object.
 {{< /card >}}
 {{< /cardpane >}}
 
-#### Firefox Legacy
+#### Firefox Legado
 
-Before GeckoDriver was around, the Selenium project had a driver implementation to automate 
-Firefox (version <48). However, this implementation is not needed anymore as it does not work 
-in recent versions of Firefox. To avoid major issues when upgrading to Selenium 4, the `setLegacy` 
-option will be shown as deprecated. The recommendation is to stop using the old implementation 
-and rely only on GeckoDriver. The following code will show the `setLegacy` line deprecated after 
-upgrading.
+Antes do GeckoDriver existir, o projeto Selenium tinha uma implementação
+de driver para automatizar o Firefox (até à versão 48).
+No entanto, esta implmentação já não é necessária, nem funciona com as
+versões mais recentes do Firefox.
+
+Para evitar problemas no upgrade para Selenium 4, a opção `setLegacy` será mostrada como deprecated. A recomendação passa por deixar de usar a implementação
+antiga e usar apenas GeckoDriver. Este código mostra que a linha `setLegacy` fica marcada como deprecated após ter migrado.
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
@@ -476,8 +462,7 @@ options.setLegacy(true);
 ```
 
 #### `BrowserType`
-The `BrowserType` interface has been around for a long time, however it is getting 
-deprecated in favour of the new `Browser` interface.
+O interface `BrowserType` existe há bastante tempo, mas está a ser substituido pelo novo `Browser`.
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -498,9 +483,9 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 
 ### C#
 
-#### `AddAdditionalCapability` is deprecated
+#### `AddAdditionalCapability` está deprecated
 
-Instead of it, `AddAdditionalOption` is recommended. Here is an example showing this:
+Recomenda-se, `AddAdditionalOption`. Exemplo de utilização:
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -525,9 +510,9 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 
 ### Python
 
-#### `executable_path has been deprecated, please pass in a Service object`
+#### `executable_path está deprecated, por favor passar como um objeto Service`
 
-In Selenium 4, you'll need to set the driver's ``executable_path`` from a Service object to prevent deprecation warnings. (Or don't set the path and instead make sure that the driver you need is on the System PATH.)
+No Selenium 4, necessita usar um objeto Service para setar ``executable_path`` e assim evitar avisos de deprecated. (ou então não force o path  e garanta que o driver está na PATH)
 
 {{< cardpane >}}
 {{< card header="Before" >}}
@@ -552,12 +537,9 @@ driver = webdriver.Chrome(service=service, options=options)
 {{< /card >}}
 {{< /cardpane >}}
 
-## Summary
+## Resumo
 
-We went through the major changes to be taken into consideration when upgrading to Selenium 4. 
-Covering the different aspects to cover when test code is prepared for the upgrade, including 
-suggestions on how to prevent potential issues that can show up when using the new version of 
-Selenium. To finalize, we also covered a set of possible issues that you can bump into after 
-upgrading, and we shared potential fixes for those issues.
+Visitámos as maiores alterações que devem ser consideradas quando planear a migração para Selenium 4.
 
-*This was originally posted at  https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4*
+
+*A versão original em Inglês pode ser consultada aqui https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4*

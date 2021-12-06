@@ -62,13 +62,11 @@ e faça checkout na sua cópia localmente.
 
 #### Dependências: Hugo
 
-We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
-Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.83.1 or higher.
+Para criar este sítio usamos [Hugo](https://gohugo.io/) e o 
+[tema Docsy](https://www.docsy.dev/). É necessario usar a versão "extended" 
+Sass/SCSS do binário Hugo e recomendamos que use a versão 0.83.1 ou superior.
 
-Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
-instructions from Docsy.
+Por favor siga as instruções (em Inglês) em como [Instalar Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo).
 
 ### Passo 2: Branch
 
@@ -83,11 +81,12 @@ diretamente no topo do `dev`.
 
 ### Passo 3: Faça mudanças
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependencies (see commands below). To make changes to the site, 
-work on the `website_and_docs` directory. To see a live preview of 
-your changes, run `hugo server` on the site's root directory.
+O repositório contem o sítio e a documentação. Antes de começar a fazer
+alterações, por favor inicialize os sub-módulos e instale as dependências
+ (veja os comandos seguintes).
+
+Para fazer alterações ao sítio, trabalhe na pasta `website_and_docs`.
+Para ver as alterações ao vivo, execute `hugo server` nesta pasta.
 
 ```shell
 % git submodule update --init --recursive
@@ -129,7 +128,7 @@ Isso pode tornar as diffs muito fáceis de ler
 ao colaborar por meio do git,
 mas não é algo que obrigamos os colaboradores a usar.
 
-#### Traducciones
+#### Traduções
 
 A documentação é traduzida para vários idiomas e as traduções são baseadas no conteúdo em inglês. Ao alterar um arquivo, **certifique-se** de realizar a
 mudanças em todos os outros arquivos traduzidos também. Isso pode ser diferente dependendo

@@ -1,24 +1,15 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+title: "Instalar driver do navegador"
+linkTitle: "Instalar driver do navegador"
 weight: 2
 description: >
-  Setting up your browser ready to be automated.
+  Preparar o navegador para ser automatizado.
 aliases: 
         [
           "/documentation/pt-br/selenium_installation/installing_webdriver_binaries/",
           "/documentation/pt-br/webdriver/driver_requirements/"
         ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Por meio do WebDriver, o Selenium oferece suporte a todos os principais navegadores do mercado
 como Chrom(ium), Firefox, Internet Explorer, Edge, Opera e Safari.
@@ -177,8 +168,7 @@ val driver: WebDriver = ChromeDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-Remember that you have to set the path to the chromedriver executable.
-This is possible using the following line:
+Recorde-se que deve setar o PATH para o chromedriver. Para tal, pode usar esta linha:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
