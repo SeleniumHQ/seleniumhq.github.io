@@ -1,7 +1,7 @@
 ---
-title: "Grid"
+title: "Selenium Grid 4"
 linkTitle: "Grid"
-weight: 9
+weight: 6
 description: >
   Want to run tests in parallel across multiple machines? Then, Grid is for you.
 aliases: 

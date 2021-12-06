@@ -1,6 +1,6 @@
 ---
-title: "GraphQL Query Support"
-linkTitle: "GraphQL Query Support"
+title: "GraphQL query support"
+linkTitle: "GraphQL Support"
 weight: 2
 aliases: ["/documentation/en/grid/grid_4/graphql_support/"]
 ---

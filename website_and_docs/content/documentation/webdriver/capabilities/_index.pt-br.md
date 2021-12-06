@@ -1,7 +1,7 @@
 ---
 title: "Capabilities"
 linkTitle: "Capabilities"
-weight: 14
+weight: 4
 aliases: ["/documentation/pt-br/driver_idiosyncrasies/"]
 ---
 

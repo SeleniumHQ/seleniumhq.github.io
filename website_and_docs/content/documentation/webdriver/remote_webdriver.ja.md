@@ -1,7 +1,7 @@
 ---
 title: "Remote WebDriver"
 linkTitle: "Remote WebDriver"
-weight: 11
+weight: 10
 aliases: 
         [
           "/documentation/ja/remote_webdriver/",
