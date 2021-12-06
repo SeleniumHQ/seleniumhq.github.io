@@ -3,7 +3,8 @@ title: "Começando"
 linkTitle: "Começando"
 weight: 2
 description: >
-  If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+  Se você é novato no Selenium, temos alguns recursos que lhe irão ajudar
+  a ficar pronto para começar.
 aliases: 
         [
           "/documentation/pt-br/getting_started/", 
@@ -12,15 +13,6 @@ aliases:
           "/documentation/pt-br/getting_started_with_webdriver/"
         ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Selenium suporta automação de todos os principais navegadores do mercado
 por meio do uso do _WebDriver_.
@@ -46,16 +38,18 @@ Para usar Selenium em seu projeto de automação, você precisa instalar as
 bibliotecas de linguagem para sua linguagem de escolha. Além disso, você precisará dos
 binários WebDriver para os navegadores que você deseja automatizar e executar testes.
 
-Installing Selenium can be divided in three steps:
+A instalação do Selenium pode ser dividida em três passos:
 
-1. [Installing the Selenium library]({{< ref "/installing_selenium_libraries.md" >}}) for your desired programming language
-2. [Set up the browser driver]({{< ref "/installing_browser_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid]({{< ref "/grid.md" >}}) if you want to scale up your tests
+1. [Instale a biblioteca Selenium]({{< ref "/installing_selenium_libraries.md" >}}) para a sua 
+linguagem de programação favorita 
+2. [Prepare o driver do navegador]({{< ref "/installing_browser_drivers.md" >}}) para automatizar 
+o seu navegador (exemplo. GeckoDriver para Firefox)
+3. (Opcional) Prepare e configure [Selenium Grid]({{< ref "/grid.md" >}}) se pretende escalar os 
+seus testes
 
-If you wish to start with a low-code/record and playback tool, please check 
+Se pretende começar com uma ferramenta "low code" de gravação/reprodução, por favor veja
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-After completing the setup, you can run the code snippet shown at the 
-[starting page](/pt-br/documentation) in our docs. Then head to the 
-[WebDriver]({{< ref "/webdriver.md" >}}) section to learn more about
-browser automation with Selenium.
+Após terminar o setup pode experimentar o exemplo de código presente na nossa  
+[página inicial](/pt-br/documentation). Depois visite a secção 
+[WebDriver]({{< ref "/webdriver.md" >}}) para aprender mais sobre automação de navegadores com Selenium.

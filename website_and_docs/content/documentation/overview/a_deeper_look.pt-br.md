@@ -1,21 +1,12 @@
 ---
-title: "A Deeper Look"
-linkTitle: "A Deeper Look"
+title: "Indo mais longe"
+linkTitle: "Indo mais longe"
 weight: 2
 description: >
   Selenium é um projeto abrangente para uma gama de ferramentas e bibliotecas que permitem
   e suportam a automação de navegadores da web.
 aliases: ["/documentation/pt-br/introduction/the_selenium_project_and_tools/"]  
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 ### Selenium controla navegadores
 
