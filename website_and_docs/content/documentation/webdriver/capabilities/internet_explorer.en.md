@@ -1,109 +1,10 @@
 ---
-title: "Driver specific capabilities"
-linkTitle: "Driver specific capabilities"
-weight: 4
-aliases: ["/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/"]
+title: "Capabilities specific to Internet Explorer browser"
+linkTitle: "Internet Explorer"
+weight: 8
+description: >-
+    These capabilities are specific to Internet Explorer.
 ---
-
-## Firefox
-
-### Define Capabilities using `FirefoxOptions`
-
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxOptions options = new FirefoxOptions();
-options.addPreference("network.proxy.type", 0);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-options = Options()
-options.headless = True
-driver = webdriver.Firefox(options=options)
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var options = new FirefoxOptions();
-options.Proxy.Kind = ProxyKind.Direct;
-var driver = new FirefoxDriver(options);
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-opts = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
-driver = Selenium::WebDriver.for(:firefox, options: opts)
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const firefox = require('selenium-webdriver/firefox');
-
-const options = new firefox.Options();
-options.headless();
-const driver = new Builder()
-    .forBrowser('firefox')
-    .setFirefoxOptions(options)
-    .build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val options = new FirefoxOptions()
-options.addPreference("network.proxy.type", 0)
-driver = RemoteWebDriver(options)
-  {{< /tab >}}
-{{< /tabpane >}}
-
-
-### Setting a custom profile
-
-It is possible to create a custom profile for Firefox as demonstrated below.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxProfile profile = new FirefoxProfile();
-FirefoxOptions options = new FirefoxOptions();
-options.setProfile(profile);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var options = new FirefoxOptions();
-var profile = new FirefoxProfile();
-options.Profile = profile;
-var driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
-driver = Selenium::WebDriver.for :firefox, options: options
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const firefox = require('selenium-webdriver/firefox');
-
-const options = new firefox.Options();
-let profile = '/path to custom profile';
-options.setProfile(profile);
-const driver = new Builder()
-    .forBrowser('firefox')
-    .setFirefoxOptions(options)
-    .build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val options = FirefoxOptions()
-options.profile = FirefoxProfile()
-driver = RemoteWebDriver(options)
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Internet Explorer
 
 ### fileUploadDialogTimeout
 
@@ -111,6 +12,7 @@ In some environments, Internet Explorer may timeout when opening the
 File Upload dialog. IEDriver has a default timeout of 1000ms, but you
 can increase the timeout using the fileUploadDialogTimeout capability.
 
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -124,7 +26,6 @@ options = webdriver.IeOptions()
 options.file_upload_dialog_timeout = 2000
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -152,6 +53,7 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ensureCleanSession
 
@@ -166,6 +68,7 @@ gets cleared before launching the IE browser.
 
 This capability accepts a Boolean value as parameter.
 
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -179,7 +82,6 @@ options = webdriver.IeOptions()
 options.ensure_clean_session = True
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -207,6 +109,7 @@ options.destructivelyEnsureCleanSession()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ignoreZoomSetting
 
@@ -216,6 +119,7 @@ can be disabled by setting the _ignoreZoomSetting_ to _true_.
 
 This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -229,7 +133,6 @@ options = webdriver.IeOptions()
 options.ignore_zoom_level = True
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -257,6 +160,7 @@ options.ignoreZoomSettings()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ignoreProtectedModeSettings
 
@@ -276,6 +180,7 @@ only a "best effort" at support will be given.
 
 This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -289,7 +194,6 @@ options = webdriver.IeOptions()
 options.ignore_protected_mode_settings = True
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -317,6 +221,7 @@ options.introduceFlakinessByIgnoringSecurityDomains()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### silent
 
@@ -325,6 +230,7 @@ diagnostic output of the IEDriverServer.
 
 This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -338,7 +244,6 @@ options = webdriver.IeOptions()
 options.set_capability("silent", True)
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -349,7 +254,7 @@ options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Please raise a PR to add code sample
+    # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
@@ -388,8 +293,9 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
-### IE Command-Line Options
+### Command-Line Options
 
 Internet Explorer includes several command-line options 
 that enable you to troubleshoot and configure the browser.
@@ -436,7 +342,6 @@ options.add_argument('-private')
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -466,7 +371,6 @@ options.add_argument('-k')
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navigate to URL
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure
@@ -542,7 +446,6 @@ options = webdriver.IeOptions()
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navigate to url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -570,7 +473,6 @@ options.force_create_process_api = true
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navigate to URL
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure
