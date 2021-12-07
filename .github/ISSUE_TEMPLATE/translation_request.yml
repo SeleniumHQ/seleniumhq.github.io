@@ -1,0 +1,18 @@
+name: 🇧🇷 Translation Request
+description: Request a translation
+title: "[🇧🇷 Translation]: "
+labels: [translate-ja, translate-pt-br, translate-zh-cn]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request content to be translated. We are currently providing
+        translations in our documentation for Japanese, Chinese, and Brazilian Portuguese.
+  - type: textarea
+    id: translation-description
+    attributes:
+      label: What needs to be translated
+      description: |
+        Link to the content or Pull Request that needs an updated translation.
+    validations:
+      required: true
