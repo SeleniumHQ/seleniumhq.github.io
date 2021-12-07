@@ -1,7 +1,7 @@
 ---
 title: "Waits"
 linkTitle: "Waits"
-weight: 4
+weight: 12
 aliases: ["/documentation/en/webdriver/waits/"]
 ---
 
@@ -95,15 +95,15 @@ about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
 Fortunately, the normal instruction set available on
-the [_WebElement_]({{< ref "/web_element.md" >}}) interface—such
+the [_WebElement_]({{< ref "elements" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
  in that the function calls will not return
  (or the callback will not trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/keyboard.md" >}})
- and [_Mouse_]({{< ref "/mouse_and_keyboard_actions_in_detail.md" >}}),
+ [_Keyboard_]({{< ref "actions_api/keyboard.md" >}})
+ and [_Mouse_]({{< ref "actions_api/mouse.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 

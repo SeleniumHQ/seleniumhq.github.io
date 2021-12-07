@@ -1,6 +1,6 @@
 ---
-title: "Capabilities"
+title: "WebDriver Capabilities"
 linkTitle: "Capabilities"
-weight: 14
+weight: 4
 aliases: ["/documentation/en/driver_idiosyncrasies/"]
 ---

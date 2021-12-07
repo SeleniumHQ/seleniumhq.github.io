@@ -1,7 +1,7 @@
 ---
-title: "Overview"
+title: "Selenium overview"
 linkTitle: "Overview"
-weight: 1
+weight: 2
 description: >
   Is Selenium for you? See an overview of the different project components.
 aliases: ["/documentation/en/introduction/"]

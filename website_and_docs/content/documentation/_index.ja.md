@@ -19,7 +19,7 @@ Seleniumはブラウザー自動化を可能にし、それを支えるツール
 
 ユーザーとブラウザーのやり取りのエミュレーション、ブラウザーの割当を増強したり縮減する分散型サーバー、そしてすべてのメジャーなブラウザー用に置換可能なコードの実装を可能にする[W3C WebDriver 仕様](//www.w3.org/TR/webdriver/)インフラの提供します。
 
-このプロジェクトは多くの有志貢献者の何千時間に及ぶ個々の時間を費やした事とソースコード[自由に利用可能]({{< ref "/copyright_and_attributions.md#license" >}})を誰にでも利用、楽しめ、そして改良できることによって実現しました。
+このプロジェクトは多くの有志貢献者の何千時間に及ぶ個々の時間を費やした事とソースコード[自由に利用可能]({{< ref "/copyright.md#license" >}})を誰にでも利用、楽しめ、そして改良できることによって実現しました。
 
 Seleniumはウェブプラットフォームの自動化のより開かれた議論をするためブラウザーベンダー、エンジニア、愛好家をまとめます。このプロジェクトはコミュニティーを導きと育成のために[年次カンファレンス](//seleniumconf.com/)開催します。
 
@@ -148,10 +148,10 @@ fun main() {
 
 
 
-See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
+See the [Overview]({{< ref "overview" >}}) to check the different project 
 components and decide if Selenium is the right tool for you.
 
-You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
+You should continue on to [Getting Started]({{< ref "webdriver/getting_started" >}})
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.

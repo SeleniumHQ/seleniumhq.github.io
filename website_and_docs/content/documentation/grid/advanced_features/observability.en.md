@@ -1,5 +1,5 @@
 ---
-title: "Observability"
+title: "Observability in Selenium Grid"
 linkTitle: "Observability"
 weight: 1
 aliases: ["/documentation/en/grid/grid_4/advanced_features/observability/"]

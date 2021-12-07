@@ -1,7 +1,7 @@
 ---
 title: "待機"
 linkTitle: "待機"
-weight: 4
+weight: 12
 aliases: ["/documentation/ja/webdriver/waits/"]
 ---
 
@@ -77,7 +77,7 @@ assert(element.text == "Hello from JavaScript!")
 
 ここでは、WebDriverで使用されるデフォルトの [ページロード戦略]({{< ref "/page_loading_strategy.md" >}}) が`document.readyState`をリッスンして、ナビゲーションの呼び出しから戻る前に`"complete"`に変更することが問題です。ドキュメントの読み込みが完了した後に`p`要素が追加されるため、このWebDriverスクリプトは断続的になる _可能性があります。_ これらのイベントを明示的に待機（またはブロック）せずに非同期でトリガーする要素またはイベントについては保証できないため、断続的である可能性があります。
 
-幸いなことに、 _WebElement.click_ や _WebElement.sendKeys_ などのWebElementインターフェイスで使用可能な通常の命令セットを使用すると、コマンドの呼び出しがブラウザーで完了するまで関数呼び出しが返されない（または、コールバックはコールバックスタイルの言語ではトリガーされない）ため、同期が保証されます。高度なユーザーインタラクションAPIである[_キーボード_]({{< ref "/keyboard.md" >}})と[_マウス_]({{< ref "/mouse_and_keyboard_actions_in_detail.md" >}})は、 "言うことをする" 非同期コマンドとして明示的に意図されているため、例外です。
+幸いなことに、 _WebElement.click_ や _WebElement.sendKeys_ などのWebElementインターフェイスで使用可能な通常の命令セットを使用すると、コマンドの呼び出しがブラウザーで完了するまで関数呼び出しが返されない（または、コールバックはコールバックスタイルの言語ではトリガーされない）ため、同期が保証されます。高度なユーザーインタラクションAPIである[_キーボード_]({{< ref "actions_api/keyboard.md" >}})と[_マウス_]({{< ref "actions_api/mouse.md" >}})は、 "言うことをする" 非同期コマンドとして明示的に意図されているため、例外です。
 
 待機とは、自動化されたタスクの実行を一定時間経過させてから次のステップに進むことです。
 

@@ -25,7 +25,7 @@ que permite escrever código intercambiável para todos os principais navegadore
 
 Este projeto é possível graças a colaboradores voluntários
 que dedicam milhares de horas de seu próprio tempo,
-e disponibilizaram o código-fonte [disponível gratuitamente]({{< ref "/copyright_and_attributions.pt-br.md#license" >}})
+e disponibilizaram o código-fonte [disponível gratuitamente]({{< ref "copyright.md#license" >}})
 para qualquer um usar, aproveitar e melhorar.
 
 Selenium reúne criadores de navegadores, engenheiros e entusiastas
@@ -160,10 +160,10 @@ fun main() {
 
 
 
-See the [Overview]({{< ref "/overview.md" >}}) to check the different project 
+See the [Overview]({{< ref "overview" >}}) to check the different project 
 components and decide if Selenium is the right tool for you.
 
-You should continue on to [Getting Started]({{< ref "/getting_started.md" >}})
+You should continue on to [Getting Started]({{< ref "webdriver/getting_started" >}})
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.
