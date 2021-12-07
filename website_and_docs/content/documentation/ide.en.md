@@ -3,7 +3,7 @@ title: "Selenium IDE"
 linkTitle: "IDE"
 weight: 10
 description: >
-The Selenium IDE is a browser extension that records and plays back a user's actions.
+    The Selenium IDE is a browser extension that records and plays back a user's actions.
 ---
 
 Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
