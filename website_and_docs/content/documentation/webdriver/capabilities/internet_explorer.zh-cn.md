@@ -1,121 +1,21 @@
 ---
-title: "Recursos específicos do Driver"
-linkTitle: "Recursos específicos do Driver"
-weight: 4
-aliases: ["/documentation/pt-br/driver_idiosyncrasies/driver_specific_capabilities/"]
+title: "Capabilities specific to Internet Explorer browser"
+linkTitle: "Internet Explorer"
+weight: 8
+needsTranslation: true
+description: >-
+    These capabilities are specific to Internet Explorer.
 ---
-
-## Firefox
-
-### Definindo recursos usando `FirefoxOptions`
-
-`FirefoxOptions` é a nova forma de definir recursos para o Navegador
-Firefox e geralmente deve ser usado em detrimento de DesiredCapabilities.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxOptions options = new FirefoxOptions();
-options.addPreference("network.proxy.type", 0);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-options = Options()
-options.headless = True
-driver = webdriver.Firefox(options=options)
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var options = new FirefoxOptions();
-options.Proxy.Kind = ProxyKind.Direct;
-var driver = new FirefoxDriver(options);
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-opts = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
-driver = Selenium::WebDriver.for(:firefox, options: opts)
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const firefox = require('selenium-webdriver/firefox');
-
-const options = new firefox.Options();
-options.headless();
-const driver = new Builder()
-    .forBrowser('firefox')
-    .setFirefoxOptions(options)
-    .build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val options = new FirefoxOptions()
-options.addPreference("network.proxy.type", 0)
-driver = RemoteWebDriver(options)
-  {{< /tab >}}
-{{< /tabpane >}}
-
-
-### Definindo um perfil personalizado
-
-É possível criar um perfil personalizado para o Firefox, conforme demonstrado abaixo.
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxProfile profile = new FirefoxProfile();
-FirefoxOptions options = new FirefoxOptions();
-options.setProfile(profile);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var options = new FirefoxOptions();
-var profile = new FirefoxProfile();
-options.Profile = profile;
-var driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
-driver = Selenium::WebDriver.for :firefox, options: options
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const firefox = require('selenium-webdriver/firefox');
-
-const options = new firefox.Options();
-let profile = '/path to custom profile';
-options.setProfile(profile);
-const driver = new Builder()
-    .forBrowser('firefox')
-    .setFirefoxOptions(options)
-    .build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val options = FirefoxOptions()
-options.profile = FirefoxProfile()
-driver = RemoteWebDriver(options)
-  {{< /tab >}}
-{{< /tabpane >}}
-
-## Internet Explorer
 
 ### fileUploadDialogTimeout
 
-Em alguns ambientes, o Internet Explorer pode expirar ao abrir a
-Caixa de Diálogo de upload de arquivo. O IEDriver tem um tempo limite padrão de 1000 ms, mas você
-pode aumentar o tempo limite usando o recurso fileUploadDialogTimeout.
+在某些环境中, 当打开文件上传对话框时, Internet Explorer可能会超时. IEDriver的默认超时为1000毫秒, 但您可以使用fileUploadDialogTimeout功能来增加超时时间.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
-WebDriver driver = new RemoteWebDriver(options);
+WebDriver driver = new RemoteWebDriver(options); 
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -124,7 +24,6 @@ options = webdriver.IeOptions()
 options.file_upload_dialog_timeout = 2000
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -144,7 +43,7 @@ const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().fileUploadDialogTimeout(2000);
 let driver = await Builder()
           .setIeOptions(options)
-          .build(); 
+          .build();  
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val options = InternetExplorerOptions()
@@ -155,16 +54,16 @@ val driver = RemoteWebDriver(options)
 
 ### ensureCleanSession
 
-Quando definido como `true`, este recurso limpa o _Cache,
-Histórico do navegador e cookies_ para todas as instâncias em execução
-do InternetExplorer, incluindo aquelas iniciadas manualmente
-ou pelo driver. Por padrão, é definido como `false`.
+设置为 `true`时, 
+此功能将清除InternetExplorer所有正在运行实例的
+ _缓存, 浏览器历史记录和Cookies_ 
+ (包括手动启动或由驱动程序启动的实例) .
+默认情况下，此设置为 `false`.
 
-Usar este recurso causará queda de desempenho quando
-iniciar o navegador, pois o driver irá esperar até que o cache
-seja limpo antes de iniciar o navegador IE.
+使用此功能将导致启动浏览器时性能下降, 
+因为驱动程序将等待直到缓存清除后再启动IE浏览器.   
 
-Esse recurso aceita um valor booleano como parâmetro.
+此功能接受一个布尔值作为参数.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -179,7 +78,6 @@ options = webdriver.IeOptions()
 options.ensure_clean_session = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -210,11 +108,12 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreZoomSetting
 
-O driver do InternetExplorer espera que o nível de zoom do navegador seja de 100%,
-caso contrário, o driver lançará uma exceção. Este comportamento padrão
-pode ser desativado definindo _ignoreZoomSetting_ como _true_.
+InternetExplorer驱动程序期望浏览器的缩放级别为100%,
+否则驱动程序将可能抛出异常.
+通过将 _ignoreZoomSetting_ 设置为 _true_,
+可以禁用此默认行为.
 
-Esse recurso aceita um valor booleano como parâmetro.
+此功能接受一个布尔值作为参数. 
  
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -229,7 +128,6 @@ options = webdriver.IeOptions()
 options.ignore_zoom_level = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -260,21 +158,21 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreProtectedModeSettings
 
-Se deve ignorar a verificação do _Modo protegido_ durante o lançamento
-uma nova sessão do IE.
+启动新的IE会话时是否跳过 _保护模式_ 检查.
 
-Se não for definido e as configurações do _Modo protegido_ não forem iguais para
-todas as zonas, uma exceção será lançada pelo driver.
+如果未设置, 
+并且所有区域的 _保护模式_ 设置都不同, 
+则驱动程序将可能引发异常.
 
-Se a capacidade for definida como `true`, os testes podem
-tornar-se instáveis, não responderem ou os navegadores podem travar.
-No entanto, esta ainda é de longe a segunda melhor escolha,
-e a primeira escolha *sempre* deve ser
-definir as configurações do Modo protegido de cada zona manualmente.
-Se um usuário estiver usando esta propriedade,
-apenas um "melhor esforço" no suporte será dado.
+如果将功能设置为 `true`, 
+则测试可能会变得不稳定, 无响应, 或者浏览器可能会挂起.
+但是, 到目前为止, 
+这仍然是第二好的选择, 
+并且第一选择应该 *始终* 是手动实际设置每个区域的保护模式设置.
+如果用户正在使用此属性，
+则只会给予 "尽力而为" 的支持.
 
-Esse recurso aceita um valor booleano como parâmetro.
+此功能接受一个布尔值作为参数. 
  
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -289,7 +187,6 @@ options = webdriver.IeOptions()
 options.ignore_protected_mode_settings = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -320,10 +217,10 @@ val driver = RemoteWebDriver(options)
 
 ### silent
 
-Quando definido como `true`, esse recurso suprime a
-saída de diagnóstico do IEDriverServer.
+设置为 `true`时, 
+此功能将禁止IEDriverServer的诊断输出.
 
-Esse recurso aceita um valor booleano como parâmetro.
+此功能接受一个布尔值作为参数. 
  
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -338,7 +235,6 @@ options = webdriver.IeOptions()
 options.set_capability("silent", True)
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -349,7 +245,7 @@ options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Por favor inclua um PR para adicionar uma amostra de código
+    # Please raise a PR to add code sample
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
@@ -389,22 +285,26 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Opções de linha de comando do IE
+### IE 命令行选项
 
-O Internet Explorer inclui várias opções de linha de comando
-que permitem solucionar problemas e configurar o navegador.
+Internet Explorer包含几个命令行选项, 
+使您可以进行故障排除和配置浏览器.
 
-Os seguintes pontos descrevem algumas opções de linha de comando com suporte
+下面介绍了一些受支持的命令行选项
 
-* _-private_: Usado para iniciar o IE no modo de navegação privada. Isso funciona para o IE 8 e versões posteriores.
+* _-private_ : 用于在私有浏览模式下启动IE.
+这适用于IE 8和更高版本.
 
-* _-k_: Inicia o Internet Explorer no modo quiosque.
-O navegador é aberto em uma janela maximizada que não exibe a barra de endereço, os botões de navegação ou a barra de status.
+* _-k_ : 在kiosk模式下启动Internet Explorer. 
+浏览器在一个最大化的窗口中打开, 
+该窗口不显示地址栏, 导航按钮或状态栏.
 
-* _-extoff_: Inicia o IE no modo sem add-on.
-Esta opção é usada especificamente para solucionar problemas com complementos do navegador. Funciona no IE 7 e versões posteriores.
+* _-extoff_ : 在无附加模式下启动IE.
+此选项专门用于解决浏览器加载项问题.
+在IE 7和更高版本中均可使用.
 
-Nota: __forceCreateProcessApi__ deve ser habilitado para que os argumentos da linha de comando funcionem.
+注意: __forceCreateProcessApi__ 
+应该启用命令行参数才能正常工作.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -436,7 +336,6 @@ options.add_argument('-private')
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -466,7 +365,6 @@ options.add_argument('-k')
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navegar para URL
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure
@@ -508,11 +406,11 @@ fun main() {
 
 ### forceCreateProcessApi
 
-Força a inicialização do Internet Explorer
-usando a API CreateProcess. O valor padrão é falso.
+强制使用CreateProcess API启动Internet Explorer.
+默认值为false. 
 
-Para IE 8 e superior, esta opção requer que
-o valor de registro "TabProcGrowth" seja definido como 0.
+对于IE 8及更高版本, 
+此选项要求将 "TabProcGrowth" 注册表值设置为0.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -542,7 +440,6 @@ options = webdriver.IeOptions()
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -570,7 +467,6 @@ options.force_create_process_api = true
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navegar para Url
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure

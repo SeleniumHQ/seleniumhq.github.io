@@ -2,6 +2,7 @@
 title: "安装 Selenium 库"
 linkTitle: "安装 Selenium 库"
 weight: 1
+needsTranslation: true
 description: >
   为您喜爱的编程语言设置Selenium库.
 aliases: [
