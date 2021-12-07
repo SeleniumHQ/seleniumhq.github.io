@@ -2,6 +2,7 @@
 title: "Seleniumライブラリのインストール"
 linkTitle: "Seleniumライブラリのインストール"
 weight: 1
+needsTranslation: true
 description: >
   Setting up the Selenium library for your favourite programming language.
 aliases: [
@@ -9,16 +10,6 @@ aliases: [
 "/ja/documentation/getting_started/installing_selenium_libraries/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
