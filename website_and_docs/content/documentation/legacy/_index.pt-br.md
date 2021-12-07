@@ -1,7 +1,7 @@
 ---
 title: "Legado"
 linkTitle: "Legado"
-weight: 12
+weight: 14
 description: >
   Nesta seção você pode encontrar toda a documentação relacionada aos componentes legados do Selenium.
   Isso deve ser mantido puramente por razões históricas e não como um incentivo para o uso obsoleto

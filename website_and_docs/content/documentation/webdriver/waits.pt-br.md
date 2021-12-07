@@ -1,7 +1,7 @@
 ---
 title: "Esperas"
 linkTitle: "Esperas"
-weight: 4
+weight: 12
 aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 
@@ -95,15 +95,15 @@ sobre elementos ou eventos que disparam de forma assíncrona
 sem esperar explicitamente - ou bloquear - nesses eventos.
 
 Felizmente, o conjunto normal de instruções disponível na interface
-[_WebElement _]({{< ref "/web_element.md" >}}) - tal
+[_WebElement _]({{< ref "elements" >}}) - tal
   como _WebElement.click_ e _WebElement.sendKeys_ — são
   garantidamente síncrono,
   em que as chamadas de função não retornarão
   (ou o retorno de chamada não será acionado em linguagens de estilo de
   retorno de chamada) até que o comando seja concluído no navegador.
   As APIs avançadas de interação com o usuário,
-  [_Keyboard_]({{< ref "/keyboard.md" >}})
-  e [_Mouse_]({{< ref "/mouse_and_keyboard_actions_in_detail.md">}}),
+  [_Keyboard_]({{< ref "actions_api/keyboard.md" >}})
+  e [_Mouse_]({{< ref "actions_api/mouse.md">}}),
   são exceções, pois são explicitamente pretendidas como
   comandos assíncronos “faça o que eu digo”.
 

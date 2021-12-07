@@ -1,7 +1,7 @@
 ---
 title: "Recursos específicos do Driver"
 linkTitle: "Recursos específicos do Driver"
-weight: 2
+weight: 4
 aliases: ["/documentation/pt-br/driver_idiosyncrasies/driver_specific_capabilities/"]
 ---
 
