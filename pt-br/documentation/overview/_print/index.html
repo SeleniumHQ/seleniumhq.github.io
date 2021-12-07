@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/pt-br/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Português (Brasileiro)</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/overview/>English</a>
 <a class=dropdown-item href=/zh-cn/documentation/overview/>中文简体</a>
 <a class=dropdown-item href=/ja/documentation/overview/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/overview/>Return to the regular view of this page</a>.</p></div><h1 class=title>Overview</h1><div class=lead>Is Selenium for you? See an overview of the different project components.</div><ul><li>1: <a href=#pg-6fdc0c5f7e79e3952a2a60378cb335e5>A Deeper Look</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/overview/>Return to the regular view of this page</a>.</p></div><h1 class=title>Overview</h1><div class=lead>Is Selenium for you? See an overview of the different project components.</div><ul><li>1: <a href=#pg-68f6deb0243c535972e6625993aae9a2>Entendendo os componentes</a></li><li>2: <a href=#pg-508f19d5c8da38c831dfdcd8b21fabc4>A Deeper Look</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><p>Selenium não é só uma ferramenta ou API,
@@ -35,7 +35,38 @@ quando os casos de teste são acionados, eles são automaticamente
 executados pela extremidade remota.</p><p>Após o desenvolvimento dos testes WebDriver, você pode enfrentar
 a necessidade de executar seus testes em vários navegadores e
 combinações de sistemas operacionais.
-É aqui que o <a href=/pt-br/documentation/grid/>Grid</a> entra em cena.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-6fdc0c5f7e79e3952a2a60378cb335e5>1 - A Deeper Look</h1><div class=lead>Selenium é um projeto abrangente para uma gama de ferramentas e bibliotecas que permitem e suportam a automação de navegadores da web.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+É aqui que o <a href=/pt-br/documentation/grid/>Grid</a> entra em cena.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-68f6deb0243c535972e6625993aae9a2>1 - Entendendo os componentes</h1><p>Construir um conjunto de testes usando WebDriver exigirá que você entenda e
+use efetivamente uma série de componentes diferentes. Como com tudo em
+software, pessoas diferentes usam termos diferentes para a mesma ideia. Abaixo está
+uma análise de como os termos são usados nesta descrição.</p><h3 id=terminologia>Terminologia</h3><ul><li><strong>API:</strong> interface de programação de aplicativo. Este é o conjunto de &ldquo;comandos&rdquo; que
+você usa para manipular o WebDriver.</li><li><strong>Biblioteca:</strong> um módulo de código que contém as APIs e o código necessário
+para implementá-los. As bibliotecas são específicas para cada linguagem, por exemplo arquivos
+.jar para Java, arquivos .dll para .NET, etc.</li><li><strong>Driver:</strong> responsável por controlar o navegador atual. A maioria dos drivers
+são criados pelos próprios fornecedores de navegadores. Os drivers são geralmente
+módulos executáveis ​​que são executados no sistema com o próprio navegador,
+não no sistema que está executando o conjunto de testes. (Embora esses possam ser
+mesmo sistema.) NOTA: <em>Algumas pessoas se referem aos drivers como proxies.</em></li><li><strong>Framework:</strong> uma biblioteca adicional usada como suporte para suítes do WebDriver.</li><li>Essas estruturas podem ser estruturas de teste, como JUnit ou NUnit.
+Eles também podem ser estruturas que suportam recursos de linguagem natural, como
+como Cucumber ou Robotium. Frameworks também podem ser escritos e usados ​​para
+coisas como manipulação ou configuração do sistema em teste,
+criação de dados, oráculos de teste, etc.</li></ul><h3 id=as-partes-e-peças>As partes e peças</h3><p>No mínimo, o WebDriver se comunica com um navegador por meio de um driver. Comunicação
+é bidirecional: o WebDriver passa comandos para o navegador por meio do driver e
+recebe informações de volta pela mesma rota.</p><figure class="img-responsive text-center"><img src=/images/documentation/webdriver/basic_comms.png alt="Basic Communication"></figure><p>O driver é específico para o navegador, como ChromeDriver para Google
+Chrome / Chromium, GeckoDriver para Mozilla Firefox, etc. O driver é
+executado no mesmo sistema do navegador. Este pode, ou não ser, o mesmo sistema onde
+os próprios testes estão sendo executados.</p><p>Este exemplo simples acima é comunicação <em>direta</em>. Comunicação para o
+navegador também pode ser comunicação <em>remota</em> através do servidor Selenium ou
+RemoteWebDriver. RemoteWebDriver roda no mesmo sistema que o driver
+e o navegador.</p><figure class="img-responsive text-center"><img src=/images/documentation/webdriver/remote_comms.png alt="Remote Communication"></figure><p>A comunicação remota também pode ocorrer usando Selenium Server ou Selenium
+Grid, que, por sua vez, fala com o driver no sistema host</p><figure class="img-responsive text-center"><img src=/images/documentation/webdriver/remote_comms_server.png alt="Remote Communication with Grid"></figure><h2 id=onde-frameworks-se-encaixam>Onde frameworks se encaixam</h2><p>O WebDriver tem um trabalho e apenas um trabalho: comunicar-se com o navegador por meio de qualquer um
+dos métodos acima. O WebDriver não sabe nada sobre testes: ele não
+sabe como comparar coisas, afirmar passa ou falha, e certamente não sabe
+uma coisa sobre relatórios ou gramática Dado / Quando / Então.</p><p>É aqui que vários frameworks entram em cena. No mínimo, você precisará de um framework de
+teste que corresponde às linguagens, por exemplo, NUnit para .NET, JUnit
+para Java, RSpec para Ruby, etc.</p><p>O framework de teste é responsável por rodar e executar seu WebDriver
+e etapas relacionadas em seus testes. Como tal, você pode pensar nele parecendo a imagem seguinte.</p><figure class="img-responsive text-center"><img src=/images/documentation/webdriver/test_framework.png alt="Estrutura de Teste"></figure><p>Frameworks/ferramentas de linguagem natural, como Cucumber, podem existir como parte desse
+framework de teste na figura acima, ou eles podem envolver o framework de teste
+inteiramente em sua própria implementação.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-508f19d5c8da38c831dfdcd8b21fabc4>2 - A Deeper Look</h1><div class=lead>Selenium é um projeto abrangente para uma gama de ferramentas e bibliotecas que permitem e suportam a automação de navegadores da web.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><h3 id=selenium-controla-navegadores>Selenium controla navegadores</h3><p><em>Selenium</em> é muitas coisas
