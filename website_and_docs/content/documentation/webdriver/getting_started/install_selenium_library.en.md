@@ -14,41 +14,25 @@ First you need to install the Selenium bindings for your automation project.
 The installation process for libraries depends on the language you choose to use.
 
 ### Java
-Installation of Selenium libraries for Java can be done using Maven.
-Add the _selenium-java_ dependency in your project pom.xml:
+Installation of Selenium libraries for Java is accomplished using a build tool.
+You can find the latest version on [Selenium Downloads](/downloads/) and see all available versions on
+[Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
+
+For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 
 ```xml
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.0.0</version>
 </dependency>
 ```
 
-The _selenium-java_ dependency supports running your automation
-project with all Selenium supported browsers. If you want to run tests
-only in a specific browser, you can add the dependency for that browser
-in your _pom.xml_ file.
-For example, you should add following dependency in your _pom.xml_
-file to run your tests only in Firefox:
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file: 
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
-```
-   
-In a similar manner, if you want to run tests only in Chrome,
-you should add the following dependency:
-
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
 ```
 
 ### Python
@@ -80,6 +64,12 @@ Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
 gem install selenium-webdriver
+```
+
+Or add it to your `Gemfile`:
+
+```rb
+gem 'selenium-webdriver', '~> 4.0'
 ```
 
 ### JavaScript

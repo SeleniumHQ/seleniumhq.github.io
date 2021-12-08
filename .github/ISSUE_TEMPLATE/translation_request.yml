@@ -1,6 +1,6 @@
-name: 🇧🇷 Translation Request
+name: 🌍 Translation Request
 description: Request a translation
-title: "[🇧🇷 Translation]: "
+title: "[🌍 Translation]: "
 labels: [translate-ja, translate-pt-br, translate-zh-cn]
 body:
   - type: markdown

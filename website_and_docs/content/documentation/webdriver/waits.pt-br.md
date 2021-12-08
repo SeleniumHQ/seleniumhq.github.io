@@ -84,7 +84,7 @@ assert(element.text == "Hello from JavaScript!")
 {{< /tabpane >}}
 
 O problema aqui é que a
-[estratégia de carregamento de página padrão]({{< ref "/page_loading_strategy.md" >}})
+[estratégia de carregamento de página padrão]({{< ref "capabilities/shared#pageloadstrategy" >}})
 usado no WebDriver escuta o `document.readyState`
 para mudar para `"complete"` antes de retornar da chamada para _navigate_.
 Porque o elemento `p` é
