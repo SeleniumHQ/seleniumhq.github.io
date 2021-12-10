@@ -63,11 +63,8 @@ ChromeDriver driver = new ChromeDriver();
 # Import code:
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Use the `install()` method to set `executabe_path` in a new `Service` instance:
-service = Service(executable_path=ChromeDriverManager().install())
-
-# Pass in the `Service` instance with the `service` keyword: 
-driver = webdriver.Chrome(service=service)
+# Use the `install()` method to set `executabe_path` in a new `Chrome` instance:
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
