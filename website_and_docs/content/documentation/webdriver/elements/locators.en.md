@@ -31,11 +31,9 @@ Selenium provides support for these 8 traditional location strategies in WebDriv
 | tag name          | Locates elements whose tag name matches the search value |
 | xpath             | Locates elements matching an XPath expression |
 
-
-{{% pageinfo color="warning" %}}
-Coming soon:
-* Examples of selecting elements from HTML using each locator strategy
-{{% /pageinfo %}}
+{{< alert-code >}}
+of selecting elements using each locator strategy
+{{< /alert-code >}}
 
 ## Relative Locators
 

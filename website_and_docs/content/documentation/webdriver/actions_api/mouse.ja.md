@@ -1,7 +1,8 @@
 ---
 title: "マウスアクションの詳細"
 linkTitle: "マウスアクションの詳細"
-weight: 3
+weight: 4
+needsTranslation: true
 description: >
   マウスは、マウスイベントを表します。
   マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
