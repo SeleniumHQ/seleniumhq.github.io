@@ -1,17 +1,21 @@
 ---
-title: "同选择元素一起工作"
-linkTitle: "同选择元素一起工作"
+title: "選択要素の操作"
+linkTitle: "選択要素の操作"
 weight: 10
+needsTranslation: true
 aliases: [
-"/documentation/zh-cn/support_packages/working_with_select_elements/",
-"/zh-cn/documentation/support_packages/working_with_select_elements/"
+"/documentation/ja/support_packages/working_with_select_elements/",
+"/ja/documentation/support_packages/working_with_select_elements/",
+"/ja/documentation/webdriver/elements/select_elements/"
 ]
+description: >
+  Select lists have special behaviors compared to other elements.
 ---
- 
-选择元素可能需要大量样板代码才能自动化.
-为了减少这种情况并使您的测试更干净, 在Selenium的support包中有一个
-`Select` 类.
-要使用它，您将需要以下导入语句:
+
+
+一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。
+これを減らしてテストをきれいにするために、Seleniumサポートパッケージに `Select` クラスがあります。
+それを使用するには、次のimportステートメントが必要です。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -34,7 +38,7 @@ import org.openqa.selenium.support.ui.Select
   {{< /tab >}}
 {{< /tabpane >}}
 
-然后，您能够参考 `<select>` 元素，基于WebElement创建一个Select对象。 
+そして、 `<select>` 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -62,8 +66,8 @@ val selectObject = new Select(selectElement)
   {{< /tab >}}
 {{< /tabpane >}}
 
-Select对象现在将为您提供一系列命令，使您可以与 `<select>` 元素进行交互.
-首先，有多种方法可以从 `<select>` 元素中选择一个选项.
+Selectオブジェクトは、 `<select>` 要素とやり取りできる一連のコマンドを提供します。
+まず、 `<select>` 要素からオプションを選択するさまざまな方法があります。
 
 ```html
 <select>
@@ -73,7 +77,7 @@ Select对象现在将为您提供一系列命令，使您可以与 `<select>` �
 </select>
 ```
 
-有三种方法可以从上述元素中选择第一个选项:
+上記の要素から最初のオプションを選択するには、3つの方法があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -131,7 +135,7 @@ selectObject.selectByVisibleText("Bread")
   {{< /tab >}}
 {{< /tabpane >}}
 
-然后，您可以检视所有被选择的选项:
+以下を使用して、選択されているオプションを確認できます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -174,8 +178,7 @@ val firstSelectedOption = selectObject.firstSelectedOption
   {{< /tab >}}
 {{< /tabpane >}}
 
-
-或者您可能只对 `<select>` 元素包含哪些 `<option>` 元素感兴趣:
+または、 `<select>` 要素に含まれる `<option>` 要素に興味があるかもしれません。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -203,7 +206,7 @@ val allAvailableOptions = selectObject.options
   {{< /tab >}}
 {{< /tabpane >}}
 
-如果要取消选择任何元素，现在有四个选项:
+要素の選択を解除する場合は、4つの選択肢があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -276,8 +279,8 @@ selectObject.deselectAll()
   {{< /tab >}}
 {{< /tabpane >}}
 
-最后，一些 `<select>` 元素允许您选择多个选项.
-您可以通过使用以下命令确定您的 `<select>` 元素是否允许多选:
+最後に、一部の `<select>` 要素を使用すると、複数のオプションを選択できます。
+`<select>` 要素がこれらの1つであるかどうかを調べるには、下記のように記述します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
