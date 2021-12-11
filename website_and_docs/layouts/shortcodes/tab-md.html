@@ -1,0 +1,14 @@
+<!--https://github.com/google/docsy/commit/51a208b49d876ae0995d4b18e6779374b35ff2fa-->
+
+{{ $tabID := .Get "ID" }}
+{{ $paneID := print (.Parent.Get "paneID") $tabID }}
+{{ $tab := (print "tab" $tabID) }}
+{{ if eq $tabID "1" }}
+<div class="tab-pane fade show active" id="tab{{ $paneID }}" role="tabpanel" aria-labelledby="nav-{{ $tab }}">
+  {{ $.Inner | markdownify }}
+</div>
+{{ else }}
+<div class="tab-pane fade" id="tab{{ $paneID }}" role="tabpanel" aria-labelledby="nav-{{ $tab }}">
+  {{ $.Inner | markdownify }}
+</div>
+{{ end }}

@@ -14,7 +14,8 @@ aliases: [
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
 
-### Java
+{{< tabpane-md  paneID="2" tabCount="6" headerTab1="Java" headerTab2="Python" headerTab3="CSharp" headerTab4="Ruby" headerTab5="JavaScript" headerTab6="Kotlin" >}}
+{{< tab-md ID="1" >}}
 JavaへのSeleniumライブラリのインストールはMavenを使います。
 プロジェクトのpom.xmlに _selenium-java_ の依存関係を追加してください。
 
@@ -48,7 +49,8 @@ _selenium-java_ 依存関係は、Seleniumがサポートする全てのブラ�
 </dependency>
 ```
 
-### Python
+{{< /tab-md >}}
+{{< tab-md ID="2" >}}
 PythonへのSeleniumライブラリのインストールはpipを使います。
 
 ```shell
@@ -62,7 +64,8 @@ pip install selenium
 python setup.py install
 ```
 
-### C#
+{{< /tab-md >}}
+{{< tab-md ID="3" >}}
 C#へのSeleniumライブラリのインストールはNuGetを使います。
 
 ```shell
@@ -72,21 +75,25 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
+{{< /tab-md >}}
+{{< tab-md ID="4" >}}
 RubyへのSeleniumライブラリのインストールはgemを使います。
 
 ```shell
 gem install selenium-webdriver
 ```
 
-## _JavaScript_
+{{< /tab-md >}}
+{{< tab-md ID="5" >}}
 JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell
 npm install selenium-webdriver
 ```
 
-### Kotlin
-Due to missing native language bindings for Kotlin, you have to use the 
+{{< /tab-md >}}
+{{< tab-md ID="6" >}}
+Due to missing native language bindings for Kotlin, you have to use the
 Java Bindings, e.g. with maven [Java](#java)
 
+{{< /tabpane-md >}}

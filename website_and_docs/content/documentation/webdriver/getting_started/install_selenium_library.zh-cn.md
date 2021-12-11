@@ -14,8 +14,8 @@ aliases: [
 首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。
 
-### Java
-
+{{< tabpane-md  paneID="2" tabCount="6" headerTab1="Java" headerTab2="Python" headerTab3="CSharp" headerTab4="Ruby" headerTab5="JavaScript" headerTab6="Kotlin" >}}
+{{< tab-md ID="1" >}}
 可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
@@ -49,8 +49,8 @@ _selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自
 </dependency>
 ```
 
-### Python
-
+{{< /tab-md >}}
+{{< tab-md ID="2" >}}
 可以使用 pip 安装 Python 的 Selenium 库：
 
 ```shell
@@ -64,8 +64,8 @@ pip install selenium
 python setup.py install
 ```
 
-### C#
-
+{{< /tab-md >}}
+{{< tab-md ID="3" >}}
 可以使用 NuGet 安装 C# 的 Selenium 库：
 
 ```shell
@@ -75,21 +75,24 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
-
+{{< /tab-md >}}
+{{< tab-md ID="4" >}}
 可以使用 gem 安装 Ruby 的 Selenium 库：
 
 ```shell
 gem install selenium-webdriver
 ```
 
-### JavaScript
-
+{{< /tab-md >}}
+{{< tab-md ID="5" >}}
 可以使用 npm 安装 JavaScript 的 Selenium 库
 
 ```shell
 npm install selenium-webdriver
 ```
 
-### Kotlin
+{{< /tab-md >}}
+{{< tab-md ID="6" >}}
 由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)
+
+{{< /tabpane-md >}}

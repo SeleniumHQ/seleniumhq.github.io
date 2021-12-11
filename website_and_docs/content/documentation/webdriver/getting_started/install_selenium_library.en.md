@@ -10,10 +10,10 @@ aliases: [
 ]
 ---
 
-First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.
+The installation process for libraries depends on the language you choose to use:
 
-### Java
+{{< tabpane-md  paneID="2" tabCount="6" headerTab1="Java" headerTab2="Python" headerTab3="CSharp" headerTab4="Ruby" headerTab5="JavaScript" headerTab6="Kotlin" >}}
+{{< tab-md ID="1" >}}
 Installation of Selenium libraries for Java is accomplished using a build tool.
 You can find the latest version on [Selenium Downloads](/downloads/) and see all available versions on
 [Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
@@ -28,14 +28,14 @@ For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 </dependency>
 ```
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file: 
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
 ```text
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
 ```
-
-### Python
+{{< /tab-md >}}
+{{< tab-md ID="2" >}}
 Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
@@ -49,7 +49,8 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 python setup.py install
 ```
 
-### C#
+{{< /tab-md >}}
+{{< tab-md ID="3" >}}
 Installation of Selenium libraries for C# can be done using NuGet:
 
 ```shell
@@ -58,8 +59,8 @@ Install-Package Selenium.WebDriver
 # or using .Net CLI
 dotnet add package Selenium.WebDriver
 ```
-
-### Ruby
+{{< /tab-md >}}
+{{< tab-md ID="4" >}}
 Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
@@ -72,13 +73,17 @@ Or add it to your `Gemfile`:
 gem 'selenium-webdriver', '~> 4.0'
 ```
 
-### JavaScript
+{{< /tab-md >}}
+{{< tab-md ID="5" >}}
 Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-### Kotlin
-Due to missing native language bindings for Kotlin, you have to use the 
+{{< /tab-md >}}
+{{< tab-md ID="6" >}}
+Due to missing native language bindings for Kotlin, you have to use the
 Java Bindings, e.g. with maven [Java](#java)
+{{< /tab-md >}}
+{{< /tabpane-md >}}

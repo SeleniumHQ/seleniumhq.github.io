@@ -14,7 +14,8 @@ aliases: [
 Primeiro você precisa instalar as ligações Selenium para seu projeto de automação.
 O processo de instalação de bibliotecas depende da linguagem que você escolher usar.
 
-### Java
+{{< tabpane-md  paneID="2" tabCount="6" headerTab1="Java" headerTab2="Python" headerTab3="CSharp" headerTab4="Ruby" headerTab5="JavaScript" headerTab6="Kotlin" >}}
+{{< tab-md ID="1" >}}
 A instalação de bibliotecas Selenium para Java pode ser feita usando Maven.
 Adicione a dependência selenium-java em seu pom.xml:
 
@@ -26,7 +27,7 @@ Adicione a dependência selenium-java em seu pom.xml:
 </dependency>
 ```
 
-A dependência _selenium-java_ suporta a execução de sua automação com todos os navegadores 
+A dependência _selenium-java_ suporta a execução de sua automação com todos os navegadores
 com suporte Selenium. Se você quiser fazer testes
 apenas em um navegador específico, você pode adicionar a dependência para esse navegador
 em seu arquivo _pom.xml_.
@@ -40,7 +41,7 @@ arquivo para executar seus testes apenas no Firefox:
   <version>4.X</version>
 </dependency>
 ```
-   
+
 De maneira semelhante, se você deseja executar testes apenas no Chrome,
 você deve adicionar a seguinte dependência:
 
@@ -51,8 +52,8 @@ você deve adicionar a seguinte dependência:
   <version>4.X</version>
 </dependency>
 ```
-
-### Python
+{{< /tab-md >}}
+{{< tab-md ID="2" >}}
 A instalação de bibliotecas Selenium para Python pode ser feita usando pip:
 
 ```shell
@@ -66,7 +67,8 @@ Como alternativa, você pode baixar o [arquivo de origem do PyPI](https://pypi.o
 python setup.py install
 ```
 
-### C#
+{{< /tab-md >}}
+{{< tab-md ID="3" >}}
 A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:
 
 ```shell
@@ -76,20 +78,22 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
+{{< /tab-md >}}
+{{< tab-md ID="4" >}}
 A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-### JavaScript
+{{< /tab-md >}}
+{{< tab-md ID="5" >}}
 A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:
 
 ```shell
 npm install selenium-webdriver
 ```
-
-### Kotlin
+{{< /tab-md >}}
+{{< tab-md ID="6" >}}
 Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)
-
+{{< /tabpane-md >}}
