@@ -3,7 +3,7 @@ title: "IE Driver Server"
 linkTitle: "IE Driver Server"
 weight: 8
 description: >
-    The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+    Internet Explorer Driverは、WebDriverの仕様を実装するスタンドアロンサーバーです。
 ---
 
 The `InternetExplorerDriver` is a standalone server which implements WebDriver's wire protocol.
