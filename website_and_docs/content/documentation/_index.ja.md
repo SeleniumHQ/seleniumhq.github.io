@@ -6,15 +6,6 @@ cascade:
 aliases: ["/documentation/ja/"]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群プロジェクトです。
 
 ユーザーとブラウザーのやり取りのエミュレーション、ブラウザーの割当を増強したり縮減する分散型サーバー、そしてすべてのメジャーなブラウザー用に置換可能なコードの実装を可能にする[W3C WebDriver 仕様](//www.w3.org/TR/webdriver/)インフラの提供します。
@@ -148,11 +139,13 @@ fun main() {
 
 
 
-See the [Overview]({{< ref "overview" >}}) to check the different project 
-components and decide if Selenium is the right tool for you.
+[概要]({{< ref "overview" >}})を参照して、さまざまなプロジェクトコンポーネントを確認し、
+Seleniumが適切なツールであるかどうかを判断してください。
 
-You should continue on to [Getting Started]({{< ref "webdriver/getting_started" >}})
-to understand how you can install Selenium and successfully use it as a test 
-automation tool, and scaling simple tests like this to run in large, distributed 
-environments on multiple browsers, on several different operating systems.
+[入門]({{< ref "webdriver/getting_started" >}})に進んで、
+Seleniumをインストールし、テスト自動化ツールとして正常に使用する方法を理解し、
+このような単純なテストをスケーリングして、複数のブラウザー、
+複数の異なるオペレーティングシステムの大規模な分散環境で実行する必要があります。
+
+
 
