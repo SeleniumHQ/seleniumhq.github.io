@@ -6,57 +6,37 @@ description: >
   The endpoints and payloads for the now-obsolete open source protocol that was the precursor to the W3C specification.
 ---
 
-
-# Introduction
+(previously located: https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol)
 
 All implementations of WebDriver that communicate with the browser, or a RemoteWebDriver server shall use a common wire protocol. This wire protocol defines a [RESTful web service](http://www.google.com?q=RESTful+web+service) using [JSON](http://www.json.org) over HTTP.
 
 The protocol will assume that the WebDriver API has been "flattened", but there is an expectation that client implementations will take a more Object-Oriented approach, as demonstrated in the existing Java API. The wire protocol is implemented in request/response pairs of "commands" and "responses".
 
-## Basic Terms and Concepts
+## Terms and Concepts
 
-<dl>
-<dt>
-<h4>Client</h4>
-</dt>
-<dd>The machine on which the WebDriver API is being used.<br>
-<br>
-</dd>
-<dt>
-<h4>Server</h4>
-</dt>
-<dd>The machine running the RemoteWebDriver. This term may also refer to a specific browser that implements the wire protocol directly, such as the FirefoxDriver or IPhoneDriver.<br>
-<br>
-</dd>
-<dt>
-<h4>Session</h4>
-</dt>
-<dd>The server should maintain one browser per session. Commands sent to a session will be directed to the corresponding browser.<br>
-<br>
-</dd>
-<dt>
-<h4>WebElement</h4>
-</dt>
-<dd>An object in the WebDriver API that represents a DOM element on the page.<br>
-<br>
-</dd>
-<dt>
-<h4>WebElement JSON Object</h4>
-</dt>
-<dd>The JSON representation of a WebElement for transmission over the wire. This object will have the following properties:<br>
-<br>
+### Client
+The machine on which the WebDriver API is being used.<br><br>
+
+### Session
+The machine running the RemoteWebDriver. This term may also refer to a specific browser that implements the wire protocol directly, such as the FirefoxDriver or IPhoneDriver.<br><br>
+
+The server should maintain one browser per session. Commands sent to a session will be directed to the corresponding browser.<br><br>
+
+### WebElement
+An object in the WebDriver API that represents a DOM element on the page.<br><br>
+
+### WebElement JSON Object
+The JSON representation of a WebElement for transmission over the wire. This object will have the following properties:<br><br>
+
+| **Key**    | **Type**      |   **Description**                    |
+|-------------|--------------------------|----------------------------|
+| ELEMENT     | string          | The opaque ID assigned to the element by the server. This ID should be used in all subsequent commands issued against the element. |
+
+### Capabilities JSON Object
+Not all server implementations will support every WebDriver feature. Therefore, the client and server should use JSON objects with the properties listed below when describing which features a session supports.
+<br><br>
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
-<tr><td> ELEMENT    </td><td> string      </td><td> The opaque ID assigned to the element by the server. This ID should be used in all subsequent commands issued against the element. </td></tr></tbody></table>
-
-</dd>
-
-<dt>
-<h4>Capabilities JSON Object</h4>
-</dt>
-<dd>Not all server implementations will support every WebDriver feature. Therefore, the client and server should use JSON objects with the properties listed below when describing which features a session supports.<br>
-<br>
-<table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
-<tr><td> browserName </td><td> string      </td><td> The name of the browser being used; should be one of <code>{chrome|firefox|htmlunit|internet explorer|iphone}</code>. </td></tr>
+<tr><td> browserName </td><td> string      </td><td> The name of the browser being used; should be one of <code> {android, chrome, firefox, htmlunit, internet explorer, iPhone, iPad, opera, safari}</code>. </td></tr>
 <tr><td> version    </td><td> string      </td><td> The browser version, or the empty string if unknown. </td></tr>
 <tr><td> platform   </td><td> string      </td><td> A key specifying which platform the browser is running on. This value should be one of <code>{WINDOWS|XP|VISTA|MAC|LINUX|UNIX}</code>. When requesting a new session, the client may specify <code>ANY</code> to indicate any available platform may be used. </td></tr>
 <tr><td> javascriptEnabled </td><td> boolean     </td><td> Whether the session supports executing user supplied JavaScript in the context of the current page. </td></tr>
@@ -71,27 +51,23 @@ The protocol will assume that the WebDriver API has been "flattened", but there 
 <tr><td> rotatable  </td><td> boolean     </td><td> Whether the session can rotate the current page's current layout between portrait and landscape orientations (only applies to mobile platforms). </td></tr>
 <tr><td> acceptSslCerts </td><td> boolean     </td><td> Whether the session should accept all SSL certs by default. </td></tr>
 <tr><td> nativeEvents </td><td> boolean     </td><td> Whether the session is capable of generating native events when simulating user input. </td></tr>
-<tr><td> proxy      </td><td> proxy object </td><td> Details of any proxy to use. If no proxy is specified, whatever the system's current or default state is used. The format is specified under Proxy JSON Object. </td></tr></tbody></table>
+<tr><td> proxy      </td><td> proxy object </td><td> Details of any proxy to use. If no proxy is specified, whatever the system's current or default state is used. The format is specified under Proxy JSON Object. </td></tr>
+<tr><td> unexpectedAlertBehaviour </td><td> string     </td><td> What the browser should do with an unhandled alert before throwing out the UnhandledAlertException. Possible values are "accept", "dismiss" and "ignore" </td></tr>
+<tr><td> elementScrollBehavior      </td><td> integer </td><td> Allows the user to specify whether elements are scrolled into the viewport for interaction to align with the top (0) or bottom (1) of the viewport. The default value is to align with the top of the viewport. Supported in IE and Firefox (since 2.36) </td></tr></tbody></table>
 
 
-</dd>
+### Desired Capabilities
+A Capabilities JSON Object sent by the client describing the capabilities a new session created by the server should possess. Any omitted keys implicitly indicate the corresponding capability is irrelevant. More at <a href='DesiredCapabilities.md'>DesiredCapabilities</a>.
+<br><br>
 
-<dt>
-<h4>Desired Capabilities</h4>
-</dt>
-<dd>A Capabilities JSON Object sent by the client describing the capabilities a new session created by the server should possess. Any omitted keys implicitly indicate the corresponding capability is irrelevant. More at <a href='DesiredCapabilities.md'>DesiredCapabilities</a>.</dd>
+### Actual Capabilities
+A Capabilities JSON Object returned by the server describing what features a session actually supports. 
+Any omitted keys implicitly indicate the corresponding capability is not supported.
+<br><br>
 
-<dt>
-<h4>Actual Capabilities</h4>
-</dt>
-<dd>A Capabilities JSON Object returned by the server describing what features a session actually supports. Any omitted keys implicitly indicate the corresponding capability is not supported.</dd>
+### Cookie JSON Object
+A JSON object describing a Cookie.<br><br>
 
-<dt>
-<h4>Cookie JSON Object</h4>
-</dt>
-<dd>
-A JSON object describing a Cookie.<br>
-<br>
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> name       </td><td> string      </td><td> The name of the cookie. </td></tr>
 <tr><td> value      </td><td> string      </td><td> The cookie value.  </td></tr>
@@ -101,26 +77,21 @@ A JSON object describing a Cookie.<br>
 <tr><td> httpOnly   </td><td> boolean     </td><td> (Optional) Whether the cookie is an httpOnly cookie.<sup>1</sup> </td></tr>
 <tr><td> expiry     </td><td> number      </td><td> (Optional) When the cookie expires, specified in seconds since midnight, January 1, 1970 UTC.<sup>1</sup> </td></tr></tbody></table>
 
-<sup>1</sup> When returning Cookie objects, the server should only omit an optional field if it is incapable of providing the information.</dd>
+<sup>1</sup> When returning Cookie objects, the server should only omit an optional field if it is incapable of providing the information.
+<br><br>
 
-<dt>
-<h4>Log Entry JSON Object</h4>
-</dt>
-<dd>
-A JSON object describing a log entry.<br>
-<br>
+### Log Entry JSON Object
+A JSON object describing a log entry.
+<br><br>
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> timestamp  </td><td> number      </td><td> The timestamp of the entry. </td></tr>
 <tr><td> level      </td><td> string      </td><td> The log level of the entry, for example, "INFO" (see <a href='#Log_Levels.md'>log levels</a>). </td></tr>
 <tr><td> message    </td><td> string      </td><td> The log message.   </td></tr>
-</dd></tbody></table>
+</tbody></table>
 
-<dt>
-<h4>Log Levels</h4>
-</dt>
-<dd>
-Log levels in order, with finest level on top and coarsest level at the bottom.<br>
-<br>
+### Log Levels
+Log levels in order, with finest level on top and coarsest level at the bottom.
+<br><br>
 <table><thead><th> <b>Level</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> ALL          </td><td> All log messages. Used for fetching of logs and configuration of logging. </td></tr>
 <tr><td> DEBUG        </td><td> Messages for debugging. </td></tr>
@@ -128,15 +99,11 @@ Log levels in order, with finest level on top and coarsest level at the bottom.<
 <tr><td> WARNING      </td><td> Messages corresponding to non-critical problems. </td></tr>
 <tr><td> SEVERE       </td><td> Messages corresponding to critical errors. </td></tr>
 <tr><td> OFF          </td><td> No log messages. Used for configuration of logging. </td></tr>
-</dd></tbody></table>
+</tbody></table>
 
-<dt>
-<h4>Log Type</h4>
-</dt>
-<dd>
-The table below lists common log types. Other log types, for instance, for<br>
-performance logging may also be available.<br>
-<br>
+### Log Type
+The table below lists common log types. Other log types, for instance, for performance logging may also be available.
+<br><br>
 <table><thead><th> <b>Log Type</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> client          </td><td> Logs from the client. </td></tr>
 <tr><td> driver          </td><td> Logs from the webdriver. </td></tr>
@@ -144,12 +111,9 @@ performance logging may also be available.<br>
 <tr><td> server          </td><td> Logs from the server. </td></tr>
 </dd></tbody></table>
 
-<dt>
-<h3>Proxy JSON Object</h3>
-</dt>
-<dd>
-A JSON object describing a Proxy configuration.<br>
-<br>
+### Proxy JSON Object
+A JSON object describing a Proxy configuration.
+<br><br>
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> proxyType  </td><td> string      </td><td> (Required) The type of proxy being used. Possible values are: <b>direct</b> - A direct connection - no proxy in use, <b>manual</b> - Manual proxy settings configured, e.g. setting a proxy for HTTP, a proxy for FTP, etc, <b>pac</b> - Proxy autoconfiguration from a URL, <b>autodetect</b> - Proxy autodetection, probably with WPAD, <b>system</b> - Use system settings </td></tr>
 <tr><td> proxyAutoconfigUrl </td><td> string      </td><td> (Required if proxyType == <b>pac</b>, Ignored otherwise) Specifies the URL to be used for proxy autoconfiguration. Expected format example: <a href='http://hostname.com:1234/pacfile'>http://hostname.com:1234/pacfile</a> </td></tr>
@@ -158,12 +122,9 @@ A JSON object describing a Proxy configuration.<br>
 <tr><td> socksPassword </td><td> string      </td><td> (Optional, Ignored if proxyType != <b>manual</b> and socksProxy is not set) Specifies SOCKS proxy password. </td></tr>
 <tr><td> noProxy    </td><td> string      </td><td> (Optional, Ignored if proxyType != <b>manual</b>) Specifies proxy bypass addresses. Format is driver specific. </td></tr></tbody></table>
 
-</dd>
-</dl>
+## Messages
 
-# Messages
-
-## Commands
+### Commands
 
 WebDriver command messages should conform to the [HTTP/1.1 request specification](http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5). Although the server may be extended to respond to other content-types, the wire protocol dictates that all commands accept a content-type of `application/json;charset=UTF-8`. Likewise, the message bodies for POST and PUT request must use an `application/json;charset=UTF-8` content-type.
 
@@ -173,7 +134,7 @@ GET /favorite/color/:name
 ```
 Given this mapping, the server should respond to GET requests sent to "/favorite/color/Jack" and "/favorite/color/Jill", with the variable `:name` set to "Jack" and "Jill", respectively.
 
-## Responses
+### Responses
 
 Command responses shall be sent as [HTTP/1.1 response messages](http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6). If the remote server must return a 4xx response, the response body shall have a Content-Type of text/plain and the message body shall be a descriptive message of the bad request. For all other cases, if a response includes a message body, it must have a Content-Type of application/json;charset=UTF-8 and will be a JSON object with the following properties:
 
@@ -183,7 +144,7 @@ Command responses shall be sent as [HTTP/1.1 response messages](http://www.w3.or
 | status  | number   | A status code summarizing the result of the command. A non-zero value indicates that the command failed. |
 | value   | `*`      | The response JSON value. |
 
-### Response Status Codes
+#### Response Status Codes
 
 The wire protocol will inherit its status codes from those used by the InternetExplorerDriver:
 
@@ -217,11 +178,11 @@ The wire protocol will inherit its status codes from those used by the InternetE
 
 The client should interpret a 404 Not Found response from the server as an "Unknown command" response. All other 4xx and 5xx responses from the server that do not define a status field should be interpreted as "Unknown error" responses.
 
-## Error Handling
+### Error Handling
 
 There are two levels of error handling specified by the wire protocol: invalid requests and failed commands.
 
-### Invalid Requests
+#### Invalid Requests
 
 All invalid requests should result in the server returning a 4xx HTTP response. The response Content-Type should be set to text/plain and the message body should be a descriptive error message. The categories of invalid requests are as follows:
 
@@ -248,7 +209,7 @@ All invalid requests should result in the server returning a 4xx HTTP response. 
 </dd>
 </dl>
 
-### Failed Commands
+#### Failed Commands
 
 If a request maps to a valid command and contains all of the expected parameters in the request body, yet fails to execute successfully, then the server should send a 500 Internal Server Error. This response should have a Content-Type of `application/json;charset=UTF-8` and the response body should be a well formed JSON response object.
 
@@ -270,7 +231,7 @@ Each JSON object in the stackTrace array must contain the following properties:
 | methodName | string   | The name of the method active in this frame, or the empty string if unknown/not applicable. |
 | lineNumber | number   | The line number in the original source file for the frame, or 0 if unknown. |
 
-# Resource Mapping
+## Resource Mapping
 
 Resources in the WebDriver REST service are mapped to individual URL patterns. Each resource may respond to one or more HTTP request methods. If a resource responds to a GET request, then it should also respond to HEAD requests. All resources should respond to OPTIONS requests with an `Allow` header field, whose value is a list of all methods that resource responds to.
 
@@ -287,9 +248,9 @@ Two resources may only be mapped to the same URL pattern if one of those resourc
 
 Given these mappings, the server should always route requests whose final path segment is active to the first resource. All other requests should be routed to second.
 
-# Command Reference
+## Command Reference
 
-## Command Summary
+### Command Summary
 
 | **HTTP Method** | **Path** | **Summary** |
 |:----------------|:---------|:------------|
@@ -393,9 +354,9 @@ Given these mappings, the server should always route requests whose final path s
 | GET             | [/session/:sessionId/application\_cache/status](#sessionsessionidapplication_cachestatus) | Get the status of the html5 application cache. |
 
 
-## Command Detail
+### Command Detail
 
-### /status
+#### /status
 
 <dl>
 <dd>
@@ -431,7 +392,7 @@ Query the server's current status.  The server should respond with a general "HT
 ---
 
 
-### /session
+#### /session
 
 <dl>
 <dd>
@@ -468,7 +429,7 @@ Create a new session. The server should attempt to create a session that most cl
 ---
 
 
-### /sessions
+#### /sessions
 
 <dl>
 <dd>
@@ -498,7 +459,7 @@ Returns a list of the currently active sessions. Each session will be returned a
 ---
 
 
-### /session/:sessionId
+#### /session/:sessionId
 
 <dl>
 <dd>
@@ -544,7 +505,7 @@ Returns a list of the currently active sessions. Each session will be returned a
 ---
 
 
-### /session/:sessionId/timeouts
+#### /session/:sessionId/timeouts
 
 <dl>
 <dd>
@@ -575,7 +536,7 @@ Configure the amount of time that a particular type of operation can execute for
 ---
 
 
-### /session/:sessionId/timeouts/async\_script
+#### /session/:sessionId/timeouts/async\_script
 
 <dl>
 <dd>
@@ -604,7 +565,7 @@ Configure the amount of time that a particular type of operation can execute for
 ---
 
 
-### /session/:sessionId/timeouts/implicit\_wait
+#### /session/:sessionId/timeouts/implicit\_wait
 
 <dl>
 <dd>
@@ -639,7 +600,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/window\_handle
+#### /session/:sessionId/window\_handle
 
 <dl>
 <dd>
@@ -674,7 +635,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/window\_handles
+#### /session/:sessionId/window\_handles
 
 <dl>
 <dd>
@@ -703,7 +664,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/url
+#### /session/:sessionId/url
 
 <dl>
 <dd>
@@ -767,7 +728,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/forward
+#### /session/:sessionId/forward
 
 <dl>
 <dd>
@@ -796,7 +757,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/back
+#### /session/:sessionId/back
 
 <dl>
 <dd>
@@ -825,7 +786,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/refresh
+#### /session/:sessionId/refresh
 
 <dl>
 <dd>
@@ -854,7 +815,7 @@ If this command is never sent, the driver should default to an implicit wait of 
 ---
 
 
-### /session/:sessionId/execute
+#### /session/:sessionId/execute
 
 <dl>
 <dd>
@@ -903,7 +864,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/execute\_async
+#### /session/:sessionId/execute\_async
 
 <dl>
 <dd>
@@ -955,7 +916,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/screenshot
+#### /session/:sessionId/screenshot
 
 <dl>
 <dd>
@@ -990,7 +951,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/ime/available\_engines
+#### /session/:sessionId/ime/available\_engines
 
 <dl>
 <dd>
@@ -1025,7 +986,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/ime/active\_engine
+#### /session/:sessionId/ime/active\_engine
 
 <dl>
 <dd>
@@ -1060,7 +1021,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/ime/activated
+#### /session/:sessionId/ime/activated
 
 <dl>
 <dd>
@@ -1095,7 +1056,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/ime/deactivate
+#### /session/:sessionId/ime/deactivate
 
 <dl>
 <dd>
@@ -1124,7 +1085,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 ---
 
 
-### /session/:sessionId/ime/activate
+#### /session/:sessionId/ime/activate
 
 <dl>
 <dd>
@@ -1165,7 +1126,7 @@ Note that this is a platform-independent method of activating IME<br>
 ---
 
 
-### /session/:sessionId/frame
+#### /session/:sessionId/frame
 
 <dl>
 <dd>
@@ -1202,7 +1163,7 @@ should switch to the page's default content.</dd>
 ---
 
 
-### /session/:sessionId/frame/parent
+#### /session/:sessionId/frame/parent
 
 <dl>
 <dd>
@@ -1225,7 +1186,7 @@ should switch to the page's default content.</dd>
 ---
 
 
-### /session/:sessionId/window
+#### /session/:sessionId/window
 
 <dl>
 <dd>
@@ -1284,7 +1245,7 @@ server assigned window handle, or by the value of its <code>name</code> attribut
 ---
 
 
-### /session/:sessionId/window/:windowHandle/size
+#### /session/:sessionId/window/:windowHandle/size
 
 <dl>
 <dd>
@@ -1343,7 +1304,7 @@ server assigned window handle, or by the value of its <code>name</code> attribut
 ---
 
 
-### /session/:sessionId/window/:windowHandle/position
+#### /session/:sessionId/window/:windowHandle/position
 
 <dl>
 <dd>
@@ -1408,7 +1369,7 @@ server assigned window handle, or by the value of its <code>name</code> attribut
 ---
 
 
-### /session/:sessionId/window/:windowHandle/maximize
+#### /session/:sessionId/window/:windowHandle/maximize
 
 <dl>
 <dd>
@@ -1437,7 +1398,7 @@ server assigned window handle, or by the value of its <code>name</code> attribut
 ---
 
 
-### /session/:sessionId/cookie
+#### /session/:sessionId/cookie
 
 <dl>
 <dd>
@@ -1520,7 +1481,7 @@ server assigned window handle, or by the value of its <code>name</code> attribut
 ---
 
 
-### /session/:sessionId/cookie/:name
+#### /session/:sessionId/cookie/:name
 
 <dl>
 <dd>
@@ -1551,7 +1512,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/source
+#### /session/:sessionId/source
 
 <dl>
 <dd>
@@ -1586,7 +1547,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/title
+#### /session/:sessionId/title
 
 <dl>
 <dd>
@@ -1621,7 +1582,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element
+#### /session/:sessionId/element
 
 <dl>
 <dd>
@@ -1677,7 +1638,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/elements
+#### /session/:sessionId/elements
 
 <dl>
 <dd>
@@ -1732,7 +1693,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/active
+#### /session/:sessionId/element/active
 
 <dl>
 <dd>
@@ -1767,7 +1728,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id
+#### /session/:sessionId/element/:id
 
 <dl>
 <dd>
@@ -1800,7 +1761,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/element
+#### /session/:sessionId/element/:id/element
 
 <dl>
 <dd>
@@ -1858,7 +1819,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/elements
+#### /session/:sessionId/element/:id/elements
 
 <dl>
 <dd>
@@ -1915,7 +1876,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/click
+#### /session/:sessionId/element/:id/click
 
 <dl>
 <dd>
@@ -1947,7 +1908,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/submit
+#### /session/:sessionId/element/:id/submit
 
 <dl>
 <dd>
@@ -1978,7 +1939,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/text
+#### /session/:sessionId/element/:id/text
 
 <dl>
 <dd>
@@ -2009,7 +1970,7 @@ such cookie visible to the current page.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/value
+#### /session/:sessionId/element/:id/value
 
 <dl>
 <dd>
@@ -2132,7 +2093,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/keys
+#### /session/:sessionId/keys
 
 <dl>
 <dd>
@@ -2167,7 +2128,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/name
+#### /session/:sessionId/element/:id/name
 
 <dl>
 <dd>
@@ -2204,7 +2165,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/clear
+#### /session/:sessionId/element/:id/clear
 
 <dl>
 <dd>
@@ -2237,7 +2198,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/selected
+#### /session/:sessionId/element/:id/selected
 
 <dl>
 <dd>
@@ -2274,7 +2235,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/enabled
+#### /session/:sessionId/element/:id/enabled
 
 <dl>
 <dd>
@@ -2311,7 +2272,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/attribute/:name
+#### /session/:sessionId/element/:id/attribute/:name
 
 <dl>
 <dd>
@@ -2348,7 +2309,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/equals/:other
+#### /session/:sessionId/element/:id/equals/:other
 
 <dl>
 <dd>
@@ -2386,7 +2347,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/displayed
+#### /session/:sessionId/element/:id/displayed
 
 <dl>
 <dd>
@@ -2423,7 +2384,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/location
+#### /session/:sessionId/element/:id/location
 
 <dl>
 <dd>
@@ -2460,7 +2421,7 @@ The server must process the key sequence as follows:<br>
 ---
 
 
-### /session/:sessionId/element/:id/location\_in\_view
+#### /session/:sessionId/element/:id/location\_in\_view
 
 <dl>
 <dd>
@@ -2500,7 +2461,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/size
+#### /session/:sessionId/element/:id/size
 
 <dl>
 <dd>
@@ -2537,7 +2498,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/element/:id/css/:propertyName
+#### /session/:sessionId/element/:id/css/:propertyName
 
 <dl>
 <dd>
@@ -2574,7 +2535,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/orientation
+#### /session/:sessionId/orientation
 
 <dl>
 <dd>
@@ -2638,7 +2599,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/alert\_text
+#### /session/:sessionId/alert\_text
 
 <dl>
 <dd>
@@ -2702,7 +2663,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/accept\_alert
+#### /session/:sessionId/accept\_alert
 
 <dl>
 <dd>
@@ -2731,7 +2692,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/dismiss\_alert
+#### /session/:sessionId/dismiss\_alert
 
 <dl>
 <dd>
@@ -2760,7 +2721,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/moveto
+#### /session/:sessionId/moveto
 
 <dl>
 <dd>
@@ -2791,7 +2752,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/click
+#### /session/:sessionId/click
 
 <dl>
 <dd>
@@ -2820,7 +2781,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/buttondown
+#### /session/:sessionId/buttondown
 
 <dl>
 <dd>
@@ -2849,7 +2810,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/buttonup
+#### /session/:sessionId/buttonup
 
 <dl>
 <dd>
@@ -2878,7 +2839,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/doubleclick
+#### /session/:sessionId/doubleclick
 
 <dl>
 <dd>
@@ -2901,7 +2862,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/touch/click
+#### /session/:sessionId/touch/click
 
 <dl>
 <dd>
@@ -2930,7 +2891,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/touch/down
+#### /session/:sessionId/touch/down
 
 <dl>
 <dd>
@@ -2960,7 +2921,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/touch/up
+#### /session/:sessionId/touch/up
 
 <dl>
 <dd>
@@ -2990,7 +2951,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/move
+#### session/:sessionId/touch/move
 
 <dl>
 <dd>
@@ -3020,7 +2981,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/scroll
+#### session/:sessionId/touch/scroll
 
 <dl>
 <dd>
@@ -3051,7 +3012,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/scroll
+#### session/:sessionId/touch/scroll
 
 <dl>
 <dd>
@@ -3081,7 +3042,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/doubleclick
+#### session/:sessionId/touch/doubleclick
 
 <dl>
 <dd>
@@ -3110,7 +3071,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/longclick
+#### session/:sessionId/touch/longclick
 
 <dl>
 <dd>
@@ -3139,7 +3100,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/flick
+#### session/:sessionId/touch/flick
 
 <dl>
 <dd>
@@ -3171,7 +3132,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### session/:sessionId/touch/flick
+#### session/:sessionId/touch/flick
 
 <dl>
 <dd>
@@ -3201,7 +3162,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/location
+#### /session/:sessionId/location
 
 <dl>
 <dd>
@@ -3253,7 +3214,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/local\_storage
+#### /session/:sessionId/local\_storage
 
 <dl>
 <dd>
@@ -3341,7 +3302,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/local\_storage/key/:key
+#### /session/:sessionId/local\_storage/key/:key
 
 <dl>
 <dd>
@@ -3395,7 +3356,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/local\_storage/size
+#### /session/:sessionId/local\_storage/size
 
 <dl>
 <dd>
@@ -3430,7 +3391,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/session\_storage
+#### /session/:sessionId/session\_storage
 
 <dl>
 <dd>
@@ -3518,7 +3479,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/session\_storage/key/:key
+#### /session/:sessionId/session\_storage/key/:key
 
 <dl>
 <dd>
@@ -3572,7 +3533,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/session\_storage/size
+#### /session/:sessionId/session\_storage/size
 
 <dl>
 <dd>
@@ -3607,7 +3568,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/log
+#### /session/:sessionId/log
 
 <dl>
 <dd>
@@ -3642,7 +3603,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/log/types
+#### /session/:sessionId/log/types
 
 <dl>
 <dd>
@@ -3671,7 +3632,7 @@ location for correctly generating native events.</dd>
 ---
 
 
-### /session/:sessionId/application\_cache/status
+#### /session/:sessionId/application\_cache/status
 
 <dl>
 <dd>

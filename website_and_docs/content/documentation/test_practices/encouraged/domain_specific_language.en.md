@@ -22,6 +22,10 @@ With that in mind, we set about “modeling” the application you are
 working on, such that the test scripts (the user's only pre-release
 proxy) “speak” for, and represent the user.
 
+The goal is to use _ubiquitous language_. Rather than referring to "load data into this table" or 
+"click on the third column" it should be possible to use language such as "create a new account" or 
+"order displayed results by name"
+
 With Selenium, DSL is usually represented by methods, written to make
 the API simple and readable – they enable a report between the
 developers and the stakeholders (users, product owners, business
@@ -36,6 +40,13 @@ intelligence specialists, etc.).
 * **Maintainable:** By leaving the implementation details out of test
   cases, you are well-insulated against changes to the AUT*.
 
+## Further Reading
+(previously located: https://github.com/SeleniumHQ/selenium/wiki/Domain-Driven-Design)
+
+There is a good book on Domain Driven Design by Eric Evans http://www.amazon.com/exec/obidos/ASIN/0321125215/domainlanguag-20
+
+And to whet your appetite there's a useful smaller book available online for 
+download at http://www.infoq.com/minibooks/domain-driven-design-quickly
 
 ## Java
 
