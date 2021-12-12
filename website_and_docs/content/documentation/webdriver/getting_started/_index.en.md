@@ -41,7 +41,7 @@ Installing Selenium can be divided in three steps:
 
 1. [Install a Selenium library]({{< ref "install_selenium_library.md" >}}) for your desired programming language
 2. [Set up the browser driver]({{< ref "install_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid](/documentation/grid) if you want to scale up your tests
+3. (Optional) Set up and configure [Selenium Grid]({{< ref "/documentation/grid" >}}) if you want to scale up your tests
 
 If you wish to start with a low-code/record and playback tool, please check 
 [Selenium IDE](https://selenium.dev/selenium-ide)
