@@ -180,12 +180,15 @@ they want to configure and buy unicorns at a discount. Your job as
 tester is to come as close as you can to “capturing” this mind-set.
 With that in mind, we set about “modeling” the application you are
 working on, such that the test scripts (the user&rsquo;s only pre-release
-proxy) “speak” for, and represent the user.</p><p>With Selenium, DSL is usually represented by methods, written to make
+proxy) “speak” for, and represent the user.</p><p>The goal is to use <em>ubiquitous language</em>. Rather than referring to &ldquo;load data into this table&rdquo; or
+&ldquo;click on the third column&rdquo; it should be possible to use language such as &ldquo;create a new account&rdquo; or
+&ldquo;order displayed results by name&rdquo;</p><p>With Selenium, DSL is usually represented by methods, written to make
 the API simple and readable – they enable a report between the
 developers and the stakeholders (users, product owners, business
 intelligence specialists, etc.).</p><h2 id=benefits>Benefits</h2><ul><li><strong>Readable:</strong> Business stakeholders can understand it.</li><li><strong>Writable:</strong> Easy to write, avoids unnecessary duplication.</li><li><strong>Extensible:</strong> Functionality can (reasonably) be added
 without breaking contracts and existing functionality.</li><li><strong>Maintainable:</strong> By leaving the implementation details out of test
-cases, you are well-insulated against changes to the AUT*.</li></ul><h2 id=java>Java</h2><p>Here is an example of a reasonable DSL method in Java.
+cases, you are well-insulated against changes to the AUT*.</li></ul><h2 id=further-reading>Further Reading</h2><p>(previously located: <a href=https://github.com/SeleniumHQ/selenium/wiki/Domain-Driven-Design>https://github.com/SeleniumHQ/selenium/wiki/Domain-Driven-Design</a>)</p><p>There is a good book on Domain Driven Design by Eric Evans <a href=http://www.amazon.com/exec/obidos/ASIN/0321125215/domainlanguag-20>http://www.amazon.com/exec/obidos/ASIN/0321125215/domainlanguag-20</a></p><p>And to whet your appetite there&rsquo;s a useful smaller book available online for
+download at <a href=http://www.infoq.com/minibooks/domain-driven-design-quickly>http://www.infoq.com/minibooks/domain-driven-design-quickly</a></p><h2 id=java>Java</h2><p>Here is an example of a reasonable DSL method in Java.
 For brevity&rsquo;s sake, it assumes the <code>driver</code> object is pre-defined
 and available to the method.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8f5902;font-style:italic>/**
 </span><span style=color:#8f5902;font-style:italic> * Takes a username and password, fills out the fields, and clicks &#34;login&#34;.
