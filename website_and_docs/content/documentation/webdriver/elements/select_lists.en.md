@@ -1,17 +1,20 @@
 ---
-title: "Trabalhando com elementos select"
-linkTitle: "Trabalhando com elementos select"
-weight: 10
+title: "Working with select list elements"
+linkTitle: "Select Lists"
+weight: 5
 aliases: [
-"/documentation/pt-br/support_packages/working_with_select_elements/",
-"/pt-br/documentation/support_packages/working_with_select_elements/"
+"/documentation/en/support_packages/working_with_select_elements/",
+"/documentation/support_packages/working_with_select_elements/",
+"/documentation/webdriver/elements/select_elements/"
 ]
+description: >
+  Select lists have special behaviors compared to other elements.
 ---
 
-Os elementos *select* podem exigir um pouco de código padrão para serem automatizados.
-Para reduzir isso e tornar seus testes mais limpos, existe uma
-Classe `Select` no pacote de suporte do Selenium.
-Para usá-lo, você precisará da seguinte instrução de importação:
+Select elements can require quite a bit of boiler plate code to automate.
+To reduce this, and make your tests cleaner, there is a
+`Select` class in the Selenium support package.
+To use it, you will need the following import statement:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -34,8 +37,8 @@ import org.openqa.selenium.support.ui.Select
   {{< /tab >}}
 {{< /tabpane >}}
 
-Você pode então criar um objeto Select usando um WebElement que
-faz referência a um elemento `<select>`.
+You are then able to create a Select object using a WebElement that
+references a `<select>` element.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -63,10 +66,10 @@ val selectObject = new Select(selectElement)
   {{< /tab >}}
 {{< /tabpane >}}
 
-O objeto Select agora lhe dará uma série de comandos
-que permitem que você interaja com um elemento `<select>`.
-Em primeiro lugar, existem diferentes maneiras de selecionar uma opção
-do elemento `<select>`.
+The Select object will now give you a series of commands
+that allow you to interact with a `<select>` element.
+First of all, there are different ways of selecting an option
+from the `<select>` element.
 
 ```html
 <select>
@@ -76,7 +79,7 @@ do elemento `<select>`.
 </select>
 ```
 
-Existem três maneiras de selecionar a primeira opção do elemento acima:
+There are three ways to select the first option from the above element:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -178,8 +181,8 @@ val firstSelectedOption = selectObject.firstSelectedOption
 {{< /tabpane >}}
 
 
-Ou você pode apenas estar interessado em quais elementos `<option>`
-o elemento `<select>` contém:
+Or you may just be interested in what `<option>` elements
+the `<select>` element contains:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -207,7 +210,7 @@ val allAvailableOptions = selectObject.options
   {{< /tab >}}
 {{< /tabpane >}}
 
-Se você deseja desmarcar qualquer elemento, agora você tem quatro opções:
+If you want to deselect any elements, you now have four options:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -280,8 +283,8 @@ selectObject.deselectAll()
   {{< /tab >}}
 {{< /tabpane >}}
 
-Finalmente, alguns elementos `<select>` permitem que você selecione mais de uma opção.
-Você pode descobrir se o seu elemento `<select>` é um deles usando:
+Finally, some `<select>` elements allow you to select more than one option.
+You can find out if your `<select>` element is one of these by using:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
