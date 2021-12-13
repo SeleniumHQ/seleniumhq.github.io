@@ -4,7 +4,7 @@ linkTitle: "ガイドライン"
 chapter: true
 weight: 12
 description: >
-  Some guidelines and recommendations on testing from the Selenium project.
+  Seleniumプロジェクトからのテストに関するいくつかのガイドラインと推奨事項
 ---
 
 {{% pageinfo color="warning" %}}

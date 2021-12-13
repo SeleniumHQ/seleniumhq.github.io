@@ -3,18 +3,9 @@ title: "WebDriver"
 linkTitle: "WebDriver"
 weight: 4
 description: >
-  WebDriver drives a browser natively, learn more about it.
+  WebDriverはブラウザをネイティブに操作します。詳細については、こちらをご覧ください。
 aliases: ["/documentation/ja/webdriver/"]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 WebDriverは、ユーザーがローカルまたはSeleniumサーバーを使用するリモートマシンで行うように、ブラウザをネイティブに動かし、ブラウザの自動化に関して大きく前進します。
 
