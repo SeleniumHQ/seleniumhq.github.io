@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>English</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/pt-br/documentation/test_practices/encouraged/>Português (Brasileiro)</a>
 <a class=dropdown-item href=/zh-cn/documentation/test_practices/encouraged/>中文简体</a>
 <a class=dropdown-item href=/ja/documentation/test_practices/encouraged/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/documentation/test_practices/encouraged/>Return to the regular view of this page</a>.</p></div><h1 class=title>Encouraged behaviors</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-fa5d8fda885160f5bac36ddd0a759f2c>Page object models</a></li><li>2: <a href=#pg-2fa3bc7763585631cae7ebbfd2ab6f4d>Domain specific language</a></li><li>3: <a href=#pg-806a27b179478d057a2a72eaecbb5a7f>Generating application state</a></li><li>4: <a href=#pg-8e67210230ed00981653880f12c0854b>Mock external services</a></li><li>5: <a href=#pg-2fc5231d4be0c254ce4f3da24dd7ecac>Improved reporting</a></li><li>6: <a href=#pg-95634a04429bc3ee0d73ad583f402ecf>Avoid sharing state</a></li><li>7: <a href=#pg-86fac44b429f8cec078f2c489c86beb0>Test independency</a></li><li>8: <a href=#pg-9a56c997c2608d98dbbc2d6cb49a33e0>Consider using a fluent API</a></li><li>9: <a href=#pg-a725d846f871bf74490745badf015de3>Fresh browser per test</a></li></ul><div class=content><p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/documentation/test_practices/encouraged/>Return to the regular view of this page</a>.</p></div><h1 class=title>Encouraged behaviors</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-fa5d8fda885160f5bac36ddd0a759f2c>Page object models</a></li><li>2: <a href=#pg-2fa3bc7763585631cae7ebbfd2ab6f4d>Domain specific language</a></li><li>3: <a href=#pg-806a27b179478d057a2a72eaecbb5a7f>Generating application state</a></li><li>4: <a href=#pg-8e67210230ed00981653880f12c0854b>Mock external services</a></li><li>5: <a href=#pg-2fc5231d4be0c254ce4f3da24dd7ecac>Improved reporting</a></li><li>6: <a href=#pg-95634a04429bc3ee0d73ad583f402ecf>Avoid sharing state</a></li><li>7: <a href=#pg-84640ae953713c14fe36c508f185cc39>Tips on working with locators</a></li><li>8: <a href=#pg-86fac44b429f8cec078f2c489c86beb0>Test independency</a></li><li>9: <a href=#pg-9a56c997c2608d98dbbc2d6cb49a33e0>Consider using a fluent API</a></li><li>10: <a href=#pg-a725d846f871bf74490745badf015de3>Fresh browser per test</a></li></ul><div class=content><p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
 Practices&rdquo; in this documentation. No one approach works for all situations.
 We prefer the idea of &ldquo;Guidelines and Recommendations&rdquo;. We encourage
 you to read through these and thoughtfully decide what approaches
@@ -255,7 +255,22 @@ tests are isolated from one another.</p><ul><li><p>Do not share test data. Imagi
 for valid orders before picking one to perform an action on. Should two tests
 pick up the same order you are likely to get unexpected behaviour.</p></li><li><p>Clean up stale data in the application that might be picked up by another
 test e.g. invalid order records.</p></li><li><p>Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelization simpler.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-86fac44b429f8cec078f2c489c86beb0>7 - Test independency</h1><p>Write each test as its own unit. Write the tests in a way that will not be
+and makes parallelization simpler.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-84640ae953713c14fe36c508f185cc39>7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>In general, if HTML IDs are available, unique, and consistently
+predictable, they are the preferred method for locating an element on
+a page. They tend to work very quickly, and forego much processing
+that comes with complicated DOM traversals.</p><p>If unique IDs are unavailable, a well-written CSS selector is the
+preferred method of locating an element. XPath works as well as CSS
+selectors, but the syntax is complicated and frequently difficult to
+debug. Though XPath selectors are very flexible, they are typically
+not performance tested by browser vendors and tend to be quite slow.</p><p>Selection strategies based on <em>linkText</em> and <em>partialLinkText</em> have
+drawbacks in that they only work on link elements. Additionally, they
+call down to XPath selectors internally in WebDriver.</p><p>Tag name can be a dangerous way to locate elements. There are
+frequently multiple elements of the same tag present on the page.
+This is mostly useful when calling the <em>findElements(By)</em> method which
+returns a collection of elements.</p><p>The recommendation is to keep your locators as compact and
+readable as possible. Asking WebDriver to traverse the DOM structure
+is an expensive operation, and the more you can narrow the scope of
+your search, the better.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-86fac44b429f8cec078f2c489c86beb0>8 - Test independency</h1><p>Write each test as its own unit. Write the tests in a way that will not be
 reliant on other tests to complete:</p><p>Let us say there is a content management system with which you can create
 some custom content which then appears on your website as a module after
 publishing, and it may take some time to sync between the CMS and the
@@ -264,7 +279,7 @@ published in one test, and then checking the module in another test. This
 is not feasible as the content may not be available immediately for the
 other test after publishing.</p><p>Instead, you can create a stub content which can be turned on and off
 within the affected test, and use that for validating the module. However,
-for content creation, you can still have a separate test.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9a56c997c2608d98dbbc2d6cb49a33e0>8 - Consider using a fluent API</h1><p>Martin Fowler coined the term <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;Fluent API&rdquo;</a>. Selenium already
+for content creation, you can still have a separate test.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9a56c997c2608d98dbbc2d6cb49a33e0>9 - Consider using a fluent API</h1><p>Martin Fowler coined the term <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;Fluent API&rdquo;</a>. Selenium already
 implements something like this in their <code>FluentWait</code> class, which is
 meant as an alternative to the standard <code>Wait</code> class.
 You could enable the Fluent API design pattern in your page object
@@ -327,7 +342,7 @@ might look like this:</p><div class=highlight><pre style=background-color:#f8f8f
     <span style=color:#ce5c00;font-weight:700>}</span>
   <span style=color:#ce5c00;font-weight:700>}</span>
 <span style=color:#ce5c00;font-weight:700>}</span>
-</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-a725d846f871bf74490745badf015de3>9 - Fresh browser per test</h1><p>Start each test from a clean known state.
+</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-a725d846f871bf74490745badf015de3>10 - Fresh browser per test</h1><p>Start each test from a clean known state.
 Ideally, spin up a new virtual machine for each test.
 If spinning up a new virtual machine is not practical,
 at least start a new WebDriver for each test.

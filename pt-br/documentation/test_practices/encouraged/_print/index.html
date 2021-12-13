@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/pt-br/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Português (Brasileiro)</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/test_practices/encouraged/>English</a>
 <a class=dropdown-item href=/zh-cn/documentation/test_practices/encouraged/>中文简体</a>
 <a class=dropdown-item href=/ja/documentation/test_practices/encouraged/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/test_practices/encouraged/>Return to the regular view of this page</a>.</p></div><h1 class=title>Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-fa4eae362230005dc133eaccc8f3c3e8>Modelos de objetos de página</a></li><li>2: <a href=#pg-4343e59eb52d202f26ceb385a8b56fa6>Linguagem específica de domínio (DSL)</a></li><li>3: <a href=#pg-edd30564b73abba307b40f4351d2b249>Gerando estado da aplicação</a></li><li>4: <a href=#pg-58945a8c3e84861fda4825f09e9cd2e0>Simulação de serviços externos</a></li><li>5: <a href=#pg-c6cc073467223ae721b34c947936cbf9>Relatórios melhorados</a></li><li>6: <a href=#pg-f155e13b0c999e5f3c5f56fef53fc47b>Evite compartilhamento de estado</a></li><li>7: <a href=#pg-a43c32fda8a8fa76d1487e152b4c1998>Independência de Testes</a></li><li>8: <a href=#pg-1ae8894e692552d092b8b8a00eee7702>Considere usar uma API fluente</a></li><li>9: <a href=#pg-eae471af628f9dd496b080eac9d94ac8>Navegador novo por teste</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/test_practices/encouraged/>Return to the regular view of this page</a>.</p></div><h1 class=title>Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-fa4eae362230005dc133eaccc8f3c3e8>Modelos de objetos de página</a></li><li>2: <a href=#pg-4343e59eb52d202f26ceb385a8b56fa6>Linguagem específica de domínio (DSL)</a></li><li>3: <a href=#pg-edd30564b73abba307b40f4351d2b249>Gerando estado da aplicação</a></li><li>4: <a href=#pg-58945a8c3e84861fda4825f09e9cd2e0>Simulação de serviços externos</a></li><li>5: <a href=#pg-c6cc073467223ae721b34c947936cbf9>Relatórios melhorados</a></li><li>6: <a href=#pg-f155e13b0c999e5f3c5f56fef53fc47b>Evite compartilhamento de estado</a></li><li>7: <a href=#pg-51a63c6ce7dd64b1ecddf236663ecb74>Tips on working with locators</a></li><li>8: <a href=#pg-a43c32fda8a8fa76d1487e152b4c1998>Independência de Testes</a></li><li>9: <a href=#pg-1ae8894e692552d092b8b8a00eee7702>Considere usar uma API fluente</a></li><li>10: <a href=#pg-eae471af628f9dd496b080eac9d94ac8>Navegador novo por teste</a></li></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><p>Uma nota sobre &ldquo;Melhores práticas&rdquo;: evitamos intencionalmente a frase &ldquo;Melhores
@@ -250,7 +250,21 @@ os testes são isolados uns dos outros.</p><ul><li><p>Não compartilhe dados de 
 para pedidos válidos antes de escolher um para executar uma ação. Caso dois testes
 peguem a mesma ordem, provavelmente você obterá um comportamento inesperado.</p></li><li><p>Limpe dados desatualizados no aplicativo que podem ser obtidos por outro
 teste, por exemplo registros de pedidos inválidos.</p></li><li><p>Crie uma nova instância do WebDriver por teste. Isso ajuda a garantir o isolamento do teste
-e torna a paralelização mais simples.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-a43c32fda8a8fa76d1487e152b4c1998>7 - Independência de Testes</h1><p>Escreva cada teste como sua própria unidade. Escreva os testes de uma forma que não seja
+e torna a paralelização mais simples.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-51a63c6ce7dd64b1ecddf236663ecb74>7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=/pt-br/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
+previsíveis, eles são o método preferido para localizar um elemento
+uma página. Eles tendem a trabalhar muito rapidamente e dispensar muito processamento
+que vem com travessias de DOM complicadas.</p><p>Se IDs exclusivos não estiverem disponíveis, um seletor CSS bem escrito é o
+método preferido de localização de um elemento. XPath funciona bem como CSS
+seletores, mas a sintaxe é complicada e frequentemente difícil de
+depurar. Embora os seletores XPath sejam muito flexíveis, eles não são tipicamente testados em performance por fornecedores de navegadores e tendem a ser bastante lentos.</p><p>As estratégias de seleção baseadas em <em>linkText</em> e <em>partialLinkText</em> têm
+desvantagens porque eles só funcionam em elementos de link. Além disso, eles
+chamam seletores XPath internamente no WebDriver.</p><p>O nome da tag pode ser uma maneira perigosa de localizar elementos. tem
+frequentemente, vários elementos da mesma tag presentes na página.
+Isso é útil principalmente ao chamar o método _findElements(By) _ que
+retorna uma coleção de elementos.</p><p>A recomendação é manter seus localizadores compactos e
+legíveis quanto possível. Pedir ao WebDriver para percorrer a estrutura DOM
+é uma operação cara, e quanto mais você pode restringir o escopo de
+sua pesquisa, melhor.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-a43c32fda8a8fa76d1487e152b4c1998>8 - Independência de Testes</h1><p>Escreva cada teste como sua própria unidade. Escreva os testes de uma forma que não seja
 dependente de outros testes para concluir:</p><p>Digamos que existe um sistema de gerenciamento de conteúdo com o qual você pode criar
 algum conteúdo personalizado que então aparece em seu site como um módulo após
 publicação, e pode levar algum tempo para sincronizar entre o CMS e a aplicação.</p><p>Uma maneira errada de testar seu módulo é que o conteúdo seja criado e
@@ -258,7 +272,7 @@ publicado em um teste e, em seguida, verificar o módulo em outro teste. Este te
 não é viável, pois o conteúdo pode não estar disponível imediatamente para o
 outro teste após a publicação.</p><p>Em vez disso, você pode criar um conteúdo stub que pode ser ligado e desligado
 dentro do teste e use-o para validar o módulo. Contudo,
-para a criação de conteúdo, você ainda pode ter um teste separado.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1ae8894e692552d092b8b8a00eee7702>8 - Considere usar uma API fluente</h1><p>Martin Fowler cunhou o termo <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;API Fluent&rdquo;</a>. Selenium já
+para a criação de conteúdo, você ainda pode ter um teste separado.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1ae8894e692552d092b8b8a00eee7702>9 - Considere usar uma API fluente</h1><p>Martin Fowler cunhou o termo <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;API Fluent&rdquo;</a>. Selenium já
 implementa algo assim em sua classe <code>FluentWait</code>, que é
 pretende ser uma alternativa à classe padrão <code>Wait</code>.
 Você pode habilitar o padrão de design de API fluente em seu objeto de página
@@ -321,7 +335,7 @@ pode ser assim:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz
     <span style=color:#ce5c00;font-weight:700>}</span>
   <span style=color:#ce5c00;font-weight:700>}</span>
 <span style=color:#ce5c00;font-weight:700>}</span>
-</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-eae471af628f9dd496b080eac9d94ac8>9 - Navegador novo por teste</h1><p>Comece cada teste a partir de um estado limpo conhecido.
+</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-eae471af628f9dd496b080eac9d94ac8>10 - Navegador novo por teste</h1><p>Comece cada teste a partir de um estado limpo conhecido.
 Idealmente, ligue uma nova máquina virtual para cada teste.
 Se ligar uma nova máquina virtual não for prático,
 pelo menos inicie um novo WebDriver para cada teste.
