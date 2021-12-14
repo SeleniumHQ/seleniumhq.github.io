@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/zh-cn/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>中文简体</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/webdriver/getting_started/>English</a>
 <a class=dropdown-item href=/pt-br/documentation/webdriver/getting_started/>Português (Brasileiro)</a>
 <a class=dropdown-item href=/ja/documentation/webdriver/getting_started/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>这是本节的多页打印视图。
-<a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/webdriver/getting_started/>返回本页常规视图</a>.</p></div><h1 class=title>入门指南</h1><div class=lead>如果你是Selenium的新手, 我们有一些资源帮助你快速入门.</div><ul><li>1: <a href=#pg-5034fffa02445a9c24f1fffd0bb6ad43>安装 Selenium 库</a></li><li>2: <a href=#pg-9136f546611c5add8d1279c319b7f3fd>安装浏览器驱动</a></li><li>3: <a href=#pg-8bcbb45064790b69db667ae981bc12ff>如何升级到Selenium 4</a></li></ul><div class=content><p>Selenium 通过使用 <em>WebDriver</em> 支持市场上所有主流浏览器的自动化。
+<a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/webdriver/getting_started/>返回本页常规视图</a>.</p></div><h1 class=title>入门指南</h1><div class=lead>如果你是Selenium的新手, 我们有一些资源帮助你快速入门.</div><ul><li>1: <a href=#pg-5034fffa02445a9c24f1fffd0bb6ad43>安装浏览器驱动</a></li><li>2: <a href=#pg-9136f546611c5add8d1279c319b7f3fd>安装浏览器驱动</a></li><li>3: <a href=#pg-8bcbb45064790b69db667ae981bc12ff>升级到Selenium 4</a></li></ul><div class=content><p>Selenium 通过使用 <em>WebDriver</em> 支持市场上所有主流浏览器的自动化。
 Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。
 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。
 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。</p><p>这种分离是有意识地努力让浏览器供应商为其浏览器的实现负责的一部分。
@@ -27,7 +27,7 @@ Selenium 在可能的情况下使用这些第三方驱动程序，
 然后前往
 <a href=/zh-cn/documentation/webdriver/>WebDriver</a> 部分
 了解更多关于
-使用Selenium实现浏览器自动化的信息.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-5034fffa02445a9c24f1fffd0bb6ad43>1 - 安装 Selenium 库</h1><div class=lead>为您喜爱的编程语言设置Selenium库.</div><p>首先，您需要为自动化项目安装 Selenium 绑定库。
+使用Selenium实现浏览器自动化的信息.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-5034fffa02445a9c24f1fffd0bb6ad43>1 - 安装浏览器驱动</h1><div class=lead>配置自动化的浏览器.</div><p>首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。</p><h3 id=java>Java</h3><p>可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 <em>selenium-java</em> 依赖项：</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
   <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
@@ -345,7 +345,7 @@ Chrome、Firefox 或 IE。它已经迁移到一个<a href=http://htmlunit.source
 但现在明智的做法是避免 PhantomJS。这个项目
 <a href=//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE>从 8 月 5 日起</a>
 就一直没有被维护过，所以尽管网络会继续变化，PhantomJS 也不会更新。在谷歌宣布可以无头运行
-Chrome 之后，现在 Mozilla 的火狐浏览器也提供了这个功能。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-8bcbb45064790b69db667ae981bc12ff>3 - 如何升级到Selenium 4</h1><div class=lead>对Selenium 4感兴趣? 查看本指南, 它将帮助您升级到最新版本!</div><p>如果您使用的是官方支持的语言
+Chrome 之后，现在 Mozilla 的火狐浏览器也提供了这个功能。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-8bcbb45064790b69db667ae981bc12ff>3 - 升级到Selenium 4</h1><div class=lead>对Selenium 4感兴趣? 查看本指南, 它将帮助您升级到最新版本!</div><p>如果您使用的是官方支持的语言
 (Ruby、JavaScript、C#、Python和Java),
 那么升级到Selenium 4应该是一个轻松的过程.
 在某些情况下可能会出现一些问题,
