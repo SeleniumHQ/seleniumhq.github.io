@@ -1,6 +1,6 @@
 ---
 title: "JavaScript 警告框,提示框和确认框"
-linkTitle: "JavaScript 警告框,提示框和确认框"
+linkTitle: "警告框"
 weight: 2
 aliases: [
 "/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/",

@@ -1,6 +1,6 @@
 ---
-title: "同选择元素一起工作"
-linkTitle: "同选择元素一起工作"
+title: "使用选择列表元素"
+linkTitle: "选择列表"
 weight: 10
 needsTranslation: true
 aliases: [
@@ -9,7 +9,7 @@ aliases: [
 "/zh-cn/documentation/webdriver/elements/select_elements/"
 ]
 description: >
-  Select lists have special behaviors compared to other elements.
+  与其他元素相比，选择列表具有特殊的行为.
 ---
  
 选择元素可能需要大量样板代码才能自动化.

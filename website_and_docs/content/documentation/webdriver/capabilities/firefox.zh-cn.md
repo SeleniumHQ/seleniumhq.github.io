@@ -1,10 +1,10 @@
 ---
-title: "Capabilities specific to Firefox browser"
+title: "Firefox浏览器特定的Capabilities"
 linkTitle: "Firefox"
 weight: 6
 needsTranslation: true
 description: >-
-    These capabilities are specific to Firefox.
+    这些capabilities基于特定的Firefox浏览器.
 ---
 
 ### 使用`FirefoxOptions`定义功能

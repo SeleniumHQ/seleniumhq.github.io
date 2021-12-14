@@ -1,10 +1,10 @@
 ---
-title: "安装 Selenium 库"
-linkTitle: "安装 Selenium 库"
+title: "安装浏览器驱动"
+linkTitle: "安装类库"
 weight: 1
 needsTranslation: true
 description: >
-  为您喜爱的编程语言设置Selenium库.
+  配置自动化的浏览器.
 aliases: [
 "/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
 "/zh-cn/documentation/getting_started/installing_selenium_libraries/"

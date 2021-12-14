@@ -1,6 +1,6 @@
 ---
-title: "测试的类型"
-linkTitle: "测试的类型"
+title: "测试类型"
+linkTitle: "测试类型"
 weight: 2
 aliases: [
 "/documentation/zh-cn/introduction/types_of_testing/",

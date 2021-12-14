@@ -4,7 +4,7 @@ linkTitle: "IDE"
 weight: 10
 needsTranslation: true
 description: >
-    The Selenium IDE is a browser extension that records and plays back a user's actions.
+    Selenium IDE是一个记录和回放用户操作的浏览器扩展.
 ---
 
 Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))

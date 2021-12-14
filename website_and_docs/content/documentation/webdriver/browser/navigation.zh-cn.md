@@ -1,6 +1,6 @@
 ---
-title: "Browser navigation"
-linkTitle: "Navigation"
+title: "浏览器导航"
+linkTitle: "导航"
 weight: 1
 requiresTranslation: true
 ---

@@ -1,9 +1,9 @@
 ---
-title: "配置自己的服务网格"
-linkTitle: "配置自己的服务网格"
+title: "Selenium Grid快速起步"
+linkTitle: "快速起步"
 weight: 2
 description: >
-  Instructions, step by step, showing how to run a simple Selenium Grid.
+  一步一步地说明如何运行简单的Selenium Grid.
 aliases: [
 "/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/",
 "/zh-cn/documentation/grid/setting_up_your_own_grid/"

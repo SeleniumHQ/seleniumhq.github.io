@@ -1,13 +1,13 @@
 ---
-title: "定位元素"
-linkTitle: "定位元素"
+title: "定位策略"
+linkTitle: "定位器"
 weight: 4
 needsTranslation: true
 aliases: [
 "/zh-cn/documentation/webdriver/relative_locators/"
 ]
 description: >
-  Ways to identify one or more specific elements in the DOM.
+  在DOM中标识一个或多个特定元素的方法.
 ---
 
 A locator is a way to identify elements on a page. It is the argument passed to the

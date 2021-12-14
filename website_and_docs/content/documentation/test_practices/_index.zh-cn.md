@@ -1,6 +1,6 @@
 ---
-title: "指南和建议"
-linkTitle: "指南"
+title: "鼓励的行为"
+linkTitle: "最佳实践"
 weight: 12
 description: >
   Selenium项目的一些测试指南和建议.

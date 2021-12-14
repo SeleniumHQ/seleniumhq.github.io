@@ -1,10 +1,10 @@
 ---
-title: "Capabilities specific to Chromium browsers"
+title: "特定的Chromium浏览器Capabilities"
 linkTitle: "Chromium"
 weight: 4
 needsTranslation: true
 description: >-
-    These capabilities are specific to Chromium based browsers.
+    这些capabilities基于特定的Chromium浏览器.
 ---
 
 These Capabilities apply to:

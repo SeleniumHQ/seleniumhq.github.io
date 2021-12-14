@@ -3,7 +3,7 @@ title: "IE Driver Server"
 linkTitle: "IE Driver Server"
 weight: 8
 description: >
-    The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+    Internet Explorer驱动是一种实现WebDriver规范的单机服务器.
 ---
 
 The `InternetExplorerDriver` is a standalone server which implements WebDriver's wire protocol.

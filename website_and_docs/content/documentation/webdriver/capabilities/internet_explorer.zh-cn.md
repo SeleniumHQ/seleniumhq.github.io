@@ -1,10 +1,10 @@
 ---
-title: "Capabilities specific to Internet Explorer browser"
+title: "Internet Explorer浏览器特定的Capabilities"
 linkTitle: "Internet Explorer"
 weight: 8
 needsTranslation: true
 description: >-
-    These capabilities are specific to Internet Explorer.
+    这些capabilities基于特定的Internet Explorer浏览器.
 ---
 
 ### fileUploadDialogTimeout

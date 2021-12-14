@@ -1,6 +1,6 @@
 ---
 title: "同cookies一起工作"
-linkTitle: "同cookies一起工作"
+linkTitle: "Cookies"
 weight: 4
 aliases: [
 "/documentation/zh-cn/support_packages/working_with_cookies/",
