@@ -1,6 +1,6 @@
 ---
 title: "安装浏览器驱动"
-linkTitle: "安装浏览器驱动"
+linkTitle: "安装驱动"
 weight: 2
 needsTranslation: true
 description: >

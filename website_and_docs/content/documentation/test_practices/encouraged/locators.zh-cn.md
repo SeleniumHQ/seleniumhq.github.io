@@ -1,10 +1,10 @@
 ---
-title: "Tips on working with locators"
-linkTitle: "Locators"
+title: "使用定位器的提示"
+linkTitle: "定位器"
 weight: 8
 needsTranslation: true
 description: >
-    When to use which locators and how best to manage them in your code.
+    何时使用哪些定位器以及如何在代码中最好地管理它们.
 ---
 
 Take a look at examples of the [supported locator strategies]({{< ref "/documentation/webdriver/elements/locators.md" >}}).

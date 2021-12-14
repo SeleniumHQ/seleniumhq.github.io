@@ -1,6 +1,6 @@
 ---
-title: "Remote WebDriver"
-linkTitle: "Remote WebDriver"
+title: "远程WebDriver"
+linkTitle: "远程WebDriver"
 weight: 10
 aliases: 
         [

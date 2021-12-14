@@ -1,6 +1,6 @@
 ---
-title: "操控浏览器"
-linkTitle: "操控浏览器"
+title: "浏览器"
+linkTitle: "浏览器"
 weight: 6
 requiresTranslation: true
 aliases: [

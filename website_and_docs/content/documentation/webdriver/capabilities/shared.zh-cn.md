@@ -4,7 +4,7 @@ linkTitle: "共享的功能"
 weight: 2
 needsTranslation: true
 description: >-
-  These capabilities are shared by all browsers.
+  这些capabilities用于所有浏览器.
 aliases: [
 "/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/",
 "/zh-cn/documentation/webdriver/capabilities/shared_capabilities/",

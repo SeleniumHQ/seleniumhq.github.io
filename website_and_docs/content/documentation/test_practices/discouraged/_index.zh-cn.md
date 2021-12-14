@@ -1,5 +1,5 @@
 ---
-title: "反模式"
+title: "不鼓励的行为"
 linkTitle: "反模式"
 weight: 8
 description: >

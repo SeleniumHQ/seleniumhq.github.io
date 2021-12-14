@@ -1,6 +1,6 @@
 ---
 title: "网络元素"
-linkTitle: "网络元素"
+linkTitle: "元素"
 weight: 8
 needsTranslation: true
 aliases: [
@@ -8,7 +8,7 @@ aliases: [
 "/zh-cn/documentation/webdriver/web_element/"
 ]
 description: >
-    Identifying and working with element objects in the DOM.
+    在DOM中识别和使用元素对象.
 ---
 
 The majority of most people's Selenium code involves working with web elements.

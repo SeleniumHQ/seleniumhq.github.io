@@ -1,10 +1,10 @@
 ---
-title: "Information about web elements"
-linkTitle: "Information"
+title: "关于网络元素的信息"
+linkTitle: "信息"
 needsTranslation: true
 weight: 4
 description: >
-  What you can learn about an element.
+  元素相关的知识.
 ---
 
 There are a number of details you can query about a specific element.

@@ -1,8 +1,8 @@
 ---
-title: "CLI Options"
-linkTitle: "CLI Options"
+title: "CLI 选项"
+linkTitle: "CLI 选项"
 weight: 2
-description: All Grid components configuration CLI options in detail.
+description: 所有网格组件配置CLI选项的详细信息.
 aliases: [
 "/zh-cn/documentation/grid/configuring_components/cli_options/"
 ]

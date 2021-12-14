@@ -1,6 +1,6 @@
 ---
 title: "服务网格的组件"
-linkTitle: "服务网格的组件"
+linkTitle: "组件"
 weight: 6
 description: >
     检查不同的Grid组件以了解如何使用它们.

@@ -1,6 +1,6 @@
 ---
-title: "Finding web elements"
-linkTitle: "Finders"
+title: "查询网络元素"
+linkTitle: "查询器"
 weight: 2
 needsTranslation: true
 aliases: [
@@ -8,7 +8,7 @@ aliases: [
 "/zh-cn/documentation/webdriver/locating_elements/"
 ]
 description: >
-  Locating the elements based on the provided locator values.
+  根据提供的定位值定位元素.
 ---
 
 One of the most fundamental aspects of using Selenium is obtaining element references to work with.

@@ -1,6 +1,6 @@
 ---
-title: "BiDirectional API"
-linkTitle: "BiDi API"
+title: "双向接口"
+linkTitle: "双向接口"
 weight: 12
 
 ---
