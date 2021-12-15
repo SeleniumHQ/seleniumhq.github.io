@@ -243,6 +243,7 @@ pull request updating this page.
 |---|---|---|---|
 | `--allow-cors` | boolean | `true` | Whether the Selenium server should allow web browser connections from any host |
 | `--host` | string | `localhost` | Server IP or hostname: usually determined automatically. |
+| `--bind-host` | boolean | `true` | Whether the server should bind to the host address/name, or only use it to" report its reachable url. Helpful in complex network topologies where the server cannot report itself with the current IP/hostname but rather an external IP or hostname (e.g. inside a Docker container) |
 | `--https-certificate` | path | `/path/to/cert.pem` | Server certificate for https. Get more detailed information by running "java -jar selenium-server.jar info security" |
 | `--https-private-key` | path | `/path/to/key.pkcs8` | Private key for https. Get more detailed information by running "java -jar selenium-server.jar info security" |
 | `--max-threads` | int | `24` | Maximum number of listener threads. Default value is: (available processors) * 3. |
