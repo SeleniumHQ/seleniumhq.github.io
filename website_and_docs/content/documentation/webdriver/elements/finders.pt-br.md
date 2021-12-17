@@ -153,7 +153,7 @@ references to all fruits and vegetable list items will be returned in a collecti
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
   {{< tab header="Python" >}}
-plants = driver.find_elemnts(By.TAG_NAME, "li")
+plants = driver.find_elements(By.TAG_NAME, "li")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
