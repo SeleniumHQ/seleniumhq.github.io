@@ -18,11 +18,8 @@ aliases: [
 {{% /pageinfo %}}
 
 {{% pageinfo color="warning" %}}
-<p class="lead">
-    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
-    highly encouraged that you use the 
-    [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}} instead.
-</p>
+While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is
+highly encouraged that you use the [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}}) instead.
 {{% /pageinfo %}}
 
 Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 

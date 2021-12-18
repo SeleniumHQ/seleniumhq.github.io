@@ -9,12 +9,10 @@ aliases: [
 ---
 
 {{% pageinfo color="warning" %}}
-<p class="lead">
 虽然Selenium 4提供了对Chrome DevTools Protocol (CDP) 的直接访问，
-但是仍非常鼓励您使用
-    [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}} 
+但是仍非常鼓励您使用 
+[WebDriver Bidi APIs]({{< ref "bidi_api.md" >}}) 
 代替.
-</p>
 {{% /pageinfo %}}
 
 许多浏览器都提供"开发工具" -- 一组与浏览器集成的工具,
