@@ -1,6 +1,6 @@
 ---
-title: "支持的包"
-linkTitle: "支持的包"
+title: "额外功能"
+linkTitle: "额外功能"
 weight: 18
 description: >
   使用Selenium简易自动化的软件包和功能的集合.

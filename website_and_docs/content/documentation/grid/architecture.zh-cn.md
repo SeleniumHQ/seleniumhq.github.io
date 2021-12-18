@@ -1,6 +1,6 @@
 ---
-title: "Grid Architecture"
-linkTitle: "Grid Architecture"
+title: "Grid架构"
+linkTitle: "Grid架构"
 weight: 10
 aliases: [
 "/zh-cn/documentation/grid/grid_architecture"

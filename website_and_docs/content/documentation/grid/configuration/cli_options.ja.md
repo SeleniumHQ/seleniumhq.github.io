@@ -236,7 +236,7 @@ pull request updating this page.
 | `--service-host` | string | `localhost` | Host name where the service that supports WebDriver commands is running |
 | `--service-port` | int | `4723` | Port where the service that supports WebDriver commands is running |
 | `--service-status-endpoint` | string | `/status` | Optional, endpoint to query the WebDriver service status, an HTTP 200 response is expected |
-
+| `--service-configuration` | string[] | `max-sessions=2 stereotype='{"browserName": "safari", "platformName": "iOS", "appium:platformVersion": "14.5"}}'` | Configuration for the service where calls will be relayed to. It is recommended to provide this type of configuration through a toml config file to improve readability. |
 
 ### Router
 
@@ -252,6 +252,7 @@ pull request updating this page.
 |---|---|---|---|
 | `--allow-cors` | boolean | `true` | Whether the Selenium server should allow web browser connections from any host |
 | `--host` | string | `localhost` | Server IP or hostname: usually determined automatically. |
+| `--bind-host` | boolean | `true` | Whether the server should bind to the host address/name, or only use it to" report its reachable url. Helpful in complex network topologies where the server cannot report itself with the current IP/hostname but rather an external IP or hostname (e.g. inside a Docker container) |
 | `--https-certificate` | path | `/path/to/cert.pem` | Server certificate for https. Get more detailed information by running "java -jar selenium-server.jar info security" |
 | `--https-private-key` | path | `/path/to/key.pkcs8` | Private key for https. Get more detailed information by running "java -jar selenium-server.jar info security" |
 | `--max-threads` | int | `24` | Maximum number of listener threads. Default value is: (available processors) * 3. |

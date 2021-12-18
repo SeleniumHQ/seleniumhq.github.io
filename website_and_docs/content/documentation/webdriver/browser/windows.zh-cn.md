@@ -1,6 +1,6 @@
 ---
-title: "Working with windows and tabs"
-linkTitle: "Windows"
+title: "同窗口和标签一起工作"
+linkTitle: "窗口"
 weight: 8
 requiresTranslation: true
 ---

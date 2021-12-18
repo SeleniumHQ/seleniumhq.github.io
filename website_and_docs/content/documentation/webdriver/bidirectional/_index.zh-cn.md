@@ -1,6 +1,6 @@
 ---
-title: "BiDirectional Functionality"
-linkTitle: "BiDirectional"
+title: "双向功能"
+linkTitle: "双向"
 weight: 16
 aliases: [
 "/documentation/zh-cn/webdriver/bidi_apis/",

@@ -61,7 +61,9 @@ ChromeDriver driver = new ChromeDriver();
 # Use Webdriver Manager for Python: https://github.com/SergeyPirogov/webdriver_manager
 
 # Import code:
+from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 
 # Use the `install()` method to set `executabe_path` in a new `Service` instance:
 service = Service(executable_path=ChromeDriverManager().install())

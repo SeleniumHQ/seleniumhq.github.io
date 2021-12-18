@@ -1,6 +1,6 @@
 ---
-title: "ThreadGuard"
-linkTitle: "ThreadGuard"
+title: "线程守卫"
+linkTitle: "线程守卫"
 weight: 6
 aliases: [
 "/documentation/zh-cn/support_classes/",

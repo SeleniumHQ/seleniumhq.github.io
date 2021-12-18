@@ -1,5 +1,5 @@
 ---
-title: "Toml选项"
+title: "Toml配置选项"
 linkTitle: "Toml选项"
 weight: 3
 description: 使用Toml文件的Grid配置示例.

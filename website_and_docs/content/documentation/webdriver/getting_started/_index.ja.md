@@ -34,7 +34,7 @@ Seleniumフレームワークはこれら全ての要素をユーザ向けのイ
 
 Seleniumのセットアップは他の商用ツールと少し違います。自動化プロジェクトでSeleniumを使うためには、選択した言語の言語バインディングライブラリをインストールする必要があります。加えて、自動化でテストを実行したいブラウザのWebDriverバイナリも必要となります。
 
-Intalling Selenium can be divided in three steps:
+Installing Selenium can be divided in three steps:
 
 1. [Installing the Selenium library]({{< ref "install_selenium_library.md" >}}) for your desired programming language
 2. [Set up the browser driver]({{< ref "install_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)

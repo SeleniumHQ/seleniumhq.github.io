@@ -1,6 +1,6 @@
 ---
-title:  "如何升级到Selenium 4"
-linkTitle:  "如何升级到Selenium 4"
+title:  "升级到Selenium 4"
+linkTitle:  "升级到Selenium 4"
 weight:  3
 description:  >
   对Selenium 4感兴趣? 查看本指南, 它将帮助您升级到最新版本!

@@ -1,6 +1,6 @@
 ---
-title: "Chrome DevTools Protocol"
-linkTitle: "Chrome DevTools Protocol"
+title: "Chrome开发工具协议"
+linkTitle: "Chrome开发工具"
 weight: 5
 aliases: [
 "/documentation/zh-cn/support_packages/chrome_devtools/",

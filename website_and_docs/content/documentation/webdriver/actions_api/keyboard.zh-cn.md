@@ -1,6 +1,6 @@
 ---
-title: "Keyboard"
-linkTitle: "Keyboard"
+title: "键盘Actions"
+linkTitle: "键盘"
 weight: 10
 aliases: [
 "/documentation/zh-cn/webdriver/keyboard/",
