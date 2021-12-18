@@ -17,8 +17,8 @@ Selenium正在与浏览器供应商合作创建
 必须忍受当前实现的全部问题和局限.
 
 
-严格限制请求响应命令的传统webdriver模型, 
-将从user agent转变为基于WebScokets的软件控制, 
+严格限制请求响应命令的传统WebDriver模型, 
+将从user agent转变为基于WebSockets的软件控制, 
 通过这样完善流事件的能力, 
 以便更好地匹配浏览器DOM的事件性质.
 
