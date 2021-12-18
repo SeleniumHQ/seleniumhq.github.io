@@ -1,8 +1,7 @@
 ---
-title: "Working with windows and tabs"
-linkTitle: "Windows"
+title: "ウィンドウとタブの操作"
+linkTitle: "ウィンドウ"
 weight: 8
-requiresTranslation: true
 ---
 
 ## ウィンドウとタブ

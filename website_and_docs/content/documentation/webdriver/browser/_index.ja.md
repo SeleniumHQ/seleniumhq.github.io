@@ -1,15 +1,14 @@
 ---
-title: "ブラウザー操作"
-linkTitle: "ブラウザー操作"
+title: "ブラウザー"
+linkTitle: "ブラウザー"
 weight: 6
-requiresTranslation: true
 aliases: [
 "/documentation/ja/webdriver/browser_manipulation/",
 "/ja/documentation/webdriver/browser_manipulation/"
 ]
 ---
 
-## Get browser information
+## ブラウザーの情報
 
 ### タイトルの取得
 

@@ -1,8 +1,7 @@
 ---
-title: "Browser navigation"
-linkTitle: "Navigation"
+title: "ブラウザー ナビゲーション"
+linkTitle: "ナビゲーション"
 weight: 1
-requiresTranslation: true
 ---
 
 ## ナビゲート
