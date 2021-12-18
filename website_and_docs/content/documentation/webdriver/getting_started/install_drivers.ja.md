@@ -1,10 +1,9 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+title: "ブラウザーのドライバーをインストールする"
+linkTitle: "ブラウザーのドライバーをインストールする"
 weight: 2
-needsTranslation: true
 description: >
-  Setting up your browser to be automated.
+  自動化するブラウザを設定する。
 aliases: [
 "/documentation/ja/selenium_installation/installing_webdriver_binaries/",
 "/documentation/ja/webdriver/driver_requirements/",
@@ -12,181 +11,269 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Seleniumは、WebDriverを介して、Chrom(ium)、Firefox、Internet Explorer、Edge、Opera、Safari
+などの市場にあるすべての主要なブラウザーをサポートします。 
+可能な場合、WebDriverは、ブラウザーに組み込まれている自動化のサポートを使用してブラウザーを動かします。
 
-SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Edge、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。
-すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。
+Internet Explorerを除くすべてのドライバーの実装は、ブラウザーベンダー自身によって提供されているため、
+標準のSeleniumディストリビューションには含まれていません。 
+この章では、さまざまなブラウザを使い始めるための基本的な要件について説明します。
 
-WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。
-これは、ブラウザーによって異なる水準となる可能性があります。
+[Capabilities](/documentation/webdriver/capabilities) のドキュメントで、より高度なオプションについてお読みください。
 
-ブラウザーを制御するためすべてのドライバーが単一のユーザー向けインターフェイスを共有している場合でも、
-ブラウザーのセッションを設定する方法が少し異なります。
-ドライバーの実装の多くはサードパーティによって提供されているため、
-標準のSeleniumディストリビューションには含まれていません。
+## クイックリファレンス
 
-ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。
-このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。
+| ブラウザー | サポートするOS | 維持管理機関 | ダウンロード | イシュートラッカー |
+| ------- | ------------ | ------------- | -------- | ------------- |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | Via Browser |
+| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+| Opera | Windows/macOS/Linux | Opera | [Downloads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
 
-### 実行可能ファイルをパスに追加する
-ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。
-WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。
-実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。
 
-WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。
+## ドライバーを使用する3つの方法
 
-* 実行可能ファイルを配置するディレクトリをこのように作成します。
-_C:\WebDriver\bin_ or _/opt/WebDriver/bin_
-* PATHにディレクトリを追加します。
-  * Windows - 管理者権限でコマンドプロンプトを開いて
-     次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
+### 1. ドライバー管理ソフトウェア
 
-```shell
-setx PATH "%PATH%;C:\WebDriver\bin"
-```
-  * macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
+ほとんどのマシンはブラウザを自動的に更新しますが、ドライバは更新しません。
+ブラウザに適切なドライバを確実に入手するために、多くのサードパーティライブラリが役立ちます。
 
-```shell
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+
+// Use WebDriver Manager: https://github.com/bonigarcia/webdrivermanager
+
+// Import WebDriver Manager:
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+// Call setup() method for the browser driver you want:
+WebDriverManager.chromedriver().setup();
+
+// Initialize your driver as you normally would:
+ChromeDriver driver = new ChromeDriver();
+
+{{< /tab >}}
+{{< tab header="Python" >}}
+
+# Use Webdriver Manager for Python: https://github.com/SergeyPirogov/webdriver_manager
+
+# Import code:
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+
+# Use the `install()` method to set `executabe_path` in a new `Service` instance:
+service = Service(executable_path=ChromeDriverManager().install())
+
+# Pass in the `Service` instance with the `service` keyword: 
+driver = webdriver.Chrome(service=service)
+
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// Use WebDriver Manager Package: https://github.com/rosolko/WebDriverManager.Net
+
+// Import the dependencies:
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
+
+// Use the `SetUpDriver()` which requires a config class:
+new DriverManager().SetUpDriver(new ChromeConfig());
+
+// Initialize your driver as you normally would:
+var driver = new ChromeDriver()
+
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+# Use webdrivers gem: https://github.com/titusfortner/webdrivers
+
+# Add gem to Gemfile:
+gem 'webdrivers', '~> 5.0'
+
+# Require webdrivers in your project:
+require 'webdrivers'
+
+# Initialize driver as you normally would:
+driver = Selenium::WebDriver.for :chrome
+
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+// There is not a recommended driver manager for JavaScript at this time
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Use WebDriverManager: https://github.com/bonigarcia/webdrivermanager
+
+// Import the library
+import io.github.bonigarcia.wdm.WebDriverManager
+
+// Call the setup method before initializing the driver as you normally would:
+fun chrome(): WebDriver {
+    WebDriverManager.chromedriver().setup()
+    return ChromeDriver()
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### 2. `PATH` 環境変数
+このオプションでは、最初に手動でドライバーをダウンロードする必要があります
+（リンクについては[クイックリファレンス](#クイックリファレンス)を参照してください）。
+
+これは、コードを更新せずにドライバーの場所を変更するための柔軟なオプションであり、各マシンがドライバーを同じ場所に配置する必要なく、複数のマシンで機能します。
+
+`PATH` にすでにリストされているディレクトリにドライバを配置するか、ディレクトリに配置して `PATH` に追加することができます。
+
+* すでに `PATH` にあるディレクトリを確認するには、コマンドプロンプト/ターミナルを開いて次のように入力します。
+
+{{< tabpane  >}}
+{{< tab header="Mac / Linux" >}}
+echo $PATH 
+{{< /tab >}}
+{{< tab header="Windows" >}}
+echo %PATH%
+{{< /tab >}}
+{{< /tabpane >}}
+
+<br />
+* ドライバを配置するディレクトリがまだPATHにない場合は、次のディレクトリを追加する必要があります。
+
+{{< tabpane  >}}
+{{< tab header="Mac / Linux" >}}
 export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
-```
+{{< /tab >}}
+{{< tab header="Windows" >}}
+setx PATH "%PATH%;C:\WebDriver\bin"
+{{< /tab >}}
+{{< /tabpane >}}
 
-* これで、変更をテストする準備ができました。
-  開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。
-  前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
+<br />
+* ドライバを起動することで、正しく追加されているかどうかをテストできます。
 
-  ```shell
+ ```shell
   chromedriver
   ```
-* `PATH`が正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
 
-```text
-Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+* If your `PATH` is configured correctly,
+* `PATH` が正しく構成されている場合、ドライバーの起動に関連する出力が表示されます。
+
+```
+Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
 Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
 ```
 
-<kbd>Ctrl + C</kbd> を押すと、コマンドプロンプトの制御を取り戻すことができます。
+ <kbd>Ctrl+C</kbd> を押して、コマンドプロンプトの制御を取り戻すことができます。
 
-### クイックリファレンス
+### 3. ハードコードされた場所
 
-| ブラウザー | サポートOS | メンテナ | ダウンロード | イシュートラッカー |
-| ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [ダウンロード](//chromedriver.storage.googleapis.com/index.html) | [イシュートラッカー](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [ダウンロード](//github.com/mozilla/geckodriver/releases) | [イシュートラッカー](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows 10 | Microsoft | [ダウンロード](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [イシュートラッカー](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium Project | [ダウンロード](/downloads) | [イシュートラッカー](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS El Capitan and newer | Apple | ビルトイン | [イシュートラッカー](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [ダウンロード](//github.com/operasoftware/operachromiumdriver/releases) | [イシュートラッカー](//github.com/operasoftware/operachromiumdriver/issues) |
+上記のオプション2と同様に、ドライバーを手動でダウンロードする必要があります。
+（リンクについては [クイックリファレンス](#クイックリファレンス) を参照してください）。 
+コードそのものに場所を指定することには、システム上の環境変数を把握する必要がないという利点がありますが、
+コードの柔軟性が大幅に低下するという欠点があります。
+
+{{< tabpane langEqualsHeader=true >}}
+
+{{< tab header="Java" >}}
+
+System.setProperty("webdriver.chrome.driver","/opt/WebDriver/bin/chromedriver");
+ChromeDriver driver = new ChromeDriver();
+
+{{< /tab >}}
+
+{{< tab header="Python" >}}
+
+service = Service(executable_path="/opt/WebDriver/bin/chromedriver")
+driver = webdriver.Chrome(service=service)
+
+{{< /tab >}}
+
+{{< tab header="CSharp" >}}
+
+var driver = new ChromeDriver(@"C:\WebDriver\bin");
+
+{{< /tab >}}
+
+{{< tab header="Ruby" >}}
+
+service = Selenium::WebDriver::Service.chrome(path: '/opt/WebDriver/bin/chromedriver')
+driver = Selenium::WebDriver.for :chrome, service: service
+
+{{< /tab >}}
+
+{{< tab header="JavaScript" >}}
+const {Builder} = require('selenium-webdriver');
+
+var service = new chrome.ServiceBuilder('/opt/WebDriver/bin/chromedriver').build();
+var driver = new Builder().forBrowser('chrome').setChromeService(service).build();
+{{< /tab >}}
+
+{{< tab header="Kotlin" >}}
+
+// Please raise a PR to add code sample
+
+{{< /tab >}}
+
+{{< /tabpane >}}
+
+
+## ブラウザの起動
 
 ### Chromium/Chrome
 
-Chrome または Chromium を動かす場合、[chromedriver](//sites.google.com/a/chromium.org/chromedriver/downloads) をダウンロードして、システムパスのフォルダに置いてください。
+デフォルトでは、Selenium4はChromev75以降と互換性があります。 
+Chromeのバージョンとchromedriverのバージョンはメジャーバージョンと一致する必要があることに注意してください。 
+該当するダウンロードリンクについては、[クイックリファレンス](#クイックリファレンス)を参照してください。
 
-LinuxまたはmacOSでは、これは `PATH` 環境変数を変更することを意味します。
-次のコマンドを実行すると、コロンで区切られたディレクトリがシステムのパスを構成していることがわかります。
+Chromeの起動方法の例は、前章、つまり詳しく説明した[ドライバーを使用する3つの方法](#ドライバーを使用する3つの方法)に記載されています。
 
-```shell
-$ echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-```
+### Edge
 
-まだパスを追加していない場合にchromedriverをパスに含めるには、chromedriverバイナリの親ディレクトリを必ず含めてください。
-次の行は、 `PATH` 環境変数の現在のコンテンツに加えて、コロンの後に追加のパスを設定します。
-
-```shell
-$ export PATH="$PATH:/path/to/chromedriver"
-```
-
-パス上でchromedriverが使用可能な場合、任意のディレクトリから_chromedriver_実行可能ファイルを実行できるはずです。
-
-Chrome / Chromiumセッションをインスタンス化するには、次のとおり。
+Microsoft Edgeは、サポートされている最も古いバージョンのv79を使用してChromiumで実装されています。 
+Chromeと同様に、Edgeのバージョンとedgedriverのバージョンはメジャーバージョンと一致する必要があります。 
+該当するダウンロードリンクについては、[クイックリファレンス](#クイックリファレンス)を参照してください。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
-WebDriver driver = new ChromeDriver();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-#Simple assignment
-from selenium.webdriver import Chrome
+WebDriver driver = new EdgeDriver();
+{{< /tab >}}
+{{< tab header="Python" >}}
+from selenium.webdriver import Edge
 
-driver = Chrome()
-
-#Or use the context manager
-from selenium.webdriver import Chrome
-
-with Chrome() as driver:
-    #your code inside this indent
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+driver = Edge()
+{{< /tab >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 
-IWebDriver driver = new ChromeDriver();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+IWebDriver driver = new EdgeDriver();
+{{< /tab >}}
+{{< tab header="Ruby" >}}
 require "selenium-webdriver"
 
-driver = Selenium::WebDriver.for :chrome
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+driver = Selenium::WebDriver.for :edge
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
-(async function myFunction() {
-    let driver = await new Builder().forBrowser('chrome').build();
-    //your code inside this block
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+var driver = new Builder().forBrowser('edge').build();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.Edge.EdgeDriver
 
-val driver: WebDriver = ChromeDriver()
-  {{< /tab >}}
+val driver: WebDriver = EdgeDriver()
+{{< /tab >}}
 {{< /tabpane >}}
-
-chromedriver実行可能ファイルへのパスを設定する必要があることに注意してください。
-これは、次の行を使えば可能です。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-Chrome(executable_path='/path/to/chromedriver')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-new ChromeDriver("/path/to/chromedriver");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
-  {{< /tab >}}
-{{< /tabpane >}}
-
-chromedriverは、Chromeの内部自動化プロキシインターフェイスを公開することにより、ブラウザーに処理を指示するWebDriverリモートサーバーとして実装されています。
 
 ### Firefox
 
-Selenium 3以降、MozillaはFirefoxドライバーの実装である [geckodriver](//github.com/mozilla/geckodriver) を引き継ぎました。
-Firefox用の新しいドライバーはgeckodriverと呼ばれ、Firefox 48以降で動作します。
-Firefox WebDriverは開発中であるため、Firefoxバージョンが新しいほどサポートが向上します。
-
-geckodriverはFirefoxを起動する新しいデフォルトの方法であるため、
-Selenium 2と同じ方法でFirefoxをインスタンス化できます。
+Selenium4にはFirefox78以降が必要です。 
+常に最新バージョンのgeckodriverを使用することをお勧めします。 
+該当するダウンロードリンクについては、[クイックリファレンス](#クイックリファレンス)を参照してください。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -196,15 +283,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 WebDriver driver = new FirefoxDriver();
   {{< /tab >}}
   {{< tab header="Python" >}}
-#Simple assignment
 from selenium.webdriver import Firefox
 
 driver = Firefox()
-#Or use the context manager
-from selenium.webdriver import Firefox
-
-with Firefox() as driver:
-   #your code inside this indent
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -220,11 +301,8 @@ driver = Selenium::WebDriver.for :firefox
   {{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
-(async function myFunction() {
-   let driver = await new Builder().forBrowser('firefox').build();
-   //your code inside this block
-})();
-  {{< /tab >}}
+var driver = new Builder().forBrowser('firefox').build();
+ {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.Firefox.FirefoxDriver
@@ -233,140 +311,22 @@ val driver: WebDriver = FirefoxDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-PATHを使用してgeckodriverの場所を設定しない場合は、
-geckodriverバイナリの場所をプログラムで設定します。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-Firefox(executable_path='/path/to/geckodriver')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-new FirefoxDriver("/path/to/geckodriver");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const firefox = require('selenium-webdriver/firefox');
-
-const serviceBuilder = new firefox.ServiceBuilder("/path/to/geckodriver");
-
-(async function myFunction() {
-    let driver = await new Builder()
-        .forBrowser('firefox')
-        .setFirefoxService(serviceBuilder)
-        .build();
-        //your code inside this block
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
-  {{< /tab >}}
-{{< /tabpane >}}
-
-実行時にプロパティを設定することも可能です。
-
-```shell
-mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver
-```
-
-Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/) または [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/) をインストール、および **marionette** の必要な機能を **false** として指定することにより、多くの機能が完了した古いFirefoxドライバーに戻すことが可能です。
-以降のFirefoxのリリースには互換性がありません。
-
-### Edge
-
-Edgeは、Microsoftの最新のブラウザーで、Windows 10およびServer 2016に含まれています。
-Edgeの更新は、主要なWindowsUpdateプログラムにバンドルされているため、現在インストールされているWindowsビルドのビルド番号に一致するバイナリをダウンロードする必要があります。 
-[Edge Developer サイト](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)には、利用可能なすべてのバイナリへのリンクが含まれています。 
-EdgeDriverの実装に対するバグは、[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver)に起票する可能性があります。 
-Edgeに対してテストを実行したいがWindows 10を実行していない場合、MicrosoftはEdge [Edge Developer サイト](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/)でテスター向けに無料のVMを提供しています。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-
-WebDriver driver = new EdgeDriver();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-#Simple assignment
-from selenium.webdriver import Edge
-
-driver = Edge()
-#Or use the context manager
-from selenium.webdriver import Edge
-
-with Edge() as driver:
-   #your code inside this indent
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Edge;
-
-IWebDriver driver = new EdgeDriver();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require "selenium-webdriver"
-
-driver = Selenium::WebDriver.for :edge
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-
-(async function myFunction() {
-   let driver = await new Builder().forBrowser('MicrosoftEdge').build();
-   //your code inside this block
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.edge.EdgeDriver
-
-val driver: WebDriver = EdgeDriver()
-  {{< /tab >}}
-{{< /tabpane >}}
-
-Edgeドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-Edge(executable_path='/path/to/MicrosoftWebDriver.exe')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-new EdgeDriver("/path/to/MicrosoftWebDriver.exe");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require("selenium-webdriver");
-const edge = require('selenium-webdriver/edge');
-let service = new edge.ServiceBuilder("/path/to/msedgedriver.exe");
-(async function test() {
-    let driver = await new Builder()
-                .setEdgeService(service)
-                .forBrowser('MicrosoftEdge')
-                .build();
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
-  {{< /tab >}}
-{{< /tabpane >}}
 
 ### Internet Explorer
-Internet Explorerは、Windows 10まではMicrosoftのデフォルトのブラウザーでしたが、Windows 10にはまだ含まれています。
-Internet ExplorerドライバーはSeleniumプロジェクトは、同じリリースの[Microsoftの現在の考慮](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer)をサポートすることを目指す唯一のドライバーです。
-古いリリースは動作する可能性がありますが、サポートされません。
 
-SeleniumプロジェクトはInternet Explorerの32ビット版と64ビット版の両方のバイナリを提供しますが、64ビットドライバーを使用するInternet Explorer 10および11にはいくつかの[制限](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)がありますが、32ビットドライバーの使うことでうまく機能します。
-ログインしたユーザーのアカウントに対してInternet Explorerの設定が保存されるため、[追加の設定が必要になること](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration)に注意してください。
+Seleniumプロジェクトは、 [Microsoftがカレントバージョンとみなすもの](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer) 
+と同じリリースをサポートすることを目的としています。 
+古いリリースは機能する可能性がありますが、サポートされません。 
+Internet Explorer 11は、2022年6月15日にWindows 10を含む特定のオペレーティングシステムのサポートを終了することに注意してください。Edgeには、引き続きサポートされるIE互換モードがあります。
+
+IEドライバーは、Seleniumプロジェクトによって直接維持される唯一のドライバーです。 
+Internet Explorerの32ビットバージョンと64ビットバージョンの両方のバイナリを使用できますが、
+64ビットドライバーにはいくつかの[制限](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)があります。 
+そのため、32ビットドライバを使用することをお勧めします。 
+Internet Explorerの設定はログインしたユーザーのアカウントに対して保存されるため、追加の設定が必要になることに注意してください。
+
+Internet Explorerの使用に関する追加情報は、[Selenium wiki](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)にあり、
+該当するダウンロードリンクの[クイックリファレンス](#クイックリファレンス)を参照してください。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -376,15 +336,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 WebDriver driver = new InternetExplorerDriver();
   {{< /tab >}}
   {{< tab header="Python" >}}
-#Simple assignment
 from selenium.webdriver import Ie
 
 driver = Ie()
-#Or use the context manager
-from selenium.webdriver import Ie
-
-with Ie() as driver:
-   #your code inside this indent
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -395,16 +349,13 @@ IWebDriver driver = new InternetExplorerDriver();
   {{< tab header="Ruby" >}}
 require "selenium-webdriver"
 
-driver = Selenium::WebDriver.for :internet_explorer
+driver = Selenium::WebDriver.for :ie
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
-(async function myFunction() {
-   let driver = await new Builder().forBrowser('internet explorer').build();
-   //your code inside this block
-})();
-  {{< /tab >}}
+var driver = new Builder().forBrowser('internet explorer').build();
+ {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.ie.InternetExplorerDriver
@@ -413,44 +364,10 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-Internet Explorerドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-Ie(executable_path='/path/to/IEDriverServer.exe')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-new InternetExplorerDriver("C:/path/to/IEDriver.exe");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require("selenium-webdriver");
-const ie = require('selenium-webdriver/ie');
-let service = new ie.ServiceBuilder("/path/to/IEDriverServer.exe");
-(async function test() {
-    let driver = await new Builder()
-                .setIeService(service)
-                .forBrowser('internet explorer')
-                .build();
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
-  {{< /tab >}}
-{{< /tabpane >}}
-
-Microsoftは、[Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069)上のInternet Explorer 11用のWebDriverバイナリも提供しています。 
-2014年以降更新されておらず、W3仕様のドラフトバージョンに基づいています。 [ジム エバンス](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)は、Microsoftの実装に関する優れた記事を持っています。
-
 ### Opera
-Operaの現在のリリースはChromiumエンジンの上に構築されており、WebDriverは[PATHに追加](#adding-executables-to-your-path)したりシステムプロパティとして追加したりできるクローズドソースの[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases)を介してサポートされるようになりました。
 
-ドライバーセッションのインスタンス化は、FirefoxとChromiumに似ています。
+Operaの現在のリリースはChromiumエンジン上に構築されており、
+WebDriverはクローズドソースの [Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases) を介してサポートされるようになりました。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -460,15 +377,9 @@ import org.openqa.selenium.opera.OperaDriver;
 WebDriver driver = new OperaDriver();
   {{< /tab >}}
   {{< tab header="Python" >}}
-#Simple assignment
 from selenium.webdriver import Opera
 
 driver = Opera()
-#Or use the context manager
-from selenium.webdriver import Opera
-
-with Opera() as driver:
-   #your code inside this indent
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -477,18 +388,12 @@ using OpenQA.Selenium.Opera;
 IWebDriver driver = new OperaDriver();
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-require "selenium-webdriver"
-
-driver = Selenium::WebDriver.for :opera
+# Not currently implemented
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder} = require("selenium-webdriver");
-const opera = require('selenium-webdriver/opera');
-(async function test() {
-    let driver = await new Builder()
-        .forBrowser('opera')
-        .build();
-})();
+
+var driver = new Builder().forBrowser('opera').build();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.WebDriver
@@ -500,23 +405,12 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-High Sierra 以降 :
-* まず端末から次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します
+ChromiumおよびFirefoxドライバーとは異なり、safaridriverはオペレーティングシステムとともにインストールされます。 
+Safariで自動化を有効にするには、ターミナルから次のコマンドを実行します。
+
 ```shell
 safaridriver --enable
 ```
-
-El Capitan と Sierra :
-
-* Safariの設定から開発メニューを有効にします
-* 開発メニューから _リモート オートメーションを許可_ オプションをオンにします
-* まずターミナルから次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します
-
-```shell
-/usr/bin/safaridriver -p 1337</
-```
-
-その後、次を使用してドライバーセッションを開始できます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -526,15 +420,9 @@ import org.openqa.selenium.safari.SafariDriver;
 WebDriver driver = new SafariDriver();
   {{< /tab >}}
   {{< tab header="Python" >}}
-#Simple assignment
 from selenium.webdriver import Safari
 
 driver = Safari()
-#Or use the context manager
-from selenium.webdriver import Safari
-
-with Safari() as driver:
-   #your code inside this indent
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -550,10 +438,7 @@ driver = Selenium::WebDriver.for :safari
   {{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
-(async function myFunction() {
-   let driver = await new Builder().forBrowser('safari').build();
-   //your code inside this block
-})();
+var driver = new Builder().forBrowser('safari').build();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.WebDriver
@@ -563,20 +448,4 @@ val driver: WebDriver = SafariDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-iOSでSafariを自動化する場合は、[Appium project](//appium.io/)をご覧ください。
-Safariは以前はWindowsで利用可能でしたが、Appleは長い間サポートを終了しており、テストプラットフォームの選択肢としては不適切です。
-
-## モック ブラウザー
-
-### HtmlUnit
-
-HtmlUnitは "Javaプログラム用のGUIレスブラウザー" です。 HTMLドキュメントをモデル化し、ページの呼び出し、フォームへの入力、リンクのクリックなどを可能にするAPIを提供します。
-JavaScriptをサポートしており、AJAXライブラリを使用して、使用する設定に応じてChrome、Firefox、またはInternet Explorerをシミュレートできます。
-[新しい場所](http://htmlunit.sourceforge.net/gettingStarted.html)に移動しました。
-ソースはsvnで管理されています。
-
-### PhantomJS
-
-PhantomJSは、Google ChromeまたはSafariで使用されているバージョンよりもはるかに古いバージョンですが、Webkitベースのヘッドレスブラウザーです。
-歴史的に人気のある選択肢でしたが、今ではPhantomJSを避ける​​のが賢明です。
-プロジェクトは[8月5日以降](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE)メンテナンスされていないため、Webの変更は継続されますが、PhantomJSは更新されません。これは、GoogleがChromeをヘッドレスで実行する機能を発表した後のことで、MozillaのFirefoxでも提供されています。
+iOSでSafariを自動化することを検討している人は、[Appiumプロジェクト](//appium.io/)を検討する必要があります。
