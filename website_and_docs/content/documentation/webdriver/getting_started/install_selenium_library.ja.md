@@ -1,10 +1,9 @@
 ---
 title: "Seleniumライブラリのインストール"
-linkTitle: "Seleniumライブラリのインストール"
+linkTitle: "ライブラリのインストール"
 weight: 1
-needsTranslation: true
 description: >
-  Setting up the Selenium library for your favourite programming language.
+  お気に入りのプログラミング言語用にSeleniumライブラリを設定します。
 aliases: [
 "/documentation/ja/selenium_installation/installing_selenium_libraries/",
 "/ja/documentation/getting_started/installing_selenium_libraries/"
@@ -87,6 +86,5 @@ npm install selenium-webdriver
 ```
 
 ### Kotlin
-Due to missing native language bindings for Kotlin, you have to use the 
-Java Bindings, e.g. with maven [Java](#java)
-
+Kotlinのネイティブ言語バインディングが欠落しているため、Javaバインディングを使用する必要があります。
+例えば、 maven [Java](#java) を使用します。
