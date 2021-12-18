@@ -10,39 +10,36 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
-    Page being translated from English to Chinese. 
-    Do you speak Chinese? Help us to translate
-    it by sending us pull requests!
+虽然Selenium 4提供了对Chrome DevTools Protocol (CDP) 的直接访问，
+但是仍非常鼓励您使用
+    [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}} 
+代替.
 </p>
 {{% /pageinfo %}}
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-    While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is 
-    highly encouraged that you use the 
-    [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}} instead.
-</p>
-{{% /pageinfo %}}
+许多浏览器都提供"开发工具" -- 一组与浏览器集成的工具,
+开发人员可以用其调试web应用程序并探索其页面的性能. 
+谷歌浏览器开发工具
+使用一种称为Chrome DevTools Protocol (简称"CDP") 的协议. 
+顾名思义, 这不是为测试而设计的,
+而并没有一个稳定的API,
+所以它的功能高度依赖于浏览器的版本. 
 
-Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
-developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
-DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
-As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
-is highly dependent on the version of the browser.
+WebDriver Bidi是W3C WebDriver的下一代协议,
+旨在提供由所有浏览器实现稳定的API, 但尚未完成.
+在此之前, Selenium提供了通过CDP实现的方式
+(诸如Google Chrome或Microsoft Edge, 以及Firefox), 
+允许您以有趣的方式增强测试.
+下面给出了实际使用的例子.
 
-WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
-implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
-the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
-Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
-do with it are given below.
+## 模拟地理位置
 
-## Emulate Geo Location
-
-Some applications have different features and functionalities across different 
-locations. Automating such applications is difficult because it is hard to emulate 
-the geo-locations in the browser using Selenium. But with the help of Devtools, 
-we can easily emulate them. Below code snippet demonstrates that.
+一些应用程序在不同的位置具有不同的特性和功能.
+自动化此类应用程序很难,
+因为很难使用Selenium在浏览器中模拟地理位置.
+但是在Devtools的帮助下,
+我们可以轻易模拟他们.
+下面的代码片段演示了这一点.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -159,7 +156,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Emulate Geo Location with the Remote WebDriver:
+## 通过远程WebDriver模拟地理位置
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -316,12 +313,14 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Override Device Mode
+## 覆盖设备模式
 
-Using Selenium's integration with CDP, one can override the current device 
-mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor 
-are required parameters. Optional parameters include scale, screenWidth, 
-screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
+使用Selenium与CDP的集成,
+可以覆盖当前设备模式并模拟新模式. 
+Width, height, mobile和deviceScaleFactor是必需的参数. 
+可选参数包括scale, screenWidth,
+screenHeight, positionX, positionY,
+dontSetVisible, screenOrientation, viewport和displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}

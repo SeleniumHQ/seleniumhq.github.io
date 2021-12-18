@@ -15,7 +15,7 @@ functionality useful for both browser automation generally and testing specifica
 Before now, users seeking this functionality have had to rely on
 with all of its frustrations and limitations.
 
-The traditional webdriver model of strict request/response commands will be supplemented
+The traditional WebDriver model of strict request/response commands will be supplemented
 with the ability to stream events from the user agent to the controlling software via WebSockets,
 better matching the evented nature of the browser DOM.
 
