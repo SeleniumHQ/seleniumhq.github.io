@@ -2,7 +2,6 @@
 title: "InternetExplorer固有のCapabiliy"
 linkTitle: "Internet Explorer"
 weight: 8
-needsTranslation: true
 description: >-
     これらのCapabilityは、InternetExplorer固有のものです。
 ---

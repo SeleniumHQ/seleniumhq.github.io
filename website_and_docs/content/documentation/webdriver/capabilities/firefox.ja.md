@@ -2,7 +2,6 @@
 title: "Firefox固有のCapabiliy"
 linkTitle: "Firefox"
 weight: 6
-needsTranslation: true
 description: >-
     これらのCapabiliyはFirefox固有のものです。
 ---

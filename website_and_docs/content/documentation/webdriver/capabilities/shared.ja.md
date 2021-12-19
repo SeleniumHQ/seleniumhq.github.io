@@ -2,7 +2,6 @@
 title: "共通のCapability"
 linkTitle: "共通のCapability"
 weight: 2
-needsTranslation: true
 description: >-
   これらのCapabilityはすべてのブラウザで共通です。
 aliases: [
