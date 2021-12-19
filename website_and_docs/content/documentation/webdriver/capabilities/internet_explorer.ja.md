@@ -1,10 +1,10 @@
 ---
-title: "Capabilities specific to Internet Explorer browser"
+title: "InternetExplorer固有のCapabiliy"
 linkTitle: "Internet Explorer"
 weight: 8
 needsTranslation: true
 description: >-
-    These capabilities are specific to Internet Explorer.
+    これらのCapabilityは、InternetExplorer固有のものです。
 ---
 
 ### fileUploadDialogTimeout
