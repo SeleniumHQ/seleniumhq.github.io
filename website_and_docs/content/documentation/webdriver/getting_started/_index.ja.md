@@ -3,7 +3,7 @@ title: "入門"
 linkTitle: "入門"
 weight: 2
 description: >
-  If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+  Seleniumを初めて使用する場合は、すぐに習得するのに役立つリソースがいくつかあります。
 aliases: [
 "/documentation/ja/getting_started/", 
 "/documentation/ja/getting_started/quick/",
@@ -12,15 +12,6 @@ aliases: [
 "/ja/documentation/getting_started/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Seleniumは市場で主要なブラウザの全てを _WebDriver_ を使うことでサポートしています。
 WebDriverとはAPI群とプロトコルです。これらはウェブブラウザの動作をコントロールするための言語中立なインターフェイスを定義しています。
@@ -34,16 +25,13 @@ Seleniumフレームワークはこれら全ての要素をユーザ向けのイ
 
 Seleniumのセットアップは他の商用ツールと少し違います。自動化プロジェクトでSeleniumを使うためには、選択した言語の言語バインディングライブラリをインストールする必要があります。加えて、自動化でテストを実行したいブラウザのWebDriverバイナリも必要となります。
 
-Installing Selenium can be divided in three steps:
+Seleniumのインストールは、次の3つのステップに分類することができます。
 
-1. [Installing the Selenium library]({{< ref "install_selenium_library.md" >}}) for your desired programming language
-2. [Set up the browser driver]({{< ref "install_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid]({{< ref "/grid.md" >}}) if you want to scale up your tests
+1. 希望するプログラミング言語の[Seleniumライブラリをインストール]({{< ref "install_selenium_library.md" >}})する。
+2. ブラウザを自動化するように[ブラウザードライバを設定]({{< ref "install_drivers.md" >}})する。（例：Firefox用のGeckoDriver）
+3. （オプション）テストをスケールアップする場合は、[Selenium Grid]({{< ref "/grid.md" >}})をセットアップして構成する。
 
-If you wish to start with a low-code/record and playback tool, please check 
-[Selenium IDE](https://selenium.dev/selenium-ide)
+ローコード/記録および再生ツールから始めたい場合は、[Selenium IDE](https://selenium.dev/selenium-ide) をチェックしてください。
 
-After completing the setup, you can run the code snippet shown at the 
-[starting page](/ja/documentation) in our docs. Then head to the 
-[WebDriver]({{< ref "/webdriver.md" >}}) section to learn more about
-browser automation with Selenium.
+セットアップが完了したら、ドキュメントの[トップページ](/ja/documentation)に表示されているコードスニペットを実行できます。 
+次に、[WebDriver]({{< ref "/webdriver.md" >}})の章に移動して、Seleniumを使用したブラウザーの自動化について詳しく学びます。
