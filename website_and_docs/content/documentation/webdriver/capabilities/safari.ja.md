@@ -1,8 +1,7 @@
 ---
-title: "Capabilities specific to Safari browser"
+title: "Safari固有のCapability"
 linkTitle: "Safari"
 weight: 10
-needsTranslation: true
 description: >-
-    These capabilities are specific to Safari.
+    これらのCapabilityはSafari固有のものです。
 ---

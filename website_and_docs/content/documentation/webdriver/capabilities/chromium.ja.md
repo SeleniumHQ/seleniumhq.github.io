@@ -1,10 +1,9 @@
 ---
-title: "Capabilities specific to Chromium browsers"
+title: "Chromiumベースのブラウザ固有のCapability"
 linkTitle: "Chromium"
 weight: 4
-needsTranslation: true
 description: >-
-    These capabilities are specific to Chromium based browsers.
+    これらの機能は、Chromiumベースのブラウザ固有のものです。
 ---
 
 These Capabilities apply to:
