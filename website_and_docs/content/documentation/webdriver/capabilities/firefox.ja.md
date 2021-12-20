@@ -1,9 +1,9 @@
 ---
-title: "Firefox固有のCapabiliy"
+title: "Firefox固有のCapability"
 linkTitle: "Firefox"
 weight: 6
 description: >-
-    これらのCapabiliyはFirefox固有のものです。
+    これらのCapabilityはFirefox固有のものです。
 ---
 
 ### `FirefoxOptions` を使用してCapabilitiesを定義する

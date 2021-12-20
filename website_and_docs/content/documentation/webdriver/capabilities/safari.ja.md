@@ -1,7 +1,7 @@
 ---
-title: "Safari固有のCapabiliy"
+title: "Safari固有のCapability"
 linkTitle: "Safari"
 weight: 10
 description: >-
-    これらのCapabiliyはSafari固有のものです。
+    これらのCapabilityはSafari固有のものです。
 ---

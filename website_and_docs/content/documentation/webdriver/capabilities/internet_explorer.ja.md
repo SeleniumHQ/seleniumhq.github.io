@@ -1,5 +1,5 @@
 ---
-title: "InternetExplorer固有のCapabiliy"
+title: "InternetExplorer固有のCapability"
 linkTitle: "Internet Explorer"
 weight: 8
 description: >-
