@@ -1,10 +1,9 @@
 ---
-title: "共有Capabilities"
-linkTitle: "共有Capabilities"
+title: "共通のCapability"
+linkTitle: "共通のCapability"
 weight: 2
-needsTranslation: true
 description: >-
-  These capabilities are shared by all browsers.
+  これらのCapabilityはすべてのブラウザで共通です。
 aliases: [
 "/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
 "/ja/documentation/webdriver/capabilities/shared_capabilities/",
@@ -18,10 +17,10 @@ aliases: [
 ---
 
 Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。
-リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
+リモートエンドは、一連の同じCapabilityを使用してセッションを作成し、現在のセッション機能を描きます。
 
-WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。
-WebDriverがサポートするCapabilitiesは次のとおりです。
+WebDriverは、各リモートエンドがCapabilityをサポートする/すべきCapabilityを提供します。
+WebDriverがサポートするCapabilityは次のとおりです。
 
 ## browserName:
 
