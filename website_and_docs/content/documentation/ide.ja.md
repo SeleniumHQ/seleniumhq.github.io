@@ -2,17 +2,14 @@
 title: "Selenium IDE"
 linkTitle: "IDE"
 weight: 10
-needsTranslation: true
 description: >
     Selenium IDEは、ユーザーのアクションを記録および再生するブラウザー拡張機能です。
 ---
 
-Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
-is an easy-to-use browser extension that records a user's
-actions in the browser using existing Selenium commands, 
-with parameters defined by the context of each element. 
-It provides an excellent way to learn Selenium syntax.
-It's available for Google Chrome, Mozilla Firefox, and Microsoft Edge.
+Seleniumの統合開発環境（[Selenium IDE](//selenium.dev/selenium-ide)）は、
+各要素のコンテキストによって定義されたパラメーターを使用して、
+既存のSeleniumコマンドを使用してブラウザーでのユーザーのアクションを記録する、使いやすいブラウザー拡張機能です。 
+これは、Seleniumの構文を学習するための優れた方法を提供します。 
+Google Chrome、Mozilla Firefox、およびMicrosoftEdgeで利用できます。
 
-For more information, visit the complete
-[Selenium IDE Documentation](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)
+詳細については、充実している[Selenium IDE ドキュメント](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)をご覧ください。
