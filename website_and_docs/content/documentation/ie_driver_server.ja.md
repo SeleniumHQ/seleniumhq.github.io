@@ -1,183 +1,162 @@
 ---
-title: "IE Driver Server"
-linkTitle: "IE Driver Server"
+title: "IE Driver サーバー"
+linkTitle: "IE Driver サーバー"
 weight: 8
 description: >
     Internet Explorer Driverは、WebDriverの仕様を実装するスタンドアロンサーバーです。
 ---
 
-The `InternetExplorerDriver` is a standalone server which implements WebDriver's wire protocol.
-This driver has been tested with IE 11, and on Windows 10. It might work with older versions
-of IE and Windows, but this is not supported.
+`InternetExplorerDriver` は、WebDriverのワイヤプロトコルを実装するスタンドアロンサーバーです。 
+このドライバーは、IE11およびWindows10でテストされています。
+古いバージョンのIEおよびWindowsで動作する可能性がありますが、これはサポートされていません。
 
-The driver supports running 32-bit and 64-bit versions of the browser. The choice of how to 
-determine which "bit-ness" to use in launching the browser depends on which version of the 
-IEDriverServer.exe is launched. If the 32-bit version of `IEDriverServer.exe` is launched, 
-the 32-bit version of IE will be launched. Similarly, if the 64-bit version of 
-IEDriverServer.exe is launched, the 64-bit version of IE will be launched.
+ドライバーは、32ビットおよび64ビットバージョンのブラウザーの実行をサポートします。 
+ブラウザの起動に使用する"ビット数"を決定する方法の選択は、起動するIEDriverServer.exeのバージョンによって異なります。 
+32ビットバージョンの `IEDriverServer.exe` を起動すると、32ビットバージョンのIEが起動します。 
+同様に、64ビットバージョンのIEDriverServer.exeを起動すると、64ビットバージョンのIEが起動します。
 
-## Installing
+## インストール
 
-You do not need to run an installer before using the `InternetExplorerDriver`, though some 
-configuration is required. The standalone server executable must be downloaded from 
-the [Downloads](https://www.selenium.dev/downloads/) page and placed in your 
-[PATH](http://en.wikipedia.org/wiki/PATH_(variable)).
+InternetExplorerDriverを使用する前にインストーラーを実行する必要はありませんが、いくつかの設定が必要になります。 
+スタンドアロンサーバーの実行可能ファイルは、[ダウンロード](https://www.selenium.dev/downloads/) ページからダウンロードして、
+[PATH](http://en.wikipedia.org/wiki/PATH_(variable))に配置する必要があります。
 
-## Pros
+## 長所
 
-* Runs in a real browser and supports JavaScript
+* 実際のブラウザで実行され、JavaScriptをサポートします。
 
-## Cons
+## 短所
 
-* Obviously the InternetExplorerDriver will only work on Windows!
-* Comparatively slow (though still pretty snappy :)
+* 明らかに、InternetExplorerDriverはWindowsでのみ動作します！
+* 比較的遅い（それでもかなりてきぱきしているが:)
 
-## Command-Line Switches
+## コマンドラインスイッチ
 
-As a standalone executable, the behavior of the IE driver can be modified through various 
-command-line arguments. To set the value of these command-line arguments, you should 
-consult the documentation for the language binding you are using. The command line 
-switches supported are described in the table below. All -`<switch>`, --`<switch>` 
-and /`<switch>` are supported.
+スタンドアロンの実行可能ファイルとして、IEドライバーの動作はさまざまなコマンドライン引数を使用して変更できます。 
+これらのコマンドライン引数の値を設定するには、使用している言語バインディングのドキュメントを参照する必要があります。 
+サポートされているコマンドラインスイッチについて、以下の表で説明します。 
+すべての-`<switch>`、--`<switch>`、および /`<switch>` がサポートされています。
 
-| Switch | Meaning |
+| Switch | 意味 |
 |:-------|:--------|
-| --port=`<portNumber>` | Specifies the port on which the HTTP server of the IE driver will listen for commands from language bindings. Defaults to 5555. |
-| --host=`<hostAdapterIPAddress>` | Specifies the IP address of the host adapter on which the HTTP server of the IE driver will listen for commands from language bindings. Defaults to 127.0.0.1. |
-| --log-level=`<logLevel>` | Specifies the level at which logging messages are output. Valid values are FATAL, ERROR, WARN, INFO, DEBUG, and TRACE. Defaults to FATAL. |
-| --log-file=`<logFile>` | Specifies the full path and file name of the log file. Defaults to stdout. |
-| --extract-path=`<path>` | Specifies the full path to the directory used to extract supporting files used by the server. Defaults to the TEMP directory if not specified. |
-| --silent | Suppresses diagnostic output when the server is started. |
+| --port=`<portNumber>` | IEドライバーのHTTPサーバーが言語バインディングからのコマンドをリッスンするポートを指定します。 デフォルトは5555です。 |
+| --host=`<hostAdapterIPAddress>` | IEドライバーのHTTPサーバーが言語バインディングからのコマンドをリッスンするホストアダプターのIPアドレスを指定します。 デフォルトは127.0.0.1です。 |
+| --log-level=`<logLevel>` | ロギングメッセージを出力するレベルを指定します。 有効な値は、FATAL、ERROR、WARN、INFO、DEBUG、およびTRACEです。 デフォルトはFATALです。 |
+| --log-file=`<logFile>` | ログファイルのフルパスとファイル名を指定します。 デフォルトはstdoutです。 |
+| --extract-path=`<path>` | サーバーが使用するサポートファイルの抽出に使用されるディレクトリへのフルパスを指定します。 指定しない場合、デフォルトでTEMPディレクトリになります。 |
+| --silent | サーバーの起動時に診断出力を抑制します。 |
 
-## Important System Properties
+## 重要なシステムプロパティ
 
-The following system properties (read using `System.getProperty()` and set using
-`System.setProperty()` in Java code or the "`-DpropertyName=value`" command line flag) 
-are used by the `InternetExplorerDriver`:
+次のシステムプロパティ（Javaコードで `System.getProperty()` を使用して読み取り、 `System.setProperty()` または "`-DpropertyName=value`" コマンドラインフラグを使用して設定）は、 `InternetExplorerDriver` によって利用されます。
 
-| **Property** | **What it means** |
+| **プロパティ** | **意味** |
 |:-------------|:------------------|
-| `webdriver.ie.driver` | The location of the IE driver binary. |
-| `webdriver.ie.driver.host` | Specifies the IP address of the host adapter on which the IE driver will listen. |
-| `webdriver.ie.driver.loglevel` | Specifies the level at which logging messages are output. Valid values are FATAL, ERROR, WARN, INFO, DEBUG, and TRACE. Defaults to FATAL. |
-| `webdriver.ie.driver.logfile` | Specifies the full path and file name of the log file. |
-| `webdriver.ie.driver.silent` | Suppresses diagnostic output when the IE driver is started. |
-| `webdriver.ie.driver.extractpath` | Specifies the full path to the directory used to extract supporting files used by the server. Defaults to the TEMP directory if not specified. |
+| `webdriver.ie.driver` | IEドライバーバイナリの場所 |
+| `webdriver.ie.driver.host` | IEドライバーがリッスンするホストアダプターのIPアドレスを指定します。 |
+| `webdriver.ie.driver.loglevel` | ロギングメッセージを出力するレベルを指定します。 有効な値は、FATAL、ERROR、WARN、INFO、DEBUG、およびTRACEです。 デフォルトはFATALです。 |
+| `webdriver.ie.driver.logfile` | ログファイルのフルパスとファイル名を指定します。 |
+| `webdriver.ie.driver.silent` | IEドライバーの起動時に診断出力を抑制します。 |
+| `webdriver.ie.driver.extractpath` | サーバーが使用するサポートファイルの抽出に使用されるディレクトリへのフルパスを指定します。 指定しない場合、デフォルトでTEMPディレクトリになります。 |
 
-## Required Configuration
+## 必要な構成
 
-* The `IEDriverServer` executable must be [downloaded](https://www.selenium.dev/downloads/) and placed in your [PATH](http://en.wikipedia.org/wiki/PATH_(variable)).
-* On IE 7 or higher on Windows Vista, Windows 7, or Windows 10, you must set the Protected Mode settings for each zone to be the same value. The value can be on or off, as long as it is the same for every zone. To set the Protected Mode settings, choose "Internet Options..." from the Tools menu, and click on the Security tab. For each zone, there will be a check box at the bottom of the tab labeled "Enable Protected Mode".
-* Additionally, "Enhanced Protected Mode" must be disabled for IE 10 and higher. This option is found in the Advanced tab of the Internet Options dialog.
-* The browser zoom level must be set to 100% so that the native mouse events can be set to the correct coordinates.
-* For Windows 10, you also need to set "Change the size of text, apps, and other items" to 100% in display settings.
-* For IE 11 _only_, you will need to set a registry entry on the target computer so that the driver can maintain a connection to the instance of Internet Explorer it creates. For 32-bit Windows installations, the key you must examine in the registry editor is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. For 64-bit Windows installations, the key is `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. Please note that the `FEATURE_BFCACHE` subkey may or may not be present, and should be created if it is not present. **Important:** Inside this key, create a DWORD value named `iexplore.exe` with the value of 0.
+*  `IEDriverServer` 実行可能ファイルを[ダウンロード](https://www.selenium.dev/downloads/)して、[PATH](http://en.wikipedia.org/wiki/PATH_(variable))に配置する必要があります。
+* Windows Vista、Windows 7、またはWindows10のIE7以降では、各ゾーンの保護モード設定を同じ値に設定する必要があります。 
+値は、すべてのゾーンで同じである限り、オンまたはオフにすることができます。 
+プロテクトモードの設定を行うには、「ツール」メニューから"インターネットオプション..."を選択し、「セキュリティ」タブをクリックします。 
+ゾーンごとに、"保護モードを有効にする"というラベルの付いたタブの下部にチェックボックスがあります。
+* さらに、IE 10以降では、"拡張保護モード" を無効にする必要があります。 
+このオプションは、「インターネットオプション」ダイアログの「詳細設定」タブにあります。
+* ネイティブマウスイベントを正しい座標に設定できるように、ブラウザのズームレベルを100％に設定する必要があります。
+* Windows 10の場合は、ディスプレイの設定で"テキスト、アプリ、その他の項目のサイズを変更する"も100％に設定する必要があります。
+* IE 11の場合 _のみ_ 、ドライバーが作成したInternet Explorerのインスタンスへの接続を維持できるように、ターゲットコンピューターにレジストリエントリを設定する必要があります。 
+32ビットWindowsインストールの場合、レジストリエディタで調べる必要のあるキーは `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE` です。
+64ビットWindowsインストールの場合、キーは`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`です。 
+`FEATURE_BFCACHE` サブキーは存在する場合と存在しない場合があり、存在しない場合は作成する必要があることに注意してください。  
+**重要：** このキーの中に、値0の `iexplore.exe` という名前のDWORD値を作成します。
 
-## Native Events and Internet Explorer
+## ネイティブイベントとInternetExplorer
 
-As the `InternetExplorerDriver` is Windows-only, it attempts to use so-called "native", or OS-level 
-events to perform mouse and keyboard operations in the browser. This is in contrast to using 
-simulated JavaScript events for the same operations. The advantage of using native events is that 
-it does not rely on the JavaScript sandbox, and it ensures proper JavaScript event propagation 
-within the browser. However, there are currently some issues with mouse events when the IE 
-browser window does not have focus, and when attempting to hover over elements.
+ `InternetExplorerDriver` はWindows専用であるため、いわゆる"ネイティブ"またはOSレベルのイベントを使用して、ブラウザーでマウスとキーボードの操作を実行しようとします。 
+ これは、同じ操作でシミュレートされたJavaScriptイベントを使用するのとは対照的です。 
+ ネイティブイベントを使用する利点は、JavaScriptサンドボックスに依存せず、ブラウザー内での適切なJavaScriptイベントの伝播を保証することです。 
+ ただし、現在、IEブラウザウィンドウにフォーカスがない場合や、要素にカーソルを合わせようとした場合のマウスイベントにはいくつかの問題があります。
 
-### Browser Focus
+### ブラウザフォーカス
 
-The challenge is that IE itself appears to not fully respect the Windows messages we send the 
-IE browser window (`WM\_MOUSEDOWN` and `WM\_MOUSEUP`) if the window doesn't have the focus. 
-Specifically, the element being clicked on will receive a focus window around it, but the click 
-will not be processed by the element. Arguably, we shouldn't be sending messages at all; rather, 
-we should be using the `SendInput()` API, but that API explicitly requires the window to have the 
-focus. We have two conflicting goals with the WebDriver project.
+課題は、ウィンドウにフォーカスがない場合、IE自体がIEブラウザウィンドウ（ `WM\_MOUSEDOWN` および `WM\_MOUSEUP` ）に送信するWindowsメッセージを完全に尊重していないように見えることです。 
+具体的には、クリックされている要素はその周りにフォーカスウィンドウを受け取りますが、クリックは要素によって処理されません。 
+間違いなく、メッセージを送信するべきではありません。 
+むしろ、 `SendInput()` APIを使用する必要がありますが、そのAPIでは、ウィンドウにフォーカスを設定する必要があります。 
+WebDriverプロジェクトには2つの相反する目標があります。
 
-First, we strive to emulate the user as closely as possible. This means using native events 
-rather than simulating the events using JavaScript.
+まず、ユーザーを可能な限りエミュレートするよう努めます。 
+これは、JavaScriptを使用してイベントをシミュレートするのではなく、ネイティブイベントを使用することを意味します。
 
-Second, we want to not require focus of the browser window being automated. This means that 
-just forcing the browser window to the foreground is suboptimal.
+次に、自動化されているブラウザウィンドウのフォーカスを必要としないようにします。 
+これは、ブラウザウィンドウをフォアグラウンドに強制するだけでは最適ではないことを意味します。
 
-An additional consideration is the possibility of multiple IE instances running under multiple 
-WebDriver instances, which means any such "bring the window to the foreground" solution will 
-have to be wrapped in some sort of synchronizing construct (mutex?) within the IE driver's 
-C++ code. Even so, this code will still be subject to race conditions, if, for example, the 
-user brings another window to the foreground between the driver bringing IE to the foreground 
-and executing the native event.
+さらに考慮しないといけないのは、複数のWebDriverインスタンスで実行される複数のIEインスタンスがある可能性です。
+つまり、このような"ウィンドウをフォアグラウンドにする"ソリューションは、IEドライバーのC++コード内のある種の同期構造（mutex？）でラップする必要があります。
+それでも、たとえば、ドライバーがIEをフォアグラウンドに移動してからネイティブイベントを実行する間に、ユーザーが別のウィンドウをフォアグラウンドに移動した場合、このコードは競合状態の影響を受けます。
 
-The discussion around the requirements of the driver and how to prioritize these two 
-conflicting goals is ongoing. The current prevailing wisdom is to prioritize the former over 
-the latter, and document that your machine will be unavailable for other tasks when using 
-the IE driver. However, that decision is far from finalized, and the code to implement it is 
-likely to be rather complicated.
+ドライバーの要件と、これら2つの相反する目標に優先順位を付ける方法についての議論が進行中です。 
+現在の一般的な知恵は、後者よりも前者を優先し、IEドライバーを使用するときにマシンが他のタスクに使用できないことを文書化することです。 
+ただし、その決定はまだ確定しておらず、それを実装するためのコードはかなり複雑になる可能性があります。
 
-### Hovering Over Elements
+### 要素にカーソルを合わせる
 
-When you attempt to hover over elements, and your physical mouse cursor is within the boundaries 
-of the IE browser window, the hover will not work. More specifically, the hover will appear 
-to work for a fraction of a second, and then the element will revert back to its previous 
-state. The prevailing theory why this occurs is that IE is doing hit-testing of some sort 
-during its event loop, which causes it to respond to the physical mouse position when the 
-physical cursor is within the window bounds. The WebDriver development team has been unable 
-to discover a workaround for this behavior of IE.
+要素にカーソルを合わせようとしたときに、物理的なマウスカーソルがIEブラウザーウィンドウの境界内にある場合、ホバーは機能しません。 
+より具体的には、ホバーはほんの一瞬だけ機能しているように見え、その後、要素は前の状態に戻ります。 
+これが発生する一般的な理論は、IEがイベントループ中に何らかのヒットテストを実行しているため、物理カーソルがウィンドウの境界内にあるときに物理マウスの位置に応答するというものです。 
+WebDriver開発チームは、IEのこの動作の回避策を見つけることができませんでした。
 
-### Clicking `<option>` Elements or Submitting Forms and `alert()`
+### `<option>` 要素をクリックするか、フォームを送信して `alert()`
 
-There are two places where the IE driver does not interact with elements using native events. 
-This is in clicking `<option>` elements within a `<select>` element. Under normal circumstances, 
-the IE driver calculates where to click based on the position and size of the element, typically 
-as returned by the JavaScript `getBoundingClientRect()` method. However, for `<option>` elements, 
-`getBoundingClientRect()` returns a rectangle with zero position and zero size. The IE driver 
-handles this one scenario by using the `click()` Automation Atom, which essentially sets 
-the `.selected` property of the element and simulates the `onChange` event in JavaScript. 
-However, this means that if the `onChange` event of the `<select>` element contains JavaScript 
-code that calls `alert()`, `confirm()` or `prompt()`, calling WebElement's `click()` method will 
-hang until the modal dialog is manually dismissed. There is no known workaround for this behavior 
-using only WebDriver code.
+IEドライバーがネイティブイベントを使用して要素と対話しない場所は2つあります。 
+これは、 `<select>` 要素内の `<option>` 要素をクリックする場合です。 
+通常の状況では、IEドライバーは、要素の位置とサイズに基づいてクリックする場所を計算します。
+通常は、JavaScriptの`getBoundingClientRect()` メソッドによって返されます。 
+ただし、 `<option>` 要素の場合、 `getBoundingClientRect()` は、位置とサイズがゼロの長方形を返します。 
+IEドライバーは、 `click()` Automation Atomを使用してこの1つのシナリオを処理します。
+これは、基本的に要素の `.selected` プロパティを設定し、JavaScriptでonChangeイベントをシミュレートします。 
+ただし、これは、 `<select>` 要素のonChangeイベントに `alert()` 、 `confirm()` 、または `prompt()`を呼び出すJavaScriptコードが含まれている場合、モーダルダイアログが手動で閉じられるまでWebElementの `click()` メソッドの呼び出しがハングすることを意味します。 WebDriverコードのみを使用したこの動作の既知の回避策はありません。
 
-Similarly, there are some scenarios when submitting an HTML form via WebElement's `submit()` 
-method may have the same effect. This can happen if the driver calls the JavaScript `submit()` 
-function on the form, and there is an onSubmit event handler that calls the JavaScript `alert()`, 
-`confirm()`, or `prompt()` functions.
+同様に、WebElementの `submit()` メソッドを介してHTMLフォームを送信すると、同じ効果が得られるシナリオがいくつかあります。 
+これは、ドライバーがフォームでJavaScriptの `submit()` 関数を呼び出し、
+JavaScriptの `alert()` 、 `confirm()` 、または `prompt()` 関数を呼び出す onSubmit イベントハンドラーがある場合に発生する可能性があります。
 
-This restriction is filed as issue 3508 (on Google Code).
+この制限は、issue 3508（Google Code）として登録されています。
 
-## Multiple instances of `InternetExplorerDriver`
+## `InternetExplorerDriver` の複数のインスタンス
 
-With the creation of the `IEDriverServer.exe`, it should be possible to create and use multiple 
-simultaneous instances of the `InternetExplorerDriver`. However, this functionality is largely 
-untested, and there may be issues with cookies, window focus, and the like. If you attempt to 
-use multiple instances of the IE driver, and run into such issues, consider using the 
-`RemoteWebDriver` and virtual machines.
+`IEDriverServer.exe` を作成すると、 `InternetExplorerDriver` の複数のインスタンスを同時に作成して使用できるようになります。 
+ただし、この機能はほとんどテストされておらず、Cookieやウィンドウフォーカスなどに問題がある可能性があります。 
+IEドライバーの複数のインスタンスを使用しようとして、そのような問題が発生した場合は、`RemoteWebDriver` と仮想マシンの使用を検討してください。
 
-There are 2 solutions for problem with cookies (and another session items) shared between 
-multiple instances of InternetExplorer.
+InternetExplorerの複数のインスタンス間で共有されるCookie（および別のセッションアイテム）の問題には、2つの解決策があります。
 
-The first is to start your InternetExplorer in private mode. After that InternetExplorer will be 
-started with clean session data and will not save changed session data at quiting. To do so you 
-need to pass 2 specific capabilities to driver: `ie.forceCreateProcessApi` with `true` value 
-and `ie.browserCommandLineSwitches` with `-private` value. Be note that it will work only 
-for InternetExplorer 8 and newer, and Windows Registry 
-`HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main` path should contain key 
-`TabProcGrowth` with `0` value.
+1つ目は、InternetExplorerをプライベートモードで起動することです。 
+その後、InternetExplorerはクリーンなセッションデータで開始され、終了時に変更されたセッションデータを保存しません。 
+これを行うには、2つの特定の機能をドライバーに渡す必要があります。
+つまり、 `true` 値を持つ `ie.forceCreateProcessApi` と `-private` 値を持つ `ie.browserCommandLineSwitches` です。 
+InternetExplorer 8以降でのみ機能することに注意してください。
+また、Windowsレジストリ `HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main` パスには、値が `0` のキー`TabProcGrowth` が含まれている必要があります。
 
-The second is to clean session during InternetExplorer starting. For this you need to pass 
-specific `ie.ensureCleanSession` capability with `true` value to driver. This clears the cache 
-for all running instances of InternetExplorer, including those started manually.
+2つ目は、InternetExplorerの起動中にセッションをクリーンアップすることです。 
+このためには、 `true` の値を持つ特定の `ie.ensureCleanSession` capabilityをドライバーに渡す必要があります。 
+これにより、手動で開始されたものを含め、InternetExplorerの実行中のすべてのインスタンスのキャッシュがクリアされます。
 
-## Running `IEDriverServer.exe` Remotely
+## `IEDriverServer.exe` をリモートで実行する
 
-The HTTP server started by the `IEDriverServer.exe` sets an access control list to only accept 
-connections from the local machine, and disallows incoming connections from remote machines. 
-At present, this cannot be changed without modifying the source code to the `IEDriverServer.exe`. 
-To run the Internet Explorer driver on a remote machine, use the Java standalone remote server 
-in connection with your language binding's equivalent of `RemoteWebDriver`.
+`IEDriverServer.exe` によって起動されたHTTPサーバーは、ローカルマシンからの接続のみを受け入れるようにアクセス制御リストを設定し、リモートマシンからの着信接続を禁止します。 
+現在、これはソースコードを `IEDriverServer.exe` に変更せずに変更することはできません。 
+リモートマシンでInternetExplorerドライバーを実行するには、Javaスタンドアロンリモートサーバーを、言語バインディングに相当するRemoteWebDriverと組み合わせて使用します。
 
-## Running `IEDriverServer.exe` Under a Windows Service
+## Windowsサービスで `IEDriverServer.exe` を実行する
 
-Attempting to use IEDriverServer.exe as part of a Windows Service application is expressly 
-unsupported. Service processes, and processes spawned by them, have much different requirements 
-than those executing in a regular user context. `IEDriverServer.exe` is explicitly untested in 
-that environment, and includes Windows API calls that are documented to be prohibited to be used 
-in service processes. While it may be possible to get the IE driver to work while running under 
-a service process, users encountering problems in that environment will need to seek out their 
-own solutions.
+IEDriverServer.exeをWindowsサービスアプリケーションの一部として使用しようとすることは、明示的にサポートされていません。 
+サービスプロセス、およびそれらによって生成されるプロセスには、通常のユーザーコンテキストで実行されるプロセスとは大きく異なる要件があります。 
+ `IEDriverServer.exe` は、その環境では明示的にテストされておらず、サービスプロセスでの使用が禁止されていることが文書化されているWindowsAPI呼び出しが含まれています。 
+サービスプロセスの下で実行しているときにIEドライバーを動作させることは可能かもしれませんが、その環境で問題が発生したユーザーは、独自の解決策を探す必要があります。
