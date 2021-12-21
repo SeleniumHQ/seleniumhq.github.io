@@ -102,7 +102,7 @@ val fruit = fruits.findElement(By.id("tomatoes"))
 {{% pageinfo color="info" %}}
 **Java and C#**<br>
 `WebDriver`, `WebElement` and `ShadowRoot` classes all implement a `SearchContext` interface, which is
-considerd a _role-based interface_. Role-based interfaces allow you to determine whether a particular
+considered a _role-based interface_. Role-based interfaces allow you to determine whether a particular
 driver implementation supports a given feature. These interfaces are clearly defined and try 
 to adhere to having only a single role of responsibility.
 {{% /pageinfo %}}

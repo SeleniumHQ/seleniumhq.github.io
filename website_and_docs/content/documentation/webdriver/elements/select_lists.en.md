@@ -11,7 +11,7 @@ description: >
   Select lists have special behaviors compared to other elements.
 ---
 
-Select elements can require quite a bit of boiler plate code to automate.
+Select elements can require quite a bit of boilerplate code to automate.
 To reduce this, and make your tests cleaner, there is a
 `Select` class in the Selenium support package.
 To use it, you will need the following import statement:

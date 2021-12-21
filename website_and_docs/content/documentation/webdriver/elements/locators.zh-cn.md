@@ -55,7 +55,7 @@ to determine the size and position of elements on the page, and can use this inf
 find the relative elements.
 
 Relative locator methods can take as the argument for the point of origin, either a previously located element reference,
-or another locator. In these examples we'll be using locators only, but you could swap the loctor in the final method with
+or another locator. In these examples we'll be using locators only, but you could swap the locator in the final method with
 an element object and it will work the same.
 
 Let us consider the below example for understanding the relative locators.
