@@ -64,7 +64,7 @@ namespace SeleniumApp
 {
   public class ClickAndHold
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -192,7 +192,7 @@ namespace SeleniumApp
 {
   public class ContextClick
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -320,7 +320,7 @@ namespace SeleniumApp
 {
   public class DoubleClick
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -449,7 +449,7 @@ namespace SeleniumApp
 {
   public class MoveToElement
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -584,7 +584,7 @@ namespace SeleniumApp
 {
   public class MoveByOffset
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -728,7 +728,7 @@ namespace SeleniumApp
 {
   public class DragAndDrop
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -872,7 +872,7 @@ namespace SeleniumApp
 {
   public class DragAndDropToOffset
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
@@ -1025,7 +1025,7 @@ namespace SeleniumApp
 {
   public class Release
   {
-    public static void Main(string[] agrs)
+    public static void Main(string[] args)
     {
       IWebDriver driver = new ChromeDriver();
       try
