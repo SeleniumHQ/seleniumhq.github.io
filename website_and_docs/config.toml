@@ -310,3 +310,17 @@ weight = 60
 tag = "tags"
 category = "categories"
 year = "year"
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_','^SELENIUM_']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
