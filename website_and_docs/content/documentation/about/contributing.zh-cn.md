@@ -2,6 +2,7 @@
 title: 为 Selenium 文档做贡献
 linkTitle: 为 Selenium 文档做贡献
 weight: 2
+requiresTranslation: true
 aliases: 
         [
           "/documentation/zh-cn/contributing/",
