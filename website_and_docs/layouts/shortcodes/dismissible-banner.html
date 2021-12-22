@@ -1,15 +1,17 @@
 <div class="row td-box--200 justify-content-center">
 	<div class="alert alert-orange bg-transparent col-6 pl-lg-5 my-4 alert-dismissible fade show"
-			 role="alert" id="banner-blm">
-		<h2 class="alert-heading pb-3 text-center">
-			<strong>BLACK LIVES MATTER</strong>
-		</h2>
+			 role="alert" id="dismissible-banner">
+        {{ with .Get "title" }}
+            <h2 class="alert-heading pb-3 text-center">
+			  {{ . }}
+		    </h2>
+        {{ end }}
 		<div class="w-100">
-			<h3>
-				In solidarity, we ask that you consider financially supporting efforts such as
-				<a target='_blank' href="https://support.eji.org/give/153413/#!/donation/checkout">The Equal Justice Initiative</a>,
-				<a target='_blank' href="https://www.naacpldf.org/">NAACP Legal Defense and Education Fund</a>,
-				or your local civil rights charity.
+            {{ if eq .Page.File.Ext "md" }}
+				{{ .Inner | markdownify }}
+			{{ else }}
+				{{ .Inner | htmlUnescape | safeHTML }}
+			{{ end }}
 			</h3>
 		</div>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -32,8 +34,7 @@
 					localStorage.setItem(config.id, Date.now());
 					return banner.parentElement.removeChild(banner);
 				});
-			})({ "id": "banner-blm", "duration": "" });
+			})({ "id": "dismissible-banner", "duration": "" });
 		</script>
-
 	</div>
 </div>
