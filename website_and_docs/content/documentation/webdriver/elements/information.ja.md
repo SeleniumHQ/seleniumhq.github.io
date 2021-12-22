@@ -1,15 +1,14 @@
 ---
-title: "Information about web elements"
-linkTitle: "Information"
+title: "Web要素に関する情報"
+linkTitle: "情報"
 weight: 4
-needsTranslation: true
 description: >
-  What you can learn about an element.
+  要素について学ぶことができること。
 ---
 
-There are a number of details you can query about a specific element.
+特定の要素についてクエリできる詳細情報がいくつかあります。
 
-## Is Displayed
+## 表示されているかどうか
 
 
 
@@ -341,11 +340,11 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Attributes and Properties
+## 属性とプロパティ
 
-### Attribute
+### 属性
 
-### DOM Attribute
+### DOMの属性
 
-### DOM Property
+### DOMのプロパティ
 

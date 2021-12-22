@@ -1,22 +1,19 @@
 ---
 title: "要素を探す"
 linkTitle: "要素を探す"
-weight: 4
-needsTranslation: true
+weight: 1
 aliases: [
 "/ja/documentation/webdriver/relative_locators/"
 ]
 description: >
-  Ways to identify one or more specific elements in the DOM.
+  DOM内の1つ以上の特定の要素を識別する方法
 ---
 
-A locator is a way to identify elements on a page. It is the argument passed to the
-[Finding element]({{< ref "finders.md" >}}) methods.
+ロケーターは、ページ上の要素を識別する方法です。 これは、[検索要素]({{< ref "finders.md" >}}) メソッドに渡される引数です。
 
-Check out our [encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) for tips on
-[locators]({{< ref "/documentation/test_practices/encouraged/locators.md" >}}), including which to use when and
-why to declare locators separately from the finding methods.
-
+検出方法とは別にロケーターを宣言するタイミングと理由など、
+[ロケーター]({{< ref "/documentation/test_practices/encouraged/locators.md" >}})に関するヒントについては、
+[推奨されるテストプラクティス]({{< ref "/documentation/test_practices/encouraged" >}}) を確認してください。
 
 ### 要素選択の方法
 
@@ -39,7 +36,7 @@ Coming soon:
 {{% /pageinfo %}}
 
 
-## Relative Locators
+## 相対ロケーター
 
 **Selenium 4** introduces Relative Locators (previously
 called as _Friendly Locators_). These locators are helpful when it is not easy to construct a locator for

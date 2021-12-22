@@ -1,21 +1,19 @@
 ---
-title: "Finding web elements"
-linkTitle: "Finders"
+title: "Web要素の検索"
+linkTitle: "検索"
 weight: 2
-needsTranslation: true
 aliases: [
 "/documentation/ja/webdriver/locating_elements/",
 "/ja/documentation/webdriver/locating_elements/"
 ]
 description: >
-  Locating the elements based on the provided locator values.
+  提供されたロケーターの値に基づいて要素を検索します。
 ---
 
-One of the most fundamental aspects of using Selenium is obtaining element references to work with.
-Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
-
+Seleniumを使用する最も基本的な側面の1つは、操作する要素の参照を取得することです。 
+Seleniumは、要素を一意に識別するための多数の組み込み[ロケーター戦略]({{< ref "locators.md" >}})を提供します。 
+非常に高度なシナリオでロケーターを使用する方法はたくさんあります。 
+このドキュメントの目的のために、このHTMLスニペットについて考えてみましょう。
 
 ```html
 <ol id="vegetables">
@@ -30,17 +28,16 @@ let's consider this HTML snippet:
 </ul>
 ```
 
-## First matching element 
+## 最初に一致する要素
 
-Many locators will match multiple elements on the page. The singular find element method will return a reference to the
-first element found within a given context.
+多くのロケーターは、ページ上の複数の要素と一致します。 
+単数の find elementメソッドは、指定されたコンテキスト内で最初に見つかった要素への参照を返します。
 
-### Evaluating entire DOM
+### DOM全体の評価
 
-When the find element method is called on the driver instance, it 
-returns a reference to the first element in the DOM that matches with the provided locator. 
-This value can be stored and used for future element actions. In our example HTML above, there are 
-two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
+ドライバーインスタンスで要素の検索メソッドが呼び出されると、提供されたロケーターと一致するDOMの最初の要素への参照が返されます。 
+この値は保存して、将来の要素アクションに使用できます。 
+上記のHTMLの例では、クラス名が "tomatoes" の要素が2つあるため、このメソッドは "vegetables" リストの要素を返します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -64,14 +61,12 @@ val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
 {{< /tabpane >}}
 
 
-### Evaluating a subset of the DOM
+### DOMのサブセットの評価
 
-Rather than finding a unique locator in the entire DOM, it is often useful to narrow the search to the scope
-of another located element. In the above example there are two elements with a class name of "tomatoes" and 
-it is a little more challenging to get the reference for the second one.
+DOM全体で一意のロケーターを見つけるのではなく、検索を別の検索された要素のスコープに絞り込むと便利なことがよくあります。 
+上記の例では、クラス名が "トマト" の2つの要素があり、2番目の要素の参照を取得するのは少し困難です。
 
-One solution is to locate an element with a unique attribute that is an ancestor of the desired element and not an
-ancestor of the undesired element, then call find element on that object:
+1つの解決策は、目的の要素の祖先であり、不要な要素の祖先ではない一意の属性を持つ要素を見つけて、そのオブジェクトでfind要素を呼び出すことです。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -102,22 +97,19 @@ val fruit = fruits.findElement(By.id("tomatoes"))
 
 {{% pageinfo color="info" %}}
 **Java and C#**<br>
-`WebDriver`, `WebElement` and `ShadowRoot` classes all implement a `SearchContext` interface, which is
-considered a _role-based interface_. Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are clearly defined and try 
-to adhere to having only a single role of responsibility.
+`WebDriver` 、 `WebElement` 、および `ShadowRoot` クラスはすべて、 _ロールベースのインターフェイス_ と見なされる `SearchContext` インターフェイスを実装します。 
+ロールベースのインターフェイスを使用すると、特定のドライバーの実装が特定の機能をサポートしているかどうかを判断できます。
+これらのインターフェースは明確に定義されており、責任の役割を1つだけ持つように努めています。
 {{% /pageinfo %}}
 
-### Optimized locator
+### 最適化されたロケーター
 
-A nested lookup might not be the most effective location strategy since it requires two
-separate commands to be issued to the browser.
+ネストされたルックアップは、ブラウザに2つの別々のコマンドを発行する必要があるため、最も効果的なロケーション戦略ではない可能性があります。
 
-To improve the performance slightly, we can use either CSS or XPath to find this element in a single command.
-See the [Locator strategy suggestions](({{< ref "/documentation/test_practices/encouraged/locators.md" >}})) in our
-[Encouraged test practices]((({{< ref "/documentation/test_practices/encouraged" >}}))) section.
+パフォーマンスをわずかに向上させるために、CSSまたはXPathのいずれかを使用して、単一のコマンドでこの要素を見つけることができます。 
+[推奨されるテストプラクティス]((({{< ref "/documentation/test_practices/encouraged" >}})))の章で、[ロケーター戦略](({{< ref "/documentation/test_practices/encouraged/locators.md" >}}))の提案を参照してください。
 
-For this example, we'll use a CSS Selector:
+この例では、CSSセレクターを使用します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -141,12 +133,12 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
 {{< /tabpane >}}
 
 
-## All matching elements
+## 一致するすべての要素
 
-There are several use cases for needing to get references to all elements that match a locator, rather
-than just the first one. The plural find elements methods return a collection of element references. 
-If there are no matches, an empty list is returned. In this case, 
-references to all fruits and vegetable list items will be returned in a collection. 
+最初の要素だけでなく、ロケーターに一致するすべての要素への参照を取得する必要があるユースケースがいくつかあります。 
+複数の要素の検索メソッドは、要素参照のコレクションを返します。 
+一致するものがない場合は、空のリストが返されます。 
+この場合、すべてのfruitsとvegetableのリストアイテムへの参照がコレクションに返されます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -169,10 +161,9 @@ val plants: List<WebElement> = driver.findElements(By.tagName("li"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Get element
-Often you get a collection of elements but want to work with a specific element, which means you
-need to iterate over the collection and identify the one you want.
-
+### 要素の取得
+多くの場合、要素のコレクションを取得しますが、特定の要素を操作したいので、コレクションを繰り返し処理して、
+必要な要素を特定する必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -279,10 +270,10 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Find Elements From Element
+## 要素から要素を検索
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+これは、親要素のコンテキスト内で一致する子のWebElementのリストを見つけるために利用されます。 
+これを実現するために、親WebElementは'findElements'と連鎖して子要素にアクセスします。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -418,9 +409,9 @@ namespace FindElementsFromElement {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Active Element
+## アクティブな要素を取得する
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+これは、現在のブラウジングコンテキストでフォーカスを持っているDOM要素を追跡（または）検索するために使用されます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
