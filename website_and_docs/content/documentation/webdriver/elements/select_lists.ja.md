@@ -2,14 +2,13 @@
 title: "選択要素の操作"
 linkTitle: "選択要素の操作"
 weight: 5
-needsTranslation: true
 aliases: [
 "/documentation/ja/support_packages/working_with_select_elements/",
 "/ja/documentation/support_packages/working_with_select_elements/",
 "/ja/documentation/webdriver/elements/select_elements/"
 ]
 description: >
-  Select lists have special behaviors compared to other elements.
+  選択リストには、他の要素と比較して特別な動作があります。
 ---
 
 
