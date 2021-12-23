@@ -4,7 +4,7 @@ linkTitle: "Tips"
 weight: 14
 ---
 
-(Previously located: https://github.com/SeleniumHQ/selenium/wiki/Crazy-Fun-Build/)
+(Previously located: https://github.com/SeleniumHQ/selenium/wiki/Developer-Tips)
 
 ## Running an Individual Test
 
