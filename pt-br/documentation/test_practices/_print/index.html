@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/pt-br/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Português (Brasileiro)</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/test_practices/>English</a>
 <a class=dropdown-item href=/zh-cn/documentation/test_practices/>中文简体</a>
 <a class=dropdown-item href=/ja/documentation/test_practices/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/test_practices/>Return to the regular view of this page</a>.</p></div><h1 class=title>Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-dd8e59352a81d0dd14725ea5ac1acf6b>Sobre automação de testes</a></li><li>2: <a href=#pg-66992012687d920f99acd526b6c65d88>Tipos de teste</a></li><li>3: <a href=#pg-2ca3e3d8ec6126dd6459ffc3adfde4b5>Diretrizes e recomendações</a></li><ul><li>3.1: <a href=#pg-fa4eae362230005dc133eaccc8f3c3e8>Modelos de objetos de página</a></li><li>3.2: <a href=#pg-4343e59eb52d202f26ceb385a8b56fa6>Linguagem específica de domínio (DSL)</a></li><li>3.3: <a href=#pg-edd30564b73abba307b40f4351d2b249>Gerando estado da aplicação</a></li><li>3.4: <a href=#pg-58945a8c3e84861fda4825f09e9cd2e0>Simulação de serviços externos</a></li><li>3.5: <a href=#pg-c6cc073467223ae721b34c947936cbf9>Relatórios melhorados</a></li><li>3.6: <a href=#pg-f155e13b0c999e5f3c5f56fef53fc47b>Evite compartilhamento de estado</a></li><li>3.7: <a href=#pg-51a63c6ce7dd64b1ecddf236663ecb74>Tips on working with locators</a></li><li>3.8: <a href=#pg-a43c32fda8a8fa76d1487e152b4c1998>Independência de Testes</a></li><li>3.9: <a href=#pg-1ae8894e692552d092b8b8a00eee7702>Considere usar uma API fluente</a></li><li>3.10: <a href=#pg-eae471af628f9dd496b080eac9d94ac8>Navegador novo por teste</a></li></ul><li>4: <a href=#pg-00c756826866d1deecc6dac2d5739aee>Piores práticas</a></li><ul><li>4.1: <a href=#pg-b9472460f277ae413b03898b8ebef6b7>Captchas</a></li><li>4.2: <a href=#pg-c79dca2107c3188889176374ce3f58ff>Downloads de arquivo</a></li><li>4.3: <a href=#pg-2d5ad114868779f863121d44ce8df24f>Códigos de respostas HTTP</a></li><li>4.4: <a href=#pg-3a9d097074ef98e8fa2e2aacf6e14dc2>Login via Gmail, email e Facebook</a></li><li>4.5: <a href=#pg-69552aacfd36f7ebd616975dfd16cc9c>Dependência entre testes</a></li><li>4.6: <a href=#pg-c613ed467d082d32cb7c5294b94a1280>Teste de performance/desempenho</a></li><li>4.7: <a href=#pg-559e8e8a1ac67ab5eeb8d552a7c78c22>Navegação por links</a></li><li>4.8: <a href=#pg-434101f95bfac0d5faefe0b450574456>Autenticação de Dois Fatores (2FA)</a></li></ul></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/test_practices/>Return to the regular view of this page</a>.</p></div><h1 class=title>Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><ul><li>1: <a href=#pg-41b48c998b0eb67a902ff9ed4be1e4f2>Design patterns and development strategies</a></li><li>2: <a href=#pg-dd8e59352a81d0dd14725ea5ac1acf6b>Sobre automação de testes</a></li><li>3: <a href=#pg-66992012687d920f99acd526b6c65d88>Tipos de teste</a></li><li>4: <a href=#pg-2ca3e3d8ec6126dd6459ffc3adfde4b5>Diretrizes e recomendações</a></li><ul><li>4.1: <a href=#pg-fa4eae362230005dc133eaccc8f3c3e8>Modelos de objetos de página</a></li><li>4.2: <a href=#pg-4343e59eb52d202f26ceb385a8b56fa6>Linguagem específica de domínio (DSL)</a></li><li>4.3: <a href=#pg-edd30564b73abba307b40f4351d2b249>Gerando estado da aplicação</a></li><li>4.4: <a href=#pg-58945a8c3e84861fda4825f09e9cd2e0>Simulação de serviços externos</a></li><li>4.5: <a href=#pg-c6cc073467223ae721b34c947936cbf9>Relatórios melhorados</a></li><li>4.6: <a href=#pg-f155e13b0c999e5f3c5f56fef53fc47b>Evite compartilhamento de estado</a></li><li>4.7: <a href=#pg-51a63c6ce7dd64b1ecddf236663ecb74>Tips on working with locators</a></li><li>4.8: <a href=#pg-a43c32fda8a8fa76d1487e152b4c1998>Independência de Testes</a></li><li>4.9: <a href=#pg-1ae8894e692552d092b8b8a00eee7702>Considere usar uma API fluente</a></li><li>4.10: <a href=#pg-eae471af628f9dd496b080eac9d94ac8>Navegador novo por teste</a></li></ul><li>5: <a href=#pg-00c756826866d1deecc6dac2d5739aee>Piores práticas</a></li><ul><li>5.1: <a href=#pg-b9472460f277ae413b03898b8ebef6b7>Captchas</a></li><li>5.2: <a href=#pg-c79dca2107c3188889176374ce3f58ff>Downloads de arquivo</a></li><li>5.3: <a href=#pg-2d5ad114868779f863121d44ce8df24f>Códigos de respostas HTTP</a></li><li>5.4: <a href=#pg-3a9d097074ef98e8fa2e2aacf6e14dc2>Login via Gmail, email e Facebook</a></li><li>5.5: <a href=#pg-69552aacfd36f7ebd616975dfd16cc9c>Dependência entre testes</a></li><li>5.6: <a href=#pg-c613ed467d082d32cb7c5294b94a1280>Teste de performance/desempenho</a></li><li>5.7: <a href=#pg-559e8e8a1ac67ab5eeb8d552a7c78c22>Navegação por links</a></li><li>5.8: <a href=#pg-434101f95bfac0d5faefe0b450574456>Autenticação de Dois Fatores (2FA)</a></li></ul></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><p>Uma nota sobre &ldquo;Melhores práticas&rdquo;: evitamos intencionalmente a frase &ldquo;Melhores
@@ -27,7 +27,257 @@ mas não o ajuda a escrever suítes de teste bem arquitetadas.
 Neste capítulo, oferecemos conselhos, diretrizes e recomendações
 sobre como abordar a automação funcional de páginas da web.</p><p>Este capítulo registra os padrões de design de software populares
 entre muitos dos usuários do Selenium
-que tiveram sucesso ao longo dos anos.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-dd8e59352a81d0dd14725ea5ac1acf6b>1 - Sobre automação de testes</h1><p>Primeiro, comece perguntando a si mesmo se você realmente precisa ou não de um navegador.
+que tiveram sucesso ao longo dos anos.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-41b48c998b0eb67a902ff9ed4be1e4f2>1 - Design patterns and development strategies</h1><p>(previously located: <a href=https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests>https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests</a>)</p><h2 id=overview>Overview</h2><p>Over time, projects tend to accumulate large numbers of tests. As the total number of tests increases,
+it becomes harder to make changes to the codebase &mdash; a single &ldquo;simple&rdquo; change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help making tests easier to write and maintain. They may help you too.</p><p><a href=/pt-br/documentation/test_practices/encouraged/domain_specific_language/>DomainDrivenDesign</a>: Express your tests in the language of the end-user of the app.
+<a href=/pt-br/documentation/test_practices/encouraged/page_object_models/>PageObjects</a>: A simple abstraction of the UI of your web app.
+LoadableComponent: Modeling PageObjects as components.
+BotStyleTests: Using a command-based approach to automating tests, rather than the object-based approach that PageObjects encourage</p><h2 id=loadable-component>Loadable Component</h2><h3 id=what-is-it>What Is It?</h3><p>The LoadableComponent is a base class that aims to make writing PageObjects less painful. It does this by providing a standard way of ensuring that pages are loaded and providing hooks to make debugging the failure of a page to load easier. You can use it to help reduce the amount of boilerplate code in your tests, which in turn make maintaining your tests less tiresome.</p><p>There is currently an implementation in Java that ships as part of Selenium 2, but the approach used is simple enough to be implemented in any language.</p><h3 id=simple-usage>Simple Usage</h3><p>As an example of a UI that we&rsquo;d like to model, take a look at the <a href=https://github.com/SeleniumHQ/selenium/issues/new>new issue</a> page. From the point of view of a test author, this offers the service of being able to file a new issue. A basic Page Object would look like:</p><pre><code>package com.example.webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class EditIssue {
+
+  private final WebDriver driver;
+
+  public EditIssue(WebDriver driver) {
+    this.driver = driver;
+  }
+
+  public void setSummary(String summary) {
+    WebElement field = driver.findElement(By.name(&quot;summary&quot;));
+    clearAndType(field, summary);
+  }
+
+  public void enterDescription(String description) {
+    WebElement field = driver.findElement(By.name(&quot;comment&quot;));
+    clearAndType(field, description);
+  }
+
+  public IssueList submit() {
+    driver.findElement(By.id(&quot;submit&quot;)).click();
+    return new IssueList(driver);
+  }
+
+  private void clearAndType(WebElement field, String text) {
+    field.clear();
+    field.sendKeys(text);
+  }
+}
+</code></pre><p>In order to turn this into a LoadableComponent, all we need to do is to set that as the base type:</p><pre><code>public class EditIssue extends LoadableComponent&lt;EditIssue&gt; {
+  // rest of class ignored for now
+}
+</code></pre><p>This signature looks a little unusual, but it all it means is that this class represents a LoadableComponent that loads the EditIssue page.</p><p>By extending this base class, we need to implement two new methods:</p><pre><code>  @Override
+  protected void load() {
+    driver.get(&quot;https://github.com/SeleniumHQ/selenium/issues/new&quot;);
+  }
+
+  @Override
+  protected void isLoaded() throws Error {
+    String url = driver.getCurrentUrl();
+    assertTrue(&quot;Not on the issue entry page: &quot; + url, url.endsWith(&quot;/new&quot;));
+  }
+</code></pre><p>The <code>load</code> method is used to navigate to the page, whilst the <code>isLoaded</code> method is used to determine whether we are on the right page. Although the method looks like it should return a boolean, instead it performs a series of assertions using JUnit&rsquo;s Assert class. There can be as few or as many assertions as you like. By using these assertions it&rsquo;s possible to give users of the class clear information that can be used to debug tests.</p><p>With a little rework, our PageObject looks like:</p><pre><code>package com.example.webdriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import static junit.framework.Assert.assertTrue;
+
+public class EditIssue extends LoadableComponent&lt;EditIssue&gt; {
+
+  private final WebDriver driver;
+  
+  // By default the PageFactory will locate elements with the same name or id
+  // as the field. Since the summary element has a name attribute of &quot;summary&quot;
+  // we don't need any additional annotations.
+  private WebElement summary;
+  
+  // Same with the submit element, which has the ID &quot;submit&quot;
+  private WebElement submit;
+  
+  // But we'd prefer a different name in our code than &quot;comment&quot;, so we use the
+  // FindBy annotation to tell the PageFactory how to locate the element.
+  @FindBy(name = &quot;comment&quot;) private WebElement description;
+  
+  public EditIssue(WebDriver driver) {
+    this.driver = driver;
+    
+    // This call sets the WebElement fields.
+    PageFactory.initElements(driver, this);
+  }
+
+  @Override
+  protected void load() {
+    driver.get(&quot;https://github.com/SeleniumHQ/selenium/issues/new&quot;);
+  }
+
+  @Override
+  protected void isLoaded() throws Error {
+    String url = driver.getCurrentUrl();
+    assertTrue(&quot;Not on the issue entry page: &quot; + url, url.endsWith(&quot;/new&quot;));
+  }
+  
+  public void setSummary(String issueSummary) {
+    clearAndType(summary, issueSummary);
+  }
+
+  public void enterDescription(String issueDescription) {
+    clearAndType(description, issueDescription);
+  }
+
+  public IssueList submit() {
+    submit.click();
+    return new IssueList(driver);
+  }
+
+  private void clearAndType(WebElement field, String text) {
+    field.clear();
+    field.sendKeys(text);
+  }
+}
+
+</code></pre><p>That doesn&rsquo;t seem to have bought us much, right? One thing it has done is encapsulate the information about how to navigate to the page into the page itself, meaning that this information&rsquo;s not scattered through the code base. It also means that we can do this in our tests:</p><pre><code>EditIssue page = new EditIssue(driver).get();
+</code></pre><p>This call will cause the driver to navigate to the page if that&rsquo;s necessary.</p><h3 id=nested-components>Nested Components</h3><p>LoadableComponents start to become more useful when they are used in conjunction with other LoadableComponents. Using our example, we could view the &ldquo;edit issue&rdquo; page as a component within a project&rsquo;s website (after all, we access it via a tab on that site). You also need to be logged in to file an issue. We could model this as a tree of nested components:</p><pre><code> + ProjectPage
+ +---+ SecuredPage
+     +---+ EditIssue
+</code></pre><p>What would this look like in code? For a start, each logical component would have its own class. The &ldquo;load&rdquo; method in each of them would &ldquo;get&rdquo; the parent. The end result, in addition to the EditIssue class above is:</p><p>ProjectPage.java:</p><pre><code>package com.example.webdriver;
+
+import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertTrue;
+
+public class ProjectPage extends LoadableComponent&lt;ProjectPage&gt; {
+
+  private final WebDriver driver;
+  private final String projectName;
+
+  public ProjectPage(WebDriver driver, String projectName) {
+    this.driver = driver;
+    this.projectName = projectName;
+  }
+
+  @Override
+  protected void load() {
+    driver.get(&quot;http://&quot; + projectName + &quot;.googlecode.com/&quot;);
+  }
+
+  @Override
+  protected void isLoaded() throws Error {
+    String url = driver.getCurrentUrl();
+
+    assertTrue(url.contains(projectName));
+  }
+}
+</code></pre><p>and SecuredPage.java:</p><pre><code>package com.example.webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import static org.junit.Assert.fail;
+
+public class SecuredPage extends LoadableComponent&lt;SecuredPage&gt; {
+
+  private final WebDriver driver;
+  private final LoadableComponent&lt;?&gt; parent;
+  private final String username;
+  private final String password;
+
+  public SecuredPage(WebDriver driver, LoadableComponent&lt;?&gt; parent, String username, String password) {
+    this.driver = driver;
+    this.parent = parent;
+    this.username = username;
+    this.password = password;
+  }
+
+  @Override
+  protected void load() {
+    parent.get();
+
+    String originalUrl = driver.getCurrentUrl();
+
+    // Sign in
+    driver.get(&quot;https://www.google.com/accounts/ServiceLogin?service=code&quot;);
+    driver.findElement(By.name(&quot;Email&quot;)).sendKeys(username);
+    WebElement passwordField = driver.findElement(By.name(&quot;Passwd&quot;));
+    passwordField.sendKeys(password);
+    passwordField.submit();
+
+    // Now return to the original URL
+    driver.get(originalUrl);
+  }
+
+  @Override
+  protected void isLoaded() throws Error {
+    // If you're signed in, you have the option of picking a different login.
+    // Let's check for the presence of that.
+
+    try {
+      WebElement div = driver.findElement(By.id(&quot;multilogin-dropdown&quot;));
+    } catch (NoSuchElementException e) {
+      fail(&quot;Cannot locate user name link&quot;);
+    }
+  }
+}
+</code></pre><p>The &ldquo;load&rdquo; method in EditIssue now looks like:</p><pre><code>  @Override
+  protected void load() {
+    securedPage.get();
+
+    driver.get(&quot;https://github.com/SeleniumHQ/selenium/issues/new&quot;);
+  }
+</code></pre><p>This shows that the components are all &ldquo;nested&rdquo; within each other. A call to <code>get()</code> in EditIssue will cause all its dependencies to load too. The example usage:</p><pre><code>public class FooTest {
+  private EditIssue editIssue;
+
+  @Before
+  public void prepareComponents() {
+    WebDriver driver = new FirefoxDriver();
+
+    ProjectPage project = new ProjectPage(driver, &quot;selenium&quot;);
+    SecuredPage securedPage = new SecuredPage(driver, project, &quot;example&quot;, &quot;top secret&quot;);
+    editIssue = new EditIssue(driver, securedPage);
+  }
+
+  @Test
+  public void demonstrateNestedLoadableComponents() {
+    editIssue.get();
+
+    editIssue.setSummary(&quot;Summary&quot;);
+    editIssue.enterDescription(&quot;This is an example&quot;);
+  }
+}
+</code></pre><p>If you&rsquo;re using a library such as <a href=https://github.com/zorzella/guiceberry>Guiceberry</a> in your tests,
+the preamble of setting up the PageObjects can be omitted leading to nice, clear, readable tests.</p><h2 id=bot-pattern>Bot Pattern</h2><p>(previously located: <a href=https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests>https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests</a>)</p><p>Although PageObjects are a useful way of reducing duplication in your tests, it&rsquo;s not always a pattern that teams feel comfortable following. An alternative approach is to follow a more &ldquo;command-like&rdquo; style of testing.</p><p>A &ldquo;bot&rdquo; is an action-oriented abstraction over the raw Selenium APIs. This means that if you find that commands aren&rsquo;t doing the Right Thing for your app, it&rsquo;s easy to change them. As an example:</p><pre><code>public class ActionBot {
+  private final WebDriver driver;
+
+  public ActionBot(WebDriver driver) {
+    this.driver = driver;
+  }
+
+  public void click(By locator) {
+    driver.findElement(locator).click();
+  }
+
+  public void submit(By locator) {
+    driver.findElement(locator).submit();
+  }
+
+  /** 
+   * Type something into an input field. WebDriver doesn't normally clear these
+   * before typing, so this method does that first. It also sends a return key
+   * to move the focus out of the element.
+   */
+  public void type(By locator, String text) { 
+    WebElement element = driver.findElement(locator);
+    element.clear();
+    element.sendKeys(text + &quot;\n&quot;);
+  }
+}
+</code></pre><p>Once these abstractions have been built and duplication in your tests identified, it&rsquo;s possible to layer PageObjects on top of bots.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-dd8e59352a81d0dd14725ea5ac1acf6b>2 - Sobre automação de testes</h1><p>Primeiro, comece perguntando a si mesmo se você realmente precisa ou não de um navegador.
 As probabilidades são de que, em algum ponto, se você estiver trabalhando em um aplicativo da web complexo,
 você precisará abrir um navegador e realmente testá-lo.</p><p>No entanto, os testes funcionais do usuário final, como os testes Selenium, são caros para executar.
 Além disso, eles normalmente exigem infraestrutura substancial
@@ -323,7 +573,7 @@ Além disso, às vezes simplesmente não há tempo suficiente para construir aut
 A curto prazo, o teste manual pode ser mais eficaz.
 Se um aplicativo tem um prazo muito curto, atualmente não há
 automação de teste disponível, e é imperativo que o teste seja feito dentro
-nesse período, o teste manual é a melhor solução.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-66992012687d920f99acd526b6c65d88>2 - Tipos de teste</h1><h3 id=teste-de-aceitação>Teste de aceitação</h3><p>Este tipo de teste é feito para determinar se um recurso ou sistema
+nesse período, o teste manual é a melhor solução.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-66992012687d920f99acd526b6c65d88>3 - Tipos de teste</h1><h3 id=teste-de-aceitação>Teste de aceitação</h3><p>Este tipo de teste é feito para determinar se um recurso ou sistema
 atende às expectativas e requisitos do cliente.
 Este tipo de teste geralmente envolve
 cooperação ou feedback do cliente, sendo uma atividade de validação que
@@ -375,7 +625,7 @@ para escrever as especificações e combiná-las com funções de código,
 como <strong><em>Cucumber</em></strong> ou <strong><em>SpecFlow</em></strong>.</p><p>Um conjunto de ferramentas é construído em cima do Selenium para tornar este processo
 ainda mais rápido, transformando diretamente as especificações BDD em
 código executável.
-Alguns deles são <strong><em>JBehave, Capybara e Robot Framework</em></strong>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2ca3e3d8ec6126dd6459ffc3adfde4b5>3 - Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Alguns deles são <strong><em>JBehave, Capybara e Robot Framework</em></strong>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2ca3e3d8ec6126dd6459ffc3adfde4b5>4 - Diretrizes e recomendações</h1><div class=lead>Some guidelines and recommendations on testing from the Selenium project.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><p>Uma nota sobre &ldquo;Melhores práticas&rdquo;: evitamos intencionalmente a frase &ldquo;Melhores
@@ -390,7 +640,7 @@ mas não o ajuda a escrever suítes de teste bem arquitetadas.
 Neste capítulo, oferecemos conselhos, diretrizes e recomendações
 sobre como abordar a automação funcional de páginas da web.</p><p>Este capítulo registra os padrões de design de software populares
 entre muitos dos usuários do Selenium
-que tiveram sucesso ao longo dos anos.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-fa4eae362230005dc133eaccc8f3c3e8>3.1 - Modelos de objetos de página</h1><p>Objeto de página é um padrão de design que se tornou popular na automação de teste para
+que tiveram sucesso ao longo dos anos.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-fa4eae362230005dc133eaccc8f3c3e8>4.1 - Modelos de objetos de página</h1><p>Objeto de página é um padrão de design que se tornou popular na automação de teste para
 melhorar a manutenção de teste e reduzir a duplicação de código. Um objeto de página é uma
 classe orientada a objetos que serve como uma interface para uma página de seu AUT.
 Os testes então usam os métodos desta classe de objeto de página sempre que precisam
@@ -535,7 +785,7 @@ Page Factory para instanciar seus objetos de página. Discutir tudo isso é
 além do escopo deste guia do usuário. Aqui, queremos apenas apresentar o
 conceitos para tornar o leitor ciente de algumas coisas que podem ser feitas. Como
 foi mencionado anteriormente, muitos escreveram sobre este tópico e nós encorajamos o
-leitor para pesquisar blogs sobre esses tópicos.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-4343e59eb52d202f26ceb385a8b56fa6>3.2 - Linguagem específica de domínio (DSL)</h1><p>Uma linguagem específica de domínio (DSL) é um sistema que fornece ao usuário
+leitor para pesquisar blogs sobre esses tópicos.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-4343e59eb52d202f26ceb385a8b56fa6>4.2 - Linguagem específica de domínio (DSL)</h1><p>Uma linguagem específica de domínio (DSL) é um sistema que fornece ao usuário
 um meio expressivo de resolver um problema. Ele permite a um usuário
 interagir com o sistema em seus termos - não apenas na linguagem do programador.</p><p>Seus usuários, em geral, não se importam com a aparência do seu site. Eles não
 preocupam-se com a decoração, animações ou gráficos. Eles
@@ -595,25 +845,25 @@ o problema da IU</strong>. A IU é uma preocupação secundária para o seu
 usuários - eles não se importam com a interface do usuário, eles apenas querem fazer seu trabalho
 feito. Seus scripts de teste devem ser lidos como uma lista de itens sujos que o usuário deseja FAZER e as coisas que deseja SABER. Os testes
 não devem se preocupar com COMO a interface do usuário exige que você vá
-sobre isso.</p><p>*<strong>AUT</strong>: Application under test</p></div><div class=td-content style=page-break-before:always><h1 id=pg-edd30564b73abba307b40f4351d2b249>3.3 - Gerando estado da aplicação</h1><p>Selenium não deve ser usado para preparar um caso de teste. Tudo as
+sobre isso.</p><p>*<strong>AUT</strong>: Application under test</p></div><div class=td-content style=page-break-before:always><h1 id=pg-edd30564b73abba307b40f4351d2b249>4.3 - Gerando estado da aplicação</h1><p>Selenium não deve ser usado para preparar um caso de teste. Tudo as
 ações repetitivas e preparações para um caso de teste devem ser feitas por meio de outros
 métodos. Por exemplo, a maioria das IUs da web tem autenticação (por exemplo, um formulário de login). Eliminar o login via navegador da web antes de cada teste irá
 melhorar a velocidade e estabilidade do teste. Um método deve ser
 criado para obter acesso à AUT* (por exemplo, usando uma API para fazer login e definir um
 cookie). Além disso, a criação de métodos para pré-carregar dados para
 o teste não deve ser feito usando Selenium. Como dito anteriormente,
-APIs existentes devem ser aproveitadas para criar dados para a AUT *.</p><p>*<strong>AUT</strong>: Application under test</p></div><div class=td-content style=page-break-before:always><h1 id=pg-58945a8c3e84861fda4825f09e9cd2e0>3.4 - Simulação de serviços externos</h1><p>Eliminar as dependências de serviços externos melhorará muito
-a velocidade e estabilidade de seus testes.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c6cc073467223ae721b34c947936cbf9>3.5 - Relatórios melhorados</h1><p>O Selenium não foi projetado para relatar sobre o status de casos de teste. Aproveitar
+APIs existentes devem ser aproveitadas para criar dados para a AUT *.</p><p>*<strong>AUT</strong>: Application under test</p></div><div class=td-content style=page-break-before:always><h1 id=pg-58945a8c3e84861fda4825f09e9cd2e0>4.4 - Simulação de serviços externos</h1><p>Eliminar as dependências de serviços externos melhorará muito
+a velocidade e estabilidade de seus testes.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c6cc073467223ae721b34c947936cbf9>4.5 - Relatórios melhorados</h1><p>O Selenium não foi projetado para relatar sobre o status de casos de teste. Aproveitar
 os recursos de relatórios integrados de frameworks de teste unitários é um bom começo.
 A maioria dos frameworks de teste unitários podem gerar relatórios formatados em xUnit ou HTML.
 Relatórios xUnit são populares para importar resultados para um servidor de integração contínua
 (CI) como Jenkins, Travis, Bamboo, etc. Aqui estão alguns links
-para obter mais informações sobre resultados de relatórios em vários idiomas.</p><p><a href=//github.com/nunit/docs/wiki/Console-Runner>NUnit 3 Console Runner</a></p><p><a href=//github.com/nunit/docs/wiki/Console-Command-Line>NUnit 3 Console Command Line</a></p><p><a href=//xunit.net/docs/getting-test-results-in-teamcity>xUnit getting test results in TeamCity</a></p><p><a href=//xunit.net/docs/getting-test-results-in-ccnet>xUnit getting test results in CruiseControl.NET</a></p><p><a href=//xunit.net/docs/getting-test-results-in-azure-devops>xUnit getting test results in Azure DevOps</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-f155e13b0c999e5f3c5f56fef53fc47b>3.6 - Evite compartilhamento de estado</h1><p>Embora mencionado em vários lugares, vale a pena mencionar novamente. Garanta que
+para obter mais informações sobre resultados de relatórios em vários idiomas.</p><p><a href=//github.com/nunit/docs/wiki/Console-Runner>NUnit 3 Console Runner</a></p><p><a href=//github.com/nunit/docs/wiki/Console-Command-Line>NUnit 3 Console Command Line</a></p><p><a href=//xunit.net/docs/getting-test-results-in-teamcity>xUnit getting test results in TeamCity</a></p><p><a href=//xunit.net/docs/getting-test-results-in-ccnet>xUnit getting test results in CruiseControl.NET</a></p><p><a href=//xunit.net/docs/getting-test-results-in-azure-devops>xUnit getting test results in Azure DevOps</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-f155e13b0c999e5f3c5f56fef53fc47b>4.6 - Evite compartilhamento de estado</h1><p>Embora mencionado em vários lugares, vale a pena mencionar novamente. Garanta que
 os testes são isolados uns dos outros.</p><ul><li><p>Não compartilhe dados de teste. Imagine vários testes em que cada um consulta o banco de dados
 para pedidos válidos antes de escolher um para executar uma ação. Caso dois testes
 peguem a mesma ordem, provavelmente você obterá um comportamento inesperado.</p></li><li><p>Limpe dados desatualizados no aplicativo que podem ser obtidos por outro
 teste, por exemplo registros de pedidos inválidos.</p></li><li><p>Crie uma nova instância do WebDriver por teste. Isso ajuda a garantir o isolamento do teste
-e torna a paralelização mais simples.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-51a63c6ce7dd64b1ecddf236663ecb74>3.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=/pt-br/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
+e torna a paralelização mais simples.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-51a63c6ce7dd64b1ecddf236663ecb74>4.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=/pt-br/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
 previsíveis, eles são o método preferido para localizar um elemento
 uma página. Eles tendem a trabalhar muito rapidamente e dispensar muito processamento
 que vem com travessias de DOM complicadas.</p><p>Se IDs exclusivos não estiverem disponíveis, um seletor CSS bem escrito é o
@@ -627,7 +877,7 @@ Isso é útil principalmente ao chamar o método _findElements(By) _ que
 retorna uma coleção de elementos.</p><p>A recomendação é manter seus localizadores compactos e
 legíveis quanto possível. Pedir ao WebDriver para percorrer a estrutura DOM
 é uma operação cara, e quanto mais você pode restringir o escopo de
-sua pesquisa, melhor.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-a43c32fda8a8fa76d1487e152b4c1998>3.8 - Independência de Testes</h1><p>Escreva cada teste como sua própria unidade. Escreva os testes de uma forma que não seja
+sua pesquisa, melhor.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-a43c32fda8a8fa76d1487e152b4c1998>4.8 - Independência de Testes</h1><p>Escreva cada teste como sua própria unidade. Escreva os testes de uma forma que não seja
 dependente de outros testes para concluir:</p><p>Digamos que existe um sistema de gerenciamento de conteúdo com o qual você pode criar
 algum conteúdo personalizado que então aparece em seu site como um módulo após
 publicação, e pode levar algum tempo para sincronizar entre o CMS e a aplicação.</p><p>Uma maneira errada de testar seu módulo é que o conteúdo seja criado e
@@ -635,7 +885,7 @@ publicado em um teste e, em seguida, verificar o módulo em outro teste. Este te
 não é viável, pois o conteúdo pode não estar disponível imediatamente para o
 outro teste após a publicação.</p><p>Em vez disso, você pode criar um conteúdo stub que pode ser ligado e desligado
 dentro do teste e use-o para validar o módulo. Contudo,
-para a criação de conteúdo, você ainda pode ter um teste separado.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1ae8894e692552d092b8b8a00eee7702>3.9 - Considere usar uma API fluente</h1><p>Martin Fowler cunhou o termo <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;API Fluent&rdquo;</a>. Selenium já
+para a criação de conteúdo, você ainda pode ter um teste separado.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1ae8894e692552d092b8b8a00eee7702>4.9 - Considere usar uma API fluente</h1><p>Martin Fowler cunhou o termo <a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;API Fluent&rdquo;</a>. Selenium já
 implementa algo assim em sua classe <code>FluentWait</code>, que é
 pretende ser uma alternativa à classe padrão <code>Wait</code>.
 Você pode habilitar o padrão de design de API fluente em seu objeto de página
@@ -698,19 +948,19 @@ pode ser assim:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz
     <span style=color:#ce5c00;font-weight:700>}</span>
   <span style=color:#ce5c00;font-weight:700>}</span>
 <span style=color:#ce5c00;font-weight:700>}</span>
-</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-eae471af628f9dd496b080eac9d94ac8>3.10 - Navegador novo por teste</h1><p>Comece cada teste a partir de um estado limpo conhecido.
+</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-eae471af628f9dd496b080eac9d94ac8>4.10 - Navegador novo por teste</h1><p>Comece cada teste a partir de um estado limpo conhecido.
 Idealmente, ligue uma nova máquina virtual para cada teste.
 Se ligar uma nova máquina virtual não for prático,
 pelo menos inicie um novo WebDriver para cada teste.
 Para Firefox, inicie um WebDriver com seu perfil conhecido.</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#000>FirefoxProfile</span> <span style=color:#000>profile</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>FirefoxProfile</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>File</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;pathToFirefoxProfile&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
 <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>FirefoxDriver</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>profile</span><span style=color:#ce5c00;font-weight:700>);</span>
-</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-00c756826866d1deecc6dac2d5739aee>4 - Piores práticas</h1><div class=lead>Things to avoid when automating browsers with Selenium.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+</code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-00c756826866d1deecc6dac2d5739aee>5 - Piores práticas</h1><div class=lead>Things to avoid when automating browsers with Selenium.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
-it by sending us pull requests!</p></div></div><div class=td-content><h1 id=pg-b9472460f277ae413b03898b8ebef6b7>4.1 - Captchas</h1><p>CAPTCHA, abreviação de <em>Completely Automated Public Turing test
+it by sending us pull requests!</p></div></div><div class=td-content><h1 id=pg-b9472460f277ae413b03898b8ebef6b7>5.1 - Captchas</h1><p>CAPTCHA, abreviação de <em>Completely Automated Public Turing test
 to tell Computers and Humans Apart</em>,
 foi projetado explicitamente para impedir a automação, portanto, não tente!
-Existem duas estratégias principais para contornar as verificações CAPTCHA:</p><ul><li>Desative CAPTCHAs em seu ambiente de teste</li><li>Adicione um hook para permitir que os testes ignorem o CAPTCHA</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-c79dca2107c3188889176374ce3f58ff>4.2 - Downloads de arquivo</h1><p>Embora seja possível iniciar um download
+Existem duas estratégias principais para contornar as verificações CAPTCHA:</p><ul><li>Desative CAPTCHAs em seu ambiente de teste</li><li>Adicione um hook para permitir que os testes ignorem o CAPTCHA</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-c79dca2107c3188889176374ce3f58ff>5.2 - Downloads de arquivo</h1><p>Embora seja possível iniciar um download
 clicando em um link com um navegador sob o controle do Selenium,
 a API não expõe o progresso do download,
 tornando-o menos do que ideal para testar arquivos baixados.
@@ -722,7 +972,7 @@ e passe este cookie para uma biblioteca de solicitação HTTP como
 <a href=//curl.haxx.se/libcurl/>libcurl</a>.</p><p>O <a href=https://github.com/SeleniumHQ/htmlunit-driver>driver HtmlUnit</a> pode baixar
 anexos acessando-os como fluxos de entrada, implementando o
 <a href=https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html>AttachmentHandler</a>.
-O AttachmentHandler pode ser adicionado ao WebClient <a href=https://htmlunit.sourceforge.io/>HtmlUnit</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2d5ad114868779f863121d44ce8df24f>4.3 - Códigos de respostas HTTP</h1><p>Para algumas configurações de navegador no Selenium RC,
+O AttachmentHandler pode ser adicionado ao WebClient <a href=https://htmlunit.sourceforge.io/>HtmlUnit</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2d5ad114868779f863121d44ce8df24f>5.3 - Códigos de respostas HTTP</h1><p>Para algumas configurações de navegador no Selenium RC,
 Selenium atuou como um proxy entre o navegador
 e o site sendo automatizado.
 Isso significa que todo o tráfego do navegador que passou pelo Selenium
@@ -761,7 +1011,7 @@ para códigos de resposta de redirecionamento.
 Além disso, nem todo navegador
 torna os códigos de resposta disponíveis para WebDriver,
 então optar por usar um proxy
-permite que você tenha uma solução que funciona para todos os navegadores.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-3a9d097074ef98e8fa2e2aacf6e14dc2>4.4 - Login via Gmail, email e Facebook</h1><p>Por vários motivos, fazer login em sites como Gmail e Facebook
+permite que você tenha uma solução que funciona para todos os navegadores.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-3a9d097074ef98e8fa2e2aacf6e14dc2>5.4 - Login via Gmail, email e Facebook</h1><p>Por vários motivos, fazer login em sites como Gmail e Facebook
 usando do WebDriver não é recomendado.
 Além de ser contra os termos de uso desses sites
 (onde você corre o risco de ter a conta encerrada),
@@ -780,9 +1030,9 @@ são mais frágeis e não confiáveis.</p><p>Implementações WebDriver que est�
 <a href=//w3c.github.io/webdriver/webdriver-spec.html>em conformidade com W3C</a>
 também anotam o objeto <code>navigator</code>
 com uma propriedade <code>WebDriver</code>
-para que os ataques de negação de serviço possam ser mitigados.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-69552aacfd36f7ebd616975dfd16cc9c>4.5 - Dependência entre testes</h1><p>Uma ideia comum e um equívoco sobre o teste automatizado é sobre uma
+para que os ataques de negação de serviço possam ser mitigados.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-69552aacfd36f7ebd616975dfd16cc9c>5.5 - Dependência entre testes</h1><p>Uma ideia comum e um equívoco sobre o teste automatizado é sobre uma
 ordem de testes específica. Seus testes devem ser executados em <strong>qualquer</strong> ordem,
-e não depender da conclusão de outros testes para ter sucesso.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c613ed467d082d32cb7c5294b94a1280>4.6 - Teste de performance/desempenho</h1><p>Teste de desempenho usando Selenium e WebDriver
+e não depender da conclusão de outros testes para ter sucesso.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c613ed467d082d32cb7c5294b94a1280>5.6 - Teste de performance/desempenho</h1><p>Teste de desempenho usando Selenium e WebDriver
 geralmente não é recomendado.
 Não porque é incapaz,
 mas porque não é otimizado para o trabalho
@@ -816,7 +1066,7 @@ para saber o que melhorar.
 Existem ferramentas de teste de desempenho disponíveis
 que podem fazer este trabalho,
 que fornecem relatórios e análises,
-e podem até fazer sugestões de melhorias.</p><p>Pacotes de exemplo (código aberto) a serem usados ​​são: <a href=//jmeter.apache.org/>JMeter</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-559e8e8a1ac67ab5eeb8d552a7c78c22>4.7 - Navegação por links</h1><p>Usar o WebDriver para navegar por links
+e podem até fazer sugestões de melhorias.</p><p>Pacotes de exemplo (código aberto) a serem usados ​​são: <a href=//jmeter.apache.org/>JMeter</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-559e8e8a1ac67ab5eeb8d552a7c78c22>5.7 - Navegação por links</h1><p>Usar o WebDriver para navegar por links
 não é uma prática recomendada. Não porque não pode ser feito,
 mas porque WebDriver definitivamente não é a ferramenta ideal para isso.
 O WebDriver precisa de tempo para inicializar,
@@ -828,7 +1078,7 @@ executando um comando <a href=//curl.haxx.se/>curl</a>,
 ou usando uma biblioteca como BeautifulSoup
 uma vez que esses métodos não dependem
 em criar um navegador e navegar para uma página.
-Você está economizando muito tempo por não usar o WebDriver para essa tarefa.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-434101f95bfac0d5faefe0b450574456>4.8 - Autenticação de Dois Fatores (2FA)</h1><p>A autenticação de dois fatores, conhecida como <em>2FA</em>, é um mecanismo de autorização
+Você está economizando muito tempo por não usar o WebDriver para essa tarefa.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-434101f95bfac0d5faefe0b450574456>5.8 - Autenticação de Dois Fatores (2FA)</h1><p>A autenticação de dois fatores, conhecida como <em>2FA</em>, é um mecanismo de autorização
 onde a senha de uso único (OTP) é gerada usando aplicativos móveis &ldquo;Autenticadores&rdquo;,
 como &ldquo;Google Authenticator&rdquo;, &ldquo;Microsoft Authenticator&rdquo;
 etc., ou por SMS, e-mail para autenticação. Automatizar isso perfeitamente
