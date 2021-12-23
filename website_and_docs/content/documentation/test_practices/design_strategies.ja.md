@@ -13,8 +13,8 @@ weight: 1
 次のデザインパターンと戦略は、テストの作成と保守を容易にするためにWebDriverで以前に使用されています。 
 それらもあなたにとって役に立つかもしれません。
 
-[DomainDrivenDesign]({{< ref "//encouraged/domain_specific_language.ja.md" >}})：アプリのエンドユーザーの言語でテストを表現します。   
-[PageObjects]({{< ref "//encouraged/page_object_models.ja.md" >}})：WebアプリのUIの単純な抽象化  
+[DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}})：アプリのエンドユーザーの言語でテストを表現します。   
+[PageObjects]({{< ref "encouraged/page_object_models.md" >}})：WebアプリのUIの単純な抽象化  
 LoadableComponent：PageObjectsをコンポーネントとしてモデリングします。   
 BotStyleTests：PageObjectsが推奨するオブジェクトベースのアプローチではなく、コマンドベースのアプローチを使用してテストを自動化します。  
 

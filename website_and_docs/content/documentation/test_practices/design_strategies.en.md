@@ -9,8 +9,8 @@ weight: 1
 Over time, projects tend to accumulate large numbers of tests. As the total number of tests increases, 
 it becomes harder to make changes to the codebase --- a single "simple" change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help making tests easier to write and maintain. They may help you too.
 
-[DomainDrivenDesign]({{< ref "//encouraged/domain_specific_language.en.md" >}}): Express your tests in the language of the end-user of the app.
-[PageObjects]({{< ref "//encouraged/page_object_models.en.md" >}}): A simple abstraction of the UI of your web app.
+[DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}}): Express your tests in the language of the end-user of the app.
+[PageObjects]({{< ref "encouraged/page_object_models.md" >}}): A simple abstraction of the UI of your web app.
 LoadableComponent: Modeling PageObjects as components.
 BotStyleTests: Using a command-based approach to automating tests, rather than the object-based approach that PageObjects encourage
 
