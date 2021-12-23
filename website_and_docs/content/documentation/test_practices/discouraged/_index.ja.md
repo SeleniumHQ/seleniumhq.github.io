@@ -1,21 +1,11 @@
 ---
-title: "最悪の慣行"
-linkTitle: "最悪の慣行"
+title: "推奨されない行動"
+linkTitle: "非推奨"
 weight: 8
 description: >
-  Things to avoid when automating browsers with Selenium.
+  Seleniumでブラウザを自動化するときに避けるべきこと。
 aliases: [
 "/documentation/ja/worst_practices/",
 "/ja/documentation/worst_practices/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-

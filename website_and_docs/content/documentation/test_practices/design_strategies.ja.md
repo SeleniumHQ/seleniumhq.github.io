@@ -1,30 +1,38 @@
 ---
-title: "Design patterns and development strategies"
-linkTitle: "Design Strategies"
+title: "デザインパターンと開発戦略"
+linkTitle: "デザイン戦略"
 weight: 1
 ---
-(previously located: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
+(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
 
-## Overview
-Over time, projects tend to accumulate large numbers of tests. As the total number of tests increases, 
-it becomes harder to make changes to the codebase --- a single "simple" change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help making tests easier to write and maintain. They may help you too.
+## 概要
+時間の経過とともに、プロジェクトは多数のテストが積み上がる傾向があります。 
+テストの総数が増えると、コードベースに変更を加えることが難しくなります。
+アプリケーションが正常に機能していても、1回の"単純な"変更で多数のテストが失敗する可能性があります。 
+これらの問題が避けられない場合もありますが、問題が発生した場合は、できるだけ早く稼働を再開する必要があります。 
+次のデザインパターンと戦略は、テストの作成と保守を容易にするためにWebDriverで以前に使用されています。 
+それらもあなたにとって役に立つかもしれません。
 
-[DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}}): Express your tests in the language of the end-user of the app.
-[PageObjects]({{< ref "encouraged/page_object_models.md" >}}): A simple abstraction of the UI of your web app.
-LoadableComponent: Modeling PageObjects as components.
-BotStyleTests: Using a command-based approach to automating tests, rather than the object-based approach that PageObjects encourage
+[DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}})：アプリのエンドユーザーの言語でテストを表現します。   
+[PageObjects]({{< ref "encouraged/page_object_models.md" >}})：WebアプリのUIの単純な抽象化  
+LoadableComponent：PageObjectsをコンポーネントとしてモデリングします。   
+BotStyleTests：PageObjectsが推奨するオブジェクトベースのアプローチではなく、コマンドベースのアプローチを使用してテストを自動化します。  
 
-## Loadable Component
+## ロード可能なコンポーネント
 
-### What Is It?
+### それは何ですか？
 
-The LoadableComponent is a base class that aims to make writing PageObjects less painful. It does this by providing a standard way of ensuring that pages are loaded and providing hooks to make debugging the failure of a page to load easier. You can use it to help reduce the amount of boilerplate code in your tests, which in turn make maintaining your tests less tiresome.
+LoadableComponentは、PageObjectsの作成の負担を軽減することを目的としたベースクラスです。 
+これは、ページがロードされることを保証する標準的な方法を提供し、ページのロードの失敗のデバッグを容易にするフックを提供することによってこれを行います。 
+これを使用して、テストの定型コードの量を減らすことができます。これにより、テストの保守が面倒になります。
 
-There is currently an implementation in Java that ships as part of Selenium 2, but the approach used is simple enough to be implemented in any language.
+現在、Selenium 2の一部として出荷されるJavaの実装がありますが、使用されるアプローチは、どの言語でも実装できるほど単純です。
 
-### Simple Usage
+### 簡単な使用方法
 
-As an example of a UI that we'd like to model, take a look at the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. From the point of view of a test author, this offers the service of being able to file a new issue. A basic Page Object would look like:
+モデル化するUIの例として、[新しいissue](https://github.com/SeleniumHQ/selenium/issues/new)のページをご覧ください。 
+テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 
+基本的なページオブジェクトは次のようになります。
 
 ```
 package com.example.webdriver;
@@ -63,7 +71,7 @@ public class EditIssue {
 }
 ```
 
-In order to turn this into a LoadableComponent, all we need to do is to set that as the base type:
+これをLoadableComponentに変換するには、これを基本型として設定するだけです。
 
 ```
 public class EditIssue extends LoadableComponent<EditIssue> {
@@ -71,9 +79,9 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 }
 ```
 
-This signature looks a little unusual, but it all it means is that this class represents a LoadableComponent that loads the EditIssue page.
+この署名は少し変わっているように見えますが、それは、このクラスがEditIssueページをロードするLoadableComponentを表すことを意味します。
 
-By extending this base class, we need to implement two new methods:
+このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。
 
 ```
   @Override
@@ -88,9 +96,12 @@ By extending this base class, we need to implement two new methods:
   }
 ```
 
-The `load` method is used to navigate to the page, whilst the `isLoaded` method is used to determine whether we are on the right page. Although the method looks like it should return a boolean, instead it performs a series of assertions using JUnit's Assert class. There can be as few or as many assertions as you like. By using these assertions it's possible to give users of the class clear information that can be used to debug tests.
+`load` メソッドはページに移動するために使用され、　`isLoaded` メソッドは正しいページにいるかどうかを判断するために使用されます。 
+このメソッドはブール値を返す必要があるように見えますが、代わりにJUnitのAssertクラスを使用して一連のアサーションを実行します。 
+アサーションは好きなだけ少なくても多くてもかまいません。 
+これらのアサーションを使用することで、クラスのユーザーにテストのデバッグに使用できる明確な情報を提供することができます。
 
-With a little rework, our PageObject looks like:
+少し手直しすると、PageObjectは次のようになります。
 
 ```
 package com.example.webdriver;
@@ -157,17 +168,23 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
 ```
 
-That doesn't seem to have bought us much, right? One thing it has done is encapsulate the information about how to navigate to the page into the page itself, meaning that this information's not scattered through the code base. It also means that we can do this in our tests:
+それは私たちをあまり信じられなかったようですよね？ 
+これまでに行ったことの1つは、ページに移動する方法に関する情報をページ自体にカプセル化することです。
+つまり、この情報はコードベース全体に散らばっていません。 
+これは、テストで下記を実行できることも意味します。
 
 ```
 EditIssue page = new EditIssue(driver).get();
 ```
 
-This call will cause the driver to navigate to the page if that's necessary.
+この呼び出しにより、ドライバーは必要に応じてページに移動します。
 
-### Nested Components
+### ネストされたコンポーネント
 
-LoadableComponents start to become more useful when they are used in conjunction with other LoadableComponents. Using our example, we could view the "edit issue" page as a component within a project's website (after all, we access it via a tab on that site). You also need to be logged in to file an issue. We could model this as a tree of nested components:
+LoadableComponentsは、他のLoadableComponentsと組み合わせて使用すると、より便利になります。 
+この例を使用すると、 "edit issue" ページをプロジェクトのWebサイト内のコンポーネントとして表示できます（結局のところ、そのサイトのタブからアクセスします）。 
+また、issue を報告するにはログインする必要があります。 
+これをネストされたコンポーネントのツリーとしてモデル化できます。
 
 ```
  + ProjectPage
@@ -175,7 +192,10 @@ LoadableComponents start to become more useful when they are used in conjunction
      +---+ EditIssue
 ```
 
-What would this look like in code? For a start, each logical component would have its own class. The "load" method in each of them would "get" the parent. The end result, in addition to the EditIssue class above is:
+これはコードではどのように見えますか？ 
+まず、各論理コンポーネントには独自のクラスがあります。 
+それぞれの "load" メソッドは、親クラスを "get" します。 
+上記のEditIssueクラスに加えて、最終結果は次のようになります。
 
 ProjectPage.java:
 
@@ -267,7 +287,7 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
 }
 ```
 
-The "load" method in EditIssue now looks like:
+EditIssueの "load" メソッドは次のようになります。
 
 ```
   @Override
@@ -278,7 +298,9 @@ The "load" method in EditIssue now looks like:
   }
 ```
 
-This shows that the components are all "nested" within each other. A call to `get()` in EditIssue will cause all its dependencies to load too. The example usage:
+これは、コンポーネントがすべて相互に "ネストされている" ことを示しています。 
+EditIssueで `get()` を呼び出すと、そのすべての依存関係も読み込まれます。 
+使用例：
 
 ```
 public class FooTest {
@@ -303,17 +325,18 @@ public class FooTest {
 }
 ```
 
-If you're using a library such as [Guiceberry](https://github.com/zorzella/guiceberry) in your tests, 
-the preamble of setting up the PageObjects can be omitted leading to nice, clear, readable tests.
+テストで [Guiceberry](https://github.com/zorzella/guiceberry) などのライブラリを使用している場合は、PageObjectsの設定の前文を省略して、わかりやすく読みやすいテストを作成できます。
 
+## ボットパターン
 
-## Bot Pattern
+(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
 
-(previously located: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
+PageObjectsは、テストでの重複を減らすための便利な方法ですが、チームが快適にフォローできるパターンであるとは限りません。 
+別のアプローチは、より "コマンドのような" スタイルのテストに従うことです。
 
-Although PageObjects are a useful way of reducing duplication in your tests, it's not always a pattern that teams feel comfortable following. An alternative approach is to follow a more "command-like" style of testing.
-
-A "bot" is an action-oriented abstraction over the raw Selenium APIs. This means that if you find that commands aren't doing the Right Thing for your app, it's easy to change them. As an example:
+"ボット" は、生のSeleniumAPIに対するアクション指向の抽象化です。 
+つまり、コマンドがアプリに対して正しいことをしていないことがわかった場合、コマンドを簡単に変更できます。 
+例として：
 
 ```
 public class ActionBot {
@@ -344,4 +367,4 @@ public class ActionBot {
 }
 ```
 
-Once these abstractions have been built and duplication in your tests identified, it's possible to layer PageObjects on top of bots.
+これらの抽象化が構築され、テストでの重複が特定されると、ボットの上にPageObjectsを階層化することができます。
