@@ -141,7 +141,8 @@ echo %PATH%
 
 {{< tabpane  >}}
 {{< tab header="Mac / Linux" >}}
-export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
+echo 'PATH="$PATH:/opt/WebDriver/bin"' >> ~/.profile
+source ~/.profile
 {{< /tab >}}
 {{< tab header="Windows" >}}
 setx PATH "%PATH%;C:\WebDriver\bin"

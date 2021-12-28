@@ -67,7 +67,8 @@ setx PATH "%PATH%;C:\WebDriver\bin"
   * Usuários do Bash no macOS e Linux - Em um terminal:
 
 ```shell
-export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
+echo 'PATH="$PATH:/opt/WebDriver/bin"' >> ~/.profile
+source ~/.profile
 ```
 
 * Agora você está pronto para testar suas alterações.

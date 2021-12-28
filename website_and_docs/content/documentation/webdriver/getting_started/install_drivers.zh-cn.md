@@ -43,7 +43,8 @@ setx PATH "%PATH%;C:\WebDriver\bin"
 ```
   * 在 macOS 和 Linux 上的 Bash 用户 - 在终端中：
 ```shell
-export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
+echo 'PATH="$PATH:/opt/WebDriver/bin"' >> ~/.profile
+source ~/.profile
 ```
 
 * 现在您可以测试更改了。关闭所有打开的命令提示符，然后打开一个新的提示符。
