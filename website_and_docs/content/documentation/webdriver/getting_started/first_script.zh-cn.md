@@ -1,19 +1,21 @@
 ---
-title: "Writing your first Selenium script"
-linkTitle: "First Script"
+title: "编写第一个Selenium脚本"
+linkTitle: "第一个脚本"
 weight: 3
-needsTranslation: true
 description: >
-    Step-by-step instructions for constructing a Selenium script
+    逐步构建一个Selenium脚本的说明
 ---
 
-Once you have [Selenium installed]({{< ref "install_selenium_library.md" >}}) and
-[Drivers installed]({{< ref "install_drivers.md" >}}), you're ready to write Selenium code.
+当你完成 [Selenium安装]({{< ref "install_selenium_library.md" >}}) and
+[驱动安装]({{< ref "install_drivers.md" >}}) 后, 便可以开始书写Selenium脚本了.
 
-Everything Selenium does is send the browser commands to do something or send requests for information.
-Most of what you'll do with Selenium is a combination of these basic commands:
+Selenium所做的一切, 
+就是发送给浏览器命令,
+用以执行某些操作或为信息发送请求.
+您将使用Selenium执行的大部分操作,
+都是以下基本命令的组合:
 
-1. Start the session with a driver instance
+1. 使用驱动实例开启会话
 
    {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" >}}
@@ -36,7 +38,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
    {{< /tab >}}
    {{< /tabpane >}}
 
-2. Send command for browser to [Navigate]({{< ref "/documentation/webdriver/browser/navigation.md" >}})
+2. 为浏览器发送命令 [Navigate]({{< ref "/documentation/webdriver/browser/navigation.md" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -59,7 +61,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-3. Request [information about the browser]({{< ref "/documentation/webdriver/browser" >}})
+3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/browser" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -82,7 +84,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-4. Send command to [find an element]({{< ref "/documentation/webdriver/elements" >}})
+4. 发送命令 [查找元素]({{< ref "/documentation/webdriver/elements" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -111,7 +113,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-5. Send command to [take action on an element]()
+5. 发送命令 [操作元素]({{< ref "/documentation/webdriver/actions_api" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -140,7 +142,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-6. Request [information about an element]()
+6. 请求 [获取元素信息]({{< ref "/documentation/webdriver/elements/information" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -163,7 +165,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-7. End the session 
+7. 结束会话
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -186,7 +188,8 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-Let's combine these 7 things into a complete script, including the libraries that need to be used:
+让我们将这7个部分组合成一个完整的脚本，
+包括需要使用的库:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
