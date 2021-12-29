@@ -110,7 +110,7 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
     {{< /tab >}}
     {{< /tabpane >}}
 
-5. [要素に対してアクションを実行する]()コマンドを送信します
+5. [要素に対してアクションを実行する]({{< ref "/documentation/webdriver/actions_api" >}})コマンドを送信します
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -139,7 +139,11 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
     {{< /tab >}}
     {{< /tabpane >}}
 
+<<<<<<< HEAD
 6. [要素に関する情報]()をリクエストします
+=======
+6. Request [information about an element]({{< ref "/documentation/webdriver/elements/information" >}})
+>>>>>>> dev
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
