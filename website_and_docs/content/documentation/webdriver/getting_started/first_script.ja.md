@@ -139,11 +139,7 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
     {{< /tab >}}
     {{< /tabpane >}}
 
-<<<<<<< HEAD
-6. [要素に関する情報]()をリクエストします
-=======
-6. Request [information about an element]({{< ref "/documentation/webdriver/elements/information" >}})
->>>>>>> dev
+6. [要素に関する情報]({{< ref "/documentation/webdriver/elements/information" >}})をリクエストします
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
