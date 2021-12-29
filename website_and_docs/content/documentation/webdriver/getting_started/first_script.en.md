@@ -110,7 +110,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-5. Send command to [take action on an element]()
+5. Send command to [take action on an element]({{< ref "/documentation/webdriver/actions_api" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -139,7 +139,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-6. Request [information about an element]()
+6. Request [information about an element]({{< ref "/documentation/webdriver/elements/information" >}})
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
