@@ -1,19 +1,18 @@
 ---
-title: "Writing your first Selenium script"
-linkTitle: "First Script"
+title: "最初のSeleniumスクリプトを書く"
+linkTitle: "最初のスクリプト"
 weight: 3
-needsTranslation: true
 description: >
-    Step-by-step instructions for constructing a Selenium script
+    Seleniumスクリプトを作成するための段階的な説明
 ---
 
-Once you have [Selenium installed]({{< ref "install_selenium_library.md" >}}) and
-[Drivers installed]({{< ref "install_drivers.md" >}}), you're ready to write Selenium code.
+[Seleniumをインストール]({{< ref "install_selenium_library.md" >}})し、
+[ドライバーをインストール]({{< ref "install_drivers.md" >}})すると、Seleniumコードを書く準備が整います。
 
-Everything Selenium does is send the browser commands to do something or send requests for information.
-Most of what you'll do with Selenium is a combination of these basic commands:
+Seleniumが行うことはすべて、ブラウザコマンドを送信して、何かを実行したり、情報の要求を送信したりすることです。 
+Seleniumで行うことのほとんどは、次の基本的なコマンドの組み合わせです。
 
-1. Start the session with a driver instance
+1. ドライバーインスタンスでセッションを開始します
 
    {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" >}}
@@ -36,7 +35,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
    {{< /tab >}}
    {{< /tabpane >}}
 
-2. Send command for browser to [Navigate]({{< ref "/documentation/webdriver/browser/navigation.md" >}})
+2. ブラウザが[ナビゲート]({{< ref "/documentation/webdriver/browser/navigation.md" >}})するコマンドを送信します
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -59,7 +58,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-3. Request [information about the browser]({{< ref "/documentation/webdriver/browser" >}})
+3. [ブラウザに関する情報]({{< ref "/documentation/webdriver/browser" >}})をリクエストします
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -82,7 +81,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-4. Send command to [find an element]({{< ref "/documentation/webdriver/elements" >}})
+4. [要素を検索する]({{< ref "/documentation/webdriver/elements" >}})ためのコマンドを送信します
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -111,7 +110,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-5. Send command to [take action on an element]({{< ref "/documentation/webdriver/actions_api" >}})
+5. [要素に対してアクションを実行する]({{< ref "/documentation/webdriver/actions_api" >}})コマンドを送信します
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -140,7 +139,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-6. Request [information about an element]({{< ref "/documentation/webdriver/elements/information" >}})
+6. [要素に関する情報]({{< ref "/documentation/webdriver/elements/information" >}})をリクエストします
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -163,7 +162,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-7. End the session 
+7. セッションを終了します 
 
     {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -186,7 +185,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
     {{< /tab >}}
     {{< /tabpane >}}
 
-Let's combine these 7 things into a complete script, including the libraries that need to be used:
+これらの7つを組み合わせて、使う必要のあるライブラリを含む完全なスクリプトにしましょう。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
