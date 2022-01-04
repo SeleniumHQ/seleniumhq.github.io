@@ -1,6 +1,6 @@
 ---
 title: "Installing browser drivers"
-linkTitle: "Installing browser drivers"
+linkTitle: "Installing drivers"
 weight: 2
 needsTranslation: true
 description: >
