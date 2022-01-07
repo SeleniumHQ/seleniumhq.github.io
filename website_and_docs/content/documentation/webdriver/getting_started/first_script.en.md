@@ -311,7 +311,7 @@ fun main() {
     driver.getTitle(); // => "Google"
 
     val searchBox = driver.findElement(By.name("q"));
-    val searchButton = driver.findElement(By.name("btnK"))
+    val searchButton = driver.findElement(By.name("btnK"));
 
     searchBox.sendKeys("Selenium");
     searchButton.click();
