@@ -194,6 +194,32 @@ You need to specify which parts are code and which are not yourself now, like th
     < ... >
     {{</* /tabpane */>}}
 
+### Link to GitHub
+
+If you disable code blocks, you can create whatever kind of link anywhere you want.
+But say you want to add a GitHub link associated with a given tab when using the default code block:
+{{< tabpane >}}
+  {{< tab header="Link" github="seleniumhq/seleniumhq.github.io/blob/dev/website_and_docs/content/documentation/about/style.en.md#L205" >}}
+    Content in automatic code block that refers to something on GitHub
+  {{< /tab >}}
+  {{< tab header="No Link" >}}
+    This content should not get linked to GitHub
+  {{< /tab >}}
+{{< /tabpane >}}
+
+To add a link to a particular tab, pass in a `github` value
+to that tab. Note that only the tabs that have this value will have the link added.
+
+    {{</* tabpane */>}}
+      {{</* tab header="Link" github="seleniumhq/seleniumhq.github.io/blob/dev/website_and_docs/content/documentation/about/style.en.md#L205" */>}}
+        Content in automatic code block that refers to something on GitHub
+      {{</* /tab */>}}
+      {{</* tab header="No Link" */>}}
+        This content should not get linked to GitHub
+      {{</* /tab */>}}
+    {{</* /tabpane */>}}
+
+
 ### Code Comments
 
 Minimize code comments because they are difficult to translate.

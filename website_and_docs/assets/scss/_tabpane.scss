@@ -1,5 +1,11 @@
-div.nocode {
+.tab-pane .nocode {
   border-bottom: 1px solid #dee2e6;
   margin: 2rem 0 2rem 0;
   padding-bottom: 1rem;
+}
+
+.tab-pane .github {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
 }
