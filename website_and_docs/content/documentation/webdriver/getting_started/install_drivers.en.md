@@ -247,7 +247,7 @@ driver = Edge()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 
 IWebDriver driver = new EdgeDriver();
 {{< /tab >}}
