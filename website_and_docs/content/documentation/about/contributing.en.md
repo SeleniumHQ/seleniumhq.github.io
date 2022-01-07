@@ -137,8 +137,8 @@ changes in all the other translated files as well. This might differ depending
 on the change, for example:
  
 * If you add a code example to the `browser_manipulation.en.md` file,
-also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md`, and all other translated files.
+also add it to `browser_manipulation.ja.md`, `browser_manipulation.pt-br.md`, 
+`browser_manipulation.zh-cn.md`, and all other translated files.
 * If you find a translation that can be improved, only change the translated
 file.
 * If you are adding a new language translation, add the new files with the
