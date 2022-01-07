@@ -2,6 +2,9 @@
 title: "Contribuindo com o Site e Documentação do Selenium"
 linkTitle: "Contribuindo com o Site e Documentação do Selenium"
 weight: 2
+needsTranslation: true
+description: >-
+    Information on improving documentation and code examples for Selenium
 aliases: 
         [
           "/documentation/pt-br/contributing/",
@@ -95,69 +98,7 @@ your changes, run `hugo server` on the site's root directory.
 % hugo server
 ```
 
-#### Capitalização de títulos
-
-Deve-se evitar a capitalização do título,
-como _Um Título Muito Estiloso_,
-e em vez disso, use _Um título muito estiloso_.
-Letras maiúsculas gratuitas, ou caixa do título,
-muitas vezes mostram um mal-entendido - ou um desprezo por -
-convenções ortográficas.
-Preferimos o que é conhecido como _sentence case_,
-com uma única inicial maiúscula para iniciar cabeçalhos.
-
-#### Comprimento da linha
-
-Ao editar o código fonte da documentação,
-que é escrito em HTML puro,
-limite o comprimento das linhas a cerca de 72 caracteres.
-
-Alguns de nós dão um passo adiante
-e usam o que é chamado de
-[_linefeeds semânticos_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-que é uma técnica pela qual as linhas de origem HTML,
-que não são lidos pelo público,
-são divididas em "intervalos naturais" na prosa.
-Em outras palavras, as frases são divididas
-em quebras naturais entre as orações.
-Em vez de se preocupar com as linhas de cada parágrafo
-de modo que todos terminem perto da margem direita,
-os feeds de linha podem ser adicionados em qualquer lugar
-que existe uma ruptura entre as ideias.
-
-Isso pode tornar as diffs muito fáceis de ler
-ao colaborar por meio do git,
-mas não é algo que obrigamos os colaboradores a usar.
-
-#### Traducciones
-
-A documentação é traduzida para vários idiomas e as traduções são baseadas no conteúdo em inglês. Ao alterar um arquivo, **certifique-se** de realizar a
-mudanças em todos os outros arquivos traduzidos também. Isso pode ser diferente dependendo
-sobre a mudança, por exemplo:
- 
-* Se você adicionar um exemplo de código ao arquivo `browser_manipulation.en.md`,
-também adicione-o a `browser_manipulation.es.md`,` browser_manipulation.ef.md`,
-`browser_manipulation.ja.md`, e todos os outros arquivos traduzidos.
-* Se você encontrar uma tradução que possa ser melhorada, altere apenas o arquivo traduzido.
-* Se você estiver adicionando uma nova tradução de idioma, adicione os novos arquivos com o
-sufixo apropriado. Não há necessidade de traduzir tudo para enviar um
-PR, pode ser feito iterativamente. Não se esqueça de verificar algumas configurações necessárias de
-valores no arquivo `config.toml`.
-* Se você fizer alterações de texto na versão em inglês, substitua a mesma seção em
-os arquivos traduzidos com sua alteração (sim, em inglês), e adicione o seguinte
-observe na parte superior do arquivo.
- 
-
-```
-{{%/* pageinfo color="warning" */%}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
-   it by sending us pull requests!
-</p>
-{{%/* /pageinfo */%}}
-```
+See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution
 
 ### Passo 4: Commit
 
