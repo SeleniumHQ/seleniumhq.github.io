@@ -315,7 +315,7 @@ See the <a href=#quick-reference>Quick Reference Section</a> for the applicable 
 <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>EdgeDriver</span><span style=color:#ce5c00;font-weight:700>();</span></code></pre></div></div><div class="tab-pane fade" id=tabs-4-1 role=tabpanel aria-labelled-by=tabs-4-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#204a87;font-weight:700>from</span> <span style=color:#000>selenium.webdriver</span> <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>Edge</span>
 
 <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Edge</span><span style=color:#000;font-weight:700>()</span></code></pre></div></div><div class="tab-pane fade" id=tabs-4-2 role=tabpanel aria-labelled-by=tabs-4-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium</span><span style=color:#000;font-weight:700>;</span>
-<span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium.Firefox</span><span style=color:#000;font-weight:700>;</span>
+<span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium.Edge</span><span style=color:#000;font-weight:700>;</span>
 
 <span style=color:#000>IWebDriver</span> <span style=color:#000>driver</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>EdgeDriver</span><span style=color:#000;font-weight:700>();</span></code></pre></div></div><div class="tab-pane fade" id=tabs-4-3 role=tabpanel aria-labelled-by=tabs-4-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#204a87>require</span> <span style=color:#4e9a06>&#34;selenium-webdriver&#34;</span>
 
@@ -596,7 +596,7 @@ Most of what you&rsquo;ll do with Selenium is a combination of these basic comma
     <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getTitle</span><span style=color:#000;font-weight:700>();</span> <span style=color:#8f5902;font-style:italic>// =&gt; &#34;Google&#34;
 </span><span style=color:#8f5902;font-style:italic></span>
     <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>searchBox</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>name</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;q&#34;</span><span style=color:#000;font-weight:700>));</span>
-    <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>searchButton</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>name</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;btnK&#34;</span><span style=color:#000;font-weight:700>))</span>
+    <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>searchButton</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>name</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;btnK&#34;</span><span style=color:#000;font-weight:700>));</span>
 
     <span style=color:#000>searchBox</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>sendKeys</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;Selenium&#34;</span><span style=color:#000;font-weight:700>);</span>
     <span style=color:#000>searchButton</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>click</span><span style=color:#000;font-weight:700>();</span>
@@ -10786,7 +10786,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
 <span class=contributions>599 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>589 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1072163?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>592 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1072163?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/eranmes>@eranmes</a></label>
 <span class=contributions>473 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/665846?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/p0deje>@p0deje</a></label>
@@ -10808,7 +10808,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/lmtierney>@lmtierney</a></label>
 <span class=contributions>179 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>168 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/696749?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>169 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/696749?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/freynaud>@freynaud</a></label>
 <span class=contributions>138 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/718010?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/samitbadle>@samitbadle</a></label>
@@ -10822,7 +10822,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/juangj>@juangj</a></label>
 <span class=contributions>108 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>104 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1000?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>106 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1000?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/aslakhellesoy>@aslakhellesoy</a></label>
 <span class=contributions>94 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3902563?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alex-savchuk>@alex-savchuk</a></label>
@@ -11236,7 +11236,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
-<span class=contributions>76 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1148325?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>77 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1148325?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/kzhirata>@kzhirata</a></label>
 <span class=contributions>39 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10259016?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/boris779>@boris779</a></label>
@@ -11388,6 +11388,8 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/f-g-s>@f-g-s</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/58732614?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/Haifischbecken>@Haifischbecken</a></label>
+<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/43995067?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/HollowMan6>@HollowMan6</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/34998542?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/joft-ware>@joft-ware</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/6227392?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11410,6 +11412,8 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/skyhirider>@skyhirider</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3819700?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/marknoble>@marknoble</a></label>
+<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/22982809?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/MartinoHead>@MartinoHead</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3352650?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bisforum>@bisforum</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2423882?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11424,10 +11428,6 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/muditlambda>@muditlambda</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/32195721?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/nikhil-lambda>@nikhil-lambda</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16527196?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/TheTestLynx>@TheTestLynx</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/793041?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/OndraM>@OndraM</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=previous-selenium-websitegithubcomseleniumhqwwwseleniumhqorg><a href=//github.com/SeleniumHQ/www.seleniumhq.org/>Previous Selenium Website</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
 <span class=contributions>417 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
