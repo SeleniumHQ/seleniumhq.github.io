@@ -2,7 +2,6 @@
 title: "安装浏览器驱动"
 linkTitle: "安装驱动"
 weight: 2
-needsTranslation: true
 description: >
   设置您的浏览器用于自动化.
 aliases: [
@@ -12,44 +11,40 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese ? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+通过WebDriver, 
+Selenium支持市场上所有主要浏览器, 
+如Chrom(ium)、Firefox、Internet Explorer、Edge、Opera和Safari. 
+WebDriver尽量使用浏览器内置的自动化支持
+来驱动浏览器.
 
-Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Edge, Opera, and Safari.
-Where possible, WebDriver drives the browser
-using the browser's built-in support for automation.
+由于除Internet Explorer之外的所有驱动程序实现
+都是由浏览器供应商自己提供的, 
+因此标准Selenium发行版中不包括这些驱动程序. 
+本节介绍了使用不同浏览器的基本要求.
 
-Since all the driver implementations except for Internet Explorer are provided by the
-browser vendors themselves, they are not included in the standard Selenium distribution.
-This section explains the basic requirements for getting you started with the different browsers.
+阅读我们的[Capabilities](/documentation/webdriver/capabilities)
+文档中的更多高级选项.
 
-Read about more advanced options in our [Capabilities](/documentation/webdriver/capabilities) documentation.
+## 快速参考
 
-## Quick Reference
-
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
-| ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | Via Browser |
-| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [Downloads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
+| 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                            |
+|-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------|
+| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.storage.googleapis.com/index.html)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)        |
+| Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)               |
+| Edge              | Windows/macOS               | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 通过浏览器                                                           |
+| Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)          |
+| Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                           |
+| Opera             | Windows/macOS/Linux         | Opera            | [下载](//github.com/operasoftware/operachromiumdriver/releases)         | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
 
 
-## Three Ways to Use Drivers
+## 使用驱动的三种方式
 
-### 1. Driver Management Software
+### 1. 驱动管理软件
 
-Most machines automatically update the browser, but the driver does not. To make sure you get
-the correct driver for your browser, there are many third party libraries to assist you.
+大多数机器会自动更新浏览器, 
+但驱动程序不会. 
+为了确保为浏览器提供正确的驱动程序, 
+这里有许多第三方库可为您提供帮助.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -126,16 +121,20 @@ return ChromeDriver()
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 2. The `PATH` Environment Variable
-This option first requires manually downloading the driver (See [Quick Reference Section](#quick-reference) for links).
+### 2. `PATH` 环境变量
+此选项首先需要手动下载驱动程序
+(有关链接, 请参阅[快速参考](#快速参考) 部分).
 
-This is a flexible option to change location of drivers without having to update your code, and will work
-on multiple machines without requiring that each machine put the drivers in the same place.
+这是一个灵活的选项, 
+可以在不更新代码的情况下更改驱动程序的位置, 
+并且可以在多台机器上工作, 
+而不需要每台机器将驱动程序放在同一位置. 
 
-You can either place the drivers in a directory that is already listed in `PATH`, or you can place them in a directory
-and add it to `PATH`.
+您可以将驱动程序放置在路径中已列出的目录中, 
+也可以将其放置在目录中并将其添加到`PATH`.
 
-* To see what directories are already on `PATH`, open a Command Prompt / Terminal and type:
+* 要查看`PATH`上已有哪些目录, 
+请打开命令提示符/终端并键入:  
 
 {{< tabpane  >}}
 {{< tab header="Mac / Linux" >}}
@@ -147,7 +146,8 @@ echo %PATH%
 {{< /tabpane >}}
 
 <br />
-* If the directory you want to place the drivers is not already on PATH, you need to add it: 
+* 如果要放置驱动程序的目录不在Path上, 
+则需要添加: 
 
 {{< tabpane  >}}
 {{< tab header="Mac / Linux" >}}
@@ -159,12 +159,14 @@ setx PATH "%PATH%;C:\WebDriver\bin"
 {{< /tabpane >}}
 
 <br />
-* You can test if it has been added correctly by starting the driver:
- ```shell
+* 您可以通过启动驱动程序
+来测试它是否已正确添加: 
+
+```shell
   chromedriver
   ```
-* If your `PATH` is configured correctly,
-you will see some output relating to the startup of the driver:
+* 如果`PATH`配置正确, 
+  您将看到一些与驱动程序启动相关的输出: 
 
 ```
 Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
@@ -173,13 +175,15 @@ Please see https://chromedriver.chromium.org/security-considerations for suggest
 ChromeDriver was started successfully.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
+想要重新控制命令提示符可以按下 <kbd>Ctrl+C</kbd>
 
-### 3. Hard Coded Location
+### 3. 硬编码位置
 
-Similar to Option 2 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
-Specifying the location in the code itself has the advantage of not needing to figure out Environment Variables on
-your system, but has the drawback of making the code much less flexible.
+与上面的选项2类似, 
+您需要手动下载驱动程序(有关链接, 请参阅[快速参考](#快速参考) 部分). 
+在代码中指定位置本身的优点是
+不需要指出系统上的环境变量, 
+但缺点是使代码的灵活性大大降低. 
 
 {{< tabpane langEqualsHeader=true >}}
 
@@ -226,22 +230,26 @@ const driver = new Builder().forBrowser('chrome').setChromeService(service).buil
 {{< /tabpane >}}
 
 
-## Starting Browsers
+## 启动浏览器
 
 ### Chromium/Chrome
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of Chrome and the
-version of chromedriver must match the major version. See the [Quick Reference Section](#quick-reference) for the
-applicable download link.
+默认情况下, 
+Selenium 4与Chrome v75及更高版本兼容. 
+请注意, Chrome和chromedriver的版本必须与主版本匹配. 
+有关适用的下载链接, 
+请参阅[快速参考](#快速参考)部分. 
 
-Examples for how to start Chrome are provided in the previous section detailing
-the [Three Ways to Use Drivers](#three-ways-to-use-drivers).
+上一节详细介绍了如何启动Chrome的示例
+[使用驱动的三种方式](#使用驱动的三种方式). 
 
 ### Edge
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the version of Edge and the version of edgedriver must match the major version.
-See the [Quick Reference Section](#quick-reference) for the applicable download link.
+Microsoft Edge是基于Chromium实现的, 最小支持的版本是v79. 
+与Chrome类似, 
+Edge版本和edgedriver版本必须与主版本匹配. 
+有关适用的下载链接, 
+请参阅[快速参考](#快速参考). 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -281,8 +289,9 @@ val driver: WebDriver = EdgeDriver()
 
 ### Firefox
 
-Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
-See the [Quick Reference Section](#quick-reference) for the applicable download link.
+Selenium 4需要Firefox 78或更高版本. 
+建议始终使用geckodriver的最新版本. 
+有关适用的下载链接, 请参阅[快速参考](#快速参考). 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -323,23 +332,27 @@ val driver: WebDriver = FirefoxDriver()
 
 ### Internet Explorer
 
-The Selenium project aims to support the same releases that
-[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
-Older releases may work, but will not be supported. Note that Internet Explorer 11 will end support for certain
-operating systems, including Windows 10 on June 15, 2022.
-Edge has an IE Compatibility mode that will continue to be supported.
+Selenium项目旨在支持与
+[微软当前考量](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer). 
+相同的发布版本. 
+旧版本可以工作, 但不受支持. 
+请注意, InternetExplorer 11将在2022年6月15日, 
+终止某些操作系统（包括Windows 10）的支持, 
+Edge的IE兼容模式将继续受到支持. 
 
-The IE Driver is the only driver maintained by the Selenium Project directly.
-While binaries for both the 32-bit and 64-bit
-versions of Internet Explorer are available, there are some
-[limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with the 64-bit driver. As such it is recommended to use the 32-bit driver.
-It should be noted that as Internet Explorer
-preferences are saved against the logged in user's account, some additional setup is required.
+IE驱动程序是Selenium项目直接维护的唯一驱动程序. 
+而Internet Explorer的32位和64位版本的二进制文件是可用的, 
+使用64位驱动程序有一些
+[限制](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html). 
+因此, 建议使用32位驱动程序. 
+应该注意的是, 作为Internet Explorer
+首选项是针对登录用户的帐户保存的, 需要进行一些额外的设置. 
 
-Additional information about using Internet Explorer can be found
-[on the Selenium wiki](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver), and
-you can see the [Quick Reference Section](#quick-reference) for the applicable download link.
+
+[在Selenium的Wiki上](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver), 
+可以找到有关使用Internet Explorer的其他信息. 
+有关适用的下载链接, 请参见[快速参考](#快速参考). 
+
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -379,9 +392,9 @@ val driver: WebDriver = InternetExplorerDriver()
 
 ### Opera
 
-Current releases of Opera are built on top of the Chromium engine,
-and WebDriver is now supported via the closed-source
-[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases).
+当前版本的Opera构建在Chromium引擎之上, 
+现在通过封闭源代码支持WebDriver
+[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases). 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -419,8 +432,10 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:
+与Chromium和Firefox驱动程序不同, 
+safaridriver是随操作系统一起安装的. 
+要在Safari上启用自动化, 
+请从终端运行以下命令: 
 
 ```shell
 safaridriver --enable
@@ -462,4 +477,5 @@ val driver: WebDriver = SafariDriver()
 {{< /tab >}}
 {{< /tabpane >}}
 
-Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+那些希望在iOS上实现Safari自动化的人
+应该看看[Appium project](//appium.io/). 
