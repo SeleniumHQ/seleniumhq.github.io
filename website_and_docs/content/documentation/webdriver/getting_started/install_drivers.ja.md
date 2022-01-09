@@ -1,7 +1,8 @@
 ---
 title: "ブラウザーのドライバーをインストールする"
 linkTitle: "ブラウザーのドライバーをインストールする"
-weight: 2
+weight: 4
+needsTranslation: true
 description: >
   自動化するブラウザを設定する。
 aliases: [
@@ -11,7 +12,7 @@ aliases: [
 ]
 ---
 
-Seleniumは、WebDriverを介して、Chrom(ium)、Firefox、Internet Explorer、Edge、Opera、Safari
+Seleniumは、WebDriverを介して、Chrome/Chromium、Firefox、Internet Explorer、Edge、Opera、Safari
 などの市場にあるすべての主要なブラウザーをサポートします。 
 可能な場合、WebDriverは、ブラウザーに組み込まれている自動化のサポートを使用してブラウザーを動かします。
 
@@ -19,7 +20,8 @@ Internet Explorerを除くすべてのドライバーの実装は、ブラウザ
 標準のSeleniumディストリビューションには含まれていません。 
 この章では、さまざまなブラウザを使い始めるための基本的な要件について説明します。
 
-[Capabilities](/documentation/webdriver/capabilities) のドキュメントで、より高度なオプションについてお読みください。
+Read about more advanced options for starting a driver
+in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
 
 ## クイックリファレンス
 
@@ -27,11 +29,12 @@ Internet Explorerを除くすべてのドライバーの実装は、ブラウザ
 | ------- | ------------ | ------------- | -------- | ------------- |
 | Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
 | Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | Via Browser |
+| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
 | Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [Downloads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
 
+Note: The Opera driver does not support w3c syntax, so we recommend using chromedriver to work with Opera.
+See the code example for [opening an Opera browser]({{< ref "open_browser.md#opera" >}})
 
 ## ドライバーを使用する3つの方法
 

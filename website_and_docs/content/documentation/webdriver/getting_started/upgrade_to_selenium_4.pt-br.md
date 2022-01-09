@@ -1,7 +1,7 @@
 ---
 title: "Como atualizar para Selenium 4"
 linkTitle: "Como atualizar para Selenium 4"
-weight: 3
+weight: 10
 description: >
   Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
   Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!

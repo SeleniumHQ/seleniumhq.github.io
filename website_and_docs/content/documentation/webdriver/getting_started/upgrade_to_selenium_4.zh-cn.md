@@ -1,7 +1,7 @@
 ---
 title:  "升级到Selenium 4"
 linkTitle:  "升级到Selenium 4"
-weight:  3
+weight:  10
 description:  >
   对Selenium 4感兴趣? 查看本指南, 它将帮助您升级到最新版本!
 aliases: [
