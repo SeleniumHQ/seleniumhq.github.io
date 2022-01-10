@@ -6,7 +6,7 @@ description: >
     Details on how to execute Selenium Test Suite with Crazy Fun.
 ---
 
-This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/Tips-And-Tricks)
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/Developer-Tips)
 
 ## Running an Individual Test
 

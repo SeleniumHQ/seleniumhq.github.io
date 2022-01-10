@@ -136,8 +136,8 @@ mudanças em todos os outros arquivos traduzidos também. Isso pode ser diferent
 sobre a mudança, por exemplo:
  
 * Se você adicionar um exemplo de código ao arquivo `browser_manipulation.en.md`,
-também adicione-o a `browser_manipulation.es.md`,` browser_manipulation.ef.md`,
-`browser_manipulation.ja.md`, e todos os outros arquivos traduzidos.
+também adicione-o a `browser_manipulation.ja.md`,` browser_manipulation.pt-br.md`,
+`browser_manipulation.zh-cn.md`, e todos os outros arquivos traduzidos.
 * Se você encontrar uma tradução que possa ser melhorada, altere apenas o arquivo traduzido.
 * Se você estiver adicionando uma nova tradução de idioma, adicione os novos arquivos com o
 sufixo apropriado. Não há necessidade de traduzir tudo para enviar um

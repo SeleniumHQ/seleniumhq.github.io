@@ -2,17 +2,17 @@
 title: "Selenium IDE"
 linkTitle: "IDE"
 weight: 10
-needsTranslation: true
 description: >
     Selenium IDE是一个记录和回放用户操作的浏览器扩展.
 ---
 
-Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
-is an easy-to-use browser extension that records a user's
-actions in the browser using existing Selenium commands,
-with parameters defined by the context of each element.
-It provides an excellent way to learn Selenium syntax.
-It's available for Google Chrome, Mozilla Firefox, and Microsoft Edge.
+Selenium的集成开发环境 ([Selenium IDE](//selenium.dev/selenium-ide))
+是一个易于使用的浏览器扩展, 
+利用既定的Selenium命令记录用户的浏览器行为, 
+参数由每个元素的上下文定义. 
+它提供了一种学习Selenium语法的极好方法. 
+其适用于谷歌Chrome、Mozilla火狐以及微软Edge浏览器. 
 
-For more information, visit the complete
-[Selenium IDE Documentation](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)
+有关更多信息, 
+请访问完整的
+[Selenium IDE 文档](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)

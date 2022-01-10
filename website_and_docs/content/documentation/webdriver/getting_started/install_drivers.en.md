@@ -203,8 +203,8 @@ driver = Selenium::WebDriver.for :chrome, service: service
 {{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
-var service = new chrome.ServiceBuilder('/opt/WebDriver/bin/chromedriver').build();
-var driver = new Builder().forBrowser('chrome').setChromeService(service).build();
+const service = new chrome.ServiceBuilder('/opt/WebDriver/bin/chromedriver').build();
+const driver = new Builder().forBrowser('chrome').setChromeService(service).build();
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
@@ -247,7 +247,7 @@ driver = Edge()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 
 IWebDriver driver = new EdgeDriver();
 {{< /tab >}}
