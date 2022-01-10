@@ -3,6 +3,8 @@ title: "Seleniumのサイトとドキュメントに貢献する"
 linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
 requiresTranslation: true
+description: >-
+    Information on improving documentation and code examples for Selenium
 aliases: 
         [
           "/documentation/ja/contributing/",
@@ -90,49 +92,7 @@ your changes, run `hugo server` on the site's root directory.
 % hugo server
 ```
 
-#### タイトルの大文字化
-
-_A Very Fine Heading_ などのタイトルの大文字化は避け、代わりに _A very fine heading_ を選択してください。
-大げさな大文字表記、またはタイトルケースは、多くの場合、正書法の慣習に対する誤解または無視を示します。
-ヘッダーを開始するための最初の大文字を1つ持つセンテンスケースとして知られているものを好みます。
-
-#### 行の長さ
-
-プレーンHTMLで記述されたドキュメントのソースを編集するときは、行の長さを約72文字に制限してください。
-
-これをさらに一歩進めて、いわゆる[セマンティックラインフィード](//rhodesmill.org/brandon/2012/one-sentence-per-line)
-と呼ばれるものを使用します。
-これは、一般の人には読まれないHTMLソース行を散文の「自然な区切り」で分割する手法です。
-つまり、文は句間の自然な区切りで分割されます。
-すべての段落が右マージンの近くで終了するように各段落の行を混乱させるのではなく、
-アイデアが途切れる場所であればどこでも改行を追加できます。
-
-これにより、gitを使用して共同作業するときにdiffを非常に読みやすくすることができますが、
-使用するコントリビューターに強制するものではありません。
-
-#### Translations
-
-ドキュメントは複数の言語に翻訳されており、翻訳は英語版に基づいて行われます。
-ファイルに変更を加えたときは、他の翻訳済みファイル全てに**必ず**同様の変更を加えてください。
-ただし、変更内容によって異なります。以下に例を示します:
-
-* `browser_manipulation.en.md`ファイルにコード例を加えた場合、`browser_manipulation.ja.md`、 `browser_manipulation.pt-br.md`及びすべての翻訳ファイルに追加してください。
-`browser_manipulation.zh-cn.md`
-* 翻訳の改善を行う場合は、各言語のファイルのみを変更してください。
-* 新しい言語向けの翻訳を追加したい場合、適切な接尾辞を付けてファイルを追加してください。プルリクエストを送信するために全てを翻訳する必要はありません、イテレーティブに行うことができます。`config.toml`ファイルで必要な設定値の確認を忘れないでください。
-* 英語版の文章に変更を加えたい場合は、翻訳されたファイルの同じ箇所をあなたの変更で（英語で）書き換えたうえで、以下の注意書きをファイルの先頭に追加してください。
-
-
-```
-{{%/* pageinfo color="warning" */%}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
-   it by sending us pull requests!
-</p>
-{{%/* /pageinfo */%}}
-```
+See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution
 
 ### ステップ 4: コミット
 
