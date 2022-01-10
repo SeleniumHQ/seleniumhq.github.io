@@ -20,11 +20,11 @@
 <div class="ghContributors">
   {{ $url := .Get 0 }}
   {{ $githubToken := "" }}
-  {{ if ne hugo.Environment "development"}}
+  {{ if ne hugo.Environment "development" }}
     {{ $githubToken = (getenv "SELENIUM_CI_TOKEN") }}
   {{ end }}
   {{ $toReplace := printf "://%s@" $githubToken }}
-  {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
+  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
   {{ $url := replace $url "://" $tokenInUrl }}
 
   {{ range getJSON $url }}

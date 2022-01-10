@@ -5,7 +5,7 @@
     {{ $githubToken = (getenv "SELENIUM_CI_TOKEN") }}
   {{ end }}
   {{ $toReplace := printf "://%s@" $githubToken }}
-  {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
+  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
   {{ $url := replace $url "://" $tokenInUrl }}
   {{ $jsonUrl := getJSON $url }}
   <div class="card text-center bg-transparent border-0 p-3 h-100" style="max-width: 12rem;">
