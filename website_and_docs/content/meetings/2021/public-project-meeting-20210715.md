@@ -1,17 +1,8 @@
 ---
 title: "Public Project Meeting - July 15, 2021"
-linkTitle: "Public Project Meeting - July 15, 2021"
+linkTitle: "TLC - July 15, 2021"
 date: 2021-07-15
-tags: ["slack","meeting","tlc"]
-categories: ["governance"]
-author: Sri Harsha ([@sri_harsha509](https://twitter.com/sri_harsha509))
-description: >
-  Continuing the series of bi-weekly public project meetings...
 ---
-
-{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
-All meeting minutes can now be found [here](/meetings).
-{{< /dismissible-banner >}}
 
 Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on July 15, 2021,5:30 PM CET. (Below times are on IST)

@@ -1,17 +1,9 @@
 ---
 title: "Public Project Meeting - July 02, 2020"
-linkTitle: "Public Project Meeting - July 02, 2020"
+linkTitle: "TLC - July 02, 2020"
 date: 2020-07-02
-tags: ["slack","meeting","tlc"]
-categories: ["governance"]
-author: Sri Harsha ([@sri_harsha509](https://twitter.com/sri_harsha509))
-description: >
-  Continuing the series of bi-weekly public project meetings...
 ---
 
-{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
-All meeting minutes can now be found [here](/meetings).
-{{< /dismissible-banner >}}
 
 Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on July 02, 2020 (times are on IST). 
