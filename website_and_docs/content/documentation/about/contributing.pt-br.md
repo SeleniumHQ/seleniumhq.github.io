@@ -96,6 +96,52 @@ your changes, run `hugo server` on the site's root directory.
 % hugo server
 ```
 
+#### Alerts
+
+Alerts have been added to direct potential contributors to where specific help is needed.
+
+When code examples are needed, this code has been added to the site:
+
+{{< highlight html >}}
+{{</* alert-code /*/>}}
+{{< /highlight >}}
+
+Which gets displayed like this:
+{{< alert-code />}}
+
+To specify what code is needed, you can pass information inside the tag:
+
+{{< highlight html >}}
+{{</* alert-code */>}}
+specifically code that does this one thing.
+{{</* /alert-code */>}}
+{{< /highlight >}}
+
+Which looks like this:
+
+{{< alert-code >}}
+specifically code that does this one thing.
+{{< /alert-code >}}
+
+Similarly, for additional content you can use:
+
+{{< highlight html >}}
+{{</* alert-content /*/>}}
+{{< /highlight >}}
+
+or
+
+{{< highlight html >}}
+{{</* alert-content */>}}
+Additional information about what specific content is needed
+{{</* /alert-content */>}}
+{{< /highlight >}}
+
+Which gets displayed like this:
+{{< alert-content >}}
+Additional information about what specific content is needed
+{{< /alert-content >}}
+
 #### Capitalização de títulos
 
 Deve-se evitar a capitalização do título,

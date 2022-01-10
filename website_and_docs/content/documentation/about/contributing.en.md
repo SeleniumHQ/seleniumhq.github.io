@@ -102,13 +102,34 @@ Alerts have been added to direct potential contributors to where specific help i
 When code examples are needed, this code has been added to the site:
 
 {{< highlight html >}}
-{{</* alert-code */>}}
+{{</* alert-code /*/>}}
 {{< /highlight >}}
 
 Which gets displayed like this:
-{{< alert-code >}}
+{{< alert-code />}}
 
-When additional content is needed, this code has been added to the site
+To specify what code is needed, you can pass information inside the tag:
+
+{{< highlight html >}}
+{{</* alert-code */>}}
+specifically code that does this one thing.
+{{</* /alert-code */>}}
+{{< /highlight >}}
+
+Which looks like this:
+
+{{< alert-code >}}
+specifically code that does this one thing.
+{{< /alert-code >}}
+
+Similarly, for additional content you can use:
+
+{{< highlight html >}}
+{{</* alert-content /*/>}}
+{{< /highlight >}}
+
+or
+
 {{< highlight html >}}
 {{</* alert-content */>}}
 Additional information about what specific content is needed
