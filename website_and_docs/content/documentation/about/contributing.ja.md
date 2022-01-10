@@ -2,6 +2,7 @@
 title: "Seleniumのサイトとドキュメントに貢献する"
 linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
+requiresTranslation: true
 aliases: 
         [
           "/documentation/ja/contributing/",

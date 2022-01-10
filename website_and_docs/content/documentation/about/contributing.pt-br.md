@@ -2,6 +2,7 @@
 title: "Contribuindo com o Site e Documentação do Selenium"
 linkTitle: "Contribuindo com o Site e Documentação do Selenium"
 weight: 2
+requiresTranslation: true
 aliases: 
         [
           "/documentation/pt-br/contributing/",

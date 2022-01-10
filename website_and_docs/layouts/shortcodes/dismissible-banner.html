@@ -1,40 +1,6 @@
-<div class="row td-box--200 justify-content-center">
-	<div class="alert alert-orange bg-transparent col-6 pl-lg-5 my-4 alert-dismissible fade show"
-			 role="alert" id="dismissible-banner">
-        {{ with .Get "title" }}
-            <h2 class="alert-heading pb-3 text-center">
-			  {{ . }}
-		    </h2>
-        {{ end }}
-		<div class="w-100">
-            {{ if eq .Page.File.Ext "md" }}
-				{{ .Inner | markdownify }}
-			{{ else }}
-				{{ .Inner | htmlUnescape | safeHTML }}
-			{{ end }}
-			</h3>
-		</div>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
+{{ $alert_type := .Get "alert" }}
+{{ $color := .Get "color" }}
+{{ $title := .Get "title" }}
+{{ $p1 := .Inner }}
 
-		<script>
-			(function(config) {
-				const banner = document.getElementById(config.id);
-				const button = banner.querySelector('.close');
-
-				const dismissed = parseInt(localStorage.getItem(config.id),10);
-				const duration  = config.duration;
-
-				if (dismissed && (!duration || (dismissed > Date.now() - duration))) {
-					return banner.parentElement.removeChild(banner);
-				}
-
-				button && button.addEventListener('click', function() {
-					localStorage.setItem(config.id, Date.now());
-					return banner.parentElement.removeChild(banner);
-				});
-			})({ "id": "dismissible-banner", "duration": "" });
-		</script>
-	</div>
-</div>
+{{ partial "alerts.html" (dict "alert_type" $alert_type "title" $title "color" $color "p1" $p1 ) }}
