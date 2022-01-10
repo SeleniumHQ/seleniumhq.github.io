@@ -1,17 +1,9 @@
 ---
 title: "Public Project Meeting - February 11, 2021"
-linkTitle: "Public Project Meeting - February 11, 2021"
+linkTitle: "TLC - February 11, 2021"
 date: 2021-02-11
-tags: ["slack","meeting","tlc"]
-categories: ["governance"]
-author: Diego Molina ([@diegofmolina](https://twitter.com/diegofmolina))
-description: >
-  Continuing the series of bi-weekly public project meetings...
 ---
 
-{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
-All meeting minutes can now be found [here](/meetings).
-{{< /dismissible-banner >}}
 
 Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on February 11, 2021,5:30 PM CET. (Below times are on CET)

@@ -1,17 +1,8 @@
 ---
 title: "Public Project Meeting - April 9, 2020"
-linkTitle: "Public Project Meeting - April 9, 2020"
+linkTitle: "TLC - April 9, 2020"
 date: 2020-04-19
-tags: ["slack","meeting","tlc"]
-categories: ["governance"]
-author: Diego Molina ([@diegofmolina](https://twitter.com/diegofmolina))
-description: >
-  As an initiative to bring more transparency to the Selenium project...
 ---
-
-{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
-All meeting minutes can now be found [here](/meetings).
-{{< /dismissible-banner >}}
 
 As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project
 meetings. These are written meetings which are held on the `#selenium-tlc` channel on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).

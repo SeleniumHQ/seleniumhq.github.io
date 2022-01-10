@@ -1,17 +1,9 @@
 ---
 title: "Public Project Meeting - April 23, 2020"
-linkTitle: "Public Project Meeting - April 23, 2020"
+linkTitle: "TLC - April 23, 2020"
 date: 2020-04-24
-tags: ["slack","meeting","tlc"]
-categories: ["governance"]
-author: Diego Molina ([@diegofmolina](https://twitter.com/diegofmolina))
-description: >
-  Continuing the series of bi-weekly public project meetings...
 ---
 
-{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
-All meeting minutes can now be found [here](/meetings).
-{{< /dismissible-banner >}}
 
 Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on April 23, 2020 (times are on CET). 
