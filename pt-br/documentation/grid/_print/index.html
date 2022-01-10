@@ -25,10 +25,7 @@ mas não irá, por exemplo, gerenciar sua infraestrutura,
 e pode não atender às suas necessidades específicas.</p><h2 id=objetivos-e-funcionalidades-principais>Objetivos e funcionalidades principais</h2><ul><li>Ponto de entrada central para todos os testes</li><li>Gerenciamento e controle dos nós / ambiente onde os navegadores rodam</li><li>Escalonamento</li><li>Executar testes em paralelo</li><li>Teste de plataforma cruzada</li><li>Balanceamento de carga</li></ul><div class="alert alert-primary" role=alert><h4 class=alert-heading>Selenium Grid 4</h4><p>Grid 4 tem uma abordagem para tirar proveito de uma série de novas
 tecnologias para facilitar o escalonamento, permitindo ainda a execução local.</p><p>Selenium Grid 4 é uma implementação nova e não compartilha a base de código
 da versão anterior.</p><p>Para obter todos os detalhes dos componentes do Grid 4, entenda como funciona e como definir
-o seu próprio. Navegue pelas seguintes seções.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-75ab41fb11e05c56b77cec734372ce26>1 - Configurando a sua</h1><div class=lead>Instructions, step by step, showing how to run a simple Selenium Grid.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to Portuguese. Do you speak Portuguese? Help us to translate
-it by sending us pull requests!</p></div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/pt-br/documentation/legacy/grid_3/components_of_a_grid/>components</a> compose a Selenium Grid. Depending
+o seu próprio. Navegue pelas seguintes seções.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-75ab41fb11e05c56b77cec734372ce26>1 - Configurando a sua</h1><div class=lead>Instructions, step by step, showing how to run a simple Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/pt-br/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.</p><h3 id=standalone>Standalone</h3><p>Standalone is the union of all components, and to the user&rsquo;s eyes, they are executed as one.
 A fully functional Grid of one is available after starting it in the Standalone mode.</p><p>Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
@@ -108,7 +105,8 @@ os slots para os navegadores disponíveis da máquina onde está sendo executado
 the machine where it runs. It also creates one slot per available CPU for Chromium
 based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
 Through a specific configuration, it can run sessions in Docker containers or relay commands.
-You can see more configuration details in the next <a href=/pt-br/documentation/legacy/grid_3/setting_up_your_own_grid/>section</a>.</p><p>Um Nó apenas executa os comandos recebidos, não avalia, não faz julgamentos,
+You can see more configuration details in
+<a href=/pt-br/documentation/grid/getting_started/>setting up your own grid</a>.</p><p>Um Nó apenas executa os comandos recebidos, não avalia, não faz julgamentos,
 ou controlar qualquer coisa. As máquinas onde o Nó está rodando não precisam ter
 o mesmo sistema operacional que os outros componentes. Por exemplo, um nó do Windows
 pode ter a capacidade de oferecer o Internet Explorer como uma opção de navegador,
@@ -126,7 +124,7 @@ If request times out while retrying or adding to the front of the queue it is re
 The New Session Queue sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queue, and Session Map.
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
-Head to the <a href=/pt-br/documentation/legacy/grid_3/setting_up_your_own_grid/>&ldquo;Setting up your own&rdquo;</a>
+Head to the <a href=/pt-br/documentation/grid/getting_started/>&ldquo;Getting Started&rdquo;</a>
 section to understand how to put all these pieces together.</div></div><div class=td-content style=page-break-before:always><h1 id=pg-b1c6192513676fb6014aaa94cca41a86>4 - Configuring Components</h1><div class=lead>Here you can see how each Grid component can be configured individually based on common configuration values and component-specific configuration values.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate

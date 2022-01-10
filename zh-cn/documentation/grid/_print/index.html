@@ -23,10 +23,7 @@ Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚�
 同时仍然允许本地执行.</p><p>Selenium Grid 4 是全新的实现,
 并且不共享之前版本的代码库.</p><p>关于Grid 4组件的所有详细信息,
 了解其工作原理以及如何设置自己的组件,
-请浏览以下章节.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9c9914771fbff5e2210e763c63e98094>1 - Selenium Grid快速起步</h1><div class=lead>一步一步地说明如何运行简单的Selenium Grid.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!</p></div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/zh-cn/documentation/legacy/grid_3/components_of_a_grid/>components</a> compose a Selenium Grid. Depending
+请浏览以下章节.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9c9914771fbff5e2210e763c63e98094>1 - Selenium Grid快速起步</h1><div class=lead>一步一步地说明如何运行简单的Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/zh-cn/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.</p><h3 id=standalone>Standalone</h3><p>Standalone is the union of all components, and to the user&rsquo;s eyes, they are executed as one.
 A fully functional Grid of one is available after starting it in the Standalone mode.</p><p>Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
@@ -91,7 +88,7 @@ Firefox70的实例的网格，提供了一个服务器集群提供可用的Firef
 只创建一个插槽.
 通过特定的配置,
 它可以在Docker容器或中继命令中运行会话.
-您可以在下一 <a href=/zh-cn/documentation/legacy/grid_3/setting_up_your_own_grid/>章节</a>
+您可以在下一 <a href=/zh-cn/documentation/grid/getting_started/>章节</a>
 中看到更多配置详细信息.</p><p>节点仅执行接收到的命令,
 它不进行评估、做出判断或控制任何事情.
 运行节点的计算机不需要与其他组件具有相同的操作系统.
@@ -115,7 +112,7 @@ Firefox70的实例的网格，提供了一个服务器集群提供可用的Firef
 新会话队列将响应发送回客户端.</p><h2 id=事件总线>事件总线</h2><p>事件总线充当节点、分发服务器、新的会话队列器和会话表之间的通信路径.
 网格通过消息进行大部分内部通信, 避免了昂贵的HTTP调用.
 当以完全分布式模式启动网格时, 事件总线是应该启动的第一个组件.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>运行你自己的Grid</h4>期待使用所有组件并运行自己的Grid?
-前往 <a href=/zh-cn/documentation/legacy/grid_3/setting_up_your_own_grid/>&ldquo;配置自己的服务网格&rdquo;</a> ,
+前往 <a href=/zh-cn/documentation/grid/getting_started/>&ldquo;配置自己的服务网格&rdquo;</a> ,
 了解如何将所有零件组合在一起.</div></div><div class=td-content style=page-break-before:always><h1 id=pg-37e2305b972ad696e0a785d1dbaeff39>4 - 配置组件</h1><div class=lead>在这里，您可以看到如何根据公共配置值和特定于组件的配置值分别配置每个网格组件.</div></div><div class=td-content><h1 id=pg-93fa084268206a9aa52621f65987bf76>4.1 - 配置帮助</h1><div class=lead>获取有关配置网格的所有可用选项的信息.</div><div class="pageinfo pageinfo-primary"><p>Help命令显示基于当前代码实现的信息.
 因此, 如果文档没有更新, 它将提供准确的信息.
 这是了解任何新版本Grid4配置的最便捷方法.</p></div><h2 id=信息命令>信息命令</h2><p>Info命令提供以下主题的详细文档:</p><ul><li>配置Selenium</li><li>安全</li><li>会话表配置</li><li>追踪</li></ul><h3 id=配置帮助>配置帮助</h3><p>通过运行以下命令快速获取配置帮助:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>java -jar selenium-server-&lt;version&gt;.jar info config

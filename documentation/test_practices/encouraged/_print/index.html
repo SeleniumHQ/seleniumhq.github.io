@@ -24,14 +24,18 @@ but does not help you write well-architected test suites.
 In this chapter we offer advice, guidelines, and recommendations
 on how to approach functional web page automation.</p><p>This chapter records software design patterns popular
 amongst many of the users of Selenium
-that have proven successful over the years.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-fa5d8fda885160f5bac36ddd0a759f2c>1 - Page object models</h1><p>Page Object is a Design Pattern which has become popular in test automation for
+that have proven successful over the years.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-fa5d8fda885160f5bac36ddd0a759f2c>1 - Page object models</h1><p>Note: this page has merged contents from multiple sources, including
+the <a href=https://github.com/SeleniumHQ/selenium/wiki/PageObjects>Selenium wiki</a></p><h2 id=overview>Overview</h2><p>Within your web app&rsquo;s UI there are areas that your tests interact with.
+A Page Object simply models these as objects within the test code.
+This reduces the amount of duplicated code and means that if the UI changes,
+the fix need only be applied in one place.</p><p>Page Object is a Design Pattern which has become popular in test automation for
 enhancing test maintenance and reducing code duplication. A page object is an
 object-oriented class that serves as an interface to a page of your AUT. The
 tests then use the methods of this page object class whenever they need to
 interact with the UI of that page. The benefit is that if the UI changes for
 the page, the tests themselves don’t need to change, only the code within the
 page object needs to change. Subsequently all changes to support that new UI
-are located in one place.</p><p>The Page Object Design Pattern provides the following advantages:</p><ul><li>There is a clean separation between test code and page specific code such as
+are located in one place.</p><h3 id=advantages>Advantages</h3><ul><li>There is a clean separation between test code and page specific code such as
 locators (or their use if you’re using a UI Map) and layout.</li><li>There is a single repository for the services or operations offered by the page
 rather than having these services scattered throughout the tests.</li></ul><p>In both cases this allows any modifications required due to UI changes to all
 be made in one place. Useful information on this technique can be found on
@@ -39,7 +43,7 @@ numerous blogs as this ‘test design pattern’ is becoming widely used. We
 encourage the reader who wishes to know more to search the internet for blogs
 on this subject. Many have written on this design pattern and can provide
 useful tips beyond the scope of this user guide. To get you started, though,
-we’ll illustrate page objects with a simple example.</p><p>First, consider an example, typical of test automation, that does not use a
+we’ll illustrate page objects with a simple example.</p><h3 id=examples>Examples</h3><p>First, consider an example, typical of test automation, that does not use a
 page object:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8f5902;font-style:italic>/***
 </span><span style=color:#8f5902;font-style:italic> * Tests login feature
 </span><span style=color:#8f5902;font-style:italic> */</span>
@@ -170,7 +174,99 @@ Page Factory for instantiating their page objects. Discussing all of these is
 beyond the scope of this user guide. Here, we merely want to introduce the
 concepts to make the reader aware of some of the things that can be done. As
 was mentioned earlier, many have blogged on this topic and we encourage the
-reader to search for blogs on these topics.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2fa3bc7763585631cae7ebbfd2ab6f4d>2 - Domain specific language</h1><p>A domain specific language (DSL) is a system which provides the user with
+reader to search for blogs on these topics.</p><h2 id=implementation-notes>Implementation Notes</h2><p>PageObjects can be thought of as facing in two directions simultaneously. Facing towards the developer of a test, they represent the <strong>services</strong> offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It&rsquo;s simplest to think of the methods on a Page Object as offering the &ldquo;services&rdquo; that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services that it offers are typically the ability to compose a new email, to choose to read a single email, and to list the subject lines of the emails in the inbox. How these are implemented shouldn&rsquo;t matter to the test.</p><p>Because we&rsquo;re encouraging the developer of a test to try and think about the services that they&rsquo;re interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means that we can effectively model the user&rsquo;s journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service, when it previously didn&rsquo;t do that) simply changing the appropriate method&rsquo;s signature will cause the tests to fail to compile. Put another way, we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.</p><p>One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login, or a click could have a different result depending on the state of the app. When this happens, it is common to have multiple methods on the PageObject:</p><pre><code>public class LoginPage {
+    public HomePage loginAs(String username, String password) {
+        // ... clever magic happens here
+    }
+    
+    public LoginPage loginAsExpectingError(String username, String password) {
+        //  ... failed login here, maybe because one or both of the username and password are wrong
+    }
+    
+    public String getErrorMessage() {
+        // So we can verify that the correct error is shown
+    }
+}
+</code></pre><p>The code presented above shows an important point: the tests, not the PageObjects, should be responsible for making assertions about the state of a page. For example:</p><pre><code>public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    inbox.assertMessageWithSubjectIsUnread(&quot;I like cheese&quot;);
+    inbox.assertMessageWithSubjectIsNotUnread(&quot;I'm not fond of tofu&quot;);
+}
+</code></pre><p>could be re-written as:</p><pre><code>public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    assertTrue(inbox.isMessageWithSubjectIsUnread(&quot;I like cheese&quot;));
+    assertFalse(inbox.isMessageWithSubjectIsUnread(&quot;I'm not fond of tofu&quot;));
+}
+</code></pre><p>Of course, as with every guideline there are exceptions, and one that is commonly seen with PageObjects is to check that the WebDriver is on the correct page when we instantiate the PageObject. This is done in the example below.</p><p>Finally, a PageObject need not represent an entire page. It may represent a section that appears many times within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.</p><h2 id=summary>Summary</h2><ul><li>The public methods represent the services that the page offers</li><li>Try not to expose the internals of the page</li><li>Generally don&rsquo;t make assertions</li><li>Methods return other PageObjects</li><li>Need not represent an entire page</li><li>Different results for the same action are modelled as different methods</li></ul><h2 id=example>Example</h2><pre><code>public class LoginPage {
+    private final WebDriver driver;
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+
+        // Check that we're on the right page.
+        if (!&quot;Login&quot;.equals(driver.getTitle())) {
+            // Alternatively, we could navigate to the login page, perhaps logging out first
+            throw new IllegalStateException(&quot;This is not the login page&quot;);
+        }
+    }
+
+    // The login page contains several HTML elements that will be represented as WebElements.
+    // The locators for these elements should only be defined once.
+        By usernameLocator = By.id(&quot;username&quot;);
+        By passwordLocator = By.id(&quot;passwd&quot;);
+        By loginButtonLocator = By.id(&quot;login&quot;);
+
+    // The login page allows the user to type their username into the username field
+    public LoginPage typeUsername(String username) {
+        // This is the only place that &quot;knows&quot; how to enter a username
+        driver.findElement(usernameLocator).sendKeys(username);
+
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to type their password into the password field
+    public LoginPage typePassword(String password) {
+        // This is the only place that &quot;knows&quot; how to enter a password
+        driver.findElement(passwordLocator).sendKeys(password);
+
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to submit the login form
+    public HomePage submitLogin() {
+        // This is the only place that submits the login form and expects the destination to be the home page.
+        // A seperate method should be created for the instance of clicking login whilst expecting a login failure. 
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the login page ever
+        // go somewhere else (for example, a legal disclaimer) then changing the method signature
+        // for this method will mean that all tests that rely on this behaviour won't compile.
+        return new HomePage(driver);	
+    }
+
+    // The login page allows the user to submit the login form knowing that an invalid username and / or password were entered
+    public LoginPage submitLoginExpectingFailure() {
+        // This is the only place that submits the login form and expects the destination to be the login page due to login failure.
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submiting a login with credentials 
+        // expected to fail login, the script will fail when it attempts to instantiate the LoginPage PageObject.
+        return new LoginPage(driver);	
+    }
+
+    // Conceptually, the login page offers the user the service of being able to &quot;log into&quot;
+    // the application using a user name and password. 
+    public HomePage loginAs(String username, String password) {
+        // The PageObject methods that enter username, password &amp; submit login have already defined and should not be repeated here.
+        typeUsername(username);
+        typePassword(password);
+        return submitLogin();
+    }
+}
+
+</code></pre><h2 id=support-in-webdriver>Support in WebDriver</h2><p>There is a PageFactory in the support package that provides support for this pattern, and helps to remove some boiler-plate code from your Page Objects at the same time.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-2fa3bc7763585631cae7ebbfd2ab6f4d>2 - Domain specific language</h1><p>A domain specific language (DSL) is a system which provides the user with
 an expressive means of solving a problem. It allows a user to
 interact with the system on their terms – not just programmer-speak.</p><p>Your users, in general, do not care how your site looks. They do not
 care about the decoration, animations, or graphics. They

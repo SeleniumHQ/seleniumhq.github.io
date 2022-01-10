@@ -22,7 +22,7 @@ but will for example not manage your infrastructure,
 and might not suit your specific needs.</p><h2 id=purposes-and-main-functionalities>Purposes and main functionalities</h2><ul><li>Central entry point for all tests</li><li>Management and control of the nodes / environment where the browsers run</li><li>Scaling</li><li>Running tests in parallel</li><li>Cross-platform testing</li><li>Load balancing</li></ul><div class="alert alert-primary" role=alert><h4 class=alert-heading>Selenium Grid 4</h4><p>Grid 4 takes advantage of a number of new technologies in order
 to facilitate scaling up while allowing local execution.</p><p>Selenium Grid 4 is a fresh implementation and does not share the codebase
 the previous version had.</p><p>To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse thorough the following sections.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-b65420f0b17cd83a52cb3a727d5dd688>1 - Getting started with Selenium Grid</h1><div class=lead>Instructions, step by step, showing how to run a simple Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/documentation/legacy/grid_3/components_of_a_grid/>components</a> compose a Selenium Grid. Depending
+up you own, please browse thorough the following sections.</p></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-b65420f0b17cd83a52cb3a727d5dd688>1 - Getting started with Selenium Grid</h1><div class=lead>Instructions, step by step, showing how to run a simple Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.</p><h3 id=standalone>Standalone</h3><p>Standalone is the union of all components, and to the user&rsquo;s eyes, they are executed as one.
 A fully functional Grid of one is available after starting it in the Standalone mode.</p><p>Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
@@ -99,7 +99,8 @@ configuration is sent as part of the registration message.</p><p>By default, the
 the machine where it runs. It also creates one slot per available CPU for Chromium
 based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
 Through a specific configuration, it can run sessions in Docker containers or relay commands.
-You can see more configuration details in the next <a href=/documentation/legacy/grid_3/setting_up_your_own_grid/>section</a>.</p><p>A Node only executes the received commands, it does not evaluate, make judgments,
+You can see more configuration details in
+<a href=/documentation/grid/getting_started/>setting up your own grid</a>.</p><p>A Node only executes the received commands, it does not evaluate, make judgments,
 or control anything. The machines where the Node is running does not need to have
 the same operating system as the other components. For example, A Windows Node
 might have the capability of offering Internet Explorer as a browser option,
@@ -117,7 +118,7 @@ If request times out while retrying or adding to the front of the queue it is re
 The New Session Queue sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queue, and Session Map.
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
-Head to the <a href=/documentation/legacy/grid_3/setting_up_your_own_grid/>&ldquo;Setting up your own&rdquo;</a>
+Head to the <a href=/documentation/grid/getting_started/>&ldquo;Getting Started&rdquo;</a>
 section to understand how to put all these pieces together.</div></div><div class=td-content style=page-break-before:always><h1 id=pg-aedd7c21b1dab64fd01a997c34bd16fe>4 - Configuration of Components</h1><div class=lead>Here you can see how each Grid component can be configured individually based on common configuration values and component-specific configuration values.</div></div><div class=td-content><h1 id=pg-b0833a230d156d49a170ccaf66b15c1e>4.1 - Configuration help</h1><div class=lead>Get information about all the available options to configure Grid.</div><div class="pageinfo pageinfo-primary"><p>The help commands display information based on the current code implementation.
 Hence, it will provide accurate information in case the documentation is not updated.
 It is the easiest way to learn about Grid 4 configuration for any new version.</p></div><h2 id=info-command>Info Command</h2><p>The info command provides detailed docs on the following topics:</p><ul><li>Configuring Selenium</li><li>Security</li><li>Session Map setup</li><li>Tracing</li></ul><h3 id=config-help>Config help</h3><p>Quick config help and overview is provided by running:</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>java -jar selenium-server-&lt;version&gt;.jar info config
