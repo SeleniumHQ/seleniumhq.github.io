@@ -93,20 +93,109 @@ Selenium now has official translators for each of the supported languages.
   The new process is for issues to be created and tagged as needs translation based on 
   changes made in a given PR.
 
+## Code examples
 
-## Code Tabs
+All references to code should be language independent,
+and the code itself should be placed inside code tabs.
 
-When adding code examples, you want to use tab panes as follows.
-You do not need to provide examples in all languages,
-but add placeholders like this for any language you do not implement:
+### Default Code Tabs
 
-{{< highlight html >}}
-{{</* tabpane langEqualsHeader=true */>}}
-{{</* tab header="Java" */>}}Java code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* tab header="Python" */>}}Python code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* tab header="CSharp" */>}}C# code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* tab header="Ruby" */>}}Ruby code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* tab header="JavaScript" */>}}JS code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* tab header="Kotlin" */>}}Kotlin code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
-{{</* /tabpane */>}}
-{{< /highlight >}}
+The Docsy code tabs look like this:
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+  {{< /tab >}}
+{{< /tabpane >}}
+
+To generate the above tabs, this is what you need to write.
+Note that the tabpane includes `langEqualsHeader=true`.
+This auto-formats the code in each tab to match the header name.
+
+    {{</* tabpane langEqualsHeader=true */>}}
+      {{</* tab header="Java" */>}}
+        WebDriver driver = new ChromeDriver();
+      {{</* /tab */>}}
+      {{</* tab header="Python" */>}}
+        driver = webdriver.Chrome()
+      {{</* /tab */>}}
+      {{</* tab header="CSharp" */>}}
+        var driver = new ChromeDriver();
+      {{</* /tab */>}}
+      {{</* tab header="Ruby" */>}}
+        driver = Selenium::WebDriver.for :chrome
+      {{</* /tab */>}}
+      {{</* tab header="JavaScript" */>}}
+        let driver = await new Builder().forBrowser('chrome').build();
+      {{</* /tab */>}}
+      {{</* tab header="Kotlin" */>}}
+        val driver = ChromeDriver()
+      {{</* /tab */>}}
+    {{</* /tabpane */>}}
+
+### Disabling Code Block
+
+If you want your example to include both text and code, you
+need to disable the default of everything being put in a code block
+
+Maybe you want something like this:
+
+{{< tabpane disableCodeBlock=true >}}
+{{< tab header="Java" >}}
+1. Start the driver
+  ```java
+    WebDriver driver = new ChromeDriver();
+  ```
+2. Navigate to a page
+  ```java
+  driver.get("https://selenium.dev");
+  ```
+3. Quit the driver
+  ```java
+  driver.quit();
+  ``` 
+{{< /tab >}}
+{{< /tabpane >}}
+
+For this you need to use `disableCodeBlock=true` instead of `langEqualsHeader=true` 
+
+You need to specify which parts are code and which are not yourself now, like this:
+
+    {{</* tabpane disableCodeBlock=true */>}}
+    {{</* tab header="Java" */>}}
+    1. Start the driver
+      ```java
+        WebDriver driver = new ChromeDriver();
+      ```
+    2. Navigate to a page
+      ```java
+      driver.get("https://selenium.dev");
+      ```
+    3. Quit the driver
+      ```java
+      driver.quit();
+      ``` 
+    {{</* /tab */>}}
+    < ... >
+    {{</* /tabpane */>}}
+
+### Code Comments
+
+Minimize code comments because they are difficult to translate.
+Further, try to avoid over-explaining each line of code unless it is
+directly related to the page you are writing.
