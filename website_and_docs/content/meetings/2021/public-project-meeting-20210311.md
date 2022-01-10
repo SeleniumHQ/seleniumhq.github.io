@@ -1,12 +1,13 @@
 ---
-title: "TLC Meeting - March 11, 2021"
+title: "Public Project Meeting - March 11, 2021"
 linkTitle: "TLC - March 11, 2021"
 date: 2021-03-11
 ---
 
-Meetings are held on the `#selenium-tlc` channel on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).
+Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on March 11, 2021,5:30 PM CET. (Below times are on IST)
 
-Listed times are on IST
+Meetings are held on the `#selenium-tlc` channel on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).
 
 ---   
 
