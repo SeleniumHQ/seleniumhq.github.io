@@ -2,6 +2,7 @@
 title: 为 Selenium 文档做贡献
 linkTitle: 为 Selenium 文档做贡献
 weight: 2
+requiresTranslation: true
 aliases: 
         [
           "/documentation/zh-cn/contributing/",
@@ -124,9 +125,9 @@ Selenium项目欢迎新的贡献者.
 这可能会略有不同, 例如:
  
 * 如果将代码示例添加到 `browser_manipulation.en.md` 文件中后, 
-则还需将其添加到 `browser_manipulation.es.md`, 
-`browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md` 以及所有其他的已翻译文件.
+则还需将其添加到 `browser_manipulation.ja.md`, 
+`browser_manipulation.pt-br.md`, 
+`browser_manipulation.zh-cn.md` 以及所有其他的已翻译文件.
 
 * 如果您发现可以改进的翻译, 请仅更改翻译的文件. 
 

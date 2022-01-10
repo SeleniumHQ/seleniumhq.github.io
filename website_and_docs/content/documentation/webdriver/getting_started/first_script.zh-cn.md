@@ -68,7 +68,7 @@ Selenium所做的一切,
     driver.getTitle(); // => "Google"
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.title() # => "Google"
+    driver.title # => "Google"
     {{< /tab >}}
     {{< tab header="CSharp" >}}
     driver.Title; // => "Google"
@@ -149,7 +149,7 @@ Selenium所做的一切,
     driver.findElement(By.name("q")).getAttribute("value"); // => "Selenium"
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.find_element(By.NAME, "q").getAttribute() # => "Selenium"
+    driver.find_element(By.NAME, "q").get_attribute("value") # => "Selenium"
     {{< /tab >}}
     {{< tab header="CSharp" >}}
     driver.FindElement(By.Name("q")).GetAttribute("value"); // => "Selenium"
@@ -226,7 +226,7 @@ driver = webdriver.Chrome()
 
 driver.get("http://www.google.com")
 
-driver.title() # => "Google"
+driver.title # => "Google"
 
 search_box = driver.find_element(By.NAME, "q")
 search_button = driver.find_element(By.NAME, "btnK")
@@ -234,7 +234,7 @@ search_button = driver.find_element(By.NAME, "btnK")
 search_box.send_keys("Selenium")
 search_button.click()
 
-driver.find_element(By.NAME, "q").getAttribute() # => "Selenium"
+driver.find_element(By.NAME, "q").get_attribute("value") # => "Selenium"
 
 driver.quit()
 

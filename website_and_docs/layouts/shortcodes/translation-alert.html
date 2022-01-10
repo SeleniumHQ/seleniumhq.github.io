@@ -1,0 +1,6 @@
+{{ $language := .Site.Language.LanguageName }}
+{{ $code := .Site.Language }}
+{{ $p1 := printf "only the [documentation](/%s/documentation) is translated to %s. The rest of the website is in English." $code $language }}
+{{ $p2 := printf "We have an official translator for this language, but check our [contribution guidelines](/%s/documentation/about/contributing/) if you'd like to help." $code}}
+
+{{ partial "alerts.html" (dict "alert_type" "note" "color" "blue" "title" "Welcome!" "p1" $p1 "p2" $p2 ) }}

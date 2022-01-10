@@ -95,22 +95,43 @@ your changes, run `hugo server` on the site's root directory.
 % hugo server
 ```
 
-#### Capitalisation of titles
+#### Alerts
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratuitous capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+Alerts have been added to direct potential contributors to where specific help is needed.
+
+When code examples are needed, this code has been added to the site:
+
+{{< highlight html >}}
+{{</* alert-code */>}}
+{{< /highlight >}}
+
+Which gets displayed like this:
+{{< alert-code >}}
+
+When additional content is needed, this code has been added to the site
+{{< highlight html >}}
+{{</* alert-content */>}}
+Additional information about what specific content is needed
+{{</* /alert-content */>}}
+{{< /highlight >}}
+
+Which gets displayed like this:
+{{< alert-content >}}
+Additional information about what specific content is needed
+{{< /alert-content >}}
+
+#### Capitalization of titles
+
+Our documentation uses Title Capitalization for `linkTitle` which should be short
+and Sentence capitalization for `title` which can be longer and more descriptive.
+For example, a `linkTitle` of  _Special Heading_ might have a `title` of
+_The importance of a special heading in documentation_
 
 #### Line length
 
 When editing the documentation’s source,
 which is written in plain HTML,
-limit your line lengths to around 72 characters.
+limit your line lengths to around 100 characters.
 
 Some of us take this one step further
 and use what is called
@@ -137,8 +158,8 @@ changes in all the other translated files as well. This might differ depending
 on the change, for example:
  
 * If you add a code example to the `browser_manipulation.en.md` file,
-also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md`, and all other translated files.
+also add it to `browser_manipulation.ja.md`, `browser_manipulation.pt-br.md`, 
+`browser_manipulation.zh-cn.md`, and all other translated files.
 * If you find a translation that can be improved, only change the translated
 file.
 * If you are adding a new language translation, add the new files with the
@@ -160,6 +181,23 @@ notice at the top of the file.
 </p>
 {{%/* /pageinfo */%}}
 ```
+
+#### Code Tabs
+
+When adding code examples, you want to use tab panes as follows.
+You do not need to provide examples in all languages,
+but add placeholders like this for any language you do not implement:
+
+{{< highlight html >}}
+{{</* tabpane langEqualsHeader=true */>}}
+{{</* tab header="Java" */>}}Java code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* tab header="Python" */>}}Python code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* tab header="CSharp" */>}}C# code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* tab header="Ruby" */>}}Ruby code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* tab header="JavaScript" */>}}JS code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* tab header="Kotlin" */>}}Kotlin code not implemented, please make a Pull Request if you can add this code{{</* /tab */>}}
+{{</* /tabpane */>}}
+{{< /highlight >}}
 
 ### Step 4: Commit
 

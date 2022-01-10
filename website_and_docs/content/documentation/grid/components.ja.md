@@ -57,7 +57,8 @@ By default, the Node auto-registers all browser drivers available on the path of
 the machine where it runs. It also creates one slot per available CPU for Chromium
 based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
 Through a specific configuration, it can run sessions in Docker containers or relay commands.
-You can see more configuration details in the next [section]({{< ref "setting_up_your_own_grid.md" >}}).
+You can see more configuration details in
+[setting up your own grid]({{< ref "getting_started.md" >}}).
 
 ノードは受信したコマンドを実行するだけで、評価、判断、制御は行いません。
 ノードが実行されているマシンは、他のコンポーネントと同じオペレーティングシステムを持つ必要はありません。
@@ -99,6 +100,6 @@ When starting the Grid in its fully distributed mode, the Event Bus is the first
 
 {{% alert title="Running your own Grid" color="primary" %}}
 Looking forward to using all these components and run your own Grid?
-Head to the ["Setting up your own"]({{< ref "setting_up_your_own_grid.md" >}})
+Head to the ["Getting Started"]({{< ref "getting_started.md" >}})
 section to understand how to put all these pieces together.
 {{% /alert %}}
