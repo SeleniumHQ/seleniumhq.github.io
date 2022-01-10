@@ -78,7 +78,7 @@ RubyへのSeleniumライブラリのインストールはgemを使います。
 gem install selenium-webdriver
 ```
 
-## _JavaScript_
+### JavaScript
 JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell

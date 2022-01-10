@@ -1,20 +1,11 @@
 ---
-title: "ガイドラインとレコメンデーション"
-linkTitle: "ガイドライン"
+title: "テストの実践"
+linkTitle: "テストの実践"
 chapter: true
 weight: 12
 description: >
   Seleniumプロジェクトからのテストに関するいくつかのガイドラインと推奨事項
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 「ベストプラクティス」に関するメモ：このドキュメントでは、"ベストプラクティス"というフレーズを意図的に避けています。
 すべての状況に有効なアプローチはありません。

@@ -8,6 +8,15 @@ aliases: [
 ]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i>
+   Page being translated from
+   English to Portuguese. Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
 Selenium is working with browser vendors to create the
 [WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/)
 as a means to provide a stable, cross-browser API that uses the bidirectional

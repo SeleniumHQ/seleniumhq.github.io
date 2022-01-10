@@ -116,8 +116,8 @@ _A Very Fine Heading_ などのタイトルの大文字化は避け、代わり�
 ファイルに変更を加えたときは、他の翻訳済みファイル全てに**必ず**同様の変更を加えてください。
 ただし、変更内容によって異なります。以下に例を示します:
 
-* `browser_manipulation.en.md`ファイルにコード例を加えた場合、`browser_manipulation.es.md`、 `browser_manipulation.ef.md`及びすべての翻訳ファイルに追加してください。
-`browser_manipulation.ja.md`
+* `browser_manipulation.en.md`ファイルにコード例を加えた場合、`browser_manipulation.ja.md`、 `browser_manipulation.pt-br.md`及びすべての翻訳ファイルに追加してください。
+`browser_manipulation.zh-cn.md`
 * 翻訳の改善を行う場合は、各言語のファイルのみを変更してください。
 * 新しい言語向けの翻訳を追加したい場合、適切な接尾辞を付けてファイルを追加してください。プルリクエストを送信するために全てを翻訳する必要はありません、イテレーティブに行うことができます。`config.toml`ファイルで必要な設定値の確認を忘れないでください。
 * 英語版の文章に変更を加えたい場合は、翻訳されたファイルの同じ箇所をあなたの変更で（英語で）書き換えたうえで、以下の注意書きをファイルの先頭に追加してください。

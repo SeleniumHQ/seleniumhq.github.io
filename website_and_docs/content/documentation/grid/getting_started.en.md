@@ -12,7 +12,7 @@ aliases: [
 
 ## Grid roles
 
-Several [components]({{< ref "components_of_a_grid.md" >}}) compose a Selenium Grid. Depending 
+Several [components]({{< ref "components.md" >}}) compose a Selenium Grid. Depending 
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.
 
