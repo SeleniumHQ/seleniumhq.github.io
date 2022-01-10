@@ -2,6 +2,7 @@
 title: "PO设计模式"
 linkTitle: "PO设计模式"
 weight: 3
+needsTranslation: true
 aliases: [
 "/documentation/zh-cn/guidelines_and_recommendations/page_object_models/",
 "/zh-cn/documentation/guidelines/page_object_models/"

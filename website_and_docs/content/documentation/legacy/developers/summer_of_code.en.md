@@ -1,10 +1,11 @@
 ---
 title: "Google Summer of Code 2011"
 linkTitle: "Summer of Code"
-weight: 14
+weight: 8
+description: >
+  Selenium encouraged users to take advantage of this program.
 ---
-
-(Previously located: https://github.com/SeleniumHQ/selenium/wiki/Google-Summer-Of-Code)
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/Google-Summer-Of-Code)
 
 ## What is Google Summer of Code?
 
