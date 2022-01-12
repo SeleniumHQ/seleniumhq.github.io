@@ -247,6 +247,7 @@ with a test runner instead of a standalone file.
 {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelloSelenium {
