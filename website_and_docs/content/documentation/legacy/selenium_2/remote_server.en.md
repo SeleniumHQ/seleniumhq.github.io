@@ -1,7 +1,7 @@
 ---
 title: "Remote WebDriver standalone server"
 linkTitle: "Remote Server"
-weight: 6
+weight: 10
 description: >
   Working with the Standalone Server.
 aliases: [
