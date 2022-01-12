@@ -1,18 +1,17 @@
 ---
-title: "Mouse Actions"
+title: "Mouse actions"
 linkTitle: "Mouse"
-weight: 6
+weight: 4
+needsTranslation: true
 description: >
-  Mouse represents a mouse event. Mouse actions are performed 
-  by using low-level interface which allows us to 
-  provide virtualized device input action to the web browser.
+  A representation of any pointer device for interacting with a web page.
 aliases: [
 "/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/",
 "/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 
-## clickAndHold
+## Click and hold
 
 It will move to the element and clicks (without releasing) in the middle of the given element.
 
@@ -47,13 +46,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
+    # Store 'google search' button web element
 searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform click-and-hold action on the element
+    # Perform click-and-hold action on the element
 webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -91,11 +90,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+    # Store 'Sign In' button web element
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform click-and-hold action on the element
+    # Perform click-and-hold action on the element
   driver.action.click_and_hold(sign_in).perform
 ensure
   driver.quit
@@ -142,7 +141,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## contextClick
+## Context click
 This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -175,13 +174,13 @@ public class contextClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
+    # Store 'google search' button web element
 searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform context-click action on the element
+    # Perform context-click action on the element
 webdriver.ActionChains(driver).context_click(searchBtn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -219,11 +218,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+    # Store 'Sign In' button web element
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform context-click action on the element
+    # Perform context-click action on the element
   driver.action.context_click(sign_in).perform
 ensure
   driver.quit
@@ -270,7 +269,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## doubleClick
+## Double click
 It will move to the element and performs a double-click in the middle of the given element.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -303,13 +302,13 @@ public class doubleClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
+    # Store 'google search' button web element
 searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform double-click action on the element
+    # Perform double-click action on the element
 webdriver.ActionChains(driver).double_click(searchBtn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -347,11 +346,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+    # Store 'Sign In' button web element
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform double-click action on the element
+    # Perform double-click action on the element
   driver.action.double_click(sign_in).perform
 ensure
   driver.quit
@@ -398,7 +397,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## moveToElement
+## Move to element
 This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -431,13 +430,13 @@ public class moveToElement {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
+    # Store 'google search' button web element
 gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
 
-# Performs mouse move action onto the element
+    # Performs mouse move action onto the element
 webdriver.ActionChains(driver).move_to_element(gmailLink).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -475,11 +474,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
+    # Store 'Gmail' anchor web element
   gmail_link = driver.find_element(link_text: 'Gmail')
-  # Performs mouse move action onto the element
+    # Performs mouse move action onto the element
   driver.action.move_to(gmail_link).perform
 ensure
   driver.quit
@@ -526,7 +525,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## moveByOffset:
+## Move by offset
 
 This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
 
@@ -563,15 +562,15 @@ public class moveByOffset {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
+    # Store 'google search' button web element
 gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
-#Set x and y offset positions of element
+    # Set x and y offset positions of element
 xOffset = 100
 yOffset = 100
-# Performs mouse move action onto the element
+    # Performs mouse move action onto the element
 webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -612,14 +611,14 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
+    # Store 'Gmail' anchor web element
   gmail_link = driver.find_element(link_text: 'Gmail')
-  # Capture x and y offset positions of element
+    # Capture x and y offset positions of element
   x_offset = gmail_link.rect.x
   y_offset = gmail_link.rect.y
-  # Performs mouse move action onto the offset position
+    # Performs mouse move action onto the offset position
   driver.action.move_to_location(x_offset, y_offset).perform
 ensure
   driver.quit
@@ -710,14 +709,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
+    # Store 'box A' as source element
 sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
+    # Store 'box B' as source element
 targetEle  = driver.find_element(By.ID, "droppable")
-# Performs drag and drop action of sourceEle onto the targetEle
+    # Performs drag and drop action of sourceEle onto the targetEle
 webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -757,13 +756,13 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
+    # Store 'box A' as source element
   source_ele = driver.find_element(id: 'draggable')
-  # Store 'box B' as source element
+    # Store 'box B' as source element
   target_ele = driver.find_element(id: 'droppable')
-  # Performs drag and drop action of sourceEle onto the targetEle
+    # Performs drag and drop action of sourceEle onto the targetEle
   driver.action.drag_and_drop(source_ele, target_ele).perform
 ensure
   driver.quit
@@ -851,17 +850,17 @@ public class dragAndDropBy {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
+    # Store 'box A' as source element
 sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
+    # Store 'box B' as source element
 targetEle  = driver.find_element(By.ID, "droppable")
 targetEleXOffset = targetEle.location.get("x")
 targetEleYOffset = targetEle.location.get("y")
 
-# Performs dragAndDropBy onto the target element offset position
+    # Performs dragAndDropBy onto the target element offset position
 webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -903,15 +902,15 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
+    # Store 'box A' as source element
   source_ele = driver.find_element(id: 'draggable')
   target_ele = driver.find_element(id: 'droppable')
-  # Capture x and y offset positions of element
+    # Capture x and y offset positions of element
   x_offset = target_ele.rect.x
   y_offset = target_ele.rect.y
-  # Performs dragAndDropBy onto the  target element offset position
+    # Performs dragAndDropBy onto the  target element offset position
   driver.action.drag_and_drop_by(source_ele, x_offset, y_offset).perform
 ensure
   driver.quit
@@ -1004,17 +1003,17 @@ public class release {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+    # Navigate to url
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
+    # Store 'box A' as source element
 sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
+    # Store 'box B' as source element
 targetEle  = driver.find_element(By.ID, "droppable")
 
-# Performs dragAndDropBy onto the target element offset position
+    # Performs dragAndDropBy onto the target element offset position
 webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
-#Performs release event
+    # Performs release event
 webdriver.ActionChains(driver).release().perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -1055,12 +1054,12 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+    # Navigate to Url
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
   source_ele = driver.find_element(id: 'draggable')
   target_ele = driver.find_element(id: 'droppable')
   driver.action.click_and_hold(source_ele).move_to(target_ele).perform
-  # Performs release event
+    # Performs release event
   driver.action.release.perform
 ensure
   driver.quit

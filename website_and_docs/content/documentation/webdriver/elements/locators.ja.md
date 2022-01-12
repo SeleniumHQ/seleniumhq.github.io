@@ -30,10 +30,9 @@ WebDriverには標準のロケータが8種類あります。
 | tag name | タグ名が一致する要素を探す |
 | xpath | XPathと一致する要素を探す |
 
-{{% pageinfo color="warning" %}}
-Coming soon:
-* Examples of selecting elements from HTML using each locator strategy
-{{% /pageinfo %}}
+{{< alert-code >}}
+of selecting elements using each locator strategy
+{{< /alert-code >}}
 
 
 ## 相対ロケーター

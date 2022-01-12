@@ -34,10 +34,9 @@ Existem oito estratégias diferentes de localização de elementos embutidas no 
 | tag name | Localiza elementos cujo nome de tag corresponde ao valor de pesquisa |
 | xpath | Localiza elementos que correspondem a uma expressão XPath |
 
-{{% pageinfo color="warning" %}}
-Coming soon:
-* Examples of selecting elements from HTML using each locator strategy
-{{% /pageinfo %}}
+{{< alert-code >}}
+of selecting elements using each locator strategy
+{{< /alert-code >}}
 
 
 ## Relative Locators

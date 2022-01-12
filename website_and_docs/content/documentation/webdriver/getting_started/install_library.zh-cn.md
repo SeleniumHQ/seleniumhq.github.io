@@ -1,21 +1,22 @@
 ---
 title: "安装浏览器驱动"
 linkTitle: "安装类库"
-weight: 1
+weight: 2
 needsTranslation: true
 description: >
   配置自动化的浏览器.
 aliases: [
 "/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
-"/zh-cn/documentation/getting_started/installing_selenium_libraries/"
+"/zh-cn/documentation/getting_started/installing_selenium_libraries/",
+"/zh-cn/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
 首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。
 
-### Java
-
+{{< tabpane disableCodeBlock=true >}}
+  {{< tab header="Java" >}}
 可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
@@ -49,9 +50,9 @@ _selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自
 </dependency>
 ```
 
-### Python
-
-可以使用 pip 安装 Python 的 Selenium 库：
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+  可以使用 pip 安装 Python 的 Selenium 库：
 
 ```shell
 pip install selenium
@@ -63,10 +64,9 @@ pip install selenium
 ```shell
 python setup.py install
 ```
-
-### C#
-
-可以使用 NuGet 安装 C# 的 Selenium 库：
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+  可以使用 NuGet 安装 C# 的 Selenium 库：
 
 ```shell
 # Using package manager
@@ -75,21 +75,26 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
-
-可以使用 gem 安装 Ruby 的 Selenium 库：
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+  可以使用 gem 安装 Ruby 的 Selenium 库：
 
 ```shell
 gem install selenium-webdriver
 ```
 
-### JavaScript
-
-可以使用 npm 安装 JavaScript 的 Selenium 库
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+  可以使用 npm 安装 JavaScript 的 Selenium 库
 
 ```shell
 npm install selenium-webdriver
 ```
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)
+  {{< /tab >}}
+{{< /tabpane >}}
 
-### Kotlin
-由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)
+## Next Step
+[Install the browser drivers]({{< ref "install_drivers.md" >}})

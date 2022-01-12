@@ -9,6 +9,9 @@ description: >
   Continuing the series of bi-weekly public project meetings...
 ---
 
+{{< dismissible-banner title="Archived meeting minutes" alert="note" color="blue" >}}
+All meeting minutes can now be found [here](/meetings).
+{{< /dismissible-banner >}}
 
 Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on April 23, 2020 (times are on CET). 

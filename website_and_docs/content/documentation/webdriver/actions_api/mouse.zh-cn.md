@@ -1,7 +1,8 @@
 ---
 title: "鼠标Actions"
 linkTitle: "鼠标"
-weight: 3
+weight: 4
+needsTranslation: true
 description: >
   Mouse表示鼠标事件. 鼠标操作是通过使用底层接口执行的, 其允许我们向Web浏览器提供虚拟化的设备输入操作.
 aliases: [
