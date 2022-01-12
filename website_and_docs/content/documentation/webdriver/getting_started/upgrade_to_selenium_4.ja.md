@@ -1,7 +1,7 @@
 ---
 title: "Selenium4にアップグレードする方法"
 linkTitle: "Selenium4にアップグレードする方法"
-weight: 3
+weight: 10
 description: >
   Selenium 4に興味がありますか？ 最新リリースへのアップグレードに役立つこのガイドを確認してください。
 aliases: [

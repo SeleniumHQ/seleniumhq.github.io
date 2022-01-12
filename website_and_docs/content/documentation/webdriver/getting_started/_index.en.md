@@ -33,20 +33,14 @@ to be used transparently,
 enabling cross-browser and cross-platform automation.
 
 Selenium setup is quite different from the setup of other commercial tools.
-To use Selenium in your automation project you need to install the language
-bindings libraries for your language of choice. In addition you will need
-WebDriver binaries for the browsers you want to automate and run test on. 
+Before you can start writing Selenium code, you have to 
+install the language bindings libraries for your language of choice, the browser you
+want to use, and the driver for that browser.
 
-Installing Selenium can be divided in three steps:
+***Follow the links below to get up and going with Selenium WebDriver.***
 
-1. [Install a Selenium library]({{< ref "install_selenium_library.md" >}}) for your desired programming language
-2. [Set up the browser driver]({{< ref "install_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid]({{< ref "/documentation/grid" >}}) if you want to scale up your tests
-
-If you wish to start with a low-code/record and playback tool, please check 
+If you wish to start with a low-code/record and playback tool, please check
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-After completing the setup, you can run the code snippet shown at the 
-[starting page](/documentation) in our docs. Then head to the 
-[WebDriver](/documentation/webdriver) section to learn more about
-browser automation with Selenium.
+Once you get things working, if you want to scale up your tests, check out the 
+[Selenium Grid]({{< ref "/documentation/grid" >}}).

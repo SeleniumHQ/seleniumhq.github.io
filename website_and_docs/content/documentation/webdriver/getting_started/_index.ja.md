@@ -2,6 +2,7 @@
 title: "入門"
 linkTitle: "入門"
 weight: 2
+needsTranslation: true
 description: >
   Seleniumを初めて使用する場合は、すぐに習得するのに役立つリソースがいくつかあります。
 aliases: [
@@ -27,7 +28,7 @@ Seleniumのセットアップは他の商用ツールと少し違います。自
 
 Seleniumのインストールは、次の3つのステップに分類することができます。
 
-1. 希望するプログラミング言語の[Seleniumライブラリをインストール]({{< ref "install_selenium_library.md" >}})する。
+1. 希望するプログラミング言語の[Seleniumライブラリをインストール]({{< ref "install_library.md" >}})する。
 2. ブラウザを自動化するように[ブラウザードライバを設定]({{< ref "install_drivers.md" >}})する。（例：Firefox用のGeckoDriver）
 3. （オプション）テストをスケールアップする場合は、[Selenium Grid]({{< ref "/grid.md" >}})をセットアップして構成する。
 

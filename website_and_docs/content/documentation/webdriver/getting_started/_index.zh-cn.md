@@ -2,6 +2,7 @@
 title: "入门指南"
 linkTitle: "入门指南"
 weight: 2
+needsTranslation: true
 description: >
   如果你是Selenium的新手, 我们有一些资源帮助你快速入门.
 aliases: [
@@ -34,7 +35,7 @@ Selenium 设置与其他商业工具的设置完全不同。
 
 安装Selenium可分为三个步骤:
 
-1. [安装Selenium类库]({{< ref "install_selenium_library.md" >}}) 为你最喜爱的编程语言
+1. [安装Selenium类库]({{< ref "install_library.md" >}}) 为你最喜爱的编程语言
 2. [配置浏览器驱动]({{< ref "install_drivers.md" >}}) 用以驱动你的浏览器 (例如GeckoDriver用于Firefox)
 3. (可选) 设置和配置 [Selenium Grid]({{< ref "/grid" >}}) 如果你想要扩展你的测试
 

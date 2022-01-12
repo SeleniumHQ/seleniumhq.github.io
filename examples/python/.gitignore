@@ -1,0 +1,10 @@
+## Insert Python-specific stuff here
+venv/**/*
+*pyc
+/.idea/
+/node_modules/
+/sa11y/scripts/axe.min.js
+/dist/
+/sa11y.egg-info/
+/package-lock.json
+tests/.pytest_cache/*
