@@ -246,7 +246,7 @@ Follow the link at the bottom of the tab to see an example of the code as it wou
 with a test runner instead of a standalone file.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
+{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -274,7 +274,7 @@ public class HelloSelenium {
     }
 }
 {{< /tab >}}
-{{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_first_script.py" >}}
+{{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_first_script.py" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -298,7 +298,7 @@ driver.find_element(By.NAME, "q").get_attribute("value") # => "Selenium"
 driver.quit()
 
 {{< /tab >}}
-{{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs" >}}
+{{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -324,7 +324,7 @@ class HelloSelenium {
     }
 }
 {{< /tab >}}
-{{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/first_script_spec.rb" >}}
+{{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/first_script_spec.rb" >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome

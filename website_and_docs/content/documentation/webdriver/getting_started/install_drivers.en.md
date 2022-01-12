@@ -60,7 +60,7 @@ ChromeDriver driver = new ChromeDriver();
 ```
 
 <div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
 See full example on GitHub.</a>
 </div>
 
@@ -85,7 +85,7 @@ driver = webdriver.Chrome(service=service)
 ```
 
 <div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_install_drivers.py">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
 See full example on GitHub.</a>
 </div>
 
@@ -111,7 +111,7 @@ var driver = new ChromeDriver()
 ```
 
 <div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
 See full example on GitHub.</a>
 </div>
 
@@ -134,7 +134,7 @@ driver = Selenium::WebDriver.for :chrome
 ```
 
 <div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/install_drivers_spec.rb">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/install_drivers_spec.rb">
 See full example on GitHub.</a>
 </div>
 
