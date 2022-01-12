@@ -1,0 +1,23 @@
+{{ $alert_type := .alert_type }}
+
+<div class="row td-box--200 justify-content-center">
+  <div class="alert alert-{{ .color }} bg-transparent col-6 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
+    <h2 class="alert-heading pb-3 text-center">{{ .title }}</h2>
+    <div class="w-100">
+      <strong>{{ humanize $alert_type }}: </strong>
+      {{ markdownify .p1 }}
+      {{ if .p2 }}
+      <br><br>
+      {{ markdownify .p2 }}
+      {{ end }}
+      {{ if .p3 }}
+      <br><br>
+      {{ markdownify .p3 }}
+      {{ end }}
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<br><br>

@@ -1,12 +1,12 @@
 ---
 title: JSON Wire Protocol Specification
 linkTitle: JSON Wire Protocol
-weight: 3
+weight: 10
 description: >
-  The endpoints and payloads for the now-obsolete open source protocol that was the precursor to the W3C specification.
+  The endpoints and payloads for the now-obsolete open source protocol that was the precursor to the 
+  [W3C specification](https://w3c.github.io/webdriver/).
 ---
-
-(previously located: https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol)
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol)
 
 All implementations of WebDriver that communicate with the browser, or a RemoteWebDriver server shall use a common wire protocol. This wire protocol defines a [RESTful web service](http://www.google.com?q=RESTful+web+service) using [JSON](http://www.json.org) over HTTP.
 

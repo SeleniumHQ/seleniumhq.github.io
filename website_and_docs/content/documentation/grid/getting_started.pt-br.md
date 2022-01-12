@@ -2,6 +2,7 @@
 title: "Configurando a sua"
 linkTitle: "Configurando a sua"
 weight: 2
+needsTranslation: true
 description: >
   Instructions, step by step, showing how to run a simple Selenium Grid.
 aliases: [
@@ -10,18 +11,9 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 ## Grid roles
 
-Several [components]({{< ref "components_of_a_grid.md" >}}) compose a Selenium Grid. Depending
+Several [components]({{< ref "components.md" >}}) compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.
 

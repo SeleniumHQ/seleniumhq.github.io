@@ -34,10 +34,9 @@ why to declare locators separately from the finding methods.
 | tag name | 定位标签名称与搜索值匹配的元素 |
 | xpath | 定位与 XPath 表达式匹配的元素 |
 
-{{% pageinfo color="warning" %}}
-Coming soon:
-* Examples of selecting elements from HTML using each locator strategy
-{{% /pageinfo %}}
+{{< alert-code >}}
+of selecting elements using each locator strategy
+{{< /alert-code >}}
 
 
 ## Relative Locators
