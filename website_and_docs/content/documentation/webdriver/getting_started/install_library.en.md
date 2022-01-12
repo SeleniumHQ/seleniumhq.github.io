@@ -1,21 +1,27 @@
 ---
 title: "Install a Selenium library"
 linkTitle: "Install Library"
-weight: 1
+weight: 2
 description: >
   Setting up the Selenium library for your favourite programming language.
 aliases: [
 "/documentation/en/selenium_installation/installing_selenium_libraries/",
-"/documentation/getting_started/installing_selenium_libraries/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
 First you need to install the Selenium bindings for your automation project.
 The installation process for libraries depends on the language you choose to use.
+Make sure you check the [Selenium downloads page](/downloads/) to make sure
+you are using the latest version.
 
-### Java
+## Requirements by language
+
+{{< tabpane disableCodeBlock=true >}}
+  {{< tab header="Java" >}}
 Installation of Selenium libraries for Java is accomplished using a build tool.
-You can find the latest version on [Selenium Downloads](/downloads/) and see all available versions on
+You can see all available versions on
 [Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
 
 For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
@@ -28,15 +34,16 @@ For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 </dependency>
 ```
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file: 
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
 ```text
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
 ```
 
-### Python
-Installation of Selenium libraries for Python can be done using pip:
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+  Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
 pip install selenium
@@ -49,18 +56,22 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 python setup.py install
 ```
 
-### C#
-Installation of Selenium libraries for C# can be done using NuGet:
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+  Installation of Selenium libraries for C# can be done using NuGet in one of two ways
 
+  * Using a Packet Manager:
 ```shell
-# Using package manager
 Install-Package Selenium.WebDriver
-# or using .Net CLI
+```
+  * Using .NET CLI
+```shell
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
-Installation of Selenium libraries for Ruby can be done using gem:
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+  Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
 gem install selenium-webdriver
@@ -72,13 +83,19 @@ Or add it to your `Gemfile`:
 gem 'selenium-webdriver', '~> 4.0'
 ```
 
-### JavaScript
-Installation of Selenium libraries for JavaScript can be done using npm:
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+  Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-### Kotlin
-Due to missing native language bindings for Kotlin, you have to use the 
-Java Bindings, e.g. with maven [Java](#java)
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    Use the Java bindings for Kotlin.
+  {{< /tab >}}
+{{< /tabpane >}}
+
+## Next Step
+[Install the browser drivers]({{< ref "install_drivers.md" >}})

@@ -1,19 +1,21 @@
 ---
 title: "Seleniumライブラリのインストール"
 linkTitle: "ライブラリのインストール"
-weight: 1
+weight: 2
 description: >
   お気に入りのプログラミング言語用にSeleniumライブラリを設定します。
 aliases: [
 "/documentation/ja/selenium_installation/installing_selenium_libraries/",
-"/ja/documentation/getting_started/installing_selenium_libraries/"
+"/ja/documentation/getting_started/installing_selenium_libraries/",
+"/ja/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
 
-### Java
+{{< tabpane disableCodeBlock=true >}}
+  {{< tab header="Java" >}}
 JavaへのSeleniumライブラリのインストールはMavenを使います。
 プロジェクトのpom.xmlに _selenium-java_ の依存関係を追加してください。
 
@@ -46,9 +48,9 @@ _selenium-java_ 依存関係は、Seleniumがサポートする全てのブラ�
   <version>3.X</version>
 </dependency>
 ```
-
-### Python
-PythonへのSeleniumライブラリのインストールはpipを使います。
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+  PythonへのSeleniumライブラリのインストールはpipを使います。
 
 ```shell
 pip install selenium
@@ -60,9 +62,9 @@ pip install selenium
 ```shell
 python setup.py install
 ```
-
-### C#
-C#へのSeleniumライブラリのインストールはNuGetを使います。
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+  C#へのSeleniumライブラリのインストールはNuGetを使います。
 
 ```shell
 # Using package manager
@@ -71,20 +73,26 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-### Ruby
-RubyへのSeleniumライブラリのインストールはgemを使います。
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+  RubyへのSeleniumライブラリのインストールはgemを使います。
 
 ```shell
 gem install selenium-webdriver
 ```
-
-### JavaScript
-JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+  JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell
 npm install selenium-webdriver
 ```
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  Kotlinのネイティブ言語バインディングが欠落しているため、Javaバインディングを使用する必要があります。
+  例えば、 maven [Java](#java) を使用します。
+  {{< /tab >}}
+{{< /tabpane >}}
 
-### Kotlin
-Kotlinのネイティブ言語バインディングが欠落しているため、Javaバインディングを使用する必要があります。
-例えば、 maven [Java](#java) を使用します。
+## Next Step
+[Install the browser drivers]({{< ref "install_drivers.md" >}})
