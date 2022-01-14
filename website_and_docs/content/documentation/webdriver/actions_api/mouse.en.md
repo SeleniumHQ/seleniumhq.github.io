@@ -565,12 +565,10 @@ driver = webdriver.Chrome()
     # Navigate to url
 driver.get("http://www.google.com")
 
-    # Store 'google search' button web element
-gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
-    # Set x and y offset positions of element
+    # Set x and y offset to move by
 xOffset = 100
 yOffset = 100
-    # Performs mouse move action onto the element
+    # Performs mouse move action
 webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
