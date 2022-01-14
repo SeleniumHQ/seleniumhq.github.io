@@ -18,7 +18,7 @@ interface which allows us to provide virtualized device input to the web browser
 In addition to the keys represented by regular unicode, 
 unicode values have been assigned to other keyboard keys for use with Selenium. 
 Each language has its own way to reference these keys; the full list can be found
-[ere](https://www.w3.org/TR/webdriver/#keyboard-actions).
+[here](https://www.w3.org/TR/webdriver/#keyboard-actions).
 
 ## Key down
 

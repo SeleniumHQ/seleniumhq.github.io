@@ -30,25 +30,25 @@ there are specific [Chrome capabilities]({{< ref "/documentation/webdriver/capab
 that can be used.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L27-L30" >}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L27-L30" >}}
   ChromeOptions options = new ChromeOptions();
   driver = new ChromeDriver(options);
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L9-L12" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L9-L12" >}}
   options = ChromeOptions()
   driver = webdriver.Chrome(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L18-L21" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L18-L21" >}}
   var options = new ChromeOptions();
   var driver = new ChromeDriver(options);
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L6-L9" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L6-L9" >}}
   options = Selenium::WebDriver::Options.chrome
   driver = Selenium::WebDriver.for :chrome, options: options
 
@@ -77,25 +77,25 @@ Microsoft Edge is implemented with Chromium, with the earliest supported version
 the major version number of edgedriver must match the major version of the Edge browser.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L35-L38">}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L35-L38">}}
   EdgeOptions options = new EdgeOptions();
   driver = new EdgeDriver(options);
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L16-L19" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L16-L19" >}}
   options = EdgeOptions()
   driver = webdriver.Edge(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L27-L30" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L27-L30" >}}
   var options = new EdgeOptions();
   var driver = new EdgeDriver(options);
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L13-L16" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L13-L16" >}}
   options = Selenium::WebDriver::Options.edge
   driver = Selenium::WebDriver.for :edge, options: options
 
@@ -123,25 +123,25 @@ the major version number of edgedriver must match the major version of the Edge 
 Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L43-L46">}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L43-L46">}}
   FirefoxOptions options = new FirefoxOptions();
   driver = new FirefoxDriver(options);
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L23-L26" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L23-L26" >}}
   options = FirefoxOptions()
   driver = webdriver.Firefox(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L36-L39" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L36-L39" >}}
   var options = new FirefoxOptions();
   var driver = new FirefoxDriver(options);
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L20-L23" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L20-L23" >}}
   options = Selenium::WebDriver::Options.firefox
   driver = Selenium::WebDriver.for :firefox, options: options
 
@@ -185,25 +185,25 @@ Additional information about using Internet Explorer can be found
 [on the Selenium wiki](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L52-L55">}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L52-L55">}}
   InternetExplorerOptions options = new InternetExplorerOptions();
   driver = new InternetExplorerDriver(options);
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L31-L34" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L31-L34" >}}
   options = IEOptions()
   driver = webdriver.Ie(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L46-L49" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L46-L49" >}}
   var options = new InternetExplorerOptions();
   var driver = new InternetExplorerDriver(options);
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L29-L32" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L29-L32" >}}
   options = Selenium::WebDriver::Options.ie
   driver = Selenium::WebDriver.for :ie, options: options
 
@@ -230,7 +230,7 @@ Additional information about using Internet Explorer can be found
 Microsoft Edge can be used in IE compatibility mode using the IE Driver.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L61-L67">}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L61-L67">}}
   InternetExplorerOptions options = new InternetExplorerOptions();
   options.attachToEdgeChrome();
   options.withEdgeExecutablePath("/path/to/edge/browser");
@@ -239,7 +239,7 @@ Microsoft Edge can be used in IE compatibility mode using the IE Driver.
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L39-L44" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L39-L44" >}}
   options = IEOptions()
   options.attach_to_edge_chrome = True
   options.edge_executable_path = "/path/to/edge/browser"
@@ -247,7 +247,7 @@ Microsoft Edge can be used in IE compatibility mode using the IE Driver.
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L56-L63" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L56-L63" >}}
   var options = new InternetExplorerOptions
   {
     AttachToEdgeChrome = true,
@@ -257,7 +257,7 @@ Microsoft Edge can be used in IE compatibility mode using the IE Driver.
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L38-L43" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L38-L43" >}}
   options = Selenium::WebDriver::Options.ie
   options.attach_to_edge_chrome = true
   options.edge_executable_path = "/path/to/edge/browser"
@@ -294,7 +294,7 @@ to drive Opera browser with the chromedriver. Like all Chromium implementations,
 make sure that the browser version matches the driver version.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
   ChromeOptions options = new ChromeOptions();
   options.setBinary("/path/to/opera/browser");
   
@@ -302,14 +302,14 @@ make sure that the browser version matches the driver version.
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
   options = ChromeOptions()
   options.binary_location = "path/to/opera/browser"
   driver = webdriver.Chrome(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L70-L76" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L70-L76" >}}
   var options = new ChromeOptions
   {
     BinaryLocation = "/path/to/opera/browser"
@@ -318,7 +318,7 @@ make sure that the browser version matches the driver version.
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L49-L53" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L49-L53" >}}
   options = Selenium::WebDriver::Options.chrome
   options.binary = '/path/to/opera/browser'
   driver = Selenium::WebDriver.for :chrome, options: options
@@ -356,24 +356,24 @@ safaridriver --enable
 ```
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L84-L88">}}
+{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L84-L88">}}
   SafariOptions options = new SafariOptions();
   driver = new SafariDriver(options);
   
   driver.quit();
 {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/python/tests/getting_started/test_open_browser.py#L58-L60" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L58-L60" >}}
   driver = webdriver.Safari()
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L83-L86" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L83-L86" >}}
   var options = new SafariOptions();
   var driver = new SafariDriver(options);
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/java_example/examples/ruby/spec/getting_started/open_browser_spec.rb#L59-L62" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L59-L62" >}}
   options = Selenium::WebDriver::Options.safari
   driver = Selenium::WebDriver.for :safari, options: options
 
