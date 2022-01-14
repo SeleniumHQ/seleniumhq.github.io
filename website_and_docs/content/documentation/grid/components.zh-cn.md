@@ -60,7 +60,7 @@ aliases: [
 只创建一个插槽. 
 通过特定的配置,
 它可以在Docker容器或中继命令中运行会话. 
-您可以在下一 [章节]({{< ref "setting_up_your_own_grid.md" >}}) 
+您可以在下一 [章节]({{< ref "getting_started.md" >}}) 
 中看到更多配置详细信息.
 
 节点仅执行接收到的命令, 
@@ -110,6 +110,6 @@ aliases: [
 
 {{% alert title="运行你自己的Grid" color="primary" %}}
 期待使用所有组件并运行自己的Grid? 
-前往 ["配置自己的服务网格"]({{< ref "setting_up_your_own_grid.md" >}}) ,
+前往 ["配置自己的服务网格"]({{< ref "getting_started.md" >}}) ,
 了解如何将所有零件组合在一起.
 {{% /alert %}}

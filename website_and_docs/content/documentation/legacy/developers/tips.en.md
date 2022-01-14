@@ -1,10 +1,12 @@
 ---
-title: "Legacy Developer TIps"
+title: "Developer Tips"
 linkTitle: "Tips"
-weight: 14
+weight: 10
+description: >
+    Details on how to execute Selenium Test Suite with Crazy Fun.
 ---
 
-(Previously located: https://github.com/SeleniumHQ/selenium/wiki/Crazy-Fun-Build/)
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/Developer-Tips)
 
 ## Running an Individual Test
 

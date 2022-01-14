@@ -1,8 +1,9 @@
 ---
 title: "Legacy developer documentation"
 linkTitle: "Developers"
-weight: 14
+weight: 16
+description: >
+    Information of interest to developers of Selenium
 aliases: ["/documentation/en/legacy_docs/"]
 ---
 
-Legacy instructions for developers.

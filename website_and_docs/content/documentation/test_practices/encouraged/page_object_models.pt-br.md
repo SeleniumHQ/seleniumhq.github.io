@@ -2,6 +2,7 @@
 title: "Modelos de objetos de página"
 linkTitle: "Modelos de objetos de página"
 weight: 3
+needsTranslation: true
 aliases: [
 "/documentation/pt-br/guidelines_and_recommendations/page_object_models/",
 "/pt-br/documentation/guidelines/page_object_models/"

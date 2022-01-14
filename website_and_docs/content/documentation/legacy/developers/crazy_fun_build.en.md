@@ -1,10 +1,12 @@
 ---
 title: "Crazy Fun Build Tool"
 linkTitle: "Crazy Fun"
-weight: 6
+weight: 2
+description: >
+    The original Selenium Build Tool that grew from nothing to be extremely unwieldy,
+    making it both crazy and "fun" to work with.
 ---
-
-(Previously located: https://github.com/SeleniumHQ/selenium/wiki/Crazy-Fun-Build/)
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/Crazy-Fun-Build)
 
 WebDriver is a large project: if we tried to push everything into a single monolithic build file it eventually becomes unmanageable. We know this. We've tried it. So we broke the single Rakefile into a series of `build.desc` files. Each of these describe a part of the build.
 

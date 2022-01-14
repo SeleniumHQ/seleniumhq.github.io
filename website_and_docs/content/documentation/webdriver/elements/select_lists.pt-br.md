@@ -191,7 +191,7 @@ o elemento `<select>` contém:
 List<WebElement> allAvailableOptions = selectObject.getOptions();
   {{< /tab >}}
   {{< tab header="Python" >}}
-# Return a list[WebElement] of options that the &lt;select&gt; element contains
+# Return a list[WebElement] of options that the <select> element contains
 all_available_options = select_object.options
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -199,7 +199,7 @@ all_available_options = select_object.options
 IList<IWebElement> allAvailableOptions = selectObject.Options;
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-# Return an Array[Element] of options that the &lt;select&gt; element contains
+# Return an Array[Element] of options that the <select> element contains
 all_available_options = select_object.options
   {{< /tab >}}
   {{< tab header="JavaScript" >}}

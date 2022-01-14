@@ -1,24 +1,14 @@
 ---
-title: "ガイドラインとレコメンデーション"
-linkTitle: "ガイドライン"
-chapter: true
-weight: 7
+title: "推奨された行動"
+linkTitle: "推奨"
+weight: 3
 description: >
-  Some guidelines and recommendations on testing from the Selenium project.
+  Seleniumプロジェクトからのテストに関するいくつかのガイドラインと推奨事項
 aliases: [
 "/documentation/ja/guidelines_and_recommendations/",
 "/ja/documentation/guidelines/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 「ベストプラクティス」に関するメモ：このドキュメントでは、"ベストプラクティス"というフレーズを意図的に避けています。
 すべての状況に有効なアプローチはありません。

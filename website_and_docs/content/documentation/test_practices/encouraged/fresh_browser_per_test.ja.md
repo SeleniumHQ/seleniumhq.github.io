@@ -1,7 +1,7 @@
 ---
 title: "テストごとに新しいブラウザを起動する"
 linkTitle: "テストごとに新しいブラウザを起動する"
-weight: 9
+weight: 11
 aliases: [
 "/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/",
 "/ja/documentation/guidelines/fresh_browser_per_test/"
