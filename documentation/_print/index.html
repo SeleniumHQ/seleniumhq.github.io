@@ -3874,7 +3874,7 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
           <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>()</span>
       <span style=color:#000;font-weight:700>}</span>
   <span style=color:#000;font-weight:700>}</span>
-  </code></pre></div></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-fb14e71e8a9627b07e76fae74adf4f7a>2.4.3 - Interacting with web elements</h1><div class=lead>A high-level instruction set for manipulating form controls.</div><p>There are only 5 basic commands that can be executed on an element:</p><ul><li><a href=https://w3c.github.io/webdriver/#element-click>click</a> (applies to any element)</li><li><a href=https://w3c.github.io/webdriver/#element-send-keys>send keys</a> (only applies to text fields and content editable elements)</li><li><a href=https://w3c.github.io/webdriver/#element-send-keys>clear</a> (only applies to text fields and content editable elements)</li><li>submit (only applies to form elements)</li><li>select (see <a href=select_lists.md>Select List Elements</a>)</li></ul><h2 id=additional-validations>Additional validations</h2><p>These methods are designed to closely emulate a user&rsquo;s experience, so,
+  </code></pre></div></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-fb14e71e8a9627b07e76fae74adf4f7a>2.4.3 - Interacting with web elements</h1><div class=lead>A high-level instruction set for manipulating form controls.</div><p>There are only 5 basic commands that can be executed on an element:</p><ul><li><a href=https://w3c.github.io/webdriver/#element-click>click</a> (applies to any element)</li><li><a href=https://w3c.github.io/webdriver/#element-send-keys>send keys</a> (only applies to text fields and content editable elements)</li><li><a href=https://w3c.github.io/webdriver/#element-send-keys>clear</a> (only applies to text fields and content editable elements)</li><li>submit (only applies to form elements)</li><li>select (see <a href=/documentation/webdriver/elements/select_lists/>Select List Elements</a>)</li></ul><h2 id=additional-validations>Additional validations</h2><p>These methods are designed to closely emulate a user&rsquo;s experience, so,
 unlike the <a href=/documentation/webdriver/actions_api/>Actions API</a>, it attempts to perform two things
 before attempting the specified action.</p><ol><li>If it determines the element is outside the viewport, it
 <a href=https://w3c.github.io/webdriver/#dfn-scrolls-into-view>scrolls the element into view</a>, specifically
@@ -3894,7 +3894,7 @@ types the provided keys into an <a href=https://w3c.github.io/webdriver/#dfn-edi
 Typically, this means an element is an input element of a form with a <code>text</code> type or an element
 with a<code>content-editable</code> attribute. If it is not editable,
 <a href=https://w3c.github.io/webdriver/#dfn-invalid-element-state>an invalid element state</a> error is returned.</p><p><a href=https://www.w3.org/TR/webdriver/#keyboard-actions>Here</a> is the list of
-possible keystrokes that WebDriver Supports.</p><ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-1-0-tab data-toggle=tab href=#tabs-1-0 role=tab onclick='handleClick("java")' aria-controls=tabs-1-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-1-1-tab data-toggle=tab href=#tabs-1-1 role=tab onclick='handleClick("python")' aria-controls=tabs-1-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-1-2-tab data-toggle=tab href=#tabs-1-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-1-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-1-3-tab data-toggle=tab href=#tabs-1-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-1-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-1-4-tab data-toggle=tab href=#tabs-1-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-1-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-1-5-tab data-toggle=tab href=#tabs-1-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-1-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-1-content><div class="tab-pane fade show active" id=tabs-1-0 role=tabpanel aria-labelled-by=tabs-1-0-tab><pre><code class=language-en data-lang=en>import org.openqa.selenium.By;
+possible keystrokes that WebDriver Supports.</p><ul class="nav nav-tabs" id=tabs-2 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-2-0-tab data-toggle=tab href=#tabs-2-0 role=tab onclick='handleClick("java")' aria-controls=tabs-2-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-2-1-tab data-toggle=tab href=#tabs-2-1 role=tab onclick='handleClick("python")' aria-controls=tabs-2-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-2-2-tab data-toggle=tab href=#tabs-2-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-2-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-2-3-tab data-toggle=tab href=#tabs-2-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-2-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-2-4-tab data-toggle=tab href=#tabs-2-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-2-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-2-5-tab data-toggle=tab href=#tabs-2-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-2-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-2-content><div class="tab-pane fade show active" id=tabs-2-0 role=tabpanel aria-labelled-by=tabs-2-0-tab><pre><code class=language-en data-lang=en>import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -3914,7 +3914,7 @@ public class HelloSelenium {
   }
 }
 
-  </code></pre></div><div class="tab-pane fade" id=tabs-1-1 role=tabpanel aria-labelled-by=tabs-1-1-tab><pre><code class=language-en data-lang=en>from selenium import webdriver
+  </code></pre></div><div class="tab-pane fade" id=tabs-2-1 role=tabpanel aria-labelled-by=tabs-2-1-tab><pre><code class=language-en data-lang=en>from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Firefox()
@@ -3924,7 +3924,7 @@ driver.get(&#34;http://www.google.com&#34;)
 
     # Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
 driver.find_element(By.NAME, &#34;q&#34;).send_keys(&#34;webdriver&#34; + Keys.ENTER)
-  </code></pre></div><div class="tab-pane fade" id=tabs-1-2 role=tabpanel aria-labelled-by=tabs-1-2-tab><pre><code class=language-en data-lang=en>using (var driver = new FirefoxDriver())
+  </code></pre></div><div class="tab-pane fade" id=tabs-2-2 role=tabpanel aria-labelled-by=tabs-2-2-tab><pre><code class=language-en data-lang=en>using (var driver = new FirefoxDriver())
 {
   // Navigate to Url
   driver.Navigate().GoToUrl(&#34;https://google.com&#34;);
@@ -3932,7 +3932,7 @@ driver.find_element(By.NAME, &#34;q&#34;).send_keys(&#34;webdriver&#34; + Keys.E
   // Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
   driver.FindElement(By.Name(&#34;q&#34;)).SendKeys(&#34;webdriver&#34; + Keys.Enter);
 }
-  </code></pre></div><div class="tab-pane fade" id=tabs-1-3 role=tabpanel aria-labelled-by=tabs-1-3-tab><pre><code class=language-en data-lang=en>require &#39;selenium-webdriver&#39;
+  </code></pre></div><div class="tab-pane fade" id=tabs-2-3 role=tabpanel aria-labelled-by=tabs-2-3-tab><pre><code class=language-en data-lang=en>require &#39;selenium-webdriver&#39;
 driver = Selenium::WebDriver.for :firefox
 begin
     # Navigate to URL
@@ -3944,7 +3944,7 @@ begin
 ensure
   driver.quit
 end
-  </code></pre></div><div class="tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><pre><code class=language-en data-lang=en>const {Builder, By, Key} = require(&#39;selenium-webdriver&#39;);
+  </code></pre></div><div class="tab-pane fade" id=tabs-2-4 role=tabpanel aria-labelled-by=tabs-2-4-tab><pre><code class=language-en data-lang=en>const {Builder, By, Key} = require(&#39;selenium-webdriver&#39;);
 
 (async function example() {
   let driver = await new Builder().forBrowser(&#39;firefox&#39;).build();
@@ -3960,7 +3960,7 @@ end
     await driver.quit();
   }
 })();
-  </code></pre></div><div class="tab-pane fade" id=tabs-1-5 role=tabpanel aria-labelled-by=tabs-1-5-tab><pre><code class=language-en data-lang=en>import org.openqa.selenium.By
+  </code></pre></div><div class="tab-pane fade" id=tabs-2-5 role=tabpanel aria-labelled-by=tabs-2-5-tab><pre><code class=language-en data-lang=en>import org.openqa.selenium.By
 import org.openqa.selenium.Keys
 import org.openqa.selenium.firefox.FirefoxDriver
 
@@ -3981,7 +3981,7 @@ This requires an element to be <a href=https://w3c.github.io/webdriver/#dfn-edit
 and <a href=https://w3c.github.io/webdriver/#dfn-resettable-elements>resettable</a>. Typically,
 this means an element is an input element of a form with a <code>text</code> type or an element
 with a<code>content-editable</code> attribute. If these conditions are not met,
-<a href=https://w3c.github.io/webdriver/#dfn-invalid-element-state>an invalid element state</a> error is returned.</p><ul class="nav nav-tabs" id=tabs-2 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-2-0-tab data-toggle=tab href=#tabs-2-0 role=tab onclick='handleClick("java")' aria-controls=tabs-2-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-2-1-tab data-toggle=tab href=#tabs-2-1 role=tab onclick='handleClick("python")' aria-controls=tabs-2-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-2-2-tab data-toggle=tab href=#tabs-2-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-2-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-2-3-tab data-toggle=tab href=#tabs-2-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-2-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-2-4-tab data-toggle=tab href=#tabs-2-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-2-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-2-5-tab data-toggle=tab href=#tabs-2-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-2-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-2-content><div class="tab-pane fade show active" id=tabs-2-0 role=tabpanel aria-labelled-by=tabs-2-0-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+<a href=https://w3c.github.io/webdriver/#dfn-invalid-element-state>an invalid element state</a> error is returned.</p><ul class="nav nav-tabs" id=tabs-3 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-3-0-tab data-toggle=tab href=#tabs-3-0 role=tab onclick='handleClick("java")' aria-controls=tabs-3-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-3-1-tab data-toggle=tab href=#tabs-3-1 role=tab onclick='handleClick("python")' aria-controls=tabs-3-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-3-2-tab data-toggle=tab href=#tabs-3-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-3-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-3-3-tab data-toggle=tab href=#tabs-3-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-3-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-3-4-tab data-toggle=tab href=#tabs-3-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-3-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-3-5-tab data-toggle=tab href=#tabs-3-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-3-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-3-content><div class="tab-pane fade show active" id=tabs-3-0 role=tabpanel aria-labelled-by=tabs-3-0-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
 <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
 <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebElement</span><span style=color:#ce5c00;font-weight:700>;</span>
 <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.chrome.ChromeDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
@@ -4002,7 +4002,7 @@ with a<code>content-editable</code> attribute. If these conditions are not met,
     <span style=color:#ce5c00;font-weight:700>}</span>
   <span style=color:#ce5c00;font-weight:700>}</span>
 <span style=color:#ce5c00;font-weight:700>}</span>
-  </code></pre></div></div><div class="tab-pane fade" id=tabs-2-1 role=tabpanel aria-labelled-by=tabs-2-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#204a87;font-weight:700>from</span> <span style=color:#000>selenium</span> <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>webdriver</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-1 role=tabpanel aria-labelled-by=tabs-3-1-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=color:#204a87;font-weight:700>from</span> <span style=color:#000>selenium</span> <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>webdriver</span>
 <span style=color:#204a87;font-weight:700>from</span> <span style=color:#000>selenium.webdriver.common.by</span> <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>By</span>
 <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>webdriver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>Chrome</span><span style=color:#000;font-weight:700>()</span>
 
@@ -4013,7 +4013,7 @@ with a<code>content-editable</code> attribute. If these conditions are not met,
 <span style=color:#000>SearchInput</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>send_keys</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;selenium&#34;</span><span style=color:#000;font-weight:700>)</span>
     <span style=color:#8f5902;font-style:italic># Clears the entered text</span>
 <span style=color:#000>SearchInput</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>clear</span><span style=color:#000;font-weight:700>()</span>
-  </code></pre></div></div><div class="tab-pane fade" id=tabs-2-2 role=tabpanel aria-labelled-by=tabs-2-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium</span><span style=color:#000;font-weight:700>;</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-2 role=tabpanel aria-labelled-by=tabs-3-2-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium</span><span style=color:#000;font-weight:700>;</span>
 <span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>OpenQA.Selenium.Chrome</span><span style=color:#000;font-weight:700>;</span>
 <span style=color:#204a87;font-weight:700>using</span> <span style=color:#000>System</span><span style=color:#000;font-weight:700>;</span>
 
@@ -4041,7 +4041,7 @@ with a<code>content-editable</code> attribute. If these conditions are not met,
     <span style=color:#000;font-weight:700>}</span>
   <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
-  </code></pre></div></div><div class="tab-pane fade" id=tabs-2-3 role=tabpanel aria-labelled-by=tabs-2-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#204a87>require</span> <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-3 role=tabpanel aria-labelled-by=tabs-3-3-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=color:#204a87>require</span> <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>
 <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Selenium</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#000>WebDriver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>for</span> <span style=color:#4e9a06>:chrome</span>
 <span style=color:#204a87;font-weight:700>begin</span>
     <span style=color:#8f5902;font-style:italic># Navigate to URL</span>
@@ -4054,7 +4054,7 @@ with a<code>content-editable</code> attribute. If these conditions are not met,
 <span style=color:#204a87;font-weight:700>ensure</span>
   <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>quit</span>
 <span style=color:#204a87;font-weight:700>end</span>
-  </code></pre></div></div><div class="tab-pane fade" id=tabs-2-4 role=tabpanel aria-labelled-by=tabs-2-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#204a87;font-weight:700>const</span> <span style=color:#000;font-weight:700>{</span><span style=color:#000>Builder</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>By</span><span style=color:#000;font-weight:700>}</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span><span style=color:#000;font-weight:700>);</span>
+  </code></pre></div></div><div class="tab-pane fade" id=tabs-3-4 role=tabpanel aria-labelled-by=tabs-3-4-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#204a87;font-weight:700>const</span> <span style=color:#000;font-weight:700>{</span><span style=color:#000>Builder</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>By</span><span style=color:#000;font-weight:700>}</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span><span style=color:#000;font-weight:700>);</span>
 <span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>async</span> <span style=color:#204a87;font-weight:700>function</span> <span style=color:#000>example</span><span style=color:#000;font-weight:700>()</span> <span style=color:#000;font-weight:700>{</span>
   <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Builder</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>forBrowser</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;chrome&#39;</span><span style=color:#000;font-weight:700>).</span><span style=color:#000>build</span><span style=color:#000;font-weight:700>();</span>
   <span style=color:#204a87;font-weight:700>try</span> <span style=color:#000;font-weight:700>{</span>
@@ -4071,7 +4071,7 @@ with a<code>content-editable</code> attribute. If these conditions are not met,
   <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>})();</span>
   
-</code></pre></div></div><div class="tab-pane fade" id=tabs-2-5 role=tabpanel aria-labelled-by=tabs-2-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span>
+</code></pre></div></div><div class="tab-pane fade" id=tabs-3-5 role=tabpanel aria-labelled-by=tabs-3-5-tab><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span>
 <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.chrome.ChromeDriver</span>
 <span style=color:#204a87;font-weight:700>fun</span> <span style=color:#000>main</span><span style=color:#000;font-weight:700>()</span> <span style=color:#000;font-weight:700>{</span>
   <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>driver</span> <span style=color:#000;font-weight:700>=</span>  <span style=color:#000>ChromeDriver</span><span style=color:#000;font-weight:700>()</span>
@@ -11229,7 +11229,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/eranmes>@eranmes</a></label>
 <span class=contributions>473 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>428 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/665846?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>430 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/665846?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/p0deje>@p0deje</a></label>
 <span class=contributions>426 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/610?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mdub>@mdub</a></label>
@@ -11453,8 +11453,6 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/dvd900>@dvd900</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4522927?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/p2635>@p2635</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2152709?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/avoid3d>@avoid3d</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1587053?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/sotayamashita>@sotayamashita</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/718010?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11845,6 +11843,8 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/Juan-Arano>@Juan-Arano</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/59338412?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/KendrickChou>@KendrickChou</a></label>
+<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/909773?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/krmahadevan>@krmahadevan</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17221009?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/idkaryan>@idkaryan</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/191885?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11867,8 +11867,6 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/mdmintz>@mdmintz</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/19623705?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/misiekofski>@misiekofski</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/43745884?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/muditlambda>@muditlambda</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=previous-selenium-websitegithubcomseleniumhqwwwseleniumhqorg><a href=//github.com/SeleniumHQ/www.seleniumhq.org/>Previous Selenium Website</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
 <span class=contributions>417 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/28229?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
