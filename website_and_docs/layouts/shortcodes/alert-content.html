@@ -1,7 +1,7 @@
 {{ $code := .Site.Language }}
 {{ $p1 := "This section needs additional and/or updated content" }}
 {{ $p2 := printf "%s" .Inner }}
-{{ $p3 := printf "Check our [contribution guidelines](/%s/documentation/about/contributing/#contributions) if you'd like to help." }}
+{{ $p3 := printf "Check our [contribution guidelines](/documentation/about/contributing) if you'd like to help." }}
 
 {{ if $p2 }}
 {{ partial "alerts.html" (dict "alert_type" "note" "color" "cyan" "title" "Content Help" "p1" $p1 "p2" $p2 "p3" $p3) }}

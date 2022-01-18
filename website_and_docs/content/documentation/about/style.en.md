@@ -3,8 +3,11 @@ title: "Style guide for Selenium documentation"
 linkTitle: "Style"
 weight: 6
 description: >-
-  Conventions for contributing to the Selenium documentation and code examples
+  Conventions for contributions to the Selenium documentation and code examples
 ---
+
+Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on 
+how to add content to this documentation.
 
 ## Alerts
 
