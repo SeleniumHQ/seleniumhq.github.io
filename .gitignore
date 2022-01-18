@@ -5,3 +5,4 @@ node_modules
 resources/
 website_and_docs/.hugo_build.lock
 
+**/target/*
