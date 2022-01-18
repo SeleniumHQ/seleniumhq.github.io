@@ -1,7 +1,7 @@
 {{ $code := .Site.Language }}
 {{ $p1 := "This section could use some updated code examples" }}
 {{ $p2 := printf "%s" .Inner }}
-{{ $p3 := printf "Check our [contribution guidelines](/%s/documentation/about/contributing/#code-tabs) if you'd like to help." }}
+{{ $p3 := printf "Check our [contribution guidelines](/%s/documentation/about/contributing/#code-tabs) if you'd like to help." $code }}
 
 {{ if $p2 }}
 {{ partial "alerts.html" (dict "alert_type" "note" "color" "orange" "title" "Coding Help" "p1" $p1 "p2" $p2 "p3" $p3) }}
