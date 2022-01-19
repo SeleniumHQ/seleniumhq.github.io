@@ -4,8 +4,11 @@ linkTitle: "Style"
 weight: 6
 requiresTranslation: true
 description: >-
-  Conventions for contributing to the Selenium documentation and code examples
+  Conventions for contributions to the Selenium documentation and code examples
 ---
+
+Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on
+how to add content to this documentation.
 
 ## Alerts
 
