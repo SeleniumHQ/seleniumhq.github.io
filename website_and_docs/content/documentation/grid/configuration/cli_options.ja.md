@@ -10,8 +10,8 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
+   <i class="fas fa-language display-4"></i>
+   Page being translated from
    English to Japanese. Do you speak Japanese? Help us to translate
    it by sending us pull requests!
 </p>
@@ -184,7 +184,7 @@ pull request updating this page.
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
 
-### Events 
+### Events
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -205,7 +205,7 @@ pull request updating this page.
 | `--structured-logs` | boolean | `false` | Use structured logs |
 | `--tracing` | boolean | `true` | Enable trace collection |
 
-### Network 
+### Network
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -217,8 +217,9 @@ pull request updating this page.
 |---|---|---|---|---|
 | `--detect-drivers` | boolean | `true` | Autodetect which drivers are available on the current system, and add them to the Node. |
 | `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype='{"browserName": "firefox", "browserVersion": "86", "moz:firefoxOptions": {"binary":"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin"}}'` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
-| `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. | 
+| `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. |
 | `--driver-implementation` | string[] | `"firefox"` | Drivers that should be checked. If specified, will skip autoconfiguration. |
+| `--node-implementation` | string | `"org.openqa.selenium.grid.node.local.LocalNodeFactory"` | Full classname of non-default Node implementation. This is used to manage a session's lifecycle. |
 | `--grid-url` | string | `https://grid.example.com` | Public URL of the Grid as a whole (typically the address of the Hub or the Router) |
 | `--heartbeat-period` | int | `60` | How often, in seconds, will the Node send heartbeat events to the Distributor to inform it that the Node is up. |
 | `--max-sessions` | int | `8` | Maximum number of concurrent sessions. Default value is the number of available processors. |
@@ -246,7 +247,7 @@ pull request updating this page.
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 
 
-### Server 
+### Server
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -290,9 +291,9 @@ When needed, you can combine a Toml file configuration with CLI arguments.
 {{% /pageinfo %}}
 
 
-### Command-line flags 
+### Command-line flags
 
-To pass config options as command-line flags, identify the valid options for the component 
+To pass config options as command-line flags, identify the valid options for the component
 and follow the template below.
 
 ```
@@ -317,7 +318,7 @@ java -jar selenium-server-<version>.jar hub --session-request-timeout 500 --port
 java -jar selenium-server-<version>.jar node --max-sessions 4 --log-level "fine" --port 7777 --driver-implementation "firefox" --driver-implementation "edge"
 ```
 
-#### Distributor, setting Session Map server url, Session Queue server url, and disabling bus 
+#### Distributor, setting Session Map server url, Session Queue server url, and disabling bus
 
 ```
 java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
