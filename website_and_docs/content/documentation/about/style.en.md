@@ -151,10 +151,36 @@ This auto-formats the code in each tab to match the header name.
       {{</* /tab */>}}
     {{</* /tabpane */>}}
 
+#### Link to GitHub
+
+All code examples should be present and linked to in our example repos: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples
+
+With `langEqualsHeader=true`, you can add GitHub links at the bottom of the given tab like this:
+
+    {{</* tabpane */>}}
+      {{</* tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35 */>}}
+        Content in automatic code block that refers to something on GitHub
+      {{</* /tab */>}}
+      {{</* tab header="No Link" */>}}
+        This content should not get linked to GitHub
+      {{</* /tab */>}}
+    {{</* /tabpane */>}}
+
+Which looks like this:
+
+{{< tabpane >}}
+{{< tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}} /
+Content in automatic code block that refers to something on GitHub
+{{< /tab >}}
+{{< tab header="No Link" >}}
+This content should not get linked to GitHub
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Disabling Code Block
 
 If you want your example to include both text and code, you
-need to disable the default of everything being put in a code block
+need to disable the default behavior that puts everything inside a code block
 
 Maybe you want something like this:
 
@@ -197,31 +223,19 @@ You need to specify which parts are code and which are not yourself now, like th
     < ... >
     {{</* /tabpane */>}}
 
-### Link to GitHub
+#### Link to GitHub
 
-If you disable code blocks, you can create whatever kind of link anywhere you want.
-But say you want to add a GitHub link associated with a given tab when using the default code block:
-{{< tabpane >}}
-  {{< tab header="Link" github="seleniumhq/seleniumhq.github.io/blob/dev/website_and_docs/content/documentation/about/style.en.md#L205" >}}
-    Content in automatic code block that refers to something on GitHub
-  {{< /tab >}}
-  {{< tab header="No Link" >}}
-    This content should not get linked to GitHub
-  {{< /tab >}}
-{{< /tabpane >}}
+All code examples should be present and linked to in our example repos: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples
 
-To add a link to a particular tab, pass in a `github` value
-to that tab. Note that only the tabs that have this value will have the link added.
+With `disableCodeBlock=true`, you can add GitHub links wherever you need them with this shortcode:
 
-    {{</* tabpane */>}}
-      {{</* tab header="Link" github="seleniumhq/seleniumhq.github.io/blob/dev/website_and_docs/content/documentation/about/style.en.md#L205" */>}}
-        Content in automatic code block that refers to something on GitHub
-      {{</* /tab */>}}
-      {{</* tab header="No Link" */>}}
-        This content should not get linked to GitHub
-      {{</* /tab */>}}
-    {{</* /tabpane */>}}
+    {{</* gh-content "java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
 
+Which looks like this:
+
+<span class="tab-pane">
+{{< gh-content "java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+</span>
 
 ### Code Comments
 
