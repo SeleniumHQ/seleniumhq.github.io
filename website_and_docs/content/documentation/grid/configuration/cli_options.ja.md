@@ -323,3 +323,33 @@ java -jar selenium-server-<version>.jar node --max-sessions 4 --log-level "fine"
 ```
 java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
 ```
+
+#### Setting custom capabilities for matching specific Nodes
+**Important:** Custom capabilities need to be set in the configuration in all Nodes. They also
+need to be included always in every session request.
+
+##### Start the Hub
+```
+java -jar selenium-server-<version>.jar hub
+```
+
+##### Start the Node A with custom cap set to `true`
+```
+java -jar selenium-server-<version>.jar node --detect-drivers false --driver-configuration display-name="Chrome (custom capability true)" max-sessions=1 stereotype='{"browserName":"chrome","gsg:customcap":true}' --port 6161
+```
+
+##### Start the Node B with custom cap set to `false`
+```
+java -jar selenium-server-<version>.jar node --detect-drivers false --driver-configuration display-name="Chrome (custom capability true)" max-sessions=1 stereotype='{"browserName":"chrome","gsg:customcap":false}' --port 6262
+```
+
+##### Matching Node A
+```java
+ChromeOptions options = new ChromeOptions();
+options.setCapability("gsg:customcap", true);
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+driver.get("https://selenium.dev");
+driver.quit();
+```
+
+Set the custom capability to `false` in order to match the Node B.
