@@ -5,6 +5,7 @@ weight: 8
 description: >
     Internet Explorer驱动是一种实现WebDriver规范的单机服务器.
 ---
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
 `InternetExplorerDriver` 是一个独立的服务器, 
 它实现WebDriver的wire协议. 
