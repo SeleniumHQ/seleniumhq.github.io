@@ -103,9 +103,8 @@ detect-drivers = false
 max-sessions = 2
 
 [docker]
-configs =
-    [
-        "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}",
+configs = [
+        "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
         "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
     ]
 url = "http://localhost:2375"
