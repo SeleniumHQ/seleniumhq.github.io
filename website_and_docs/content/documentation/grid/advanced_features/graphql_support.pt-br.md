@@ -150,7 +150,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInf
 ### Buscando informação da sessão para uma sessão específica:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: \"<session-id>\") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Buscando os recursos de cada nó na Grid:

@@ -151,7 +151,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInf
 ### 查询以获取给定会话的会话信息查询以获取给定会话的会话信息 :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: \"<session-id>\") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### 查询网格中每个节点的功能 :
