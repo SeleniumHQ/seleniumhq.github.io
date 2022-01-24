@@ -1,9 +1,9 @@
 ---
-title: "Scroll wheel actions"
-linkTitle: "Wheel"
+title: "滚轮操作"
+linkTitle: "滚轮"
 weight: 6
 description: >
-    A representation of a scroll wheel input device for interacting with a web page.
+    用于与网页交互的滚轮输入设备的呈现.
 ---
 
-Scroll wheel support is coming to Selenium 4.2
+滚轮操作将要伴随 Selenium 4.2 发布
