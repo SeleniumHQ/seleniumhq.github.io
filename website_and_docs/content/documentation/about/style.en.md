@@ -169,7 +169,7 @@ With `langEqualsHeader=true`, you can add GitHub links at the bottom of the give
 Which looks like this:
 
 {{< tabpane >}}
-{{< tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}} /
+{{< tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
 Content in automatic code block that refers to something on GitHub
 {{< /tab >}}
 {{< tab header="No Link" >}}
