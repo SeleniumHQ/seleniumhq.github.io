@@ -5,6 +5,7 @@ weight: 8
 description: >
     Internet Explorer Driverは、WebDriverの仕様を実装するスタンドアロンサーバーです。
 ---
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
 `InternetExplorerDriver` は、WebDriverのワイヤプロトコルを実装するスタンドアロンサーバーです。 
 このドライバーは、IE11およびWindows10でテストされています。

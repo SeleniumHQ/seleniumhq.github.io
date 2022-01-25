@@ -130,13 +130,13 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { uri,
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### グリッドで最大セッション数を取得するためのクエリ 
+### グリッドで最大セッション数を取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { maxSession } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### グリッド内のすべてのノードのすべてのセッションの詳細を取得するためのクエリ 
+### グリッド内のすべてのノードのすべてのセッションの詳細を取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
@@ -151,7 +151,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInf
 ### 特定のセッションのセッション情報を取得するためのクエリ
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: \"<session-id>\") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### グリッド内の各ノードのcapabilityを照会する
