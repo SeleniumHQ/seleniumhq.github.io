@@ -273,9 +273,12 @@ const driver = new Builder().forBrowser('chrome').setChromeService(service).buil
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
+import org.openqa.selenium.chrome.ChromeDriver
 
-// Please raise a PR to add code example
-
+fun main(args: Array<String>) {
+    System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
+    val driver = ChromeDriver()
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
