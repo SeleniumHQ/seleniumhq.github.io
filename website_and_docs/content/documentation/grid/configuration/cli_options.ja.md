@@ -204,6 +204,7 @@ pull request updating this page.
 | `--plain-logs` | boolean | `true` | Use plain log lines |
 | `--structured-logs` | boolean | `false` | Use structured logs |
 | `--tracing` | boolean | `true` | Enable trace collection |
+| `--log-timestamp-format` | string | `HH:mm:ss.SSS` | Allows the configure log timestamp format |
 
 ### Network
 
