@@ -175,7 +175,7 @@ pull request updating this page.
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
 
-### Events 
+### Events
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -196,7 +196,7 @@ pull request updating this page.
 | `--structured-logs` | boolean | `false` | Use structured logs |
 | `--tracing` | boolean | `true` | Enable trace collection |
 
-### Network 
+### Network
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -208,12 +208,13 @@ pull request updating this page.
 |---|---|---|---|---|
 | `--detect-drivers` | boolean | `true` | Autodetect which drivers are available on the current system, and add them to the Node. |
 | `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype='{"browserName": "firefox", "browserVersion": "86", "moz:firefoxOptions": {"binary":"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin"}}'` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
-| `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. | 
+| `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. |
 | `--driver-implementation` | string[] | `"firefox"` | Drivers that should be checked. If specified, will skip autoconfiguration. |
+| `--node-implementation` | string | `"org.openqa.selenium.grid.node.local.LocalNodeFactory"` | Full classname of non-default Node implementation. This is used to manage a session's lifecycle. |
 | `--grid-url` | string | `https://grid.example.com` | Public URL of the Grid as a whole (typically the address of the Hub or the Router) |
 | `--heartbeat-period` | int | `60` | How often, in seconds, will the Node send heartbeat events to the Distributor to inform it that the Node is up. |
 | `--max-sessions` | int | `8` | Maximum number of concurrent sessions. Default value is the number of available processors. |
-| `--override-max-sessions` | boolean | `false` | The # of available processos is the recommended max sessions value (1 browser session per processor). Setting this flag to true allows the recommended max value to be overwritten. Session stability and reliability might suffer as the host could run out of resources. |
+| `--override-max-sessions` | boolean | `false` | The # of available processors is the recommended max sessions value (1 browser session per processor). Setting this flag to true allows the recommended max value to be overwritten. Session stability and reliability might suffer as the host could run out of resources. |
 | `--register-cycle` | int | `10` | How often, in seconds, the Node will try to register itself for the first time to the Distributor. |
 | `--register-period` | int | `120` | How long, in seconds, will the Node try to register to the Distributor for the first time. After this period is completed, the Node will not attempt to register again. |
 | `--session-timeout` | int | `300` | Let X be the session-timeout in seconds. The Node will automatically kill a session that has not had any activity in the last X seconds. This will release the slot for other tests. |
@@ -237,7 +238,7 @@ pull request updating this page.
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 
 
-### Server 
+### Server
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
@@ -281,9 +282,9 @@ When needed, you can combine a Toml file configuration with CLI arguments.
 {{% /pageinfo %}}
 
 
-### Command-line flags 
+### Command-line flags
 
-To pass config options as command-line flags, identify the valid options for the component 
+To pass config options as command-line flags, identify the valid options for the component
 and follow the template below.
 
 ```
@@ -308,8 +309,38 @@ java -jar selenium-server-<version>.jar hub --session-request-timeout 500 --port
 java -jar selenium-server-<version>.jar node --max-sessions 4 --log-level "fine" --port 7777 --driver-implementation "firefox" --driver-implementation "edge"
 ```
 
-#### Distributor, setting Session Map server url, Session Queue server url, and disabling bus 
+#### Distributor, setting Session Map server url, Session Queue server url, and disabling bus
 
 ```
 java -jar selenium-server-<version>.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus false
 ```
+
+#### Setting custom capabilities for matching specific Nodes
+**Important:** Custom capabilities need to be set in the configuration in all Nodes. They also
+need to be included always in every session request.
+
+##### Start the Hub
+```
+java -jar selenium-server-<version>.jar hub
+```
+
+##### Start the Node A with custom cap set to `true`
+```
+java -jar selenium-server-<version>.jar node --detect-drivers false --driver-configuration display-name="Chrome (custom capability true)" max-sessions=1 stereotype='{"browserName":"chrome","gsg:customcap":true}' --port 6161
+```
+
+##### Start the Node B with custom cap set to `false`
+```
+java -jar selenium-server-<version>.jar node --detect-drivers false --driver-configuration display-name="Chrome (custom capability true)" max-sessions=1 stereotype='{"browserName":"chrome","gsg:customcap":false}' --port 6262
+```
+
+##### Matching Node A
+```java
+ChromeOptions options = new ChromeOptions();
+options.setCapability("gsg:customcap", true);
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+driver.get("https://selenium.dev");
+driver.quit();
+```
+
+Set the custom capability to `false` in order to match the Node B.

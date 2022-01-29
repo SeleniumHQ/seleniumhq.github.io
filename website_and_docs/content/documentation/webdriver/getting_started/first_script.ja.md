@@ -345,7 +345,7 @@ driver.find_element(name: 'q').attribute('value') # => "Selenium"
 
 driver.quit
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/firstScript.js" >}}
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
 (async function helloSelenium() {

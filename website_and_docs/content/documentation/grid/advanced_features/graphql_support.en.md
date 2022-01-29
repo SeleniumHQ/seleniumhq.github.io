@@ -107,11 +107,11 @@ The structure of grid schema is as follows:
 
 ## Querying GraphQL
 
-The best way to query GraphQL is by using `curl` requests. GraphQL allows you to 
-fetch only the data that you want, nothing more nothing less.
+The best way to query GraphQL is by using `curl` requests. The query is interpreted as JSON. Ensure double quotes are properly escaped to avoid unexpected errors.
+GraphQL allows you to fetch only the data that you want, nothing more nothing less.
 
 Some of the example GraphQL queries are given below. You can build your own 
-queries as you like.
+queries as you like. 
 
 ### Querying the number of `maxSession` and `sessionCount` in the grid :
 
@@ -154,7 +154,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInf
 ### Query to get session information for a given session:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: \"<session-id>\") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Querying the capabilities of each node in the grid :

@@ -5,7 +5,7 @@ weight: 8
 description: >
     The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
 ---
-This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals) \
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
 The `InternetExplorerDriver` is a standalone server which implements WebDriver's wire protocol.
 This driver has been tested with IE 11, and on Windows 10. It might work with older versions

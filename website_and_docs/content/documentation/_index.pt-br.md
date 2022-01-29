@@ -113,11 +113,10 @@ fun main() {
 {{< /tabpane >}}
 
 
-See the [Overview]({{< ref "overview" >}}) to check the different project 
-components and decide if Selenium is the right tool for you.
+Consulte a [Visão Geral]({{< ref "overview" >}}) para verificar os diferentes componentes do projeto
+e decidir se o Selenium é a ferramenta certa para você.
 
-You should continue on to [Getting Started]({{< ref "webdriver/getting_started" >}})
-to understand how you can install Selenium and successfully use it as a test 
-automation tool, and scaling simple tests like this to run in large, distributed 
-environments on multiple browsers, on several different operating systems.
-
+Você deve continuar no Guia de [Introdução]({{< ref "webdriver/getting_started" >}})
+para entender como instalar o Selenium e usá-lo com sucesso como uma 
+ferramenta de automação de teste e dimensionar testes simples como esse para serem executados em ambientes grandes 
+e distribuídos em vários navegadores e em vários sistemas operacionais diferentes.
