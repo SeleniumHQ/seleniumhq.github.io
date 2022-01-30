@@ -230,6 +230,24 @@ Chromeのバージョンとchromedriverのバージョンはメジャーバー�
 
 Chromeの起動方法の例は、前章、つまり詳しく説明した[ドライバーを使用する3つの方法](#ドライバーを使用する3つの方法)に記載されています。
 
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+System.setProperty("webdriver.chrome.driver","/path/to/chromedriver");
+ChromeDriver driver = new ChromeDriver();
+{{< /tab >}}
+
+{{< tab header="Kotlin" >}}
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main(args: Array<String>) {
+  System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
+  val driver = ChromeDriver()
+}
+{{< /tab >}}
+
+{{< /tabpane >}}
+
 ### Edge
 
 Microsoft Edgeは、サポートされている最も古いバージョンのv79を使用してChromiumで実装されています。 
