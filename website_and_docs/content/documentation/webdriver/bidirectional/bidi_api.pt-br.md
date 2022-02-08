@@ -494,7 +494,7 @@ expect(driver.find_element(id: 'result').text).to eq('two')
 {{< /tab >}}
 
 {{< tab header="JavaScript" >}}
-const connection = await driver.createCDPConnection()
+const connection = await driver.createCDPConnection('page')
 let url = fileServer.whereIs("/cheese")
 let httpResponse = new HttpResponse(url)
 httpResponse.addHeaders("Content-Type", "UTF-8")
