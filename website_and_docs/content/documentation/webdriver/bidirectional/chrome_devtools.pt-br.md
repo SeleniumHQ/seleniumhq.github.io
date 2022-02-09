@@ -452,3 +452,100 @@ fun kotlinOverridDeviceMode() {
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+## Collect Performance Metrics
+
+Collect various performance metrics while navigating the application.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+public void performanceMetricsExample() {
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
+
+    driver.get("https://google.com");
+    driver.quit();
+
+    for(Metric m : metricList) {
+        System.out.println(m.getName() + " = " + m.getValue());
+    }
+}
+{{< /tab >}}
+{{< tab header="Python" >}}
+# Please raise a PR to add code sample
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// File must contain the following using statements
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+
+// We must use a version-specific set of domains
+using OpenQA.Selenium.DevTools.V94.Performance;
+
+public async Task PerformanceMetricsExample()
+{
+    IWebDriver driver = new ChromeDriver();
+    IDevTools devTools = driver as IDevTools;
+    DevToolsSession session = devTools.GetDevToolsSession();
+    await session.SendCommand<EnableCommandSettings>(new EnableCommandSettings());
+    var metricsResponse =
+        await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
+            new GetMetricsCommandSettings());
+
+    driver.Navigate().GoToUrl("http://www.google.com");
+    driver.Quit();
+
+    var metrics = metricsResponse.Metrics;
+    foreach (Metric metric in metrics)
+    {
+        Console.WriteLine("{0} = {1}", metric.Name, metric.Value);
+    }
+}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.duckduckgo.com'
+  driver.execute_cdp('Performance.enable', {})
+  metrics = driver.execute_cdp('Performance.getMetrics', {})
+  puts metrics
+ensure
+  driver.quit
+end
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+await driver.get("https://www.duckduckgo.com");
+
+await driver.sendAndGetDevToolsCommand('Performance.enable')
+
+let result = await driver.sendAndGetDevToolsCommand('Performance.getMetrics')
+console.log(result)
+
+await driver.quit();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+val driver = ChromeDriver()
+val devTools = driver.devTools
+devTools.createSession()
+devTools.send(Performance.enable(Optional.empty()))
+val metricList: List<Metric> = devTools.send(Performance.getMetrics())
+
+driver["https://google.com"]
+driver.quit()
+
+for (m in metricList) {
+    println(m.name.toString() + " = " + m.value)
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
