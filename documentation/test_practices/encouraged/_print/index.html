@@ -360,7 +360,7 @@ selectors, but the syntax is complicated and frequently difficult to
 debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.</p><p>Selection strategies based on <em>linkText</em> and <em>partialLinkText</em> have
 drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.</p><p>Tag name can be a dangerous way to locate elements. There are
+call down to <a href=https://www.w3.org/TR/webdriver/#link-text>querySelectorAll</a> selectors internally in WebDriver.</p><p>Tag name can be a dangerous way to locate elements. There are
 frequently multiple elements of the same tag present on the page.
 This is mostly useful when calling the <em>findElements(By)</em> method which
 returns a collection of elements.</p><p>The recommendation is to keep your locators as compact and
