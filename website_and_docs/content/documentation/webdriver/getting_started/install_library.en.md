@@ -119,7 +119,7 @@ Add the following section to the file `nuget.config` if it is empty:
 ...
 ```
 
-Use Ctrl-Shift-P and type "NuGet Add Package", and select required Selenium packages.
+From vscode, Use Ctrl-Shift-P and type "NuGet Add Package", and select required Selenium packages.
 Now you can use the examples in the documentation related to C# with vscode.
 
 ## Next Step
