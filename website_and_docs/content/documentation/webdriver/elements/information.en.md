@@ -10,6 +10,8 @@ There are a number of details you can query about a specific element.
 
 ## Is Displayed
 
+The isDisplayed method in Selenium verifies if a certain element is present and displayed. If the element is displayed, then the value returned is true. If not, then the value returned is false.
+
 ## Is Enabled
 
 This method is used to check if the connected Element
