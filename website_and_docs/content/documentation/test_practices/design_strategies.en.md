@@ -71,7 +71,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 }
 ```
 
-This signature looks a little unusual, but it all it means is that this class represents a LoadableComponent that loads the EditIssue page.
+This signature looks a little unusual, but all it means is that this class represents a LoadableComponent that loads the EditIssue page.
 
 By extending this base class, we need to implement two new methods:
 
