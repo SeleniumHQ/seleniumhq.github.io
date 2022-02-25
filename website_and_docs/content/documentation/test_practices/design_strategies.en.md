@@ -7,7 +7,7 @@ weight: 1
 
 ## Overview
 Over time, projects tend to accumulate large numbers of tests. As the total number of tests increases, 
-it becomes harder to make changes to the codebase --- a single "simple" change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help making tests easier to write and maintain. They may help you too.
+it becomes harder to make changes to the codebase --- a single "simple" change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help make tests easier to write and maintain. They may help you too.
 
 [DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}}): Express your tests in the language of the end-user of the app.
 [PageObjects]({{< ref "encouraged/page_object_models.md" >}}): A simple abstraction of the UI of your web app.
@@ -18,7 +18,7 @@ BotStyleTests: Using a command-based approach to automating tests, rather than t
 
 ### What Is It?
 
-The LoadableComponent is a base class that aims to make writing PageObjects less painful. It does this by providing a standard way of ensuring that pages are loaded and providing hooks to make debugging the failure of a page to load easier. You can use it to help reduce the amount of boilerplate code in your tests, which in turn make maintaining your tests less tiresome.
+The LoadableComponent is a base class that aims to make writing PageObjects less painful. It does this by providing a standard way of ensuring that pages are loaded and providing hooks to make debugging the failure of a page to load easier. You can use it to help reduce the amount of boilerplate code in your tests, which in turn makes maintaining your tests less tiresome.
 
 There is currently an implementation in Java that ships as part of Selenium 2, but the approach used is simple enough to be implemented in any language.
 
