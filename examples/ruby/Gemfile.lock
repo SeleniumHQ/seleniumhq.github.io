@@ -3,7 +3,9 @@ GEM
   specs:
     childprocess (4.1.0)
     diff-lcs (1.5.0)
-    nokogiri (1.13.0-x86_64-darwin)
+    nokogiri (1.13.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     racc (1.6.0)
     rake (13.0.6)
@@ -33,6 +35,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   rake (~> 13.0)
