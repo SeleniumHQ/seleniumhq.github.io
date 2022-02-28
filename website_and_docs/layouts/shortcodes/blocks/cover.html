@@ -5,7 +5,7 @@
 {{ $col_id := .Get "color" | default "dark" }}
 {{ $image_anchor := .Get "image_anchor" | default "smart" }}
 {{ $logo_anchor := .Get "logo_anchor" | default "smart" }}
-{{/* Height can be one of: auto, min, med, max, full. */}}
+{{/* Height can be one of: auto, min, med, max, full, tiny. */}}
 {{ $height := .Get "height" | default "max" }}
 {{ $byline := .Get "byline" | default "" }}
 {{ with $promo_image }}
