@@ -15,6 +15,12 @@
   padding-bottom: 1rem !important;
 }
 
+.td-cover-block--height-tiny {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 250px !important;
+}
+
 .td-cover-block--height-min {
     min-height: 300px !important;
 }
