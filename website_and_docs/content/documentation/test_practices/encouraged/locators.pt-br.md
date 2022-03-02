@@ -21,7 +21,7 @@ depurar. Embora os seletores XPath sejam muito flexíveis, eles não são tipica
 
 As estratégias de seleção baseadas em _linkText_ e _partialLinkText_ têm
 desvantagens porque eles só funcionam em elementos de link. Além disso, eles
-chamam seletores XPath internamente no WebDriver.
+chamam seletores [querySelectorAll](https://www.w3.org/TR/webdriver/#link-text) internamente no WebDriver.
 
 O nome da tag pode ser uma maneira perigosa de localizar elementos. tem
 frequentemente, vários elementos da mesma tag presentes na página.

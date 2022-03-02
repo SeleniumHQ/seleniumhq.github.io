@@ -107,7 +107,7 @@ val fruit = fruits.findElement(By.id("tomatoes"))
 ネストされたルックアップは、ブラウザに2つの別々のコマンドを発行する必要があるため、最も効果的なロケーション戦略ではない可能性があります。
 
 パフォーマンスをわずかに向上させるために、CSSまたはXPathのいずれかを使用して、単一のコマンドでこの要素を見つけることができます。 
-[推奨されるテストプラクティス]((({{< ref "/documentation/test_practices/encouraged" >}})))の章で、[ロケーター戦略](({{< ref "/documentation/test_practices/encouraged/locators.md" >}}))の提案を参照してください。
+[推奨されるテストプラクティス]({{< ref "/documentation/test_practices/encouraged" >}})の章で、[ロケーター戦略]({{< ref "/documentation/test_practices/encouraged/locators" >}})の提案を参照してください。
 
 この例では、CSSセレクターを使用します。
 

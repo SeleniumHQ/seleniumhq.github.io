@@ -77,6 +77,10 @@ silver:
     - logo: "/images/sponsors/TopBargains_Website_Logo.png"
       url: "https://www.topbargains.com.au/"
       name: "Top Bargains"
+     # Sponsorship start date: Feb 08, 2022
+    - logo: "/images/sponsors/Scraping_Bee_Logo.png"
+      url: "https://www.scrapingbee.com/?utm_source=selenium_sponsor&utm_medium=selenium_sponsor&utm_campaign=selenium_sponsor&utm_id=selenium_sponsor"
+      name: "ScrapingBee"
 
 bronze:
   # Set to false if no items are present

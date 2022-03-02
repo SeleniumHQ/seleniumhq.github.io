@@ -17,7 +17,7 @@ XPathはCSSセレクタと同様に動作しますが、シンタックスは複
 XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。
 
 link textセレクタとpartial _linkText_ セレクタはa要素でしか動作しないという欠点があります。
-加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。
+加えて、これらはWebDriverの内部で[querySelectorAll](https://www.w3.org/TR/webdriver/#link-text)の呼び出しに置き換えられます。
 
 タグ名によるロケータは危険な方法になり得ます。
 大抵の場合ページ上には同じタグ名の要素が複数あります。タグ名は要素のコレクションを返す _findElements(By)_ メソッドを使う時にもっとも役に立ちます。

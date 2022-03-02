@@ -191,7 +191,7 @@ val emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-ema
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Chaining relative lcoators
+### Chaining relative locators
 
 You can also chain locators if needed. Sometimes the element is most easily identified as being both above/below one
 element and right/left of another.
