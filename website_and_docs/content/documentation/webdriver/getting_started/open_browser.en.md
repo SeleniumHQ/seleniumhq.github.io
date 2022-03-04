@@ -55,6 +55,9 @@ that can be used.
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const chrome = require('selenium-webdriver/chrome');
+
   let options = new chrome.Options();
   let driver = await new Builder()
     .forBrowser('chrome')
@@ -102,6 +105,9 @@ the major version number of edgedriver must match the major version of the Edge 
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const edge = require('selenium-webdriver/edge');
+
   let options = new edge.Options();
   let driver = await new Builder()
     .forBrowser('MicrosoftEdge')
@@ -148,6 +154,9 @@ Selenium 4 requires Firefox 78 or greater. It is recommended to always use the l
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const firefox = require('selenium-webdriver/firefox');
+
   let options = new firefox.Options();
   let driver = await new Builder()
     .forBrowser('firefox')
@@ -210,6 +219,9 @@ Additional information about using Internet Explorer can be found
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const ie = require('selenium-webdriver/ie');
+
   let options = new ie.Options();
   let driver = await new Builder()
     .forBrowser('internetExplorer')
@@ -326,6 +338,9 @@ make sure that the browser version matches the driver version.
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const chrome = require('selenium-webdriver/chrome');
+
   let options = new chrome.Options();
   options.setChromeBinaryPath("/path/to/opera/browser");
 
@@ -380,6 +395,9 @@ safaridriver --enable
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
+  const { Builder } = require("selenium-webdriver");
+  const safari = require('selenium-webdriver/safari');
+
   let options = new safari.Options();
   let driver = await new Builder()
     .forBrowser('safari')
