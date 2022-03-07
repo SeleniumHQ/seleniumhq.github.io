@@ -1,34 +1,33 @@
 ---
-title: "Open and close a browser with Selenium"
-linkTitle: "Open Browser"
+title: "使用Selenium打开和关闭浏览器"
+linkTitle: "打开浏览器"
 weight: 6
-needsTranslation: true
 description: >
-  Code examples for starting and stopping a session with each browser.
+  使用每种浏览器启动和停止会话的代码示例.
 ---
 
-Once you have a [Selenium library installed]({{< ref "install_library.md" >}}),
-and your [desired browser driver]({{< ref "install_library.md" >}}),
-you can start and stop a session with a browser.
+当你已经完成 [安装Selenium类库]({{< ref "install_library.md" >}}),
+以及 [浏览器所需的驱动]({{< ref "install_library.md" >}}),
+您可以使用浏览器启动和停止会话.
 
-Typically, browsers are started with specific options that describe
-which capabilities the browser must support, and how the browser should
-behave during the session. Some capabilities are 
-[shared by all browsers]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}), and
-some will be specific to the browser being used.
-This page will show examples of starting a browser with the default capabilities.
+通常, 浏览器都是根据特定的选项启动, 
+这些选项描述浏览器必须支持哪些功能, 
+以及浏览器在会话期间应如何运行.
+有些功能由[所有浏览器共享]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}),
+有些功能特定于所使用的浏览器.
+此页面将显示使用默认功能启动浏览器的示例.
 
-After learning how to start a session, check out the next session on how to 
-[write your first Selenium script]({{< ref "first_script.md" >}})
+在学习如何开启一个会话后, 
+请查看下一段内容关于如何
+[编写第一个Selenium脚本的会话]({{< ref "first_script.md" >}}) 
 
 ## Chrome
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of 
-the Chrome browser and the version of chromedriver must match the major version. 
+默认情况下, Selenium 4与Chrome v75及更高版本兼容.
+请注意, Chrome浏览器和chromedriver的版本必须与主版本匹配. 
 
-In addition to the [shared capabilities]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}),
-there are specific [Chrome capabilities]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}})
-that can be used.
+除了[共享功能]({{< ref "/documentation/webdriver/capabilities/shared.md" >}})外,
+还可以使用特定的[Chrome功能]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}}).
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L27-L30" >}}
@@ -77,8 +76,10 @@ that can be used.
 
 ## Edge
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+微软Edge是用Chromium实现的, 
+是最早支持的v79版本.
+与Chrome类似, 
+edgedriver的主要版本号必须与Edge浏览器的主要版本匹配.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L35-L38">}}
@@ -127,7 +128,8 @@ the major version number of edgedriver must match the major version of the Edge 
 
 ## Firefox
 
-Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
+Selenium 4需要Firefox 78或更高版本.
+建议始终使用geckodriver的最新版本.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L43-L46">}}
@@ -176,23 +178,22 @@ Selenium 4 requires Firefox 78 or greater. It is recommended to always use the l
 
 ## Internet Explorer
 
-The IE Driver is the only driver maintained by the Selenium Project directly.
-While binaries for both the 32-bit and 64-bit
-versions of Internet Explorer are available, there are some
-[limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+IE驱动程序是Selenium项目直接维护的唯一驱动程序.
+虽然32位和64位版本的Internet Explorer都有可执行文件, 
+但64位驱动程序存在一些[限制](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html).
+因此, 建议使用32位驱动程序.
 
 ### Legacy 
-The Selenium project aims to support the same releases that
-[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
-Older releases may work, but will not be supported. Note that Internet Explorer 11 will end support for certain 
-operating systems, including Windows 10 on June 15, 2022.
+Selenium项目旨在支持[微软认为最新的版本](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
+旧版本可能会工作, 但不受支持.
+请注意, 
+Internet Explorer 11将于2022年6月15日终止对包括Windows 10在内的某些操作系统的支持.
 
-It should be noted that as Internet Explorer
-preferences are saved against the logged-in user's account, some additional setup is required.
+需要注意的是, 由于Internet Explorer首选项是针对登录用户的帐户保存的, 
+因此需要进行一些额外的设置.
 
-Additional information about using Internet Explorer can be found
-[on the Selenium wiki](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
+有关使用Internet Explorer的更多信息, 
+请访问[Selenium wiki](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L52-L55">}}
@@ -239,8 +240,8 @@ Additional information about using Internet Explorer can be found
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Compatibility Mode
-Microsoft Edge can be used in IE compatibility mode using the IE Driver.
+### 兼容模式
+可以使用IE驱动程序在IE兼容模式下使用微软Edge.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L61-L67">}}
@@ -302,9 +303,9 @@ Microsoft Edge can be used in IE compatibility mode using the IE Driver.
 
 ## Opera
 
-Since the opera driver does not support w3c syntax, but is based on Chromium, it is recommended
-to drive Opera browser with the chromedriver. Like all Chromium implementations, 
-make sure that the browser version matches the driver version.
+由于opera驱动程序不支持w3c语法, 
+但基于Chrome, 因此建议使用chromedriver驱动opera浏览器.
+与所有Chromium实现一样, 确保浏览器版本与驱动程序版本匹配.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
@@ -364,8 +365,9 @@ make sure that the browser version matches the driver version.
 ## Safari
 
 ### Desktop
-Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:
+与Chromium和Firefox驱动程序不同, 
+safaridriver是随操作系统一起安装的.
+要在Safari上启用自动化, 请从命令行运行以下命令:
 
 ```shell
 safaridriver --enable
@@ -415,8 +417,9 @@ safaridriver --enable
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Mobile
-Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+### 移动端
+那些希望在iOS上实现Safari自动化的人
+应该看看[Appium项目](//appium.io/).
 
-## Next Step
-[Create your first Selenium script]({{< ref "first_script.md" >}})
+## 下一步
+[创建你的第一个Selenium脚本]({{< ref "first_script.md" >}})
