@@ -7,7 +7,12 @@ weight: 1
 
 ## Overview
 Over time, projects tend to accumulate large numbers of tests. As the total number of tests increases, 
-it becomes harder to make changes to the codebase --- a single "simple" change may cause numerous tests to fail, even though the application still works properly. Sometimes these problems are unavoidable, but when they do occur you want to be up and running again as quickly as possible. The following design patterns and strategies have been used before with WebDriver to help making tests easier to write and maintain. They may help you too.
+it becomes harder to make changes to the codebase --- a single "simple" change 
+may cause numerous tests to fail, even though the application still works properly. 
+Sometimes these problems are unavoidable, but when they do occur you want to be up 
+and running again as quickly as possible. The following design patterns and strategies 
+have been used before with WebDriver to help make tests easier to write and maintain. 
+They may help you too.
 
 [DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}}): Express your tests in the language of the end-user of the app.
 [PageObjects]({{< ref "encouraged/page_object_models.md" >}}): A simple abstraction of the UI of your web app.
@@ -18,13 +23,19 @@ BotStyleTests: Using a command-based approach to automating tests, rather than t
 
 ### What Is It?
 
-The LoadableComponent is a base class that aims to make writing PageObjects less painful. It does this by providing a standard way of ensuring that pages are loaded and providing hooks to make debugging the failure of a page to load easier. You can use it to help reduce the amount of boilerplate code in your tests, which in turn make maintaining your tests less tiresome.
+The LoadableComponent is a base class that aims to make writing PageObjects less painful. 
+It does this by providing a standard way of ensuring that pages are loaded and providing 
+hooks to make debugging the failure of a page to load easier. You can use it to help 
+reduce the amount of boilerplate code in your tests, which in turn makes maintaining 
+your tests less tiresome.
 
 There is currently an implementation in Java that ships as part of Selenium 2, but the approach used is simple enough to be implemented in any language.
 
 ### Simple Usage
 
-As an example of a UI that we'd like to model, take a look at the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. From the point of view of a test author, this offers the service of being able to file a new issue. A basic Page Object would look like:
+As an example of a UI that we'd like to model, take a look at 
+the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. From the point of view of a test author, 
+this offers the service of being able to file a new issue. A basic Page Object would look like:
 
 ```
 package com.example.webdriver;
@@ -71,7 +82,8 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 }
 ```
 
-This signature looks a little unusual, but it all it means is that this class represents a LoadableComponent that loads the EditIssue page.
+This signature looks a little unusual, but all it means is that this class 
+represents a LoadableComponent that loads the EditIssue page.
 
 By extending this base class, we need to implement two new methods:
 
@@ -88,7 +100,11 @@ By extending this base class, we need to implement two new methods:
   }
 ```
 
-The `load` method is used to navigate to the page, whilst the `isLoaded` method is used to determine whether we are on the right page. Although the method looks like it should return a boolean, instead it performs a series of assertions using JUnit's Assert class. There can be as few or as many assertions as you like. By using these assertions it's possible to give users of the class clear information that can be used to debug tests.
+The `load` method is used to navigate to the page, whilst the `isLoaded` method is used to 
+determine whether we are on the right page. Although the method looks like it should return 
+a boolean, instead it performs a series of assertions using JUnit's Assert class. 
+There can be as few or as many assertions as you like. By using these assertions 
+it's possible to give users of the class clear information that can be used to debug tests.
 
 With a little rework, our PageObject looks like:
 
@@ -157,7 +173,9 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
 ```
 
-That doesn't seem to have bought us much, right? One thing it has done is encapsulate the information about how to navigate to the page into the page itself, meaning that this information's not scattered through the code base. It also means that we can do this in our tests:
+That doesn't seem to have bought us much, right? One thing it has done is encapsulate 
+the information about how to navigate to the page into the page itself, meaning that 
+this information's not scattered through the code base. It also means that we can do this in our tests:
 
 ```
 EditIssue page = new EditIssue(driver).get();
@@ -167,7 +185,11 @@ This call will cause the driver to navigate to the page if that's necessary.
 
 ### Nested Components
 
-LoadableComponents start to become more useful when they are used in conjunction with other LoadableComponents. Using our example, we could view the "edit issue" page as a component within a project's website (after all, we access it via a tab on that site). You also need to be logged in to file an issue. We could model this as a tree of nested components:
+LoadableComponents start to become more useful when they are used in conjunction 
+with other LoadableComponents. Using our example, we could view the "edit issue" 
+page as a component within a project's website (after all, we access it via a tab 
+on that site). You also need to be logged in to file an issue. We could model this 
+as a tree of nested components:
 
 ```
  + ProjectPage
@@ -175,7 +197,9 @@ LoadableComponents start to become more useful when they are used in conjunction
      +---+ EditIssue
 ```
 
-What would this look like in code? For a start, each logical component would have its own class. The "load" method in each of them would "get" the parent. The end result, in addition to the EditIssue class above is:
+What would this look like in code? For a start, each logical component would 
+have its own class. The "load" method in each of them would "get" the parent. 
+The end result, in addition to the EditIssue class above is:
 
 ProjectPage.java:
 
@@ -278,7 +302,9 @@ The "load" method in EditIssue now looks like:
   }
 ```
 
-This shows that the components are all "nested" within each other. A call to `get()` in EditIssue will cause all its dependencies to load too. The example usage:
+This shows that the components are all "nested" within each other. 
+A call to `get()` in EditIssue will cause all its dependencies to 
+load too. The example usage:
 
 ```
 public class FooTest {
@@ -311,9 +337,13 @@ the preamble of setting up the PageObjects can be omitted leading to nice, clear
 
 (previously located: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
 
-Although PageObjects are a useful way of reducing duplication in your tests, it's not always a pattern that teams feel comfortable following. An alternative approach is to follow a more "command-like" style of testing.
+Although PageObjects are a useful way of reducing duplication in your tests, 
+it's not always a pattern that teams feel comfortable following. 
+An alternative approach is to follow a more "command-like" style of testing.
 
-A "bot" is an action-oriented abstraction over the raw Selenium APIs. This means that if you find that commands aren't doing the Right Thing for your app, it's easy to change them. As an example:
+A "bot" is an action-oriented abstraction over the raw Selenium APIs. 
+This means that if you find that commands aren't doing the Right Thing 
+for your app, it's easy to change them. As an example:
 
 ```
 public class ActionBot {

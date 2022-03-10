@@ -143,7 +143,7 @@ var cloudOptions = new Dictionary<string, object>();
 cloudOptions.Add("build", myTestBuild);
 cloudOptions.Add("name", myTestName);
 browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
-var driver = new RemoteWebDriver(new Uri(CloudURL), options);
+var driver = new RemoteWebDriver(new Uri(CloudURL), browserOptions);
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 options = Selenium::WebDriver::Options.firefox

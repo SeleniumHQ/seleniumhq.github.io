@@ -195,6 +195,7 @@ pull request updating this page.
 | `--plain-logs` | boolean | `true` | Use plain log lines |
 | `--structured-logs` | boolean | `false` | Use structured logs |
 | `--tracing` | boolean | `true` | Enable trace collection |
+| `--log-timestamp-format` | string | `HH:mm:ss.SSS` | Allows the configure log timestamp format |
 
 ### Network
 
@@ -219,6 +220,7 @@ pull request updating this page.
 | `--register-period` | int | `120` | How long, in seconds, will the Node try to register to the Distributor for the first time. After this period is completed, the Node will not attempt to register again. |
 | `--session-timeout` | int | `300` | Let X be the session-timeout in seconds. The Node will automatically kill a session that has not had any activity in the last X seconds. This will release the slot for other tests. |
 | `--vnc-env-var`| string | `START_XVFB` | Environment variable to check in order to determine if a vnc stream is available or not. |
+| `--no-vnc-port`| int | `7900` | If VNC is available, sets the port where the local noVNC stream can be obtained |
 
 ### Relay
 

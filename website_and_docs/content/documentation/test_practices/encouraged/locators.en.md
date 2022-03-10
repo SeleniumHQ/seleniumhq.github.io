@@ -21,7 +21,7 @@ not performance tested by browser vendors and tend to be quite slow.
 
 Selection strategies based on _linkText_ and _partialLinkText_ have
 drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+call down to [querySelectorAll](https://www.w3.org/TR/webdriver/#link-text) selectors internally in WebDriver.
 
 Tag name can be a dangerous way to locate elements. There are
 frequently multiple elements of the same tag present on the page.
