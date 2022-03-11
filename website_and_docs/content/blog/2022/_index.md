@@ -2,7 +2,7 @@
 ---
 title: "Blog Posts - 2022"
 linkTitle: "2022"
-weight: 90
+weight: 88
 ---
 
 
