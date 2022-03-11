@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – maven</title><link>/tags/maven/</link><description>Recent content in maven on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jan 2011 00:00:00 +0000</lastBuildDate><atom:link href="/tags/maven/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 2.0b1 and Maven</title><link>/blog/2011/2-0b1-and-maven/</link><pubDate>Tue, 25 Jan 2011 00:00:00 +0000</pubDate><guid>/blog/2011/2-0b1-and-maven/</guid><description>
 &lt;p>If you’re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml&lt;/p>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
+&lt;pre tabindex="0">&lt;code>&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
 &amp;lt;artifactId&amp;gt;selenium&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;2.0b1&amp;lt;/version&amp;gt;

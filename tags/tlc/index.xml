@@ -800,7 +800,7 @@ Currently: 161 open issues, 25 open pull requests&lt;/li>
 &lt;p>&lt;em>Titus Fortner 9:13 PM&lt;/em>&lt;/p>
 &lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/411b883645023d1e1a629a3197d3552253b93f2f/rb/lib/selenium/webdriver/remote/driver.rb#L54">https://github.com/SeleniumHQ/selenium/blob/411b883645023d1e1a629a3197d3552253b93f2f/rb/lib/selenium/webdriver/remote/driver.rb#L54&lt;/a>
 driver.rb&lt;/p>
-&lt;p>capabilities[&amp;lsquo;se:cdpVersion&amp;rsquo;].split('.').first&lt;/p>
+&lt;p>capabilities[&amp;lsquo;se:cdpVersion&amp;rsquo;].split(&amp;rsquo;.&amp;rsquo;).first&lt;/p>
 &lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium%7CSeleniumHQ/selenium">https://github.com/SeleniumHQ/selenium|SeleniumHQ/selenium&lt;/a>SeleniumHQ/selenium | Added by GitHub&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:13 PM&lt;/em>&lt;/p>
 &lt;p>Perfect :slightly_smiling_face:&lt;/p>
@@ -1030,7 +1030,7 @@ Documentation for Selenium&lt;/p>
 &lt;p>&lt;em>Luis Correia 9:55 PM&lt;/em>&lt;/p>
 &lt;p>I would be happy with that on a webpage&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:56 PM&lt;/em>&lt;/p>
-&lt;p>OK. Would you please leave a comment on &lt;a href="https://github.com/SeleniumHQ/selenium/issues/8165?">https://github.com/SeleniumHQ/selenium/issues/8165?&lt;/a>&lt;/p>
+&lt;p>OK. Would you please leave a comment on &lt;a href="https://github.com/SeleniumHQ/selenium/issues/8165">https://github.com/SeleniumHQ/selenium/issues/8165&lt;/a>?&lt;/p>
 &lt;p>8165 Update user docs with new Selenium 4 features
 :rocket: Feature Proposal
 Selenium 4 brings a set of all-new features and &lt;a href="https://www.selenium.dev/documentation/en/">https://www.selenium.dev/documentation/en/&lt;/a> needs to be updated to contain the related docs for them.
@@ -1061,7 +1061,7 @@ that&amp;rsquo;s proper context&lt;/p>
 &lt;p>Or you can PR the changes you think would provide the context; docs are all in a public repo.&lt;/p>
 &lt;p>I&amp;rsquo;m struggling a bit with Sauce documentation right now. I&amp;rsquo;m good at making sure the info is &amp;ldquo;correct,&amp;rdquo; but finding I&amp;rsquo;m not so great on explaining why it matters to people, and that part is important&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:59 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner I guess you&amp;rsquo;ve seen &lt;a href="https://developers.google.com/tech-writing?">https://developers.google.com/tech-writing?&lt;/a>&lt;/p>
+&lt;p>@titusfortner I guess you&amp;rsquo;ve seen &lt;a href="https://developers.google.com/tech-writing">https://developers.google.com/tech-writing&lt;/a>?&lt;/p>
 &lt;p>&lt;em>Titus Fortner 9:59 PM&lt;/em>&lt;/p>
 &lt;p>It&amp;rsquo;s like I have &amp;ldquo;presentation&amp;rdquo; mode and &amp;ldquo;documentation&amp;rdquo; mode and I can&amp;rsquo;t get them to work together :smile:&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:59 PM&lt;/em>&lt;/p>
@@ -3231,7 +3231,7 @@ I should be more available in January to help, but I&amp;rsquo;ve spent more tim
 &lt;p>&lt;em>David Burns 9:49 PM&lt;/em>
 do we have people to do releases for ruby with @p0deje away?&lt;/p>
 &lt;p>&lt;em>Alex Rodionov 9:50 PM&lt;/em>&lt;/p>
-&lt;p>According to &lt;a href="https://github.com/SeleniumHQ/selenium/issues/8168,">https://github.com/SeleniumHQ/selenium/issues/8168,&lt;/a> a currently missing CDP stuff in Ruby is:
+&lt;p>According to &lt;a href="https://github.com/SeleniumHQ/selenium/issues/8168">https://github.com/SeleniumHQ/selenium/issues/8168&lt;/a>, a currently missing CDP stuff in Ruby is:
 Intercept network requests allowing to mock backend requests
 Bootstrap script
 Record traffic
@@ -4739,7 +4739,7 @@ what do we need to be done before doing Alpha 7?&lt;/p>
 &lt;p>&lt;em>Simon Stewart 8:25 PM&lt;/em>&lt;/p>
 &lt;p>We need all languages to have that in place before we can move to betas&lt;/p>
 &lt;p>&lt;em>Diego Molina 8:27 PM&lt;/em>&lt;/p>
-&lt;p>I have seen a few PRs from &lt;a href="https://github.com/seanpoulter,">https://github.com/seanpoulter,&lt;/a> he seems keen to help in JS
+&lt;p>I have seen a few PRs from &lt;a href="https://github.com/seanpoulter">https://github.com/seanpoulter&lt;/a>, he seems keen to help in JS
 he already asked how he can implement relative locators in JS
 we should try to give him quick feedback&lt;/p>
 &lt;p>Sean Poulter
@@ -5163,8 +5163,8 @@ timeline of the meeting held on April 23, 2020 (times are on CET).&lt;/p>
 &lt;p>&lt;em>Simon Stewart 4:38 PM&lt;/em>&lt;/p>
 &lt;p>It’s the law of diminishing returns. We’re starting to hit actual issues and things that need thinking about&lt;/p>
 &lt;p>&lt;em>Diego Molina 4:41 PM&lt;/em>&lt;/p>
-&lt;p>I experimented during the weekend with &lt;a href="https://chaoss.github.io/grimoirelab/">https://chaoss.github.io/grimoirelab/&lt;/a> and &lt;a href="https://github.com/cncf/devstats,">https://github.com/cncf/devstats,&lt;/a> I liked the first one more, but we need to find a place where to deploy it for free
-Recently I bumped into &lt;a href="https://github.com/google/triage-party,">https://github.com/google/triage-party,&lt;/a> which could be also a good one to have an overview (edited)&lt;/p>
+&lt;p>I experimented during the weekend with &lt;a href="https://chaoss.github.io/grimoirelab/">https://chaoss.github.io/grimoirelab/&lt;/a> and &lt;a href="https://github.com/cncf/devstats">https://github.com/cncf/devstats&lt;/a>, I liked the first one more, but we need to find a place where to deploy it for free
+Recently I bumped into &lt;a href="https://github.com/google/triage-party">https://github.com/google/triage-party&lt;/a>, which could be also a good one to have an overview (edited)&lt;/p>
 &lt;p>&lt;em>4:42&lt;/em>&lt;/p>
 &lt;p>all this in the spirit of having a clear project status for everyone&lt;/p>
 &lt;p>I can try to have something working for the next meeting, does anyone have more comments or should we move to the next topic?&lt;/p>
