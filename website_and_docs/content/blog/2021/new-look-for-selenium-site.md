@@ -18,7 +18,7 @@ possible!
 We did a major revamp to our website two years ago. However, this
 revamp had some "technical debt" in it...
 
-{{< tweet 1194205732347887616 >}}
+{{< tweet user="SeleniumHQ" id="1194205732347887616" >}}
 
 We use [Hugo](https://gohugo.io/) to generate our website, and to
 build a website with Hugo, one normally needs to select a 
