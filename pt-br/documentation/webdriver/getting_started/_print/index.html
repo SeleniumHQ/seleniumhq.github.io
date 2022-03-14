@@ -66,7 +66,26 @@ você deve adicionar a seguinte dependência:</p><div class=highlight><pre tabin
 </span></span><span style=display:flex><span>Install-Package Selenium.WebDriver
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># or using .Net CLI</span>
 </span></span><span style=display:flex><span>dotnet add package Selenium.WebDriver
-</span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><div class=nocode><p>A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
+</span></span></code></pre></div><h2 id=supported-net-versions>Supported .NET Versions</h2><p>Make sure to use the .NET SDK version compatible with relevant <a href=https://www.nuget.org/packages/Selenium.WebDriver>Selenium package</a>.
+Check the dependencies section to find out the <a href=https://dotnet.microsoft.com/en-us/download/dotnet>supported .NET version</a>.
+At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
+You can download <a href="https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019">MSBuild Tools 2019 from here</a> to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.</p><h2 id=using-visual-studio-code-vscode-and-c>Using Visual Studio Code (vscode) and C#</h2><p>This is a quick guide to help you get started with vscode and C#, however, more research may be required.
+Install the compatible .NET SDK as per the seciton above.
+Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
+Follow the <a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0">instruction here</a> to create and run the &ldquo;Hello World&rdquo; console project using C#.
+You may also create a NUnit starter project using the command line <code>dotnet new NUnit</code>.
+Make sure the file <code>%appdata%\NuGet\nuget.config</code> is configured properly as some developers reported that it will be empty due to some issues.
+If <code>nuget.config</code> is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
+Add the following section to the file <code>nuget.config</code> if it is empty:</p><pre tabindex=0><code>&lt;configuration&gt;
+  &lt;packageSources&gt;
+    &lt;add key=&#34;nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; protocolVersion=&#34;3&#34; /&gt;
+    &lt;add key=&#34;nuget.org&#34; value=&#34;https://www.nuget.org/api/v2/&#34; /&gt;   
+  &lt;/packageSources&gt;
+...
+</code></pre><p>For more info about <code>nuget.config</code> <a href=https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file>click here</a>.
+You may have to customize <code>nuget.config</code> to meet you needs.</p><p>Now, go back to vscode, press Ctrl-Shift-P, and type &ldquo;NuGet Add Package&rdquo;, and enter the required Selenium packages such as <code>Selenium.WebDrive</code>.
+Press Entery and select the version.
+Now you can use the examples in the documentation related to C# with vscode.</p></div></div><div class="tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><div class=nocode><p>A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-4 role=tabpanel aria-labelled-by=tabs-0-4-tab><div class=nocode><p>A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab><div class=nocode>Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven <a href=#java>Java</a></div></div></div><h2 id=next-step>Next Step</h2><p><a href=/pt-br/documentation/webdriver/getting_started/install_drivers/>Install the browser drivers</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-85748a8d5e7df1adfbfbebcb08631f9b>2 - Installing browser drivers</h1><div class=lead>Setting up your browser ready to be automated.</div><p>Through WebDriver, Selenium supports all major browsers on the market
 such as Chrome/Chromium, Firefox, Internet Explorer, Edge, Opera, and Safari.
