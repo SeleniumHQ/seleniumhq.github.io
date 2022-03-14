@@ -11,6 +11,45 @@ There are a number of details you can query about a specific element.
 
 ## Is Displayed
 
+This method is used to check if the connected Element is
+displayed on a webpage. Returns a `Boolean` value,
+True if the connected element is displayed in the current
+browsing context else returns false.
+
+This functionality is [mentioned in](https://w3c.github.io/webdriver/#element-displayedness), but not defined by
+the w3c specification due to the
+[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=hTa1KI6fQpg).
+As such, Selenium cannot expect drivers to implement
+this functionality directly, and now relies on
+executing a large JavaScript function directly.
+This function makes many approximations about an element's
+nature and relationship in the tree to return a value.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+// Help us with a PR for code sample
+{{< /tab >}}
+{{< tab header="Python" >}}
+# Help us with a PR for code sample
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// Help us with a PR for code sample
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+# Help us with a PR for code sample
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+// Help us with a PR for code sample
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Help us with a PR for code sample
+{{< /tab >}}
+{{< /tabpane >}}
+
+{{< alert-code >}}
+for element displayedness
+{{< /alert-code >}}
+
 
 ## Is Element Selected
 

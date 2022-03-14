@@ -114,8 +114,8 @@ A nested lookup might not be the most effective location strategy since it requi
 separate commands to be issued to the browser.
 
 To improve the performance slightly, we can use either CSS or XPath to find this element in a single command.
-See the [Locator strategy suggestions](({{< ref "/documentation/test_practices/encouraged/locators.md" >}})) in our
-[Encouraged test practices]((({{< ref "/documentation/test_practices/encouraged" >}}))) section.
+See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}}) in our
+[Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) section.
 
 For this example, we'll use a CSS Selector:
 

@@ -14,13 +14,13 @@ We are very pleased to announce the release of <a href="http://www.selenium.dev/
 
 All the information can be seen in different tweets from the project contributors, here they are all in one place:
 
-{{< tweet 1266307374941437952 >}}
-{{< tweet 1266307376279359488 >}}
-{{< tweet 1266307377420275713 >}}
-{{< tweet 1266307378485563392 >}}
-{{< tweet 1266307379513171968 >}}
-{{< tweet 1266025050706149379 >}}
-{{< tweet 1266144106885111814 >}}
+{{< tweet user="shs96c" id="1266307374941437952" >}}
+{{< tweet user="shs96c" id="1266307376279359488" >}}
+{{< tweet user="shs96c" id="1266307377420275713" >}}
+{{< tweet user="shs96c" id="1266307378485563392" >}}
+{{< tweet user="shs96c" id="1266307379513171968" >}}
+{{< tweet user="AutomatedTester" id="1266025050706149379" >}}
+{{< tweet user="p0deje" id="1266144106885111814" >}}
 
 Happy hacking!
 
