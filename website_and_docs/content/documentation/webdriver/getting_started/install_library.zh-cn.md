@@ -78,13 +78,15 @@ dotnet add package Selenium.WebDriver
 Make sure to use the .NET SDK version compatible with relevant [Selenium package](https://www.nuget.org/packages/Selenium.WebDriver).
 Check the dependencies section to find out the [supported .NET version](https://dotnet.microsoft.com/en-us/download/dotnet).
 At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
-You can download [MSBuild Tools 2019 from here](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.
+You can download [MSBuild Tools 2019 from here](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) 
+to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.
 
 ## Using Visual Studio Code (vscode) and C#
 This is a quick guide to help you get started with vscode and C#, however, more research may be required.
-Install the compatible .NET SDK as per the seciton above.
+Install the compatible .NET SDK as per the section above.
 Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
-Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0) to create and run the "Hello World" console project using C#.
+Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0) 
+to create and run the "Hello World" console project using C#.
 You may also create a NUnit starter project using the command line `dotnet new NUnit`.
 Make sure the file `%appdata%\NuGet\nuget.config` is configured properly as some developers reported that it will be empty due to some issues.
 If `nuget.config` is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
@@ -100,8 +102,8 @@ Add the following section to the file `nuget.config` if it is empty:
 For more info about `nuget.config` [click here](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
 You may have to customize `nuget.config` to meet you needs.
 
-Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and enter the required Selenium packages such as `Selenium.WebDrive`.
-Press Entery and select the version.
+Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and enter the required Selenium packages such as `Selenium.WebDriver`.
+Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.
 
   {{< /tab >}}
