@@ -38,7 +38,11 @@ nature and relationship in the tree to return a value.
 # Help us with a PR for code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-// Help us with a PR for code sample
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
