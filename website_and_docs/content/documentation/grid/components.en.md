@@ -23,7 +23,7 @@ The Router behaves differently depending on the request.
 If it is a new session request, the Router will add it to the New Session Queue. 
 The Distributor regularly checks if there is a free slot. 
 If so, the first matching request is removed from the New Session Queue.
-will receive the event and poll the New Session Queue to get the new session request.
+The Router will receive the event and poll the New Session Queue to get the new session request.
 If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will 
 return the Node where the session is running. After this, the Router will
