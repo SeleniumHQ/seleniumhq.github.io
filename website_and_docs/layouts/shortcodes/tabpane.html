@@ -28,7 +28,7 @@
     id="{{ $entryid }}" role="tabpanel" aria-labelled-by="{{ $tabid }}">
 
   {{ if $.Get "disableCodeBlock" }}
-    <div class="nocode">
+    <div class="my-3 py-2 border-bottom">
       {{- index . "content" | markdownify -}}
     </div>
   {{ else }}
