@@ -16,6 +16,9 @@
 {{ with $.Get "github" }}
 {{ $tab = merge $tab (dict "github" ($.Get "github")) }}
 {{ end }}
+{{ with $.Get "disableCodeBlock" }}
+{{ $tab = merge $tab (dict "disableCodeBlock" ($.Get "disableCodeBlock")) }}
+{{ end }}
 {{ with $.Get "highlight" }}
 {{ $tab = merge $tab (dict "highlight" ($.Get "highlight")) }}
 {{ end }}

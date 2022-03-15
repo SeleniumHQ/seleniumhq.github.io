@@ -1,0 +1,32 @@
+{{ $url := .Get "codeUrl" }}
+{{ $parsedUrl := urls.Parse $url }}
+{{ $slicedPath := split $parsedUrl.Path "/" }}
+{{ $org := index $slicedPath 1 }}
+{{ $repo := index $slicedPath 2 }}
+{{ $branch := index $slicedPath 4 }}
+{{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
+{{ $filePath := delimit (after 5 $slicedPath) "/" }}
+{{ $apiUrl := printf "https://api.github.com/repos/%s/%s/contents/%s?ref=%s" $org $repo $filePath $branch }}
+
+{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
+{{ $toReplace := printf "://%s@" $githubToken }}
+{{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
+{{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
+
+{{ $apiResults := getJSON $apiUrlWithToken  }}
+{{ $content := base64Decode $apiResults.content }}
+{{ $codeSnippet := $content }}  
+{{ with $parsedUrl.Fragment }}
+  {{ $codeLines := split $parsedUrl.Fragment "-" }}
+  {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
+  {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
+  {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
+  {{ $splitContent := split $content "\n" }}
+  {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}  
+{{ end }}
+
+{{ highlight $codeSnippet $language }}
+
+<div class="github nocode">     
+  <a href="{{- $url -}}" target="_blank">See full example on GitHub.</a>
+</div>
