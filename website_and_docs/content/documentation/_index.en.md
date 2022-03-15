@@ -32,30 +32,11 @@ browsers. Once you've installed everything, only a few lines of code get you ins
 a browser. You can find a more comprehensive example in [Writing your first Selenium script]({{< ref "first_script.md" >}})
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class HelloSelenium {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-
-        driver.get("https://selenium.dev");
-
-        driver.quit();
-    }
-}
+{{< tab header="Java" disableCodeBlock=true >}}
+    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-
-
-driver = webdriver.Chrome()
-
-driver.get("http://selenium.dev")
-
-driver.quit()
-
+{{< tab header="Python" disableCodeBlock=true >}}
+    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/hello/test_hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
