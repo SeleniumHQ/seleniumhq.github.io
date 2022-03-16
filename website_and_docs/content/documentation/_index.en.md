@@ -33,10 +33,10 @@ a browser. You can find a more comprehensive example in [Writing your first Sele
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" disableCodeBlock=true >}}
-    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
 {{< tab header="Python" disableCodeBlock=true >}}
-    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/hello/test_hello_selenium.py" >}}
+    {{< gh-codeblock path="/examples/python/tests/hello/test_hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

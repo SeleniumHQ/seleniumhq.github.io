@@ -158,15 +158,15 @@ All code examples should be present and linked to in our example
 
 With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
 repository. In this case, `langEqualsHeader=true` is only needed if the `tabpane` mixes 
-more than one `tab` with GitHub links and code examples added directly in the markdown file 
-(which should not happen often).
+more than one `tab` with code hosted on GitHub and code examples added directly in the 
+markdown file (which should not happen often).
 
 However, `disableCodeBlock=true` is needed at the `tab` level when using the `gh-codeblock`
 shortcode. This is an example of the `gh-codeblock` shortcode usage:
 
     {{</* tabpane */>}}
       {{</* tab header="Link" disableCodeBlock=true */>}}
-        {{</* gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
+        {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
       {{</* /tab */>}}
       {{</* tab header="No Link" */>}}
         This content should not get linked to GitHub
@@ -177,7 +177,7 @@ Which looks like this:
 
 {{< tabpane >}}
   {{< tab header="Link" disableCodeBlock=true >}}
-    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
   {{< /tab >}}
   {{< tab header="No Link" >}}
     This content should not get linked to GitHub
@@ -238,12 +238,12 @@ All code examples should be present and linked to in our example
 With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
 repository. This is an example of the `gh-codeblock` shortcode usage:
 
-    {{</* gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
 
 Which looks like this:
 
 <span class="tab-pane">
-{{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
 </span>
 
 ### Code Comments
