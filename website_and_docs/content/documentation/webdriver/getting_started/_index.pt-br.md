@@ -47,16 +47,17 @@ Para usar Selenium em seu projeto de automação, você precisa instalar as
 bibliotecas de linguagem para sua linguagem de escolha. Além disso, você precisará dos
 binários WebDriver para os navegadores que você deseja automatizar e executar testes.
 
-Installing Selenium can be divided in three steps:
 
-1. [Installing the Selenium library]({{< ref "install_library.md" >}}) for your desired programming language
-2. [Set up the browser driver]({{< ref "install_drivers.md" >}}) to automate your browser (e.g. GeckoDriver for Firefox)
-3. (Optional) Set up and configure [Selenium Grid]({{< ref "/grid" >}}) if you want to scale up your tests
+A instalação do Selenium é dividida nas etapas:
 
-If you wish to start with a low-code/record and playback tool, please check 
+1. [Instalando a biblioteca Selenium]({{< ref "install_library.md" >}}) para sua linguagem de programação escolhida.
+2. [Configure o driver para o navegador]({{< ref "install_drivers.md" >}}) para automatizar o navegador (ex. GeckoDriver para Firefox).
+3. (Opcional) Escolha e configure [Selenium Grid]({{< ref "/grid" >}}) se você quiser tornar seus testes escaláveis.
+
+Se você deseja iniciar com ferramenta low-code / gravação e reprodução, por favor veja:
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
 After completing the setup, you can run the code snippet shown at the 
-[starting page](/pt-br/documentation) in our docs. Then head to the 
-[WebDriver]({{< ref "/webdriver.md" >}}) section to learn more about
-browser automation with Selenium.
+Depois de completar as etapas de configuração, você pode executar o snippet de codigo em
+[starting page](/pt-br/documentation) na documentação. Então siga para seção
+[WebDriver]({{< ref "/webdriver.md" >}}) para aprender mais sobre automação de navegadores com Selenium.
