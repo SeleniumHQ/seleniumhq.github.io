@@ -153,13 +153,20 @@ This auto-formats the code in each tab to match the header name.
 
 #### Link to GitHub
 
-All code examples should be present and linked to in our example repos: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples
+All code examples should be present and linked to in our example 
+[repos](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
 
-With `langEqualsHeader=true`, you can add GitHub links at the bottom of the given tab like this:
+With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
+repository. In this case, `langEqualsHeader=true` is only needed if the `tabpane` mixes 
+more than one `tab` with GitHub links and code examples added directly in the markdown file 
+(which should not happen often).
+
+However, `disableCodeBlock=true` is needed at the `tab` level when using the `gh-codeblock`
+shortcode. This is an example of the `gh-codeblock` shortcode usage:
 
     {{</* tabpane */>}}
-      {{</* tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35 */>}}
-        Content in automatic code block that refers to something on GitHub
+      {{</* tab header="Link" disableCodeBlock=true */>}}
+        {{</* gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
       {{</* /tab */>}}
       {{</* tab header="No Link" */>}}
         This content should not get linked to GitHub
@@ -169,12 +176,12 @@ With `langEqualsHeader=true`, you can add GitHub links at the bottom of the give
 Which looks like this:
 
 {{< tabpane >}}
-{{< tab header="Link" github="SeleniumHQ/seleniumhq.github.io/tree/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
-Content in automatic code block that refers to something on GitHub
-{{< /tab >}}
-{{< tab header="No Link" >}}
-This content should not get linked to GitHub
-{{< /tab >}}
+  {{< tab header="Link" disableCodeBlock=true >}}
+    {{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+  {{< /tab >}}
+  {{< tab header="No Link" >}}
+    This content should not get linked to GitHub
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ### Disabling Code Block
@@ -225,16 +232,18 @@ You need to specify which parts are code and which are not yourself now, like th
 
 #### Link to GitHub
 
-All code examples should be present and linked to in our example repos: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples
+All code examples should be present and linked to in our example 
+[repos](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
 
-With `disableCodeBlock=true`, you can add GitHub links wherever you need them with this shortcode:
+With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
+repository. This is an example of the `gh-codeblock` shortcode usage:
 
-    {{</* gh-content "java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
+    {{</* gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
 
 Which looks like this:
 
 <span class="tab-pane">
-{{< gh-content "java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+{{< gh-codeblock codeUrl="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
 </span>
 
 ### Code Comments

@@ -28,7 +28,7 @@
     id="{{ $entryid }}" role="tabpanel" aria-labelled-by="{{ $tabid }}">
 
   {{ if $.Get "disableCodeBlock" }}
-    <div class="nocode">
+    <div class="my-3 py-2 border-bottom">
       {{- index . "content" | markdownify -}}
     </div>
   {{ else }}
@@ -43,16 +43,15 @@
       {{  $lang = $element.language }}
     {{- end -}}
     {{- with $element.highlight -}}
-      {{  $hloptions = $element.highlight }}
+      {{ $hloptions = $element.highlight }}
     {{- end -}}
     {{- $tabid := printf "tabs-%v-%v-tab" $.Ordinal $index | anchorize -}}
     {{- $entryid := printf "tabs-%v-%v" $.Ordinal $index | anchorize -}}
 
-    {{- highlight (index . "content") $lang $hloptions -}}
-    {{ if $element.github }}
-      <div class="github nocode">
-        <a href ="https://www.github.com/{{- $element.github -}}">See full example on GitHub.</a>
-      </div>
+    {{ if $element.disableCodeBlock }}
+      {{- index . "content" | markdownify -}}   
+    {{ else }}
+      {{- highlight (index . "content") $lang $hloptions -}}
     {{end}}
   {{end}}
 
