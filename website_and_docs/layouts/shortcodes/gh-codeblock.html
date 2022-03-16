@@ -1,23 +1,28 @@
-{{ $url := .Get "codeUrl" }}
-{{ $parsedUrl := urls.Parse $url }}
-{{ $slicedPath := split $parsedUrl.Path "/" }}
-{{ $org := index $slicedPath 1 }}
-{{ $repo := index $slicedPath 2 }}
-{{ $branch := index $slicedPath 4 }}
+{{ $apiBaseUrl := .Get "apiBaseUrl" | default "https://api.github.com/repos" }}
+{{ $webBaseUrl := .Get "webBaseUrl" | default "https://github.com" }}
+{{ $org := .Get "org" | default "SeleniumHQ" }}
+{{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
+{{ $branch := .Get "branch" | default "dev" }}
+{{ $path := .Get "path" }}
+
+{{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
+{{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $path }}
+
+{{ $slicedPath := split $path "/" }}
 {{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
-{{ $filePath := delimit (after 5 $slicedPath) "/" }}
-{{ $apiUrl := printf "https://api.github.com/repos/%s/%s/contents/%s?ref=%s" $org $repo $filePath $branch }}
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ $toReplace := printf "://%s@" $githubToken }}
-{{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
+{{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
 {{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
 
 {{ $apiResults := getJSON $apiUrlWithToken  }}
 {{ $content := base64Decode $apiResults.content }}
-{{ $codeSnippet := $content }}  
-{{ with $parsedUrl.Fragment }}
-  {{ $codeLines := split $parsedUrl.Fragment "-" }}
+{{ $codeSnippet := $content }}
+
+{{ $parsedApiUrl := urls.Parse $webUrl }}
+{{ with $parsedApiUrl.Fragment }}
+  {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
   {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
   {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
   {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
@@ -28,7 +33,7 @@
 {{ highlight $codeSnippet $language }}
 
 <div class="text-right mb-5 pb-2 border-bottom">     
-  <a href="{{- $url -}}" target="_blank">
+  <a href="{{- $webUrl -}}" target="_blank">
     <i class="fas fa-external-link-alt pl-2"></i>
     <i class="fas fa-external-link" aria-hidden="true"></i>
     <small>
@@ -36,3 +41,5 @@
     </small>
   </a>
 </div>
+
+
