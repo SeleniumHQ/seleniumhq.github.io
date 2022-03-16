@@ -21,7 +21,11 @@
               <div class="modal-body">
                 {{ $.Scratch.Set "counter" 0 }}
                 {{ $url := "https://api.github.com/repos/seleniumhq/selenium/releases?per_page=100" }}
-                {{ $releases := getJSON $url }}
+                {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
+                {{ $toReplace := printf "://%s@" $githubToken }}
+                {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
+                {{ $urlWithToken := replace $url "://" $tokenInUrl }}                
+                {{ $releases := getJSON $urlWithToken }}
                 {{ range sort $releases "created_at" "desc" }}
                 <!-- Expand / Collapse -->
                 {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
