@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumDocs
+namespace SeleniumDocs.GettingStarted
 {
     [TestClass]
     public class FirstScriptTest
