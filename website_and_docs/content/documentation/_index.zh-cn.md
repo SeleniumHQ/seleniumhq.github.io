@@ -30,19 +30,8 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 {{< tab header="Python" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/python/tests/hello/test_hello_selenium.py" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-class HelloSelenium {
-    static void Main() {
-        var driver = new ChromeDriver();
-
-        driver.Navigate().GoToUrl("https://selenium.dev");
-
-        driver.Quit();
-    }
-}
+{{< tab header="CSharp" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
