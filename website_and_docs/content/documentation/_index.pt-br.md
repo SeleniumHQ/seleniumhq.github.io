@@ -6,15 +6,6 @@ cascade:
 aliases: ["/documentation/pt-br/"]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 Selenium é um projeto que abrange uma variedade de ferramentas e bibliotecas
 que permitem e suportam a automação de navegadores da web.
 
