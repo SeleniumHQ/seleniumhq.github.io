@@ -8,15 +8,6 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 ## Grid 
 
 ### Status da Grid
@@ -166,20 +157,18 @@ If no registration secret has been configured while setting up the Grid, then us
 cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
-### Get New Session Queue Requests
+### Obter novos pedidos da Fila de Sessão
 
-New Session Request Queue holds the new session requests. 
-To get the current requests in the queue, use the cURL command enlisted below. 
-The response returns the total number of requests in the queue and the request payloads.
+Novos pedidos da Fila de Sessão contém os novos pedidos de sessão.
+Para obter os pedidos na Fila, utiliza o comando cURL listado abaixo.
+É retornado o número total de pedidos na Fila.
 
-In the Standalone mode, the Queue URL is the Standalone server address. 
-
-In the Hub-Node mode, the Queue URL is the Hub server address.
+No modo Standalone, a URL é a do servidor, em modo Grid, a URL será a do HUB.
 
 ```shell
 cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
 
-In the fully distributed mode, the Queue URL is New Session Queue server address.
+No modo totalmente distribuido, a URL da Fila é a porta do servidor de Fila.
 ```shell
 cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
