@@ -65,13 +65,12 @@ e faça checkout na sua cópia localmente.
 
 #### Dependências: Hugo
 
-We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
-Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.83.1 or higher.
+Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
+para criar e gerar o website. Você vai necessitar de usar a versão "extended"
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.83.1 ou superior.
 
-Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
-instructions from Docsy.
+Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
+
 
 ### Passo 2: Branch
 
@@ -86,11 +85,11 @@ diretamente no topo do `dev`.
 
 ### Passo 3: Faça mudanças
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependencies (see commands below). To make changes to the site, 
-work on the `website_and_docs` directory. To see a live preview of 
-your changes, run `hugo server` on the site's root directory.
+O repositório contém o website e a documentação. Antes de começar a alterar coisas, por favor
+veja o resto dos passos para preparar as dependências e sub-módulos (veja os comandos abaixo).
+
+Para fazer alterações ao website, trabalha na pasta `website_and_docs`. Para ver uma previsão
+do aspecto do website, execute `hugo server` a partir da raíz do projecto.
 
 ```shell
 % git submodule update --init --recursive
