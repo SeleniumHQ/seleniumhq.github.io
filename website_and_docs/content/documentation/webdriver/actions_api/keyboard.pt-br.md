@@ -289,4 +289,59 @@ fun main() {
 This is a convenience method in the Actions API that combines keyDown and keyUp commands in one action.
 Executing this command differs slightly from using the element method.
 
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+WebDriver driver = new FirefoxDriver();
+try {
+
+// Navigate to the url
+driver.get("https://google.com");
+
+// Create an object of Action class
+Actions action = new Actions(driver);
+
+// Find google search box element
+WebElement search = driver.findElement(By.name("q"));
+
+// Send value by action class to the search box
+action.sendKeys(search, "Selenium").perform();
+
+// Perform Keyboard action by Action class
+action.sendKeys(Keys.ENTER).perform();
+
+} finally {
+driver.quit();
+}
+
+{{< /tab >}}
+{{< tab header="Python" >}}
+
+# Help us with a PR for code sample
+
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+
+# Help us with a PR for code sample
+
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+
+# Help us with a PR for code sample
+
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+
+# Help us with a PR for code sample
+
+{{< /tab >}}
+
+{{< tab header="Kotlin" >}}
+
+# Help us with a PR for code sample
+
+{{< /tab >}}
+{{< /tabpane >}}
+
 {{< alert-code >}}
+for sendKeys by Action
+{{< /alert-code >}}
