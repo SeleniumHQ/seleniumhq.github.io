@@ -66,7 +66,7 @@ Let us consider the below example for understanding the relative locators.
 #### Above
 
 If the email text field element is not easily identifiable for some reason, but the password text field element is,
-we can locate the text field element using the fact that it is an "input" element "above" the password element.
+we can locate the text field element using the fact that it is an "input" element "above" the password element. 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -82,10 +82,10 @@ var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("pass
 email_locator = {relative: {tag_name: 'input', above: {id: 'password'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let emailLocator = locateWith(By.tagName('input')).above(By.id('password')));
+let emailLocator = locateWith(By.tagName('input')).above(By.id('password'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password")))
+val emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password"))
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -108,10 +108,10 @@ var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("e
 password_locator = {relative: {tag_name: 'input', below: {id: 'email'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let passwordLocator = locateWith(By.tagName('input')).below(By.id('email')));
+let passwordLocator = locateWith(By.tagName('input')).below(By.id('email'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email")))
+val passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"))
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -119,7 +119,7 @@ val passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("ema
 
 If the cancel button is not easily identifiable for some reason, but the submit button element is,
 we can locate the cancel button element using the fact that it is a "button" element to the "left of" the submit element.
-
+    
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 By cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"));
@@ -134,10 +134,10 @@ var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("s
 cancel_locator = {relative: {tag_name: 'button', left: {id: 'submit'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit')));
+let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit")))
+val cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"))
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -160,16 +160,16 @@ var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("
 submit_locator = {relative: {tag_name: 'button', right: {id: 'cancel'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel')));
+let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel")))
+val submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel"))
 {{< /tab >}}
 {{< /tabpane >}}
 
 #### Near
 
-If the relative positioning is not obvious, or it varies based on window size, you can use the near method to
+If the relative positioning is not obvious, or it varies based on window size, you can use the near method to 
 identify an element that is at most `50px` away from the provided locator.
 One great use case for this is to work with a form element that doesn't have an easily constructed locator,
 but its associated [input label element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) does.
@@ -188,35 +188,34 @@ var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-e
 email_locator = {relative: {tag_name: 'input', near: {id: 'lbl-email'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email')));
+let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email")))
+val emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email"));
 {{< /tab >}}
 {{< /tabpane >}}
 
 ### Chaining relative locators
 
-You can also chain locators if needed. Sometimes the element is most easily identified as being both above/below one
-element and right/left of another.
+You can also chain locators if needed. Sometimes the element is most easily identified as being both above/below one element and right/left of another.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email").toRightOf(By.id("cancel"));
+By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"));
 {{< /tab >}}
 {{< tab header="Python" >}}
-submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}.to_right_of({By.ID: "cancel"})
+submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_right_of({By.ID: "cancel"})
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-var submitLocator = RelativeBy.WithLocator(By.tagName("button"))Below(By.Id("email").RightOf(By.Id("cancel"));
+var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 submit_locator = {relative: {tag_name: 'button', below: {id: 'email'}, right: {id: 'cancel'}}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-let submitLocator = locateWith(By.tagName('button')).below(By.id('email').toRightOf(By.id('cancel')));
+let submitLocator = locateWith(By.tagName('button')).below(By.id('email')).toRightOf(By.id('cancel'));
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-val submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email").toRightOf(By.id("cancel")))
+val submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"))
 {{< /tab >}}
 {{< /tabpane >}}
