@@ -54,7 +54,7 @@ let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
 {{< /tabpane >}}
 
 {{< alert-code >}}
-for isDisplayed() method
+for element displayedness
 {{< /alert-code >}}
 
 ## Is Enabled
