@@ -26,7 +26,11 @@ nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-// Help us with a PR for code sample
+// Navigate to the url
+driver.get('https://www.google.com');
+
+// Get boolean value for is element display
+boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Help us with a PR for code sample
