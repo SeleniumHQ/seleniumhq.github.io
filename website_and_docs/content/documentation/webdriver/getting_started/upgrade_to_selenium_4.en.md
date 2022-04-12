@@ -77,7 +77,7 @@ caps.SetCapability("platform", "Windows 10");
 caps.SetCapability("version", "92");
 caps.SetCapability("build", myTestBuild);
 caps.SetCapability("name", myTestName);
-var driver = new RemoteWebDriver(new Uri(CloudURL), capabilities);
+var driver = new RemoteWebDriver(new Uri(CloudURL), caps);
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 caps = Selenium::WebDriver::Remote::Capabilities.firefox
