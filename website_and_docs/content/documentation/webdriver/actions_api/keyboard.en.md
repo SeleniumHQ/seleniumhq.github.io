@@ -314,7 +314,25 @@ driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
 
-# Help us with a PR for code sample
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+#this line will install chrome if not already, else will grab the cached version
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/docs/api/py/genindex.html")
+
+    # Store google search box WebElement
+search = driver.find_element(By.NAME, "q")
+
+action = webdriver.ActionChains(driver)
+
+#send_keys sends keys to the currently focused element
+action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perform()
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
