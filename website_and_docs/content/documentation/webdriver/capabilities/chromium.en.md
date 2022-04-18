@@ -1,5 +1,5 @@
 ---
-title: "Capabilities specific to Chromium browsers"
+title: "Capabilities specific to Chromium based browsers"
 linkTitle: "Chromium"
 weight: 4
 description: >-
