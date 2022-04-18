@@ -2,9 +2,8 @@
 title: "键盘Actions"
 linkTitle: "键盘"
 weight: 2
-needsTranslation: true
 description: >
-  A representation of any key input device for interacting with a web page.
+  用于与网页交互的任何输入设备的呈现.
 aliases: [
 "/documentation/zh-cn/webdriver/keyboard/",
 "/zh-cn/documentation/webdriver/keyboard/"
@@ -15,10 +14,12 @@ Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许�
 
 ## Keys
 
-In addition to the keys represented by regular unicode,
-unicode values have been assigned to other keyboard keys for use with Selenium.
-Each language has its own way to reference these keys; the full list can be found
-[here](https://www.w3.org/TR/webdriver/#keyboard-actions).
+除了由常规unicode表示的按键,
+unicode值已指派给其他键盘按键,
+以便于Selenium一起使用.
+每种语言都有自己的方式来引用这些键;
+[在此](https://www.w3.org/TR/webdriver/#keyboard-actions)
+可以找到完整的列表.
 
 ## Key down
 
@@ -284,8 +285,9 @@ fun main() {
 
 ## Send keys
 
-This is a convenience method in the Actions API that combines keyDown and keyUp commands in one action.
-Executing this command differs slightly from using the element method.
+这是Actions API中的一种简便方法,
+它将keyDown和keyUp命令组合在一个操作中.
+执行此命令与使用元素方法略有不同.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
