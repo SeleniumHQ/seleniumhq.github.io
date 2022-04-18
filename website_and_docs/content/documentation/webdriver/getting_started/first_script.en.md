@@ -239,9 +239,6 @@ No more commands can be sent to this driver instance.
 ## Putting everything together
 Let's combine these 8 things into a complete script.
 
-Follow the link at the bottom of the tab to see an example of the code as it would be executed
-with a test runner instead of a standalone file.
-
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 import org.openqa.selenium.By;
