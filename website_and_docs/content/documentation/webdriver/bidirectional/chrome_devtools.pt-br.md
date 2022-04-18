@@ -130,7 +130,6 @@ const { Builder } = require("selenium-webdriver");
     };
       await pageCdpConnection.execute(
         "Emulation.setGeolocationOverride",
-        1,
         coordinates
       );
   } catch (e) {
@@ -271,7 +270,6 @@ async function executeCDPCommands () {
   };
   await cdpConnection.execute(
     "Emulation.setGeolocationOverride",
-    1,
     coordinates
   );
  await driver.quit();
@@ -423,7 +421,6 @@ options.enableDebugger();
     };
     await pageCdpConnection.execute(
       "Emulation.setDeviceMetricsOverride",
-      1,
       metrics
     );
     await driver.get("https://www.google.com");
