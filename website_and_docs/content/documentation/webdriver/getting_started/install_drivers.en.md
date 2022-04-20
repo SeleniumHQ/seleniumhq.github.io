@@ -247,8 +247,7 @@ ChromeDriver driver = new ChromeDriver();
 
 {{< tab header="Python" >}}
 
-service = Service(executable_path="/path/to/chromedriver")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(executable_path="/path/to/chromedriver")
 
 {{< /tab >}}
 
