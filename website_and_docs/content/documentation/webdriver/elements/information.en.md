@@ -33,7 +33,11 @@ driver.get('https://www.google.com');
 boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.google.com")
+
+# Get boolean value for is element display
+is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // Help us with a PR for code sample
