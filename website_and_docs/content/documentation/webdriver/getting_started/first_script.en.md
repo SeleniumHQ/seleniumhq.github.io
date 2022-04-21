@@ -210,7 +210,7 @@ Notice that we need to relocate the search box because the DOM has changed since
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 7. End the session 
+### 8. End the session 
 
 This ends the driver process, which by default closes the browser as well. 
 No more commands can be sent to this driver instance. 
