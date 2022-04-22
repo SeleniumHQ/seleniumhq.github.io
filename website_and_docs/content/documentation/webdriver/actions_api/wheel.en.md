@@ -113,7 +113,8 @@ fun main() {
 
 ## Scroll by given amount from element 
 
-Scrolls to the element by scrolling the viewport. This way the element is at the bottom. Scrolls the viewport further by the given amount i.e. horizontal and vertical offsets.
+Scrolls to the element by scrolling the viewport. This way the element is at the bottom. 
+Scrolls the viewport further by the given amount i.e. horizontal and vertical offsets.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -333,9 +334,11 @@ fun main() {
 
 ## Scroll from a offset of origin (viewport) by given amount
 
-The origin is the where the cursor is placed before the scroll is executed. For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
+The origin is the where the cursor is placed before the scroll is executed. 
+For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
 For origin as viewport, the origin offset is calculated from the upper left corner of the viewport.
-Starting from this origin, the viewport is scrolled by the given amount i.e. horizontal and vertical offsets.
+Starting from this origin, the viewport is scrolled by the given amount 
+i.e. horizontal and vertical offsets.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -485,9 +488,11 @@ fun main() {
 
 ## Scroll from a offset of origin (element) by given amount
 
-The origin is the where the cursor is placed before the scroll is executed. For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
+The origin is the where the cursor is placed before the scroll is executed. 
+For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
 For origin as element, the origin offset is calculated from the center of the element.
-Starting from this origin, the viewport is scrolled by the given amount i.e. horizontal and vertical offsets.
+Starting from this origin, the viewport is scrolled by the given amount 
+i.e. horizontal and vertical offsets.
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" >}}
@@ -617,7 +622,6 @@ fun main() {
                     "dddddddddddddddddddddddddddddddd" +
                     "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
         )
-        Thread.sleep(2000)
         actions.scroll(
             0,
             -50,
