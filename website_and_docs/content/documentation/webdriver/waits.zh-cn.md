@@ -7,7 +7,7 @@ aliases: ["/documentation/zh-cn/webdriver/waits/"]
 
 WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器做什么的进程外库，而且web平台本质上是异步的，所以WebDriver不跟踪DOM的实时活动状态。这伴随着一些我们将在这里讨论的挑战。
 
-根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 _竞争条件_ 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 **no such element** 的错误。 
+根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 _竞争条件_ 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 **no such element** 的错误。
 
 考虑下面的文档：
 
@@ -105,7 +105,7 @@ def document_initialised(driver):
     return driver.execute_script("return initialised")
 
 driver.navigate("file:///race_condition.html")
-WebDriverWait(driver).until(document_initialised)
+WebDriverWait(driver, timeout=10).until(document_initialised)
 el = driver.find_element(By.TAG_NAME, "p")
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
@@ -113,7 +113,7 @@ assert el.text == "Hello from JavaScript!"
 driver = new ChromeDriver();
 driver.Url = "https://www.google.com/ncr";
 driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-            
+
 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 IWebElement firstResult = wait.Until(e => e.FindElement(By.XPath("//a/h3")));
 
@@ -171,7 +171,7 @@ assertEquals(foo.getText(), "Hello from JavaScript!");
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -346,7 +346,7 @@ WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
   {{< tab header="Python" >}}
 driver = Firefox()
 driver.get("http://somedomain/url_that_delays_loading")
-wait = WebDriverWait(driver, 10, poll_frequency=1, ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException])
+wait = WebDriverWait(driver, timeout=10, poll_frequency=1, ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException])
 element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
   {{< /tab >}}
   {{< tab header="CSharp" >}}
