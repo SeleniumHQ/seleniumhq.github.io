@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - dev
-  pull_request_target:
-    branches:
-      - dev
 
 jobs:
   test_build:
@@ -22,4 +19,4 @@ jobs:
       - name: Build
         run: chmod +x build-site.sh && ./build-site.sh
         env:
-          SELENIUM_CI_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          SELENIUM_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
