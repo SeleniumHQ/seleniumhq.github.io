@@ -2,7 +2,6 @@
 title: "安装浏览器驱动"
 linkTitle: "安装驱动"
 weight: 4
-needsTranslation: true
 description: >
   设置您的浏览器用于自动化.
 aliases: [
@@ -23,8 +22,8 @@ WebDriver尽量使用浏览器内置的自动化支持
 因此标准Selenium发行版中不包括这些驱动程序. 
 本节介绍了使用不同浏览器的基本要求.
 
-Read about more advanced options for starting a driver
-in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
+在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers.md" >}}) 文档中
+阅读有关启动驱动程序的更多高级选项.
 
 ## 快速参考
 
@@ -36,8 +35,9 @@ in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}})
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
 | Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
 
-Note: The Opera driver does not support w3c syntax, so we recommend using chromedriver to work with Opera.
-See the code example for [opening an Opera browser]({{< ref "open_browser.md#opera" >}}).
+注意: Opera驱动程序不支持w3c语法, 
+因此我们建议使用chromedriver来处理Opera. 
+请参见[打开Opera浏览器]({{< ref "open_browser.md#opera" >}})的代码示例
 
 ## 使用驱动的三种方式
 
@@ -51,65 +51,67 @@ See the code example for [opening an Opera browser]({{< ref "open_browser.md#ope
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Calling `setup()` automatically puts the correct browser driver where the code will see it:
+2. 调用 `setup()` 会自动将正确的浏览器驱动程序
+放在代码可以看到的位置:
+
 ```java
 WebDriverManager.chromedriver().setup();
 ```
-3. Just initialize the driver as you normally would:
+3. 只需像平常一样初始化驱动程序:
 ```java 
 ChromeDriver driver = new ChromeDriver();
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-See full example on GitHub.</a>
+查看GitHub上的完整示例.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="Python" >}}
 
-1. Import [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
+1. 导入 [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
 
 ```py
 from webdriver_manager.chrome import ChromeDriverManager
 ```
 
-2. Use `install()` to get the location used by the manager and pass it into service class
+2. 使用 `install()` 获取管理器使用的位置, 并将其传递到服务类中
 
 ```py
 service = Service(executable_path=ChromeDriverManager().install())
 ```
 
-3. Use `Service` instance when initializing the driver: 
+3. 使用 `Service` 实例并初始化驱动程序: 
 ```py
 driver = webdriver.Chrome(service=service)
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-See full example on GitHub.</a>
+查看GitHub上的完整示例.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
+1. 导入 [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 ```
 
-2. Use the `SetUpDriver()` which requires a config class:
+2. 使用 `SetUpDriver()` 时需要一个配置类:
 
 ```csharp
 new DriverManager().SetUpDriver(new ChromeConfig());
 ```
 
-3. Initialize your driver as you normally would:
+3. 像往常一样初始化驱动程序:
 
 ```csharp
 var driver = new ChromeDriver()
@@ -117,30 +119,30 @@ var driver = new ChromeDriver()
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-See full example on GitHub.</a>
+查看GitHub上的完整示例.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-1. Add [webdrivers gem](https://github.com/titusfortner/webdrivers) to Gemfile:
+1. 增加 [webdrivers gem](https://github.com/titusfortner/webdrivers) 到 Gemfile:
 
 ```rb
 gem 'webdrivers', '~> 5.0'
 ```
 
-2. Require webdrivers in your project:
+2. 在程序中Require webdrivers:
 ```rb
 require 'webdrivers'
 ```
 
-3 Initialize driver as you normally would:
+3. 像往常一样初始化驱动程序:
 ```rb
 driver = Selenium::WebDriver.for :chrome
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/install_drivers_spec.rb">
-See full example on GitHub.</a>
+查看GitHub上的完整示例.</a>
 </div>
 
 {{< /tab >}}
@@ -149,11 +151,11 @@ See full example on GitHub.</a>
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Call the setup method before initializing the driver as you normally would:
+2. 在初始化驱动程序之前调用setup方法:
 ```java
 fun chrome(): WebDriver {
     WebDriverManager.chromedriver().setup()
@@ -181,48 +183,50 @@ fun chrome(): WebDriver {
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Bash" >}}
-To see what directories are already on `PATH`, open a Terminal and execute:
+
+要查看`PATH`上已经有哪些目录, 请打开Terminal并执行
 ```shell
 echo $PATH
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+如果驱动程序的位置不在列出的目录中, 
+可以将新目录添加到PATH:
 ```shell
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.bash_profile
 source ~/.bash_profile
 ```
-You can test if it has been added correctly by starting the driver:
+您可以通过启动驱动程序来测试其是否被正确添加:
 ```shell
 chromedriver
 ```
 {{< /tab >}}
 {{< tab header="Zsh" >}}
-To see what directories are already on `PATH`, open a Terminal and execute:
+要查看`PATH`上已经有哪些目录, 请打开Terminal并执行:
 ```shell
 echo $PATH
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+如果驱动程序的位置不在列出的目录中, 
+可以将新目录添加到PATH:
 ```shell
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.zshenv
 source ~/.zshenv
 ```
-You can test if it has been added correctly by starting the driver:
+您可以通过启动驱动程序来测试其是否被正确添加:
 ```shell
 chromedriver
 ```
 {{< /tab >}}
 {{< tab header="Windows" >}}
-To see what directories are already on `PATH`, open a Command Prompt and execute:
+
+要查看`PATH`上已经有哪些目录, 请打开命令提示符并执行:
 ```shell
 echo %PATH%
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+如果驱动程序的位置不在列出的目录中, 
+可以将新目录添加到PATH:
 ```shell
 setx PATH "%PATH%;C:\WebDriver\bin"
 ```
-You can test if it has been added correctly by starting the driver:
+您可以通过启动驱动程序来测试其是否被正确添加:
 ```shell
 chromedriver.exe
 ```
@@ -300,10 +304,10 @@ fun main(args: Array<String>) {
 {{< /tabpane >}}
 
 
-## Advanced Configuration
+## 高级配置
 
-More information on how you can change the driver behavior can be found on the
-[Configuring driver parameters]({{< ref "/documentation/webdriver/drivers.md" >}}) page.
+有关如何更改驱动程序行为的更多信息, 
+请参见[配置驱动程序参数]({{< ref "/documentation/webdriver/drivers.md" >}}) 页面
 
-## Next Step
-[Open and close a browser]({{< ref "open_browser.md" >}})
+## 下一步
+[打开和关闭浏览器]({{< ref "open_browser.md" >}})
