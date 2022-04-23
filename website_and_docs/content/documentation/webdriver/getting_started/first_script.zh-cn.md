@@ -9,7 +9,7 @@ description: >
 当你完成 [Selenium安装]({{< ref "install_library.md" >}}) and
 [驱动安装]({{< ref "install_drivers.md" >}}) 后, 便可以开始书写Selenium脚本了.
 
-## Eight Basic Components
+## 八个基本组成部分
 
 Selenium所做的一切, 
 就是发送给浏览器命令,
@@ -19,7 +19,8 @@ Selenium所做的一切,
 
 ### 1. 使用驱动实例开启会话
 
-For more details on starting a session read our documentation on [opening and closing a browser]({{< ref "open_browser.md" >}})
+有关启动会话的更多详细信息, 
+请阅读我们关于[打开和关闭浏览器]({{< ref "open_browser.md" >}})的文档
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -42,8 +43,11 @@ For more details on starting a session read our documentation on [opening and cl
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 2. Take action on browser
-In this example we are [navigating]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) to a web page. 
+### 2. 在浏览器上执行操作
+
+在本例中, 我们
+[导航]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) 
+到一个网页. 
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -66,10 +70,10 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
     {{< /tab >}}
 {{< /tabpane >}}
 
-3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/browser" >}})
+### 3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/browser" >}})
 
-There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
-can request, including window handles, browser size / position, cookies, alerts, etc.
+您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/browser" >}}) , 
+包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -92,18 +96,23 @@ can request, including window handles, browser size / position, cookies, alerts,
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 4. Establish Waiting Strategy
+### 4. 建立等待策略
 
-Synchronizing the code with the current state of the browser is one of the biggest challenges
-with Selenium, and doing it well is an advanced topic. 
+将代码与浏览器的当前状态同步
+是Selenium面临的最大挑战之一, 
+做好它是一个高级主题. 
 
-Essentially you want to make sure that the element is on the page before you attempt to locate it
-and the element is in an interactable state before you attempt to interact with it.
+基本上, 您希望在尝试定位元素之前, 
+确保该元素位于页面上, 
+并且在尝试与该元素交互之前, 
+该元素处于可交互状态.
 
-An implicit wait is rarely the best solution, but it's the easiest to demonstrate here, so 
-we'll use it as a placeholder. 
+隐式等待很少是最好的解决方案, 
+但在这里最容易演示, 
+所以我们将使用它作为占位符. 
 
-Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
+阅读更多关于[等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
+的信息. 
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -126,9 +135,10 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
     {{< /tab >}}
 {{< /tabpane >}}
 
-## 5. 发送命令 [查找元素]({{< ref "/documentation/webdriver/elements" >}})
-   The majority of commands in most Selenium sessions are element related, and you can't interact
-   with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
+### 5. 发送命令 [查找元素]({{< ref "/documentation/webdriver/elements" >}})
+大多数Selenium会话中的主要命令都与元素相关, 
+如果不先[找到元素]({{< ref "/documentation/webdriver/elements" >}}), 
+就无法与之交互.
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -158,8 +168,9 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 {{< /tabpane >}}
 
 ### 6. 操作元素
-There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
-but you will use them frequently. 
+对于一个元素, 
+只有少数几个[操作]({{< ref "/documentation/webdriver/elements/interactions.md" >}})可以执行, 
+但您将经常使用它们. 
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -189,8 +200,10 @@ but you will use them frequently.
 {{< /tabpane >}}
 
 ### 7. 获取元素信息
-Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
-Notice that we need to relocate the search box because the DOM has changed since we first located it.  
+元素存储了很多[被请求的信息]({{< ref "/documentation/webdriver/elements/information" >}}). 
+请注意, 我们需要重新定位搜索框, 
+因为自从我们第一次找到它以来, 
+DOM已经发生了变化. 
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -215,8 +228,9 @@ Notice that we need to relocate the search box because the DOM has changed since
 
 ### 8. 结束会话 
 
-This ends the driver process, which by default closes the browser as well. 
-No more commands can be sent to this driver instance. 
+这将结束驱动程序进程, 
+默认情况下, 该进程也会关闭浏览器. 
+无法向此驱动程序实例发送更多命令. 
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -239,13 +253,13 @@ No more commands can be sent to this driver instance.
     {{< /tab >}}
 {{< /tabpane >}}
 
-## Putting everything together
+## 组合所有事情
 
-让我们将这8个部分组合成一个完整的脚本，
+让我们将这8个部分组合成一个完整的脚本, 
 包括需要使用的库:
 
-Follow the link at the bottom of the tab to see an example of the code as it would be executed
-with a test runner instead of a standalone file.
+按照选项卡底部的链接查看代码示例, 
+因为它将使用测试运行程序而不是独立文件执行.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
@@ -397,9 +411,10 @@ fun main() {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Steps
+## 接下来的步骤
 
-Take what you've learned and build out your Selenium code. 
+利用你所学的知识, 
+构建你的Selenium代码. 
 
-As you find more functionality that you need, read up on the rest of our
-[WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
+当您发现需要更多功能时, 
+请阅读我们的[WebDriver文档]({{< ref "/documentation/webdriver/" >}})的其余部分. 
