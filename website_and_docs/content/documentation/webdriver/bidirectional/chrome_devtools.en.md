@@ -105,19 +105,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const cdpConnection = await driver.createCDPConnection('page');
-
-const coordinates = {
-  latitude: <latitude>,
-  longitude: <longitude>,
-  accuracy: 100,
-};
-
-await cdpConnection.execute(
-  "Emulation.setGeolocationOverride",
-  coordinates
-);
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/bidirectional/emulateGeoLocation.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
