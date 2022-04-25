@@ -12,34 +12,38 @@
 {{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
-{{ $toReplace := printf "://%s@" $githubToken }}
-{{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
-{{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
+{{ if $githubToken }}
+  {{ $toReplace := printf "://%s@" $githubToken }}
+  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
+  {{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
 
-{{ $apiResults := getJSON $apiUrlWithToken  }}
-{{ $content := base64Decode $apiResults.content }}
-{{ $codeSnippet := $content }}
+  {{ $apiResults := getJSON $apiUrlWithToken  }}
+  {{ $content := base64Decode $apiResults.content }}
+  {{ $codeSnippet := $content }}
 
-{{ $parsedApiUrl := urls.Parse $webUrl }}
-{{ with $parsedApiUrl.Fragment }}
-  {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
-  {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
-  {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
-  {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
-  {{ $splitContent := split $content "\n" }}
-  {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}  
+  {{ $parsedApiUrl := urls.Parse $webUrl }}
+  {{ with $parsedApiUrl.Fragment }}
+    {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
+    {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
+    {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
+    {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
+    {{ $splitContent := split $content "\n" }}
+    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}  
+  {{ end }}
+
+  {{ highlight $codeSnippet $language }}
+
+  <div class="text-right mb-5 pb-2 border-bottom">     
+    <a href="{{- $webUrl -}}" target="_blank">
+      <i class="fas fa-external-link-alt pl-2"></i>
+      <i class="fas fa-external-link" aria-hidden="true"></i>
+      <small>
+        Check code on GitHub
+      </small>
+    </a>
+  </div>
+{{ else }}
+  {{ partial "github-content.html" }}
 {{ end }}
-
-{{ highlight $codeSnippet $language }}
-
-<div class="text-right mb-5 pb-2 border-bottom">     
-  <a href="{{- $webUrl -}}" target="_blank">
-    <i class="fas fa-external-link-alt pl-2"></i>
-    <i class="fas fa-external-link" aria-hidden="true"></i>
-    <small>
-      Check code on GitHub
-    </small>
-  </a>
-</div>
 
 

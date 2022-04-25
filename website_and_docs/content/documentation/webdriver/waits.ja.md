@@ -111,7 +111,7 @@ def document_initialised(driver):
     return driver.execute_script("return initialised")
 
 driver.navigate("file:///race_condition.html")
-WebDriverWait(driver).until(document_initialised)
+WebDriverWait(driver, timeout=10).until(document_initialised)
 el = driver.find_element(By.TAG_NAME, "p")
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
@@ -119,7 +119,7 @@ assert el.text == "Hello from JavaScript!"
 driver = new ChromeDriver();
 driver.Url = "https://www.google.com/ncr";
 driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-            
+
 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 IWebElement firstResult = wait.Until(e => e.FindElement(By.XPath("//a/h3")));
 
@@ -174,13 +174,13 @@ println(firstResult.text)
   {{< tab header="Java" >}}
 WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
             .until(driver -> driver.findElement(By.name("q")));
-assertEquals(foo.getText(), "Hello from JavaScript!"); 
+assertEquals(foo.getText(), "Hello from JavaScript!");
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -368,7 +368,7 @@ WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
   {{< tab header="Python" >}}
 driver = Firefox()
 driver.get("http://somedomain/url_that_delays_loading")
-wait = WebDriverWait(driver, 10, poll_frequency=1, ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException])
+wait = WebDriverWait(driver, timeout=10, poll_frequency=1, ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException])
 element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -394,7 +394,7 @@ begin
   foo = wait.until { driver.find_element(id: 'foo')}
 ensure
   driver.quit
-end 
+end
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, until} = require('selenium-webdriver');
@@ -405,7 +405,7 @@ const {Builder, until} = require('selenium-webdriver');
     // Waiting 30 seconds for an element to be present on the page, checking
     // for its presence once every 5 seconds.
     let foo = await driver.wait(until.elementLocated(By.id('foo')), 30000, 'Timed out after 30 seconds', 5000);
-})(); 
+})();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val wait = FluentWait<WebDriver>(driver)

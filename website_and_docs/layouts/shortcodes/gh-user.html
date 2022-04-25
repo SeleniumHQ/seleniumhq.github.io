@@ -1,21 +1,25 @@
-<div>
+{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
+{{ if $githubToken }}
   {{ $url := .Get 0 }}
-  {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
   {{ $toReplace := printf "://%s@" $githubToken }}
   {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
   {{ $url := replace $url "://" $tokenInUrl }}
   {{ $jsonUrl := getJSON $url }}
-  <div class="card text-center bg-transparent border-0 p-3 h-100" style="max-width: 12rem;">
-    <img src="{{$jsonUrl.avatar_url}}" class="card-img-top" alt="{{$jsonUrl.name}}">
-    <div class="card-body pb-0 px-1">
-      <p class="card-text m-0">
-        {{$jsonUrl.name}}
-      </p>
-    </div>
-    <div class="card-footer bg-transparent border-0 px-1">
-      <p>
-        <a href="{{$jsonUrl.html_url}}">@{{$jsonUrl.login}}</a>
-      </p>
+  <div>
+    <div class="card text-center bg-transparent border-0 p-3 h-100" style="max-width: 12rem;">
+      <img src="{{$jsonUrl.avatar_url}}" class="card-img-top" alt="{{$jsonUrl.name}}">
+      <div class="card-body pb-0 px-1">
+        <p class="card-text m-0">
+          {{$jsonUrl.name}}
+        </p>
+      </div>
+      <div class="card-footer bg-transparent border-0 px-1">
+        <p>
+          <a href="{{$jsonUrl.html_url}}">@{{$jsonUrl.login}}</a>
+        </p>
+      </div>
     </div>
   </div>
-</div>
+{{ else }}
+  {{ partial "github-content.html" }}
+{{ end }}
