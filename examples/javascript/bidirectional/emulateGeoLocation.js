@@ -2,10 +2,8 @@ const {Builder} = require('selenium-webdriver');
 
 (async function openChromeTest() {
   try {
-    let driver = await new Builder()
-                .forBrowser('chrome')
-                .build();
-
+    let driver = await new Builder().forBrowser('chrome').build();
+    
     const cdpConnection = await driver.createCDPConnection('page');
     //Latitude and longitude of Tokyo, Japan
     const coordinates = {
@@ -19,7 +17,6 @@ const {Builder} = require('selenium-webdriver');
     );
     await driver.get("https://kawasaki-india.com/dealer-locator/");
     await driver.quit();
-
   } catch (error) {
     console.log(error)
   }
