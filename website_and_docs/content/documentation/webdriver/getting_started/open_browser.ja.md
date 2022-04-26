@@ -55,17 +55,8 @@ that can be used.
 
   driver.quit
   {{< /tab >}}
-  {{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/openChromeTest.js#L6-L10" >}}
-  const { Builder } = require("selenium-webdriver");
-  const chrome = require('selenium-webdriver/chrome');
-
-  let options = new chrome.Options();
-  let driver = await new Builder()
-    .forBrowser('chrome')
-    .setChromeOptions(options)
-    .build();
-
-  await driver.quit();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/getting_started/openChromeTest.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = ChromeOptions()
