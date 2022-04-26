@@ -97,17 +97,8 @@ edgedriver的主要版本号必须与Edge浏览器的主要版本匹配.
 
   driver.quit
   {{< /tab >}}
-  {{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/openEdgeTest.js#L6-L10">}}
-  const { Builder } = require("selenium-webdriver");
-  const edge = require('selenium-webdriver/edge');
-
-  let options = new edge.Options();
-  let driver = await new Builder()
-    .forBrowser('MicrosoftEdge')
-    .setEdgeOptions(options)
-    .build();
-
-  await driver.quit();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/getting_started/openEdgeTest.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = EdgeOptions()
