@@ -38,7 +38,7 @@ For Gradle, add the _selenium-java_ dependency in your project `build.gradle` fi
 
 ```text
 dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
 ```
 
   {{< /tab >}}
