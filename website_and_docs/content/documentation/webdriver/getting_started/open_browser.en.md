@@ -54,17 +54,8 @@ that can be used.
 
   driver.quit
   {{< /tab >}}
-  {{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/openChromeTest.js#L6-L10" >}}
-  const { Builder } = require("selenium-webdriver");
-  const chrome = require('selenium-webdriver/chrome');
-
-  let options = new chrome.Options();
-  let driver = await new Builder()
-    .forBrowser('chrome')
-    .setChromeOptions(options)
-    .build();
-
-  await driver.quit();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/getting_started/openChromeTest.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = ChromeOptions()
@@ -104,17 +95,8 @@ the major version number of edgedriver must match the major version of the Edge 
 
   driver.quit
   {{< /tab >}}
-  {{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/openEdgeTest.js#L6-L10">}}
-  const { Builder } = require("selenium-webdriver");
-  const edge = require('selenium-webdriver/edge');
-
-  let options = new edge.Options();
-  let driver = await new Builder()
-    .forBrowser('MicrosoftEdge')
-    .setEdgeOptions(options)
-    .build();
-
-  await driver.quit();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/getting_started/openEdgeTest.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = EdgeOptions()
@@ -153,18 +135,9 @@ Selenium 4 requires Firefox 78 or greater. It is recommended to always use the l
 
   driver.quit
   {{< /tab >}}
-  {{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/openFirefoxTest.js#L6-L10" >}}
-  const { Builder } = require("selenium-webdriver");
-  const firefox = require('selenium-webdriver/firefox');
-
-  let options = new firefox.Options();
-  let driver = await new Builder()
-    .forBrowser('firefox')
-    .setFirefoxOptions(options)
-    .build();
-
-  await driver.quit();
- {{< /tab >}}
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/getting_started/openFirefoxTest.js">}}
+  {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = FirefoxOptions()
   val driver = FirefoxDriver(options)
