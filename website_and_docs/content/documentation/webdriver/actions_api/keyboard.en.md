@@ -93,26 +93,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By, Key} = require('selenium-webdriver');
-
-(async function example() {
-  let driver = await new Builder().forBrowser('chrome').build();
-
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-
-    // Enter text "webdriver" and perform keyboard action "Enter"
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.ENTER);
-
-    // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
-    await driver.actions().keyDown(Key.CONTROL).sendKeys('a').perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/keyboard/keyDown.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
@@ -238,24 +220,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By, Key} = require('selenium-webdriver');
-(async function example() {
-  let driver = await new Builder().forBrowser('firefox').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-
-    // Store google search box WebElement
-    let search = driver.findElement(By.name('q'));
-
-    // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
-    await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys("qwerty").keyUp(Key.SHIFT).sendKeys("qwerty").perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/keyboard/keyUp.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By

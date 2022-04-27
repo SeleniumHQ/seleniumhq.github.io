@@ -246,50 +246,6 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
 
 对于客户端设置, 请执行以下步骤.
 
-### Beta 1 
-
-#### 添加所需依赖
-
-可以使用Maven安装追踪导出器的外部库.
-在项目pom.xml中添加 _opentelemetry-exporter-jaeger_ 
-和 _grpc-netty_ 的依赖项：
-
-```xml
-  <dependency>
-      <groupId>io.opentelemetry</groupId>
-      <artifactId>opentelemetry-exporter-jaeger</artifactId>
-      <version>0.14.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-netty</artifactId>
-      <version>1.34.1</version>
-    </dependency>
-``` 
-
- 
-#### 在运行客户端时添加/传递所需的系统属性
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-
-System.setProperty("JAEGER_SERVICE_NAME", "selenium-java-client");
-System.setProperty("JAEGER_AGENT_HOST","localhost");
-System.setProperty("JAEGER_AGENT_PORT","14250");
-
-ImmutableCapabilities capabilities = new ImmutableCapabilities("browserName", "chrome");
-
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), capabilities);
-
-driver.get("http://www.google.com");
-
-driver.quit();
-
-  {{< /tab >}}
-{{< /tabpane >}}
-
-### Beta 2 及以后
-
 #### 添加所需依赖
 
 可以使用Maven安装追踪导出器的外部库.
