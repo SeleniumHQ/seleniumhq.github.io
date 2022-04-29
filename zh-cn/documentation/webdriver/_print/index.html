@@ -56,30 +56,35 @@ Selenium 在可能的情况下使用这些第三方驱动程序，
 </span></span><span style=display:flex><span>Install-Package Selenium.WebDriver
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># or using .Net CLI</span>
 </span></span><span style=display:flex><span>dotnet add package Selenium.WebDriver
-</span></span></code></pre></div><h2 id=supported-net-versions>Supported .NET Versions</h2><p>Make sure to use the .NET SDK version compatible with relevant <a href=https://www.nuget.org/packages/Selenium.WebDriver>Selenium package</a>.
-Check the dependencies section to find out the <a href=https://dotnet.microsoft.com/en-us/download/dotnet>supported .NET version</a>.
-At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
-You can download <a href="https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019">MSBuild Tools 2019 from here</a>
-to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.</p><h2 id=using-visual-studio-code-vscode-and-c>Using Visual Studio Code (vscode) and C#</h2><p>This is a quick guide to help you get started with vscode and C#, however, more research may be required.
-Install the compatible .NET SDK as per the section above.
-Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
-Follow the <a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0">instruction here</a>
-to create and run the &ldquo;Hello World&rdquo; console project using C#.
-You may also create a NUnit starter project using the command line <code>dotnet new NUnit</code>.
-Make sure the file <code>%appdata%\NuGet\nuget.config</code> is configured properly as some developers reported that it will be empty due to some issues.
-If <code>nuget.config</code> is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
-Add the following section to the file <code>nuget.config</code> if it is empty:</p><pre tabindex=0><code>&lt;configuration&gt;
+</span></span></code></pre></div><h2 id=支持的-net-版本>支持的 .NET 版本</h2><p>确保使用与.NET SDK版本兼容的相关<a href=https://www.nuget.org/packages/Selenium.WebDriver>Selenium包</a>.
+检查依赖的部分用以找出<a href=https://dotnet.microsoft.com/en-us/download/dotnet>支持的 .NET 版本</a>.
+在本次升级时, .NET 5.0 (Visual Studio 2019) 是已知的被支持的版本, 并且 .NET 6.0 并未支持.
+您可以下载 <a href="https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019">MSBuild Tools 2019 于此</a>
+以安装所需的组件和依赖项, 例如 .NET SDK 和 NuGet 包管理器.</p><h2 id=使用-visual-studio-code-vscode-以及-c>使用 Visual Studio Code (vscode) 以及 C#</h2><p>这是一个快速指南, 可帮助您开始使用 vscode 和 C#, 但可能需要进行更多调研.
+按照上一节安装兼容的 .NET SDK.
+还要安装适用于 C# 和 NuGet 的 vscode 扩展 (Ctrl-Shift-X).
+参考 <a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0">此处指令</a>
+创建并且使用C#运行 &ldquo;Hello World&rdquo; 的控制台项目.
+您也可以使用命令行 <code>dotnet new NUnit</code>创建一个 NUnit 初创项目.
+确保文件 <code>%appdata%\NuGet\nuget.config</code> 已正确配置,
+因为某些开发人员报告说,
+由于某些问题, 该文件将为空.
+如果 <code>nuget.config</code> 为空,
+或者未正确配置,
+则Selenium项目的.NET构建将失败.
+将以下部分添加到文件 <code>nuget.config</code> (如果为空) :</p><pre tabindex=0><code>&lt;configuration&gt;
   &lt;packageSources&gt;
     &lt;add key=&#34;nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; protocolVersion=&#34;3&#34; /&gt;
     &lt;add key=&#34;nuget.org&#34; value=&#34;https://www.nuget.org/api/v2/&#34; /&gt;   
   &lt;/packageSources&gt;
 ...
-</code></pre><p>For more info about <code>nuget.config</code> <a href=https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file>click here</a>.
-You may have to customize <code>nuget.config</code> to meet you needs.</p><p>Now, go back to vscode, press Ctrl-Shift-P, and type &ldquo;NuGet Add Package&rdquo;, and enter the required Selenium packages such as <code>Selenium.WebDriver</code>.
-Press Enter and select the version.
-Now you can use the examples in the documentation related to C# with vscode.</p></div></div><div class="tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><div class="my-3 py-2 border-bottom"><p>可以使用 gem 安装 Ruby 的 Selenium 库：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
+</code></pre><p>有关 <code>nuget.config</code> 的更多信息<a href=https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file>点此</a>.
+你也可以自定义 <code>nuget.config</code> 以满足所需.</p><p>现在, 返回 vscode, 按 Ctrl-Shift-P,
+然后键入"NuGet Add Package",
+然后输入所需的 Selenium 包,
+如"Selenium.WebDriver".</p><p>按 Enter 并选择版本.</p><p>现在, 您可以通过vscode与文档中 C# 相关示例结合使用.</p></div></div><div class="tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><div class="my-3 py-2 border-bottom"><p>可以使用 gem 安装 Ruby 的 Selenium 库：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-4 role=tabpanel aria-labelled-by=tabs-0-4-tab><div class="my-3 py-2 border-bottom"><p>可以使用 npm 安装 JavaScript 的 Selenium 库</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
-</span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab><div class="my-3 py-2 border-bottom">由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven <a href=#java>Java</a></div></div></div><h2 id=next-step>Next Step</h2><p><a href=/zh-cn/documentation/webdriver/getting_started/install_drivers/>Install the browser drivers</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-9136f546611c5add8d1279c319b7f3fd>1.2 - 安装浏览器驱动</h1><div class=lead>设置您的浏览器用于自动化.</div><p>通过WebDriver,
+</span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab><div class="my-3 py-2 border-bottom">由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven <a href=#java>Java</a></div></div></div><h2 id=下一步>下一步</h2><p><a href=/zh-cn/documentation/webdriver/getting_started/install_drivers/>安装浏览器驱动</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-9136f546611c5add8d1279c319b7f3fd>1.2 - 安装浏览器驱动</h1><div class=lead>设置您的浏览器用于自动化.</div><p>通过WebDriver,
 Selenium支持市场上所有主要浏览器,
 如Chrome、Firefox、Internet Explorer、Edge、Opera和Safari.
 WebDriver尽量使用浏览器内置的自动化支持
