@@ -2,7 +2,6 @@
 title: "安装浏览器驱动"
 linkTitle: "安装类库"
 weight: 2
-needsTranslation: true
 description: >
   配置自动化的浏览器.
 aliases: [
@@ -74,23 +73,27 @@ Install-Package Selenium.WebDriver
 # or using .Net CLI
 dotnet add package Selenium.WebDriver
 ```
-## Supported .NET Versions
-Make sure to use the .NET SDK version compatible with relevant [Selenium package](https://www.nuget.org/packages/Selenium.WebDriver).
-Check the dependencies section to find out the [supported .NET version](https://dotnet.microsoft.com/en-us/download/dotnet).
-At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
-You can download [MSBuild Tools 2019 from here](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) 
-to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.
+## 支持的 .NET 版本
+确保使用与.NET SDK版本兼容的相关[Selenium包](https://www.nuget.org/packages/Selenium.WebDriver).
+检查依赖的部分用以找出[支持的 .NET 版本](https://dotnet.microsoft.com/en-us/download/dotnet).
+在本次升级时, .NET 5.0 (Visual Studio 2019) 是已知的被支持的版本, 并且 .NET 6.0 并未支持.
+您可以下载 [MSBuild Tools 2019 于此](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)
+以安装所需的组件和依赖项, 例如 .NET SDK 和 NuGet 包管理器.
 
-## Using Visual Studio Code (vscode) and C#
-This is a quick guide to help you get started with vscode and C#, however, more research may be required.
-Install the compatible .NET SDK as per the section above.
-Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
-Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0) 
-to create and run the "Hello World" console project using C#.
-You may also create a NUnit starter project using the command line `dotnet new NUnit`.
-Make sure the file `%appdata%\NuGet\nuget.config` is configured properly as some developers reported that it will be empty due to some issues.
-If `nuget.config` is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
-Add the following section to the file `nuget.config` if it is empty:
+## 使用 Visual Studio Code (vscode) 以及 C#
+这是一个快速指南, 可帮助您开始使用 vscode 和 C#, 但可能需要进行更多调研.
+按照上一节安装兼容的 .NET SDK.
+还要安装适用于 C# 和 NuGet 的 vscode 扩展 (Ctrl-Shift-X).
+参考 [此处指令](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0) 
+创建并且使用C#运行 "Hello World" 的控制台项目.
+您也可以使用命令行 `dotnet new NUnit`创建一个 NUnit 初创项目.
+确保文件 `%appdata%\NuGet\nuget.config` 已正确配置, 
+因为某些开发人员报告说, 
+由于某些问题, 该文件将为空.
+如果 `nuget.config` 为空,
+或者未正确配置, 
+则Selenium项目的.NET构建将失败.
+将以下部分添加到文件 `nuget.config` (如果为空) :
 ```
 <configuration>
   <packageSources>
@@ -99,12 +102,17 @@ Add the following section to the file `nuget.config` if it is empty:
   </packageSources>
 ...
 ```
-For more info about `nuget.config` [click here](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
-You may have to customize `nuget.config` to meet you needs.
+有关 `nuget.config` 的更多信息[点此](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
+你也可以自定义 `nuget.config` 以满足所需.
 
-Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and enter the required Selenium packages such as `Selenium.WebDriver`.
-Press Enter and select the version.
-Now you can use the examples in the documentation related to C# with vscode.
+现在, 返回 vscode, 按 Ctrl-Shift-P, 
+然后键入"NuGet Add Package", 
+然后输入所需的 Selenium 包, 
+如"Selenium.WebDriver".
+
+按 Enter 并选择版本.
+
+现在, 您可以通过vscode与文档中 C# 相关示例结合使用.
 
   {{< /tab >}}
   {{< tab header="Ruby" >}}
@@ -127,5 +135,5 @@ npm install selenium-webdriver
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Step
-[Install the browser drivers]({{< ref "install_drivers.md" >}})
+## 下一步
+[安装浏览器驱动]({{< ref "install_drivers.md" >}})
