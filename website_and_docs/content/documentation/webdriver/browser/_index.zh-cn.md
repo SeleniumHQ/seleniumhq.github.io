@@ -2,14 +2,13 @@
 title: "浏览器"
 linkTitle: "浏览器"
 weight: 6
-requiresTranslation: true
 aliases: [
 "/documentation/zh-cn/webdriver/browser_manipulation/",
 "/zh-cn/documentation/webdriver/browser_manipulation/"
 ]
 ---
 
-## Get browser information
+## 获取浏览器信息
 
 ### 获取标题
 
