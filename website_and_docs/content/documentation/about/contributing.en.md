@@ -67,7 +67,7 @@ and check out your copy locally.
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.83.1 or higher.
+to use Hugo 0.94 or higher.
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
