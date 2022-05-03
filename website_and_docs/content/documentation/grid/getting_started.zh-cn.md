@@ -131,22 +131,6 @@ locally. More detailed examples and usages can be found in the
 [Configuring Components]({{< ref "components.md" >}}) section.
 {{% /pageinfo %}}
 
-## Warning
-
-Selenium Grid must be protected from external access using appropriate
-firewall permissions.
-
-Failure to protect your Grid could result in one or more of the following occurring:
-
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
-
-See this blog post on [Detectify](//labs.detectify.com), which gives a good
-overview of how a publicly exposed Grid could be misused:
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
-
-
 ## 提醒
 
 Selenium服务网格需要使用合适的防火墙许可来隔离外部访问。
