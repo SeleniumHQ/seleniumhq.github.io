@@ -7254,10 +7254,7 @@ UI or via an API call.</p><p>The Grid UI can be reached by opening your preferre
 endpoint or using GraphQL:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>curl -X POST -H <span style=color:#4e9a06>&#34;Content-Type: application/json&#34;</span> --data <span style=color:#4e9a06>&#39;{ &#34;query&#34;: &#34;{grid{uri}}&#34; }&#39;</span> -s http://localhost:4444/graphql <span style=color:#000;font-weight:700>|</span> jq .
 </span></span></code></pre></div><div class="pageinfo pageinfo-primary"><p>For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-<a href=/zh-cn/documentation/grid/components/>Configuring Components</a> section.</p></div><h2 id=warning>Warning</h2><p>Selenium Grid must be protected from external access using appropriate
-firewall permissions.</p><p>Failure to protect your Grid could result in one or more of the following occurring:</p><ul><li>You provide open access to your Grid infrastructure</li><li>You allow third parties to access internal web applications and files</li><li>You allow third parties to run custom binaries</li></ul><p>See this blog post on <a href=//labs.detectify.com>Detectify</a>, which gives a good
-overview of how a publicly exposed Grid could be misused:
-<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a></p><h2 id=提醒>提醒</h2><p>Selenium服务网格需要使用合适的防火墙许可来隔离外部访问。</p><p>如果不能有效的保护你的服务网格，可能会导致以下问题：</p><ul><li>提供了一个开发的接口来访问服务网格的基础设施</li><li>你将会允许第三方来访问内部web服务和文件</li><li>你将会允许第三方来执行定制的二进制文件</li></ul><p>请参考这篇文章<a href=//labs.detectify.com>Detectify</a>, 这里给了一个很好的概要，
+<a href=/zh-cn/documentation/grid/components/>Configuring Components</a> section.</p></div><h2 id=提醒>提醒</h2><p>Selenium服务网格需要使用合适的防火墙许可来隔离外部访问。</p><p>如果不能有效的保护你的服务网格，可能会导致以下问题：</p><ul><li>提供了一个开发的接口来访问服务网格的基础设施</li><li>你将会允许第三方来访问内部web服务和文件</li><li>你将会允许第三方来执行定制的二进制文件</li></ul><p>请参考这篇文章<a href=//labs.detectify.com>Detectify</a>, 这里给了一个很好的概要，
 关于暴露一个服务网格后会如何被滥用：<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-e2c3220801c7eb142b84fad49bc5b858>3.2 - 什么时候应该使用Grid</h1><div class=lead>Grid是适合您的工具吗?</div><p>通常来说，有2个原因你需要使用Grid。</p><ul><li>在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试</li><li>缩短完成测试的时间</li></ul><p>Grid通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。
 比如的测试套件里包含100个测试，你的Grid支持4种不同的终端（虚拟机或者独立的物理设备）
 来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。
@@ -10914,7 +10911,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/AutomatedTester&quot;&gt;@AutomatedTester&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;1184 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;1187 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -10970,7 +10967,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/diemol&quot;&gt;@diemol&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;616 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;619 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -14103,7 +14100,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/diemol&quot;&gt;@diemol&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;484 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;485 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
