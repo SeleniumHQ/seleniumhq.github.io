@@ -119,11 +119,7 @@ The Grid UI can be reached by opening your preferred browser and heading to
 [http://localhost:4444](http://localhost:4444).
 
 API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
-endpoint or using GraphQL:
-
-```shell
-curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
-```
+endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 
 {{% pageinfo color="primary" %}}
 For simplicity, all command examples shown in this page assume that components are running
