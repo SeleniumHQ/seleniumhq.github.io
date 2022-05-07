@@ -400,27 +400,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-
-    await driver.get('https://www.example.com');
-
-    // Add few cookies
-    await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test2', value:'cookie2'});
-
-    // Delete a cookie with name 'test1'
-    await driver.manage().deleteCookie('test1');
-    
-    // Get all Available cookies
-    driver.manage().getCookies().then(function (cookies) {
-        console.log('cookie details => ', cookies);
-    });
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/deleteCookie.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
