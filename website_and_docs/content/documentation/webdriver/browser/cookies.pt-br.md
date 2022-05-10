@@ -629,20 +629,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-        
-    await driver.get('https://www.example.com');
-    
-    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
-    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
-    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
-    console.log(await driver.manage().getCookie('key'));
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/sameSiteCookie.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
