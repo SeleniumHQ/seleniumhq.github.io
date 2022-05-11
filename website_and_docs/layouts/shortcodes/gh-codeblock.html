@@ -2,7 +2,7 @@
 {{ $webBaseUrl := .Get "webBaseUrl" | default "https://github.com" }}
 {{ $org := .Get "org" | default "SeleniumHQ" }}
 {{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
-{{ $branch := .Get "branch" | default "dev" }}
+{{ $branch := .Get "branch" | default "trunk" }}
 {{ $path := .Get "path" }}
 
 {{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}

@@ -3,7 +3,7 @@ name: Publish Selenium Site
 on:
   push:
     branches:
-      - dev
+      - trunk
 
 jobs:
   deploy:
