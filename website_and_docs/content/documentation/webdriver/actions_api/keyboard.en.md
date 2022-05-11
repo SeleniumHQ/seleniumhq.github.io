@@ -305,12 +305,9 @@ action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perfor
 # Help us with a PR for code sample
 
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-
-# Help us with a PR for code sample
-
-{{< /tab >}}
-
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/keyboard/sendKeysAction.js">}}
+  {{< /tab >}}
 {{< tab header="Kotlin" >}}
 
 # Help us with a PR for code sample
