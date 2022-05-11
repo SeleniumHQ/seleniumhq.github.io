@@ -182,23 +182,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-
-    await driver.get('https://www.example.com');
-
-    // set a cookie on the current domain
-    await driver.manage().addCookie({name:'foo', value: 'bar'});
-
-    // Get cookie details with named cookie 'foo' 
-    driver.manage().getCookie('foo').then(function (cookie) {
-        console.log('cookie details => ', cookie);
-    });
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/getNamedCookie.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -301,24 +286,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-
-    await driver.get('https://www.example.com');
-
-    // Add few cookies
-    await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test2', value:'cookie2'});
-
-    // Get all Available cookies
-    driver.manage().getCookies().then(function (cookies) {
-        console.log('cookie details => ', cookies);
-    });
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/getAllCookies.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -429,27 +398,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-
-    await driver.get('https://www.example.com');
-
-    // Add few cookies
-    await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test2', value:'cookie2'});
-
-    // Delete a cookie with name 'test1'
-    await driver.manage().deleteCookie('test1');
-    
-    // Get all Available cookies
-    driver.manage().getCookies().then(function (cookies) {
-        console.log('cookie details => ', cookies);
-    });
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/deleteCookie.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -551,22 +501,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-
-    await driver.get('https://www.example.com');
-
-    // Add few cookies
-    await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test2', value:'cookie2'});
-
-    // Delete all cookies
-    await driver.manage().deleteAllCookies();
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/deleteAllCookies.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -689,20 +625,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .build();
-        
-    await driver.get('https://www.example.com');
-    
-    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
-    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
-    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
-    console.log(await driver.manage().getCookie('key'));
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/browser/cookies/sameSiteCookie.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
