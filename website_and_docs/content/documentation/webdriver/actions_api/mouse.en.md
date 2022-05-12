@@ -340,24 +340,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function doubleClick() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-    // Store 'google search' button web element
-    let searchBtn = driver.findElement(By.linkText("Sign in"));
-    const actions = driver.actions({async: true});
-    // Perform double-click action on the element
-    await actions.doubleClick(searchBtn).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/doubleClick.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
