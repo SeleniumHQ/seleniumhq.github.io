@@ -2,7 +2,7 @@
 {{ $webBaseUrl := .Get "webBaseUrl" | default "https://github.com" }}
 {{ $org := .Get "org" | default "SeleniumHQ" }}
 {{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
-{{ $branch := .Get "branch" | default "trunk" }}
+{{ $branch := .Get "branch" | default "wheel_examples" }}
 {{ $fullPath := .Get "path" }}
 {{ $path := index (split $fullPath "#") 0 }}
 
