@@ -16,7 +16,8 @@ namespace SeleniumDocs.GettingStarted
 
             driver.Navigate().GoToUrl("https://google.com");
 
-            Assert.AreEqual("Google", driver.Title);
+            var title = driver.Title;
+            Assert.AreEqual("Google", title);
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
@@ -27,7 +28,8 @@ namespace SeleniumDocs.GettingStarted
             searchButton.Click();
             
             searchBox = driver.FindElement(By.Name("q"));
-            Assert.AreEqual("Selenium", searchBox.GetAttribute("value"));
+            var value = searchBox.GetAttribute("value");
+            Assert.AreEqual("Selenium", value);
 
             driver.Quit();
         }
