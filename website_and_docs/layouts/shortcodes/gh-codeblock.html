@@ -3,10 +3,11 @@
 {{ $org := .Get "org" | default "SeleniumHQ" }}
 {{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
 {{ $branch := .Get "branch" | default "trunk" }}
-{{ $path := .Get "path" }}
+{{ $fullPath := .Get "path" }}
+{{ $path := index (split $fullPath "#") 0 }}
 
 {{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
-{{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $path }}
+{{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
 
 {{ $slicedPath := split $path "/" }}
 {{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
@@ -28,12 +29,12 @@
     {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
     {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
     {{ $splitContent := split $content "\n" }}
-    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}  
+    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
   {{ end }}
 
   {{ highlight $codeSnippet $language }}
 
-  <div class="text-right mb-5 pb-2 border-bottom">     
+  <div class="text-right mb-5 pb-2">
     <a href="{{- $webUrl -}}" target="_blank">
       <i class="fas fa-external-link-alt pl-2"></i>
       <i class="fas fa-external-link" aria-hidden="true"></i>
