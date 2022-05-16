@@ -30,11 +30,11 @@ public class clickAndHold {
       // Navigate to Url
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
-      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      // Store 'signIn' button web element
+      WebElement signIn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
       // Perform click-and-hold action on the element
-      actionProvider.clickAndHold(searchBtn).build().perform();
+      actionProvider.clickAndHold(signIn).build().perform();
     } finally {
       driver.quit();
     }
@@ -46,14 +46,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
-    # Navigate to url
+# Navigate to url
 driver.get("http://www.google.com")
 
-    # Store 'google search' button web element
-searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
+# Store 'Sign In' button web element
+signIn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-    # Perform click-and-hold action on the element
-webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
+# Perform click-and-hold action on the element
+webdriver.ActionChains(driver).click_and_hold(signIn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -71,11 +71,11 @@ namespace SeleniumApp
       {
         // Navigate to Url
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
-        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        // Store 'Sign In' button web element
+        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
         // Perform click-and-hold action on the element
-        actionProvider.ClickAndHold(searchBtn).Build().Perform();
+        actionProvider.ClickAndHold(signIn).Build().Perform();
       }
       finally
       {
@@ -113,11 +113,11 @@ fun main() {
     try {
         // Navigate to Url
         driver.get("https://google.com")
-        // Store 'google search' button web element
-        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        // Store 'Sign In' button web element
+        val signIn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
         // Perform click-and-hold action on the element
-        actionProvider.clickAndHold(searchBtn).build().perform()
+        actionProvider.clickAndHold(signIn).build().perform()
     } finally {
         driver.quit()
     }

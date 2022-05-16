@@ -5,11 +5,11 @@ const {Builder, By} = require('selenium-webdriver');
     try {
         // Navigate to Url
         await driver.get('https://www.google.com');
-        // Store 'google search' button web element
-        let searchBtn = driver.findElement(By.linkText("Sign in"));
+        // Store 'SignIn' button web element
+        let signInBtn = driver.findElement(By.linkText("Sign in"));
         const actions = driver.actions({async: true});
         // Perform mouseMove to element and mouseDown (press) action on the element
-        await actions.move({origin:searchBtn}).press().perform();
+        await actions.move({origin:signInBtn}).press().perform();
     }
     finally {
         await driver.quit();
