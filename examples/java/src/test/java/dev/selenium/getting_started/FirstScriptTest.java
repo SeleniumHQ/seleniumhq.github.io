@@ -18,7 +18,8 @@ public class FirstScriptTest {
 
         driver.get("https://google.com");
 
-        Assertions.assertEquals("Google", driver.getTitle());
+        String title = driver.getTitle();
+        Assertions.assertEquals("Google", title);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
@@ -29,7 +30,8 @@ public class FirstScriptTest {
         searchButton.click();
 
         searchBox = driver.findElement(By.name("q"));
-        Assertions.assertEquals("Selenium", searchBox.getAttribute("value"));
+        String value = searchBox.getAttribute("value")
+        Assertions.assertEquals("Selenium", value);
 
         driver.quit();
     }

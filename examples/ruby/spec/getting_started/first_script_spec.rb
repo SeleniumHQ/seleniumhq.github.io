@@ -6,7 +6,8 @@ RSpec.describe 'First Script' do
 
     driver.get('https://google.com')
 
-    expect(driver.title).to eq('Google')
+    title = driver.title
+    expect(title).to eq('Google')
 
     driver.manage.timeouts.implicit_wait = 500
 
@@ -17,7 +18,8 @@ RSpec.describe 'First Script' do
     search_button.click
 
     search_box = driver.find_element(name: 'q')
-    expect(attribute('value')).to eq('Selenium')
+    value = search_box.attribute('value')
+    expect(value).to eq('Selenium')
 
     driver.quit
   end

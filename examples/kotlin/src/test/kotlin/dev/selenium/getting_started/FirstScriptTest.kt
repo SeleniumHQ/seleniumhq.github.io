@@ -12,21 +12,14 @@ import java.time.Duration
 class FirstScriptTest {
     private lateinit var driver: WebDriver
 
-    @BeforeAll
-    fun setupDriverBinary() {
-        WebDriverManager.chromedriver().setup()
-    }
-
-    @BeforeEach
-    fun setupBrowser() {
-        driver = ChromeDriver()
-    }
-
     @Test
     fun eightComponents() {
+        driver = ChromeDriver()
+
         driver.get("https://google.com")
 
-        assertEquals("Google", driver.title)
+        title = driver.title
+        assertEquals("Google", title)
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))
 
@@ -37,11 +30,9 @@ class FirstScriptTest {
         searchButton.click()
 
         searchBox = driver.findElement(By.name("q"))
-        assertEquals("Selenium", searchBox.getAttribute("value"))
-    }
+        val value = searchBox.getAttribute("value")
+        assertEquals("Selenium", value)
 
-    @AfterEach
-    fun cleanupBrowser() {
         driver.quit()
     }
 }

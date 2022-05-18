@@ -7,7 +7,8 @@ def test_eight_components():
 
     driver.get("https://google.com")
 
-    assert driver.title == "Google"
+    title = driver.title
+    assert title == "Google"
 
     driver.implicitly_wait(0.5)
 
@@ -18,6 +19,7 @@ def test_eight_components():
     search_button.click()
 
     search_box = driver.find_element(by=By.NAME, value="q")
-    assert search_box.get_attribute("value") == "Selenium"
+    value = search_box.get_attribute("value")
+    assert value == "Selenium"
 
     driver.quit()
