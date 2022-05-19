@@ -143,11 +143,11 @@ public class contextClick {
       // Navigate to Url
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
-      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      // Store 'signIn' button web element
+      WebElement signIn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
       // Perform context-click action on the element
-      actionProvider.contextClick(searchBtn).build().perform();
+      actionProvider.contextClick(signIn).build().perform();
     } finally {
       driver.quit();
     }
@@ -158,14 +158,14 @@ public class contextClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-    # Navigate to url
+# Navigate to url
 driver.get("http://www.google.com")
 
-    # Store 'google search' button web element
-searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
+# Store 'signIn' button web element
+signIn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-    # Perform context-click action on the element
-webdriver.ActionChains(driver).context_click(searchBtn).perform()
+# Perform context-click action on the element
+webdriver.ActionChains(driver).context_click(signIn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -183,11 +183,11 @@ namespace SeleniumApp
       {
         // Navigate to Url
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
-        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        // Store 'signIn' button web element
+        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
         // Perform context-click action on the element
-        actionProvider.ContextClick(searchBtn).Build().Perform();
+        actionProvider.ContextClick(signIn).Build().Perform();
       }
       finally
       {
@@ -220,11 +220,11 @@ const {Builder, By} = require('selenium-webdriver');
   try {
     // Navigate to Url
     await driver.get('https://www.google.com');
-    // Store 'google search' button web element
-    let searchBtn = driver.findElement(By.linkText("Sign in"));
+    // Store 'signIn' button web element
+    let signIn = driver.findElement(By.linkText("Sign in"));
     const actions = driver.actions({async: true});
     // Perform context-click action on the element
-    await actions.contextClick(searchBtn).perform();
+    await actions.contextClick(signIn).perform();
   }
   finally {
     await driver.quit();
@@ -241,11 +241,11 @@ fun main() {
     try {
         // Navigate to Url
         driver.get("https://google.com")
-        // Store 'google search' button web element
-        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        // Store 'signIn' button web element
+        val signIn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
         // Perform context-click action on the element
-        actionProvider.contextClick(searchBtn).build().perform()
+        actionProvider.contextClick(signIn).build().perform()
     } finally {
         driver.quit()
     }
@@ -271,11 +271,11 @@ public class doubleClick {
       // Navigate to Url
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
-      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      // Store 'signIn' button web element
+      WebElement signIn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
       // Perform double-click action on the element
-      actionProvider.doubleClick(searchBtn).build().perform();
+      actionProvider.doubleClick(signIn).build().perform();
     } finally {
       driver.quit();
     }
@@ -286,14 +286,14 @@ public class doubleClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-    # Navigate to url
+# Navigate to url
 driver.get("http://www.google.com")
 
-    # Store 'google search' button web element
-searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
+# Store 'signIn' button web element
+signIn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-    # Perform double-click action on the element
-webdriver.ActionChains(driver).double_click(searchBtn).perform()
+# Perform double-click action on the element
+webdriver.ActionChains(driver).double_click(signIn).perform()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -311,11 +311,11 @@ namespace SeleniumApp
       {
         // Navigate to Url
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
-        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        // Store 'signIn' button web element
+        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
         // Perform double-click action on the element
-        actionProvider.DoubleClick(searchBtn).Build().Perform();
+        actionProvider.DoubleClick(signIn).Build().Perform();
       }
       finally
       {
@@ -353,11 +353,11 @@ fun main() {
     try {
         // Navigate to Url
         driver.get("https://google.com")
-        // Store 'google search' button web element
-        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        // Store 'signIn' button web element
+        val signIn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
         // Perform double-click action on the element
-        actionProvider.doubleClick(searchBtn).build().perform()
+        actionProvider.doubleClick(signIn).build().perform()
     } finally {
         driver.quit()
     }
