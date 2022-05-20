@@ -301,9 +301,23 @@ action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perfor
 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
 
-# Help us with a PR for code sample
-
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  # Store google search box WebElement
+  search = driver.find_element(name: 'q')
+  # Get focus on Search
+  driver.execute_script('arguments[0].focus()', search)
+  # Send value by action class to the search box
+  driver.action.send_keys('Selenium').perform
+  # Perform Keyboard action by Action class
+  driver.action.send_keys(:enter).perform
+ensure
+  driver.quit
+end
 {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/javascript/actionsApi/keyboard/sendKeysAction.js">}}
