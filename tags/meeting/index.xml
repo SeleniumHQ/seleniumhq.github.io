@@ -1,9 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – meeting</title><link>/tags/meeting/</link><description>Recent content in meeting on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/meeting/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Public Project Meeting - July 15, 2021</title><link>/blog/2021/public-project-meeting-20210715/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210715/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,7 +10,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on July 15, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -182,11 +180,10 @@ Website
 &lt;p>Right now I&amp;rsquo;m busy updating all of my Java test examples from JUnit 4 to JUnit 5 thanks to @Puja Jagani&lt;/p>
 &lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:36 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
 &lt;p>ok, so it seems we are done with today’s public meeting, thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - June 17, 2021</title><link>/blog/2021/public-project-meeting-20210617/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210617/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -194,7 +191,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on June 17, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -298,11 +294,10 @@ so we can document and potentially automate releases&lt;/p>
 &lt;p>Yeah, I&amp;rsquo;ll loop you in when we set up a demo. Might not work for what we need&lt;/p>
 &lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:39 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
 &lt;p>sounds good&lt;/p></description></item><item><title>Blog: Public Project Meeting - June 03, 2021</title><link>/blog/2021/public-project-meeting-20210603/</link><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210603/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -310,7 +305,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on June 03, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -663,11 +657,10 @@ Release process&lt;/p>
 &lt;p>sounds good, that would help a lot&lt;/p>
 &lt;p>&lt;em>Simon Stewart 10:22 PM&lt;/em>&lt;/p>
 &lt;p>Will check tomorrow&lt;/p></description></item><item><title>Blog: Public Project Meeting - May 20, 2021</title><link>/blog/2021/public-project-meeting-20210520/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210520/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -675,7 +668,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on May 20, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -1077,11 +1069,10 @@ that&amp;rsquo;s proper context&lt;/p>
 &lt;p>I&amp;rsquo;m totally fine waiting as long as necessary for that, but I also heard @AutomatedTester suggest that maybe @Puja Jagani could help with that&lt;/p>
 &lt;p>&lt;em>Titus Fortner 10:06 PM&lt;/em>&lt;/p>
 &lt;p>sounds great, thanks @simonstewart!&lt;/p></description></item><item><title>Blog: Public Project Meeting - May 06, 2021</title><link>/blog/2021/public-project-meeting-20210506/</link><pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210506/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -1089,7 +1080,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on May 06, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -1337,11 +1327,10 @@ didn&amp;rsquo;t get too deep into it&lt;/p>
 &lt;p>I care about a user who needs to change because of them&lt;/p>
 &lt;p>&lt;em>Diego Molina 9:51 PM&lt;/em>&lt;/p>
 &lt;p>Anyway, I think those were all the topics we had :slightly_smiling_face:&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 22, 2021</title><link>/blog/2021/public-project-meeting-20210422/</link><pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210422/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -1349,7 +1338,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on April 22, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -1508,11 +1496,10 @@ release the IDE, and we will post here in #selenium-tlc&lt;/p>
 &lt;p>does anyone have an extra topic?&lt;/p>
 &lt;p>seems not, thank you everyone!&lt;/p>
 &lt;p>(and thanks @harsha509 for publishing the notes to our blog :slightly_smiling_face:)&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 08, 2021</title><link>/blog/2021/public-project-meeting-20210408/</link><pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210408/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -1520,7 +1507,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on April 08, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -1839,11 +1825,10 @@ than the rest of us since he actually reads specs&lt;/p>
 &lt;p>&lt;em>9:48 PM&lt;/em>&lt;/p>
 &lt;p>in case you have some spare time, @AutomatedTester @jimevans @simonstewart&lt;/p>
 &lt;p>that’s all I had in the agenda :slightly_smiling_face:&lt;/p></description></item><item><title>Blog: Public Project Meeting - March 25, 2021</title><link>/blog/2021/public-project-meeting-20210325/</link><pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210325/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -1851,7 +1836,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on March 25, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -2047,11 +2031,10 @@ New&lt;/p>
 however, if anyone has a comment about what we discussed today, feel free to comment it here at any time&lt;/p>
 &lt;p>&lt;em>Titus Fortner 10:43 PM&lt;/em>&lt;/p>
 &lt;p>Thanks @diemol!&lt;/p></description></item><item><title>Blog: Public Project Meeting - March 11, 2021</title><link>/blog/2021/public-project-meeting-20210311/</link><pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210311/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -2059,7 +2042,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on March 11, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -2213,11 +2195,10 @@ everything else seems to be small adjustments, some could happen for beta 2 and 
 &lt;p>&lt;em>Diego Molina 10:34 PM&lt;/em>&lt;/p>
 &lt;p>true, while checking old issues, there are 3-4 we could close by updating the docs&lt;/p>
 &lt;p>ok, so let’s wrap today’s meeting with that, thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - February 25, 2021</title><link>/blog/2021/public-project-meeting-20210225/</link><pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210225/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -2225,7 +2206,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on February 25, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -2371,11 +2351,10 @@ I updated the bindings that use it&lt;/p>
 now sure what to do now :slightly_smiling_face:&lt;/p>
 &lt;p>&lt;em>Simon Stewart 10:35 PM&lt;/em>&lt;/p>
 &lt;p>Once again, I shall mutter about writing our own http client based on netty, starting from the one we have for domain sockets&lt;/p></description></item><item><title>Blog: Public Project Meeting - February 11, 2021</title><link>/blog/2021/public-project-meeting-20210211/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210211/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -2383,7 +2362,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on February 11, 2021,5:30 PM CET. (Below times are on CET)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -2663,11 +2641,10 @@ Jim: inclined to support&lt;/p>
 &lt;p>The what was for Titus&lt;/p>
 &lt;p>&lt;em>Diego Molina 6:32 PM&lt;/em>&lt;/p>
 &lt;p>ok, so the meeting time is up, thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - January 28, 2021</title><link>/blog/2021/public-project-meeting-20210128/</link><pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210128/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -2675,7 +2652,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on January 28, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -2824,11 +2800,10 @@ someone needs to take the time and take the contents of that Wiki and put them i
 thank you&lt;/p>
 &lt;p>I think that was it for today, right?&lt;/p>
 &lt;p>Thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - January 14, 2021</title><link>/blog/2021/public-project-meeting-20210114/</link><pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210114/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -2836,7 +2811,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on January 14, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -3064,11 +3038,10 @@ improve docs ftw&lt;/p>
 &lt;p>re beta readiness: i have a refactor to .NET i want to do to make CDP via RemoteWebDriver easier/more correct, but it can wait until post-beta1&lt;/p>
 &lt;p>&lt;em>10:45&lt;/em>&lt;/p>
 &lt;p>otherwise, i think .NET is ready for beta.&lt;/p></description></item><item><title>Blog: Public Project Meeting - December 03, 2020</title><link>/blog/2020/public-project-meeting-20201203/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20201203/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -3076,7 +3049,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on December 03, 2020,5:30 PM CET.&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -3244,11 +3216,10 @@ The latter I think is missing in all bindings.
 &lt;p>he&amp;rsquo;s been looking through the code for the devtools stuff and is working the print stuff&lt;/p>
 &lt;p>&lt;em>Titus Fortner 10:02 PM&lt;/em>&lt;/p>
 &lt;p>I&amp;rsquo;ll have bandwidth to do a release, but not to dig through the implementations until January :)&lt;/p></description></item><item><title>Blog: Public Project Meeting - November 19, 2020</title><link>/blog/2020/public-project-meeting-20201119/</link><pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20201119/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -3256,7 +3227,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on November 19, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -3594,11 +3564,10 @@ wonder if it’s still handling some redirects&lt;/p>
 I need to leave, but thank you all for joining!&lt;/p>
 &lt;p>&lt;em>Titus Fortner 11:02 PM&lt;/em>&lt;/p>
 &lt;p>Thanks @diemol!&lt;/p></description></item><item><title>Blog: Public Project Meeting - October 08, 2020</title><link>/blog/2020/public-project-meeting-20201008/</link><pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20201008/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -3606,7 +3575,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on October 08, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -3687,11 +3655,10 @@ Alpha 7 talk?&lt;/p>
 &lt;p>&lt;em>Diego Molina 9:36 PM&lt;/em>&lt;/p>
 &lt;p>Doesn’t seem like that
 Thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - September 24, 2020</title><link>/blog/2020/public-project-meeting-20200924/</link><pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200924/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -3699,7 +3666,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on September 24, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -3924,11 +3890,10 @@ Once those are done, I’ll be a lot happier with it&lt;/p>
 &lt;p>Thanks everyone!&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:45 PM&lt;/em>
 Thank you, @diemol!&lt;/p></description></item><item><title>Blog: Public Project Meeting - August 13, 2020</title><link>/blog/2020/public-project-meeting-20200813/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200813/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -3936,7 +3901,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on August 13, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -4177,11 +4141,10 @@ what do you think?&lt;/p>
 @mmerrell hey&amp;hellip; friendly poke about that draining PR&lt;/p>
 &lt;p>&lt;em>Diego Molina 8:51 PM&lt;/em>&lt;/p>
 &lt;p>ok, thanks everyone for your time!&lt;/p></description></item><item><title>Blog: Public Project Meeting - July 02, 2020</title><link>/blog/2020/public-project-meeting-20200702/</link><pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200702/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -4189,7 +4152,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on July 02, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -4600,11 +4562,10 @@ Thanks @AutomatedTester&lt;/p>
 &lt;li>&lt;a href="https://w3c.github.io/webdriver/#processing-model">WebDriver Specification details about transport&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>This was originally posted to &lt;a href="https://www.theautomatedtester.co.uk/">https://www.theautomatedtester.co.uk/&lt;/a>&lt;/p></description></item><item><title>Blog: Public Project Meeting - June 04, 2020</title><link>/blog/2020/public-project-meeting-20200604/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200604/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -4612,7 +4573,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on June 04, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -4888,11 +4848,10 @@ I can reach out to him&lt;/p>
 &lt;p>&lt;em>Marcus Merrell 9:01 PM&lt;/em>&lt;/p>
 &lt;p>thank YOU, @diemol
 1&lt;/p></description></item><item><title>Blog: Public Project Meeting - May 07, 2020</title><link>/blog/2020/public-project-meeting-20200507/</link><pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200507/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -4900,7 +4859,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on May 07, 2020 (times are on IST).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -5114,11 +5072,10 @@ Screen Shot 2020-05-07 at 11.12.57 AM.png&lt;/p>
 &lt;p>Argh&amp;hellip; missed it again!!!&lt;/p>
 &lt;p>&lt;em>9:28&lt;/em>&lt;/p>
 &lt;p>For CoC, I keep dropping the ball on this one. I have been busy with work but hopefully can do something in the next two weeks&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 23, 2020</title><link>/blog/2020/public-project-meeting-20200423/</link><pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200423/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -5126,7 +5083,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>Continuing the series of bi-weekly public project meetings, here is the
 timeline of the meeting held on April 23, 2020 (times are on CET).&lt;/p>
 &lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
@@ -5410,11 +5366,10 @@ Js bindings is already at alpha7. We can try to implement relative locators(whic
 &lt;p>to respect people&amp;rsquo;s time, we will end the meeting here, I will upload the minutes to selenium.dev, and prepare an agenda for the next one&lt;/p>
 &lt;p>&lt;em>5:32&lt;/em>&lt;/p>
 &lt;p>thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 9, 2020</title><link>/blog/2020/public-project-meeting-20200409/</link><pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200409/</guid><description>
-&lt;div class="row td-box--200 justify-content-center">
-&lt;div class="alert alert-blue bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
-&lt;h2 class="alert-heading pb-3 text-center">Archived meeting minutes&lt;/h2>
-&lt;div class="w-100">
-&lt;strong>Note: &lt;/strong>
+&lt;div class="row justify-content-center my-1">
+&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+&lt;div class="w-100 text-center">
 All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/div>
 &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -5422,7 +5377,6 @@ All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;br>&lt;br>
 &lt;p>As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project
 meetings. These are written meetings which are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
 &lt;p>Here is the timeline of the meeting held on April 9, 2020 (times are on CET).&lt;/p>
