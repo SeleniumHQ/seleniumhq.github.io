@@ -326,9 +326,30 @@ end
   {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
 
-# Help us with a PR for code sample
+fun main() {
+  val driver = ChromeDriver()
+    try {
+      // Navigate to Url
+      driver.get("https://www.selenium.dev/selenium/docs/api/java/overview-summary.html")
 
+      // Store search box WebElement
+      val search = driver.findElement(By.id("search"))
+      val action = Actions(driver)
+
+      // Send value by action class to the search box
+      action.sendKeys(search, "devtools").perform();
+
+      // Perform Keyboard action by Action class
+      action.sendKeys(search, Keys.ENTER).perform();
+    } finally {
+      driver.quit()
+  }
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
