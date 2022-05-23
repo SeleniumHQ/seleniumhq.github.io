@@ -124,9 +124,9 @@ configs = [
     "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
 ]
 #Optionally define all device files that should be mapped to docker containers
-devices = [
-    "/dev/kvm:/dev/kvm"
-]
+#devices = [
+#    "/dev/kvm:/dev/kvm"
+#]
 url = "http://localhost:2375"
 video-image = "selenium/video:latest"
 ```
