@@ -7,7 +7,7 @@ description: >
 ---
 
 当你已经完成 [安装Selenium类库]({{< ref "install_library.md" >}}),
-以及 [浏览器所需的驱动]({{< ref "install_library.md" >}}),
+以及 [浏览器所需的驱动]({{< ref "install_drivers.md" >}}),
 您可以使用浏览器启动和停止会话.
 
 通常, 浏览器都是根据特定的选项启动, 

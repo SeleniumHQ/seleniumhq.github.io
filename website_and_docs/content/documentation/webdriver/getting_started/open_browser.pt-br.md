@@ -8,7 +8,7 @@ description: >
 ---
 
 Once you have a [Selenium library installed]({{< ref "install_library.md" >}}),
-and your [desired browser driver]({{< ref "install_library.md" >}}),
+and your [desired browser driver]({{< ref "install_drivers.md" >}}),
 you can start and stop a session with a browser.
 
 Typically, browsers are started with specific options that describe
