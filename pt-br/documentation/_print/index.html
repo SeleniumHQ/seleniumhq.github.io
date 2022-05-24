@@ -5270,9 +5270,7 @@ Executing this command differs slightly from using the element method.</p><ul cl
 </span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>}</span> <span style=color:#204a87;font-weight:700>finally</span> <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>      <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>}</span>
-</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span></span></span></code></pre></div></div></div><div class="row justify-content-center my-1"><div class="alert alert-orange -bg-selenium-cyan-20 col-10 pl-lg-5 mb-0 alert-dismissible fade show" role=alert><h2 class="alert-heading pb-3 text-center">Coding Help</h2><div class=w-100><strong>Note:</strong>
-This section could use some updated code examples<br><br>for sendKeys by Action<br><br>Check our <a href=/pt-br/documentation/about/contributing/>contribution guidelines</a> and <a href=/pt-br/documentation/about/style#code-examples>code example formats</a> if you&rsquo;d like to help.</div><button type=button class=close data-dismiss=alert aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-3826b702b93bc29599384a35cb0cc848>2.8.2 - Ações do mouse em detalhe</h1><div class=lead>Mouse representa um evento do mouse. Ações do mouse são realizadas usando interface de baixo nível que nos permite fornecer ação de entrada de dispositivo virtualizado para o navegador da web.</div><h2 id=clickandhold>clickAndHold</h2><p>Ele se moverá para o elemento e clicar (sem soltar) no meio do elemento fornecido.</p><ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-0-0-tab data-toggle=tab href=#tabs-0-0 role=tab onclick='handleClick("java")' aria-controls=tabs-0-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-0-1-tab data-toggle=tab href=#tabs-0-1 role=tab onclick='handleClick("python")' aria-controls=tabs-0-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-0-2-tab data-toggle=tab href=#tabs-0-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-0-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-0-3-tab data-toggle=tab href=#tabs-0-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-0-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-0-4-tab data-toggle=tab href=#tabs-0-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-0-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-0-5-tab data-toggle=tab href=#tabs-0-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-0-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-0-content><div class="tab-pane fade show active" id=tabs-0-0 role=tabpanel aria-labelled-by=tabs-0-0-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span></span></span></code></pre></div></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-3826b702b93bc29599384a35cb0cc848>2.8.2 - Ações do mouse em detalhe</h1><div class=lead>Mouse representa um evento do mouse. Ações do mouse são realizadas usando interface de baixo nível que nos permite fornecer ação de entrada de dispositivo virtualizado para o navegador da web.</div><h2 id=clickandhold>clickAndHold</h2><p>Ele se moverá para o elemento e clicar (sem soltar) no meio do elemento fornecido.</p><ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-0-0-tab data-toggle=tab href=#tabs-0-0 role=tab onclick='handleClick("java")' aria-controls=tabs-0-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-0-1-tab data-toggle=tab href=#tabs-0-1 role=tab onclick='handleClick("python")' aria-controls=tabs-0-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-0-2-tab data-toggle=tab href=#tabs-0-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-0-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-0-3-tab data-toggle=tab href=#tabs-0-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-0-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-0-4-tab data-toggle=tab href=#tabs-0-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-0-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-0-5-tab data-toggle=tab href=#tabs-0-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-0-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-0-content><div class="tab-pane fade show active" id=tabs-0-0 role=tabpanel aria-labelled-by=tabs-0-0-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebElement</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.chrome.ChromeDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
@@ -15158,6 +15156,20 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/in/29110?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/apps/dependabot&quot;&gt;@dependabot[bot]&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;4 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/45083857?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -15306,20 +15318,6 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
   /&gt;
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/cambiph&quot;&gt;@cambiph&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;3 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/in/29110?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/apps/dependabot&quot;&gt;@dependabot[bot]&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;3 commits&lt;/span&gt;
 &lt;/div&gt;
