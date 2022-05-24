@@ -299,7 +299,7 @@ action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perfor
 
 IWebDriver driver = new ChromeDriver();
 // Navigate to the url
-driver.Url = "https://www.selenium.dev";
+driver.Url = "https://www.google.com";
 // Create an object of Action class
 Actions action = new Actions(driver);
 // Find google search box element
