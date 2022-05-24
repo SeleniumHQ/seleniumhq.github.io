@@ -299,7 +299,18 @@ action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perfor
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 
-# Help us with a PR for code sample
+
+IWebDriver driver = new ChromeDriver();
+// Navigate to the url
+driver.Url = "https://www.selenium.dev";
+// Create an object of Action class
+Actions action = new Actions(driver);
+// Find google search box element
+IWebElement search = driver.FindElement(By.Name("q"));
+// Send value by action class to the search box
+action.SendKeys(search, "Selenium").Perform();
+// Perform Keyboard action by Action class
+action.SendKeys(Keys.Enter).Perform();
 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
