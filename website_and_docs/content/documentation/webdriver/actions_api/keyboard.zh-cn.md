@@ -299,25 +299,67 @@ action.move_to_element(search).click().send_keys("send_keys", Keys.ENTER).perfor
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 
-# Help us with a PR for code sample
+
+IWebDriver driver = new ChromeDriver();
+// Navigate to the url
+driver.Url = "https://www.google.com";
+// Create an object of Action class
+Actions action = new Actions(driver);
+// Find google search box element
+IWebElement search = driver.FindElement(By.Name("q"));
+// Send value by action class to the search box
+action.SendKeys(search, "Selenium").Perform();
+// Perform Keyboard action by Action class
+action.SendKeys(Keys.Enter).Perform();
 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
 
-# Help us with a PR for code sample
-
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  # Store google search box WebElement
+  search = driver.find_element(name: 'q')
+  # Get focus on Search
+  driver.execute_script('arguments[0].focus()', search)
+  # Send value by action class to the search box
+  driver.action.send_keys('Selenium').perform
+  # Perform Keyboard action by Action class
+  driver.action.send_keys(:enter).perform
+ensure
+  driver.quit
+end
 {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/javascript/actionsApi/keyboard/sendKeysAction.js">}}
   {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
 
-# Help us with a PR for code sample
+fun main() {
+  val driver = ChromeDriver()
+    try {
+      // Navigate to Url
+      driver.get("https://www.selenium.dev/selenium/docs/api/java/overview-summary.html")
 
+      // Store search box WebElement
+      val search = driver.findElement(By.id("search"))
+      val action = Actions(driver)
+
+      // Send value by action class to the search box
+      action.sendKeys(search, "devtools").perform();
+
+      // Perform Keyboard action by Action class
+      action.sendKeys(search, Keys.ENTER).perform();
+    } finally {
+      driver.quit()
+  }
+}
 {{< /tab >}}
 {{< /tabpane >}}
-
-{{< alert-code >}}
-for sendKeys by Action
-{{< /alert-code >}}

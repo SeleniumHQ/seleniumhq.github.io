@@ -1,7 +1,7 @@
 {{ $alert_type := .alert_type }}
 
-<div class="row td-box--200 justify-content-center">
-  <div class="alert alert-{{ .color }} bg-transparent col-10 pl-lg-5 my-4 alert-dismissible fade show" role="alert">
+<div class="row justify-content-center my-1">
+  <div class="alert alert-{{ .color }} -bg-selenium-cyan-20 col-10 pl-lg-5 mb-0 alert-dismissible fade show" role="alert">
     {{ if .title }}
     <h2 class="alert-heading pb-3 text-center">{{ .title }}</h2>
     {{ end }}
@@ -24,4 +24,3 @@
     </button>
   </div>
 </div>
-<br><br>

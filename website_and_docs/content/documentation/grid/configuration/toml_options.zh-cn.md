@@ -110,6 +110,8 @@ webdriver-executable = '/path/to/chromedriver/95/chromedriver'
 则最多有2个并发会话.
 原型配置需要映射一个Docker映像,
 Docker的守护进程需要通过http/tcp公开.
+此外，可以通过 `devices` 属性定义在主机上可访问的哪些设备文件将在容器中可用。
+有关 docker 设备映射如何工作的更多信息，请参阅 [docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device) 文档。
 
 ```toml
 [node]
@@ -118,9 +120,13 @@ max-sessions = 2
 
 [docker]
 configs = [
-        "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
-        "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
-    ]
+    "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
+    "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
+]
+#Optionally define all device files that should be mapped to docker containers
+#devices = [
+#    "/dev/kvm:/dev/kvm"
+#]
 url = "http://localhost:2375"
 video-image = "selenium/video:latest"
 ```

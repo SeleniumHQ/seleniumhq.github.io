@@ -179,6 +179,7 @@ pull request updating this page.
 |---|---|---|---|
 | `--docker-assets-path` | string | `/opt/selenium/assets` | Absolute path where assets will be stored |
 | `--docker-` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Docker configs which map image name to stereotype capabilities (example `-D selenium/standalone-firefox:latest '{"browserName": "firefox"}') |
+| `--docker-devices` | string[] | `/dev/kvm:/dev/kvm` | Exposes devices to a container. Each device mapping declaration must have at least the path of the device in both host and container separated by a colon like in this example: /device/path/in/host:/device/path/in/container |
 | `--docker-host` | string | `localhost` | Host name where the Docker daemon is running |
 | `--docker-port` | int | `2375` | Port where the Docker daemon is running |
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
