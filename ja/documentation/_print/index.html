@@ -788,7 +788,7 @@ but you will use them frequently.</p><ul class="nav nav-tabs" id=tabs-15 role=ta
 </span></span><span style=display:flex><span>        <span style=color:#000>searchButton</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>click</span><span style=color:#000;font-weight:700>()</span></span></span></code></pre></div><div class="text-right mb-5 pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L29-L30 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
 <i class="fas fa-external-link" aria-hidden=true></i>
 <small>Check code on GitHub</small></a></div></div></div></div><h3 id=7-要素に関する情報をリクエストします>7. 要素に関する情報をリクエストします</h3><p>Elements store a lot of <a href=/ja/documentation/webdriver/elements/information/>information that can be requested</a>.
-Notice that we need to relocate the search box because the DOM has changed since we first located it.</p><ul class="nav nav-tabs" id=tabs-17 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-17-0-tab data-toggle=tab href=#tabs-17-0 role=tab onclick='handleClick("java")' aria-controls=tabs-17-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-17-1-tab data-toggle=tab href=#tabs-17-1 role=tab onclick='handleClick("python")' aria-controls=tabs-17-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-17-2-tab data-toggle=tab href=#tabs-17-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-17-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-17-3-tab data-toggle=tab href=#tabs-17-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-17-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-17-4-tab data-toggle=tab href=#tabs-17-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-17-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-17-5-tab data-toggle=tab href=#tabs-17-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-17-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-17-content><div class="tab-pane fade show active" id=tabs-17-0 role=tabpanel aria-labelled-by=tabs-17-0-tab><div class="my-3 py-2 border-bottom"><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>)</span></span></span></code></pre></div><div class="text-right mb-5 pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L33 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
+Notice that we need to relocate the search box because the DOM has changed since we first located it.</p><ul class="nav nav-tabs" id=tabs-17 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-17-0-tab data-toggle=tab href=#tabs-17-0 role=tab onclick='handleClick("java")' aria-controls=tabs-17-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-17-1-tab data-toggle=tab href=#tabs-17-1 role=tab onclick='handleClick("python")' aria-controls=tabs-17-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-17-2-tab data-toggle=tab href=#tabs-17-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-17-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-17-3-tab data-toggle=tab href=#tabs-17-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-17-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-17-4-tab data-toggle=tab href=#tabs-17-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-17-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-17-5-tab data-toggle=tab href=#tabs-17-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-17-5 aria-selected=false>Kotlin</a></li></ul><div class=tab-content id=tabs-17-content><div class="tab-pane fade show active" id=tabs-17-0 role=tabpanel aria-labelled-by=tabs-17-0-tab><div class="my-3 py-2 border-bottom"><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>);</span></span></span></code></pre></div><div class="text-right mb-5 pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L33 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
 <i class="fas fa-external-link" aria-hidden=true></i>
 <small>Check code on GitHub</small></a></div></div></div><div class="tab-pane fade" id=tabs-17-1 role=tabpanel aria-labelled-by=tabs-17-1-tab><div class="my-3 py-2 border-bottom"><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=display:flex><span>    <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>search_box</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>get_attribute</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#000;font-weight:700>)</span></span></span></code></pre></div><div class="text-right mb-5 pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/python/tests/getting_started/test_first_script.py#L22 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
 <i class="fas fa-external-link" aria-hidden=true></i>
@@ -845,7 +845,7 @@ No more commands can be sent to this driver instance.</p><ul class="nav nav-tabs
 </span></span><span style=display:flex><span>        <span style=color:#000>searchButton</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>searchBox</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;q&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
-</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>        <span style=color:#000>Assertions</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Selenium&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>value</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>quit</span><span style=color:#ce5c00;font-weight:700>();</span>
@@ -964,7 +964,7 @@ No more commands can be sent to this driver instance.</p><ul class="nav nav-tabs
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>searchBox</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>sendKeys</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;Selenium&#39;</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>searchButton</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>click</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>search_box</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>name</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;q&#39;</span><span style=color:#000;font-weight:700>))</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>search_box</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>name</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;q&#39;</span><span style=color:#000;font-weight:700>));</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>search_box</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getAttribute</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>();</span>
@@ -10586,7 +10586,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/diemol&quot;&gt;@diemol&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;636 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;640 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -10712,7 +10712,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/pujagani&quot;&gt;@pujagani&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;196 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;197 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -12395,6 +12395,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/in/29110?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/apps/dependabot&quot;&gt;@dependabot[bot]&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;8 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/233500?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -12405,20 +12419,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
     &gt;&lt;a href=&quot;https://github.com/WillAbides&quot;&gt;@WillAbides&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;8 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/in/29110?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/apps/dependabot&quot;&gt;@dependabot[bot]&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;7 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -13733,7 +13733,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/harsha509&quot;&gt;@harsha509&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;453 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;454 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -17670,7 +17670,7 @@ shortcode. This is an example of the <code>gh-codeblock</code> shortcode usage:<
 </span></span><span style=display:flex><span>        <span style=color:#000>searchButton</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>searchBox</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;q&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
-</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>        <span style=color:#000>Assertions</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Selenium&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>value</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>quit</span><span style=color:#ce5c00;font-weight:700>();</span>
@@ -17717,7 +17717,7 @@ repository. This is an example of the <code>gh-codeblock</code> shortcode usage:
 </span></span><span style=display:flex><span>        <span style=color:#000>searchButton</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>searchBox</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;q&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
-</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>String</span> <span style=color:#000>value</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>searchBox</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getAttribute</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;value&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>        <span style=color:#000>Assertions</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Selenium&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>value</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>quit</span><span style=color:#ce5c00;font-weight:700>();</span>
