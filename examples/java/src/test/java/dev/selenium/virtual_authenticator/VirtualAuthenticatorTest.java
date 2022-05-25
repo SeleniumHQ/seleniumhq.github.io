@@ -187,7 +187,6 @@ public class VirtualAuthenticatorTest {
     Assertions.assertArrayEquals(credentialId, credential.getId());
     Assertions.assertTrue(credential.isResidentCredential());
     Assertions.assertArrayEquals(privateKey.getEncoded(), credential.getPrivateKey().getEncoded());
-
   }
 
   @Test
@@ -225,7 +224,6 @@ public class VirtualAuthenticatorTest {
     authenticator.removeCredential(credentialId2);
     Assertions.assertEquals(1, authenticator.getCredentials().size());
     Assertions.assertArrayEquals(credentialId1, authenticator.getCredentials().get(0).getId());
-
   }
 
   @Test
