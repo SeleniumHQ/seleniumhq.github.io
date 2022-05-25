@@ -30,7 +30,7 @@ public class FirstScriptTest {
         searchButton.click();
 
         searchBox = driver.findElement(By.name("q"));
-        String value = searchBox.getAttribute("value")
+        String value = searchBox.getAttribute("value");
         Assertions.assertEquals("Selenium", value);
 
         driver.quit();
