@@ -28,6 +28,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L64-66" >}}
 VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
 
 options.setProtocol(protocol);
@@ -56,6 +57,7 @@ It creates a new virtual authenticator with the provided properties.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L62-73" >}}
 VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
 VirtualAuthenticator authenticator =
   ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
@@ -78,6 +80,7 @@ Removes the previously added virtual authenticator.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L77-86" >}}
 ((HasVirtualAuthenticator) driver).removeVirtualAuthenticator(authenticator);
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -98,6 +101,7 @@ Creates a resident (stateful) credential with the given required credential [par
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L89-109" >}}
 Credential credential = Credential.createResidentCredential(
     credentialId, rpId, privateKey, userHandle, signCount);
   {{< /tab >}}
@@ -119,6 +123,7 @@ Creates a resident (stateless) credential with the given required credential [pa
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L139-165" >}}
 Credential credential = Credential.createNonResidentCredential(
     credentialId, rpId, privateKey, signCount);
   {{< /tab >}}
@@ -140,6 +145,7 @@ Registers the credential with the authenticator.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L181-182" >}}
 VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
 VirtualAuthenticator authenticator =
     ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
@@ -167,6 +173,7 @@ Returns the list of credentials owned by the authenticator.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L168-190" >}}
   List<Credential> credentials = authenticator.getCredentials();
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -188,6 +195,7 @@ Returns the list of credentials owned by the authenticator.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L193-227" >}}
 authenticator.removeCredential(credentialId);
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -209,6 +217,7 @@ Removes all the credentials from the authenticator.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L230-263" >}}
   authenticator.removeAllCredentials();
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -229,6 +238,7 @@ Sets whether the authenticator will simulate success or fail on user verificatio
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
+  {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L234-235" >}}
   // Disable user verification.
   authenticator.setUserVerified(false);
 
