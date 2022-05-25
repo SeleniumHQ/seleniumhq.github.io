@@ -16,7 +16,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     await searchBox.sendKeys('Selenium');
     await searchButton.click();
 
-    let search_box = driver.findElement(By.name('q'))
+    let search_box = driver.findElement(By.name('q'));
     let value = search_box.getAttribute("value");
 
     await driver.quit();

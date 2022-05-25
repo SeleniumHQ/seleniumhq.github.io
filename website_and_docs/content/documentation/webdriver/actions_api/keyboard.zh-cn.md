@@ -363,7 +363,3 @@ fun main() {
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
-{{< alert-code >}}
-for sendKeys by Action
-{{< /alert-code >}}
