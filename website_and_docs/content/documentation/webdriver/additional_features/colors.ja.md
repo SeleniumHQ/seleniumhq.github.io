@@ -25,7 +25,7 @@ import org.openqa.selenium.support.Color;
 from selenium.webdriver.support.color import Color
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 include Selenium::WebDriver::Support
@@ -60,7 +60,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 HEX_COLOUR = Color.from_string('#2F7ED8')
@@ -99,7 +99,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 BLACK = Color.from_string('black')
@@ -127,7 +127,7 @@ private final Color TRANSPARENT = Color.fromString("transparent");
 TRANSPARENT = Color.from_string('transparent')
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 TRANSPARENT = Color.from_string('transparent')
@@ -154,7 +154,7 @@ login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value
 login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
@@ -181,7 +181,7 @@ assert loginButtonBackgroundColour.equals(HOTPINK);
 assert login_button_background_colour == HOTPINK
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 assert(login_button_background_colour == HOTPINK)
@@ -208,7 +208,7 @@ assert login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)'
 assert login_button_background_colour.rgb == 'rgb(255, 105, 180)'
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 assert(login_button_background_colour.hex == '#ff69b4')
