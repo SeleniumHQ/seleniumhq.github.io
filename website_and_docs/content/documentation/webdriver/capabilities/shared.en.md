@@ -54,7 +54,7 @@ If a page takes a long time to load as a result of downloading assets (e.g., ima
 that aren't important to the automation, 
 you can change from the default parameter of `normal` to
 `eager` or `none` to speed up the session. This value applies to the entire
-session, so make sure that your [waiting strategy](/webdriver/waits) is sufficient
+session, so make sure that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient
 to minimize flakiness.
 
 
