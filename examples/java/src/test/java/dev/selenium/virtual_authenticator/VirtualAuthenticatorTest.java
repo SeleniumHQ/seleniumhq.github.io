@@ -1,5 +1,9 @@
 package dev.selenium.virtual_authenticator;
 
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.util.Base64;
+import java.util.List;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,10 +15,6 @@ import org.openqa.selenium.virtualauthenticator.Credential;
 import org.openqa.selenium.virtualauthenticator.HasVirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
-
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.util.Base64;
-import java.util.List;
 
 public class VirtualAuthenticatorTest {
 
