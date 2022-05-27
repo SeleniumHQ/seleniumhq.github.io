@@ -17,16 +17,9 @@ As the name suggests, Virtual Authenticator emulates such authenticators for tes
 A Virtual Authenticatior has a [set of properties](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
 These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindings.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
-
-options.setProtocol(protocol);
-options.setTransport(transport);
-options.setIsUserConsenting(true);
-options.setHasResidentKey(true);
-options.setHasUserVerification(true);
-options.setIsUserVerified(true);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L72-78" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -45,11 +38,9 @@ options.setIsUserVerified(true);
 
 It creates a new virtual authenticator with the provided properties.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
-VirtualAuthenticator authenticator =
-  ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L85-92" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -67,9 +58,9 @@ VirtualAuthenticator authenticator =
 
 Removes the previously added virtual authenticator.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-((HasVirtualAuthenticator) driver).removeVirtualAuthenticator(authenticator);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L101-105" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -87,10 +78,9 @@ Removes the previously added virtual authenticator.
 
 Creates a resident (stateful) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-Credential credential = Credential.createResidentCredential(
-    credentialId, rpId, privateKey, userHandle, signCount);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L120-123" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -108,10 +98,9 @@ Credential credential = Credential.createResidentCredential(
 
 Creates a resident (stateless) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-Credential credential = Credential.createNonResidentCredential(
-    credentialId, rpId, privateKey, signCount);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L163-165" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -129,16 +118,9 @@ Credential credential = Credential.createNonResidentCredential(
 
 Registers the credential with the authenticator. 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
-VirtualAuthenticator authenticator =
-    ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
-
-Credential credential = Credential.createNonResidentCredential(
-  credentialId, rpId, privateKey, signCount);
-
-authenticator.addCredential(credential);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L157-166" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -156,9 +138,9 @@ authenticator.addCredential(credential);
 
 Returns the list of credentials owned by the authenticator.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-  List<Credential> credentials = authenticator.getCredentials();
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L177-191" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -177,9 +159,9 @@ Returns the list of credentials owned by the authenticator.
 
  Removes a credential from the authenticator based on the passed credential id.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-authenticator.removeCredential(credentialId);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -198,9 +180,9 @@ authenticator.removeCredential(credentialId);
 
 Removes all the credentials from the authenticator.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-  authenticator.removeAllCredentials();
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L216-225" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
@@ -218,13 +200,9 @@ Removes all the credentials from the authenticator.
 
 Sets whether the authenticator will simulate success or fail on user verification.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-  // Disable user verification.
-  authenticator.setUserVerified(false);
-
-  // Enable user verification.
-  authenticator.setUserVerified(true);
+      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L231-232" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
   {{< /tab >}}
