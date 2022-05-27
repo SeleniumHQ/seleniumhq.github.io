@@ -22,7 +22,7 @@ public class VirtualAuthenticatorTest {
    * A pkcs#8 encoded encrypted RSA private key as a base64url string.
    */
   private final static String
-    base64EncodedPK =
+    base64EncodedRsaPK =
     "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDbBOu5Lhs4vpowbCnmCyLUpIE7JM9sm9QXzye2G+jr+Kr"
     + "MsinWohEce47BFPJlTaDzHSvOW2eeunBO89ZcvvVc8RLz4qyQ8rO98xS1jtgqi1NcBPETDrtzthODu/gd0sjB2Tk3TLuB"
     + "GVoPXt54a+Oo4JbBJ6h3s0+5eAfGplCbSNq6hN3Jh9YOTw5ZA6GCEy5l8zBaOgjXytd2v2OdSVoEDNiNQRkjJd2rmS2oi"
@@ -42,10 +42,18 @@ public class VirtualAuthenticatorTest {
     + "NpLwcR8fqaYOdAHWWz636osVEqosRrHzJOGpf9x2RSWzQJ+dq8+6fACgfFZOVpN644+sAHfNPAI/gnNKU5OfUv+eav8fB"
     + "nzlf1A3y3GIkyMyzFN3DE7e0n/lyqxE4HBYGpI8g==";
 
-  private final static PKCS8EncodedKeySpec privateKey =
-    new PKCS8EncodedKeySpec(Base64.getMimeDecoder().decode(base64EncodedPK));
+  private final static PKCS8EncodedKeySpec rsaPrivateKey =
+    new PKCS8EncodedKeySpec(Base64.getMimeDecoder().decode(base64EncodedRsaPK));
 
-  private VirtualAuthenticator authenticator;
+  // A pkcs#8 encoded unencrypted EC256 private key as a base64url string.
+  String base64EncodedEC256PK =
+    "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg8_zMDQDYAxlU-Q"
+    + "hk1Dwkf0v18GZca1DMF3SaJ9HPdmShRANCAASNYX5lyVCOZLzFZzrIKmeZ2jwU"
+    + "RmgsJYxGP__fWN_S-j5sN4tT15XEpN_7QZnt14YvI6uvAgO0uJEboFaZlOEB";
+
+  PKCS8EncodedKeySpec ec256PrivateKey =
+    new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedEC256PK));
+
   public WebDriver driver;
 
   @BeforeEach
@@ -59,6 +67,20 @@ public class VirtualAuthenticatorTest {
   }
 
   @Test
+  public void testVirtualOptions() {
+    // Create virtual authenticator options
+    VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
+      .setIsUserVerified(true)
+      .setHasUserVerification(true)
+      .setIsUserConsenting(true)
+      .setTransport(VirtualAuthenticatorOptions.Transport.USB)
+      .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)
+      .setHasResidentKey(false);
+
+    Assertions.assertEquals(6, options.toMap().size());
+  }
+
+  @Test
   public void testCreateAuthenticator() {
     // Create virtual authenticator options
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
@@ -66,7 +88,8 @@ public class VirtualAuthenticatorTest {
       .setHasResidentKey(false);
 
     // Register a virtual authenticator
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+    VirtualAuthenticator authenticator =
+      ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     List<Credential> credentialList = authenticator.getCredentials();
 
@@ -76,7 +99,7 @@ public class VirtualAuthenticatorTest {
   @Test
   public void testRemoveAuthenticator() {
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
-    authenticator =
+    VirtualAuthenticator authenticator =
       ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     ((HasVirtualAuthenticator) driver).removeVirtualAuthenticator(authenticator);
@@ -92,12 +115,12 @@ public class VirtualAuthenticatorTest {
       .setHasResidentKey(true)
       .setHasUserVerification(true)
       .setIsUserVerified(true);
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+    VirtualAuthenticator authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     byte[] credentialId = {1, 2, 3, 4};
     byte[] userHandle = {1};
     Credential residentCredential = Credential.createResidentCredential(
-      credentialId, "localhost", privateKey, userHandle, /*signCount=*/0);
+      credentialId, "localhost", rsaPrivateKey, userHandle, /*signCount=*/0);
 
     authenticator.addCredential(residentCredential);
 
@@ -114,16 +137,10 @@ public class VirtualAuthenticatorTest {
       .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)
       .setHasResidentKey(true);
 
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
-
-    // A pkcs#8 encoded unencrypted EC256 private key as a base64url string.
-    String base64EncodedPK =
-      "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg8_zMDQDYAxlU-Q"
-      + "hk1Dwkf0v18GZca1DMF3SaJ9HPdmShRANCAASNYX5lyVCOZLzFZzrIKmeZ2jwU"
-      + "RmgsJYxGP__fWN_S-j5sN4tT15XEpN_7QZnt14YvI6uvAgO0uJEboFaZlOEB";
+    VirtualAuthenticator authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     PKCS8EncodedKeySpec privateKey =
-      new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedPK));
+      new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedEC256PK));
 
     byte[] credentialId = {1, 2, 3, 4};
     byte[] userHandle = {1};
@@ -141,20 +158,11 @@ public class VirtualAuthenticatorTest {
       .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)
       .setHasResidentKey(false);
 
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
-
-    // A pkcs#8 encoded unencrypted EC256 private key as a base64url string.
-    String base64EncodedPK =
-      "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg8_zMDQDYAxlU-Q"
-      + "hk1Dwkf0v18GZca1DMF3SaJ9HPdmShRANCAASNYX5lyVCOZLzFZzrIKmeZ2jwU"
-      + "RmgsJYxGP__fWN_S-j5sN4tT15XEpN_7QZnt14YvI6uvAgO0uJEboFaZlOEB";
-
-    PKCS8EncodedKeySpec privateKey =
-      new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedPK));
+    VirtualAuthenticator authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     byte[] credentialId = {1, 2, 3, 4};
     Credential nonResidentCredential = Credential.createNonResidentCredential(
-      credentialId, "localhost", privateKey, /*signCount=*/0);
+      credentialId, "localhost", ec256PrivateKey, /*signCount=*/0);
     authenticator.addCredential(nonResidentCredential);
 
     List<Credential> credentialList = authenticator.getCredentials();
@@ -171,12 +179,12 @@ public class VirtualAuthenticatorTest {
       .setHasResidentKey(true)
       .setHasUserVerification(true)
       .setIsUserVerified(true);
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+    VirtualAuthenticator authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
     byte[] credentialId = {1, 2, 3, 4};
     byte[] userHandle = {1};
     Credential residentCredential = Credential.createResidentCredential(
-      credentialId, "localhost", privateKey, userHandle, /*signCount=*/0);
+      credentialId, "localhost", rsaPrivateKey, userHandle, /*signCount=*/0);
 
     authenticator.addCredential(residentCredential);
 
@@ -185,80 +193,44 @@ public class VirtualAuthenticatorTest {
 
     Credential credential = credentialList.get(0);
     Assertions.assertArrayEquals(credentialId, credential.getId());
-    Assertions.assertTrue(credential.isResidentCredential());
-    Assertions.assertArrayEquals(privateKey.getEncoded(), credential.getPrivateKey().getEncoded());
+    Assertions.assertArrayEquals(rsaPrivateKey.getEncoded(), credential.getPrivateKey().getEncoded());
   }
 
   @Test
   public void testRemoveCredential() {
-    VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
-      .setProtocol(VirtualAuthenticatorOptions.Protocol.CTAP2)
-      .setHasResidentKey(true)
-      .setHasUserVerification(true)
-      .setIsUserVerified(true);
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+    VirtualAuthenticator authenticator =
+      ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(new VirtualAuthenticatorOptions());
 
-    byte[] credentialId1 = {1, 2, 3, 4};
-    byte[] userHandle1 = {1};
-    Credential residentCredential1 = Credential.createResidentCredential(
-      credentialId1, "localhost", privateKey, userHandle1, /*signCount=*/0);
+    byte[] credentialId = {1, 2, 3, 4};
+    Credential credential = Credential.createNonResidentCredential(
+      credentialId, "localhost", rsaPrivateKey, 0);
 
-    String base64EncodedPK =
-      "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg8_zMDQDYAxlU-Q"
-      + "hk1Dwkf0v18GZca1DMF3SaJ9HPdmShRANCAASNYX5lyVCOZLzFZzrIKmeZ2jwU"
-      + "RmgsJYxGP__fWN_S-j5sN4tT15XEpN_7QZnt14YvI6uvAgO0uJEboFaZlOEB";
+    authenticator.addCredential(credential);
 
-    PKCS8EncodedKeySpec privateKey2 =
-      new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedPK));
-
-    byte[] credentialId2 = {6, 7, 8, 9};
-    Credential residentCredential2 = Credential.createNonResidentCredential(
-      credentialId2, "localhost", privateKey2, 0);
-
-    authenticator.addCredential(residentCredential1);
-    authenticator.addCredential(residentCredential2);
-
-    List<Credential> credentialList = authenticator.getCredentials();
-    Assertions.assertEquals(2, credentialList.size());
-
-    authenticator.removeCredential(credentialId2);
-    Assertions.assertEquals(1, authenticator.getCredentials().size());
-    Assertions.assertArrayEquals(credentialId1, authenticator.getCredentials().get(0).getId());
+    authenticator.removeCredential(credentialId);
+    Assertions.assertEquals(0, authenticator.getCredentials().size());
   }
 
   @Test
   public void testRemoveAllCredentials() {
-    VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
-      .setProtocol(VirtualAuthenticatorOptions.Protocol.CTAP2)
-      .setHasResidentKey(true)
-      .setHasUserVerification(true)
-      .setIsUserVerified(true);
-    authenticator = ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
+    VirtualAuthenticator authenticator =
+      ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(new VirtualAuthenticatorOptions());
 
-    byte[] credentialId1 = {1, 2, 3, 4};
-    byte[] userHandle1 = {1};
-    Credential residentCredential1 = Credential.createResidentCredential(
-      credentialId1, "localhost", privateKey, userHandle1, /*signCount=*/0);
+    byte[] credentialId = {1, 2, 3, 4};
+    Credential residentCredential = Credential.createNonResidentCredential(
+      credentialId, "localhost", rsaPrivateKey, /*signCount=*/0);
 
-    String base64EncodedPK =
-      "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg8_zMDQDYAxlU-Q"
-      + "hk1Dwkf0v18GZca1DMF3SaJ9HPdmShRANCAASNYX5lyVCOZLzFZzrIKmeZ2jwU"
-      + "RmgsJYxGP__fWN_S-j5sN4tT15XEpN_7QZnt14YvI6uvAgO0uJEboFaZlOEB";
-
-    PKCS8EncodedKeySpec privateKey2 =
-      new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedPK));
-
-    byte[] credentialId2 = {6, 7, 8, 9};
-    Credential residentCredential2 = Credential.createNonResidentCredential(
-      credentialId2, "localhost", privateKey2, 0);
-
-    authenticator.addCredential(residentCredential1);
-    authenticator.addCredential(residentCredential2);
-
-    List<Credential> credentialList = authenticator.getCredentials();
-    Assertions.assertEquals(2, credentialList.size());
+    authenticator.addCredential(residentCredential);
 
     authenticator.removeAllCredentials();
     Assertions.assertEquals(0, authenticator.getCredentials().size());
+  }
+
+  @Test
+  public void testSetUserVerified() {
+    VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
+      .setIsUserVerified(true);
+
+    Assertions.assertTrue((boolean) options.toMap().get("isUserVerified"));
   }
 }
