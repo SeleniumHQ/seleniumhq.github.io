@@ -2,16 +2,14 @@
 title: "滚轮操作"
 linkTitle: "滚轮"
 weight: 6
-needsTranslation: true
 description: >
     用于与网页交互的滚轮输入设备的呈现.
 ---
 
-滚轮操作将要伴随 Selenium 4.2 发布
+## 滚动到元素 
 
-## Scroll to element 
-
-Scrolls to the element by scrolling the viewport. This way the element is at the bottom.
+通过滚动可视区域移动到元素. 
+使得元素位于底部.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -57,7 +55,7 @@ ActionChains(driver).scroll(0, 0, 0, 0, origin=element).perform()
 driver.quit()
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  // This feature is not implemented - Help us by sending a pr to implement this feature
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -115,10 +113,12 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll by given amount from element 
+## 基于元素定量滚动
 
-Scrolls to the element by scrolling the viewport. This way the element is at the bottom. 
-Scrolls the viewport further by the given amount i.e. horizontal and vertical offsets.
+通过滚动可视区域移动到元素.
+使得元素位于底部.
+将可视区域按照进给定的量一步滚动, 
+例如水平和垂直偏移.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -231,9 +231,10 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll by given amount 
+## 定量滚动 
 
-Scrolls the viewport by the given amount i.e. horizontal and vertical offsets.
+将可视区域按照进给定的量一步滚动,
+例如水平和垂直偏移.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -338,13 +339,15 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from a offset of origin (viewport) by given amount
+## 基于原点(可视区域)定量偏移滚动
 
-The origin is the where the cursor is placed before the scroll is executed. 
-For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
-For origin as viewport, the origin offset is calculated from the upper left corner of the viewport.
-Starting from this origin, the viewport is scrolled by the given amount 
-i.e. horizontal and vertical offsets.
+原点是执行滚动之前光标所在的位置.
+例如，滚动鼠标滚轮之前光标在屏幕上的位置.
+对于"可视区域作为原点",
+从可视区域的左上角计算原点偏移.
+从该原点开始,
+可视区域将按定量滚动, 
+例如水平和垂直偏移.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -493,13 +496,15 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from a offset of origin (element) by given amount
+## 基于原点(元素)定量偏移滚动
 
-The origin is the where the cursor is placed before the scroll is executed. 
-For example, the position on the screen where the cursor is before scrolling a mouse wheel. 
-For origin as element, the origin offset is calculated from the center of the element.
-Starting from this origin, the viewport is scrolled by the given amount 
-i.e. horizontal and vertical offsets.
+原点是执行滚动之前光标所在的位置.
+例如，滚动鼠标滚轮之前光标在屏幕上的位置.
+对于"元素作为原点",
+原点偏移是从元素的中心计算的.
+从该原点开始,
+可视区域将按定量滚动,
+例如水平和垂直偏移.
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" >}}
