@@ -69,22 +69,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder, By } = require('selenium-webdriver');
-
-(async function scrollToElement() {
-  let driver = await new Builder().forBrowser('chrome').build();
-
-  try {
-    await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
-    element = await driver.findElement(By.id('closepopup'));
-    await driver.actions().scroll(0, 0, 0, 0, element).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/wheelScrollToElement.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
