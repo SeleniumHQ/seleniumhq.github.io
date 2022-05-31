@@ -15,7 +15,7 @@ to use Hugo 0.94.0 or higher.
 
 Steps needed to have this working locally and work on it:
 
-- Follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) instructions from Docsy
+- Follow the [Install Hugo](https://www.docsy.dev/docs/get-started/other-options/#install-hugo) instructions from Docsy
 - Clone this repository
 - Run `git submodule update --init --recursive`
 - Run `cd website_and_docs`
