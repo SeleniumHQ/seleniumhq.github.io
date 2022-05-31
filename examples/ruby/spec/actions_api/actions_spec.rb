@@ -10,9 +10,9 @@ RSpec.describe 'Actions' do
     clickable = @driver.find_element(id: 'clickable')
     @driver.action
            .move_to(clickable)
-           .pause(action.get_device('mouse'), 1)
+           .pause(duration: 1)
            .click_and_hold
-           .pause(action.get_device('keyboard'), 1)
+           .pause(duration: 1)
            .send_keys("abc")
            .perform
 

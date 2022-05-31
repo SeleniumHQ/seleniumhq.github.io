@@ -51,14 +51,36 @@ namespace SeleniumDocs.ActionsAPI
         [TestMethod]
         public void BackClick()
         {
-            
-            throw new WebDriverException("Need to implement MouseButton.Back");
+            driver.Url = "https://selenium.dev/selenium/web/mouse_interaction.html";
+
+            driver.FindElement(By.Id("click")).Click();
+            Assert.AreEqual("We Arrive Here", driver.Title);
+
+            ActionBuilder actionBuilder = new ActionBuilder();
+            PointerInputDevice mouse = new PointerInputDevice(PointerKind.Mouse, "default mouse");
+            actionBuilder.AddAction(mouse.CreatePointerDown(MouseButton.Back));
+            actionBuilder.AddAction(mouse.CreatePointerUp(MouseButton.Back));
+            ((IActionExecutor)driver).PerformActions(actionBuilder.ToActionSequenceList());
+
+            Assert.AreEqual("BasicMouseInterfaceTest", driver.Title);
         }
 
         [TestMethod]
         public void ForwardClick()
         {
-            throw new WebDriverException("Need to implement MouseButton.Forward");
+            driver.Url = "https://selenium.dev/selenium/web/mouse_interaction.html";
+
+            driver.FindElement(By.Id("click")).Click();
+            driver.Navigate().Back();
+            Assert.AreEqual("BasicMouseInterfaceTest", driver.Title);
+
+            ActionBuilder actionBuilder = new ActionBuilder();
+            PointerInputDevice mouse = new PointerInputDevice(PointerKind.Mouse, "default mouse");
+            actionBuilder.AddAction(mouse.CreatePointerDown(MouseButton.Forward));
+            actionBuilder.AddAction(mouse.CreatePointerUp(MouseButton.Forward));
+            ((IActionExecutor)driver).PerformActions(actionBuilder.ToActionSequenceList());
+
+            Assert.AreEqual("We Arrive Here", driver.Title);
         }
 
         [TestMethod]
@@ -88,6 +110,7 @@ namespace SeleniumDocs.ActionsAPI
         }
 
         [TestMethod]
+        [Obsolete("Obsolete")]
         public void MoveByOffsetFromTopLeftOfElement()
         {
             driver.Url = "https://selenium.dev/selenium/web/mouse_interaction.html";

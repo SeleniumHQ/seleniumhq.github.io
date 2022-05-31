@@ -30,7 +30,7 @@ lower level commands for you. These are all documented in [keyboard](), [mouse](
 Pointer movements and Wheel scrolling allow the user to set a duration for the action, but sometimes you just need
 to wait a beat between actions for things to work correctly.
 
-{{< tabpane disableCodeBlock=true height="8">}}
+{{< tabpane disableCodeBlock=true height="9">}}
     {{< tab header="Java" >}}
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
     {{< /tab >}}
@@ -38,9 +38,11 @@ to wait a beat between actions for things to work correctly.
         {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L16-L21" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
+        {{< badge version="4.2" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L10-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
@@ -69,7 +71,7 @@ it does not get executed with the perform method.
         {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L38" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L41" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L45" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L35" >}}

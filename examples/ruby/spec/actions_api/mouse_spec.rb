@@ -42,8 +42,8 @@ RSpec.describe 'Mouse' do
     expect(@driver.title).to eq("We Arrive Here")
 
     @driver.action
-           .pointer_down(3)
-           .pointer_up(3)
+           .pointer_down(:back)
+           .pointer_up(:back)
            .perform
 
     expect(@driver.title).to eq("BasicMouseInterfaceTest")
@@ -56,8 +56,8 @@ RSpec.describe 'Mouse' do
     expect(@driver.title).to eq("BasicMouseInterfaceTest")
 
     @driver.action
-           .pointer_down(4)
-           .pointer_up(4)
+           .pointer_down(:forward)
+           .pointer_up(:forward)
            .perform
 
     expect(@driver.title).to eq("We Arrive Here")

@@ -2,6 +2,7 @@ from time import sleep
 
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.mouse_button import MouseButton
 from selenium.webdriver.common.by import By
 
 
@@ -46,8 +47,8 @@ def test_back_click_ab(driver):
     assert driver.title == "We Arrive Here"
 
     action = ActionBuilder(driver)
-    action.pointer_action.pointer_down(3)
-    action.pointer_action.pointer_up(3)
+    action.pointer_action.pointer_down(MouseButton.BACK)
+    action.pointer_action.pointer_up(MouseButton.BACK)
     action.perform()
 
     assert driver.title == "BasicMouseInterfaceTest"
@@ -60,8 +61,8 @@ def test_forward_click_ab(driver):
     assert driver.title == "BasicMouseInterfaceTest"
 
     action = ActionBuilder(driver)
-    action.pointer_action.pointer_down(4)
-    action.pointer_action.pointer_up(4)
+    action.pointer_action.pointer_down(MouseButton.FORWARD)
+    action.pointer_action.pointer_up(MouseButton.FORWARD)
     action.perform()
 
     assert driver.title == "We Arrive Here"

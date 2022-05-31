@@ -11,14 +11,18 @@ namespace SeleniumDocs.ActionsAPI
         [TestMethod]
         public void Pause()
         {
+            driver.Url = "https://selenium.dev/selenium/web/mouse_interaction.html";
+
             DateTime start = DateTime.Now;
 
-            ActionBuilder actionBuilder = new ActionBuilder();
-            PointerInputDevice mouse = new PointerInputDevice(PointerKind.Mouse, "default mouse");
-            KeyInputDevice keyboard = new KeyInputDevice("default keyboard");
-            actionBuilder.AddAction(mouse.CreatePause(TimeSpan.FromSeconds(1)));
-            actionBuilder.AddAction(keyboard.CreatePause(TimeSpan.FromSeconds(1)));
-            ((IActionExecutor)driver).PerformActions(actionBuilder.ToActionSequenceList());
+            IWebElement clickable = driver.FindElement(By.Id("clickable"));
+            new Actions(driver)
+                .MoveToElement(clickable)
+                .Pause(TimeSpan.FromSeconds(1))
+                .ClickAndHold()
+                .Pause(TimeSpan.FromSeconds(1))
+                .SendKeys("abc")
+                .Perform();
 
             TimeSpan duration = DateTime.Now - start;
             Assert.IsTrue(duration > TimeSpan.FromSeconds(2));
@@ -40,7 +44,7 @@ namespace SeleniumDocs.ActionsAPI
 
             ((WebDriver)driver).ResetInputState();
 
-            new Actions(driver).SendKeys("a").Perform();
+            actions.SendKeys("a").Perform();
             var value = clickable.GetAttribute("value");
             Assert.AreEqual("Å", value[..1]);
             Assert.AreEqual("a", value.Substring(1, 1));

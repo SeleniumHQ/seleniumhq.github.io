@@ -25,7 +25,7 @@ This is useful for focusing a specific element:
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L22-L25" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L11-L14" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L12-L15" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L17-L20" >}}
@@ -51,7 +51,7 @@ This is otherwise known as "clicking":
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L23-L26" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L24-L27" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
@@ -86,7 +86,7 @@ This is otherwise known as "right-clicking":
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L34-L37" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L35-L38" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
@@ -111,12 +111,15 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L60-L66" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L48-L51" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L49-L52" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L55" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L59-L63" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
+        {{< badge version="4.2" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L44-L47" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
@@ -136,12 +139,15 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L78-L84" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L62-L65" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L63-L66" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L61" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L77-L81" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
+        {{< badge version="4.2" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L58-L61" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
@@ -161,10 +167,10 @@ This method combines moving to the center of an element with pressing and releas
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L93-L96" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L73-L76" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L74-L77" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L69-L72" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L91-L94" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L69-L72" >}}
@@ -188,10 +194,10 @@ Note that the element must be in the viewport or else the command will error.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L105-L108" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L84-L87" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L85-L88" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L82-L85" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L104-L107" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L80-L83" >}}
@@ -223,13 +229,13 @@ This approach does not work correctly when the element is not entirely inside th
 
 {{< tabpane disableCodeBlock=true height="4" >}}
     {{< tab header="Java" >}}
-**Not Implemented in Java**
+**Not Implemented in Selenium 4**
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L95-L98" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L95-L98" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L118-L121" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L91-L94" >}}
@@ -258,7 +264,7 @@ for the remaining languages as of Selenium 4.3.
 **Coming in Selenium 4.3**
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L110-L113" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L133-L136" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
 **Coming in Selenium 4.3**
@@ -281,10 +287,10 @@ offset.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L108-L110" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L109-L111" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L125-L129" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L148-L152" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L105-L107" >}}
@@ -309,10 +315,10 @@ Note that the pointer position does not change when the page is scrolled.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L125-L127" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L126-L128" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L147-L149" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L170-L172" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L119-L121" >}}
@@ -335,10 +341,10 @@ moves to the location of the target element and then releases the mouse.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L138-L142" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L139-L143" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L161-L165" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L184-L188" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L131-L135" >}}
@@ -360,10 +366,10 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L150-L155" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L151-L156" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L175-L180" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L198-L203" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L143-L148" >}}

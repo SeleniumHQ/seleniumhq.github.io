@@ -60,8 +60,8 @@ public class MouseTest extends BaseTest {
         PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE, "default mouse");
 
         Sequence actions = new Sequence(mouse, 0)
-                .addAction(mouse.createPointerDown(3))
-                .addAction(mouse.createPointerUp(3));
+                .addAction(mouse.createPointerDown(PointerInput.MouseButton.BACK.asArg()))
+                .addAction(mouse.createPointerUp(PointerInput.MouseButton.BACK.asArg()));
 
         ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
 
@@ -78,8 +78,8 @@ public class MouseTest extends BaseTest {
         PointerInput mouse = new PointerInput(PointerInput.Kind.MOUSE, "default mouse");
 
         Sequence actions = new Sequence(mouse, 0)
-                .addAction(mouse.createPointerDown(4))
-                .addAction(mouse.createPointerUp(4));
+                .addAction(mouse.createPointerDown(PointerInput.MouseButton.FORWARD.asArg()))
+                .addAction(mouse.createPointerUp(PointerInput.MouseButton.FORWARD.asArg()));
 
         ((RemoteWebDriver) driver).perform(Collections.singletonList(actions));
 
@@ -186,13 +186,3 @@ public class MouseTest extends BaseTest {
         Assertions.assertEquals("dropped", driver.findElement(By.id("drop-status")).getText());
     }
 }
-
-
-
-
-
-
-
-
-
-
