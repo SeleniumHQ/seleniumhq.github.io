@@ -19,7 +19,8 @@
 </ul>
 
 <!-- Inner content -->
-<div class="tab-content" id="tabs-{{- $.Ordinal -}}-content">
+{{- $height := default "auto" ($.Get "height") -}}
+<div class="tab-content border-bottom height-{{- $height -}}" id="tabs-{{- $.Ordinal -}}-content">
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
   {{- $tabid := printf "tabs-%v-%v-tab" $.Ordinal $index | anchorize -}}
   {{- $entryid := printf "tabs-%v-%v" $.Ordinal $index | anchorize -}}
@@ -28,7 +29,7 @@
     id="{{ $entryid }}" role="tabpanel" aria-labelled-by="{{ $tabid }}">
 
   {{ if $.Get "disableCodeBlock" }}
-    <div class="my-3 py-2 border-bottom">
+    <div class="my-3 py-2">
       {{- index . "content" | markdownify -}}
     </div>
   {{ else }}
