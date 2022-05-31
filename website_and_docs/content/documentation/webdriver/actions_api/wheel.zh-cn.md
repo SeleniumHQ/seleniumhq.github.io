@@ -70,7 +70,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/wheelScrollToElement.js">}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/wheel/wheelScrollToElement.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
@@ -170,23 +170,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder, By } = require('selenium-webdriver');
-
-(async function scollByGivenAmountFromElement() {
-  let driver = await new Builder().forBrowser('chrome').build();
-
-  try {
-    await driver.manage().window().setRect({ width: 500, height: 400 });
-    await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
-    element = await driver.findElement(By.linkText('Go To Page 2'));
-
-    await driver.actions().scroll(0, 0, 0, 300, element).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/actionsApi/wheel/scrollByAmount.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
