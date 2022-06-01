@@ -51,8 +51,8 @@ def test_set_pointer_event_properties(driver):
     driver.get('https://www.selenium.dev/selenium/web/pointerActionsPage.html')
 
     pointer_area = driver.find_element(By.ID, "pointerArea")
-    action = ActionBuilder(driver)
-    action.add_pointer_input(POINTER_PEN, "default pen")
+    pen_input = PointerInput(POINTER_PEN, "default pen")
+    action = ActionBuilder(driver, mouse=pen_input)
     action.pointer_action\
         .move_to(pointer_area)\
         .pointer_down()\
