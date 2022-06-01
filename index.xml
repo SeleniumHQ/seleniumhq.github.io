@@ -454,7 +454,7 @@ aria-controls="tabs-0-1" aria-selected="false">
 Ruby
 &lt;/a>
 &lt;/li>&lt;/ul>
-&lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
+&lt;div class="tab-content border-bottom height-auto" id="tabs-0-content">&lt;div class="tab-pane fade show active"
 id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// This &amp;#34;HasAuthentication&amp;#34; interface is the key!
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span> &lt;span style="color:#000">authentication&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
