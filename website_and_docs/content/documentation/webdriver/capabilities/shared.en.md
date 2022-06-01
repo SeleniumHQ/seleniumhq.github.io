@@ -134,23 +134,8 @@ caps.page_load_strategy='normal'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("normal");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/capabilities/normal.js">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
