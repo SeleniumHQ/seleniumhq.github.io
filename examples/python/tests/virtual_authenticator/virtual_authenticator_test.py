@@ -2,7 +2,7 @@ import pytest
 from base64 import urlsafe_b64decode, urlsafe_b64encode
 
 from selenium.common.exceptions import InvalidArgumentException
-from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.virtual_authenticator import (
     Credential,
     VirtualAuthenticatorOptions,
@@ -29,6 +29,11 @@ lUhAsyjJiQ/0bK1yX87ulqFVgO0Knmh+wNajrb9wiONAJTMICG7tiWJOm7fW5cfTJwWkBwYADmkfTRmH
 zJOGpf9x2RSWzQJ+dq8+6fACgfFZOVpN644+sAHfNPAI/gnNKU5OfUv+eav8fBnzlf1A3y3GIkyMyzFN3DE7e0n/lyqxE4H
 BYGpI8g==
 '''
+
+
+@pytest.fixture(scope="module", autouse=True)
+def driver():
+    yield WebDriver()
 
 
 def test_virtual_authenticator_options():
@@ -212,6 +217,7 @@ def test_remove_credential(driver):
 def test_remove_all_credentials(driver):
     # Create default virtual authenticator options
     options = VirtualAuthenticatorOptions()
+    options.has_resident_key = True
 
     # Register a virtual authenticator
     driver.add_virtual_authenticator(options)
