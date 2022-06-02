@@ -222,23 +222,8 @@ caps.page_load_strategy='eager'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("eager");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/capabilities/eager.js">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -320,23 +305,8 @@ caps.page_load_strategy='none'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("none");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/capabilities/none.js">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
