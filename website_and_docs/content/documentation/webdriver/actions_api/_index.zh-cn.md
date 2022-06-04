@@ -1,35 +1,48 @@
 ---
-title: "Actions API"
-linkTitle: "Actions API"
+title: "Actions接口"
+linkTitle: "Actions接口"
 weight: 14
 description: >
-    A low-level interface for providing virtualized device input actions to the web browser.
+    用于向 Web 浏览器提供虚拟化设备输入操作的低级接口.
 ---
 
-In addition to the high-level [element interactions]({{< ref "/documentation/webdriver/elements/interactions.md" >}}), 
-the [Actions API](https://w3c.github.io/webdriver/#dfn-actions) provides granular control over
-exactly what designated input devices can do. Selenium provides an interface for 3 kinds of input sources: 
-a key input for keyboard devices, a pointer input for a mouse, pen or touch devices, 
-and wheel inputs for scroll wheel devices (introduced in Selenium 4.2). 
-Selenium allows you to construct individual action commands assigned to specific
-inputs and chain them together and call the associated perform method to execute them all at once.
+除了高级[元素交互]({{< ref "/documentation/webdriver/elements/interactions.md" >}})之外, 
+[Actions 接口](https://w3c.github.io/webdriver/#dfn-actions) 
+还提供了对指定输入设备
+可以执行的确切操作的精细控制.
+Selenium为3种输入源提供了接口：
+键盘设备的键输入, 鼠标, 笔或触摸设备的输入, 以及滚轮设备的滚轮输入
+(在Selenium 4.2中引入).
+Selenium允许您构建分配给特定输入的独立操作命令,
+会将他们链接在一起,
+并调用关联的执行方法以一次执行它们.
 
-## Action Builder
+## Action构造器
 
-In the move from the legacy JSON Wire Protocol to the new W3C WebDriver Protocol,
-the low level building blocks of actions became especially detailed. It is extremely
-powerful, but each input device has a number of ways to use it and if you need to 
-manage more than one device, you are responsible for ensuring proper synchronization between them.
+在从遗留JSON Wire协议迁移到
+新的W3C WebDriver协议的过程中, 
+低级的操作构建块变得特别详细. 
+它非常强大, 
+但每个输入设备都有多种使用方法, 
+如果您需要管理多个设备, 
+则负责确保他们之间的同步正确.  
 
-Thankfully, you likely do not need to learn how to use the low level commands directly, since
-almost everything you might want to do has been given a convenience method that combines the 
-lower level commands for you. These are all documented in 
-[keyboard]({{< ref "keyboard" >}}), [mouse]({{< ref "mouse" >}}), [pen]({{< ref "pen" >}}), and [wheel]({{< ref "wheel" >}}) pages.
+值得庆幸的是, 
+您可能不需要学习如何直接使用低级命令, 
+因为您可能要执行的几乎所有操作, 
+都已提供了相应的简便方法, 
+这些方法可以为您组合较低级别的命令. 
+请分别参阅相应的[键盘]({{< ref "keyboard" >}}), 
+[鼠标]({{< ref "mouse" >}}), 
+[笔]({{< ref "pen" >}}) 
+和[滚轮]({{< ref "wheel" >}}) 页面. 
 
-## Pause
+## 暂停
 
-Pointer movements and Wheel scrolling allow the user to set a duration for the action, but sometimes you just need
-to wait a beat between actions for things to work correctly.
+指针移动和滚轮滚动
+允许用户设置操作的持续时间, 
+但有时您只需要在操作之间等待一下, 
+即可正常工作.
 
 {{< tabpane disableCodeBlock=true height="9">}}
     {{< tab header="Java" >}}
@@ -54,15 +67,17 @@ to wait a beat between actions for things to work correctly.
     {{< /tab >}}
 {{< /tabpane >}}
 
-## Release All Actions
+## 释放所有Actions
 
-An important thing to note is that the driver remembers the state of all the input
-items throughout a session. Even if you create a new instance of an actions class, the depressed keys and
-the location of the pointer will be in whatever state a previously performed action left them.
+需要注意的重要一点是, 
+驱动程序会记住整个会话中所有输入项的状态. 
+即使创建actions类的新实例, 
+按下的键和指针的位置
+也将处于以前执行的操作离开它们的任何状态. 
 
-There is a special method to release all currently depressed keys and pointer buttons.
-This method is implemented differently in each of the languages because
-it does not get executed with the perform method.
+有一种特殊的方法来释放所有当前按下的键和指针按钮. 
+此方法在每种语言中的实现方式不同, 
+因为它不会使用perform方法执行.
 
 {{< tabpane disableCodeBlock=true height="1">}}
     {{< tab header="Java" >}}
