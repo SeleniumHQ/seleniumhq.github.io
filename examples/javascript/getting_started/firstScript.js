@@ -17,8 +17,7 @@ const assert = require('assert');
     await searchBox.sendKeys('Selenium');
     await searchButton.click();
 
-    let search_box = await driver.findElement(By.name('q'));
-    let value = await search_box.getAttribute("value");
+    let value = await searchBox.getAttribute("value");
     assert.deepStrictEqual(value, "Selenium")
 
     await driver.quit();
