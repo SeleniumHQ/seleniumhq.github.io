@@ -32,7 +32,7 @@ For more details on starting a session read our documentation on [opening and cl
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L5" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L5" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L6" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L17" >}}
@@ -56,7 +56,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L7" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L8" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L19" >}}
@@ -82,7 +82,7 @@ can request, including window handles, browser size / position, cookies, alerts,
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L9" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L21" >}}
@@ -116,7 +116,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L12" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L11" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L12" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L24" >}}
@@ -141,7 +141,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14-L15" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L13-L14" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L14-L15" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L26-L27" >}}
@@ -166,7 +166,7 @@ but you will use them frequently.
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L16-L17" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L29-L30" >}}
@@ -217,7 +217,7 @@ No more commands can be sent to this driver instance.
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L24" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L22" >}}
+        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L23" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
