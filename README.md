@@ -27,6 +27,11 @@ A full contribution guideline can be seen at [contributing](https://selenium.dev
 
 Please check all the information available at https://selenium.dev/getinvolved/
 
+### Do not want to clone the repository to contribute, try GitPod!
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SeleniumHQ/seleniumhq.github.io)
+
+
 ## For Selenium Site and Documentation maintainers
 
 ### How does the site and docs get build?
