@@ -1,12 +1,10 @@
 ---
-title: "Configuring driver parameters"
+title: "Configurando o driver"
 linkTitle: "Drivers"
 weight: 12
 needsTranslation: true
 ---
 
-We learned how to [install drivers]({{< ref "getting_started/install_drivers.md" >}}) in the Getting Started section.
+Nós aprendemos como [instalar drivers]({{< ref "getting_started/install_drivers.md" >}}) na sessão de Introdução.
 
-Selenium provides access to Service classes which are used to determine how the server is started
-
-
+Selenium concede o acesso para classes de serviço que são usadas para determinar como o servidor será iniciado.
