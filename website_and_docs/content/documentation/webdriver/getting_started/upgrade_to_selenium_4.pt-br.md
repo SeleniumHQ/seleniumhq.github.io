@@ -3,26 +3,11 @@ title: "Como atualizar para Selenium 4"
 linkTitle: "Como atualizar para Selenium 4"
 weight: 10
 description: >
-  Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
   Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!
 aliases: [
 "/pt-br/documentation/getting_started/how_to_upgrade_to_selenium_4/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-  Esta página está sendo traduzido do Inglês para o Português.
-  Você fala Inglês? Nos ajude a traduzir esta pagina enviando pull requests!
-</p>
-{{% /pageinfo %}}
 
 Atualizar para o Selenium 4 deve ser um processo sem dificuldades se você estiver usando uma das linguagens oficialmente suportadas
 (Ruby, JavaScript, C#, Python, and Java). Pode haver alguns casos em que alguns problemas podem acontecer,
@@ -333,7 +318,7 @@ PM> Install-Package Selenium.WebDriver -Version 4.0.0
 ### Python
 A mudança mais importante para usar o Python é a versão minima requerida. Para Selenium 4 a versão miníma requerida será Python3.7 ou superior.
 Mais detalhes podem ser encontrados aqui:[Python Package Index](https://pypi.org/project/selenium/4.0.0/).
-Para ataulizar através da linha de comando, você pode executar:
+Para atualizar através da linha de comando, você pode executar:
 
 ```shell
 pip install selenium==4.0.0
@@ -383,7 +368,7 @@ encontrar após atualizar para o Selenium 4.
 
 ### Java
 
-#### Waits and Timeout
+#### Waits e Timeout
 Os parametros que eram esperados de ser recebidos em um Timeout trocaram de `(long time, TimeUnit unit)` para
 o `(Duration duration)`.
 
