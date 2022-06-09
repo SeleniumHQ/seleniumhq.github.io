@@ -186,7 +186,13 @@ ChromeDriver driver = new ChromeDriver();
 
 {{< tab header="Python" >}}
 
+from selenium.webdriver.chrome.service import Service
+
 service = Service(executable_path="/opt/WebDriver/bin/chromedriver")
+
+
+from selenium import webdriver
+
 driver = webdriver.Chrome(service=service)
 
 {{< /tab >}}
