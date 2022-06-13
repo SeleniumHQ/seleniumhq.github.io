@@ -1,23 +1,21 @@
 ---
-title: "Write your first Selenium script"
-linkTitle: "First Script"
+title: "Programe o seu primeiro script Selenium"
+linkTitle: "Primeiro Script"
 weight: 8
-needsTranslation: true
+needsTranslation: false
 description: >
-    Step-by-step instructions for constructing a Selenium script
+    Instruções passo a passo para programar um script Selenium
 ---
 
-Once you have [Selenium installed]({{< ref "install_library.md" >}}) and
-[Drivers installed]({{< ref "install_drivers.md" >}}), you're ready to write Selenium code.
+Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}) e os
+[Drivers instalados]({{< ref "install_drivers.md" >}}), você estará pronto para programar códigos Selenium.
 
-## Eight Basic Components
+## Oito Componentes Básicos
+Tudo que o Selenium faz é enviar comandos ao navegador de internet para fazer algo ou solicitar informações dele.
+A maior parte do que você irá fazer com o Selenium é uma combinação desses comandos básicos:
 
-Everything Selenium does is send the browser commands to do something or send requests for information.
-Most of what you'll do with Selenium is a combination of these basic commands:
-
-### 1. Start the session
-
-For more details on starting a session read our documentation on [opening and closing a browser]({{< ref "open_browser.md" >}})
+### 1. Iniciando uma sessão
+Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação em [abrindo e fechando o navegador de internet]({{< ref "open_browser.md" >}})
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -40,8 +38,8 @@ For more details on starting a session read our documentation on [opening and cl
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 2. Take action on browser
-In this example we are [navigating]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) to a web page. 
+### 2. Agindo no navegador de internet
+Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) para uma página web. 
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -64,10 +62,9 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 3. Request browser information
-
-There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
-can request, including window handles, browser size / position, cookies, alerts, etc.
+### 3. Solicitando informação do navegador de internet
+Existem diversos tipos de [informação sobre o navegador de internet]({{< ref "/documentation/webdriver/browser" >}}) que você
+pode solicitar, incluindo window handles, tamanho / posição do navegador, cookies, alertas e etc.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -90,18 +87,19 @@ can request, including window handles, browser size / position, cookies, alerts,
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 4. Establish Waiting Strategy
+### 4. Estabelecendo uma Estratégia de Espera
 
-Synchronizing the code with the current state of the browser is one of the biggest challenges
-with Selenium, and doing it well is an advanced topic. 
+Sincronizar o código ao estado atual do navegador é um dos maiores 
+desafios 
+quando se trabalha com o Selenium, fazer isso de maneira bem feita é um tópico avançado.
 
-Essentially you want to make sure that the element is on the page before you attempt to locate it
-and the element is in an interactable state before you attempt to interact with it.
+Essencialmente, você quer ter certeza absoluta de que o elemento está na página antes de tentar localizá-lo
+e o elemento está em um estado interativo antes de você tentar interagir com ele.
 
-An implicit wait is rarely the best solution, but it's the easiest to demonstrate here, so 
-we'll use it as a placeholder. 
+Uma espera implícita raramente é a melhor solução, mas é a mais fácil de demonstrar aqui, então
+vamos usá-la como um substituto. 
 
-Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
+Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits.md" >}}).
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -124,9 +122,10 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 5. Find an element
-The majority of commands in most Selenium sessions are element related, and you can't interact
-with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
+### 5. Encontrando um elemento
+A maioria dos comandos na maior parte das sessões do Selenium são relacionados a elementos e você não pode 
+interagir
+com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdriver/elements" >}})
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -149,9 +148,9 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 6. Take action on element
-There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
-but you will use them frequently. 
+### 6. Agindo no elemento
+Há apenas um punhado de [ações a serem executadas em um elemento]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
+mas você irá usá-las com frequência.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -174,9 +173,8 @@ but you will use them frequently.
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 7. Request element information
-Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
-Notice that we need to relocate the search box because the DOM has changed since we first located it.  
+### 7. Solicitando informações do elemento
+Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref "/documentation/webdriver/elements/information" >}}). Observe que precisamos realocar a caixa de pesquisa porque o DOM mudou desde que o localizamos pela primeira vez.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -199,10 +197,10 @@ Notice that we need to relocate the search box because the DOM has changed since
     {{< /tab >}}
 {{< /tabpane >}}
 
-### 8. End the session 
+### 8. Encerrando a sessão
 
-This ends the driver process, which by default closes the browser as well. 
-No more commands can be sent to this driver instance. 
+Isso encerra o processo do driver, que por padrão também fecha o navegador.
+Nenhum outro comando pode ser enviado para esta instância do driver.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -225,8 +223,8 @@ No more commands can be sent to this driver instance.
     {{< /tab >}}
 {{< /tabpane >}}
 
-## Putting everything together
-Let's combine these 8 things into a complete script with assertions that can be executed by a test runner.
+## Juntando tudo
+Vamos combinar essas 8 coisas em um script completo com asserções que podem ser executadas por um executor de testes.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
@@ -249,9 +247,8 @@ Let's combine these 8 things into a complete script with assertions that can be 
     {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Steps
+## Próximos Passos
 
-Take what you've learned and build out your Selenium code. 
+Use oque você aprendeu e construa o seu proprio código Selenium.
 
-As you find more functionality that you need, read up on the rest of our
-[WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
+À medida que você encontrar mais funcionalidades de que necessita, leia o restante da nossa [documentação do WebDriver]({{< ref "/documentation/webdriver/" >}}).

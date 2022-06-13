@@ -1,10 +1,10 @@
 ---
-title: "Installing browser drivers"
-linkTitle: "Installing drivers"
+title: "Instalando drivers de navegadores"
+linkTitle: "Instalando drivers de navegadores"
 weight: 4
 needsTranslation: true
 description: >
-  Setting up your browser ready to be automated.
+ Configurando seu navegador para ficar preparado para ser automatizado.
 aliases: [
 "/documentation/pt-br/selenium_installation/installing_webdriver_binaries/",
 "/documentation/pt-br/webdriver/driver_requirements/",
@@ -12,100 +12,100 @@ aliases: [
 ]
 ---
 
-Through WebDriver, Selenium supports all major browsers on the market
-such as Chrome/Chromium, Firefox, Internet Explorer, Edge, Opera, and Safari.
-Where possible, WebDriver drives the browser
-using the browser's built-in support for automation.
+Através do WebDriver, o Selenium suporta todos os principais navegadores do mercado
+como Chrome/Chromium, Firefox, Internet Explorer, Edge, Opera e Safari.
+Sempre que possível, o WebDriver conduz o navegador
+usando o suporte integrado do navegador para automação.
 
-Since all the driver implementations except for Internet Explorer are provided by the
-browser vendors themselves, they are not included in the standard Selenium distribution.
-This section explains the basic requirements for getting you started with the different browsers.
+Como todas as implementações do driver, exceto a do Internet Explorer, são fornecidas pelos próprios
+desenvolvedores dos navegadores, elas não estão incluídas na distribuição padrão do Selenium.
+Esta seção explica os requisitos básicos para você começar a usar os diferentes navegadores.
 
-Read about more advanced options for starting a driver
-in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
+Leia mais sobre opções avançadas para iniciar um driver
+ na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
 
-## Quick Reference
+## Consulta rápida
 
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| Navegador | OS Suportado | Mantido por | Download | Rastreador de Problemas |
 | ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Problemas](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Problemas](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Problemas](https://github.com/MicrosoftDocs/edge-developer/issues) |
+| Internet Explorer | Windows | Projeto Selenium | [Downloads](/downloads) | [Problemas](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS High Sierra e superiores | Apple | Integrado no Sistema  | [Problemas](//bugreport.apple.com/logon) |
 
-Note: The Opera driver does not support w3c syntax, so we recommend using chromedriver to work with Opera.
-See the code example for [opening an Opera browser]({{< ref "open_browser.md#opera" >}}).
+Observação: O driver Opera não oferece suporte à sintaxe w3c, portanto, recomendamos o uso do chromedriver para trabalhar com o Opera.
+Veja o exemplo de código para [abrir um navegador Opera]({{< ref "open_browser.md#opera" >}}).
 
-## Three Ways to Use Drivers
+## Três maneiras diferentes de usar os drivers
 
-### 1. Driver Management Software
+### 1. Software de gerenciamento de Driver 
 
-Most machines automatically update the browser, but the driver does not. To make sure you get
-the correct driver for your browser, there are many third party libraries to assist you.
+A maioria das máquinas atualiza automaticamente o navegador, mas não o driver. Para certificar de obter 
+o driver correto para o seu navegador de internet, existem diversas bibliotecas de terceiros para auxiliá-lo.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. Importe o [Gerenciador de WebDriver](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Calling `setup()` automatically puts the correct browser driver where the code will see it:
+2. Invocar o `setup()` coloca automaticamente o driver correto, onde o código conseguirá enxergá-lo:
 ```java
 WebDriverManager.chromedriver().setup();
 ```
-3. Just initialize the driver as you normally would:
+3. Inicialize o seu driver como você normalmente faria:
 ```java 
 ChromeDriver driver = new ChromeDriver();
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-See full example on GitHub.</a>
+Veja o exemplo completo no GitHub.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="Python" >}}
 
-1. Import [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
+1. Importe o [Gerenciador de WebDriver para Python](https://github.com/SergeyPirogov/webdriver_manager)
 
 ```py
 from webdriver_manager.chrome import ChromeDriverManager
 ```
 
-2. Use `install()` to get the location used by the manager and pass it into service class
+2. Use o `install()` para obter a localização usada pelo gerenciador WebDriver e passá-la para a classe de serviço
 
 ```py
 service = Service(executable_path=ChromeDriverManager().install())
 ```
 
-3. Use `Service` instance when initializing the driver:
+3. Use a instância `Service` ao inicializar o driver:
 ```py
 driver = webdriver.Chrome(service=service)
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-See full example on GitHub.</a>
+Veja o exemplo completo no GitHub.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
+1. Importe o [Pacote Gerenciador do WebDriver](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 ```
 
-2. Use the `SetUpDriver()` which requires a config class:
+2. Use o `SetUpDriver()` que requer uma classe de configuração:
 
 ```csharp
 new DriverManager().SetUpDriver(new ChromeConfig());
 ```
 
-3. Initialize your driver as you normally would:
+3. Inicialize o seu driver como você normalmente faria:
 
 ```csharp
 var driver = new ChromeDriver()
@@ -113,7 +113,7 @@ var driver = new ChromeDriver()
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-See full example on GitHub.</a>
+Veja o exemplo completo no GitHub.</a>
 </div>
 
 {{< /tab >}}
@@ -124,32 +124,32 @@ See full example on GitHub.</a>
 gem 'webdrivers', '~> 5.0'
 ```
 
-2. Require webdrivers in your project:
+2. Requer webdrivers no seu projeto:
 ```rb
 require 'webdrivers'
 ```
 
-3 Initialize driver as you normally would:
+3 Inicialize o seu driver como você normalmente faria:
 ```rb
 driver = Selenium::WebDriver.for :chrome
 ```
 
 <div class="github">
     <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/install_drivers_spec.rb">
-See full example on GitHub.</a>
+Veja o exemplo completo no GitHub.</a>
 </div>
 
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-*There is not a recommended driver manager for JavaScript at this time*
+*Não há um gerenciador de driver recomendado para o JavaScript no momento*
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. Importe o [Gerenciador de WebDriver](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Call the setup method before initializing the driver as you normally would:
+2. Invoque o método de configuração antes de inicializar o driver como faria normalmente:
 ```java
 fun chrome(): WebDriver {
     WebDriverManager.chromedriver().setup()
@@ -160,67 +160,68 @@ fun chrome(): WebDriver {
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 2. The `PATH` Environment Variable
-This option first requires manually downloading the driver (See [Quick Reference Section](#quick-reference) for links).
+### 2. A variável de ambiente  `PATH`
+Esta opção requer primeiro o download manual do driver (Vejá a [sessão de Consulta de referencia rápida](#quick-reference) para links).
 
-This is a flexible option to change location of drivers without having to update your code, and will work
-on multiple machines without requiring that each machine put the drivers in the same place.
+Esta é uma opção flexível para alterar a localização dos drivers sem precisar atualizar seu código e funcionará
+em várias máquinas sem exigir que cada máquina coloque os drivers no mesmo lugar.
 
-You can either place the drivers in a directory that is already listed in `PATH`, or you can place them in a directory
-and add it to `PATH`.
+Você pode colocar os drivers em um diretório que já está listado em 
+`PATH`, ou você pode colocá-los em um diretório
+e acrescenta-lo ao `PATH`.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Bash" >}}
-To see what directories are already on `PATH`, open a Terminal and execute:
+Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell
 echo $PATH
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+Se o local do seu driver ainda não estiver em um diretório listado,
+você pode adicionar um novo diretório ao PATH:
 ```shell
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.bash_profile
 source ~/.bash_profile
 ```
-You can test if it has been added correctly by starting the driver:
+Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver
 ```
 {{< /tab >}}
 {{< tab header="Zsh" >}}
-To see what directories are already on `PATH`, open a Terminal and execute:
+Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell
 echo $PATH
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+Se o local do seu driver ainda não estiver em um diretório listado,
+você pode adicionar um novo diretório ao PATH:
 ```shell
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.zshenv
 source ~/.zshenv
 ```
-You can test if it has been added correctly by starting the driver:
+Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver
 ```
 {{< /tab >}}
 {{< tab header="Windows" >}}
-To see what directories are already on `PATH`, open a Command Prompt and execute:
+Para ver quais diretórios já estão no `PATH`, abra o Prompt de Comando e execute:
 ```shell
 echo %PATH%
 ```
-If the location to your driver is not already in a directory listed,
-you can add a new directory to PATH:
+Se o local do seu driver ainda não estiver em um diretório listado,
+você pode adicionar um novo diretório ao PATH:
 ```shell
 setx PATH "%PATH%;C:\WebDriver\bin"
 ```
-You can test if it has been added correctly by starting the driver:
+Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver.exe
 ```
 {{< /tab >}}
 {{< /tabpane >}}
 
-If your `PATH` is configured correctly above,
-you will see some output relating to the startup of the driver:
+Se o seu `PATH` estiver configurado corretamente como acima,
+você verá algumas saídas relacionadas à inicialização do driver:
 
 ```
 Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
@@ -229,13 +230,13 @@ Please see https://chromedriver.chromium.org/security-considerations for suggest
 ChromeDriver was started successfully.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
+Você pode recuperar o controle do seu prompt de comando pressionando <kbd>Ctrl+C</kbd>
 
-### 3. Hard Coded Location
+### 3. Localização definida no código
 
-Similar to Option 2 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
-Specifying the location in the code itself has the advantage of not needing to figure out Environment Variables on
-your system, but has the drawback of making the code much less flexible.
+Semelhante à opção 2 acima, você precisará baixar manualmente o driver (Vejá a [sessão de Consulta de referencia rápida](#quick-reference) para links).
+Especificar a localização no próprio código tem a vantagem de você não precisar se preocupar em descobrir variáveis de ambiente no
+seu sistema, mas tem a desvantagem de tornar o código muito menos flexível.
 
 {{< tabpane langEqualsHeader=true >}}
 
@@ -289,10 +290,10 @@ fun main(args: Array<String>) {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Advanced Configuration
+## Configurações avançadas
 
-More information on how you can change the driver behavior can be found on the
-[Configuring driver parameters]({{< ref "/documentation/webdriver/drivers.md" >}}) page.
+Mais informações a respeito de como você pode alterar o comportamento do driver podem ser encontradas na página
+[Configurando Parâmetros do driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
 
-## Next Step
-[Open and close a browser]({{< ref "open_browser.md" >}})
+## Próximo passo
+[Abrindo e fechando um navegador de internet]({{< ref "open_browser.md" >}})
