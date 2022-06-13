@@ -47,7 +47,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< /tab >}}
 {{< /tabpane >}}
 
-  # Actions causing JS exceptions
+## Actions causing JS exceptions
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
