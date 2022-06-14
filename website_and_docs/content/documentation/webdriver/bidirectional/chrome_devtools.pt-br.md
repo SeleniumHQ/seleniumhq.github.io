@@ -279,7 +279,7 @@ fun main() {
 
 ## Modo de Dispositivo Override
 
-Usando a integração do Selenium com o CDP, pode-se substituir o modo do dispositivo atual e simular um novo modo. Width(largura), Height(altura), mobile(mobilidade) e dispositiveScaleFactor são parâmetros obrigatórios. Parâmetros opcionais incluem scale(escala), screenWidth(largura da tela),
+Usando a integração do Selenium com o CDP, pode-se substituir o modo do dispositivo atual e simular um novo modo. Width(largura), Height(altura), mobile(mobilidade) e deviceScaleFactor são parâmetros obrigatórios. Parâmetros opcionais incluem scale(escala), screenWidth(largura da tela),
 screenHeight(altura da tela), positionX, positionY, dontSetVisible(não setar como visível), screenOrientation(orientação da tela), viewport e displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
