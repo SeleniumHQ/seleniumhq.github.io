@@ -9,15 +9,6 @@ aliases: [
 ---
 
 {{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
-{{% pageinfo color="warning" %}}
 Apesar do Selenium 4 providenciar acesso direto ao Protocolo Chrome DevTools  (CDP), é altamente recomendável que você use o [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}}) ao invés do acesso direto.
 {{% /pageinfo %}}
 
