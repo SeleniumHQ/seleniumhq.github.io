@@ -1,6 +1,6 @@
 ---
-title: "Chrome DevTools Protocol"
-linkTitle: "Chrome DevTools Protocol"
+title: "Chrome DevTools"
+linkTitle: "Chrome DevTools"
 weight: 5
 aliases: [
 "/documentation/pt-br/support_packages/chrome_devtools/",
@@ -9,37 +9,25 @@ aliases: [
 ---
 
 {{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
+Apesar do Selenium 4 providenciar acesso direto ao Protocolo Chrome DevTools  (CDP), é altamente recomendável que você use o [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}}) ao invés do acesso direto.
 {{% /pageinfo %}}
 
-{{% pageinfo color="warning" %}}
-While Selenium 4 provides direct access to the Chrome DevTools Protocol (CDP), it is
-highly encouraged that you use the [WebDriver Bidi APIs]({{< ref "bidi_api.md" >}}) instead.
-{{% /pageinfo %}}
+Muitos navegadores fornecem o "DevTools", um conjunto de ferramentas integradas ao navegador, que
+desenvolvedores podem usar para depurar web apps analisar o desempenho de suas páginas. O DevTools do Google Chrome faz o uso de um protocolo chamado Protocolo Chrome DevTools (abreviado como "CDP"). 
+Como o nome sugere, ele não foi projetado para testes, ou tem uma API estável, portanto, sua funcionalidade depende muito da versão do navegador de internet.
 
-Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
-developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
-DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
-As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
-is highly dependent on the version of the browser.
+WebDriver Bidi é a próxima geração do protocolo W3C WebDriver e visa fornecer uma API estável
+implementado por todos os navegadores, mas ele ainda não está completo. Até que seja, o Selenium fornece acesso ao
+CDP para os navegadores que o implementam (como Google Chrome ou Microsoft Edge e
+Firefox), permitindo que você aprimore seus testes de maneiras interessantes. Alguns exemplos do que você pode
+fazer com ele são dadas abaixo.
 
-WebDriver Bidi is the next generation of the W3C WebDriver protocol and aims to provide a stable API 
-implemented by all browsers, but it's not yet complete. Until it is, Selenium provides access to 
-the CDP for those browsers that implement it (such as Google Chrome, or Microsoft Edge, and 
-Firefox), allowing you to enhance your tests in interesting ways. Some examples of what you can 
-do with it are given below.
+## Emular Geo Localização
 
-## Emulate Geo Location
-
-Some applications have different features and functionalities across different 
-locations. Automating such applications is difficult because it is hard to emulate 
-the geo-locations in the browser using Selenium. But with the help of Devtools, 
-we can easily emulate them. Below code snippet demonstrates that.
+Alguns aplicativos têm recursos e funcionalidades diferentes em diferentes
+locations. Automatizar esses tipos de aplicativos é complicado porque é difícil emular
+as geolocalizações no navegador usando o Selenium. Mas com a ajuda do Devtools,
+podemos facilmente as emular. O trecho do código abaixo demonstra isso.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -104,7 +92,7 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Latitude and longitude of Tokyo, Japan
+  # Latitude e longitude de Tóquio, Japão
   coordinates = { latitude: 35.689487,
                   longitude: 139.691706,
                   accuracy: 100 }
@@ -133,7 +121,7 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Emulate Geo Location with the Remote WebDriver:
+## Emular localização geográfica com o Remote WebDriver:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -210,7 +198,7 @@ driver = Selenium::WebDriver.for(
 :capabilities => :chrome)
 
 begin
-  # Latitude and longitude of Tokyo, Japan
+  # Latitude e longitude de Tóquio, Japão
   coordinates = { latitude: 35.689487,
                   longitude: 139.691706,
                   accuracy: 100 }
@@ -289,12 +277,10 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Override Device Mode
+## Modo de Dispositivo Override
 
-Using Selenium's integration with CDP, one can override the current device 
-mode and simulate a new mode. Width, height, mobile, and deviceScaleFactor 
-are required parameters. Optional parameters include scale, screenWidth, 
-screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
+Usando a integração do Selenium com o CDP, pode-se substituir o modo do dispositivo atual e simular um novo modo. Width(largura), Height(altura), mobile(mobilidade) e deviceScaleFactor são parâmetros obrigatórios. Parâmetros opcionais incluem scale(escala), screenWidth(largura da tela),
+screenHeight(altura da tela), positionX, positionY, dontSetVisible(não setar como visível), screenOrientation(orientação da tela), viewport e displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -319,7 +305,7 @@ driver.get("https://selenium.dev/");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+# Por favor, crie um PR para adicionar uma amostra de código
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -428,9 +414,9 @@ fun kotlinOverridDeviceMode() {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Collect Performance Metrics
+## Coletando Métricas de Desempenho
 
-Collect various performance metrics while navigating the application.
+Colete várias métricas de desempenho enquanto navega no aplicativo.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -453,7 +439,7 @@ public void performanceMetricsExample() {
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+# Por favor, crie um PR para adicionar uma amostra de código
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // File must contain the following using statements
