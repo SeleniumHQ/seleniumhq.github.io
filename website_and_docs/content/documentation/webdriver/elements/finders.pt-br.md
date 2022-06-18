@@ -1,5 +1,5 @@
 ---
-title: "Finding web elements"
+title: "Encontrando Elementos Web"
 linkTitle: "Finders"
 weight: 2
 needsTranslation: true
@@ -8,39 +8,37 @@ aliases: [
 "/pt-br/documentation/webdriver/locating_elements/"
 ]
 description: >
-  Locating the elements based on the provided locator values.
+  Localizando elementos com base nos valores providenciados pelo localizador.
 ---
-
-One of the most fundamental aspects of using Selenium is obtaining element references to work with.
-Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
+Um dos aspectos mais fundamentais do uso do Selenium é obter referências de elementos para trabalhar.
+O Selenium oferece várias [estratégias de localizador]({{< ref "locators.md" >}}) para identificar exclusivamente um elemento.
+Há muitas maneiras de usar os localizadores em cenários complexos. Para os propósitos desta documentação,
+vamos considerar este trecho de HTML:
 
 
 ```html
 <ol id="vegetables">
  <li class="potatoes">…
  <li class="onions">…
- <li class="tomatoes"><span>Tomato is a Vegetable</span>…
+ <li class="tomatoes"><span>O tomate é um vegetal</span>…
 </ol>
 <ul id="fruits">
   <li class="bananas">…
   <li class="apples">…
-  <li class="tomatoes"><span>Tomato is a Fruit</span>…
+  <li class="tomatoes"><span>O tomate é uma fruta</span>…
 </ul>
 ```
 
-## First matching element 
+## Primeiro Elemento correspondente
+Muitos localizadores irão corresponder a vários elementos na página.
+O método de elemento de localização singular retornará uma referência ao
+primeiro elemento encontrado dentro de um determinado contexto.
 
-Many locators will match multiple elements on the page. The singular find element method will return a reference to the
-first element found within a given context.
-
-### Evaluating entire DOM
-
-When the find element method is called on the driver instance, it 
-returns a reference to the first element in the DOM that matches with the provided locator. 
-This value can be stored and used for future element actions. In our example HTML above, there are 
-two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
+### Avaliando o DOM inteiro
+Quando o metodo find element é chamado na instância do driver, ele
+retorna uma referência ao primeiro elemento no DOM que corresponde ao localizador fornecido.
+Esse valor pode ser guardado e usado para ações futuras do elemento. Em nosso exemplo HTML acima, existem
+dois elementos que têm um nome de classe de "tomatoes" então este método retornará o elemento na lista "vegetables".
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -64,14 +62,13 @@ val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
 {{< /tabpane >}}
 
 
-### Evaluating a subset of the DOM
+### Avaliando um subconjunto do DOM
+Ao em vez de tentar encontrar um localizador unico no DOM inteiro, normalmente é útil restringir a busca ao escopo de outro elemento
+já localizado. No exemplo acima existem dois elementos com um nome de classe de "tomatoes" e
+é um pouco mais desafiador obter a referência para o segundo.
 
-Rather than finding a unique locator in the entire DOM, it is often useful to narrow the search to the scope
-of another located element. In the above example there are two elements with a class name of "tomatoes" and 
-it is a little more challenging to get the reference for the second one.
-
-One solution is to locate an element with a unique attribute that is an ancestor of the desired element and not an
-ancestor of the undesired element, then call find element on that object:
+Uma possível solução seria localizar um elemento com um atributo único que seja um ancestral do elemento desejado e não um
+ancestral do elemento indesejado, então invoque o find element nesse objeto:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -101,23 +98,22 @@ val fruit = fruits.findElement(By.id("tomatoes"))
 {{< /tabpane >}}
 
 {{% pageinfo color="info" %}}
-**Java and C#**<br>
-`WebDriver`, `WebElement` and `ShadowRoot` classes all implement a `SearchContext` interface, which is
-considered a _role-based interface_. Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are clearly defined and try 
-to adhere to having only a single role of responsibility.
+**Java e C#**<br>
+As classes `WebDriver`, `WebElement` e `ShadowRoot` todas implementam o `SearchContext` interface, que é
+considerada uma _role-based interface_(interface baseada em função). As interfaces baseadas em função permitem determinar se uma determinada
+implementação de driver suporta um recurso específico. Essas interfaces são claramente definidas e tentam
+aderir a ter apenas um único papel de responsabilidade.
 {{% /pageinfo %}}
 
-### Optimized locator
+### Localizador otimizado
+Uma pesquisa aninhada pode não ser a estratégia de localização mais eficaz, pois requer dois
+comandos separados a serem emitidos para o navegador.
 
-A nested lookup might not be the most effective location strategy since it requires two
-separate commands to be issued to the browser.
+Para melhorar um pouco o desempenho, podemos usar CSS ou XPath para encontrar esse elemento com um único comando.
+Veja as [sugestões de estratégia do localizador]({{< ref "/documentation/test_practices/encouraged/locators" >}}) na nossa sessão de
+[Práticas de teste incentivadas]({{< ref "/documentation/test_practices/encouraged" >}}).
 
-To improve the performance slightly, we can use either CSS or XPath to find this element in a single command.
-See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}}) in our
-[Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) section.
-
-For this example, we'll use a CSS Selector:
+Para esse exemplo, utilizaremos o CSS Selector:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -141,12 +137,11 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
 {{< /tabpane >}}
 
 
-## All matching elements
-
-There are several use cases for needing to get references to all elements that match a locator, rather
-than just the first one. The plural find elements methods return a collection of element references. 
-If there are no matches, an empty list is returned. In this case, 
-references to all fruits and vegetable list items will be returned in a collection. 
+## Todos os elementos correspondentes
+Existem vários casos de uso para a necessidade de obter referências a todos os elementos que correspondem a um localizador, em vez
+do que apenas o primeiro. Os métodos plurais find elements retornam uma coleção de referências de elementos.
+Se não houver correspondências, uma lista vazia será retornada. Nesse caso,
+referências a todos os itens da lista de frutas e vegetais serão devolvidas em uma coleção.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -169,9 +164,9 @@ val plants: List<WebElement> = driver.findElements(By.tagName("li"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Get element
-Often you get a collection of elements but want to work with a specific element, which means you
-need to iterate over the collection and identify the one you want.
+### Obter Elemento
+Muitas vezes você obterá uma coleção de elementos, mas quer trabalhar apenas com um elemento específico, o que significa que você
+precisa iterar sobre a coleção e identificar o que você deseja.
 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -188,10 +183,10 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()
 
-    # Navigate to Url
+    # Navegar até a URL
 driver.get("https://www.example.com")
 
-    # Get all the elements available with tag name 'p'
+    # Obtém todos os elementos disponiveis com o nome da tag 'p'
 elements = driver.find_elements(By.TAG_NAME, 'p')
 
 for e in elements:
@@ -207,10 +202,10 @@ namespace FindElementsExample {
   public static void Main(string[] args) {
    IWebDriver driver = new FirefoxDriver();
    try {
-    // Navigate to Url
+    // Navegar até a URL
     driver.Navigate().GoToUrl("https://example.com");
 
-    // Get all the elements available with tag name 'p'
+    // Obtém todos os elementos disponiveis com o nome da tag 'p'
     IList < IWebElement > elements = driver.FindElements(By.TagName("p"));
     foreach(IWebElement e in elements) {
      System.Console.WriteLine(e.Text);
@@ -227,10 +222,10 @@ namespace FindElementsExample {
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
-     # Navigate to URL
+     # Navegar até a URL
   driver.get 'https://www.example.com'
 
-     # Get all the elements available with tag name 'p'
+     # Obtém todos os elementos disponiveis com o nome da tag 'p'
   elements = driver.find_elements(:tag_name,'p')
 
   elements.each { |e|
@@ -245,10 +240,10 @@ const {Builder, By} = require('selenium-webdriver');
 (async function example() {
     let driver = await new Builder().forBrowser('firefox').build();
     try {
-        // Navigate to Url
+        // Navegar até a URL
         await driver.get('https://www.example.com');
 
-        // Get all the elements available with tag 'p'
+        // Obtém todos os elementos disponiveis com o nome da tag 'p'
         let elements = await driver.findElements(By.css('p'));
         for(let e of elements) {
             console.log(await e.getText());
@@ -267,7 +262,7 @@ fun main() {
     val driver = FirefoxDriver()
     try {
         driver.get("https://example.com")
-        // Get all the elements available with tag name 'p'
+        // Obtém todos os elementos disponiveis com o nome da tag 'p'
         val elements = driver.findElements(By.tagName("p"))
         for (element in elements) {
             println("Paragraph text:" + element.text)
@@ -279,10 +274,10 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Find Elements From Element
+## Localizar Elementos em um Elemento
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+Ele é usado para localizar a lista de WebElements filhos correspondentes dentro do contexto do elemento pai.
+Para realizar isso, o WebElement pai é encadeado com o 'findElements' para acessar seus elementos filhos.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -298,10 +293,10 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
           try {
               driver.get("https://example.com");
 
-              // Get element with tag name 'div'
+              // Obtém o elemento com o nome da tag 'div'
               WebElement element = driver.findElement(By.tagName("div"));
 
-              // Get all the elements available with tag name 'p'
+              // Obtém todos os elementos disponiveis com o nome da tag 'p'
               List<WebElement> elements = element.findElements(By.tagName("p"));
               for (WebElement e : elements) {
                   System.out.println(e.getText());
@@ -319,10 +314,10 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 driver.get("https://www.example.com")
 
-    # Get element with tag name 'div'
+    # Obtém o elemento com o nome da tag 'div'
 element = driver.find_element(By.TAG_NAME, 'div')
 
-    # Get all the elements available with tag name 'p'
+    # Obtém todos os elementos disponíveis com o nome da tag 'p'
 elements = element.find_elements(By.TAG_NAME, 'p')
 for e in elements:
     print(e.text)
@@ -339,10 +334,10 @@ namespace FindElementsFromElement {
    try {
     driver.Navigate().GoToUrl("https://example.com");
 
-    // Get element with tag name 'div'
+    // Obtém o elemento com o nome da tag 'div'
     IWebElement element = driver.FindElement(By.TagName("div"));
 
-    // Get all the elements available with tag name 'p'
+    // Obtém todos os elementos disponíveis com o nome da tag 'p'
     IList < IWebElement > elements = element.FindElements(By.TagName("p"));
     foreach(IWebElement e in elements) {
      System.Console.WriteLine(e.Text);
@@ -358,13 +353,13 @@ namespace FindElementsFromElement {
   require 'selenium-webdriver'
   driver = Selenium::WebDriver.for :chrome
   begin
-    # Navigate to URL
+    # Navegar até a URL
     driver.get 'https://www.example.com'
 
-    # Get element with tag name 'div'
+    # Obtém o elemento com o nome da tag 'div'
     element = driver.find_element(:tag_name,'div')
 
-    # Get all the elements available with tag name 'p'
+    # Obtém todos os elementos disponíveis com o nome da tag 'p'
     elements = element.find_elements(:tag_name,'p')
 
     elements.each { |e|
@@ -384,10 +379,10 @@ namespace FindElementsFromElement {
 
       await driver.get('https://www.example.com');
 
-      // Get element with tag name 'div'
+      //  Obtém o elemento com o nome da tag 'div'
       let element = driver.findElement(By.css("div"));
 
-      // Get all the elements available with tag name 'p'
+      // Obtém todos os elementos disponíveis com o nome da tag 'p'
       let elements = await element.findElements(By.css("p"));
       for(let e of elements) {
           console.log(await e.getText());
@@ -403,10 +398,10 @@ namespace FindElementsFromElement {
       try {
           driver.get("https://example.com")
 
-          // Get element with tag name 'div'
+           // Obtém o elemento com o nome da tag 'div'
           val element = driver.findElement(By.tagName("div"))
 
-          // Get all the elements available with tag name 'p'
+          // Obtém todos os elementos disponíveis com o nome da tag 'p'
           val elements = element.findElements(By.tagName("p"))
           for (e in elements) {
               println(e.text)
@@ -418,9 +413,9 @@ namespace FindElementsFromElement {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Active Element
+## Obter elemento ativo
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no contexto de navegação atual.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -434,7 +429,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
         driver.get("http://www.google.com");
         driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
 
-        // Get attribute of current active element
+        // Obter atributo do elemento atualmente ativo
         String attr = driver.switchTo().activeElement().getAttribute("title");
         System.out.println(attr);
       } finally {
@@ -451,7 +446,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   driver.get("https://www.google.com")
   driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
 
-    # Get attribute of current active element
+    # Obter atributo do elemento atualmente ativo
   attr = driver.switch_to.active_element.get_attribute("title")
   print(attr)
   {{< /tab >}}
@@ -464,11 +459,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
       public static void Main(string[] args) {
        IWebDriver driver = new ChromeDriver();
        try {
-        // Navigate to Url
+        // Navegar até a URL
         driver.Navigate().GoToUrl("https://www.google.com");
         driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
 
-        // Get attribute of current active element
+        // Obter atributo do elemento atualmente ativo
         string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
         System.Console.WriteLine(attr);
        } finally {
@@ -485,7 +480,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
     driver.get 'https://www.google.com'
     driver.find_element(css: '[name="q"]').send_keys('webElement')
 
-    # Get attribute of current active element
+    # Obter atributo do elemento atualmente ativo
     attr = driver.switch_to.active_element.attribute('title')
     puts attr
   ensure
@@ -500,7 +495,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
       await driver.get('https://www.google.com');
       await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
 
-      // Get attribute of current active element
+      // Obter atributo do elemento atualmente ativo
       let attr = await driver.switchTo().activeElement().getAttribute("title");
       console.log(`${attr}`)
   })();
@@ -515,7 +510,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
           driver.get("https://www.google.com")
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
-          // Get attribute of current active element
+          // Obter atributo do elemento atualmente ativo
           val attr = driver.switchTo().activeElement().getAttribute("title")
           print(attr)
       } finally {
