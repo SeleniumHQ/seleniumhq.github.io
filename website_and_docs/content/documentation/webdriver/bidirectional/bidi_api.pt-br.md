@@ -4,14 +4,6 @@ linkTitle: "BiDi API"
 weight: 12
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 A seguinte lista de APIs crescerá à medida que o projeto Selenium se prepara
 para suportar casos de uso do mundo real. Se houver funcionalidades adicionais que você gostaria de ver, por favor, levante uma [solicitação de recurso](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
