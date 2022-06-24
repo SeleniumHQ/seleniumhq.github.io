@@ -1,24 +1,16 @@
 ---
-title: "RemoteWebDriver BiDirectional API"
-linkTitle: "RemoteWebDriver BiDi API"
+title: "远程网络驱动 双向 API（RemoteWebDriver BiDirectional API）"
+linkTitle: "远程网络驱动 BiDi API"
 weight: 1
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
-The following examples demonstrate how to leverage BiDi APIs with [Remote WebDriver](/documentation/webdriver/remote_webdriver/).
 
-## Register Basic Auth
+下面的例子显示如何使用 [Remote WebDriver](/documentation/webdriver/remote_webdriver/).
 
-Some applications make use of browser authentication to secure pages.
-With Selenium, you can automate the input of basic auth credentials whenever they arise.
+## 注册基本认证（Register Basic Auth）
+
+一些应用程序使用浏览器身份验证来保护页面。使用 Selenium，您可以在基本身份验证出现时自动输入它们。
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
@@ -26,11 +18,9 @@ With Selenium, you can automate the input of basic auth credentials whenever the
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Mutation Observation
+## DOM动态变化观察 （Mutation Observation）
 
-Mutation Observation is the ability to capture events via
-WebDriver BiDi when there are DOM mutations on a specific
-element in the DOM.
+DOM动态变化观察是当 DOM 中的特定元素上存在 DOM 突变时，通过 WebDriver BiDi 捕获事件的能力。
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
@@ -38,9 +28,9 @@ element in the DOM.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Listen to `console.log` events
+## 监听控制台日志事件 （Listen to `console.log` events）
 
-Listen to the `console.log` events and register callbacks to process the event.
+侦听 console. log 事件并注册回调以处理该事件。
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
@@ -48,7 +38,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Actions causing JS exceptions
+## JS异常处理 （Actions causing JS exceptions）
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
@@ -56,10 +46,9 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Network Interception
+## 监听网络 （Network Interception）
 
-If you want to capture network events coming into the browser and you want manipulate them you are able to do
-it with the following examples.
+如果你希望捕获进入浏览器的网络事件并对其进行操作，可以使用以下示例进行操作。
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
