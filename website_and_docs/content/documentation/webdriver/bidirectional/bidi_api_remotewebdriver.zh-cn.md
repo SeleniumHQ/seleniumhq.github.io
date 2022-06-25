@@ -1,6 +1,6 @@
 ---
-title: "远程网络驱动 双向 API（RemoteWebDriver BiDirectional API）"
-linkTitle: "远程网络驱动 BiDi API"
+title: "远程 WebDriver 双向 API（RemoteWebDriver BiDirectional API）"
+linkTitle: "远程 WebDriver 双向 API"
 weight: 1
 ---
 
@@ -30,7 +30,7 @@ DOM动态变化观察是当 DOM 中的特定元素上存在 DOM 突变时，通�
 
 ## 监听控制台日志事件 （Listen to `console.log` events）
 
-侦听 console. log 事件并注册回调以处理该事件。
+监听 console. log 事件并注册回调以处理该事件。
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
@@ -46,7 +46,7 @@ DOM动态变化观察是当 DOM 中的特定元素上存在 DOM 突变时，通�
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 监听网络 （Network Interception）
+## 截网侦察 （Network Interception）
 
 如果你希望捕获进入浏览器的网络事件并对其进行操作，可以使用以下示例进行操作。
 
