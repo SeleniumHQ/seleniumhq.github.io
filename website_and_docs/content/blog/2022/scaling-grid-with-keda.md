@@ -9,7 +9,7 @@ description: >
   Scaling the selenium grid in a kubernetes cluster with the help of KEDA
 ---
 
-##The Issue:
+## The Issue:
 
 If you have any experience with Selenium Grid and Kubernetes you will probably run into an issue with scaling. K8s works wonders for scaling up and down applications based on their CPU and Memory usage, but it is not so straightforward when it comes down to applications like Selenium Grid.
 
@@ -18,7 +18,7 @@ The issue is described quite well in [this blog post](https://sahajamit.medium.c
 1. The browser pods use a variable amount of resources depending on the demand of the current test. This means that all your browser pods may be in use but there isn't enough CPU usage for the HPA to decide that a scale-up is needed, leaving tests waiting in the queue unnecessarily.
 2. When Kubernetes decides to scale down a deployment it does so (for the most part) at random. You could have 10 tests running on 20 pods and need to scale down. More than likely at least one of the pods asked to terminate will still have a test running, resulting in connection failures.
 
-##How KEDA Helps:
+## How KEDA Helps:
 
 KEDA is a **free and open-source** Kubernetes event-driven autoscaling solution that extends the feature set of K8s' HPA. This is done via plugins written by the community that feed KEDA's metrics server with the information it needs to scale specific deployments up and down.
 
@@ -57,7 +57,7 @@ As an added bonus KEDA allows us to scale our deployments down to 0 when there i
 
 A full example of how to implement this is further down in the article but KEDA solves one of our two issues. Now we can properly scale up and down based on the actual load on the selenium grid. Unfortunately scaling down still results in the likely possibility that a pod is still running a test and is told to terminate before it can finish.
 
-##Using PreStop and Drain:
+## Using PreStop and Drain:
 
 To combat this we are going to use a combination of K8s [PreStop](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks) and Selenium Grid's [Drain](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain-node) functionality.
 
@@ -78,7 +78,7 @@ spec:
             exec:
               command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; tail --pid=$(pgrep -f '[n]ode --bind-host false --config /opt/selenium/config.toml') -f /dev/null; sleep 30s"]
 ```
-####Breaking this down:
+#### Breaking this down:
 
 - terminationGracePeriodSeconds is set to however long you wish to give your pods to gracefully terminate before being forced. In this case I give the pods 60 minutes to finish their test when asked to terminate. If you are also scaling your cluster nodes as a part of this you may need to increase the termination grace period for your cluster nodes as well.
 - When the pod is told to stop, the PreStop command is ran first.
@@ -88,14 +88,14 @@ spec:
 
 And with that our application can now safely scale down our selenium browser deployments!
 
-##From Start to Finish:
+## From Start to Finish:
 
-###Install KEDA:
+### Install KEDA:
 
 - **Note:** As of 05/26/2022 there is a bug with the latest (2.7.1) version of the plugin. [Until this fix is merged and released in 2.8.0](https://github.com/kedacore/keda/pull/3062), I suggest using 2.6.1. You can find the [latest version number here](https://keda.sh/docs/2.7/scalers/selenium-grid-scaler/).
 - ```kubectl apply -f https://github.com/kedacore/keda/releases/download/<Version_Number_Here>/keda-<Version_Number_Here>.yaml```
 
-###Create and apply your scaled object(s):
+### Create and apply your scaled object(s):
 
 As described earlier your [scaled object](https://keda.sh/docs/2.7/scalers/selenium-grid-scaler/) will look like so:
 ```
@@ -144,7 +144,7 @@ This is due to a name change between the Edge sessions in the queue and the acti
 Once you have that ready just save it as a yaml file and apply with:
 - `kubectl apply -f ./<scaled-object-file-name>.yaml --namespace=<browser_namespace>`
 
-###Add PreStop commands to your browser pods:
+### Add PreStop commands to your browser pods:
 
 1. Set your `terminationGracePeriodSeconds` of your deployment to whatever the maximum time you wish to give the pods in order to terminate gracefully. Again you may need to also increase the grace period for your nodepool as well which will vary depending on your K8s provider.
 2. Add the PreStop command to the container lifecycle spec:
@@ -163,4 +163,4 @@ spec:
               command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; tail --pid=$(pgrep -f '[n]ode --bind-host false --config /opt/selenium/config.toml') -f /dev/null; sleep 30s"]
 ```
 
-####And that is it, your selenium grid pods should now scale up and down properly without any lost sessions!
+#### And that is it, your selenium grid pods should now scale up and down properly without any lost sessions!
