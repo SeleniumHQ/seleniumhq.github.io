@@ -46,7 +46,7 @@ the correct driver for your browser, there are many third party libraries to ass
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
