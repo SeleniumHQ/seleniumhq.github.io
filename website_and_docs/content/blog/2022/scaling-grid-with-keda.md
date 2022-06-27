@@ -31,7 +31,9 @@ triggers:
       url: 'http://selenium-grid-url-or-ip:4444/graphql'
       browserName: 'chrome'
 ```
+
 All of this gets saved as a Scaled-Object like so:
+
 ```
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
@@ -61,7 +63,7 @@ A full example of how to implement this is further down in the article but KEDA 
 
 To combat this we are going to use a combination of K8s [PreStop](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks) and Selenium Grid's [Drain](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain-node) functionality.
 
-- PreStop allows us to set a command or chain of commands that is run to completion before the container is told to stop.
+- `PreStop` allows us to set a command or chain of commands that is run to completion before the container is told to stop.
 - Drain tells the selenium browser pod to finish its current test and then shut down.
 
 Together these look like so in our browser pod yaml:
@@ -80,9 +82,9 @@ spec:
 ```
 #### Breaking this down:
 
-- terminationGracePeriodSeconds is set to however long you wish to give your pods to gracefully terminate before being forced. In this case I give the pods 60 minutes to finish their test when asked to terminate. If you are also scaling your cluster nodes as a part of this you may need to increase the termination grace period for your cluster nodes as well.
-- When the pod is told to stop, the PreStop command is ran first.
-- We curl the localhost of our pod to tell it to drain. The pod will no longer accept new session requests and will finish its current test. More information on this [can be found here](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain).
+- `terminationGracePeriodSeconds` is set to however long you wish to give your pods to gracefully terminate before being forced. In this case I give the pods 60 minutes to finish their test when asked to terminate. If you are also scaling your cluster nodes as a part of this you may need to increase the termination grace period for your cluster nodes as well.
+- When the pod is told to stop, the `PreStop` command is ran first.
+- We curl the `localhost` of our pod to tell it to drain. The pod will no longer accept new session requests and will finish its current test. More information on this [can be found here](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain).
 - We then tail the internal node process that will continue to run until the node has been drained.
 - After this we give the pod 30 seconds to finish anything else before giving the full termination command.
 
@@ -147,7 +149,7 @@ Once you have that ready just save it as a yaml file and apply with:
 ### Add PreStop commands to your browser pods:
 
 1. Set your `terminationGracePeriodSeconds` of your deployment to whatever the maximum time you wish to give the pods in order to terminate gracefully. Again you may need to also increase the grace period for your nodepool as well which will vary depending on your K8s provider.
-2. Add the PreStop command to the container lifecycle spec:
+2. Add the `PreStop` command to the container lifecycle spec:
 
 ```
 spec:
