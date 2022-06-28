@@ -47,7 +47,7 @@ o driver correto para o seu navegador de internet, existem diversas bibliotecas 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Importe o [Gerenciador de WebDriver](https://github.com/bonigarcia/webdrivermanager)
+1. Importe o [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
