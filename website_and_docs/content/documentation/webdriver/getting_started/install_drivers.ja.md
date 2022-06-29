@@ -46,7 +46,7 @@ See the code example for [opening an Opera browser]({{< ref "open_browser.md#ope
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 
-// Use WebDriver Manager: https://github.com/bonigarcia/webdrivermanager
+// Use WebDriverManager: https://github.com/bonigarcia/webdrivermanager
 
 // Import WebDriver Manager:
 import io.github.bonigarcia.wdm.WebDriverManager;

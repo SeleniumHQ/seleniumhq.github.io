@@ -51,7 +51,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
