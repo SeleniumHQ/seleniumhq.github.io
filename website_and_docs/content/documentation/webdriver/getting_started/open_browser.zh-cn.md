@@ -276,17 +276,23 @@ Internet Explorer 11将于2022年6月15日终止对包括Windows 10在内的某�
 
 ## Opera
 
-由于opera驱动程序不支持w3c语法, 
+由于opera驱动程序未设置w3c为默认语法, 
 但基于Chrome, 因此建议使用chromedriver驱动opera浏览器.
 与所有Chromium实现一样, 确保浏览器版本与驱动程序版本匹配.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
-  ChromeOptions options = new ChromeOptions();
-  options.setBinary("/path/to/opera/browser");
-  
-  driver = new ChromeDriver(options);
-  
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L84">}}
+  //    Set webdriver.chrome.driver with Opera Driver
+  System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
+  //    Create ChromeOptions Instance
+  ChromeOptions chromeOptions = new ChromeOptions();
+  //    Set W3C Dialect
+  chromeOptions.setExperimentalOption("w3c", true);
+  //    Create ChromeDriver Instance
+  WebDriver driver = new ChromeDriver(chromeOptions);
+  //    Open Target Website
+  driver.get("https://www.selenium.dev");
+  //    Quit
   driver.quit();
   {{< /tab >}}
   {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
@@ -347,7 +353,7 @@ safaridriver --enable
 ```
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L84-L88">}}
+{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L90-L94">}}
   SafariOptions options = new SafariOptions();
   driver = new SafariDriver(options);
   
