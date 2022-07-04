@@ -70,11 +70,17 @@ public class OpenBrowserTest {
     @Disabled("Requires non-standard browser")
     @Test
     public void operaSession() {
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/path/to/opera/browser");
-
-        driver = new ChromeDriver(options);
-
+        //    Set webdriver.chrome.driver with Opera Driver
+        System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
+        //    Create ChromeOptions Instance
+        chromeOptions = new ChromeOptions();
+        //    Set W3C Dialect
+        chromeOptions.setExperimentalOption("w3c", true);
+        //    Create ChromeDriver Instance
+        driver = new ChromeDriver(chromeOptions);
+        //    Open Target Website
+        driver.get("https://www.selenium.dev");
+        //    Quit
         driver.quit();
     }
 
