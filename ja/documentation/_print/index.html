@@ -624,14 +624,20 @@ preferences are saved against the logged-in user&rsquo;s account, some additiona
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>driver</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>InternetExplorerDriver</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>options</span><span style=color:#000;font-weight:700>)</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>quit</span><span style=color:#000;font-weight:700>()</span>
-</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div><h2 id=opera>Opera</h2><p>Since the opera driver does not support w3c syntax, but is based on Chromium, it is recommended
+</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div><h2 id=opera>Opera</h2><p>Since the opera driver does not set w3c as default value, but is based on Chromium, it is recommended
 to drive Opera browser with the chromedriver. Like all Chromium implementations,
-make sure that the browser version matches the driver version.</p><ul class="nav nav-tabs" id=tabs-11 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-11-0-tab data-toggle=tab href=#tabs-11-0 role=tab onclick='handleClick("java")' aria-controls=tabs-11-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-11-1-tab data-toggle=tab href=#tabs-11-1 role=tab onclick='handleClick("python")' aria-controls=tabs-11-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-11-2-tab data-toggle=tab href=#tabs-11-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-11-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-11-3-tab data-toggle=tab href=#tabs-11-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-11-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-11-4-tab data-toggle=tab href=#tabs-11-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-11-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-11-5-tab data-toggle=tab href=#tabs-11-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-11-5 aria-selected=false>Kotlin</a></li></ul><div class="tab-content border-bottom height-auto" id=tabs-11-content><div class="tab-pane fade show active" id=tabs-11-0 role=tabpanel aria-labelled-by=tabs-11-0-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=display:flex><span>  <span style=color:#000>ChromeOptions</span> <span style=color:#000>options</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ChromeOptions</span><span style=color:#ce5c00;font-weight:700>();</span>
-</span></span><span style=display:flex><span>  <span style=color:#000>options</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>setBinary</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;/path/to/opera/browser&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ChromeDriver</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>options</span><span style=color:#ce5c00;font-weight:700>);</span>
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>quit</span><span style=color:#ce5c00;font-weight:700>();</span>
+make sure that the browser version matches the driver version.</p><ul class="nav nav-tabs" id=tabs-11 role=tablist><li class=nav-item><a class="nav-link active tab-java" id=tabs-11-0-tab data-toggle=tab href=#tabs-11-0 role=tab onclick='handleClick("java")' aria-controls=tabs-11-0 aria-selected=true>Java</a></li><li class=nav-item><a class="nav-link tab-python" id=tabs-11-1-tab data-toggle=tab href=#tabs-11-1 role=tab onclick='handleClick("python")' aria-controls=tabs-11-1 aria-selected=false>Python</a></li><li class=nav-item><a class="nav-link tab-csharp" id=tabs-11-2-tab data-toggle=tab href=#tabs-11-2 role=tab onclick='handleClick("csharp")' aria-controls=tabs-11-2 aria-selected=false>CSharp</a></li><li class=nav-item><a class="nav-link tab-ruby" id=tabs-11-3-tab data-toggle=tab href=#tabs-11-3 role=tab onclick='handleClick("ruby")' aria-controls=tabs-11-3 aria-selected=false>Ruby</a></li><li class=nav-item><a class="nav-link tab-javascript" id=tabs-11-4-tab data-toggle=tab href=#tabs-11-4 role=tab onclick='handleClick("javascript")' aria-controls=tabs-11-4 aria-selected=false>JavaScript</a></li><li class=nav-item><a class="nav-link tab-kotlin" id=tabs-11-5-tab data-toggle=tab href=#tabs-11-5 role=tab onclick='handleClick("kotlin")' aria-controls=tabs-11-5 aria-selected=false>Kotlin</a></li></ul><div class="tab-content border-bottom height-auto" id=tabs-11-content><div class="tab-pane fade show active" id=tabs-11-0 role=tabpanel aria-labelled-by=tabs-11-0-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Set webdriver.chrome.driver with Opera Driver
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>System</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>setProperty</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;webdriver.chrome.driver&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;OPERA_DRIVER_PATH&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Create ChromeOptions Instance
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>ChromeOptions</span> <span style=color:#000>chromeOptions</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ChromeOptions</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Set W3C Dialect
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>chromeOptions</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>setExperimentalOption</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;w3c&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#204a87;font-weight:700>true</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Create ChromeDriver Instance
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ChromeDriver</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>chromeOptions</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Open Target Website
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://www.selenium.dev&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>//    Quit
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>quit</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>  </span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-11-1 role=tabpanel aria-labelled-by=tabs-11-1-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span>  <span style=color:#000>options</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>ChromeOptions</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>  <span style=color:#000>options</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>binary_location</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#34;path/to/opera/browser&#34;</span>
 </span></span><span style=display:flex><span>  <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>webdriver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>Chrome</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>options</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>options</span><span style=color:#000;font-weight:700>)</span>
@@ -9625,7 +9631,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/diemol&quot;&gt;@diemol&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;707 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;710 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -9667,7 +9673,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/p0deje&quot;&gt;@p0deje&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;429 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;430 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -10316,6 +10322,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/5413013?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/bonigarcia&quot;&gt;@bonigarcia&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;10 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/114508?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -10340,20 +10360,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
     &gt;&lt;a href=&quot;https://github.com/josephg&quot;&gt;@josephg&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;10 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/5413013?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/bonigarcia&quot;&gt;@bonigarcia&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;9 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -10414,6 +10420,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/279773?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/asolntsev&quot;&gt;@asolntsev&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;8 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/457137?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -10438,20 +10458,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
     &gt;&lt;a href=&quot;https://github.com/potapovDim&quot;&gt;@potapovDim&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;8 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/279773?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/asolntsev&quot;&gt;@asolntsev&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;7 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -10959,6 +10965,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/58857646?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/coinzdude&quot;&gt;@coinzdude&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;40 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/11289542?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -10987,20 +11007,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/58857646?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/coinzdude&quot;&gt;@coinzdude&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;34 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/672016?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -11024,7 +11030,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/apps/dependabot&quot;&gt;@dependabot[bot]&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;23 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;24 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -11123,6 +11129,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
     &gt;&lt;a href=&quot;https://github.com/zewa666&quot;&gt;@zewa666&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;3 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/107802931?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/Angus3280&quot;&gt;@Angus3280&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;2 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -11359,7 +11379,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/diemol&quot;&gt;@diemol&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;473 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;474 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -11387,7 +11407,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/selenium-ci&quot;&gt;@selenium-ci&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;80 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;81 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -12120,6 +12140,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/1790594?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/AutomationD&quot;&gt;@AutomationD&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/64000291?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -12526,6 +12560,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/28630660?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/PDUBEY00&quot;&gt;@PDUBEY00&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/145182?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -12576,6 +12624,20 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   /&gt;
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/tuxiqae&quot;&gt;@tuxiqae&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/11150054?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/cablespaghetti&quot;&gt;@cablespaghetti&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
 &lt;/div&gt;
@@ -12705,48 +12767,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
 &lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/8518239?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/gitter-badger&quot;&gt;@gitter-badger&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/413772?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/graingert&quot;&gt;@graingert&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/15939458?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/ThomasMeschke&quot;&gt;@ThomasMeschke&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
-&lt;/div&gt;
 </code></pre></div><h4 id=selenium-website--docsgithubcomseleniumhqseleniumhqgithubio><a href=//github.com/SeleniumHQ/seleniumhq.github.io/>Selenium Website & Docs</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><pre><code>&lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/5992658?v=4&quot;
@@ -12800,7 +12820,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/alaahong&quot;&gt;@alaahong&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;90 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;91 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
@@ -12870,7 +12890,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/pujagani&quot;&gt;@pujagani&lt;/a&gt;&lt;/label
   &gt;
-  &lt;span class=&quot;contributions&quot;&gt;27 commits&lt;/span&gt;
+  &lt;span class=&quot;contributions&quot;&gt;28 commits&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
