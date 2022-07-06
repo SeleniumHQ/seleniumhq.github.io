@@ -82,7 +82,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
         {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L22-L27" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/actionsApi/keysTest.js#L31-L36" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code

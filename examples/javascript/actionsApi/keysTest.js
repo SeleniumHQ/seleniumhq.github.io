@@ -24,6 +24,20 @@ suite(function(env) {
       const textField = driver.findElement(By.id("textInput"));
       assert.deepStrictEqual('A', await textField.getAttribute('value'))
     });
+
+    it('KeyUp', async function() {
+      await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
+
+      await driver.actions()
+        .keyDown(Key.SHIFT)
+        .sendKeys('a')
+        .keyUp(Key.SHIFT)
+        .sendKeys("b")
+        .perform();
+
+      const textField = driver.findElement(By.id("textInput"));
+      assert.deepStrictEqual('Ab', await textField.getAttribute('value'))
+    });
   });
 });
 
