@@ -453,7 +453,16 @@ public void performanceMetricsExample() {
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get('https://www.duckduckgo.com')
+driver.execute_cdp_cmd('Performance.enable', {})
+t = driver.execute_cdp_cmd('Performance.getMetrics', {})
+print(t)
+driver.quit()
+ 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // File must contain the following using statements
