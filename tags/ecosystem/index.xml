@@ -1,0 +1,132 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – ecosystem</title><link>/tags/ecosystem/</link><description>Recent content in ecosystem on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ecosystem/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Test Automation Summit Berlin</title><link>/blog/2022/test-automation-summit/</link><pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate><guid>/blog/2022/test-automation-summit/</guid><description>
+&lt;p>Have you ever wanted to contribute to an open source testing project, but couldn&amp;rsquo;t figure out where to start?
+If so, fill out &lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe6u6_bS59njqhhSwfnWSlGxlqQaNJ8xouDBR6YM-7pQYvJFQ/viewform">this form&lt;/a>
+to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin,
+sponsored by &lt;a href="https://www.selenium.dev">Selenium&lt;/a> and hosted by &lt;a href="https://saucelabs.com/">Sauce Labs&lt;/a>.
+You can review the list of available projects below and select the one that you&amp;rsquo;d like to contribute to. We&amp;rsquo;ll be in touch soon if you
+are selected to join us.&lt;/p>
+&lt;p>This will &lt;em>&lt;strong>not&lt;/strong>&lt;/em> be your typical workshop.
+This will be a working session with one or more maintainers of a given project
+to show you exactly what you need to know to contribute to that project.
+Selected participants will be required to bring a laptop capable of executing Selenium tests,
+including a working dev environment for the applicable programming language.&lt;/p>
+&lt;p>This is a new idea we’re trying out, so space is very limited.
+If there is sufficient demand we will consider doing more events like this in the future.&lt;/p>
+&lt;h3 id="objectives">Objectives&lt;/h3>
+&lt;p>At the end of the session you will be able to:&lt;/p>
+&lt;ul>
+&lt;li>Build the project on your computer&lt;/li>
+&lt;li>Execute the existing test suite for the project&lt;/li>
+&lt;li>Write new tests for the project&lt;/li>
+&lt;li>Add a feature or fix a bug&lt;/li>
+&lt;/ul>
+&lt;h3 id="agenda-subject-to-change">Agenda (subject to change)&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Start&lt;/th>
+&lt;th>End&lt;/th>
+&lt;th>Activity&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0900&lt;/td>
+&lt;td>0930&lt;/td>
+&lt;td>Breakfast&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0930&lt;/td>
+&lt;td>1000&lt;/td>
+&lt;td>Talk: &amp;ldquo;State of WebDriver Ecosystem&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1000&lt;/td>
+&lt;td>1100&lt;/td>
+&lt;td>Lightning talks about participating projects&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1100&lt;/td>
+&lt;td>1200&lt;/td>
+&lt;td>Split into working groups and walk through projects&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1200&lt;/td>
+&lt;td>1300&lt;/td>
+&lt;td>Lunch&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1300&lt;/td>
+&lt;td>1630&lt;/td>
+&lt;td>Continue with working sessions&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1630&lt;/td>
+&lt;td>1700&lt;/td>
+&lt;td>Wrap up&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1700&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Happy hour&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="participating-projects">Participating Projects&lt;/h3>
+&lt;p>The following maintainers are will be present to assist you in working on their project:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Maintainer&lt;/th>
+&lt;th>Project(s)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/asolntsev">Andrei Solntsev&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://selenide.org/">Selenide&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/boni_gg">Boni Garcia&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/bonigarcia/webdrivermanager">WebDriverManager&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/bromann">Christian Bromann&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://webdriver.io/">WebdriverIO&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/AutomatedTester">David Burns&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://wpt.fyi/results/webdriver/tests">W3C Web Platform Tests&lt;/a>, &lt;a href="https://www.selenium.dev/">Selenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/diegofmolina">Diego Molina&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.selenium.dev/">Selenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.linkedin.com/in/filip-cynarski-39b3b260/">Filip Cynarski&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/FluentLenium/FluentLenium">FluentLenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/JanMolak">Jan Molak&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://serenity-js.org/">Serenity/JS&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.linkedin.com/in/mikkonenjani/">Jani Mikkonen&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://robotframework.org/SeleniumLibrary/">Robot Framework&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/mykola-mokhnach">Nick Mokhnach&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://appium.io/">Appium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/titusfortner">Titus Fortner&lt;/a>&lt;/td>
+&lt;td>&lt;a href="http://watir.com/">Watir&lt;/a>, &lt;a href="https://www.selenium.dev/">Selenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Plus maybe another surprise guest or two. We&amp;rsquo;ll update the list when we know more.&lt;/p>
+&lt;h3 id="other-projects">Other Projects&lt;/h3>
+&lt;p>Do you maintain an open source project in the WebDriver ecosystem?&lt;br>
+Have you written a test framework that uses Selenium that is (or you want to make) open source?&lt;br>
+Please fill out &lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSdr21sc1j8a4yqq-TQnc6ATC4r7she2CuSSfZylvC_YOX3JFA/viewform">this form&lt;/a>
+(provide additional relevant details in the comments), and we will be in touch about future events.&lt;/p></description></item></channel></rss>
