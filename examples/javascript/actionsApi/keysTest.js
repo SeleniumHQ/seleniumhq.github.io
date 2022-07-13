@@ -38,6 +38,29 @@ suite(function(env) {
       const textField = driver.findElement(By.id("textInput"));
       assert.deepStrictEqual('Ab', await textField.getAttribute('value'))
     });
+
+    it('sendKeys', async function() {
+      await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
+
+      await driver.actions()
+        .sendKeys('abc')
+        .perform();
+
+      const textField = driver.findElement(By.id("textInput"));
+      assert.deepStrictEqual('abc', await textField.getAttribute('value'))
+    });
+
+    it('Designated Element', async function() {
+      await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
+      await driver.findElement(By.tagName("body")).click();
+
+      const textField = await driver.findElement(By.id("textInput"));
+      await driver.actions()
+        .sendKeys(textField, 'Selenium!')
+        .perform();
+
+      assert.deepStrictEqual('Selenium!', await textField.getAttribute('value'))
+    });
   });
 });
 
