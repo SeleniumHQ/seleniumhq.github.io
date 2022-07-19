@@ -9,7 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseTest {
     public WebDriver driver;
 
-    @BeforeAll static void setDriver() {
+    @BeforeAll
+    public static void setDriver() {
         WebDriverManager.chromedriver().setup();
     }
 

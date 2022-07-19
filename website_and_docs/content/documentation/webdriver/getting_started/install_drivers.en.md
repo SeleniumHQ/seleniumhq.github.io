@@ -29,7 +29,7 @@ in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}})
 | ------- | ------------ | ------------- | -------- | ------------- |
 | Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
 | Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
+| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
 | Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
 
@@ -46,7 +46,7 @@ the correct driver for your browser, there are many third party libraries to ass
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
