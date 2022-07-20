@@ -61,9 +61,15 @@ The following maintainers are will be present to assist you in working on their 
 | [Jan Molak](https://twitter.com/JanMolak) | [Serenity/JS](https://serenity-js.org/)                                                                  |
 | [Jani Mikkonen](https://www.linkedin.com/in/mikkonenjani/) | [Robot Framework](https://robotframework.org/SeleniumLibrary/)                                           |
 | [Nick Mokhnach](https://github.com/mykola-mokhnach) | [Appium](https://appium.io/)                                                                             |
+| [Ronald Brill](https://twitter.com/HtmlUnit) | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                           |
 | [Titus Fortner](https://twitter.com/titusfortner) | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
 
 Plus maybe another surprise guest or two. We'll update the list when we know more.
+
+#### Update 7/20/2022
+
+[Ronald Brill](https://twitter.com/HtmlUnit), maintainer of
+[HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver) will now be joining us!
 
 ### Other Projects
 
