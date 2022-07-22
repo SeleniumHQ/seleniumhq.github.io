@@ -11,10 +11,16 @@ description: >
 
 Have you ever wanted to contribute to an open source testing project, but couldn't figure out where to start?
 If so, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSe6u6_bS59njqhhSwfnWSlGxlqQaNJ8xouDBR6YM-7pQYvJFQ/viewform)
-to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin, 
+to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin,
 sponsored by [Selenium](https://www.selenium.dev) and hosted by [Sauce Labs](https://saucelabs.com/).
 You can review the list of available projects below and select the one that you'd like to contribute to. We'll be in touch soon if you
 are selected to join us.
+<br/>
+
+**Update 7/22/2022:**
+Application deadline is July 28! We'll contact everyone by Friday, July 29.
+
+{{< figure src="TAS_Berlin.png" class="img-responsive w-50" >}}
 
 This will ***not*** be your typical workshop.
 This will be a working session with one or more maintainers of a given project
@@ -64,12 +70,11 @@ The following maintainers are will be present to assist you in working on their 
 | [Ronald Brill](https://twitter.com/HtmlUnit) | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                           |
 | [Titus Fortner](https://twitter.com/titusfortner) | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
 
-Plus maybe another surprise guest or two. We'll update the list when we know more.
-
-#### Update 7/20/2022
-
+**Update 7/20/2022:**
 [Ronald Brill](https://twitter.com/HtmlUnit), maintainer of
 [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver) will now be joining us!
+
+Plus maybe another surprise guest or two. We'll continue updating this list as we know more.
 
 ### Other Projects
 
