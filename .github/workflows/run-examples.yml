@@ -1,0 +1,35 @@
+name: Run test examples
+
+on:
+  pull_request:
+    branches:
+      - trunk
+  push:
+    branches:
+      - trunk
+
+env:
+  DISPLAY: :99
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        java: [ 8 ]
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v2
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: ${{ matrix.java }}
+    - name: Start Xvfb
+      run: Xvfb :99 &
+    - name: Run tests
+      run: |
+        cd examples/java
+        mvn -B test
+
