@@ -4,7 +4,13 @@ If so, fill out &lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSe6u6_bS59n
 to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin,
 sponsored by &lt;a href="https://www.selenium.dev">Selenium&lt;/a> and hosted by &lt;a href="https://saucelabs.com/">Sauce Labs&lt;/a>.
 You can review the list of available projects below and select the one that you&amp;rsquo;d like to contribute to. We&amp;rsquo;ll be in touch soon if you
-are selected to join us.&lt;/p>
+are selected to join us.
+&lt;br/>&lt;/p>
+&lt;p>&lt;strong>Update 7/22/2022:&lt;/strong>
+Application deadline is July 28! We&amp;rsquo;ll contact everyone by Friday, July 29.&lt;/p>
+&lt;figure class="img-responsive w-50">
+&lt;img src="/blog/2022/test-automation-summit/TAS_Berlin.png"/>
+&lt;/figure>
 &lt;p>This will &lt;em>&lt;strong>not&lt;/strong>&lt;/em> be your typical workshop.
 This will be a working session with one or more maintainers of a given project
 to show you exactly what you need to know to contribute to that project.
@@ -128,10 +134,10 @@ If there is sufficient demand we will consider doing more events like this in th
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>Plus maybe another surprise guest or two. We&amp;rsquo;ll update the list when we know more.&lt;/p>
-&lt;h4 id="update-7202022">Update 7/20/2022&lt;/h4>
-&lt;p>&lt;a href="https://twitter.com/HtmlUnit">Ronald Brill&lt;/a>, maintainer of
+&lt;p>&lt;strong>Update 7/20/2022:&lt;/strong>
+&lt;a href="https://twitter.com/HtmlUnit">Ronald Brill&lt;/a>, maintainer of
 &lt;a href="https://github.com/SeleniumHQ/htmlunit-driver">HTMLUnit Driver&lt;/a> will now be joining us!&lt;/p>
+&lt;p>Plus maybe another surprise guest or two. We&amp;rsquo;ll continue updating this list as we know more.&lt;/p>
 &lt;h3 id="other-projects">Other Projects&lt;/h3>
 &lt;p>Do you maintain an open source project in the WebDriver ecosystem?&lt;br>
 Have you written a test framework that uses Selenium that is (or you want to make) open source?&lt;br>
