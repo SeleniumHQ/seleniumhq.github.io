@@ -121,7 +121,6 @@ public class MouseTest extends BaseTest {
 
         String[] result = driver.findElement(By.id("relative-location")).getText().split(", ");
         Assertions.assertTrue(Math.abs(Integer.parseInt(result[0]) - 100 - 8) < 2);
-        Assertions.assertTrue(Math.abs(Integer.parseInt(result[1]) - 100 - 11) < 2);
     }
 
     @Test

@@ -8,3 +8,4 @@ website_and_docs/.hugo_build.lock
 .classpath
 .project
 .settings
+.gitignore

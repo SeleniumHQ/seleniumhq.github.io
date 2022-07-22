@@ -40,7 +40,6 @@ public class ActionsTest extends BaseTest {
         Actions actions = new Actions(driver);
         actions.clickAndHold(clickable)
                 .keyDown(Keys.SHIFT)
-                .keyDown(Keys.ALT)
                 .sendKeys("a")
                 .perform();
 
