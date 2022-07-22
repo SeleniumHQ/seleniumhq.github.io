@@ -2,11 +2,9 @@ package dev.selenium.augmenter;
 
 import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
 import static org.openqa.selenium.remote.http.Contents.utf8String;
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -40,7 +38,6 @@ import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.net.MediaType;
 
@@ -192,11 +189,9 @@ public class CdpRemoteWebDriverTest {
     CompletableFuture<JavascriptException> futureJsExc = new CompletableFuture<>();
     devTools.getDomains().events().addJavascriptExceptionListener(futureJsExc::complete);
 
-    driver.get("https://www.google.com");
+    driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
     WebElement element = driver.findElement(By.tagName("button"));
-
-    new WebDriverWait(driver, Duration.ofSeconds(5)).until(elementToBeClickable(element));
 
     ((JavascriptExecutor) driver)
       .executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
