@@ -12,7 +12,7 @@ env:
   DISPLAY: :99
 
 jobs:
-  build:
+  test_examples:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
