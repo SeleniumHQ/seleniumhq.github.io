@@ -113,10 +113,11 @@ public class MouseTest extends BaseTest {
     @Test
     public void moveByOffsetFromElement() {
         driver.get("https://www.selenium.dev/selenium/web/mouse_interaction.html");
+        driver.manage().window().fullscreen();
 
         WebElement tracker = driver.findElement(By.id("mouse-tracker"));
         new Actions(driver)
-                .moveToElement(tracker, 8, 11)
+                .moveToElement(tracker, 8, 0)
                 .perform();
 
         String[] result = driver.findElement(By.id("relative-location")).getText().split(", ");
