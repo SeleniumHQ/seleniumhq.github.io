@@ -8,7 +8,6 @@
 
     <logger name="io.github.bonigarcia" level="DEBUG" />
     <logger name="io" level="WARN" />
-    <logger name="ch" level="OFF" />
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />
