@@ -47,7 +47,7 @@ public class ActionsTest extends BaseTest {
         ((RemoteWebDriver) driver).resetInputState();
 
         actions.sendKeys("a").perform();
-        Assertions.assertEquals("Å", String.valueOf(clickable.getAttribute("value").charAt(0)));
+        Assertions.assertEquals("A", String.valueOf(clickable.getAttribute("value").charAt(0)));
         Assertions.assertEquals("a", String.valueOf(clickable.getAttribute("value").charAt(1)));
     }
 }
