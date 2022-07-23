@@ -15,8 +15,9 @@
 {{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
 {{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
 
-{{ $slicedPath := split $path "/" }}
-{{ $language := index (last 1 (split (index (last 1 $slicedPath) 0) ".")) 0 }}
+{{ $filename := index (last 1 (split $path "/")) 0 }}
+{{ $fileExtension := (cond (in $filename ".") (index (last 1 (split $filename ".")) 0) "txt") }}
+{{ $language := .Get "language" | default $fileExtension }}
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ if $githubToken }}
