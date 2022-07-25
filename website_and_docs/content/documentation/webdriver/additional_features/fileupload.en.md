@@ -91,14 +91,14 @@ namespace SeleniumDocumentation.SeleniumPRs
 
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Help us by sending a code sample for file upload
 
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Help us by sending a code sample for file upload
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  // This feature is not implemented - Help us by sending a pr to implement this feature
+  // Help us by sending a code sample for file upload
 {{< /tab >}}
 {{< /tabpane >}}
 
