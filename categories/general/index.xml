@@ -129,15 +129,26 @@ If there is sufficient demand we will consider doing more events like this in th
 &lt;td>&lt;a href="https://github.com/SeleniumHQ/htmlunit-driver">HTMLUnit Driver&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;a href="https://twitter.com/shs96c">Simon Stewart&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.selenium.dev/">Selenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;a href="https://twitter.com/titusfortner">Titus Fortner&lt;/a>&lt;/td>
 &lt;td>&lt;a href="http://watir.com/">Watir&lt;/a>, &lt;a href="https://www.selenium.dev/">Selenium&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://twitter.com/YevgenShunevych">Yevgeniy Shunevych&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/atata-framework/atata/">Atata&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;strong>Update 7/20/2022:&lt;/strong>
 &lt;a href="https://twitter.com/HtmlUnit">Ronald Brill&lt;/a>, maintainer of
 &lt;a href="https://github.com/SeleniumHQ/htmlunit-driver">HTMLUnit Driver&lt;/a> will now be joining us!&lt;/p>
-&lt;p>Plus maybe another surprise guest or two. We&amp;rsquo;ll continue updating this list as we know more.&lt;/p>
+&lt;p>&lt;strong>Update 7/25/2022:&lt;/strong>
+&lt;a href="https://twitter.com/YevgenShunevych">Yevgeniy Shunevych&lt;/a>, maintainer of
+&lt;a href="https://github.com/atata-framework/atata/">Atata&lt;/a> will now be joining us!&lt;/p>
+&lt;p>&lt;strong>Update 7/26/2022:&lt;/strong> &lt;a href="https://twitter.com/shs96c">Simon Stewart&lt;/a>, creator of WebDriver, will now be joining us!&lt;/p>
 &lt;h3 id="other-projects">Other Projects&lt;/h3>
 &lt;p>Do you maintain an open source project in the WebDriver ecosystem?&lt;br>
 Have you written a test framework that uses Selenium that is (or you want to make) open source?&lt;br>
