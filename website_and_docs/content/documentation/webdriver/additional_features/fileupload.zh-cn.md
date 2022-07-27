@@ -102,4 +102,4 @@ namespace SeleniumDocumentation.SeleniumPRs
 {{< /tab >}}
 {{< /tabpane >}}
 
-Thus the above example code helps to understand how we can upload a file using selenium. 
+So the above example code helps to understand how we can upload a file using selenium. 
