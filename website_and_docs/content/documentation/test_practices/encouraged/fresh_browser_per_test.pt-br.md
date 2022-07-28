@@ -12,9 +12,8 @@ Comece cada teste a partir de um estado limpo conhecido.
 Idealmente, ligue uma nova máquina virtual para cada teste.
 Se ligar uma nova máquina virtual não for prático,
 pelo menos inicie um novo WebDriver para cada teste.
-Para Firefox, inicie um WebDriver com seu perfil conhecido.
-
+Most browser drivers like GeckoDriver and ChromeDriver will start with a clean
+known state with a new user profile, by default.
 ```java
-FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
-WebDriver driver = new FirefoxDriver(profile);
+WebDriver driver = new FirefoxDriver();
 ```
