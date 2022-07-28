@@ -17,7 +17,7 @@ description: >
 
 此功能[提及于](https://w3c.github.io/webdriver/#element-displayedness), 
 但是未定义于w3c规范中, 
-因为[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=hTa1KI6fQpg).
+因为[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk).
 因此，Selenium不能期望驱动程序
 直接实现这种功能，现在依赖于
 直接执行大量JavaScript函数. 
