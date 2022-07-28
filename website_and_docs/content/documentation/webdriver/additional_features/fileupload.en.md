@@ -8,10 +8,14 @@ aliases: [
 ]
 ---
 
-The file upload dialog could be handled using Selenium, when the input element is of type file. 
-An example of it, could be found on this web page-  https://the-internet.herokuapp.com/upload
-We will require to have a file available with us, which we need to upload. 
-The code to upload the file for different programming languages will be as follows - 
+The file upload dialog could be handled using Selenium, 
+when the input element is of type file. 
+An example of it, could be found on this 
+web page-  https://the-internet.herokuapp.com/upload
+We will require to have a file available with us, 
+which we need to upload. 
+The code to upload the file for different programming 
+languages will be as follows - 
 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -102,4 +106,5 @@ namespace SeleniumDocumentation.SeleniumPRs
 {{< /tab >}}
 {{< /tabpane >}}
 
-So the above example code helps to understand how we can upload a file using selenium. 
+So the above example code helps to understand 
+how we can upload a file using Selenium. 
