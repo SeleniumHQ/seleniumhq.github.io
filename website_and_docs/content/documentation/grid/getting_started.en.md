@@ -10,13 +10,13 @@ aliases: [
 ]
 ---
 
-## Grid roles
+## Grid roles UPDATED 28JULY2022
 
 Several [components]({{< ref "components.md" >}}) compose a Selenium Grid. Depending 
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.
 
-### Standalone
+### Standalone UPDATED 28JULY2022
 
 Standalone is the union of all components, and to the user's eyes, they are executed as one. 
 A fully functional Grid of one is available after starting it in the Standalone mode.
