@@ -130,25 +130,7 @@ recurso `unhandledPromptBehavior` e tem os seguintes estados:
 
 ## setWindowRect
 
-Este comando altera o tamanho e a posição da atual
-janela de contexto de navegação. Este comando atua como setter
-para o comando `getWindowRect` que aceita **largura**, **altura**,
-**x**, **y** como argumentos _opcionais_.
-
-Durante a automação, o contexto de navegação atual será associado
-com estados de janela, que descrevem a visibilidade
-da janela do navegador. Os estados da janela são
-
-* maximized
-* minimized
-* normal
-* fullscreen
-
-Definir _Width_ ou _Height_ não garante que o resultado
-o tamanho da janela corresponderá exatamente ao que foi inserido. Isto é porque
-alguns drivers podem não ser redimensionados em incrementos de pixel único.
-Devido a isso, buscar o estado / detalhes da janela por `getWindowRect`
-pode não corresponder igualmente aos valores definidos para o navegador.
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 

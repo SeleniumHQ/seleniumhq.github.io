@@ -399,8 +399,7 @@ user prompt encounters at the remote-end. This is defined by
 
 ## setWindowRect
 
-Indicates whether the remote end supports all of the resizing and repositioning commands.
-https://w3c.github.io/webdriver/#capabilities
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 
