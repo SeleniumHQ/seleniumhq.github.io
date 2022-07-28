@@ -5824,11 +5824,11 @@ functionality useful for both browser automation generally and testing specifica
 Before now, users seeking this functionality have had to rely on
 with all of its frustrations and limitations.</p><p>The traditional WebDriver model of strict request/response commands will be supplemented
 with the ability to stream events from the user agent to the controlling software via WebSockets,
-better matching the evented nature of the browser DOM.</p><p>Because it&rsquo;s a bad idea to tie your tests to a specific version of a specific browser,
-the Selenium project recommends using WebDriver BiDi wherever possible.
-However, until the spec is complete there are many useful things that the CDP offers.
-To help keep your tests independent and portable, Selenium offers some useful helper classes.
-At the moment, these use the CDP, but when we shall be using WebDriver Bidi as soon as possible</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1619bbb0c5d5eea077cfa1e99172ee8b>9.1 - BiDirectional API</h1><p>The following list of APIs will be growing as the Selenium
+better matching the evented nature of the browser DOM.</p><p>As it is not a good idea to tie your tests to a specific version of any browser, the
+Selenium project recommends using WebDriver BiDi wherever possible.</p><p>However, until the specification is complete there are many useful things that
+CDP (Chrome DevTools Protocol) offers. To help keep your tests independent
+and portable, Selenium offers some useful helper classes as well. At the
+moment, they use the CDP, but soon it could be done using WebDriver BiDi.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-1619bbb0c5d5eea077cfa1e99172ee8b>9.1 - BiDirectional API</h1><p>The following list of APIs will be growing as the Selenium
 project works through supporting real world use cases. If there
 is additional functionality you&rsquo;d like to see, please raise a
 <a href="https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md">feature request</a>.</p><h2 id=register-basic-auth>Register Basic Auth</h2><p>Some applications make use of browser authentication to secure pages.
