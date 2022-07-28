@@ -111,7 +111,7 @@ primarily this gets used when needing to type multiple characters in the middle 
         {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L36-L38" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/actionsApi/keysTest.js#L45-L47" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
