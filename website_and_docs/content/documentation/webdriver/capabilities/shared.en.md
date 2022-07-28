@@ -399,25 +399,7 @@ user prompt encounters at the remote-end. This is defined by
 
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
-
-During automation, the current browsing context will be associated 
-with window states, which describe the visibility 
-of the browser window. The window states are
-
-* maximized
-* minimized
-* normal
-* fullscreen
-
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was requested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not match the values set in the browser.
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 
