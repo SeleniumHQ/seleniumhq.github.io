@@ -274,18 +274,24 @@ Microsoft Edge can be used in IE compatibility mode using the IE Driver.
 
 ## Opera
 
-Since the opera driver does not support w3c syntax, but is based on Chromium, it is recommended
+Since the opera driver does not set w3c as default value, but is based on Chromium, it is recommended
 to drive Opera browser with the chromedriver. Like all Chromium implementations, 
 make sure that the browser version matches the driver version.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
-  ChromeOptions options = new ChromeOptions();
-  options.setBinary("/path/to/opera/browser");
-  
-  driver = new ChromeDriver(options);
-  
-  driver.quit();
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L84">}}
+    //    Set webdriver.chrome.driver with Opera Driver
+    System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
+    //    Create ChromeOptions Instance
+    ChromeOptions chromeOptions = new ChromeOptions();
+    //    Set W3C Dialect
+    chromeOptions.setExperimentalOption("w3c", true);
+    //    Create ChromeDriver Instance
+    WebDriver driver = new ChromeDriver(chromeOptions);
+    //    Open Target Website
+    driver.get("https://www.selenium.dev");
+    //    Quit
+    driver.quit();
   {{< /tab >}}
   {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
   options = ChromeOptions()
@@ -344,7 +350,7 @@ safaridriver --enable
 ```
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L84-L88">}}
+{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L90-L94">}}
   SafariOptions options = new SafariOptions();
   driver = new SafariDriver(options);
   

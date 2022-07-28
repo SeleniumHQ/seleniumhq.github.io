@@ -18,7 +18,7 @@ browsing context else returns false.
 
 This functionality is [mentioned in](https://w3c.github.io/webdriver/#element-displayedness), but not defined by
 the w3c specification due to the
-[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=hTa1KI6fQpg).
+[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=LAD_XPGP_kk).
 As such, Selenium cannot expect drivers to implement
 this functionality directly, and now relies on
 executing a large JavaScript function directly.

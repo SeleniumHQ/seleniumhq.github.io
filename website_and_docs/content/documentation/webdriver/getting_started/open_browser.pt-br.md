@@ -267,17 +267,23 @@ O Microsoft Edge pode ser usado no modo de compatibilidade do IE usando o Driver
 
 ## Opera
 
-Como o driver opera não suporta a sintaxe w3c, mas é baseado no Chromium, é recomendado
+Porque o driver opera não define W3C como a sintaxe padrão, mas é baseado no Chromium, é recomendado
 utilizar o navegador Opera com o chromedriver. Assim como todas as implementações do Chromium,
 certifique-se de que a versão do navegador corresponda à versão do driver.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L78">}}
-  ChromeOptions options = new ChromeOptions();
-  options.setBinary("/path/to/opera/browser");
-  
-  driver = new ChromeDriver(options);
-  
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L73-L84">}}
+  //    Set webdriver.chrome.driver with Opera Driver
+  System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
+  //    Create ChromeOptions Instance
+  ChromeOptions chromeOptions = new ChromeOptions();
+  //    Set W3C Dialect
+  chromeOptions.setExperimentalOption("w3c", true);
+  //    Create ChromeDriver Instance
+  WebDriver driver = new ChromeDriver(chromeOptions);
+  //    Open Target Website
+  driver.get("https://www.selenium.dev");
+  //    Quit
   driver.quit();
   {{< /tab >}}
   {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
@@ -337,7 +343,7 @@ safaridriver --enable
 ```
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L84-L88">}}
+{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L90-L94">}}
   SafariOptions options = new SafariOptions();
   driver = new SafariDriver(options);
   
