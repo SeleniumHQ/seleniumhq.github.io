@@ -13,8 +13,7 @@ Ideally, spin up a new virtual machine for each test.
 If spinning up a new virtual machine is not practical,
 at least start a new WebDriver for each test.
 For Firefox, start a WebDriver with your known profile.
-
+FirefoxDriver will start with a clean known state, by default
 ```java
-FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
-WebDriver driver = new FirefoxDriver(profile);
+WebDriver driver = new FirefoxDriver();
 ```
