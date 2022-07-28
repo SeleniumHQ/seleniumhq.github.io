@@ -1299,16 +1299,7 @@ locating elements. The default timeout <strong>0</strong>
 is imposed when a new session is created by WebDriver.</p><h2 id=unhandledpromptbehavior>unhandledPromptBehavior</h2><p>Specifies the state of current session&rsquo;s <code>user prompt handler</code>.
 Defaults to <strong>dismiss and notify state</strong></p><h3 id=user-prompt-handler>User Prompt Handler</h3><p>This defines what action must take when a
 user prompt encounters at the remote-end. This is defined by
-<code>unhandledPromptBehavior</code> capability and has the following states:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>This command alters the size and position of the current
-browsing context window. This command acts as setter
-to <code>getWindowRect</code> command which accepts <strong>width</strong>, <strong>height</strong>,
-<strong>x</strong>, <strong>y</strong> as <em>optional</em> arguments.</p><p>During automation, the current browsing context will be associated
-with window states, which describe the visibility
-of the browser window. The window states are</p><ul><li>maximized</li><li>minimized</li><li>normal</li><li>fullscreen</li></ul><p>Setting <em>Width</em> or <em>Height</em> does not guaranteed that the resulting
-window size will exactly match that which was requested. This is because
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by <code>getWindowRect</code>
-may not match the values set in the browser.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>This new capability indicates if strict interactability checks
+<code>unhandledPromptBehavior</code> capability and has the following states:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>Indicates whether the remote end supports all of the <a href=https://w3c.github.io/webdriver/#resizing-and-positioning-windows>resizing and repositioning</a> <a href=https://w3c.github.io/webdriver/#dfn-commands>commands</a>.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>This new capability indicates if strict interactability checks
 should be applied to <em>input type=file</em> elements. As strict interactability
 checks are off by default, there is a change in behaviour
 when using <em>Element Send Keys</em> with hidden file upload controls.</p><h2 id=proxy>proxy</h2><p>A proxy server acts as an intermediary for

@@ -1249,15 +1249,7 @@ WebDriver创建新会话时,
 将设置默认超时时间为 <strong>0</strong> .</p><h2 id=unhandledpromptbehavior>unhandledPromptBehavior</h2><p>指定当前会话 <code>user prompt handler</code> 的状态.
 默认为 <strong>dismiss and notify state</strong> .</p><h3 id=user-prompt-handler>User Prompt Handler</h3><p>这定义了在远端出现用户提示时必须采取的措施.
 该行为由<code>unhandledPromptBehavior</code> 功能定义,
-具有以下状态:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>此命令更改当前浏览上下文中窗口的大小和位置.
-此命令作为 <code>getWindowRect</code> 对应的设置方法,
-该命令接受 <strong>width</strong>, <strong>height</strong>,
-<strong>x</strong>, <strong>y</strong> 作为 <em>可选</em> 参数.</p><p>在自动化期间,
-当前浏览上下文将与描述浏览器窗口可见性状态的窗口状态相关联.
-窗口状态为</p><ul><li>maximized</li><li>minimized</li><li>normal</li><li>fullscreen</li></ul><p>设置 <em>Width</em> 或 <em>Height</em> 不能保证结果窗口的大小一定完全匹配所请求的窗口大小.
-这是因为某些驱动程序可能无法以单像素为单位调整大小.
-因此, 通过 <code>getWindowRect</code> 获取窗口状态 (或详细信息)
-可能与浏览器设置的值不匹配.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>新功能用于是否对 <em>类型为文件的输入(input type=file)</em> 元素进行严格的交互性检查.
+具有以下状态:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>Indicates whether the remote end supports all of the <a href=https://w3c.github.io/webdriver/#resizing-and-positioning-windows>resizing and repositioning</a> <a href=https://w3c.github.io/webdriver/#dfn-commands>commands</a>.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>新功能用于是否对 <em>类型为文件的输入(input type=file)</em> 元素进行严格的交互性检查.
 默认关闭严格性检查,
 在将 <em>元素的Send Keys</em> 方法作用于隐藏的文件上传时,
 会有控制方面的行为区别.</p><h2 id=proxy>proxy</h2><p>代理服务器充当客户端和服务器之间的请求中介.

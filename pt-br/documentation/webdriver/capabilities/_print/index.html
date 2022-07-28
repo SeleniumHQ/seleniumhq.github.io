@@ -63,16 +63,7 @@ localizando de elementos. O tempo limite padrão <strong>0</strong>
 é imposto quando uma nova sessão é criada pelo WebDriver.</p><h2 id=unhandledpromptbehavior>unhandledPromptBehavior</h2><p>Especifica o estado do <code>user prompt handler</code> da sessão atual.
 O padrão é <strong>dismiss and notify state</strong> (<strong>dispensar e notificar estado</strong>, em português)</p><h3 id=user-prompt-handler>User Prompt Handler</h3><p>Isso define qual ação deve ser tomada quando um
 o prompt do usuário se encontra na extremidade remota. Isso é definido pelo
-recurso <code>unhandledPromptBehavior</code> e tem os seguintes estados:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>Este comando altera o tamanho e a posição da atual
-janela de contexto de navegação. Este comando atua como setter
-para o comando <code>getWindowRect</code> que aceita <strong>largura</strong>, <strong>altura</strong>,
-<strong>x</strong>, <strong>y</strong> como argumentos <em>opcionais</em>.</p><p>Durante a automação, o contexto de navegação atual será associado
-com estados de janela, que descrevem a visibilidade
-da janela do navegador. Os estados da janela são</p><ul><li>maximized</li><li>minimized</li><li>normal</li><li>fullscreen</li></ul><p>Definir <em>Width</em> ou <em>Height</em> não garante que o resultado
-o tamanho da janela corresponderá exatamente ao que foi inserido. Isto é porque
-alguns drivers podem não ser redimensionados em incrementos de pixel único.
-Devido a isso, buscar o estado / detalhes da janela por <code>getWindowRect</code>
-pode não corresponder igualmente aos valores definidos para o navegador.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>O novo recurso indica se as verificações estritas de interatividade
+recurso <code>unhandledPromptBehavior</code> e tem os seguintes estados:</p><ul><li>dismiss</li><li>accept</li><li>dismiss and notify</li><li>accept and notify</li><li>ignore</li></ul><h2 id=setwindowrect>setWindowRect</h2><p>Indicates whether the remote end supports all of the <a href=https://w3c.github.io/webdriver/#resizing-and-positioning-windows>resizing and repositioning</a> <a href=https://w3c.github.io/webdriver/#dfn-commands>commands</a>.</p><h2 id=strictfileinteractability>strictFileInteractability</h2><p>O novo recurso indica se as verificações estritas de interatividade
 devem ser aplicadas aos elementos <em>input type = file</em>. Como as verificações de
 interatividade estrita estão desativadas por padrão, há uma mudança no comportamento
 ao usar <em>Element Send Keys</em> com controles de upload de arquivos ocultos.</p><h2 id=proxy>proxy</h2><p>Um servidor proxy atua como intermediário para
