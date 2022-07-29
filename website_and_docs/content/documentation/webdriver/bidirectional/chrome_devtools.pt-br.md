@@ -305,7 +305,18 @@ driver.get("https://selenium.dev/");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Por favor, crie um PR para adicionar uma amostra de código
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+// iPhone 11 Pro dimensions
+set_device_metrics_override = dict({
+"width": 375,
+"height": 812,
+"deviceScaleFactor": 50,
+"mobile": True
+})
+driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)
+driver.get("<your site url>")
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

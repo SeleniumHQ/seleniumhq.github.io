@@ -64,17 +64,23 @@ The following maintainers are will be present to assist you in working on their 
 | [David Burns](https://twitter.com/AutomatedTester)                     | [W3C Web Platform Tests](https://wpt.fyi/results/webdriver/tests), [Selenium](https://www.selenium.dev/) |
 | [Diego Molina](https://twitter.com/diegofmolina)                       | [Selenium](https://www.selenium.dev/)                                                                    |
 | [Filip Cynarski](https://www.linkedin.com/in/filip-cynarski-39b3b260/) | [FluentLenium](https://github.com/FluentLenium/FluentLenium)                                             |
-| [Jan Molak](https://twitter.com/JanMolak) | [Serenity/JS](https://serenity-js.org/)                                                                  |
-| [Jani Mikkonen](https://www.linkedin.com/in/mikkonenjani/) | [Robot Framework](https://robotframework.org/SeleniumLibrary/)                                           |
-| [Nick Mokhnach](https://github.com/mykola-mokhnach) | [Appium](https://appium.io/)                                                                             |
-| [Ronald Brill](https://twitter.com/HtmlUnit) | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                           |
-| [Titus Fortner](https://twitter.com/titusfortner) | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
+| [Jan Molak](https://twitter.com/JanMolak)                              | [Serenity/JS](https://serenity-js.org/)                                                                  |
+| [Jani Mikkonen](https://www.linkedin.com/in/mikkonenjani/)             | [Robot Framework](https://robotframework.org/SeleniumLibrary/)                                           |
+| [Nick Mokhnach](https://github.com/mykola-mokhnach)                    | [Appium](https://appium.io/)                                                                             |
+| [Ronald Brill](https://twitter.com/HtmlUnit)                           | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                                         |
+| [Simon Stewart](https://twitter.com/shs96c)                            | [Selenium](https://www.selenium.dev/)                                                                    |
+| [Titus Fortner](https://twitter.com/titusfortner)                      | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
+| [Yevgeniy Shunevych](https://twitter.com/YevgenShunevych)              | [Atata](https://github.com/atata-framework/atata/)                                                       |
 
 **Update 7/20/2022:**
 [Ronald Brill](https://twitter.com/HtmlUnit), maintainer of
 [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver) will now be joining us!
 
-Plus maybe another surprise guest or two. We'll continue updating this list as we know more.
+**Update 7/25/2022:**
+[Yevgeniy Shunevych](https://twitter.com/YevgenShunevych), maintainer of
+[Atata](https://github.com/atata-framework/atata/) will now be joining us!
+
+**Update 7/26/2022:** [Simon Stewart](https://twitter.com/shs96c), creator of WebDriver, will now be joining us!
 
 ### Other Projects
 

@@ -310,6 +310,10 @@ If the mouse has not previously been moved, the position will be in the upper le
 corner of the viewport.
 Note that the pointer position does not change when the page is scrolled.
 
+Note that the first argument X specifies to move right when positive, while the second argument
+Y specifies to move down when positive. So `moveByOffset(30, -10)` moves right 30 and up 10 from
+the current mouse position.
+
 {{< tabpane disableCodeBlock=true height="3" >}}
     {{< tab header="Java" >}}
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
