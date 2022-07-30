@@ -116,7 +116,7 @@ val fruit = fruits.findElement(By.id("tomatoes"))
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" >}}
-fruit = driver.find_element_by_css_selector("#fruits .tomatoes")
+fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
