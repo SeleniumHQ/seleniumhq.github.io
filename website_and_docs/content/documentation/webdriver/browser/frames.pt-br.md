@@ -211,7 +211,7 @@ driver.SwitchTo().Frame(1);
   {{< /tab >}}
   {{< tab header="Python" >}}
     # switching to second iframe based on index
-iframe = driver.find_elements_by_tag_name('iframe')[1]
+iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
 
     # switch to selected iframe
 driver.switch_to.frame(iframe)

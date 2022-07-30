@@ -77,7 +77,7 @@ WebElement fruit = fruits.findElement(By.id("tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" >}}
 fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_elements_by_id("tomatoes")
+fruit = fruits.find_elements(By.ID,"tomatoes")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
