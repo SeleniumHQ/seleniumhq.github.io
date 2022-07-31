@@ -10,12 +10,11 @@ description: >
   在DOM中标识一个或多个特定元素的方法.
 ---
 
-A locator is a way to identify elements on a page. It is the argument passed to the
-[Finding element]({{< ref "finders.md" >}}) methods.
+定位器是在页面上标识元素的一种方法。它是传送给
+[查找元素]({{< ref "finders.md" >}}) 方法的参数。
 
-Check out our [encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) for tips on
-[locators]({{< ref "/documentation/test_practices/encouraged/locators.md" >}}), including which to use when and
-why to declare locators separately from the finding methods.
+查看 [鼓励测试练习]({{< ref "/documentation/test_practices/encouraged" >}}) 寻找
+[定位器]({{< ref "/documentation/test_practices/encouraged/locators.md" >}})的小技巧， 包含在查找方法中，不同时间，不同原因下，单独声明的定位器的使用方法。
 
 
 
