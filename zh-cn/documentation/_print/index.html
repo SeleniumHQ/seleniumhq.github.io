@@ -3996,10 +3996,9 @@ This section could use some updated code examples<br><br>for element displayedne
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#204a87;font-weight:700>get</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://www.example.com&#34;</span><span style=color:#000;font-weight:700>)</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// retrieves the text of the element
-</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>text</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>cssSelector</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#000;font-weight:700>)).</span><span style=color:#000>getText</span><span style=color:#000;font-weight:700>()</span></span></span></code></pre></div></div></div><h2 id=特性和属性>特性和属性</h2><h3 id=特性>特性</h3><h3 id=dom-特性>DOM 特性</h3><h3 id=dom-属性>DOM 属性</h3></div><div class=td-content style=page-break-before:always><h1 id=pg-01199522e2d2ea9360d11a43bff79c51>2.4.4 - 定位策略</h1><div class=lead>在DOM中标识一个或多个特定元素的方法.</div><p>A locator is a way to identify elements on a page. It is the argument passed to the
-<a href=/zh-cn/documentation/webdriver/elements/finders/>Finding element</a> methods.</p><p>Check out our <a href=/zh-cn/documentation/test_practices/encouraged/>encouraged test practices</a> for tips on
-<a href=/zh-cn/documentation/test_practices/encouraged/locators/>locators</a>, including which to use when and
-why to declare locators separately from the finding methods.</p><h3 id=元素选择策略>元素选择策略</h3><p>在 WebDriver 中有 8 种不同的内置元素定位策略：</p><table><thead><tr><th>定位器 Locator</th><th>描述</th></tr></thead><tbody><tr><td>class name</td><td>定位class属性与搜索值匹配的元素（不允许使用复合类名）</td></tr><tr><td>css selector</td><td>定位 CSS 选择器匹配的元素</td></tr><tr><td>id</td><td>定位 id 属性与搜索值匹配的元素</td></tr><tr><td>name</td><td>定位 name 属性与搜索值匹配的元素</td></tr><tr><td>link text</td><td>定位link text可视文本与搜索值完全匹配的锚元素</td></tr><tr><td>partial link text</td><td>定位link text可视文本部分与搜索值部分匹配的锚点元素。如果匹配多个元素，则只选择第一个元素。</td></tr><tr><td>tag name</td><td>定位标签名称与搜索值匹配的元素</td></tr><tr><td>xpath</td><td>定位与 XPath 表达式匹配的元素</td></tr></tbody></table><div class="row justify-content-center my-1"><div class="alert alert-orange -bg-selenium-cyan-20 col-10 pl-lg-5 mb-0 alert-dismissible fade show" role=alert><h2 class="alert-heading pb-3 text-center">Coding Help</h2><div class=w-100><strong>Note:</strong>
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>val</span> <span style=color:#000>text</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>findElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>cssSelector</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#000;font-weight:700>)).</span><span style=color:#000>getText</span><span style=color:#000;font-weight:700>()</span></span></span></code></pre></div></div></div><h2 id=特性和属性>特性和属性</h2><h3 id=特性>特性</h3><h3 id=dom-特性>DOM 特性</h3><h3 id=dom-属性>DOM 属性</h3></div><div class=td-content style=page-break-before:always><h1 id=pg-01199522e2d2ea9360d11a43bff79c51>2.4.4 - 定位策略</h1><div class=lead>在DOM中标识一个或多个特定元素的方法.</div><p>定位器是在页面上标识元素的一种方法。它是传送给
+<a href=/zh-cn/documentation/webdriver/elements/finders/>查找元素</a> 方法的参数。</p><p>查看 <a href=/zh-cn/documentation/test_practices/encouraged/>鼓励测试练习</a> 寻找
+<a href=/zh-cn/documentation/test_practices/encouraged/locators/>定位器</a>的小技巧， 包含在查找方法中，不同时间，不同原因下，单独声明的定位器的使用方法。</p><h3 id=元素选择策略>元素选择策略</h3><p>在 WebDriver 中有 8 种不同的内置元素定位策略：</p><table><thead><tr><th>定位器 Locator</th><th>描述</th></tr></thead><tbody><tr><td>class name</td><td>定位class属性与搜索值匹配的元素（不允许使用复合类名）</td></tr><tr><td>css selector</td><td>定位 CSS 选择器匹配的元素</td></tr><tr><td>id</td><td>定位 id 属性与搜索值匹配的元素</td></tr><tr><td>name</td><td>定位 name 属性与搜索值匹配的元素</td></tr><tr><td>link text</td><td>定位link text可视文本与搜索值完全匹配的锚元素</td></tr><tr><td>partial link text</td><td>定位link text可视文本部分与搜索值部分匹配的锚点元素。如果匹配多个元素，则只选择第一个元素。</td></tr><tr><td>tag name</td><td>定位标签名称与搜索值匹配的元素</td></tr><tr><td>xpath</td><td>定位与 XPath 表达式匹配的元素</td></tr></tbody></table><div class="row justify-content-center my-1"><div class="alert alert-orange -bg-selenium-cyan-20 col-10 pl-lg-5 mb-0 alert-dismissible fade show" role=alert><h2 class="alert-heading pb-3 text-center">Coding Help</h2><div class=w-100><strong>Note:</strong>
 This section could use some updated code examples<br><br>of selecting elements using each locator strategy<br><br>Check our <a href=/zh-cn/documentation/about/contributing/>contribution guidelines</a> and <a href=/zh-cn/documentation/about/style#code-examples>code example formats</a> if you&rsquo;d like to help.</div><button type=button class=close data-dismiss=alert aria-label=Close>
 <span aria-hidden=true>&#215;</span></button></div></div><h2 id=relative-locators>Relative Locators</h2><p><strong>Selenium 4</strong> introduces Relative Locators (previously
 called as <em>Friendly Locators</em>). These locators are helpful when it is not easy to construct a locator for
@@ -13720,6 +13719,20 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/61235494?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/pallavigitwork&quot;&gt;@pallavigitwork&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;7 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/2152854?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -13756,20 +13769,6 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
   /&gt;
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/Greavox&quot;&gt;@Greavox&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;6 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/61235494?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/pallavigitwork&quot;&gt;@pallavigitwork&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;6 commits&lt;/span&gt;
 &lt;/div&gt;
@@ -14700,6 +14699,20 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 
 &lt;div style=&quot;padding: 10px;&quot;&gt;
   &lt;img
+    src=&quot;https://avatars.githubusercontent.com/u/37041186?v=4&quot;
+    class=&quot;inline&quot;
+    width=&quot;100&quot;
+    height=&quot;100&quot;
+    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
+  /&gt;
+  &lt;label
+    &gt;&lt;a href=&quot;https://github.com/yufanme&quot;&gt;@yufanme&lt;/a&gt;&lt;/label
+  &gt;
+  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 10px;&quot;&gt;
+  &lt;img
     src=&quot;https://avatars.githubusercontent.com/u/6318039?v=4&quot;
     class=&quot;inline&quot;
     width=&quot;100&quot;
@@ -14848,20 +14861,6 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
   /&gt;
   &lt;label
     &gt;&lt;a href=&quot;https://github.com/InaKrasnokutska&quot;&gt;@InaKrasnokutska&lt;/a&gt;&lt;/label
-  &gt;
-  &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div style=&quot;padding: 10px;&quot;&gt;
-  &lt;img
-    src=&quot;https://avatars.githubusercontent.com/u/34998542?v=4&quot;
-    class=&quot;inline&quot;
-    width=&quot;100&quot;
-    height=&quot;100&quot;
-    style=&quot;height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; &quot;
-  /&gt;
-  &lt;label
-    &gt;&lt;a href=&quot;https://github.com/joft-ware&quot;&gt;@joft-ware&lt;/a&gt;&lt;/label
   &gt;
   &lt;span class=&quot;contributions&quot;&gt;1 commits&lt;/span&gt;
 &lt;/div&gt;
