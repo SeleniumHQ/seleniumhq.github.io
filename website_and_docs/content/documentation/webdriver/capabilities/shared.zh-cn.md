@@ -114,24 +114,7 @@ WebDriver创建新会话时,
 
 ## setWindowRect
 
-此命令更改当前浏览上下文中窗口的大小和位置. 
-此命令作为 `getWindowRect` 对应的设置方法, 
-该命令接受 **width**, **height**,
-**x**, **y** 作为 _可选_ 参数.
-
-在自动化期间, 
-当前浏览上下文将与描述浏览器窗口可见性状态的窗口状态相关联. 
-窗口状态为
-
-* maximized
-* minimized
-* normal
-* fullscreen
-
-设置 _Width_ 或 _Height_ 不能保证结果窗口的大小一定完全匹配所请求的窗口大小. 
-这是因为某些驱动程序可能无法以单像素为单位调整大小. 
-因此, 通过 `getWindowRect` 获取窗口状态 (或详细信息) 
-可能与浏览器设置的值不匹配.
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 

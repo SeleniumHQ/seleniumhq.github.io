@@ -101,24 +101,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 
 ## setWindowRect
 
-このコマンドは、現在のブラウジングコンテキストウィンドウのサイズと位置を変更します。
-このコマンドは、**幅** 、**高さ**、**x**、**y**を _任意_ の引数として受け取る
-`getWindowRect` コマンドのセッターとして機能します。
-
-自動化中、現在のブラウジングコンテキストは、
-ブラウザーウィンドウの可視状態を表すウィンドウ状態に関連付けられます。
-ウィンドウ状態は、以下です。
-
-* maximized
-* minimized
-* normal
-* fullscreen
-
-_幅_ または _高さ_ を設定しても、結果のウィンドウサイズが要求されたものと
-正確に一致することを保証しません。
-これは、一部のドライバはシングルピクセル単位でサイズ変更できない場合があるからです。
-このため、 `getWindowRect` でウィンドウの状態/詳細を取得しても、
-ブラウザーに設定された値と等しく一致しない場合があります。
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 
