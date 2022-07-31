@@ -51,8 +51,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.get("https://the-internet.herokuapp.com/upload");
-driver.find_element_by_id("file-upload").send_keys("selenium-snapshot.jpg")
-driver.find_element_by_id("file-submit").submit()
+driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")
+driver.find_element(By.ID,"file-submit").submit()
 if(driver.page_source.find("File Uploaded!")):
     print("file upload success")
 else:

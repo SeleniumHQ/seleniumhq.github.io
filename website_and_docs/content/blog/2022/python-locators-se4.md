@@ -24,14 +24,14 @@ Sometime after Selenium 4.2, the Python Selenium bindings will remove
 locator-specific methods for finding elements. This means that the methods
 
 ```python
-driver.find_element_by_id("some_id")
-driver.find_element_by_name("some_name")
-driver.find_element_by_tag_name("some_tag")
-driver.find_element_by_css_selector("some_selector")
-driver.find_element_by_class_name("some_class")
-driver.find_element_by_link_text("some_text")
-driver.find_element_by_partial_link_text("some_other_text")
-driver.find_element_by_xpath("some_xpath")
+driver.find_element(By.ID,"some_id")
+driver.find_element(By.NAME,"some_name")
+driver.find_element(By.TAG_NAME,"some_tag")
+driver.find_element(By.CSS_SELECTOR,"some_selector")
+driver.find_element(By.CLASS_NAME,"some_class")
+driver.find_element(By.LINK_TEXT,"some_text")
+driver.find_element(By.PARTIAL_LINK_TEXT,"some_other_text")
+driver.find_element(By.XPATH,"some_xpath")
 ```
 will be removed. All of these methods are in fact special cases of
 
@@ -46,8 +46,8 @@ Note that it's good practice to use the
 which has specific values for using particular locator strategies. For example, this line
 
 ```python
-driver.find_element_by_id("submit_button").click()
-driver.find_element_by_css_selectors('.myelement child').text
+driver.find_element(By.ID,"submit_button").click()
+driver.find_element(By.CSS_SELECTOR,'.myelement child').text
 ```
 
 becomes
