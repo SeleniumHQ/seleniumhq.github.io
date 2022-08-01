@@ -40,25 +40,8 @@ only has 80 installed, the session creation will fail.
 
 ## pageLoadStrategy:
 
-When navigating to a new page via URL, by default Selenium will wait
-until the Document's Ready State is "complete." 
-The `document.readyState` property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on completing a navigation method (e.g., `driver.navigate().get()`)
-until the document ready state is `complete`. This does not
-necessarily mean that the page has finished loading, especially for sites
-like Single Page Applications that use a lot of JavaScript to dynamically load content
-after the Ready State returns complete. Note also that this behavior does not apply to navigation
-that is a result of clicking an element or submitting a form.
-
-If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
-that aren't important to the automation, 
-you can change from the default parameter of `normal` to
-`eager` or `none` to speed up the session. This value applies to the entire
-session, so make sure that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient
-to minimize flakiness.
-
-
-The page load strategy queries the
+There are 3 page load startegies, one can use with Selenium.
+The page load strategy queries the 
 [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
 as described in the table below:
 
@@ -68,13 +51,38 @@ as described in the table below:
 | eager | interactive | DOM access is ready, but other resources like images may still be loading |
 | none | Any | Does not block WebDriver at all |
 
-### normal
+The `document.readyState` property of a document describes the loading state of the current document.
 
-This will make Selenium WebDriver to wait for the entire page is loaded.
-When set to **normal**, Selenium WebDriver waits until the
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
+When navigating to a new page via URL, WebDriver will hold off on completing a navigation method (e.g., `driver.navigate().get()`)
+until the document ready state is in `its desired state`.
 
-By default **normal** is set to browser if none is provided.
+If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
+that aren't important to the automation, 
+you can change from the default parameter of `normal` to
+`eager` or `none` to speed up the session. This value applies to the entire
+session, so make sure that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient
+to minimize flakiness.
+
+
+This does not necessarily mean that the page has finished loading, especially for sites
+like Single Page Applications that use a lot of JavaScript to dynamically load content
+after the Ready State returns complete.
+
+`Note : ` This behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+
+### Default Behaviour - normal
+By default **normal** is set to browser.
+
+When Page Load Strategy is set to **normal**, Selenium will wait until the whole HTML document 
+and stylesheets and images and more to complete their loading. 
+To be more specific, it is when the 
+[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event is fired.
+
+Quoting from Mozilla's documentation of load event:
+
+    The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images.
+
+Once all the contents are loaded, Selenium continues the automation as programmed.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -156,13 +164,13 @@ driver.quit()
 {{< /tab >}}
 {{< /tabpane >}}
 
-### eager
+### Alternative 1 - Eager
 
 This will make Selenium WebDriver to wait until the
 initial HTML document has been completely loaded and parsed,
 and discards loading of stylesheets, images and subframes.
 
-When set to **eager**, Selenium WebDriver waits until
+When Page Load Strategy is set to **eager**, Selenium WebDriver waits until
 [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
 
 {{< tabpane langEqualsHeader=true >}}
@@ -244,9 +252,9 @@ driver.quit()
 {{< /tab >}}
 {{< /tabpane >}}
 
-### none
+### Alternative 2 - None
 
-When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
+When Page Load Strategy is set to **none**, Selenium WebDriver only waits until the initial page is downloaded.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
