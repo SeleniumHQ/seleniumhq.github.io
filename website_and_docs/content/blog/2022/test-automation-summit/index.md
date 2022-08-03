@@ -11,10 +11,16 @@ description: >
 
 Have you ever wanted to contribute to an open source testing project, but couldn't figure out where to start?
 If so, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSe6u6_bS59njqhhSwfnWSlGxlqQaNJ8xouDBR6YM-7pQYvJFQ/viewform)
-to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin, 
+to apply for an invitation to join the Open Source Test Automation Summit on August 26 in Berlin,
 sponsored by [Selenium](https://www.selenium.dev) and hosted by [Sauce Labs](https://saucelabs.com/).
 You can review the list of available projects below and select the one that you'd like to contribute to. We'll be in touch soon if you
 are selected to join us.
+<br/>
+
+**Update 7/22/2022:**
+Application deadline is July 28! We'll contact everyone by Friday, July 29.
+
+{{< figure src="TAS_Berlin.png" class="img-responsive w-50" >}}
 
 This will ***not*** be your typical workshop.
 This will be a working session with one or more maintainers of a given project
@@ -58,18 +64,23 @@ The following maintainers are will be present to assist you in working on their 
 | [David Burns](https://twitter.com/AutomatedTester)                     | [W3C Web Platform Tests](https://wpt.fyi/results/webdriver/tests), [Selenium](https://www.selenium.dev/) |
 | [Diego Molina](https://twitter.com/diegofmolina)                       | [Selenium](https://www.selenium.dev/)                                                                    |
 | [Filip Cynarski](https://www.linkedin.com/in/filip-cynarski-39b3b260/) | [FluentLenium](https://github.com/FluentLenium/FluentLenium)                                             |
-| [Jan Molak](https://twitter.com/JanMolak) | [Serenity/JS](https://serenity-js.org/)                                                                  |
-| [Jani Mikkonen](https://www.linkedin.com/in/mikkonenjani/) | [Robot Framework](https://robotframework.org/SeleniumLibrary/)                                           |
-| [Nick Mokhnach](https://github.com/mykola-mokhnach) | [Appium](https://appium.io/)                                                                             |
-| [Ronald Brill](https://twitter.com/HtmlUnit) | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                           |
-| [Titus Fortner](https://twitter.com/titusfortner) | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
+| [Jan Molak](https://twitter.com/JanMolak)                              | [Serenity/JS](https://serenity-js.org/)                                                                  |
+| [Jani Mikkonen](https://www.linkedin.com/in/mikkonenjani/)             | [Robot Framework](https://robotframework.org/SeleniumLibrary/)                                           |
+| [Nick Mokhnach](https://github.com/mykola-mokhnach)                    | [Appium](https://appium.io/)                                                                             |
+| [Ronald Brill](https://twitter.com/HtmlUnit)                           | [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver)                                         |
+| [Simon Stewart](https://twitter.com/shs96c)                            | [Selenium](https://www.selenium.dev/)                                                                    |
+| [Titus Fortner](https://twitter.com/titusfortner)                      | [Watir](http://watir.com/), [Selenium](https://www.selenium.dev/)                                        |
+| [Yevgeniy Shunevych](https://twitter.com/YevgenShunevych)              | [Atata](https://github.com/atata-framework/atata/)                                                       |
 
-Plus maybe another surprise guest or two. We'll update the list when we know more.
-
-#### Update 7/20/2022
-
+**Update 7/20/2022:**
 [Ronald Brill](https://twitter.com/HtmlUnit), maintainer of
 [HTMLUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver) will now be joining us!
+
+**Update 7/25/2022:**
+[Yevgeniy Shunevych](https://twitter.com/YevgenShunevych), maintainer of
+[Atata](https://github.com/atata-framework/atata/) will now be joining us!
+
+**Update 7/26/2022:** [Simon Stewart](https://twitter.com/shs96c), creator of WebDriver, will now be joining us!
 
 ### Other Projects
 

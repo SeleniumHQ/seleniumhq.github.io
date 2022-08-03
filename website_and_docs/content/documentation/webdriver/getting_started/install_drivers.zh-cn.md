@@ -29,7 +29,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 
 | 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
 |-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
-| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.storage.googleapis.com/index.html)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
+| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
 | Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
 | Edge              | Windows/macOS               | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
