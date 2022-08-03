@@ -29,7 +29,10 @@ jobs:
     - name: Start Xvfb
       run: Xvfb :99 &
     - name: Run tests
-      run: |
-        cd examples/java
-        mvn -B test
-
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/java
+          mvn -B test
