@@ -1,38 +1,41 @@
 package dev.selenium.getting_started;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirstScriptTest {
+
     public WebDriver driver;
 
-    @Test
-    public void eightComponents() {
-        driver = new ChromeDriver();
+    @BeforeAll
+    public static void setDriver() {
+        WebDriverManager.chromedriver().setup();
+    }
 
+    @BeforeEach
+    public void setup() {
+        driver = new ChromeDriver();
+    }
+
+    @AfterEach
+    public void quit() {
+        driver.quit();
+    }
+
+    @Test
+    public void test() {
         driver.get("https://google.com");
 
         String title = driver.getTitle();
-        Assertions.assertEquals("Google", title);
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-
-        WebElement searchBox = driver.findElement(By.name("q"));
-        WebElement searchButton = driver.findElement(By.name("btnK"));
-
-        searchBox.sendKeys("Selenium");
-        searchButton.click();
-
-        searchBox = driver.findElement(By.name("q"));
-        String value = searchBox.getAttribute("value");
-        Assertions.assertEquals("Selenium", value);
-
-        driver.quit();
+        assertEquals("Google", title);
     }
+
 }
