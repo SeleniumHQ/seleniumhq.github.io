@@ -14,7 +14,7 @@
         <logback.version>1.2.11</logback.version>
 
         <junit5.version>5.9.0</junit5.version>
-        <wdm.version>5.2.2</wdm.version>
+        <wdm.version>5.2.3</wdm.version>
 
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
 
