@@ -4,12 +4,17 @@ on:
   pull_request:
     branches:
       - trunk
+    paths:
+      - 'examples'      
   push:
     branches:
       - trunk
+    paths:
+      - 'examples'      
 
 env:
   DISPLAY: :99
+  GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
   test_examples:
