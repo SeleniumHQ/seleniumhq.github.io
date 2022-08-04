@@ -14,6 +14,7 @@ on:
 
 env:
   DISPLAY: :99
+  GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
   test_examples:
