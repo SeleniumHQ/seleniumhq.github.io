@@ -54,7 +54,7 @@ as described in the table below:
 The `document.readyState` property of a document describes the loading state of the current document.
 
 When navigating to a new page via URL, WebDriver will hold off on completing a navigation method (e.g., `driver.navigate().get()`)
-until the document ready state is in `its desired state`.
+until the document ready state is in its **ready state (refer to the table above)**.
 
 If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
 that aren't important to the automation, 
@@ -68,7 +68,7 @@ This does not necessarily mean that the page has finished loading, especially fo
 like Single Page Applications that use a lot of JavaScript to dynamically load content
 after the Ready State returns complete.
 
-`Note : ` This behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+`Note:` This behavior does not apply to navigation that is a result of clicking an element or submitting a form.
 
 ### Default Behaviour - normal
 By default **normal** is set to browser.
@@ -166,12 +166,13 @@ driver.quit()
 
 ### Alternative 1 - Eager
 
+When Page Load Strategy is set to **eager**, Selenium WebDriver waits until
+[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+
+
 This will make Selenium WebDriver to wait until the
 initial HTML document has been completely loaded and parsed,
 and discards loading of stylesheets, images and subframes.
-
-When Page Load Strategy is set to **eager**, Selenium WebDriver waits until
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -255,6 +256,10 @@ driver.quit()
 ### Alternative 2 - None
 
 When Page Load Strategy is set to **none**, Selenium WebDriver only waits until the initial page is downloaded.
+
+Selenium takes it to the extreme that it only waits until the initial HTML 
+document is downloaded (no guarantee that it is loaded). It doesn't wait for
+other resources such as stylesheets and images to be loaded.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
