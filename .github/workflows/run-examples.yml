@@ -4,9 +4,13 @@ on:
   pull_request:
     branches:
       - trunk
+    paths:
+      - 'examples'      
   push:
     branches:
       - trunk
+    paths:
+      - 'examples'      
 
 env:
   DISPLAY: :99
