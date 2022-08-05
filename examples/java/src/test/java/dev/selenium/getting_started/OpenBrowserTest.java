@@ -73,7 +73,7 @@ public class OpenBrowserTest {
         //    Set webdriver.chrome.driver with Opera Driver
         System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
         //    Create ChromeOptions Instance
-        chromeOptions = new ChromeOptions();
+        ChromeOptions chromeOptions = new ChromeOptions();
         //    Set W3C Dialect
         chromeOptions.setExperimentalOption("w3c", true);
         //    Create ChromeDriver Instance
