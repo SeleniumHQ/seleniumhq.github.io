@@ -1,16 +1,17 @@
 name: Run test examples
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - trunk
     paths:
-      - 'examples'      
+      - 'examples/**'
   push:
     branches:
       - trunk
     paths:
-      - 'examples'      
+      - 'examples/**'
 
 env:
   DISPLAY: :99
