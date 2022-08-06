@@ -66,7 +66,7 @@ it does not get executed with the perform method.
 
 {{< tabpane disableCodeBlock=true height="1">}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L47" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L38" >}}
