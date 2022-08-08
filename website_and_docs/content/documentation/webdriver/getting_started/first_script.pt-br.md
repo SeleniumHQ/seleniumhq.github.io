@@ -22,7 +22,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L30" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L6" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L15" >}}
@@ -46,7 +46,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navi
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L40" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L17" >}}
@@ -71,7 +71,7 @@ pode solicitar, incluindo window handles, tamanho / posição do navegador, cook
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L42" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L12" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L19" >}}
@@ -106,7 +106,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L45" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L13" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L22" >}}
@@ -132,7 +132,7 @@ com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdrive
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L47-L48" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15-L16" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L24-L25" >}}
@@ -157,7 +157,7 @@ mas você irá usá-las com frequência.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L50-L51" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L18-L19" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L20-L21" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L27-L28" >}}
@@ -181,7 +181,7 @@ Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L54" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L22" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L24" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L31" >}}
@@ -207,7 +207,7 @@ Nenhum outro comando pode ser enviado para esta instância do driver.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L25" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L27" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}

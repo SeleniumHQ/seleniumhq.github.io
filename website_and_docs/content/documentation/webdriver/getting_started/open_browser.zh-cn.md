@@ -36,7 +36,7 @@ description: >
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L9-L12" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L10-L13" >}}
   options = ChromeOptions()
   driver = webdriver.Chrome(options=options)
 
@@ -79,7 +79,7 @@ edgedriver的主要版本号必须与Edge浏览器的主要版本匹配.
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L16-L19" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L18-L21" >}}
   options = EdgeOptions()
   driver = webdriver.Edge(options=options)
 
@@ -120,7 +120,7 @@ Selenium 4需要Firefox 78或更高版本.
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L23-L26" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L26-L29" >}}
   options = FirefoxOptions()
   driver = webdriver.Firefox(options=options)
 
@@ -175,7 +175,7 @@ Internet Explorer 11将于2022年6月15日终止对包括Windows 10在内的某�
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L31-L34" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L34-L37" >}}
   options = IEOptions()
   driver = webdriver.Ie(options=options)
 
@@ -226,7 +226,7 @@ Internet Explorer 11将于2022年6月15日终止对包括Windows 10在内的某�
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L39-L44" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L42-L47" >}}
   options = IEOptions()
   options.attach_to_edge_chrome = True
   options.edge_executable_path = "/path/to/edge/browser"
@@ -295,7 +295,7 @@ Internet Explorer 11将于2022年6月15日终止对包括Windows 10在内的某�
   //    Quit
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L52-L56" >}}
   options = ChromeOptions()
   options.binary_location = "path/to/opera/browser"
   driver = webdriver.Chrome(options=options)
@@ -359,7 +359,7 @@ safaridriver --enable
   
   driver.quit();
 {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L58-L60" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L61-L63" >}}
   driver = webdriver.Safari()
 
   driver.quit()
