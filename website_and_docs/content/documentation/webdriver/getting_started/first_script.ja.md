@@ -21,7 +21,7 @@ For more details on starting a session read our documentation on [opening and cl
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L30" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L6" >}}
@@ -45,7 +45,7 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L19" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L40" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
@@ -71,7 +71,7 @@ can request, including window handles, browser size / position, cookies, alerts,
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L21" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L42" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
@@ -105,7 +105,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L24" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L45" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L13" >}}
@@ -130,7 +130,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L26-L27" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L47-L48" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15-L16" >}}
@@ -155,7 +155,7 @@ but you will use them frequently.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29-L30" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L50-L51" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L18-L19" >}}
@@ -180,7 +180,7 @@ Notice that we need to relocate the search box because the DOM has changed since
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L33" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L54" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L22" >}}
@@ -206,7 +206,7 @@ No more commands can be sent to this driver instance.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L36" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L25" >}}
