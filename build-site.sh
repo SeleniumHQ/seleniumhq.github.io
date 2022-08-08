@@ -15,7 +15,7 @@ if [[ -z "${DEPLOY_PRIME_URL}" ]]; then
 else
   echo -e "\033[0;32mNetlify DEPLOY_PRIME_URL detected, this seems to be a PR, deployment happening at ${DEPLOY_PRIME_URL}...\033[0m"
   USE_BASE_URL_SITE="--baseURL ${DEPLOY_PRIME_URL}"
-  SELENIUM_EXAMPLES_BRANCH=${BRANCH}
+  SELENIUM_EXAMPLES_BRANCH=${HEAD}
 fi
 
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
