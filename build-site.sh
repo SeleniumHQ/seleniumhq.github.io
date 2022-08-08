@@ -28,6 +28,6 @@ echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
 cd website_and_docs && npm install
 
 echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
-hugo --minify ${USE_BASE_URL_SITE}
+SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}
 
 echo -e "\033[0;32mDone building site!\033[0m"
