@@ -31,7 +31,6 @@ def test_releases_all(driver):
     ActionChains(driver)\
         .click_and_hold(clickable)\
         .key_down(Keys.SHIFT)\
-        .key_down(Keys.ALT)\
         .key_down("a")\
         .perform()
 
@@ -39,5 +38,5 @@ def test_releases_all(driver):
 
     ActionChains(driver).key_down('a').perform()
 
-    assert clickable.get_attribute('value')[0] == "Å"
+    assert clickable.get_attribute('value')[0] == "A"
     assert clickable.get_attribute('value')[1] == "a"

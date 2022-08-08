@@ -287,7 +287,7 @@ offset.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L109-L111" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L108-L110" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L148-L152" >}}
@@ -319,7 +319,7 @@ the current mouse position.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L126-L128" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L124-L126" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L170-L172" >}}
@@ -345,7 +345,7 @@ moves to the location of the target element and then releases the mouse.
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L139-L143" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L137-L141" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L184-L188" >}}
@@ -370,7 +370,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L151-L156" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L149-L154" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L198-L203" >}}
