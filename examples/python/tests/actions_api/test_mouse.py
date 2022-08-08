@@ -95,25 +95,23 @@ def test_move_by_offset_from_element(driver):
 
     mouse_tracker = driver.find_element(By.ID, "mouse-tracker")
     ActionChains(driver)\
-        .move_to_element_with_offset(mouse_tracker, 8, 11)\
+        .move_to_element_with_offset(mouse_tracker, 8, 0)\
         .perform()
 
     coordinates = driver.find_element(By.ID, "relative-location").text.split(", ")
-    assert abs(int(coordinates[0]) - 8) < 2
-    assert abs(int(coordinates[1]) - 11) < 2
+    assert abs(int(coordinates[0]) - 100 - 8) < 2
 
 
 def test_move_by_offset_from_viewport_origin_ab(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     action = ActionBuilder(driver)
-    action.pointer_action.move_to_location(8, 12)
+    action.pointer_action.move_to_location(8, 0)
     action.perform()
 
     coordinates = driver.find_element(By.ID, "absolute-location").text.split(", ")
 
     assert abs(int(coordinates[0]) - 8) < 2
-    assert abs(int(coordinates[1]) - 11) < 2
 
 
 def test_move_by_offset_from_current_pointer_ab(driver):

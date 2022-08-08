@@ -31,7 +31,7 @@ que podem ser utilizados.
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L9-L12" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L10-L13" >}}
   options = ChromeOptions()
   driver = webdriver.Chrome(options=options)
 
@@ -72,7 +72,7 @@ o número da versão principal do edgedriver deve corresponder à versão princi
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L16-L19" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L18-L21" >}}
   options = EdgeOptions()
   driver = webdriver.Edge(options=options)
 
@@ -112,7 +112,7 @@ O Selenium 4 requer o Firefox 78 ou superior. Recomenda-se sempre usar a versão
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L23-L26" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L26-L29" >}}
   options = FirefoxOptions()
   driver = webdriver.Firefox(options=options)
 
@@ -166,7 +166,7 @@ na [wiki do Selenium](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriv
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L31-L34" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L34-L37" >}}
   options = IEOptions()
   driver = webdriver.Ie(options=options)
 
@@ -217,7 +217,7 @@ O Microsoft Edge pode ser usado no modo de compatibilidade do IE usando o Driver
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L39-L44" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L42-L47" >}}
   options = IEOptions()
   options.attach_to_edge_chrome = True
   options.edge_executable_path = "/path/to/edge/browser"
@@ -286,7 +286,7 @@ certifique-se de que a versão do navegador corresponda à versão do driver.
   //    Quit
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L52-L56" >}}
   options = ChromeOptions()
   options.binary_location = "path/to/opera/browser"
   driver = webdriver.Chrome(options=options)
@@ -349,7 +349,7 @@ safaridriver --enable
   
   driver.quit();
 {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L58-L60" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L61-L63" >}}
   driver = webdriver.Safari()
 
   driver.quit()
