@@ -1,4 +1,17 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 09 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.4.0. We&amp;rsquo;re shipping
+this for Java, .Net, Python, Ruby, and JavaScript, so if you&amp;rsquo;re using any
+of those languages, go and grab it from your package manager of choice!&lt;/p>
+&lt;p>Some of the main highlights are:&lt;/p>
+&lt;ul>
+&lt;li>Adding support for CDP released in Chrome v104, while v101 was removed&lt;/li>
+&lt;li>Virtual authenticator feature was completed across languages.&lt;/li>
+&lt;li>All language bindings will throw an error when &lt;code>w3c: false&lt;/code> is set in &lt;code>ChromeOptions&lt;/code>&lt;/li>
+&lt;li>Improved health checks and requests with non W3C locators for Relay Nodes in Grid&lt;/li>
+&lt;/ul>
+&lt;p>Check the complete changelog and download the artifacts at the
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0">Selenium 4.0.0 release in GitHub&lt;/a>
+or directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the first release candidate of Selenium
 4. We&amp;rsquo;re shipping this for .Net, Java, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
