@@ -36,7 +36,7 @@ a browser. You can find a more comprehensive example in [Writing your first Sele
     {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
 {{< tab header="Python" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/python/tests/hello/test_hello_selenium.py" >}}
+    {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}

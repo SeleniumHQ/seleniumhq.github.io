@@ -1,43 +1,61 @@
 name: Run test examples
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - trunk
     paths:
-      - 'examples'      
+      - 'examples/**'
   push:
     branches:
       - trunk
     paths:
-      - 'examples'      
+      - 'examples/**'
 
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+  GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
   test_examples:
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
-        java: [ 8 ]
+    runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout GitHub repo
       uses: actions/checkout@v2
+    - name: Filter for different binding languages
+      uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          java:
+            - 'examples/java/**'
+          python:
+            - 'examples/python/**'
+    - name: Start Xvfb
+      if: matrix.os == 'ubuntu-latest'
+      run: Xvfb :99 &
     - name: Set up Java
+      if: steps.filter.outputs.java == 'true'
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
-        java-version: ${{ matrix.java }}
-    - name: Start Xvfb
-      run: Xvfb :99 &
+        java-version: 8
+      env:
+        COMMAND: cd examples/java && mvn -B test
+    - name: Set Python command
+      if: steps.filter.outputs.python == 'true'
+      run: echo "$COMMAND"
+      env:
+        COMMAND: cd examples/python && pip3 install -r requirements.txt && pytest
     - name: Run tests
+      if: steps.filter.outputs.java == 'true'
       uses: nick-invision/retry@v2.7.1
       with:
         timeout_minutes: 20
         max_attempts: 3
-        command: |
-          cd examples/java
-          mvn -B test
+        command: $COMMAND
