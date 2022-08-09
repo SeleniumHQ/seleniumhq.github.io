@@ -10,7 +10,7 @@ of those languages, go and grab it from your package manager of choice!&lt;/p>
 &lt;li>Improved health checks and requests with non W3C locators for Relay Nodes in Grid&lt;/li>
 &lt;/ul>
 &lt;p>Check the complete changelog and download the artifacts at the
-&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0">Selenium 4.0.0 release in GitHub&lt;/a>
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0">Selenium 4.4.0 release in GitHub&lt;/a>
 or directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the first release candidate of Selenium
 4. We&amp;rsquo;re shipping this for .Net, Java, Python, Ruby, and JavaScript,
