@@ -34,7 +34,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L6" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L17" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -58,7 +58,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navi
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L8" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L19" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -83,7 +83,7 @@ pode solicitar, incluindo window handles, tamanho / posição do navegador, cook
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L21" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -118,7 +118,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L12" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L24" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -144,7 +144,7 @@ com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdrive
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L14-L15" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L26-L27" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L40-L41" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -169,7 +169,7 @@ mas você irá usá-las com frequência.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L29-L30" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L43-L44" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -193,7 +193,7 @@ Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L20" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L47" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -219,7 +219,7 @@ Nenhum outro comando pode ser enviado para esta instância do driver.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L23" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
