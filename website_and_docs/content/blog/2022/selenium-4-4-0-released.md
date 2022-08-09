@@ -21,7 +21,7 @@ Some of the main highlights are:
   * Improved health checks and requests with non W3C locators for Relay Nodes in Grid
 
 Check the complete changelog and download the artifacts at the 
-[Selenium 4.0.0 release in GitHub](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0)
+[Selenium 4.4.0 release in GitHub](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0)
 or directly from the [Selenium site][download].
 
 [download]: /downloads
