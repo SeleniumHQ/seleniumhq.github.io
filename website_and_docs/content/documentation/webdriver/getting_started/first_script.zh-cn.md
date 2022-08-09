@@ -39,7 +39,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L6" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L17" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -66,7 +66,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L8" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L19" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -92,7 +92,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L21" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -131,7 +131,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L12" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L24" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -157,7 +157,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L14-L15" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L26-L27" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L40-L41" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -183,7 +183,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L29-L30" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L43-L44" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -210,7 +210,7 @@ DOM已经发生了变化.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L20" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L47" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -237,7 +237,7 @@ DOM已经发生了变化.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L23" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
