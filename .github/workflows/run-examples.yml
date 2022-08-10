@@ -38,6 +38,8 @@ jobs:
             - 'examples/python/**'
           kotlin:
             - 'examples/kotlin/**'
+          javascript:
+            - 'examples/javascript/**'
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
@@ -75,3 +77,15 @@ jobs:
         command: |
           cd examples/kotlin
           mvn -B test
+    - name: Run JavaScript tests
+      if: steps.filter.outputs.javascript == 'true'
+      uses: nick-invision/retry@v2.7.1
+      env:
+        SELENIUM_BROWSER: chrome
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/javascript
+          npm install
+          npm test

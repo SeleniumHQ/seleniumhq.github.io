@@ -1,4 +1,3 @@
-
 const {By, Key} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const assert = require("assert");
@@ -28,6 +27,9 @@ suite(function(env) {
     it('KeyUp', async function() {
       await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
 
+      const textField = driver.findElement(By.id("textInput"));
+      await textField.click();
+
       await driver.actions()
         .keyDown(Key.SHIFT)
         .sendKeys('a')
@@ -35,22 +37,23 @@ suite(function(env) {
         .sendKeys("b")
         .perform();
 
-      const textField = driver.findElement(By.id("textInput"));
       assert.deepStrictEqual('Ab', await textField.getAttribute('value'))
     });
 
     it('sendKeys', async function() {
       await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
 
+      const textField = driver.findElement(By.id("textInput"));
+      await textField.click();
+
       await driver.actions()
         .sendKeys('abc')
         .perform();
 
-      const textField = driver.findElement(By.id("textInput"));
       assert.deepStrictEqual('abc', await textField.getAttribute('value'))
     });
 
-    it('Designated Element', async function() {
+    it.skip('Designated Element', async function() {
       await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html');
       await driver.findElement(By.tagName("body")).click();
 
