@@ -6,8 +6,8 @@
   {{ $url := replace $url "://" $tokenInUrl }}
   {{ $jsonUrl := getJSON $url }}
   <div>
-    <div class="card text-center bg-transparent border-0 p-3 h-100" style="max-width: 12rem;">
-      <img src="{{$jsonUrl.avatar_url}}" class="card-img-top" alt="{{$jsonUrl.name}}">
+    <div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+      <img src="{{$jsonUrl.avatar_url}}" class="card-img-top mx-auto" alt="{{$jsonUrl.name}}" style="max-width: 122px;">
       <div class="card-body pb-0 px-1">
         <p class="card-text m-0">
           {{$jsonUrl.name}}
