@@ -36,26 +36,42 @@ jobs:
             - 'examples/java/**'
           python:
             - 'examples/python/**'
+          kotlin:
+            - 'examples/kotlin/**'
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
     - name: Set up Java
-      if: steps.filter.outputs.java == 'true'
+      if: steps.filter.outputs.java == 'true' || steps.filter.outputs.kotlin == 'true'
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
         java-version: 8
-      env:
-        COMMAND: cd examples/java && mvn -B test
-    - name: Set Python command
-      if: steps.filter.outputs.python == 'true'
-      run: echo "$COMMAND"
-      env:
-        COMMAND: cd examples/python && pip3 install -r requirements.txt && pytest
-    - name: Run tests
+    - name: Run Java tests
       if: steps.filter.outputs.java == 'true'
       uses: nick-invision/retry@v2.7.1
       with:
         timeout_minutes: 20
         max_attempts: 3
-        command: $COMMAND
+        command: |
+          cd examples/java
+          mvn -B test
+    - name: Run Python tests
+      if: steps.filter.outputs.python == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/python
+          pip3 install -r requirements.txt
+          pytest
+    - name: Run Kotlin tests
+      if: steps.filter.outputs.kotlin == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/kotlin
+          mvn -B test

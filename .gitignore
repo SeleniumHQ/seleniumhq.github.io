@@ -1,6 +1,6 @@
 .idea
 public/
-resources/
+resources
 node_modules
 .DS_Store
 website_and_docs/.hugo_build.lock

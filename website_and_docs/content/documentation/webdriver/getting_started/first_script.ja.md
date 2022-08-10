@@ -36,7 +36,7 @@ For more details on starting a session read our documentation on [opening and cl
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L6" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L17" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -60,7 +60,7 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L8" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L19" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -86,7 +86,7 @@ can request, including window handles, browser size / position, cookies, alerts,
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L21" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -120,7 +120,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L12" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L24" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -145,7 +145,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L14-L15" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L26-L27" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L40-L41" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -170,7 +170,7 @@ but you will use them frequently.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L29-L30" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L43-L44" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -195,7 +195,7 @@ Notice that we need to relocate the search box because the DOM has changed since
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L20" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L47" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -221,7 +221,7 @@ No more commands can be sent to this driver instance.
         {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L23" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
