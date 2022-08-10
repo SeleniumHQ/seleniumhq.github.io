@@ -22,7 +22,7 @@ The issue is described quite well in [this blog post](https://sahajamit.medium.c
 
 KEDA is a **free and open-source** Kubernetes event-driven autoscaling solution that extends the feature set of K8s' HPA. This is done via plugins written by the community that feed KEDA's metrics server with the information it needs to scale specific deployments up and down.
 
-Specifically for Selenium Grid, we have a [plugin](https://keda.sh/docs/2.7/scalers/selenium-grid-scaler/) that will tie into our grid to get the information it needs. Example of the trigger used:
+Specifically for Selenium Grid, we have a [plugin](https://keda.sh/docs/latest/scalers/selenium-grid-scaler/) that will tie into our grid to get the information it needs. Example of the trigger used:
 
 ```
 triggers:
@@ -55,7 +55,7 @@ spec:
 ```
 As an added bonus KEDA allows us to scale our deployments down to 0 when there is no use, something the normal out-of-the-box HPA does not allow.
 
-[More details on all the settings you can have in a Scaled-Object can be found here.](https://keda.sh/docs/2.7/concepts/scaling-deployments/)
+[More details on all the settings you can have in a Scaled-Object can be found here.](https://keda.sh/docs/latest/concepts/scaling-deployments/)
 
 A full example of how to implement this is further down in the article but KEDA solves one of our two issues. Now we can properly scale up and down based on the actual load on the selenium grid. Unfortunately scaling down still results in the likely possibility that a pod is still running a test and is told to terminate before it can finish.
 
@@ -94,12 +94,12 @@ And with that our application can now safely scale down our selenium browser dep
 
 ### Install KEDA:
 
-- **Note:** As of 05/26/2022 there is a bug with the latest (2.7.1) version of the plugin. [Until this fix is merged and released in 2.8.0](https://github.com/kedacore/keda/pull/3062), I suggest using 2.6.1. You can find the [latest version number here](https://keda.sh/docs/2.7/scalers/selenium-grid-scaler/).
+- You need to use version 2.8.0 or later, you can find the [latest version number here](https://keda.sh/docs/latest/scalers/selenium-grid-scaler/).
 - ```kubectl apply -f https://github.com/kedacore/keda/releases/download/<Version_Number_Here>/keda-<Version_Number_Here>.yaml```
 
 ### Create and apply your scaled object(s):
 
-As described earlier your [scaled object](https://keda.sh/docs/2.7/scalers/selenium-grid-scaler/) will look like so:
+As described earlier your [scaled object](https://keda.sh/docs/latest/scalers/selenium-grid-scaler/) will look like so:
 ```
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
