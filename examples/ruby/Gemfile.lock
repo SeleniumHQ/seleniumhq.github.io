@@ -3,9 +3,14 @@ GEM
   specs:
     childprocess (4.1.0)
     diff-lcs (1.5.0)
-    nokogiri (1.13.6-x86_64-darwin)
+    ffi (1.15.5)
+    mini_portile2 (2.8.0)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.8-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     racc (1.6.0)
     rake (13.0.6)
@@ -24,7 +29,7 @@ GEM
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.2.1)
+    selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -36,14 +41,16 @@ GEM
     websocket (1.2.9)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
+  ffi (~> 1.15, >= 1.15.5)
   rake (~> 13.0)
   rspec (~> 3.0)
-  selenium-webdriver (~> 4.2.1)
+  selenium-webdriver (~> 4.4.0)
   webdrivers (~> 5.0)
 
 BUNDLED WITH

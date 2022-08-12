@@ -43,7 +43,7 @@ que podem ser utilizados.
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L6-L9" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L8-L11" >}}
   options = Selenium::WebDriver::Options.chrome
   driver = Selenium::WebDriver.for :chrome, options: options
 
@@ -84,7 +84,7 @@ o número da versão principal do edgedriver deve corresponder à versão princi
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L13-L16" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L17-L20" >}}
   options = Selenium::WebDriver::Options.edge
   driver = Selenium::WebDriver.for :edge, options: options
 
@@ -124,7 +124,7 @@ O Selenium 4 requer o Firefox 78 ou superior. Recomenda-se sempre usar a versão
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L20-L23" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L26-L29" >}}
   options = Selenium::WebDriver::Options.firefox
   driver = Selenium::WebDriver.for :firefox, options: options
 
@@ -178,7 +178,7 @@ na [wiki do Selenium](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriv
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L29-L32" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L35-L38" >}}
   options = Selenium::WebDriver::Options.ie
   driver = Selenium::WebDriver.for :ie, options: options
 
@@ -235,7 +235,7 @@ O Microsoft Edge pode ser usado no modo de compatibilidade do IE usando o Driver
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L38-L43" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L44-L49" >}}
   options = Selenium::WebDriver::Options.ie
   options.attach_to_edge_chrome = true
   options.edge_executable_path = "/path/to/edge/browser"
@@ -302,7 +302,7 @@ certifique-se de que a versão do navegador corresponda à versão do driver.
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L49-L53" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L53-L59" >}}
   options = Selenium::WebDriver::Options.chrome
   options.binary = '/path/to/opera/browser'
   driver = Selenium::WebDriver.for :chrome, options: options
@@ -360,7 +360,7 @@ safaridriver --enable
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L59-L62" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L65-L68" >}}
   options = Selenium::WebDriver::Options.safari
   driver = Selenium::WebDriver.for :safari, options: options
 
