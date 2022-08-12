@@ -117,12 +117,11 @@ namespace SeleniumDocs.ActionsAPI
             
             IWebElement tracker = driver.FindElement(By.Id("mouse-tracker"));
             new Actions(driver)
-                .MoveToElement(tracker, 8, 11, MoveToElementOffsetOrigin.TopLeft)
+                .MoveToElement(tracker, 8, 0)
                 .Perform();
 
             string[] result = driver.FindElement(By.Id("relative-location")).Text.Split(", ");
-            Assert.IsTrue(Math.Abs(int.Parse(result[0]) - 8) < 2);
-            Assert.IsTrue(Math.Abs(int.Parse(result[1]) - 11) < 2);
+            Assert.IsTrue(Math.Abs(int.Parse(result[0]) - 100 - 8) < 2);
         }
 
         [TestMethod]
@@ -132,12 +131,11 @@ namespace SeleniumDocs.ActionsAPI
             
             IWebElement tracker = driver.FindElement(By.Id("mouse-tracker"));
             new Actions(driver)
-                .MoveToElement(tracker, 8, 11, MoveToElementOffsetOrigin.Center)
+                .MoveToElement(tracker, 8, 0)
                 .Perform();
 
             string[] result = driver.FindElement(By.Id("relative-location")).Text.Split(", ");
             Assert.IsTrue(Math.Abs(int.Parse(result[0]) - 100 - 8) < 2);
-            Assert.IsTrue(Math.Abs(int.Parse(result[1]) - 100 - 11) < 2);
         }
         
         [TestMethod]
@@ -148,12 +146,11 @@ namespace SeleniumDocs.ActionsAPI
             ActionBuilder actionBuilder = new ActionBuilder();
             PointerInputDevice mouse = new PointerInputDevice(PointerKind.Mouse, "default mouse");
             actionBuilder.AddAction(mouse.CreatePointerMove(CoordinateOrigin.Viewport,
-                8, 12, TimeSpan.Zero));
+                8, 0, TimeSpan.Zero));
             ((IActionExecutor)driver).PerformActions(actionBuilder.ToActionSequenceList());
             
             string[] result = driver.FindElement(By.Id("absolute-location")).Text.Split(", ");
             Assert.IsTrue(Math.Abs(int.Parse(result[0]) - 8) < 2);
-            Assert.IsTrue(Math.Abs(int.Parse(result[1]) - 12) < 2);
         }
 
         [TestMethod]

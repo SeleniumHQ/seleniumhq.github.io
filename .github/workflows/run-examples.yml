@@ -42,6 +42,8 @@ jobs:
             - 'examples/javascript/**'
           ruby:
             - 'examples/ruby/**'
+          dotnet:
+            - 'examples/dotnet/**'
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
@@ -57,6 +59,11 @@ jobs:
       with:
         ruby-version: 2.7
         bundler-cache: true
+    - name: Set up .Net
+      if: steps.filter.dotnet.java == 'true'
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 5.0.x
     - name: Run Java tests
       if: steps.filter.outputs.java == 'true'
       uses: nick-invision/retry@v2.7.1
@@ -107,3 +114,12 @@ jobs:
           cd examples/ruby
           bundle install
           bundle exec rspec
+    - name: Run .Net tests
+      if: steps.filter.outputs.dotnet == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/dotnet/SeleniumDocs
+          dotnet test

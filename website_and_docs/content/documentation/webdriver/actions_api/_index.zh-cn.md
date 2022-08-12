@@ -87,7 +87,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
         {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L37" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L45" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L44" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L34" >}}

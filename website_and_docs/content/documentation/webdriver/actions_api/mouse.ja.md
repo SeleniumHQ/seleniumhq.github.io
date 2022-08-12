@@ -264,7 +264,7 @@ for the remaining languages as of Selenium 4.3.
 **Coming in Selenium 4.3**
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L133-L136" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
 **Coming in Selenium 4.3**
@@ -290,7 +290,7 @@ offset.
         {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L108-L110" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L148-L152" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L104-L106" >}}
@@ -322,7 +322,7 @@ the current mouse position.
         {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L124-L126" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L170-L172" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L117-L119" >}}
@@ -348,7 +348,7 @@ moves to the location of the target element and then releases the mouse.
         {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L137-L141" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L184-L188" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L129-L133" >}}
@@ -373,7 +373,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L149-L154" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L198-L203" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L141-L146" >}}

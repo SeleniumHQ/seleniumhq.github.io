@@ -37,7 +37,7 @@ que podem ser utilizados.
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L18-L21" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L17-L20" >}}
   var options = new ChromeOptions();
   var driver = new ChromeDriver(options);
 
