@@ -75,7 +75,7 @@ it does not get executed with the perform method.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L45" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L35" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L34" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code

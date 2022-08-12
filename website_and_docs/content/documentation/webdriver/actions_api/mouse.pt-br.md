@@ -293,7 +293,7 @@ offset.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L148-L152" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L105-L107" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L104-L106" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -325,7 +325,7 @@ the current mouse position.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L170-L172" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L119-L121" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L117-L119" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -351,7 +351,7 @@ moves to the location of the target element and then releases the mouse.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L184-L188" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L131-L135" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L129-L133" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -376,7 +376,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L198-L203" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L143-L148" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L141-L146" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code

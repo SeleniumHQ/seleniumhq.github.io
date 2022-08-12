@@ -28,7 +28,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L15" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L5" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
@@ -52,7 +52,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navi
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L17" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
@@ -77,7 +77,7 @@ pode solicitar, incluindo window handles, tamanho / posição do navegador, cook
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L19" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
@@ -112,7 +112,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L22" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L12" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
@@ -138,7 +138,7 @@ com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdrive
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L24-L25" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14-L15" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
@@ -163,7 +163,7 @@ mas você irá usá-las com frequência.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L27-L28" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L17-L18" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L19-L20" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
@@ -187,7 +187,7 @@ Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L31" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L21" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L23" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
@@ -213,7 +213,7 @@ Nenhum outro comando pode ser enviado para esta instância do driver.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L24" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L26" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}

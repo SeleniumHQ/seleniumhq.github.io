@@ -28,14 +28,13 @@ RSpec.describe 'Actions' do
     action = @driver.action
                     .click_and_hold(clickable)
                     .key_down(:shift)
-                    .key_down(:alt)
                     .key_down("a")
     action.perform
 
     @driver.action.release_actions
 
     action.key_down('a').perform
-    expect(clickable.attribute('value')[0]).to eq "Å"
+    expect(clickable.attribute('value')[0]).to eq "A"
     expect(clickable.attribute('value')[-1]).to eq "a"
   end
 end
