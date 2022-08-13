@@ -1,7 +1,6 @@
 package dev.selenium.getting_started;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Duration;
 
@@ -37,22 +36,22 @@ public class FirstScriptTest {
 
     @Test
     public void eightComponents() {
-        driver.get("https://duckduckgo.com/");
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 
         String title = driver.getTitle();
-        assertTrue(title.contains("DuckDuckGo"));
+        assertEquals("Web form", title);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
-        WebElement searchBox = driver.findElement(By.name("q"));
-        WebElement searchButton = driver.findElement(By.id("search_button_homepage"));
+        WebElement textBox = driver.findElement(By.name("my-text"));
+        WebElement submitButton = driver.findElement(By.cssSelector("button"));
 
-        searchBox.sendKeys("Selenium");
-        searchButton.click();
+        textBox.sendKeys("Selenium");
+        submitButton.click();
 
-        searchBox = driver.findElement(By.name("q"));
-        String value = searchBox.getAttribute("value");
-        assertEquals("Selenium", value);
+        WebElement message = driver.findElement(By.id("message"));
+        String value = message.getText();
+        assertEquals("Received!", value);
     }
 
 }

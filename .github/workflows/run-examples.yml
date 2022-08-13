@@ -60,7 +60,7 @@ jobs:
         ruby-version: 2.7
         bundler-cache: true
     - name: Set up .Net
-      if: steps.filter.dotnet.java == 'true'
+      if: steps.filter.outputs.dotnet == 'true'
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x

@@ -13,22 +13,22 @@ suite(function(env) {
         after(() => driver.quit());
 
         it('First Selenium script', async function() {
-            await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
+            await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
 
             let title = await driver.getTitle();
-            assert.ok(title.includes("Selenium"));
+            assert.equal("Web form", title);
 
-            await driver.manage().setTimeouts({ implicit: 5000 });
+            await driver.manage().setTimeouts({ implicit: 500 });
 
-            let searchBox = await driver.findElement(By.name('text'));
-            let searchButton = await driver.findElement(By.id('submitbtn'));
+            let textBox = await driver.findElement(By.name('my-text'));
+            let submitButton = await driver.findElement(By.css('button'));
 
-            await searchBox.sendKeys('Selenium');
-            await searchButton.click();
+            await textBox.sendKeys('Selenium');
+            await submitButton.click();
 
-            searchBox = await driver.findElement(By.id('form-results'));
-            let value = await searchBox.getText();
-            assert.ok(value.includes("Selenium"));
+            let message = await driver.findElement(By.id('message'));
+            let value = await message.getText();
+            assert.equal("Received!", value);
         });
 
     });
