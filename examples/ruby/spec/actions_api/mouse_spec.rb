@@ -92,19 +92,20 @@ RSpec.describe 'Mouse' do
   describe 'move by offset' do
     it 'offset from element' do
       driver.get 'https://www.selenium.dev/selenium/web/mouse_interaction.html'
+      driver.action.scroll_to(driver.find_element(id: 'bottom')).perform
 
       mouse_tracker = driver.find_element(id: 'mouse-tracker')
-
-      rect = mouse_tracker.rect
-
       driver.action
             .move_to(mouse_tracker, 8, 11)
             .perform
 
-      sleep 0.5
+      rect = mouse_tracker.rect
+      center_x = rect.width/2
+      center_y = rect.height/2
       x_coord, y_coord = driver.find_element(id: 'relative-location').text.split(',').map(&:to_i)
-      expect(x_coord).to be_within(1).of((rect.width / 2) + 8)
-      expect(y_coord).to be_within(1).of((rect.height / 2) + 11)
+
+      expect(x_coord).to be_within(1).of(center_x + 8)
+      expect(y_coord).to be_within(1).of(center_y + 11)
     end
 
     it 'offset from viewport' do
