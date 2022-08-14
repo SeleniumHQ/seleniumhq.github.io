@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.selenium'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+ext {
+  seleniumVersion = '4.4.0'
+  junitVersion = '5.9.0'
+  webdrivermanagerVersion = '5.2.3'
+}
+
+dependencies {
+    testImplementation 'org.seleniumhq.selenium:selenium-java:$seleniumVersion'
+    testImplementation 'org.seleniumhq.selenium:selenium-grid:$seleniumVersion'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:$webdrivermanagerVersion'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:$junitVersion'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:$junitVersion'
+}
+
+test {
+    useJUnitPlatform()
+}
