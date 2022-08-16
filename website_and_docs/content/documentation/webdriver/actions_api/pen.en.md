@@ -32,7 +32,7 @@ has 5 buttons, a pen has 3 equivalent button states:
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L9-L15" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L11-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -57,7 +57,7 @@ has 5 buttons, a pen has 3 equivalent button states:
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/PenTest.cs#L64-L77" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L48-L54" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L50-L56" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
