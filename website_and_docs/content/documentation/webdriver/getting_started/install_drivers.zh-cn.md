@@ -29,7 +29,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 
 | 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
 |-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
-| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.storage.googleapis.com/index.html)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
+| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
 | Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
 | Edge              | Windows/macOS               | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
@@ -51,7 +51,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
@@ -263,6 +263,9 @@ ChromeDriver driver = new ChromeDriver();
 {{< /tab >}}
 
 {{< tab header="Python" >}}
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
 service = Service(executable_path="/path/to/chromedriver")
 driver = webdriver.Chrome(service=service)

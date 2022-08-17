@@ -134,23 +134,8 @@ caps.page_load_strategy='normal'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("normal");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L26-L33">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -237,23 +222,8 @@ caps.page_load_strategy='eager'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("eager");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L6-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -335,23 +305,8 @@ caps.page_load_strategy='none'
 driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, Capabilities} = require('selenium-webdriver');
-const caps = new Capabilities();
-caps.setPageLoadStrategy("none");
-(async function example() {
-let driver = await new Builder().
-withCapabilities(caps).
-forBrowser('chrome').
-build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L16-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -444,25 +399,7 @@ user prompt encounters at the remote-end. This is defined by
 
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
-
-During automation, the current browsing context will be associated 
-with window states, which describe the visibility 
-of the browser window. The window states are
-
-* maximized
-* minimized
-* normal
-* fullscreen
-
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was requested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not match the values set in the browser.
+Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
 ## strictFileInteractability
 

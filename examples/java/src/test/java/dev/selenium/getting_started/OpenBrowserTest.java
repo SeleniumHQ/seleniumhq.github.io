@@ -1,7 +1,5 @@
 package dev.selenium.getting_started;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -15,9 +13,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
-
-import java.nio.file.Path;
-import java.util.Optional;
 
 public class OpenBrowserTest {
     public WebDriver driver;
@@ -70,11 +65,17 @@ public class OpenBrowserTest {
     @Disabled("Requires non-standard browser")
     @Test
     public void operaSession() {
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/path/to/opera/browser");
-
-        driver = new ChromeDriver(options);
-
+        //    Set webdriver.chrome.driver with Opera Driver
+        System.setProperty("webdriver.chrome.driver", "OPERA_DRIVER_PATH");
+        //    Create ChromeOptions Instance
+        ChromeOptions chromeOptions = new ChromeOptions();
+        //    Set W3C Dialect
+        chromeOptions.setExperimentalOption("w3c", true);
+        //    Create ChromeDriver Instance
+        driver = new ChromeDriver(chromeOptions);
+        //    Open Target Website
+        driver.get("https://www.selenium.dev");
+        //    Quit
         driver.quit();
     }
 

@@ -1,1068 +1,387 @@
 ---
-title: "Ações do mouse em detalhe"
-linkTitle: "Ações do mouse em detalhe"
+title: "Mouse actions"
+linkTitle: "Mouse"
 weight: 4
 needsTranslation: true
 description: >
-  Mouse representa um evento do mouse. Ações do mouse são realizadas
-  usando interface de baixo nível que nos permite
-  fornecer ação de entrada de dispositivo virtualizado para o navegador da web.
+  A representation of any pointer device for interacting with a web page.
 aliases: [
-"/documentation/pt-br/support_packages/mouse_and_keyboard_actions_in_detail/",
-"/pt-br/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
+"/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 
-## clickAndHold
+There are only 3 actions that can be accomplished with a mouse:
+pressing down on a button, releasing a pressed button, and moving the mouse.
+Selenium provides convenience methods that combine these actions in the most common ways.
 
-Ele se moverá para o elemento e clicar (sem soltar) no meio do elemento fornecido.
+## Click and hold
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+This method combines moving the mouse to the center of an element with pressing the left mouse button.
+This is useful for focusing a specific element:
 
-public class clickAndHold {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-
-      // Store 'Sign In' button web element
-      WebElement signIn = driver.findElement(By.linkText("Sign in"));
-      Actions actionProvider = new Actions(driver);
-      // Perform click-and-hold action on the element
-      actionProvider.clickAndHold(signIn).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.google.com")
-
-# Store 'Sign In' button web element
-signIn = driver.find_element(By.LINK_TEXT, "Sign in")
-
-# Perform click-and-hold action on the element
-webdriver.ActionChains(driver).click_and_hold(signIn).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class ClickAndHold
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://google.com");
-        // Store 'Sign In' button web element
-        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
-        Actions actionProvider = new Actions(driver);
-        // Perform click-and-hold action on the element
-        actionProvider.ClickAndHold(signIn).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
-  sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform click-and-hold action on the element
-  driver.action.click_and_hold(sign_in).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/clickAndHold.js">}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://google.com")
-        // Store 'Sign In' button web element
-        val signIn = driver.findElement(By.linkText("Sign in"))
-        val actionProvider = Actions(driver)
-        // Perform click-and-hold action on the element
-        actionProvider.clickAndHold(signIn).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L22-L25" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L12-L15" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L17-L20" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L9-L12" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## contextClick
-Este método primeiro executa um movimento do mouse para a localização do elemento e executa o clique de contexto (clique com o botão direito) no elemento fornecido.
+## Click and release
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+This method combines moving to the center of an element with pressing and releasing the left mouse button.
+This is otherwise known as "clicking":
 
-public class contextClick {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-
-      // Store 'signIn' button web element
-      WebElement signIn = driver.findElement(By.linkText("Sign in"));
-      Actions actionProvider = new Actions(driver);
-      // Perform context-click action on the element
-      actionProvider.contextClick(signIn).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.google.com")
-
-# Store 'signIn' button web element
-signIn = driver.find_element(By.LINK_TEXT, "Sign in")
-
-# Perform context-click action on the element
-webdriver.ActionChains(driver).context_click(signIn).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class ContextClick
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://google.com");
-        // Store 'signIn' button web element
-        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
-        Actions actionProvider = new Actions(driver);
-        // Perform context-click action on the element
-        actionProvider.ContextClick(signIn).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
-  sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform context-click action on the element
-  driver.action.context_click(sign_in).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function contextClick() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-    // Store 'signIn' button web element
-    let signIn = driver.findElement(By.linkText("Sign in"));
-    const actions = driver.actions({async: true});
-    // Perform context-click action on the element
-    await actions.contextClick(signIn).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://google.com")
-        // Store 'signIn' button web element
-        val signIn = driver.findElement(By.linkText("Sign in"))
-        val actionProvider = Actions(driver)
-        // Perform context-click action on the element
-        actionProvider.contextClick(signIn).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L24-L27" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L20-L23" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## doubleClick
-Ele se moverá para o elemento e executará um clique duplo no meio do elemento fornecido.
+## Alternate Button Clicks
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+There are a total of 5 defined buttons for a Mouse:
+* 0 — Left Button (the default)
+* 1 — Middle Button (currently unsupported)
+* 2 — Right Button
+* 3 — X1 (Back) Button
+* 4 — X2 (Forward) Button
 
-public class doubleClick {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
+### Context Click
 
-      // Store 'signIn' button web element
-      WebElement signIn = driver.findElement(By.linkText("Sign in"));
-      Actions actionProvider = new Actions(driver);
-      // Perform double-click action on the element
-      actionProvider.doubleClick(signIn).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
+This method combines moving to the center of an element with pressing and releasing the right mouse button (button 2).
+This is otherwise known as "right-clicking":
 
-# Navigate to url
-driver.get("http://www.google.com")
-
-# Store 'signIn' button web element
-signIn = driver.find_element(By.LINK_TEXT, "Sign in")
-
-# Perform double-click action on the element
-webdriver.ActionChains(driver).double_click(signIn).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class DoubleClick
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://google.com");
-        // Store 'signIn' button web element
-        IWebElement signIn = driver.FindElement(By.LinkText("Sign in"));
-        Actions actionProvider = new Actions(driver);
-        // Perform double-click action on the element
-        actionProvider.DoubleClick(signIn).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
-  sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform double-click action on the element
-  driver.action.double_click(sign_in).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/doubleClick.js">}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://google.com")
-        // Store 'signIn' button web element
-        val signIn = driver.findElement(By.linkText("Sign in"))
-        val actionProvider = Actions(driver)
-        // Perform double-click action on the element
-        actionProvider.doubleClick(signIn).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L35-L38" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L31-L34" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## moveToElement
-Este método move o mouse para o meio do elemento. O elemento também é rolado para a exibição ao executar esta ação.
+### Back Click
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+There is no convenience method for this, it is just pressing and releasing mouse button 3
 
-public class moveToElement {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-
-      // Store 'Gmail' anchor web element
-      WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
-      Actions actionProvider = new Actions(driver);
-      // Performs mouse move action onto the element
-      actionProvider.moveToElement(gmailLink).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.google.com")
-
-# Store 'google search' button web element
-gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
-
-# Performs mouse move action onto the element
-webdriver.ActionChains(driver).move_to_element(gmailLink).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class MoveToElement
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
-        IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
-        Actions actionProvider = new Actions(driver);
-        // Performs mouse move action onto the element
-        actionProvider.MoveToElement(gmailLink).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
-  gmail_link = driver.find_element(link_text: 'Gmail')
-  # Performs mouse move action onto the element
-  driver.action.move_to(gmail_link).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/actionsApi/mouse/moveToElement.js">}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://google.com")
-        // Store 'Gmail' anchor web element
-        val gmailLink = driver.findElement(By.linkText("Gmail"))
-        val actionProvider = Actions(driver)
-        // Performs mouse move action onto the element
-        actionProvider.moveToElement(gmailLink).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="7" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L60-L66" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L49-L52" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L59-L63" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L44-L47" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## moveByOffset:
+### Forward Click
 
-Este método move o mouse de sua posição atual (ou 0,0) pelo deslocamento fornecido. Se as coordenadas estiverem fora da janela de visualização, o mouse ficará fora da janela do navegador.
+There is no convenience method for this, it is just pressing and releasing mouse button 4
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-
-public class moveByOffset {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-
-      // Store 'Gmail' anchor web element
-      WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
-      // Capture x and y offset positions of element
-      int xOffset = gmailLink.getRect().getX();
-      int yOffset = gmailLink.getRect().getY();
-      Actions actionProvider = new Actions(driver);
-      // Performs mouse move action onto the offset position
-      actionProvider.moveByOffset(xOffset, yOffset).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.google.com")
-
-# Store 'google search' button web element
-gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
-#Set x and y offset positions of element
-xOffset = 100
-yOffset = 100
-# Performs mouse move action onto the element
-webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class MoveByOffset
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
-        IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
-        // Set x and y offset positions of element
-        int xOffset = 100;
-        int yOffset = 100;
-        Actions actionProvider = new Actions(driver);
-        // Performs mouse move action onto the offset position
-        actionProvider.MoveByOffset(xOffset, yOffset).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
-  gmail_link = driver.find_element(link_text: 'Gmail')
-  # Capture x and y offset positions of element
-  x_offset = gmail_link.rect.x
-  y_offset = gmail_link.rect.y
-  # Performs mouse move action onto the offset position
-  driver.action.move_to_location(x_offset, y_offset).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function moveByOffset() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-    // Store 'Gmail' anchor web element
-    let gmailLink = driver.findElement(By.linkText("Gmail"));
-    // Capture offset positions of element
-    let offset = await gmailLink.getRect();
-    let x = await offset.x;
-    let y = await offset.y;
-    const actions = driver.actions({async: true});
-    // Performs mouse move action onto the element
-    await actions.move({x:parseInt(x),y:parseInt(y)}).pause(3000).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://google.com")
-        // Store 'Gmail' anchor web element
-        val gmailLink = driver.findElement(By.linkText("Gmail"))
-        // Capture x and y offset positions of element
-        val xOffset = gmailLink.rect.getX()
-        val yOffset = gmailLink.rect.getY()
-        val actionProvider = Actions(driver)
-        // Performs mouse move action onto the element
-        actionProvider.moveByOffset(xOffset, yOffset).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="7" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L78-L84" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L63-L66" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L77-L81" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< badge version="4.2" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L58-L61" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## dragAndDrop
+## Double click
 
-Este método primeiro executa um clique e segura no elemento de origem,
-move-se para o local do elemento de destino e, em seguida, libera o mouse.
+This method combines moving to the center of an element with pressing and releasing the left mouse button twice.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-
-public class dragAndDrop {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
-      WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
-      WebElement targetEle = driver.findElement(By.id("droppable"));
-      Actions actionProvider = new Actions(driver);
-      // Performs drag and drop action of sourceEle onto the targetEle
-      actionProvider.dragAndDrop(sourceEle, targetEle).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-
-# Store 'box A' as source element
-sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element(By.ID, "droppable")
-# Performs drag and drop action of sourceEle onto the targetEle
-webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class DragAndDrop
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
-        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
-        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
-        Actions actionProvider = new Actions(driver);
-        // Performs drag and drop action of sourceEle onto the targetEle
-        actionProvider.DragAndDrop(sourceEle, targetEle).Build().Perform();
-      }
-      finally
-      {
-          driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
-  source_ele = driver.find_element(id: 'draggable')
-  # Store 'box B' as source element
-  target_ele = driver.find_element(id: 'droppable')
-  # Performs drag and drop action of sourceEle onto the targetEle
-  driver.action.drag_and_drop(source_ele, target_ele).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function dragAndDrop() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
-    let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
-    let targetEle = driver.findElement(By.id("droppable"));
-    const actions = driver.actions({async: true});
-    // Performs drag and drop action of sourceEle onto the targetEle
-    await actions.dragAndDrop(sourceEle, targetEle).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
-        val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
-        val targetEle = driver.findElement(By.id("droppable"))
-        val actionProvider = Actions(driver)
-        // Performs drag and drop action of sourceEle onto the targetEle
-        actionProvider.dragAndDrop(sourceEle, targetEle).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L93-L96" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L74-L77" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L91-L94" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L69-L72" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## dragAndDropBy
+## Move to element
 
-Este método primeiro executa um clique e segura no elemento de origem, move-se para o deslocamento fornecido e, em seguida, libera o mouse.
+This method moves the mouse to the in-view center point of the element. 
+This is otherwise known as "hovering."
+Note that the element must be in the viewport or else the command will error.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-
-public class dragAndDropBy {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
-      WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
-      WebElement targetEle = driver.findElement(By.id("droppable"));
-      int targetEleXOffset = targetEle.getLocation().getX();
-      int targetEleYOffset = targetEle.getLocation().getY();
-      Actions actionProvider = new Actions(driver);
-      // Performs dragAndDropBy onto the  target element offset position
-      actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-
-# Store 'box A' as source element
-sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element(By.ID, "droppable")
-targetEleXOffset = targetEle.location.get("x")
-targetEleYOffset = targetEle.location.get("y")
-
-# Performs dragAndDropBy onto the target element offset position
-webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class DragAndDropToOffset
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
-        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
-        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
-        int targetEleXOffset = targetEle.Location.X;
-        int targetEleYOffset = targetEle.Location.Y;
-        Actions actionProvider = new Actions(driver);
-        // Performs drag and drop action of sourceEle onto the targetEle
-        actionProvider.DragAndDropToOffset(sourceEle, targetEleXOffset, targetEleYOffset).Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
-  source_ele = driver.find_element(id: 'draggable')
-  target_ele = driver.find_element(id: 'droppable')
-  # Capture x and y offset positions of element
-  x_offset = target_ele.rect.x
-  y_offset = target_ele.rect.y
-  # Performs dragAndDropBy onto the  target element offset position
-  driver.action.drag_and_drop_by(source_ele, x_offset, y_offset).perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function dragAndDropBy() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
-    let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
-    let targetEle = driver.findElement(By.id("droppable"));
-    let offset = await targetEle.getRect();
-    let x = await offset.x;
-    let y = await offset.y;
-    const actions = driver.actions({async: true});
-    // Performs dragAndDropBy onto the  target element offset position
-    await actions.dragAndDrop(sourceEle, {x:parseInt(x), y:parseInt(y)}).perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
-        val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
-        val targetEle = driver.findElement(By.id("droppable"))
-        val targetEleXOffset = targetEle.location.getX()
-        val targetEleYOffset = targetEle.location.getY()
-        val actionProvider = Actions(driver)
-        // Performs dragAndDropBy onto the  target element offset position
-        actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L105-L108" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L85-L88" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L104-L107" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L80-L83" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
-## release
+## Move by offset
 
-Esta ação libera o botão esquerdo do mouse pressionado. Se WebElement for aprovado,
-ele irá liberar o botão esquerdo do mouse pressionado no WebElement fornecido
+These methods first move the mouse to the designated origin and then
+by the number of pixels in the provided offset.
+Note that the position of the mouse must be in the viewport or else the command will error.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+### Offset from Element (Top Left Origin)
 
-public class release {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      // Navigate to Url
-      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
-      WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
-      WebElement targetEle = driver.findElement(By.id("droppable"));
-      Actions actionProvider = new Actions(driver);
-      actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform();
-      // Performs release event
-      actionProvider.release().build().perform();
-    } finally {
-      driver.quit();
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
+This method moves the mouse to the in-view center point of the element
+then attempts to move to the upper left corner of the element and then moves by the
+provided offset.
 
-# Navigate to url
-driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+This will be removed as an option in Selenium 4.3, and only an offset from center of the element
+will be supported. As of Selenium 4.2, this is the default behavior for Ruby, .NET and Python in order
+to be backwards compatible with previous versions of Selenium.
+This approach does not work correctly when the element is not entirely inside the viewport.
 
-# Store 'box A' as source element
-sourceEle = driver.find_element(By.ID, "draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element(By.ID, "droppable")
-
-# Performs dragAndDropBy onto the target element offset position
-webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
-#Performs release event
-webdriver.ActionChains(driver).release().perform()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-
-namespace SeleniumApp
-{
-  public class Release
-  {
-    public static void Main(string[] args)
-    {
-      IWebDriver driver = new ChromeDriver();
-      try
-      {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
-        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
-        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
-        Actions actionProvider = new Actions(driver);
-        actionProvider.ClickAndHold(sourceEle).MoveToElement(targetEle).Build().Perform();
-        // Performs release event              
-        actionProvider.Release().Build().Perform();
-      }
-      finally
-      {
-        driver.Quit();
-      }
-    }
-  }
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  # Navigate to Url
-  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  source_ele = driver.find_element(id: 'draggable')
-  target_ele = driver.find_element(id: 'droppable')
-  driver.action.click_and_hold(source_ele).move_to(target_ele).perform
-  # Performs release event
-  driver.action.release.perform
-ensure
-  driver.quit
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-
-(async function release() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
-    let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
-    let targetEle = driver.findElement(By.id("droppable"));
-    const actions = driver.actions({async: true});
-    await actions.move({origin:sourceEle}).press().perform();
-    // Performs release event on target element
-    await actions.move({origin:targetEle}).release().perform();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.interactions.Actions
-
-fun main() {
-    val driver =  ChromeDriver()
-    try {
-        // Navigate to Url
-        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
-        val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
-        val targetEle = driver.findElement(By.id("droppable"))
-        val actionProvider = Actions(driver)
-        actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform()
-        // Performs release event
-        actionProvider.release().build().perform()
-    } finally {
-        driver.quit()
-    }
-}
-  {{< /tab >}}
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+**Not Implemented in Selenium 4**
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L118-L121" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L91-L94" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
 {{< /tabpane >}}
 
+### Offset from Element (Center Origin)
+
+This method moves to the in-view center point of the element, 
+then moves the mouse by the provided offset
+
+This is the default behavior in Java as of Selenium 4.0, and will be the default
+for the remaining languages as of Selenium 4.3.
+
+{{< tabpane disableCodeBlock=true height="4" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L117-L120" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+**Coming in Selenium 4.3**
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L133-L136" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+**Coming in Selenium 4.3**
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
+{{< /tabpane >}}
+
+### Offset from Viewport
+
+This method moves the mouse from the upper left corner of the current viewport by the provided
+offset.
+
+{{< tabpane disableCodeBlock=true height="6" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L108-L110" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L148-L152" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L105-L107" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
+{{< /tabpane >}}
+
+### Offset from Current Pointer Location
+
+This method moves the mouse from its current position by the offset provided by the user.
+If the mouse has not previously been moved, the position will be in the upper left
+corner of the viewport.
+Note that the pointer position does not change when the page is scrolled.
+
+Note that the first argument X specifies to move right when positive, while the second argument
+Y specifies to move down when positive. So `moveByOffset(30, -10)` moves right 30 and up 10 from
+the current mouse position.
+
+{{< tabpane disableCodeBlock=true height="3" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L124-L126" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L170-L172" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L119-L121" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
+{{< /tabpane >}}
+
+## Drag and Drop on Element
+
+This method firstly performs a click-and-hold on the source element, 
+moves to the location of the target element and then releases the mouse.
+
+{{< tabpane disableCodeBlock=true height="5" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L137-L141" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L184-L188" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L131-L135" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
+{{< /tabpane >}}
+
+## Drag and Drop by Offset
+
+This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+
+{{< tabpane disableCodeBlock=true height="6" >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L149-L154" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L198-L203" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L143-L148" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        // Add Code
+   {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        // Add Code
+    {{< /tab >}}
+{{< /tabpane >}}

@@ -3,26 +3,11 @@ title: "Como atualizar para Selenium 4"
 linkTitle: "Como atualizar para Selenium 4"
 weight: 10
 description: >
-  Interested in Selenium 4? Check this guide that will help you upgrade to the latest release!
   Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!
 aliases: [
 "/pt-br/documentation/getting_started/how_to_upgrade_to_selenium_4/"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-  Esta página está sendo traduzido do Inglês para o Português.
-  Você fala Inglês? Nos ajude a traduzir esta pagina enviando pull requests!
-</p>
-{{% /pageinfo %}}
 
 Atualizar para o Selenium 4 deve ser um processo sem dificuldades se você estiver usando uma das linguagens oficialmente suportadas
 (Ruby, JavaScript, C#, Python, and Java). Pode haver alguns casos em que alguns problemas podem acontecer,
@@ -175,7 +160,7 @@ visto que se destinavam apenas a uso interno. Os exemplos de código a seguir ex
 Encontrando um único elemento com `findElement*`
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
@@ -187,7 +172,7 @@ driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
@@ -204,7 +189,7 @@ driver.findElement(By.xpath("xPath"));
 Encontrando multiplos elementos com `findElements*`
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
@@ -216,7 +201,7 @@ driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
@@ -241,7 +226,7 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
 #### Maven
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```xml
 <dependencies>
   <!-- more dependencies ... -->
@@ -254,7 +239,7 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
 </dependencies>
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```xml
 <dependencies>
     <!-- more dependencies ... -->
@@ -268,14 +253,13 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
 ```
 {{< /card >}}
 {{< /cardpane >}}
-
-After making the change, you could execute `mvn clean compile` on the same directory where the 
-`pom.xml` file is.
+Após realizar a mudança, você pode executar `mvn clean compile` no mesmo diretório, onde o 
+arquivo `pom.xml` está.
 
 #### Gradle
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```jsonpath
 plugins {
     id 'java'
@@ -295,7 +279,7 @@ test {
 }
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```jsonpath
 plugins {
     id 'java'
@@ -317,7 +301,7 @@ test {
 {{< /card >}}
 {{< /cardpane >}}
 
-Após realizar a mudança, você pode executar `./gradlew clean build` no mesmo diretório em o arquivo `build.gradle`está.
+Após realizar a mudança, você pode executar `./gradlew clean build` no mesmo diretório onde o arquivo `build.gradle`está.
 
 Para verifica todas as versões do Java, você pode ir até [MVNRepository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java).
 
@@ -334,7 +318,7 @@ PM> Install-Package Selenium.WebDriver -Version 4.0.0
 ### Python
 A mudança mais importante para usar o Python é a versão minima requerida. Para Selenium 4 a versão miníma requerida será Python3.7 ou superior.
 Mais detalhes podem ser encontrados aqui:[Python Package Index](https://pypi.org/project/selenium/4.0.0/).
-Para ataulizar através da linha de comando, você pode executar:
+Para atualizar através da linha de comando, você pode executar:
 
 ```shell
 pip install selenium==4.0.0
@@ -377,27 +361,26 @@ Ou, atualize o seu package.json e execute `npm install`:
 }
 ```
 
-## Potential errors and deprecation messages
+## Possíveis erros e mensagens de descontinuação
 
-Here is a set of code examples that will help to overcome the deprecation messages you might 
-encounter after upgrading to Selenium 4.
+Aqui temos um conjunto de exemplos de código que o ajudarão a superar as mensagens de descontinuação, que você pode
+encontrar após atualizar para o Selenium 4.
 
 ### Java
 
-#### Waits and Timeout
-
-The parameters received in Timeout have switched from expecting `(long time, TimeUnit unit)` to 
-expect `(Duration duration)`.
+#### Waits e Timeout
+Os parametros que eram esperados de ser recebidos em um Timeout trocaram de `(long time, TimeUnit unit)` para
+o `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
@@ -405,14 +388,13 @@ driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 ```
 {{< /card >}}
 {{< /cardpane >}}
-
-Waits are also expecting different parameters now. `WebDriverWait` is now expecting a `Duration` 
-instead of a `long` for timeout in seconds and milliseconds. The `withTimeout` and `pollingEvery` 
-utility methods from `FluentWait` have switched from expecting `(long time, TimeUnit unit)` to 
-expect `(Duration duration)`.
+As esperas(waits) também esperam parâmetros diferentes agora. O `WebDriverWait` 
+agora espera uma `Duration` em vez de um tempo limite `long` em segundos e milissegundos. 
+Os métodos utilitários `withTimeout` e `pollingEvery` do `FluentWait` passaram do 
+`(long time, TimeUnit unit)` para o `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
@@ -423,7 +405,7 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .ignoring(NoSuchElementException.class);
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
@@ -436,13 +418,12 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
 {{< /card >}}
 {{< /cardpane >}}
 
-#### Merging capabilities is no longer changing the calling object
-
-It was possible to merge a different set of capabilities into another set, and it was 
-mutating the calling object. Now, the result of the merge operation needs to be assigned.
+#### A fusão de recursos não estã mais alterando o objeto de invocação
+Antes era possível fundir um conjunto diferente de recursos em outro counjunto, e isso 
+alterava o objeto de chamada. Agora, o resultado da operação de fusão precisa ser atribuído.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
@@ -450,9 +431,9 @@ FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
 ```
-As a result, the `options` object was getting modified.
+Como resultado, o objeto `options` estava sendo modificado.
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
@@ -460,18 +441,17 @@ FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options = options.merge(capabilities);
 ```
-The result of the `merge` call needs to be assigned to an object.
+O resultado da chamada `merge`  precisa ser atribuído a um objeto.
 {{< /card >}}
 {{< /cardpane >}}
 
 #### Firefox Legacy
-
-Before GeckoDriver was around, the Selenium project had a driver implementation to automate 
-Firefox (version <48). However, this implementation is not needed anymore as it does not work 
-in recent versions of Firefox. To avoid major issues when upgrading to Selenium 4, the `setLegacy` 
-option will be shown as deprecated. The recommendation is to stop using the old implementation 
-and rely only on GeckoDriver. The following code will show the `setLegacy` line deprecated after 
-upgrading.
+Antes do GeckoDriver existir, o projeto Selenium tinha uma implementação de driver para automatizar 
+o Firefox(versão<48). Entretanto, esta implementação não é mais necessária, pois não funciona
+nas versões mais recentes do Firefox. Para evitar graves problemas ao atualizar para o Selenium 4, 
+a opção `setLegacy` será mostrada como obsoleta. A recomendação é parar de utilizar a implementação 
+antiga e depender apenas do GeckoDriver. O código a seguir mostrará a linha `setLegacy` obsoleta após 
+atualizar.
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
@@ -479,18 +459,18 @@ options.setLegacy(true);
 ```
 
 #### `BrowserType`
-The `BrowserType` interface has been around for a long time, however it is getting 
-deprecated in favour of the new `Browser` interface.
+A interface `BrowserType` existe há um bom tempo, más ela está ficando 
+obsoleta a favor da nova interface `Browser`.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
@@ -501,12 +481,12 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 
 ### C#
 
-#### `AddAdditionalCapability` is deprecated
+#### `AddAdditionalCapability` está descontinuada
 
-Instead of it, `AddAdditionalOption` is recommended. Here is an example showing this:
+Em vez dela, `AddAdditionalOption` é recomendada. Aqui está um exemplo mostrando isso:
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```cs
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -515,7 +495,7 @@ var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud:options", cloudOptions, true);
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```cs
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -528,12 +508,12 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 
 ### Python
 
-#### `executable_path has been deprecated, please pass in a Service object`
-
-In Selenium 4, you'll need to set the driver's ``executable_path`` from a Service object to prevent deprecation warnings. (Or don't set the path and instead make sure that the driver you need is on the System PATH.)
+#### `executable_path foi descontinuada, por favor, passe um Service object`
+No Selenium 4, você precisara definir o ``executable_path`` a partir de um objeto Service para evitar avisos de depreciação.
+(Ou não defina o caminho e, em vez disso, certifique-se de que o driver que você precisa esteja no System PATH.)
 
 {{< cardpane >}}
-{{< card header="Before" >}}
+{{< card header="Antes" >}}
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
@@ -542,7 +522,7 @@ options.add_experimental_option("useAutomationExtension", False)
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 ```
 {{< /card >}}
-{{< card header="After" >}}
+{{< card header="Depois" >}}
 ```python
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -555,12 +535,11 @@ driver = webdriver.Chrome(service=service, options=options)
 {{< /card >}}
 {{< /cardpane >}}
 
-## Summary
+## Resumo
+Passamos pelas principais mudanças a serem levadas em consideração ao atualizar para o Selenium 4.
+Cobrimos os diferentes aspectos a serem cobertos quando o código de teste é preparado para a atualização, incluindo
+sugestões sobre como evitar possíveis problemas que podem aparecer ao usar a nova versão do
+Selenium. Para finalizar, também abordamos um conjunto de possíveis problemas com os quais você pode se deparar depois
+da atualização e compartilhamos possíveis correções para esses problemas.
 
-We went through the major changes to be taken into consideration when upgrading to Selenium 4. 
-Covering the different aspects to cover when test code is prepared for the upgrade, including 
-suggestions on how to prevent potential issues that can show up when using the new version of 
-Selenium. To finalize, we also covered a set of possible issues that you can bump into after 
-upgrading, and we shared potential fixes for those issues.
-
-*This was originally posted at  https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4*
+*Este tópico foi originalmente postado no site  https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4*

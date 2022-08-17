@@ -106,7 +106,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/bidirectional/emulateGeoLocation.js">}}
+    {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
@@ -310,7 +310,18 @@ driver.get("https://selenium.dev/");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+  from selenium import webdriver
+  
+  driver = webdriver.Chrome()
+  // iPhone 11 Pro dimensions
+  set_device_metrics_override = dict({
+                  "width": 375,
+                  "height": 812,
+                  "deviceScaleFactor": 50,
+                  "mobile": True
+              })
+  driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)
+  driver.get("<your site url>")
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

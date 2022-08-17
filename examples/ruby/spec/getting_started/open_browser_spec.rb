@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'spec_helper'
+require 'selenium-webdriver'
 
 RSpec.describe 'Open Browser' do
   it 'chrome session' do
