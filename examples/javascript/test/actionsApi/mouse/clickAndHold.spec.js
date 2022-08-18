@@ -13,14 +13,14 @@ suite(function(env) {
 
     it('Mouse move and mouseDown on an element', async function() {
         // Navigate to Url
-        await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
+        await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
         
-        // Store 'SignIn' button web element
-        let signInBtn = driver.findElement(By.tagName("button"));
+        // Store 'clickable' web element
+        let clickable = driver.findElement(By.id("clickable"));
         const actions = driver.actions({async: true});
         
         // Perform mouseMove to element and mouseDown (press) action on the element
-        await actions.move({origin:signInBtn}).press().perform();
+        await actions.move({origin:clickable}).press().perform();
     });
 
   });
