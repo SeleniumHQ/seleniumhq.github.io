@@ -45,18 +45,12 @@ namespace SeleniumDocs.ChromeDevTools
 
             Assert.IsTrue(driver.PageSource.Contains("delicious cheese"));
         }
+
         [TestMethod]
         public void InterceptNetworkRequest()
         {
             var handler = new NetworkRequestHandler();
             handler.RequestMatcher = httprequest => true;
-            handler.RequestTransformer = http =>
-            {
-                http.Method = "GET";
-                http.Url = "http://gmail.com";
-                return http;
-            };
-
             handler.ResponseSupplier = http =>
                     {
                         var response = new HttpResponseData();
@@ -69,9 +63,7 @@ namespace SeleniumDocs.ChromeDevTools
             networkInterceptor.AddRequestHandler(handler);
 
             networkInterceptor.StartMonitoring().Wait();
-            driver.Navigate().GoToUrl("http://google.com");
-            var title = driver.Title;
-            Assert.AreEqual("gmail.com", title);
+            driver.Navigate().GoToUrl("https://google.com");
             networkInterceptor.StopMonitoring().Wait();
 
             Assert.IsTrue(driver.PageSource.Contains("delicious cheese"));

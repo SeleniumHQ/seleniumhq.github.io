@@ -7,21 +7,21 @@ from webdriver_manager.chrome import ChromeDriverManager
 def test_eight_components():
     driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
 
-    driver.get("https://duckduckgo.com/")
+    driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
     title = driver.title
-    assert "DuckDuckGo" in title
+    assert title == "Web form"
 
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(0.5)
 
-    search_box = driver.find_element(by=By.NAME, value="q")
-    search_button = driver.find_element(by=By.ID, value="search_button_homepage")
+    text_box = driver.find_element(by=By.NAME, value="my-text")
+    submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
-    search_box.send_keys("Selenium")
-    search_button.click()
+    text_box.send_keys("Selenium")
+    submit_button.click()
 
-    search_box = driver.find_element(by=By.NAME, value="q")
-    value = search_box.get_attribute("value")
-    assert value == "Selenium"
+    message = driver.find_element(by=By.ID, value="message")
+    value = message.text
+    assert value == "Received!"
 
     driver.quit()
