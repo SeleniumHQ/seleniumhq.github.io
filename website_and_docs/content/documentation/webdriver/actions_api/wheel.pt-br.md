@@ -33,7 +33,7 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L17-L20" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L9-L12" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L11-L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         Not implemented yet
@@ -59,7 +59,7 @@ in the right and down directions. Negative values represent left and up, respect
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L31-L35" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L20-L24" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L22-L26" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         Not implemented yet
@@ -92,7 +92,7 @@ delta x and delta y values.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L46-L53" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L32-L36" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L34-L38" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         Not implemented yet
@@ -131,7 +131,7 @@ it will result in an exception.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L66-L75" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L46-L50" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L48-L52" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         Not implemented yet
@@ -165,7 +165,7 @@ it will result in an exception.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L89-L97" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L62-L64" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         Not implemented yet

@@ -2,6 +2,8 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.GettingStarted
 {
@@ -9,29 +11,40 @@ namespace SeleniumDocs.GettingStarted
     public class FirstScriptTest
     {
 
+        protected IWebDriver driver;
+
+        [TestInitialize]
+        public void CreateDriver()
+        {
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            driver = new ChromeDriver();
+        }
+
+        [TestCleanup]
+        public void QuitDriver()
+        {
+            driver.Quit();
+        }
+
         [TestMethod]
         public void ChromeSession()
         {
-            var driver = new ChromeDriver();
-
-            driver.Navigate().GoToUrl("https://google.com");
+            driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/web-form.html");
 
             var title = driver.Title;
-            Assert.AreEqual("Google", title);
+            Assert.AreEqual("Web form", title);
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
-            var searchBox = driver.FindElement(By.Name("q"));
-            var searchButton = driver.FindElement(By.Name("btnK"));
+            var textBox = driver.FindElement(By.Name("my-text"));
+            var submitButton = driver.FindElement(By.TagName("button"));
             
-            searchBox.SendKeys("Selenium");
-            searchButton.Click();
+            textBox.SendKeys("Selenium");
+            submitButton.Click();
             
-            searchBox = driver.FindElement(By.Name("q"));
-            var value = searchBox.GetAttribute("value");
-            Assert.AreEqual("Selenium", value);
-
-            driver.Quit();
+            var message = driver.FindElement(By.Id("message"));
+            var value = message.Text;
+            Assert.AreEqual("Received!", value);
         }
     }
 }
