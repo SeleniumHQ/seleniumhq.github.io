@@ -62,6 +62,7 @@
   height: 450px;
 }
 
-.my-3 .highlight {
-  margin: 0;
+// Override Docsy sidebar default of 2rem
+.td-content .highlight {
+  margin: 1rem 0;
 }

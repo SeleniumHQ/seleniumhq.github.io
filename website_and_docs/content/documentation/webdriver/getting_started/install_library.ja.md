@@ -23,31 +23,24 @@ JavaへのSeleniumライブラリのインストールはMavenを使います。
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
-_selenium-java_ 依存関係は、Seleniumがサポートする全てのブラウザを自動化プロジェクトで実行できるようにします。
-もし特定のブラウザだけでテストを実行したい場合は、そのブラウザの依存関係を _pom.xml_ ファイルに追加することができます。
-例えば、Firefoxのみでテストを実行するためには下記の依存関係を _pom.xml_ ファイルに追加します。
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-同じように、Chromeのみでテストを実行するためには下記の依存関係を追加します。
+Gradle 7.0 and above:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>3.X</version>
-</dependency>
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
 ```
+
   {{< /tab >}}
   {{< tab header="Python" >}}
   PythonへのSeleniumライブラリのインストールはpipを使います。

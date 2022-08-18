@@ -56,10 +56,10 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L16-L19" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L10-L13" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/actionsApi/keysTest.js#L19-L22" >}}
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -79,10 +79,10 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L30-L35" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L22-L27" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/actionsApi/keysTest.js#L31-L36" >}}
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -108,16 +108,15 @@ primarily this gets used when needing to type multiple characters in the middle 
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L46-L48" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L36-L38" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/actionsApi/keysTest.js#L45-L47" >}}
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
     {{< /tab >}}
 {{< /tabpane >}}
-
 
 ### Designated Element
 
@@ -132,7 +131,7 @@ primarily this gets used when needing to type multiple characters in the middle 
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L60-L63" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L48-L51" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -159,7 +158,7 @@ This code will end up with the text: `SeleniumSelenium!`
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L76-L87" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L60-L70" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code

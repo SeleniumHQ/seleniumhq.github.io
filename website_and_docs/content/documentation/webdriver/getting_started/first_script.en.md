@@ -20,22 +20,22 @@ For more details on starting a session read our documentation on [opening and cl
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L30" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L15" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L20" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L5" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L6" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,22 +44,22 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L40" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L17" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L32" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L8" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -70,22 +70,22 @@ can request, including window handles, browser size / position, cookies, alerts,
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L42" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L41" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L12" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L19" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L35" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L10" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -104,22 +104,22 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L45" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L44" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L22" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L37" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L12" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L12" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -129,22 +129,22 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L47-L48" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L24-L25" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L39-L40" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14-L15" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L14-L15" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L40-L41" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -154,47 +154,46 @@ but you will use them frequently.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L50-L51" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L49-L50" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L20-L21" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L27-L28" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L42-L43" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L17-L18" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L19-L20" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L17-L18" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L43-L44" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
 ### 7. Request element information
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
-Notice that we need to relocate the search box because the DOM has changed since we first located it.  
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L54" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L53" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L24" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L31" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L46" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L21" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L23" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L20" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L47" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -205,22 +204,22 @@ No more commands can be sent to this driver instance.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L27" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L26" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L24" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L26" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js#L23" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -241,7 +240,7 @@ Let's combine these 8 things into a complete script with assertions that can be 
         {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/getting_started/firstScript.js" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
         {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt" >}}

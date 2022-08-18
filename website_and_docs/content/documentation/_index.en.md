@@ -45,7 +45,7 @@ a browser. You can find a more comprehensive example in [Writing your first Sele
     {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/hello/helloSelenium.js" >}}
+    {{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt" >}}

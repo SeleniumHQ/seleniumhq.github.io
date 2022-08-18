@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe 'Install Drivers' do
   it 'chrome session' do
-    require 'webdrivers/chrome'
+    require 'webdrivers'
 
     driver = Selenium::WebDriver.for :chrome
 
     driver.quit
   end
 
-  it 'edge session' do
-    require 'webdrivers/edge'
+  it 'edge session', exclude: {platform: :linux} do
+    require 'webdrivers'
 
     driver = Selenium::WebDriver.for :edge
 
@@ -18,17 +20,15 @@ RSpec.describe 'Install Drivers' do
   end
 
   it 'firefox session' do
-    require 'webdrivers/firefox'
+    require 'webdrivers'
 
     driver = Selenium::WebDriver.for :firefox
 
     driver.quit
   end
 
-  it 'IE session' do
-    skip('Only runs on Windows')
-
-    require 'webdrivers/ie'
+  it 'IE session', exclusive: {platform: :windows} do
+    require 'webdrivers'
 
     driver = Selenium::WebDriver.for :ie
 
