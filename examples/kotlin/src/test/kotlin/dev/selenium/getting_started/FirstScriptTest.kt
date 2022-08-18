@@ -3,7 +3,6 @@ package dev.selenium.getting_started
 import io.github.bonigarcia.wdm.WebDriverManager
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -30,22 +29,22 @@ class FirstScriptTest {
 
     @Test
     fun eightComponents() {
-        driver.get("https://duckduckgo.com/")
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
         val title = driver.title
-        assertTrue(title.contains("DuckDuckGo"))
+        assertEquals("Web form", title)
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60))
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))
 
-        var searchBox = driver.findElement(By.name("q"))
-        val searchButton = driver.findElement(By.id("search_button_homepage"))
+        var textBox = driver.findElement(By.name("my-text"))
+        val submitButton = driver.findElement(By.cssSelector("button"))
 
-        searchBox.sendKeys("Selenium")
-        searchButton.click()
+        textBox.sendKeys("Selenium")
+        submitButton.click()
 
-        searchBox = driver.findElement(By.name("q"))
-        val value = searchBox.getAttribute("value")
-        assertEquals("Selenium", value)
+        val message = driver.findElement(By.id("message"))
+        val value = message.getText()
+        assertEquals("Received!", value)
     }
 
 }

@@ -20,7 +20,7 @@ For more details on starting a session read our documentation on [opening and cl
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L30" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
@@ -35,7 +35,7 @@ For more details on starting a session read our documentation on [opening and cl
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,7 +44,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L40" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
@@ -59,7 +59,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L33" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -70,7 +70,7 @@ can request, including window handles, browser size / position, cookies, alerts,
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L42" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L41" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L12" >}}
@@ -85,7 +85,7 @@ can request, including window handles, browser size / position, cookies, alerts,
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -104,7 +104,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L45" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L44" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15" >}}
@@ -119,7 +119,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L36" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -129,7 +129,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L47-L48" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" >}}
@@ -144,7 +144,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L40-L41" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -154,7 +154,7 @@ but you will use them frequently.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L50-L51" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L49-L50" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L20-L21" >}}
@@ -169,17 +169,16 @@ but you will use them frequently.
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L43-L44" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
 ### 7. Request element information
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
-Notice that we need to relocate the search box because the DOM has changed since we first located it.  
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L54" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L53" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L24" >}}
@@ -194,7 +193,7 @@ Notice that we need to relocate the search box because the DOM has changed since
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L47" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -205,7 +204,7 @@ No more commands can be sent to this driver instance.
 
 {{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
         {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L27" >}}
@@ -220,7 +219,7 @@ No more commands can be sent to this driver instance.
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
