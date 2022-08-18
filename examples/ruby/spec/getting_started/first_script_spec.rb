@@ -14,7 +14,7 @@ RSpec.describe 'First Script' do
     driver.manage.timeouts.implicit_wait = 500
 
     text_box = driver.find_element(name: 'my-text')
-    submit_button = driver.find_element(css: 'button')
+    submit_button = driver.find_element(tag_name: 'button')
 
     text_box.send_keys('Selenium')
     submit_button.click
