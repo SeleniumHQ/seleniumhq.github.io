@@ -44,7 +44,7 @@ to wait a beat between actions for things to work correctly.
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L10-L17" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code

@@ -57,7 +57,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L10-L17" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
