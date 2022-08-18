@@ -37,7 +37,7 @@ namespace SeleniumDocs.GettingStarted
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
             var textBox = driver.FindElement(By.Name("my-text"));
-            var submitButton = driver.FindElement(By.CssSelector("button"));
+            var submitButton = driver.FindElement(By.TagName("button"));
             
             textBox.SendKeys("Selenium");
             submitButton.Click();
