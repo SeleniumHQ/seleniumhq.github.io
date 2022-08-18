@@ -41,6 +41,14 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
+Gradle 7.0 and above:
+
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+```
+
+
   {{< /tab >}}
   {{< tab header="Python" >}}
   Installation of Selenium libraries for Python can be done using pip:
