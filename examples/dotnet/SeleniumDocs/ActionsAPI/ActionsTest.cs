@@ -38,7 +38,6 @@ namespace SeleniumDocs.ActionsAPI
             var actions = new Actions(driver);
             actions.ClickAndHold(clickable)
                 .KeyDown(Keys.Shift)
-                .KeyDown(Keys.Alt)
                 .SendKeys("a")
                 .Perform();
 
@@ -46,7 +45,7 @@ namespace SeleniumDocs.ActionsAPI
 
             actions.SendKeys("a").Perform();
             var value = clickable.GetAttribute("value");
-            Assert.AreEqual("Å", value[..1]);
+            Assert.AreEqual("A", value[..1]);
             Assert.AreEqual("a", value.Substring(1, 1));
         }
     }
