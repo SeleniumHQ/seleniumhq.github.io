@@ -33,7 +33,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L15" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L5" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
@@ -60,7 +60,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L17" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
@@ -86,7 +86,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L19" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
@@ -125,7 +125,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L22" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L12" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
@@ -151,7 +151,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L24-L25" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14-L15" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
@@ -177,7 +177,7 @@ Selenium所做的一切,
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L27-L28" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L17-L18" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L19-L20" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
@@ -204,7 +204,7 @@ DOM已经发生了变化.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L31" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L21" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L23" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
@@ -231,7 +231,7 @@ DOM已经发生了变化.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L24" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L26" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}

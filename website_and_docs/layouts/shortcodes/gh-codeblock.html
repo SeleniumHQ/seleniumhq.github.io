@@ -16,7 +16,7 @@
 {{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
 
 {{ $slicedPath := split $path "/" }}
-{{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
+{{ $language := index (last 1 (split (index (last 1 $slicedPath) 0) ".")) 0 }}
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ if $githubToken }}

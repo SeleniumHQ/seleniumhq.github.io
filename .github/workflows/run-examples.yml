@@ -40,6 +40,8 @@ jobs:
             - 'examples/kotlin/**'
           javascript:
             - 'examples/javascript/**'
+          ruby:
+            - 'examples/ruby/**'
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
@@ -49,6 +51,12 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 8
+    - name: Set up Ruby
+      if: steps.filter.outputs.ruby == 'true'
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        bundler-cache: true
     - name: Run Java tests
       if: steps.filter.outputs.java == 'true'
       uses: nick-invision/retry@v2.7.1
@@ -89,3 +97,13 @@ jobs:
           cd examples/javascript
           npm install
           npm test
+    - name: Run Ruby tests
+      if: steps.filter.outputs.ruby == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/ruby
+          bundle install
+          bundle exec rspec
