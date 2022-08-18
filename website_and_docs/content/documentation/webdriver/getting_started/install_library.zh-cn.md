@@ -34,6 +34,13 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
+Gradle 7.0 and above:
+
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+```
+
   {{< /tab >}}
   {{< tab header="Python" >}}
   可以使用 pip 安装 Python 的 Selenium 库：
