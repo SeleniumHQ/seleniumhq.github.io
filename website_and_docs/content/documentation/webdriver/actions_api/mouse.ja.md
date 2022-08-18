@@ -31,7 +31,7 @@ This is useful for focusing a specific element:
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L17-L20" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L9-L12" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L11-L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -57,7 +57,7 @@ This is otherwise known as "clicking":
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L20-L23" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L22-L25" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -92,7 +92,7 @@ This is otherwise known as "right-clicking":
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L31-L34" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -120,7 +120,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L44-L47" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L47-L50" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -148,7 +148,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L58-L61" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L61-L64" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -173,7 +173,7 @@ This method combines moving to the center of an element with pressing and releas
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L91-L94" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L69-L72" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L73-L76" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -200,7 +200,7 @@ Note that the element must be in the viewport or else the command will error.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L104-L107" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L80-L83" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L84-L87" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -238,7 +238,7 @@ This approach does not work correctly when the element is not entirely inside th
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L118-L121" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L91-L94" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -293,7 +293,7 @@ offset.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L104-L106" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L114-L116" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -325,7 +325,7 @@ the current mouse position.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L117-L119" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L128-L130" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -351,7 +351,7 @@ moves to the location of the target element and then releases the mouse.
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L129-L133" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L141-L145" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
@@ -376,7 +376,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L141-L146" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L153-L158" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         // Add Code
