@@ -135,7 +135,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/capabilities/normal.js">}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L26-L33">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -223,7 +223,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/capabilities/eager.js">}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L6-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -306,7 +306,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/capabilities/none.js">}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L16-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy

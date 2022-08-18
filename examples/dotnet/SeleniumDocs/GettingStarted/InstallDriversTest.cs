@@ -21,6 +21,7 @@ namespace SeleniumDocs.GettingStarted
             driver.Quit();
         }
 
+        [Ignore] // WebDriverManager.Net does not resolve msedgedriver in Linux
         [TestMethod]
         public void EdgeSession()
         {

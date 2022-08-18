@@ -30,7 +30,7 @@ For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.0.0</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ For Gradle, add the _selenium-java_ dependency in your project `build.gradle` fi
 
 ```text
 dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
 For Gradle 7.0 and above,

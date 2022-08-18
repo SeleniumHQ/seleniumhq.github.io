@@ -23,30 +23,15 @@ aliases: [
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
-_selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自动化项目。
-如果只想在特定的浏览器中运行测试，可以在 _pom.xml_ 文件中添加该浏览器的依赖项。
-例如，您应该在 _pom.xml_ 文件中添加以下依赖项，以便于只在 Firefox 中运行测试：
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
-```
-
-同样，如果您只想在 Chrome 上运行测试，您应该添加以下依赖项：
-
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
   {{< /tab >}}
