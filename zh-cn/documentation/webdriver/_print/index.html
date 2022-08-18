@@ -35,20 +35,10 @@ Selenium 在可能的情况下使用这些第三方驱动程序，
 在项目 pom.xml 中添加 <em>selenium-java</em> 依赖项：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p><em>selenium-java</em> 依赖项支持在所有 Selenium 支持的浏览器中运行自动化项目。
-如果只想在特定的浏览器中运行测试，可以在 <em>pom.xml</em> 文件中添加该浏览器的依赖项。
-例如，您应该在 <em>pom.xml</em> 文件中添加以下依赖项，以便于只在 Firefox 中运行测试：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-firefox-driver<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
-</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p>同样，如果您只想在 Chrome 上运行测试，您应该添加以下依赖项：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-chrome-driver<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
-</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
+</span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>可以使用 pip 安装 Python 的 Selenium 库：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>或者，您也可以下载 <a href=https://pypi.org/project/selenium/#files>PyPI source archive</a>
 (selenium-x.x.x.tar.gz) 并使用 <em>setup.py</em> 进行安装：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install

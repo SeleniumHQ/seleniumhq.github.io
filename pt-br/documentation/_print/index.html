@@ -258,24 +258,10 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 Adicione a dependência selenium-java em seu pom.xml:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p>A dependência <em>selenium-java</em> suporta a execução de sua automação com todos os navegadores
-com suporte Selenium. Se você quiser fazer testes
-apenas em um navegador específico, você pode adicionar a dependência para esse navegador
-em seu arquivo <em>pom.xml</em>.
-Por exemplo, você deve adicionar a seguinte dependência em seu <em>pom.xml</em>
-arquivo para executar seus testes apenas no Firefox:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-firefox-driver<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
-</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p>De maneira semelhante, se você deseja executar testes apenas no Chrome,
-você deve adicionar a seguinte dependência:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-chrome-driver<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.X<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
-</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
+</span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>A instalação de bibliotecas Selenium para Python pode ser feita usando pip:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>Como alternativa, você pode baixar o <a href=https://pypi.org/project/selenium/#files>arquivo de origem do PyPI</a>
 (selenium-x.x.x.tar.gz) e instale-o usando <em>setup.py</em>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
