@@ -12,15 +12,10 @@ suite(function(env) {
         after(() => driver.quit());
 
         it('Double-click on an element', async function() {
-            // Navigate to Url
-            await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
-            
-            // Store 'Sign in' button web element
-            let signIn = driver.findElement(By.tagName("button"));
-            const actions = driver.actions({ async: true });
-            
-            // Perform double-click action on the element
-            await actions.doubleClick(signIn).perform();
+            await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');            
+            let clickable = driver.findElement(By.id("clickable"));
+            const actions = driver.actions({ async: true });        
+            await actions.doubleClick(clickable).perform();
         });
 
     });
