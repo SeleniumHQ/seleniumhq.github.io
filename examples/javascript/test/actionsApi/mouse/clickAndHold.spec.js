@@ -12,14 +12,9 @@ suite(function(env) {
     after(() => driver.quit());
 
     it('Mouse move and mouseDown on an element', async function() {
-        // Navigate to Url
-        await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
-        
-        // Store 'clickable' web element
+        await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');        
         let clickable = driver.findElement(By.id("clickable"));
-        const actions = driver.actions({async: true});
-        
-        // Perform mouseMove to element and mouseDown (press) action on the element
+        const actions = driver.actions({async: true});        
         await actions.move({origin:clickable}).press().perform();
     });
 
