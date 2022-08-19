@@ -198,8 +198,8 @@ Here is a Java example showing how to match that Node
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
-options.setCapability("networkname:applicationName", "node_2");
-options.setCapability("nodename:applicationName", "app_2");
+options.setCapability("networkname:applicationName", "node_1");
+options.setCapability("nodename:applicationName", "app_1");
 options.setBrowserVersion("96");
 options.setPlatformName("macOS");
 WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);

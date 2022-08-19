@@ -5,6 +5,7 @@ from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.ie.options import Options as IEOptions
 
+@pytest.mark.skip(reason="only runs if chromedriver is in PATH")
 def test_chrome_session():
     options = ChromeOptions()
     driver = webdriver.Chrome(options=options)
@@ -12,6 +13,7 @@ def test_chrome_session():
     driver.quit()
 
 
+@pytest.mark.skip(reason="only runs if msedgedriver is in PATH")
 def test_edge_session():
     options = EdgeOptions()
     driver = webdriver.Edge(options=options)
@@ -19,6 +21,7 @@ def test_edge_session():
     driver.quit()
 
 
+@pytest.mark.skip(reason="only runs if geckodriver is in PATH")
 def test_firefox_session():
     options = FirefoxOptions()
     driver = webdriver.Firefox(options=options)

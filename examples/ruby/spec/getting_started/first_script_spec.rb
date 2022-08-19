@@ -1,25 +1,27 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe 'First Script' do
   it 'uses eight components' do
     driver = Selenium::WebDriver.for :chrome
 
-    driver.get('https://google.com')
+    driver.get('https://www.selenium.dev/selenium/web/web-form.html')
 
     title = driver.title
-    expect(title).to eq('Google')
+    expect(title).to eq('Web form')
 
     driver.manage.timeouts.implicit_wait = 500
 
-    search_box = driver.find_element(name: 'q')
-    search_button = driver.find_element(name: 'btnK')
+    text_box = driver.find_element(name: 'my-text')
+    submit_button = driver.find_element(tag_name: 'button')
 
-    search_box.send_keys('Selenium')
-    search_button.click
+    text_box.send_keys('Selenium')
+    submit_button.click
 
-    search_box = driver.find_element(name: 'q')
-    value = search_box.attribute('value')
-    expect(value).to eq('Selenium')
+    message = driver.find_element(id: 'message')
+    value = message.text
+    expect(value).to eq('Received!')
 
     driver.quit
   end

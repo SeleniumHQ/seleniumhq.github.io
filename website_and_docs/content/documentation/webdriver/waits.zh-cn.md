@@ -171,7 +171,7 @@ assertEquals(foo.getText(), "Hello from JavaScript!");
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element(By.TAG_NAME,"p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}

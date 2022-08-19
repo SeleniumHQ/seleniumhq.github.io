@@ -69,6 +69,7 @@ def test_can_scroll_from_viewport_with_offset_by_amount(driver):
         .scroll_from_origin(scroll_origin, 0, 200)\
         .perform()
 
+    sleep(0.5)
     iframe = driver.find_element(By.TAG_NAME, "iframe")
     driver.switch_to.frame(iframe)
     checkbox = driver.find_element(By.NAME, "scroll_checkbox")

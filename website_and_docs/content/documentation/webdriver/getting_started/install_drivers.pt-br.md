@@ -28,7 +28,7 @@ Leia mais sobre opções avançadas para iniciar um driver
 
 | Navegador | OS Suportado | Mantido por | Download | Rastreador de Problemas |
 | ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Problemas](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Problemas](//bugs.chromium.org/p/chromedriver/issues/list) |
 | Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Problemas](//github.com/mozilla/geckodriver/issues) |
 | Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Problemas](https://github.com/MicrosoftDocs/edge-developer/issues) |
 | Internet Explorer | Windows | Projeto Selenium | [Downloads](/downloads) | [Problemas](//github.com/SeleniumHQ/selenium/labels/D-IE) |
@@ -47,7 +47,7 @@ o driver correto para o seu navegador de internet, existem diversas bibliotecas 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
 
-1. Importe o [Gerenciador de WebDriver](https://github.com/bonigarcia/webdrivermanager)
+1. Importe o [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
@@ -129,7 +129,7 @@ gem 'webdrivers', '~> 5.0'
 require 'webdrivers'
 ```
 
-3 Inicialize o seu driver como você normalmente faria:
+3. Inicialize o seu driver como você normalmente faria:
 ```rb
 driver = Selenium::WebDriver.for :chrome
 ```

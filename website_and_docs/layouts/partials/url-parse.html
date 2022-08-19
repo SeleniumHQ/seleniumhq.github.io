@@ -1,0 +1,9 @@
+<script>
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  if (typeof params.language !== 'undefined') {
+      handleClick(params.language)
+  }
+</script>
