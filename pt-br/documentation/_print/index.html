@@ -263,7 +263,7 @@ Adicione a dependência selenium-java em seu pom.xml:</p><div class=highlight><p
 </span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
 </span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div><p>Gradle 7.0 and above:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
-</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>A instalação de bibliotecas Selenium para Python pode ser feita usando pip:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>Como alternativa, você pode baixar o <a href=https://pypi.org/project/selenium/#files>arquivo de origem do PyPI</a>
 (selenium-x.x.x.tar.gz) e instale-o usando <em>setup.py</em>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
@@ -1155,7 +1155,7 @@ visto que se destinavam apenas a uso interno. Os exemplos de código a seguir ex
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.0.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>&lt;!-- more dependencies ... --&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependencies&gt;</span>
@@ -1187,29 +1187,29 @@ repositories {
 dependencies {
     testImplementation &#39;org.junit.jupiter:junit-jupiter-api:5.7.0&#39;
     testRuntimeOnly &#39;org.junit.jupiter:junit-jupiter-engine:5.7.0&#39;
-    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 }
 test {
     useJUnitPlatform()
 }
 </code></pre></p></div></div></div><p>Após realizar a mudança, você pode executar <code>./gradlew clean build</code> no mesmo diretório onde o arquivo <code>build.gradle</code>está.</p><p>Para verifica todas as versões do Java, você pode ir até <a href=https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java>MVNRepository</a>.</p><h3 id=c>C#</h3><p>O local para obter atualizações para Selenium 4 em C# é <a href=https://www.nuget.org/>NuGet</a>
-Dentro do pacaote <a href=https://www.nuget.org/packages/Selenium.WebDriver/4.0.0><code>Selenium.WebDriver</code></a> você pode seguir as instruções para atualizar para ultima versão.
-Dentro do Visual Studio, através do NuGet Package Manager você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.0.0
+Dentro do pacaote <a href=https://www.nuget.org/packages/Selenium.WebDriver/4.4.0><code>Selenium.WebDriver</code></a> você pode seguir as instruções para atualizar para ultima versão.
+Dentro do Visual Studio, através do NuGet Package Manager você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.4.0
 </span></span></code></pre></div><h3 id=python>Python</h3><p>A mudança mais importante para usar o Python é a versão minima requerida. Para Selenium 4 a versão miníma requerida será Python3.7 ou superior.
-Mais detalhes podem ser encontrados aqui:<a href=https://pypi.org/project/selenium/4.0.0/>Python Package Index</a>.
-Para atualizar através da linha de comando, você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.0.0
+Mais detalhes podem ser encontrados aqui:<a href=https://pypi.org/project/selenium/4.4.3/>Python Package Index</a>.
+Para atualizar através da linha de comando, você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.4.3
 </span></span></code></pre></div><h3 id=ruby>Ruby</h3><p>Detalhes para atualizar para o Selenium 4 podem ser vistos aqui:
-<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.0.0>selenium-webdriver</a> gem in RubyGems
+<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.4.0>selenium-webdriver</a> gem in RubyGems
 Para instalar a ultima versão, você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div><p>Para adicioná-lo ao seu Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.0.0&#39;</span>
+</span></span></code></pre></div><p>Para adicioná-lo ao seu Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.4.0&#39;</span>
 </span></span></code></pre></div><h3 id=javascript>JavaScript</h3><p>O pacote selenium-webdriver pode ser encontrado pelo Node package manager,
-<a href=https://www.npmjs.com>npmjs</a>. Selenium 4 pode ser encontrado <a href=https://www.npmjs.com/package/selenium-webdriver/v/4.0.0>aqui</a>.
+<a href=https://www.npmjs.com>npmjs</a>. Selenium 4 pode ser encontrado <a href=https://www.npmjs.com/package/selenium-webdriver/v/4.4.0>aqui</a>.
 Para instalar, você pode executar:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div><p>Ou, atualize o seu package.json e execute <code>npm install</code>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;selenium-tests&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;version&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;1.0.0&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;dependencies&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.0.0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.4.0&#34;</span>
 </span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span>
 </span></span></code></pre></div><h2 id=possíveis-erros-e-mensagens-de-descontinuação>Possíveis erros e mensagens de descontinuação</h2><p>Aqui temos um conjunto de exemplos de código que o ajudarão a superar as mensagens de descontinuação, que você pode
@@ -11365,6 +11365,8 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/Bredda>@Bredda</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/110619?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/cjayswal>@cjayswal</a></label>
+<span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/59066376?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/Dor-bl>@Dor-bl</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/7461869?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bongosway>@bongosway</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/29910324?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11437,8 +11439,6 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/ddavison>@ddavison</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/46810751?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/dbudim>@dbudim</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/59066376?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/Dor-bl>@Dor-bl</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4992944?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/dylanlive>@dylanlive</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/42012866?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>

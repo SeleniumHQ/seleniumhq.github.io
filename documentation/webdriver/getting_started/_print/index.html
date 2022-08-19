@@ -44,7 +44,7 @@ You can see all available versions on
 </span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
 </span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div><p>Gradle 7.0 and above:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
-</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>Installation of Selenium libraries for Python can be done using pip:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>Alternatively you can download the <a href=https://pypi.org/project/selenium/#files>PyPI source archive</a>
 (selenium-x.x.x.tar.gz) and install it using <em>setup.py</em>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
@@ -71,7 +71,7 @@ Add the following section to the file <code>nuget.config</code> if it is empty:<
 You may have to customize <code>nuget.config</code> to meet you needs.</p><p>Now, go back to vscode, press Ctrl-Shift-P, and type &ldquo;NuGet Add Package&rdquo;, and enter the required Selenium packages such as <code>Selenium.WebDriver</code>.
 Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.</p></div></div><div class="tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><div class="my-3 py-2"><p>Installation of Selenium libraries for Ruby can be done using gem:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div><p>Or add it to your <code>Gemfile</code>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rb data-lang=rb><span style=display:flex><span><span style=color:#000>gem</span> <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;~&gt; 4.0&#39;</span>
+</span></span></code></pre></div><p>Or add it to your <code>Gemfile</code>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rb data-lang=rb><span style=display:flex><span><span style=color:#000>gem</span> <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;~&gt; 4.4&#39;</span>
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-4 role=tabpanel aria-labelled-by=tabs-0-4-tab><div class="my-3 py-2"><p>Installation of Selenium libraries for JavaScript can be done using npm:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab><div class="my-3 py-2"><pre><code>Use the Java bindings for Kotlin.
 </code></pre></div></div></div><h2 id=next-step>Next Step</h2><p><a href=/documentation/webdriver/getting_started/install_drivers/>Install the browser drivers</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-a10595dd599468370802ce95ea02456c>2 - Install browser drivers</h1><div class=lead>Setting up your system to allow a browser to be automated.</div><p>Through WebDriver, Selenium supports all major browsers on the market
@@ -953,7 +953,7 @@ most common ones for Java, which are <a href=https://maven.apache.org/>Maven</a>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.0.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>&lt;!-- more dependencies ... --&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependencies&gt;</span>
@@ -985,33 +985,33 @@ repositories {
 dependencies {
     testImplementation &#39;org.junit.jupiter:junit-jupiter-api:5.7.0&#39;
     testRuntimeOnly &#39;org.junit.jupiter:junit-jupiter-engine:5.7.0&#39;
-    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 }
 test {
     useJUnitPlatform()
 }
 </code></pre></p></div></div></div><p>After making the change, you could execute <code>./gradlew clean build</code>
 on the same directory where the <code>build.gradle</code> file is.</p><p>To check all the Java releases, you can head to <a href=https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java>MVNRepository</a>.</p><h3 id=c>C#</h3><p>The place to get updates for Selenium 4 in C# is <a href=https://www.nuget.org/>NuGet</a>. Under the
-<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.0.0><code>Selenium.WebDriver</code></a> package you
+<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.4.0><code>Selenium.WebDriver</code></a> package you
 can get the instructions to update to the latest version. Inside of Visual Studio, through the
-NuGet Package Manager you can execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.0.0
+NuGet Package Manager you can execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.4.0
 </span></span></code></pre></div><h3 id=python>Python</h3><p>The most important change to use Python is the minimum required version. Selenium 4 will
 require a minimum Python 3.7 or higher. More details can be found at the
-<a href=https://pypi.org/project/selenium/4.0.0/>Python Package Index</a>. To upgrade from the
-command line, you can execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.0.0
+<a href=https://pypi.org/project/selenium/4.4.3/>Python Package Index</a>. To upgrade from the
+command line, you can execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.4.3
 </span></span></code></pre></div><h3 id=ruby>Ruby</h3><p>The update details for Selenium 4 can be seen at the
-<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.0.0>selenium-webdriver</a>
+<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.4.0>selenium-webdriver</a>
 gem in RubyGems. To install the latest version, you can execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div><p>To add it to your Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.0.0&#39;</span>
+</span></span></code></pre></div><p>To add it to your Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.4.0&#39;</span>
 </span></span></code></pre></div><h3 id=javascript>JavaScript</h3><p>The selenium-webdriver package can be found at the Node package manager,
 <a href=https://www.npmjs.com>npmjs</a>. Selenium 4 can be found
-<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.0.0>here</a>. To install it, you
+<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.4.0>here</a>. To install it, you
 could either execute:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div><p>Or, update your package.json and run<code> npm install</code>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;selenium-tests&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;version&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;1.0.0&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;dependencies&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.0.0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.4.0&#34;</span>
 </span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span>
 </span></span></code></pre></div><h2 id=potential-errors-and-deprecation-messages>Potential errors and deprecation messages</h2><p>Here is a set of code examples that will help to overcome the deprecation messages you might

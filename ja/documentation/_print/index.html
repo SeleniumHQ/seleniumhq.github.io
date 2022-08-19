@@ -181,7 +181,7 @@ Seleniumは可能な場合これらのサードパーティ製のdriverを使い
 </span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
 </span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div><p>Gradle 7.0 and above:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
-</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>PythonへのSeleniumライブラリのインストールはpipを使います。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>また、<a href=https://pypi.org/project/selenium/#files>PyPI source archive</a>
 (selenium-x.x.x.tar.gz)をダウンロードして、 <em>setup.py</em> でインストールすることもできます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
@@ -1223,7 +1223,7 @@ Javaで最も一般的なものである<a href=https://maven.apache.org/>Maven<
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.0.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>&lt;!-- more dependencies ... --&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependencies&gt;</span>
@@ -1254,29 +1254,29 @@ repositories {
 dependencies {
     testImplementation &#39;org.junit.jupiter:junit-jupiter-api:5.7.0&#39;
     testRuntimeOnly &#39;org.junit.jupiter:junit-jupiter-engine:5.7.0&#39;
-    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 }
 test {
     useJUnitPlatform()
 }
 </code></pre></p></div></div></div><p>変更を加えた後、 <code>build.gradle</code> ファイルと同じディレクトリで <code>./gradlew cleanbuild</code> を実行できます。</p><p>すべてのJavaリリースを確認するには、 <a href=https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java>MVNRepository</a> にアクセスしてください。</p><h3 id=c>C#</h3><p>C#でSelenium4の更新を取得する場所は <a href=https://www.nuget.org/>NuGet</a> です。
-<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.0.0><code>Selenium.WebDriver</code></a> パッケージの下で、最新バージョンに更新するための手順を入手できます。
-Visual Studio内では、NuGetパッケージマネージャーを使用して次の操作を実行できます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.0.0
+<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.4.0><code>Selenium.WebDriver</code></a> パッケージの下で、最新バージョンに更新するための手順を入手できます。
+Visual Studio内では、NuGetパッケージマネージャーを使用して次の操作を実行できます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.4.0
 </span></span></code></pre></div><h3 id=python>Python</h3><p>Pythonを使用するための最も重要な変更は、最低限必要なバージョンです。
 Selenium 4には、Python3.7以降が必要です。
-詳細については、<a href=https://pypi.org/project/selenium/4.0.0/>Python Package Index</a>を参照してください。
-コマンドラインからアップグレードするには、次のコマンドを実行できます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.0.0
-</span></span></code></pre></div><h3 id=ruby>Ruby</h3><p>Selenium 4の更新の詳細は、RubyGemsの<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.0.0>selenium-webdriver</a>で確認できます。
+詳細については、<a href=https://pypi.org/project/selenium/4.4.3/>Python Package Index</a>を参照してください。
+コマンドラインからアップグレードするには、次のコマンドを実行できます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.4.3
+</span></span></code></pre></div><h3 id=ruby>Ruby</h3><p>Selenium 4の更新の詳細は、RubyGemsの<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.4.0>selenium-webdriver</a>で確認できます。
 最新バージョンをインストールするには、次のコマンドを実行できます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div><p>Gemfileには下記のように追加します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.0.0&#39;</span>
+</span></span></code></pre></div><p>Gemfileには下記のように追加します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.4.0&#39;</span>
 </span></span></code></pre></div><h3 id=javascript>JavaScript</h3><p>selenium-webdriverパッケージは、Nodeパッケージマネージャーの<a href=https://www.npmjs.com>npmjs</a>にあります。
-Selenium4は<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.0.0>here</a>にあります。
+Selenium4は<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.4.0>here</a>にあります。
 これをインストールするには、次のいずれかを実行します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div><p>または、package.jsonを更新して、 <code>npm install</code> を実行します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;selenium-tests&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;version&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;1.0.0&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;dependencies&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.0.0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#4e9a06>&#34;^4.4.0&#34;</span>
 </span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span>
 </span></span></code></pre></div><h2 id=潜在的なエラーと非推奨メッセージ>潜在的なエラーと非推奨メッセージ</h2><p>これは、Selenium4にアップグレードした後に発生する可能性のある非推奨メッセージを克服するのに役立つ一連のコード例です。</p><h3 id=java-1>Java</h3><h4 id=待機とタイムアウト>待機とタイムアウト</h4><p>タイムアウトで受信するパラメーターは、期待値 <code>(long time, TimeUnit unit)</code> から期待値 <code>(Duration duration)</code> に替わりました。</p><div class="card-deck mb-4"><div class="card mb-4"><div class=card-header>Before</div><div class=card-body><p class=card-text><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>manage</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>timeouts</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>implicitlyWait</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>10</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>TimeUnit</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>SECONDS</span><span style=color:#ce5c00;font-weight:700>);</span>
@@ -10399,6 +10399,8 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 <label><a href=https://github.com/Bredda>@Bredda</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/110619?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/cjayswal>@cjayswal</a></label>
+<span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/59066376?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/Dor-bl>@Dor-bl</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/7461869?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bongosway>@bongosway</a></label>
 <span class=contributions>2 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/29910324?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -10471,8 +10473,6 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 <label><a href=https://github.com/ddavison>@ddavison</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/46810751?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/dbudim>@dbudim</a></label>
-<span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/59066376?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/Dor-bl>@Dor-bl</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4992944?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/dylanlive>@dylanlive</a></label>
 <span class=contributions>1 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/42012866?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>

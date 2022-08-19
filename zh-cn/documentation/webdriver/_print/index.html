@@ -40,7 +40,7 @@ Selenium 在可能的情况下使用这些第三方驱动程序，
 </span></span></code></pre></div><p>For Gradle, add the <em>selenium-java</em> dependency in your project <code>build.gradle</code> file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
 </span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div><p>Gradle 7.0 and above:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
-</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.0.0&#39;
+</span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div></div></div><div class="tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><div class="my-3 py-2"><p>可以使用 pip 安装 Python 的 Selenium 库：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>或者，您也可以下载 <a href=https://pypi.org/project/selenium/#files>PyPI source archive</a>
 (selenium-x.x.x.tar.gz) 并使用 <em>setup.py</em> 进行安装：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
@@ -996,7 +996,7 @@ safaridriver是随操作系统一起安装的.
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;dependency&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;groupId&gt;</span>org.seleniumhq.selenium<span style=color:#204a87;font-weight:700>&lt;/groupId&gt;</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;artifactId&gt;</span>selenium-java<span style=color:#204a87;font-weight:700>&lt;/artifactId&gt;</span>
-</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.0.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>&lt;version&gt;</span>4.4.0<span style=color:#204a87;font-weight:700>&lt;/version&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&lt;/dependency&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>&lt;!-- more dependencies ... --&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>&lt;/dependencies&gt;</span>
@@ -1029,7 +1029,7 @@ repositories {
 dependencies {
     testImplementation &#39;org.junit.jupiter: junit-jupiter-api: 5.7.0&#39;
     testRuntimeOnly &#39;org.junit.jupiter: junit-jupiter-engine: 5.7.0&#39;
-    implementation group:  &#39;org.seleniumhq.selenium&#39;, name:  &#39;selenium-java&#39;, version:  &#39;4.0.0&#39;
+    implementation group:  &#39;org.seleniumhq.selenium&#39;, name:  &#39;selenium-java&#39;, version:  &#39;4.4.0&#39;
 }
 test {
     useJUnitPlatform()
@@ -1040,26 +1040,26 @@ test {
 您可以前往
 <a href=https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java>MVNRepository</a> .</p><h3 id=c>C#</h3><p>在 C# 中获取 Selenium 4 更新的
 地方是 <a href=https://www.nuget.org/>NuGet</a> .<br>在下面包
-<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.0.0><code>Selenium.WebDriver</code></a>
+<a href=https://www.nuget.org/packages/Selenium.WebDriver/4.4.0><code>Selenium.WebDriver</code></a>
 你可以获得更新到最新版本的说明.<br>在 Visual Studio 内部,
-您可以通过 NuGet 包管理器执行：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.0.0
+您可以通过 NuGet 包管理器执行：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>PM&gt; Install-Package Selenium.WebDriver -Version 4.4.0
 </span></span></code></pre></div><h3 id=python>Python</h3><p>使用 Python 的最重要变化是所需的最低版本.
 Selenium 4 将至少需要 Python 3.7 或更高版本.<br>更多详细信息可以在
-<a href=https://pypi.org/project/selenium/4.0.0/>Python 包索引</a> .<br>基于命令行做升级的话, 你可以执行:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.0.0
+<a href=https://pypi.org/project/selenium/4.4.3/>Python 包索引</a> .<br>基于命令行做升级的话, 你可以执行:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install <span style=color:#000>selenium</span><span style=color:#ce5c00;font-weight:700>==</span>4.4.3
 </span></span></code></pre></div><h3 id=ruby>Ruby</h3><p>Selenium 4 的更新细节
 可以在RubyGems中的gem发现
-<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.0.0>selenium-webdriver</a> .<br>要安装最新版本,
+<a href=https://rubygems.org/gems/selenium-webdriver/versions/4.4.0>selenium-webdriver</a> .<br>要安装最新版本,
 您可以执行:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div><p>将以下内容添加到你的Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.0.0&#39;</span>
+</span></span></code></pre></div><p>将以下内容添加到你的Gemfile:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem <span style=color:#4e9a06>&#39;selenium-webdriver&#39;</span>, <span style=color:#4e9a06>&#39;~&gt; 4.4.0&#39;</span>
 </span></span></code></pre></div><h3 id=javascript>JavaScript</h3><p>可以在 Node 包管理器中找到 selenium-webdriver 包,
 <a href=https://www.npmjs.com>npmjs</a> .<br>Selenium 4 可以在
-<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.0.0>这里</a> 找到.<br>要安装, 你可以执行:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
+<a href=https://www.npmjs.com/package/selenium-webdriver/v/4.4.0>这里</a> 找到.<br>要安装, 你可以执行:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
 </span></span></code></pre></div><p>或者, 更新你的 package.json
 并运行 <code>npm install</code> :</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#000;font-weight:700>:</span>  <span style=color:#4e9a06>&#34;selenium-tests&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;version&#34;</span><span style=color:#000;font-weight:700>:</span>  <span style=color:#4e9a06>&#34;1.0.0&#34;</span><span style=color:#000;font-weight:700>,</span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>&#34;dependencies&#34;</span><span style=color:#000;font-weight:700>:</span>  <span style=color:#000;font-weight:700>{</span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span>  <span style=color:#4e9a06>&#34;^4.0.0&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>&#34;selenium-webdriver&#34;</span><span style=color:#000;font-weight:700>:</span>  <span style=color:#4e9a06>&#34;^4.4.0&#34;</span>
 </span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>}</span>
 </span></span></code></pre></div><h2 id=潜在错误和弃用消息>潜在错误和弃用消息</h2><p>这是一组代码示例,
