@@ -48,19 +48,19 @@ This is otherwise known as "clicking":
 
 {{< tabpane disableCodeBlock=true height="4" >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
+        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L24-L27" >}}
+        {{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L24-L27" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
+        {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L22-L25" >}}
+        {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L22-L25" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndRelease.spec.js#L16-L18" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -83,19 +83,19 @@ This is otherwise known as "right-clicking":
 
 {{< tabpane disableCodeBlock=true height="4" >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
+        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_mouse.py#L35-L38" >}}
+        {{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L35-L38" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
+        {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/mouse_spec.rb#L34-L37" >}}
+        {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L16-L18" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
