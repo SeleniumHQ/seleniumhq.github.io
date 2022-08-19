@@ -2,7 +2,7 @@ const {By} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 
 suite(function(env) {
-  describe('Click and release', function() {
+  describe('Right click', function() {
     let driver;
 
     before(async function() {
@@ -11,11 +11,11 @@ suite(function(env) {
 
     after(() => driver.quit());
 
-    it('Mouse move and click on an element', async function() {
+    it('Mouse move and right click on an element', async function() {
         await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');        
-        let click = driver.findElement(By.id("click"));
+        let clickable = driver.findElement(By.id("clickable"));
         const actions = driver.actions({async: true});        
-        await actions.move({origin:click}).click().perform();
+        await actions.move({origin:clickable}).contextClick().perform();
     });
 
   });
