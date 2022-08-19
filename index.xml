@@ -1,4 +1,171 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Scaling a Kubernetes Selenium Grid with KEDA</title><link>/blog/2022/scaling-grid-with-keda/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/scaling-grid-with-keda/</guid><description>
+&lt;h2 id="the-issue">The Issue&lt;/h2>
+&lt;p>If you have any experience with Selenium Grid and Kubernetes you will probably
+run into an issue with scaling. Kubernetes (K8S) works wonders for scaling up and
+down applications based on their CPU and Memory usage, but it is not so
+straightforward when it comes down to applications like Selenium Grid.&lt;/p>
+&lt;p>The issue is described quite well in &lt;a href="https://sahajamit.medium.com/spinning-up-your-own-auto-scalable-selenium-grid-in-kubernetes-part-2-15b11f228ed8">this blog post&lt;/a>.
+But in short, the Horizontal Pod AutoScaler (HPA) that is built into
+Kubernetes checks (by default) for resource consumption to determine
+if a deployment needs to be scaled up or down. This becomes an issue
+for Selenium Grid for a couple reasons:&lt;/p>
+&lt;ol>
+&lt;li>The browser pods use a variable amount of resources depending on
+the demand of the current test. This means that all your browser pods
+may be in use but there isn&amp;rsquo;t enough CPU usage for the HPA to decide
+that a scale-up is needed, leaving tests waiting in the queue unnecessarily.&lt;/li>
+&lt;li>When Kubernetes decides to scale down a deployment it does so
+(for the most part) at random. You could have 10 tests running on
+20 pods and need to scale down. More than likely at least one of
+the pods asked to terminate will still have a test running, resulting
+in connection failures.&lt;/li>
+&lt;/ol>
+&lt;h2 id="how-keda-helps">How KEDA Helps&lt;/h2>
+&lt;p>&lt;a href="https://keda.sh/">KEDA&lt;/a> is a &lt;strong>free and open-source&lt;/strong> Kubernetes
+event-driven autoscaling solution that extends the feature set of
+K8S&amp;rsquo; HPA. This is done via plugins written by the community that
+feed KEDA&amp;rsquo;s metrics server with the information it needs to scale
+specific deployments up and down.&lt;/p>
+&lt;p>Specifically for Selenium Grid, we have a &lt;a href="https://keda.sh/docs/latest/scalers/selenium-grid-scaler/">plugin&lt;/a>
+that will tie into our grid to get the information it needs. Example of the used trigger:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">triggers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-grid&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">url&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;http://selenium-grid-url-or-ip:4444/graphql&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">browserName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;chrome&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of this gets saved as a Scaled-Object like so:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">apiVersion&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">keda.sh/v1alpha1&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">kind&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">ScaledObject&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-scaledobject&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">namespace&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">&amp;lt;namespace of your browser pods&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">labels&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">deploymentName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-node-deployment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">minReplicaCount&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">maxReplicaCount&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">80&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scaleTargetRef&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-node-deployment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">triggers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-grid&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">url&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium-grid-url-or-ip:4444/graphql&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">browserName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;chrome&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As an added bonus KEDA allows us to scale our deployments down to
+0 when there is no use, something the normal out-of-the-box HPA
+does not allow.&lt;/p>
+&lt;p>Check more details at &lt;a href="https://keda.sh/docs/latest/concepts/scaling-deployments/">the documentation for Scaled-Object in KEDA&lt;/a>.&lt;/p>
+&lt;p>A full example of how to implement this is further down in the article
+but KEDA solves one of our two issues. Now we can properly scale up and
+down based on the actual load on the Selenium Grid. Unfortunately scaling
+down still results in the likely possibility that a pod is still running
+a test and is told to terminate before it can finish.&lt;/p>
+&lt;h2 id="using-prestop-and-drain">Using PreStop and Drain&lt;/h2>
+&lt;p>To combat this we are going to use a combination of K8s
+&lt;a href="https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks">PreStop&lt;/a>
+and Selenium Grid&amp;rsquo;s &lt;a href="https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain-node">Drain&lt;/a>
+functionality.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>PreStop&lt;/code> allows us to set a command or chain of commands that is run to completion before the container is told to stop.&lt;/li>
+&lt;li>Drain tells the selenium browser pod to finish its current test and then shut down.&lt;/li>
+&lt;/ul>
+&lt;p>Together these look like so in our browser pod yaml:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">template&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">terminationGracePeriodSeconds&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">3600&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">...&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">...&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">containers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">lifecycle&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">preStop&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">exec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;/bin/sh&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;-c&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;curl --request POST &amp;#39;localhost:5555/se/grid/node/drain&amp;#39; --header &amp;#39;X-REGISTRATION-SECRET;&amp;#39;; tail --pid=$(pgrep -f &amp;#39;[n]ode --bind-host false --config /opt/selenium/config.toml&amp;#39;) -f /dev/null; sleep 30s&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="breaking-this-down">Breaking this down&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>terminationGracePeriodSeconds&lt;/code> is set to however long you wish to give your
+pods to gracefully terminate before being forced. In this case I give the pods
+60 minutes to finish their test when asked to terminate. If you are also scaling
+your cluster nodes as a part of this you may need to increase the termination
+grace period for your cluster nodes as well.&lt;/li>
+&lt;li>When the pod is told to stop, the &lt;code>PreStop&lt;/code> command is ran first.&lt;/li>
+&lt;li>We curl the &lt;code>localhost&lt;/code> of our pod to tell it to drain. The pod will no
+longer accept new session requests and will finish its current test. More
+information on this &lt;a href="https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain">can be found in the Selenium Grid documentation&lt;/a>.&lt;/li>
+&lt;li>We then tail the internal node process that will continue to run until the node has been drained.&lt;/li>
+&lt;li>After this we give the pod 30 seconds to finish anything else before giving the full termination command.&lt;/li>
+&lt;/ul>
+&lt;p>And with that our application can now safely scale down our selenium browser deployments!&lt;/p>
+&lt;h2 id="from-start-to-finish">From Start to Finish&lt;/h2>
+&lt;h3 id="install-keda">Install KEDA&lt;/h3>
+&lt;ul>
+&lt;li>You need to use version 2.8.0 or later, you can find the latest version number at the
+&lt;a href="https://keda.sh/docs/latest/scalers/selenium-grid-scaler/">Selenium Grid Scaler docs&lt;/a>.&lt;/li>
+&lt;li>&lt;code>kubectl apply -f https://github.com/kedacore/keda/releases/download/&amp;lt;Version_Number_Here&amp;gt;/keda-&amp;lt;Version_Number_Here&amp;gt;.yaml&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="create-and-apply-your-scaled-objects">Create and apply your scaled object(s)&lt;/h3>
+&lt;p>As described earlier your &lt;a href="https://keda.sh/docs/latest/scalers/selenium-grid-scaler/">scaled object&lt;/a> will look like so:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">apiVersion&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">keda.sh/v1alpha1&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">kind&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">ScaledObject&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-scaledobject&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">namespace&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">&amp;lt;namespace of your browser pods&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">labels&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">deploymentName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-node-deployment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">minReplicaCount&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">maxReplicaCount&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">80&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">scaleTargetRef&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-chrome-node-deployment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">triggers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-grid&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">url&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium-grid-url-or-ip:4444/graphql&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">browserName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;chrome&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will need one of these for every browser you wish to scale.&lt;/p>
+&lt;p>Things to edit:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>namespace&lt;/code> should be the namespace that your selenium browser pods exist in&lt;/li>
+&lt;li>&lt;code>deploymentName&lt;/code> are the name of your browser deployment&lt;/li>
+&lt;li>&lt;code>name&lt;/code> (within spec) is also the name of your browser deployment&lt;/li>
+&lt;li>&lt;code>url&lt;/code> is the url of your selenium grid&lt;/li>
+&lt;li>&lt;code>browserName&lt;/code> is the name of the browser you are using&lt;/li>
+&lt;li>&lt;code>minReplicaCount&lt;/code> and &lt;code>maxReplicaCount&lt;/code> are the min and maximum pod count you want to have&lt;/li>
+&lt;/ol>
+&lt;p>If you plan to scale with Edge you will need at least version &lt;code>2.8.0&lt;/code> of KEDA and will
+need to include &lt;code>sessionBrowserName&lt;/code> as well in the trigger metadata:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">triggers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">selenium-grid&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">url&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium-grid-url-or-ip:4444/graphql&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">browserName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;MicrosoftEdge&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">sessionBrowserName&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#39;msedge&amp;#39;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is due to a name change between the Edge sessions in the queue and the active
+sessions and is &lt;a href="https://github.com/kedacore/keda/pull/3062">addressed through this pull request&lt;/a>.&lt;/p>
+&lt;p>Once you have that ready just save it as a yaml file and apply with:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>kubectl apply -f ./&amp;lt;scaled-object-file-name&amp;gt;.yaml --namespace=&amp;lt;browser_namespace&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="add-prestop-commands-to-your-browser-pods">Add PreStop commands to your browser pods&lt;/h3>
+&lt;ol>
+&lt;li>Set your &lt;code>terminationGracePeriodSeconds&lt;/code> of your deployment to whatever the maximum
+time you wish to give the pods in order to terminate gracefully. Again you may need to
+also increase the grace period for your nodepool as well which will vary depending on
+your K8s provider.&lt;/li>
+&lt;li>Add the &lt;code>PreStop&lt;/code> command to the container lifecycle spec:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">template&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">spec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">terminationGracePeriodSeconds&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#0000cf;font-weight:bold">3600&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">...&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">...&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">containers&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">lifecycle&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">preStop&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">exec&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">command&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;/bin/sh&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;-c&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;curl --request POST &amp;#39;localhost:5555/se/grid/node/drain&amp;#39; --header &amp;#39;X-REGISTRATION-SECRET;&amp;#39;; tail --pid=$(pgrep -f &amp;#39;[n]ode --bind-host false --config /opt/selenium/config.toml&amp;#39;) -f /dev/null; sleep 30s&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That is it, your Selenium Grid pods should now scale up and down properly without any lost sessions!&lt;/p></description></item><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.4.0. We&amp;rsquo;re shipping
 this for Java, .Net, Python, Ruby, and JavaScript, so if you&amp;rsquo;re using any
 of those languages, go and grab it from your package manager of choice!&lt;/p>
@@ -6581,228 +6748,4 @@ I can reach out to him&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">selenium-webdriver 4.0.0.alpha6 has just been released. The biggest change is an experimental support for Chrome DevTools protocol! Read more in changelog &lt;a href="https://t.co/1l2XYkaEfB">https://t.co/1l2XYkaEfB&lt;/a>.&lt;a href="https://twitter.com/hashtag/selenium?src=hash&amp;amp;ref_src=twsrc%5Etfw">#selenium&lt;/a> &lt;a href="https://twitter.com/hashtag/ruby?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ruby&lt;/a> &lt;a href="https://twitter.com/hashtag/devtools?src=hash&amp;amp;ref_src=twsrc%5Etfw">#devtools&lt;/a>&lt;/p>&amp;mdash; Alex Rodionov (@p0deje) &lt;a href="https://twitter.com/p0deje/status/1266144106885111814?ref_src=twsrc%5Etfw">May 28, 2020&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;/p>
-&lt;p>Happy hacking!&lt;/p></description></item><item><title>Blog: Public Project Meeting - May 07, 2020</title><link>/blog/2020/public-project-meeting-20200507/</link><pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200507/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on May 07, 2020 (times are on IST).&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;p>The next meeting will be on May 21, 2020, 4:30 PM CET.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>adamgoucher 8:00 PM&lt;/em>&lt;/p>
-&lt;p>alright. welcome back. time for another fortnightly chat about the project.&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:01 PM&lt;/em>&lt;/p>
-&lt;p>:wave:&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:01 PM&lt;/em>&lt;/p>
-&lt;p>:wave:&lt;/p>
-&lt;p>&lt;em>Sri Harsha 8:01 PM&lt;/em>&lt;/p>
-&lt;p>:wave:&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:02 PM&lt;/em>&lt;/p>
-&lt;p>some general project statistics;
-open issues: 391
-open pull request: 68
-(which is the lowest i think ive seen either of those numbers before)&lt;/p>
-&lt;p>&lt;em>8:03&lt;/em>&lt;/p>
-&lt;p>agenda wise, this is going to be more loosey-goosey than normal as i’m swamped with day job so ignoring things. we’ll see is that is a good thing or not.&lt;/p>
-&lt;p>&lt;em>8:03&lt;/em>&lt;/p>
-&lt;p>any overall announcements? new people on committees, have the commit bit, etc?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:04 PM&lt;/em>&lt;/p>
-&lt;p>I’ve landed the update to OpenTracing, which unblocks me&lt;/p>
-&lt;p>&lt;em>8:04&lt;/em>&lt;/p>
-&lt;p>Next step is to wire the tracing into the Docker support
-And then pick up the websocket forwarding&lt;/p>
-&lt;p>&lt;em>8:05&lt;/em>&lt;/p>
-&lt;p>(Which, to be fair, is “mostly done”)&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:05 PM&lt;/em>&lt;/p>
-&lt;p>heh. the last 20% takes the other 80% of the time :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:05 PM&lt;/em>&lt;/p>
-&lt;p>The Pareto Principle in action&lt;/p>
-&lt;p>&lt;em>8:06&lt;/em>&lt;/p>
-&lt;p>I’d be happy pushing a6 before the next meeting&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:06 PM&lt;/em>&lt;/p>
-&lt;p>what do we think is missing from a6 now?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:06 PM&lt;/em>&lt;/p>
-&lt;p>It’s been a while since we did a release, and there’s progress in there&lt;/p>
-&lt;p>&lt;em>8:07&lt;/em>&lt;/p>
-&lt;p>I’d dearly love the websocket forwarding, but I can live without it
-@diemol landed the first work with Fail Safe for some more robustness in the Grid&lt;/p>
-&lt;p>&lt;em>8:08&lt;/em>&lt;/p>
-&lt;p>I think @barancev is also making some progress switching the underlying HTTP engine again&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:08 PM&lt;/em>&lt;/p>
-&lt;p>looks like there was a bunch of plumbing / dependencies updated in the last week especially with .net and python&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:08 PM&lt;/em>&lt;/p>
-&lt;p>@jimevans and @AutomatedTester know more than I do&lt;/p>
-&lt;p>&lt;em>Jim Evans 8:10 PM&lt;/em>&lt;/p>
-&lt;p>yes, the .NET bindings build using bazel should now work cross-platform. you should be able to run .NET tests using bazel test (with caveats, which i’ve yet to fully document). it kinda works within VS code, but one can for certain develop using Visual Studio 2019 on Windows, and Visual Studio for Mac on MacOS.&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:11 PM&lt;/em>
-(still breaks my head to write .net code on mac)&lt;/p>
-&lt;p>&lt;em>8:11&lt;/em>&lt;/p>
-&lt;p>what more was needed for the http engine stuff? i thought there was a flag in there already?&lt;/p>
-&lt;p>&lt;em>8:12&lt;/em>&lt;/p>
-&lt;p>or did we change it again, again&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:13 PM&lt;/em>&lt;/p>
-&lt;p>The underlying library didn’t support http/2 or unix domain sockets, despite it being possible&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:14 PM&lt;/em>&lt;/p>
-&lt;p>so do we want/need to wait for that work to be done-ish before doing a6? so far that sounds like the only thing that will be confusing to release partially implemented&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:14 PM&lt;/em>&lt;/p>
-&lt;p>Nah.&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:15 PM&lt;/em>&lt;/p>
-&lt;p>scans commits in another window&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:15 PM&lt;/em>&lt;/p>
-&lt;p>As long as it’s in before we start on the betas, we’ll be fine&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:15 PM&lt;/em>&lt;/p>
-&lt;p>a question i know we dont have an answer for, but do we have a gut feel for how many more a’s there are before we start the b’s?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:16 PM&lt;/em>&lt;/p>
-&lt;p>The major outstanding features are:
-websocket forwarding
-graph-ql support&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:16 PM&lt;/em>&lt;/p>
-&lt;p>thats not that horrid of a list. its been much worse&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:17 PM&lt;/em>&lt;/p>
-&lt;p>We’ve been chipping away at it&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:18 PM&lt;/em>&lt;/p>
-&lt;p>so if a6 is within the next 2 weeks, do we have a trigger condition for releasing it?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:18 PM&lt;/em>&lt;/p>
-&lt;p>No trigger condition&lt;/p>
-&lt;p>&lt;em>8:18&lt;/em>&lt;/p>
-&lt;p>Other than “someone updates the changelog”, I guess&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:19 PM&lt;/em>&lt;/p>
-&lt;p>do we want to say ‘a6 is next tuesday’ so that all the maintainers are ready to build and tag everything? (feel like we can’t magically do it all from ci but could be making that up)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:20 PM&lt;/em>&lt;/p>
-&lt;p>The graphql piece is to support the ui, so strictly speaking we don’t really need it, but it keeps things flexible&lt;/p>
-&lt;p>&lt;em>8:20&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester, @p0deje, @jimevans, @titusfortner, @harsha509 Cool with shipping an alpha next week?&lt;/p>
-&lt;p>&lt;em>Jim Evans 8:21 PM&lt;/em>&lt;/p>
-&lt;p>+1 from me.&lt;/p>
-&lt;p>&lt;em>Sri Harsha 8:21 PM&lt;/em>&lt;/p>
-&lt;p>Yes&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:22 PM&lt;/em>&lt;/p>
-&lt;p>how are we handling the numbers in JS, JS is already in a7, right?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:22 PM&lt;/em>&lt;/p>
-&lt;p>“alpha-n+1”&lt;/p>
-&lt;p>&lt;em>Sri Harsha 8:22 PM&lt;/em>&lt;/p>
-&lt;p>Yes @diemol . Do you have any suggestions @corevo . He should be releasing the next alpha as i know.&lt;/p>
-&lt;p>&lt;em>Alex Rodionov 8:23 PM&lt;/em>&lt;/p>
-&lt;p>+1 from me&lt;/p>
-&lt;p>&lt;em>Tomer Steinfeld 8:25 PM&lt;/em>&lt;/p>
-&lt;p>JS has been in alpha for a long time because of historical reasons&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:25 PM&lt;/em>&lt;/p>
-&lt;p>ok. so thats covers the bulk of the pressing tech stuff. other stuff that could be discussed;
-when is the next sfc call? (if its happened in the last two weeks, anything to report)
-did anyone pick up the ball to talk to miki about the go bindings?
-seconf india
-seconf us
-state of the se-ide into the main repo&lt;/p>
-&lt;p>&lt;em>Tomer Steinfeld 8:25 PM&lt;/em>&lt;/p>
-&lt;p>I think we can land stable 4.0 together, but I don&amp;rsquo;t see a reason we should release 4 alphas together&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:26 PM&lt;/em>&lt;/p>
-&lt;p>(or we can keep talking about js too. but that list is just my remaining things)&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:26 PM&lt;/em>&lt;/p>
-&lt;p>the PLC call happened on Tuesday, it was just me and Jim. We mostly talked about conferences, and we were going to follow up with Simon about the status of the Code of Conduct&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:27 PM&lt;/em>&lt;/p>
-&lt;p>Uhh… I thought @AutomatedTester was running with the CoC stuff.&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:27 PM&lt;/em>&lt;/p>
-&lt;p>at this point India is still slated to happen in September, same venue. I don&amp;rsquo;t know the latest about speakers or progress or anything like that&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:27 PM&lt;/em>&lt;/p>
-&lt;p>It’s entirely possible I am mistaken&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:27 PM&lt;/em>&lt;/p>
-&lt;p>i thought david was on that too&lt;/p>
-&lt;p>&lt;em>Tomer Steinfeld 8:27 PM&lt;/em>&lt;/p>
-&lt;p>Is there an update from the SFC about the MS store?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:28 PM&lt;/em>&lt;/p>
-&lt;p>ok, I thought David was on the MS Store issue, and not the CoC, but it wouldn&amp;rsquo;t be the first time I was mistaken&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:28 PM&lt;/em>&lt;/p>
-&lt;p>why don&amp;rsquo;t we take the CoC draft we have, add it to the new site, and iterate on it?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:28 PM&lt;/em>&lt;/p>
-&lt;p>We were going to get a review and some guidance from Sage Sharp&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:29 PM&lt;/em>&lt;/p>
-&lt;p>for Chicago, we&amp;rsquo;ve got a verbal understanding that the venue will allow us to reschedule the conference for sometime next year with no fees. We&amp;rsquo;ve already given them a somewhat hefty deposit, and while we could likely fight to get that back, we&amp;rsquo;d rather just have it next April or October&amp;ndash;we&amp;rsquo;re going to make that decision in late May/early June&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:30 PM&lt;/em>&lt;/p>
-&lt;p>for the SeleniumConf website, @andrewmkrug has joined the Selenium GitHub org, and he is helping us to push the site code to a private repo&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:30 PM&lt;/em>&lt;/p>
-&lt;p>for the Fall, we&amp;rsquo;re considering an online-only conference, and we&amp;rsquo;re waiting for a few pieces of data to come in over the next couple weeks, around TestBash and SauceCon, to gauge how they went, ideas for optimization, pros/cons, do&amp;rsquo;s don&amp;rsquo;t&amp;rsquo;s, etc&lt;/p>
-&lt;p>&lt;em>Andrew Krug 8:30 PM&lt;/em>&lt;/p>
-&lt;p>was added to #selenium-tlc by Diego Molina.&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:32 PM&lt;/em>&lt;/p>
-&lt;p>I spoke to Deb (from SFC) quite a bit on Friday about tips and pointers for an online-only conference, and I&amp;rsquo;ve started to develop some opinions for how it should be done. I haven&amp;rsquo;t yet, however, come up with a firm position on the pricing model for sponsors or attendees&amp;ndash;I definitely want to offer all the track sessions/keynotes for free, and offer a paid tier for &amp;ldquo;something&amp;rdquo; else, like if people want T-shirts or something else, but it would likely be a model where they pay what they want (to support the project), and the swag they get depends on the tier they buy into&lt;/p>
-&lt;p>&lt;em>8:33&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m waiting to hear more from Richard Bradshaw before beginning that discussion, probably during our bi-weekly Conference conference call, on May 28th&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:35 PM&lt;/em>&lt;/p>
-&lt;p>so. CoC — when can we get the review and guidance? if its more than ‘not in may’ we should likely throw it up and start the iteration process&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:36 PM&lt;/em>&lt;/p>
-&lt;p>It depends on Sage’s availability, and that of the people working on the CoC&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:37 PM&lt;/em>&lt;/p>
-&lt;p>(which, sounds like we’re not quite sure of who those are from our end)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:37 PM&lt;/em>&lt;/p>
-&lt;p>Last I checked, @mmerrell, @AutomatedTester, @diemol, @jimevans and I were all interested in being involved&lt;/p>
-&lt;p>&lt;em>8:38&lt;/em>&lt;/p>
-&lt;p>From memory.&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:38 PM&lt;/em>&lt;/p>
-&lt;p>so the nebulous items seem to be;
-determine who is actually on the coc stuff&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:38 PM&lt;/em>&lt;/p>
-&lt;p>Agreed&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:38 PM&lt;/em>&lt;/p>
-&lt;p>doh! no editing. and,
-determine who is actually doing the ms store stuff&lt;/p>
-&lt;p>&lt;em>8:40&lt;/em>&lt;/p>
-&lt;p>which means, for the next meeting;&lt;/p>
-&lt;ul>
-&lt;li>release a6 (a7 of js)&lt;/li>
-&lt;li>report who is point and who is assisting with the CoC&lt;/li>
-&lt;li>report who is leading the ms store stuff&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>8:41&lt;/em>&lt;/p>
-&lt;p>anyone else have anything they want / need to discuss in public?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:41 PM&lt;/em>&lt;/p>
-&lt;p>I’m good&lt;/p>
-&lt;p>&lt;em>8:41&lt;/em>&lt;/p>
-&lt;p>Though perhaps we should figure out who owns what on that list
-I hold the build bacon this time&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:42 PM&lt;/em>&lt;/p>
-&lt;p>maybe we can record how a release is done? and from that I can write docs&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:43 PM&lt;/em>&lt;/p>
-&lt;p>I’ll walk you through the process
-We did have it written up here: &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/Releasing-Selenium">https://github.com/SeleniumHQ/selenium/wiki/Releasing-Selenium&lt;/a>&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:43 PM&lt;/em>&lt;/p>
-&lt;p>from the april 23 meeting, looks like @AutomatedTester is the store person
-Screen Shot 2020-05-07 at 11.12.57 AM.png
-Screen Shot 2020-05-07 at 11.12.57 AM.png&lt;/p>
-&lt;p>&lt;em>David Burns 2 days ago&lt;/em>&lt;/p>
-&lt;p>I am waiting on replies from SFC. I chased up yesterday. Have meeting with MS next week&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:45 PM&lt;/em>&lt;/p>
-&lt;p>anyone volunteering for CoC lead?&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:46 PM&lt;/em>&lt;/p>
-&lt;p>ah nice, the release process is written, we &amp;ldquo;just&amp;rdquo; need to update it&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:46 PM&lt;/em>&lt;/p>
-&lt;p>The java one doesn’t seem wildly inaccurate&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:48 PM&lt;/em>&lt;/p>
-&lt;p>which means, for the next meeting;&lt;/p>
-&lt;ul>
-&lt;li>release a6 (a7 of js) &amp;ndash; simon&lt;/li>
-&lt;li>report who is point and who is assisting with the CoC &amp;ndash; tbd&lt;/li>
-&lt;li>report who is leading the ms store stuff - david?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Alexei Barantsev 8:49 PM&lt;/em>&lt;/p>
-&lt;p>sorry to be late, I&amp;rsquo;m +1 for the next alpha&lt;/p>
-&lt;p>&lt;em>adamgoucher 8:50 PM&lt;/em>&lt;/p>
-&lt;p>so if there isnt anything else, i say we call this thing done and do it all again in a fortnight.&lt;/p>
-&lt;p>&lt;em>8:52&lt;/em>&lt;/p>
-&lt;p>slack says no one is furiously typing so, see all y’all in two weeks. as ever, if there is something you want discussed, message me directly or just drop it here for us to pickup&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:53 PM&lt;/em>&lt;/p>
-&lt;p>thank you @adamgoucher!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:54 PM&lt;/em>&lt;/p>
-&lt;p>Thanks, @adamgoucher!&lt;/p>
-&lt;p>&lt;em>David Burns 9:24 PM&lt;/em>&lt;/p>
-&lt;p>Argh&amp;hellip; missed it again!!!&lt;/p>
-&lt;p>&lt;em>9:28&lt;/em>&lt;/p>
-&lt;p>For CoC, I keep dropping the ball on this one. I have been busy with work but hopefully can do something in the next two weeks&lt;/p></description></item></channel></rss>
+&lt;p>Happy hacking!&lt;/p></description></item></channel></rss>
