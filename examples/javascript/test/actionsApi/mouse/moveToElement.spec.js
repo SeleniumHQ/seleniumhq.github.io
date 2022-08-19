@@ -12,15 +12,10 @@ suite(function(env) {
     after(() => driver.quit());
 
     it('Mouse move into an element', async function() {
-        // Navigate to Url
-        await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
-
-        // Store 'Gmail' anchor web element
-        let gmailLink = driver.findElement(By.tagName("button"));
+        await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
+        let hoverable = driver.findElement(By.id("hover"));
         const actions = driver.actions({ async: true });
-
-        // Performs mouse move action onto the element
-        await actions.move({ origin: gmailLink }).perform();
+        await actions.move({ origin: hoverable }).perform();
     });
 
   });
