@@ -72,7 +72,7 @@ suite(function(env) {
 
             var textField = await driver.findElement(By.id('textInput'))
 
-            var cmdCtrl = platform.includes('win') ? Key.CONTROL : Key.COMMAND
+            var cmdCtrl = platform.includes('darwin') ? Key.COMMAND : Key.CONTROL
 
             await driver.actions()
                 .click(textField)
