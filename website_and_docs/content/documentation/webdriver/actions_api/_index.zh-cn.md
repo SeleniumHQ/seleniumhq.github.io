@@ -60,7 +60,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -93,7 +93,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
