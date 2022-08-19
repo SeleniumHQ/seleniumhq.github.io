@@ -39,7 +39,7 @@ Gradle 7.0 and above:
 
 ```text
 dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
   {{< /tab >}}

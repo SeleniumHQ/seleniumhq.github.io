@@ -45,7 +45,7 @@ Gradle 7.0 and above:
 
 ```text
 dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
 
@@ -118,7 +118,7 @@ gem install selenium-webdriver
 Or add it to your `Gemfile`:
 
 ```rb
-gem 'selenium-webdriver', '~> 4.0'
+gem 'selenium-webdriver', '~> 4.4'
 ```
 
   {{< /tab >}}
