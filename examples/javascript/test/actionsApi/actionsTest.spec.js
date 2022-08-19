@@ -15,9 +15,9 @@ suite(function(env) {
         it('Pause', async function() {
             await driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
-            var clickable = await driver.findElement(By.id('clickable'))
             const start = Date.now()
 
+            var clickable = await driver.findElement(By.id('clickable'))
             await driver.actions()
                 .move({ origin: clickable })
                 .pause(1000)
