@@ -34,7 +34,7 @@ This is useful for focusing a specific element:
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L11-L14" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndHold.spec.js#L9-L12" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndHold.spec.js#L16-L18" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
