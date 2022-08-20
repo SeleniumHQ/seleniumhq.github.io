@@ -95,7 +95,7 @@ This is otherwise known as "right-clicking":
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L16-L18" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L17-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
