@@ -124,7 +124,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< badge version="4.5.0" >}}     
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L21-L22" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L21-L22" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -153,7 +153,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
         {{< badge version="4.5.0" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L34-L35" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L34-L35" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
