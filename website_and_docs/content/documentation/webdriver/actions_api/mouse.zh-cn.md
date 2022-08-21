@@ -123,7 +123,8 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L47-L50" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< badge version="4.5.0" >}}     
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L21-L22" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -151,7 +152,8 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L61-L64" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< badge version="4.5.0" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L34-L35" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
