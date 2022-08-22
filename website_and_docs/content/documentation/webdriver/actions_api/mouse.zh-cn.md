@@ -95,7 +95,7 @@ This is otherwise known as "right-clicking":
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L34-L37" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L16-L18" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L17-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -123,7 +123,8 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L47-L50" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< badge version="4.5.0" >}}     
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L21-L22" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -151,7 +152,8 @@ There is no convenience method for this, it is just pressing and releasing mouse
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L61-L64" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< badge version="4.5.0" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L34-L35" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -176,7 +178,7 @@ This method combines moving to the center of an element with pressing and releas
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L73-L76" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L16-L18" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L17-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -203,7 +205,7 @@ Note that the element must be in the viewport or else the command will error.
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L84-L87" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveToElement.spec.js#L16-L18" >}}
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveToElement.spec.js#L17-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -241,7 +243,7 @@ This approach does not work correctly when the element is not entirely inside th
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L18-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -258,7 +260,7 @@ for the remaining languages as of Selenium 4.3.
 
 {{< tabpane disableCodeBlock=true height="4" >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L117-L120" >}}
+        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
 **Coming in Selenium 4.3**
