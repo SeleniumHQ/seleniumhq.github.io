@@ -127,12 +127,13 @@ port = 5555
 detect-drivers = false
 
 [relay]
-# Default Appium server endpoint
+# Default Appium/cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
-# Stereotypes supported by the service
+# Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
+#  that many test slots to that particular configuration
 configs = [
-  "1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
+  "5", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
 ]
 ```
 
