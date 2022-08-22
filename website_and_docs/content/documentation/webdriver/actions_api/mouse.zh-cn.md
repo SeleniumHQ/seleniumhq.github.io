@@ -243,7 +243,7 @@ This approach does not work correctly when the element is not entirely inside th
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L18-L19" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
