@@ -14,13 +14,14 @@ suite(function(env) {
 
     it('Mouse move and right click on an element', async function() {
       await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
-      const clickable = driver.findElement(By.id("clickable"));
+      const mouseTracker = driver.findElement(By.id("mouse-tracker"));
       const actions = driver.actions({async: true});
-      await actions.contextClick(clickable).perform();
+      await actions.move({x:8, y:0, origin: mouseTracker}).perform();
 
       await driver.sleep(500);
-      const clicked = await driver.findElement(By.id('click-status')).getText();
-      assert.deepStrictEqual(clicked, `context-clicked`)
+      let result = await driver.findElement(By.id('relative-location')).getText();
+      result = result.split(', ');
+      assert.deepStrictEqual((Math.abs(result[0] -100 -8)<2), true)
     });
   });
 });
