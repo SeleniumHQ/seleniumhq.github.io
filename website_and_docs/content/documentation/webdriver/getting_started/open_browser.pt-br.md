@@ -31,26 +31,26 @@ que podem ser utilizados.
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L9-L12" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L10-L13" >}}
   options = ChromeOptions()
   driver = webdriver.Chrome(options=options)
 
   driver.quit()
   {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L18-L21" >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L17-L20" >}}
   var options = new ChromeOptions();
   var driver = new ChromeDriver(options);
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L6-L9" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L8-L11" >}}
   options = Selenium::WebDriver::Options.chrome
   driver = Selenium::WebDriver.for :chrome, options: options
 
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/getting_started/openChromeTest.js">}}
+    {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = ChromeOptions()
@@ -72,7 +72,7 @@ o número da versão principal do edgedriver deve corresponder à versão princi
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L16-L19" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L18-L21" >}}
   options = EdgeOptions()
   driver = webdriver.Edge(options=options)
 
@@ -84,14 +84,14 @@ o número da versão principal do edgedriver deve corresponder à versão princi
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L13-L16" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L17-L20" >}}
   options = Selenium::WebDriver::Options.edge
   driver = Selenium::WebDriver.for :edge, options: options
 
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/getting_started/openEdgeTest.js">}}
+    {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = EdgeOptions()
@@ -112,7 +112,7 @@ O Selenium 4 requer o Firefox 78 ou superior. Recomenda-se sempre usar a versão
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L23-L26" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L26-L29" >}}
   options = FirefoxOptions()
   driver = webdriver.Firefox(options=options)
 
@@ -124,14 +124,14 @@ O Selenium 4 requer o Firefox 78 ou superior. Recomenda-se sempre usar a versão
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L20-L23" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L26-L29" >}}
   options = Selenium::WebDriver::Options.firefox
   driver = Selenium::WebDriver.for :firefox, options: options
 
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/getting_started/openFirefoxTest.js">}}
+    {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = FirefoxOptions()
@@ -166,7 +166,7 @@ na [wiki do Selenium](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriv
 
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L31-L34" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L34-L37" >}}
   options = IEOptions()
   driver = webdriver.Ie(options=options)
 
@@ -178,7 +178,7 @@ na [wiki do Selenium](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriv
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L29-L32" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L35-L38" >}}
   options = Selenium::WebDriver::Options.ie
   driver = Selenium::WebDriver.for :ie, options: options
 
@@ -217,7 +217,7 @@ O Microsoft Edge pode ser usado no modo de compatibilidade do IE usando o Driver
   
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L39-L44" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L42-L47" >}}
   options = IEOptions()
   options.attach_to_edge_chrome = True
   options.edge_executable_path = "/path/to/edge/browser"
@@ -235,7 +235,7 @@ O Microsoft Edge pode ser usado no modo de compatibilidade do IE usando o Driver
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L38-L43" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L44-L49" >}}
   options = Selenium::WebDriver::Options.ie
   options.attach_to_edge_chrome = true
   options.edge_executable_path = "/path/to/edge/browser"
@@ -286,7 +286,7 @@ certifique-se de que a versão do navegador corresponda à versão do driver.
   //    Quit
   driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L49-L53" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L52-L56" >}}
   options = ChromeOptions()
   options.binary_location = "path/to/opera/browser"
   driver = webdriver.Chrome(options=options)
@@ -302,7 +302,7 @@ certifique-se de que a versão do navegador corresponda à versão do driver.
   
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L49-L53" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L53-L59" >}}
   options = Selenium::WebDriver::Options.chrome
   options.binary = '/path/to/opera/browser'
   driver = Selenium::WebDriver.for :chrome, options: options
@@ -349,7 +349,7 @@ safaridriver --enable
   
   driver.quit();
 {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L58-L60" >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L61-L63" >}}
   driver = webdriver.Safari()
 
   driver.quit()
@@ -360,7 +360,7 @@ safaridriver --enable
 
   driver.Quit();
   {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L59-L62" >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L65-L68" >}}
   options = Selenium::WebDriver::Options.safari
   driver = Selenium::WebDriver.for :safari, options: options
 

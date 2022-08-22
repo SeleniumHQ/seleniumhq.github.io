@@ -12,27 +12,39 @@ import java.time.Duration
 class FirstScriptTest {
     private lateinit var driver: WebDriver
 
+    @BeforeAll
+    fun setupAll() {
+        WebDriverManager.chromedriver().setup()
+    }
+
+    @BeforeEach
+    fun setup() {
+        driver = ChromeDriver()
+    }
+
+    @AfterEach
+    fun teardown() {
+        driver.quit()
+    }
+
     @Test
     fun eightComponents() {
-        driver = ChromeDriver()
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
-        driver.get("https://google.com")
-
-        title = driver.title
-        assertEquals("Google", title)
+        val title = driver.title
+        assertEquals("Web form", title)
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))
 
-        var searchBox = driver.findElement(By.name("q"))
-        val searchButton = driver.findElement(By.name("btnK"))
+        var textBox = driver.findElement(By.name("my-text"))
+        val submitButton = driver.findElement(By.cssSelector("button"))
 
-        searchBox.sendKeys("Selenium")
-        searchButton.click()
+        textBox.sendKeys("Selenium")
+        submitButton.click()
 
-        searchBox = driver.findElement(By.name("q"))
-        val value = searchBox.getAttribute("value")
-        assertEquals("Selenium", value)
-
-        driver.quit()
+        val message = driver.findElement(By.id("message"))
+        val value = message.getText()
+        assertEquals("Received!", value)
     }
+
 }

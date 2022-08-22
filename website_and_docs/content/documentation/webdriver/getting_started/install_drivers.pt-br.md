@@ -129,7 +129,7 @@ gem 'webdrivers', '~> 5.0'
 require 'webdrivers'
 ```
 
-3 Inicialize o seu driver como você normalmente faria:
+3. Inicialize o seu driver como você normalmente faria:
 ```rb
 driver = Selenium::WebDriver.for :chrome
 ```

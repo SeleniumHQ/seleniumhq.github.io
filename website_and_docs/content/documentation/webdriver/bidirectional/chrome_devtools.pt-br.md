@@ -103,7 +103,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/bidirectional/emulateGeoLocation.js">}}
+    {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
@@ -450,7 +450,15 @@ public void performanceMetricsExample() {
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Por favor, crie um PR para adicionar uma amostra de código
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get('https://www.duckduckgo.com')
+driver.execute_cdp_cmd('Performance.enable', {})
+t = driver.execute_cdp_cmd('Performance.getMetrics', {})
+print(t)
+driver.quit()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // File must contain the following using statements

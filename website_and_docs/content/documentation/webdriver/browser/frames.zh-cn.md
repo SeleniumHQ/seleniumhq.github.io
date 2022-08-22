@@ -203,7 +203,7 @@ driver.SwitchTo().Frame(1);
 {{< /tab >}}
 {{< tab header="Python" >}}
     # 基于索引切换到第 2 个 iframe
-iframe = driver.find_elements_by_tag_name('iframe')[1]
+iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
 
     # 切换到选择的 iframe
 driver.switch_to.frame(iframe)

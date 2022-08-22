@@ -18,6 +18,7 @@ import org.openqa.selenium.safari.SafariOptions
 class OpenBrowserTest {
     private lateinit var driver: WebDriver
 
+    @Disabled("Only runs if chromedriver is in PATH")
     @Test
     fun chromeSession() {
         val options = ChromeOptions()
@@ -25,6 +26,7 @@ class OpenBrowserTest {
         driver.quit()
     }
 
+    @Disabled("Only runs if msedgedriver is in PATH")
     @Test
     fun edgeSession() {
         val options = EdgeOptions()
@@ -32,6 +34,7 @@ class OpenBrowserTest {
         driver.quit()
     }
 
+    @Disabled("Only runs if geckodriver is in PATH")
     @Test
     fun firefoxSession() {
         val options = FirefoxOptions()

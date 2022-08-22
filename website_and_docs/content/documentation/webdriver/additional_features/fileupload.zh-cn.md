@@ -1,6 +1,6 @@
 ---
-title: "File Upload"
-linkTitle: "File Upload"
+title: "文件上传"
+linkTitle: "文件上传"
 weight: 1
 aliases: [
 "/documentation/en/support_packages/file_upload/",
@@ -8,14 +8,12 @@ aliases: [
 ]
 ---
 
-The file upload dialog could be handled using Selenium, 
-when the input element is of type file. 
-An example of it, could be found on this 
-web page-  https://the-internet.herokuapp.com/upload
-We will require to have a file available with us, 
-which we need to upload. 
-The code to upload the file for different programming 
-languages will be as follows - 
+当input元素为文件类型时,
+文件上传对话框可以使用Selenium处理. 
+例如, 在这个网页中可以发现-  https://the-internet.herokuapp.com/upload
+我们需要一个可用的文件, 
+用于上传. 
+不同语言的文件上传的代码实现如下 - 
 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -51,8 +49,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.get("https://the-internet.herokuapp.com/upload");
-driver.find_element_by_id("file-upload").send_keys("selenium-snapshot.jpg")
-driver.find_element_by_id("file-submit").submit()
+driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")
+driver.find_element(By.ID,"file-submit").submit()
 if(driver.page_source.find("File Uploaded!")):
     print("file upload success")
 else:
@@ -107,5 +105,5 @@ namespace SeleniumDocumentation.SeleniumPRs
 {{< /tabpane >}}
 
 
-So the above example code helps to understand 
-how we can upload a file using Selenium. 
+所以上面的示例代码有助于我们理解
+如何使用Selenium上传文件. 

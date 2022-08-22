@@ -167,7 +167,7 @@ shortcode. This is an example of the `gh-codeblock` shortcode usage:
 
     {{</* tabpane */>}}
       {{</* tab header="Link" disableCodeBlock=true */>}}
-        {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" */>}}
+        {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
       {{</* /tab */>}}
       {{</* tab header="No Link" */>}}
         This content should not get linked to GitHub
@@ -178,7 +178,7 @@ Which looks like this:
 
 {{< tabpane >}}
   {{< tab header="Link" disableCodeBlock=true >}}
-    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" >}}
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
   {{< /tab >}}
   {{< tab header="No Link" >}}
     This content should not get linked to GitHub
@@ -239,12 +239,12 @@ All code examples should be present and linked to in our example
 With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
 repository. This is an example of the `gh-codeblock` shortcode usage:
 
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
 
 Which looks like this:
 
 <span class="tab-pane">
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
 </span>
 
 ### Code Comments

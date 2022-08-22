@@ -163,7 +163,6 @@ pull request updating this page.
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--grid-model` | string | `org.openqa.selenium.grid.distributor.GridModel` | Full classname of non-default grid model. This is used to store the states of all the registered Nodes. |
 | `--healthcheck-interval` | int | `120` | How often, in seconds, will the health check run for all Nodes. This ensures the server can ping all the Nodes successfully. |
 | ``--distributor`` | uri | `http://localhost:5553` | Url of the distributor. |
 | `--distributor-host` | string | `localhost` | Host on which the distributor is listening. |

@@ -28,7 +28,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
     {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
 {{< tab header="Python" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/python/tests/hello/test_hello_selenium.py" >}}
+    {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
@@ -37,7 +37,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
     {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/hello/helloSelenium.js" >}}
+    {{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" disableCodeBlock=true >}}
     {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt" >}}
