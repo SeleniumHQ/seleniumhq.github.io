@@ -18,7 +18,6 @@ suite(function(env) {
       const actions = driver.actions({ async: true });
       await actions.move({ origin: hoverable }).perform();
 
-      await driver.sleep(500);
       const status = await driver.findElement(By.id('move-status')).getText();
       assert.deepStrictEqual(status, `hovered`)
     });

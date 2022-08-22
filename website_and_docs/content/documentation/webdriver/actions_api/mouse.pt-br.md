@@ -260,7 +260,7 @@ for the remaining languages as of Selenium 4.3.
 
 {{< tabpane disableCodeBlock=true height="4" >}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L117-L120" >}}
+        {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
 **Coming in Selenium 4.3**
