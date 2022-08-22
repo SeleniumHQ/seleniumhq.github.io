@@ -2,9 +2,8 @@
 title: 为 Selenium 文档做贡献
 linkTitle: 为 Selenium 文档做贡献
 weight: 2
-requiresTranslation: true
 description: >-
-    Information on improving documentation and code examples for Selenium
+    有关改进Selenium文档和代码示例的信息
 aliases: 
         [
           "/documentation/zh-cn/contributing/",
@@ -64,7 +63,7 @@ Selenium项目欢迎新的贡献者.
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站. 
 你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
-我们推荐使用0.83.1或更高版本的Hugo.
+我们推荐使用0.94或更高版本的Hugo.
 
 请参考来自Docsy的说明
 [安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .
@@ -96,7 +95,8 @@ Selenium项目欢迎新的贡献者.
 % hugo server
 ```
 
-See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution
+请参阅 [样式指南]({{< ref "style.md" >}}) , 
+以了解更多关于我们约定的信息
 
 ### 步骤 4: 提交
 

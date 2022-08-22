@@ -3,7 +3,7 @@ title: "Selenium RC (Selenium 1)"
 linkTitle: "Selenium 1"
 weight: 2
 description: >
-    The original version of Selenium
+    原始版本的Selenium
 aliases: [
 "/documentation/zh-cn/legacy_docs/selenium_rc/",
 "/zh-cn/documentation/legacy/selenium_rc/"

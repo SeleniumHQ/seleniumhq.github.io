@@ -1,8 +1,10 @@
 # frozen_string_literal: true
-require 'spec_helper'
+require 'selenium-webdriver'
 
 RSpec.describe 'Open Browser' do
   it 'chrome session' do
+    skip('Only runs if chromedriver is in PATH')
+
     options = Selenium::WebDriver::Options.chrome
     driver = Selenium::WebDriver.for :chrome, options: options
 
@@ -10,6 +12,8 @@ RSpec.describe 'Open Browser' do
   end
 
   it 'edge session' do
+    skip('Only runs if msedgedriver is in PATH')
+
     options = Selenium::WebDriver::Options.edge
     driver = Selenium::WebDriver.for :edge, options: options
 
@@ -17,6 +21,8 @@ RSpec.describe 'Open Browser' do
   end
 
   it 'firefox session' do
+    skip('Only runs if geckodriver is in PATH')
+
     options = Selenium::WebDriver::Options.firefox
     driver = Selenium::WebDriver.for :firefox, options: options
 

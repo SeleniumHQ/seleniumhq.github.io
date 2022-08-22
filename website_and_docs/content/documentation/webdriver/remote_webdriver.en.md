@@ -242,49 +242,6 @@ To set up the visualization framework Jaeger UI and Selenium Grid 4, please refe
 
 For client-side setup, follow the steps below.
 
-### Beta 1 
-
-#### Add the required dependencies
-
-Installation of external libraries for tracing exporter can be done using Maven.
-Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
-
-```xml
-  <dependency>
-      <groupId>io.opentelemetry</groupId>
-      <artifactId>opentelemetry-exporter-jaeger</artifactId>
-      <version>0.14.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-netty</artifactId>
-      <version>1.34.1</version>
-    </dependency>
-``` 
-
- 
-#### Add/pass the required system properties while running the client
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-
-System.setProperty("JAEGER_SERVICE_NAME", "selenium-java-client");
-System.setProperty("JAEGER_AGENT_HOST","localhost");
-System.setProperty("JAEGER_AGENT_PORT","14250");
-
-ImmutableCapabilities capabilities = new ImmutableCapabilities("browserName", "chrome");
-
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), capabilities);
-
-driver.get("http://www.google.com");
-
-driver.quit();
-
-  {{< /tab >}}
-{{< /tabpane >}}
-
-### Beta 2 onwards 
-
 #### Add the required dependencies
 
 Installation of external libraries for tracing exporter can be done using Maven.

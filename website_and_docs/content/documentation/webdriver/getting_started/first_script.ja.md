@@ -19,48 +19,48 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
 
 For more details on starting a session read our documentation on [opening and closing a browser]({{< ref "open_browser.md" >}})
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L20" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    val driver = ChromeDriver()
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
 ### 2. Take action on browser
 In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/webdriver/browser/navigation.md" >}})するコマンドを送信します
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    driver.get("https://google.com");
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.get("http://www.google.com")
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    driver.Navigate().GoToUrl("https://www.google.com");
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L32" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    driver.get 'https://google.com'
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    await driver.get('https://www.google.com');
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    driver.get("https://google.com")
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -69,24 +69,24 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
 There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    driver.getTitle(); // => "Google"
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L41" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.title # => "Google"
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L12" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    driver.Title; // => "Google"
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L35" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    driver.title # => 'Google'
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    await driver.getTitle(); // => "Google"
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    driver.getTitle() // => "Google"
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -103,56 +103,49 @@ we'll use it as a placeholder.
 
 Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-{{< /tab >}}
-{{< tab header="Python" >}}
-driver.implicitly_wait(0.5)
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-driver.manage.timeouts.implicit_wait = 500
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-driver.manage().setTimeouts({implicit: 0.5 })
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))
-{{< /tab >}}
+{{< tabpane disableCodeBlock=true >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L44" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L37" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
+    {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+    {{< /tab >}}
 {{< /tabpane >}}
-
 
 ### 5. [要素を検索する]({{< ref "/documentation/webdriver/elements" >}})ためのコマンドを送信します
 The majority of commands in most Selenium sessions are element related, and you can't interact
 with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    WebElement searchBox = driver.findElement(By.name("q"));
-    WebElement searchButton = driver.findElement(By.name("btnK"));
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    search_box = driver.find_element(By.NAME, "q")
-    search_button = driver.find_element(By.NAME, "btnK")
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    var searchBox = driver.FindElement(By.Name("q"));
-    var searchButton = driver.FindElement(By.Name("btnK"))
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L39-L40" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    search_box = driver.find_element(name: 'q')
-    search_button = driver.find_element(name: 'btnK')
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    let searchBox = await driver.findElement(By.name('q'));
-    let searchButton = await driver.findElement(By.name('btnK'));
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    val searchBox = driver.findElement(By.name("q"));
-    val searchButton = driver.findElement(By.name("btnK"))
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -160,55 +153,48 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
 but you will use them frequently. 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    searchBox.sendKeys("Selenium");
-    searchButton.click();
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L49-L50" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    search_box.send_keys("Selenium")
-    search_button.click()
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L20-L21" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    searchBox.SendKeys("Selenium");
-    searchButton.Click();
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L42-L43" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    search_box.send_keys 'Selenium'
-    search_button.click
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L19-L20" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    await searchBox.sendKeys('Selenium');
-    await searchButton.click();
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    searchBox.sendKeys("Selenium")
-    searchButton.click()
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
 ### 7. 要素に関する情報をリクエストします
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
-Notice that we need to relocate the search box because the DOM has changed since we first located it.  
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    driver.findElement(By.name("q")).getAttribute("value"); // => "Selenium"
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L53" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.find_element(By.NAME, "q").get_attribute("value") # => "Selenium"
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L24" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    driver.FindElement(By.Name("q")).GetAttribute("value"); // => "Selenium"
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L46" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    driver.find_element(name: 'q').attribute('value') # => "Selenium"
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L23" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    await driver.findElement(By.name('q')).getAttribute("value"); // => 'Selenium'
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    driver.findElement(By.name("q")).getAttribute("value"); // => "Selenium"
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -217,24 +203,24 @@ Notice that we need to relocate the search box because the DOM has changed since
 This ends the driver process, which by default closes the browser as well. 
 No more commands can be sent to this driver instance. 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane disableCodeBlock=true >}}
     {{< tab header="Java" >}}
-    driver.quit();
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-    driver.quit()
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L27" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-    driver.Quit();
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L26" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-    driver.quit
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L26" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-    await driver.quit();
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
     {{< /tab >}}
     {{< tab header="Kotlin" >}}
-    driver.quit()
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
     {{< /tab >}}
 {{< /tabpane >}}
 
@@ -242,156 +228,25 @@ No more commands can be sent to this driver instance.
 
 これらの8つを組み合わせて、使う必要のあるライブラリを含む完全なスクリプトにしましょう。
 
-Follow the link at the bottom of the tab to see an example of the code as it would be executed
-with a test runner instead of a standalone file.
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class HelloSelenium {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-
-        driver.get("https://google.com");
-        
-        driver.getTitle(); // => "Google"
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-        
-        WebElement searchBox = driver.findElement(By.name("q"));
-        WebElement searchButton = driver.findElement(By.name("btnK"));
-        
-        searchBox.sendKeys("Selenium");
-        searchButton.click();
-        
-        searchBox = driver.findElement(By.name("q"));
-        searchBox.getAttribute("value"); // => "Selenium"
-        
-        driver.quit();
-    }
-}
-{{< /tab >}}
-{{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_first_script.py" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-
-driver = webdriver.Chrome()
-
-driver.get("https://www.google.com")
-
-driver.title # => "Google"
-
-driver.implicitly_wait(0.5)
-
-search_box = driver.find_element(By.NAME, "q")
-search_button = driver.find_element(By.NAME, "btnK")
-
-search_box.send_keys("Selenium")
-search_button.click()
-
-driver.find_element(By.NAME, "q").get_attribute("value") # => "Selenium"
-
-driver.quit()
-
-{{< /tab >}}
-{{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-class HelloSelenium {
-    static void Main() {
-        var driver = new ChromeDriver();
-
-        driver.Navigate().GoToUrl("https://www.google.com");
-
-        driver.Title; // => "Google"
-
-        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
-
-        var searchBox = driver.FindElement(By.Name("q"));
-        var searchButton = driver.FindElement(By.Name("btnK"))
-
-        searchBox.SendKeys("Selenium");
-        searchButton.Click();
-
-        driver.FindElement(By.Name("q")).GetAttribute("value"); // => "Selenium"
-
-        driver.Quit();
-    }
-}
-{{< /tab >}}
-{{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/first_script_spec.rb" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :chrome
-
-driver.get 'https://google.com'
-
-driver.title # => 'Google'
-
-driver.manage.timeouts.implicit_wait = 500
-
-search_box = driver.find_element(name: 'q')
-search_button = driver.find_element(name: 'btnK')
-
-search_box.send_keys 'Selenium'
-search_button.click
-
-driver.find_element(name: 'q').attribute('value') # => "Selenium"
-
-driver.quit
-{{< /tab >}}
-{{< tab header="JavaScript" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/javascript/documentation/webdriver/getting_started/firstScript.js" >}}
-const {Builder, By, Key, until} = require('selenium-webdriver');
-
-(async function helloSelenium() {
-    let driver = await new Builder().forBrowser('chrome').build();
-
-    await driver.get('https://www.google.com');
-
-    await driver.getTitle(); // => "Google"
-
-    driver.manage().setTimeouts({implicit: 0.5 })
-
-    let searchBox = await driver.findElement(By.name('q'));
-    let searchButton = await driver.findElement(By.name('btnK'));
-
-    await searchBox.sendKeys('Selenium');
-    await searchButton.click();
-
-    await driver.findElement(By.name('q')).getAttribute("value"); // => 'Selenium'
-
-    await driver.quit();
-})();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-
-fun main() {
-    val driver = ChromeDriver()
-
-    driver.get("https://google.com")
-
-    driver.getTitle(); // => "Google"
-
-    driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))
-
-    val searchBox = driver.findElement(By.name("q"));
-    val searchButton = driver.findElement(By.name("btnK"))
-
-    searchBox.sendKeys("Selenium");
-    searchButton.click();
-
-    driver.findElement(By.name("q")).getAttribute("value"); // => "Selenium"
-
-    driver.quit()
-}
-{{< /tab >}}
+{{< tabpane disableCodeBlock=true >}}
+    {{< tab header="Java" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
+    {{< /tab >}}
+    {{< tab header="Python" >}}
+        {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py" >}}
+    {{< /tab >}}
+    {{< tab header="CSharp" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs" >}}
+    {{< /tab >}}
+    {{< tab header="Ruby" >}}
+        {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb" >}}
+    {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+        {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js" >}}
+    {{< /tab >}}
+    {{< tab header="Kotlin" >}}
+        {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt" >}}
+    {{< /tab >}}
 {{< /tabpane >}}
 
 ## Next Steps

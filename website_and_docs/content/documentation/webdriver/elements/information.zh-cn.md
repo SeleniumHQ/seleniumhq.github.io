@@ -1,29 +1,28 @@
 ---
 title: "关于网络元素的信息"
 linkTitle: "信息"
-needsTranslation: true
 weight: 4
 description: >
   元素相关的知识.
 ---
 
-There are a number of details you can query about a specific element.
+您可以查询有关特定元素的许多详细信息.
 
-## Is Displayed
+## 是否显示
 
-This method is used to check if the connected Element is
-displayed on a webpage. Returns a `Boolean` value,
-True if the connected element is displayed in the current
-browsing context else returns false.
+此方法用于检查连接的元素是否正确
+显示在网页上. 返回一个 `Boolean` 值, 
+如果连接的元素显示在当前的浏览器上下文中, 则为True
+否则返回false.
 
-This functionality is [mentioned in](https://w3c.github.io/webdriver/#element-displayedness), but not defined by
-the w3c specification due to the
-[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=hTa1KI6fQpg).
-As such, Selenium cannot expect drivers to implement
-this functionality directly, and now relies on
-executing a large JavaScript function directly.
-This function makes many approximations about an element's
-nature and relationship in the tree to return a value.
+此功能[提及于](https://w3c.github.io/webdriver/#element-displayedness), 
+但是未定义于w3c规范中, 
+因为[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk).
+因此，Selenium不能期望驱动程序
+直接实现这种功能，现在依赖于
+直接执行大量JavaScript函数. 
+此函数界定了元素树中的许多本身属性以及关系, 
+并以值的形式返回.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -34,7 +33,11 @@ driver.get('https://www.google.com');
 boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.google.com")
+
+# Get boolean value for is element display
+is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // Help us with a PR for code sample
@@ -59,7 +62,7 @@ for element displayedness
 {{< /alert-code >}}
 
 
-## Is Element Selected
+## 元素是否被选定
 
 此方法确定是否 _已选择_ 引用的元素.
 此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
@@ -113,7 +116,7 @@ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-t
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Element TagName
+## 获取元素标签名
 
 此方法用于获取在当前浏览上下文中
 具有焦点的被引用元素的
@@ -164,7 +167,7 @@ val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Element Rect
+## 获取元素矩形
 
 用于获取参考元素的尺寸和坐标.
 
@@ -336,11 +339,11 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Attributes and Properties
+## 特性和属性
 
-### Attribute
+### 特性
 
-### DOM Attribute
+### DOM 特性
 
-### DOM Property
+### DOM 属性
 

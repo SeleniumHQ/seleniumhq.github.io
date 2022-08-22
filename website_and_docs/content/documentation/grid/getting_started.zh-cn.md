@@ -110,6 +110,33 @@ java -jar selenium-server-<version>.jar router --sessions http://localhost:5556 
 java -jar selenium-server-<version>.jar node 
 ```
 
+## Running tests
+
+To run tests after starting successfully Selenium Grid, you can use a `RemoteWebDriver`.
+Head to the [`RemoteWebDriver` section]({{< ref "../webdriver/remote_webdriver.md" >}}) for
+more details.
+
+### Tests metadata
+
+You can add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+or visualize parts of it through the Selenium Grid UI. Metadata can be added by prefixing the metadata with `se:`.
+
+Here is a quick example in Java showing how to do that.
+
+```java
+ChromeOptions chromeOptions = new ChromeOptions();
+chromeOptions.setCapability("browserVersion", "100");
+chromeOptions.setCapability("platformName", "Windows");
+// Showing a test name instead of the session id in the Grid UI
+chromeOptions.setCapability("se:name", "My simple test"); 
+// Other type of metadata can be seen in the Grid UI by clicking on the 
+// session info or via GraphQL
+chromeOptions.setCapability("se:sampleMetadata", "Sample metadata value"); 
+WebDriver driver = new RemoteWebDriver(new URL("http://gridUrl:4444"), chromeOptions);
+driver.get("http://www.google.com");
+driver.quit();
+```
+
 ## Querying Selenium Grid
 
 After starting a Grid, there are mainly two ways of querying its status, through the Grid
@@ -119,33 +146,13 @@ The Grid UI can be reached by opening your preferred browser and heading to
 [http://localhost:4444](http://localhost:4444).
 
 API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
-endpoint or using GraphQL:
-
-```shell
-curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
-```
+endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 
 {{% pageinfo color="primary" %}}
 For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
 [Configuring Components]({{< ref "components.md" >}}) section.
 {{% /pageinfo %}}
-
-## Warning
-
-Selenium Grid must be protected from external access using appropriate
-firewall permissions.
-
-Failure to protect your Grid could result in one or more of the following occurring:
-
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
-
-See this blog post on [Detectify](//labs.detectify.com), which gives a good
-overview of how a publicly exposed Grid could be misused:
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
-
 
 ## 提醒
 

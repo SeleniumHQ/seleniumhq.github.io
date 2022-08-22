@@ -22,57 +22,61 @@
                 {{ $.Scratch.Set "counter" 0 }}
                 {{ $url := "https://api.github.com/repos/seleniumhq/selenium/releases?per_page=100" }}
                 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
-                {{ $toReplace := printf "://%s@" $githubToken }}
-                {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
-                {{ $urlWithToken := replace $url "://" $tokenInUrl }}                
-                {{ $releases := getJSON $urlWithToken }}
-                {{ range sort $releases "created_at" "desc" }}
-                <!-- Expand / Collapse -->
-                {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-                {{ $counter := $.Scratch.Get "counter" }}
-                <p>
-                  <button class="btn btn-link no-focus" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
-                    <i class="fas fa-plus-circle show-collapsed selenium-ide pr-2"></i>
-                    <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>
-                    <span class="-text-900 font-weight-bold">{{ .name }}</span>
-                  </button>
-                </p>
-                <div class="collapse pb-3" id="release-{{ $counter }}">
-                  <div class="card card-body">
-                    <h6 class="card-title pl-2 pb-3">
-                      <span class="selenium-ide font-weight-bold">Release date:</span>
-                      <span class="pl-2">
-                        <a href="{{ .html_url }}" target="_blank">
-                          {{ time.Format "January 2, 2006" .created_at }}
-                          <i class="fas fa-external-link-alt pl-2"></i>
-                        </a>
-                      </span>
-                    </h6>
-                    <div class="table-responsive">
-                      <table class="table m-0">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="selenium-ide">Name</th>
-                            <th scope="col" class="selenium-ide">Size</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {{ range .assets }}
-                          {{ $size := (div .size (mul 1024 1024)) }}
-                          <tr>
-                            <th scope="row">
-                              <p>
-                                <a href="{{ .browser_download_url }}">{{ .name }}</a>
-                              </p>
-                            </th>
-                            <td>{{ printf "%.1f" ($size) }} MB</td>
-                          </tr>
-                          {{ end }}
-                        </tbody>
-                      </table>
+                {{ if $githubToken }}
+                  {{ $toReplace := printf "://%s@" $githubToken }}
+                  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
+                  {{ $urlWithToken := replace $url "://" $tokenInUrl }}                
+                  {{ $releases := getJSON $urlWithToken }}
+                  {{ range sort $releases "created_at" "desc" }}
+                  <!-- Expand / Collapse -->
+                  {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+                  {{ $counter := $.Scratch.Get "counter" }}
+                  <p>
+                    <button class="btn btn-link no-focus" type="button" data-toggle="collapse" data-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
+                      <i class="fas fa-plus-circle show-collapsed selenium-ide pr-2"></i>
+                      <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>
+                      <span class="-text-900 font-weight-bold">{{ .name }}</span>
+                    </button>
+                  </p>
+                  <div class="collapse pb-3" id="release-{{ $counter }}">
+                    <div class="card card-body">
+                      <h6 class="card-title pl-2 pb-3">
+                        <span class="selenium-ide font-weight-bold">Release date:</span>
+                        <span class="pl-2">
+                          <a href="{{ .html_url }}" target="_blank">
+                            {{ time.Format "January 2, 2006" .created_at }}
+                            <i class="fas fa-external-link-alt pl-2"></i>
+                          </a>
+                        </span>
+                      </h6>
+                      <div class="table-responsive">
+                        <table class="table m-0">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="selenium-ide">Name</th>
+                              <th scope="col" class="selenium-ide">Size</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {{ range .assets }}
+                            {{ $size := (div .size (mul 1024 1024)) }}
+                            <tr>
+                              <th scope="row">
+                                <p>
+                                  <a href="{{ .browser_download_url }}">{{ .name }}</a>
+                                </p>
+                              </th>
+                              <td>{{ printf "%.1f" ($size) }} MB</td>
+                            </tr>
+                            {{ end }}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
-                </div>
+                  {{ end }}
+                {{ else }}
+                  {{ partial "github-content.html" }}>
                 {{ end }}
               </div>
               <div class="modal-footer selenium-button-container">

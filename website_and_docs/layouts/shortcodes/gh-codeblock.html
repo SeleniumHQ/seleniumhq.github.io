@@ -2,44 +2,55 @@
 {{ $webBaseUrl := .Get "webBaseUrl" | default "https://github.com" }}
 {{ $org := .Get "org" | default "SeleniumHQ" }}
 {{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
-{{ $branch := .Get "branch" | default "dev" }}
-{{ $path := .Get "path" }}
+{{ $branch := .Get "branch" | default "trunk" }}
 
-{{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
-{{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $path }}
-
-{{ $slicedPath := split $path "/" }}
-{{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
-
-{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
-{{ $toReplace := printf "://%s@" $githubToken }}
-{{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
-{{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
-
-{{ $apiResults := getJSON $apiUrlWithToken  }}
-{{ $content := base64Decode $apiResults.content }}
-{{ $codeSnippet := $content }}
-
-{{ $parsedApiUrl := urls.Parse $webUrl }}
-{{ with $parsedApiUrl.Fragment }}
-  {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
-  {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
-  {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
-  {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
-  {{ $splitContent := split $content "\n" }}
-  {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}  
+{{ $defaultBranchFromEnv := (getenv "SELENIUM_EXAMPLES_BRANCH") }}
+{{ if $defaultBranchFromEnv }}
+  {{ $branch = $defaultBranchFromEnv }}
 {{ end }}
 
-{{ highlight $codeSnippet $language }}
+{{ $fullPath := .Get "path" }}
+{{ $path := index (split $fullPath "#") 0 }}
 
-<div class="text-right mb-5 pb-2 border-bottom">     
-  <a href="{{- $webUrl -}}" target="_blank">
-    <i class="fas fa-external-link-alt pl-2"></i>
-    <i class="fas fa-external-link" aria-hidden="true"></i>
-    <small>
-      Check code on GitHub
-    </small>
-  </a>
-</div>
+{{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
+{{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
+
+{{ $slicedPath := split $path "/" }}
+{{ $language := index (last 1 (split (index (last 1 $slicedPath) 0) ".")) 0 }}
+
+{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
+{{ if $githubToken }}
+  {{ $toReplace := printf "://%s@" $githubToken }}
+  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
+  {{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
+
+  {{ $apiResults := getJSON $apiUrlWithToken  }}
+  {{ $content := base64Decode $apiResults.content }}
+  {{ $codeSnippet := $content }}
+
+  {{ $parsedApiUrl := urls.Parse $webUrl }}
+  {{ with $parsedApiUrl.Fragment }}
+    {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
+    {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
+    {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
+    {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
+    {{ $splitContent := split $content "\n" }}
+    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
+  {{ end }}
+
+  {{ highlight $codeSnippet $language }}
+
+  <div class="text-right mb-5 pb-2">
+    <a href="{{- $webUrl -}}" target="_blank">
+      <i class="fas fa-external-link-alt pl-2"></i>
+      <i class="fas fa-external-link" aria-hidden="true"></i>
+      <small>
+        Check code on GitHub
+      </small>
+    </a>
+  </div>
+{{ else }}
+  {{ partial "github-content.html" }}
+{{ end }}
 
 

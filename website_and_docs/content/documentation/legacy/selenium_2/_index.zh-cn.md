@@ -3,5 +3,5 @@ title: "Selenium 2"
 linkTitle: "Selenium 2"
 weight: 4
 description: >
-  Selenium 2 was a rewrite of Selenium 1 that was implemented with WebDriver code.
+  Selenium 2 是以实现了WebDriver代码重写的Selenium 1.
 ---

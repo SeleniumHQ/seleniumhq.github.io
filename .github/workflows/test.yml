@@ -3,7 +3,10 @@ name: Test site build
 on:
   pull_request:
     branches:
-      - dev
+      - trunk
+  push:
+    branches:
+      - trunk
 
 jobs:
   test_build:
@@ -19,4 +22,4 @@ jobs:
       - name: Build
         run: chmod +x build-site.sh && ./build-site.sh
         env:
-          SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
+          SELENIUM_CI_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}

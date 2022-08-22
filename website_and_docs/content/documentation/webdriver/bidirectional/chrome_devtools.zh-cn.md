@@ -112,31 +112,8 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-
-(async function geoLocationTest() {
-  const driver = await new Builder().forBrowser("chrome").build();
-  try {
-    await driver.get("https://my-location.org/");
-    const pageCdpConnection = await driver.createCDPConnection('page');
-    //Latitude and longitude of Tokyo, Japan
-    const coordinates = {
-      latitude: 35.689487,
-      longitude: 139.691706,
-      accuracy: 100,
-    };
-      await pageCdpConnection.execute(
-        "Emulation.setGeolocationOverride",
-        1,
-        coordinates
-      );
-  } catch (e) {
-    console.log(e)
-  } finally {
-     await driver.quit();
-  }
-})();
+  {{< tab header="JavaScript" disableCodeBlock=true >}}
+    {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
@@ -269,7 +246,6 @@ async function executeCDPCommands () {
   };
   await cdpConnection.execute(
     "Emulation.setGeolocationOverride",
-    1,
     coordinates
   );
  await driver.quit();
@@ -343,7 +319,18 @@ driver.get("https://selenium.dev/");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+// iPhone 11 Pro dimensions
+set_device_metrics_override = dict({
+"width": 375,
+"height": 812,
+"deviceScaleFactor": 50,
+"mobile": True
+})
+driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)
+driver.get("<your site url>")
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -423,7 +410,6 @@ options.enableDebugger();
     };
     await pageCdpConnection.execute(
       "Emulation.setDeviceMetricsOverride",
-      1,
       metrics
     );
     await driver.get("https://www.google.com");
@@ -478,7 +464,15 @@ public void performanceMetricsExample() {
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get('https://www.duckduckgo.com')
+driver.execute_cdp_cmd('Performance.enable', {})
+t = driver.execute_cdp_cmd('Performance.getMetrics', {})
+print(t)
+driver.quit()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // File must contain the following using statements

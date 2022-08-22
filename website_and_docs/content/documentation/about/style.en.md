@@ -166,7 +166,7 @@ shortcode. This is an example of the `gh-codeblock` shortcode usage:
 
     {{</* tabpane */>}}
       {{</* tab header="Link" disableCodeBlock=true */>}}
-        {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
+        {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
       {{</* /tab */>}}
       {{</* tab header="No Link" */>}}
         This content should not get linked to GitHub
@@ -177,7 +177,7 @@ Which looks like this:
 
 {{< tabpane >}}
   {{< tab header="Link" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
   {{< /tab >}}
   {{< tab header="No Link" >}}
     This content should not get linked to GitHub
@@ -210,7 +210,8 @@ Maybe you want something like this:
 
 For this you need to use `disableCodeBlock=true` instead of `langEqualsHeader=true` 
 
-You need to specify which parts are code and which are not yourself now, like this:
+You need to be explicit about which parts are code and which are not,
+do not indent plain text or it will still be treated like a codeblock:
 
     {{</* tabpane disableCodeBlock=true */>}}
     {{</* tab header="Java" */>}}
@@ -238,13 +239,24 @@ All code examples should be present and linked to in our example
 With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
 repository. This is an example of the `gh-codeblock` shortcode usage:
 
-    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
 
 Which looks like this:
 
 <span class="tab-pane">
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L16-L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
 </span>
+
+### Consistent Heights
+
+Typically, a user will pick their language and not switch tabs again. If they do, however,
+the entire page will shift because the height of the block is based on the amount of code in the tab.
+This can get especially jarring at the bottom of a page with a lot of tabs.
+
+You can add a "height" value to the `tabpane` that corresponds to the lines of code or some
+equivalent for text:
+
+    {{</* tabpane disableCodeBlock=true height="5" */>}}
 
 ### Code Comments
 

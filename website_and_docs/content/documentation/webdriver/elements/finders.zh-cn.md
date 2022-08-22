@@ -80,7 +80,7 @@ WebElement fruit = fruits.findElement(By.id("tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" >}}
 fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_elements_by_id("tomatoes")
+fruit = fruits.find_elements(By.ID,"tomatoes")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
@@ -124,7 +124,7 @@ For this example, we'll use a CSS Selector:
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" >}}
-fruit = driver.find_element_by_css_selector("#fruits .tomatoes")
+fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));

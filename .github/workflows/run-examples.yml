@@ -1,0 +1,125 @@
+name: Run test examples
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - trunk
+    paths:
+      - 'examples/**'
+  push:
+    branches:
+      - trunk
+    paths:
+      - 'examples/**'
+
+env:
+  DISPLAY: :99
+  GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+  GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+
+jobs:
+  test_examples:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v2
+    - name: Filter for different binding languages
+      uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          java:
+            - 'examples/java/**'
+          python:
+            - 'examples/python/**'
+          kotlin:
+            - 'examples/kotlin/**'
+          javascript:
+            - 'examples/javascript/**'
+          ruby:
+            - 'examples/ruby/**'
+          dotnet:
+            - 'examples/dotnet/**'
+    - name: Start Xvfb
+      if: matrix.os == 'ubuntu-latest'
+      run: Xvfb :99 &
+    - name: Set up Java
+      if: steps.filter.outputs.java == 'true' || steps.filter.outputs.kotlin == 'true'
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: 8
+    - name: Set up Ruby
+      if: steps.filter.outputs.ruby == 'true'
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        bundler-cache: true
+    - name: Set up .Net
+      if: steps.filter.dotnet.java == 'true'
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 5.0.x
+    - name: Run Java tests
+      if: steps.filter.outputs.java == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/java
+          mvn -B test
+    - name: Run Python tests
+      if: steps.filter.outputs.python == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/python
+          pip3 install -r requirements.txt
+          pytest
+    - name: Run Kotlin tests
+      if: steps.filter.outputs.kotlin == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/kotlin
+          mvn -B test
+    - name: Run JavaScript tests
+      if: steps.filter.outputs.javascript == 'true'
+      uses: nick-invision/retry@v2.7.1
+      env:
+        SELENIUM_BROWSER: chrome
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/javascript
+          npm install
+          npm test
+    - name: Run Ruby tests
+      if: steps.filter.outputs.ruby == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/ruby
+          bundle install
+          bundle exec rspec
+    - name: Run .Net tests
+      if: steps.filter.outputs.dotnet == 'true'
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/dotnet/SeleniumDocs
+          dotnet test

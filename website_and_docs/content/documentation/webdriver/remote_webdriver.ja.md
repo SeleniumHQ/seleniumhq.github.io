@@ -237,49 +237,6 @@ HTTP リクエストをエンド ツー エンドでトレースするには、�
 
 クライアント側のセットアップについては、以下の手順に従ってください。
 
-### Beta 1 
-
-#### 必要な依存関係を追加する
-
-トレーシング エクスポーターの外部ライブラリのインストールは、Maven を使って実行できます。 
-プロジェクト pom.xml に _opentelemetry-exporter-jaeger_ および _grpc-netty_ の依存関係を追加します。
-
-```xml
-  <dependency>
-      <groupId>io.opentelemetry</groupId>
-      <artifactId>opentelemetry-exporter-jaeger</artifactId>
-      <version>0.14.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-netty</artifactId>
-      <version>1.34.1</version>
-    </dependency>
-``` 
-
- 
-#### クライアントの実行中に必要なシステムプロパティを追加/渡す
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-
-System.setProperty("JAEGER_SERVICE_NAME", "selenium-java-client");
-System.setProperty("JAEGER_AGENT_HOST","localhost");
-System.setProperty("JAEGER_AGENT_PORT","14250");
-
-ImmutableCapabilities capabilities = new ImmutableCapabilities("browserName", "chrome");
-
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), capabilities);
-
-driver.get("http://www.google.com");
-
-driver.quit();
-
-  {{< /tab >}}
-{{< /tabpane >}}
-
-### Beta 2 onwards 
-
 #### 必要な依存関係を追加する
 
 トレーシング エクスポーターの外部ライブラリのインストールは、Maven を使って実行できます。 

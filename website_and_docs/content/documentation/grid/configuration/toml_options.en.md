@@ -94,7 +94,10 @@ webdriver-executable = '/path/to/chromedriver/95/chromedriver'
 
 A Standalone or Node server that is able to run each new session in a Docker container. Disabling
 drivers detection, having maximum 2 concurrent sessions. Stereotypes configured need to be mapped
-to a Docker image, and the Docker daemon needs to be exposed via http/tcp.
+to a Docker image, and the Docker daemon needs to be exposed via http/tcp. In addition, it is
+possible to define which device files, accessible on the host, will be available in containers
+through the `devices` property. Refer to the [docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device) documentation
+ for more information about how docker device mapping works.
 
 
 ```toml
@@ -104,9 +107,13 @@ max-sessions = 2
 
 [docker]
 configs = [
-        "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
-        "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
-    ]
+    "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
+    "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
+]
+#Optionally define all device files that should be mapped to docker containers
+#devices = [
+#    "/dev/kvm:/dev/kvm"
+#]
 url = "http://localhost:2375"
 video-image = "selenium/video:latest"
 ```
@@ -175,8 +182,8 @@ Here is a Java example showing how to match that Node
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
-options.setCapability("networkname:applicationName", "node_2");
-options.setCapability("nodename:applicationName", "app_2");
+options.setCapability("networkname:applicationName", "node_1");
+options.setCapability("nodename:applicationName", "app_1");
 options.setBrowserVersion("96");
 options.setPlatformName("macOS");
 WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);

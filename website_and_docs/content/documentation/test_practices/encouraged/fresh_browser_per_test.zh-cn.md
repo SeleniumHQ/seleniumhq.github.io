@@ -13,8 +13,8 @@ aliases: [
 理想情况下, 为每次测试打开一个新的虚拟机. 
 如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 
 对于Firefox, 请使用您已知的配置文件去启动WebDriver.
-
+Most browser drivers like GeckoDriver and ChromeDriver will start with a clean
+known state with a new user profile, by default.
 ```java
-FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
-WebDriver driver = new FirefoxDriver(profile);
+WebDriver driver = new FirefoxDriver();
 ```

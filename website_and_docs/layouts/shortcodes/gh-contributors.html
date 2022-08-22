@@ -17,9 +17,10 @@
     padding-left: 4px;
   }
 </style>
+{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
+{{ if $githubToken }}
 <div class="ghContributors">
   {{ $url := .Get 0 }}
-  {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
   {{ $toReplace := printf "://%s@" $githubToken }}
   {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
   {{ $url := replace $url "://" $tokenInUrl }}
@@ -40,3 +41,7 @@
   </div>
   {{ end }}
 </div>
+{{ else }}
+  {{ partial "github-content.html" }}
+{{ end }}
+

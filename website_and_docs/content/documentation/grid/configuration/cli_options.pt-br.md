@@ -163,7 +163,6 @@ pull request updating this page.
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--grid-model` | string | `org.openqa.selenium.grid.distributor.GridModel` | Full classname of non-default grid model. This is used to store the states of all the registered Nodes. |
 | `--healthcheck-interval` | int | `120` | How often, in seconds, will the health check run for all Nodes. This ensures the server can ping all the Nodes successfully. |
 | ``--distributor`` | uri | `http://localhost:5553` | Url of the distributor. |
 | `--distributor-host` | string | `localhost` | Host on which the distributor is listening. |
@@ -179,6 +178,7 @@ pull request updating this page.
 |---|---|---|---|
 | `--docker-assets-path` | string | `/opt/selenium/assets` | Absolute path where assets will be stored |
 | `--docker-` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Docker configs which map image name to stereotype capabilities (example `-D selenium/standalone-firefox:latest '{"browserName": "firefox"}') |
+| `--docker-devices` | string[] | `/dev/kvm:/dev/kvm` | Exposes devices to a container. Each device mapping declaration must have at least the path of the device in both host and container separated by a colon like in this example: /device/path/in/host:/device/path/in/container |
 | `--docker-host` | string | `localhost` | Host name where the Docker daemon is running |
 | `--docker-port` | int | `2375` | Port where the Docker daemon is running |
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
@@ -230,6 +230,9 @@ pull request updating this page.
 | `--session-timeout` | int | `300` | Let X be the session-timeout in seconds. The Node will automatically kill a session that has not had any activity in the last X seconds. This will release the slot for other tests. |
 | `--vnc-env-var`| string | `START_XVFB` | Environment variable to check in order to determine if a vnc stream is available or not. |
 | `--no-vnc-port`| int | `7900` | If VNC is available, sets the port where the local noVNC stream can be obtained |
+| `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
+| `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
+| `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
 
 ### Relay
 
