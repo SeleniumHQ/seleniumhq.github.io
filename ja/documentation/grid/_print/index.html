@@ -18,25 +18,25 @@ Page being translated from English to Japanese.
 Do you speak Japanese? Help us to translate
 it by sending us pull requests!</p></div><p>Selenium Grid allows the execution of WebDriver scripts on remote machines
 by routing commands sent by the client to remote browser instances.</p><p>Grid aims to:</p><ul><li>Provide an easy way to run tests in parallel on multiple machines</li><li>Allow testing on different browser versions</li><li>Enable cross platform testing</li></ul><p>Interested? Go through the following sections to understand
-how Grid works, and how to set up your own.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-3c2b75d36f1614bda9b1f90fda16b57d>1 - 独自のグリッドを設定する</h1><div class=lead>Instructions, step by step, showing how to run a simple Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/ja/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
+how Grid works, and how to set up your own.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-3c2b75d36f1614bda9b1f90fda16b57d>1 - 独自のグリッドを設定する</h1><div class=lead>Instructions for a simple Selenium Grid</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/ja/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
-Grid role.</p><h3 id=standalone>Standalone</h3><p>Standalone is the union of all components, and to the user&rsquo;s eyes, they are executed as one.
-A fully functional Grid of one is available after starting it in the Standalone mode.</p><p>Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
-will be listening on <code>http://localhost:4444</code>, and that&rsquo;s the URL you should point your
-<code>RemoteWebDriver</code> tests. The server will detect the available drivers that it can use
-from the System <code>PATH</code>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar standalone
-</span></span></code></pre></div><h3 id=hub-and-nodes>Hub and Node(s)</h3><p>It enables the classic Hub & Node(s) setup. These roles are suitable for small
-and middle-sized Grids.</p><h4 id=hub>Hub</h4><p>A Hub is the union of the following components:</p><ul><li>Router</li><li>Distributor</li><li>Session Map</li><li>New Session Queue</li><li>Event Bus</li></ul><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar hub
-</span></span></code></pre></div><p>By default, the server will be listening on <code>http://localhost:4444</code>, and that&rsquo;s the URL
-you should point your <code>RemoteWebDriver</code> tests.</p><h4 id=nodes>Node(s)</h4><p>One or more Nodes can be started in this setup, and the server will detect the available
+Grid role.</p><h3 id=standalone>Standalone</h3><p><strong>Standalone</strong> combines all Grid components seamlessly into one.
+Running a Grid in <strong>Standalone</strong> mode gives you a fully functional Grid with a single command,
+within a single process.</p><p><strong>Standalone</strong> is also the easiest mode to spin up a Selenium Grid. By default, the server
+will listen for <code>RemoteWebDriver</code> requests on <code>http://localhost:4444/wd/hub</code>. By default, the
+server will detect the available drivers that it can use from the System <code>PATH</code>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar standalone
+</span></span></code></pre></div><p>You can still pass a <code>--config</code> file, or pass specific
+<a href=/ja/documentation/grid/configuration/cli_options/>configuration flags on the CLI</a></p><h4 id=hub>Hub</h4><p>A Hub is the union of the following components:</p><ul><li>Router</li><li>Distributor</li><li>Session Map</li><li>New Session Queue</li><li>Event Bus</li></ul><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar hub
+</span></span></code></pre></div><p>By default, the server will listen for <code>RemoteWebDriver</code> requests on <code>http://localhost:4444/wd/hub</code>.</p><h4 id=node>Node</h4><p>One or more <strong>Nodes</strong> can be started in this setup, and the server will detect the available
 drivers that it can use from the System <code>PATH</code>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node
-</span></span></code></pre></div><h3 id=distributed>Distributed</h3><p>On Distributed mode, each component needs to be started on its own. This setup is more suitable
+</span></span></code></pre></div><h3 id=distributed>Distributed</h3><p>When using a distributed Grid, each component needs is started separately. This setup is more suitable
 for large Grids.</p><div class="alert alert-primary" role=alert>The startup order of the components is not important, however, we recommend following these
-steps when starting a distributed Grid.</div><ol><li>Event Bus: serves as a communication path to other Grid components in subsequent steps.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar  event-bus
-</span></span></code></pre></div><ol start=2><li>Session Map: responsible for mapping session IDs to the Node where the session is running.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar sessions
-</span></span></code></pre></div><ol start=3><li>New Session Queue: adds the new session request to a queue, then the distributor processes it.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar sessionqueue
-</span></span></code></pre></div><ol start=4><li>Distributor: Nodes register to it, and assigns a Node for a session request.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus <span style=color:#204a87>false</span>
-</span></span></code></pre></div><ol start=5><li>Router: the Grid entrypoint, in charge of redirecting requests to the right component.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
+steps when starting a distributed Grid.</div><ol><li><strong>Event Bus</strong>: a communication path to other Grid components</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar  event-bus
+</span></span></code></pre></div><ol start=2><li><strong>Session Map</strong>: maps session IDs to the <strong>Node</strong> where the session is running</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar sessions
+</span></span></code></pre></div><ol start=3><li><strong>New Session Queue</strong>: adds the new session request to a queue for the distributor to processes</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar sessionqueue
+</span></span></code></pre></div><ol start=4><li><strong>Distributor</strong>: assigns a <strong>Node</strong> for a session request. Other <strong>Nodes</strong> register to the <strong>Distributor</strong>
+the way they would have registered to the <strong>Hub</strong> in a non-distributed Grid</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar distributor --sessions http://localhost:5556 --sessionqueue http://localhost:5559 --bind-bus <span style=color:#204a87>false</span>
+</span></span></code></pre></div><ol start=5><li><strong>Router</strong>: Redirects requests to the right component</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueue http://localhost:5559
 </span></span></code></pre></div><ol start=6><li>Node(s)</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node 
 </span></span></code></pre></div><h2 id=running-tests>Running tests</h2><p>To run tests after starting successfully Selenium Grid, you can use a <code>RemoteWebDriver</code>.
 Head to the <a href=/ja/documentation/webdriver/remote_webdriver/><code>RemoteWebDriver</code> section</a> for
@@ -57,8 +57,10 @@ UI or via an API call.</p><p>The Grid UI can be reached by opening your preferre
 <a href=http://localhost:4444>http://localhost:4444</a>.</p><p>API calls can be done through the <a href=http://localhost:4444/status>http://localhost:4444/status</a>
 endpoint or using <a href=/ja/documentation/grid/advanced_features/graphql_support/>GraphQL</a></p><div class="pageinfo pageinfo-primary"><p>For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-<a href=/ja/documentation/grid/components/>Configuring Components</a> section.</p></div><h2 id=警告>警告</h2><p>Selenium Gridは、適切なファイアウォールアクセス許可を使用して外部アクセスから保護する必要があります。</p><p>グリッドを保護しないと、次の1つ以上が発生する可能性があります。</p><ul><li>グリッドインフラストラクチャへのオープンアクセスを提供します。</li><li>サードパーティが内部Webアプリケーションおよびファイルにアクセスすることを許可します。</li><li>サードパーティにカスタムバイナリの実行を許可します。</li></ul><p><a href=//labs.detectify.com>Detectify</a> に関するこのブログ投稿をご覧ください。
-これは、公開されたグリッドが悪用される可能性のある概要を示しています。 <a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-0918ac00dadcaec8ed42334dbf603f55>2 - グリッドを使用する場合</h1><div class=lead>Is Grid right for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=/ja/documentation/grid/configuration/>Configuring Components</a> section.</p></div><h2 id=warning>Warning</h2><p>Selenium Grid must be protected from external access using appropriate
+firewall permissions.</p><p>Failure to protect your Grid could result in one or more of the following occurring:</p><ul><li>You provide open access to your Grid infrastructure</li><li>You allow third parties to access internal web applications and files</li><li>You allow third parties to run custom binaries</li></ul><p>See this blog post on <a href=//labs.detectify.com>Detectify</a>, which gives a good
+overview of how a publicly exposed Grid could be misused:
+<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-0918ac00dadcaec8ed42334dbf603f55>2 - グリッドを使用する場合</h1><div class=lead>Is Grid right for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from English to Japanese.
 Do you speak Japanese? Help us to translate
 it by sending us pull requests!</p></div><p>When would you use a Selenium Grid?</p><ul><li>To run your tests in parallel, against different browser types, browser versions, operating systems</li><li>To reduce the time needed to execute a test suite</li></ul><p>Selenium Grid runs test suites in parallel against multiple machines (called Nodes).
@@ -76,42 +78,46 @@ parallel on the latest version of Safari.</p><p>Execution time can be expressed 
 </code></pre><p>As the test suite is executing, the Grid allocates the tests to run against these
 browsers as configured in the tests.</p><p>A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.</p><p>Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team
 of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
-has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-456d2e951a458e6f18fe16c80ad70bc5>3 - グリッドのコンポーネント</h1><div class=lead>Check the different Grid components to understand how to use them.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-456d2e951a458e6f18fe16c80ad70bc5>3 - グリッドのコンポーネント</h1><div class=lead>Understand how to use the different Grid components</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!</p></div><div class="card mb-4"><div class=card-header><strong>Grid Components</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>Grid components shown in the fully distributed mode</div></div><h2 id=ルーター>ルーター</h2><p>ルーターがリクエストを正しいコンポーネントに転送します。</p><p>これはGridのエントリポイントであり、すべての外部リクエストはGridによって受信されます。
-ルーターの動作は、リクエストによって異なります。
-新しいセッション要求の場合、ルーターはそれをディストリビュータに転送します（新しいセッションの作成が処理されます）。
-リクエストが既存のセッションに属している場合、ルーターはセッションIDをセッションマップに送信し、
-セッションマップはセッションが実行されているノードを返します。
-この後、ルーターはリクエストをノードに転送します。</p><p>ルーターは、プロセスで不要なコンポーネントをオーバーロードすることなく、
-より適切に処理できるコンポーネントにリクエストを送信することにより、
-Grid内の負荷のバランスをとることを目的としています。</p><h2 id=ディストリビューター>ディストリビューター</h2><p>ディストリビューターは、すべてのノードとそのケイパビリティを認識しています。
-その主な役割は、新しいセッション要求を受け取り、セッションを作成できる適切なノードを見つけることです。
-セッションが作成されると、ディストリビューターは、
-セッションIDとセッションが実行されているノードとの関係をセッションマップに格納します。</p><h2 id=ノード>ノード</h2><p>ノードはGrid内に数回存在することができます。
-各ノードは、それが実行されているマシンの利用可能なブラウザのスロットを管理します。</p><p>ノードは、イベントバスを介して自身をディストリビューターに登録し、その構成は登録メッセージの一部として送信されます。</p><p>By default, the Node auto-registers all browser drivers available on the path of
+it by sending us pull requests!</p></div><p>Selenium Grid 4.0 is a ground-up rewrite from previous versions. In addition to a comprehensive
+set of improvements to performance and standards compliance, the different functions of the grid were
+broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
+and cloud-distributed scalability, Selenium Grid 4.0 is a wholly new solution for the modern era.</p><div class="card mb-4"><div class=card-header><strong>Grid Components</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>Grid components shown in the fully distributed mode</div></div><h2 id=router>Router</h2><p>The <strong>Router</strong> forwards requests to the correct component.</p><p>The <strong>Router</strong> is the entry point of the Grid, receiving all external requests.
+The <strong>Router</strong> behaves differently depending on the request:</p><ul><li>If it is a new session request, the <strong>Router</strong> will add it to the <strong>New Session Queue</strong></li><li>The <strong>Distributor</strong> regularly checks if there is a free slot</li><li>If so, the first matching request is removed from the <strong>New Session Queue</strong></li><li>The <strong>Router</strong> will receive the event and poll the <strong>New Session Queue</strong> to get the new session request</li><li>If the request belongs to an existing session, the <strong>Router</strong> will send the</li><li>session id to the <strong>Session Map</strong>, and the <strong>Session Map</strong> will
+return the <strong>Node</strong> where the session is running. After this, the <strong>Router</strong> will
+forward the request to the <strong>Node</strong>.</li></ul><p>The <strong>Router</strong> balances the load in the Grid by sending the requests to the
+component that is able to handle them better, without overloading any component
+that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>The <strong>Distributor</strong> keeps track of all <strong>Nodes</strong> and their capabilities. Its
+receives a new session request, then finds a suitable <strong>Node</strong> where the session can be
+created. After the session is created, the <strong>Distributor</strong> stores in the <strong>Session Map</strong>
+the relation between the session id and <strong>Node</strong> where the session is being executed.</p><h2 id=node>Node</h2><p>A Grid can contain multiple <strong>Nodes</strong>. Each <strong>Node</strong> manages
+the slots for the available browsers of the machine where it is running.</p><p>The <strong>Node</strong> registers itself to the <strong>Distributor</strong> through the <strong>Event Bus</strong>, and its
+configuration is sent as part of the registration message.</p><p>By default, the <strong>Node</strong> auto-registers all browser drivers available on the path of
 the machine where it runs. It also creates one slot per available CPU for Chromium
-based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
+based browsers and Firefox. For Safari, only one slot is created.
 Through a specific configuration, it can run sessions in Docker containers or relay commands.
 You can see more configuration details in
-<a href=/ja/documentation/grid/getting_started/>setting up your own grid</a>.</p><p>ノードは受信したコマンドを実行するだけで、評価、判断、制御は行いません。
-ノードが実行されているマシンは、他のコンポーネントと同じオペレーティングシステムを持つ必要はありません。
-たとえば、WindowsノードにはInternet Explorerをブラウザーオプションとして提供する機能がありますが、
-これはLinuxまたはMacでは不可能です。</p><h2 id=session-map>Session Map</h2><p>The Session Map is a data store that keeps the information of the session id and the Node
-where the session is running. It serves as a support for the Router in the process of
-forwarding a request to the Node. The Router will ask the Session Map for the Node
-associated to a session id.</p><h2 id=new-session-queue>New Session Queue</h2><p>New Session Queue holds all the new session requests in a FIFO order.
-It has configurable parameters for setting the request timeout and request retry interval.</p><p>The Router adds the new session request to the New Session Queue and waits for the response.
-The New Session Queue regularly checks if any request in the queue has timed out,
-if so the request is rejected and removed immediately.</p><p>The Distributor regularly checks if a slot is available. If so, the Distributor requests the
-New Session Queue for the first matching request. The Distributor then attempts to create
-a new session.</p><p>Once the requested capabilities match the capabilities of any of the free Node slots, the Distributor attempts to get the
-available slot. If all the slots are busy, the Distributor will ask the queue to add the request to the front of the queue.
-If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the Distributor sends the session information to the New Session Queue.
-The New Session Queue sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queue, and Session Map.
+<a href=/ja/documentation/grid/getting_started/>setting up your own grid</a>.</p><p>A <strong>Node</strong> only executes the received commands, it does not evaluate, make judgments,
+or control anything other than the flow of commands and responses. The machines where
+the <strong>Node</strong> is running does not need to have the same operating system as the other
+components. For example, A Windows <strong>Node</strong> might have the capability of offering Edge
+as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can
+have multiple <strong>Nodes</strong> configured with Windows, Mac, or Linux.</p><h2 id=session-map>Session Map</h2><p>The <strong>Session Map</strong> is a data store that keeps the information of the session id and the <strong>Node</strong>
+where the session is running. It serves as a support for the <strong>Router</strong> in the process of
+forwarding a request to the <strong>Node</strong>. The <strong>Router</strong> will ask the <strong>Session Map</strong> for the <strong>Node</strong>
+associated to a session id.</p><h2 id=new-session-queue>New Session Queue</h2><p>The <strong>New Session Queue</strong> holds all the new session requests in a FIFO order.
+It has configurable parameters for setting the request timeout and request retry interval.</p><p>The <strong>Router</strong> adds the new session request to the <strong>New Session Queue</strong> and waits for the response.
+The <strong>New Session Queue</strong> regularly checks if any request in the queue has timed out,
+if so the request is rejected and removed immediately.</p><p>The <strong>Distributor</strong> regularly checks if a slot is available. If so, the <strong>Distributor</strong> requests the
+<strong>New Session Queue</strong> for the first matching request. The <strong>Distributor</strong> then attempts to create
+a new session.</p><p>Once the requested capabilities match the capabilities of any of the free <strong>Node</strong> slots, the <strong>Distributor</strong> attempts to get the
+available slot. If all the slots are busy, the <strong>Distributor</strong> will ask the queue to add the request to the front of the queue.
+If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the <strong>Distributor</strong> sends the session information to the <strong>New Session Queue</strong>.
+The <strong>New Session Queue</strong> sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The <strong>Event Bus</strong> serves as a communication path between the <strong>Nodes</strong>, <strong>Distributor</strong>, <strong>New Session Queue</strong>, and <strong>Session Map</strong>.
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
-When starting the Grid in its fully distributed mode, the Event Bus is the first component that should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
+When starting the Grid in its fully distributed mode, the <strong>Event Bus</strong> is the first component that should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
 Head to the <a href=/ja/documentation/grid/getting_started/>&ldquo;Getting Started&rdquo;</a>
 section to understand how to put all these pieces together.</div></div><div class=td-content style=page-break-before:always><h1 id=pg-6355fd8c1e3f7ed9dd004a69385e35a6>4 - コンポーネントの構成</h1><div class=lead>Here you can see how each Grid component can be configured individually based on common configuration values and component-specific configuration values.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
