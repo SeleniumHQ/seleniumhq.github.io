@@ -11,6 +11,32 @@ aliases: [
 ]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
+## Quick start
+
+1. Prerequisites
+    * Java 11 or higher installed
+    * Browser(s) installed
+    * Browser driver(s) [installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+    * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
+1. Start the Grid
+    * `java -jar selenium-server-<version>.jar standalone`
+1. Point* your WebDriver tests to [http://localhost:4444](http://localhost:4444)
+1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
+
+*Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
+Check the [`RemoteWebDriver` section]({{< ref "../webdriver/remote_webdriver" >}}).
+
+To learn more about the different configuration options, go through the sections below.
+
 ## Grid roles
 
 Several [components]({{< ref "components.md" >}}) compose a Selenium Grid. Depending 
@@ -106,18 +132,12 @@ java -jar selenium-server-<version>.jar router --sessions http://localhost:5556 
 java -jar selenium-server-<version>.jar node 
 ```
 
-## Running tests
-
-To run tests after starting successfully Selenium Grid, you can use a `RemoteWebDriver`.
-Head to the [`RemoteWebDriver` section]({{< ref "../webdriver/remote_webdriver.md" >}}) for
-more details.
-
-### Tests metadata
+## Metadata in tests
 
 You can add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 or visualize parts of it through the Selenium Grid UI. Metadata can be added by prefixing the metadata with `se:`.
 
-Here is a quick example in Java showing how to do that.
+Here is a quick example in Java showing that.
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
