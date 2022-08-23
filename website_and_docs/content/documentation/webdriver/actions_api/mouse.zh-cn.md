@@ -298,7 +298,7 @@ offset.
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L114-L116" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L29-L30" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
