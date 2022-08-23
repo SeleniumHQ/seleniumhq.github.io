@@ -100,7 +100,7 @@ WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
 System.out.println(firstResult.getText());
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 def document_initialised(driver):
     return driver.execute_script("return initialised")
 
@@ -168,7 +168,7 @@ WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
 assertEquals(foo.getText(), "Hello from JavaScript!");         
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
 el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element(By.TAG_NAME,"p"))

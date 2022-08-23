@@ -13,35 +13,23 @@ aliases:
         ]
 ---
 
-Selenium Grid permite a execução de scripts WebDriver em máquinas remotas (virtuais
-ou reais) por meio de comandos de roteamento enviados pelo cliente para instâncias remotas do navegador.
-Seu objetivo é fornecer uma maneira fácil de executar testes em paralelo em várias máquinas.
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Portuguese. 
+   Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-Selenium Grid nos permite executar testes em paralelo em várias máquinas
-e gerenciar diferentes versões e configurações do navegador centralmente
-(em vez de em cada teste individual).
+Selenium Grid allows the execution of WebDriver scripts on remote machines 
+by routing commands sent by the client to remote browser instances. 
 
-A Selenium Grid não é uma bala de prata.
-Ela resolve um subconjunto de problemas comuns de delegação e distribuição,
-mas não irá, por exemplo, gerenciar sua infraestrutura,
-e pode não atender às suas necessidades específicas.
+Grid aims to:
 
-## Objetivos e funcionalidades principais
+* Provide an easy way to run tests in parallel on multiple machines
+* Allow testing on different browser versions
+* Enable cross platform testing
 
-* Ponto de entrada central para todos os testes
-* Gerenciamento e controle dos nós / ambiente onde os navegadores rodam
-* Escalonamento
-* Executar testes em paralelo
-* Teste de plataforma cruzada
-* Balanceamento de carga
-
-{{% alert title="Selenium Grid 4" color="primary" %}}
-Grid 4 tem uma abordagem para tirar proveito de uma série de novas 
-tecnologias para facilitar o escalonamento, permitindo ainda a execução local.
-
-Selenium Grid 4 é uma implementação nova e não compartilha a base de código
-da versão anterior.
-
-Para obter todos os detalhes dos componentes do Grid 4, entenda como funciona e como definir
-o seu próprio. Navegue pelas seguintes seções.
-{{% /alert %}}
+Interested? Go through the following sections to understand
+how Grid works, and how to set up your own.
