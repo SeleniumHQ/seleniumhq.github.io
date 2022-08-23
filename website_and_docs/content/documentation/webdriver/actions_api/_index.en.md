@@ -47,7 +47,7 @@ to wait a beat between actions for things to work correctly.
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -78,7 +78,7 @@ it does not get executed with the perform method.
         {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code

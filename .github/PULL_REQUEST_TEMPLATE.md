@@ -1,8 +1,8 @@
 **Thanks for contributing to the Selenium site and documentation!**
-**A PR well described will help maintainers to quickly review and merge it**
+**A PR well described will help maintainers to review and merge it quickly**
 
 Before submitting your PR, please check our [contributing](https://selenium.dev/documentation/en/contributing/) guidelines.
-Avoid large PRs, help reviewers by making them as simple and short as possible.
+Avoid large PRs, and help reviewers by making them as simple and short as possible.
 
 
 <!--- Provide a general summary of your changes in the Title above -->

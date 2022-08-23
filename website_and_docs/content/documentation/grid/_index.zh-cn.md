@@ -13,40 +13,24 @@ aliases:
         ]
 ---
 
-
-通过将客户端命令发送到远程浏览器的实例,
-Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚本.
-它旨在提供一种在多台计算机上并行运行测试的简便方法.
-
-Selenium Grid允许我们在多台计算机上并行运行测试,
-并集中管理不同的浏览器版本和浏览器配置
-(而不是在每个独立的测试中).
-
-Selenium Grid不是银弹.
-它解决了一些常见的委派和分布式问题,
-但是例如无法管理基础架构这样的问题,
-可能不适合您的特定需求.
-
-## 目的和主要功能
-
-* 为所有的测试提供统一的入口
-* 管理和控制运行着浏览器的节点/环境
-* 扩展
-* 并行测试
-* 跨平台(操作系统)测试
-* 负载测试
-
-{{% alert title="Selenium Grid 4" color="primary" %}}
-Grid 4有一种实现可以利用许多新技术来促进扩展,
-同时仍然允许本地执行.
-
-Selenium Grid 4 是全新的实现,
-并且不共享之前版本的代码库.
-
-关于Grid 4组件的所有详细信息,
-了解其工作原理以及如何设置自己的组件,
-请浏览以下章节.
-{{% /alert %}}
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
 
+Selenium Grid allows the execution of WebDriver scripts on remote machines 
+by routing commands sent by the client to remote browser instances. 
 
+Grid aims to:
+
+* Provide an easy way to run tests in parallel on multiple machines
+* Allow testing on different browser versions
+* Enable cross platform testing
+
+Interested? Go through the following sections to understand
+how Grid works, and how to set up your own.

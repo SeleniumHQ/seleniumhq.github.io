@@ -1,5 +1,6 @@
 const {By} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
+const assert = require("assert");
 
 suite(function(env) {
   describe('Move to element', function() {
@@ -9,19 +10,16 @@ suite(function(env) {
       driver = await env.builder().build();
     });
 
-    after(() => driver.quit());
+    after(async () => await driver.quit());
 
     it('Mouse move into an element', async function() {
-        // Navigate to Url
-        await driver.get('https://crossbrowsertesting.github.io/selenium_example_page.html');
+      await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
+      const hoverable = driver.findElement(By.id("hover"));
+      const actions = driver.actions({ async: true });
+      await actions.move({ origin: hoverable }).perform();
 
-        // Store 'Gmail' anchor web element
-        let gmailLink = driver.findElement(By.tagName("button"));
-        const actions = driver.actions({ async: true });
-
-        // Performs mouse move action onto the element
-        await actions.move({ origin: gmailLink }).perform();
+      const status = await driver.findElement(By.id('move-status')).getText();
+      assert.deepStrictEqual(status, `hovered`)
     });
-
   });
 });

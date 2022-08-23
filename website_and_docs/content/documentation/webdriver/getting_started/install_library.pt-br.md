@@ -24,35 +24,24 @@ Adicione a dependência selenium-java em seu pom.xml:
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
-A dependência _selenium-java_ suporta a execução de sua automação com todos os navegadores
-com suporte Selenium. Se você quiser fazer testes
-apenas em um navegador específico, você pode adicionar a dependência para esse navegador
-em seu arquivo _pom.xml_.
-Por exemplo, você deve adicionar a seguinte dependência em seu _pom.xml_
-arquivo para executar seus testes apenas no Firefox:
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-De maneira semelhante, se você deseja executar testes apenas no Chrome,
-você deve adicionar a seguinte dependência:
+Gradle 7.0 and above:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
+
   {{< /tab >}}
   {{< tab header="Python" >}}
   A instalação de bibliotecas Selenium para Python pode ser feita usando pip:
