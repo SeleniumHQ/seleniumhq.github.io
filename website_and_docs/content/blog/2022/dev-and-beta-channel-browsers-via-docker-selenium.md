@@ -1,20 +1,20 @@
 ---
-title: "Dev and Beta Channel Browser Support via Docker Selenium"
-linkTitle: "Dev and Beta Channel Browser Support via Docker Selenium"
+title: "Dev and Beta Channel Browsers via Docker Selenium"
+linkTitle: "Dev and Beta Channel Browsers via Docker Selenium"
 date: 2022-08-22
 tags: ["webdriver", "docker", "browsers", "chrome", "firefox", "edge"]
 categories: ["general", "browsers", "docker"]
 author: James Mortensen ([@jmort253](https://twitter.com/jmort253))
 description: >
   Now you can test on Google Chrome, Mozilla Firefox, 
-  and Microsoft Edge on the Dev and Beta Channels using Docker Selenium
+  and Microsoft Edge on the Dev and Beta channels using Docker Selenium
 ---
 
-We now have the browser beta and dev channel releases published to [Selenium Docker Hub](https://hub.docker.com/u/selenium) and updated every two days. This enables QA teams to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases and using container tools such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment _before_ those issues have an impact on their users.
+The Docker Selenium browser Beta and Dev channel releases are now regularly published to [Docker Hub](https://hub.docker.com/u/selenium) and updated every two days. This enables QA teams to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment _before_ those issues have an impact on their users.
 
 ### What are "release channels"?
 
-Here's some background on release channels: Google, Mozilla, and Microsoft all maintain different "channels" for their respective browser releases. The one most end users use is known as the "stable" channel. The stable channel consists of versions of these browsers which have passed rigorous testing and are considered "production-ready". Up until now, this was a QA team's only option for testing when using Docker Selenium.  Today, we're pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the beta and dev channels.
+Here's some background on release channels: Google, Mozilla, and Microsoft all maintain different "channels" for their respective browser releases. Most end users use the "Stable" channel. The Stable channel releases have passed rigorous testing, and these versions are considered "production-ready". Up until now, this was a QA team's only option for testing when using Docker Selenium. Today, we're pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.
 
 For clarity, here is Google's description of these 3 channels from [their "Chrome Release Channels" page](https://www.chromium.org/getting-involved/dev-channel/):
 
@@ -67,8 +67,9 @@ $ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalon
 
 ### Selenium Grid
 
-To run these container images in a Selenium Grid, we'll use docker-compose. For instance, here's an example on how to run a Selenium Grid with Chrome, Firefox, and Edge on the Beta channel:
+To run these container images in a Selenium Grid, we'll use docker-compose. For instance, this example shows how to run a Selenium Grid with Chrome, Firefox, and Edge on the Beta channel:
 
+**docker-compose-v3-beta-channel.yml:**
 ```bash
 # To execute this docker-compose yml file use `docker-compose -f docker-compose-v3-beta-channel.yml up`
 # Add the `-d` flag at the end for detached execution
@@ -114,8 +115,8 @@ services:
       - "4444:4444"
 ```
 
-To run on the Dev channel, simply replace the "beta" tags with "dev".
+To run on the more cutting edge -- and hence potentially more buggy -- Dev channel, simply replace the "beta" tags with "dev".
 
 ### Support
 
-These images represent pre-release browsers and WebDrivers, and they're not guaranteed to be 100% stable. Should you run into any issues with these images, support is limited and is dependent on the browser vendors. However, if you believe the issue is related to Selenium, please contact us in the various support channels.
+These Beta and Dev images represent pre-release browsers and WebDrivers, and they're not guaranteed to be 100% stable. Should you run into any issues with these images, support from the Selenium community is limited and is dependent on the browser vendors. However, if you believe the issue is related to Selenium, please contact us in the [various support channels](/support/).
