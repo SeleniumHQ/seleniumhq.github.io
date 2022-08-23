@@ -7078,18 +7078,12 @@ it with the following examples.</p><ul class="nav nav-tabs" id=tabs-5 role=tabli
 </span></span><span style=display:flex><span>Thread safety error; this instance of WebDriver was constructed
 </span></span><span style=display:flex><span>on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
 </span></span><span style=display:flex><span>This is not permitted and *will* cause undefined behaviour
-</span></span></code></pre></div><p>正如示例所示:</p><ul><li><code>protectedDriver</code> 将在主线程中创建</li><li>我们使用Java的 <code>Runnable</code> 启动一个新进程, 并使用一个新的 <code>Thread</code> 运行该进程</li><li>这两个 <code>Thread</code> 都会发生冲突, 因为主线程的内存中没有 <code>protectedDriver</code></li><li><code>ThreadGuard.protect</code> 会抛出异常</li></ul><h4 id=注意>注意:</h4><p>这不能代替并发运行时使用 <code>ThreadLocal</code> 管理驱动程序的需求.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-7428c1276eb4771db6039b18cd60bda7>3 - Grid</h1><div class=lead>要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.</div><p>通过将客户端命令发送到远程浏览器的实例,
-Selenium Grid 允许在远程计算机 (虚拟或真实) 上执行WebDriver脚本.
-它旨在提供一种在多台计算机上并行运行测试的简便方法.</p><p>Selenium Grid允许我们在多台计算机上并行运行测试,
-并集中管理不同的浏览器版本和浏览器配置
-(而不是在每个独立的测试中).</p><p>Selenium Grid不是银弹.
-它解决了一些常见的委派和分布式问题,
-但是例如无法管理基础架构这样的问题,
-可能不适合您的特定需求.</p><h2 id=目的和主要功能>目的和主要功能</h2><ul><li>为所有的测试提供统一的入口</li><li>管理和控制运行着浏览器的节点/环境</li><li>扩展</li><li>并行测试</li><li>跨平台(操作系统)测试</li><li>负载测试</li></ul><div class="alert alert-primary" role=alert><h4 class=alert-heading>Selenium Grid 4</h4><p>Grid 4有一种实现可以利用许多新技术来促进扩展,
-同时仍然允许本地执行.</p><p>Selenium Grid 4 是全新的实现,
-并且不共享之前版本的代码库.</p><p>关于Grid 4组件的所有详细信息,
-了解其工作原理以及如何设置自己的组件,
-请浏览以下章节.</p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9c9914771fbff5e2210e763c63e98094>3.1 - Selenium Grid快速起步</h1><div class=lead>一步一步地说明如何运行简单的Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/zh-cn/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
+</span></span></code></pre></div><p>正如示例所示:</p><ul><li><code>protectedDriver</code> 将在主线程中创建</li><li>我们使用Java的 <code>Runnable</code> 启动一个新进程, 并使用一个新的 <code>Thread</code> 运行该进程</li><li>这两个 <code>Thread</code> 都会发生冲突, 因为主线程的内存中没有 <code>protectedDriver</code></li><li><code>ThreadGuard.protect</code> 会抛出异常</li></ul><h4 id=注意>注意:</h4><p>这不能代替并发运行时使用 <code>ThreadLocal</code> 管理驱动程序的需求.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-7428c1276eb4771db6039b18cd60bda7>3 - Grid</h1><div class=lead>要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from English to Chinese.
+Do you speak Chinese? Help us to translate
+it by sending us pull requests!</p></div><p>Selenium Grid allows the execution of WebDriver scripts on remote machines
+by routing commands sent by the client to remote browser instances.</p><p>Grid aims to:</p><ul><li>Provide an easy way to run tests in parallel on multiple machines</li><li>Allow testing on different browser versions</li><li>Enable cross platform testing</li></ul><p>Interested? Understand how Grid works, and how to set up you own,
+by going thorough the following sections.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9c9914771fbff5e2210e763c63e98094>3.1 - Selenium Grid快速起步</h1><div class=lead>一步一步地说明如何运行简单的Selenium Grid.</div><h2 id=grid-roles>Grid roles</h2><p>Several <a href=/zh-cn/documentation/grid/components/>components</a> compose a Selenium Grid. Depending
 on your needs, you can start each one of them on its own, or a few at the same time by using a
 Grid role.</p><h3 id=standalone>Standalone</h3><p>Standalone is the union of all components, and to the user&rsquo;s eyes, they are executed as one.
 A fully functional Grid of one is available after starting it in the Standalone mode.</p><p>Standalone is also the easiest mode to spin up a Selenium Grid. By default, the server
@@ -11183,7 +11177,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/tadashi0713>@tadashi0713</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=selenium-website--docsgithubcomseleniumhqseleniumhqgithubio><a href=//github.com/SeleniumHQ/seleniumhq.github.io/>Selenium Website & Docs</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>542 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>543 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>481 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
