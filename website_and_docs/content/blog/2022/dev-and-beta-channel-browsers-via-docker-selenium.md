@@ -10,7 +10,7 @@ description: >
   and Microsoft Edge on the Dev and Beta channels using Docker Selenium
 ---
 
-The Docker Selenium browser Beta and Dev channel releases are now regularly published to [Docker Hub](https://hub.docker.com/u/selenium) and updated every two days. This enables QA teams to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment _before_ those issues have an impact on their users.
+The Docker Selenium browser Beta and Dev channel releases are now regularly published to [Docker Hub](https://hub.docker.com/u/selenium) and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment _before_ those issues have an impact on their users.
 
 ### What are "release channels"?
 
