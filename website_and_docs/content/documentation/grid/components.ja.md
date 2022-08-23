@@ -3,7 +3,7 @@ title: "グリッドのコンポーネント"
 linkTitle: "グリッドのコンポーネント"
 weight: 6
 description: >
-    Check the different Grid components to understand how to use them.
+    Understand how to use the different Grid components
 aliases: [
 "/documentation/ja/grid/grid_4/components_of_a_grid/",
 "/ja/documentation/grid/components_of_a_grid/"

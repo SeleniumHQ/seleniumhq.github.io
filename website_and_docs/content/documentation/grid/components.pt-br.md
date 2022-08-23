@@ -3,7 +3,7 @@ title: "Componentes"
 linkTitle: "Componentes"
 weight: 6
 description: >
-    Check the different Grid components to understand how to use them.
+    Understand how to use the different Grid components
 aliases: [
 "/documentation/pt-br/grid/grid_4/components_of_a_grid/",
 "/pt-br/documentation/grid/components_of_a_grid/"
