@@ -215,19 +215,17 @@ for more information about how docker device mapping works.</p><div class=highli
 </span></span><span style=display:flex><span><span style=color:#000>video-image</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;selenium/video:latest&#34;</span>
 </span></span></code></pre></div><h3 id=relaying-commands-to-a-service-endpoint-that-supports-webdriver>Relaying commands to a service endpoint that supports WebDriver</h3><p>It is useful to connect an external service that supports WebDriver to Selenium Grid.
 An example of such service could be a cloud provider or an Appium server. In this way,
-Grid can enable more coverage to platforms and versions not present locally.</p><p>The following is an en example of connecting an Appium server to Grid.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span><span style=color:#000;font-weight:700>[</span><span style=color:#000>server</span><span style=color:#000;font-weight:700>]</span>
-</span></span><span style=display:flex><span><span style=color:#000>port</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#0000cf;font-weight:700>5555</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
+Grid can enable more coverage to platforms and versions not present locally.</p><p>The following is an en example of connecting an Appium server to Grid.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span><span style=color:#000;font-weight:700>[</span><span style=color:#000>node</span><span style=color:#000;font-weight:700>]</span>
 </span></span><span style=display:flex><span><span style=color:#000>detect-drivers</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>false</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>[</span><span style=color:#000>relay</span><span style=color:#000;font-weight:700>]</span>
-</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Default Appium server endpoint</span>
+</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Default Appium/Cloud server endpoint</span>
 </span></span><span style=display:flex><span><span style=color:#000>url</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;http://localhost:4723/wd/hub&#34;</span>
 </span></span><span style=display:flex><span><span style=color:#000>status-endpoint</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;/status&#34;</span>
-</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Stereotypes supported by the service</span>
+</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Stereotypes supported by the service. The initial number is &#34;max-sessions&#34;, and will allocate </span>
+</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># that many test slots to that particular configuration</span>
 </span></span><span style=display:flex><span><span style=color:#000>configs</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>[</span>
-</span></span><span style=display:flex><span>  <span style=color:#4e9a06>&#34;1&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;{\&#34;browserName\&#34;: \&#34;chrome\&#34;, \&#34;platformName\&#34;: \&#34;android\&#34;, \&#34;appium:platformVersion\&#34;: \&#34;11\&#34;}&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#4e9a06>&#34;5&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;{\&#34;browserName\&#34;: \&#34;chrome\&#34;, \&#34;platformName\&#34;: \&#34;android\&#34;, \&#34;appium:platformVersion\&#34;: \&#34;11\&#34;}&#34;</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>]</span>
 </span></span></code></pre></div><h3 id=basic-auth-enabled>Basic auth enabled</h3><p>It is possible to protect a Grid with basic auth by configuring the Router/Hub/Standalone with
 a username and password. This user/password combination will be needed when loading the Grid UI
