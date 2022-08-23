@@ -251,7 +251,7 @@ most common ones for Java, which are [Maven](https://maven.apache.org/) and
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.0.0</version>
+        <version>4.4.0</version>
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
@@ -298,7 +298,7 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 }
 test {
     useJUnitPlatform()
@@ -315,29 +315,29 @@ To check all the Java releases, you can head to [MVNRepository](https://mvnrepos
 ### C#
 
 The place to get updates for Selenium 4 in C# is [NuGet](https://www.nuget.org/). Under the 
-[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.0.0) package you 
+[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.4.0) package you 
 can get the instructions to update to the latest version. Inside of Visual Studio, through the 
 NuGet Package Manager you can execute:
 
 ```shell
-PM> Install-Package Selenium.WebDriver -Version 4.0.0
+PM> Install-Package Selenium.WebDriver -Version 4.4.0
 ```
 
 ### Python
 
 The most important change to use Python is the minimum required version. Selenium 4 will 
 require a minimum Python 3.7 or higher. More details can be found at the 
-[Python Package Index](https://pypi.org/project/selenium/4.0.0/). To upgrade from the 
+[Python Package Index](https://pypi.org/project/selenium/4.4.3/). To upgrade from the 
 command line, you can execute:
 
 ```shell
-pip install selenium==4.0.0
+pip install selenium==4.4.3
 ```
 
 ### Ruby
 
 The update details for Selenium 4 can be seen at the 
-[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.0.0) 
+[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.4.0) 
 gem in RubyGems. To install the latest version, you can execute:
 
 ```shell
@@ -347,14 +347,14 @@ gem install selenium-webdriver
 To add it to your Gemfile:
 
 ```shell
-gem 'selenium-webdriver', '~> 4.0.0'
+gem 'selenium-webdriver', '~> 4.4.0'
 ```
 
 ### JavaScript
 
 The selenium-webdriver package can be found at the Node package manager, 
 [npmjs](https://www.npmjs.com). Selenium 4 can be found 
-[here](https://www.npmjs.com/package/selenium-webdriver/v/4.0.0). To install it, you 
+[here](https://www.npmjs.com/package/selenium-webdriver/v/4.4.0). To install it, you 
 could either execute:
 
 ```shell
@@ -368,7 +368,7 @@ Or, update your package.json and run` npm install`:
   "name": "selenium-tests",
   "version": "1.0.0",
   "dependencies": {
-    "selenium-webdriver": "^4.0.0"
+    "selenium-webdriver": "^4.4.0"
   }
 }
 ```

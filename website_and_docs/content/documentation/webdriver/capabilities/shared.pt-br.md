@@ -17,6 +17,15 @@ aliases: [
 ]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Portuguese. 
+   Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
 Para criar uma nova sessão por Selenium WebDriver,
 a extremidade local deve fornecer os recursos básicos para a extremidade remota.
 A extremidade remota usa o mesmo conjunto de recursos para
@@ -26,38 +35,298 @@ WebDriver fornece recursos que cada controle extremidade
 remota irá/deverá apoiar a implementação.
 A seguir estão os recursos que o WebDriver suporta:
 
-## browserName:
+## browserName
 
 Este recurso é usado para definir o `browserName` para uma determinada sessão.
 Se o navegador especificado não estiver instalado na
 extremidade remota, a criação da sessão irá falhar
 
-## browserVersion: 
+## browserVersion
 
 Este recurso é opcional, usado para
 definir a versão do navegador disponível na extremidade remota.
 Por exemplo, se pedir o Chrome versão 75 em um sistema que
 tem apenas a versão 80 instalada, a criação da sessão irá falhar
 
-## pageLoadStrategy:
+## pageLoadStrategy
 
-Ao navegar para uma nova página via URL, por padrão o Selenium irá esperar
-até que a página esteja totalmente carregada antes de responder. Isso funciona bem para
-iniciantes, mas pode causar longos tempos de espera em páginas que carregam um grande
-número de recursos de terceiros. Usar uma estratégia não padrão pode tornar a
-execução de testes mais rápida em casos como este, mas também pode apresentar instabilidade
-onde os elementos na página mudam de posição conforme os elementos são carregados e mudam
-de tamanho.
+Three types of page load strategies are available.
 
-A estratégia de carregamento da página consulta o
+The page load strategy queries the 
 [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-conforme descrito na tabela abaixo:
+as described in the table below:
 
-| Estrtégia | Ready State | Notas |
+| Strategy | Ready State | Notes |
 | -------- | ----------- | ----- |
-| normal | complete | Usado por padrão, aguarda o download de todos os recursos |
-| eager | interactive | O acesso ao DOM está pronto, mas outros recursos, como imagens, ainda podem estar carregando |
-| none | Any | Não bloqueia o WebDriver de nenhuma forma |
+| normal | complete | Used by default, waits for all resources to download |
+| eager | interactive | DOM access is ready, but other resources like images may still be loading |
+| none | Any | Does not block WebDriver at all |
+
+The `document.readyState` property of a document describes the loading state of the current document.
+
+When navigating to a new page via URL, by default, WebDriver will hold off on completing a navigation 
+method (e.g., driver.navigate().get()) until the document ready state is complete. This _does not 
+necessarily mean that the page has finished loading_, especially for sites like Single Page Applications 
+that use JavaScript to dynamically load content after the Ready State returns complete. Note also 
+that this behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+
+If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
+that aren't important to the automation, you can change from the default parameter of `normal` to
+`eager` or `none` to speed up the session. This value applies to the entire session, so make sure 
+that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient to minimize 
+flakiness.
+
+
+### normal (default)
+
+WebDriver waits until the [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) 
+event fire is returned.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pageLoadStrategy {
+  public static void main(String[] args) {
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+    WebDriver driver = new ChromeDriver(chromeOptions);
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+    } finally {
+      driver.quit();
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Python" >}}
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'normal'
+driver = webdriver.Chrome(options=options)
+driver.get("http://www.google.com")
+driver.quit()
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='normal'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
+{{< /tab >}}
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+  val chromeOptions = ChromeOptions()
+  chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL)
+  val driver = ChromeDriver(chromeOptions)
+  try {
+    driver.get("https://www.google.com")
+  }
+  finally {
+    driver.quit()
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### eager
+
+WebDriver waits until [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) 
+event fire is returned.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pageLoadStrategy {
+  public static void main(String[] args) {
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+    WebDriver driver = new ChromeDriver(chromeOptions);
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+    } finally {
+      driver.quit();
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Python" >}}
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'eager'
+driver = webdriver.Chrome(options=options)
+driver.get("http://www.google.com")
+driver.quit()
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='eager'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
+{{< /tab >}}
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+  val chromeOptions = ChromeOptions()
+  chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER)
+  val driver = ChromeDriver(chromeOptions)
+  try {
+    driver.get("https://www.google.com")
+  }
+  finally {
+    driver.quit()
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### none
+
+WebDriver only waits until the initial page is downloaded.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pageLoadStrategy {
+  public static void main(String[] args) {
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
+    WebDriver driver = new ChromeDriver(chromeOptions);
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+    } finally {
+      driver.quit();
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Python" >}}
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'none'
+driver = webdriver.Chrome(options=options)
+driver.get("http://www.google.com")
+driver.quit()
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='none'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
+{{< /tab >}}
+{{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+  val chromeOptions = ChromeOptions()
+  chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE)
+  val driver = ChromeDriver(chromeOptions)
+  try {
+    driver.get("https://www.google.com")
+  }
+  finally {
+    driver.quit()
+  }
+}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ## platformName
 
