@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/pt-br/getinvolved>Get Involved</a>
 <a class=dropdown-item href=/pt-br/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/pt-br/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Português (Brasileiro)</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/grid/>English</a>
 <a class=dropdown-item href=/zh-cn/documentation/grid/>中文简体</a>
-<a class=dropdown-item href=/ja/documentation/grid/>日本語</a></div></li></ul><div class=navbar-nav><div id=docsearch></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
+<a class=dropdown-item href=/ja/documentation/grid/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; Buscar no site…" aria-label="Buscar no site…" autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/pt-br/documentation/grid/>Return to the regular view of this page</a>.</p></div><h1 class=title>Grid</h1><div class=lead>Want to run tests in parallel across multiple machines? Then, Grid is for you.</div><ul><li>1: <a href=#pg-75ab41fb11e05c56b77cec734372ce26>Configurando a sua</a></li><li>2: <a href=#pg-473c3ba9a1648a779746261bd023b3f4>Quando usar a Grid</a></li><li>3: <a href=#pg-b523d0ca8ce055224f37be89f8083fc0>Componentes</a></li><li>4: <a href=#pg-b1c6192513676fb6014aaa94cca41a86>Configuring Components</a></li><ul><li>4.1: <a href=#pg-87c07f7cc7b198a46952084fd2e170cb>Config help</a></li><li>4.2: <a href=#pg-fb1445fa9df303a9961b39fa99116b7a>CLI Options</a></li><li>4.3: <a href=#pg-b112688e72f40f34b417d747cee9d825>Toml Options</a></li></ul><li>5: <a href=#pg-cf345e864afd2cccb282c4c5d3e03055>Grid Architecture</a></li><li>6: <a href=#pg-0a55bd7bbf52302fce2db52de9355fdd>Advanced Features</a></li><ul><li>6.1: <a href=#pg-0559dcb12b1e3ebb50211585a83e0be8>Observability</a></li><li>6.2: <a href=#pg-2c82ff996091dc1dd2f15b718d6b1ede>Suporte a buscas em GraphQL</a></li><li>6.3: <a href=#pg-d2d54c4f08eb016972465f2a03ead126>Rotas da Grid</a></li></ul></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from English to Portuguese.
 Do you speak Portuguese? Help us to translate
@@ -60,37 +60,25 @@ locally. More detailed examples and usages can be found in the
 <a href=/pt-br/documentation/grid/components/>Configuring Components</a> section.</p></div><h2 id=aviso>Aviso</h2><p>A Selenium Grid deve ser protegida do acesso externo usando
 permissões de firewall.</p><p>A falha em proteger sua rede pode resultar em um ou mais dos seguintes eventos:</p><ul><li>Você fornece acesso aberto à sua infraestrutura de rede</li><li>Você permite que terceiros acessem aplicativos e arquivos internos da web</li><li>Você permite que terceiros executem binários personalizados</li></ul><p>Veja esta postagem do blog em <a href=//labs.detectify.com>Detectify</a>, que dá uma boa
 visão geral de como uma rede exposta publicamente pode ser mal utilizada:
-<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Não deixe sua grade totalmente aberta</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-473c3ba9a1648a779746261bd023b3f4>2 - Quando usar a Grid</h1><div class=lead>Is Grid the right tool for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
-Page being translated from
-English to Portuguese. Do you speak Portuguese? Help us to translate
-it by sending us pull requests!</p></div><p>De modo geral, há dois motivos pelos quais você pode querer usar a Grid.</p><ul><li>Para executar seus testes em vários navegadores, várias versões de navegador,
-e navegadores executados em diferentes sistemas operacionais.</li><li>Para reduzir o tempo que leva para o conjunto de testes concluir uma aprovação no teste.</li></ul><p>A Grid é usada para acelerar a execução dos testes usando
-várias máquinas para executar testes em paralelo. Por exemplo, se você tiver um conjunto de
-100 testes, mas você configurou o Grid para suportar 4 máquinas diferentes (VMs ou
-máquinas físicas separadas) para executar esses testes, seu conjunto de testes será concluído
-em (aproximadamente) um quarto do tempo, do que se você executasse seus testes sequencialmente
-em uma única máquina. Para grandes conjuntos de testes e conjuntos de testes de longa duração, como
-aqueles que realizam grandes quantidades de validação de dados, isso pode ser um
-economizador de tempo significativo. Alguns conjuntos de testes podem levar horas para serem executados.
-Outro motivo para impulsionar o tempo gasto na execução do pacote é para encurtar o tempo de resposta para os resultados do teste
-após o código de check-in dos desenvolvedores para o AUT. Cada vez mais equipes de software
-praticando o desenvolvimento de software Agile desejam testar o feedback tão imediatamente quanto
-possível, em oposição a esperar durante a noite para uma aprovação no teste durante a noite.</p><p>A Grid também é usada para suportar testes em execução em vários
-ambientes de runtime, especificamente, em diferentes navegadores ao mesmo tempo. Por
-exemplo, uma ‘Grid’ de máquinas virtuais pode ser configurada com cada uma suportando um
-navegador diferente que o aplicativo a ser testado deve suportar. Então, máquina 1
-tem Internet Explorer 8, máquina 2, Internet Explorer 9, máquina 3, o mais recente
-Chrome e máquina 4 com o Firefox mais recente. Quando o conjunto de testes é executado,
-o Selenium Grid recebe cada combinação de navegador de teste e atribui cada teste a um navegador necessário.</p><p>Além disso, pode-se ter uma Grid do mesmo navegador, tipo e versão. Por
-exemplo, pode-se ter uma Grid de 4 máquinas, cada uma executando 3 instâncias de
-Firefox 70, permitindo um ‘server-farm’ (em certo sentido) de Firefox.
-Quando o pacote é executado, cada teste é passado para o Grid que
-atribui o teste à próxima instância disponível do Firefox. Desta maneira um
-obtém aprovação em que, concebivelmente, 12 testes estão sendo executados ao mesmo tempo em
-paralelo, reduzindo significativamente o tempo necessário para concluir os testes.</p><p>A Grid é muito flexível. Esses dois exemplos podem ser combinados para permitir
-várias instâncias de cada tipo e versão de navegador. Uma configuração como
-essa forneceria execução paralela para conclusão rápida de testes e
-suporte para vários tipos e versões de navegador simultaneamente.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-b523d0ca8ce055224f37be89f8083fc0>3 - Componentes</h1><div class=lead>Check the different Grid components to understand how to use them.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Não deixe sua grade totalmente aberta</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-473c3ba9a1648a779746261bd023b3f4>2 - Quando usar a Grid</h1><div class=lead>Is Grid right for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from English to Portuguese.
+Do you speak Portuguese? Help us to translate
+it by sending us pull requests!</p></div><p>When would you use a Selenium Grid?</p><ul><li>To run your tests in parallel, against different browser types, browser versions, operating systems</li><li>To reduce the time needed to execute a test suite</li></ul><p>Selenium Grid runs test suites in parallel against multiple machines (called Nodes).
+For large and long-running test suites, this can save minutes, hours, or perhaps days.
+This shortens the turnaround time for test results as your application under test (AUT)
+changes.</p><p>Grid can run tests (in parallel) against multiple different browsers, and it can
+run against multiple instances of the same browser. As an example, let&rsquo;s imagine
+a Grid with six Nodes. The first machine has Firefox&rsquo;s latest version,
+the second has Firefox &ldquo;latest minus one&rdquo;, the third gets the latest Chrome, and
+the remaining three machines are Mac Minis, which allows for three tests to run in
+parallel on the latest version of Safari.</p><p>Execution time can be expressed as a simple formula:</p><p><code>Number of Tests * Average Test Time / Number of Nodes = Total Execution Time</code></p><pre><code>   15      *       45s        /        1        =      11m 15s   // Without Grid
+   15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
+   15      *       45s        /        15       =      45s       // Grid with 15 Nodes
+  100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+</code></pre><p>As the test suite is executing, the Grid allocates the tests to run against these
+browsers as configured in the tests.</p><p>A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.</p><p>Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team
+of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
+has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-b523d0ca8ce055224f37be89f8083fc0>3 - Componentes</h1><div class=lead>Check the different Grid components to understand how to use them.</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from
 English to Portuguese. Do you speak Portuguese? Help us to translate
 it by sending us pull requests!</p></div><div class="card mb-4"><div class=card-header><strong>Grid Components</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>Grid components shown in the fully distributed mode</div></div><h2 id=roteador-router>Roteador (Router)</h2><p>The Router takes care of forwarding the request to the correct component.</p><p>It is the entry point of the Grid, all external requests will be received by it.

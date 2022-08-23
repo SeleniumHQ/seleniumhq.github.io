@@ -12,7 +12,7 @@
 <a class=dropdown-item href=/zh-cn/getinvolved>Get Involved</a>
 <a class=dropdown-item href=/zh-cn/sponsors>Sponsors</a></div></li></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>中文简体</a><div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink><a class=dropdown-item href=/documentation/grid/>English</a>
 <a class=dropdown-item href=/pt-br/documentation/grid/>Português (Brasileiro)</a>
-<a class=dropdown-item href=/ja/documentation/grid/>日本語</a></div></li></ul><div class=navbar-nav><div id=docsearch></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>这是本节的多页打印视图。
+<a class=dropdown-item href=/ja/documentation/grid/>日本語</a></div></li></ul><div class=navbar-nav><input type=search class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label=站内搜索… autocomplete=off></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>这是本节的多页打印视图。
 <a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/grid/>返回本页常规视图</a>.</p></div><h1 class=title>Grid</h1><div class=lead>要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.</div><ul><li>1: <a href=#pg-9c9914771fbff5e2210e763c63e98094>Selenium Grid快速起步</a></li><li>2: <a href=#pg-e2c3220801c7eb142b84fad49bc5b858>什么时候应该使用Grid</a></li><li>3: <a href=#pg-9c8ff9881742928aaf1544b3c5de86a1>服务网格的组件</a></li><li>4: <a href=#pg-37e2305b972ad696e0a785d1dbaeff39>配置组件</a></li><ul><li>4.1: <a href=#pg-93fa084268206a9aa52621f65987bf76>配置帮助</a></li><li>4.2: <a href=#pg-4eef2fd47f890b3bd4246fa0b9f9e349>CLI 选项</a></li><li>4.3: <a href=#pg-9908b5b7f21b6519e90ed597e0ccd1e4>Toml配置选项</a></li></ul><li>5: <a href=#pg-95174e92571847894c6295f2bd10b6bc>Grid架构</a></li><li>6: <a href=#pg-9586edf2b9ce7e57a4873d12c1cb49bf>高级功能</a></li><ul><li>6.1: <a href=#pg-58fa36fce0115e0cac81fa0157f35027>可观测性</a></li><li>6.2: <a href=#pg-5accfc3d64bfa8a3f37b3a48872e2e2d>GraphQL查询支持</a></li><li>6.3: <a href=#pg-d465290d42e97f4e216fb472ad892ff3>Grid端点</a></li></ul></ul><div class=content><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
 Page being translated from English to Chinese.
 Do you speak Chinese? Help us to translate
@@ -58,16 +58,25 @@ UI or via an API call.</p><p>The Grid UI can be reached by opening your preferre
 endpoint or using <a href=/zh-cn/documentation/grid/advanced_features/graphql_support/>GraphQL</a></p><div class="pageinfo pageinfo-primary"><p>For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
 <a href=/zh-cn/documentation/grid/components/>Configuring Components</a> section.</p></div><h2 id=提醒>提醒</h2><p>Selenium服务网格需要使用合适的防火墙许可来隔离外部访问。</p><p>如果不能有效的保护你的服务网格，可能会导致以下问题：</p><ul><li>提供了一个开发的接口来访问服务网格的基础设施</li><li>你将会允许第三方来访问内部web服务和文件</li><li>你将会允许第三方来执行定制的二进制文件</li></ul><p>请参考这篇文章<a href=//labs.detectify.com>Detectify</a>, 这里给了一个很好的概要，
-关于暴露一个服务网格后会如何被滥用：<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-e2c3220801c7eb142b84fad49bc5b858>2 - 什么时候应该使用Grid</h1><div class=lead>Grid是适合您的工具吗?</div><p>通常来说，有2个原因你需要使用Grid。</p><ul><li>在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试</li><li>缩短完成测试的时间</li></ul><p>Grid通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。
-比如的测试套件里包含100个测试，你的Grid支持4种不同的终端（虚拟机或者独立的物理设备）
-来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。
-在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。
-一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。</p><p>Grid也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。
-比如，一个由虚拟机组成的Grid，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。
-比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了，
-Selenium Grid会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。</p><p>另外，一个Grid可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个
-Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进Grid的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行，
-显著的缩短的整个测试完成的时间。</p><p>Grid是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9c8ff9881742928aaf1544b3c5de86a1>3 - 服务网格的组件</h1><div class=lead>检查不同的Grid组件以了解如何使用它们.</div><div class="card mb-4"><div class=card-header><strong>Grid组件</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>以完全分布式模式显示的Grid组件</div></div><h2 id=路由>路由</h2><p>路由负责将请求转发到正确的组件.</p><p>它是Grid的入口点, 所有外部请求都将由其接收.
+关于暴露一个服务网格后会如何被滥用：<a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-e2c3220801c7eb142b84fad49bc5b858>2 - 什么时候应该使用Grid</h1><div class=lead>Is Grid right for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
+Page being translated from English to Chinese.
+Do you speak Chinese? Help us to translate
+it by sending us pull requests!</p></div><p>When would you use a Selenium Grid?</p><ul><li>To run your tests in parallel, against different browser types, browser versions, operating systems</li><li>To reduce the time needed to execute a test suite</li></ul><p>Selenium Grid runs test suites in parallel against multiple machines (called Nodes).
+For large and long-running test suites, this can save minutes, hours, or perhaps days.
+This shortens the turnaround time for test results as your application under test (AUT)
+changes.</p><p>Grid can run tests (in parallel) against multiple different browsers, and it can
+run against multiple instances of the same browser. As an example, let&rsquo;s imagine
+a Grid with six Nodes. The first machine has Firefox&rsquo;s latest version,
+the second has Firefox &ldquo;latest minus one&rdquo;, the third gets the latest Chrome, and
+the remaining three machines are Mac Minis, which allows for three tests to run in
+parallel on the latest version of Safari.</p><p>Execution time can be expressed as a simple formula:</p><p><code>Number of Tests * Average Test Time / Number of Nodes = Total Execution Time</code></p><pre><code>   15      *       45s        /        1        =      11m 15s   // Without Grid
+   15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
+   15      *       45s        /        15       =      45s       // Grid with 15 Nodes
+  100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+</code></pre><p>As the test suite is executing, the Grid allocates the tests to run against these
+browsers as configured in the tests.</p><p>A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.</p><p>Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team
+of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
+has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9c8ff9881742928aaf1544b3c5de86a1>3 - 服务网格的组件</h1><div class=lead>检查不同的Grid组件以了解如何使用它们.</div><div class="card mb-4"><div class=card-header><strong>Grid组件</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>以完全分布式模式显示的Grid组件</div></div><h2 id=路由>路由</h2><p>路由负责将请求转发到正确的组件.</p><p>它是Grid的入口点, 所有外部请求都将由其接收.
 路由的行为因请求而异.
 当请求一个新的会话时, 路由将把它添加到新的会话队列中.
 分发器定期检查是否有空闲槽.
