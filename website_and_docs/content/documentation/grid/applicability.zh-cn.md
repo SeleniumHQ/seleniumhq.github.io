@@ -3,33 +3,53 @@ title: "什么时候应该使用Grid"
 linkTitle: "适用性"
 weight: 4
 description: >
-  Grid是适合您的工具吗?
+  Is Grid right for you?
 aliases: [
 "/documentation/zh-cn/grid/when_to_use_grid/",
 "/zh-cn/documentation/grid/when_to_use_grid"
 ]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
+When would you use a Selenium Grid?
 
-通常来说，有2个原因你需要使用Grid。
+* To run your tests in parallel, against different browser types, browser versions, operating systems
+* To reduce the time needed to execute a test suite
 
-* 在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试
-* 缩短完成测试的时间
+Selenium Grid runs test suites in parallel against multiple machines (called Nodes). 
+For large and long-running test suites, this can save minutes, hours, or perhaps days. 
+This shortens the turnaround time for test results as your application under test (AUT) 
+changes.
 
-Grid通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。
-比如的测试套件里包含100个测试，你的Grid支持4种不同的终端（虚拟机或者独立的物理设备）
-来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。
-在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。
-一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
+Grid can run tests (in parallel) against multiple different browsers, and it can
+run against multiple instances of the same browser. As an example, let's imagine
+a Grid with six Nodes. The first machine has Firefox's latest version,
+the second has Firefox "latest minus one", the third gets the latest Chrome, and
+the remaining three machines are Mac Minis, which allows for three tests to run in
+parallel on the latest version of Safari.
 
-Grid也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。
-比如，一个由虚拟机组成的Grid，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。
-比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了，
-Selenium Grid会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。
- 
-另外，一个Grid可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个
-Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进Grid的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行，
-显著的缩短的整个测试完成的时间。
+Execution time can be expressed as a simple formula:
 
-Grid是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。
+```Number of Tests * Average Test Time / Number of Nodes = Total Execution Time```
+
+       15      *       45s        /        1        =      11m 15s   // Without Grid
+       15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
+       15      *       45s        /        15       =      45s       // Grid with 15 Nodes
+      100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+
+As the test suite is executing, the Grid allocates the tests to run against these 
+browsers as configured in the tests.
+
+A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.
+
+Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team 
+of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
+has been a critical part of the Selenium project since the earliest days.
