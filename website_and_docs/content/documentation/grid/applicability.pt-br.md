@@ -3,7 +3,7 @@ title: "Quando usar a Grid"
 linkTitle: "Quando usar a Grid"
 weight: 4
 description: >
-  Is Grid the right tool for you?
+  Is Grid right for you?
 aliases: [
 "/documentation/pt-br/grid/when_to_use_grid/",
 "/pt-br/documentation/grid/when_to_use_grid"

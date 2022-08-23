@@ -3,7 +3,7 @@ title: "グリッドを使用する場合"
 linkTitle: "グリッドを使用する場合"
 weight: 4
 description: >
-  Is Grid the right tool for you?
+ Is Grid right for you?
 aliases: [
 "/documentation/ja/grid/when_to_use_grid/",
 "/ja/documentation/grid/when_to_use_grid"
