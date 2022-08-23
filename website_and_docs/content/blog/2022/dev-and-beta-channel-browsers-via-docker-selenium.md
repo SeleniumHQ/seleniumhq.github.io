@@ -1,7 +1,7 @@
 ---
 title: "Dev and Beta Channel Browsers via Docker Selenium"
 linkTitle: "Dev and Beta Channel Browsers via Docker Selenium"
-date: 2022-08-22
+date: 2022-08-23
 tags: ["webdriver", "docker", "browsers", "chrome", "firefox", "edge"]
 categories: ["general", "browsers", "docker"]
 author: James Mortensen ([@jmort253](https://twitter.com/jmort253))
