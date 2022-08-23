@@ -144,7 +144,7 @@ detect-drivers = false
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
-#  that many test slots to that particular configuration
+# that many test slots to that particular configuration
 configs = [
   "5", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
 ]
