@@ -127,14 +127,11 @@ Grid can enable more coverage to platforms and versions not present locally.
 The following is an en example of connecting an Appium server to Grid.
 
 ```toml
-[server]
-port = 5555
-
 [node]
 detect-drivers = false
 
 [relay]
-# Default Appium/cloud server endpoint
+# Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
