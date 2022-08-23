@@ -19,28 +19,28 @@
 </style>
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ if $githubToken }}
-  <div class="ghContributors">
-    {{ $url := .Get 0 }}
-    {{ $toReplace := printf "://%s@" $githubToken }}
-    {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
-    {{ $url := replace $url "://" $tokenInUrl }}
+<div class="ghContributors">
+  {{ $url := .Get 0 }}
+  {{ $toReplace := printf "://%s@" $githubToken }}
+  {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
+  {{ $url := replace $url "://" $tokenInUrl }}
 
-    {{ range getJSON $url }}
-    <div style="padding: 10px;">
-      <img
-        src="{{.avatar_url}}"
-        class="inline"
-        width="100"
-        height="100"
-        style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
-      />
-      <label
-        ><a href="{{.html_url}}">@{{.login}}</a></label
-      >
-      <span class="contributions">{{.contributions}} commits</span>
-    </div>
-    {{ end }}
+  {{ range getJSON $url }}
+  <div style="padding: 10px;">
+    <img
+      src="{{.avatar_url}}"
+      class="inline"
+      width="100"
+      height="100"
+      style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+    />
+    <label
+      ><a href="{{.html_url}}">@{{.login}}</a></label
+    >
+    <span class="contributions">{{.contributions}} commits</span>
   </div>
+  {{ end }}
+</div>
 {{ else }}
   {{ partial "github-content.html" }}
 {{ end }}

@@ -40,14 +40,13 @@ public class ActionsTest extends BaseTest {
         Actions actions = new Actions(driver);
         actions.clickAndHold(clickable)
                 .keyDown(Keys.SHIFT)
-                .keyDown(Keys.ALT)
                 .sendKeys("a")
                 .perform();
 
         ((RemoteWebDriver) driver).resetInputState();
 
         actions.sendKeys("a").perform();
-        Assertions.assertEquals("Å", String.valueOf(clickable.getAttribute("value").charAt(0)));
+        Assertions.assertEquals("A", String.valueOf(clickable.getAttribute("value").charAt(0)));
         Assertions.assertEquals("a", String.valueOf(clickable.getAttribute("value").charAt(1)));
     }
 }

@@ -266,7 +266,7 @@ driver.findElements(By.xpath("xPath"));
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.0.0</version>
+        <version>4.4.0</version>
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
@@ -314,7 +314,7 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter: junit-jupiter-api: 5.7.0'
     testRuntimeOnly 'org.junit.jupiter: junit-jupiter-engine: 5.7.0'
-    implementation group:  'org.seleniumhq.selenium', name:  'selenium-java', version:  '4.0.0'
+    implementation group:  'org.seleniumhq.selenium', name:  'selenium-java', version:  '4.4.0'
 }
 test {
     useJUnitPlatform()
@@ -336,13 +336,13 @@ test {
 在 C# 中获取 Selenium 4 更新的
 地方是 [NuGet](https://www.nuget.org/) .  
 在下面包
-[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.0.0) 
+[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.4.0) 
 你可以获得更新到最新版本的说明.  
 在 Visual Studio 内部, 
 您可以通过 NuGet 包管理器执行：
 
 ```shell
-PM> Install-Package Selenium.WebDriver -Version 4.0.0
+PM> Install-Package Selenium.WebDriver -Version 4.4.0
 ```
 
 ### Python
@@ -350,18 +350,18 @@ PM> Install-Package Selenium.WebDriver -Version 4.0.0
 使用 Python 的最重要变化是所需的最低版本. 
 Selenium 4 将至少需要 Python 3.7 或更高版本.  
 更多详细信息可以在
-[Python 包索引](https://pypi.org/project/selenium/4.0.0/) .  
+[Python 包索引](https://pypi.org/project/selenium/4.4.3/) .  
 基于命令行做升级的话, 你可以执行: 
 
 ```shell
-pip install selenium==4.0.0
+pip install selenium==4.4.3
 ```
 
 ### Ruby
 
 Selenium 4 的更新细节
 可以在RubyGems中的gem发现
-[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.0.0) .  
+[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.4.0) .  
 要安装最新版本, 
 您可以执行: 
 
@@ -372,7 +372,7 @@ gem install selenium-webdriver
 将以下内容添加到你的Gemfile: 
 
 ```shell
-gem 'selenium-webdriver', '~> 4.0.0'
+gem 'selenium-webdriver', '~> 4.4.0'
 ```
 
 ### JavaScript
@@ -380,7 +380,7 @@ gem 'selenium-webdriver', '~> 4.0.0'
 可以在 Node 包管理器中找到 selenium-webdriver 包, 
 [npmjs](https://www.npmjs.com) .  
 Selenium 4 可以在
-[这里](https://www.npmjs.com/package/selenium-webdriver/v/4.0.0) 找到.  
+[这里](https://www.npmjs.com/package/selenium-webdriver/v/4.4.0) 找到.  
 要安装, 你可以执行: 
 
 ```shell
@@ -395,7 +395,7 @@ npm install selenium-webdriver
   "name":  "selenium-tests",
   "version":  "1.0.0",
   "dependencies":  {
-    "selenium-webdriver":  "^4.0.0"
+    "selenium-webdriver":  "^4.4.0"
   }
 }
 ```

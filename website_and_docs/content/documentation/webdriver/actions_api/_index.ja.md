@@ -44,10 +44,10 @@ to wait a beat between actions for things to work correctly.
     {{< /tab >}}
     {{< tab header="Ruby" >}}
         {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L10-L17" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code
@@ -66,19 +66,19 @@ it does not get executed with the perform method.
 
 {{< tabpane disableCodeBlock=true height="1">}}
     {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L47" >}}
+        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
     {{< /tab >}}
     {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L38" >}}
+        {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L37" >}}
     {{< /tab >}}
     {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L45" >}}
+        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L44" >}}
     {{< /tab >}}
     {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L35" >}}
+        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code

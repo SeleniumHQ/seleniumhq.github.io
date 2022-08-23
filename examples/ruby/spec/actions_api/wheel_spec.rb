@@ -3,69 +3,71 @@
 require 'spec_helper'
 
 RSpec.describe 'Scrolling' do
-  it 'scrolls to element' do
-    @driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
+  let(:driver) { start_session }
 
-    iframe = @driver.find_element(tag_name: 'iframe')
-    @driver.action
-           .scroll_to(iframe)
-           .perform
+  it 'scrolls to element' do
+    driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
+
+    iframe = driver.find_element(tag_name: 'iframe')
+    driver.action
+          .scroll_to(iframe)
+          .perform
 
     expect(in_viewport?(iframe)).to eq true
   end
 
   it 'scrolls by given amount' do
-    @driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
+    driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
 
-    footer = @driver.find_element(tag_name: 'footer')
+    footer = driver.find_element(tag_name: 'footer')
     delta_y = footer.rect.y
-    @driver.action
-           .scroll_by(0, delta_y)
-           .perform
+    driver.action
+          .scroll_by(0, delta_y)
+          .perform
 
     expect(in_viewport?(footer)).to eq true
   end
 
   it 'scrolls from element by given amount' do
-    @driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
+    driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
 
-    iframe = @driver.find_element(tag_name: 'iframe')
+    iframe = driver.find_element(tag_name: 'iframe')
     scroll_origin = Selenium::WebDriver::WheelActions::ScrollOrigin.element(iframe)
-    @driver.action
-           .scroll_from(scroll_origin, 0, 200)
-           .perform
+    driver.action
+          .scroll_from(scroll_origin, 0, 200)
+          .perform
 
-    @driver.switch_to.frame(iframe)
-    checkbox = @driver.find_element(name: 'scroll_checkbox')
+    driver.switch_to.frame(iframe)
+    checkbox = driver.find_element(name: 'scroll_checkbox')
     expect(in_viewport?(checkbox)).to eq true
   end
 
   it 'scrolls from element by given amount with offset' do
-    @driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
+    driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html')
 
-    footer = @driver.find_element(tag_name: 'footer')
+    footer = driver.find_element(tag_name: 'footer')
     scroll_origin = Selenium::WebDriver::WheelActions::ScrollOrigin.element(footer, 0, -50)
-    @driver.action
-           .scroll_from(scroll_origin, 0, 200)
-           .perform
+    driver.action
+          .scroll_from(scroll_origin, 0, 200)
+          .perform
 
-    iframe = @driver.find_element(tag_name: 'iframe')
-    @driver.switch_to.frame(iframe)
-    checkbox = @driver.find_element(name: 'scroll_checkbox')
+    iframe = driver.find_element(tag_name: 'iframe')
+    driver.switch_to.frame(iframe)
+    checkbox = driver.find_element(name: 'scroll_checkbox')
     expect(in_viewport?(checkbox)).to eq true
   end
 
   it 'scrolls by given amount with offset' do
-    @driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame.html')
+    driver.get('https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame.html')
 
     scroll_origin = Selenium::WebDriver::WheelActions::ScrollOrigin.viewport(10, 10)
-    @driver.action
-           .scroll_from(scroll_origin, 0, 200)
-           .perform
+    driver.action
+          .scroll_from(scroll_origin, 0, 200)
+          .perform
 
-    iframe = @driver.find_element(tag_name: 'iframe')
-    @driver.switch_to.frame(iframe)
-    checkbox = @driver.find_element(name: 'scroll_checkbox')
+    iframe = driver.find_element(tag_name: 'iframe')
+    driver.switch_to.frame(iframe)
+    checkbox = driver.find_element(name: 'scroll_checkbox')
     expect(in_viewport?(checkbox)).to eq true
   end
 end
@@ -78,5 +80,5 @@ def in_viewport?(element)
     window.pageYOffset&&t+o>window.pageXOffset
   IN_VIEWPORT
 
-  @driver.execute_script(in_viewport, element)
+  driver.execute_script(in_viewport, element)
 end

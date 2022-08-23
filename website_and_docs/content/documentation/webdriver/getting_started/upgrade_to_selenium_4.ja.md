@@ -247,7 +247,7 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.0.0</version>
+        <version>4.4.0</version>
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
@@ -293,7 +293,7 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 }
 test {
     useJUnitPlatform()
@@ -309,27 +309,27 @@ test {
 ### C#
 
 C#でSelenium4の更新を取得する場所は [NuGet](https://www.nuget.org/) です。 
-[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.0.0) パッケージの下で、最新バージョンに更新するための手順を入手できます。 
+[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.4.0) パッケージの下で、最新バージョンに更新するための手順を入手できます。 
 Visual Studio内では、NuGetパッケージマネージャーを使用して次の操作を実行できます。
 
 ```shell
-PM> Install-Package Selenium.WebDriver -Version 4.0.0
+PM> Install-Package Selenium.WebDriver -Version 4.4.0
 ```
 
 ### Python
 
 Pythonを使用するための最も重要な変更は、最低限必要なバージョンです。 
 Selenium 4には、Python3.7以降が必要です。 
-詳細については、[Python Package Index](https://pypi.org/project/selenium/4.0.0/)を参照してください。 
+詳細については、[Python Package Index](https://pypi.org/project/selenium/4.4.3/)を参照してください。 
 コマンドラインからアップグレードするには、次のコマンドを実行できます。
 
 ```shell
-pip install selenium==4.0.0
+pip install selenium==4.4.3
 ```
 
 ### Ruby
 
-Selenium 4の更新の詳細は、RubyGemsの[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.0.0)で確認できます。 
+Selenium 4の更新の詳細は、RubyGemsの[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.4.0)で確認できます。 
 最新バージョンをインストールするには、次のコマンドを実行できます。
 
 ```shell
@@ -339,13 +339,13 @@ gem install selenium-webdriver
 Gemfileには下記のように追加します。
 
 ```shell
-gem 'selenium-webdriver', '~> 4.0.0'
+gem 'selenium-webdriver', '~> 4.4.0'
 ```
 
 ### JavaScript
 
 selenium-webdriverパッケージは、Nodeパッケージマネージャーの[npmjs](https://www.npmjs.com)にあります。 
-Selenium4は[here](https://www.npmjs.com/package/selenium-webdriver/v/4.0.0)にあります。 
+Selenium4は[here](https://www.npmjs.com/package/selenium-webdriver/v/4.4.0)にあります。 
 これをインストールするには、次のいずれかを実行します。
 
 ```shell
@@ -359,7 +359,7 @@ npm install selenium-webdriver
   "name": "selenium-tests",
   "version": "1.0.0",
   "dependencies": {
-    "selenium-webdriver": "^4.0.0"
+    "selenium-webdriver": "^4.4.0"
   }
 }
 ```
