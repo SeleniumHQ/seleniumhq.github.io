@@ -32,5 +32,5 @@ Grid aims to:
 * Allow testing on different browser versions
 * Enable cross platform testing
 
-Interested? Understand how Grid works, and how to set up you own, 
-by going thorough the following sections.
+Interested? Go through the following sections to understand
+how Grid works, and how to set up your own.
