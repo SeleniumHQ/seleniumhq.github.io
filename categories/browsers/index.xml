@@ -1,0 +1,76 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – browsers</title><link>/categories/browsers/</link><description>Recent content in browsers on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/browsers/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
+&lt;p>The Docker Selenium browser Beta and Dev channel releases are now regularly published to &lt;a href="https://hub.docker.com/u/selenium">Docker Hub&lt;/a> and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment &lt;em>before&lt;/em> those issues have an impact on their users.&lt;/p>
+&lt;h3 id="what-are-release-channels">What are &amp;ldquo;release channels&amp;rdquo;?&lt;/h3>
+&lt;p>Here&amp;rsquo;s some background on release channels: Google, Mozilla, and Microsoft all maintain different &amp;ldquo;channels&amp;rdquo; for their respective browser releases. Most end users use the &amp;ldquo;Stable&amp;rdquo; channel. The Stable channel releases have passed rigorous testing, and these versions are considered &amp;ldquo;production-ready&amp;rdquo;. Up until now, this was a QA team&amp;rsquo;s only option for testing when using Docker Selenium. Today, we&amp;rsquo;re pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.&lt;/p>
+&lt;p>For clarity, here is Google&amp;rsquo;s description of these 3 channels from &lt;a href="https://www.chromium.org/getting-involved/dev-channel/">their &amp;ldquo;Chrome Release Channels&amp;rdquo; page&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Stable channel:&lt;/strong> This channel has gotten the full testing and blessing of the Chrome test team, and is the best bet to avoid crashes and other issues. It&amp;rsquo;s updated roughly every two-three weeks for minor releases, and every 6 weeks for major releases.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>Beta channel:&lt;/strong> If you are interested in seeing what&amp;rsquo;s next, with minimal risk, Beta channel is the place to be. It&amp;rsquo;s updated every week roughly, with major updates coming every six weeks, more than a month before the Stable channel will get them.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>Dev channel:&lt;/strong> If you want to see what&amp;rsquo;s happening quickly, then you want the Dev channel. The Dev channel gets updated once or twice weekly, and it shows what we&amp;rsquo;re working on right now. There&amp;rsquo;s no lag between major versions, whatever code we&amp;rsquo;ve got, you will get. While this build does get tested, it is still subject to bugs, as we want people to see what&amp;rsquo;s new as soon as possible.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="standalone-usage">Standalone Usage:&lt;/h3>
+&lt;p>To use these new Docker Selenium container images in Standalone mode, run the following commands:&lt;/p>
+&lt;p>&lt;strong>Chrome Beta:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-chrome:beta
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Chrome Dev:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-chrome:dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Firefox Beta:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-firefox:beta
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Firefox Dev:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-firefox:dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Edge Beta:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-edge:beta
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Edge Dev:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ docker run --rm -it -p 4444:4444 -p 7900:7900 --shm-size 2g selenium/standalone-edge:dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="selenium-grid">Selenium Grid&lt;/h3>
+&lt;p>To run these container images in a Selenium Grid, we&amp;rsquo;ll use docker-compose. For instance, this example shows how to run a Selenium Grid with Chrome, Firefox, and Edge on the Beta channel:&lt;/p>
+&lt;p>&lt;strong>docker-compose-v3-beta-channel.yml:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># To execute this docker-compose yml file use `docker-compose -f docker-compose-v3-beta-channel.yml up`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Add the `-d` flag at the end for detached execution&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose-v3-beta-channel.yml down`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>version: &lt;span style="color:#4e9a06">&amp;#34;3&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>services:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chrome:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: selenium/node-chrome:beta
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shm_size: 2gb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> depends_on:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_HOST&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_PUBLISH_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4442&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_SUBSCRIBE_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4443&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> edge:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: selenium/node-edge:beta
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shm_size: 2gb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> depends_on:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_HOST&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_PUBLISH_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4442&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_SUBSCRIBE_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4443&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> firefox:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: selenium/node-firefox:beta
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shm_size: 2gb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> depends_on:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_HOST&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_PUBLISH_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4442&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#000">SE_EVENT_BUS_SUBSCRIBE_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">4443&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> selenium-hub:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: selenium/hub:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> container_name: selenium-hub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ports:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#4e9a06">&amp;#34;4442:4442&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#4e9a06">&amp;#34;4443:4443&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#4e9a06">&amp;#34;4444:4444&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To run on the more cutting edge &amp;ndash; and hence potentially more buggy &amp;ndash; Dev channel, simply replace the &amp;ldquo;beta&amp;rdquo; tags with &amp;ldquo;dev&amp;rdquo;.&lt;/p>
+&lt;h3 id="support">Support&lt;/h3>
+&lt;p>These Beta and Dev images represent pre-release browsers and WebDrivers, and they&amp;rsquo;re not guaranteed to be 100% stable. Should you run into any issues with these images, support from the Selenium community is limited and is dependent on the browser vendors. However, if you believe the issue is related to Selenium, please contact us in the &lt;a href="/support/">various support channels&lt;/a>.&lt;/p></description></item></channel></rss>
