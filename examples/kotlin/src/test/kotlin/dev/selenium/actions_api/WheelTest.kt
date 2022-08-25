@@ -15,6 +15,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.junit.jupiter.api.TestInstance
+
 @TestInstance(Lifecycle.PER_CLASS)
 class FirstScriptTest {
     lateinit var driver: WebDriver
