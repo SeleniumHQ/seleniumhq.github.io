@@ -14,7 +14,8 @@ The Docker Selenium browser Beta and Dev channel releases are now regularly publ
 
 ### What are "release channels"?
 
-Here's some background on release channels: Google, Mozilla, and Microsoft all maintain different "channels" for their respective browser releases. Most end users use the "Stable" channel. The Stable channel releases have passed rigorous testing, and these versions are considered "production-ready". Up until now, this was a QA team's only option for testing when using Docker Selenium. Today, we're pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.
+
+Here's some background on release channels: Google, Mozilla, and Microsoft all maintain different "channels" for their respective browser releases. Most end users use the "Stable" channel. The Stable channel releases have passed rigorous testing, and these versions are considered "production-ready". Up until now, this was the only option for a tester or developer when using Docker Selenium. Today, we're pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.
 
 For clarity, here is Google's description of these 3 channels from [their "Chrome Release Channels" page](https://www.chromium.org/getting-involved/dev-channel/):
 
