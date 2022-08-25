@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.junit.jupiter.api.TestInstance
 
-@TestInstance(Lifecycle.PER_CLASS)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class FirstScriptTest {
     lateinit var driver: WebDriver
     
@@ -38,9 +38,6 @@ class FirstScriptTest {
     
     @Test
     fun shouldScrollToElement() {
-        
-        WebDriverManager.chromedriver().setup()
-        driver = ChromeDriver()
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
 
         val iframe = driver.findElement(By.tagName("iframe"));
