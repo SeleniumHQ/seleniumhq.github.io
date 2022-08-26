@@ -19,13 +19,10 @@ aliases: [
 可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.4.0</version>
-</dependency>
-```
+    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L11-L12" >}}
+and
+
+    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L30-L35" >}}
 
 For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
@@ -36,10 +33,7 @@ dependencies {
 
 Gradle 7.0 and above:
 
-```text
-dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
+    {{< gh-codeblock path="/examples/java/src/test/java/build.gradle#L12-L13" >}}
 
   {{< /tab >}}
   {{< tab header="Python" >}}
