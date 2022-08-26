@@ -85,7 +85,7 @@ class WheelTest : BaseTest() {
     }
     
     fun inViewport(element: WebElement): Boolean {
-        val script = "for(var e=arguments[0],f=e.offsetTop,t=e.offsetLeft,o=e.offsetWidth,n=e.offsetHeight\ne.offsetParent)f+=(e=e.offsetParent).offsetTop,t+=e.offsetLeft\nreturn f<window.pageYOffset+window.innerHeight&&t<window.pageXOffset+window.innerWidth&&f+n>\nwindow.pageYOffset&&t+o>window.pageXOffset"
+        val script = "for(var e=arguments[0],f=e.offsetTop,t=e.offsetLeft,o=e.offsetWidth,n=e.offsetHeight;\ne.offsetParent;)f+=(e=e.offsetParent).offsetTop,t+=e.offsetLeft;\nreturn f<window.pageYOffset+window.innerHeight&&t<window.pageXOffset+window.innerWidth&&f+n>\nwindow.pageYOffset&&t+o>window.pageXOffset"
         return (driver as JavascriptExecutor).executeScript(script, element) as Boolean 
     }
 }
