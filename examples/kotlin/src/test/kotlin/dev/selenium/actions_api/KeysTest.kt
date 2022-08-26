@@ -10,7 +10,7 @@ import org.openqa.selenium.Platform
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
 
-class WheelTest : BaseTest() {
+class KeysTest : BaseTest() {
 
     @Test
     fun keyDown() {
