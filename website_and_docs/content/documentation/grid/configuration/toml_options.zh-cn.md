@@ -142,19 +142,17 @@ Grid可以实现对本地不存在的平台和版本的更多覆盖.
 下面是一个将Appium服务器连接到Grid的示例.
 
 ```toml
-[server]
-port = 5555
-
 [node]
 detect-drivers = false
 
 [relay]
-# Default Appium server endpoint
+# Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
-# Stereotypes supported by the service
+# Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
+# that many test slots to that particular configuration
 configs = [
-  "1", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
+  "5", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
 ]
 ```
 

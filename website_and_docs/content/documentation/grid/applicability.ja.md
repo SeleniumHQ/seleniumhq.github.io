@@ -3,7 +3,7 @@ title: "グリッドを使用する場合"
 linkTitle: "グリッドを使用する場合"
 weight: 4
 description: >
-  Is Grid the right tool for you?
+ Is Grid right for you?
 aliases: [
 "/documentation/ja/grid/when_to_use_grid/",
 "/ja/documentation/grid/when_to_use_grid"
@@ -13,33 +13,44 @@ aliases: [
 {{% pageinfo color="warning" %}}
 <p class="lead">
    <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
+   Page being translated from English to Japanese. 
+   Do you speak Japanese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
 
-一般的に、グリッドを使用する理由は2つあります。
+When would you use a Selenium Grid?
 
-* 複数のブラウザー、複数のバージョンのブラウザー、および異なるオペレーティングシステムで実行されているブラウザーに対してテストを実行するため。
-* テストスイートがテストがパスするのに完了するのにかかる時間を短縮するため。
+* To run your tests in parallel, against different browser types, browser versions, operating systems
+* To reduce the time needed to execute a test suite
 
-グリッドは、複数のマシンを使用してテストを並行して実行することにより、テストパスの実行を高速化するために使用されます。
-たとえば、100個のテストスイートがあり、それらのテストを実行するために4つの異なるマシン（VMまたは個別の物理マシン）をサポートするようにグリッドをセットアップした場合、テストスイートは単一のマシンでテストを連続して実行した場合と比較して（およそ）4分の1の時間で完了します。
-大規模なテストスイート、および大量のデータ検証を実行するような長時間実行されるテストスイートの場合、これは大幅な時間の節約になります。
-一部のテストスイートの実行には数時間かかる場合があります。 スイートの実行に費やす時間を増やすもう1つの理由は、開発者がAUTのコードをチェックインした後のテスト結果の所要時間を短縮することです。
-アジャイルソフトウェア開発を実践しているソフトウェアチームは、一晩テストパスを一晩待つのではなく、できるだけ早くテストフィードバックを求めています。
+Selenium Grid runs test suites in parallel against multiple machines (called Nodes). 
+For large and long-running test suites, this can save minutes, hours, or perhaps days. 
+This shortens the turnaround time for test results as your application under test (AUT) 
+changes.
 
-グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。
-たとえば、仮想マシンの"グリッド"は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。
-したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。
-テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。
+Grid can run tests (in parallel) against multiple different browsers, and it can
+run against multiple instances of the same browser. As an example, let's imagine
+a Grid with six Nodes. The first machine has Firefox's latest version,
+the second has Firefox "latest minus one", the third gets the latest Chrome, and
+the remaining three machines are Mac Minis, which allows for three tests to run in
+parallel on the latest version of Safari.
 
-さらに、すべて同じブラウザ、タイプ、およびバージョンのグリッドを持つことができます。
-たとえば、それぞれがFirefox 70の3つのインスタンスを実行する4台のマシンのグリッドを持つことができ、利用可能なFirefoxインスタンスの"ある意味"での"サーバーファーム"を可能にします。
-スイートが実行されると、各テストはグリッドに渡され、グリッドは次に利用可能なFirefoxインスタンスにテストを割り当てます。 この方法で、おそらく12のテストがすべて同時に並行して実行されるテストパスを取得し、テストパスの完了に必要な時間を大幅に短縮します。
+Execution time can be expressed as a simple formula:
 
-グリッドは非常に柔軟です。
-これらの2つの例を組み合わせて、各ブラウザタイプとバージョンの複数のインスタンスを許可することができます。
-このような構成では、迅速にテストがパスすることを完了するための並列実行と、複数のブラウザタイプおよびバージョンの同時サポートの両方が提供されます。
+```Number of Tests * Average Test Time / Number of Nodes = Total Execution Time```
+
+       15      *       45s        /        1        =      11m 15s   // Without Grid
+       15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
+       15      *       45s        /        15       =      45s       // Grid with 15 Nodes
+      100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+
+As the test suite is executing, the Grid allocates the tests to run against these 
+browsers as configured in the tests.
+
+A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.
+
+Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team 
+of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
+has been a critical part of the Selenium project since the earliest days.
