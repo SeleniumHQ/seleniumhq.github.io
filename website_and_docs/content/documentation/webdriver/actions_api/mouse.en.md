@@ -381,7 +381,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
         {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L153-L158" >}}
     {{< /tab >}}
     {{< tab header="JavaScript" >}}
-        // Add Code
+        {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L17-L21" >}}
    {{< /tab >}}
     {{< tab header="Kotlin" >}}
         // Add Code

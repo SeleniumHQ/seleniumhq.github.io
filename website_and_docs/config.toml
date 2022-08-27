@@ -8,7 +8,7 @@ theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
-
+#ignoreErrors = ["error-remote-getjson"] 
 # Language settings
 # contentDir = "content/en"
 defaultContentLanguage = "en"

@@ -23,5 +23,16 @@ suite(function(env) {
       let result = await driver.findElement(By.id("drop-status")).getText();
       assert.deepStrictEqual('dropped', result)
     });
+
+    it('Onto Element', async function() {
+      await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
+      const draggable = driver.findElement(By.id("draggable"));
+      const droppable = await driver.findElement(By.id("droppable"));
+      const actions = driver.actions({async: true});
+      await actions.dragAndDrop(draggable, droppable).perform();
+
+      let result = await driver.findElement(By.id("drop-status")).getText();
+      assert.deepStrictEqual('dropped', result)
+    });
   });
 });

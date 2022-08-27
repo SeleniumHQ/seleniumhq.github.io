@@ -76,27 +76,27 @@ ancestor of the undesired element, then call find element on that object:
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 WebElement fruits = driver.findElement(By.id("fruits"));
-WebElement fruit = fruits.findElement(By.id("tomatoes"));
+WebElement fruit = fruits.findElement(By.className("tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" >}}
 fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_elements(By.ID,"tomatoes")
+fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
-IWebElement fruit = fruits.FindElement(By.Id("tomatoes"));
+IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 fruits = driver.find_element(id: 'fruits')
-fruit = fruits.find_element(id: 'tomatoes')
+fruit = fruits.find_element(class: 'tomatoes')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruits = driver.findElement(By.id('fruits'));
-const fruit = fruits.findElement(By.id('tomatoes'));
+const fruit = fruits.findElement(By.className('tomatoes'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val fruits = driver.findElement(By.id("fruits"))
-val fruit = fruits.findElement(By.id("tomatoes"))
+val fruit = fruits.findElement(By.className("tomatoes"))
   {{< /tab >}}
 {{< /tabpane >}}
 
