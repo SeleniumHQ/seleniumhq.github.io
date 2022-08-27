@@ -49,7 +49,7 @@ aliases: [
 
 | 软件 | 版本 | 许可 |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.98.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.99.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
 
 ## 许可

@@ -3,17 +3,17 @@ publish = "website_and_docs/public"
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]
-HUGO_VERSION = "0.98.0"
+HUGO_VERSION = "0.99.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.98.0"
+HUGO_VERSION = "0.99.1"
 
 [context.branch-deploy]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.98.0"
+HUGO_VERSION = "0.99.1"
