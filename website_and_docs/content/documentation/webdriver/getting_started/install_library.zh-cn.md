@@ -16,32 +16,42 @@ aliases: [
 
 {{< tabpane disableCodeBlock=true >}}
   {{< tab header="Java" >}}
-可以使用 Maven 安装 Java 的 Selenium 库。
+Installation of Selenium libraries for Java is accomplished using a build tool.
+You can see all available versions on
+[Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
+
+### 可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
-    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L11-L12" >}}
-and
+1. specify the version in `properties`:
 
-    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L30-L35" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L11-L12" >}}
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
+2. specify the dependency in `dependencies`
 
-```text
-dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
+{{< gh-codeblock path="examples/java/pom.xml#L30-L35" >}}
 
-Gradle 7.0 and above:
+### Gradle
+in the project `build.gradle` file:
 
-    {{< gh-codeblock path="/examples/java/src/test/java/build.gradle#L12-L13" >}}
+1. specify the version in extra properties (`ext`):
+
+{{< gh-codeblock path="examples/java/build.gradle#L11-L12" >}}
+
+2. specify the dependency as `testImplementation` in `dependencies`
+
+{{< gh-codeblock path="examples/java/build.gradle#L17-L18" >}}
 
   {{< /tab >}}
   {{< tab header="Python" >}}
-  可以使用 pip 安装 Python 的 Selenium 库：
+
+### pip
 
 ```shell
 pip install selenium
 ```
+
+### 下载
 
 或者，您也可以下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
 (selenium-x.x.x.tar.gz) 并使用 _setup.py_ 进行安装：
@@ -49,24 +59,44 @@ pip install selenium
 ```shell
 python setup.py install
 ```
+
+### Require in project
+
+To use it in a project, add it to the `requirements.txt` file:
+{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  可以使用 NuGet 安装 C# 的 Selenium 库：
+### Packet Manager
 
 ```shell
-# Using package manager
 Install-Package Selenium.WebDriver
-# or using .Net CLI
+```
+
+### .NET CLI
+
+```shell
 dotnet add package Selenium.WebDriver
 ```
-## 支持的 .NET 版本
+
+### CSProj
+
+in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+
+{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L13" >}}
+
+### Additional considerations
+
+Further items of note for using Selenium with .NET:
+
+#### 支持的 .NET 版本
 确保使用与.NET SDK版本兼容的相关[Selenium包](https://www.nuget.org/packages/Selenium.WebDriver).
 检查依赖的部分用以找出[支持的 .NET 版本](https://dotnet.microsoft.com/en-us/download/dotnet).
 在本次升级时, .NET 5.0 (Visual Studio 2019) 是已知的被支持的版本, 并且 .NET 6.0 并未支持.
 您可以下载 [MSBuild Tools 2019 于此](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)
 以安装所需的组件和依赖项, 例如 .NET SDK 和 NuGet 包管理器.
 
-## 使用 Visual Studio Code (vscode) 以及 C#
+#### 使用 Visual Studio Code (vscode) 以及 C#
 这是一个快速指南, 可帮助您开始使用 vscode 和 C#, 但可能需要进行更多调研.
 按照上一节安装兼容的 .NET SDK.
 还要安装适用于 C# 和 NuGet 的 vscode 扩展 (Ctrl-Shift-X).
@@ -102,19 +132,34 @@ dotnet add package Selenium.WebDriver
 
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  可以使用 gem 安装 Ruby 的 Selenium 库：
+
+### Install locally
 
 ```shell
 gem install selenium-webdriver
 ```
 
+### Add to project
+
+In your project's `Gemfile`:
+
+{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  可以使用 npm 安装 JavaScript 的 Selenium 库
+
+### Install locally
 
 ```shell
 npm install selenium-webdriver
 ```
+
+### Add to project
+
+In your project's `package.json`, add requirement to `dependencies`:
+
+{{< gh-codeblock path="examples/javascript/package.json#L9-L10" >}}
+
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)

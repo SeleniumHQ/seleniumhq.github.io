@@ -24,31 +24,38 @@ Installation of Selenium libraries for Java is accomplished using a build tool.
 You can see all available versions on
 [Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
 
-For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
+### Maven
+in the project's `pom.xml` file:
 
-    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L11-L12" >}}
-and
+1. specify the version in `properties`:
 
-    {{< gh-codeblock path="/examples/java/src/test/java/pom.xml#L30-L35" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L11-L12" >}}
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
+2. specify the dependency in `dependencies`
 
-```text
-dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
+{{< gh-codeblock path="examples/java/pom.xml#L30-L35" >}}
 
-Gradle 7.0 and above:
+### Gradle
+in the project `build.gradle` file:
 
-    {{< gh-codeblock path="/examples/java/src/test/java/build.gradle#L12-L13" >}}
+1. specify the version in extra properties (`ext`):
+
+{{< gh-codeblock path="examples/java/build.gradle#L11-L12" >}}
+
+2. specify the dependency as `testImplementation` in `dependencies`
+
+{{< gh-codeblock path="examples/java/build.gradle#L17-L18" >}}
 
   {{< /tab >}}
   {{< tab header="Python" >}}
-  Installation of Selenium libraries for Python can be done using pip:
+
+### Pip
 
 ```shell
 pip install selenium
 ```
+
+### Download
 
 Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
 (selenium-x.x.x.tar.gz) and install it using _setup.py_:
@@ -57,25 +64,43 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 python setup.py install
 ```
 
+### Require in project
+
+To use it in a project, add it to the `requirements.txt` file:
+{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  Installation of Selenium libraries for C# can be done using NuGet in one of two ways
 
-  * Using a Packet Manager:
+### Packet Manager
+
 ```shell
 Install-Package Selenium.WebDriver
 ```
-  * Using .NET CLI
+
+### .NET CLI
+
 ```shell
 dotnet add package Selenium.WebDriver
 ```
-## Supported .NET Versions
+
+### CSProj
+
+in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+
+{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L13" >}}
+
+### Additional considerations
+
+Further items of note for using Selenium with .NET:
+
+#### Supported .NET Versions
 Make sure to use the .NET SDK version compatible with relevant [Selenium package](https://www.nuget.org/packages/Selenium.WebDriver).
 Check the dependencies section to find out the [supported .NET version](https://dotnet.microsoft.com/en-us/download/dotnet).
 At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
 You can download [MSBuild Tools 2019 from here](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.
 
-## Using Visual Studio Code (vscode) and C#
+#### Using Visual Studio Code (vscode) and C#
 This is a quick guide to help you get started with vscode and C#, however, more research may be required.
 Install the compatible .NET SDK as per the section above.
 Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
@@ -102,25 +127,33 @@ Now you can use the examples in the documentation related to C# with vscode.
 
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  Installation of Selenium libraries for Ruby can be done using gem:
+
+### Install locally
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Or add it to your `Gemfile`:
+### Add to project
 
-```rb
-gem 'selenium-webdriver', '~> 4.4'
-```
+In your project's `Gemfile`:
+
+{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
 
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  Installation of Selenium libraries for JavaScript can be done using npm:
+
+### Install locally
 
 ```shell
 npm install selenium-webdriver
 ```
+
+### Add to project
+
+In your project's `package.json`, add requirement to `dependencies`:
+
+{{< gh-codeblock path="examples/javascript/package.json#L9-L10" >}}
 
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
