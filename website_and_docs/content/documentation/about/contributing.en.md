@@ -72,6 +72,7 @@ to use Hugo 0.100.0 or higher.
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
 
+Node.js and postcss-cli are also needed to build the site locally.
 ### Step 2: Branch
 
 Create a feature branch and start hacking:
