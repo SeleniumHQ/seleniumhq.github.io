@@ -86,7 +86,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -183,7 +183,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -287,7 +287,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -399,7 +399,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -502,7 +502,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -626,7 +626,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie

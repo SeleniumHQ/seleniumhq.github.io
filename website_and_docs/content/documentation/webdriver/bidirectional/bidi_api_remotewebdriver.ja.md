@@ -22,7 +22,7 @@ With Selenium, you can automate the input of basic auth credentials whenever the
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L82-105" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L82-105" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -34,7 +34,7 @@ element in the DOM.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L110-148" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L110-148" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,7 +44,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L153-178" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L153-178" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -52,7 +52,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L183-202" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L183-202" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ it with the following examples.
 
 {{< tabpane disableCodeBlock=true >}}
 {{< tab header="Java" >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L207-L223" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L207-L223" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

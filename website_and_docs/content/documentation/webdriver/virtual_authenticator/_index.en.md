@@ -18,20 +18,20 @@ A Virtual Authenticatior has a [set of properties](https://www.w3.org/TR/webauth
 These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindings.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L72-78" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L48-55" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L72-78" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L48-55" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -40,20 +40,20 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 It creates a new virtual authenticator with the provided properties.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L85-92" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L63-71" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L85-92" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L63-71" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Remove Virtual Authenticator
@@ -61,20 +61,20 @@ It creates a new virtual authenticator with the provided properties.
 Removes the previously added virtual authenticator.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L101-105" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#80-86" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L101-105" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#80-86" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Create Resident Credential
@@ -82,20 +82,20 @@ Removes the previously added virtual authenticator.
 Creates a resident (stateful) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L120-123" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#103-107" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L120-123" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#103-107" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Create Non-Resident Credential 
@@ -103,20 +103,20 @@ Creates a resident (stateful) credential with the given required credential [par
 Creates a resident (stateless) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L163-165" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L145-148" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L163-165" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L145-148" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Add Credential
@@ -124,20 +124,20 @@ Creates a resident (stateless) credential with the given required credential [pa
 Registers the credential with the authenticator. 
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L157-166" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L139-150" >}}   
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L157-166" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L139-150" >}}   
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Get Credential
@@ -145,42 +145,42 @@ Registers the credential with the authenticator.
 Returns the list of credentials owned by the authenticator.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L177-191" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L162-178" >}}  
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L177-191" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L162-178" >}}  
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
 ## Remove Credential
 
- Removes a credential from the authenticator based on the passed credential id.
+Removes a credential from the authenticator based on the passed credential id.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
-  {{< /tab >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L189-198" >}} 
-  {{< tab header="CSharp" >}}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
+{{< /tab >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L189-198" >}} 
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -189,20 +189,20 @@ Returns the list of credentials owned by the authenticator.
 Removes all the credentials from the authenticator.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L216-225" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L207-216" >}} 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L216-225" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L207-216" >}} 
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Set User Verified
@@ -210,18 +210,18 @@ Removes all the credentials from the authenticator.
 Sets whether the authenticator will simulate success or fail on user verification.
 
 {{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
-      {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L231-232" >}}
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-      {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L224-225" >}} 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L231-232" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L224-225" >}} 
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}

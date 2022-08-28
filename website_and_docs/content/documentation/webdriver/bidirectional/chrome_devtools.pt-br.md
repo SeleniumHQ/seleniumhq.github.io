@@ -103,7 +103,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver

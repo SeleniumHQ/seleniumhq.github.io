@@ -46,47 +46,47 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 ## Key down
 
 {{< tabpane disableCodeBlock=true height="4">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L18-L21" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L16-L19" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L18-L21" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L16-L19" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add Code
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Key up
 
 {{< tabpane disableCodeBlock=true height="6">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L31-L36" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L30-L35" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L31-L36" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L30-L35" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add Code
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Send keys
@@ -98,47 +98,47 @@ primarily this gets used when needing to type multiple characters in the middle 
 ### Active Element
 
 {{< tabpane disableCodeBlock=true height="3">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L46-L48" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L46-L48" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L46-L48" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L46-L48" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add Code
+{{< /tab >}}
 {{< /tabpane >}}
 
 ### Designated Element
 
 {{< tabpane disableCodeBlock=true height="4">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L45-L48" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L60-L63" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        // Add Code
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L45-L48" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L60-L63" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+// Add Code
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add Code
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Copy and Paste
@@ -148,22 +148,22 @@ Note that the key to use for this operation will be different depending on if it
 This code will end up with the text: `SeleniumSelenium!`
 
 {{< tabpane disableCodeBlock=true height="13">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L55-L66" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L76-L87" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        // Add Code
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L55-L66" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L76-L87" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+// Add Code
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add Code
+{{< /tab >}}
 {{< /tabpane >}}
