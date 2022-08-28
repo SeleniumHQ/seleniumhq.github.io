@@ -4,6 +4,7 @@ GEM
     ast (2.4.2)
     childprocess (4.1.0)
     diff-lcs (1.5.0)
+    ffi (1.15.5)
     json (2.6.2)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
@@ -64,11 +65,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  ffi (~> 1.15, >= 1.15.5)
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
-  selenium-webdriver (~> 4.0)
+  selenium-webdriver (~> 4.4)
   webdrivers (~> 5.0)
 
 BUNDLED WITH
