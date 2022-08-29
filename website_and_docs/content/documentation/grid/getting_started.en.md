@@ -273,3 +273,10 @@ Failure to protect your Grid could result in one or more of the following occurr
 See this blog post on [Detectify](//labs.detectify.com), which gives a good
 overview of how a publicly exposed Grid could be misused:
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
+
+## Further reading
+
+* [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
+* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
+* [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
+* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
