@@ -69,7 +69,23 @@ UI or via an API call.</p><p>The Grid UI can be reached by opening your preferre
 <a href=http://localhost:4444>http://localhost:4444</a>.</p><p>API calls can be done through the <a href=http://localhost:4444/status>http://localhost:4444/status</a>
 endpoint or using <a href=/ja/documentation/grid/advanced_features/graphql_support/>GraphQL</a></p><div class="pageinfo pageinfo-primary"><p>For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-<a href=/ja/documentation/grid/configuration/>Configuring Components</a> section.</p></div><h2 id=warning>Warning</h2><p>Selenium Grid must be protected from external access using appropriate
+<a href=/ja/documentation/grid/configuration/>Configuring Components</a> section.</p></div><h2 id=grid-sizes>Grid sizes</h2><p>Choosing a Grid role depends on what operating systems and browsers need to be supported,
+how many parallel sessions need to be executed, the amount of available machines, and how
+powerful (CPU, RAM) those machines are.</p><p>Creating sessions concurrently relies on the available processors to the <strong>Distributor</strong>.
+For example, if a machine has 4 CPUs, the <strong>Distributor</strong> will only be able to create up
+to 4 sessions concurrently.</p><p>By default, the maximum amount of concurrent sessions a <strong>Node</strong> supports is limited by
+the number of CPUs available. For example, if the <strong>Node</strong> machine has 8CPUs, it can run
+up to 8 concurrent browser sessions (with the exception of Safari, which is always one).
+Additionally, it is expected that each browser session should use around 1GB RAM.</p><p>In general, it is a recommended to have <strong>Nodes</strong> as small as possible. Instead of having
+a machine with 32CPUs and 32GB RAM to run 32 concurrent browser sessions, it is better to
+have 32 small <strong>Nodes</strong> in order to better isolate processes. With this, if a <strong>Node</strong>
+fails, it will do it in an isolated way. Docker is a good tool to achieve this approach.</p><p>Note that the default values (1CPU/1GB RAM per browser) are a recommendation and they could
+not apply to your context. It is recommended to use them as a reference, but measuring
+performance continuously will help to determine the ideal values for your environment.</p><p>Grid sizes are relative to the amount of supported concurrent sessions and amount of
+<strong>Nodes</strong>, and there is no &ldquo;one size fits all&rdquo;. Sizes mentioned below are rough estimations
+thay can vary between different environments. For example a <strong>Hub/Node</strong> with 120 <strong>Nodes</strong>
+might work well when the <strong>Hub</strong> has enough resources. Values below are not set on stone,
+and feedback is welcomed!</p><h3 id=small>Small</h3><p><strong>Standalone</strong> or <strong>Hub/Node</strong> with 5 or less <strong>Nodes</strong>.</p><h3 id=middle>Middle</h3><p><strong>Hub/Node</strong> between 6 and 60 <strong>Nodes</strong>.</p><h3 id=large>Large</h3><p><strong>Hub/Node</strong> between 60 and 100 <strong>Nodes</strong>. <strong>Distributed</strong> with over 100 <strong>Nodes</strong>.</p><h2 id=warning>Warning</h2><p>Selenium Grid must be protected from external access using appropriate
 firewall permissions.</p><p>Failure to protect your Grid could result in one or more of the following occurring:</p><ul><li>You provide open access to your Grid infrastructure</li><li>You allow third parties to access internal web applications and files</li><li>You allow third parties to run custom binaries</li></ul><p>See this blog post on <a href=//labs.detectify.com>Detectify</a>, which gives a good
 overview of how a publicly exposed Grid could be misused:
 <a href=//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/>Don&rsquo;t Leave your Grid Wide Open</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-0918ac00dadcaec8ed42334dbf603f55>2 - グリッドを使用する場合</h1><div class=lead>Is Grid right for you?</div><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language display-4"></i>
