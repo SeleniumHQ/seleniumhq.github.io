@@ -97,43 +97,44 @@ parallel on the latest version of Safari.</p><p>Execution time can be expressed 
 </code></pre><p>As the test suite is executing, the Grid allocates the tests to run against these
 browsers as configured in the tests.</p><p>A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.</p><p>Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team
 of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
-has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-01cd7005c9fe890b652a752e84202045>3 - Selenium Grid Components</h1><div class=lead>Understand how to use the different Grid components</div><p>Selenium Grid 4.0 is a ground-up rewrite from previous versions. In addition to a comprehensive
+has been a critical part of the Selenium project since the earliest days.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-01cd7005c9fe890b652a752e84202045>3 - Selenium Grid Components</h1><div class=lead>Understand how to use the different Grid components</div><p>Selenium Grid 4 is a ground-up rewrite from previous versions. In addition to a comprehensive
 set of improvements to performance and standards compliance, the different functions of the grid were
 broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
-and cloud-distributed scalability, Selenium Grid 4.0 is a wholly new solution for the modern era.</p><div class="card mb-4"><div class=card-header><strong>Grid Components</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>Grid components shown in the fully distributed mode</div></div><h2 id=router>Router</h2><p>The <strong>Router</strong> forwards requests to the correct component.</p><p>The <strong>Router</strong> is the entry point of the Grid, receiving all external requests.
-The <strong>Router</strong> behaves differently depending on the request:</p><ul><li>If it is a new session request, the <strong>Router</strong> will add it to the <strong>New Session Queue</strong></li><li>The <strong>Distributor</strong> regularly checks if there is a free slot</li><li>If so, the first matching request is removed from the <strong>New Session Queue</strong></li><li>The <strong>Router</strong> will receive the event and poll the <strong>New Session Queue</strong> to get the new session request</li><li>If the request belongs to an existing session, the <strong>Router</strong> will send the</li><li>session id to the <strong>Session Map</strong>, and the <strong>Session Map</strong> will
-return the <strong>Node</strong> where the session is running. After this, the <strong>Router</strong> will
-forward the request to the <strong>Node</strong>.</li></ul><p>The <strong>Router</strong> balances the load in the Grid by sending the requests to the
-component that is able to handle them better, without overloading any component
-that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>The <strong>Distributor</strong> keeps track of all <strong>Nodes</strong> and their capabilities. Its
-receives a new session request, then finds a suitable <strong>Node</strong> where the session can be
-created. After the session is created, the <strong>Distributor</strong> stores in the <strong>Session Map</strong>
-the relation between the session id and <strong>Node</strong> where the session is being executed.</p><h2 id=node>Node</h2><p>A Grid can contain multiple <strong>Nodes</strong>. Each <strong>Node</strong> manages
-the slots for the available browsers of the machine where it is running.</p><p>The <strong>Node</strong> registers itself to the <strong>Distributor</strong> through the <strong>Event Bus</strong>, and its
-configuration is sent as part of the registration message.</p><p>By default, the <strong>Node</strong> auto-registers all browser drivers available on the path of
-the machine where it runs. It also creates one slot per available CPU for Chromium
-based browsers and Firefox. For Safari, only one slot is created.
-Through a specific configuration, it can run sessions in Docker containers or relay commands.
-You can see more configuration details in
-<a href=/documentation/grid/getting_started/>setting up your own grid</a>.</p><p>A <strong>Node</strong> only executes the received commands, it does not evaluate, make judgments,
-or control anything other than the flow of commands and responses. The machines where
-the <strong>Node</strong> is running does not need to have the same operating system as the other
-components. For example, A Windows <strong>Node</strong> might have the capability of offering Edge
-as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can
-have multiple <strong>Nodes</strong> configured with Windows, Mac, or Linux.</p><h2 id=session-map>Session Map</h2><p>The <strong>Session Map</strong> is a data store that keeps the information of the session id and the <strong>Node</strong>
-where the session is running. It serves as a support for the <strong>Router</strong> in the process of
-forwarding a request to the <strong>Node</strong>. The <strong>Router</strong> will ask the <strong>Session Map</strong> for the <strong>Node</strong>
-associated to a session id.</p><h2 id=new-session-queue>New Session Queue</h2><p>The <strong>New Session Queue</strong> holds all the new session requests in a FIFO order.
-It has configurable parameters for setting the request timeout and request retry interval.</p><p>The <strong>Router</strong> adds the new session request to the <strong>New Session Queue</strong> and waits for the response.
-The <strong>New Session Queue</strong> regularly checks if any request in the queue has timed out,
-if so the request is rejected and removed immediately.</p><p>The <strong>Distributor</strong> regularly checks if a slot is available. If so, the <strong>Distributor</strong> requests the
+and cloud-distributed scalability, Selenium Grid 4 is a wholly new solution for the modern era.</p><div class="card mb-4"><div class=card-header><strong>Grid Components</strong></div><div class=card-body><p class=card-text><img src=/images/documentation/grid/components.png alt="Selenium Grid 4 Components" title="Selenium Grid 4 Components"></p></div><div class=card-footer>Grid components shown in the fully distributed mode</div></div><h2 id=router>Router</h2><p>The <strong>Router</strong> is the entry point of the Grid, receiving all external requests, and forwards them to
+the correct component.</p><p>If the <strong>Router</strong> receives a new session request, it will be forwarded to the <strong>New Session Queue</strong>.</p><p>If the request belongs to an existing session, the <strong>Router</strong> will query the <strong>Session Map</strong> to get
+the <strong>Node</strong> ID where the session is running, and then the request will be forwarded directly to the
+<strong>Node</strong>.</p><p>The <strong>Router</strong> balances the load in the Grid by sending the requests to the component that is able
+to handle them better, without overloading any component that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>The <strong>Distributor</strong> has two main responsibilities:</p><h4 id=register-and-keep-track-of-all-nodes-and-their-capabilities>Register and keep track of all Nodes and their capabilities</h4><p>A <strong>Node</strong> registers to the <strong>Distributor</strong> by sending a <strong>Node</strong> registration event through
+the <strong>Event Bus</strong>. The <strong>Distributor</strong> reads it, and then tries to reach the <strong>Node</strong> via HTTP
+to confirm its existance. If the request is successfull, the <strong>Distributor</strong> registers the Node
+and keeps track of all <strong>Nodes</strong> capabilities through the <strong>GridModel</strong>.</p><h4 id=query-the-new-session-queue-and-process-any-pending-new-session-requests>Query the New Session Queue and process any pending new session requests</h4><p>When a new session request is sent to the <strong>Router</strong>, it gets forwarded to the <strong>New Session Queue</strong>,
+where it will wait in the queue. The <strong>Distributor</strong> will poll the <strong>New Session Queue</strong> for pending
+new session requests, and then finds a suitable <strong>Node</strong> where the session can be created. After the
+session has been created, the <strong>Distributor</strong> stores in the <strong>Session Map</strong> the relation between the
+session id and <strong>Node</strong> where the session is being executed.</p><h2 id=session-map>Session Map</h2><p>The <strong>Session Map</strong> is a data store that keeps the relationship between the session id and the <strong>Node</strong>
+where the session is running. It supports the <strong>Router</strong> in the process of forwarding a request to the
+<strong>Node</strong>. The <strong>Router</strong> will ask the <strong>Session Map</strong> for the <strong>Node</strong> associated to a session id.</p><h2 id=new-session-queue>New Session Queue</h2><p>The <strong>New Session Queue</strong> holds all the new session requests in a FIFO order. It has configurable
+parameters for setting the request timeout and request retry interval (how often the timeout will
+be checked).</p><p>The <strong>Router</strong> adds the new session request to the <strong>New Session Queue</strong> and waits for the response.
+The <strong>New Session Queue</strong> regularly checks if any request in the queue has timed out, if so the request
+is rejected and removed immediately.</p><p>The <strong>Distributor</strong> regularly checks if a slot is available. If so, the <strong>Distributor</strong> polls the
 <strong>New Session Queue</strong> for the first matching request. The <strong>Distributor</strong> then attempts to create
-a new session.</p><p>Once the requested capabilities match the capabilities of any of the free <strong>Node</strong> slots, the <strong>Distributor</strong> attempts to get the
-available slot. If all the slots are busy, the <strong>Distributor</strong> will ask the queue to add the request to the front of the queue.
-If request times out while retrying or adding to the front of the queue it is rejected.</p><p>After a session is created successfully, the <strong>Distributor</strong> sends the session information to the <strong>New Session Queue</strong>.
-The <strong>New Session Queue</strong> sends the response back to the client.</p><h2 id=event-bus>Event Bus</h2><p>The <strong>Event Bus</strong> serves as a communication path between the <strong>Nodes</strong>, <strong>Distributor</strong>, <strong>New Session Queue</strong>, and <strong>Session Map</strong>.
-The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
-When starting the Grid in its fully distributed mode, the <strong>Event Bus</strong> is the first component that should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
+a new session.</p><p>Once the requested capabilities match the capabilities of any of the free <strong>Node</strong> slots, the <strong>Distributor</strong>
+attempts to get the available slot. If all the slots are busy, the <strong>Distributor</strong> will send the request back
+to the queue. If request times out while retrying or adding to the front of the queue, it will be rejected.</p><p>After a session is created successfully, the <strong>Distributor</strong> sends the session information to the <strong>New Session Queue</strong>,
+which then gets sent back to the <strong>Router</strong>, and finally to the client.</p><h2 id=node>Node</h2><p>A Grid can contain multiple <strong>Nodes</strong>. Each <strong>Node</strong> manages the slots for the available browsers of the machine
+where it is running.</p><p>The <strong>Node</strong> registers itself to the <strong>Distributor</strong> through the <strong>Event Bus</strong>, and its configuration is sent as
+part of the registration message.</p><p>By default, the <strong>Node</strong> auto-registers all browser drivers available on the path of the machine where it runs.
+It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is
+created. Through a specific <a href=/documentation/grid/configuration/>configuration</a>, it can run sessions in Docker
+containers or relay commands.</p><p>A <strong>Node</strong> only executes the received commands, it does not evaluate, make judgments, or control anything other
+than the flow of commands and responses. The machines where the <strong>Node</strong> is running does not need to have the
+same operating system as the other components. For example, A Windows <strong>Node</strong> might have the capability of
+offering IE Mode on Edge as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can
+have multiple <strong>Nodes</strong> configured with Windows, Mac, or Linux.</p><h2 id=event-bus>Event Bus</h2><p>The <strong>Event Bus</strong> serves as a communication path between the <strong>Nodes</strong>, <strong>Distributor</strong>, <strong>New Session Queue</strong>,
+and <strong>Session Map</strong>. The Grid does most of its internal communication through messages, avoiding expensive HTTP
+calls. When starting the Grid in its fully distributed mode, the <strong>Event Bus</strong> is the first component that
+should be started.</p><div class="alert alert-primary" role=alert><h4 class=alert-heading>Running your own Grid</h4>Looking forward to using all these components and run your own Grid?
 Head to the <a href=/documentation/grid/getting_started/>&ldquo;Getting Started&rdquo;</a>
 section to understand how to put all these pieces together.</div></div><div class=td-content style=page-break-before:always><h1 id=pg-aedd7c21b1dab64fd01a997c34bd16fe>4 - Configuration of Components</h1><div class=lead>Here you can see how each Grid component can be configured individually based on common configuration values and component-specific configuration values.</div></div><div class=td-content><h1 id=pg-b0833a230d156d49a170ccaf66b15c1e>4.1 - Configuration help</h1><div class=lead>Get information about all the available options to configure Grid.</div><div class="pageinfo pageinfo-primary"><p>The help commands display information based on the current code implementation.
 Hence, it will provide accurate information in case the documentation is not updated.
