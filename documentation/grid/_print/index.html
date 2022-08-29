@@ -270,7 +270,7 @@ need to be included always in every session request.</p><div class=highlight><pr
 </span></span></code></pre></div></div><div class=td-content style=page-break-before:always><h1 id=pg-ddd942d3d6b672c0dd5dcde8e4533a63>5 - Grid architecture</h1><p>The Grid is designed as a set of components that all fulfill a role in
 maintaining the Grid. It can seem quite complicated, but hopefully
 this document can help clear up any confusion.</p><h2 id=the-key-components>The Key Components</h2><p>The main components of the Grid are:</p><dl><dt>Event Bus<dd>Used for sending messages which may be received asynchronously
-between the other components.<dt>Session Queue<dd>Maintains a list of incoming sessions which have yet to be
+between the other components.<dt>New Session Queue<dd>Maintains a list of incoming sessions which have yet to be
 assigned to a Node by the Distributor.<dt>Distributor<dd>Responsible for maintaining a model of the available locations in
 the Grid where a session may run (known as "slots") and taking any
 incoming <a href=https://w3c.github.io/webdriver/#new-session>new
@@ -278,7 +278,7 @@ session</a> requests and assigning them to a slot.<dt>Node<dd>Runs a <a href=htt
 session</a>. Each session is assigned to a slot, and each node has
 one or more slots.<dt>Session Map<dd>Maintains a mapping between the <a href=https://w3c.github.io/webdriver/#dfn-session-id>session
 ID</a> and the address of the Node the session is running on.<dt>Router<dd>Acts as the front-end of the Grid. This is the only part of the
-Grid which _may_ be exposed to the wider Web (though we strongly
+Grid which <i>may</i> be exposed to the wider Web (though we strongly
 caution against it). This routes incoming requests to either the
 New Session Queue or the Node on which the session is running.</dl><p>While discussing the Grid, there are some other useful concepts to
 keep in mind:</p><ul><li>A <strong>slot</strong> is the place where a session can run.</li><li>Each slot has a <strong>stereotype</strong>. This is the minimal set of
