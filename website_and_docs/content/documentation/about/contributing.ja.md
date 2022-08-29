@@ -134,8 +134,8 @@ Fixes #141
 あなたの作業を同期するため、(`git merge`ではなく)`git rebase`を時々実行してください。
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### ステップ 6: テスト

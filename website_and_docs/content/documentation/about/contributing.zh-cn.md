@@ -141,8 +141,8 @@ Fixes #141
 使用 `git rebase` (并非 `git merge`) 同步实时的工作.
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### 步骤 6: 测试

@@ -144,8 +144,8 @@ executam `git shortlog` ou` git log --oneline`.
 Use `git rebase` (não `git merge`) para sincronizar seu trabalho de tempos em tempos.
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### Passo 6: Teste

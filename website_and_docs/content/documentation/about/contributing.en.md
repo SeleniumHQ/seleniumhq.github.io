@@ -144,8 +144,8 @@ run `git shortlog` or `git log --oneline`.
 Use `git rebase` (not `git merge`) to sync your work from time to time.
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### Step 6: Test
