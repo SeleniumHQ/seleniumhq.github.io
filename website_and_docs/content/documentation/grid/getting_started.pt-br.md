@@ -227,6 +227,48 @@ locally. More detailed examples and usages can be found in the
 [Configuring Components]({{< ref "/configuration" >}}) section.
 {{% /pageinfo %}}
 
+## Grid sizes
+
+Choosing a Grid role depends on what operating systems and browsers need to be supported, 
+how many parallel sessions need to be executed, the amount of available machines, and how 
+powerful (CPU, RAM) those machines are.
+
+Creating sessions concurrently relies on the available processors to the **Distributor**. 
+For example, if a machine has 4 CPUs, the **Distributor** will only be able to create up
+to 4 sessions concurrently.
+
+By default, the maximum amount of concurrent sessions a **Node** supports is limited by
+the number of CPUs available. For example, if the **Node** machine has 8CPUs, it can run
+up to 8 concurrent browser sessions (with the exception of Safari, which is always one).
+Additionally, it is expected that each browser session should use around 1GB RAM. 
+
+In general, it is a recommended to have **Nodes** as small as possible. Instead of having
+a machine with 32CPUs and 32GB RAM to run 32 concurrent browser sessions, it is better to
+have 32 small **Nodes** in order to better isolate processes. With this, if a **Node**
+fails, it will do it in an isolated way. Docker is a good tool to achieve this approach.
+
+Note that the default values (1CPU/1GB RAM per browser) are a recommendation and they could
+not apply to your context. It is recommended to use them as a reference, but measuring 
+performance continuously will help to determine the ideal values for your environment.
+
+Grid sizes are relative to the amount of supported concurrent sessions and amount of 
+**Nodes**, and there is no "one size fits all". Sizes mentioned below are rough estimations
+thay can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
+might work well when the **Hub** has enough resources. Values below are not set on stone,
+and feedback is welcomed!
+
+### Small
+
+**Standalone** or **Hub/Node** with 5 or less **Nodes**.
+
+### Middle
+
+**Hub/Node** between 6 and 60 **Nodes**.
+
+### Large
+
+**Hub/Node** between 60 and 100 **Nodes**. **Distributed** with over 100 **Nodes**.
+
 ## Warning
 
 Selenium Grid must be protected from external access using appropriate
