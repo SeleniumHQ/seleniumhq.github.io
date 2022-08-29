@@ -356,7 +356,7 @@ moves to the location of the target element and then releases the mouse.
 {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L141-L145" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-// Add Code
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L29-L32" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
