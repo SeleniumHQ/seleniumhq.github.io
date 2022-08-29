@@ -29,49 +29,103 @@ To learn more about the different configuration options, go through the sections
 
 ## Grid roles
 
-Several [components]({{< ref "components.md" >}}) compose a Selenium Grid. Depending 
-on your needs, you can start each one of them on its own, or a few at the same time by using a
-Grid role.
+Grid is composed by six different [components]({{< ref "components.md" >}}), which gives
+you the option to deploy it in different ways.
+
+Depending on your needs, you can start each one of them on its own (Distributed), group
+them in Hub & Node, or all in one on a single machine (Standalone).
 
 ### Standalone
 
-**Standalone** combines all Grid components seamlessly into one. 
-Running a Grid in **Standalone** mode gives you a fully functional Grid with a single command, 
-within a single process.
+**Standalone** combines all Grid [components]({{< ref "components.md" >}}) seamlessly 
+into one. Running a Grid in **Standalone** mode gives you a fully functional Grid 
+with a single command, within a single process. **Standalone** can only run on a 
+single machine.
 
 **Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
-will listen for `RemoteWebDriver` requests on `http://localhost:4444/wd/hub`. By default, the
-server will detect the available drivers that it can use from the System `PATH`.
+will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
+By default, the server will detect the available drivers that it can use from the System 
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
 ```
-You can still pass a `--config` file, or pass specific 
-[configuration flags on the CLI]({{< ref "cli_options.md" >}})
+
+After starting successfully the Grid in Standalone mode, point your WebDriver tests 
+to [http://localhost:4444](http://localhost:4444).
+
+Common use cases for **Standalone** are:
+* Develop or debug tests using `RemoteWebDriver` locally
+* Running quick test suites before pushing code
+* Have a easy to setup Grid in a CI/CD tool (GitHub Actions, Jenkins, etc...)
+
+
+### Hub and Node
+
+**Hub and Node** is the most used role because it allows to:
+* Combine different machines in a single Grid
+  * Machines with different operating systems and/or browser versions, for example
+* Have a single entry point to run WebDriver tests in different environments
+* Scaling capacity up or down without tearing down the Grid
 
 #### Hub
 
-A Hub is the union of the following components:
-
-* Router
-* Distributor
-* Session Map
-* New Session Queue
-* Event Bus
+A Hub is composed by the following [components]({{< ref "components.md" >}}):
+Router, Distributor, Session Map, New Session Queue, and Event Bus.
 
 ```shell
 java -jar selenium-server-<version>.jar hub
 ```
 
-By default, the server will listen for `RemoteWebDriver` requests on `http://localhost:4444/wd/hub`.
+By default, the server will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444).
 
 #### Node
 
-One or more **Nodes** can be started in this setup, and the server will detect the available 
-drivers that it can use from the System `PATH`. 
+During startup time, the **Node** will detect the available drivers that it can use from the System 
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
 
+The command below assumes the **Node** is running on the same machine where the **Hub** is running.
 ```shell
 java -jar selenium-server-<version>.jar node
+```
+
+##### More than one Node on the same machine
+
+**Node** 1
+```shell
+java -jar selenium-server-<version>.jar node --port 5555
+```
+
+**Node** 2
+```shell
+java -jar selenium-server-<version>.jar node --port 6666
+```
+
+##### Node and Hub on different machines
+
+**Hub** and **Nodes** talk to each other via HTTP and the [**EventBus**]({{< ref "components.md#event-bus" >}})
+(the **EventBus** lives inside the **Hub**). A **Node** sends a message to the **Hub** via the **EventBus** to 
+start the registration process. When the **Hub** receives the message, reaches out to the **Node** via HTTP to 
+confirm its existence.
+
+To successfully register a **Node** to a **Hub** it is important to expose the **EventBus** ports (4442 and 4443 by 
+default) on the **Hub** machine. This also applies for the **Node** port. With that, both **Hub** and **Node** will
+be able to communicate.
+
+If the **Hub** is using the default ports, the `--hub` flag can be used to register the **Node**
+```shell
+java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444
+```
+
+When the **Hub** is not using the default ports, the `--publish-events` and `--subscribe-events` are needed.
+
+For example, if the **Hub** uses ports `8886`, `8887`, and `8888`
+```shell
+java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887 --port 8888
+```
+The **Node** needs to use those ports to register successfully
+```shell
+java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
 ```
 
 ### Distributed 
@@ -124,10 +178,10 @@ java -jar selenium-server-<version>.jar node
 
 ## Metadata in tests
 
-You can add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
-or visualize parts of it through the Selenium Grid UI. Metadata can be added by prefixing the metadata with `se:`.
+Add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+or visualize parts of it (like `se:name`) through the Selenium Grid UI. 
 
-Here is a quick example in Java showing that.
+Metadata can be added by prefixing a capability with `se:`. Here is a quick example in Java showing that.
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
