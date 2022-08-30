@@ -17,11 +17,13 @@ USE_BASE_URL_SITE=""
 if [[ "${NETLIFY}" = "true" ]]; then
   echo -e "\033[0;32mNetlify detected, seems to be a PR, deployment happening at ${DEPLOY_PRIME_URL}...\033[0m"
   USE_BASE_URL_SITE="--baseURL ${DEPLOY_PRIME_URL}"
-  # Getting repo information from the GitHub API
-  # Useful to get the code examples from the right org and repo
-  REPO_INFO=$(curl -s -H ${SELENIUM_ACCEPT_HEADER} -H ${SELENIUM_AUTH_HEADER} ${SELENIUM_GITHUB_API_PULLS_URL}/${REVIEW_ID})
-  SELENIUM_EXAMPLES_REPO=$(echo $REPO_INFO | jq -r .head.repo.name)
-  SELENIUM_EXAMPLES_ORG=$(echo $REPO_INFO | jq -r .head.repo.owner.login)
+  if [[ "${PULL_REQUEST}" = "true" ]]; then
+    # Getting repo information from the GitHub API
+    # Useful to get the code examples from the right org and repo
+    REPO_INFO=$(curl -s -H ${SELENIUM_ACCEPT_HEADER} -H ${SELENIUM_AUTH_HEADER} ${SELENIUM_GITHUB_API_PULLS_URL}/${REVIEW_ID})
+    SELENIUM_EXAMPLES_REPO=$(echo $REPO_INFO | jq -r .head.repo.name)
+    SELENIUM_EXAMPLES_ORG=$(echo $REPO_INFO | jq -r .head.repo.owner.login)
+  fi
 fi
 
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
