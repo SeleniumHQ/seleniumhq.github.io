@@ -1,6 +1,6 @@
 #!/bin/bash
 # Print commands
-# set -x
+set -x
 # Exit on error
 set -e
 
