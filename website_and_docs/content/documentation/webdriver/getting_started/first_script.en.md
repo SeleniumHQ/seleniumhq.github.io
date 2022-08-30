@@ -18,7 +18,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
 
 For more details on starting a session read our documentation on [opening and closing a browser]({{< ref "open_browser.md" >}})
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
 {{< /tab >}}
@@ -42,7 +42,7 @@ For more details on starting a session read our documentation on [opening and cl
 ### 2. Take action on browser
 In this example we are [navigating]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) to a web page. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
 {{< /tab >}}
@@ -68,7 +68,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
 There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L41" >}}
 {{< /tab >}}
@@ -76,7 +76,7 @@ can request, including window handles, browser size / position, cookies, alerts,
 {{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L12" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L35" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
@@ -102,7 +102,7 @@ we'll use it as a placeholder.
 
 Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L44" >}}
 {{< /tab >}}
@@ -119,7 +119,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -127,7 +127,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 The majority of commands in most Selenium sessions are element related, and you can't interact
 with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
 {{< /tab >}}
@@ -152,7 +152,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
 but you will use them frequently. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L49-L50" >}}
 {{< /tab >}}
@@ -176,7 +176,7 @@ but you will use them frequently.
 ### 7. Request element information
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L53" >}}
 {{< /tab >}}
@@ -202,7 +202,7 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 This ends the driver process, which by default closes the browser as well. 
 No more commands can be sent to this driver instance. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
 {{< /tab >}}
@@ -226,7 +226,7 @@ No more commands can be sent to this driver instance.
 ## Putting everything together
 Let's combine these 8 things into a complete script with assertions that can be executed by a test runner.
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 {{< /tab >}}

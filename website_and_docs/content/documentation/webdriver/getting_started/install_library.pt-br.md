@@ -15,8 +15,8 @@ aliases: [
 Primeiro você precisa instalar as bibliotecas Selenium para seu projeto de automação.
 O processo de instalação de bibliotecas depende da linguagem que você escolher usar.
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 A instalação de bibliotecas Selenium para Java pode ser feita usando Maven.
 Adicione a dependência selenium-java em seu pom.xml:
 
@@ -42,8 +42,8 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   A instalação de bibliotecas Selenium para Python pode ser feita usando pip:
 
 ```shell
@@ -56,8 +56,8 @@ Como alternativa, você pode baixar o [arquivo de origem do PyPI](https://pypi.o
 ```shell
 python setup.py install
 ```
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:
 
 ```shell
@@ -94,23 +94,23 @@ Você pode ter de personalizar o arquivo `nuget.config` atender suas necessidade
 Agora, volte ao VSCode, pressione Ctrl-Shift-P e digite "NuGet Add Package" e adicione os pacotes requeridos para Selenium, como o pacote `Selenium.WebDriver`. Pressione enter e selecione a versão.
 Agora você pode utilizar os exemplos na documentação relacionada para C# com VSCode.
 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-  {{< /tab >}}
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
   Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)
   {{< /tab >}}

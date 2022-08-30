@@ -14,8 +14,8 @@ aliases: [
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 JavaへのSeleniumライブラリのインストールはMavenを使います。
 プロジェクトのpom.xmlに _selenium-java_ の依存関係を追加してください。
 
@@ -41,8 +41,8 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   PythonへのSeleniumライブラリのインストールはpipを使います。
 
 ```shell
@@ -55,8 +55,8 @@ pip install selenium
 ```shell
 python setup.py install
 ```
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   C#へのSeleniumライブラリのインストールはNuGetを使います。
 
 ```shell
@@ -96,21 +96,21 @@ Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and en
 Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.
  
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   RubyへのSeleniumライブラリのインストールはgemを使います。
 
 ```shell
 gem install selenium-webdriver
 ```
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell
 npm install selenium-webdriver
 ```
-  {{< /tab >}}
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
   Kotlinのネイティブ言語バインディングが欠落しているため、Javaバインディングを使用する必要があります。
   例えば、 maven [Java](#java) を使用します。

@@ -48,8 +48,8 @@ WebDriver尽量使用浏览器内置的自动化支持
 为了确保为浏览器提供正确的驱动程序, 
 这里有许多第三方库可为您提供帮助.
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
 
 1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -71,8 +71,8 @@ ChromeDriver driver = new ChromeDriver();
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 
 1. 导入 [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
 
@@ -96,8 +96,8 @@ driver = webdriver.Chrome(service=service)
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 1. 导入 [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
@@ -122,8 +122,8 @@ var driver = new ChromeDriver()
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 1. 增加 [webdrivers gem](https://github.com/titusfortner/webdrivers) 到 Gemfile:
 
 ```rb
@@ -145,11 +145,11 @@ driver = Selenium::WebDriver.for :chrome
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
  *There is not a recommended driver manager for JavaScript at this time*
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 
 1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -163,7 +163,7 @@ fun chrome(): WebDriver {
 }
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### 2. `PATH` 环境变量
@@ -181,8 +181,8 @@ fun chrome(): WebDriver {
 * 要查看`PATH`上已有哪些目录, 
 请打开命令提示符/终端并键入:  
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Bash" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Bash" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行
 ```shell
@@ -198,8 +198,8 @@ source ~/.bash_profile
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Zsh" >}}
+{{% /tab %}}
+{{% tab header="Zsh" %}}
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行:
 ```shell
 echo $PATH
@@ -214,8 +214,8 @@ source ~/.zshenv
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Windows" >}}
+{{% /tab %}}
+{{% tab header="Windows" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开命令提示符并执行:
 ```shell
@@ -230,7 +230,7 @@ setx PATH "%PATH%;C:\WebDriver\bin"
 ```shell
 chromedriver.exe
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 如果`PATH`配置正确, 

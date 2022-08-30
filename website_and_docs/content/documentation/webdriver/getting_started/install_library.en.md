@@ -18,8 +18,8 @@ you are using the latest version.
 
 ## Requirements by language
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 Installation of Selenium libraries for Java is accomplished using a build tool.
 You can see all available versions on
 [Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
@@ -49,8 +49,8 @@ dependencies {
 ```
 
 
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
@@ -64,8 +64,8 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 python setup.py install
 ```
 
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   Installation of Selenium libraries for C# can be done using NuGet in one of two ways
 
   * Using a Packet Manager:
@@ -107,8 +107,8 @@ Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and en
 Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.
 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
@@ -121,15 +121,15 @@ Or add it to your `Gemfile`:
 gem 'selenium-webdriver', '~> 4.4'
 ```
 
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-  {{< /tab >}}
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
     Use the Java bindings for Kotlin.
   {{< /tab >}}

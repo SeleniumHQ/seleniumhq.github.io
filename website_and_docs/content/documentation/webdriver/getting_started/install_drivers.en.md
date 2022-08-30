@@ -43,8 +43,8 @@ See the code example for [opening an Opera browser]({{< ref "open_browser.md#ope
 Most machines automatically update the browser, but the driver does not. To make sure you get 
 the correct driver for your browser, there are many third party libraries to assist you. 
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
 
 1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -64,8 +64,8 @@ ChromeDriver driver = new ChromeDriver();
 See full example on GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 
 1. Import [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
 
@@ -89,8 +89,8 @@ driver = webdriver.Chrome(service=service)
 See full example on GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
@@ -115,8 +115,8 @@ var driver = new ChromeDriver()
 See full example on GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 1. Add [webdrivers gem](https://github.com/titusfortner/webdrivers) to Gemfile:
 
 ```rb
@@ -138,11 +138,11 @@ driver = Selenium::WebDriver.for :chrome
 See full example on GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
  *There is not a recommended driver manager for JavaScript at this time*
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 
 1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -156,7 +156,7 @@ fun chrome(): WebDriver {
 }
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### 2. The `PATH` Environment Variable
@@ -168,8 +168,8 @@ on multiple machines without requiring that each machine put the drivers in the 
 You can either place the drivers in a directory that is already listed in `PATH`, or you can place them in a directory
 and add it to `PATH`.
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Bash" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell
 echo $PATH
@@ -184,8 +184,8 @@ You can test if it has been added correctly by starting the driver:
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Zsh" >}}
+{{% /tab %}}
+{{% tab header="Zsh" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell
 echo $PATH
@@ -200,8 +200,8 @@ You can test if it has been added correctly by starting the driver:
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Windows" >}}
+{{% /tab %}}
+{{% tab header="Windows" %}}
 To see what directories are already on `PATH`, open a Command Prompt and execute:
 ```shell
 echo %PATH%
@@ -215,7 +215,7 @@ You can test if it has been added correctly by starting the driver:
 ```shell
 chromedriver.exe
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 If your `PATH` is configured correctly above,

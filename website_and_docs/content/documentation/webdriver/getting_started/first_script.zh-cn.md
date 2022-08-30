@@ -22,7 +22,7 @@ Selenium所做的一切,
 有关启动会话的更多详细信息, 
 请阅读我们关于[打开和关闭浏览器]({{< ref "open_browser.md" >}})的文档
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Selenium所做的一切,
 [导航]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) 
 到一个网页. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
 {{< /tab >}}
@@ -75,7 +75,7 @@ Selenium所做的一切,
 您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/browser" >}}) , 
 包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L41" >}}
 {{< /tab >}}
@@ -114,7 +114,7 @@ Selenium所做的一切,
 阅读更多关于[等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
 的信息. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L44" >}}
 {{< /tab >}}
@@ -140,7 +140,7 @@ Selenium所做的一切,
 如果不先[找到元素]({{< ref "/documentation/webdriver/elements" >}}), 
 就无法与之交互.
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
 {{< /tab >}}
@@ -166,7 +166,7 @@ Selenium所做的一切,
 只有少数几个[操作]({{< ref "/documentation/webdriver/elements/interactions.md" >}})可以执行, 
 但您将经常使用它们. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L49-L50" >}}
 {{< /tab >}}
@@ -190,7 +190,7 @@ Selenium所做的一切,
 ### 7. 获取元素信息
 元素存储了很多[被请求的信息]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L53" >}}
 {{< /tab >}}
@@ -217,7 +217,7 @@ Selenium所做的一切,
 默认情况下, 该进程也会关闭浏览器. 
 无法向此驱动程序实例发送更多命令. 
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
 {{< /tab >}}
@@ -246,7 +246,7 @@ Selenium所做的一切,
 按照选项卡底部的链接查看代码示例, 
 因为它将使用测试运行程序而不是独立文件执行.
 
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 {{< /tab >}}

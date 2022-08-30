@@ -39,8 +39,8 @@ WebDriver Bidi是W3C WebDriver的下一代协议,
 我们可以轻易模拟他们.
 下面的代码片段演示了这一点.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true code=false >}}
+  {{< tab header="Java" code=true >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
 devTools.createSession();
@@ -50,7 +50,7 @@ devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
 driver.get("https://my-location.org/");
 driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{< tab header="Python" code=true >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
@@ -64,7 +64,7 @@ def geoLocationTest():
     driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
     driver.get("<your site url>")
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
@@ -96,7 +96,7 @@ namespace dotnet_test {
     }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -112,10 +112,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.devtools.DevTools
 

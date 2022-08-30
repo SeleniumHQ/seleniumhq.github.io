@@ -22,30 +22,30 @@ unicode values have been assigned to other keyboard keys for use with Selenium.
 Each language has its own way to reference these keys; the full list can be found
 [here](https://www.w3.org/TR/webdriver/#keyboard-actions).
 
-{{< tabpane disableCodeBlock=true height="1">}}
-    {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+    {{% tab header="Java" %}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
-    {{< /tab >}}
-    {{< tab header="Python" >}}
+    {{% /tab %}}
+    {{% tab header="Python" %}}
 Use the [Python Keys class](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/py/selenium/webdriver/common/keys.py#L23)
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
+    {{% /tab %}}
+    {{% tab header="CSharp" %}}
 Use the [.NET static Keys class](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/dotnet/src/webdriver/Keys.cs#L28)
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
+    {{% /tab %}}
+    {{% tab header="Ruby" %}}
 Use the [Ruby KEYS constant](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/rb/lib/selenium/webdriver/common/keys.rb#L28)
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
+    {{% /tab %}}
+    {{% tab header="JavaScript" %}}
 Use the [JavaScript KEYS constant](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/javascript/node/selenium-webdriver/lib/input.js#L44)
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
+   {{% /tab %}}
+    {{% tab header="Kotlin" %}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
-    {{< /tab >}}
+    {{% /tab %}}
 {{< /tabpane >}}
 
 ## Key down
 
-{{< tabpane disableCodeBlock=true height="4">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L18-L21" >}}
 {{< /tab >}}
@@ -59,7 +59,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L19-L22" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
@@ -68,7 +68,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ## Key up
 
-{{< tabpane disableCodeBlock=true height="6">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L31-L36" >}}
 {{< /tab >}}
@@ -82,7 +82,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L34-L39" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
@@ -97,7 +97,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 
 ### Active Element
 
-{{< tabpane disableCodeBlock=true height="3">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L46-L48" >}}
 {{< /tab >}}
@@ -111,7 +111,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L46-L48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
@@ -120,7 +120,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 
 ### Designated Element
 
-{{< tabpane disableCodeBlock=true height="4">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
 {{< /tab >}}
@@ -147,7 +147,7 @@ Here's an example of using all of the above methods to conduct a copy / paste ac
 Note that the key to use for this operation will be different depending on if it is a Mac OS or not.
 This code will end up with the text: `SeleniumSelenium!`
 
-{{< tabpane disableCodeBlock=true height="13">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
 {{< /tab >}}

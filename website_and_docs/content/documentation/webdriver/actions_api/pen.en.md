@@ -18,7 +18,7 @@ has 5 buttons, a pen has 3 equivalent button states:
 
 ## Using a Pen
 
-{{< tabpane disableCodeBlock=true height="11">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge version="4.2" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L26-L33" >}}
@@ -46,7 +46,7 @@ has 5 buttons, a pen has 3 equivalent button states:
 
 {{< badge version="4.2" >}}
 
-{{< tabpane disableCodeBlock=true height="15">}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L67-L81" >}}
 {{< /tab >}}

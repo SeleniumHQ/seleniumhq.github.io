@@ -83,7 +83,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -180,7 +180,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
@@ -283,7 +283,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
@@ -395,7 +395,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
@@ -498,7 +498,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
@@ -623,7 +623,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
+  {{< tab header="JavaScript" code=false >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
