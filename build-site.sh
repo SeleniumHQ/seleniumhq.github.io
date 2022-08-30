@@ -22,9 +22,6 @@ if [[ "${NETLIFY}" = "true" ]]; then
     # Getting repo information from the GitHub API
     # Useful to get the code examples from the right org and repo
     REPO_INFO=$(curl -s -H ${SELENIUM_ACCEPT_HEADER} -H ${SELENIUM_AUTH_HEADER} ${SELENIUM_GITHUB_API_PULLS_URL}/${REVIEW_ID})
-    echo $REPO_INFO
-    echo $BRANCH
-    echo $HEAD
     SELENIUM_EXAMPLES_BRANCH=${HEAD}
     SELENIUM_EXAMPLES_REPO=$(echo $REPO_INFO | jq -r .head.repo.name)
     SELENIUM_EXAMPLES_ORG=$(echo $REPO_INFO | jq -r .head.repo.owner.login)
