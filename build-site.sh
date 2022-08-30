@@ -2,9 +2,6 @@
 # Exit on error
 set -e
 
-# curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${SELENIUM_CI_TOKEN}" \
-#   https://api.github.com/repos/SeleniumHQ/seleniumhq.github.io/pulls/1145 | jq .head.repo
-
 SELENIUM_GITHUB_API_PULLS_URL=https://api.github.com/repos/SeleniumHQ/seleniumhq.github.io/pulls
 SELENIUM_ACCEPT_HEADER="Accept: application/vnd.github+json"
 SELENIUM_AUTH_HEADER="Authorization: Bearer ${SELENIUM_CI_TOKEN}"
