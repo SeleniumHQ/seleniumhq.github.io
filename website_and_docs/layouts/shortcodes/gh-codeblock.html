@@ -9,6 +9,16 @@
   {{ $branch = $defaultBranchFromEnv }}
 {{ end }}
 
+{{ $defaultOrgFromEnv := (getenv "SELENIUM_EXAMPLES_ORG") }}
+{{ if $defaultOrgFromEnv }}
+  {{ $org = $defaultOrgFromEnv }}
+{{ end }}
+
+{{ $defaultRepoFromEnv := (getenv "SELENIUM_EXAMPLES_REPO") }}
+{{ if $defaultRepoFromEnv }}
+  {{ $repo = $defaultRepoFromEnv }}
+{{ end }}
+
 {{ $fullPath := .Get "path" }}
 {{ $path := index (split $fullPath "#") 0 }}
 
