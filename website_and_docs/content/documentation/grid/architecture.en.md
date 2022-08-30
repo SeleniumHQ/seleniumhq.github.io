@@ -20,7 +20,7 @@ The main components of the Grid are:
 <dd>Used for sending messages which may be received asynchronously
     between the other components.
 
-<dt>Session Queue
+<dt>New Session Queue
 <dd>Maintains a list of incoming sessions which have yet to be
     assigned to a Node by the Distributor.
 
@@ -44,7 +44,7 @@ The main components of the Grid are:
 
 <dt>Router
 <dd>Acts as the front-end of the Grid. This is the only part of the
-    Grid which _may_ be exposed to the wider Web (though we strongly
+    Grid which <i>may</i> be exposed to the wider Web (though we strongly
     caution against it). This routes incoming requests to either the
     New Session Queue or the Node on which the session is running.
 </dl>

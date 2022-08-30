@@ -55,7 +55,7 @@ description: >
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = ChromeOptions()
@@ -98,7 +98,7 @@ edgedriver的主要版本号必须与Edge浏览器的主要版本匹配.
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = EdgeOptions()
@@ -139,7 +139,7 @@ Selenium 4需要Firefox 78或更高版本.
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = FirefoxOptions()
