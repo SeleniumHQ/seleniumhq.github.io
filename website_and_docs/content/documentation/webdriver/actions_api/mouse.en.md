@@ -178,7 +178,7 @@ This method combines moving to the center of an element with pressing and releas
 {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L17-L19" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L17-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
