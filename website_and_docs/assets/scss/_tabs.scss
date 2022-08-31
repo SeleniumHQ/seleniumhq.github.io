@@ -1,0 +1,15 @@
+.tab-content {
+  .tab-pane {
+    pre {
+      border: none;
+    }
+  }
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #f8f8f8;
+}
+
+.tab-body {
+  background: inherit;
+}
