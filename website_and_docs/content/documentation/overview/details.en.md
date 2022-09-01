@@ -19,7 +19,7 @@ that uses the best techniques available
 to remotely control browser instances
 and emulate a user's interaction with the browser.
 
-It allows users to simulate common activities performed by end-users;
+Selenium allows users to simulate common activities performed by end-users;
 entering text into fields,
 selecting drop-down values and checking boxes,
 and clicking links in documents.
@@ -27,9 +27,9 @@ It also provides many other controls such as mouse movement,
 arbitrary JavaScript execution, and much more.
 
 Although used primarily for front-end testing of websites,
-Selenium is at its core a browser user agent _library_.
+Selenium is, at its core, a browser user agent _library_.
 The interfaces are ubiquitous to their application,
-which encourages composition with other libraries to suit your purpose.
+encouraging composition with other libraries to suit your purpose.
 
 
 ### One interface to rule them all
@@ -37,11 +37,11 @@ which encourages composition with other libraries to suit your purpose.
 One of the project's guiding principles
 is to support a common interface for all (major) browser technologies.
 Web browsers are incredibly complex, highly engineered applications,
-performing their operations in completely different ways
+performing their operations in entirely different ways
 but which frequently look the same while doing so.
 Even though the text is rendered in the same fonts,
 the images are displayed in the same place
-and the links take you to the same destination.
+, and the links take you to the same destination.
 What is happening underneath is as different as night and day.
 Selenium “abstracts” these differences,
 hiding their details and intricacies from the person writing the code.
@@ -84,9 +84,9 @@ As it has grown in popularity, so have its requirements and challenges multiplie
 As the web becomes more complicated
 and new technologies are added to websites,
 it's the mission of this project to keep up with them where possible.
-Being an open source project,
+Being an open-source project,
 this support is provided through the generous donation of time from many volunteers,
-every one of which has a “day job”.
+every one of which has a “day job.”
 
 Another mission of the project is to encourage
 more volunteers to partake in this effort,
