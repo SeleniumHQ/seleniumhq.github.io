@@ -330,7 +330,7 @@ the current mouse position.
 {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L128-L130" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-// Add Code
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Add Code
