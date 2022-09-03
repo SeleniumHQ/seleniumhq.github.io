@@ -2,7 +2,6 @@
 title: "共享的功能"
 linkTitle: "共享的功能"
 weight: 2
-needsTranslation: true
 description: >-
   这些capabilities用于所有浏览器.
 aliases: [
@@ -17,14 +16,6 @@ aliases: [
 ]
 ---
  
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Chinese. 
-   Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 为了通过Selenium WebDriver创建新会话, 
 本地端应向远程端提供基本功能. 
@@ -47,37 +38,41 @@ WebDriver提供了每个远程端将 (或应该) 支持实现的功能.
  
 ## pageLoadStrategy
 
-Three types of page load strategies are available.
+共有三种类型的页面加载策略.
 
-The page load strategy queries the 
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
+页面加载策略可以在此链接查询
+[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState) ,
+如下表所述:
 
-| Strategy | Ready State | Notes |
-| -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| 策略     | 就绪状态        | 备注                            |
+|--------|-------------|-------------------------------|
+| normal | complete    | 默认值, 等待所有资源下载                 |
+| eager  | interactive | DOM 访问已准备就绪, 但诸如图像的其他资源可能仍在加载 |
+| none   | Any         | 完全不会阻塞 WebDriver              |
 
-The `document.readyState` property of a document describes the loading state of the current document.
+文档的 `document.readyState` 属性描述当前文档的加载状态.
 
-When navigating to a new page via URL, by default, WebDriver will hold off on completing a navigation 
-method (e.g., driver.navigate().get()) until the document ready state is complete. This _does not 
-necessarily mean that the page has finished loading_, especially for sites like Single Page Applications 
-that use JavaScript to dynamically load content after the Ready State returns complete. Note also 
-that this behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+当通过URL导航到新页面时, 
+默认情况下, WebDriver将暂缓完成导航方法
+(例如, driver.navigate().get())直到文档就绪状态完成. 
+这 _并非意味着该页面已完成加载_, 
+特别是对于使用 JavaScript 在就绪状态返回完成后
+动态加载内容单页应用程序的站点. 
+另请注意此行为不适用于单击元素或提交表单后出现的导航行为.
 
-If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
-that aren't important to the automation, you can change from the default parameter of `normal` to
-`eager` or `none` to speed up the session. This value applies to the entire session, so make sure 
-that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient to minimize 
-flakiness.
+如果由于下载对自动化不重要的资源(例如, 图像、css、js)
+而需要很长时间才能加载页面, 
+您可以将默认参数`normal`更改为
+`eager` 或 `none` 以加快会话加载速度.
+此值适用于整个会话, 
+因此请确保您的 [等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
+足够普适.
 
 
-### normal (default)
+### normal (默认值)
 
-WebDriver waits until the [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) 
-event fire is returned.
+WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)
+事件触发并返回.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -137,7 +132,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -160,8 +155,8 @@ fun main() {
 
 ### eager
 
-WebDriver waits until [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) 
-event fire is returned.
+WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event)
+事件触发并返回.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -221,7 +216,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -244,7 +239,7 @@ fun main() {
 
 ### none
 
-WebDriver only waits until the initial page is downloaded.
+WebDriver 仅等待初始页面已下载. 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -304,7 +299,7 @@ driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" disableCodeBlock=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -390,7 +385,8 @@ WebDriver创建新会话时,
 
 ## setWindowRect
 
-Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
+用于所有支持 [调整大小和重新定位](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) 
+[命令](https://w3c.github.io/webdriver/#dfn-commands) 的远程终端.
 
 ## strictFileInteractability
 

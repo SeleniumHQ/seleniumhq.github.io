@@ -63,7 +63,7 @@ Selenium项目欢迎新的贡献者.
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站. 
 你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
-我们推荐使用0.94或更高版本的Hugo.
+我们推荐使用0.101.0或更高版本的Hugo.
 
 请参考来自Docsy的说明
 [安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .
@@ -141,8 +141,8 @@ Fixes #141
 使用 `git rebase` (并非 `git merge`) 同步实时的工作.
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### 步骤 6: 测试

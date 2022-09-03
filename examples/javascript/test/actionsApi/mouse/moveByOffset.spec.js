@@ -1,4 +1,4 @@
-const {By} = require('selenium-webdriver');
+const {By, Origin} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const assert = require('assert');
 
@@ -21,7 +21,7 @@ suite(function(env) {
       await driver.sleep(500);
       let result = await driver.findElement(By.id('relative-location')).getText();
       result = result.split(', ');
-      assert.deepStrictEqual((Math.abs(result[0] -100 -8)<2), true)
+      assert.deepStrictEqual((Math.abs(parseInt(result[0]) -100 -8)<2), true)
     });
 
     it('From viewport origin', async function() {
@@ -31,7 +31,20 @@ suite(function(env) {
 
       let result = await driver.findElement(By.id('absolute-location')).getText();
       result = result.split(', ');
-      assert.deepStrictEqual((Math.abs(result[0] -8)<2), true)
+      assert.deepStrictEqual((Math.abs(parseInt(result[0]) -8)<2), true)
+    });
+
+    it('From current pointer location', async function() {
+      await driver.get('https://selenium.dev/selenium/web/mouse_interaction.html');
+      const actions = driver.actions({async: true});
+      await actions.move({x: 6, y: 3}).perform()
+
+      await actions.move({x: 13, y: 15, origin: Origin.POINTER}).perform()
+
+      let result = await driver.findElement(By.id('absolute-location')).getText();
+      result = result.split(', ');
+      assert.deepStrictEqual(Math.abs(parseInt(result[0]) - 6 -13)<2, true)
+      assert.deepStrictEqual(Math.abs(parseInt(result[1]) - 3 -15)<2, true)
     });
   });
 });

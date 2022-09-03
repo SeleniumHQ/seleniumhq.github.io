@@ -166,23 +166,23 @@ However, `disableCodeBlock=true` is needed at the `tab` level when using the `gh
 shortcode. This is an example of the `gh-codeblock` shortcode usage:
 
     {{</* tabpane */>}}
-      {{</* tab header="Link" disableCodeBlock=true */>}}
-        {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
-      {{</* /tab */>}}
-      {{</* tab header="No Link" */>}}
-        This content should not get linked to GitHub
-      {{</* /tab */>}}
+    {{</* tab header="Link" disableCodeBlock=true */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="No Link" */>}}
+    This content should not get linked to GitHub
+    {{</* /tab */>}}
     {{</* /tabpane */>}}
 
 Which looks like this:
 
 {{< tabpane >}}
-  {{< tab header="Link" disableCodeBlock=true >}}
-    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
-  {{< /tab >}}
-  {{< tab header="No Link" >}}
-    This content should not get linked to GitHub
-  {{< /tab >}}
+{{< tab header="Link" disableCodeBlock=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L37-L55" >}}
+{{< /tab >}}
+{{< tab header="No Link" >}}
+This content should not get linked to GitHub
+{{< /tab >}}
 {{< /tabpane >}}
 
 ### Disabling Code Block

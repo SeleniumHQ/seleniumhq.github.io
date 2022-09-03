@@ -63,7 +63,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.94 or higher.
+to use Hugo 0.101.0 or higher.
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
@@ -134,8 +134,8 @@ Fixes #141
 あなたの作業を同期するため、(`git merge`ではなく)`git rebase`を時々実行してください。
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### ステップ 6: テスト

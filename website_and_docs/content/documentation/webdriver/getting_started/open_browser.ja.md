@@ -56,7 +56,7 @@ that can be used.
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = ChromeOptions()
@@ -97,7 +97,7 @@ the major version number of edgedriver must match the major version of the Edge 
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = EdgeOptions()
@@ -137,7 +137,7 @@ Selenium 4 requires Firefox 78 or greater. It is recommended to always use the l
   driver.quit
   {{< /tab >}}
   {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   val options = FirefoxOptions()
