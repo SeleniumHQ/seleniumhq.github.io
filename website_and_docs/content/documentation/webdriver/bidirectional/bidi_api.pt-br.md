@@ -19,7 +19,7 @@ Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 driver.get("https://your-domain.com/login");
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" code=true >}}
 NetworkAuthenticationHandler handler = new NetworkAuthenticationHandler()
@@ -188,7 +188,7 @@ const assert = require("assert");
 }())
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -456,10 +456,10 @@ com os exemplos a seguir.
     assertThat(source).contains("delicious cheese!");
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Atualmente indisponível no python devido à incapacidade de misturar certos comandos async(assíncronos) e de sync(sincronização)
+Atualmente indisponível no python devido à incapacidade de misturar certos comandos async(assíncronos) e de sync(sincronização)
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'

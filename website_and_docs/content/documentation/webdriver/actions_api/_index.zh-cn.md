@@ -52,18 +52,18 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge version="4.2" >}}
+{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge version="4.2" >}}
+{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -96,6 +96,6 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}

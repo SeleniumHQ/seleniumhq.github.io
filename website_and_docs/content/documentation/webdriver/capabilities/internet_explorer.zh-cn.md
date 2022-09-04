@@ -245,7 +245,7 @@ options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-    # Please raise a PR to add code sample
+    {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
