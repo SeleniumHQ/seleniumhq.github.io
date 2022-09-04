@@ -6,8 +6,8 @@ description: >
     A representation of a scroll wheel input device for interacting with a web page.
 ---
 
-{{< badge version="4.2" >}}
-{{< badge browser=Chromium wpt="perform_actions/wheel.py" >}}
+{{< badge-version version="4.2" >}}
+{{< badge-browser browser=Chromium wpt="perform_actions/wheel.py" >}}
 
 There are 5 scenarios for scrolling on a page.
 

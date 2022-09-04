@@ -62,7 +62,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -85,7 +85,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -114,7 +114,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -134,10 +134,10 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -161,9 +161,9 @@ This code will end up with the text: `SeleniumSelenium!`
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
