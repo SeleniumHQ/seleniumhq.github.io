@@ -168,7 +168,7 @@ on multiple machines without requiring that each machine put the drivers in the 
 You can either place the drivers in a directory that is already listed in `PATH`, or you can place them in a directory
 and add it to `PATH`.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane code=false >}}
 {{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell

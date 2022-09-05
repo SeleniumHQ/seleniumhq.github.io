@@ -81,7 +81,7 @@ If the element is out of the viewport,
 it will be scrolled to the bottom of the screen, then the page will be scrolled by the provided
 delta x and delta y values.
 
-{{< tabpane code=false  >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
 {{< /tab >}}
@@ -154,7 +154,7 @@ the page will be scrolled by the provided delta x and delta y values.
 Note that if the offset from the upper left corner of the viewport falls outside of the screen,
 it will result in an exception.
 
-{{< tabpane code=false  >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
 {{< /tab >}}

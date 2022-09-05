@@ -181,7 +181,7 @@ fun chrome(): WebDriver {
 * 要查看`PATH`上已有哪些目录, 
 请打开命令提示符/终端并键入:  
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane code=false >}}
 {{% tab header="Bash" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行
