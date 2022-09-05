@@ -36,10 +36,10 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L11-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -62,10 +62,10 @@ in the right and down directions. Negative values represent left and up, respect
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L22-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -95,10 +95,10 @@ delta x and delta y values.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L34-L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -134,10 +134,10 @@ it will result in an exception.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L48-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -168,9 +168,9 @@ it will result in an exception.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-Not implemented yet
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
