@@ -1144,15 +1144,15 @@ other kinds of authentication credentials)&lt;/p>
 &lt;p>In short, in Selenium 4, the process has become less
 complicated. Perhaps an example will help?&lt;/p>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
-&lt;a class="nav-link active persistLang-Java"
+&lt;a class="nav-link active persistLang-java"
 id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab"
-onclick="persistLang(&amp;#34;Java&amp;#34;);"
+onclick="persistLang(&amp;#34;java&amp;#34;);"
 aria-controls="tabs-0-0" aria-selected="false">Java&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
-&lt;a class="nav-link persistLang-Ruby"
+&lt;a class="nav-link persistLang-ruby"
 id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab"
-onclick="persistLang(&amp;#34;Ruby&amp;#34;);"
+onclick="persistLang(&amp;#34;ruby&amp;#34;);"
 aria-controls="tabs-0-1" aria-selected="false">Ruby&lt;/a>
 &lt;/li>
 &lt;/ul>
