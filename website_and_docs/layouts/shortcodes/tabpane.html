@@ -30,7 +30,7 @@
 <!-- Scratchpad gets populated through call to .Inner -->
 {{- .Inner -}}
 
-<ul class="nav nav-tabs" id="tabs-{{- $.Ordinal -}}" role="tablist">
+<ul class="nav nav-tabs{{ if $persistLang }} persist{{ end }}" id="tabs-{{- $.Ordinal -}}" role="tablist">
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
 
     {{- $lang := $langPane -}}
@@ -75,7 +75,7 @@
 {{ $activeSet = false }}
 
 <!-- Inner content -->
-<div class="tab-content" id="tabs-{{- $.Ordinal -}}-content">
+<div class="tab-content{{ if $persistLang }} persist{{ end }}" id="tabs-{{- $.Ordinal -}}-content">
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
 
     {{- $lang := $langPane -}}
