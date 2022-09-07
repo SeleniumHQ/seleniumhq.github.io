@@ -39,7 +39,7 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L18-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -65,7 +65,7 @@ in the right and down directions. Negative values represent left and up, respect
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L30-L34" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -98,7 +98,7 @@ delta x and delta y values.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L43-L47" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -137,7 +137,7 @@ it will result in an exception.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L59-L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -171,6 +171,6 @@ it will result in an exception.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L75-L78" >}}
 {{< /tab >}}
 {{< /tabpane >}}
