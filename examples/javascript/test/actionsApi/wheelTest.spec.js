@@ -45,7 +45,7 @@ suite(function (env) {
       const iframe = await driver.findElement(By.css("iframe"))
 
       await driver.actions()
-        .scroll(0, 0, 0, 300, iframe)
+        .scroll(0, 0, 0, 200, iframe)
         .perform()
 
       await driver.sleep(500)
@@ -62,7 +62,7 @@ suite(function (env) {
       const footer = await driver.findElement(By.css("footer"))
 
       await driver.actions()
-        .scroll(0, -30, 0, 300, footer)
+        .scroll(0, -50, 0, 200, footer)
         .perform()
 
       await driver.sleep(500)
@@ -73,12 +73,12 @@ suite(function (env) {
     })
 
     it('Scroll from an offset of origin (element) by given amount', async function () {
-      await driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html")
+      await driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame.html")
 
       const iframe = await driver.findElement(By.css("footer"))
 
       await driver.actions()
-        .scroll(10, 10, 0, 5000)
+        .scroll(10, 10, 0, 200)
         .perform()
 
       await driver.sleep(500)
