@@ -59,7 +59,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L18-L21" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L19-L22" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -82,7 +82,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L33-L38" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L34-L39" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -111,7 +111,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L49-L51" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L47-L48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
