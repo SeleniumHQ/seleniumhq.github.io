@@ -168,7 +168,7 @@ it will result in an exception.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L78-L82" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L80-L82" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L75-L78" >}}

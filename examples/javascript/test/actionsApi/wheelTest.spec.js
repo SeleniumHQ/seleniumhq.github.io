@@ -74,16 +74,18 @@ suite(function (env) {
 
     it('Scroll from an offset of origin (element) by given amount', async function () {
       await driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame.html")
-
-      const iframe = await driver.findElement(By.css("footer"))
-
+  
+      const iframe = await driver.findElement(By.css("iframe"))
+  
       await driver.actions()
         .scroll(10, 10, 0, 200)
         .perform()
-
+  
       await driver.sleep(500)
-
-      assert.ok(await inViewport(iframe))
+  
+      await driver.switchTo().frame(iframe)
+      const checkbox = await driver.findElement(By.name('scroll_checkbox'))
+      assert.ok(await inViewport(checkbox))
     })
 
     function inViewport(element) {
