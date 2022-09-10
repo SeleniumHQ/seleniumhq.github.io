@@ -32,13 +32,13 @@ has 5 buttons, a pen has 3 equivalent button states:
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L9-L15" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L11-L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/PenTest.kt#L23-L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -57,13 +57,13 @@ has 5 buttons, a pen has 3 equivalent button states:
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/PenTest.cs#L64-L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L48-L54" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L50-L56" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/PenTest.kt#L64-L78" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

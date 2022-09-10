@@ -38,7 +38,7 @@ has 5 buttons, a pen has 3 equivalent button states:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/PenTest.kt#L23-L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ has 5 buttons, a pen has 3 equivalent button states:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/PenTest.kt#L64-L78" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
