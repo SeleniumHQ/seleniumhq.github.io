@@ -37,7 +37,7 @@ This is useful for focusing a specific element:
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndHold.spec.js#L16-L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L23-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ This is otherwise known as "clicking":
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndRelease.spec.js#L16-L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L35-L38" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -98,7 +98,7 @@ This is otherwise known as "right-clicking":
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L17-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L47-L50" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -127,7 +127,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L21-L22" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L61-L67" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -156,7 +156,7 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L34-L35" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L79-L85" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -181,7 +181,7 @@ This method combines moving to the center of an element with pressing and releas
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L17-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L94-L97" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -208,7 +208,7 @@ Note that the element must be in the viewport or else the command will error.
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveToElement.spec.js#L17-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L106-L109" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -275,7 +275,7 @@ for the remaining languages as of Selenium 4.3.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L119-L122" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -301,7 +301,7 @@ offset.
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L29-L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L132-L137" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -333,7 +333,7 @@ the current mouse position.
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L154-L156" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -359,7 +359,7 @@ moves to the location of the target element and then releases the mouse.
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L29-L32" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L167-L171" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -384,6 +384,6 @@ This method firstly performs a click-and-hold on the source element, moves to th
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L17-L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add Code
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L180-L185" >}}
 {{< /tab >}}
 {{< /tabpane >}}
