@@ -27,30 +27,34 @@ nature and relationship in the tree to return a value.
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Navigate to the url
-driver.get('https://www.google.com');
+driver.get('https://the-internet.herokuapp.com/login');
 
 // Get boolean value for is element display
-boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
+boolean isButtonVisible = driver.findElement(By.css("[name='username']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
-driver.get("https://www.google.com")
+driver.get("https://the-internet.herokuapp.com/login")
 
 # Get boolean value for is element display
-is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
+is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='username']").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-// Help us with a PR for code sample
+//Navigate to the url
+driver.Url = "https://the-internet.herokuapp.com/login";
+
+//Get boolean value for is element display
+Boolean is_button_visible = driver.FindElement(By.CssSelector("[name='username']")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Help us with a PR for code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.google.com');
+await driver.get('https://the-internet.herokuapp.com/login');
 
 // Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
+let result =  await driver.findElement(By.css("[name='username']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
