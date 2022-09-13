@@ -63,7 +63,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -96,6 +96,6 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
 {{< /tab >}}
 {{< /tabpane >}}

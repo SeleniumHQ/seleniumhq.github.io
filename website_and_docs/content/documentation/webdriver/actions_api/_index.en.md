@@ -50,7 +50,7 @@ to wait a beat between actions for things to work correctly.
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -81,6 +81,6 @@ it does not get executed with the perform method.
 {{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
 {{< /tab >}}
 {{< /tabpane >}}
