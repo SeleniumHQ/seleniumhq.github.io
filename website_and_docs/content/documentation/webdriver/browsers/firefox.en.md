@@ -9,11 +9,51 @@ aliases: [
 ]
 ---
 
+Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
+
 ## Options
 
 Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
 
 Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
+
+Starting a Firefox session with basic defined options looks like this:
+
+{{< tabpane langEqualsHeader=true code=false >}}
+  {{< tab header="Java" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L43-L46">}}
+  FirefoxOptions options = new FirefoxOptions();
+  driver = new FirefoxDriver(options);
+
+  driver.quit();
+  {{< /tab >}}
+  {{< tab header="Python" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L26-L29" >}}
+  options = FirefoxOptions()
+  driver = webdriver.Firefox(options=options)
+
+  driver.quit()
+  {{< /tab >}}
+  {{< tab header="CSharp" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L36-L39" >}}
+  var options = new FirefoxOptions();
+  var driver = new FirefoxDriver(options);
+  
+  driver.Quit();
+  {{< /tab >}}
+  {{< tab header="Ruby" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L26-L29" >}}
+  options = Selenium::WebDriver::Options.firefox
+  driver = Selenium::WebDriver.for :firefox, options: options
+
+  driver.quit
+  {{< /tab >}}
+  {{< tab header="JavaScript" code=false >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" code=true >}}
+  val options = FirefoxOptions()
+  val driver = FirefoxDriver(options)
+  
+  driver.quit()
+  {{< /tab >}}
+{{< /tabpane >}}
 
 Here are a few common use cases with different capabilities:
 

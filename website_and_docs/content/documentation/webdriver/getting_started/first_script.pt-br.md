@@ -15,7 +15,7 @@ Tudo que o Selenium faz é enviar comandos ao navegador de internet para fazer a
 A maior parte do que você irá fazer com o Selenium é uma combinação desses comandos básicos:
 
 ### 1. Iniciando uma sessão
-Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação em [abrindo e fechando o navegador de internet]({{< ref "open_browser.md" >}})
+Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação em [driver sessions]({{< ref "../drivers/" >}})
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}

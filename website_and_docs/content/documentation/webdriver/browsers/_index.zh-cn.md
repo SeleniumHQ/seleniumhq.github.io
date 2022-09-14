@@ -3,6 +3,7 @@ title: "Supported Browsers"
 linkTitle: "Browsers"
 weight: 4
 aliases: [
+"/documentation/zh-cn/getting_started/open_browser/",
 "/documentation/zh-cn/capabilities/",
 "/documentation/zh-cn/driver_idiosyncrasies/",
 "/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/",

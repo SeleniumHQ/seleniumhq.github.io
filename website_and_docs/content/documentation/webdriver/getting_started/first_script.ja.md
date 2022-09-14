@@ -17,7 +17,7 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
 
 ### 1. ドライバーインスタンスでセッションを開始します
 
-For more details on starting a session read our documentation on [opening and closing a browser]({{< ref "open_browser.md" >}})
+For more details on starting a session read our documentation on  [driver sessions]({{< ref "../drivers/" >}})
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}

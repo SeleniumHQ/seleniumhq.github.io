@@ -12,7 +12,7 @@ aliases: [
 ]
 ---
 
-Seleniumは、WebDriverを介して、Chrome/Chromium、Firefox、Internet Explorer、Edge、Opera、Safari
+Seleniumは、WebDriverを介して、Chrome/Chromium、Firefox、Internet Explorer、Edge、Safari
 などの市場にあるすべての主要なブラウザーをサポートします。 
 可能な場合、WebDriverは、ブラウザーに組み込まれている自動化のサポートを使用してブラウザーを動かします。
 
@@ -33,8 +33,7 @@ in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) d
 | Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
 
-Note: The Opera driver does not support w3c syntax, so we recommend using chromedriver to work with Opera.
-See the code example for [opening an Opera browser]({{< ref "open_browser.md#opera" >}})
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## ドライバーを使用する3つの方法
 
@@ -454,45 +453,6 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Opera
-
-Operaの現在のリリースはChromiumエンジン上に構築されており、
-WebDriverはクローズドソースの [Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases) を介してサポートされるようになりました。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.opera.OperaDriver;
-
-WebDriver driver = new OperaDriver();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver import Opera
-
-driver = Opera()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Opera;
-
-IWebDriver driver = new OperaDriver();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Not currently implemented
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require("selenium-webdriver");
-
-var driver = new Builder().forBrowser('opera').build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.opera.OperaDriver
-
-val driver: WebDriver = OperaDriver()
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ### Safari
 
 ChromiumおよびFirefoxドライバーとは異なり、safaridriverはオペレーティングシステムとともにインストールされます。 
@@ -538,4 +498,5 @@ val driver: WebDriver = SafariDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-iOSでSafariを自動化することを検討している人は、[Appiumプロジェクト](//appium.io/)を検討する必要があります。
+## Next Step
+[Create your first Selenium script]({{< ref "first_script.md" >}})

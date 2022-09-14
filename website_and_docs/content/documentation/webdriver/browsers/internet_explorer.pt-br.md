@@ -20,7 +20,78 @@ versions of Internet Explorer are available, there are some
 [known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
 with the 64-bit driver. As such it is recommended to use the 32-bit driver.
 
+Additional information about using Internet Explorer can be found on the
+[IE Driver Server page]({{< ref "/documentation/ie_driver_server/" >}})
+
 ## Options
+
+Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L61-L67">}}
+  InternetExplorerOptions options = new InternetExplorerOptions();
+  options.attachToEdgeChrome();
+  options.withEdgeExecutablePath("/path/to/edge/browser");
+  
+  driver = new InternetExplorerDriver(options);
+  
+  driver.quit();
+  {{< /tab >}}
+  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L42-L47" >}}
+  options = IEOptions()
+  options.attach_to_edge_chrome = True
+  options.edge_executable_path = "/path/to/edge/browser"
+  driver = webdriver.Ie(options=options)
+
+  driver.quit()
+  {{< /tab >}}
+  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L56-L63" >}}
+  var options = new InternetExplorerOptions
+  {
+    AttachToEdgeChrome = true,
+    EdgeExecutablePath = "/path/to/edge/browser"
+  };
+  var driver = new InternetExplorerDriver(options);
+  
+  driver.Quit();
+  {{< /tab >}}
+  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L44-L49" >}}
+  options = Selenium::WebDriver::Options.ie
+  options.attach_to_edge_chrome = true
+  options.edge_executable_path = "/path/to/edge/browser"
+  driver = Selenium::WebDriver.for :ie, options: options
+
+  driver.quit
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+  let options = new ie.Options();
+  options.setEdgeChromium(true);
+  options.setEdgePath("/path/to/edge/browser);
+
+  let driver = await new Builder()
+    .forBrowser('internet explorer')
+    .setIEOptions(options)
+    .build();
+
+  await driver.quit();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  val options = InternetExplorerOptions()
+  options.attachToEdgeChrome()
+  options.withEdgeExecutablePath("/path/to/edge/browser")
+  val driver = InternetExplorerDriver(options)
+
+  driver.quit()
+  {{< /tab >}}
+{{< /tabpane >}}
+
+As of Internet Explorer Driver v4.5.0:
+* If IE is not present on the system (default in Windows 11), you do not need to 
+use the two parameters above. IE Driver will use Edge and will automatically locate it. 
+* If IE and Edge are both present on the system, you only need to set attaching to Edge,
+IE Driver will automatically locate Edge on your system.
+
+Here are a few common use cases with different capabilities:
 
 ### fileUploadDialogTimeout
 

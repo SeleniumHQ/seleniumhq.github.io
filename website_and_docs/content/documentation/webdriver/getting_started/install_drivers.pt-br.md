@@ -13,7 +13,7 @@ aliases: [
 ---
 
 Através do WebDriver, o Selenium suporta todos os principais navegadores do mercado
-como Chrome/Chromium, Firefox, Internet Explorer, Edge, Opera e Safari.
+como Chrome/Chromium, Firefox, Internet Explorer, Edge e Safari.
 Sempre que possível, o WebDriver conduz o navegador
 usando o suporte integrado do navegador para automação.
 
@@ -34,8 +34,7 @@ Leia mais sobre opções avançadas para iniciar um driver
 | Internet Explorer | Windows | Projeto Selenium | [Downloads](/downloads) | [Problemas](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra e superiores | Apple | Integrado no Sistema  | [Problemas](//bugreport.apple.com/logon) |
 
-Observação: O driver Opera não oferece suporte à sintaxe w3c, portanto, recomendamos o uso do chromedriver para trabalhar com o Opera.
-Veja o exemplo de código para [abrir um navegador Opera]({{< ref "open_browser.md#opera" >}}).
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## Três maneiras diferentes de usar os drivers
 
@@ -290,5 +289,5 @@ fun main(args: Array<String>) {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Próximo passo
-[Abrindo e fechando um navegador de internet]({{< ref "open_browser.md" >}})
+## Próximo Passo
+[Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})

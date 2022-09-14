@@ -13,7 +13,7 @@ aliases: [
 
 通过WebDriver, 
 Selenium支持市场上所有主要浏览器, 
-如Chrome、Firefox、Internet Explorer、Edge、Opera和Safari. 
+如Chrome、Firefox、Internet Explorer、Edge和Safari. 
 WebDriver尽量使用浏览器内置的自动化支持
 来驱动浏览器.
 
@@ -35,9 +35,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
 | Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
 
-注意: Opera驱动程序不支持w3c语法, 
-因此我们建议使用chromedriver来处理Opera. 
-请参见[打开Opera浏览器]({{< ref "open_browser.md#opera" >}})的代码示例
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## 使用驱动的三种方式
 
@@ -308,4 +306,4 @@ fun main(args: Array<String>) {
 
 
 ## 下一步
-[打开和关闭浏览器]({{< ref "open_browser.md" >}})
+[创建你的第一个Selenium脚本]({{< ref "first_script.md" >}})
