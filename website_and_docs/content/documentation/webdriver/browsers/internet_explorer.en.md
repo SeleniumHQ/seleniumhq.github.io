@@ -1,18 +1,34 @@
 ---
-title: "Capabilities specific to Internet Explorer browser"
+title: "IE specific functionality"
 linkTitle: "Internet Explorer"
 weight: 8
-needsTranslation: true
 description: >-
-    These capabilities are specific to Internet Explorer.
+    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+aliases: [
+"/documentation/en/capabilities/internet_explorer"
+]
 ---
+
+As of June 2022, Selenium officially no longer supports standalone Internet Explorer.
+The Internet Explorer driver still supports running Microsoft Edge in "IE Compatibility Mode."
+
+## Special considerations
+
+The IE Driver is the only driver maintained by the Selenium Project directly.
+While binaries for both the 32-bit and 64-bit
+versions of Internet Explorer are available, there are some
+[known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
+with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+
+## Options
 
 ### fileUploadDialogTimeout
 
-Em alguns ambientes, o Internet Explorer pode expirar ao abrir a
-Caixa de Diálogo de upload de arquivo. O IEDriver tem um tempo limite padrão de 1000 ms, mas você
-pode aumentar o tempo limite usando o recurso fileUploadDialogTimeout.
+In some environments, Internet Explorer may timeout when opening the
+File Upload dialog. IEDriver has a default timeout of 1000ms, but you
+can increase the timeout using the fileUploadDialogTimeout capability.
 
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -26,7 +42,6 @@ options = webdriver.IeOptions()
 options.file_upload_dialog_timeout = 2000
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -54,20 +69,22 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ensureCleanSession
 
-Quando definido como `true`, este recurso limpa o _Cache,
-Histórico do navegador e cookies_ para todas as instâncias em execução
-do InternetExplorer, incluindo aquelas iniciadas manualmente
-ou pelo driver. Por padrão, é definido como `false`.
+When set to `true`, this capability clears the _Cache, 
+Browser History and Cookies_ for all running instances 
+of InternetExplorer including those started manually 
+or by the driver. By default, it is set to `false`.
 
-Usar este recurso causará queda de desempenho quando
-iniciar o navegador, pois o driver irá esperar até que o cache
-seja limpo antes de iniciar o navegador IE.
+Using this capability will cause performance drop while 
+launching the browser, as the driver will wait until the cache 
+gets cleared before launching the IE browser.
 
-Esse recurso aceita um valor booleano como parâmetro.
+This capability accepts a Boolean value as parameter.
 
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -81,7 +98,6 @@ options = webdriver.IeOptions()
 options.ensure_clean_session = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -109,15 +125,17 @@ options.destructivelyEnsureCleanSession()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ignoreZoomSetting
 
-O driver do InternetExplorer espera que o nível de zoom do navegador seja de 100%,
-caso contrário, o driver lançará uma exceção. Este comportamento padrão
-pode ser desativado definindo _ignoreZoomSetting_ como _true_.
+InternetExplorer driver expects the browser zoom level to be 100%, 
+else the driver will throw an exception. This default behaviour 
+can be disabled by setting the _ignoreZoomSetting_ to _true_.
 
-Esse recurso aceita um valor booleano como parâmetro.
+This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -131,7 +149,6 @@ options = webdriver.IeOptions()
 options.ignore_zoom_level = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -159,25 +176,27 @@ options.ignoreZoomSettings()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### ignoreProtectedModeSettings
 
-Se deve ignorar a verificação do _Modo protegido_ durante o lançamento
-uma nova sessão do IE.
+Whether to skip the _Protected Mode_ check while launching 
+a new IE session.
 
-Se não for definido e as configurações do _Modo protegido_ não forem iguais para
-todas as zonas, uma exceção será lançada pelo driver.
+If not set and _Protected Mode_ settings are not same for 
+all zones, an exception will be thrown by the driver.
 
-Se a capacidade for definida como `true`, os testes podem
-tornar-se instáveis, não responderem ou os navegadores podem travar.
-No entanto, esta ainda é de longe a segunda melhor escolha,
-e a primeira escolha *sempre* deve ser
-definir as configurações do Modo protegido de cada zona manualmente.
-Se um usuário estiver usando esta propriedade,
-apenas um "melhor esforço" no suporte será dado.
+If capability is set to `true`, tests may 
+become flaky, unresponsive, or browsers may hang.
+However, this is still by far a second-best choice, 
+and the first choice should *always* be to actually 
+set the Protected Mode settings of each zone manually. 
+If a user is using this property, 
+only a "best effort" at support will be given.
 
-Esse recurso aceita um valor booleano como parâmetro.
+This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -191,7 +210,6 @@ options = webdriver.IeOptions()
 options.ignore_protected_mode_settings = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -219,14 +237,16 @@ options.introduceFlakinessByIgnoringSecurityDomains()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
 ### silent
 
-Quando definido como `true`, esse recurso suprime a
-saída de diagnóstico do IEDriverServer.
+When set to `true`, this capability suppresses the
+diagnostic output of the IEDriverServer.
 
-Esse recurso aceita um valor booleano como parâmetro.
+This capability accepts a Boolean value as parameter.
  
+<div>
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -240,7 +260,6 @@ options = webdriver.IeOptions()
 options.set_capability("silent", True)
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -251,7 +270,7 @@ options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-    # Por favor inclua um PR para adicionar uma amostra de código
+    {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
@@ -290,23 +309,24 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
+</div>
 
-### Opções de linha de comando do IE
+### Command-Line Options
 
-O Internet Explorer inclui várias opções de linha de comando
-que permitem solucionar problemas e configurar o navegador.
+Internet Explorer includes several command-line options 
+that enable you to troubleshoot and configure the browser.
 
-Os seguintes pontos descrevem algumas opções de linha de comando com suporte
+The following describes few supported command-line options 
 
-* _-private_: Usado para iniciar o IE no modo de navegação privada. Isso funciona para o IE 8 e versões posteriores.
+* _-private_ : Used to start IE in private browsing mode. This works for IE 8 and later versions.
 
-* _-k_: Inicia o Internet Explorer no modo quiosque.
-O navegador é aberto em uma janela maximizada que não exibe a barra de endereço, os botões de navegação ou a barra de status.
+* _-k_ : Starts Internet Explorer in kiosk mode. 
+The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.
 
-* _-extoff_: Inicia o IE no modo sem add-on.
-Esta opção é usada especificamente para solucionar problemas com complementos do navegador. Funciona no IE 7 e versões posteriores.
+* _-extoff_ : Starts IE in no add-on mode. 
+This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.
 
-Nota: __forceCreateProcessApi__ deve ser habilitado para que os argumentos da linha de comando funcionem.
+Note: __forceCreateProcessApi__ should to enabled in-order for command line arguments to work.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -338,7 +358,6 @@ options.add_argument('-private')
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -368,7 +387,6 @@ options.add_argument('-k')
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navegar para URL
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure
@@ -410,11 +428,11 @@ fun main() {
 
 ### forceCreateProcessApi
 
-Força a inicialização do Internet Explorer
-usando a API CreateProcess. O valor padrão é falso.
+Forces launching Internet Explorer 
+using the CreateProcess API. The default value is false.
 
-Para IE 8 e superior, esta opção requer que
-o valor de registro "TabProcGrowth" seja definido como 0.
+For IE 8 and above, this option requires the 
+"TabProcGrowth" registry value to be set to 0.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -444,7 +462,6 @@ options = webdriver.IeOptions()
 options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
-# Navegar para Url
 driver.get("http://www.google.com")
 
 driver.quit()
@@ -472,7 +489,6 @@ options.force_create_process_api = true
 driver = Selenium::WebDriver.for(:ie, options: options)
 
 begin
-  # Navegar para Url
   driver.get 'https://google.com'
   puts(driver.capabilities.to_json)
 ensure

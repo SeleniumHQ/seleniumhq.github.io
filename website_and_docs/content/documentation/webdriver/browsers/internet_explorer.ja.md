@@ -1,21 +1,36 @@
 ---
-title: "Internet Explorer浏览器特定的Capabilities"
+title: "IE specific functionality"
 linkTitle: "Internet Explorer"
 weight: 8
-needsTranslation: true
 description: >-
-    这些capabilities基于特定的Internet Explorer浏览器.
+    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+aliases: [
+"/documentation/ja/capabilities/internet_explorer"
+]
 ---
+
+As of June 2022, Selenium officially no longer supports standalone Internet Explorer.
+The Internet Explorer driver still supports running Microsoft Edge in "IE Compatibility Mode."
+
+## Special considerations
+
+The IE Driver is the only driver maintained by the Selenium Project directly.
+While binaries for both the 32-bit and 64-bit
+versions of Internet Explorer are available, there are some
+[known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
+with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+
+## Options
 
 ### fileUploadDialogTimeout
 
-在某些环境中, 当打开文件上传对话框时, Internet Explorer可能会超时. IEDriver的默认超时为1000毫秒, 但您可以使用fileUploadDialogTimeout功能来增加超时时间.
+環境によっては、ファイルアップロードダイアログを開くときにInternet Explorerがタイムアウトする場合があります。 IEDriverのデフォルトのタイムアウトは1000ミリ秒ですが、fileUploadDialogTimeout capabilityを使用してタイムアウトを増やすことができます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
-WebDriver driver = new RemoteWebDriver(options); 
+WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -43,7 +58,7 @@ const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().fileUploadDialogTimeout(2000);
 let driver = await Builder()
           .setIeOptions(options)
-          .build();  
+          .build(); 
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val options = InternetExplorerOptions()
@@ -54,16 +69,14 @@ val driver = RemoteWebDriver(options)
 
 ### ensureCleanSession
 
-设置为 `true`时, 
-此功能将清除InternetExplorer所有正在运行实例的
- _缓存, 浏览器历史记录和Cookies_ 
- (包括手动启动或由驱动程序启动的实例) .
-默认情况下，此设置为 `false`.
+この機能を `true` に設定すると、手動またはドライバーによって開始されたものを含め、
+InternetExplorerの実行中のすべてのインスタンスのキャッシュ、ブラウザー履歴、およびCookieがクリアされます。
+デフォルトでは、`false` に設定されています。
 
-使用此功能将导致启动浏览器时性能下降, 
-因为驱动程序将等待直到缓存清除后再启动IE浏览器.   
+この機能を使用すると、ドライバーがIEブラウザーを起動する前にキャッシュがクリアされるまで待機するため、
+ブラウザーの起動中にパフォーマンスが低下します。
 
-此功能接受一个布尔值作为参数.
+このケイパビリティは、ブール値をパラメーターとして受け入れます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -108,13 +121,12 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreZoomSetting
 
-InternetExplorer驱动程序期望浏览器的缩放级别为100%,
-否则驱动程序将可能抛出异常.
-通过将 _ignoreZoomSetting_ 设置为 _true_,
-可以禁用此默认行为.
+InternetExplorerドライバーは、ブラウザーのズームレベルが100％であることを想定しています。
+それ以外の場合、ドライバーは例外をスローします。
+このデフォルトの動作は、 _ignoreZoomSetting_ を _true_ に設定することで無効にできます。
 
-此功能接受一个布尔值作为参数. 
- 
+このケイパビリティは、ブール値をパラメーターとして受け入れます。
+
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -158,22 +170,19 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreProtectedModeSettings
 
-启动新的IE会话时是否跳过 _保护模式_ 检查.
+新しいIEセッションの起動中に _保護モード_ チェックをスキップするかどうか。
 
-如果未设置, 
-并且所有区域的 _保护模式_ 设置都不同, 
-则驱动程序将可能引发异常.
+設定されておらず、 _保護モード_ 設定がすべてのゾーンで同じでない場合、
+ドライバーによって例外がスローされます。
 
-如果将功能设置为 `true`, 
-则测试可能会变得不稳定, 无响应, 或者浏览器可能会挂起.
-但是, 到目前为止, 
-这仍然是第二好的选择, 
-并且第一选择应该 *始终* 是手动实际设置每个区域的保护模式设置.
-如果用户正在使用此属性，
-则只会给予 "尽力而为" 的支持.
+ケイパビリティを `true` に設定すると、テストが不安定になったり、応答しなくなったり、
+ブラウザがハングしたりする場合があります。
+ただし、これはまだ2番目に良い選択であり、最初の選択は *常に* 
+各ゾーンの保護モード設定を手動で実際に設定することです。
+ユーザーがこのプロパティを使用している場合、「ベストエフォート」のみがサポートされます。
 
-此功能接受一个布尔值作为参数. 
- 
+このケイパビリティは、ブール値をパラメーターとして受け入れます。
+
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -217,10 +226,9 @@ val driver = RemoteWebDriver(options)
 
 ### silent
 
-设置为 `true`时, 
-此功能将禁止IEDriverServer的诊断输出.
+`true` に設定すると、このケイパビリティはIEDriverServerの診断出力を抑制します。
 
-此功能接受一个布尔值作为参数. 
+このケイパビリティは、ブール値をパラメーターとして受け入れます。
  
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -285,26 +293,23 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-### IE 命令行选项
+### IE Command-Line Options
 
-Internet Explorer包含几个命令行选项, 
-使您可以进行故障排除和配置浏览器.
+Internet Explorerには、ブラウザーのトラブルシューティングと構成を可能にするいくつかのコマンドラインオプションが含まれています。
 
-下面介绍了一些受支持的命令行选项
+次に、サポートされているいくつかのコマンドラインオプションについて説明します。
 
-* _-private_ : 用于在私有浏览模式下启动IE.
-这适用于IE 8和更高版本.
+* _-private_ : IEをプライベートブラウジングモードで起動するために使用されます。
+これはIE 8以降のバージョンで機能します。
 
-* _-k_ : 在kiosk模式下启动Internet Explorer. 
-浏览器在一个最大化的窗口中打开, 
-该窗口不显示地址栏, 导航按钮或状态栏.
+* _-k_ : Internet Explorerをキオスクモードで起動します。
+ブラウザは、アドレスバー、ナビゲーションボタン、またはステータスバーを表示しない最大化されたウィンドウで開きます。
 
-* _-extoff_ : 在无附加模式下启动IE.
-此选项专门用于解决浏览器加载项问题.
-在IE 7和更高版本中均可使用.
+* _-extoff_ : アドオンなしモードでIEを起動します。
+このオプションは、ブラウザーのアドオンに関する問題のトラブルシューティングに特に使用されます。
+IE 7以降のバージョンで動作します。
 
-注意: __forceCreateProcessApi__ 
-应该启用命令行参数才能正常工作.
+注：コマンドライン引数が機能するためには、 __forceCreateProcessApi__ を順番に有効にする必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -396,7 +401,7 @@ fun main() {
     try {
         driver.get("https://google.com/ncr")
         val caps = driver.getCapabilities()
-        println(caps)
+        println(caps);
     } finally {
         driver.quit()
     }
@@ -406,11 +411,10 @@ fun main() {
 
 ### forceCreateProcessApi
 
-强制使用CreateProcess API启动Internet Explorer.
-默认值为false. 
+CreateProcess APIを使用してInternet Explorerを強制的に起動します。
+デフォルト値はfalseです。
 
-对于IE 8及更高版本, 
-此选项要求将 "TabProcGrowth" 注册表值设置为0.
+IE 8以降の場合、このオプションでは "TabProcGrowth" レジストリの値を0に設定する必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -499,5 +503,6 @@ fun main() {
         driver.quit()
     }
 }
+
   {{< /tab >}}
 {{< /tabpane >}}

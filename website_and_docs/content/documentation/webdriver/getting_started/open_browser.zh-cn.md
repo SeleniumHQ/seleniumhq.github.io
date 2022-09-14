@@ -27,7 +27,7 @@ description: >
 请注意, Chrome浏览器和chromedriver的版本必须与主版本匹配. 
 
 除了[共享功能]({{< ref "/documentation/webdriver/drivers/options.md" >}})外,
-还可以使用特定的[Chrome功能]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}}).
+还可以使用特定的[Chrome功能]({{< ref "/documentation/webdriver/browsers/chrome.md" >}}).
 
 {{< tabpane langEqualsHeader=true code=false >}}
   {{< tab header="Java" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L27-L30" >}}

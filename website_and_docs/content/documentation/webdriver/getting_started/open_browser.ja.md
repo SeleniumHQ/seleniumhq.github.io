@@ -27,7 +27,7 @@ By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the 
 the Chrome browser and the version of chromedriver must match the major version. 
 
 In addition to the [shared capabilities]({{< ref "/documentation/webdriver/drivers/options.md" >}}),
-there are specific [Chrome capabilities]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}})
+there are specific [Chrome capabilities]({{< ref "/documentation/webdriver/browsers/chrome.md" >}})
 that can be used.
 
 {{< tabpane langEqualsHeader=true code=false >}}
