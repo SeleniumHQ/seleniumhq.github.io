@@ -2,7 +2,9 @@
 title: "Working with iFrames and frames"
 linkTitle: "Frames"
 weight: 6
-requiresTranslation: true
+aliases: [
+"/documentation/pt-br/webdriver/browser/frames",
+]
 ---
 
 Frames são um meio obsoleto de construir um layout de site a partir de

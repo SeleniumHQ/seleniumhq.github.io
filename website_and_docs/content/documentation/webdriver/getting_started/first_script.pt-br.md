@@ -39,7 +39,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
 {{< /tabpane >}}
 
 ### 2. Agindo no navegador de internet
-Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) para uma página web. 
+Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) para uma página web. 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -63,7 +63,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/browser/navi
 {{< /tabpane >}}
 
 ### 3. Solicitando informação do navegador de internet
-Existem diversos tipos de [informação sobre o navegador de internet]({{< ref "/documentation/webdriver/browser" >}}) que você
+Existem diversos tipos de [informação sobre o navegador de internet]({{< ref "/documentation/webdriver/interactions" >}}) que você
 pode solicitar, incluindo window handles, tamanho / posição do navegador, cookies, alertas e etc.
 
 {{< tabpane code=false langEqualsHeader=true >}}

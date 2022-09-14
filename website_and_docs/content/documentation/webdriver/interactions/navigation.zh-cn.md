@@ -2,7 +2,9 @@
 title: "浏览器导航"
 linkTitle: "导航"
 weight: 1
-requiresTranslation: true
+aliases: [
+"/documentation/zh-cn/webdriver/browser/navigation",
+]
 ---
 
 ## 打开网站

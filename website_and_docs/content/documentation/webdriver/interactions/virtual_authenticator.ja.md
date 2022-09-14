@@ -4,6 +4,9 @@ linkTitle: "Virtual Authenticator"
 weight: 16
 description: >
     A representation of the Web Authenticator model.
+aliases: [
+"/documentation/ja/virtual_authenticator/"
+]
 ---
 
 {{% pageinfo color="warning" %}}

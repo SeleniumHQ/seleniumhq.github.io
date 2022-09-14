@@ -1,7 +1,7 @@
 ---
 title: "Esperas"
 linkTitle: "Esperas"
-weight: 12
+weight: 6
 aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 

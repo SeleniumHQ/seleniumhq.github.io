@@ -41,7 +41,7 @@ For more details on starting a session read our documentation on  [driver sessio
 {{< /tabpane >}}
 
 ### 2. Take action on browser
-In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/webdriver/browser/navigation.md" >}})するコマンドを送信します
+In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/webdriver/interactions/navigation.md" >}})するコマンドを送信します
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -64,9 +64,9 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 3. [ブラウザに関する情報]({{< ref "/documentation/webdriver/browser" >}})をリクエストします
+### 3. [ブラウザに関する情報]({{< ref "/documentation/webdriver/interactions" >}})をリクエストします
 
-There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
+There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/interactions" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
 {{< tabpane code=false langEqualsHeader=true >}}

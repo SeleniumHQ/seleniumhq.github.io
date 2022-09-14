@@ -3,6 +3,9 @@ title: "Browser navigation"
 linkTitle: "Navigation"
 weight: 1
 requiresTranslation: true
+aliases: [
+"/documentation/en/webdriver/browser/navigation",
+]
 ---
 
 ## Navigate to

@@ -2,7 +2,9 @@
 title: "同窗口和标签一起工作"
 linkTitle: "窗口"
 weight: 8
-requiresTranslation: true
+aliases: [
+"/documentation/zh-cn/webdriver/browser/windows",
+]
 ---
 
 ## 窗口和标签页

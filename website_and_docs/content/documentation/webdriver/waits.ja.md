@@ -1,7 +1,7 @@
 ---
 title: "待機"
 linkTitle: "待機"
-weight: 12
+weight: 6
 aliases: ["/documentation/ja/webdriver/waits/"]
 ---
 

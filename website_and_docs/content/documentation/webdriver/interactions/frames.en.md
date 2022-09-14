@@ -1,15 +1,22 @@
 ---
-title: "iFrame と Frame の操作"
-linkTitle: "フレーム"
+title: "Working with iFrames and frames"
+linkTitle: "Frames"
 weight: 6
+aliases: [
+"/documentation/en/webdriver/browser/frames",
+]
 ---
 
-Frameは、同じドメイン上の複数のドキュメントからサイトレイアウトを構築する非推奨の手段となりました。
-HTML5以前のWebアプリを使用している場合を除き、frameを使用することはほとんどありません。
-iFrameは、まったく異なるドメインからのドキュメントの挿入を許可し、今でも一般的に使用されています。
+Frames are a now deprecated means of building a site layout from
+multiple documents on the same domain. You are unlikely to work with
+them unless you are working with an pre HTML5 webapp.  Iframes allow
+the insertion of a document from an entirely different domain, and are
+still commonly used.
 
-FrameまたはiFrameを使用する必要がある場合、Webdriverを使用して同じ方法で作業できます。 
-iFrame内のボタンがある場合を考えてみましょう。ブラウザー開発ツールを使用して要素を検査すると、次のように表示される場合があります。
+If you need to work with frames or iframes, WebDriver allows you to
+work with them in the same way. Consider a button within an iframe.
+If we inspect the element using the browser development tools, we might
+see the following:
 
 ```html
 <div id="modal">
@@ -19,7 +26,8 @@ iFrame内のボタンがある場合を考えてみましょう。ブラウザ�
 </div>
 ```
 
-iFrameがなければ、次のようなボタンを使用してボタンをクリックします。
+If it was not for the iframe we would expect to click on the button
+using something like:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -48,14 +56,17 @@ driver.findElement(By.tagName("button")).click()
   {{< /tab >}}
 {{< /tabpane >}}
 
-ただし、iFrameの外側にボタンがない場合は、代わりにno such elementエラーが発生する可能性があります。
-これは、Seleniumがトップレベルのドキュメントの要素のみを認識するために発生します。
-ボタンを操作するには、ウィンドウを切り替える方法と同様に、最初にFrameに切り替える必要があります。
-WebDriverは、Frameに切り替える3つの方法を提供します。
+However, if there are no buttons outside of the iframe, you might
+instead get a _no such element_ error. This happens because Selenium is
+only aware of the elements in the top level document. To interact with
+the button, we will need to first switch to the frame, in a similar way
+to how we switch windows. WebDriver offers three ways of switching to
+a frame.
 
-## WebElementを使う
+## Using a WebElement
 
-WebElementを使用した切り替えは、最も柔軟なオプションです。好みのセレクタを使用してFrameを見つけ、それに切り替えることができます。
+Switching using a WebElement is the most flexible option. You can
+find the frame using your preferred selector and switch to it.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -120,10 +131,10 @@ driver.findElement(By.tagName("button")).click()
   {{< /tab >}}
 {{< /tabpane >}}
 
-## nameまたはIDを使う
-
-FrameまたはiFrameにidまたはname属性がある場合、代わりにこれを使うことができます。
-名前またはIDがページ上で一意でない場合、最初に見つかったものに切り替えます。
+## Using a name or ID
+If your frame or iframe has an id or name attribute, this can be used
+instead.  If the name or ID is not unique on the page, then the first
+one found will be switched to.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -182,9 +193,10 @@ driver.findElement(By.tagName("button")).click()
   {{< /tab >}}
 {{< /tabpane >}}
 
-## インデックスを使う
+## Using an index
 
-JavaScriptの _window.frames_ を使用して照会できるように、Frameのインデックスを使用することもできます。
+It is also possible to use the index of the frame, such as can be
+queried using _window.frames_ in JavaScript.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -217,9 +229,10 @@ driver.switchTo().frame(1)
 {{< /tabpane >}}
 
 
-## Frameを終了する
+## Leaving a frame
 
-iFrameまたはFrameセットを終了するには、次のようにデフォルトのコンテンツに切り替えます。
+To leave an iframe or frameset, switch back to the default content
+like so:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

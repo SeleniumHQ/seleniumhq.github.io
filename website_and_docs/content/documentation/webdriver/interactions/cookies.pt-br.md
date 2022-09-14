@@ -1,28 +1,29 @@
 ---
-title: "Working with cookies"
-linkTitle: "Cookies"
+title: "Trabalhando com cookies"
+linkTitle: "Trabalhando com cookies"
 weight: 4
 aliases: [
-"/documentation/en/support_packages/working_with_cookies/",
-"/documentation/support_packages/working_with_cookies/"
+"/documentation/pt-br/webdriver/browser/cookies",
+"/documentation/pt-br/support_packages/working_with_cookies/",
+"/pt-br/documentation/support_packages/working_with_cookies/"
 ]
 ---
 
-A cookie is a small piece of data that is sent from a website and stored in your computer. 
-Cookies are mostly used to recognise the user and load the stored information. 
+Um cookie é um pequeno pedaço de dado enviado de um site e armazenado no seu computador.
+Os cookies são usados principalmente para reconhecer o usuário e carregar as informações armazenadas.
 
-WebDriver API provides a way to interact with cookies with built-in methods: 
+A API WebDriver fornece uma maneira de interagir com cookies com métodos integrados:
 
 ## Add Cookie
-It is used to add a cookie to the current browsing context. 
-Add Cookie only accepts a set of defined serializable JSON object. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Here </a>
-is the link to the list of accepted JSON key values
+É usado para adicionar um cookie ao contexto de navegação atual.
+Add Cookie aceita apenas um conjunto de objetos JSON serializáveis definidos. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Aqui </a>
+é o link para a lista de valores-chave JSON aceitos.
 
-First of all, you need to be on the domain that the cookie will be
-valid for. If you are trying to preset cookies before
-you start interacting with a site and your homepage is large / takes a while to load
-an alternative is to find a smaller page on the site (typically the 404 page is small, 
-e.g. http://example.com/some404page)
+Em primeiro lugar, você precisa estar no domínio para qual o cookie será
+valido. Se você está tentando predefinir cookies antes
+de começar a interagir com um site e sua página inicial é grande / demora um pouco para carregar
+uma alternativa é encontrar uma página menor no site (normalmente a página 404 é pequena,
+por exemplo http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -110,7 +111,7 @@ fun main() {
 
 ## Get Named Cookie
 
-It returns the serialized cookie data matching with the cookie name among all associated cookies.
+Retorna os dados do cookie serializado correspondentes ao nome do cookie entre todos os cookies associados.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -209,8 +210,8 @@ fun main() {
 
 ## Get All Cookies
 
-It returns a ‘successful serialized cookie data’ for current browsing context. 
-If browser is no longer available it returns error. 
+Retorna 'dados de cookie serializados com sucesso' para o contexto de navegação atual.
+Se o navegador não estiver mais disponível, ele retornará um erro. 
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -315,7 +316,7 @@ fun main() {
 
 ## Delete Cookie
 
-It deletes the cookie data matching with the provided cookie name.
+Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -430,7 +431,7 @@ fun main() {
 
 ## Delete All Cookies
 
-It deletes all the cookies of the current browsing context.
+Exclui todos os cookies do contexto de navegação atual.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -528,24 +529,24 @@ fun main() {
 
 ## Same-Site Cookie Attribute
 
-It allows a user to instruct browsers to control whether cookies 
-are sent along with the request initiated by third party sites. 
-It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.
+Permite que um usuário instrua os navegadores a controlar se os cookies
+são enviados junto com a solicitação iniciada por sites de terceiros.
+É usado para evitar ataques CSRF (Cross-Site Request Forgery).
 
-Same-Site cookie attribute accepts two parameters as instructions
+O atributo de cookie Same-Site aceita dois parâmetros como instruções
 
 ## Strict:
-When the sameSite attribute is set as **Strict**, 
-the cookie will not be sent along with 
-requests initiated by third party websites.
+Quando o atributo sameSite é definido como **Strict**,
+o cookie não será enviado junto com
+solicitações iniciadas por sites de terceiros.
 
 ## Lax:
-When you set a cookie sameSite attribute to **Lax**, 
-the cookie will be sent along with the GET 
-request initiated by third party website.
+Quando você define um atributo cookie sameSite como **Lax**,
+o cookie será enviado junto com uma solicitação GET
+iniciada por um site de terceiros.
 
-**Note**: **As of now this feature is landed in chrome(80+version), 
-Firefox(79+version) and works with Selenium 4 and later versions.**
+**Nota**: **a partir de agora, esse recurso está disponível no Chrome (versão 80+),
+Firefox (versão 79+) e funciona com Selenium 4 e versões posteriores.**
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

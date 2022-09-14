@@ -1,19 +1,19 @@
 ---
-title: "Manipulação do Browser"
-linkTitle: "Manipulação do Browser"
-weight: 6
-requiresTranslation: true
+title: "Browser interactions"
+linkTitle: "Interactions"
+weight: 10
 aliases: [
-"/documentation/pt-br/webdriver/browser_manipulation/",
-"/pt-br/documentation/webdriver/browser_manipulation/"
+"/documentation/ja/webdriver/browser/",
+"/documentation/ja/webdriver/browser_manipulation/",
+"/ja/documentation/webdriver/browser_manipulation/"
 ]
 ---
 
-## Get browser information
+## ブラウザーの情報
 
-### Coletar título
+### タイトルの取得
 
-Você pode ler o título da página atual no navegador:
+ブラウザーから現在のページタイトルを読むことができます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
@@ -25,9 +25,9 @@ Você pode ler o título da página atual no navegador:
 {{< /tabpane >}}
 
 
-### Coletar a URL atual
+### 現在のURLを取得
 
-Você pode ler a URL atual na barra de endereço do navegador usando:
+ブラウザーのアドレスバーから現在のURLを読むには、次を使用します。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}

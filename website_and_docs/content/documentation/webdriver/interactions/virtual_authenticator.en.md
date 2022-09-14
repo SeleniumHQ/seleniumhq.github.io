@@ -4,16 +4,10 @@ linkTitle: "Virtual Authenticator"
 weight: 16
 description: >
     A representation of the Web Authenticator model.
+aliases: [
+"/documentation/en/virtual_authenticator/"
+]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner. 
 [Web Authentication](https://www.w3.org/TR/webauthn-2/) defines APIs that allows a user to create a public-key credential and register it with an authenticator. 
@@ -34,12 +28,16 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L48-55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -56,12 +54,16 @@ It creates a new virtual authenticator with the provided properties.
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L63-71" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -77,12 +79,16 @@ Removes the previously added virtual authenticator.
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#80-86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -98,12 +104,16 @@ Creates a resident (stateful) credential with the given required credential [par
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#103-107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -119,12 +129,16 @@ Creates a resident (stateless) credential with the given required credential [pa
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L145-148" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -140,12 +154,16 @@ Registers the credential with the authenticator.
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L139-150" >}}   
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -161,15 +179,18 @@ Returns the list of credentials owned by the authenticator.
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L162-178" >}}  
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
-
 
 ## Remove Credential
 
@@ -179,16 +200,20 @@ Removes a credential from the authenticator based on the passed credential id.
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
 {{< /tab >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L189-198" >}} 
 {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L189-198" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -205,12 +230,16 @@ Removes all the credentials from the authenticator.
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L207-216" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -226,11 +255,15 @@ Sets whether the authenticator will simulate success or fail on user verificatio
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L224-225" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}

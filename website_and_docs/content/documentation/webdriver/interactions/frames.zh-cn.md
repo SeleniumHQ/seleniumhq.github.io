@@ -2,7 +2,9 @@
 title: "与iFrames和frames一起工作"
 linkTitle: "Frames"
 weight: 6
-requiresTranslation: true
+aliases: [
+"/documentation/zh-cn/webdriver/browser/frames",
+]
 ---
 
 框架是一种现在已被弃用的方法，用于从同一域中的多个文档构建站点布局。除非你使用的是 HTML5

@@ -2,7 +2,9 @@
 title: "Working with windows and tabs"
 linkTitle: "Windows"
 weight: 8
-requiresTranslation: true
+aliases: [
+"/documentation/en/webdriver/browser/windows",
+]
 ---
 
 ## Windows and tabs

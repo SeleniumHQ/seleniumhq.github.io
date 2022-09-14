@@ -1,23 +1,28 @@
 ---
-title: "JavaScript アラート、プロンプトおよび確認"
-linkTitle: "JavaScript アラート、プロンプトおよび確認"
+title: "Alertas, prompts e confirmações JavaScript"
+linkTitle: "Alertas, prompts e confirmações JavaScript"
 weight: 2
 aliases: [
-"/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/",
-"/ja/documentation/webdriver/js_alerts_prompts_and_confirmations/"
+"/documentation/pt-br/webdriver/browser/alerts",
+"/documentation/pt-br/webdriver/js_alerts_prompts_and_confirmations/",
+"/pt-br/documentation/webdriver/js_alerts_prompts_and_confirmations/"
 ]
 ---
 
-WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。
-これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。
+WebDriver fornece uma API para trabalhar com os três tipos nativos de
+mensagens pop-up oferecidas pelo JavaScript. Esses pop-ups são estilizados pelo
+navegador e oferecem personalização limitada.
 
-## アラート
+## Alertas
 
-これらの最も単純なものはアラートと呼ばれ、カスタムメッセージと、ほとんどのブラウザーでOKのラベルが付いたアラートを非表示にする単一のボタンを表示します。
-ほとんどのブラウザーでは閉じるボタンを押すことで閉じることもできますが、これは常にOKボタンと同じことを行います。
-<a onclick="window.alert('Sample alert')">アラートの例を参照してください</a>。
+O mais simples deles é referido como um alerta, que mostra um
+mensagem personalizada e um único botão que dispensa o alerta, rotulado
+na maioria dos navegadores como OK. Ele também pode ser dispensado na maioria dos navegadores
+pressionando o botão Fechar, mas isso sempre fará a mesma coisa que
+o botão OK. <a onclick="window.alert('Sample alert')"> Veja um exemplo de alerta </a>.
 
-WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
+O WebDriver pode obter o texto do pop-up e aceitar ou dispensar esses
+alertas.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -105,12 +110,13 @@ alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
 
-## 確認
+## Confirmação
 
-確認ダイアログボックスはアラートに似ていますが、ユーザーがメッセージをキャンセルすることも選択できる点が異なります。
-<a onclick="window.confirm('Are you sure?')">サンプルを確認してください</a>。
+Uma caixa de confirmação é semelhante a um alerta, exceto que o usuário também pode escolher
+cancelar a mensagem. <a onclick="window.confirm('Are you sure?')"> Veja
+uma amostra de confirmação </a>.
 
-この例は、アラートを保存する別の方法も示しています。
+Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -210,13 +216,15 @@ alert.dismiss()
   {{< /tab >}}
 {{< /tabpane >}}
 
-## プロンプト
+## Prompt
 
-プロンプトは確認ボックスに似ていますが、テキスト入力も含まれている点が異なります。
-フォーム要素の操作と同様に、WebDriverの送信キーを使用して応答を入力できます。
-これにより、プレースホルダーテキストが完全に置き換えられます。
-キャンセルボタンを押してもテキストは送信されません。
-<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
+Os prompts são semelhantes às caixas de confirmação, exceto que também incluem um texto de
+entrada. Semelhante a trabalhar com elementos de formulário, você pode
+usar o sendKeys do WebDriver para preencher uma resposta. Isso substituirá
+completamente o espaço de texto de exemplo. Pressionar o botão Cancelar não enviará nenhum texto.
+<a onclick="window.prompt('What is your tool of choice?', navigator.appName)">
+Veja um exemplo de prompt </a>.
+
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

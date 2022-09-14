@@ -1,28 +1,25 @@
 ---
-title: "Trabalhando com cookies"
-linkTitle: "Trabalhando com cookies"
+title: "同cookies一起工作"
+linkTitle: "Cookies"
 weight: 4
 aliases: [
-"/documentation/pt-br/support_packages/working_with_cookies/",
-"/pt-br/documentation/support_packages/working_with_cookies/"
+"/documentation/zh-cn/webdriver/browser/cookies",
+"/documentation/zh-cn/support_packages/working_with_cookies/",
+"/zh-cn/documentation/support_packages/working_with_cookies/"
 ]
 ---
+ 
 
-Um cookie é um pequeno pedaço de dado enviado de um site e armazenado no seu computador.
-Os cookies são usados principalmente para reconhecer o usuário e carregar as informações armazenadas.
+Cookie是从网站发送并存储在您的计算机中的一小段数据. Cookies主要用于识别用户并加载存储的信息. 
 
-A API WebDriver fornece uma maneira de interagir com cookies com métodos integrados:
+WebDriver API提供了一种使用内置的方法与Cookie进行交互: 
 
-## Add Cookie
-É usado para adicionar um cookie ao contexto de navegação atual.
-Add Cookie aceita apenas um conjunto de objetos JSON serializáveis definidos. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Aqui </a>
-é o link para a lista de valores-chave JSON aceitos.
+## 添加 Cookie
+这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. <a href="https://www.w3.org/TR/webdriver1/#cookies"> 这里 </a>
+是一个链接, 用于描述可接受的JSON键值的列表
 
-Em primeiro lugar, você precisa estar no domínio para qual o cookie será
-valido. Se você está tentando predefinir cookies antes
-de começar a interagir com um site e sua página inicial é grande / demora um pouco para carregar
-uma alternativa é encontrar uma página menor no site (normalmente a página 404 é pequena,
-por exemplo http://example.com/some404page)
+首先, 您需要位于有效Cookie的域上. 如果您在开始与网站进行交互之前尝试预设cookie, 并且您的首页很大或需要一段时间才能加载完毕, 则可以选择在网站上找到一个较小的页面 (通常404页很小, 
+例如 http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -104,13 +101,13 @@ fun main() {
     } finally {
         driver.quit()
     }
-}
+}  
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Named Cookie
+## 获取命名的 Cookie
 
-Retorna os dados do cookie serializado correspondentes ao nome do cookie entre todos os cookies associados.
+此方法返回与cookie名称匹配的序列化cookie数据中所有关联的cookie.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -207,10 +204,9 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get All Cookies
+## 获取全部 Cookies
 
-Retorna 'dados de cookie serializados com sucesso' para o contexto de navegação atual.
-Se o navegador não estiver mais disponível, ele retornará um erro. 
+此方法会针对当前访问上下文返回“成功的序列化cookie数据”. 如果浏览器不再可用, 则返回错误. 
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -313,9 +309,9 @@ fun main() {
 {{< /tabpane >}}
 
 
-## Delete Cookie
+## 删除 Cookie
 
-Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
+此方法删除与提供的cookie名称匹配的cookie数据.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -428,9 +424,9 @@ fun main() {
 {{< /tabpane >}}
 
 
-## Delete All Cookies
+## 删除所有 Cookies
 
-Exclui todos os cookies do contexto de navegação atual.
+此方法删除当前访问上下文的所有cookie.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -522,30 +518,29 @@ fun main() {
     } finally {
         driver.quit()
     }
-}  
+}
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Same-Site Cookie Attribute
+## Same-Site Cookie属性
 
-Permite que um usuário instrua os navegadores a controlar se os cookies
-são enviados junto com a solicitação iniciada por sites de terceiros.
-É usado para evitar ataques CSRF (Cross-Site Request Forgery).
+此属性允许用户引导浏览器控制cookie, 是否与第三方站点发起的请求一起发送.
+引入其是为了防止CSRF（跨站请求伪造）攻击.
 
-O atributo de cookie Same-Site aceita dois parâmetros como instruções
+Same-Site cookie属性接受以下两种参数作为指令
 
 ## Strict:
-Quando o atributo sameSite é definido como **Strict**,
-o cookie não será enviado junto com
-solicitações iniciadas por sites de terceiros.
+当sameSite属性设置为 **Strict**, 
+cookie不会与来自第三方网站的请求一起发送.
 
 ## Lax:
-Quando você define um atributo cookie sameSite como **Lax**,
-o cookie será enviado junto com uma solicitação GET
-iniciada por um site de terceiros.
+当您将cookie sameSite属性设置为 **Lax**,
+cookie将与第三方网站发起的GET请求一起发送.
 
-**Nota**: **a partir de agora, esse recurso está disponível no Chrome (versão 80+),
-Firefox (versão 79+) e funciona com Selenium 4 e versões posteriores.**
+**注意**: **到目前为止, 
+此功能已在Chrome(80+版本), 
+Firefox(79+版本)中提供,
+并适用于Selenium 4以及更高版本.**
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -649,6 +644,6 @@ fun main() {
     } finally {
         driver.quit()
     }
-}
+} 
   {{< /tab >}}
 {{< /tabpane >}}

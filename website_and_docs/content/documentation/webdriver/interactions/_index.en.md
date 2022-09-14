@@ -1,18 +1,19 @@
 ---
-title: "ブラウザー"
-linkTitle: "ブラウザー"
-weight: 6
+title: "Browser interactions"
+linkTitle: "Interactions"
+weight: 10
 aliases: [
-"/documentation/ja/webdriver/browser_manipulation/",
-"/ja/documentation/webdriver/browser_manipulation/"
+"/documentation/en/webdriver/browser/",
+"/documentation/en/webdriver/browser_manipulation/",
+"/documentation/webdriver/browser_manipulation/"
 ]
 ---
 
-## ブラウザーの情報
+## Get browser information
 
-### タイトルの取得
+### Get title
 
-ブラウザーから現在のページタイトルを読むことができます。
+You can read the current page title from the browser:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
@@ -24,9 +25,9 @@ aliases: [
 {{< /tabpane >}}
 
 
-### 現在のURLを取得
+### Get current URL
 
-ブラウザーのアドレスバーから現在のURLを読むには、次を使用します。
+You can read the current URL from the browser's address bar using:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}

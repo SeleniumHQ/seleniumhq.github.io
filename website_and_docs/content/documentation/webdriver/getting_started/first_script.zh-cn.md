@@ -45,7 +45,7 @@ For more details on starting a session read our documentation on [driver session
 ### 2. 在浏览器上执行操作
 
 在本例中, 我们
-[导航]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) 
+[导航]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) 
 到一个网页. 
 
 {{< tabpane code=false langEqualsHeader=true >}}
@@ -69,9 +69,9 @@ For more details on starting a session read our documentation on [driver session
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/browser" >}})
+### 3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/interactions" >}})
 
-您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/browser" >}}) , 
+您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/interactions" >}}) , 
 包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
 {{< tabpane code=false langEqualsHeader=true >}}

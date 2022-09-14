@@ -1,18 +1,20 @@
 ---
-title: "Working with windows and tabs"
-linkTitle: "Windows"
+title: "ウィンドウとタブの操作"
+linkTitle: "ウィンドウ"
 weight: 8
-requiresTranslation: true
+aliases: [
+"/documentation/ja/webdriver/browser/windows",
+]
 ---
 
-## Janelas e guias
+## ウィンドウとタブ
 
-### Pegue o idenficador da janela
+### ウィンドウハンドルの取得
 
-O WebDriver não faz distinção entre janelas e guias. E se
-seu site abre uma nova guia ou janela, o Selenium permitirá que você trabalhe
-usando um identificador. Cada janela tem um identificador único que permanece
-persistente em uma única sessão. Você pode pegar o identificador atual usando:
+WebDriverは、ウィンドウとタブを区別しません。
+サイトが新しいタブまたはウィンドウを開く場合、Seleniumはウィンドウハンドルを使って連動します。
+各ウィンドウには一意の識別子があり、これは単一のセッションで持続します。
+次のコードを使用して、現在のウィンドウのウィンドウハンドルを取得できます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
@@ -23,19 +25,13 @@ persistente em uma única sessão. Você pode pegar o identificador atual usando
   {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
 {{< /tabpane >}}
 
-### Alternando janelas ou guias
+### ウィンドウまたはタブの切り替え
 
-Clicar em um link que abre em uma
-<a href="https://seleniumhq.github.io" target="_blank"> nova janela </a>
-focará a nova janela ou guia na tela, mas o WebDriver não saberá qual
-janela que o sistema operacional considera ativa. Para trabalhar com a nova janela
-você precisará mudar para ela. Se você tiver apenas duas guias ou janelas abertas,
-e você sabe com qual janela você iniciou, pelo processo de eliminação
-você pode percorrer as janelas ou guias que o WebDriver pode ver e alternar
-para aquela que não é o original.
+<a href="https://seleniumhq.github.io" target="_blank"> 新しいウィンドウ</a>で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
+新しいウィンドウで作業するには、それに切り替える必要があります。
+開いているタブまたはウィンドウが2つしかなく、どちらのウィンドウから開始するかがわかっている場合、削除のプロセスによって、WebDriverが表示できる両方のウィンドウまたはタブをループし、元のウィンドウまたはタブに切り替えることができます。
 
-No entanto, o Selenium 4 fornece uma nova API [NewWindow](#criar-nova-janela-ou-nova-guia-e-alternar) 
-que cria uma nova guia (ou) nova janela e muda automaticamente para ela.
+ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI [NewWindow](#新しいウィンドウまたは新しいタブを作成して切り替える) が用意されています。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -199,13 +195,13 @@ wait.until(titleIs("Selenium documentation"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Criar nova janela (ou) nova guia e alternar
-Cria uma nova janela (ou) guia e focará a nova janela ou guia na tela.
-Você não precisa mudar para trabalhar com a nova janela (ou) guia. Se você tiver mais de duas janelas
-(ou) guias abertas diferentes da nova janela, você pode percorrer as janelas ou guias que o WebDriver pode ver
-e mudar para aquela que não é a original.
+### 新しいウィンドウ（または）新しいタブを作成して切り替える
 
-__Nota: este recurso funciona com Selenium 4 e versões posteriores.__
+新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
+新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
+新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
+
+__注意: この機能は、Selenium 4以降のバージョンで機能します。__
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -256,13 +252,11 @@ driver.switchTo().newWindow(WindowType.WINDOW)
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Fechando uma janela ou guia
+### ウィンドウまたはタブを閉じる
 
-Quando você fechar uma janela ou guia _e_ que não é a
-última janela ou guia aberta em seu navegador, você deve fechá-la e alternar
-de volta para a janela que você estava usando anteriormente. Supondo que você seguiu a
-amostra de código na seção anterior, você terá o identificador da janela
-anterior armazenado em uma variável. Junte isso e você obterá:
+ウィンドウまたはタブでの作業が終了し、 _かつ_ ブラウザーで最後に開いたウィンドウまたはタブではない場合、それを閉じて、以前使用していたウィンドウに切り替える必要があります。
+前のセクションのコードサンプルに従ったと仮定すると、変数に前のウィンドウハンドルが格納されます。
+これをまとめると以下のようになります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -310,15 +304,11 @@ driver.switchTo().window(originalWindow)
   {{< /tab >}}
 {{< /tabpane >}}
 
-Esquecer de voltar para outro gerenciador de janela após fechar uma
-janela deixará o WebDriver em execução na página agora fechada e
-acionara uma **No Such Window Exception**. Você deve trocar
-de volta para um identificador de janela válido para continuar a execução.
+ウィンドウを閉じた後に別のウィンドウハンドルに切り替えるのを忘れると、現在閉じられているページでWebDriverが実行されたままになり、 **No Such Window Exception** が発行されます。実行を継続するには、有効なウィンドウハンドルに切り替える必要があります。
 
-### Sair do navegador no final de uma sessão
+### セッションの終了時にブラウザーを終了する
 
-Quando você terminar a sessão do navegador, você deve chamar a função _quit()_,
-em vez de fechar:
+ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.quit();{{< /tab >}}
@@ -329,17 +319,15 @@ em vez de fechar:
   {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
 {{< /tabpane >}}
 
-* _quit()_ irá:
-   * Fechar todas as janelas e guias associadas a essa sessão do WebDriver
-   * Fechar o processo do navegador
-   * Fechar o processo do driver em segundo plano
-   * Notificar o Selenium Grid de que o navegador não está mais em uso para que possa
-    ser usado por outra sessão (se você estiver usando Selenium Grid)
+* Quitは、
+  * そのWebDriverセッションに関連付けられているすべてのウィンドウとタブを閉じます
+  * ブラウザーのプロセス
+  * バックグラウンドのドライバーのプロセス
+  * ブラウザーが使用されなくなったことをSelenium Gridに通知して、別のセッションで使用できるようにします（Selenium Gridを使用している場合）
 
-A falha em encerrar deixará processos e portas extras em segundo plano
-rodando em sua máquina, o que pode causar problemas mais tarde.
+quitの呼び出しに失敗すると、余分なバックグラウンドプロセスとポートがマシン上で実行されたままになり、後で問題が発生する可能性があります。
 
-Algumas estruturas de teste oferecem métodos e anotações em que você pode ligar para derrubar no final de um teste.
+一部のテストフレームワークでは、テストの終了時にフックできるメソッドとアノテーションを提供しています。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -398,9 +386,7 @@ fun tearDown() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-Se não estiver executando o WebDriver em um contexto de teste, você pode considerar o uso do
-`try/finally` que é oferecido pela maioria das linguagens para que uma exceção
-ainda limpe a sessão do WebDriver.
+テストコンテキストでWebDriverを実行していない場合は、ほとんどの言語で提供されている `try  / finally` の使用を検討して、例外がWebDriverセッションをクリーンアップするようにします。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -446,9 +432,8 @@ try {
   {{< /tab >}}
 {{< /tabpane >}}
 
-O WebDriver do Python agora suporta o gerenciador de contexto python,
-que ao usar a palavra-chave `with` pode encerrar automaticamente o
-driver no fim da execução.
+PythonのWebDriverは、pythonコンテキストマネージャーをサポートするようになりました。
+withキーワードを使用すると、実行終了時にドライバーを自動的に終了できます。
 
 ```python
 with webdriver.Firefox() as driver:
@@ -457,12 +442,13 @@ with webdriver.Firefox() as driver:
 # WebDriver will automatically quit after indentation
 ```
 
-## Gerenciamento de janelas
-A resolução da tela pode impactar como seu aplicativo da web é renderizado, então
-WebDriver fornece mecanismos para mover e redimensionar a janela do navegador.
+## ウィンドウマネジメント
 
-### Coletar o tamanho da janela
-Obtém o tamanho da janela do navegador em pixels.
+画面解像度はWebアプリケーションのレンダリング方法に影響を与える可能性があるため、WebDriverはブラウザーウィンドウを移動およびサイズ変更するメカニズムを提供します。
+
+### ウィンドウサイズの取得
+
+ブラウザーウィンドウのサイズをピクセル単位で取得します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -526,9 +512,10 @@ val height1 = size.height
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Definir o tamanho da janela
+### ウィンドウサイズの設定
 
-Restaura a janela e define o tamanho da janela.
+ウィンドウを復元し、ウィンドウサイズを設定します。
+
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< /tab >}}
   {{< tab header="Python" >}}driver.set_window_size(1024, 768){{< /tab >}}
@@ -538,9 +525,9 @@ Restaura a janela e define o tamanho da janela.
   {{< tab header="Kotlin" >}}driver.manage().window().size = Dimension(1024, 768){{< /tab >}}
 {{< /tabpane >}}
 
-### Coletar posição da janela
+### ウィンドウの位置を取得
 
-Busca as coordenadas da coordenada superior esquerda da janela do navegador.
+ブラウザーウィンドウの左上の座標を取得します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -605,9 +592,9 @@ val y1 = position.y
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Definir posição da janela
+    ## ウィンドウの位置設定
 
-Move a janela para a posição escolhida.
+選択した位置にウィンドウを移動します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -635,10 +622,9 @@ driver.manage().window().position = Point(0,0)
     {{< /tab >}}
 {{< /tabpane >}}
 
-### Maximizar janela
-Aumenta a janela. Para a maioria dos sistemas operacionais, a janela irá preencher
-a tela, sem bloquear os próprios menus do sistema operacional e
-barras de ferramentas.
+### ウィンドウの最大化
+
+ウィンドウを拡大します。ほとんどのオペレーティングシステムでは、オペレーティングシステムのメニューとツールバーをブロックすることなく、ウィンドウが画面いっぱいに表示されます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.manage().window().maximize();{{< /tab >}}
@@ -649,14 +635,13 @@ barras de ferramentas.
   {{< tab header="Kotlin" >}}driver.manage().window().maximize(){{< /tab >}}
 {{< /tabpane >}}
 
-### Minimizar janela
-Minimiza a janela do contexto de navegação atual.
-O comportamento exato deste comando é específico para
-gerenciadores de janela individuais.
- 
-Minimizar Janela normalmente oculta a janela na bandeja do sistema.
+### ウィンドウを最小化
+現在のブラウジングコンテキストのウィンドウを最小化します。
+このコマンドの正確な動作は、個々のウィンドウマネージャーに固有のものです。
 
-__Nota: este recurso funciona com Selenium 4 e versões posteriores.__
+ウィンドウを最小化すると、通常、システムトレイのウィンドウが非表示になります。
+
+__注：この機能は、Selenium 4以降のバージョンで機能します。__
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.manage().window().minimize();{{< /tab >}}
@@ -667,9 +652,9 @@ __Nota: este recurso funciona com Selenium 4 e versões posteriores.__
   {{< tab header="Kotlin" >}}driver.manage().window().minimize(){{< /tab >}}
 {{< /tabpane >}}
 
-### Janela em tamanho cheio
+### 全画面ウィンドウ
 
-Preenche a tela inteira, semelhante a pressionar F11 na maioria dos navegadores.
+ほとんどのブラウザーでF11を押すのと同じように、画面全体に表示されます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.manage().window().fullscreen();{{< /tab >}}
@@ -680,11 +665,11 @@ Preenche a tela inteira, semelhante a pressionar F11 na maioria dos navegadores.
   {{< tab header="Kotlin" >}}driver.manage().window().fullscreen(){{< /tab >}}
 {{< /tabpane >}}
 
-### TakeScreenshot
+### スクリーンショットの取得
 
-Usado para capturar a tela do contexto de navegação atual.
-O endpoint WebDriver [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot)
-retorna a captura de tela codificada no formato Base64.
+現在のブラウジング コンテキストのスクリーンショットをキャプチャするために使います。  
+WebDriver エンドポイントの [スクリーンショット](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) は、
+Base64 形式でエンコードされたスクリーンショットを返します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -734,7 +719,7 @@ driver = Selenium::WebDriver.for :chrome
 begin
   driver.get 'https://example.com/'
 
-      # Takes and Stores the screenshot in specified path
+    # Takes and Stores the screenshot in specified path
   driver.save_screenshot('./image.png')
 
 end
@@ -768,14 +753,14 @@ fun main(){
     copyFile(scrFile, File("./image.png"))
     driver.quit()
 }
-   {{< /tab >}}
+  {{< /tab >}}
 {{< /tabpane >}}
 
-###  TakeElementScreenshot
+###  要素のスクリーンショットの取得
 
-Usado para capturar a imagem de um elemento para o contexto de navegação atual.
-O endpoint WebDriver [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot)
-retorna a captura de tela codificada no formato Base64.
+現在のブラウジング コンテキストの要素のスクリーンショットをキャプチャするために使います。 
+WebDriver エンドポイントの [スクリーンショット](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) は、
+Base64 形式でエンコードされたスクリーンショットを返します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -795,7 +780,7 @@ public class SeleniumelementTakeScreenshot {
     driver.quit();
   }
 }
-  {{< /tab >}}
+ {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -837,7 +822,7 @@ begin
   driver.get 'https://example.com/'
   ele = driver.find_element(:css, 'h1')
 
-      # Takes and Stores the element screenshot in specified path
+    # Takes and Stores the element screenshot in specified path
   ele.save_screenshot('./image.jpg')
 end
   {{< /tab >}}
@@ -875,11 +860,9 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
+### スクリプトの実行
 
-### Executar Script
-
-Executa o snippet de código JavaScript no
-contexto atual de um frame ou janela selecionada.
+選択したフレームまたはウィンドウの現在のコンテキストで、JavaScript コードスニペットを実行します。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -902,7 +885,7 @@ header = driver.find_element(By.CSS_SELECTOR, "h1")
 driver.execute_script('return arguments[0].innerText', header)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-   //creating Chromedriver instance
+    //creating Chromedriver instance
 	IWebDriver driver = new ChromeDriver();
 	//Creating the JavascriptExecutor interface object by Type casting
 	IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
@@ -944,11 +927,12 @@ driver.executeScript("alert('hello world')")
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Imprimir Página
+### ページの印刷
 
-Imprime a página atual dentro do navegador
+ブラウザ内の現在のページを印刷します。
 
-_Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
+_Note: Chromium ブラウザがヘッドレスモードである必要があります。_
+
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -1011,3 +995,4 @@ _Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
     val content = pdf.content
   {{< /tab >}}
 {{< /tabpane >}}
+

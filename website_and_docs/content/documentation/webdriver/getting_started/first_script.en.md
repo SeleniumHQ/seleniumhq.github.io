@@ -40,7 +40,7 @@ For more details on starting a session read our documentation on [driver session
 {{< /tabpane >}}
 
 ### 2. Take action on browser
-In this example we are [navigating]({{< ref "/documentation/webdriver/browser/navigation.md" >}}) to a web page. 
+In this example we are [navigating]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) to a web page. 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -65,7 +65,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/browser/na
 
 ### 3. Request browser information
 
-There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/browser" >}}) you
+There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/interactions" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
 {{< tabpane code=false langEqualsHeader=true >}}

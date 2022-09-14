@@ -1,18 +1,20 @@
 ---
-title: "Browser"
-linkTitle: "Browser"
-weight: 6
+title: "Browser interactions"
+linkTitle: "Interactions"
+weight: 10
+requiresTranslation: true
 aliases: [
-"/documentation/en/webdriver/browser_manipulation/",
-"/documentation/webdriver/browser_manipulation/"
+"/documentation/pt-br/webdriver/browser/",
+"/documentation/pt-br/webdriver/browser_manipulation/",
+"/pt-br/documentation/webdriver/browser_manipulation/"
 ]
 ---
 
 ## Get browser information
 
-### Get title
+### Coletar título
 
-You can read the current page title from the browser:
+Você pode ler o título da página atual no navegador:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
@@ -24,9 +26,9 @@ You can read the current page title from the browser:
 {{< /tabpane >}}
 
 
-### Get current URL
+### Coletar a URL atual
 
-You can read the current URL from the browser's address bar using:
+Você pode ler a URL atual na barra de endereço do navegador usando:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
