@@ -343,11 +343,43 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 特性和属性
+## Fetching Attributes or Properties
 
-### 特性
+Fetches the run time value associated with a 
+DOM attribute. It returns the data associated 
+with the DOM attribute or property of the element. 
 
-### DOM 特性
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+//Navigate to the url
+driver.get("https://the-internet.herokuapp.com/login");
 
-### DOM 属性
+//search web element using link text property
+WebElement eleSelLink = driver.findElement(By.linkText(("Elemental Selenium")));
 
+//fetch the href property associated with the link
+String hrefVal = eleSelLink.getAttribute("href");
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+   # Help us with a PR for code sample
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+ //Navigate to the url
+driver.Url="https://the-internet.herokuapp.com/login";
+
+//search web element using link text property
+IWebElement eleSelLink = driver.FindElement(By.LinkText(("Elemental Selenium")));
+
+//fetch the href property associated with the link
+String hrefVal = eleSelLink.GetAttribute("href");
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Help us with a PR for code sample
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+// Help us with a PR for code sample
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Help us with a PR for code sample
+  {{< /tab >}}
+{{< /tabpane >}}
