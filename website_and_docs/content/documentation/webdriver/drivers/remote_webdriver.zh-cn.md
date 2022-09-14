@@ -4,6 +4,7 @@ linkTitle: "远程WebDriver"
 weight: 10
 aliases: 
         [
+          "/documentation/zh-cn/webdriver/remote_webdriver/",
           "/documentation/zh-cn/remote_webdriver/",
           "/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
         ]

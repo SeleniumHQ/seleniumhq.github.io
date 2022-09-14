@@ -13,7 +13,7 @@ description: >
 通常, 浏览器都是根据特定的选项启动, 
 这些选项描述浏览器必须支持哪些功能, 
 以及浏览器在会话期间应如何运行.
-有些功能由[所有浏览器共享]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}),
+有些功能由[所有浏览器共享]({{< ref "/documentation/webdriver/drivers/options.md" >}}),
 有些功能特定于所使用的浏览器.
 此页面将显示使用默认功能启动浏览器的示例.
 
@@ -26,7 +26,7 @@ description: >
 默认情况下, Selenium 4与Chrome v75及更高版本兼容.
 请注意, Chrome浏览器和chromedriver的版本必须与主版本匹配. 
 
-除了[共享功能]({{< ref "/documentation/webdriver/capabilities/shared.md" >}})外,
+除了[共享功能]({{< ref "/documentation/webdriver/drivers/options.md" >}})外,
 还可以使用特定的[Chrome功能]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}}).
 
 {{< tabpane langEqualsHeader=true code=false >}}

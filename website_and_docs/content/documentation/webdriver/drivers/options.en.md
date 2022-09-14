@@ -1,10 +1,11 @@
 ---
-title: "Shared capabilities"
-linkTitle: "Shared"
+title: "Browser Options"
+linkTitle: "Options"
 weight: 2
 description: >-
   These capabilities are shared by all browsers.
 aliases: [
+"/documentation/en/capabilitis/shared/",
 "/documentation/en/driver_idiosyncrasies/shared_capabilities/",
 "/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/en/webdriver/http_proxies/",
@@ -16,14 +17,13 @@ aliases: [
 ]
 ---
 
-In order to create a new session by Selenium WebDriver, 
-the local end should provide the basic capabilities to the remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
+In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
+As of Selenium 4, you must use the browser options classes. 
+For remote driver sessions, a browser options instance is required as it determines which browser will be used.
 
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-The following capabilities are supported by WebDriver:
+These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
+
+Each browser has [custom options]() that may be defined in addition to the ones defined in the specification.
 
 ## browserName
 

@@ -13,7 +13,7 @@ you can start and stop a session with a browser.
 Typically, browsers are started with specific options that describe
 which capabilities the browser must support, and how the browser should
 behave during the session. Some capabilities are 
-[shared by all browsers]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}), and
+[shared by all browsers]({{< ref "/documentation/webdriver/drivers/options.md" >}}), and
 some will be specific to the browser being used.
 This page will show examples of starting a browser with the default capabilities.
 
@@ -25,7 +25,7 @@ After learning how to start a session, check out the next session on how to
 By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of 
 the Chrome browser and the version of chromedriver must match the major version. 
 
-In addition to the [shared capabilities]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}),
+In addition to the [shared capabilities]({{< ref "/documentation/webdriver/drivers/options.md" >}}),
 there are specific [Chrome capabilities]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}})
 that can be used.
 

@@ -1,11 +1,12 @@
 ---
-title: "Recursos compartilhados"
-linkTitle: "Recursos compartilhados"
+title: "Browser Options"
+linkTitle: "Options"
 weight: 2
 needsTranslation: true
 description: >-
   These capabilities are shared by all browsers.
 aliases: [
+"/documentation/pt-br/capabilitis/shared/",
 "/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
 "/pt-br/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/pt-br/webdriver/http_proxies/",
@@ -26,14 +27,13 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-Para criar uma nova sessão por Selenium WebDriver,
-a extremidade local deve fornecer os recursos básicos para a extremidade remota.
-A extremidade remota usa o mesmo conjunto de recursos para
-cria uma sessão e descreve os recursos da sessão atual.
+In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
+As of Selenium 4, you must use the browser options classes.
+For remote driver sessions, a browser options instance is required as it determines which browser will be used.
 
-WebDriver fornece recursos que cada controle extremidade
-remota irá/deverá apoiar a implementação.
-A seguir estão os recursos que o WebDriver suporta:
+These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
+
+Each browser has [custom options]() that may be defined in addition to the ones defined in the specification.
 
 ## browserName
 

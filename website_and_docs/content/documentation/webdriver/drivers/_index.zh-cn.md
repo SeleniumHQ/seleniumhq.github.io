@@ -1,12 +1,47 @@
 ---
-title: "配置驱动参数"
-linkTitle: "驱动"
-weight: 12 
+title: "Driver Sessions"
+linkTitle: "Drivers"
+weight: 3
 ---
 
-我们在入门部分学习了如何[安装驱动]({{< ref "../getting_started/install_drivers.md" >}}) .
+Starting and stopping a session is for opening and closing a browser.
 
-Selenium提供对服务类的访问, 
-这些服务类用于确定服务器的启动方式
+## Creating Sessions
+
+Creating a new session corresponds with the W3C command for [New session](https://w3c.github.io/webdriver/#new-session)
+
+The session is created automatically by initializing a new Driver class object.
+
+Each language allows a session to be created with arguments from one of these classes (or equivalent):
+
+* [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but this is required for remote
+* Some form of [CommandExecutor]({{< ref "executors.md" >}}) (the implementation varies between languages)
+* [Listeners]({{< ref "listeners.md" >}})
+
+### Local Driver
+
+The primary unique argument for starting a local driver includes information about starting the required driver service
+on the local machine.
+
+* [Service]({{< ref "service.md" >}}) object applies only to local drivers and provides information about the browser driver
+
+{{< alert-code >}}
+Show Starting Local driver with multiple arguments.
+{{< /alert-code >}}
+
+### Remote Driver
+
+The primary unique argument for starting a remote driver includes information about where to execute the code.
+Read the details in the [Remote Driver Section]()
 
 
+## Quitting Sessions
+
+Quitting a session corresponds to W3C command for [Deleting a Session](https://w3c.github.io/webdriver/#delete-session).
+
+Important note: the `quit` method is different from the `close` method, 
+and it is recommended to always use `quit` to end the session
+
+{{< alert-code >}}
+Show quitting a session.
+{{< /alert-code >}}

@@ -1,10 +1,11 @@
 ---
-title: "共通のCapability"
-linkTitle: "共通のCapability"
+title: "Browser Options"
+linkTitle: "Options"
 weight: 2
 description: >-
   これらのCapabilityはすべてのブラウザで共通です。
 aliases: [
+"/documentation/ja/capabilitis/shared/",
 "/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
 "/ja/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/ja/webdriver/http_proxies/",
@@ -25,11 +26,13 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。
-リモートエンドは、一連の同じCapabilityを使用してセッションを作成し、現在のセッション機能を描きます。
+In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
+As of Selenium 4, you must use the browser options classes.
+For remote driver sessions, a browser options instance is required as it determines which browser will be used.
 
-WebDriverは、各リモートエンドがCapabilityをサポートする/すべきCapabilityを提供します。
-WebDriverがサポートするCapabilityは次のとおりです。
+These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
+
+Each browser has [custom options]() that may be defined in addition to the ones defined in the specification.
 
 ## browserName
 

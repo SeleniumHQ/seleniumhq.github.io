@@ -84,7 +84,7 @@ assert(element.text == "Hello from JavaScript!")
 {{< /tabpane >}}
 
 The issue here is that the default
-[page load strategy]({{< ref "capabilities/shared#pageloadstrategy" >}})
+[page load strategy]({{< ref "drivers/options#pageloadstrategy" >}})
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is

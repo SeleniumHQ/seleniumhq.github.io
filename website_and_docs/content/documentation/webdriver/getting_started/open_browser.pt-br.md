@@ -9,7 +9,7 @@ description: >
 Assim que você tiver a [biblioteca Selenium instalada]({{< ref "install_library.md" >}}),
 e o [driver do seu navegador de internet preferido]({{< ref "install_drivers.md" >}}), você pode iniciar e parar uma sessão com o navegador de internet.
 
-Normalmente, os navegadores são iniciados com opções específicas que descrevem quais recursos o navegador deve suportar e como o navegador deve se comportar durante a sessão. Alguns recursos são [compartilhados por todos os navegadores de internet]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}), já 
+Normalmente, os navegadores são iniciados com opções específicas que descrevem quais recursos o navegador deve suportar e como o navegador deve se comportar durante a sessão. Alguns recursos são [compartilhados por todos os navegadores de internet]({{< ref "/documentation/webdriver/drivers/options.md" >}}), já 
 outros serão exclusivos para o navegador de internet que está sendo usado. 
 Esta página mostrará exemplos de como iniciar um navegador de internet com os recursos padrões.
 
@@ -20,7 +20,7 @@ Depois de você aprender como iniciar uma sessão, confira a próxima sessão so
 Por padrão, o Selenium 4 é compativel com o Chrome v75 e versões superiores. Observe que a versão do
 navegador de internet Chrome e a versão do chromedriver precisam corresponder à versão principal.
 
-Além dos [recursos compartilhados]({{< ref "/documentation/webdriver/capabilities/shared.md" >}}),
+Além dos [recursos compartilhados]({{< ref "/documentation/webdriver/drivers/options.md" >}}),
 existem [recursos Chrome]({{< ref "/documentation/webdriver/capabilities/chromium.md" >}}) exclusivos 
 que podem ser utilizados.
 

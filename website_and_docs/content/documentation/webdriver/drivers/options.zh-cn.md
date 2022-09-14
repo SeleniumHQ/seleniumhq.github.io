@@ -1,10 +1,11 @@
 ---
-title: "共享的功能"
-linkTitle: "共享的功能"
+title: "Browser Options"
+linkTitle: "Options"
 weight: 2
 description: >-
   这些capabilities用于所有浏览器.
 aliases: [
+"/documentation/zh-cn/capabilitis/shared/",
 "/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/",
 "/zh-cn/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/zh-cn/webdriver/http_proxies/",
@@ -15,14 +16,14 @@ aliases: [
 "/zh-cn/documentation/webdriver/capabilities/page_loading_strategy/"
 ]
 ---
- 
 
-为了通过Selenium WebDriver创建新会话, 
-本地端应向远程端提供基本功能. 
-远端使用相同的功能集来创建会话并描述当前会话功能. 
- 
-WebDriver提供了每个远程端将 (或应该) 支持实现的功能. 
-以下是WebDriver支持的功能:
+In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
+As of Selenium 4, you must use the browser options classes.
+For remote driver sessions, a browser options instance is required as it determines which browser will be used.
+
+These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
+
+Each browser has [custom options]() that may be defined in addition to the ones defined in the specification.
  
 ## browserName
  
