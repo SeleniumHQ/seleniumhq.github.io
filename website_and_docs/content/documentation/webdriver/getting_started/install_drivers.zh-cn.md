@@ -22,7 +22,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 因此标准Selenium发行版中不包括这些驱动程序. 
 本节介绍了使用不同浏览器的基本要求.
 
-在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers.md" >}}) 文档中
+在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
 ## 快速参考
@@ -306,11 +306,6 @@ fun main(args: Array<String>) {
 
 {{< /tabpane >}}
 
-
-## 高级配置
-
-有关如何更改驱动程序行为的更多信息, 
-请参见[配置驱动程序参数]({{< ref "/documentation/webdriver/drivers.md" >}}) 页面
 
 ## 下一步
 [打开和关闭浏览器]({{< ref "open_browser.md" >}})

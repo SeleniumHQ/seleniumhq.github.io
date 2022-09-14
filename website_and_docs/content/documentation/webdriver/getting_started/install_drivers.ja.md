@@ -21,7 +21,7 @@ Internet Explorerを除くすべてのドライバーの実装は、ブラウザ
 この章では、さまざまなブラウザを使い始めるための基本的な要件について説明します。
 
 Read about more advanced options for starting a driver
-in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
+in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
 ## クイックリファレンス
 

@@ -21,7 +21,7 @@ browser vendors themselves, they are not included in the standard Selenium distr
 This section explains the basic requirements for getting you started with the different browsers.
 
 Read about more advanced options for starting a driver 
-in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
+in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
 ## Quick Reference
 
@@ -285,11 +285,6 @@ fun main(args: Array<String>) {
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
-## Advanced Configuration
-
-More information on how you can change the driver behavior can be found on the
-[Configuring driver parameters]({{< ref "/documentation/webdriver/drivers.md" >}}) page.
 
 ## Next Step
 [Open and close a browser]({{< ref "open_browser.md" >}})

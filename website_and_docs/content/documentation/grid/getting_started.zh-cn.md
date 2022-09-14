@@ -33,7 +33,7 @@ aliases: [
 1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
 
 *Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/remote_webdriver" >}}).
+Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
 
 To learn more about the different configuration options, go through the sections below.
 

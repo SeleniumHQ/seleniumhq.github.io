@@ -22,7 +22,7 @@ desenvolvedores dos navegadores, elas não estão incluídas na distribuição p
 Esta seção explica os requisitos básicos para você começar a usar os diferentes navegadores.
 
 Leia mais sobre opções avançadas para iniciar um driver
- na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
+ na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers/" >}}).
 
 ## Consulta rápida
 
@@ -289,11 +289,6 @@ fun main(args: Array<String>) {
 
 {{< /tab >}}
 {{< /tabpane >}}
-
-## Configurações avançadas
-
-Mais informações a respeito de como você pode alterar o comportamento do driver podem ser encontradas na página
-[Configurando Parâmetros do driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
 
 ## Próximo passo
 [Abrindo e fechando um navegador de internet]({{< ref "open_browser.md" >}})

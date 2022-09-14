@@ -5,7 +5,7 @@ weight: 12
 needsTranslation: true
 ---
 
-We learned how to [install drivers]({{< ref "getting_started/install_drivers.md" >}}) in the Getting Started section.
+We learned how to [install drivers]({{< ref "../getting_started/install_drivers.md" >}}) in the Getting Started section.
 
 Selenium provides access to Service classes which are used to determine how the server is started
 
