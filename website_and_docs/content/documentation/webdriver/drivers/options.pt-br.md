@@ -33,7 +33,7 @@ For remote driver sessions, a browser options instance is required as it determi
 
 These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
 
-Each browser has [custom options]() that may be defined in addition to the ones defined in the specification.
+Each browser has ({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
 
 ## browserName
 
