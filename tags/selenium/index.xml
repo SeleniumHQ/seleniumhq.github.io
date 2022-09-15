@@ -849,7 +849,7 @@ your session before accessing the site, but you can now just call a
 other kinds of authentication credentials)&lt;/p>
 &lt;p>In short, in Selenium 4, the process has become less
 complicated. Perhaps an example will help?&lt;/p>
-&lt;ul class="nav nav-tabs persist" id="tabs-0" role="tablist">&lt;li class="nav-item">
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
 &lt;a class="nav-link active persistLang-java"
 id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab"
 onclick="persistLang(&amp;#34;java&amp;#34;);"
@@ -862,7 +862,7 @@ onclick="persistLang(&amp;#34;ruby&amp;#34;);"
 aria-controls="tabs-0-1" aria-selected="false">Ruby&lt;/a>
 &lt;/li>
 &lt;/ul>
-&lt;div class="tab-content persist" id="tabs-0-content">&lt;div class="tab-pane fade show active"
+&lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
 id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// This &amp;#34;HasAuthentication&amp;#34; interface is the key!
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span> &lt;span style="color:#000">authentication&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
