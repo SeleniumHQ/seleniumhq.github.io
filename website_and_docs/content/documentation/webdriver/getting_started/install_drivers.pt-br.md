@@ -170,7 +170,7 @@ Você pode colocar os drivers em um diretório que já está listado em
 `PATH`, ou você pode colocá-los em um diretório
 e acrescenta-lo ao `PATH`.
 
-{{< tabpane code=false >}}
+{{< tabpane code=false persistLang=false >}}
 {{% tab header="Bash" %}}
 Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell

@@ -169,7 +169,7 @@ fun chrome(): WebDriver {
 
 * すでに `PATH` にあるディレクトリを確認するには、コマンドプロンプト/ターミナルを開いて次のように入力します。
 
-{{< tabpane code=false >}}
+{{< tabpane code=false persistLang=false >}}
 {{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell
