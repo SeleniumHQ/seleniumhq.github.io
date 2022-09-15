@@ -10,7 +10,7 @@ suite(function(env) {
             driver = await new Builder().forBrowser('chrome').build();
         });
 
-        after(() => driver.quit());
+        after(async () => await driver.quit());
 
         it('First Selenium script', async function() {
             await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
