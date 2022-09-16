@@ -19,7 +19,7 @@ Selenium uses an HTTP client and associated WebSocket client for multiple purpos
 Currently, Selenium uses [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP requests and responses asynchronously. Additionally also provides WebSocket support. Hence it is a good fit. 
 
 ### Why does Selenium want to move to Java 11+ HTTP Client?
-While AsyncHttpClient provides the required functionality, the open-source project is not been actively maintained since June 2021. It  coincides with the fact that Java 11+ provides a built-in HTTP and WebSocket client. Selenium can leverage it replace AsyncHttpClient.
+While AsyncHttpClient provides the required functionality, the open-source project is not been actively maintained since June 2021. It  coincides with the fact that Java 11+ provides a built-in HTTP and WebSocket client. Selenium can leverage it to replace AsyncHttpClient.
 Currently, Selenium Java supports Java  8. Selenium has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. Aligning it with major releases and accompanied announcements  is crucial to ensure the user experience is intact.
 
 A step towards the move is to leverage the Selenium Java codebase's bifurcation. Selenium Java codebase consists of the Grid code (server) and Selenium client code (client binding). Updating the server code to use Java 11+ HTTP client requires updating the Selenium supported minimum Java version to 11 (which will happen in due time).
