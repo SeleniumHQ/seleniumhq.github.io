@@ -27,14 +27,14 @@ aliases: [
 </dependency>
 ```
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
+对于 Gradle, 在您项目的 `build.gradle` 文件中添加 _selenium-java_ 依赖 :
 
 ```text
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-Gradle 7.0 and above:
+Gradle 7.0 及以上版本:
 
 ```text
 dependencies {
