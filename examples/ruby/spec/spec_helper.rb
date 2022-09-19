@@ -21,12 +21,17 @@ RSpec.configure do |config|
     guards.add_condition(:platform, Selenium::WebDriver::Platform.os)
     results = guards.disposition
     send(*results) if results
-
-    def start_session
-      require 'webdrivers'
-      @driver = Selenium::WebDriver.for :chrome
-    end
   end
 
   config.after { @driver&.quit }
+
+  def start_session
+    require 'webdrivers'
+    @driver = Selenium::WebDriver.for :chrome
+  end
+
+  def start_firefox
+    require 'webdrivers'
+    @driver = Selenium::WebDriver.for :firefox
+  end
 end
