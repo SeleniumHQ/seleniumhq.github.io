@@ -90,6 +90,8 @@ See full example on GitHub.</a>
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
+
 1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp

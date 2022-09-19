@@ -35,9 +35,13 @@ Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with b
 Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
 {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L14-L17" >}}
 {{% /tab %}}
-{{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L18-L23" >}}
-{{< /tab >}}
+{{% tab header="CSharp" %}}
+Note that the .NET [Driver Manager]({{< ref "../getting_started/install_drivers#1-driver-management-software" >}}) 
+does not support Internet Explorer, so the location must be in a 
+[directory on PATH]({{< ref "../getting_started/install_drivers#2-the-path-environment-variable" >}}), 
+or specified explicitly as in this example.
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L24-L32" >}}
+{{% /tab %}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L10" >}}
 {{< /tab >}}

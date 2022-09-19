@@ -1,8 +1,8 @@
+using System;
+using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.IE;
 using SeleniumDocs.TestSupport;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.Browsers
 {
@@ -10,17 +10,26 @@ namespace SeleniumDocs.Browsers
     [EnabledOnOs("WINDOWS")]
     public class InternetExplorerTest
     {
+        [TestInitialize]
+        public void ReferenceHardCodedDriver()
+        {
+            var hardCodedPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../");
+            var path = Path.GetFullPath(hardCodedPath);
+            Environment.SetEnvironmentVariable("EDGE_DRIVER_PATH", path);
+        }
+
         [TestMethod]
         public void BasicOptions()
         {
-            new DriverManager().SetUpDriver(new InternetExplorerConfig());
-
+            var driverPath = Environment.GetEnvironmentVariable("EDGE_DRIVER_PATH");
+            var service = InternetExplorerDriverService.CreateDefaultService(driverPath);
             var options = new InternetExplorerOptions
             {
+                IgnoreZoomLevel = true,
                 AttachToEdgeChrome = true,
-                EdgeExecutablePath = System.Environment.GetEnvironmentVariable("EDGE_PATH")
+                EdgeExecutablePath = Environment.GetEnvironmentVariable("EDGE_PATH")
             };
-            var driver = new InternetExplorerDriver(options);
+            var driver = new InternetExplorerDriver(service, options);
 
             driver.Quit();
         }
