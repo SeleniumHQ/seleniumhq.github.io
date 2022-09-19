@@ -20,40 +20,26 @@ Capabilities unique to Chrome can be found at Google's page for [Capabilities & 
 
 Starting a Chrome session with basic defined options looks like this:
 
-{{< tabpane langEqualsHeader=true code=false >}}
-  {{< tab header="Java" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L27-L30" >}}
-  ChromeOptions options = new ChromeOptions();
-  driver = new ChromeDriver(options);
-  
-  driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L10-L13" >}}
-  options = ChromeOptions()
-  driver = webdriver.Chrome(options=options)
-
-  driver.quit()
-  {{< /tab >}}
-  {{< tab header="CSharp" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L17-L20" >}}
-  var options = new ChromeOptions();
-  var driver = new ChromeDriver(options);
-
-  driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L8-L11" >}}
-  options = Selenium::WebDriver::Options.chrome
-  driver = Selenium::WebDriver.for :chrome, options: options
-
-  driver.quit
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js">}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
-  val options = ChromeOptions()
-  val driver = ChromeDriver(options)
-
-  driver.quit()
-  {{< /tab >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L25-L26" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L8-L10" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L17" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 Here are a few common use cases with different capabilities:
