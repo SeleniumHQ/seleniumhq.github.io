@@ -1,0 +1,59 @@
+name: Run Ruby examples
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '55 22 * * *'
+  pull_request:
+    branches:
+      - trunk
+    paths:
+      - 'examples/ruby/**'
+  push:
+    branches:
+      - trunk
+    paths:
+      - 'examples/ruby/**'
+
+env:
+  DISPLAY: :99
+  GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+  GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+  EDGE_PATH: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+
+jobs:
+  test_examples:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v2
+    - name: Start Xvfb
+      if: matrix.os == 'ubuntu-latest'
+      run: Xvfb :99 &
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        bundler-cache: true
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@latest
+    - name: Install Edge
+      uses: browser-actions/setup-edge@latest
+    - name: Install Firefox
+      uses: abhi1693/setup-browser@v0.3.4
+      with:
+        browser: firefox
+        version: latest
+    - name: Run tests
+      uses: nick-invision/retry@v2.7.1
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/ruby
+          bundle install
+          bundle exec rspec
