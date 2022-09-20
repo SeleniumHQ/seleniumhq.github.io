@@ -3,7 +3,7 @@ title: "Working with windows and tabs"
 linkTitle: "Windows"
 weight: 8
 aliases: [
-"/documentation/pt-br/webdriver/browser/windows",
+"/pt-br/documentation/webdriver/browser/windows/"
 ]
 ---
 

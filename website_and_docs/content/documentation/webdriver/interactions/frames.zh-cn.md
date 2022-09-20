@@ -3,7 +3,7 @@ title: "与iFrames和frames一起工作"
 linkTitle: "Frames"
 weight: 6
 aliases: [
-"/documentation/zh-cn/webdriver/browser/frames",
+"/zh-cn/documentation/webdriver/browser/frames/"
 ]
 ---
 

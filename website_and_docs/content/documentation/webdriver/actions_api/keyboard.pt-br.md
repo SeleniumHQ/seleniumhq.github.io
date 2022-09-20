@@ -5,8 +5,8 @@ weight: 2
 description: >
   A representation of any key input device for interacting with a web page.
 aliases: [
-"/documentation/en/webdriver/keyboard/",
-"/documentation/webdriver/keyboard/"
+"/documentation/pt-br/webdriver/keyboard/",
+"/pt-br/documentation/webdriver/keyboard/"
 ]
 ---
 

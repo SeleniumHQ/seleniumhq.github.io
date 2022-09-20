@@ -5,7 +5,7 @@ weight: 6
 description: >-
     These are capabilities and features specific to Mozilla Firefox browsers.
 aliases: [
-"/documentation/ja/capabilities/firefox"
+"/ja/documentation/capabilities/firefox"
 ]
 ---
 

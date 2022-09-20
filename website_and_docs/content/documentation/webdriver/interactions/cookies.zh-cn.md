@@ -3,9 +3,9 @@ title: "同cookies一起工作"
 linkTitle: "Cookies"
 weight: 4
 aliases: [
-"/documentation/zh-cn/webdriver/browser/cookies",
 "/documentation/zh-cn/support_packages/working_with_cookies/",
-"/zh-cn/documentation/support_packages/working_with_cookies/"
+"/zh-cn/documentation/support_packages/working_with_cookies/",
+"/zh-cn/documentation/webdriver/browser/cookies/"
 ]
 ---
  

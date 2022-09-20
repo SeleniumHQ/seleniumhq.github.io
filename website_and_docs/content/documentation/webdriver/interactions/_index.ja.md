@@ -3,9 +3,9 @@ title: "Browser interactions"
 linkTitle: "Interactions"
 weight: 10
 aliases: [
-"/documentation/ja/webdriver/browser/",
 "/documentation/ja/webdriver/browser_manipulation/",
-"/ja/documentation/webdriver/browser_manipulation/"
+"/ja/documentation/webdriver/browser_manipulation/",
+"ja/documentation/webdriver/browser/"
 ]
 ---
 

@@ -5,7 +5,7 @@ weight: 10
 description: >-
     These are capabilities and features specific to Apple Safari browsers.
 aliases: [
-"/documentation/ja/capabilities/safari"
+"/ja/documentation/capabilities/safari"
 ]
 ---
 

@@ -5,7 +5,6 @@ weight: 2
 description: >-
   これらのCapabilityはすべてのブラウザで共通です。
 aliases: [
-"/documentation/ja/capabilitis/shared/",
 "/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
 "/ja/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/ja/webdriver/http_proxies/",
@@ -13,7 +12,8 @@ aliases: [
 "/ja/documentation/webdriver/capabilities/http_proxies/",
 "/documentation/ja/webdriver/page_loading_strategy/",
 "/ja/documentation/webdriver/page_loading_strategy/",
-"/ja/documentation/webdriver/capabilities/page_loading_strategy/"
+"/ja/documentation/webdriver/capabilities/page_loading_strategy/",
+"/ja/documentation/capabilitis/shared/",
 ]
 ---
 
