@@ -45,6 +45,7 @@ o driver correto para o seu navegador de internet, existem diversas bibliotecas 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
 
 1. Importe o [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java

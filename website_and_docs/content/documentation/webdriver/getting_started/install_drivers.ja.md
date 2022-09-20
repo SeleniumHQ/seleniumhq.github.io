@@ -44,6 +44,7 @@ Note: The Opera driver no longer works with the latest functionality of Selenium
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
 
 1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java

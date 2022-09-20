@@ -19,43 +19,27 @@ Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOption
 
 Starting a Firefox session with basic defined options looks like this:
 
-{{< tabpane langEqualsHeader=true code=false >}}
-  {{< tab header="Java" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L43-L46">}}
-  FirefoxOptions options = new FirefoxOptions();
-  driver = new FirefoxDriver(options);
-
-  driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L26-L29" >}}
-  options = FirefoxOptions()
-  driver = webdriver.Firefox(options=options)
-
-  driver.quit()
-  {{< /tab >}}
-  {{< tab header="CSharp" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L36-L39" >}}
-  var options = new FirefoxOptions();
-  var driver = new FirefoxDriver(options);
-  
-  driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" code=true github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L26-L29" >}}
-  options = Selenium::WebDriver::Options.firefox
-  driver = Selenium::WebDriver.for :firefox, options: options
-
-  driver.quit
-  {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js">}}
-  {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
-  val options = FirefoxOptions()
-  val driver = FirefoxDriver(options)
-  
-  driver.quit()
-  {{< /tab >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L25-L26" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L8-L10" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L16-L17" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L8-L9" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
-
-Here are a few common use cases with different capabilities:
 
 ### Arguments
 

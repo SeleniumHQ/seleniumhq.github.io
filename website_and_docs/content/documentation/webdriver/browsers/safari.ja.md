@@ -24,48 +24,30 @@ Capabilities unique to Safari can be found at Apple's page [About WebDriver for 
 
 Starting a Safari session with basic defined options looks like this:
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/OpenBrowserTest.java#L90-L94">}}
-  SafariOptions options = new SafariOptions();
-  driver = new SafariDriver(options);
-  
-  driver.quit();
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#21-L22" >}}
 {{< /tab >}}
-  {{< tab header="Python" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_open_browser.py#L61-L63" >}}
-  driver = webdriver.Safari()
-
-  driver.quit()
-  {{< /tab >}}
-  {{< tab header="CSharp" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/OpenBrowserTest.cs#L83-L86" >}}
-  var options = new SafariOptions();
-  var driver = new SafariDriver(options);
-
-  driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" github="SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/open_browser_spec.rb#L65-L68" >}}
-  options = Selenium::WebDriver::Options.safari
-  driver = Selenium::WebDriver.for :safari, options: options
-
-  driver.quit
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  const { Builder } = require("selenium-webdriver");
-  const safari = require('selenium-webdriver/safari');
-
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/SafariTest.cs#L14-L15" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L9" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
   let options = new safari.Options();
   let driver = await new Builder()
     .forBrowser('safari')
     .setSafariOptions(options)
     .build();
-
-  await driver.quit();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
   val options = SafariOptions()
   val driver = SafariDriver(options)
-
-  driver.quit()
-  {{< /tab >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ### Mobile

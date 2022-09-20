@@ -1,47 +1,47 @@
 ---
-title: "Driver Sessions"
-linkTitle: "Drivers"
+title: "驱动会话"
+linkTitle: "驱动"
 weight: 3
 ---
 
-Starting and stopping a session is for opening and closing a browser.
+启动和停止会话, 用于打开和关闭浏览器.
 
-## Creating Sessions
+## 创建会话
 
-Creating a new session corresponds with the W3C command for [New session](https://w3c.github.io/webdriver/#new-session)
+创建会话对应于W3C的命令 [新建会话](https://w3c.github.io/webdriver/#new-session) 
 
-The session is created automatically by initializing a new Driver class object.
+会话是通过初始化新的驱动类对象自动创建的.
 
-Each language allows a session to be created with arguments from one of these classes (or equivalent):
+每种语言都允许使用来自这些类 (或等效类) 之一的参数创建会话:
 
-* [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but this is required for remote
-* Some form of [CommandExecutor]({{< ref "executors.md" >}}) (the implementation varies between languages)
-* [Listeners]({{< ref "listeners.md" >}})
+* [选项]({{< ref "options.md" >}}) 描述您想要的会话类型; 默认值为local，但是对于remote则是必须设置的
+* 各种形式的 [命令执行器]({{< ref "executors.md" >}}) (实现因语言而异)
+* [监听器]({{< ref "listeners.md" >}})
 
-### Local Driver
+### 本地驱动
 
-The primary unique argument for starting a local driver includes information about starting the required driver service
-on the local machine.
+启动本地驱动的首要唯一参数
+包括在本地计算机上有关启动所需驱动服务的信息.
 
-* [Service]({{< ref "service.md" >}}) object applies only to local drivers and provides information about the browser driver
+* [服务]({{< ref "service.md" >}}) 对象仅适用于本地驱动，并提供有关浏览器驱动的信息
 
 {{< alert-code >}}
-Show Starting Local driver with multiple arguments.
+显示具有多个参数的启动本地驱动方式.
 {{< /alert-code >}}
 
-### Remote Driver
+### 远程驱动
 
-The primary unique argument for starting a remote driver includes information about where to execute the code.
-Read the details in the [Remote Driver Section]({{< ref "remote_webdriver.md" >}})
+用于启动远程驱动的首要唯一参数包括有关在何处执行代码的信息.
+请浏览 [远程驱动章节]({{< ref "remote_webdriver.md" >}})中的详细信息
 
 
-## Quitting Sessions
+## 退出会话
 
-Quitting a session corresponds to W3C command for [Deleting a Session](https://w3c.github.io/webdriver/#delete-session).
+退出会话对应于W3C的命令 [删除会话](https://w3c.github.io/webdriver/#delete-session).
 
-Important note: the `quit` method is different from the `close` method, 
-and it is recommended to always use `quit` to end the session
+重要提示: `quit` 方法与 `close` 方法不同,
+建议始终使用 `quit` 来结束会话
 
 {{< alert-code >}}
-Show quitting a session.
+显示退出会话.
 {{< /alert-code >}}
