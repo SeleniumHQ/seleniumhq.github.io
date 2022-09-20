@@ -19,7 +19,7 @@ Selenium所做的一切,
 
 ### 1. 使用驱动实例开启会话
 
-For more details on starting a session read our documentation on [driver sessions]({{< ref "../drivers/" >}})
+关于如何启动会话，请浏览我们的文档 [驱动会话]({{< ref "../drivers/" >}})
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
