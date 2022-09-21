@@ -4,7 +4,7 @@ linkTitle: "Navigation"
 weight: 1
 requiresTranslation: true
 aliases: [
-"/documentation/en/webdriver/browser/navigation",
+"/documentation/webdriver/browser/navigation",
 ]
 ---
 

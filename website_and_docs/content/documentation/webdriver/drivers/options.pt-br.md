@@ -6,7 +6,6 @@ needsTranslation: true
 description: >-
   These capabilities are shared by all browsers.
 aliases: [
-"/documentation/pt-br/capabilitis/shared/",
 "/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
 "/pt-br/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/pt-br/webdriver/http_proxies/",
@@ -14,7 +13,8 @@ aliases: [
 "/pt-br/documentation/webdriver/capabilities/http_proxies/",
 "/documentation/pt-br/webdriver/page_loading_strategy/",
 "/pt-br/documentation/webdriver/page_loading_strategy/",
-"/pt-br/documentation/webdriver/capabilities/page_loading_strategy/"
+"/pt-br/documentation/webdriver/capabilities/page_loading_strategy/",
+"/pt-br/documentation/capabilitis/shared/",
 ]
 ---
 

@@ -5,7 +5,6 @@ weight: 2
 description: >-
   These capabilities are shared by all browsers.
 aliases: [
-"/documentation/en/capabilitis/shared/",
 "/documentation/en/driver_idiosyncrasies/shared_capabilities/",
 "/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/en/webdriver/http_proxies/",
@@ -13,7 +12,8 @@ aliases: [
 "/documentation/webdriver/capabilities/http_proxies/",
 "/documentation/en/webdriver/page_loading_strategy/",
 "/documentation/webdriver/page_loading_strategy/",
-"/documentation/webdriver/capabilities/page_loading_strategy/"
+"/documentation/webdriver/capabilities/page_loading_strategy/",
+"/documentation/capabilitis/shared/",
 ]
 ---
 

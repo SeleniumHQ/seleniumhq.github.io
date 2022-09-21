@@ -5,7 +5,7 @@ weight: 8
 description: >-
     These are capabilities and features specific to Microsoft Internet Explorer browsers.
 aliases: [
-"/documentation/ja/capabilities/internet_explorer"
+"/ja/documentation/capabilities/internet_explorer"
 ]
 ---
 

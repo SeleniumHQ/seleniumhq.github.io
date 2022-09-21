@@ -5,7 +5,7 @@ weight: 16
 description: >
     A representation of the Web Authenticator model.
 aliases: [
-"/documentation/pt-br/virtual_authenticator/"
+"/pt-br/documentation/webdriver/virtual_authenticator/"
 ]
 ---
 

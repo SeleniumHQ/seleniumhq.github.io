@@ -6,8 +6,8 @@ needsTranslation: true
 description: >
   A representation of any pointer device for interacting with a web page.
 aliases: [
-"/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/",
-"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
+"/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/ja/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 

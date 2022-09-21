@@ -5,7 +5,6 @@ weight: 2
 description: >-
   这些capabilities用于所有浏览器.
 aliases: [
-"/documentation/zh-cn/capabilitis/shared/",
 "/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/",
 "/zh-cn/documentation/webdriver/capabilities/shared_capabilities/",
 "/documentation/zh-cn/webdriver/http_proxies/",
@@ -13,7 +12,8 @@ aliases: [
 "/zh-cn/documentation/webdriver/capabilities/http_proxies/",
 "/documentation/zh-cn/webdriver/page_loading_strategy/",
 "/zh-cn/documentation/webdriver/page_loading_strategy/",
-"/zh-cn/documentation/webdriver/capabilities/page_loading_strategy/"
+"/zh-cn/documentation/webdriver/capabilities/page_loading_strategy/",
+"/zh-cn/documentation/capabilitis/shared/",
 ]
 ---
 

@@ -3,9 +3,9 @@ title: "Alertas, prompts e confirmações JavaScript"
 linkTitle: "Alertas, prompts e confirmações JavaScript"
 weight: 2
 aliases: [
-"/documentation/pt-br/webdriver/browser/alerts",
 "/documentation/pt-br/webdriver/js_alerts_prompts_and_confirmations/",
-"/pt-br/documentation/webdriver/js_alerts_prompts_and_confirmations/"
+"/pt-br/documentation/webdriver/js_alerts_prompts_and_confirmations/",
+"/pt-br/documentation/webdriver/browser/alerts/"
 ]
 ---
 

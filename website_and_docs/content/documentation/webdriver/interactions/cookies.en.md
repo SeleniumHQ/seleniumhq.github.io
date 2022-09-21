@@ -3,9 +3,9 @@ title: "Working with cookies"
 linkTitle: "Cookies"
 weight: 4
 aliases: [
-"/documentation/en/webdriver/browser/cookies",
 "/documentation/en/support_packages/working_with_cookies/",
-"/documentation/support_packages/working_with_cookies/"
+"/documentation/support_packages/working_with_cookies/",
+"/documentation/webdriver/browser/cookies"
 ]
 ---
 

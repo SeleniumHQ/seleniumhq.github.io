@@ -5,7 +5,7 @@ weight: 4
 description: >-
     These are capabilities and features specific to Google Chrome browsers.
 aliases: [
-"/documentation/en/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 

@@ -3,7 +3,7 @@ title: "Working with iFrames and frames"
 linkTitle: "Frames"
 weight: 6
 aliases: [
-"/documentation/pt-br/webdriver/browser/frames",
+"/pt-br/documentation/webdriver/browser/frames/"
 ]
 ---
 

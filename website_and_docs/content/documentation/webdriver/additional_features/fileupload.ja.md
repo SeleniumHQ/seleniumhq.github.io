@@ -2,10 +2,6 @@
 title: "File Upload"
 linkTitle: "File Upload"
 weight: 1
-aliases: [
-"/documentation/en/support_packages/file_upload/",
-"/documentation/support_packages/file_upload/"
-]
 ---
 
 
