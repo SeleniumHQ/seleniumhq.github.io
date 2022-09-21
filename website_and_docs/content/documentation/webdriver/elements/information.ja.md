@@ -44,7 +44,7 @@ is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_di
 driver.Navigate().GoToUrl("https://google.com");
 
 // Get bool value for is element displayed
-bool displayedLogo = driver.FindElement(By.CssSelector("img[alt='Google']").Displayed;
+bool displayedLogo = driver.FindElement(By.CssSelector("img[alt='Google']")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Help us with a PR for code sample

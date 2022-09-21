@@ -2,10 +2,6 @@
 title: "文件上传"
 linkTitle: "文件上传"
 weight: 1
-aliases: [
-"/documentation/en/support_packages/file_upload/",
-"/documentation/support_packages/file_upload/"
-]
 ---
 
 当input元素为文件类型时,

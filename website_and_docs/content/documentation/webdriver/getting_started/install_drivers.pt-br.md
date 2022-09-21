@@ -13,7 +13,7 @@ aliases: [
 ---
 
 Através do WebDriver, o Selenium suporta todos os principais navegadores do mercado
-como Chrome/Chromium, Firefox, Internet Explorer, Edge, Opera e Safari.
+como Chrome/Chromium, Firefox, Internet Explorer, Edge e Safari.
 Sempre que possível, o WebDriver conduz o navegador
 usando o suporte integrado do navegador para automação.
 
@@ -22,7 +22,7 @@ desenvolvedores dos navegadores, elas não estão incluídas na distribuição p
 Esta seção explica os requisitos básicos para você começar a usar os diferentes navegadores.
 
 Leia mais sobre opções avançadas para iniciar um driver
- na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
+ na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers/" >}}).
 
 ## Consulta rápida
 
@@ -34,8 +34,7 @@ Leia mais sobre opções avançadas para iniciar um driver
 | Internet Explorer | Windows | Projeto Selenium | [Downloads](/downloads) | [Problemas](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra e superiores | Apple | Integrado no Sistema  | [Problemas](//bugreport.apple.com/logon) |
 
-Observação: O driver Opera não oferece suporte à sintaxe w3c, portanto, recomendamos o uso do chromedriver para trabalhar com o Opera.
-Veja o exemplo de código para [abrir um navegador Opera]({{< ref "open_browser.md#opera" >}}).
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## Três maneiras diferentes de usar os drivers
 
@@ -44,8 +43,9 @@ Veja o exemplo de código para [abrir um navegador Opera]({{< ref "open_browser.
 A maioria das máquinas atualiza automaticamente o navegador, mas não o driver. Para certificar de obter 
 o driver correto para o seu navegador de internet, existem diversas bibliotecas de terceiros para auxiliá-lo.
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
 
 1. Importe o [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -65,8 +65,8 @@ ChromeDriver driver = new ChromeDriver();
 Veja o exemplo completo no GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 
 1. Importe o [Gerenciador de WebDriver para Python](https://github.com/SergeyPirogov/webdriver_manager)
 
@@ -90,8 +90,8 @@ driver = webdriver.Chrome(service=service)
 Veja o exemplo completo no GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 1. Importe o [Pacote Gerenciador do WebDriver](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
@@ -116,8 +116,8 @@ var driver = new ChromeDriver()
 Veja o exemplo completo no GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 1. Add [webdrivers gem](https://github.com/titusfortner/webdrivers) to Gemfile:
 
 ```rb
@@ -139,11 +139,11 @@ driver = Selenium::WebDriver.for :chrome
 Veja o exemplo completo no GitHub.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 *Não há um gerenciador de driver recomendado para o JavaScript no momento*
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 
 1. Importe o [Gerenciador de WebDriver](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -157,7 +157,7 @@ fun chrome(): WebDriver {
 }
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### 2. A variável de ambiente  `PATH`
@@ -170,8 +170,8 @@ Você pode colocar os drivers em um diretório que já está listado em
 `PATH`, ou você pode colocá-los em um diretório
 e acrescenta-lo ao `PATH`.
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Bash" >}}
+{{< tabpane code=false persistLang=false >}}
+{{% tab header="Bash" %}}
 Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell
 echo $PATH
@@ -186,8 +186,8 @@ Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Zsh" >}}
+{{% /tab %}}
+{{% tab header="Zsh" %}}
 Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell
 echo $PATH
@@ -202,8 +202,8 @@ Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Windows" >}}
+{{% /tab %}}
+{{% tab header="Windows" %}}
 Para ver quais diretórios já estão no `PATH`, abra o Prompt de Comando e execute:
 ```shell
 echo %PATH%
@@ -217,7 +217,7 @@ Você pode testar se foi adicionado corretamente iniciando o driver:
 ```shell
 chromedriver.exe
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 Se o seu `PATH` estiver configurado corretamente como acima,
@@ -290,10 +290,5 @@ fun main(args: Array<String>) {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Configurações avançadas
-
-Mais informações a respeito de como você pode alterar o comportamento do driver podem ser encontradas na página
-[Configurando Parâmetros do driver]({{< ref "/documentation/webdriver/drivers.md" >}}).
-
-## Próximo passo
-[Abrindo e fechando um navegador de internet]({{< ref "open_browser.md" >}})
+## Próximo Passo
+[Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})

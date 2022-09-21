@@ -11,7 +11,7 @@ RSpec.describe 'Install Drivers' do
     driver.quit
   end
 
-  it 'edge session', exclude: {platform: :linux} do
+  it 'edge session' do
     require 'webdrivers'
 
     driver = Selenium::WebDriver.for :edge

@@ -13,7 +13,7 @@ aliases: [
 
 通过WebDriver, 
 Selenium支持市场上所有主要浏览器, 
-如Chrome、Firefox、Internet Explorer、Edge、Opera和Safari. 
+如Chrome、Firefox、Internet Explorer、Edge和Safari. 
 WebDriver尽量使用浏览器内置的自动化支持
 来驱动浏览器.
 
@@ -22,7 +22,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 因此标准Selenium发行版中不包括这些驱动程序. 
 本节介绍了使用不同浏览器的基本要求.
 
-在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers.md" >}}) 文档中
+在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
 ## 快速参考
@@ -35,9 +35,7 @@ WebDriver尽量使用浏览器内置的自动化支持
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
 | Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
 
-注意: Opera驱动程序不支持w3c语法, 
-因此我们建议使用chromedriver来处理Opera. 
-请参见[打开Opera浏览器]({{< ref "open_browser.md#opera" >}})的代码示例
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## 使用驱动的三种方式
 
@@ -48,8 +46,9 @@ WebDriver尽量使用浏览器内置的自动化支持
 为了确保为浏览器提供正确的驱动程序, 
 这里有许多第三方库可为您提供帮助.
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
 
 1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -71,8 +70,8 @@ ChromeDriver driver = new ChromeDriver();
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 
 1. 导入 [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
 
@@ -96,8 +95,8 @@ driver = webdriver.Chrome(service=service)
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 1. 导入 [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
 
 ```csharp
@@ -122,8 +121,8 @@ var driver = new ChromeDriver()
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 1. 增加 [webdrivers gem](https://github.com/titusfortner/webdrivers) 到 Gemfile:
 
 ```rb
@@ -145,11 +144,11 @@ driver = Selenium::WebDriver.for :chrome
 查看GitHub上的完整示例.</a>
 </div>
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
  *There is not a recommended driver manager for JavaScript at this time*
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 
 1. 导入 [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -163,7 +162,7 @@ fun chrome(): WebDriver {
 }
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### 2. `PATH` 环境变量
@@ -181,8 +180,8 @@ fun chrome(): WebDriver {
 * 要查看`PATH`上已有哪些目录, 
 请打开命令提示符/终端并键入:  
 
-{{< tabpane disableCodeBlock=true >}}
-{{< tab header="Bash" >}}
+{{< tabpane code=false persistLang=false >}}
+{{% tab header="Bash" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行
 ```shell
@@ -198,8 +197,8 @@ source ~/.bash_profile
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Zsh" >}}
+{{% /tab %}}
+{{% tab header="Zsh" %}}
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行:
 ```shell
 echo $PATH
@@ -214,8 +213,8 @@ source ~/.zshenv
 ```shell
 chromedriver
 ```
-{{< /tab >}}
-{{< tab header="Windows" >}}
+{{% /tab %}}
+{{% tab header="Windows" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开命令提示符并执行:
 ```shell
@@ -230,7 +229,7 @@ setx PATH "%PATH%;C:\WebDriver\bin"
 ```shell
 chromedriver.exe
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 如果`PATH`配置正确, 
@@ -307,10 +306,5 @@ fun main(args: Array<String>) {
 {{< /tabpane >}}
 
 
-## 高级配置
-
-有关如何更改驱动程序行为的更多信息, 
-请参见[配置驱动程序参数]({{< ref "/documentation/webdriver/drivers.md" >}}) 页面
-
 ## 下一步
-[打开和关闭浏览器]({{< ref "open_browser.md" >}})
+[创建你的第一个Selenium脚本]({{< ref "first_script.md" >}})

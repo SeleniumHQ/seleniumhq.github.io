@@ -11,17 +11,17 @@ para suportar casos de uso do mundo real. Se houver funcionalidades adicionais q
 
 Alguns aplicativos fazem o uso da autenticação do navegador para proteger suas páginas. Com o Selenium, você pode automatizar a entrada de credenciais básicas de autenticação sempre que for necessário.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true code=false >}}
+{{< tab header="Java" code=true >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
 ((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
 driver.get("https://your-domain.com/login");
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" code=true >}}
 NetworkAuthenticationHandler handler = new NetworkAuthenticationHandler()
 {
     UriMatcher = (d) => d.Host.Contains("your-domain.com"),
@@ -32,7 +32,7 @@ INetwork networkInterceptor = driver.Manage().Network;
 networkInterceptor.AddAuthenticationHandler(handler);
 await networkInterceptor.StartMonitoring();
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -45,7 +45,7 @@ ensure
   driver.quit
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" code=true >}}
 const {Builder} = require('selenium-webdriver');
 
 (async function example() {
@@ -63,7 +63,7 @@ const {Builder} = require('selenium-webdriver');
   }
 }())
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" code=true >}}
 val uriPredicate = Predicate { uri: URI ->
         uri.host.contains("your-domain.com")
     }
@@ -76,8 +76,8 @@ driver.get("https://your-domain.com/login")
 
 Mutation Observation(Observação de Mutação) é a capacidade de capturar eventos via WebDriver BiDi quando há mutações DOM em um elemento específico no DOM.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true code=false >}}
+  {{< tab header="Java" code=true >}}
 ChromeDriver driver = new ChromeDriver();
 
 AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
@@ -98,7 +98,7 @@ assertThat(seen.get().getCurrentValue(), is("gouda"));
 
 driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{< tab header="Python" code=true >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -115,7 +115,7 @@ assert event["current_value"] == ""
 assert event["old_value"] == "display:none;"
 
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 List<DomMutationData> attributeValueChanges = new List<DomMutationData>();
 DefaultWait<List<DomMutationData>> wait = new DefaultWait<List<DomMutationData>>(attributeValueChanges);
 wait.Timeout = TimeSpan.FromSeconds(3);
@@ -143,7 +143,7 @@ foreach(var record in attributeValueChanges)
 
 await monitor.DisableDomMutationMonitoring();
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
@@ -160,7 +160,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" code=true >}}
 const {Builder, until} = require('selenium-webdriver');
 const assert = require("assert");
 
@@ -188,7 +188,7 @@ const assert = require("assert");
 }())
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -431,8 +431,8 @@ fun kotlinJsErrorListener() {
 Se você quer capturar eventos de rede que chegam ao navegador e deseja manipulá-los, você pode fazer
 com os exemplos a seguir.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true code=false >}}
+{{< tab header="Java" code=true >}}
     import org.openqa.selenium.WebDriver;
     import org.openqa.selenium.devtools.HasDevTools;
     import org.openqa.selenium.devtools.NetworkInterceptor;
@@ -456,12 +456,12 @@ com os exemplos a seguir.
     assertThat(source).contains("delicious cheese!");
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Atualmente indisponível no python devido à incapacidade de misturar certos comandos async(assíncronos) e de sync(sincronização)
+Atualmente indisponível no python devido à incapacidade de misturar certos comandos async(assíncronos) e de sync(sincronização)
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-# Por favor, crie um PR para adicionar a amostra de código
+{{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -478,7 +478,7 @@ driver.find_element(tag_name: 'button').click
 expect(driver.find_element(id: 'result').text).to eq('two')
 {{< /tab >}}
 
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" code=true >}}
 const connection = await driver.createCDPConnection('page')
 let url = fileServer.whereIs("/cheese")
 let httpResponse = new HttpResponse(url)
@@ -490,7 +490,7 @@ await driver.onIntercept(connection, httpResponse, async function () {
 })
 driver.get(url)
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" code=true >}}
 val driver = ChromeDriver()
 val interceptor = new NetworkInterceptor(
       driver,

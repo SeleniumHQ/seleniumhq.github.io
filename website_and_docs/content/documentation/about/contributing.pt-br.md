@@ -67,7 +67,7 @@ e faça checkout na sua cópia localmente.
 
 Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
 para criar e gerar o website. Você vai necessitar de usar a versão "extended"
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.94 ou superior.
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.101.0 ou superior.
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 
@@ -144,8 +144,8 @@ executam `git shortlog` ou` git log --oneline`.
 Use `git rebase` (não `git merge`) para sincronizar seu trabalho de tempos em tempos.
 
 ```shell
-% git fetch upstream
-% git rebase upstream/trunk
+% git fetch origin
+% git rebase origin/trunk
 ```
 
 ### Passo 6: Teste

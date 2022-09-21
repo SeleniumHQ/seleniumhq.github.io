@@ -12,7 +12,7 @@ aliases: [
 ]
 ---
 
-Seleniumは、WebDriverを介して、Chrome/Chromium、Firefox、Internet Explorer、Edge、Opera、Safari
+Seleniumは、WebDriverを介して、Chrome/Chromium、Firefox、Internet Explorer、Edge、Safari
 などの市場にあるすべての主要なブラウザーをサポートします。 
 可能な場合、WebDriverは、ブラウザーに組み込まれている自動化のサポートを使用してブラウザーを動かします。
 
@@ -21,7 +21,7 @@ Internet Explorerを除くすべてのドライバーの実装は、ブラウザ
 この章では、さまざまなブラウザを使い始めるための基本的な要件について説明します。
 
 Read about more advanced options for starting a driver
-in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}}) documentation.
+in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
 ## クイックリファレンス
 
@@ -33,8 +33,7 @@ in our [driver configuration]({{< ref "/documentation/webdriver/drivers.md" >}})
 | Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
 
-Note: The Opera driver does not support w3c syntax, so we recommend using chromedriver to work with Opera.
-See the code example for [opening an Opera browser]({{< ref "open_browser.md#opera" >}})
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## ドライバーを使用する3つの方法
 
@@ -43,79 +42,121 @@ See the code example for [opening an Opera browser]({{< ref "open_browser.md#ope
 ほとんどのマシンはブラウザを自動的に更新しますが、ドライバは更新しません。
 ブラウザに適切なドライバを確実に入手するために、多くのサードパーティライブラリが役立ちます。
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+**Important:** This package does not currently work for IEDriverServer v4+
 
-// Use WebDriverManager: https://github.com/bonigarcia/webdrivermanager
-
-// Import WebDriver Manager:
+1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
+```java
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-// Call setup() method for the browser driver you want:
+```
+2. Calling `setup()` automatically puts the correct browser driver where the code will see it:
+```java
 WebDriverManager.chromedriver().setup();
-
-// Initialize your driver as you normally would:
+```
+3. Just initialize the driver as you normally would:
+```java 
 ChromeDriver driver = new ChromeDriver();
+```
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+<div class="github">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
+See full example on GitHub.</a>
+</div>
 
-# Use Webdriver Manager for Python: https://github.com/SergeyPirogov/webdriver_manager
+{{% /tab %}}
+{{% tab header="Python" %}}
 
-# Import code:
-from selenium import webdriver
+1. Import [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
+
+```py
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
+```
 
-# Use the `install()` method to set `executabe_path` in a new `Service` instance:
+2. Use `install()` to get the location used by the manager and pass it into service class
+
+```py
 service = Service(executable_path=ChromeDriverManager().install())
+```
 
-# Pass in the `Service` instance with the `service` keyword: 
+3. Use `Service` instance when initializing the driver: 
+```py
 driver = webdriver.Chrome(service=service)
+```
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// Use WebDriver Manager Package: https://github.com/rosolko/WebDriverManager.Net
+<div class="github">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
+See full example on GitHub.</a>
+</div>
 
-// Import the dependencies:
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
+
+```csharp
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
+```
 
-// Use the `SetUpDriver()` which requires a config class:
+2. Use the `SetUpDriver()` which requires a config class:
+
+```csharp
 new DriverManager().SetUpDriver(new ChromeConfig());
+```
 
-// Initialize your driver as you normally would:
+3. Initialize your driver as you normally would:
+
+```csharp
 var driver = new ChromeDriver()
+```
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Use webdrivers gem: https://github.com/titusfortner/webdrivers
+<div class="github">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
+See full example on GitHub.</a>
+</div>
 
-# Add gem to Gemfile:
+{{% /tab %}}
+{{% tab header="Ruby" %}}
+1. Add [webdrivers gem](https://github.com/titusfortner/webdrivers) to Gemfile:
+
+```rb
 gem 'webdrivers', '~> 5.0'
+```
 
-# Require webdrivers in your project:
+2. Require webdrivers in your project:
+```rb
 require 'webdrivers'
+```
 
-# Initialize driver as you normally would:
+3. Initialize driver as you normally would:
+```rb
 driver = Selenium::WebDriver.for :chrome
+```
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-// There is not a recommended driver manager for JavaScript at this time
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-// Use WebDriverManager: https://github.com/bonigarcia/webdrivermanager
+<div class="github">
+    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/install_drivers_spec.rb">
+See full example on GitHub.</a>
+</div>
 
-// Import the library
-import io.github.bonigarcia.wdm.WebDriverManager
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+ *There is not a recommended driver manager for JavaScript at this time*
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 
-// Call the setup method before initializing the driver as you normally would:
+1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
+```java
+import io.github.bonigarcia.wdm.WebDriverManager;
+```
+2. Call the setup method before initializing the driver as you normally would:
+```java
 fun chrome(): WebDriver {
     WebDriverManager.chromedriver().setup()
     return ChromeDriver()
 }
-{{< /tab >}}
+```
+
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### 2. `PATH` 環境変数
@@ -128,33 +169,57 @@ fun chrome(): WebDriver {
 
 * すでに `PATH` にあるディレクトリを確認するには、コマンドプロンプト/ターミナルを開いて次のように入力します。
 
-{{< tabpane  >}}
-{{< tab header="Mac / Linux" >}}
-echo $PATH 
-{{< /tab >}}
-{{< tab header="Windows" >}}
-echo %PATH%
-{{< /tab >}}
-{{< /tabpane >}}
-
-<br />
-* ドライバを配置するディレクトリがまだPATHにない場合は、次のディレクトリを追加する必要があります。
-
-{{< tabpane  >}}
-{{< tab header="Mac / Linux" >}}
-export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
-{{< /tab >}}
-{{< tab header="Windows" >}}
-setx PATH "%PATH%;C:\WebDriver\bin"
-{{< /tab >}}
-{{< /tabpane >}}
-
-<br />
+{{< tabpane code=false persistLang=false >}}
+{{% tab header="Bash" %}}
+To see what directories are already on `PATH`, open a Terminal and execute:
+```shell
+echo $PATH
+```
+If the location to your driver is not already in a directory listed,
+you can add a new directory to PATH:
+```shell
+echo 'export PATH=$PATH:/path/to/driver' >> ~/.bash_profile
+source ~/.bash_profile
+```
 * ドライバを起動することで、正しく追加されているかどうかをテストできます。
+```shell
+chromedriver
+```
+{{% /tab %}}
+{{% tab header="Zsh" %}}
+To see what directories are already on `PATH`, open a Terminal and execute:
+```shell
+echo $PATH
+```
+If the location to your driver is not already in a directory listed,
+you can add a new directory to PATH:
+```shell
+echo 'export PATH=$PATH:/path/to/driver' >> ~/.zshenv
+source ~/.zshenv
+```
+* ドライバを起動することで、正しく追加されているかどうかをテストできます。
+```shell
+chromedriver
+```
+{{% /tab %}}
+{{% tab header="Windows" %}}
+To see what directories are already on `PATH`, open a Command Prompt and execute:
+```shell
+echo %PATH%
+```
+If the location to your driver is not already in a directory listed,
+you can add a new directory to PATH:
+```shell
+setx PATH "%PATH%;C:\WebDriver\bin"
+```
+* ドライバを起動することで、正しく追加されているかどうかをテストできます。
+```shell
+chromedriver.exe
+```
+{{% /tab %}}
+{{< /tabpane >}}
 
- ```shell
-  chromedriver
-  ```
+<br />
 
 * If your `PATH` is configured correctly,
 * `PATH` が正しく構成されている場合、ドライバーの起動に関連する出力が表示されます。
@@ -389,45 +454,6 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Opera
-
-Operaの現在のリリースはChromiumエンジン上に構築されており、
-WebDriverはクローズドソースの [Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases) を介してサポートされるようになりました。
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.opera.OperaDriver;
-
-WebDriver driver = new OperaDriver();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver import Opera
-
-driver = Opera()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Opera;
-
-IWebDriver driver = new OperaDriver();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Not currently implemented
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder} = require("selenium-webdriver");
-
-var driver = new Builder().forBrowser('opera').build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.opera.OperaDriver
-
-val driver: WebDriver = OperaDriver()
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ### Safari
 
 ChromiumおよびFirefoxドライバーとは異なり、safaridriverはオペレーティングシステムとともにインストールされます。 
@@ -473,4 +499,5 @@ val driver: WebDriver = SafariDriver()
   {{< /tab >}}
 {{< /tabpane >}}
 
-iOSでSafariを自動化することを検討している人は、[Appiumプロジェクト](//appium.io/)を検討する必要があります。
+## Next Step
+[Create your first Selenium script]({{< ref "first_script.md" >}})
