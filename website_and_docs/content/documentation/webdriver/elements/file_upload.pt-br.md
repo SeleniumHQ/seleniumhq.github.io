@@ -2,7 +2,11 @@
 title: "File Upload"
 linkTitle: "File Upload"
 weight: 1
+aliases: [
+"/pt-br/documentation/webdriver/additional_features/fileupload/"
+]
 ---
+
 
 The file upload dialog could be handled using Selenium, 
 when the input element is of type file. 
@@ -101,6 +105,7 @@ namespace SeleniumDocumentation.SeleniumPRs
   // Help us by sending a code sample for file upload
 {{< /tab >}}
 {{< /tabpane >}}
+
 
 So the above example code helps to understand 
 how we can upload a file using Selenium. 

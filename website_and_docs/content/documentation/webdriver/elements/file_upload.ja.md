@@ -2,6 +2,9 @@
 title: "File Upload"
 linkTitle: "File Upload"
 weight: 1
+aliases: [
+"/ja/documentation/webdriver/additional_features/fileupload/"
+]
 ---
 
 
@@ -13,7 +16,6 @@ We will require to have a file available with us,
 which we need to upload. 
 The code to upload the file for different programming 
 languages will be as follows - 
-
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

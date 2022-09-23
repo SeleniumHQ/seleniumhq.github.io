@@ -2,6 +2,9 @@
 title: "文件上传"
 linkTitle: "文件上传"
 weight: 1
+aliases: [
+"/zh-cn/documentation/webdriver/additional_features/fileupload/"
+]
 ---
 
 当input元素为文件类型时,
