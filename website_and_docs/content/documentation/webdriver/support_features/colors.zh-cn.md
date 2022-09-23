@@ -1,22 +1,20 @@
 ---
-title: "Trabalhando com cores"
-linkTitle: "Trabalhando com cores"
+title: "同颜色一起工作"
+linkTitle: "颜色"
 weight: 1
 aliases: [
-"/documentation/pt-br/support_packages/working_with_colours/",
-"/pt-br/documentation/support_packages/working_with_colours/"
+"/documentation/zh-cn/support_packages/working_with_colours/",
+"/zh-cn/documentation/support_packages/working_with_colours/",
+"/zh-cn/documentation/webdriver/additional_features/working_with_colours/",
 ]
 ---
+ 
+在测试中, 您偶尔会需要验证某事物的颜色；问题是网络上的颜色定义不是个常量.
+如果有一种简单的方法可以比较颜色的十六进制与RGB呈现, 或者颜色的RGBA与HSLA呈现, 岂不美哉?
 
-Ocasionalmente, você desejará validar a cor de algo como parte de seus testes;
-o problema é que as definições de cores na web não são constantes.
-Não seria bom se houvesse uma maneira fácil de comparar
-uma representação HEX de uma cor com uma representação RGB de uma cor,
-ou uma representação RGBA de uma cor com uma representação HSLA de uma cor?
+不用担心有一个解决方案：_Color_ 类!
 
-Não se preocupe. Existe uma solução: a classe _Color_!
-
-Em primeiro lugar, você precisará importar a classe:
+首先, 您需要导入该类:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -37,10 +35,7 @@ include Selenium::WebDriver::Support
   {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
 {{< /tabpane >}}
 
-Agora você pode começar a criar objetos coloridos.
-Cada objeto de cor precisará ser criado a partir de uma representação de string de
-sua cor.
-As representações de cores com suporte são:
+您现在可以开始创建颜色对象. 每个颜色对象都需要使用您颜色的字符串定义来创建. 支持的颜色定义如下:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -74,7 +69,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -87,8 +82,7 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< /tab >}}
 {{< /tabpane >}}
 
-A classe Color também suporta todas as definições de cores básicas
-especificadas em
+Color类还支持在以下网址中指定的所有基本颜色定义
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< tabpane langEqualsHeader=true >}}
@@ -111,7 +105,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -120,9 +114,7 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< /tab >}}
 {{< /tabpane >}}
 
-Às vezes, os navegadores retornam um valor de cor "transparent"
-se nenhuma cor foi definida em um elemento.
-A classe Color também oferece suporte para isso:
+如果元素上未设置颜色, 则有时浏览器会返回“透明”的颜色值. Color类也支持此功能:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -138,17 +130,14 @@ TRANSPARENT = Color.from_string('transparent')
 TRANSPARENT = Color.from_string('transparent')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
   {{< /tab >}}
 {{< /tabpane >}}
 
-Agora você pode consultar com segurança um elemento
-para obter sua cor / cor de fundo sabendo que
-qualquer resposta será analisada corretamente
-e convertido em um objeto Color válido:
+现在, 您可以安全地查询元素以获取其颜色/背景色, 任何响应都将被正确解析并转换为有效的Color对象:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -170,7 +159,7 @@ login_button_colour = Color.from_string(driver.find_element(id: 'login').css_val
 login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
@@ -179,7 +168,7 @@ val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("log
   {{< /tab >}}
 {{< /tabpane >}}
 
-Você pode então comparar diretamente os objetos coloridos:
+然后, 您可以直接比较颜色对象:
 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -196,15 +185,14 @@ assert login_button_background_colour == HOTPINK
 assert(login_button_background_colour == HOTPINK)
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< /tab >}}
 {{< /tabpane >}}
 
-Ou você pode converter a cor em um dos seguintes formatos
-e realizar uma validação estática:
+或者, 您可以将颜色转换为以下格式之一并执行静态验证:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -226,7 +214,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
@@ -235,4 +223,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-As cores não são mais um problema.
+颜色不再是问题.

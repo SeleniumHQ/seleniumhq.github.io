@@ -1,22 +1,22 @@
 ---
-title: "Working With Colors"
-linkTitle: "Colors"
+title: "色を扱う"
+linkTitle: "色を扱う"
 weight: 1
 aliases: [
-"/documentation/en/support_packages/working_with_colours/",
-"/documentation/support_packages/working_with_colours/"
+"/documentation/ja/support_packages/working_with_colours/",
+"/ja/documentation/support_packages/working_with_colours/",
+"/ja/documentation/webdriver/additional_features/working_with_colours/",
 ]
 ---
 
-You will occasionally want to validate the colour of something as part of your tests;
-the problem is that colour definitions on the web are not constant.
-Would it not be nice if there was an easy way to compare
-a HEX representation of a colour with a RGB representation of a colour,
-or a RGBA representation of a colour with a HSLA representation of a colour?
 
-Worry not. There is a solution: the _Color_ class!
+テストの一部として何かの色を検証したい場合があります。
+問題は、ウェブ上の色の定義が一定ではないことです。
+色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
 
-First of all, you will need to import the class:
+心配しないでください。解決策があります。:  _Color_ クラスです！
+
+まず、クラスをインポートする必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -37,10 +37,9 @@ include Selenium::WebDriver::Support
   {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
 {{< /tabpane >}}
 
-You can now start creating colour objects.
-Every colour object will need to be created from a string representation of
-your colour.
-Supported colour representations are:
+これで、カラーオブジェクトの作成を開始できます。
+すべての色オブジェクトは、色の文字列表現から作成する必要があります。
+サポートされている色表現は、以下のとおりです。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -87,9 +86,7 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< /tab >}}
 {{< /tabpane >}}
 
-The Color class also supports all of the base colour definitions
-specified in
-[http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
+Colorクラスは、 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4) で指定されているすべての基本色定義もサポートしています。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -120,9 +117,8 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< /tab >}}
 {{< /tabpane >}}
 
-Sometimes browsers will return a colour value of "transparent"
-if no colour has been set on an element.
-The Color class also supports this:
+要素に色が設定されていない場合、ブラウザは "透明" の色の値を返すことがあります。
+Colorクラスもこれをサポートしています。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -145,10 +141,7 @@ private val TRANSPARENT = Color.fromString("transparent")
   {{< /tab >}}
 {{< /tabpane >}}
 
-You can now safely query an element
-to get its colour/background colour knowing that
-any response will be correctly parsed
-and converted into a valid Color object:
+レスポンスが正しく解析され、有効なColorオブジェクトに変換されることを認識して、要素を安全にクエリしてその色/背景色を取得できるようになりました。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -179,8 +172,7 @@ val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("log
   {{< /tab >}}
 {{< /tabpane >}}
 
-You can then directly compare colour objects:
-
+そして、色オブジェクトを直接比較できます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -203,8 +195,7 @@ assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< /tab >}}
 {{< /tabpane >}}
 
-Or you can convert the colour into one of the following formats
-and perform a static validation:
+または、色を次の形式のいずれかに変換し、静的に検証することができます。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -235,4 +226,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-Colours are no longer a problem.
+色はもはや問題ではありません。

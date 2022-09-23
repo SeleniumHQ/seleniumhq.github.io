@@ -4,7 +4,8 @@ linkTitle: "ThreadGuard"
 weight: 6
 aliases: [
 "/documentation/ja/support_classes/",
-"/ja/documentation/support_packages/thread_guard/"
+"/ja/documentation/support_packages/thread_guard/",
+"/ja/documentation/webdriver/additional_features/thread_guard/"
 ]
 ---
 
