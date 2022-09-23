@@ -147,7 +147,7 @@ npm install selenium-webdriver
 ## Supported Minimum Version
 
 Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
-Node 10.15.0 is currently the minimum supported version by Selenium.
+Node 14.20.0 is currently the minimum supported version by Selenium.
 View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
 
   {{% /tab %}}
