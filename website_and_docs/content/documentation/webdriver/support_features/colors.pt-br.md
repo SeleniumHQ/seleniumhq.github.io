@@ -1,21 +1,23 @@
 ---
-title: "色を扱う"
-linkTitle: "色を扱う"
+title: "Trabalhando com cores"
+linkTitle: "Trabalhando com cores"
 weight: 1
 aliases: [
-"/documentation/ja/support_packages/working_with_colours/",
-"/ja/documentation/support_packages/working_with_colours/"
+"/documentation/pt-br/support_packages/working_with_colours/",
+"/pt-br/documentation/support_packages/working_with_colours/",
+"/pt-br/documentation/webdriver/additional_features/working_with_colours/",
 ]
 ---
 
+Ocasionalmente, você desejará validar a cor de algo como parte de seus testes;
+o problema é que as definições de cores na web não são constantes.
+Não seria bom se houvesse uma maneira fácil de comparar
+uma representação HEX de uma cor com uma representação RGB de uma cor,
+ou uma representação RGBA de uma cor com uma representação HSLA de uma cor?
 
-テストの一部として何かの色を検証したい場合があります。
-問題は、ウェブ上の色の定義が一定ではないことです。
-色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
+Não se preocupe. Existe uma solução: a classe _Color_!
 
-心配しないでください。解決策があります。:  _Color_ クラスです！
-
-まず、クラスをインポートする必要があります。
+Em primeiro lugar, você precisará importar a classe:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -36,9 +38,10 @@ include Selenium::WebDriver::Support
   {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
 {{< /tabpane >}}
 
-これで、カラーオブジェクトの作成を開始できます。
-すべての色オブジェクトは、色の文字列表現から作成する必要があります。
-サポートされている色表現は、以下のとおりです。
+Agora você pode começar a criar objetos coloridos.
+Cada objeto de cor precisará ser criado a partir de uma representação de string de
+sua cor.
+As representações de cores com suporte são:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -72,7 +75,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -85,7 +88,9 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< /tab >}}
 {{< /tabpane >}}
 
-Colorクラスは、 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4) で指定されているすべての基本色定義もサポートしています。
+A classe Color também suporta todas as definições de cores básicas
+especificadas em
+[http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -107,7 +112,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -116,8 +121,9 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< /tab >}}
 {{< /tabpane >}}
 
-要素に色が設定されていない場合、ブラウザは "透明" の色の値を返すことがあります。
-Colorクラスもこれをサポートしています。
+Às vezes, os navegadores retornam um valor de cor "transparent"
+se nenhuma cor foi definida em um elemento.
+A classe Color também oferece suporte para isso:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -133,14 +139,17 @@ TRANSPARENT = Color.from_string('transparent')
 TRANSPARENT = Color.from_string('transparent')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
   {{< /tab >}}
 {{< /tabpane >}}
 
-レスポンスが正しく解析され、有効なColorオブジェクトに変換されることを認識して、要素を安全にクエリしてその色/背景色を取得できるようになりました。
+Agora você pode consultar com segurança um elemento
+para obter sua cor / cor de fundo sabendo que
+qualquer resposta será analisada corretamente
+e convertido em um objeto Color válido:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -162,7 +171,7 @@ login_button_colour = Color.from_string(driver.find_element(id: 'login').css_val
 login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
@@ -171,7 +180,8 @@ val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("log
   {{< /tab >}}
 {{< /tabpane >}}
 
-そして、色オブジェクトを直接比較できます。
+Você pode então comparar diretamente os objetos coloridos:
+
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -187,14 +197,15 @@ assert login_button_background_colour == HOTPINK
 assert(login_button_background_colour == HOTPINK)
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< /tab >}}
 {{< /tabpane >}}
 
-または、色を次の形式のいずれかに変換し、静的に検証することができます。
+Ou você pode converter a cor em um dos seguintes formatos
+e realizar uma validação estática:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -216,7 +227,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+// Essa funcionalidade não está implementada - Nos ajude enviando um PR implementando essa funcionalidade
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
@@ -225,4 +236,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-色はもはや問題ではありません。
+As cores não são mais um problema.
