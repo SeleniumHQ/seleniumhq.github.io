@@ -255,10 +255,14 @@ Adicione a dependência selenium-java em seu pom.xml:</p><div class=highlight><p
 </span></span><span style=display:flex><span>    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
 </span></span></code></pre></div><p>Gradle 7.0 and above:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>dependencies {
 </span></span><span style=display:flex><span>    implementation group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version: &#39;4.4.0&#39;
-</span></span></code></pre></div></div><div class="tab-body tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><p>A instalação de bibliotecas Selenium para Python pode ser feita usando pip:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
+</span></span></code></pre></div><h2 id=supported-minimum-version>Supported Minimum Version</h2><p>Make sure to use the Java version greater than or equal to the minimum supported version by Selenium.
+Java 8 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported <a href=https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13>here</a>.</p></div><div class="tab-body tab-pane fade" id=tabs-0-1 role=tabpanel aria-labelled-by=tabs-0-1-tab><p>A instalação de bibliotecas Selenium para Python pode ser feita usando pip:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>pip install selenium
 </span></span></code></pre></div><p>Como alternativa, você pode baixar o <a href=https://pypi.org/project/selenium/#files>arquivo de origem do PyPI</a>
 (selenium-x.x.x.tar.gz) e instale-o usando <em>setup.py</em>:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>python setup.py install
-</span></span></code></pre></div></div><div class="tab-body tab-pane fade" id=tabs-0-2 role=tabpanel aria-labelled-by=tabs-0-2-tab><p>A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Using package manager</span>
+</span></span></code></pre></div><h2 id=supported-minimum-version>Supported Minimum Version</h2><p>Make sure to use the Python version greater than or equal to the minimum supported version by Selenium.
+Python 3.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported <a href=https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41>here</a>.</p></div><div class="tab-body tab-pane fade" id=tabs-0-2 role=tabpanel aria-labelled-by=tabs-0-2-tab><p>A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#8f5902;font-style:italic># Using package manager</span>
 </span></span><span style=display:flex><span>Install-Package Selenium.WebDriver
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic># or using .Net CLI</span>
 </span></span><span style=display:flex><span>dotnet add package Selenium.WebDriver
@@ -275,8 +279,12 @@ Se o arquivo <code>nuget.config</code> estiver vazio, ou não configurado corret
 </code></pre><p>Para mais informações sobre o arquivo <code>nuget.config</code> <a href=https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file>clique aqui</a>.
 Você pode ter de personalizar o arquivo <code>nuget.config</code> atender suas necessidades.</p><p>Agora, volte ao VSCode, pressione Ctrl-Shift-P e digite &ldquo;NuGet Add Package&rdquo; e adicione os pacotes requeridos para Selenium, como o pacote <code>Selenium.WebDriver</code>. Pressione enter e selecione a versão.
 Agora você pode utilizar os exemplos na documentação relacionada para C# com VSCode.</p></div><div class="tab-body tab-pane fade" id=tabs-0-3 role=tabpanel aria-labelled-by=tabs-0-3-tab><p>A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>gem install selenium-webdriver
-</span></span></code></pre></div></div><div class="tab-body tab-pane fade" id=tabs-0-4 role=tabpanel aria-labelled-by=tabs-0-4-tab><p>A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
-</span></span></code></pre></div></div><div class="tab-body tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab>Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)</div></div><h2 id=próximo-passo>Próximo passo</h2><p><a href=/pt-br/documentation/webdriver/getting_started/install_drivers/>Instale os drivers do navegador</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-85748a8d5e7df1adfbfbebcb08631f9b>2.1.2 - Instalando drivers de navegadores</h1><div class=lead>Configurando seu navegador para ficar preparado para ser automatizado.</div><p>Através do WebDriver, o Selenium suporta todos os principais navegadores do mercado
+</span></span></code></pre></div><h2 id=supported-minimum-version>Supported Minimum Version</h2><p>Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium.
+Ruby 2.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported <a href=https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32>here</a>.</p></div><div class="tab-body tab-pane fade" id=tabs-0-4 role=tabpanel aria-labelled-by=tabs-0-4-tab><p>A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>npm install selenium-webdriver
+</span></span></code></pre></div><h2 id=supported-minimum-version>Supported Minimum Version</h2><p>Make sure to use the Node version greater than or equal to the minimum supported version by Selenium.
+Node 14.20.0 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported <a href=https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23>here</a>.</p></div><div class="tab-body tab-pane fade" id=tabs-0-5 role=tabpanel aria-labelled-by=tabs-0-5-tab>Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)</div></div><h2 id=próximo-passo>Próximo passo</h2><p><a href=/pt-br/documentation/webdriver/getting_started/install_drivers/>Instale os drivers do navegador</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-85748a8d5e7df1adfbfbebcb08631f9b>2.1.2 - Instalando drivers de navegadores</h1><div class=lead>Configurando seu navegador para ficar preparado para ser automatizado.</div><p>Através do WebDriver, o Selenium suporta todos os principais navegadores do mercado
 como Chrome/Chromium, Firefox, Internet Explorer, Edge e Safari.
 Sempre que possível, o WebDriver conduz o navegador
 usando o suporte integrado do navegador para automação.</p><p>Como todas as implementações do driver, exceto a do Internet Explorer, são fornecidas pelos próprios
@@ -11439,7 +11447,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/illicitonion>@illicitonion</a></label>
 <span class=contributions>1162 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>790 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>791 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>755 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
@@ -11453,7 +11461,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/andreastt>@andreastt</a></label>
 <span class=contributions>289 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>229 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/67744?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>230 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/67744?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/krosenvold>@krosenvold</a></label>
 <span class=contributions>225 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/8536?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/hugs>@hugs</a></label>
@@ -11483,7 +11491,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/alex-savchuk>@alex-savchuk</a></label>
 <span class=contributions>90 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17887843?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/symonk>@symonk</a></label>
-<span class=contributions>75 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>76 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andrashatvani>@andrashatvani</a></label>
 <span class=contributions>66 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1015125?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ajayk>@ajayk</a></label>
@@ -11597,6 +11605,8 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/oddui>@oddui</a></label>
 <span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/6696690?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/adiohana>@adiohana</a></label>
+<span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/129603?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/whimboo>@whimboo</a></label>
 <span class=contributions>5 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23129441?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/iampopovich>@iampopovich</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/115442?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11619,8 +11629,6 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/lauromoura>@lauromoura</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1205116?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/Ardesco>@Ardesco</a></label>
-<span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1371569?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/klepikov>@klepikov</a></label>
 <span class=contributions>4 commits</span></div></div><h4 id=selenium-idegithubcomseleniumhqselenium-ide><a href=//github.com/SeleniumHQ/selenium-ide/>Selenium IDE</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/888886?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/corevo>@corevo</a></label>
 <span class=contributions>2445 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/457137?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11629,7 +11637,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/baimao8437>@baimao8437</a></label>
 <span class=contributions>88 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4707505?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/toddtarsi>@toddtarsi</a></label>
-<span class=contributions>76 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/58857646?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>79 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/58857646?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/coinzdude>@coinzdude</a></label>
 <span class=contributions>54 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/33743343?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/Jongkeun>@Jongkeun</a></label>
@@ -11895,7 +11903,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>565 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>494 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>495 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
@@ -11905,7 +11913,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/kzhirata>@kzhirata</a></label>
 <span class=contributions>41 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>33 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10259016?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>35 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10259016?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/boris779>@boris779</a></label>
 <span class=contributions>32 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/13719696?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alenros>@alenros</a></label>

@@ -1,4 +1,45 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/using-java11-httpclient/</guid><description>
+&lt;h3 id="current-http-client-used-in-selenium">Current HTTP client used in Selenium&lt;/h3>
+&lt;p>Selenium uses an HTTP client and associated WebSocket client for multiple purposes&lt;/p>
+&lt;ul>
+&lt;li>To send commands to the WebDriver&lt;/li>
+&lt;li>To send commands from the Selenium client library to the Grid&lt;/li>
+&lt;li>For various Grid components to communicate with each other depending on the Grid mode&lt;/li>
+&lt;li>To create ChromeDevTools protocol and BiDi protocol sessions&lt;/li>
+&lt;/ul>
+&lt;p>Currently, Selenium uses &lt;a href="https://github.com/AsyncHttpClient/async-http-client">AsyncHttpClient&lt;/a>. AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it is a good fit.&lt;/p>
+&lt;h3 id="why-does-selenium-want-to-move-to-java-11-http-client">Why does Selenium want to move to Java 11+ HTTP Client?&lt;/h3>
+&lt;p>While AsyncHttpClient provides the required functionality, the open-source project is not been actively maintained since June 2021. It coincides with the fact that Java 11+ provides a built-in HTTP and WebSocket client. Selenium can utilize it to replace AsyncHttpClient.
+Currently, Selenium Java supports Java 8. Selenium has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. Aligning it with major releases and accompanied announcements is crucial to ensure the user experience is intact.&lt;/p>
+&lt;p>The Selenium server runs great on Java 11+ already, so while we plan to make that the minimum version in a future release, for now we plan to introduce optional components that can take advantage of modern Java releases.&lt;/p>
+&lt;p>So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.&lt;/p>
+&lt;h3 id="using-java-11-http-client-in-selenium-450">Using Java 11+ HTTP Client in Selenium 4.5.0&lt;/h3>
+&lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
+&lt;ul>
+&lt;li>Project configured to use Java 11+&lt;/li>
+&lt;li>Using Selenium 4.5.0&lt;/li>
+&lt;/ul>
+&lt;h4 id="integrating-the-java-11-client">Integrating the Java 11+ client&lt;/h4>
+&lt;p>Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.&lt;/p>
+&lt;h5 id="add-the-artifact-the-pom">Add the artifact the POM&lt;/h5>
+&lt;p>Add the follow dependencies to your pom.xml&lt;/p>
+&lt;pre tabindex="0">&lt;code> &amp;lt;dependency&amp;gt;
+&amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+&amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt;
+&amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+&amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+&amp;lt;artifactId&amp;gt;selenium-http-jdk-client&amp;lt;/artifactId&amp;gt;
+&amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code>&lt;/pre>&lt;h5 id="set-the-system-property">Set the system property&lt;/h5>
+&lt;p>Set the system property to indicate that Java 11+ Http client needs to be used.
+By default, it uses the AsyncHttpClient.&lt;/p>
+&lt;pre tabindex="0">&lt;code> System.setProperty(&amp;#34;webdriver.http.factory&amp;#34;, &amp;#34;jdk-http-client&amp;#34;);
+&lt;/code>&lt;/pre>&lt;p>You are all set up to leverage the newly supported client.
+The user-experience remains the unchanged. Everything else works as expected.&lt;/p>
+&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
 &lt;p>The Docker Selenium browser Beta and Dev channel releases are now regularly published to &lt;a href="https://hub.docker.com/u/selenium">Docker Hub&lt;/a> and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment &lt;em>before&lt;/em> those issues have an impact on their users.&lt;/p>
 &lt;h3 id="what-are-release-channels">What are &amp;ldquo;release channels&amp;rdquo;?&lt;/h3>
 &lt;p>Here&amp;rsquo;s some background on release channels: Google, Mozilla, and Microsoft all maintain different &amp;ldquo;channels&amp;rdquo; for their respective browser releases. Most end users use the &amp;ldquo;Stable&amp;rdquo; channel. The Stable channel releases have passed rigorous testing, and these versions are considered &amp;ldquo;production-ready&amp;rdquo;. Up until now, this was the only option for a tester or developer when using Docker Selenium. Today, we&amp;rsquo;re pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.&lt;/p>
@@ -6517,290 +6558,4 @@ Thanks @AutomatedTester&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://w3c.github.io/webdriver/#processing-model">WebDriver Specification details about transport&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>This was originally posted to &lt;a href="https://www.theautomatedtester.co.uk/">https://www.theautomatedtester.co.uk/&lt;/a>&lt;/p></description></item><item><title>Blog: Public Project Meeting - June 04, 2020</title><link>/blog/2020/public-project-meeting-20200604/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200604/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on June 04, 2020 (times are on IST).&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;p>The next meeting will be on June 18, 2020, 4:30 PM CET.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 8:05 PM&lt;/em>&lt;/p>
-&lt;p>the agenda will be:&lt;/p>
-&lt;ul>
-&lt;li>anything people want to add in the next 2 minutes&lt;/li>
-&lt;li>me looking to previous agendas and adding those items here&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 8:06 PM&lt;/em>&lt;/p>
-&lt;p>Hahaha&lt;/p>
-&lt;p>Agenda item: path to betas&lt;/p>
-&lt;p>8:07
-I’d like to hear about the work that @AutomatedTester has in mind for his interns, and how (as a project) we’ll support them&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:08 PM&lt;/em>&lt;/p>
-&lt;p>Agenda:&lt;/p>
-&lt;ul>
-&lt;li>general project statistics&lt;/li>
-&lt;li>any overall announcements? new people on committees, have the commit bit, etc?&lt;/li>
-&lt;li>so do we want/need to wait for that work to be done before doing Alpha 7?&lt;/li>
-&lt;li>Work to be done before beta? (Path to betas)&lt;/li>
-&lt;li>when is the next SFC call? (if its happened in the last two weeks, anything to report)&lt;/li>
-&lt;li>Did anyone pick up the ball to talk to Miki about the go bindings?&lt;/li>
-&lt;li>SeConf India SeConf Chicago&lt;/li>
-&lt;li>Selenium Conf website in GitHub org?&lt;/li>
-&lt;li>IDE to main repo?&lt;/li>
-&lt;li>CoC&lt;/li>
-&lt;/ul>
-&lt;p>Let&amp;rsquo;s start&lt;/p>
-&lt;p>8:09
-general project statistics:
-two weeks ago: 391 open issues, open pull request: 68
-now: 343 open issues, open pull request: 72&lt;/p>
-&lt;p>8:10
-looking better, let&amp;rsquo;s keep the pace!
-1&lt;/p>
-&lt;p>next item:;
-any overall announcements? new people on committees, have the commit bit, etc?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:11 PM&lt;/em>&lt;/p>
-&lt;p>Just a quick note that @Bongosway has landed a few patches recently. I’m hoping that we find a way to help him into the fold a little more&lt;/p>
-&lt;p>And a high five to @rajendra for his work on the JDBC stuff
-1 reply
-4 days ago
-View thread&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:12 PM&lt;/em>&lt;/p>
-&lt;p>absolutely, thanks for contributing!&lt;/p>
-&lt;p>anything else or should we move to the next item in the agenda?&lt;/p>
-&lt;p>8:13
-ok, next item:
-what do we need to be done before doing Alpha 7?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:15 PM&lt;/em>&lt;/p>
-&lt;p>Things I’d like to see:&lt;/p>
-&lt;ul>
-&lt;li>Switch to the reactor client for http&lt;/li>
-&lt;li>Land a basic replacement for the UI&lt;/li>
-&lt;li>Straw-man proposals for the functionality that might rely on CDP&lt;/li>
-&lt;/ul>
-&lt;p>Of which that last is in my court&lt;/p>
-&lt;p>&lt;em>David Burns 8:16 PM&lt;/em>&lt;/p>
-&lt;ol>
-&lt;li>I am working on&lt;/li>
-&lt;/ol>
-&lt;p>as for my interns, one of which in here so say hi to @Saksham Gupta&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:17 PM&lt;/em>&lt;/p>
-&lt;p>waves to @Saksham Gupta!
-1&lt;/p>
-&lt;p>&lt;em>David Burns 8:17 PM&lt;/em>&lt;/p>
-&lt;p>They will be extending the GraphQL system with in grid (@Saksham Gupta )&lt;/p>
-&lt;p>and Phani, when he joins, will be building out the Grid UI and modernising it&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:18 PM&lt;/em>&lt;/p>
-&lt;p>that sounds great!&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:18 PM&lt;/em>&lt;/p>
-&lt;p>welcome, @Saksham Gupta!
-1&lt;/p>
-&lt;p>&lt;em>David Burns 8:18 PM&lt;/em>&lt;/p>
-&lt;p>The goal of the work is to add most, if not all, the features we want in this area&lt;/p>
-&lt;p>&lt;em>8:19&lt;/em>&lt;/p>
-&lt;p>both @Saksham Gupta and Phani will be supported by me and @rajendra&lt;/p>
-&lt;p>&lt;em>8:20&lt;/em>&lt;/p>
-&lt;p>and next week we have another member joining our team who we can get to support both interns to make sure we don&amp;rsquo;t have any performance hits with the work they add and guide them through perf profiling. etc&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:20 PM&lt;/em>&lt;/p>
-&lt;p>@Saksham Gupta you might find this useful: &lt;a href="https://docs.google.com/document/d/1aFMmmMhBg1PgfTPmyaXaEJAhsh0lf3p0VpV7kfHIstI/edit">https://docs.google.com/document/d/1aFMmmMhBg1PgfTPmyaXaEJAhsh0lf3p0VpV7kfHIstI/edit&lt;/a>&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:20 PM&lt;/em>&lt;/p>
-&lt;p>anything else pending from the non-Java stuff?&lt;/p>
-&lt;p>I know CDP is not working with JS yet, not sure about Python&lt;/p>
-&lt;p>&lt;em>David Burns 8:20 PM&lt;/em>&lt;/p>
-&lt;p>Non-java we need to add CDP to python and JS which my team will be doing&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:21 PM&lt;/em>&lt;/p>
-&lt;p>One thing i’m keen on is steering users away from raw CDP&lt;/p>
-&lt;p>&lt;em>David Burns 8:21 PM&lt;/em>&lt;/p>
-&lt;p>agreed&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:21 PM&lt;/em>&lt;/p>
-&lt;p>When we get WebDriver BiDi in place, we’d like to use that where possible&lt;/p>
-&lt;p>CDP is ugly, hard to use, and deeply fragile&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:22 PM&lt;/em>&lt;/p>
-&lt;p>that is a good point, because we don&amp;rsquo;t want GitHub issues reporting bugs merely due to something failing in CDP&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:23 PM&lt;/em>&lt;/p>
-&lt;p>Something will fail with the CDP stuff&lt;/p>
-&lt;p>I may have to version it independently of the rest of the java pieces.&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:23 PM&lt;/em>&lt;/p>
-&lt;p>is the idea to have CDP in JS and Python for Alpha 7?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:23 PM&lt;/em>&lt;/p>
-&lt;p>has the chromium team talked at all about CDP becoming a standard, or publishing a roadmap? (I&amp;rsquo;m off to put this exact question into google)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:24 PM&lt;/em>&lt;/p>
-&lt;p>They’re involved with the webdriver bidi stuff&lt;/p>
-&lt;p>I think there’s a lot of value separating “automation” from “debugging APIs”&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:24 PM&lt;/em>&lt;/p>
-&lt;p>yeah&lt;/p>
-&lt;p>&lt;em>David Burns 8:24 PM&lt;/em>&lt;/p>
-&lt;p>the spec is being worked on right now&lt;/p>
-&lt;p>I have been reviewing it this week&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:24 PM&lt;/em>&lt;/p>
-&lt;p>I saw the transcript from last week, good stuff&lt;/p>
-&lt;p>&lt;em>David Burns 8:25 PM&lt;/em>&lt;/p>
-&lt;p>CDP is not going to be the standard&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:25 PM&lt;/em>&lt;/p>
-&lt;p>asking again to stay in the topic, is the idea to have CDP in JS and Python for Alpha 7?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:25 PM&lt;/em>&lt;/p>
-&lt;p>Yes&lt;/p>
-&lt;p>&lt;em>David Burns 8:25 PM&lt;/em>&lt;/p>
-&lt;p>@diemol maybe.. hopefully&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:25 PM&lt;/em>&lt;/p>
-&lt;p>We need all languages to have that in place before we can move to betas&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:27 PM&lt;/em>&lt;/p>
-&lt;p>I have seen a few PRs from &lt;a href="https://github.com/seanpoulter">https://github.com/seanpoulter&lt;/a>, he seems keen to help in JS
-he already asked how he can implement relative locators in JS
-we should try to give him quick feedback&lt;/p>
-&lt;p>Sean Poulter
-Location
-Ottawa, Canada
-Repositories
-22
-Followers
-17
-@seanpoulter | Oct 18th, 2012 | Added by GitHub&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:28 PM&lt;/em>&lt;/p>
-&lt;p>@harsha509 would you like to help with that? Or @corevo?&lt;/p>
-&lt;p>And&lt;/p>
-&lt;p>&lt;em>David Burns 8:28 PM&lt;/em>&lt;/p>
-&lt;p>JS relative locators is in there, might need some TLC&lt;/p>
-&lt;p>&lt;em>Sri Harsha 8:28 PM&lt;/em>&lt;/p>
-&lt;p>i need a week to hack into js things. currently busy in paid work&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:28 PM&lt;/em>&lt;/p>
-&lt;p>NP.&lt;/p>
-&lt;p>8:29
-These paid jobs are what allow us to have the luxury of working on OSS. Focusing on them makes a lot of sense&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:29 PM&lt;/em>&lt;/p>
-&lt;p>in any case, let&amp;rsquo;s try to give feedback, we are in the look for JS maintainers and who knows if he could be &amp;ldquo;the one&amp;rdquo;&lt;/p>
-&lt;p>ok, next item?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:30 PM&lt;/em>&lt;/p>
-&lt;p>Have we finished the beta discussion?&lt;/p>
-&lt;p>I don’t think we’ve got more items to add to it&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:31 PM&lt;/em>&lt;/p>
-&lt;p>no, that is next&lt;/p>
-&lt;p>Work to be done before beta? (Path to betas)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:31 PM&lt;/em>&lt;/p>
-&lt;p>The things for alpha-7 are the blockers for beta&lt;/p>
-&lt;p>8:32
-After that, I think the changes are incremental rather than entirely new features&lt;/p>
-&lt;p>8:33
-(other than (maybe) pluggable locators0&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:33 PM&lt;/em>&lt;/p>
-&lt;p>also my &amp;ldquo;drain&amp;rdquo; feature&lt;/p>
-&lt;p>I&amp;rsquo;m negotiating a couple days with my paid work to get back on that&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:33 PM&lt;/em>&lt;/p>
-&lt;p>That’d be nice to get into a7&lt;/p>
-&lt;p>I suspect that the graphql stuff will cause some changes to have to happen&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:33 PM&lt;/em>&lt;/p>
-&lt;p>can we set up a time to pair for an hour or so?&lt;/p>
-&lt;p>&lt;em>Sri Harsha 8:33 PM&lt;/em>&lt;/p>
-&lt;p>I will take over maintaining JS bindings for sure in future&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:33 PM&lt;/em>&lt;/p>
-&lt;p>@mmerrell sure&lt;/p>
-&lt;p>8:34
-I’m around monday and tuesday next week&lt;/p>
-&lt;p>@harsha509 WOOHOO!&lt;/p>
-&lt;p>That’d be awesome&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:34 PM&lt;/em>&lt;/p>
-&lt;p>perfect&amp;ndash;I&amp;rsquo;ve just blocked out most of the day for it&lt;/p>
-&lt;p>I know what I need to do, but would like a bit of validation on the approach, and then I need to test it&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:36 PM&lt;/em>&lt;/p>
-&lt;p>ok, seems the betas part has been mostly discussed in the Alpha 7 part and these previous lines&lt;/p>
-&lt;p>if everyone is ok with it, next topic
-2&lt;/p>
-&lt;p>when is the next SFC call? (if its happened in the last two weeks, anything to report)&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:36 PM&lt;/em>&lt;/p>
-&lt;p>it happened Tuesday, and I believe we primarily discussed the conference&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:38 PM&lt;/em>&lt;/p>
-&lt;p>ah perfect, there is an item in the agenda for &amp;ldquo;SeConf India SeConf Chicago&amp;rdquo;&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:38 PM&lt;/em>&lt;/p>
-&lt;p>@manoj9788 will know the most about that&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:40 PM&lt;/em>&lt;/p>
-&lt;p>yep&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:40 PM&lt;/em>&lt;/p>
-&lt;p>is there something else to comment from SFC or conferences? or should we move to the next item?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:40 PM&lt;/em>&lt;/p>
-&lt;p>I can speak for Chicago&lt;/p>
-&lt;p>I don&amp;rsquo;t think we talked about anything else&amp;hellip; the SFC wasn&amp;rsquo;t present on the call&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:41 PM&lt;/em>&lt;/p>
-&lt;p>would you like to say something about the Chicago conference?'&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:41 PM&lt;/em>&lt;/p>
-&lt;p>yeah&amp;ndash;we&amp;rsquo;re negotiating with the hotel to take our contract and move it to 2021, around the same time of year&lt;/p>
-&lt;p>&lt;em>8:42&lt;/em>&lt;/p>
-&lt;p>we&amp;rsquo;re waiting to hear back from them with a selection of dates in the Sep-Oct-Nov range&lt;/p>
-&lt;p>hoping not to have it the week before Thanksgiving, but also hoping to keep the room rates low&lt;/p>
-&lt;p>&lt;em>8:43&lt;/em>&lt;/p>
-&lt;p>as to this year, we&amp;rsquo;re talking about holding a very sane, relatively small virtual conference, or a series of webinars spread over a couple months&lt;/p>
-&lt;p>we&amp;rsquo;re also discussing having another group help us out with planning and execution, someone with experience at promoting and running virtual conferences&lt;/p>
-&lt;p>&lt;em>8:44&lt;/em>&lt;/p>
-&lt;p>the first discussion will happen today, and if we decide to explore further, I will probably feel more comfortable talking about who we&amp;rsquo;re considering&lt;/p>
-&lt;p>there is a lot to consider for a virtual conference, and we want to make sure we are thoughtful and careful&lt;/p>
-&lt;p>&lt;em>Rajendra Kadam 8:44 PM&lt;/em>&lt;/p>
-&lt;p>replied to a thread:
-And a high five to @rajendra for his work on the JDBC stuff
-Thanks @simonstewart.
-. It wouldn&amp;rsquo;t have been complete without your help.
-1&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:44 PM&lt;/em>&lt;/p>
-&lt;p>all that is already a lot of info, thanks for sharing!&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:45 PM&lt;/em>&lt;/p>
-&lt;p>for SeConf India, I don&amp;rsquo;t know if @manoj9788 is on and would like to share. If not, I can at least say a little about what they&amp;rsquo;re considering, I just don&amp;rsquo;t want it to be incomplete&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:46 PM&lt;/em>&lt;/p>
-&lt;p>up to you I would say&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:48 PM&lt;/em>&lt;/p>
-&lt;p>it appears that there&amp;rsquo;s no way they&amp;rsquo;re going to be able to put on a conference in September in Bangalore. The borders and COVID caseload aren&amp;rsquo;t adequately under control, and much like the US conference, there are too many variables that would need to be under control right now for Naresh to feel confident about having an in-person conference a scant 3 months from now
-1&lt;/p>
-&lt;p>(by &amp;ldquo;borders&amp;rdquo; I mean &amp;ldquo;international travel &amp;amp; quarantine procedures&amp;rdquo;)&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:48 PM&lt;/em>&lt;/p>
-&lt;p>that makes a lot of sense&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:50 PM&lt;/em>&lt;/p>
-&lt;p>so we are discussing whether or not we can essentially combine the notion of a virtual conference. That troubles me because I know that all parties involved want to see revenue, but the Selenium project doesn&amp;rsquo;t want to charge for admission. I&amp;rsquo;m concerned there would be too many hands in the pot for any one of them to receive enough $$ to make it worth their while&lt;/p>
-&lt;p>but that&amp;rsquo;s my own concern&amp;ndash;not meant to represent the opinion of the planning committee. We&amp;rsquo;re looking for data, not opinions&amp;ndash;so we&amp;rsquo;re reaching out to people who have been through this in recent weeks to find out what&amp;rsquo;s possible&lt;/p>
-&lt;p>8:51
-we hope to report in a couple weeks on any progress, both with planning the virtual conference, and with whether or not we can expect to fund our coffers in the near future&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:51 PM&lt;/em>&lt;/p>
-&lt;p>ok, then we can follow up in the next meeting, thanks!
-1&lt;/p>
-&lt;p>8:52
-next topic: Did anyone pick up the ball to talk to Miki about the go bindings?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:52 PM&lt;/em>&lt;/p>
-&lt;p>Not me&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:52 PM&lt;/em>&lt;/p>
-&lt;p>I think no one did but we should keep the topic around, and try to get to it when we have Se 4 released or close to be released&lt;/p>
-&lt;p>8:53
-adding one more binding now would be too distracting
-which does not mean that we cannot reach out to him&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:54 PM&lt;/em>&lt;/p>
-&lt;p>Agreed&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:55 PM&lt;/em>&lt;/p>
-&lt;p>ok, let&amp;rsquo;s move to the next one since we only have a few minutes left&lt;/p>
-&lt;p>Selenium Conf website in GitHub org?&lt;/p>
-&lt;p>I see the site was revamped, so great job @andrewmkrug&lt;/p>
-&lt;p>8:56
-but I am not sure if @andrewmkrug is having problems to push the code to the org
-I can reach out to him&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:56 PM&lt;/em>&lt;/p>
-&lt;p>Thank you
-1&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:56 PM&lt;/em>&lt;/p>
-&lt;p>next topic: IDE to main repo?&lt;/p>
-&lt;p>&lt;em>8:57&lt;/em>&lt;/p>
-&lt;p>I guess we should focus more on the bindings and the Grid for now?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:58 PM&lt;/em>&lt;/p>
-&lt;p>I think @AutomatedTester has already done a chunk of the heavy lifting&lt;/p>
-&lt;p>&lt;em>9:00&lt;/em>&lt;/p>
-&lt;p>Got to go. Meeting time&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:00 PM&lt;/em>&lt;/p>
-&lt;p>last topic was CoC, but we can take it next time&lt;/p>
-&lt;p>well, we covered everything (almost), thank you everyone!
-1&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 9:01 PM&lt;/em>&lt;/p>
-&lt;p>thank YOU, @diemol
-1&lt;/p></description></item></channel></rss>
+&lt;p>This was originally posted to &lt;a href="https://www.theautomatedtester.co.uk/">https://www.theautomatedtester.co.uk/&lt;/a>&lt;/p></description></item></channel></rss>

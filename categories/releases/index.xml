@@ -1,4 +1,45 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 09 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/using-java11-httpclient/</guid><description>
+&lt;h3 id="current-http-client-used-in-selenium">Current HTTP client used in Selenium&lt;/h3>
+&lt;p>Selenium uses an HTTP client and associated WebSocket client for multiple purposes&lt;/p>
+&lt;ul>
+&lt;li>To send commands to the WebDriver&lt;/li>
+&lt;li>To send commands from the Selenium client library to the Grid&lt;/li>
+&lt;li>For various Grid components to communicate with each other depending on the Grid mode&lt;/li>
+&lt;li>To create ChromeDevTools protocol and BiDi protocol sessions&lt;/li>
+&lt;/ul>
+&lt;p>Currently, Selenium uses &lt;a href="https://github.com/AsyncHttpClient/async-http-client">AsyncHttpClient&lt;/a>. AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it is a good fit.&lt;/p>
+&lt;h3 id="why-does-selenium-want-to-move-to-java-11-http-client">Why does Selenium want to move to Java 11+ HTTP Client?&lt;/h3>
+&lt;p>While AsyncHttpClient provides the required functionality, the open-source project is not been actively maintained since June 2021. It coincides with the fact that Java 11+ provides a built-in HTTP and WebSocket client. Selenium can utilize it to replace AsyncHttpClient.
+Currently, Selenium Java supports Java 8. Selenium has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. Aligning it with major releases and accompanied announcements is crucial to ensure the user experience is intact.&lt;/p>
+&lt;p>The Selenium server runs great on Java 11+ already, so while we plan to make that the minimum version in a future release, for now we plan to introduce optional components that can take advantage of modern Java releases.&lt;/p>
+&lt;p>So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.&lt;/p>
+&lt;h3 id="using-java-11-http-client-in-selenium-450">Using Java 11+ HTTP Client in Selenium 4.5.0&lt;/h3>
+&lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
+&lt;ul>
+&lt;li>Project configured to use Java 11+&lt;/li>
+&lt;li>Using Selenium 4.5.0&lt;/li>
+&lt;/ul>
+&lt;h4 id="integrating-the-java-11-client">Integrating the Java 11+ client&lt;/h4>
+&lt;p>Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.&lt;/p>
+&lt;h5 id="add-the-artifact-the-pom">Add the artifact the POM&lt;/h5>
+&lt;p>Add the follow dependencies to your pom.xml&lt;/p>
+&lt;pre tabindex="0">&lt;code> &amp;lt;dependency&amp;gt;
+&amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+&amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt;
+&amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+&amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+&amp;lt;artifactId&amp;gt;selenium-http-jdk-client&amp;lt;/artifactId&amp;gt;
+&amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code>&lt;/pre>&lt;h5 id="set-the-system-property">Set the system property&lt;/h5>
+&lt;p>Set the system property to indicate that Java 11+ Http client needs to be used.
+By default, it uses the AsyncHttpClient.&lt;/p>
+&lt;pre tabindex="0">&lt;code> System.setProperty(&amp;#34;webdriver.http.factory&amp;#34;, &amp;#34;jdk-http-client&amp;#34;);
+&lt;/code>&lt;/pre>&lt;p>You are all set up to leverage the newly supported client.
+The user-experience remains the unchanged. Everything else works as expected.&lt;/p>
+&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.4.0. We&amp;rsquo;re shipping
 this for Java, .Net, Python, Ruby, and JavaScript, so if you&amp;rsquo;re using any
 of those languages, go and grab it from your package manager of choice!&lt;/p>
