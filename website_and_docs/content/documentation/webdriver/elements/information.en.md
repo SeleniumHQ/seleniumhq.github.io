@@ -17,7 +17,7 @@ browsing context else returns false.
 
 This functionality is [mentioned in](https://w3c.github.io/webdriver/#element-displayedness), but not defined by 
 the w3c specification due to the 
-[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=hTa1KI6fQpg). 
+[impossibility of covering all potential conditions](https://www.youtube.com/watch?v=LAD_XPGP_kk). 
 As such, Selenium cannot expect drivers to implement 
 this functionality directly, and now relies on 
 executing a large JavaScript function directly. 
@@ -27,30 +27,34 @@ nature and relationship in the tree to return a value.
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Navigate to the url
-driver.get('https://www.google.com');
+driver.get('https://the-internet.herokuapp.com/login');
 
 // Get boolean value for is element display
-boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
+boolean isButtonVisible = driver.findElement(By.css("[name='username']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
-driver.get("https://www.google.com")
+driver.get("https://the-internet.herokuapp.com/login")
 
 # Get boolean value for is element display
-is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
+is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='username']").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-// Help us with a PR for code sample
+//Navigate to the url
+driver.Url = "https://the-internet.herokuapp.com/login";
+
+//Get boolean value for is element display
+Boolean is_button_visible = driver.FindElement(By.CssSelector("[name='username']")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Help us with a PR for code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.google.com');
+await driver.get('https://the-internet.herokuapp.com/login');
 
 // Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
+let result =  await driver.findElement(By.css("[name='username']")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
@@ -398,11 +402,43 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 
 
 
-## Attributes and Properties
+## Fetching Attributes or Properties
 
-### Attribute
+Fetches the run time value associated with a 
+DOM attribute. It returns the data associated 
+with the DOM attribute or property of the element. 
 
-### DOM Attribute
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+//Navigate to the url
+driver.get("https://the-internet.herokuapp.com/login");
 
-### DOM Property
+//search web element using link text property
+WebElement eleSelLink = driver.findElement(By.linkText(("Elemental Selenium")));
 
+//fetch the href property associated with the link
+String hrefVal = eleSelLink.getAttribute("href");
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+   # Help us with a PR for code sample
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+ //Navigate to the url
+driver.Url="https://the-internet.herokuapp.com/login";
+
+//search web element using link text property
+IWebElement eleSelLink = driver.FindElement(By.LinkText(("Elemental Selenium")));
+
+//fetch the href property associated with the link
+String hrefVal = eleSelLink.GetAttribute("href");
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Help us with a PR for code sample
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+// Help us with a PR for code sample
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Help us with a PR for code sample
+  {{< /tab >}}
+{{< /tabpane >}}
