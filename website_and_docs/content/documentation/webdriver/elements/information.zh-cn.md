@@ -27,34 +27,34 @@ description: >
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Navigate to the url
-driver.get('https://the-internet.herokuapp.com/login');
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Get boolean value for is element display
-boolean isButtonVisible = driver.findElement(By.css("[name='username']")).isDisplayed();
+boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
-driver.get("https://the-internet.herokuapp.com/login")
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 # Get boolean value for is element display
-is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='username']").is_displayed()
+is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 //Navigate to the url
-driver.Url = "https://the-internet.herokuapp.com/login";
+driver.Url = "https://www.selenium.dev/selenium/web/inputs.html";
 
 //Get boolean value for is element display
-Boolean is_button_visible = driver.FindElement(By.CssSelector("[name='username']")).Displayed;
+Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Help us with a PR for code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://the-internet.herokuapp.com/login');
+await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.css("[name='username']")).isDisplayed();
+let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
@@ -352,26 +352,26 @@ with the DOM attribute or property of the element.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 //Navigate to the url
-driver.get("https://the-internet.herokuapp.com/login");
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-//search web element using link text property
-WebElement eleSelLink = driver.findElement(By.linkText(("Elemental Selenium")));
+//identify the email text box
+WebElement emailTxt = driver.findElement(By.name(("email_input")));
 
-//fetch the href property associated with the link
-String hrefVal = eleSelLink.getAttribute("href");
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.getAttribute("value");
   {{< /tab >}}
   {{< tab header="Python" >}}
    # Help us with a PR for code sample
   {{< /tab >}}
   {{< tab header="CSharp" >}}
  //Navigate to the url
-driver.Url="https://the-internet.herokuapp.com/login";
+driver.Url="https://www.selenium.dev/selenium/web/inputs.html";
 
-//search web element using link text property
-IWebElement eleSelLink = driver.FindElement(By.LinkText(("Elemental Selenium")));
+//identify the email text box
+IWebElement emailTxt = driver.FindElement(By.Name(("email_input")));
 
-//fetch the href property associated with the link
-String hrefVal = eleSelLink.GetAttribute("href");
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.GetAttribute("value");
   {{< /tab >}}
   {{< tab header="Ruby" >}}
     # Help us with a PR for code sample
