@@ -30,7 +30,8 @@ using OpenQA.Selenium.Support.UI
 include Selenium::WebDriver::Support
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+const { Select } = require("selenium-webdriver")
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.support.ui.Select
@@ -58,7 +59,9 @@ select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+const selectElement = await driver.findElement(By.id('selectElementID'))
+const selectObject = new Select(selectElement)
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -123,7 +126,15 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+// Select an <option> based upon the <select> element's internal index
+selectObject.selectByIndex(1)
+
+// Select an <option> based upon its value attribute
+selectObject.selectByValue('value1')
+
+// Select an <option> based upon its text
+selectObject.selectByVisibleText('Bread')
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Select an <option> based upon the <select> element's internal index
@@ -169,7 +180,12 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+// Return a Array<WebElement> of options that have been selected
+const allSelectedOptions = selectObject.getAllSelectedOptions()
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+const firstSelectedOption = selectObject.getFirstSelectedOption()
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Return a List<WebElement> of options that have been selected
@@ -202,7 +218,9 @@ IList<IWebElement> allAvailableOptions = selectObject.Options;
 all_available_options = select_object.options
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+// Return a Array<WebElement> of options that the <select> element contains
+const allAvailableOptions = await selectObject.getOptions();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Return a List<WebElement> of options that the <select> element contains
@@ -266,7 +284,18 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+// Deselect an <option> based upon the <select> element's internal index
+selectObject.deselectByIndex(1)
+
+// Deselect an <option> based upon its value attribute
+selectObject.deselectByValue('value1')
+
+// Deselect an <option> based upon its text
+selectObject.deselectByVisibleText('Bread')
+
+// Deselect all selected <option> elements
+selectObject.deselectAll()
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Deselect an <option> based upon the <select> element's internal index
@@ -300,7 +329,8 @@ bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
 does_this_allow_multiple_selections = select_object.multiple?
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< badge-version version="4.5.0" >}}
+const doesThisAllowMultipleSelections = await selectObject.isMultiple()
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple
