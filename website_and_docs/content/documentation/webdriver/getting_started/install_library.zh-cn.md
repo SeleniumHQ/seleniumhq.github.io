@@ -40,6 +40,11 @@ Gradle 7.0 及以上版本:
 dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
+## Supported Minimum Version
+
+Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
+Java 8 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -55,6 +60,12 @@ pip install selenium
 ```shell
 python setup.py install
 ```
+## Supported Minimum Version
+
+Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
+Python 3.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+
   {{% /tab %}}
   {{% tab header="CSharp" %}}
   可以使用 NuGet 安装 C# 的 Selenium 库：
@@ -114,6 +125,12 @@ dotnet add package Selenium.WebDriver
 gem install selenium-webdriver
 ```
 
+## Supported Minimum Version
+
+Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
+Ruby 2.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
   可以使用 npm 安装 JavaScript 的 Selenium 库
@@ -121,6 +138,13 @@ gem install selenium-webdriver
 ```shell
 npm install selenium-webdriver
 ```
+
+## Supported Minimum Version
+
+Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
+Node 14.20.0 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
   由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)
