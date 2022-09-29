@@ -1,4 +1,278 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/using-java11-httpclient/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.5.0 Released!</title><link>/blog/2022/selenium-4-5-0-released/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-5-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.5.0 for
+Java, .NET, Python, Ruby, and JavaScript bindings as well as the Grid and Internet Explorer Driver.
+Links to everything can be found on our &lt;a href="/downloads">Downloads Page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Adding support for CDP released in Chrome v105 and v106, while v102 and v103 were removed&lt;/li>
+&lt;li>Updates to &lt;a href="https://www.selenium.dev/documentation/webdriver/support_features/select_lists/">Select functionality&lt;/a>&lt;/li>
+&lt;li>Improved experience for &lt;a href="https://www.selenium.dev/documentation/webdriver/browsers/firefox#add-ons">Firefox Add-ons&lt;/a>&lt;/li>
+&lt;li>IE driver automatically uses &lt;a href="https://titusfortner.com/2022/09/28/edge-ie-mode.html">Edge in IE Mode if IE is not present&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.selenium.dev/blog/2022/using-java11-httpclient">Java 11 HTTP Client supported&lt;/a> for Java users running Java versions 11+&lt;/li>
+&lt;li>Various language specific bug fixes; see the full list of changes in the
+&lt;a href="/downloads#bindings">Changelogs&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>Huge thanks to all the external contributors who made this version possible:&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/9820084?v=4" class="card-img-top mx-auto" alt="Guille" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Guille
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/alvarezguille">@alvarezguille&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/42476341?v=4" class="card-img-top mx-auto" alt="Austin Michael Wilkins" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Austin Michael Wilkins
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/amwilkins">@amwilkins&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/279773?v=4" class="card-img-top mx-auto" alt="Andrei Solntsev" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Andrei Solntsev
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/asolntsev">@asolntsev&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/27357499?v=4" class="card-img-top mx-auto" alt="Bartek Florczak" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Bartek Florczak
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/baflQA">@baflQA&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/31008335?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ch-saeki">@ch-saeki&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/2959615?v=4" class="card-img-top mx-auto" alt="Vikas Goel" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Vikas Goel
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/f2008700">@f2008700&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/8839280?v=4" class="card-img-top mx-auto" alt="Kazuki Higashiguchi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kazuki Higashiguchi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/hgsgtk">@hgsgtk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5511591?v=4" class="card-img-top mx-auto" alt="Kazuaki Matsuo" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kazuaki Matsuo
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/KazuCocoa">@KazuCocoa&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6788579?v=4" class="card-img-top mx-auto" alt="Michael Mintz" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Michael Mintz
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mdmintz">@mdmintz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/8957536?v=4" class="card-img-top mx-auto" alt="Kim Hyeonseok" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kim Hyeonseok
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/plming">@plming&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/19333856?v=4" class="card-img-top mx-auto" alt="Potapov Dmitriy" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Potapov Dmitriy
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/potapovDim">@potapovDim&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/19307354?v=4" class="card-img-top mx-auto" alt="Shishu Raj Pandey" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Shishu Raj Pandey
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shishurajpandey">@shishurajpandey&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/26336?v=4" class="card-img-top mx-auto" alt="Tony Narlock" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tony Narlock
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/tony">@tony&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/55334829?v=4" class="card-img-top mx-auto" alt="V24" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+V24
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/umarfarouk98">@umarfarouk98&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/129603?v=4" class="card-img-top mx-auto" alt="Henrik Skupin" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Henrik Skupin
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/whimboo">@whimboo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/using-java11-httpclient/</guid><description>
 &lt;h3 id="current-http-client-used-in-selenium">Current HTTP client used in Selenium&lt;/h3>
 &lt;p>Selenium uses an HTTP client and associated WebSocket client for multiple purposes&lt;/p>
 &lt;ul>
@@ -1749,12 +2023,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>&lt;strong>These are only our plans&lt;/strong>. If you really need those browsers, and (better!) can help us maintain support for them, then please let us know.&lt;/p>
 &lt;p>You’ll notice that Opera and Chrome are not listed above. Since Opera and Google now maintain the drivers for those browsers, they are best placed to decide which are the supported versions, but in summary, Google support the major Chrome release channels (stable, beta, dev and canary) and Opera suggest using Opera 11.6+.&lt;/p></description></item><item><title>Blog: A Note About the Cybervillains SSL Certificate</title><link>/blog/2012/a-note-about-the-cybervillains-ssl-certificate/</link><pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate><guid>/blog/2012/a-note-about-the-cybervillains-ssl-certificate/</guid><description>
 &lt;p>If you&amp;#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.&lt;/p>
-&lt;p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and &lt;a href="http://www.neustar.biz/solutions/website-performance">Neustar&lt;/a> for taking providing the new certificate and the patch!&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.19: the Prancing Unicorn release</title><link>/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</link><pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate><guid>/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</guid><description>
-&lt;p>You might be pleased to hear that Selenium 2.19 has been released (&lt;a href="http://seleniumhq.org/download/">download it from here!&lt;/a>). There’s one big user facing changing that we’d like to tell you about: the webdriver-backed selenium can now be used in supported languages.&lt;/p>
-&lt;p>By providing this capability, it’s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">RemoteWebDriver&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">desired_capabilities&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">DesiredCapabilities&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">FIREFOX&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">selenium&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">DefaultSelenium&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4444&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;, &amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">*&lt;/span>&lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;, &amp;#39;&lt;/span>&lt;span style="color:#000">http&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">//&lt;/span>&lt;span style="color:#000">www&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">google&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">com&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">start&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Provided you keep a reference to the original webdriver and selenium objects you created you can use the two APIs interchangeably. You’ll see that the magic is the “*webdriver” browser name passed to the selenium instance, and that we pass the webdriver instance when calling start().&lt;/p>
-&lt;p>We hope you like it!&lt;/p>
-&lt;p>PS: I have no idea why this is the Prancing Unicorn release, but it’s been a while since we named one 🙂&lt;/p></description></item></channel></rss>
+&lt;p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and &lt;a href="http://www.neustar.biz/solutions/website-performance">Neustar&lt;/a> for taking providing the new certificate and the patch!&lt;/p></description></item></channel></rss>
