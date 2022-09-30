@@ -51,7 +51,8 @@ Add an argument to options:
 {{< tabpane langEqualsHeader=true >}}
   {{% tab header="Python" %}}
 options=Options()
-options.add_argument("-profile /path/to/profile")
+options.add_argument("-profile")
+options.add_argument("/path/to/profile")
   {{% /tab %}}
 {{< /tabpane >}}
 
