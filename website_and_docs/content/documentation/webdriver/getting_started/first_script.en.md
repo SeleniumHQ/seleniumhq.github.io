@@ -239,9 +239,10 @@ Let's combine these 8 things into a complete script with assertions that can be 
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% tab header="JavaScript" %}}
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js" >}}
-{{< /tab >}}
+To run the tests, please install Mocha (for example, by entering `npm install mocha` into terminal) and run the file using `mocha firstSpec.js`.
+{{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt" >}}
 {{< /tab >}}
