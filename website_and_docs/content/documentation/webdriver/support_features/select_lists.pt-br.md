@@ -73,7 +73,7 @@ Note that as of Selenium 4.5, you can't create a `Select` object if the `<select
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -102,7 +102,7 @@ Get a list of all options in the `<select>` element:
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -129,7 +129,7 @@ zero or many elements.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -160,7 +160,7 @@ Select the option based on its visible text
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -185,7 +185,7 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -210,7 +210,7 @@ Select the option based on its position in the list
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -244,7 +244,7 @@ Options with a `disabled` attribute may not be selected.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -270,7 +270,7 @@ You can repeat these methods for each element you want to select.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
