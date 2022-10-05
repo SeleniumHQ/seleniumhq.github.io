@@ -77,7 +77,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -106,7 +106,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -133,7 +133,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -164,7 +164,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -189,7 +189,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -214,7 +214,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -248,7 +248,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -274,7 +274,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
