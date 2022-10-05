@@ -75,7 +75,7 @@ Note that as of Selenium 4.5, you can't create a `Select` object if the `<select
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L20-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -104,7 +104,7 @@ Get a list of all options in the `<select>` element:
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L48" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -131,7 +131,7 @@ zero or many elements.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L51" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -162,7 +162,7 @@ Select the option based on its visible text
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L27" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -187,7 +187,7 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/kotlin/dev/selenium/support/SelectListTest.kt#L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -212,7 +212,7 @@ Select the option based on its position in the list
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L33" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -246,7 +246,7 @@ Options with a `disabled` attribute may not be selected.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L74-L76" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -272,6 +272,6 @@ You can repeat these methods for each element you want to select.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
