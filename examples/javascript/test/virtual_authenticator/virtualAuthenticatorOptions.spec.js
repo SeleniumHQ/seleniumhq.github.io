@@ -1,4 +1,4 @@
-const { VirtualAuthenticatorOptions } = require("selenium-webdriver/lib/virtual_authenticator");
+const { VirtualAuthenticatorOptions, Transport, Protocol } = require("selenium-webdriver/lib/virtual_authenticator");
 const { suite } = require('selenium-webdriver/testing');
 const assert = require('assert')
 
@@ -15,11 +15,11 @@ suite(function() {
             options.setIsUserVerified(true);
             options.setHasUserVerification(true);
             options.setIsUserConsenting(true);
-            options.setTransport(VirtualAuthenticatorOptions.Transport['USB']);
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['U2F']);
+            options.setTransport(Transport['USB']);
+            options.setProtocol(Protocol['U2F']);
             options.setHasResidentKey(false);
 
-            assert(Object.keys(options).length == 6);
+            assert(Object.keys(options).length === 6);
         });
 
         it('User verified', async function() {

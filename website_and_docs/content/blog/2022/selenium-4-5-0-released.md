@@ -43,7 +43,6 @@ Huge thanks to all the external contributors who made this version possible:
 {{< gh-user "https://api.github.com/users/shishurajpandey" >}} 
 {{< gh-user "https://api.github.com/users/TamsilAmani" >}}
 {{< gh-user "https://api.github.com/users/tony" >}}
-{{< gh-user "https://api.github.com/users/umarfarouk98" >}}
 {{< gh-user "https://api.github.com/users/whimboo" >}}
     </div>
   </div>
