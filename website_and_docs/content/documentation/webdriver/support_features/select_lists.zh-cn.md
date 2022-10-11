@@ -80,7 +80,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L20-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -109,7 +109,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L48" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -136,7 +136,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L51" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -167,7 +167,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L27" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -192,7 +192,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -217,7 +217,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L33" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -251,7 +251,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L74-L76" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -277,6 +277,6 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
