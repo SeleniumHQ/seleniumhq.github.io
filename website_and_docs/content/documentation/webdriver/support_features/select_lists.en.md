@@ -187,7 +187,7 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="/kotlin/dev/selenium/support/SelectListTest.kt#L30" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
