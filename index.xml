@@ -282,7 +282,7 @@ Currently, Selenium Java supports Java 8. Selenium has plans to upgrade the mini
 &lt;p>Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.&lt;/p>
 &lt;h5 id="add-the-artifact-the-pom">Add the artifact the POM&lt;/h5>
 &lt;p>Add the follow dependencies to your pom.xml&lt;/p>
-&lt;pre tabindex="0">&lt;code> &amp;lt;dependency&amp;gt;
+&lt;pre tabindex="0">&lt;code>&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
 &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
@@ -298,7 +298,15 @@ By default, it uses the AsyncHttpClient.&lt;/p>
 &lt;pre tabindex="0">&lt;code> System.setProperty(&amp;#34;webdriver.http.factory&amp;#34;, &amp;#34;jdk-http-client&amp;#34;);
 &lt;/code>&lt;/pre>&lt;p>You are all set up to leverage the newly supported client.
 The user-experience remains the unchanged. Everything else works as expected.&lt;/p>
-&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
+&lt;h4 id="using-the-java-11-client-in-grid">Using the Java 11+ client in Grid&lt;/h4>
+&lt;p>To do that, you will need to download the &lt;code>selenium-http-jdk-client&lt;/code> jar file and
+use the &lt;code>--ext&lt;/code> flag to make it available in the Grid jar&amp;rsquo;s classpath.&lt;/p>
+&lt;p>The jar file can be downloaded directly from &lt;a href="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/4.5.0/">repo1.maven.org&lt;/a>
+and then start the Grid in the following way:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>java -Dwebdriver.http.factory&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>jdk-http-client -jar selenium-server-4.5.0.jar —ext selenium-http-jdk-client-4.5.0.jar standalone
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>An alternative to downloading the &lt;code>selenium-http-jdk-client&lt;/code> jar file is to use &lt;a href="https://get-coursier.io/docs/cli-installation">Coursier&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>java -Dwebdriver.http.factory&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>jdk-http-client -jar selenium-server-4.5.0.jar —ext &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> standalone
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
 &lt;p>The Docker Selenium browser Beta and Dev channel releases are now regularly published to &lt;a href="https://hub.docker.com/u/selenium">Docker Hub&lt;/a> and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment &lt;em>before&lt;/em> those issues have an impact on their users.&lt;/p>
 &lt;h3 id="what-are-release-channels">What are &amp;ldquo;release channels&amp;rdquo;?&lt;/h3>
 &lt;p>Here&amp;rsquo;s some background on release channels: Google, Mozilla, and Microsoft all maintain different &amp;ldquo;channels&amp;rdquo; for their respective browser releases. Most end users use the &amp;ldquo;Stable&amp;rdquo; channel. The Stable channel releases have passed rigorous testing, and these versions are considered &amp;ldquo;production-ready&amp;rdquo;. Up until now, this was the only option for a tester or developer when using Docker Selenium. Today, we&amp;rsquo;re pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.&lt;/p>
