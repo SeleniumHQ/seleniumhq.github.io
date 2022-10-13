@@ -27,6 +27,7 @@ The Selenium server runs great on Java 11+ already, so while we plan to make tha
 So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.
 
 ### Using Java 11+ HTTP Client in Selenium 4.5.0
+
 #### Prerequisites: 
 * Project configured to use Java 11+
 * Using Selenium 4.5.0 
@@ -39,17 +40,16 @@ Java 11+ HTTP client sits in its own artifact. It can be imported into projects 
 Add the follow dependencies to your pom.xml
 
 ```
- <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.5.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-http-jdk-client</artifactId>
-      <version>4.5.0</version>
-    </dependency>
-
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>4.5.0</version>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-http-jdk-client</artifactId>
+  <version>4.5.0</version>
+</dependency>
 ```
 
 ##### Set the system property
@@ -63,6 +63,24 @@ By default, it uses the AsyncHttpClient.
 ```
 You are all set up to leverage the newly supported client.
 The user-experience remains the unchanged. Everything else works as expected.
+
+#### Using the Java 11+ client in Grid
+To do that, you will need to download the `selenium-http-jdk-client` jar file and
+use the `--ext` flag to make it available in the Grid jar's classpath.
+
+The jar file can be downloaded directly from [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/4.5.0/)
+and then start the Grid in the following way:
+
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —ext selenium-http-jdk-client-4.5.0.jar standalone
+```
+
+An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
+
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0) standalone
+```
+
 
 Huge thanks to Simon Stewart ([@shs96c](https://twitter.com/shs96c)) for making this possible with his contribution! 
 
