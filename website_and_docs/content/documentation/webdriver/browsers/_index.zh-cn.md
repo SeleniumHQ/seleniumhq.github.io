@@ -1,6 +1,6 @@
 ---
-title: "Supported Browsers"
-linkTitle: "Browsers"
+title: "支持的浏览器列表"
+linkTitle: "浏览器"
 weight: 4
 aliases: [
 "/documentation/zh-cn/driver_idiosyncrasies/",
@@ -11,4 +11,4 @@ aliases: [
 ]
 ---
 
-Each browser has custom capabilities and unique features.
+每个浏览器都有定制和特有的功能。
