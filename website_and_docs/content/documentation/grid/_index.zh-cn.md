@@ -13,12 +13,24 @@ aliases:
         ]
 ---
 
-Selenium Grid 允许通过将客户端发送的命令路由到远程浏览器实例来在远程机器上执行 WebDriver 脚本。 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-Grid 的目标:
 
-* 提供一种在多台机器上并行运行测试的简单方法
-* 允许在不同的浏览器版本上进行测试
-* 启用跨平台测试
+Selenium Grid allows the execution of WebDriver scripts on remote machines 
+by routing commands sent by the client to remote browser instances. 
 
-感兴趣? 通过以下部分了解Grid的工作原理, 以及如何设置自己的.
+Grid aims to:
+
+* Provide an easy way to run tests in parallel on multiple machines
+* Allow testing on different browser versions
+* Enable cross platform testing
+
+Interested? Go through the following sections to understand
+how Grid works, and how to set up your own.
