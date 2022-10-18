@@ -19,7 +19,7 @@ makes writing good tests a challenge.
 
 Selenium provides tools to make functional user interaction easier,
 but does not help you write well-architected test suites.
-In this chapte, we offer advice, guidelines, and recommendations
+In this chapter, we offer advice, guidelines, and recommendations
 on how to approach functional web page automation.
 
 This chapter records software design patterns popular
