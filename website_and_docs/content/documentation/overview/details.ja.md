@@ -1,104 +1,67 @@
 ---
-title: "A Deeper Look"
-linkTitle: "A Deeper Look"
+title: "Selenium 詳細"
+linkTitle: "詳細"
 weight: 2
 description: >
-  Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群のプロジェクトです。
+  Seleniumは、Web ブラウザーの自動化を可能にし、
+  サポートするさまざまなツールとライブラリーの包括的なプロジェクトです。
 aliases: [
-"/documentation/ja/introduction/the_selenium_project_and_tools/",
-"/ja/documentation/overview/a_deeper_look"
+"/documentation/en/introduction/the_selenium_project_and_tools/",
+"/documentation/overview/a_deeper_look"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Spanish. Do you speak Spanish? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+### Selenium 詳細
 
-### Selenium controla los navegadores web
+_Selenium_ にはさまざまな機能がありますが、その核となるのは、
+ブラウザーのインスタンスをリモートで制御し、
+ユーザーとブラウザーのやりとりをエミュレートするために利用できる最高の技術を使用する、
+Webブラウザー自動化のためのツールセットです。
 
-_Selenium_ significa muchas cosas pero en su núcleo, es un conjunto
-de herramientas para la automatización de navegadores web que utiliza
-las mejores técnicas disponibles para controlar remotamente las
-instancias de los navegadores y emular la interacción del usuario con
-el navegador.
+Seleniumを使用すると、ユーザーはエンド ユーザーが実行する一般的なアクティビティをシミュレートできます。 
+フィールドにテキストを入力し、ドロップダウン値とチェック ボックスを選択し、ドキュメント内のリンクをクリックします。 
+また、マウスの移動、任意の JavaScript の実行など、他の多くのコントロールも提供します。
 
-Permite a los usuarios simular interacciones básicas realizadas por
-los usuarios finales; insertando texto en los campos, seleccionando
-valores de menús desplegables y casillas de verificación, y haciendo
-clics en los enlaces de los documentos. También provee muchos otros
-controles tales como el movimiento del mouse, la ejecución arbitraria
-de JavaScript, y mucho más.
+主にWebサイトのフロントエンドのテストに使用されますが、その中核として、Seleniumは、
+ユーザーがブラウザーを代理で操作する _ライブラリ_ です。 
+インターフェースはアプリケーションに遍在しており、目的に合わせて他のライブラリとの構成を促進します。
 
-A pesar de que es usado principalmente para pruebas de front-end de
-sitios webs, Selenium es en esencia una _librería_ de agente de
-usuario para el navegador. Las interfaces son ubicuas a su
-aplicación, lo que fomenta la composición con otras librerías para
-adaptarse a su propósito.
+### すべてを支配する 1 つのインターフェース
 
+プロジェクトの指針となる原則の1つは、すべての (主要な) ブラウザー テクノロジに共通のインターフェイスをサポートすることです。
+Webブラウザーは非常に複雑で、高度に設計されたアプリケーションであり、
+まったく異なる方法で操作を実行しますが、実行中は同じように見えることがよくあります。 
+テキストは同じフォントで表示されますが、画像は同じ場所に表示され、リンク先は同じです。 
+水面下で起こっていることは、昼と夜と同じくらい異なります。 
+Selenium はこれらの違いを "抽象化" し、コードを書いている人からその詳細や複雑さを隠蔽します。 
+これにより、数行のコードを記述して複雑なワークフローを実行できますが、
+これらの同じ行は、Firefox、Internet Explorer、Chrome、およびその他のサポートされているすべてのブラウザーで実行されます。
 
-### Una interfaz para gobernarlos a todos
+### ツールとサポート
 
-Uno de los principios fundamentales del proyecto es permitir una
-interfaz común para todas las tecnologías de los (principales)
-navegadores. Los navegadores web son aplicaciones increíblemente
-complejas y de mucha ingeniería, realizando operaciones completamente
-diferentes pero que usualmente se ven iguales al hacerlo. Aunque el
-texto se presente con las mismas fuentes, las imágenes se muestren en
-el mismo lugar y los enlaces te llevan al mismo destino. Lo que
-sucede por debajo es tan diferente como la noche y el día. Selenium
-abstrae estas diferencias, ocultando sus detalles y complejidades a
-la persona que escribe el código. Esto le permite escribir varias
-líneas de código para realizar un flujo de trabajo complicado, pero
-estas mismas líneas se ejecutarán en Firefox, Internet Explorer,
-Chrome y los demás navegadores compatibles.
+Seleniumの必要最小限な設計アプローチは、より大きなアプリケーションのコンポーネントとして含まれる汎用性を提供します。 
+Seleniumの包括的なプロジェクトの下で提供される周辺インフラストラクチャは、
+[ブラウザーのgrid]({{< ref "/grid.md" >}})をまとめるためのツールを提供し、
+さまざまなブラウザーやさまざまなマシンの複数のオペレーティングシステムでテストを実行できるようにします。
 
+サーバールームやデータセンター内の一連のコンピューターがすべて同時にブラウザーを起動して、
+サイトのリンク、フォーム、テーブルにアクセスし、1日24時間アプリケーションをテストしていると想像してください。
+最も一般的な言語用に提供されているシンプルなプログラミングインターフェイスを介して、
+これらのテストは並行して休むことなく実行され、エラーが発生するとレポートが返されます。
 
-### Herramientas y soporte
+ブラウザーを制御するだけでなく、そのようなgridを簡単に拡張および展開できるようにするための
+ツールとドキュメントをユーザーに提供することで、これを実現するお手伝いをするのが目的です。
 
-El diseño minimalista de Selenium le da la versatilidad para que se
-pueda incluir como un componente en otras aplicaciones. La
-infraestructura proporcionada debajo del catálogo de Selenium te da
-las herramientas para que puedas ensamblar tu [grid de
-navegadores]({{< ref "/grid.md" >}}) de modo que tus pruebas
-se puedan ejecutar en diferentes navegadores a través de diferente
-sistemas operativos y plataformas.
+### 誰がSeleniumを利用するのか
 
-Imagina un banco de computadores en tu sala de servidores o en un
-centro de datos, todos ejecutando navegadores al mismo tiempo e
-interactuando con los enlaces en tu sitio web, formularios, y
-tablas&mdash;probando tu aplicación 24 horas al día. A través de la
-sencilla interfaz de programación proporcionada para los lenguajes
-más comunes, estas pruebas se ejecutarán incansablemente en paralelo,
-reportando cuando ocurran errores.
+世界で最も重要な企業の多くは、ブラウザベースのテストに Seleniumを採用しており、
+多くの場合、他の独自ツールを使用した長年にわたる取り組みに取って代わりました。 
+人気が高まるにつれて、その要件と課題も倍増しています。
 
-Es un objetivo ayudar a que esto sea una realidad para ti,
-proporcionando a los usuarios herramientas y documentación para
-controlar no solo los navegadores pero también para facilitar la
-escalabilidad e implementación de tales grids.
+ウェブがより複雑になり、新しいテクノロジーがウェブサイトに追加されるにつれて、
+可能な限りそれらに遅れずについていくことがこのプロジェクトの使命です。 
+オープンソースプロジェクトであるため、このサポートは多くのボランティアからの惜しみない時間の寄付によって提供されます。
 
-
-### Quien utiliza Selenium
-
-Muchas de las empresas más importantes del mundo han adoptado
-Selenium para sus pruebas basadas en navegador, a menudo reemplazando
-esfuerzos de años que involucran otras herramientas propietarias. A
-medida que ha crecido en popularidad, también se han multiplicado sus
-requisitos y desafíos.
-
-A medida que la web se vuelve más complicada y se agregan nuevas
-tecnologías a los sitios web, la misión de este proyecto es
-mantenerse al día con ellos siempre que sea posible. Siendo un
-proyecto de código abierto, este apoyo se sustenta a través de la
-donación generosa de tiempo de muchos voluntarios, cada uno de los
-cuales tiene un "trabajo diurno".
-
-Otra misión del proyecto es alentar a más voluntarios a participar en
-este esfuerzo, y construir una comunidad fuerte para que el proyecto
-pueda seguir el ritmo de las tecnologías emergentes y seguir siendo
-una plataforma dominante para la automatización de pruebas
-funcionales.
+このプロジェクトのもう1つの使命は、より多くのボランティアがこの取り組みに参加することを奨励し、
+強力なコミュニティを構築して、プロジェクトが新しいテクノロジに対応し続け、
+機能テスト自動化の主要なプラットフォームであり続けることができるようにすることです。
