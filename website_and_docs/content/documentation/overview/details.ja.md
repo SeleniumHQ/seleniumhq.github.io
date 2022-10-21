@@ -7,7 +7,7 @@ description: >
   サポートするさまざまなツールとライブラリーの包括的なプロジェクトです。
 aliases: [
 "/documentation/ja/introduction/the_selenium_project_and_tools/",
-"/documentation/overview/a_deeper_look"
+"/ja/documentation/overview/a_deeper_look"
 ]
 ---
 
