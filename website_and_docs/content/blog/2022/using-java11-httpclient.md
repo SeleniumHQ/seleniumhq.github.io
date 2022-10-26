@@ -72,14 +72,17 @@ The jar file can be downloaded directly from [repo1.maven.org](https://repo1.mav
 and then start the Grid in the following way:
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —ext selenium-http-jdk-client-4.5.0.jar standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar -—ext selenium-http-jdk-client-4.5.0.jar standalone
 ```
 
 An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0) standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0) standalone
 ```
+
+If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` and `—-ext` flags 
+needs to be done for all components.
 
 
 Huge thanks to Simon Stewart ([@shs96c](https://twitter.com/shs96c)) for making this possible with his contribution! 
