@@ -266,11 +266,20 @@ Henrik Skupin
 &lt;li>For various Grid components to communicate with each other depending on the Grid mode&lt;/li>
 &lt;li>To create ChromeDevTools protocol and BiDi protocol sessions&lt;/li>
 &lt;/ul>
-&lt;p>Currently, Selenium uses &lt;a href="https://github.com/AsyncHttpClient/async-http-client">AsyncHttpClient&lt;/a>. AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it is a good fit.&lt;/p>
+&lt;p>Currently, Selenium uses &lt;a href="https://github.com/AsyncHttpClient/async-http-client">AsyncHttpClient&lt;/a>.
+AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP
+requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it
+is a good fit.&lt;/p>
 &lt;h3 id="why-does-selenium-want-to-move-to-java-11-http-client">Why does Selenium want to move to Java 11+ HTTP Client?&lt;/h3>
-&lt;p>While AsyncHttpClient provides the required functionality, the open-source project is not been actively maintained since June 2021. It coincides with the fact that Java 11+ provides a built-in HTTP and WebSocket client. Selenium can utilize it to replace AsyncHttpClient.
-Currently, Selenium Java supports Java 8. Selenium has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. Aligning it with major releases and accompanied announcements is crucial to ensure the user experience is intact.&lt;/p>
-&lt;p>The Selenium server runs great on Java 11+ already, so while we plan to make that the minimum version in a future release, for now we plan to introduce optional components that can take advantage of modern Java releases.&lt;/p>
+&lt;p>While AsyncHttpClient provides the required functionality, the open-source project is not been
+actively maintained since June 2021. It coincides with the fact that Java 11+ provides a built-in
+HTTP and WebSocket client. Selenium can utilize it to replace AsyncHttpClient.&lt;/p>
+&lt;p>Currently, Selenium Java supports Java 8. Selenium has plans to upgrade the minimum version
+supported to Java 11. However, it is a sizeable effort. Aligning it with major releases and accompanied
+announcements is crucial to ensure the user experience is intact.&lt;/p>
+&lt;p>The Selenium server runs great on Java 11+ already, so while we plan to make that the minimum
+version in a future release, for now we plan to introduce optional components that can take advantage
+of modern Java releases.&lt;/p>
 &lt;p>So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.&lt;/p>
 &lt;h3 id="using-java-11-http-client-in-selenium-450">Using Java 11+ HTTP Client in Selenium 4.5.0&lt;/h3>
 &lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
@@ -307,7 +316,7 @@ and then start the Grid in the following way:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>An alternative to downloading the &lt;code>selenium-http-jdk-client&lt;/code> jar file is to use &lt;a href="https://get-coursier.io/docs/cli-installation">Coursier&lt;/a>.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>java -Dwebdriver.http.factory&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>jdk-http-client -jar selenium-server-4.5.0.jar —-ext &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> standalone
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you are using the Hub/Node(s) mode or the Distributed mode, setting the &lt;code>-Dwebdriver.http.factory=jdk-http-client&lt;/code> and &lt;code>—-ext&lt;/code> flags
-needs to be done for all components.&lt;/p>
+needs to be done for each one of the components.&lt;/p>
 &lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
 &lt;p>The Docker Selenium browser Beta and Dev channel releases are now regularly published to &lt;a href="https://hub.docker.com/u/selenium">Docker Hub&lt;/a> and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment &lt;em>before&lt;/em> those issues have an impact on their users.&lt;/p>
 &lt;h3 id="what-are-release-channels">What are &amp;ldquo;release channels&amp;rdquo;?&lt;/h3>
