@@ -247,6 +247,45 @@ Vamos combinar essas 8 coisas em um script completo com asserções que podem se
 {{< /tab >}}
 {{< /tabpane >}}
 
+## Test Runners
+If you are using Selenium for testing,
+you will want to execute your Selenium code using test runner tools.
+
+Many of the code examples in this documentation can be found in our example repositories.
+There are multiple options in each language, but here is what we are using in our examples:
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="Python" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+// Add instructions
+{{< /tab >}}
+{{% tab header="JavaScript" %}}
+Install Mocha Test runner using below command in your terminal
+
+```shell
+npm install mocha
+```
+
+and run your tests using below command
+
+```shell
+mocha firstScript.spec.js
+```
+
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add instructions
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## Próximos Passos
 
 Use oque você aprendeu e construa o seu proprio código Selenium.

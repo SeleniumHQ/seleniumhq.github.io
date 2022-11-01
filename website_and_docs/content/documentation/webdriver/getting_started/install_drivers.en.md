@@ -18,7 +18,7 @@ using the browser's built-in support for automation.
 
 Since all the driver implementations except for Internet Explorer are provided by the
 browser vendors themselves, they are not included in the standard Selenium distribution.
-This section explains the basic requirements for getting you started with the different browsers.
+This section explains the basic requirements for getting started with the different browsers.
 
 Read about more advanced options for starting a driver 
 in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.

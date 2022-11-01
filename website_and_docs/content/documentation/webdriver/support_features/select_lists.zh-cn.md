@@ -2,7 +2,6 @@
 title: "使用选择列表元素"
 linkTitle: "选择列表"
 weight: 10
-needsTranslation: true
 aliases: [
 "/documentation/zh-cn/support_packages/working_with_select_elements/",
 "/zh-cn/documentation/support_packages/working_with_select_elements/",
@@ -13,23 +12,25 @@ description: >
   与其他元素相比，选择列表具有特殊的行为.
 ---
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
+Select对象现在将为您提供一系列命令,
+用于允许您与 `<select>` 元素进行交互.
 
-If you are using Java or .NET make sure that you've properly required the support package
-in your code. See the full code from GitHub in any of the examples below.
+如果您使用的是 Java 或 .NET，
+请确保您在代码中已正确加载所需的包.
+您可以通过GitHub查看下面示例的完整代码.
 
-Note that this class only works for HTML elements `select` and `option`.
-It is possible to design drop-downs with JavaScript overlays using `div` or `li`,
-and this class will not work for those.
+请注意，此类仅适用于 HTML 元素 `select` 和 `option`.
+这个类将不适用于那些通过 `div` 或 `li` 
+并使用JavaScript遮罩层设计的下拉列表.
 
-## Types
+## 类型
 
-Select methods may behave differently depending on which type of `<select>` element is being worked with.
+选择方法的行为可能会有所不同，
+具体取决于正在使用的 `<select>` 元素的类型.
 
-### Single select
+### 单选
 
-This is the standard drop-down object where one and only one option may be selected.
+这是标准的下拉对象，其只能选定一个选项.
 
 ```html
 <select name="selectomatic">
@@ -40,10 +41,10 @@ This is the standard drop-down object where one and only one option may be selec
 </select>
 ```
 
-### Multiple select
+### 复选
 
-This select list allows selecting and deselecting more than one option at a time.
-This only applies to `<select>` elements with the `multiple` attribute.
+此选择列表允许同时选定和取消选择多个选项.
+这仅适用于具有 `multiple` 属性的 `<select>`元素.
 
 ```html
 <select name="multi" id="multi" multiple="multiple">
@@ -54,10 +55,13 @@ This only applies to `<select>` elements with the `multiple` attribute.
 </select>
 ```
 
-## Create class
+## 构建类
 
-First locate a `<select>` element, then use it to initialize a `Select` object.
-Note that as of Selenium 4.5, you can't create a `Select` object if the `<select>` element is disabled.
+首先定位一个 `<select>` 元素,
+然后借助其初始化一个`Select` 对象.
+请注意, 从 Selenium 4.5 开始,
+您无法针对禁用的 `<select>` 元素构建 `Select` 对象.
+
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -73,20 +77,20 @@ Note that as of Selenium 4.5, you can't create a `Select` object if the `<select
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L20-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## List options
+## 选项列表
 
-There are two lists that can be obtained:
+共有两种列表可以被获取:
 
-### All options
+### 全部选项
 
-Get a list of all options in the `<select>` element:
+获取 `<select>` 元素中所有选项列表:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -102,18 +106,18 @@ Get a list of all options in the `<select>` element:
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L48" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Selected options
+### 选中的选项
 
-Get a list of selected options in the `<select>` element. For a standard select list
-this will only be a list with one element, for a multiple select list it can contain
-zero or many elements.
+获取 `<select>` 元素中所选中的选项列表.
+对于标准选择列表这将只是一个包含一个元素的列表, 
+对于复选列表则表示包含的零个或多个元素.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -129,22 +133,22 @@ zero or many elements.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L51" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Select option
+## 选项
 
-The Select class provides three ways to select an option.
-Note that for multiple select type Select lists, you can repeat these methods
-for each element you want to select.
+Select类提供了三种选择选项的方法.
+请注意, 对于复选类型的选择列, 
+对于要选择的每个元素可以重复使用这些方法.
 
-### Text
+### 文本
 
-Select the option based on its visible text
+根据其可见文本选择选项
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -160,16 +164,16 @@ Select the option based on its visible text
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L27" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Value
+### 值
 
-Select the option based on its value attribute
+根据其值属性选择选项
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -185,16 +189,16 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L30" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Index
+### 序号
 
-Select the option based on its position in the list
+根据其在列表中的位置选择选项
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -210,18 +214,18 @@ Select the option based on its position in the list
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L33" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Disabled options
+### 禁用的选项
 
 {{< badge-version version="4.5" >}}
 
-Options with a `disabled` attribute may not be selected.
+具有 `disabled` 属性的选项可能无法被选择.
 
 ```html
     <select name="single_disabled">
@@ -244,17 +248,17 @@ Options with a `disabled` attribute may not be selected.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L74-L76" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## De-select option
+## 取消选择选项
 
-Only multiple select type select lists can have options de-selected. 
-You can repeat these methods for each element you want to select.
+只有复选类型的选择列表才能取消选择选项.
+您可以对要选择的每个元素重复使用这些方法.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -270,9 +274,9 @@ You can repeat these methods for each element you want to select.
 {{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/SelectListTest.kt#L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
