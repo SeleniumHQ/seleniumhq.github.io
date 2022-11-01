@@ -1,5 +1,5 @@
 const { Builder } = require("selenium-webdriver");
-const { Credential, VirtualAuthenticatorOptions } = require("selenium-webdriver/lib/virtual_authenticator");
+const { Credential, VirtualAuthenticatorOptions, Transport, Protocol } = require("selenium-webdriver/lib/virtual_authenticator");
 const { suite } = require('selenium-webdriver/testing');
 const assert = require('assert')
 const { InvalidArgumentError } = require("selenium-webdriver/lib/error");
@@ -42,13 +42,13 @@ suite(function(env) {
         after(() => driver.quit());
 
         function arraysEqual(array1, array2) {
-            return (array1.length == array2.length &&
+            return (array1.length === array2.length &&
                 array1.every((item) => array2.includes(item)) &&
                 array2.every((item) => array1.includes(item)));
         }
 
         it('Register a virtual authenticator', async function() {
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['U2F']);
+            options.setProtocol(Protocol['U2F']);
             options.setHasResidentKey(false);
 
             // Register a virtual authenticator
@@ -77,7 +77,7 @@ suite(function(env) {
         });
 
         it('Createa and add residential key', async function() {
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['CTAP2']);
+            options.setProtocol(Protocol['CTAP2']);
             options.setHasResidentKey(true);
             options.setHasUserVerification(true);
             options.setIsUserVerified(true);
@@ -101,8 +101,8 @@ suite(function(env) {
             assert(arraysEqual(credential_id, test_id));
         });
 
-        it('Add resident credential not supported whenauthenticator uses U2F protocol', async function() {
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['U2F']);
+        it('Add resident credential not supported when authenticator uses U2F protocol', async function() {
+            options.setProtocol(Protocol['U2F']);
             options.setHasResidentKey(true);
 
             await driver.addVirtualAuthenticator(options);
@@ -128,7 +128,7 @@ suite(function(env) {
         });
 
         it('Create and add non residential key', async function() {
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['U2F']);
+            options.setProtocol(Protocol['U2F']);
             options.setHasResidentKey(false);
 
             await driver.addVirtualAuthenticator(options);
@@ -151,7 +151,7 @@ suite(function(env) {
         });
 
         it('Get credential', async function() {
-            options.setProtocol(VirtualAuthenticatorOptions.Protocol['CTAP2']);
+            options.setProtocol(Protocol['CTAP2']);
             options.setHasResidentKey(true);
             options.setHasUserVerification(true);
             options.setIsUserVerified(true);

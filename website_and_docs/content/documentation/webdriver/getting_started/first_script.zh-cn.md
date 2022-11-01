@@ -130,7 +130,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -263,6 +263,45 @@ Selenium所做的一切,
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+## Test Runners
+If you are using Selenium for testing,
+you will want to execute your Selenium code using test runner tools.
+
+Many of the code examples in this documentation can be found in our example repositories.
+There are multiple options in each language, but here is what we are using in our examples:
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="Python" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// Add instructions
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+// Add instructions
+{{< /tab >}}
+{{% tab header="JavaScript" %}}
+Install Mocha Test runner using below command in your terminal
+
+```shell
+npm install mocha
+```
+
+and run your tests using below command
+
+```shell
+mocha firstScript.spec.js
+```
+
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// Add instructions
 {{< /tab >}}
 {{< /tabpane >}}
 

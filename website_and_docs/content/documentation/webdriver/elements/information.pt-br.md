@@ -28,34 +28,34 @@ nature and relationship in the tree to return a value.
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Navigate to the url
-driver.get('https://www.google.com');
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Get boolean value for is element display
-boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
+boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
-driver.get("https://www.google.com")
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 # Get boolean value for is element display
-is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
+is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-// Navigate to the url
-driver.Navigate().GoToUrl("https://google.com");
+//Navigate to the url
+driver.Url = "https://www.selenium.dev/selenium/web/inputs.html";
 
-// Get bool value for is element displayed
-bool displayedLogo = driver.FindElement(By.CssSelector("img[alt='Google']")).Displayed;
+//Get boolean value for is element display
+Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Help us with a PR for code sample
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.google.com');
+await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
+let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
@@ -349,11 +349,43 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Attributes and Properties
+## Fetching Attributes or Properties
 
-### Attribute
+Fetches the run time value associated with a 
+DOM attribute. It returns the data associated 
+with the DOM attribute or property of the element. 
 
-### DOM Attribute
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+//Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-### DOM Property
+//identify the email text box
+WebElement emailTxt = driver.findElement(By.name(("email_input")));
 
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.getAttribute("value");
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+   # Help us with a PR for code sample
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+ //Navigate to the url
+driver.Url="https://www.selenium.dev/selenium/web/inputs.html";
+
+//identify the email text box
+IWebElement emailTxt = driver.FindElement(By.Name(("email_input")));
+
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.GetAttribute("value");
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Help us with a PR for code sample
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+// Help us with a PR for code sample
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Help us with a PR for code sample
+  {{< /tab >}}
+{{< /tabpane >}}
