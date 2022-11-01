@@ -1,14 +1,14 @@
 ---
-title: "Browser Service"
-linkTitle: "Service"
+title: "浏览器服务"
+linkTitle: "服务"
 weight: 3
 ---
 
-The Service classes are for managing the starting and stopping of drivers.
-They are not applicable in Remote Drivers.
+服务类用于管理驱动程序的启动和停止.
+它们不适用于远程驱动程序.
 
-* Location of the driver
-* port to use
-* command line arguments to use
+* 驱动的位置
+* 端口的使用
+* 命令行参数的使用
 
 {{< alert-code />}}

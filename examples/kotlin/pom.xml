@@ -14,7 +14,7 @@
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
 
-        <selenium.version>4.4.0</selenium.version>
+        <selenium.version>4.5.0</selenium.version>
         <junit5.version>5.9.0</junit5.version>
         <wdm.version>5.2.3</wdm.version>
 

@@ -298,7 +298,7 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));
+new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(driver => driver.FindElement(By.Name("q")));
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -324,7 +324,6 @@ they are conditions that are predefined for frequent wait operations.
 The conditions available in the different language bindings vary,
 but this is a non-exhaustive list of a few:
 
-<!-- TODO(ato): Fill in -->
 * alert is present
 * element exists
 * element is visible
@@ -338,7 +337,6 @@ to find an exhaustive list of expected conditions:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 

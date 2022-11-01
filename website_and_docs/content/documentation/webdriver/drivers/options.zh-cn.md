@@ -1,6 +1,6 @@
 ---
-title: "Browser Options"
-linkTitle: "Options"
+title: "浏览器选项"
+linkTitle: "选项"
 weight: 2
 description: >-
   这些capabilities用于所有浏览器.
@@ -17,13 +17,16 @@ aliases: [
 ]
 ---
 
-In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
-As of Selenium 4, you must use the browser options classes.
-For remote driver sessions, a browser options instance is required as it determines which browser will be used.
+在 Selenium 3 中, capabilities是借助"Desired Capabilities"类定义于会话中的. 
+从 Selenium 4 开始, 您必须使用浏览器选项类. 
+对于远程驱动程序会话, 浏览器选项实例是必需的, 因为它确定将使用哪个浏览器. 
 
-These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
 
-Each browser has ({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
+这些选项在 [Capabilities](https://w3c.github.io/webdriver/#capabilities) 的 w3c 规范中进行了描述. 
+
+
+每个浏览器都有 [自定义选项]({{< ref "../browsers/" >}}) , 是规范定义之外的内容. 
+
  
 ## browserName
  

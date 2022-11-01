@@ -49,6 +49,6 @@ WebDriverには1つのジョブしかありません:　上記の任意のメソ
 テストフレームワークは、WebDriverおよびテストの関連手順の実行を担当します。
 それは下記図に似ていると考えることができます。
 
-{{< figure src="/images/documentation/webdriver/remote_comms_test_frameworkserver.png" class="img-responsive text-center" alt="テストフレームワーク">}}
+{{< figure src="/images/documentation/webdriver/test_framework.png" class="img-responsive text-center" alt="テストフレームワーク">}}
 
 上図でCucumberなどの自然言語のフレームワーク/ツールがテストフレームワークボックスの一部として存在する場合があります、またはテストフレームワークを独自の実装で完全に密閉する場合があります。

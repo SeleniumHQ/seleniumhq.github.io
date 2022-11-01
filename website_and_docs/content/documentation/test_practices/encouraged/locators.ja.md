@@ -1,13 +1,13 @@
 ---
-title: "Tips on working with locators"
+title: "ロケータをうまく扱うTips"
 linkTitle: "Locators"
 weight: 8
 needsTranslation: true
 description: >
-    When to use which locators and how best to manage them in your code.
+    どのロケータを指定すべきか、コード内でロケータをどう管理すると良いか。
 ---
 
-Take a look at examples of the [supported locator strategies]({{< ref "/documentation/webdriver/elements/locators.md" >}}).
+サポートしているロケータについては [要素を探す]({{< ref "/documentation/webdriver/elements/locators.md" >}})を参照してください。
 
 一般に、HTMLのid属性が利用可能でユニークかつ一貫している場合、ページで要素を探す方法として適しています。
 idは動作がとても速い傾向があり、複雑なDOMトラバースに伴う処理を省略できます。
