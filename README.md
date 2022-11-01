@@ -11,7 +11,7 @@ This is the repository used to build and publish the official Selenium [website]
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.94.0 or higher.
+to use Hugo 0.101.0.
 
 Steps needed to have this working locally and work on it:
 

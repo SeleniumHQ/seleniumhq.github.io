@@ -1,7 +1,7 @@
 ---
 title: "Esperas"
 linkTitle: "Esperas"
-weight: 12
+weight: 6
 aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 
@@ -84,7 +84,7 @@ assert(element.text == "Hello from JavaScript!")
 {{< /tabpane >}}
 
 O problema aqui é que a
-[estratégia de carregamento de página padrão]({{< ref "capabilities/shared#pageloadstrategy" >}})
+[estratégia de carregamento de página padrão]({{< ref "drivers/options#pageloadstrategy" >}})
 usado no WebDriver escuta o `document.readyState`
 para mudar para `"complete"` antes de retornar da chamada para _navigate_.
 Porque o elemento `p` é
@@ -151,7 +151,7 @@ WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
 System.out.println(firstResult.getText());
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 def document_initialised(driver):
     return driver.execute_script("return initialised")
 
@@ -229,10 +229,10 @@ WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
 assertEquals(foo.getText(), "Hello from JavaScript!");
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element(By.TAG_NAME,"p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -301,7 +301,7 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));
+new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(driver => driver.FindElement(By.Name("q")));
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
@@ -327,7 +327,6 @@ são condições predefinidas para operações de espera frequentes.
 As condições disponíveis nas diferentes linguagens variam,
 mas esta é uma lista não exaustiva de alguns:
 
-<!-- TODO(ato): Fill in -->
 * alert is present
 * element exists
 * element is visible
@@ -341,7 +340,6 @@ para encontrar uma lista exaustiva das condições esperadas:
 
 * Classe Java [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
 * Classe Python [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected)
-* Tipo .NET [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm)
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 

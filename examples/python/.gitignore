@@ -8,3 +8,5 @@ venv/**/*
 /sa11y.egg-info/
 /package-lock.json
 tests/.pytest_cache/*
+/.pytest_cache/
+geckodriver.log

@@ -3,7 +3,14 @@ package dev.selenium.augmenter;
 import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
 import static org.openqa.selenium.remote.http.Contents.utf8String;
 
-import com.google.common.net.MediaType;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicReference;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -23,27 +30,24 @@ import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
 import org.openqa.selenium.devtools.events.DomMutationEvent;
 import org.openqa.selenium.devtools.v85.log.Log;
+import org.openqa.selenium.grid.Main;
 import org.openqa.selenium.logging.EventType;
 import org.openqa.selenium.logging.HasLogEvents;
+import org.openqa.selenium.net.PortProber;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.google.common.net.MediaType;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Consumer;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CdpRemoteWebDriverTest {
 
-  private static WebDriver driver;
+  private static URL gridUrl;
+
+  private WebDriver driver;
 
   @BeforeAll
   static void setDriver() {
@@ -52,10 +56,11 @@ public class CdpRemoteWebDriverTest {
 
   @BeforeEach
   public void setup() throws MalformedURLException {
-    // Download the latest Grid jar from https://www.selenium.dev/downloads/
-    // Run the Grid jar in any one of the modes by referring to https://www.selenium.dev/documentation/grid/getting_started/
-    // By Default Grid runs on "http://localhost:4444".
-    URL gridUrl = new URL("http://localhost:4444");
+    int port = PortProber.findFreePort();
+    WebDriverManager.chromedriver().setup();
+    Main.main(new String[] { "standalone", "--port", String.valueOf(port) });
+
+    gridUrl = new URL(String.format("http://localhost:%d/", port));
     ChromeOptions options = new ChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
   }
@@ -173,27 +178,28 @@ public class CdpRemoteWebDriverTest {
     Assertions.assertTrue(latch.await(10, TimeUnit.SECONDS));
   }
 
-
   @Test
-  public void testJsExceptionListener() {
+  public void testJsExceptionListener() throws Exception {
     driver = new Augmenter().augment(driver);
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
 
     List<JavascriptException> jsExceptionsList = new ArrayList<>();
-    Consumer<JavascriptException> addEntry = jsExceptionsList::add;
-    devTools.getDomains().events().addJavascriptExceptionListener(addEntry);
+    devTools.getDomains().events().addJavascriptExceptionListener(jsExceptionsList::add);
+    CompletableFuture<JavascriptException> futureJsExc = new CompletableFuture<>();
+    devTools.getDomains().events().addJavascriptExceptionListener(futureJsExc::complete);
 
-    driver.get("https://www.google.com");
-    WebElement element = driver.findElement(By.linkText("Sign in"));
+    driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
+
+    WebElement element = driver.findElement(By.tagName("button"));
 
     ((JavascriptExecutor) driver)
       .executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
                      element, "onclick", "throw new Error('Hello, world!')");
     element.click();
 
+    futureJsExc.get(5, TimeUnit.SECONDS);
     Assertions.assertEquals(1, jsExceptionsList.size());
-
   }
 
   @Test
@@ -203,17 +209,18 @@ public class CdpRemoteWebDriverTest {
     devTools.createSession();
 
     // Intercept and change response if the request uri contains "google"
-    NetworkInterceptor interceptor = new NetworkInterceptor(
+    try (NetworkInterceptor interceptor = new NetworkInterceptor(
       driver,
       Route.matching(req -> req.getUri().contains("google"))
         .to(() -> req -> new HttpResponse()
           .setStatus(200)
           .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
-          .setContent(utf8String("Creamy, delicious cheese!"))));
+          .setContent(utf8String("Creamy, delicious cheese!"))))) {
 
-    driver.get("https://google.com");
+      driver.get("https://google.com");
 
-    String source = driver.getPageSource();
-    Assertions.assertTrue(source.contains("delicious cheese!"));
+      String source = driver.getPageSource();
+      Assertions.assertTrue(source.contains("delicious cheese!"));
+    }
   }
 }

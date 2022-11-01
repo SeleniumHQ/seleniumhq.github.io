@@ -1,7 +1,7 @@
 ---
 title: "待機"
 linkTitle: "待機"
-weight: 12
+weight: 6
 aliases: ["/documentation/ja/webdriver/waits/"]
 ---
 
@@ -75,7 +75,7 @@ assert(element.text == "Hello from JavaScript!")
   {{< /tab >}}
 {{< /tabpane >}}
 
-ここでは、WebDriverで使用されるデフォルトの [ページロード戦略]({{< ref "capabilities/shared#pageloadstrategy" >}}) が`document.readyState`をリッスンして、ナビゲーションの呼び出しから戻る前に`"complete"`に変更することが問題です。ドキュメントの読み込みが完了した後に`p`要素が追加されるため、このWebDriverスクリプトは断続的になる _可能性があります。_ これらのイベントを明示的に待機（またはブロック）せずに非同期でトリガーする要素またはイベントについては保証できないため、断続的である可能性があります。
+ここでは、WebDriverで使用されるデフォルトの [ページロード戦略]({{< ref "drivers/options#pageloadstrategy" >}}) が`document.readyState`をリッスンして、ナビゲーションの呼び出しから戻る前に`"complete"`に変更することが問題です。ドキュメントの読み込みが完了した後に`p`要素が追加されるため、このWebDriverスクリプトは断続的になる _可能性があります。_ これらのイベントを明示的に待機（またはブロック）せずに非同期でトリガーする要素またはイベントについては保証できないため、断続的である可能性があります。
 
 幸いなことに、 _WebElement.click_ や _WebElement.sendKeys_ などのWebElementインターフェイスで使用可能な通常の命令セットを使用すると、コマンドの呼び出しがブラウザーで完了するまで関数呼び出しが返されない（または、コールバックはコールバックスタイルの言語ではトリガーされない）ため、同期が保証されます。高度なユーザーインタラクションAPIである[_キーボード_]({{< ref "actions_api/keyboard.md" >}})と[_マウス_]({{< ref "actions_api/mouse.md" >}})は、 "言うことをする" 非同期コマンドとして明示的に意図されているため、例外です。
 
@@ -106,7 +106,7 @@ WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
 System.out.println(firstResult.getText());
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 def document_initialised(driver):
     return driver.execute_script("return initialised")
 
@@ -177,10 +177,10 @@ WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
 assertEquals(foo.getText(), "Hello from JavaScript!");
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element(By.TAG_NAME,"p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -235,7 +235,8 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
- new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< /tab >}}
+ new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(driver => driver.FindElement(By.Name("q")));
+  {{< /tab >}}
   {{< tab header="Ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
@@ -256,7 +257,6 @@ DOMと指示を同期しなければならないことは非常に一般的で�
 
 異なる言語バインディングで利用可能な条件は異なりますが、これは少数の抜粋したリストです。
 
-<!-- TODO(ato): Fill in -->
 * alert is present
 * element exists
 * element is visible
@@ -269,7 +269,6 @@ DOMと指示を同期しなければならないことは非常に一般的で�
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 

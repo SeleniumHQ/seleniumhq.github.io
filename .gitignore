@@ -2,7 +2,12 @@
 public/
 node_modules
 .DS_Store
-resources/
 website_and_docs/.hugo_build.lock
+website_and_docs/resources
 
 **/target/*
+.classpath
+.project
+.settings
+.gitignore
+.pydevproject

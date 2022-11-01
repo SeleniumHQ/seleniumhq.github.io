@@ -1,0 +1,7 @@
+{{ $browser := .Get "browser" }}
+{{ $wpt := .Get "wpt" }}
+
+{{ $href := printf "https://wpt.fyi/results/webdriver/tests/%s" $wpt }}
+{{ $title := "This code does not work in all browsers" }}
+{{ $text := printf "%s Only" $browser }}
+{{ partial "badge.html" (dict "type" "browser" "title" $title "text" $text "href" $href) }}

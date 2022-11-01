@@ -1,7 +1,7 @@
 ---
 title: "等待"
 linkTitle: "等待"
-weight: 12
+weight: 6
 aliases: ["/documentation/zh-cn/webdriver/waits/"]
 ---
 
@@ -72,7 +72,7 @@ assert(element.text == "Hello from JavaScript!")
   {{< /tab >}}
 {{< /tabpane >}}
 
-这里的问题是WebDriver中使用的默认页面加载策略[页面加载策略]({{< ref "capabilities/shared#pageloadstrategy" >}})听从`document.readyState`在返回调用 _navigate_ 之前将状态改为`"complete"` 。因为`p`元素是在文档完成加载之后添加的，所以这个WebDriver脚本可能是间歇性的。它“可能”间歇性是因为无法做出保证说异步触发这些元素或事件不需要显式等待或阻塞这些事件。
+这里的问题是WebDriver中使用的默认页面加载策略[页面加载策略]({{< ref "drivers/options#pageloadstrategy" >}})听从`document.readyState`在返回调用 _navigate_ 之前将状态改为`"complete"` 。因为`p`元素是在文档完成加载之后添加的，所以这个WebDriver脚本可能是间歇性的。它“可能”间歇性是因为无法做出保证说异步触发这些元素或事件不需要显式等待或阻塞这些事件。
 
 幸运的是，[_WebElement_]({{< ref "elements" >}})接口上可用的正常指令集——例如 _WebElement.click_ 和 _WebElement.sendKeys_—是保证同步的，因为直到命令在浏览器中被完成之前函数调用是不会返回的(或者回调是不会在回调形式的语言中触发的)。高级用户交互APIs,[_键盘_]({{< ref "actions_api/keyboard.md" >}})和[_鼠标_]({{< ref "actions_api/mouse.md" >}})是例外的，因为它们被明确地设计为“按我说的做”的异步命令。
 
@@ -100,7 +100,7 @@ WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
 System.out.println(firstResult.getText());
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 def document_initialised(driver):
     return driver.execute_script("return initialised")
 
@@ -168,10 +168,10 @@ WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
 assertEquals(foo.getText(), "Hello from JavaScript!");         
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver, timeout=3).until(lambda d: d.find_element(By.TAG_NAME,"p"))
 assert el.text == "Hello from JavaScript!"
   {{< /tab >}}
   {{< tab header="CSharp" >}}
@@ -222,7 +222,8 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
- new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< /tab >}}
+ new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(driver => driver.FindElement(By.Name("q")));
+  {{< /tab >}}
   {{< tab header="Ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
@@ -242,7 +243,6 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
 
 不同的语言绑定提供的条件各不相同，但这只是其中一些:
 
-<!-- TODO(ato): Fill in -->
 * alert is present
 * element exists
 * element is visible
@@ -255,7 +255,6 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 

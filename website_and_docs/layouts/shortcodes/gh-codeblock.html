@@ -3,6 +3,22 @@
 {{ $org := .Get "org" | default "SeleniumHQ" }}
 {{ $repo := .Get "repo" | default "seleniumhq.github.io" }}
 {{ $branch := .Get "branch" | default "trunk" }}
+
+{{ $defaultBranchFromEnv := (getenv "SELENIUM_EXAMPLES_BRANCH") }}
+{{ if $defaultBranchFromEnv }}
+  {{ $branch = $defaultBranchFromEnv }}
+{{ end }}
+
+{{ $defaultOrgFromEnv := (getenv "SELENIUM_EXAMPLES_ORG") }}
+{{ if $defaultOrgFromEnv }}
+  {{ $org = $defaultOrgFromEnv }}
+{{ end }}
+
+{{ $defaultRepoFromEnv := (getenv "SELENIUM_EXAMPLES_REPO") }}
+{{ if $defaultRepoFromEnv }}
+  {{ $repo = $defaultRepoFromEnv }}
+{{ end }}
+
 {{ $fullPath := .Get "path" }}
 {{ $path := index (split $fullPath "#") 0 }}
 
@@ -10,7 +26,7 @@
 {{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
 
 {{ $slicedPath := split $path "/" }}
-{{ $language := index (split (index (last 1 $slicedPath) 0) ".") 1 }}
+{{ $language := index (last 1 (split (index (last 1 $slicedPath) 0) ".")) 0 }}
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ if $githubToken }}
@@ -34,7 +50,7 @@
 
   {{ highlight $codeSnippet $language }}
 
-  <div class="text-right mb-5 pb-2">
+  <div class="text-right pb-2">
     <a href="{{- $webUrl -}}" target="_blank">
       <i class="fas fa-external-link-alt pl-2"></i>
       <i class="fas fa-external-link" aria-hidden="true"></i>

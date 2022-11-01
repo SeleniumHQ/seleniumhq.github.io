@@ -9,12 +9,12 @@ aliases: [
 ---
 
 
-Although mentioned in several places it is worth mentioning again. Ensure 
-tests are isolated from one another.
+Although mentioned in several places, it is worth mentioning again. 
+We must ensure that the tests are isolated from one another.
 
 * Do not share test data. Imagine several tests that each query the database 
 for valid orders before picking one to perform an action on. Should two tests
-pick up the same order you are likely to get unexpected behaviour.
+pick up the same order you are likely to get unexpected behavior.
 
 * Clean up stale data in the application that might be picked up by another 
 test e.g. invalid order records.

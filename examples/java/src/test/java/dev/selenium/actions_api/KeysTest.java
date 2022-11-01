@@ -4,7 +4,6 @@ import dev.selenium.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
@@ -68,9 +67,7 @@ public class KeysTest extends BaseTest {
     public void copyAndPaste() {
         driver.get("https://www.selenium.dev/selenium/web/single_text_input.html");
 
-        Platform platformName = ((HasCapabilities) driver).getCapabilities().getPlatformName();
-
-        Keys cmdCtrl = platformName.is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
+        Keys cmdCtrl = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
 
         WebElement textField = driver.findElement(By.id("textInput"));
         new Actions(driver)

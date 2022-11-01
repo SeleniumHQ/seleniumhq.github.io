@@ -3,12 +3,13 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using SeleniumDocs.TestSupport;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.GettingStarted
 {
-    [TestClass]
+    [TestClassCustom]
     public class InstallDriversTest
     {
         [TestMethod]
@@ -41,7 +42,7 @@ namespace SeleniumDocs.GettingStarted
             driver.Quit();
         }
 
-        [Ignore] // Only runs on Windows
+        [EnabledOnOs("WINDOWS")]
         [TestMethod]
         public void InternetExplorerSession()
         {

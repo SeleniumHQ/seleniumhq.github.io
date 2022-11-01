@@ -1,9 +1,9 @@
 tasks:
   - name: Install Hugo, init submodules and start website
     init: |
-      curl -LO https://github.com/gohugoio/hugo/releases/download/v0.94.0/hugo_extended_0.94.0_Linux-64bit.deb && \
-      sudo dpkg -i hugo_extended_0.94.0_Linux-64bit.deb && \
-      sudo rm hugo_extended_0.94.0_Linux-64bit.deb
+      curl -LO https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_extended_0.101.0_Linux-64bit.deb && \
+      sudo dpkg -i hugo_extended_0.101.0_Linux-64bit.deb && \
+      sudo rm hugo_extended_0.101.0_Linux-64bit.deb
       git submodule update --init --recursive
     command: |
       cd website_and_docs

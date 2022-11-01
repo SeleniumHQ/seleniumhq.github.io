@@ -62,7 +62,7 @@ aliases: [
 
 | Software | Version | License |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.83.1 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.101.0 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
 
 

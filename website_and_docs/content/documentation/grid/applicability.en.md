@@ -1,52 +1,46 @@
 ---
-title: "When to Use a Grid"
-linkTitle: "Applicability"
+title: "When to Use Grid"
+linkTitle: "When to Use Grid"
 weight: 4
 description: >
-  Is Grid the right tool for you?
+  Is Grid right for you?
 aliases: [
 "/documentation/en/grid/when_to_use_grid/",
 "/documentation/grid/when_to_use_grid"
 ]
 ---
 
-Generally speaking, there’s two reasons why you might want to use Grid.
+When would you use a Selenium Grid?
 
-* To run your tests against multiple browsers, multiple versions of browser,
-and browsers running on different operating systems.
-* To reduce the time it takes for the test suite to complete a test pass.
+* To run your tests in parallel, against different browser types, browser versions, operating systems
+* To reduce the time needed to execute a test suite
 
-Grid is used to speed up the execution of a test pass by using
-multiple machines to run tests in parallel. For example, if you have a suite of
-100 tests, but you set up Grid to support 4 different machines (VMs or
-separate physical machines) to run those tests, your test suite will complete
-in (roughly) one-fourth the time as it would if you ran your tests sequentially
-on a single machine. For large test suites, and long-running test suite such as
-those performing large amounts of data-validation, this can be a significant
-time-saver. Some test suites can take hours to run. Another reason to boost the
-time spent running the suite is to shorten the turnaround time for test results
-after developers check-in code for the AUT. Increasingly software teams
-practicing Agile software development want test feedback as immediately as
-possible as opposed to wait overnight for an overnight test pass.
+Selenium Grid runs test suites in parallel against multiple machines (called Nodes). 
+For large and long-running test suites, this can save minutes, hours, or perhaps days. 
+This shortens the turnaround time for test results as your application under test (AUT) 
+changes.
 
-Grid is also used to support running tests against multiple runtime
-environments, specifically, against different browsers at the same time. For
-example, a ‘grid’ of virtual machines can be setup with each supporting a
-different browser that the application to be tested must support. So, machine 1
-has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
-Chrome, and machine 4 the latest Firefox. When the test suite is run,
-Selenium-Grid receives each test-browser combination and assigns each test to
-run against its required browser.
+Grid can run tests (in parallel) against multiple different browsers, and it can
+run against multiple instances of the same browser. As an example, let's imagine
+a Grid with six Nodes. The first machine has Firefox's latest version,
+the second has Firefox "latest minus one", the third gets the latest Chrome, and
+the remaining three machines are Mac Minis, which allows for three tests to run in
+parallel on the latest version of Safari.
 
-In addition, one can have a grid of all the same browser, type and version. For
-instance, one could have a grid of 4 machines each running 3 instances of
-Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
-instances. When the suite runs, each test is passed to Grid which
-assigns the test to the next available Firefox instance. In this manner one
-gets test pass where conceivably 12 tests are all running at the same time in
-parallel, significantly reducing the time required to complete a test pass.
+Execution time can be expressed as a simple formula:
 
-Grid is very flexible. These two examples can be combined to allow
-multiple instances of each browser type and version. A configuration such as
-this would provide both, parallel execution for fast test pass completion and
-support for multiple browser types and versions simultaneously.
+```Number of Tests * Average Test Time / Number of Nodes = Total Execution Time```
+
+       15      *       45s        /        1        =      11m 15s   // Without Grid
+       15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
+       15      *       45s        /        15       =      45s       // Grid with 15 Nodes
+      100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+
+As the test suite is executing, the Grid allocates the tests to run against these 
+browsers as configured in the tests.
+
+A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.
+
+Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team 
+of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
+has been a critical part of the Selenium project since the earliest days.

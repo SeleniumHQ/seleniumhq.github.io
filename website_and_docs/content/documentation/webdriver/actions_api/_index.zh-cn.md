@@ -44,27 +44,27 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 但有时您只需要在操作之间等待一下, 
 即可正常工作.
 
-{{< tabpane disableCodeBlock=true height="9">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< badge version="4.2" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L10-L17" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        // Add Code
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-version version="4.2" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.2" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## 释放所有Actions
@@ -79,23 +79,23 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 此方法在每种语言中的实现方式不同, 
 因为它不会使用perform方法执行.
 
-{{< tabpane disableCodeBlock=true height="1">}}
-    {{< tab header="Java" >}}
-        {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L47" >}}
-    {{< /tab >}}
-    {{< tab header="Python" >}}
-        {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L38" >}}
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
-        {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L45" >}}
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
-        {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L35" >}}
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-        // Add Code
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
-        // Add Code
-    {{< /tab >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L37" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L44" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
+{{< /tab >}}
 {{< /tabpane >}}

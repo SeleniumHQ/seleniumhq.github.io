@@ -13,33 +13,33 @@ the [Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects)
 
 ## Overview
 
-Within your web app's UI there are areas that your tests interact with. 
-A Page Object simply models these as objects within the test code. 
+Within your web app's UI, there are areas where your tests interact with. 
+A Page Object only models these as objects within the test code. 
 This reduces the amount of duplicated code and means that if the UI changes, 
-the fix need only be applied in one place.
+the fix needs only to be applied in one place.
 
-Page Object is a Design Pattern which has become popular in test automation for
+Page Object is a Design Pattern that has become popular in test automation for
 enhancing test maintenance and reducing code duplication. A page object is an
 object-oriented class that serves as an interface to a page of your AUT. The
 tests then use the methods of this page object class whenever they need to
 interact with the UI of that page. The benefit is that if the UI changes for
 the page, the tests themselves don’t need to change, only the code within the
-page object needs to change. Subsequently all changes to support that new UI
+page object needs to change. Subsequently, all changes to support that new UI
 are located in one place.
 
 ### Advantages
 
-* There is a clean separation between test code and page specific code such as
+* There is a clean separation between the test code and page-specific code, such as
   locators (or their use if you’re using a UI Map) and layout.
-* There is a single repository for the services or operations offered by the page
+* There is a single repository for the services or operations the page offers
   rather than having these services scattered throughout the tests.
 
-In both cases this allows any modifications required due to UI changes to all
-be made in one place. Useful information on this technique can be found on
+In both cases, this allows any modifications required due to UI changes to all
+be made in one place. Helpful information on this technique can be found on
 numerous blogs as this ‘test design pattern’ is becoming widely used. We
-encourage the reader who wishes to know more to search the internet for blogs
+encourage readers who wish to know more to search the internet for blogs
 on this subject. Many have written on this design pattern and can provide
-useful tips beyond the scope of this user guide. To get you started, though,
+helpful tips beyond the scope of this user guide. To get you started,
 we’ll illustrate page objects with a simple example.
 
 ### Examples
@@ -178,6 +178,7 @@ There is a lot of flexibility in how the page objects may be designed, but
 there are a few basic rules for getting the desired maintainability of your
 test code.
 
+## Assertions in Page Objects
 Page objects themselves should never make verifications or assertions. This is
 part of your test and should always be within the test’s code, never in an page
 object. The page object will contain the representation of the page, and the
@@ -191,6 +192,7 @@ instantiating the page object. In the examples above, both the SignInPage and
 HomePage constructors check that the expected page is available and ready for
 requests from the test.
 
+## Page Component Objects
 A page object does not necessarily need to represent all the parts of a
 page itself. The same principles used for page objects can be used to
 create "Page _Component_ Objects" that represent discrete chunks of the
@@ -202,6 +204,7 @@ pages. If a page in the AUT has multiple components, or common
 components used throughout the site (e.g. a navigation bar), then it
 may improve maintainability and reduce code duplication.
 
+## Other Design Patterns Used in Testing
 There are other design patterns that also may be used in testing. Some use a
 Page Factory for instantiating their page objects. Discussing all of these is
 beyond the scope of this user guide. Here, we merely want to introduce the
@@ -211,11 +214,12 @@ reader to search for blogs on these topics.
 
 ## Implementation Notes
 
-PageObjects can be thought of as facing in two directions simultaneously. Facing towards the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services that it offers are typically the ability to compose a new email, to choose to read a single email, and to list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
 
-Because we're encouraging the developer of a test to try and think about the services that they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means that we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service, when it previously didn't do that) simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way, we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
+PageObjects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
 
-One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login, or a click could have a different result depending on the state of the app. When this happens, it is common to have multiple methods on the PageObject:
+Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
+
+One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the PageObject:
 
 ```
 public class LoginPage {
@@ -253,9 +257,9 @@ public void testMessagesAreReadOrUnread() {
 }
 ```
 
-Of course, as with every guideline there are exceptions, and one that is commonly seen with PageObjects is to check that the WebDriver is on the correct page when we instantiate the PageObject. This is done in the example below.
+Of course, as with every guideline, there are exceptions, and one that is commonly seen with PageObjects is to check that the WebDriver is on the correct page when we instantiate the PageObject. This is done in the example below.
 
-Finally, a PageObject need not represent an entire page. It may represent a section that appears many times within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.
+Finally, a PageObject need not represent an entire page. It may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.
 
 ## Summary
 
@@ -343,4 +347,4 @@ public class LoginPage {
 
 ## Support in WebDriver
 
-There is a PageFactory in the support package that provides support for this pattern, and helps to remove some boiler-plate code from your Page Objects at the same time.
+There is a PageFactory in the support package that provides support for this pattern and helps to remove some boiler-plate code from your Page Objects at the same time.

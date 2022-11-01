@@ -28,7 +28,7 @@ selenium:
       name: "LambdaTest"
     # Added: December 17, 2017
     - logo: "/images/sponsors/subject7_logo.png"
-      url: "https://www.subject-7.com/?utm_source=SeleniumHQ&utm_medium=referral&utm_campaign=product"
+      url: "https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product"
       name: "Subject7"
     # Added: November 30, 2021
     - logo: "/images/sponsors/Avo_logo.png"
@@ -86,6 +86,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Sep 3, 2022
+    - logo: "/images/sponsors/SelectorsHub_logo.png"
+      url: "https://selectorshub.com/"
+      name: "SelectorsHub"
     # Sponsorship start date: April 20, 2022
     - logo: "/images/sponsors/AdsPower.png"
       url: "https://www.adspower.com/?source=selenium"

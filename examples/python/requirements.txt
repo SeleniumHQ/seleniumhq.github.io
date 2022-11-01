@@ -1,4 +1,4 @@
-selenium==4.2.0
+selenium==4.5.0
 pytest
 flake8
-webdriver_manager
+webdriver_manager==3.8.3

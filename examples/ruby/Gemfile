@@ -2,7 +2,11 @@
 
 source 'https://rubygems.org'
 
+gem 'ffi', '~> 1.15', '>= 1.15.5' if Gem.win_platform? # Windows only
 gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.0'
-gem 'selenium-webdriver', '~> 4.2.1'
-gem 'webdrivers', '~> 5.0'
+gem 'rubocop', '~> 1.35'
+gem 'rubocop-rspec', '~> 2.12'
+gem 'selenium-webdriver', '= 4.5'
+gem 'webdrivers', '~> 5.1'
+gem 'ffi', '~> 1.15', '>= 1.15.5'

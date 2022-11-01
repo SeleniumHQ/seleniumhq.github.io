@@ -14,8 +14,8 @@ aliases: [
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 JavaへのSeleniumライブラリのインストールはMavenを使います。
 プロジェクトのpom.xmlに _selenium-java_ の依存関係を追加してください。
 
@@ -23,33 +23,32 @@ JavaへのSeleniumライブラリのインストールはMavenを使います。
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
-_selenium-java_ 依存関係は、Seleniumがサポートする全てのブラウザを自動化プロジェクトで実行できるようにします。
-もし特定のブラウザだけでテストを実行したい場合は、そのブラウザの依存関係を _pom.xml_ ファイルに追加することができます。
-例えば、Firefoxのみでテストを実行するためには下記の依存関係を _pom.xml_ ファイルに追加します。
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-同じように、Chromeのみでテストを実行するためには下記の依存関係を追加します。
+Gradle 7.0 and above:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>3.X</version>
-</dependency>
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+
+## Supported Minimum Version
+
+Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
+Java 8 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13). 
+
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   PythonへのSeleniumライブラリのインストールはpipを使います。
 
 ```shell
@@ -62,8 +61,14 @@ pip install selenium
 ```shell
 python setup.py install
 ```
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+## Supported Minimum Version
+
+Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
+Python 3.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   C#へのSeleniumライブラリのインストールはNuGetを使います。
 
 ```shell
@@ -103,21 +108,33 @@ Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and en
 Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.
  
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   RubyへのSeleniumライブラリのインストールはgemを使います。
 
 ```shell
 gem install selenium-webdriver
 ```
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+## Supported Minimum Version
+
+Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
+Ruby 2.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell
 npm install selenium-webdriver
 ```
-  {{< /tab >}}
+## Supported Minimum Version
+
+Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
+Node 14.20.0 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
   Kotlinのネイティブ言語バインディングが欠落しているため、Javaバインディングを使用する必要があります。
   例えば、 maven [Java](#java) を使用します。

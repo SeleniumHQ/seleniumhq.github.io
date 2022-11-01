@@ -1,67 +1,15 @@
-.height-auto {
-  height: auto;
+.tab-content {
+  .tab-pane {
+    pre {
+      border: none;
+    }
+  }
 }
 
-.height-1 {
-  height: 100px;
+.nav-tabs .nav-link.active {
+    background-color: #f8f8f8;
 }
 
-.height-2 {
-  height: 125px;
-}
-
-.height-3 {
-  height: 150px;
-}
-
-.height-4 {
-  height: 175px;
-}
-
-.height-5 {
-  height: 200px;
-}
-
-.height-6 {
-  height: 225px;
-}
-
-.height-7 {
-  height: 250px;
-}
-
-.height-8 {
-  height: 275px;
-}
-
-.height-9 {
-  height: 300px;
-}
-
-.height-10 {
-  height: 325px;
-}
-
-.height-11 {
-  height: 350px;
-}
-
-.height-12 {
-  height: 375px;
-}
-
-.height-13 {
-  height: 400px;
-}
-
-.height-14 {
-  height: 425px;
-}
-
-.height-15 {
-  height: 450px;
-}
-
-.my-3 .highlight {
-  margin: 0;
+.tab-body {
+  background: inherit;
 }

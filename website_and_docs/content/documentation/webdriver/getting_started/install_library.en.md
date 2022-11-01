@@ -18,8 +18,8 @@ you are using the latest version.
 
 ## Requirements by language
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 Installation of Selenium libraries for Java is accomplished using a build tool.
 You can see all available versions on
 [Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
@@ -30,7 +30,7 @@ For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.0.0</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
@@ -38,11 +38,23 @@ For Gradle, add the _selenium-java_ dependency in your project `build.gradle` fi
 
 ```text
 dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+Gradle 7.0 and above:
+
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
+```
+## Supported Minimum Version
+
+Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
+Java 8 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13). 
+
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
@@ -55,9 +67,14 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 ```shell
 python setup.py install
 ```
+## Supported Minimum Version
 
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
+Python 3.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   Installation of Selenium libraries for C# can be done using NuGet in one of two ways
 
   * Using a Packet Manager:
@@ -99,8 +116,8 @@ Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and en
 Press Enter and select the version.
 Now you can use the examples in the documentation related to C# with vscode.
 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
@@ -110,18 +127,30 @@ gem install selenium-webdriver
 Or add it to your `Gemfile`:
 
 ```rb
-gem 'selenium-webdriver', '~> 4.0'
+gem 'selenium-webdriver', '~> 4.4'
 ```
 
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+## Supported Minimum Version
+
+Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
+Ruby 2.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-  {{< /tab >}}
+## Supported Minimum Version
+
+Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
+Node 14.20.0 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
     Use the Java bindings for Kotlin.
   {{< /tab >}}

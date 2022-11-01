@@ -128,8 +128,9 @@ The Docsy code tabs look like this:
 {{< /tabpane >}}
 
 To generate the above tabs, this is what you need to write.
-Note that the tabpane includes `langEqualsHeader=true`.
-This auto-formats the code in each tab to match the header name.
+Note that the `tabpane` includes `langEqualsHeader=true`.
+This auto-formats the code in each tab to match the header name
+and is also used to synchronize the tabs on the page.
 
     {{</* tabpane langEqualsHeader=true */>}}
       {{</* tab header="Java" */>}}
@@ -152,103 +153,100 @@ This auto-formats the code in each tab to match the header name.
       {{</* /tab */>}}
     {{</* /tabpane */>}}
 
-#### Link to GitHub
+#### Reference Github Examples
 
-All code examples should be present and linked to in our example 
-[repos](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
+To ensure that all code is kept up to date, our goal is to write the code in the repo where it
+can be executed when Selenium versions are updated to ensure that everything is correct.
 
-With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
-repository. In this case, `langEqualsHeader=true` is only needed if the `tabpane` mixes 
-more than one `tab` with code hosted on GitHub and code examples added directly in the 
-markdown file (which should not happen often).
+All code examples to be in our 
+[example directories](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
 
-However, `disableCodeBlock=true` is needed at the `tab` level when using the `gh-codeblock`
-shortcode. This is an example of the `gh-codeblock` shortcode usage:
+This code can be automatically displayed in the documentation using the `gh-codeblock` shortcode.
+The shortcode automatically generates its own html, so set `code=false` to prevent the auto-formatting.
+We still need `langEqualsHeader=true` to keep the language tabs synchronized throughout the page.
+Note that the `gh-codeblock` line can not be indented at all.
 
-    {{</* tabpane */>}}
-      {{</* tab header="Link" disableCodeBlock=true */>}}
-        {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" */>}}
-      {{</* /tab */>}}
-      {{</* tab header="No Link" */>}}
-        This content should not get linked to GitHub
-      {{</* /tab */>}}
+One great thing about using `gh-codeblock` is that it adds a link to the full example.
+This means you don't have to include any additional context code, just the line(s) that
+are needed, and the user can navigate to the repo to see how to use it.
+
+A basic comparison of code looks like:
+
+    {{</* tabpane code=false langEqualsHeader=true */>}}
+    {{</* tab header="Java" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="Python" */>}}
+    {{</* gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="CSharp" */>}}
+    {{</* gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L39-L40" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="Ruby" */>}}
+    {{</* gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="JavaScript" */>}}
+    {{</* gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" */>}}
+    {{</* /tab */>}}
+    {{</* tab header="Kotlin" */>}}
+    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" */>}}
+    {{</* /tab */>}}
     {{</* /tabpane */>}}
 
 Which looks like this:
 
-{{< tabpane >}}
-  {{< tab header="Link" disableCodeBlock=true >}}
-    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" >}}
-  {{< /tab >}}
-  {{< tab header="No Link" >}}
-    This content should not get linked to GitHub
-  {{< /tab >}}
-{{< /tabpane >}}
-
-### Disabling Code Block
-
-If you want your example to include both text and code, you
-need to disable the default behavior that puts everything inside a code block
-
-Maybe you want something like this:
-
-{{< tabpane disableCodeBlock=true >}}
+{{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-1. Start the driver
-  ```java
-    WebDriver driver = new ChromeDriver();
-  ```
-2. Navigate to a page
-  ```java
-  driver.get("https://selenium.dev");
-  ```
-3. Quit the driver
-  ```java
-  driver.quit();
-  ``` 
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L17-L18" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L39-L40" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-For this you need to use `disableCodeBlock=true` instead of `langEqualsHeader=true` 
+### Using Markdown in a Tab
 
-You need to specify which parts are code and which are not yourself now, like this:
+If you want your example to include something other than code (default) or html (from `gh-codeblock`),
+you need to first set `code=false`, 
+then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with curly braces:
 
-    {{</* tabpane disableCodeBlock=true */>}}
-    {{</* tab header="Java" */>}}
+    {{</* tabpane code=false langEqualsHeader=true */>}}
+    {{%/* tab header="Java" */%}}
     1. Start the driver
-      ```java
-        WebDriver driver = new ChromeDriver();
-      ```
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" */>}}
     2. Navigate to a page
-      ```java
-      driver.get("https://selenium.dev");
-      ```
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" */>}}
     3. Quit the driver
-      ```java
-      driver.quit();
-      ``` 
-    {{</* /tab */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" */>}}
+    {{%/* /tab */%}}
     < ... >
     {{</* /tabpane */>}}
 
-#### Link to GitHub
+This produces:
 
-All code examples should be present and linked to in our example 
-[repos](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
+{{< tabpane code=false langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+1. Start the driver
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
+2. Navigate to a page
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
+3. Quit the driver
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
+{{% /tab %}}
+{{< /tabpane >}}
 
-With the `gh-codeblock` shortcode, it is possible to render code hosted in a GitHub
-repository. This is an example of the `gh-codeblock` shortcode usage:
-
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" */>}}
-
-Which looks like this:
-
-<span class="tab-pane">
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17-L37" >}}
-</span>
-
-### Code Comments
-
-Minimize code comments because they are difficult to translate.
-Further, try to avoid over-explaining each line of code unless it is
-directly related to the page you are writing.
+This is preferred to writing code comments because those will not be translated.
+Only include the code that is needed for the documentation, and avoid over-explaining.
+Finally, remember not to indent plain text or it will rendered as a codeblock.

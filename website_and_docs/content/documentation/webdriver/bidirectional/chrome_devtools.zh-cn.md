@@ -39,8 +39,8 @@ WebDriver Bidi是W3C WebDriver的下一代协议,
 我们可以轻易模拟他们.
 下面的代码片段演示了这一点.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true code=false >}}
+  {{< tab header="Java" code=true >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
 devTools.createSession();
@@ -50,7 +50,7 @@ devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
 driver.get("https://my-location.org/");
 driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{< tab header="Python" code=true >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
@@ -64,7 +64,7 @@ def geoLocationTest():
     driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
     driver.get("<your site url>")
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
@@ -96,7 +96,7 @@ namespace dotnet_test {
     }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -112,10 +112,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" disableCodeBlock=true >}}
-    {{< gh-codeblock path="/examples/javascript/bidirectional/emulateGeoLocation.js">}}
+  {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.devtools.DevTools
 
@@ -319,7 +319,18 @@ driver.get("https://selenium.dev/");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+// iPhone 11 Pro dimensions
+set_device_metrics_override = dict({
+"width": 375,
+"height": 812,
+"deviceScaleFactor": 50,
+"mobile": True
+})
+driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', set_device_metrics_override)
+driver.get("<your site url>")
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -453,7 +464,15 @@ public void performanceMetricsExample() {
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get('https://www.duckduckgo.com')
+driver.execute_cdp_cmd('Performance.enable', {})
+t = driver.execute_cdp_cmd('Performance.getMetrics', {})
+print(t)
+driver.quit()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // File must contain the following using statements

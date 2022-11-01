@@ -15,8 +15,8 @@ aliases: [
 Primeiro você precisa instalar as bibliotecas Selenium para seu projeto de automação.
 O processo de instalação de bibliotecas depende da linguagem que você escolher usar.
 
-{{< tabpane disableCodeBlock=true >}}
-  {{< tab header="Java" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+  {{% tab header="Java" %}}
 A instalação de bibliotecas Selenium para Java pode ser feita usando Maven.
 Adicione a dependência selenium-java em seu pom.xml:
 
@@ -24,37 +24,31 @@ Adicione a dependência selenium-java em seu pom.xml:
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
-  <version>4.X</version>
+  <version>4.4.0</version>
 </dependency>
 ```
 
-A dependência _selenium-java_ suporta a execução de sua automação com todos os navegadores
-com suporte Selenium. Se você quiser fazer testes
-apenas em um navegador específico, você pode adicionar a dependência para esse navegador
-em seu arquivo _pom.xml_.
-Por exemplo, você deve adicionar a seguinte dependência em seu _pom.xml_
-arquivo para executar seus testes apenas no Firefox:
+For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-firefox-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
 
-De maneira semelhante, se você deseja executar testes apenas no Chrome,
-você deve adicionar a seguinte dependência:
+Gradle 7.0 and above:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-chrome-driver</artifactId>
-  <version>4.X</version>
-</dependency>
+```text
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ```
-  {{< /tab >}}
-  {{< tab header="Python" >}}
+## Supported Minimum Version
+
+Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
+Java 8 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+
+  {{% /tab %}}
+  {{% tab header="Python" %}}
   A instalação de bibliotecas Selenium para Python pode ser feita usando pip:
 
 ```shell
@@ -67,8 +61,15 @@ Como alternativa, você pode baixar o [arquivo de origem do PyPI](https://pypi.o
 ```shell
 python setup.py install
 ```
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
+
+## Supported Minimum Version
+
+Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
+Python 3.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+
+  {{% /tab %}}
+  {{% tab header="CSharp" %}}
   A instalação de bibliotecas Selenium para C# pode ser feita usando NuGet:
 
 ```shell
@@ -105,23 +106,34 @@ Você pode ter de personalizar o arquivo `nuget.config` atender suas necessidade
 Agora, volte ao VSCode, pressione Ctrl-Shift-P e digite "NuGet Add Package" e adicione os pacotes requeridos para Selenium, como o pacote `Selenium.WebDriver`. Pressione enter e selecione a versão.
 Agora você pode utilizar os exemplos na documentação relacionada para C# com VSCode.
 
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
   A instalação de bibliotecas Selenium para Ruby pode ser feita usando gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+## Supported Minimum Version
+
+Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
+Ruby 2.7 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+
+  {{% /tab %}}
+  {{% tab header="JavaScript" %}}
   A instalação de bibliotecas Selenium para JavaScript pode ser feita usando npm:
 
 ```shell
 npm install selenium-webdriver
 ```
+## Supported Minimum Version
 
-  {{< /tab >}}
+Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
+Node 14.20.0 is currently the minimum supported version by Selenium.
+View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+
+  {{% /tab %}}
   {{< tab header="Kotlin" >}}
   Devido à ausência de vínculos de linguagem nativo para Kotlin, você deve usar vínculos Java, por exemplo, com Maven [Java](#java)
   {{< /tab >}}
