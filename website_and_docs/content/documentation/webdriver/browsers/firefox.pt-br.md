@@ -50,7 +50,15 @@ Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`
 
 Adicione uma opção:
 
-{{< alert-code />}}
+<div>
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Python" >}}
+options=Options()
+options.add_argument("-profile")
+options.add_argument("/path/to/profile")
+  {{< /tab >}}
+{{< /tabpane >}}
+</div>
 
 ### Iniciar navegador numa localização específica
 
