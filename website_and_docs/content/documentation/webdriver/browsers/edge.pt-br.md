@@ -13,7 +13,7 @@ Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "ch
 
 ## Opções
 
-Starting an Edge session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Edge com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -37,8 +37,8 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Internet Explorer Compatibility Mode
+## Modo compatibilidade Internet Explorer
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
-the Internet Explorer Driver classes in conjunction with Microsoft Edge.
-Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
+O Microsoft Edge pode ser controlado em modo "compatibilidade Internet Explorer", são usadas
+classes do Internet Explorer Driver em conjunção com o Microsoft Edge.
+Leia a [página Internet Explorer]({{< ref "internet_explorer.md" >}}) para mais detalhes.
