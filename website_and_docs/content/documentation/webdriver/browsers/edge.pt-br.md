@@ -1,17 +1,17 @@
 ---
-title: "Edge specific functionality"
+title: "Funcionalidade específica do Edge"
 linkTitle: "Edge"
 weight: 5
 description: >-
-    These are capabilities and features specific to Microsoft Edge browsers.
+    Estas capacidades e características são específicas ao navegador Microsoft Edge.
 ---
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+Microsoft Edge foi criado com recurso ao Chromium, cuja versão suportada mais antiga é a v79. 
+Tal como o Chrome, a versão do edgedriver deve ser igual à do navegador Edge.
 
-All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}}) work for Edge as well.
+Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "chrome.md" >}}) irão funcionar de igual forma para o Edge.
 
-## Options
+## Opções
 
 Starting an Edge session with basic defined options looks like this:
 

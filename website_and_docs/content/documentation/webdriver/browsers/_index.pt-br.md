@@ -11,4 +11,4 @@ aliases: [
 ]
 ---
 
-Each browser has custom capabilities and unique features.
+Cada navegador tem capacidades e características únicas.

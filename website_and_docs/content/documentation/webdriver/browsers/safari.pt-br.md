@@ -1,24 +1,25 @@
 ---
-title: "Safari specific functionality"
+title: "Funcionalidade específica do Safari"
 linkTitle: "Safari"
 weight: 10
 description: >-
-    These are capabilities and features specific to Apple Safari browsers.
+    Estas capacidades e características são específicas ao navegador Apple Safari.
 aliases: [
 "/pt-br/documentation/capabilities/safari"
 ]
 ---
 
-Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:
+Ao invés dos drivers para Chromium e Firefox, o safaridriver faz parte to sistema Operativo.
+Para activar a automação no Safari, execute o seguinte comando no terminal:
 
 ```shell
 safaridriver --enable
 ```
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
+
 
 Capabilities unique to Safari can be found at Apple's page [About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
 

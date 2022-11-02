@@ -1,23 +1,23 @@
 ---
-title: "Firefox specific functionality"
+title: "Funcionalidade específica do Firefox"
 linkTitle: "Firefox"
 weight: 6
 description: >-
-    These are capabilities and features specific to Mozilla Firefox browsers.
+    Estas capacidades e características são específicas ao navegador Mozilla Firefox.
 aliases: [
 "/pt-br/documentation/capabilities/firefox"
 ]
 ---
 
-Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
+Por omissão, Selenium 4 é compatível com Firefox 78 ou superior. Recomendamos que use sempre a versão mais recente do geckodriver.
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
+Capacidades únicas ao Firefox podem ser encontradas na página da Mozilla para [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
 
-Starting a Firefox session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Firefox com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,7 +41,7 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+Alguns exemplos de uso com capacidades diferentes:
 
 ### Arguments
 

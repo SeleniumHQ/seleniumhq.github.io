@@ -1,20 +1,19 @@
 ---
-title: "Chrome specific functionality"
+title: "Funcionalidade específica do Chrome"
 linkTitle: "Chrome"
 weight: 4
 description: >-
-    These are capabilities and features specific to Google Chrome browsers.
+    Estas capacidades e características são específicas ao navegador Google Chrome.
 aliases: [
 "/pt-br/documentation/capabilities/chromium"
 ]
 ---
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of
-the Chrome browser and the version of chromedriver must match the major version.
+Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a versão do navegador e do chromedriver devem ser idênticas.
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
 Capabilities unique to Chrome can be found at Google's page for [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
