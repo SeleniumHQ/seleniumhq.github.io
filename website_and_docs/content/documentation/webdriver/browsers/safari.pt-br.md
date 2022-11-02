@@ -20,10 +20,9 @@ safaridriver --enable
 
 Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
+Capacidades únicas ao Safari podem ser encontradas na página da Apple [WebDriver para Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
 
-Capabilities unique to Safari can be found at Apple's page [About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
-
-Starting a Safari session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Safari com um conjunto de opções básicas::
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -51,5 +50,5 @@ Starting a Safari session with basic defined options looks like this:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Mobile
-Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+### Mobile (celular)
+Se pretende automatizar Safari em iOS, deve olhar para o [Projecto Appium](//appium.io/).

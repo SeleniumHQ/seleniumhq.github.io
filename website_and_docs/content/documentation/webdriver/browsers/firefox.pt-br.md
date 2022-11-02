@@ -45,25 +45,26 @@ Alguns exemplos de uso com capacidades diferentes:
 
 ### Arguments
 
-The `args` parameter is for a list of Command line switches used when starting the browser.  
-Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
+O parametro `args` é usado para indicar uma lista de opções ao iniciar o navegador. 
+Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`
 
-Add an argument to options:
-
-{{< alert-code />}}
-
-### Start browser in a specified location
-
-The `binary` parameter takes the path of an alternate location of browser to use. For example, with this parameter you can
-use geckodriver to drive Firefox Nightly instead of the production version when both are present on your computer.
-
-Add a browser location to options:
+Adicione uma opção:
 
 {{< alert-code />}}
 
-### Profiles
+### Iniciar navegador numa localização específica
 
-There are several ways to work with Firefox profiles
+O parametro `binary` é usado contendo o caminho para uma localização específica do navegador. 
+Como exemplo, pode usar este parametro para indicar ao geckodriver a versão Firefox Nightly ao invés da
+versão de produção, quando ambas versões estão presentes no seu computador.
+
+Adicionar uma localização:
+
+{{< alert-code />}}
+
+### Perfis
+
+Existem várias formas de trabalhar com perfis Firefox
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
@@ -113,13 +114,13 @@ driver = RemoteWebDriver(options)
 {{< /tabpane >}}
 </div>
 
-## Add-ons
+## Extras
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Ao invés do Chrome, os extras do Firefos não são adicionados como parte das capacidades, mas sim após iniciar o driver.
 
-### Installation
+### Instalação
 
-A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla.org/en-US/firefox/) 
+Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mozilla.org/en-US/firefox/) 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -142,9 +143,9 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Uninstallation
+### Desinstalação
 
-Uninstalling an addon requires knowing its id. The id can be obtained from the return value when installing the add-on.
+Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor de retorno durante a instalação.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -168,11 +169,11 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Unsigned installation
+### Instalação de extensões não assinadas
 
-When working with an unfinished or unpublished extension, it will likely not be signed. As such, it can only
-be installed as "temporary." This can be done by passing in either a zip file or a directory, here's an 
-example with a directory:
+Quando trabalhar em uma extensão não terminada ou não publicada, provavelmente ela não estará assinada.
+Desta forma, só pode ser instalada como "temporária". Isto pode ser feito passando uma arquivo ZIP ou
+uma pasta, este é um exemplo com uma pasta:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -197,10 +198,10 @@ example with a directory:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Full page screenshots
+## Captura de tela inteira
 
 {{< alert-code />}}
 
-## Context
+## Contexto
 
 {{< alert-code />}}

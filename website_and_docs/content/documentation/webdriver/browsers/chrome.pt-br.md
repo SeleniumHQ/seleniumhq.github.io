@@ -15,9 +15,9 @@ Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a 
 
 Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Chrome can be found at Google's page for [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
+Capacidades únicas ao Chrome podem ser encontradas na página da Google para [Capacidades e & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
-Starting a Chrome session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,7 +41,7 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+Alguns exemplos de uso com capacidades diferentes:
 
 ### Arguments
 
