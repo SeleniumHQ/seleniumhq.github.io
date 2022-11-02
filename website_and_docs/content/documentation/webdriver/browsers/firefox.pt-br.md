@@ -50,7 +50,13 @@ Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
 
 Add an argument to options:
 
-{{< alert-code />}}
+{{< tabpane langEqualsHeader=true >}}
+  {{% tab header="Python" %}}
+options=Options()
+options.add_argument("-profile")
+options.add_argument("/path/to/profile")
+  {{% /tab %}}
+{{< /tabpane >}}
 
 ### Start browser in a specified location
 
