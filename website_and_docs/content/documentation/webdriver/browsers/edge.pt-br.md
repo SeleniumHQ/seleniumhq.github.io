@@ -7,7 +7,7 @@ description: >-
 ---
 
 Microsoft Edge foi criado com recurso ao Chromium, cuja versão mais antiga suportada é a v79. 
-Tal como o Chrome, a versão do edgedriver deve ser igual à do navegador Edge.
+Tal como o Chrome, a versão (maior) do edgedriver deve ser igual à do navegador Edge.
 
 Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "chrome.md" >}}) irão funcionar de igual forma para o Edge.
 

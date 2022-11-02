@@ -43,7 +43,7 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 
 Alguns exemplos de uso com capacidades diferentes:
 
-### Arguments
+### Argumentos
 
 O parametro `args` é usado para indicar uma lista de opções ao iniciar o navegador. 
 Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`

@@ -1,6 +1,6 @@
 ---
-title: "Supported Browsers"
-linkTitle: "Browsers"
+title: "Navegadores suportados"
+linkTitle: "Navegadores"
 weight: 4
 aliases: [
 "/documentation/pt-br/driver_idiosyncrasies/",

@@ -9,7 +9,7 @@ aliases: [
 ]
 ---
 
-Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a versão do navegador e do chromedriver devem ser idênticas.
+Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a versão (maior) do navegador e do chromedriver devem ser idênticas.
 
 ## Opções
 
@@ -43,59 +43,56 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 
 Alguns exemplos de uso com capacidades diferentes:
 
-### Arguments
+### Argumentos
 
-The `args` parameter is for a list of [Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
-used when starting the browser.
-Commonly used args include `--start-maximized` and `user-data-dir=/tmp/temp_profile`
+O parametro `args` é usado para indicar uma lista de [opções](https://peter.sh/experiments/chromium-command-line-switches/) ao iniciar o navegador. 
+Opções mais frequentes incluem `--start-maximized` e `user-data-dir=/tmp/temp_profile`
 
-Add an argument to options:
-
-{{< alert-code />}}
-
-### Start browser in a specified location
-
-The `binary` parameter takes the path of an alternate location of browser to use. With this parameter you can
-use chromedriver to drive various Chromium based browsers.
-
-Add a browser location to options:
+Adicione uma opção:
 
 {{< alert-code />}}
 
-### Add extensions
+### Iniciar navegador numa localização específica
 
-The `extensions` parameter accepts crx files
-
-Add an extension to options:
+Adicionar uma localização:
 
 {{< alert-code />}}
 
-### Keeping browser open
+### Adicionar extensões
 
-Setting the `detach` parameter to true will keep the browser open after the driver process has been quit.
+O parametro `extensions` aceita ficheiros crx 
 
-Ad a binary to options:
+Adicionar uma extensão:
 
 {{< alert-code />}}
 
-### Excluding arguments
+### Manter o navegador aberto
 
-Chrome adds various arguments, if you do not want those arguments added, pass them into `excludeSwitches`.
-A common example is to turn the popup blocker back on.
+Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo depois do driver fechar.
 
-Set excluded arguments on options:
+Adicionar detach:
+
+{{< alert-code />}}
+
+### Excluindo parametros
+
+Chrome adiciona vários parametros, se não os pretende adicionar, passe-os em `excludeSwitches`.
+
+Um exemplo comum é voltar a activar o bloqueador de popups.
+
+Exclua parametros:
 
 {{< alert-code />}}
 
 ## Casting
 
-You can drive Chrome Cast devices, including sharing tabs
+Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
 {{< alert-code />}}
 
-## Network conditions
+## Condições de rede
 
-You can simulate various network conditions.
+Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
 
 {{< alert-code />}}
 
@@ -103,10 +100,10 @@ You can simulate various network conditions.
 
 {{< alert-code />}}
 
-## Permissions
+## Permissões
 
 {{< alert-code />}}
 
 ## DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using Chrome DevTools
+Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) para mais informação em como usar Chrome DevTools
