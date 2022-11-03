@@ -31,15 +31,14 @@ the browser version is not that easy anymore.
 
 Selenium Manager is a new tool that helps to get a working environment to run Selenium out of the box. Beta 1 
 of Selenium Manager will configure the browser drivers for Chrome, Firefox, and Edge if they are not present 
-on the `PATH`. In addition, in .NET it is limited to Windows only. 
+on the `PATH`.
 
 To run a Selenium test with Selenium 4.6, you only need to have Chrome, Firefox, or Edge installed. If you 
 already have browser drivers installed, this feature will be ignored. If you'd like to help us test it, though, 
 delete your drivers or remove your third party driver manager and things should still "just work." If they don't, 
 please file a [bug report](https://github.com/SeleniumHQ/selenium/issues).
 
-Future releases of Selenium Manager will support macOS and Linux for .NET, and eventually even download browsers 
-if necessary.
+Future releases of Selenium Manager will eventually even download browsers if necessary.
 
 ### Inspired by Open Source and the Selenium Community
 
