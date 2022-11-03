@@ -41,12 +41,8 @@ Leia mais sobre opções avançadas para iniciar um driver
 
 Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
 of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
-found on the `PATH`. In addition, in .NET it is limited to Windows only. Future releases of
-Selenium Manager will support macOS and Linux for .NET, and eventually download browsers if
-necessary.
-
-Selenium Manager is shipped as part of Selenium 4.6, and it will be used when no driver is
-found for Chrome, Firefox, or Edge. No extra configuration is needed.
+found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
+will eventually even download browsers if necessary.
 
 Read more at the blog announcement for Selenium Manager (link here).
 
