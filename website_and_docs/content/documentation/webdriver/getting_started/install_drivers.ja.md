@@ -23,9 +23,33 @@ Internet Explorerを除くすべてのドライバーの実装は、ブラウザ
 Read about more advanced options for starting a driver
 in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
-## ドライバーを使用する3つの方法
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Japanese. 
+   Do you speak Japanese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-### 1. ドライバー管理ソフトウェア
+## Four Ways to Use Drivers
+
+### 1. Selenium Manager <small>(Beta)</small>
+
+{{< badge-version version="4.6" >}}
+
+Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
+of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
+found on the `PATH`. In addition, in .NET it is limited to Windows only. Future releases of
+Selenium Manager will support macOS and Linux for .NET, and eventually download browsers if
+necessary.
+
+Selenium Manager is shipped as part of Selenium 4.6, and it will be used when no driver is
+found for Chrome, Firefox, or Edge. No extra configuration is needed.
+
+Read more at the blog announcement for Selenium Manager (link here).
+
+### 2. ドライバー管理ソフトウェア
 
 ほとんどのマシンはブラウザを自動的に更新しますが、ドライバは更新しません。
 ブラウザに適切なドライバを確実に入手するために、多くのサードパーティライブラリが役立ちます。
@@ -147,7 +171,7 @@ fun chrome(): WebDriver {
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. `PATH` 環境変数
+### 3. `PATH` 環境変数
 このオプションでは、最初に手動でドライバーをダウンロードする必要があります
 （リンクについては[クイックリファレンス](#クイックリファレンス)を参照してください）。
 
@@ -221,9 +245,9 @@ ChromeDriver was started successfully.
 
  <kbd>Ctrl+C</kbd> を押して、コマンドプロンプトの制御を取り戻すことができます。
 
-### 3. ハードコードされた場所
+### 4. ハードコードされた場所
 
-上記のオプション2と同様に、ドライバーを手動でダウンロードする必要があります。
+上記のオプション3と同様に、ドライバーを手動でダウンロードする必要があります。
 （リンクについては [クイックリファレンス](#クイックリファレンス) を参照してください）。 
 コードそのものに場所を指定することには、システム上の環境変数を把握する必要がないという利点がありますが、
 コードの柔軟性が大幅に低下するという欠点があります。
