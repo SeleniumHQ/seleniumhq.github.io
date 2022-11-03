@@ -82,7 +82,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 ## 创建永久凭据
 
-使用给定的所需凭据 [参数] (https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个永久凭据。
+使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个永久(有状态的)凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -103,7 +103,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 ## 创建临时凭据
 
-使用给定的所需凭据 [参数] (https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个临时凭据。
+使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个常驻(无状态)凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
