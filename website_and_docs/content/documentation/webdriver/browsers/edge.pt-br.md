@@ -1,19 +1,19 @@
 ---
-title: "Edge specific functionality"
+title: "Funcionalidade específica do Edge"
 linkTitle: "Edge"
 weight: 5
 description: >-
-    These are capabilities and features specific to Microsoft Edge browsers.
+    Estas capacidades e características são específicas ao navegador Microsoft Edge.
 ---
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+Microsoft Edge foi criado com recurso ao Chromium, cuja versão mais antiga suportada é a v79. 
+Tal como o Chrome, a versão (maior) do edgedriver deve ser igual à do navegador Edge.
 
-All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}}) work for Edge as well.
+Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "chrome.md" >}}) irão funcionar de igual forma para o Edge.
 
-## Options
+## Opções
 
-Starting an Edge session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Edge com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -37,8 +37,8 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Internet Explorer Compatibility Mode
+## Modo compatibilidade Internet Explorer
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
-the Internet Explorer Driver classes in conjunction with Microsoft Edge.
-Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
+O Microsoft Edge pode ser controlado em modo "compatibilidade Internet Explorer", são usadas
+classes do Internet Explorer Driver em conjunção com o Microsoft Edge.
+Leia a [página Internet Explorer]({{< ref "internet_explorer.md" >}}) para mais detalhes.
