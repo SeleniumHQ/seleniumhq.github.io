@@ -1,28 +1,28 @@
 ---
-title: "Safari specific functionality"
+title: "Funcionalidade específica do Safari"
 linkTitle: "Safari"
 weight: 10
 description: >-
-    These are capabilities and features specific to Apple Safari browsers.
+    Estas capacidades e características são específicas ao navegador Apple Safari.
 aliases: [
 "/pt-br/documentation/capabilities/safari"
 ]
 ---
 
-Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:
+Ao invés dos drivers para Chromium e Firefox, o safaridriver faz parte to sistema Operativo.
+Para activar a automação no Safari, execute o seguinte comando no terminal:
 
 ```shell
 safaridriver --enable
 ```
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Safari can be found at Apple's page [About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
+Capacidades únicas ao Safari podem ser encontradas na página da Apple [WebDriver para Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
 
-Starting a Safari session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Safari com um conjunto de opções básicas::
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -50,5 +50,5 @@ Starting a Safari session with basic defined options looks like this:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Mobile
-Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+### Mobile (celular)
+Se pretende automatizar Safari em iOS, deve olhar para o [Projecto Appium](//appium.io/).

@@ -1,23 +1,23 @@
 ---
-title: "Firefox specific functionality"
+title: "Funcionalidade específica do Firefox"
 linkTitle: "Firefox"
 weight: 6
 description: >-
-    These are capabilities and features specific to Mozilla Firefox browsers.
+    Estas capacidades e características são específicas ao navegador Mozilla Firefox.
 aliases: [
 "/pt-br/documentation/capabilities/firefox"
 ]
 ---
 
-Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
+Por omissão, Selenium 4 é compatível com Firefox 78 ou superior. Recomendamos que use sempre a versão mais recente do geckodriver.
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
+Capacidades únicas ao Firefox podem ser encontradas na página da Mozilla para [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
 
-Starting a Firefox session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Firefox com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,14 +41,14 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+Alguns exemplos de uso com capacidades diferentes:
 
-### Arguments
+### Argumentos
 
-The `args` parameter is for a list of Command line switches used when starting the browser.  
-Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
+O parametro `args` é usado para indicar uma lista de opções ao iniciar o navegador. 
+Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`
 
-Add an argument to options:
+Adicione uma opção:
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
@@ -60,18 +60,19 @@ options.add_argument("/path/to/profile")
 {{< /tabpane >}}
 </div>
 
-### Start browser in a specified location
+### Iniciar navegador numa localização específica
 
-The `binary` parameter takes the path of an alternate location of browser to use. For example, with this parameter you can
-use geckodriver to drive Firefox Nightly instead of the production version when both are present on your computer.
+O parametro `binary` é usado contendo o caminho para uma localização específica do navegador. 
+Como exemplo, pode usar este parametro para indicar ao geckodriver a versão Firefox Nightly ao invés da
+versão de produção, quando ambas versões estão presentes no seu computador.
 
-Add a browser location to options:
+Adicionar uma localização:
 
 {{< alert-code />}}
 
-### Profiles
+### Perfis
 
-There are several ways to work with Firefox profiles
+Existem várias formas de trabalhar com perfis Firefox
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
@@ -121,13 +122,13 @@ driver = RemoteWebDriver(options)
 {{< /tabpane >}}
 </div>
 
-## Add-ons
+## Extras
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Ao invés do Chrome, os extras do Firefos não são adicionados como parte das capacidades, mas sim após iniciar o driver.
 
-### Installation
+### Instalação
 
-A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla.org/en-US/firefox/) 
+Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mozilla.org/en-US/firefox/) 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -150,9 +151,9 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Uninstallation
+### Desinstalação
 
-Uninstalling an addon requires knowing its id. The id can be obtained from the return value when installing the add-on.
+Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor de retorno durante a instalação.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -176,11 +177,11 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Unsigned installation
+### Instalação de extensões não assinadas
 
-When working with an unfinished or unpublished extension, it will likely not be signed. As such, it can only
-be installed as "temporary." This can be done by passing in either a zip file or a directory, here's an 
-example with a directory:
+Quando trabalhar em uma extensão não terminada ou não publicada, provavelmente ela não estará assinada.
+Desta forma, só pode ser instalada como "temporária". Isto pode ser feito passando uma arquivo ZIP ou
+uma pasta, este é um exemplo com uma pasta:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -205,10 +206,10 @@ example with a directory:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Full page screenshots
+## Captura de tela inteira
 
 {{< alert-code />}}
 
-## Context
+## Contexto
 
 {{< alert-code />}}

@@ -75,7 +75,7 @@ Add an extension to options:
 
 Setting the `detach` parameter to true will keep the browser open after the driver process has been quit.
 
-Ad a binary to options:
+Add a binary to options:
 
 {{< alert-code />}}
 
