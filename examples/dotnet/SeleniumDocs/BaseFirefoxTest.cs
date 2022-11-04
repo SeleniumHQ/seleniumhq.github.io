@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 
 namespace SeleniumDocs
 {
@@ -8,7 +8,7 @@ namespace SeleniumDocs
         [TestInitialize]
         public void CreateDriver()
         {
-            driver = new ChromeDriver();
+            driver = new FirefoxDriver();
         }
     }
 }

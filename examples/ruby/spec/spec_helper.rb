@@ -30,6 +30,7 @@ RSpec.configure do |config|
   end
 
   def start_firefox
-    @driver = Selenium::WebDriver.for :firefox
+    options = Selenium::WebDriver::Options.firefox(timeouts: {implicit: 1500})
+    @driver = Selenium::WebDriver.for :firefox, options: options
   end
 end

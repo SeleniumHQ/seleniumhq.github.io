@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -73,7 +74,7 @@ namespace SeleniumDocs.Support
             var selectElement = driver.FindElement(By.Name("single_disabled"));
             var select = new SelectElement(selectElement);
 
-            Assert.ThrowsException<WebDriverArgumentException>(() => select.SelectByValue("disabled"));
+            Assert.ThrowsException<InvalidOperationException>(() => select.SelectByValue("disabled"));
         }
     }
 }
