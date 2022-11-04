@@ -43,7 +43,7 @@ of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if 
 found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
 will eventually even download browsers if necessary.
 
-Read more at the blog announcement for Selenium Manager (link here).
+Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
 
 ### 2. ドライバー管理ソフトウェア
 
