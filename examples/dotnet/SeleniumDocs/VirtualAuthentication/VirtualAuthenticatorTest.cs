@@ -9,7 +9,7 @@ using System;
 namespace SeleniumDocs.VirtualAuthentication
 {
     [TestClass]
-    public class VirtualAuthenticatorTest : BaseTest
+    public class VirtualAuthenticatorTest : BaseChromeTest
     {
         //A pkcs#8 encoded encrypted RSA private key as a base64 string.
         private static string base64EncodedRSAPK =

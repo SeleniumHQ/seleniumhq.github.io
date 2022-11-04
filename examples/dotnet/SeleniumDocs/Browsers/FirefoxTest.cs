@@ -3,8 +3,6 @@ using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.Browsers
 {
@@ -17,12 +15,6 @@ namespace SeleniumDocs.Browsers
         public void QuitDriver()
         {
             driver.Quit();
-        }
-
-        [TestInitialize]
-        public void SetupDriver()
-        {
-            new DriverManager().SetUpDriver(new FirefoxConfig());
         }
 
         [TestMethod]
