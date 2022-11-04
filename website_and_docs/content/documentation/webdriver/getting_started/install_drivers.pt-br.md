@@ -24,9 +24,29 @@ Esta seção explica os requisitos básicos para você começar a usar os difere
 Leia mais sobre opções avançadas para iniciar um driver
  na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers/" >}}).
 
-## Três maneiras diferentes de usar os drivers
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Portuguese. 
+   Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-### 1. Software de gerenciamento de Driver 
+## QuatroTrês maneiras diferentes de usar os drivers
+
+### 1. Selenium Manager <small>(Beta)</small>
+
+{{< badge-version version="4.6" >}}
+
+Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
+of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
+found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
+will eventually even download browsers if necessary.
+
+Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+
+### 2. Software de gerenciamento de Driver 
 
 A maioria das máquinas atualiza automaticamente o navegador, mas não o driver. Para certificar de obter 
 o driver correto para o seu navegador de internet, existem diversas bibliotecas de terceiros para auxiliá-lo.
@@ -148,7 +168,7 @@ fun chrome(): WebDriver {
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. A variável de ambiente  `PATH`
+### 3. A variável de ambiente  `PATH`
 Esta opção requer primeiro o download manual do driver (Vejá a [sessão de Consulta de referencia rápida](#quick-reference) para links).
 
 Esta é uma opção flexível para alterar a localização dos drivers sem precisar atualizar seu código e funcionará
@@ -220,9 +240,9 @@ ChromeDriver was started successfully.
 
 Você pode recuperar o controle do seu prompt de comando pressionando <kbd>Ctrl+C</kbd>
 
-### 3. Localização definida no código
+### 4. Localização definida no código
 
-Semelhante à opção 2 acima, você precisará baixar manualmente o driver (Vejá a [sessão de Consulta de referencia rápida](#quick-reference) para links).
+Semelhante à opção 3 acima, você precisará baixar manualmente o driver (Vejá a [sessão de Consulta de referencia rápida](#quick-reference) para links).
 Especificar a localização no próprio código tem a vantagem de você não precisar se preocupar em descobrir variáveis de ambiente no
 seu sistema, mas tem a desvantagem de tornar o código muito menos flexível.
 

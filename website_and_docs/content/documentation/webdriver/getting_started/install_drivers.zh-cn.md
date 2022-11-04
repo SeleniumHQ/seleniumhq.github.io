@@ -25,9 +25,29 @@ WebDriver尽量使用浏览器内置的自动化支持
 在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
-## 使用驱动的三种方式
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-### 1. 驱动管理软件
+## Four Ways to Use Drivers
+
+### 1. Selenium Manager <small>(Beta)</small>
+
+{{< badge-version version="4.6" >}}
+
+Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
+of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
+found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
+will eventually even download browsers if necessary.
+
+Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+
+### 2. 驱动管理软件
 
 大多数机器会自动更新浏览器, 
 但驱动程序不会. 
@@ -153,7 +173,7 @@ fun chrome(): WebDriver {
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. `PATH` 环境变量
+### 3. `PATH` 环境变量
 此选项首先需要手动下载驱动程序
 (有关链接, 请参阅[快速参考](#快速参考) 部分).
 
@@ -232,9 +252,9 @@ ChromeDriver was started successfully.
 
 想要重新控制命令提示符可以按下 <kbd>Ctrl+C</kbd>
 
-### 3. 硬编码位置
+### 4. 硬编码位置
 
-与上面的选项2类似, 
+与上面的选项3类似, 
 您需要手动下载驱动程序(有关链接, 请参阅[快速参考](#快速参考) 部分). 
 在代码中指定位置本身的优点是
 不需要指出系统上的环境变量, 
