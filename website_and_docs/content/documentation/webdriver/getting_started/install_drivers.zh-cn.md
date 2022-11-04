@@ -25,18 +25,6 @@ WebDriver尽量使用浏览器内置的自动化支持
 在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
-## 快速参考
-
-| 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
-|-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
-| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
-| Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
-| Edge              | Windows/macOS               | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
-| Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
-| Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
-
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
-
 ## 使用驱动的三种方式
 
 ### 1. 驱动管理软件
@@ -304,6 +292,18 @@ fun main(args: Array<String>) {
 {{< /tab >}}
 
 {{< /tabpane >}}
+
+## 快速参考
+
+| 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
+|-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
+| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
+| Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
+| Edge              | Windows/macOS/Linux         | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
+| Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
+| Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
+
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 
 ## 下一步

@@ -23,18 +23,6 @@ This section explains the basic requirements for getting started with the differ
 Read about more advanced options for starting a driver 
 in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
-## Quick Reference
-
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
-| ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
-
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
-
 ## Three Ways to Use Drivers
 
 ### 1. Driver Management Software
@@ -286,6 +274,18 @@ fun main(args: Array<String>) {
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+## Quick Reference
+
+| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| ------- | ------------ | ------------- | -------- | ------------- |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows/macOS/Linux | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
+| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## Next Step
 [Create your first Selenium script]({{< ref "first_script.md" >}})

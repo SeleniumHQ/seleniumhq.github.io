@@ -1,24 +1,23 @@
 ---
-title: "Chrome specific functionality"
+title: "Funcionalidade específica do Chrome"
 linkTitle: "Chrome"
 weight: 4
 description: >-
-    These are capabilities and features specific to Google Chrome browsers.
+    Estas capacidades e características são específicas ao navegador Google Chrome.
 aliases: [
 "/pt-br/documentation/capabilities/chromium"
 ]
 ---
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of
-the Chrome browser and the version of chromedriver must match the major version.
+Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a versão (maior) do navegador e do chromedriver devem ser idênticas.
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Chrome can be found at Google's page for [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
+Capacidades únicas ao Chrome podem ser encontradas na página da Google para [Capacidades e & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
-Starting a Chrome session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -42,61 +41,58 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+Alguns exemplos de uso com capacidades diferentes:
 
-### Arguments
+### Argumentos
 
-The `args` parameter is for a list of [Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
-used when starting the browser.
-Commonly used args include `--start-maximized` and `user-data-dir=/tmp/temp_profile`
+O parametro `args` é usado para indicar uma lista de [opções](https://peter.sh/experiments/chromium-command-line-switches/) ao iniciar o navegador. 
+Opções mais frequentes incluem `--start-maximized` e `user-data-dir=/tmp/temp_profile`
 
-Add an argument to options:
-
-{{< alert-code />}}
-
-### Start browser in a specified location
-
-The `binary` parameter takes the path of an alternate location of browser to use. With this parameter you can
-use chromedriver to drive various Chromium based browsers.
-
-Add a browser location to options:
+Adicione uma opção:
 
 {{< alert-code />}}
 
-### Add extensions
+### Iniciar navegador numa localização específica
 
-The `extensions` parameter accepts crx files
-
-Add an extension to options:
+Adicionar uma localização:
 
 {{< alert-code />}}
 
-### Keeping browser open
+### Adicionar extensões
 
-Setting the `detach` parameter to true will keep the browser open after the driver process has been quit.
+O parametro `extensions` aceita ficheiros crx 
 
-Ad a binary to options:
+Adicionar uma extensão:
 
 {{< alert-code />}}
 
-### Excluding arguments
+### Manter o navegador aberto
 
-Chrome adds various arguments, if you do not want those arguments added, pass them into `excludeSwitches`.
-A common example is to turn the popup blocker back on.
+Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo depois do driver fechar.
 
-Set excluded arguments on options:
+Adicionar detach:
+
+{{< alert-code />}}
+
+### Excluindo parametros
+
+Chrome adiciona vários parametros, se não os pretende adicionar, passe-os em `excludeSwitches`.
+
+Um exemplo comum é voltar a activar o bloqueador de popups.
+
+Exclua parametros:
 
 {{< alert-code />}}
 
 ## Casting
 
-You can drive Chrome Cast devices, including sharing tabs
+Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
 {{< alert-code />}}
 
-## Network conditions
+## Condições de rede
 
-You can simulate various network conditions.
+Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
 
 {{< alert-code />}}
 
@@ -104,10 +100,10 @@ You can simulate various network conditions.
 
 {{< alert-code />}}
 
-## Permissions
+## Permissões
 
 {{< alert-code />}}
 
 ## DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using Chrome DevTools
+Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) para mais informação em como usar Chrome DevTools
