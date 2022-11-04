@@ -1,20 +1,8 @@
 package dev.selenium.augmenter;
 
-import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
-import static org.openqa.selenium.remote.http.Contents.utf8String;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
-
+import com.google.common.net.MediaType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -39,9 +27,17 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.remote.http.Route;
 
-import com.google.common.net.MediaType;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicReference;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
+import static org.openqa.selenium.remote.http.Contents.utf8String;
 
 public class CdpRemoteWebDriverTest {
 
@@ -49,15 +45,9 @@ public class CdpRemoteWebDriverTest {
 
   private WebDriver driver;
 
-  @BeforeAll
-  static void setDriver() {
-    WebDriverManager.chromedriver().setup();
-  }
-
   @BeforeEach
   public void setup() throws MalformedURLException {
     int port = PortProber.findFreePort();
-    WebDriverManager.chromedriver().setup();
     Main.main(new String[] { "standalone", "--port", String.valueOf(port) });
 
     gridUrl = new URL(String.format("http://localhost:%d/", port));
