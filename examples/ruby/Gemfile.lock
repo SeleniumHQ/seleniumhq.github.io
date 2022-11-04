@@ -47,7 +47,7 @@ GEM
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.5.0)
+    selenium-webdriver (4.6.1)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -70,7 +70,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
-  selenium-webdriver (= 4.5)
+  selenium-webdriver (= 4.6.1)
   webdrivers (~> 5.1)
 
 BUNDLED WITH

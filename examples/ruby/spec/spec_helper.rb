@@ -26,12 +26,10 @@ RSpec.configure do |config|
   config.after { @driver&.quit }
 
   def start_session
-    require 'webdrivers'
     @driver = Selenium::WebDriver.for :chrome
   end
 
   def start_firefox
-    require 'webdrivers'
     @driver = Selenium::WebDriver.for :firefox
   end
 end
