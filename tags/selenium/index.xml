@@ -54,7 +54,338 @@ check the project&amp;rsquo;s &lt;a href="https://github.com/SeleniumHQ/selenium
 However, you as a member of the Selenium community are key part on the future success of this new tool. Please
 report ideas or bugs through our &lt;a href="https://github.com/SeleniumHQ/selenium/issues">issue tracker&lt;/a> and join
 the conversation through our &lt;a href="/support/#ChatRoom">community channels&lt;/a>. Looking forward to your feedback!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.5.0 Released!</title><link>/blog/2022/selenium-4-5-0-released/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-5-0-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.6.0 Released!</title><link>/blog/2022/selenium-4-6-0-released/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-6-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.6.0 for Java,
+.NET, Python, Ruby, and JavaScript bindings as well as the Grid and
+Internet Explorer Driver. Links to everything can be found on our
+&lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Adding support for CDP released in Chrome v105, v106, and v107, while v104 was removed&lt;/li>
+&lt;li>Initial implementation of &lt;a href="/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> across bindings&lt;/li>
+&lt;li>Improvements to the new Java HTTP 11 client and important Grid fixes.&lt;/li>
+&lt;li>Observability enabled in the &lt;a href="https://github.com/SeleniumHQ/docker-selenium#tracing-in-grid">Docker-Selenium images&lt;/a>.&lt;/li>
+&lt;li>Various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Huge thanks to all the contributors who made this version possible:&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10820686?v=4" class="card-img-top mx-auto" alt="Nick Crews" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nick Crews
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/NickCrews">@NickCrews&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/17887843?v=4" class="card-img-top mx-auto" alt="Simon K" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon K
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/symonk">@symonk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/2779764?v=4" class="card-img-top mx-auto" alt="Chris Stringer" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Chris Stringer
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/cstringer">@cstringer&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/8839280?v=4" class="card-img-top mx-auto" alt="Kazuki Higashiguchi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kazuki Higashiguchi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/hgsgtk">@hgsgtk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/4146725?v=4" class="card-img-top mx-auto" alt="Brandon Walderman" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Brandon Walderman
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bwalderman">@bwalderman&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/15668267?v=4" class="card-img-top mx-auto" alt="Václav Votípka" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Václav Votípka
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/eNcacz">@eNcacz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/36271666?v=4" class="card-img-top mx-auto" alt="Konstantin Kotenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Konstantin Kotenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/kkotenko">@kkotenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/26433073?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vinoth959">@vinoth959&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16218269?v=4" class="card-img-top mx-auto" alt="Hyesung Lee" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Hyesung Lee
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/silentsoft">@silentsoft&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1879166?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/tvataire">@tvataire&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/33136628?v=4" class="card-img-top mx-auto" alt="Muhammad Hammad" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Muhammad Hammad
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mhnaeem">@mhnaeem&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10154945?v=4" class="card-img-top mx-auto" alt="Yevgeniy Shunevych" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Yevgeniy Shunevych
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/909773?v=4" class="card-img-top mx-auto" alt="Krishnan Mahadevan" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Krishnan Mahadevan
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/krmahadevan">@krmahadevan&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Blog: Selenium 4.5.0 Released!</title><link>/blog/2022/selenium-4-5-0-released/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-5-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.5.0 for
 Java, .NET, Python, Ruby, and JavaScript bindings as well as the Grid and Internet Explorer Driver.
 Links to everything can be found on our &lt;a href="/downloads">Downloads Page&lt;/a>.&lt;/p>
@@ -2071,14 +2402,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>I’m really looking forward to it! I’m sure you are too.&lt;/p></description></item><item><title>Blog: Selenium Conference 2012</title><link>/blog/2012/selenium-conference-2012/</link><pubDate>Fri, 24 Feb 2012 00:00:00 +0000</pubDate><guid>/blog/2012/selenium-conference-2012/</guid><description>
 &lt;p>Good news, everybody! &lt;a href="http://www.seleniumconf.org/">Selenium Conf ’12&lt;/a> is getting closer! We recently &lt;a href="http://www.seleniumconf.org/speakers/">selected the speakers&lt;/a> for the conference, and it’s going to be a great mix of talks, spanning the full range of subjects from the very practical to the deeply technical. I’m promised that there will be robots.&lt;/p>
 &lt;p>Selenium Conf isn’t just about the planned talks, it’s also about the community. On the final day, there will be an unconference, so if there’s something you feel passionately about and feel the world should know, now’s your chance. You’ll not only have a chance to talk to and meet other selenium users, but also many of the core team members.&lt;/p>
-&lt;p>The conference runs from the 16-18 April in London. &lt;a href="http://www.seleniumconf.org/tickets/">Tickets are still available&lt;/a>! We’re looking forward to seeing you there.&lt;/p></description></item><item><title>Blog: Support for Ancient Browsers</title><link>/blog/2012/support-for-ancient-browsers/</link><pubDate>Fri, 24 Feb 2012 00:00:00 +0000</pubDate><guid>/blog/2012/support-for-ancient-browsers/</guid><description>
-&lt;p>The first code checked into the Selenium project’s public repository was in November, 2004. We’re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it’s time to review the list of browsers again.&lt;/p>
-&lt;p>We periodically review the list of supported browsers as the more changes there are between the oldest version of a browser that we support and the most recent, the harder it is for us to add new features and maintain those that already exist. Balanced against the cost of maintaining the selenium code base itself are your tests; we know that your users might not be updating their browsers to the latest and greatest, and we know that you’ve still got to prove your app works on all the browsers that are important to you. That’s why what’s below is just our plan, and we’re talking about it now to let you have your say.&lt;/p>
-&lt;p>Looking at the market share of the browsers out there helps us make an informed choice about what it makes sense to support. This will most likely mean:&lt;/p>
-&lt;p>&lt;strong>Firefox&lt;/strong>: the Firefox market appears to be split between those on 3.6 and those on the new rapid release schedule. Given this, we are thinking of officially supporting Firefox 3.6, and the last, latest and next release of Firefox (currently Firefox 9-11) as well as any ESR releases. The market share for Firefox versions 3.0 and 3.5 is tiny, and the effort to keep them working with selenium is disproportionately high.&lt;/p>
-&lt;p>&lt;strong>Internet Explorer&lt;/strong>: &lt;a href="http://www.ie6countdown.com/">Despite Microsoft’s efforts&lt;/a>, IE 6 is still a popular browser, particularly in the workplace. We will continue to support IE versions 6 and up.&lt;/p>
-&lt;p>&lt;strong>Safari&lt;/strong>: Safari 3 is now ancient and has been superseded by newer releases. We plan on only supporting Safari 4 and 5.&lt;/p>
-&lt;p>&lt;strong>iOS&lt;/strong>: We’ll continue to target the most recent iOS release.&lt;/p>
-&lt;p>&lt;strong>Android&lt;/strong>: Due to some technical limitations in previous Android releases, we are targeting Ice Cream Sandwich and onwards. We will continue to make available the testing framework for Froyo, but will not be making any changes to it.&lt;/p>
-&lt;p>&lt;strong>These are only our plans&lt;/strong>. If you really need those browsers, and (better!) can help us maintain support for them, then please let us know.&lt;/p>
-&lt;p>You’ll notice that Opera and Chrome are not listed above. Since Opera and Google now maintain the drivers for those browsers, they are best placed to decide which are the supported versions, but in summary, Google support the major Chrome release channels (stable, beta, dev and canary) and Opera suggest using Opera 11.6+.&lt;/p></description></item></channel></rss>
+&lt;p>The conference runs from the 16-18 April in London. &lt;a href="http://www.seleniumconf.org/tickets/">Tickets are still available&lt;/a>! We’re looking forward to seeing you there.&lt;/p></description></item></channel></rss>
