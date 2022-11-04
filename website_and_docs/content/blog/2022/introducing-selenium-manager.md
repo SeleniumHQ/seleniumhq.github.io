@@ -1,7 +1,7 @@
 ---
 title: "Introducing Selenium Manager"
 linkTitle: "Introducing Selenium Manager"
-date: 2022-11-03
+date: 2022-11-04
 tags: ["selenium", "manager", "chromedriver", "geckodriver", "edgedriver"]
 categories: ["releases"]
 author: Boni García ([@boni_gg](https://twitter.com/boni_gg))
