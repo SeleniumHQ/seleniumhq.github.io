@@ -19,7 +19,6 @@ env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
-  EDGE_PATH: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
 
 jobs:
   test_examples:

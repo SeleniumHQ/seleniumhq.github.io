@@ -26,8 +26,7 @@ public class InternetExplorerTest {
     @Test
     public void basicOptions() {
         InternetExplorerOptions options = new InternetExplorerOptions();
-        options.attachToEdgeChrome();
-        options.withEdgeExecutablePath(System.getenv("EDGE_PATH"));
+        options.ignoreZoomSettings();
         driver = new InternetExplorerDriver(options);
     }
 }

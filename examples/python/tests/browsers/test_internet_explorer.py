@@ -12,8 +12,7 @@ from webdriver_manager.microsoft import IEDriverManager
 def test_basic_options():
     service = InternetExplorerService(executable_path=IEDriverManager().install())
     options = InternetExplorerOptions()
-    options.attach_to_edge_chrome = True
-    options.edge_executable_path = os.getenv("EDGE_PATH")
+    options.ignore_zoom_level = True
     driver = webdriver.Ie(options=options, service=service)
 
     driver.quit()
