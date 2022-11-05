@@ -55,6 +55,57 @@ let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 for element displayedness
 {{< /alert-code >}}
 
+## 是否启用
+
+此方法用于检查所连接的元素在网页上是启用还是禁用状态。返回一个布尔值，如果在当前浏览上下文中是 **启用** 状态，则返回 **true**，否则返回 **false**。
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+  //navigates to url
+  driver.get("https://www.google.com/");
+
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("http://www.google.com")
+
+    # Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'http://www.google.com/'
+
+    # Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+ //navigates to url
+ driver.get("https://www.google.com/")
+
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("btnK")).isEnabled()
+  {{< /tab >}}
+{{< /tabpane >}}
 
 ## 是否被选定
 
