@@ -361,7 +361,14 @@ WebElement emailTxt = driver.findElement(By.name(("email_input")));
 String valueInfo = eleSelLink.getAttribute("value");
   {{< /tab >}}
   {{< tab header="Python" >}}
-   # Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+# Identify the email text box
+email_txt = driver.find_element(By.NAME, "email_input")
+
+# Fetch the value property associated with the textbox
+value_info = email_txt.get_attribute("value")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
  //Navigate to the url
