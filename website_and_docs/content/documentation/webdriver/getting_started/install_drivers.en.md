@@ -23,21 +23,20 @@ This section explains the basic requirements for getting started with the differ
 Read about more advanced options for starting a driver 
 in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
-## Quick Reference
+## Four Ways to Use Drivers
 
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
-| ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+### 1. Selenium Manager (Beta)
 
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
+{{< badge-version version="4.6" >}}
 
-## Three Ways to Use Drivers
+Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
+of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
+found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
+will eventually even download browsers if necessary.
 
-### 1. Driver Management Software
+Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+
+### 2. Driver Management Software
 
 Most machines automatically update the browser, but the driver does not. To make sure you get 
 the correct driver for your browser, there are many third party libraries to assist you. 
@@ -160,7 +159,7 @@ fun chrome(): WebDriver {
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. The `PATH` Environment Variable
+### 3. The `PATH` Environment Variable
 This option first requires manually downloading the driver (See [Quick Reference Section](#quick-reference) for links).
 
 This is a flexible option to change location of drivers without having to update your code, and will work
@@ -231,9 +230,9 @@ ChromeDriver was started successfully.
 
 You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
 
-### 3. Hard Coded Location
+### 4. Hard Coded Location
 
-Similar to Option 2 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
+Similar to Option 3 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
 Specifying the location in the code itself has the advantage of not needing to figure out Environment Variables on
 your system, but has the drawback of making the code much less flexible.
 
@@ -286,6 +285,18 @@ fun main(args: Array<String>) {
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+## Quick Reference
+
+| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| ------- | ------------ | ------------- | -------- | ------------- |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows/macOS/Linux | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
+| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## Next Step
 [Create your first Selenium script]({{< ref "first_script.md" >}})

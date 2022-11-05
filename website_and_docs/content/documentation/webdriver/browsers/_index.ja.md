@@ -1,6 +1,6 @@
 ---
-title: "Supported Browsers"
-linkTitle: "Browsers"
+title: "対応ブラウザ"
+linkTitle: "ブラウザ"
 weight: 4
 aliases: [
 "/documentation/ja/driver_idiosyncrasies/",
@@ -11,4 +11,4 @@ aliases: [
 ]
 ---
 
-Each browser has custom capabilities and unique features.
+各ブラウザには、カスタムCapabilityと固有の機能があります。
