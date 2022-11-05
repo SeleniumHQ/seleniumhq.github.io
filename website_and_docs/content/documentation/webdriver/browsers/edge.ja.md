@@ -1,19 +1,19 @@
 ---
-title: "Edge specific functionality"
+title: "Edge固有の機能"
 linkTitle: "Edge"
 weight: 5
 description: >-
-    These are capabilities and features specific to Microsoft Edge browsers.
+    これらは、Microsoft Edgeブラウザに固有のCapabilityです。
 ---
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+Microsoft EdgeはChromiumで実装されており、サポートされている最も古いバージョンはv79です。
+Chromeと同様に、edgedriverのメジャー バージョン番号は、Edgeブラウザのメジャーバージョンと一致する必要があります。
 
-All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}}) work for Edge as well.
+[Chromeページ]({{< ref "chrome.md" >}}) にあるすべての機能とオプションは、Edgeでも機能します。
 
-## Options
+## オプション
 
-Starting an Edge session with basic defined options looks like this:
+基本的な定義済みオプションを使用して Edgeセッションを開始すると、次のようになります。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -37,8 +37,8 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Internet Explorer Compatibility Mode
+## Internet Explorer Compatibility モード
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
-the Internet Explorer Driver classes in conjunction with Microsoft Edge.
-Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
+Microsoft Edge は、Internet Explorer ドライバークラスを Microsoft Edgeと組み合わせて使用する 
+"Internet Explorer 互換モード"で動かすことができます。 
+詳細については、[Internet Explorerページ]({{< ref "internet_explorer.md" >}})を参照してください。
