@@ -20,13 +20,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 A instalação de bibliotecas Selenium para Java pode ser feita usando Maven.
 Adicione a dependência selenium-java em seu pom.xml:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.4.0</version>
-</dependency>
-```
+{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
 
 For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 

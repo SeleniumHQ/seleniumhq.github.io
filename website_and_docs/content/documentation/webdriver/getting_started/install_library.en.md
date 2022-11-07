@@ -26,13 +26,7 @@ You can see all available versions on
 
 For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.4.0</version>
-</dependency>
-```
+{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
 
 For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
 
