@@ -58,19 +58,9 @@ Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducin
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Calling `setup()` automatically puts the correct browser driver where the code will see it:
-```java
-WebDriverManager.chromedriver().setup();
-```
-3. Just initialize the driver as you normally would:
-```java 
-ChromeDriver driver = new ChromeDriver();
-```
+2. Call `setup()`:
 
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L16-L18" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -81,21 +71,9 @@ See full example on GitHub.</a>
 from webdriver_manager.chrome import ChromeDriverManager
 ```
 
-2. Use `install()` to get the location used by the manager and pass it into service class
+2. Use `install()` to get the location used by the manager and pass it to the driver in a service class instance:
 
-```py
-service = Service(executable_path=ChromeDriverManager().install())
-```
-
-3. Use `Service` instance when initializing the driver: 
-```py
-driver = webdriver.Chrome(service=service)
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L14-L16" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -108,20 +86,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. Use the `SetUpDriver()` which requires a config class:
 
-```csharp
-new DriverManager().SetUpDriver(new ChromeConfig());
-```
-
-3. Initialize your driver as you normally would:
-
-```csharp
-var driver = new ChromeDriver()
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L18-L20" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}

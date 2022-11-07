@@ -153,13 +153,13 @@ This code will end up with the text: `SeleniumSelenium!`
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L55-L66" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L56-L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L72-L82" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L75-L87" >}}

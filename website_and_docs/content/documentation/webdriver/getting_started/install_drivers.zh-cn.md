@@ -62,21 +62,9 @@ Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducin
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. 调用 `setup()` 会自动将正确的浏览器驱动程序
-放在代码可以看到的位置:
+2. 调用 `setup()`:
 
-```java
-WebDriverManager.chromedriver().setup();
-```
-3. 只需像平常一样初始化驱动程序:
-```java 
-ChromeDriver driver = new ChromeDriver();
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L16-L18" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -89,19 +77,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 2. 使用 `install()` 获取管理器使用的位置, 并将其传递到服务类中
 
-```py
-service = Service(executable_path=ChromeDriverManager().install())
-```
-
-3. 使用 `Service` 实例并初始化驱动程序: 
-```py
-driver = webdriver.Chrome(service=service)
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L14-L16" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -114,20 +90,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. 使用 `SetUpDriver()` 时需要一个配置类:
 
-```csharp
-new DriverManager().SetUpDriver(new ChromeConfig());
-```
-
-3. 像往常一样初始化驱动程序:
-
-```csharp
-var driver = new ChromeDriver()
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L18-L20" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}

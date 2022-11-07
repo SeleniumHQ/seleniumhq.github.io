@@ -1,4 +1,4 @@
-package dev.selenium.augmenter;
+package dev.selenium.bidirectional;
 
 import com.google.common.net.MediaType;
 import org.junit.jupiter.api.AfterEach;
@@ -39,7 +39,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
 import static org.openqa.selenium.remote.http.Contents.utf8String;
 
-public class CdpRemoteWebDriverTest {
+public class BidiApiRemotewebdriverTest {
 
   private static URL gridUrl;
 
@@ -71,24 +71,25 @@ public class CdpRemoteWebDriverTest {
   public void testBasicAuth() {
     AtomicReference<DevTools> devToolsAtomicReference = new AtomicReference<>();
 
-    driver = new Augmenter().addDriverAugmentation("chrome",
-                                                   HasAuthentication.class,
-                                                   (caps, exec) -> (whenThisMatches, useTheseCredentials) -> {
-                                                     devToolsAtomicReference.get()
-                                                       .createSessionIfThereIsNotOne();
-                                                     devToolsAtomicReference.get().getDomains()
-                                                       .network()
-                                                       .addAuthHandler(whenThisMatches,
-                                                                       useTheseCredentials);
-
-                                                   }).augment(driver);
+    driver = new Augmenter()
+            .addDriverAugmentation("chrome",
+                    HasAuthentication.class,
+                    (caps, exec) -> (whenThisMatches, useTheseCredentials) -> {
+                      devToolsAtomicReference.get()
+                              .createSessionIfThereIsNotOne();
+                      devToolsAtomicReference.get().getDomains()
+                              .network()
+                              .addAuthHandler(whenThisMatches,
+                                      useTheseCredentials);
+                    }).augment(driver);
 
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
     devToolsAtomicReference.set(devTools);
-    ((HasAuthentication) driver).register(UsernameAndPassword.of("admin", "admin"));
-    driver.get("https://the-internet.herokuapp.com/basic_auth");
+    ((HasAuthentication) driver).
+            register(UsernameAndPassword.of("admin", "admin"));
 
+    driver.get("https://the-internet.herokuapp.com/basic_auth");
     WebElement element = driver.findElement(By.tagName("p"));
 
     Assertions
@@ -101,25 +102,20 @@ public class CdpRemoteWebDriverTest {
     AtomicReference<WebDriver> augmentedDriver = new AtomicReference<>();
     CountDownLatch latch = new CountDownLatch(1);
 
-    Augmenter augmenter = new Augmenter();
+    driver = new Augmenter()
+            .addDriverAugmentation("chrome",
+                    HasLogEvents.class,
+                    (caps, exec) -> new HasLogEvents() {
+                      @Override
+                      public <X> void onLogEvent(EventType<X> kind) {
 
-    driver = augmenter.
-      addDriverAugmentation("chrome", HasLogEvents.class, (caps, exec) -> new HasLogEvents() {
-        @Override
-        public <X> void onLogEvent(EventType<X> kind) {
-          kind.initializeListener(augmentedDriver.get());
-        }
-      }).augment(driver);
+                        kind.initializeListener(augmentedDriver.get());
+                      }
+                    }).augment(driver);
 
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
-
-    if (driver instanceof HasLogEvents) {
-      augmentedDriver.set(driver);
-    } else {
-      throw new Exception("Not an instance of HasLogEvents");
-    }
-
+    augmentedDriver.set(driver);
     ((HasLogEvents) driver).onLogEvent(domMutation(mutation -> {
       if ("cheese".equals(mutation.getAttributeName())) {
         seen.set(mutation);
@@ -128,8 +124,8 @@ public class CdpRemoteWebDriverTest {
     }));
 
     driver.get("https://www.google.com");
-    WebElement span = driver.findElement(By.cssSelector("span"));
 
+    WebElement span = driver.findElement(By.cssSelector("span"));
     ((JavascriptExecutor) driver)
       .executeScript("arguments[0].setAttribute('cheese', 'gouda');", span);
 
@@ -145,12 +141,8 @@ public class CdpRemoteWebDriverTest {
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
 
-    // Use as per Devtools version
     devTools.send(org.openqa.selenium.devtools.v85.runtime.Runtime.enable());
     devTools.send(Log.enable());
-
-    // https://chromedevtools.github.io/devtools-protocol/tot/Console/ states that post deprecation either Runtime or Log domain is to be used
-    // Depending on the implementation, events from either of the domains can be fired for console logs.
 
     devTools.addListener(Log.entryAdded(),
                          logEntry -> {
@@ -159,7 +151,6 @@ public class CdpRemoteWebDriverTest {
                            latch.countDown();
                          });
 
-    // Use as per Devtools version
     devTools.addListener(org.openqa.selenium.devtools.v85.runtime.Runtime.consoleAPICalled(),
                          consoleLog -> System.out.println("Type: " + consoleLog.getType()));
 
@@ -198,7 +189,6 @@ public class CdpRemoteWebDriverTest {
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
 
-    // Intercept and change response if the request uri contains "google"
     try (NetworkInterceptor interceptor = new NetworkInterceptor(
       driver,
       Route.matching(req -> req.getUri().contains("google"))

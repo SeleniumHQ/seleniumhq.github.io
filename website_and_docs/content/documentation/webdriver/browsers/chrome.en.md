@@ -22,17 +22,16 @@ Starting a Chrome session with basic defined options looks like this:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L25-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L8-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}
