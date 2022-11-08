@@ -69,6 +69,10 @@ public class SignInPage {
 
   public SignInPage(WebDriver driver){
     this.driver = driver;
+    if (!driver.getTitle().equals("Home Page of logged in user")) {
+      throw new IllegalStateException("This is not Home Page of logged in user," +
+            " current page is: " + driver.getCurrentUrl());
+    }
   }
 
   /**
