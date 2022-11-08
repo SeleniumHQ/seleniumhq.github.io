@@ -56,7 +56,8 @@ RSpec.describe 'Keys' do
     expect(text_field.attribute('value')).to eq 'Selenium!'
   end
 
-  it 'copy and paste' do
+  it 'copy and paste', except: {browser: :chrome,
+                                reason: 'https://bugs.chromium.org/p/chromedriver/issues/detail?id=4264'} do
     driver.get 'https://www.selenium.dev/selenium/web/single_text_input.html'
     wait.until { driver.find_element(id: 'textInput').attribute('autofocus') }
 

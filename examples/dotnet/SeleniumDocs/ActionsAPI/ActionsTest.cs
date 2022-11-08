@@ -6,7 +6,7 @@ using OpenQA.Selenium.Interactions;
 namespace SeleniumDocs.ActionsAPI
 {
     [TestClass]
-    public class ActionsTest : BaseTest
+    public class ActionsTest : BaseChromeTest
     {
         [TestMethod]
         public void Pause()

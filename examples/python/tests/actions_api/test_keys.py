@@ -50,7 +50,8 @@ def test_send_keys_to_designated_element(driver):
     assert driver.find_element(By.ID, "textInput").get_attribute('value') == "abc"
 
 
-def test_copy_and_paste(driver):
+def test_copy_and_paste(firefox_driver):
+    driver = firefox_driver
     driver.get('https://selenium.dev/selenium/web/single_text_input.html')
     cmd_ctrl = Keys.COMMAND if sys.platform == 'darwin' else Keys.CONTROL
 

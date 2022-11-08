@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 namespace SeleniumDocs.ChromeDevTools
 {
     [TestClass]
-    public class NetworkInterceptorTest : BaseTest
+    public class NetworkInterceptorTest : BaseChromeTest
     {
         [TestMethod]
         public void InterceptNetworkForAuthentication()

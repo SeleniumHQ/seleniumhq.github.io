@@ -29,21 +29,21 @@ Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with b
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#28-L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#28-L30" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L14-L17" >}}
+Note that Python must specify service class for IE to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L13-L16" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 Note that the .NET [Driver Manager]({{< ref "../getting_started/install_drivers#1-driver-management-software" >}})
 does not support Internet Explorer, so the location must be in a
 [directory on PATH]({{< ref "../getting_started/install_drivers#2-the-path-environment-variable" >}}),
 or specified explicitly as in this example.
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L24-L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L24-L30" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L10" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" code=true >}}
   let driver = await new Builder()

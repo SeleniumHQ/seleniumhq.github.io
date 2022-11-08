@@ -7,7 +7,7 @@ using OpenQA.Selenium.Interactions;
 namespace SeleniumDocs.ActionsAPI
 {
     [TestClass]
-    public class MouseTest : BaseTest
+    public class MouseTest : BaseChromeTest
     {
         [TestMethod]
         public void ClickAndHold()

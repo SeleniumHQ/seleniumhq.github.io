@@ -3,8 +3,6 @@ using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.Browsers
 {
@@ -17,12 +15,6 @@ namespace SeleniumDocs.Browsers
         public void QuitDriver()
         {
             driver.Quit();
-        }
-
-        [TestInitialize]
-        public void SetupDriver()
-        {
-            new DriverManager().SetUpDriver(new FirefoxConfig());
         }
 
         [TestMethod]
@@ -53,7 +45,7 @@ namespace SeleniumDocs.Browsers
              driver = new FirefoxDriver();
 
              string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-             string extensionFilePath = Path.Combine(baseDir, "../../../extensions/webextensions-selenium-example.xpi");
+             string extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.xpi");
              string extensionId = driver.InstallAddOnFromFile(Path.GetFullPath(extensionFilePath));
              driver.UninstallAddOn(extensionId);
 
@@ -67,7 +59,7 @@ namespace SeleniumDocs.Browsers
              driver = new FirefoxDriver();
 
              string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-             string extensionDirPath = Path.Combine(baseDir, "../../../extensions/webextensions-selenium-example/");
+             string extensionDirPath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example/");
              driver.InstallAddOnFromDirectory(Path.GetFullPath(extensionDirPath), true);
 
              driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
