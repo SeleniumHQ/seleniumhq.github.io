@@ -96,6 +96,10 @@ public class SignInPage {
 
   public SignInPage(WebDriver driver){
     this.driver = driver;
+    if (!driver.getTitle().equals("Sign-In Page")) {
+      throw new IllegalStateException("This is not Sign In Page," +
+            " current page is: " + driver.getCurrentUrl());
+    }
   }
 
   /**
