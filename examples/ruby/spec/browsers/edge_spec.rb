@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'webdrivers'
 
 RSpec.describe 'Edge' do
   it 'basic options' do

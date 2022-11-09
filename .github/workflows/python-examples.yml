@@ -19,7 +19,6 @@ env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
-  EDGE_PATH: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
 
 jobs:
   test_examples:
@@ -43,12 +42,20 @@ jobs:
       with:
         browser: firefox
         version: latest
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      working-directory: ./examples/python
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
     - name: Run tests
-      uses: nick-invision/retry@v2.7.1
+      uses: nick-invision/retry@v2.8.2
       with:
         timeout_minutes: 20
         max_attempts: 3
         command: |
           cd examples/python
-          pip3 install -r requirements.txt
           pytest

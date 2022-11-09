@@ -20,46 +20,34 @@ you are using the latest version.
 
 {{< tabpane code=false langEqualsHeader=true >}}
   {{% tab header="Java" %}}
+View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+
 Installation of Selenium libraries for Java is accomplished using a build tool.
-You can see all available versions on
-[Maven Repository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
 
-For Maven, add the _selenium-java_ dependency in your project `pom.xml` file:
+### Maven
+Specify the dependency in the project's `pom.xml` file:
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.4.0</version>
-</dependency>
-```
+{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
 
-For Gradle, add the _selenium-java_ dependency in your project `build.gradle` file:
+### Gradle
+Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-```text
-dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
-
-Gradle 7.0 and above:
-
-```text
-dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
-## Supported Minimum Version
-
-Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
-Java 8 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13). 
+{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
 
   {{% /tab %}}
-  {{% tab header="Python" %}}
-  Installation of Selenium libraries for Python can be done using pip:
+  {{% tab header="Python" %}} 
+The minimum supported Python version for each Selenium version can be found 
+in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+
+There are a couple different ways to install Selenium.
+
+### Pip
 
 ```shell
 pip install selenium
 ```
+
+### Download
 
 Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
 (selenium-x.x.x.tar.gz) and install it using _setup.py_:
@@ -67,32 +55,41 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 ```shell
 python setup.py install
 ```
-## Supported Minimum Version
 
-Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
-Python 3.7 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+### Require in project
+
+To use it in a project, add it to the `requirements.txt` file:
+{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-  Installation of Selenium libraries for C# can be done using NuGet in one of two ways
+A list of all supported frameworks for each version of Selenium 
+is available on [Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
 
-  * Using a Packet Manager:
+There are a few options for installing Selenium.
+
+### Packet Manager
+
 ```shell
 Install-Package Selenium.WebDriver
 ```
-  * Using .NET CLI
+
+### .NET CLI
+
 ```shell
 dotnet add package Selenium.WebDriver
 ```
-## Supported .NET Versions
-Make sure to use the .NET SDK version compatible with relevant [Selenium package](https://www.nuget.org/packages/Selenium.WebDriver).
-Check the dependencies section to find out the [supported .NET version](https://dotnet.microsoft.com/en-us/download/dotnet).
-At the time of this update, .NET 5.0 (Visual Studio 2019) is known to be supported, and .NET 6.0 is not supported.
-You can download [MSBuild Tools 2019 from here](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019) to install the needed components and dependencies such as .NET SDK and NuGet Package Manager.
 
-## Using Visual Studio Code (vscode) and C#
-This is a quick guide to help you get started with vscode and C#, however, more research may be required.
+### CSProj
+
+in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+
+{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+
+### Additional considerations
+
+Further items of note for using Visual Studio Code (vscode) and C#
+
 Install the compatible .NET SDK as per the section above.
 Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
 Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)
@@ -118,37 +115,39 @@ Now you can use the examples in the documentation related to C# with vscode.
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-  Installation of Selenium libraries for Ruby can be done using gem:
+You can see the minimum required version of Ruby for any given Selenium version 
+on [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+
+Selenium can be installed two different ways.
+
+### Install manually
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Or add it to your `Gemfile`:
+### Add to project's gemfile
 
-```rb
-gem 'selenium-webdriver', '~> 4.4'
-```
-
-## Supported Minimum Version
-
-Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
-Ruby 2.7 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-  Installation of Selenium libraries for JavaScript can be done using npm:
+You can find the minimum required version of Node for any given version of Selenium in the
+`Node Support Policy` section on [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+
+Selenium is typically installed using npm.
+
+### Install locally
 
 ```shell
 npm install selenium-webdriver
 ```
 
-## Supported Minimum Version
+### Add to project
 
-Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
-Node 14.20.0 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+In your project's `package.json`, add requirement to `dependencies`:
+
+{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

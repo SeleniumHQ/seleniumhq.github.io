@@ -6,9 +6,7 @@ RSpec.describe 'Install Drivers' do
   it 'chrome session' do
     require 'webdrivers'
 
-    driver = Selenium::WebDriver.for :chrome
-
-    driver.quit
+    @driver = Selenium::WebDriver.for :chrome
   end
 
   it 'edge session' do

@@ -1,15 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumDocs.Support
 {
     [TestClass]
-    public class SelectListTest : BaseTest
+    public class SelectListTest : BaseChromeTest
     {
         [TestInitialize]
         public void Navigate()
@@ -74,7 +74,7 @@ namespace SeleniumDocs.Support
             var selectElement = driver.FindElement(By.Name("single_disabled"));
             var select = new SelectElement(selectElement);
 
-            Assert.ThrowsException<WebDriverArgumentException>(() => select.SelectByValue("disabled"));
+            Assert.ThrowsException<InvalidOperationException>(() => select.SelectByValue("disabled"));
         }
     }
 }
