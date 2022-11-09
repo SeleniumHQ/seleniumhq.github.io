@@ -1,6 +1,6 @@
 ---
-title: "Grid Endpoints"
-linkTitle: "Grid Endpoints"
+title: "Grid エンドポイント"
+linkTitle: "Grid エンドポイント"
 weight: 3
 aliases: [
 "/documentation/ja/grid/grid_4/grid_endpoints/",
@@ -8,179 +8,190 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+## Grid
 
-## Grid 
+### Grid ステータス
 
-### Grid Status
-
-Grid status provides the current state of the Grid. It consists of details about every registered Node.
-For every Node, the status includes information regarding Node availability, sessions, and slots. 
+Grid ステータスは Grid の現在の状態を提供します。 登録されている全てのノードの詳細で構成されます。
+各ノードのステータスには、ノードの稼働状況、セッション、およびスロットに関する情報が含まれます。
 
 ```shell
 cURL GET 'http://localhost:4444/status'
 ```
 
-In the Standalone mode, the Grid URL is the Standalone server address.
+スタンドアロンモードでは、Grid URL は スタンドアロンサーバーのアドレスになります。
 
-In the Hub-Node mode, the Grid URL is the Hub server address. 
+ハブ&ノードモードでは、Grid URL は ハブのアドレスになります。
 
-In the fully distributed mode, the Grid URL is the Router server address.
+完全分散モードでは、Grid URL は ルーターのアドレスになります。
 
-Default URL for all the above modes is http://localhost:4444.
+上記すべてのモードのデフォルトの URL は http://localhost:4444 です。
 
-## Distributor
+## ディストリビューター
 
-### Remove Node
+### ノード削除
 
-To remove the Node from the Grid, use the cURL command enlisted below.
-It does not stop any ongoing session running on that Node.
-The Node continues running as it is unless explicitly killed. 
-The Distributor is no longer aware of the Node and hence any matching new session request
-will not be forwarded to that Node.
+ノードを Grid から削除するには、以下の cURL コマンドを使用します。
+このコマンドは、そのノード上で実行中のセッションを停止させるものではありません。
+ノードは明示的に強制終了されない限り、そのまま動作し続けます。
+ディストリビューターはそのノードを認識しなくなるため、マッチする新しいセッションのリクエストは はその Node に転送されません。
 
-In the Standalone mode, the Distributor URL is the Standalone server address. 
+スタンドアロンモードでは、ディストリビューターの URL はスタンドアロンサーバーのアドレスとなります。
 
-In the Hub-Node mode, the Distributor URL is the Hub server address.  
+ハブ&ノードモードでは、ディストリビューターの URL は ハブのアドレスになります。
+
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-In the fully distributed mode, the URL is the Distributor server address. 
+
+完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
+
 ```shell
 cURL --request DELETE 'http://localhost:5553/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
-If no registration secret has been configured while setting up the Grid, then use 
+
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request DELETE 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
-### Drain Node
+### ノードのドレイン
 
-Node drain command is for graceful node shutdown.
-Draining a Node stops the Node after all the ongoing sessions are complete.
-However, it does not accept any new session requests.
+ノードドレインコマンドはノードをグレースフルシャットダウンするために利用します。
+ドレインは実行中のセッションがすべて完了した後にノードを停止します。
+新規のセッションは受け付けません。
 
-In the Standalone mode, the Distributor URL is the Standalone server address. 
+スタンドアロンモードでは、ディストリビューターの URL はスタンドアロンサーバーのアドレスとなります。
 
-In the Hub-Node mode, the Distributor URL is the Hub server address.  
+ハブ&ノードモードでは、ディストリビューターの URL は ハブのアドレスになります。
+
 ```shell
 cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-In the fully distributed mode, the URL is the Distributor server address. 
+
+完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
+
 ```shell
 cURL --request POST 'http://localhost:5553/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
-If no registration secret has been configured while setting up the Grid, then use 
+
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
-## Node
+## ノード
 
-The endpoints in this section are applicable for Hub-Node mode and fully distributed Grid mode where the
-Node runs independently. 
-The default Node URL is http://localhost:5555 in case of one Node. 
-In case of multiple Nodes, use [Grid status](#grid-status) to get all Node details and locate the Node address.
+この節でのエンドポイントは、ハブ&ノードモードとノードが独立して動作する完全分散型 Grid モードに適用されます。
+ノードが 1 つの場合、デフォルトのノード URL は http://localhost:5555 です。
+複数のノードがある場合は、[Grid ステータス](#grid-ステータス) を使ってすべてのノードの詳細とノードアドレスを取得してください。
 
-### Status 
+### ステータス
 
-The Node status is essentially a health-check for the Node.
-Distributor pings the node status are regular intervals and updates the Grid Model accordingly.
-The status includes information regarding availability, sessions, and slots. 
+ノードステータスは基本的にノードのヘルスチェックのためのものです。
+ディストリビューターは定期的にノードの状態を ping で取得し、それに応じて Grid モデルを更新します。
+ステータスには稼働状況、セッション、およびスロットに関する情報が含まれます。
 
 ```shell
 cURL --request GET 'http://localhost:5555/status'
 ```
 
-### Drain
+### ドレイン
 
-Distributor passes the [drain](#drain-node) command to the appropriate node identified by the node-id.
-To drain the Node directly, use the cuRL command enlisted below.
-Both endpoints are valid and produce the same result. Drain finishes the ongoing sessions before stopping the Node.
+ディストリビューターは [ドレイン](#ノードのドレイン)コマンドを適切なノードに渡します。
+ノードを直接ドレインするには以下の cURL コマンドを使います。
+どちらのエンドポイントも有効であり、同じ結果になります。
+ドレインは、ノードを停止する前に進行中のセッションを終了させます。
 
 ```shell
 cURL --request POST 'http://localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
-If no registration secret has been configured while setting up the Grid, then use 
+
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request POST 'http://<node-URL>/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
-### Check session owner
+### セッションオーナーのチェック
 
-To check if a session belongs to a Node, use the cURL command enlisted below. 
+あるセッションがノードに属しているかどうかをチェックするには、以下の cURL コマンドを使います。
 
 ```shell
 cURL --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
-If no registration secret has been configured while setting up the Grid, then use 
+
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
-It will return true if the session belongs to the Node else it will return false.
+もしセッションがノードに属していたら true を返し、そうでなければ false が返ります。
 
-### Delete session
+### セッションの削除
 
-Deleting the session terminates the WebDriver session, quits the driver and removes it from the active sessions map.
-Any request using the removed session-id or reusing the driver instance will throw an error.
+セッションを削除すると、WebDriver セッションが終了し、ドライバがアクティブなセッションマップから削除されます。
+削除されたセッション ID を使用するリクエストや、ドライバのインスタンスを再利用しようとすると、エラーとなります。
 
 ```shell
 cURL --request DELETE 'http://localhost:5555/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
-If no registration secret has been configured while setting up the Grid, then use 
+
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
-## New Session Queue
+## 新規セッションキュー
 
-### Clear New Session Queue
+### 新規セッションキューのクリア
 
-New Session Request Queue holds the new session requests. 
-To clear the queue, use the cURL command enlisted below. 
-Clearing the queue rejects all the requests in the queue. For each such request, the server returns an error response to the respective client.
-The result of the clear command is the total number of deleted requests.
+新規セッションキューには、新規セッションリクエストが格納されます。
+キューをクリアするには、以下に挙げる cURL コマンドを使用します。
+キューを消去すると、キューにあるすべてのリクエストを拒否します。
+サーバーは各リクエストのそれぞれのクライアントにエラーレスポンスを返します。
+クリアコマンドの結果は、削除されたリクエストの数です。
 
-In the Standalone mode, the Queue URL is the Standalone server address. 
+スタンドアロンモードでは、キューの URL はスタンドアロンサーバーのアドレスとなります。
 
-In the Hub-Node mode, the Queue URL is the Hub server address.
+ハブ&ノードモードでは、キューの URL は ハブのアドレスになります。
 
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
-In the fully distributed mode, the Queue URL is New Session Queue server address.
+完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
+
 ```shell
 cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
-If no registration secret has been configured while setting up the Grid, then use 
+Grid の設定時に登録用の secret を設定していない場合は次のようにします:
+
 ```shell
 cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
-### Get New Session Queue Requests
+### 新規セッションリクエストの取得
 
-New Session Request Queue holds the new session requests. 
-To get the current requests in the queue, use the cURL command enlisted below. 
-The response returns the total number of requests in the queue and the request payloads.
+新規セッションキューには、新規セッションリクエストが格納されます。
+キューにある現在のリクエストを取得するには、以下に挙げる cURL コマンドを使用します。
+レスポンスはキュー内のリクエストの数とリクエストのペイロードを返します。
 
-In the Standalone mode, the Queue URL is the Standalone server address. 
+スタンドアロンモードでは、キューの URL はスタンドアロンサーバーのアドレスとなります。
 
-In the Hub-Node mode, the Queue URL is the Hub server address.
+ハブ&ノードモードでは、キューの URL は ハブのアドレスになります。
 
 ```shell
 cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
 
-In the fully distributed mode, the Queue URL is New Session Queue server address.
+完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
+
 ```shell
 cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
+```

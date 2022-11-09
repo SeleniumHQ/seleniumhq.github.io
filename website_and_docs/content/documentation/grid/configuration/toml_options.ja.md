@@ -1,43 +1,33 @@
 ---
-title: "Toml Options"
-linkTitle: "Toml Options"
+title: "Toml オプション"
+linkTitle: "Toml オプション"
 weight: 3
-description: Grid configuration examples using Toml files.
+description: Tomlファイルを使用したGridの設定例.
 aliases: [
 "/ja/documentation/grid/configuring_components/toml_options/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
-All the options shown in [CLI options]({{< ref "cli_options.md" >}}) can be configured through
-a [TOML](https://github.com/toml-lang/toml) file. This page shows configuration examples for the
-different Grid components.
+[CLI オプション]({{< ref "cli_options.md" >}}) に記載されている全てのオプションは
+[TOML](https://github.com/toml-lang/toml) ファイルでも設定ができます。
+このページでは異なる Grid コンポーネントの設定例を紹介します。
 
 {{% pageinfo color="primary" %}}
-Note that this documentation could be outdated if an option was modified or added
-but has not been documented yet. In case you bump into this situation, please check
-the ["Config help"]({{< ref "help.md" >}}) section and feel free to send us a
-pull request updating this page.
+オプションが変更、または追加されたが文書化されていない場合、
+このドキュメントは古くなる可能性があることに注意してください。
+もしそのような状況を見つけたら、["構成ヘルプ"]({{< ref "help.md" >}})を確認し、
+ドキュメントを更新するプルリクエストを気軽に送ってください。
 {{% /pageinfo %}}
 
+## 概要
 
-## Overview
+Selenium Grid は[TOML](https://github.com/toml-lang/toml)フォーマットの設定ファイルを使用します。
+設定ファイルはセクションで構成され、各セクションはオプションとその値が設定されています。
 
-Selenium Grid uses [TOML](https://github.com/toml-lang/toml) format for config files.
-The config file consists of sections and each section has options and its respective value(s).
+詳しい使い方は[TOML ドキュメント](https://toml.io/ja/)を参照してください。
+パースエラーに遭遇した場合、[TOML リンター](https://www.toml-lint.com/)を使って検証してください。
 
-Refer to the [TOML documentation](https://toml.io/en/) for detailed usage guidance. In case of
-parsing errors, validate the config using [TOML linter](https://www.toml-lint.com/).
-
-The general configuration structure has the following pattern:
+一般的な設定の構成は以下のパターンです:
 
 ```toml
 [section1]
@@ -48,17 +38,15 @@ option2=["value1","value2"]
 option3=true
 ```
 
-Below are some examples of Grid components configured with a Toml file, the component can be
-started in the following way:
+TOML ファイルで設定された Grid コンポーネントを起動するには以下のように起動できます:
 
 ```
 java -jar selenium-server-<version>.jar <component> --config /path/to/file/<file-name>.toml
 ```
 
+### スタンドアロン
 
-### Standalone
-
-A Standalone server, running on port 4449, and a new session request timeout of 500 seconds.
+ポート 4449 で動作し、新規セッションリクエストのタイムアウトが 500 秒のスタンドアロンサーバー。
 
 ```toml
 [server]
@@ -68,9 +56,9 @@ port = 4449
 session-request-timeout = 500
 ```
 
-### Specific browsers and a limit of max sessions
+### 特定のブラウザとセッションの上限
 
-A Standalone server or a Node which only has Firefox and Chrome enabled by default.
+Firefox と Chrome のみがデフォルトで有効になっているスタンドアロンサーバー、またはノード
 
 ```toml
 [node]
@@ -78,10 +66,10 @@ drivers = ["chrome", "firefox"]
 max-sessions = 3
 ```
 
-### Configuring and customising drivers
+### ドライバーのカスタマイズと設定
 
-Standalone or Node server with customised drivers, which allows things like having Firefox Beta
-or Nightly, and having different browser versions.
+Firefox Beta や Nightly のような、異なるブラウザのバージョンを持つことができるカスタマイズされた
+ドライバを用いた、スタンドアロン、またはノード。
 
 ```toml
 [node]
@@ -99,15 +87,15 @@ stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"95\", \"platfo
 webdriver-executable = '/path/to/chromedriver/95/chromedriver'
 ```
 
-### Standalone or Node with Docker
+### Docker を利用したスタンドアロン、またはノード
 
-A Standalone or Node server that is able to run each new session in a Docker container. Disabling
-drivers detection, having maximum 2 concurrent sessions. Stereotypes configured need to be mapped
-to a Docker image, and the Docker daemon needs to be exposed via http/tcp. In addition, it is
-possible to define which device files, accessible on the host, will be available in containers
-through the `devices` property. Refer to the [docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device) documentation
- for more information about how docker device mapping works.
-
+Docker コンテナでセッションを実行できるスタンドアロン、またはノードサーバー。
+ドライバを検出を無効にし、最大 2 つの同時セッションを持ちます。
+ステレオタイプは、Docker イメージにマッピングされる必要があり、
+Docker デーモンが http/tcp で公開されている必要があります。
+また、`devices`プロパティを用いて、ホスト上でアクセス可能なデバイスファイルを、コンテナで利用できるようにすることも可能です。
+Docker デバイスをマッピングする詳しい方法は[docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device)
+を参照してください。
 
 ```toml
 [node]
@@ -116,7 +104,7 @@ max-sessions = 2
 
 [docker]
 configs = [
-    "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}", 
+    "selenium/standalone-chrome:93.0", "{\"browserName\": \"chrome\", \"browserVersion\": \"91\"}",
     "selenium/standalone-firefox:92.0", "{\"browserName\": \"firefox\", \"browserVersion\": \"92\"}"
 ]
 #Optionally define all device files that should be mapped to docker containers
@@ -127,13 +115,13 @@ url = "http://localhost:2375"
 video-image = "selenium/video:latest"
 ```
 
-### Relaying commands to a service endpoint that supports WebDriver
+### WebDriver をサポートするサービスエンドポイントへのコマンド中継
 
-It is useful to connect an external service that supports WebDriver to Selenium Grid.
-An example of such service could be a cloud provider or an Appium server. In this way,
-Grid can enable more coverage to platforms and versions not present locally.
+WebDriver をサポートする外部サービスを Selenium Grid に接続すると便利です。
+例えばクラウドプロバイダーや Appium サーバーなどです。
+Grid はローカルに存在しないプラットフォームやバージョンなどを幅広くカバーできるようになります。
 
-The following is an en example of connecting an Appium server to Grid.
+以下は Appium サーバーを Grid に接続する例です。
 
 ```toml
 [node]
@@ -143,18 +131,19 @@ detect-drivers = false
 # Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
-# Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
+# Stereotypes supported by the service. The initial number is "max-sessions", and will allocate
 # that many test slots to that particular configuration
 configs = [
   "5", "{\"browserName\": \"chrome\", \"platformName\": \"android\", \"appium:platformVersion\": \"11\"}"
 ]
 ```
 
-### Basic auth enabled
+### Basic 認証の有効化
 
-It is possible to protect a Grid with basic auth by configuring the Router/Hub/Standalone with
-a username and password. This user/password combination will be needed when loading the Grid UI
-or starting a new session.
+ルーター、ハブ、スタンドアロンにユーザー名とパスワードを設定することで、
+Basic 認証で Grid を保護することができます。
+このユーザーとパスワードは、Grid UI を読み込む時や
+新しいセッションを開始する時に必要になります。
 
 ```toml
 [router]
@@ -162,17 +151,17 @@ username = "admin"
 password = "myStrongPassword"
 ```
 
-Here is a Java example showing how to start a session using the configured user and password.
+Java でユーザーとパスワードを使ってセッションを開始する方法の例です。
 
 ```java
 URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");
 RemoteWebDriver webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
 ```
 
-### Setting custom capabilities for matching specific Nodes
+### 特定のノードにマッチするカスタム capabilities の設定
 
-**Important:** Custom capabilities need to be set in the configuration in all Nodes. They also
-need to be included always in every session request.
+**重要**: カスタム capabilities は全てのノードで設定する必要があります。
+また全てのセッションリクエストで常に含まれる必要があります。
 
 ```toml
 [node]
@@ -184,7 +173,7 @@ stereotype = '{"browserName": "firefox", "platformName": "macOS", "browserVersio
 max-sessions = 5
 ```
 
-Here is a Java example showing how to match that Node
+Java でノードにマッチさせる方法の例です。
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
