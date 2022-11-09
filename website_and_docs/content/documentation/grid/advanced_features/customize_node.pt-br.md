@@ -8,6 +8,14 @@ aliases: [
 ]
 ---
 
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from 
+   English to Portugese. Do you speak Portugese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
 ### How to customize a Node
 
@@ -44,9 +52,8 @@ java -jar custom_node-1.0-SNAPSHOT.jar node \
 
 Here's a sample that just prints some messages on to the console whenever there's an activity of interest (session created, session deleted, a webdriver command executed etc.,) on the Node.
 
-
-<details>
 <summary>Sample customized node</summary>
+<details>
 
 ```java
 package org.seleniumhq.samples;
