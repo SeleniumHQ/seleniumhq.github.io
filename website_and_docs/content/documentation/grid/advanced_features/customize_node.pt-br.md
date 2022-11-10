@@ -2,8 +2,6 @@
 title: "Customizing a Node"
 linkTitle: "Customize Node"
 weight: 4
-aliases: [
-]
 ---
 
 {{% pageinfo color="warning" %}}
