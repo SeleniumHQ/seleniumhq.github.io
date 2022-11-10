@@ -38,8 +38,7 @@ Let's see an example of all this:
 ### Custom Node as an uber jar
 
 1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below two dependencies to your sample project.
-    * [org.seleniumhq.selenium/selenium-java](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)
+2. Add the below dependency to your sample project.
     * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
 3. Add your customized Node to the project.
 4. Build an [uber jar](https://imagej.net/develop/uber-jars) to be able to start the Node using `java -jar` command.
@@ -49,13 +48,13 @@ Let's see an example of all this:
 java -jar custom_node-server.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
-**Note:** We need `selenium-java` as a dependency so that we can support all the common browser flavors via our uber jar execution.
+
+**Note:** If you are using Maven as a build tool, please prefer using [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin) instead of [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin) because maven-assembly plugin seems to have issues with being able to merge multiple Service Provider Interface files (`META-INF/services`)
 
 ### Custom Node as a regular jar
 
 1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below dependencies to your sample project.
-    * [org.seleniumhq.selenium/selenium-remote-driver](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver)
+2. Add the below dependency to your sample project.
     * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
 3. Add your customized Node to the project.
 4. Build a jar of your project using your build tool.
@@ -66,8 +65,6 @@ java -jar selenium-server-4.6.0.jar \
 --ext custom_node-1.0-SNAPSHOT.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
-**Note:** Here we are **NOT** using `selenium-java` as a dependency because its already part of the original selenium uber jar and we are just adding our custom node to the classpath via the `--ext` argument.
-
 Below is a sample that just prints some messages on to the console whenever there's an activity of interest (session created, session deleted, a webdriver command executed etc.,) on the Node.
 
 
