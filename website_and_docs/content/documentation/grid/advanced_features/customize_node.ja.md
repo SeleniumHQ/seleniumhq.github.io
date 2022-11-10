@@ -3,8 +3,6 @@ title: "Customizing a Node"
 linkTitle: "Customize Node"
 weight: 4
 aliases: [
-"/documentation/en/grid/grid_4/customize_node/",
-"/documentation/grid/advanced_features/customize_node/"
 ]
 ---
 
