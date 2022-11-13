@@ -343,11 +343,10 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Fetching Attributes or Properties
+## 获取特性或属性
 
-Fetches the run time value associated with a 
-DOM attribute. It returns the data associated 
-with the DOM attribute or property of the element. 
+获取与 DOM 属性关联的运行时的值.
+它返回与元素的 DOM 特性或属性关联的数据. 
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}

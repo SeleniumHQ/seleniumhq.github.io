@@ -1,6 +1,6 @@
 ---
-title: "Browser interactions"
-linkTitle: "Interactions"
+title: "浏览器交互"
+linkTitle: "交互"
 weight: 10
 aliases: [
 "/documentation/zh-cn/webdriver/browser_manipulation/",

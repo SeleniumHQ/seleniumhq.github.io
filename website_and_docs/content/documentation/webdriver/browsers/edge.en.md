@@ -38,6 +38,6 @@ Starting an Edge session with basic defined options looks like this:
 
 ## Internet Explorer Compatibility Mode
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
+Microsoft Edge can be driven in "Internet Explorer Compatibility Mode", which uses
 the Internet Explorer Driver classes in conjunction with Microsoft Edge.
 Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
