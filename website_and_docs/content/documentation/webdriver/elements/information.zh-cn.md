@@ -10,9 +10,13 @@ description: >
 
 ## 是否显示
 
-此方法用于检查连接的元素是否正确显示在网页上. 返回一个 `Boolean` 值，如果连接的元素显示在当前的浏览器上下文中，则为True，否则返回false。
+此方法用于检查连接的元素是否正确显示在网页上. 返回一个 `Boolean` 值，
+如果连接的元素显示在当前的浏览器上下文中，则为True，否则返回false。
 
-此功能[于W3C规范中提及](https://w3c.github.io/webdriver/#element-displayedness)，但由于[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk)而无法定义。因此，Selenium不能期望驱动程序直接实现这种功能，现在依赖于直接执行大量JavaScript函数。这个函数对一个元素的性质和在树中的关系做了许多近似的判断，以返回一个值。
+此功能[于W3C规范中提及](https://w3c.github.io/webdriver/#element-displayedness)，
+但由于[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk)而无法定义。
+因此，Selenium不能期望驱动程序直接实现这种功能，现在依赖于直接执行大量JavaScript函数。
+这个函数对一个元素的性质和在树中的关系做了许多近似的判断，以返回一个值。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -57,7 +61,8 @@ for element displayedness
 
 ## 是否启用
 
-此方法用于检查所连接的元素在网页上是启用还是禁用状态。返回一个布尔值，如果在当前浏览上下文中是 **启用** 状态，则返回 **true**，否则返回 **false**。
+此方法用于检查所连接的元素在网页上是启用还是禁用状态。
+返回一个布尔值，如果在当前浏览上下文中是 **启用** 状态，则返回 **true**，否则返回 **false**。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
