@@ -1,6 +1,6 @@
 package dev.selenium.support;
 
-import dev.selenium.BaseTest;
+import dev.selenium.BaseChromeTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelectListTest extends BaseTest {
+public class SelectListTest extends BaseChromeTest {
 
     @BeforeEach
     public void navigate() {

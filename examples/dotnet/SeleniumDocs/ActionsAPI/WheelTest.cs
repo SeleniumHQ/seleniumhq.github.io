@@ -6,7 +6,7 @@ using OpenQA.Selenium.Interactions;
 namespace SeleniumDocs.ActionsAPI
 {
     [TestClass]
-    public class WheelTest : BaseTest
+    public class WheelTest : BaseChromeTest
     {
         [TestMethod]
         public void ShouldAllowScrollingToAnElement()

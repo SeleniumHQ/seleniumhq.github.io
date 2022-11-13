@@ -6,7 +6,7 @@ using OpenQA.Selenium.Interactions;
 namespace SeleniumDocs.ActionsAPI
 {
     [TestClass]
-    public class KeysTest : BaseTest
+    public class KeysTest : BaseFirefoxTest
     {
         [TestMethod]
         public void KeyDown()

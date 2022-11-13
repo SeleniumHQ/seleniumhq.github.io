@@ -1,33 +1,32 @@
 ---
-title: "Edge specific functionality"
+title: "Edge 特定功能"
 linkTitle: "Edge"
 weight: 5
 description: >-
-    These are capabilities and features specific to Microsoft Edge browsers.
+    这些是特定于微软Edge浏览器的功能和特性.
 ---
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+微软Edge是用Chromium实现的，最早支持版本是v79.
+与Chrome类似, Edge驱动的主版本号必须与Edge浏览器的主要版本匹配.
 
-All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}}) work for Edge as well.
+在 [Chrome 页面]({{< ref "chrome.md" >}}) 上找到的所有capabilities和选项也适用于Edge.
 
-## Options
+## 选项
 
-Starting an Edge session with basic defined options looks like this:
+使用基本定义的选项启动 Edge 会话如下所示:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L25-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L8-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L16">}}
@@ -37,8 +36,8 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Internet Explorer Compatibility Mode
+## Internet Explorer 兼容模式
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
-the Internet Explorer Driver classes in conjunction with Microsoft Edge.
-Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
+微软Edge可以被"Internet Explorer兼容模式"驱动, 
+该模式使用Internet Explorer驱动类与微软Edge结合使用.
+阅读 [Internet Explorer 页面]({{< ref "internet_explorer.md" >}}) 了解更多详情.

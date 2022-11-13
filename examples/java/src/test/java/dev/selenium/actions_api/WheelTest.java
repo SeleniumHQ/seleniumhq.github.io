@@ -1,6 +1,6 @@
 package dev.selenium.actions_api;
 
-import dev.selenium.BaseTest;
+import dev.selenium.BaseChromeTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.WheelInput;
 
-public class WheelTest extends BaseTest {
+public class WheelTest extends BaseChromeTest {
     @Test
     public void shouldScrollToElement() {
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");

@@ -19,7 +19,6 @@ env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
-  EDGE_PATH: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
 
 jobs:
   test_examples:
@@ -49,7 +48,7 @@ jobs:
         browser: firefox
         version: latest
     - name: Run tests
-      uses: nick-invision/retry@v2.7.1
+      uses: nick-invision/retry@v2.8.2
       with:
         timeout_minutes: 20
         max_attempts: 3

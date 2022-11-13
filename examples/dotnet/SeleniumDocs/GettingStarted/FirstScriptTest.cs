@@ -2,8 +2,6 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.GettingStarted
 {
@@ -11,24 +9,11 @@ namespace SeleniumDocs.GettingStarted
     public class FirstScriptTest
     {
 
-        protected IWebDriver driver;
-
-        [TestInitialize]
-        public void CreateDriver()
-        {
-            new DriverManager().SetUpDriver(new ChromeConfig());
-            driver = new ChromeDriver();
-        }
-
-        [TestCleanup]
-        public void QuitDriver()
-        {
-            driver.Quit();
-        }
-
         [TestMethod]
         public void ChromeSession()
         {
+            IWebDriver driver = new ChromeDriver();
+
             driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/web-form.html");
 
             var title = driver.Title;
@@ -45,6 +30,8 @@ namespace SeleniumDocs.GettingStarted
             var message = driver.FindElement(By.Id("message"));
             var value = message.Text;
             Assert.AreEqual("Received!", value);
+            
+            driver.Quit();
         }
     }
 }

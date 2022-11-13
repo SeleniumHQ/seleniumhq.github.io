@@ -77,9 +77,9 @@ RSpec.describe 'Pen' do
                                'pointerType' => 'pen',
                                'pageX' => (center_x + 2).to_s,
                                'pageY' => (center_y + 2).floor.to_s,
-                               'tiltX' => -72.floor.to_s,
-                               'tiltY' => 9.floor.to_s,
-                               'twist' => 86.floor.to_s)
+                               'tiltX' => -72.to_s,
+                               'tiltY' => 9.to_s,
+                               'twist' => 86.to_s)
     expect(up).to include('button' => '0',
                           'pointerType' => 'pen',
                           'pageX' => (center_x + 2).to_s,
