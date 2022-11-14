@@ -1,9 +1,9 @@
 ---
 title: "虚拟身份验证器"
-linkTitle: "Virtual Authenticator"
+linkTitle: "虚拟身份验证器"
 weight: 16
 description: >
-    A representation of the Web Authenticator model.
+    一种Web身份验证器模型的表示形式.
 aliases: [
 "/zh-cn/documentation/webdriver/virtual_authenticator/"
 ]
