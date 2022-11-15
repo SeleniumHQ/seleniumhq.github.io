@@ -6,8 +6,8 @@ tags: ["webdriver", "framework", "ecosystem", "java", "dotnet"]
 categories: ["technical", "general"]
 author: Anton Angelov ([@angelovstanton](https://www.linkedin.com/in/angelovstanton/))
 description: >
-  Customize and extend our cross-platform .NET 6 and JAVA test automation framework to perfectly fit your needs.
-  Start on top of hundreds of best practice features and integrations.
+  Customize and extend BELLATRIX, a cross-platform .NET 6 and JAVA test automation framework to perfectly fit your needs.
+  Start on top of hundreds of best practices features and integrations.
 ---
 Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of core Selenium maintainers.
