@@ -386,7 +386,8 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 
 ## 获取属性
 
-获取DOM属性相关的运行时值。它返回与该元素的DOM属性或属性相关的数据。
+获取与 DOM 属性关联的运行时的值。
+它返回与该元素的 DOM 特性或属性关联的数据。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
