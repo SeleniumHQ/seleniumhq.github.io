@@ -3,53 +3,43 @@ title: "Quando usar a Grid"
 linkTitle: "Quando usar a Grid"
 weight: 4
 description: >
-  Is Grid right for you?
+  Será a Grid a melhor escolha para você?
 aliases: [
 "/documentation/pt-br/grid/when_to_use_grid/",
 "/pt-br/documentation/grid/when_to_use_grid"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Portuguese. 
-   Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Quando deve usar a Selenium Grid?
 
-When would you use a Selenium Grid?
+* Para executar testes em paralelo, com vários tipos e versões de navegador e sistemas operativos
+* Para reduzir o tempo necessário a executar uma bateria de testes
 
-* To run your tests in parallel, against different browser types, browser versions, operating systems
-* To reduce the time needed to execute a test suite
+A Selenium Grid executa baterias de testes em paralelo contra várias máquinas (chamadas Nodes).
+Para testes longos, isto poderá poupar minutos, horas e talvez dias.
+Isto encurta o tempo de espera para obter resultados dos testes de cada vez que sobre a aplicação 
+em testes é alterada.
 
-Selenium Grid runs test suites in parallel against multiple machines (called Nodes). 
-For large and long-running test suites, this can save minutes, hours, or perhaps days. 
-This shortens the turnaround time for test results as your application under test (AUT) 
-changes.
+A Grid consegue executar testes (em paralelo) contra multiplos e diferentes navegadores, também
+é capaz de executar contra várias instâncias do mesmo navegador. Como exemplo, vamos imaginar
+uma Grid com seis Nodes. A primeira máquina tem a versão mais recente do Firefox, a segunda tem
+a versão "mais recente -1", a terceira tem o Chrome mais recente e as restantes máquinas são Mac
+Mini, que permitem três testes em paralelo com a versão mais recente to Safari.
 
-Grid can run tests (in parallel) against multiple different browsers, and it can
-run against multiple instances of the same browser. As an example, let's imagine
-a Grid with six Nodes. The first machine has Firefox's latest version,
-the second has Firefox "latest minus one", the third gets the latest Chrome, and
-the remaining three machines are Mac Minis, which allows for three tests to run in
-parallel on the latest version of Safari.
+O tempo de execução pode ser expresso como uma fórmula simples:
 
-Execution time can be expressed as a simple formula:
+```Número de testes * Tempo médio de cada teste / Número de Nodes = Tempo total de execução```
 
-```Number of Tests * Average Test Time / Number of Nodes = Total Execution Time```
+       15      *       45s        /        1        =      11m 15s   // Sem Grid
+       15      *       45s        /        5        =      2m 15s    // Grid com 5 Nodes
+       15      *       45s        /        15       =      45s       // Grid com 15 Nodes
+      100      *       120s       /        15       =      13m 20s   // Demoraria mais de 3 horas sem Grid
 
-       15      *       45s        /        1        =      11m 15s   // Without Grid
-       15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
-       15      *       45s        /        15       =      45s       // Grid with 15 Nodes
-      100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+À medida que a bateria de testes executa, a Grid vai alocando os testes contra estes navegadores
+como está definido nos testes.
 
-As the test suite is executing, the Grid allocates the tests to run against these 
-browsers as configured in the tests.
+Uma configuração deste tipo pode acelerar bastante o tempo de execução mesmo no caso de baterias de testes grandes.
 
-A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.
-
-Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team 
-of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
-has been a critical part of the Selenium project since the earliest days.
+A Selenium Grid é uma parte integrante do projecto Selenium e é mantida em paralelo pela mesma equipa de developers
+que desenvolvem o resto das funcionalidades base do projecto. Dada a importância da velocidade e desempenho da
+execução dos testes, a Grid tem sido considerada desde o início como uma parte crítica e fundamental ao projecto.
