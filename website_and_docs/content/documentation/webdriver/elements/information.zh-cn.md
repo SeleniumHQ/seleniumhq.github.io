@@ -6,23 +6,17 @@ description: >
   元素相关的知识.
 ---
 
-您可以查询有关特定元素的许多详细信息.
+您可以查询有关特定元素的许多详细信息。
 
 ## 是否显示
 
-此方法用于检查连接的元素是否正确
-显示在网页上. 返回一个 `Boolean` 值, 
-如果连接的元素显示在当前的浏览器上下文中, 则为True
-否则返回false.
+此方法用于检查连接的元素是否正确显示在网页上. 返回一个 `Boolean` 值，
+如果连接的元素显示在当前的浏览器上下文中，则为True，否则返回false。
 
-此功能[提及于](https://w3c.github.io/webdriver/#element-displayedness), 
-但是未定义于w3c规范中, 
-因为[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk).
-因此，Selenium不能期望驱动程序
-直接实现这种功能，现在依赖于
-直接执行大量JavaScript函数. 
-此函数界定了元素树中的许多本身属性以及关系, 
-并以值的形式返回.
+此功能[于W3C规范中提及](https://w3c.github.io/webdriver/#element-displayedness)，
+但由于[无法覆盖所有潜在条件](https://www.youtube.com/watch?v=LAD_XPGP_kk)而无法定义。
+因此，Selenium不能期望驱动程序直接实现这种功能，现在依赖于直接执行大量JavaScript函数。
+这个函数对一个元素的性质和在树中的关系做了许多近似的判断，以返回一个值。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -65,15 +59,64 @@ let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 for element displayedness
 {{< /alert-code >}}
 
+## 是否启用
 
-## 元素是否被选定
+此方法用于检查所连接的元素在网页上是启用还是禁用状态。
+返回一个布尔值，如果在当前浏览上下文中是 **启用** 状态，则返回 **true**，否则返回 **false**。
 
-此方法确定是否 _已选择_ 引用的元素.
-此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+  //navigates to url
+  driver.get("https://www.google.com/");
 
-返回一个布尔值,
-如果在当前浏览上下文中 **已选择** 引用的元素,
-则返回 **True**, 否则返回 **False**.
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("http://www.google.com")
+
+    # Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'http://www.google.com/'
+
+    # Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+ //navigates to url
+ driver.get("https://www.google.com/")
+
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("btnK")).isEnabled()
+  {{< /tab >}}
+{{< /tabpane >}}
+
+## 是否被选定
+
+此方法确认相关的元素是否 _已选定_，常用于复选框、单选框、输入框和选择元素中。
+
+该方法返回一个布尔值，如果在当前浏览上下文中 **选择了** 引用的元素，则返回 **True**，否则返回 **False**。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -122,9 +165,7 @@ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-t
 
 ## 获取元素标签名
 
-此方法用于获取在当前浏览上下文中
-具有焦点的被引用元素的
-[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) .
+此方法用于获取在当前浏览上下文中具有焦点的被引用元素的[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -171,15 +212,15 @@ val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 获取元素矩形
+## 位置和大小
 
-用于获取参考元素的尺寸和坐标.
+用于获取参照元素的尺寸和坐标。
 
-提取的数据主体包含以下详细信息:
+提取的数据主体包含以下详细信息：
 * 元素左上角的X轴位置
 * 元素左上角的y轴位置
 * 元素的高度
-* 元素宽度
+* 元素的宽度
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -237,7 +278,7 @@ println(res.getX())
 
 ## 获取元素CSS值
 
-获取当前浏览上下文中元素的特定计算样式属性的值.
+获取当前浏览上下文中元素的特定计算样式属性的值。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -294,9 +335,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 获取元素文本
+## 文本内容
 
-获取特定元素渲染后的文本.
+获取特定元素渲染后的文本内容。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -345,8 +386,8 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 
 ## 获取特性或属性
 
-获取与 DOM 属性关联的运行时的值.
-它返回与元素的 DOM 特性或属性关联的数据. 
+获取与 DOM 属性关联的运行时的值。
+它返回与该元素的 DOM 特性或属性关联的数据。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
