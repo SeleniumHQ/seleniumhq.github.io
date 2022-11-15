@@ -3,17 +3,8 @@ title: "Diretrizes e recomendações"
 linkTitle: "Diretrizes"
 weight: 12
 description: >
-  Some guidelines and recommendations on testing from the Selenium project.
+  Guias e recomendações ao preparar soluções de testes com o projecto Selenium.
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Uma nota sobre "Melhores práticas": evitamos intencionalmente a frase "Melhores
 Práticas" nesta documentação. Nenhuma abordagem funciona para todas as situações.
