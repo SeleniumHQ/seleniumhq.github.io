@@ -3,7 +3,7 @@ title: "Grid"
 linkTitle: "Grid"
 weight: 6
 description: >
-  Want to run tests in parallel across multiple machines? Then, Grid is for you.
+  Pretende executar testes em paralelo em várias máquinas? Então a Grid é para si.
 aliases: 
         [
           "/documentation/pt-br/selenium_installation/installing_standalone_server/",
@@ -13,23 +13,14 @@ aliases:
         ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Portuguese. 
-   Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Selenium Grid permite a execucão de scripts WebDriver em máquinas remotas, 
+passando os comandos recebidos pelo cliente para a instância remotas do navegador.
 
-Selenium Grid allows the execution of WebDriver scripts on remote machines 
-by routing commands sent by the client to remote browser instances. 
+O objectivo da Grid é:
 
-Grid aims to:
+* Providenciar uma forma fácil de executar testes em paralelo em multiplas máquinas
+* Permitir testes em versões diferentes de navegadores
+* Permitir testes em várias plataformas
 
-* Provide an easy way to run tests in parallel on multiple machines
-* Allow testing on different browser versions
-* Enable cross platform testing
-
-Interested? Go through the following sections to understand
-how Grid works, and how to set up your own.
+Está interessado? Enão siga lendo as próximas secções para entender como a Grid funciona
+e também como montar a sua.
