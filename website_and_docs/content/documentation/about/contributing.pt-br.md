@@ -4,7 +4,7 @@ linkTitle: "Contribuindo com o Site e Documentação do Selenium"
 weight: 2
 requiresTranslation: true
 description: >-
-    Information on improving documentation and code examples for Selenium
+    Informações em como melhorar a documentação e exemplos de código para Selenium.
 aliases: 
         [
           "/documentation/pt-br/contributing/",

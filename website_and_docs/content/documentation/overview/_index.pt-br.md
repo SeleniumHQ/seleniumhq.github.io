@@ -1,21 +1,11 @@
 ---
-title: "Overview"
-linkTitle: "Overview"
+title: "Resumo"
+linkTitle: "Resumo"
 weight: 2
 description: >
-  Is Selenium for you? See an overview of the different project components.
+  Será Selenium a ferramenta para você? Veja um resumo dos componentes do projecto.
 aliases: ["/documentation/pt-br/introduction/"]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 
 Selenium não é só uma ferramenta ou API,
 mas sim uma composição de várias ferramentas.
