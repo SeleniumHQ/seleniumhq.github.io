@@ -4,40 +4,29 @@ linkTitle: "Configurando a sua"
 weight: 2
 needsTranslation: true
 description: >
-  Instructions for a simple Selenium Grid
+  Instruções para criar uma Selenium Grid simples
 aliases: [
 "/documentation/pt-br/grid/grid_4/setting_up_your_own_grid/",
 "/pt-br/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Portuguese. 
-   Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+## Início rapido
 
-## Quick start
-
-1. Prerequisites
-    * Java 11 or higher installed
-    * Browser(s) installed
-    * Browser driver(s)
-      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
-      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
-    * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
-1. Start the Grid
+1. Pré-requisitos
+    * Java 11 ou superior instalado
+    * Navegador(es) instalados
+    * Drivers do(s) navegador(es)
+      * Se usar o Selenium 4.6, o Selenium Manager irá configurar os navegadores Chrome, Firefox e Edge [se não forem encontrados no `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
+    * Obter o ficheiro Selenium Server Jar a partir da [última release](https://github.com/SeleniumHQ/selenium/releases/latest)
+1. Iniciar a Grid
     * `java -jar selenium-server-<version>.jar standalone`
-1. Point* your WebDriver tests to [http://localhost:4444](http://localhost:4444)
-1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
+1. Aponte* os seus testes WebDriver para [http://localhost:4444](http://localhost:4444)
+1. (Opcional) Verifique os testes que estão em execução abrindo o navegador em [http://localhost:4444](http://localhost:4444)
 
-*Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+*Se quer saber como direcionar os seus testes para [http://localhost:4444](http://localhost:4444), veja a secção [`RemoteWebDriver`]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
 
-To learn more about the different configuration options, go through the sections below.
+Para aprender mais sobre as diferentes opções de configuração, veja as secções seguintes.
 
 ## Grid roles
 
