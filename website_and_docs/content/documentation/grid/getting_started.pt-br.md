@@ -11,7 +11,7 @@ aliases: [
 ]
 ---
 
-## Início rapido
+## Início rápido
 
 1. Pré-requisitos
     * Java 11 ou superior instalado
@@ -30,18 +30,19 @@ Para aprender mais sobre as diferentes opções de configuração, veja as secç
 
 ## Grid roles
 
-Grid is composed by six different [components]({{< ref "components.md" >}}), which gives
-you the option to deploy it in different ways.
+A Grid é composta de seis [componentes]({{< ref "components.md" >}}) diferentes, o que permite ser
+instalada de várias formas.
 
-Depending on your needs, you can start each one of them on its own (Distributed), group
-them in Hub & Node, or all in one on a single machine (Standalone).
+Dependendo das necessidades, podemos iniciar cada um dos componentes (Distribuido) ou agrupar no formato
+Hub e Node ou ainda numa única máquina (Standalone).
 
 ### Standalone
 
-**Standalone** combines all Grid [components]({{< ref "components.md" >}}) seamlessly 
-into one. Running a Grid in **Standalone** mode gives you a fully functional Grid 
-with a single command, within a single process. **Standalone** can only run on a 
-single machine.
+**Standalone** combina todos os [componentes]({{< ref "components.md" >}}) num só sitio.
+Executar uma Grid em modo **Standalone** permite uma Grid totalmente funcionar com um único
+comando, num único processo. **Standalone** só funcionará numa única máquina.
+
+
 
 **Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
 will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
