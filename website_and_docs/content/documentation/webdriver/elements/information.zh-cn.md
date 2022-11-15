@@ -384,7 +384,7 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 获取属性
+## 获取特性或属性
 
 获取与 DOM 属性关联的运行时的值。
 它返回与该元素的 DOM 特性或属性关联的数据。
