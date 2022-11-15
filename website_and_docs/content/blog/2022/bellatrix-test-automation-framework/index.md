@@ -1,7 +1,7 @@
 ---
 title: "BELLATRIX Test Automation Framework for C# and JAVA"
 linkTitle: "BELLATRIX Test Automation Framework for C# and JAVA"
-date: 2022-11-10
+date: 2022-11-16
 tags: ["webdriver", "framework", "ecosystem", "java", "dotnet"]
 categories: ["technical", "general"]
 author: Anton Angelov ([@angelovstanton](https://www.linkedin.com/in/angelovstanton/))
