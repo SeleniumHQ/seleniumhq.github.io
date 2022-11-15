@@ -42,56 +42,53 @@ Hub e Node ou ainda numa única máquina (Standalone).
 Executar uma Grid em modo **Standalone** permite uma Grid totalmente funcionar com um único
 comando, num único processo. **Standalone** só funcionará numa única máquina.
 
-
-
-**Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
-will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
-By default, the server will detect the available drivers that it can use from the System 
+**Standalone** é também a forma mais simples de colocar uma Selenium Grid em funcionamento.
+Por omissão, o servidor irá escutar por pedidos `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
+O servidor irá também detectar os drivers disponíveis no 
 [`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
 ```
 
-After starting successfully the Grid in Standalone mode, point your WebDriver tests 
-to [http://localhost:4444](http://localhost:4444).
+Após iniciar a Selenium Grid no modo Standalone, aponte os seus WebDriver tests para
+[http://localhost:4444](http://localhost:4444).
 
-Common use cases for **Standalone** are:
-* Develop or debug tests using `RemoteWebDriver` locally
-* Running quick test suites before pushing code
-* Have a easy to setup Grid in a CI/CD tool (GitHub Actions, Jenkins, etc...)
+Alguns casos de uso para **Standalone** são:
+* Desenvolver ou debugar testes usando `RemoteWebDriver` localmente
+* Executar baterias de testes rapidamente antes de fazer commit de código
+* Ter uma Grid simples de montar numa ferramenta CI/CD (GitHub Actions, Jenkins, etc...)
 
+### Hub e Node
 
-### Hub and Node
-
-**Hub and Node** is the most used role because it allows to:
-* Combine different machines in a single Grid
-  * Machines with different operating systems and/or browser versions, for example
-* Have a single entry point to run WebDriver tests in different environments
-* Scaling capacity up or down without tearing down the Grid
+**Hub e Node** é uma das formas mais usadas porque permite:
+* Combinar máquinas diferentes na mesma Grid
+  * Máquinas com sistemas operativos diferentes e/ou versões de navegadores diferentes
+* Ter um ponto único de entrada para executar testes WebDriver em ambientes diferentes
+* Escalar a capacidade para cima ou para baixo sem ter que parar a Grid
 
 #### Hub
 
-A Hub is composed by the following [components]({{< ref "components.md" >}}):
-Router, Distributor, Session Map, New Session Queue, and Event Bus.
+O Hub é composto pelos seguintes [componentes]({{< ref "components.md" >}}):
+Router, Distributor, Session Map, New Session Queue, e Event Bus.
 
 ```shell
 java -jar selenium-server-<version>.jar hub
 ```
 
-By default, the server will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444).
+Por omissão, o servidor irá estar à escuta por pedidos de sessão `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
 
 #### Node
 
-During startup time, the **Node** will detect the available drivers that it can use from the System 
+Ao iniciar, o **Node** irá detectar os drivers disponíveis através do 
 [`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
 
-The command below assumes the **Node** is running on the same machine where the **Hub** is running.
+O comando exemplo seguinte assume que o **Node** está a executar na mesma máquina onde o **Hub** está em execução.
 ```shell
 java -jar selenium-server-<version>.jar node
 ```
 
-##### More than one Node on the same machine
+##### Mais do que um Node na mesma máquina
 
 **Node** 1
 ```shell
@@ -103,7 +100,7 @@ java -jar selenium-server-<version>.jar node --port 5555
 java -jar selenium-server-<version>.jar node --port 6666
 ```
 
-##### Node and Hub on different machines
+##### Node e Hub em máquinas diferentes
 
 **Hub** and **Nodes** talk to each other via HTTP and the [**Event Bus**]({{< ref "components.md#event-bus" >}})
 (the **Event Bus** lives inside the **Hub**). A **Node** sends a message to the **Hub** via the **Event Bus** to 
