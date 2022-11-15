@@ -1,5 +1,5 @@
 ---
-title: "CLI オプション"
+title: "Selenium GridのCLI オプション"
 linkTitle: "CLI オプション"
 weight: 2
 description: 全てのGridコンポーネントのCLIオプション詳細

@@ -37,25 +37,25 @@ aliases: [
 Grid は 6 つの異なる[コンポーネント]({{< ref "components.md" >}})で構成され、様々な方法でデプロイすることができます。
 
 必要に応じて、それぞれ個別に起動する（分散）か、ハブ&ノードのグループに分けるか、
-全てを一つのマシンで起動する（スタンドアロン）かを選べます。
+全てを一つのマシンで起動する（**スタンドアロン**）かを選べます。
 
-### スタンドアロン
+### **スタンドアロン**
 
-スタンドアロンは全ての Grid[コンポーネント]({{< ref "components.md" >}})を 1 つに連結します。
-スタンドアロンモードはシングルプロセスで動き、Grid の全機能を利用することができます
-スタンドアロンは単一のマシン上でのみ動かすことができます。
+**スタンドアロン**は全ての Grid[コンポーネント]({{< ref "components.md" >}})を 1 つに連結します。
+**スタンドアロン**モードはシングルプロセスで動き、Grid の全機能を利用することができます。
+**スタンドアロン**は単一のマシン上でのみ動かすことができます。
 
-スタンドアロンは Selenium Grid を起動する最も簡単な方法でもあります。
+**スタンドアロン**は Selenium Grid を起動する最も簡単な方法でもあります。
 デフォルトではサーバーは[http://localhost:4444](http://localhost:4444) で `RemoteWebDriver` リクエストをリッスンします。
-サーバーはデフォルトで[システムパス上]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})の利用可能なドライバーを検出します。
+サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
 ```
 
-スタンドアロンモードで Grid のを起動したら、WebDriver テストの対象を[http://localhost:4444](http://localhost:4444)に向けてください。
+**スタンドアロン**で Grid のを起動したら、WebDriver テストの対象を[http://localhost:4444](http://localhost:4444)に向けてください。
 
-スタンドアロンの一般的なユースケースは:
+**スタンドアロン**の一般的なユースケースは:
 
 - `RemoteWebDriver` を使用したローカルでの開発やデバッグ
 - コードをプッシュする前の簡易なテスト実行
@@ -63,7 +63,7 @@ java -jar selenium-server-<version>.jar standalone
 
 ### ハブ&ノード
 
-ハブ&ノードは最も利用されているロールです。その理由は:
+**ハブ&ノード**は最も利用されているロールです。その理由は:
 
 - 様々なマシンを Grid に統合できます
   - 様々な OS やブラウザーバージョンを持つマシンなど
@@ -83,7 +83,7 @@ java -jar selenium-server-<version>.jar hub
 
 #### ノード
 
-ノードは起動時にシステムの[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+ノードは起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
 が通っている利用可能なドライバーを検出します。
 
 次のコマンドはノードがハブと同じマシン上で動作していることを前提としています。
@@ -193,8 +193,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-i
 
 ## テストメタデータ
 
-あなたのテストにメタデータを追加して、[GraphQL]({{< ref "advanced_features/graphql_support.md" >}})を介して
-取得したり Selenium Grid UI で可視化することができます。
+テストにメタデータを追加して、[GraphQL]({{< ref "advanced_features/graphql_support.md" >}}) 経由で使用するか、Selenium Grid UI 経由でその一部( `se:name` など) を可視化します。
 
 メタデータは capability に`se:`プリフィックスをつけることで追加できます。
 Java での簡単な例を紹介します。
@@ -213,7 +212,7 @@ driver.get("http://www.google.com");
 driver.quit();
 ```
 
-## Querying Selenium Grid
+## Selenium Grid のクエリ
 
 Grid 起動後、ステータスを問い合わせる方法は、
 Grid UI と API 呼び出しの主に 2 通りあります。
@@ -265,8 +264,8 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 Grid ロールの選択は、どのような OS やブラウザをサポートする必要があるかによって決まります。
 どの OS、ブラウザをサポートするか、どのくらいの並列セッションを実行するか、マシンの数とそれらの性能（CPU、RAM）に依存します。
 
-セッションを並列で作成するのは、Distributor が利用可能なプロセッサーに依存します。たとえば、
-マシンに 4 つの CPU がある場合、Distributor は同時に最大 4 つのセッションしか作成できません。
+セッションを並列で作成するのは、**ディストリビューター**が利用可能なプロセッサーに依存します。たとえば、
+マシンに 4 つの CPU がある場合、**ディストリビューター**は同時に最大 4 つのセッションしか作成できません。
 
 デフォルトでは、ノードがサポートする同時セッションの最大数は、利用可能な CPU の数によって制限されます。
 たとえば、ノードのマシンに 8CPU がある場合、同時に最大 8 つのブラウザセッションを実行できます（ただし、Safari は常に 1 つです）。
@@ -287,15 +286,15 @@ Grid のサイズは、サポートされる同時セッションの数と、ノ
 
 ### Small
 
-5 台以下のノードで、スタンドアロンかハブ&ノード
+5 台以下の**ノード**で、**スタンドアロン**か**ハブ&ノード**
 
 ### Middle
 
-6〜60 台のノードで、ハブ&ノード
+6〜60 台の**ノード**で、**ハブ&ノード**
 
 ### Large
 
-60〜100 台のノードで、ハブ&ノード、あるいは 100 台以上のノードで分散
+60〜100 台の**ノード**で、**ハブ&ノード**、あるいは 100 台以上の**ノード**で**分散**
 
 ## 警告
 
