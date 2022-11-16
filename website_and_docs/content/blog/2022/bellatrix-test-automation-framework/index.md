@@ -79,14 +79,14 @@ The sample code uses MSTest as default test framework but by changing the attrib
 ## Why BELLATRIX? ##
 Let's quickly list some of the essential things the framework brings to the table:
 
-###Multiple Test Environments Configuration###
+### Multiple Test Environments Configuration
 Every aspect of the framework can be controlled via a rich JSON configuration designed to work for many test environments. Here is just a short part responsible for controlling web execution. [**Web Project Configuration**](https://docs.bellatrix.solutions/web-automation/control-browser/#configuration).
 
-###Customization###
+### Customization
 
 One of the hardest things to develop is to allow these generic frameworks to be extendable and customizable. Knowing how essential customization is, we built several ways to enable it. The major one is about [**writing your own plug-ins**](https://bellatrix.solutions/features/web/extend-the-framework-to-fit-your-needs/).
 
-###Test Reliability###
+### Test Reliability
 
 One of the biggest problems in test automation is handling timeouts and performing actions on elements that may not be on the page right now. BELLATRIX hides the complexity of searching and [**waiting for elements**](https://bellatrix.solutions/features/web/boost-test-reliability/). Furthermore, when you perform an action or assertion against an element, we guarantee that once returned is there.
 
@@ -98,7 +98,7 @@ totalSpan.ValidateInnerTextIs("120.00€", timeout: 30, sleepInterval: 2);
 messageAlert.ValidateIsNotVisible();
 ```
 
-###Complex Controls###
+### Complex Controls
 
 BELLATRIX gives you API for easing the work with **[HTML tables and grids](https://docs.bellatrix.solutions/web-automation/complex-components/)**. 
 {{< figure src="grid-html-example.png" class="img-responsive w-50" >}}
@@ -115,16 +115,16 @@ There is much more complex stuff that you can do with both components so check t
 ## Integrations ##
 Seamlessly integrate the framework with your existing tools and processes. Execute tests in the clouds, distribute and publish test results in reporting solutions. Maybe the most significant differentiators of the framework are its many integrations with popular tools such as Jira/qTest/Allure/ReportPortal and clouds such as AWS, Microsoft Azure, + many more. All these integrations leverage BELLATRIX plug-in architecture. For example, we have plug-ins for automatically generating/updating test cases based on our automated tests in qTest and AzureDevops or similarly create automatic bug reports with steps to reproduce in Jira or Azure.
 
-###Dynamic Test Cases###
+### Dynamic Test Cases
 
 Dynamic test cases are a unique feature in BELLATRIX, where the framework automatically generates test cases in a popular test case management system based on your automated tests. It will populate the title, description, and other necessary properties automatically. Moreover, it will generate human-readable steps and expected results. The most significant benefit is that it will keep up to date with your auto-generated test cases over time, no matter what you change in your tests. It is an excellent functionality to allow non-technical people of your company to see what your tests are doing.
 
-###AI Validation of PDFs and Image###
+### AI Validation of PDFs and Image
 Azure Computer Vision is a service that can be used to extract printed and handwritten text from images and documents with mixed languages and writing styles. In contrast, Azure Form Recognizer is an AI-powered document extraction service that understands your document. 
 You are not limited to PDFs only. You can use the same feature for extracting text from complex images. BELLATRIX comes with similar functionality based on AWS cloud.
 
-###Email Testing###
-BELLATRIX offers a few utilities for email testing. There are a few scenarios where we need such integration. The first one is related to creating unique email inboxes and using the generated individual emails to submit various online forms. Later, we can read the emails via the services and check the content of the emails. It might be enough to verify the content via regular C#, or in some cases, we might need to interact with the email content in the browser. 
+### Email Testing
+BELLATRIX offers a few utilities for email testing. There are a few scenarios where we need such integration. The first one is related to creating unique email inboxes and using the generated individual emails to submit various online forms. Later, we can read the emails via the services and check the content of the emails. It might be enough to verify the content via regular C#, or in some cases, we might need to interact with the email content in the browser.
 
 There are tons of other integrations that we use on a daily basis in many big enterprise projects, such as cloud secrets management for securely storing credentials and other secrets. 
 **[All BELLATRIX Integrations](https://docs.bellatrix.solutions/product-integrations/)**
