@@ -84,11 +84,11 @@ Every aspect of the framework can be controlled via a rich JSON configuration de
 
 ### Customization
 
-One of the hardest things to develop is to allow these generic frameworks to be extendable and customizable. Knowing how essential customization is, we created different ways to achieve it. The major one is about [**writing your own plug-ins**](https://bellatrix.solutions/features/web/extend-the-framework-to-fit-your-needs/).
+One of the hardest things to develop is to allow these generic frameworks to be extendable and customizable. Knowing how essential customization is, we utilize different ways to achieve it. The major one is about [**writing your own plug-ins**](https://bellatrix.solutions/features/web/extend-the-framework-to-fit-your-needs/).
 
 ### Test Reliability
 
-One of the biggest problems in test automation is handling timeouts and performing actions on elements that may not be on the page right now. BELLATRIX hides the complexity of searching and [**waiting for elements**](https://bellatrix.solutions/features/web/boost-test-reliability/). Furthermore, when you perform an action or assertion against an element, we guarantee that once returned it is there.
+One of the biggest problems in test automation is handling timeouts and performing actions on elements that may not be on the page right now. BELLATRIX hides the complexity of searching and [**waiting for elements**](https://bellatrix.solutions/features/web/boost-test-reliability/). Furthermore, when you perform an action or assertion against an element, we guarantee that once returned, it will be present.
 
 A significant part of your tests are the assertions - checking whether some conditions are met. To handle such scenarios, we created elements **Validate** methods. They internally handle the whole complexity of waiting for some condition to happen.
 
@@ -100,7 +100,7 @@ messageAlert.ValidateIsNotVisible();
 
 ### Complex Controls
 
-BELLATRIX gives you API for easing the work with **[HTML tables and grids](https://docs.bellatrix.solutions/web-automation/complex-components/)**. 
+BELLATRIX provides API that makes handling HTML tables and grids much easier **[HTML tables and grids](https://docs.bellatrix.solutions/web-automation/complex-components/)**. 
 {{< figure src="grid-html-example.png" class="img-responsive w-50" >}}
 Here is an example for asserting grid cells:
 
@@ -117,19 +117,19 @@ Seamlessly integrate the framework with your existing tools and processes. Execu
 
 ### Dynamic Test Cases
 
-Dynamic test cases are a unique feature in BELLATRIX, where the framework automatically generates test cases in a popular test case management system based on your automated tests. It will populate the title, description, and other necessary properties automatically. Moreover, it will generate human-readable steps and expected results. The most significant benefit is that it will keep up to date with your auto-generated test cases over time, no matter what you change in your tests. It is an excellent functionality to allow non-technical people of your company to see what your tests are doing.
+Dynamic test cases are a unique feature in BELLATRIX, where the framework automatically generates test cases in a popular test case management system based on your automated tests. It will populate the title, description, and other necessary properties automatically. Moreover, it will generate human-readable steps and expected results. The most significant benefit is that it will keep up to date with your auto-generated test cases over time, no matter what you change in your tests. It is an excellent functionality which allows the  non-technical people of your company to see what your tests are doing.
 
 ### AI Validation of PDFs and Image
 Azure Computer Vision is a service that can be used to extract printed and handwritten text from images and documents with mixed languages and writing styles. In contrast, Azure Form Recognizer is an AI-powered document extraction service that understands your document. 
 You are not limited to PDFs only. You can use the same feature for extracting text from complex images. BELLATRIX comes with similar functionality based on the AWS cloud.
 
 ### Email Testing
-BELLATRIX offers a few utilities for email testing. There are a few scenarios where we need such integration. The first one is related to creating unique email inboxes and using the generated individual emails to submit various online forms. Later, we can read the emails via the services and check the content of the emails. It might be enough to verify the content via regular C#, or in some cases, we might need to interact with the email content in the browser.
+BELLATRIX offers a few utilities for email testing. There are a few scenarios where we need such integration. The first one is related to creating unique email inboxes and using  them to submit various online forms. Later, we can read the emails via the services and check the content of the emails. It might be enough to verify the content via regular C#, or in some cases, we might need to interact with the email content in the browser.
 
 There are tons of other integrations that we use on a daily basis in many big enterprise projects, such as cloud secrets management for securely storing credentials and other secrets. 
 **[All BELLATRIX Integrations](https://docs.bellatrix.solutions/product-integrations/)**
 
-Using BELLATRIX in your projects might save you months/years of work even if you have the required programming knowledge. This way, you can quickly focus on writing automated tests for your project.
-Usually, there are 4-6 major releases each year, bringing all bug fixes and new features. Check our **[release notes history](https://bellatrix.solutions/roadmap/release-3-6-0-0-chamaeleon/)**. The framework is fully covered with over 4000 automated tests and offers rich documentation. We make sure to merge the new feature branches only when we are sure that everything is working. If anything comes up after a major release, it is quickly fixed within a few days.
+Using BELLATRIX in your projects might save months/years of effort even if you have the required programming knowledge. This way, you can quickly focus on writing automated tests for your project.
+Usually, there are 4-6 major releases each year, including all bug fixes and new features. Check our **[release notes history](https://bellatrix.solutions/roadmap/release-3-6-0-0-chamaeleon/)**. The framework is fully covered with over 4000 automated tests and offers rich documentation. We make sure to merge the new feature branches only when we are sure that everything is working. If some issue emerges after a major release, it is quickly fixed within a few days.
 
 For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our **[contact us form](https://bellatrix.solutions/contact-us/)**.
