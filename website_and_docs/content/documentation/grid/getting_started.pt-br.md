@@ -102,94 +102,94 @@ java -jar selenium-server-<version>.jar node --port 6666
 
 ##### Node e Hub em máquinas diferentes
 
-**Hub** and **Nodes** talk to each other via HTTP and the [**Event Bus**]({{< ref "components.md#event-bus" >}})
-(the **Event Bus** lives inside the **Hub**). A **Node** sends a message to the **Hub** via the **Event Bus** to 
-start the registration process. When the **Hub** receives the message, reaches out to the **Node** via HTTP to 
-confirm its existence.
+A comunicação entre **Hub** e **Nodes** ocorre via HTTP. Para iniciar o processo de registo, o **Node** envia
+uma mensagem para o **Hub** através do [**Event Bus**]({{< ref "components.md#event-bus" >}}) 
+(o **Event Bus** reside dentro do **Hub**). Quando o **Hub** recebe a mensagem, tenta comunicar com o **Node**
+para confirmar a sua existencia.
 
-To successfully register a **Node** to a **Hub**, it is important to expose the **Event Bus** ports (4442 and 4443 by 
-default) on the **Hub** machine. This also applies for the **Node** port. With that, both **Hub** and **Node** will
-be able to communicate.
+Para que um **Node** se consiga registar no **Hub**, é importante que as portas do **Event Bus** sejam expostas 
+na máquina **Hub**. As portas por omissão são 4442 e 4443 para o **Event Bus** e 4444 para o **Hub**.
 
-If the **Hub** is using the default ports, the `--hub` flag can be used to register the **Node**
+Se o **Hub** estiver a usar as portas por omissão, pode usar a flag `--hub` para registar o **Node**
 ```shell
 java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444
 ```
 
-When the **Hub** is not using the default ports, the `--publish-events` and `--subscribe-events` flags are needed.
+Quando o **Hub** não estiver a usar as portas por omissão, necessita usar as flags`--publish-events` e `--subscribe-events`.
 
-For example, if the **Hub** uses ports `8886`, `8887`, and `8888`
+Por exemplo, se o **Hub** usar as portas`8886`, `8887`, e `8888`
 ```shell
 java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887 --port 8888
 ```
-The **Node** needs to use those ports to register successfully
+O **Node** necessita de especificar as portas para conseguir registar-se com sucesso
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
 ```
 
-### Distributed 
+### Distribuida
 
-When using a Distributed Grid, each component is started separately, and ideally on different machines.
+Quando usar uma Grid distribuida, cada componente é iniciado separadamente e preferencialmente em máquinas diferentes.
 
 {{% alert color="primary" %}}
-It is important to expose all ports properly in order to allow fluent communication between all components.
+É de extrema importância expor todas as portas necessárias de forma a que a comunicação flua correctamente entre todos os componentes.
 {{% /alert %}}
 
-1. **Event Bus**: enables internal communication between different Grid components.
+1. **Event Bus**: permite comunicação interna entre os diferentes componentes da Grid.
 
-Default ports are: `4442`, `4443`, and `5557`.
+As portas por omissão são: `4442`, `4443`, and `5557`.
 ```shell
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. **New Session Queue**: adds new session requests to a queue, which will be queried by the Distributor
+2. **New Session Queue**: adiciona novos pedidos de sessão a uma queue, que serão consultadas pelo Distributor
 
-Default port is `5559`.
+A porta por omissão é `5559`.
 ```shell
 java -jar selenium-server-<version>.jar sessionqueue --port 5559
 ```
 
-3. **Session Map**: maps session IDs to the **Node** where the session is running
+3. **Session Map**: estabelece um mapa entre id de sessão e o **Node** onde a sessão está a executar
 
-Default **Session Map** port is `5556`. **Session Map** interacts with the **Event Bus**. 
+A porta por omissão é `5556`. **Session Map** interage com o **Event Bus**. 
 ```shell
 java -jar selenium-server-<version>.jar sessions --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5556
 ```
 
-4. **Distributor**: queries the **New Session Queue** for new session requests, and assigns them to a **Node** when the capabilities match. **Nodes** register to the **Distributor** the way they register to the **Hub** in a **Hub/Node** Grid.
+4. **Distributor**: consulta **New Session Queue** para novos pedidos de sessão, que entrega ao um **Node** quando encontra um capacidade 
+correspondente. **Nodes** registam-se no **Distributor** da mesma forma como numa Grid do tipo **Hub/Node**.
 
-Default **Distributor** port is `5553`. **Distributor** interacts with **New Session Queue**, **Session Map**, **Event Bus**, and the **Node(s)**.
+A porta por omissão é `5553`. **Distributor** interage com **New Session Queue**, **Session Map**, **Event Bus**, e **Node(s)**.
 
 ```shell
 java -jar selenium-server-<version>.jar distributor --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --sessions http://<sessions-ip>:5556 --sessionqueue http://<new-session-queue-ip>:5559 --port 5553 --bind-bus false
 ```
 
-5. **Router**: redirects new session requests to the queue, and redirects running sessions requests to the **Node** running that session.
+5. **Router**: redirecciona novos pedidos de sessão para a queue, e redirecciona pedidos de sessões para o **Node** que estiver a executar a sessão.
 
-Default **Router** port is `4444`. **Router** interacts with **New Session Queue**, **Session Map**, and **Distributor**.
+A porta por omissão é `4444`. **Router** interage com **New Session Queue**, **Session Map**, e **Distributor**.
 ```shell
 java -jar selenium-server-<version>.jar router --sessions http://<sessions-ip>:5556 --distributor http://<distributor-ip>:5553 --sessionqueue http://<new-session-queue-ip>:5559 --port 4444
 ```
 
 6. **Node(s)**
 
-Default **Node** port is `5555`.
+A porta por omissão é `5555`.
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443
 ```
 
-## Metadata in tests
+## Adicionar Metadata nos testes
 
-Add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
-or visualize parts of it (like `se:name`) through the Selenium Grid UI. 
+Adicione Metadata aos testes, através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+ou visualize parcialmente (como `se:name`) através da Selenium Grid UI. 
 
-Metadata can be added by prefixing a capability with `se:`. Here is a quick example in Java showing that.
+Metadata pode ser adicionada como uma capacidade com o prefixo `se:`. Eis um pequeno exemplo em Java.
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
 chromeOptions.setCapability("browserVersion", "100");
 chromeOptions.setCapability("platformName", "Windows");
-// Showing a test name instead of the session id in the Grid UI
+// Mostrando na Grid UI o nome de um teste ao invés de uma session id
 chromeOptions.setCapability("se:name", "My simple test"); 
 // Other type of metadata can be seen in the Grid UI by clicking on the 
 // session info or via GraphQL
