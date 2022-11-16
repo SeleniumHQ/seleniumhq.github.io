@@ -1,83 +1,76 @@
 ---
-title: "Config help"
-linkTitle: "Config help"
+title: "Ajuda de configuração"
+linkTitle: "Ajuda de configuração"
 weight: 1
-description: Get information about all the available options to configure Grid.
+description: Obtenha ajuda sobre todas as opções disponíveis para configurar a Grid.
 aliases: [
 "/documentation/pt-br/grid/grid_4/configuring_components/config_help/",
 "/pt-br/documentation/grid/configuring_components/config_help/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 {{% pageinfo color="primary" %}}
-The help commands display information based on the current code implementation.
-Hence, it will provide accurate information in case the documentation is not updated.
-It is the easiest way to learn about Grid 4 configuration for any new version.
+Os comandos de ajuda (help) mostram informação baseada na implementação de código em vigor.
+Desta forma, irá obter informação potencialmente mais actual do que esta documentação.
+Embora possa não ser a mais detalhada, é sempre a forma mais simples de aprender sobre
+as configurações da Grid 4 em qualquer nova versão.
 {{% /pageinfo %}}
 
-## Info Command
+## Commando info
 
-The info command provides detailed docs on the following topics:
-* Configuring Selenium
-* Security
-* Session Map setup
-* Tracing
+O comando `info` fornece detalhes de documentação sobre os seguintes tópicos:
+* Configurar Selenium
+* Segurança
+* Setup Session Map
+* Traceamento
 
-### Config help 
+### Ajuda sobre configuração
 
-Quick config help and overview is provided by running:
+Ajuda rápida e resumo pode ser obtida com:
 
 ```shell
 java -jar selenium-server-<version>.jar info config
 ```
 
-### Security
+### Segurança
 
-To get details on setting up the Grid servers for secure communication and node registration:
+Para obter detalhes em como configurar os servidores Grid para comunicação segura
+e para o registo de **Nodes**:
 
 ```shell
 java -jar selenium-server-<version>.jar info security
 ```
 
-### Session Map setup
+### Configuração Session Map
 
-By default, Grid uses a local session map to store session information. 
-Grid supports additional storage options like Redis and JDBC - SQL supported databases. 
-To set up different session storage, use the following command to get setup steps:
+Por omissão, a Grid usa um `local session map` para armazenar informação de sessões.
+A Grid permite armazenamento opcional em Redis ou bancos de dados JDBC SQL.
+Para obter informação de como usar, use o seguinte comando:
 
 ```shell
 java -jar selenium-server-<version>.jar info sessionmap
 ```
 
-### Setting up tracing with OpenTelemetry and Jaeger
+### Traceamento com OpenTelemetry e Jaeger
 
-By default, tracing is enabled. To export traces and visualize them via Jaeger, use the following command for instructions:
+Por omissao, traceamento está activo. Para exportar e visualizar através de Jaeger, use o 
+comando seguinte para instruções de como o efectuar:
 
 ```shell
 java -jar selenium-server-<version>.jar info tracing
 ```
 
-## List the Selenium Grid commands  
+## Lista de comandos Selenium Grid
  
+Irá mostrar todos os comandos disponíveis e também a descrição de cada um.
 
 ```shell
 java -jar selenium-server-<version>.jar --config-help
 ```
 
-It will show all the available commands and description for each one.
+## Comandos de ajuda para componente
 
-## Component help commands
-
-Pass --help config option after the Selenium role to get component-specific config information.
+Adicione `--help` após o Selenium role para obter informação específica de configuração do componente.
 
 ### Standalone 
 
