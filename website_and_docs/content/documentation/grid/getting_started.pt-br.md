@@ -191,123 +191,121 @@ chromeOptions.setCapability("browserVersion", "100");
 chromeOptions.setCapability("platformName", "Windows");
 // Mostrando na Grid UI o nome de um teste ao invés de uma session id
 chromeOptions.setCapability("se:name", "My simple test"); 
-// Other type of metadata can be seen in the Grid UI by clicking on the 
-// session info or via GraphQL
-chromeOptions.setCapability("se:sampleMetadata", "Sample metadata value"); 
+// Outros tipos de metadara podem ser visualizados na Grid UI 
+// ao clicar na informação de sessão ou via GraphQL
+chromeOptions.setCapability("se:sampleMetadata", "Valor exemplo de Metadata"); 
 WebDriver driver = new RemoteWebDriver(new URL("http://gridUrl:4444"), chromeOptions);
 driver.get("http://www.google.com");
 driver.quit();
 ```
 
-## Querying Selenium Grid
+## Questionando a Selenium Grid
 
-After starting a Grid, there are mainly two ways of querying its status, through the Grid 
-UI or via an API call.
+Após iniciar a Gris, existem duas formas de saber o seu estado, através da Grid UI ou
+por chamada API.
 
-The Grid UI can be reached by opening your preferred browser and heading to 
-[http://localhost:4444](http://localhost:4444).
-
-API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
-endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+A Grid UI pode ser acedida pelo seu navegador preferido em [http://localhost:4444](http://localhost:4444). 
+As chamadas API podem ser feitas para o endpoint [http://localhost:4444/status](http://localhost:4444/status) ou
+através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}}).
 
 {{% pageinfo color="primary" %}}
-For simplicity, all command examples shown in this page assume that components are running
-locally. More detailed examples and usages can be found in the
-[Configuring Components]({{< ref "/configuration" >}}) section.
+Para simplificar, todos os exemplos apresentados assumem que os componentes estão a ser executados localmente.
+Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "/configuration" >}}).
 {{% /pageinfo %}}
 
-## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
+## Usando o cliente HTTP nativo Java 11 {{% badge-version version="4.5" %}}
 
-By default, Grid will use [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
-AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP 
-requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it 
-is a good fit. 
+Por omissão, a Grid irá usar [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
+AsyncHttpClient é uma biblioteca open-source library criada em cima do Netty. Isto permite a
+execução de pedidos e respostas HTTP de forma assíncrona. Esta biblioteca é uma boa escolha
+pois além de permitir pedidos assíncronos, também suporta WebSockets.
 
-However, AsyncHttpClient is not been actively maintained since June 2021. It coincides with the 
-fact that Java 11+ provides a built-in HTTP and WebSocket client. Currently, Selenium 
-has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. 
-Aligning it with major releases and accompanied announcements  is crucial to ensure the user 
-experience is intact.
+No entanto, a biblioteca AsyncHttpClient não é mantida activamente desde Junho de 2021. Isto coincide com
+o facto de que a partir do Java 11, a JVM tem um cliente nativo que suporta camadas assíncronas
+e contém um cliente WebSocket.
 
-To do use the Java 11 client, you will need to download the `selenium-http-jdk-client` jar file 
-and use the `--ext` flag to make it available in the Grid jar's classpath.
+Atualmente, o projecto Selenium tem planos de atualizar a versão mínima suportada para Java 11. 
+No entanto, isto é um esforço considerável. Alinhá-lo com os principais lançamentos e anúncios
+acompanhados é crucial para garantir que a experiência do usuário esteja intacta.
 
-The jar file can be downloaded directly from [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/)
-and then start the Grid in the following way:
+Para usar o cliente Java 11, terá que baixar o ficheiro jar `selenium-http-jdk-client` e usar
+a flag `--ext` para funcionar na Grid.
+
+Este ficheiro pode ser obtido directamente de [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/)
+e depois pode iniciar a Grid com:
 
 ```bash
 java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar -—ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
-An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
+Uma alternativa a baixar o ficheiro jar `selenium-http-jdk-client` é usar [Coursier](https://get-coursier.io/docs/cli-installation).
 
 ```bash
 java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
-If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` 
-and `—-ext` flags needs to be done for each one of the components.
+Se está a usar a Grid em modo **Hub/Node** ou **Distributed**, terá que usar as flags 
+`-Dwebdriver.http.factory=jdk-http-client` e `—-ext` em cada um dos componentes.
 
-## Grid sizes
+## Dimensionar Grid
 
-Choosing a Grid role depends on what operating systems and browsers need to be supported, 
-how many parallel sessions need to be executed, the amount of available machines, and how 
-powerful (CPU, RAM) those machines are.
+A escolha de Grid depende de quais sistemas operacionais e navegadores precisam ser suportados,
+quantas sessões paralelas precisam ser executadas, a quantidade de máquinas disponíveis e quão
+poderosas (CPU, RAM) essas máquinas são.
 
-Creating sessions concurrently relies on the available processors to the **Distributor**. 
-For example, if a machine has 4 CPUs, the **Distributor** will only be able to create up
-to 4 sessions concurrently.
+A criação de sessões simultaneas depende dos processadores disponíveis para o **Distributor**.
+Por exemplo, se uma máquina tiver 4 CPUs, o **Distributor** só poderá criar quatro sessões
+em simultâneo.
 
-By default, the maximum amount of concurrent sessions a **Node** supports is limited by
-the number of CPUs available. For example, if the **Node** machine has 8CPUs, it can run
-up to 8 concurrent browser sessions (with the exception of Safari, which is always one).
-Additionally, it is expected that each browser session should use around 1GB RAM. 
+Por omissão, a quantidade máxima de sessões simultâneas que um **Node** suporta é limitada pelo
+número de CPUs disponíveis. Por exemplo, se a máquina **Node** tiver 8 CPUs, ela poderá executar
+até 8 sessões de navegador simultâneas (com exceção do Safari, que é sempre uma).
+Além disso, espera-se que cada sessão do navegador use cerca de 1 GB de RAM.
 
-In general, it is a recommended to have **Nodes** as small as possible. Instead of having
-a machine with 32CPUs and 32GB RAM to run 32 concurrent browser sessions, it is better to
-have 32 small **Nodes** in order to better isolate processes. With this, if a **Node**
-fails, it will do it in an isolated way. Docker is a good tool to achieve this approach.
+Em geral, é recomendado ter **Nodes** o mais pequenos possíveis. Em vez de ter
+uma máquina com 32CPUs e 32GB de RAM para executar 32 sessões de navegador simultâneas, é melhor
+tem 32 pequenos **Nodes** para isolar melhor os processos. Com isso, se um **Node**
+falhar, será de forma isolada. Docker é uma boa ferramenta para alcançar essa abordagem.
 
-Note that the default values (1CPU/1GB RAM per browser) are a recommendation and they could
-not apply to your context. It is recommended to use them as a reference, but measuring 
-performance continuously will help to determine the ideal values for your environment.
+Note que os valores 1CPU/1GB RAM por navegador são uma recomendação e podem não ser os mais indicados
+para o seu contexto. Recomenda-se que use estea valores como referência, mas meça o desempenho 
+continuamente para ajudar a determinar os valores ideais para o seu ambiente.
 
-Grid sizes are relative to the amount of supported concurrent sessions and amount of 
-**Nodes**, and there is no "one size fits all". Sizes mentioned below are rough estimations
-thay can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
-might work well when the **Hub** has enough resources. Values below are not set on stone,
-and feedback is welcomed!
+Os tamanhos da Grid são relativos à quantidade de sessões simultâneas suportadas e à quantidade de
+**Nodes**, não existindo um "tamanho único". Os tamanhos mencionados abaixo são estimativas aproximadas
+que podem variar entre diferentes ambientes. Por exemplo, um **Hub/Node** com 120 **Nodes**
+pode funcionar bem quando o **Hub** tiver recursos suficientes. Os valores abaixo não são gravados em pedra,
+e comentários são bem-vindos!
 
-### Small
+### Pequena
 
-**Standalone** or **Hub/Node** with 5 or less **Nodes**.
+**Standalone** e **Hub/Node** com cinco **Nodes** ou menos.
 
-### Middle
+### Média
 
-**Hub/Node** between 6 and 60 **Nodes**.
+**Hub/Node** entre 6 e 60 **Nodes**.
 
-### Large
+### Grande
 
-**Hub/Node** between 60 and 100 **Nodes**. **Distributed** with over 100 **Nodes**.
+**Hub/Node** entre 60 e 100 **Nodes**. **Distributed** com mais de 100 **Nodes**.
 
-## Warning
+## AVISO
 
-Selenium Grid must be protected from external access using appropriate
-firewall permissions.
+Deve proteger a Selenium Grid de acesso externo, usando regras de firewall apropriadas.
 
-Failure to protect your Grid could result in one or more of the following occurring:
+Se falhar em proteger a Grid uma ou mais coisas poderão ocorrer:
 
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
+* Permite acesso aberto à sua infraestrutura da Grid
+* Permitir acesso de terceiros a aplicativos web e a ficheiros
+* Permitir execução remota de ficheiros binários por terceiros
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good
-overview of how a publicly exposed Grid could be misused:
+Leia este artigo (em Inglês) em [Detectify](//labs.detectify.com), que dá um bom resumo
+de como uma Grid exposta publicamente pode ser abusada:
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
-## Further reading
+## Leituras adicionais
 
-* [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
-* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
-* [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
+* [Componentes]({{< ref "components.md" >}}): compreender como usar os componentes da Grid
+* [Configuração]({{< ref "/configuration" >}}): personalize a sua configuração Grid.
+* [Arquitectura]({{< ref "architecture.md" >}}): entenda conceitos chave da Grid.
+* [Advanced Features]({{< ref "/advanced_features" >}}): explore mais possibilidades da Grid.
