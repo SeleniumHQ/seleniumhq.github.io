@@ -1,26 +1,17 @@
 ---
-title: "Grid Architecture"
-linkTitle: "Grid Architecture"
+title: "Arquitectura da Grid"
+linkTitle: "Arquitectura da Grid"
 weight: 10
 aliases: [
 "/pt-br/documentation/grid/grid_architecture"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+A Grid está desenhada como um conjunto de componentes, em que cada tem
+o seu papel crucial em manter a Grid. Isto pode parecer um pouco complicado,
+mas esperamos que este documento ajude a esclarecer alguma confusão.
 
-The Grid is designed as a set of components that all fulfill a role in
-maintaining the Grid. It can seem quite complicated, but hopefully
-this document can help clear up any confusion.
-
-## The Key Components
+## Os componentes chave
 
 The main components of the Grid are:
 
