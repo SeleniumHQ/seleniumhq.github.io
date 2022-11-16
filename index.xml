@@ -1,4 +1,104 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Introducing Selenium Manager</title><link>/blog/2022/introducing-selenium-manager/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/introducing-selenium-manager/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+&lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
+Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of core Selenium maintainers.
+One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
+A testing framework is an abstraction in which common code providing generic functionality (which can be selectively overridden) for testing different aspects of our applications- UI, API, security, performance and many other.&lt;/p>
+&lt;h2 id="bellatrix-test-automation-framework">BELLATRIX Test Automation Framework&lt;/h2>
+&lt;p>The first version of &lt;strong>&lt;a href="https://bellatrix.solutions/">BELLATRIX&lt;/a>&lt;/strong> appeared on 26 December 2017. It was available only for C# initially but written on new back then .NET Core, allowing the framework to be used on all major operating systems (cross-platform).
+One huge advantage of BELLATRIX is cross-technology readiness. It allows you to write tests for different technologies such as Web, Mobile, Desktop, and API. For me, this also includes a similar API. In BELLATRIX, we strive the API for different modules to be as identical as possible.&lt;/p>
+&lt;p>The usage is simple. We suggest cloning BELLATRIX as a GIT sub-module. Then, any customizations, tests, and project-specific plug-ins should be placed in a project outside the BELLATRIX cloned repository. This way, you can quickly update to the latest version.&lt;/p>
+&lt;p>&lt;a href="https://bellatrix.solutions/">&lt;strong>BELLATRIX official website, download and releases info&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/AutomateThePlanet/BELLATRIX">&lt;strong>BELLATRIX official C# GitHub Page&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/AutomateThePlanet/BELLATRIX-Java">&lt;strong>BELLATRIX official Java GitHub Page&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://docs.bellatrix.solutions/overview/">&lt;strong>BELLATRIX C# Documentation&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://docs.java.bellatrix.solutions/overview/">&lt;strong>BELLATRIX Java Documentation&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>Let&amp;rsquo;s investigate how easy it is to create your first test with BELLATRIX in 15 minutes. The sample will showcase how to create a very basic test login into a website:
+&lt;figure class="img-responsive w-50">
+&lt;img src="/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
+&lt;/figure>
+&lt;/p>
+&lt;ol>
+&lt;li>Open the BellatrixTestFramework.sln&lt;/li>
+&lt;/ol>
+&lt;figure class="img-responsive w-50">
+&lt;img src="/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
+&lt;/figure>
+&lt;ol start="2">
+&lt;li>Under the starthere folder find the project your prefer: web, mobile, desktop, API&lt;/li>
+&lt;/ol>
+&lt;figure class="img-responsive w-50">
+&lt;img src="/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
+&lt;/figure>
+&lt;ol start="3">
+&lt;li>Open the BellatrixLoginTest.cs file. There you will find a sample test automating the login.&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c4a000">[TestClass]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">LoginTestsMSTest&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">MSTest&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WebTest&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">override&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">TestInit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Navigation&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Navigate&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;http://demos.bellatrix.solutions/my-account/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c4a000">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c4a000"> [TestMethod]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">SuccessfullyLoginToMyAccount&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">userNameField&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Components&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CreateById&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">TextField&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;username&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">passwordField&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Components&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CreateById&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">Password&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;password&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">loginButton&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Components&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CreateByXpath&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">Button&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;//button[@name=&amp;#39;login&amp;#39;]&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">userNameField&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">SetText&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;info@berlinspaceflowers.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">passwordField&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">SetPassword&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;@purISQzt%%DYBnLCIhaoG6$&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">loginButton&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Click&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">myAccountContentDiv&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Components&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CreateByClass&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">Div&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;woocommerce-MyAccount-content&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">myAccountContentDiv&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ValidateInnerTextContains&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Hello info1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">logoutLink&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000">App&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Components&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CreateByInnerTextContaining&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">Anchor&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Log out&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">logoutLink&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ValidateIsVisible&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">logoutLink&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Click&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All available services are available through the main &lt;strong>App&lt;/strong> class. The &lt;strong>Components&lt;/strong> property provides various &lt;strong>Create&lt;/strong> methods for finding elements. They are generic, so you need to mention the type of the searched element. We have different elements because, for each of them, BELLATRIX offers various additional methods and assertions on top of native WebDriver methods.
+The sample code uses MSTest as default test framework but by changing the attributes it will work out of the box for NUnit too. You need to change the base class namespace too.&lt;/p>
+&lt;h2 id="why-bellatrix">Why BELLATRIX?&lt;/h2>
+&lt;p>Let&amp;rsquo;s quickly list some of the essential things the framework brings to the table:&lt;/p>
+&lt;p>###Multiple Test Environments Configuration###
+Every aspect of the framework can be controlled via a rich JSON configuration designed to work for many test environments. Here is just a short part responsible for controlling web execution. &lt;a href="https://docs.bellatrix.solutions/web-automation/control-browser/#configuration">&lt;strong>Web Project Configuration&lt;/strong>&lt;/a>.&lt;/p>
+&lt;p>###Customization###&lt;/p>
+&lt;p>One of the hardest things to develop is to allow these generic frameworks to be extendable and customizable. Knowing how essential customization is, we built several ways to enable it. The major one is about &lt;a href="https://bellatrix.solutions/features/web/extend-the-framework-to-fit-your-needs/">&lt;strong>writing your own plug-ins&lt;/strong>&lt;/a>.&lt;/p>
+&lt;p>###Test Reliability###&lt;/p>
+&lt;p>One of the biggest problems in test automation is handling timeouts and performing actions on elements that may not be on the page right now. BELLATRIX hides the complexity of searching and &lt;a href="https://bellatrix.solutions/features/web/boost-test-reliability/">&lt;strong>waiting for elements&lt;/strong>&lt;/a>. Furthermore, when you perform an action or assertion against an element, we guarantee that once returned is there.&lt;/p>
+&lt;p>A significant part of your tests is the assertions - checking whether some conditions are met. To handle such scenarios, we created elements Validate methods. They internally handle the whole complexity of waiting for some condition to happen.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">updateCart&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ValidateIsDisabled&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">totalSpan&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ValidateInnerTextIs&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;120.00€&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">timeout&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">30&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">sleepInterval&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">messageAlert&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ValidateIsNotVisible&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>###Complex Controls###&lt;/p>
+&lt;p>BELLATRIX gives you API for easing the work with &lt;strong>&lt;a href="https://docs.bellatrix.solutions/web-automation/complex-components/">HTML tables and grids&lt;/a>&lt;/strong>.
+&lt;figure class="img-responsive w-50">
+&lt;img src="/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
+&lt;/figure>
+Here is an example for asserting grid cells:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ForEachCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">cell&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">cell&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AssertFontSize&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;14px&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">GetCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Firstname&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>&lt;span style="color:#000;font-weight:bold">).&lt;/span>&lt;span style="color:#000">ValidateInnerTextIs&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Mary&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">GetCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>&lt;span style="color:#000;font-weight:bold">).&lt;/span>&lt;span style="color:#000">ValidateInnerTextIs&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;John&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">GetCell&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">Employee&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;(&lt;/span>&lt;span style="color:#000">cell&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">cell&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">PersonalEmail&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>&lt;span style="color:#000;font-weight:bold">).&lt;/span>&lt;span style="color:#000">ValidateInnerTextIs&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;mary@hotmail.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>There is much more complex stuff that you can do with both components so check the &lt;strong>&lt;a href="https://docs.bellatrix.solutions/web-automation/complex-components/">official documentation&lt;/a>&lt;/strong>.&lt;/p>
+&lt;h2 id="integrations">Integrations&lt;/h2>
+&lt;p>Seamlessly integrate the framework with your existing tools and processes. Execute tests in the clouds, distribute and publish test results in reporting solutions. Maybe the most significant differentiators of the framework are its many integrations with popular tools such as Jira/qTest/Allure/ReportPortal and clouds such as AWS, Microsoft Azure, + many more. All these integrations leverage BELLATRIX plug-in architecture. For example, we have plug-ins for automatically generating/updating test cases based on our automated tests in qTest and AzureDevops or similarly create automatic bug reports with steps to reproduce in Jira or Azure.&lt;/p>
+&lt;p>###Dynamic Test Cases###&lt;/p>
+&lt;p>Dynamic test cases are a unique feature in BELLATRIX, where the framework automatically generates test cases in a popular test case management system based on your automated tests. It will populate the title, description, and other necessary properties automatically. Moreover, it will generate human-readable steps and expected results. The most significant benefit is that it will keep up to date with your auto-generated test cases over time, no matter what you change in your tests. It is an excellent functionality to allow non-technical people of your company to see what your tests are doing.&lt;/p>
+&lt;p>###AI Validation of PDFs and Image###
+Azure Computer Vision is a service that can be used to extract printed and handwritten text from images and documents with mixed languages and writing styles. In contrast, Azure Form Recognizer is an AI-powered document extraction service that understands your document.
+You are not limited to PDFs only. You can use the same feature for extracting text from complex images. BELLATRIX comes with similar functionality based on AWS cloud.&lt;/p>
+&lt;p>###Email Testing###
+BELLATRIX offers a few utilities for email testing. There are a few scenarios where we need such integration. The first one is related to creating unique email inboxes and using the generated individual emails to submit various online forms. Later, we can read the emails via the services and check the content of the emails. It might be enough to verify the content via regular C#, or in some cases, we might need to interact with the email content in the browser.&lt;/p>
+&lt;p>There are tons of other integrations that we use on a daily basis in many big enterprise projects, such as cloud secrets management for securely storing credentials and other secrets.
+&lt;strong>&lt;a href="https://docs.bellatrix.solutions/product-integrations/">All BELLATRIX Integrations&lt;/a>&lt;/strong>&lt;/p>
+&lt;p>Using BELLATRIX in your projects might save you months/years of work even if you have the required programming knowledge. This way, you can quickly focus on writing automated tests for your project.
+Usually, there are 4-6 major releases each year, bringing all bug fixes and new features. Check our &lt;strong>&lt;a href="https://bellatrix.solutions/roadmap/release-3-6-0-0-chamaeleon/">release notes history&lt;/a>&lt;/strong>. The framework is fully covered with over 4000 automated tests and offers rich documentation. We make sure to merge the new feature branches only when we are sure that everything is working. If anything comes up after a major release, it is quickly fixed within a few days.&lt;/p>
+&lt;p>For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our &lt;strong>&lt;a href="https://bellatrix.solutions/contact-us/">contact us form&lt;/a>&lt;/strong>.&lt;/p></description></item><item><title>Blog: Introducing Selenium Manager</title><link>/blog/2022/introducing-selenium-manager/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/introducing-selenium-manager/</guid><description>
 &lt;p>Most people&amp;rsquo;s first experience with Selenium ends up with an error message like this one:&lt;/p>
 &lt;pre tabindex="0">&lt;code>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver
 system property; for more information, see https://chromedriver.chromium.org/. The latest version can be
@@ -6546,255 +6646,4 @@ static website that gets &lt;em>published&lt;/em>.&lt;/p>
 all the major repositories under the &lt;a href="https://github.com/seleniumhq/">SeleniumHQ GitHub&lt;/a>
 organization. I hope they are helpful if you decide to move from &lt;code>master&lt;/code> as a name
 for your default branch.&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/">https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Blog: Public Project Meeting - August 13, 2020</title><link>/blog/2020/public-project-meeting-20200813/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200813/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on August 13, 2020 (times are on IST).&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;p>The next meeting will be on August 27, 2020, 4:30 PM CET.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 7:58 PM&lt;/em>
-:wave:&lt;/p>
-&lt;ul>
-&lt;li>Here is the agenda for today&lt;/li>
-&lt;li>General project statistics (Previous meeting: 338 open issues, 73 open PRs)&lt;/li>
-&lt;li>Overall announcements? New people on committees, with the commit bit, etc?&lt;/li>
-&lt;li>Improving workflow (Reviewing PRs, Improving design requirements)&lt;/li>
-&lt;li>Selenium Conf website in GitHub org? (README is pending)&lt;/li>
-&lt;li>IDE to the main repo?&lt;/li>
-&lt;li>Users/passwords, access keys, etc… to distribution and release repositories.&lt;/li>
-&lt;li>Anything new to report from the last PLC/SFC call?&lt;/li>
-&lt;li>Conferences. Status for SeConf India &amp;amp; SeConf Chicago?&lt;/li>
-&lt;li>Pending work that needs to be done for Alpha 7?&lt;/li>
-&lt;li>Pending work that needs to be done for the first Beta?&lt;/li>
-&lt;li>Selenium Branding guide&lt;/li>
-&lt;li>Selenium marketing strategy (e.g: Webpack)&lt;/li>
-&lt;li>CoC, next steps?&lt;/li>
-&lt;li>Did anyone talk to Miki about the go bindings? (This topic has been skipped in the previous meetings but it is good to keep it on the agenda so we act on it when we have more bandwidth)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>8:00 PM&lt;/em>&lt;/p>
-&lt;p>Let’s start with the 1st item
-General project statistics (Previous meeting: 338 open issues, 73 open PRs)&lt;/p>
-&lt;p>&lt;em>8:01 PM&lt;/em>&lt;/p>
-&lt;p>Current statistics 334 open issues, 63 open PRs
-Next item
-Overall announcements? New people on committees, with the commit bit, etc?
-Not that I am aware, anyone else?&lt;/p>
-&lt;p>&lt;em>David Burns 8:02 PM&lt;/em>&lt;/p>
-&lt;p>No, but I would like to propose to create a new team on github for my team to at least have triage ability on bugs&lt;/p>
-&lt;p>&lt;em>8:03 PM&lt;/em>&lt;/p>
-&lt;p>I can&amp;rsquo;t assign bugs unless they are somehow associated to the org&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:03 PM&lt;/em>&lt;/p>
-&lt;p>That is a good idea, I had the thought of creating a triage team and add people who are helping already in the #selenium channel, like @Salmon Mode
-:+1:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:03 PM&lt;/em>&lt;/p>
-&lt;p>+1 for a triage team&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:04 PM&lt;/em>&lt;/p>
-&lt;p>We should add that to the governance model&lt;/p>
-&lt;p>&lt;em>David Burns 8:04 PM&lt;/em>&lt;/p>
-&lt;p>we can always discuss commit bit for my team at a later stage but I want them in the org&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:04 PM&lt;/em>&lt;/p>
-&lt;p>as a way to be part of the team without the need of explicitly be a committer&lt;/p>
-&lt;p>&lt;em>8:05 PM&lt;/em>&lt;/p>
-&lt;p>who wants to take that task? add this to the governance model?&lt;/p>
-&lt;p>&lt;em>David Burns 8:05 PM&lt;/em>&lt;/p>
-&lt;p>I can&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:05 PM&lt;/em>&lt;/p>
-&lt;p>:thumbsup:&lt;/p>
-&lt;p>&lt;em>8:06 PM&lt;/em>&lt;/p>
-&lt;p>next topic?
-Improving workflow (Reviewing PRs, Improving design requirements)&lt;/p>
-&lt;p>&lt;em>David Burns 8:06 PM&lt;/em>&lt;/p>
-&lt;p>that&amp;rsquo;s mine&lt;/p>
-&lt;p>&lt;em>8:07 PM&lt;/em>&lt;/p>
-&lt;p>I would like to see if there is a way we can get designs for what people want descrribed better in issues
-I have noticed people misinterpretting requests in bugs that my team are working on&lt;/p>
-&lt;p>&lt;em>8:08 PM&lt;/em>&lt;/p>
-&lt;p>and I dont know if it&amp;rsquo;s tribal knowledge that is missing or general experience or what
-can we get more definitive process for this&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:08 PM&lt;/em>&lt;/p>
-&lt;p>“misinterpreting”?&lt;/p>
-&lt;p>&lt;em>David Burns 8:09 PM&lt;/em>&lt;/p>
-&lt;p>well, we started down the observability issue and there are cases where work was done based on what their intrepretation was and it turned out to be different
-they didnt have the same context and motivation behind the changes&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:10 PM&lt;/em>&lt;/p>
-&lt;p>It really helped when we had a conversation about the event stuff
-And since I’d planned to do that work myself, it seemed more lightweight not to fully describe everything in the issue&lt;/p>
-&lt;p>&lt;em>David Burns 8:10 PM&lt;/em>&lt;/p>
-&lt;p>I agree, and I want to see if there are times we can front load that in to the issue
-rather than go down, write code , it&amp;rsquo;s wrong, try again&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:10 PM&lt;/em>&lt;/p>
-&lt;p>Maybe if we make clear that they’re a placeholder for a conversation
-and identify who to speak to?&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:11 PM&lt;/em>&lt;/p>
-&lt;p>what I am missing in general about this, is that the decisions made through conversations in Slack are not being written in the GitHub issues or in the PRs, which makes things hard to review and move on&lt;/p>
-&lt;p>&lt;em>David Burns 8:11 PM&lt;/em>&lt;/p>
-&lt;p>there is that too&lt;/p>
-&lt;p>&lt;em>8:12 PM&lt;/em>&lt;/p>
-&lt;p>but having a converrsation requires the person that needs to be spoken to being free which isnt always a realistic expectation due to numerrous factors&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:13 PM&lt;/em>&lt;/p>
-&lt;p>True, but front-loading all the design work is also impractical&lt;/p>
-&lt;p>&lt;em>David Burns 8:13 PM&lt;/em>&lt;/p>
-&lt;p>I guess if we add more context and motivation that would be a good halfway point&lt;/p>
-&lt;p>&lt;em>8:13 PM&lt;/em>&lt;/p>
-&lt;p>motivation being the main one for me.&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:13 PM&lt;/em>&lt;/p>
-&lt;p>what we also need to realise is that we did not have something that looked like a roadmap before, Simon helped with his brain dump that turned into the GitHub issues we have for the Selenium 4 release project
-so we are in a better place than the one we were
-but I agree that more detail on what is intended in the issues is needed, a natural next step in the iteration
-:+1:&lt;/p>
-&lt;p>&lt;em>David Burns 8:14 PM&lt;/em>&lt;/p>
-&lt;p>agreed&lt;/p>
-&lt;p>&lt;em>8:15 PM&lt;/em>&lt;/p>
-&lt;p>because, and this is my next item, if we can have some more info in issues it&amp;rsquo;s easierr to review
-there are changes that I can review and I go for correctness in the java server but it might be the wrong idea
-and we have PRs that sit, again due to people having lives and can&amp;rsquo;t always be here&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:16 PM&lt;/em>&lt;/p>
-&lt;p>do you think we should back to the open issues and find ways to extend them and make them more clear?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:17 PM&lt;/em>&lt;/p>
-&lt;p>Select the subset that are needing clarification and ask?&lt;/p>
-&lt;p>&lt;em>David Burns 8:17 PM&lt;/em>&lt;/p>
-&lt;p>I have started doing that with some of the next load of work that I want my team to work on
-my goal, like everyone, is to ship se4&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:17 PM&lt;/em>&lt;/p>
-&lt;p>Agreed
-And I want to help make that happen&lt;/p>
-&lt;p>&lt;em>8:18 PM&lt;/em>&lt;/p>
-&lt;p>But I’m under some weird time constraints&lt;/p>
-&lt;p>&lt;em>David Burns 8:18 PM&lt;/em>&lt;/p>
-&lt;p>I know, I am not blaming anyone&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:18 PM&lt;/em>&lt;/p>
-&lt;p>I know :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>David Burns 8:18 PM&lt;/em>&lt;/p>
-&lt;p>I just want to make your life easier and my team&amp;rsquo;s
-and you&amp;rsquo;re kinda in both&lt;/p>
-&lt;p>&lt;em>8:19 PM&lt;/em>&lt;/p>
-&lt;p>so&amp;hellip; since code is mutable&amp;hellip; can we go with I review for correctness, if it&amp;rsquo;s wrong and we spot then a new issue is raised with more context/motivation?
-and I will put it on my team&amp;rsquo;s stack?&lt;/p>
-&lt;p>&lt;em>8:20 PM&lt;/em>&lt;/p>
-&lt;p>I feel this issue could raise it&amp;rsquo;s head with Sauce if they expand their team&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:20 PM&lt;/em>&lt;/p>
-&lt;p>uh, I need the simple English translation for that phrase&lt;/p>
-&lt;p>&lt;em>David Burns 8:21 PM&lt;/em>&lt;/p>
-&lt;p>heh&amp;hellip; sorry
-since I can review code, and make sure we have tests. If I feel it&amp;rsquo;s ok to merge I will, after a few days&lt;/p>
-&lt;p>&lt;em>8:22 PM&lt;/em>&lt;/p>
-&lt;p>if others in this group disagree with the change, let me know, I will add it to our work and will get it sorted
-The issue of missing context and motivation could happen to anyone joining this group e.g. Sauce expanding their OSS team&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:24 PM&lt;/em>&lt;/p>
-&lt;p>got it, thanks for the translation
-I don’t see any issue with that, I think it makes sense
-in the end we can always improve things after merging code&lt;/p>
-&lt;p>&lt;em>David Burns 8:24 PM&lt;/em>&lt;/p>
-&lt;p>cool. there are a few PRs from my team that have been sitting for a while&lt;/p>
-&lt;p>&lt;em>8:25 PM&lt;/em>&lt;/p>
-&lt;p>and didn&amp;rsquo;t feel I could merge as I didnt have confidence in the serverr (give me a browser any day)&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:26 PM&lt;/em>&lt;/p>
-&lt;p>I am finding ways to help a bit more there, but we should follow your suggestion, I would appreciate a comment in the PR before merging it, like “hey, this has been sitting for while, it looks correct to me, I’ll merge it tomorrow unless someone has something against”
-:+1:&lt;/p>
-&lt;p>&lt;em>David Burns 8:27 PM&lt;/em>&lt;/p>
-&lt;p>deal
-and we can get to a stage where my team can review each other which would be even better&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:27 PM&lt;/em>&lt;/p>
-&lt;p>:thumbsup:&lt;/p>
-&lt;p>&lt;em>8:28 PM&lt;/em>&lt;/p>
-&lt;p>Next topic?
-Selenium Conf website in GitHub org? (README is pending)&lt;/p>
-&lt;p>&lt;em>8:29 PM&lt;/em>&lt;/p>
-&lt;p>Quick update here, Andrew gave me an intro on how to make changes, the setup is more complex than I thought. We are in the process of documenting it.
-We should in the near future formalise a team in the governance model for the Selenium conference, there is a lot of work happening there that should be more recognised
-:+1:&lt;/p>
-&lt;p>&lt;em>8:30 PM&lt;/em>&lt;/p>
-&lt;p>Next topic
-IDE to the main repo?&lt;/p>
-&lt;p>&lt;em>8:30 PM&lt;/em>&lt;/p>
-&lt;p>I’ve seen @AutomatedTester and @rajendra moving the IDE repo into bazel, right?&lt;/p>
-&lt;p>&lt;em>David Burns 8:31 PM&lt;/em>&lt;/p>
-&lt;p>bazel work is hand
-once that is done we can move it over wholesale
-I think the bazel work is 40% of packages. Tests still need doing but we&amp;rsquo;re touch the rough edges of bazel here&lt;/p>
-&lt;p>&lt;em>8:32 PM&lt;/em>&lt;/p>
-&lt;p>we&amp;rsquo;ve both been chatting to people on the bazel slack&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:32 PM&lt;/em>&lt;/p>
-&lt;p>thanks for the update
-next topic?&lt;/p>
-&lt;p>&lt;em>8:33 PM&lt;/em>&lt;/p>
-&lt;p>Users/passwords, access keys, etc… to distribution and release repositories.
-I added this one&lt;/p>
-&lt;p>&lt;em>8:34 PM&lt;/em>&lt;/p>
-&lt;p>A few weeks ago I changed the way docker-selenium is released, moved it to GitHub actions, since I did not know the password used to push the images to Docker Hub, I had to reset the password and use it there&lt;/p>
-&lt;p>&lt;em>8:35 PM&lt;/em>&lt;/p>
-&lt;p>which means that I am the only one who has the password now, and I believe this is the case for many other things we have (npm, python and ruby stuff, stores for Google/Firefox etc..)
-is there a way the ones in the TLC can have access to this information?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:35 PM&lt;/em>&lt;/p>
-&lt;p>We have some of the passwords stored in LastPass&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:35 PM&lt;/em>&lt;/p>
-&lt;p>and also consolidate it?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:36 PM&lt;/em>&lt;/p>
-&lt;p>We can share out individual credentials as needed&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:36 PM&lt;/em>&lt;/p>
-&lt;p>the thing is that the “as needed” moment usually comes when the one who has the credentials is not available&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:37 PM&lt;/em>&lt;/p>
-&lt;p>That’s why we share them on LastPass :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 8:37 PM&lt;/em>&lt;/p>
-&lt;p>We could create a selenium account for Rubygems and share the password, right now it is giving individual accounts permission manually&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:38 PM&lt;/em>&lt;/p>
-&lt;p>Who has access to LastPass and can give access to all the TLC members?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:38 PM&lt;/em>&lt;/p>
-&lt;p>I do.
-Everyone in the PLC should have it too&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:38 PM&lt;/em>&lt;/p>
-&lt;p>I am only referring to credentials needed for releases and so on
-do we want to have different types of credentials mixed?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 8:38 PM&lt;/em>&lt;/p>
-&lt;p>(Sinking into a meeting where I need to talk at work. Dropping out of here)&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:39 PM&lt;/em>&lt;/p>
-&lt;p>Ok, then we can touch this topic again in the next meeting, but we already started it :slightly_smiling_face:
-Next topic:
-Anything new to report from the last PLC/SFC call?&lt;/p>
-&lt;p>&lt;em>8:40 PM&lt;/em>&lt;/p>
-&lt;p>Seems not :slightly_smiling_face:
-Next topic:
-Conferences. Status for SeConf India &amp;amp; SeConf Chicago?&lt;/p>
-&lt;p>&lt;em>David Burns 8:42 PM&lt;/em>&lt;/p>
-&lt;p>@mmerrell or @manoj9788 ?&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:42 PM&lt;/em>&lt;/p>
-&lt;p>I know India is virtual and there is a schedule already, I think they are figuring out if workshops will be done
-:+1::skin-tone-4:&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:43 PM&lt;/em>&lt;/p>
-&lt;p>and I saw that Chicago is officially postponed to 2021&lt;/p>
-&lt;p>&lt;em>David Burns 8:43 PM&lt;/em>&lt;/p>
-&lt;p>in that case, move this topic to just india and then post that conference drop it from the agenda for a while&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:44 PM&lt;/em>&lt;/p>
-&lt;p>ok, makes sense
-next topic:
-Pending work that needs to be done for Alpha 7?
-Pending work that needs to be done for the first Beta?
-I am not sure if there are many updates here&lt;/p>
-&lt;p>&lt;em>8:44 PM&lt;/em>&lt;/p>
-&lt;p>I think we need to land those PRs that are sitting to move to the last alpha&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 8:46 PM&lt;/em>&lt;/p>
-&lt;p>Yeah&amp;ndash;we&amp;rsquo;ve moved out all SeConf Chicago meetings until November. We&amp;rsquo;re working to choose a new date with the venue for next year, and working on language in the contract that will allow us &amp;ldquo;ultimate cancel ability&amp;rdquo; if this thing continues to be a problem. We can move that off of the agenda for the time being
-:+1:&lt;/p>
-&lt;p>&lt;em>8:47 PM&lt;/em>&lt;/p>
-&lt;p>I don&amp;rsquo;t have any new information about India - as far as I know there are no changes to the plan&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:48 PM&lt;/em>&lt;/p>
-&lt;p>thanks Marcus!&lt;/p>
-&lt;p>&lt;em>8:49 PM&lt;/em>&lt;/p>
-&lt;p>So, I know that the 4 remaining topics in the agenda have no updates, so I suggest we skip them and we end the meeting early
-what do you think?&lt;/p>
-&lt;p>&lt;em>David Burns 8:49 PM&lt;/em>&lt;/p>
-&lt;p>fine
-@mmerrell hey&amp;hellip; friendly poke about that draining PR&lt;/p>
-&lt;p>&lt;em>Diego Molina 8:51 PM&lt;/em>&lt;/p>
-&lt;p>ok, thanks everyone for your time!&lt;/p></description></item></channel></rss>
+&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/">https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
