@@ -13,40 +13,38 @@ mas esperamos que este documento ajude a esclarecer alguma confusão.
 
 ## Os componentes chave
 
-The main components of the Grid are:
+Os componentes principais da Grid são:
 
 <dl>
 <dt>Event Bus
-<dd>Used for sending messages which may be received asynchronously
-    between the other components.
+<dd>Usado para enviar mensagens que podem ser recebidas de forma assíncrona
+    entre os outros componentes.
 
 <dt>New Session Queue
-<dd>Maintains a list of incoming sessions which have yet to be
-    assigned to a Node by the Distributor.
+<dd>Mantém uma lista de pedidos de sessão que serão assignadas a um Node
+    pelo Distributor.
 
 <dt>Distributor
-<dd>Responsible for maintaining a model of the available locations in
-    the Grid where a session may run (known as "slots") and taking any
-    incoming <a
-    href="https://w3c.github.io/webdriver/#new-session">new
-    session</a> requests and assigning them to a slot.
+<dd>Responsável por manter um modelo das localizações da Grid (slots) onde uma 
+    sessão pode ser lançada e também por aceitar novos 
+    <a href="https://w3c.github.io/webdriver/#new-session">pedidos de sessão</a> 
+    e assignar a um slot livre.
 
 <dt>Node
-<dd>Runs a <a
-    href="https://w3c.github.io/webdriver/#dfn-sessions">WebDriver
-    session</a>. Each session is assigned to a slot, and each node has
-    one or more slots.
+<dd>Executa uma <a href="https://w3c.github.io/webdriver/#dfn-sessions"> 
+    sessão WebDriver</a>. Cada sessão é assignada a um slot e cada Node tem
+    um ou mais slots.
 
 <dt>Session Map
-<dd>Maintains a mapping between the <a
-    href="https://w3c.github.io/webdriver/#dfn-session-id">session
-    ID</a> and the address of the Node the session is running on.
+<dd>Mantém um mapeamento entre um <a
+    href="https://w3c.github.io/webdriver/#dfn-session-id">ID de sessão</a>
+    e o endereço do Node onde a sessão está a ser executada.
 
 <dt>Router
-<dd>Acts as the front-end of the Grid. This is the only part of the
-    Grid which <i>may</i> be exposed to the wider Web (though we strongly
-    caution against it). This routes incoming requests to either the
-    New Session Queue or the Node on which the session is running.
+<dd>Este é o ponto de entrada da Grid. É também a única parte da Grid
+    que <i>poderá</i> estar exposta à Internet (embora nós não recomendemos).
+    Este componente reencaminha novos pedidos para New Session Queue ou 
+    para o Node onde a sessão esteja a ser executada
 </dl>
 
 While discussing the Grid, there are some other useful concepts to
