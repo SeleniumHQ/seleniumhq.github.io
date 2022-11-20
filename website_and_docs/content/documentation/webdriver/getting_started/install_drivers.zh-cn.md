@@ -14,13 +14,15 @@ aliases: [
 通过WebDriver, 
 Selenium支持市场上所有主要浏览器, 
 如Chrome、Firefox、Internet Explorer、Edge和Safari. 
-WebDriver尽量使用浏览器内置的自动化支持来驱动浏览器.
+WebDriver尽量使用浏览器内置的自动化支持
+来驱动浏览器.
 
-由于除Internet Explorer之外的所有驱动程序实现都是由浏览器供应商自己提供的, 
+由于除Internet Explorer之外的所有驱动程序实现
+都是由浏览器供应商自己提供的, 
 因此标准Selenium发行版中不包括这些驱动程序. 
 本节介绍了使用不同浏览器的基本要求.
 
-在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中，
+在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
 {{% pageinfo color="warning" %}}
