@@ -47,7 +47,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L18-L21" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
@@ -70,7 +70,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L31-L36" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
@@ -99,7 +99,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L46-L48" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
@@ -150,7 +150,7 @@ This code will end up with the text: `SeleniumSelenium!`
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L56-L67" >}}
