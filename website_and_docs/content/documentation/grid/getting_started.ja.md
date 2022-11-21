@@ -83,10 +83,10 @@ java -jar selenium-server-<version>.jar hub
 
 #### ノード
 
-ノードは起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
 が通っている利用可能なドライバーを検出します。
 
-次のコマンドはノードがハブと同じマシン上で動作していることを前提としています。
+次のコマンドは**ノード**が**ハブ**と同じマシン上で動作していることを前提としています。
 
 ```shell
 java -jar selenium-server-<version>.jar node
@@ -108,25 +108,25 @@ java -jar selenium-server-<version>.jar node --port 6666
 
 ##### 異なるマシンでノードとハブを動かす
 
-ハブとノードは HTTP と[イベントバス]({{< ref "components.md#event-bus" >}})を介して通信します (イベントバスはハブの一部として存在します)。
-ノードはイベントバスを通じてメッセージを送信し、登録処理を開始します。
-ハブがメッセージを受け取り、ノードの存在を確かめるため HTTP を使ってノードにアクセスします。
+**ハブ**と**ノード**は HTTP と[イベントバス]({{< ref "components.md#event-bus" >}})を介して通信します (**イベントバス**は**ハブ**の一部として存在します)。
+**ノード**は**イベントバス**を通じてメッセージを送信し、登録処理を開始します。
+**ハブ**がメッセージを受け取り、**ノード**の存在を確かめるため HTTP を使って**ノード**にアクセスします。
 
-ハブがデフォルトのポートを使用していれば、 `--hub` フラグでノードを登録することができます。
+**ハブ**がデフォルトのポートを使用していれば、 `--hub` フラグで**ノード**を登録することができます。
 
 ```shell
 java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444
 ```
 
-ハブがデフォルトのポートを使用していない場合、`--publish-events` と `--subscribe-events` のフラグが必要です。
+**ハブ**がデフォルトのポートを使用していない場合、`--publish-events` と `--subscribe-events` のフラグが必要です。
 
-例えばハブが `8886` `8887` `8888` ポートを利用している場合、
+例えば**ハブ**が `8886` `8887` `8888` ポートを利用している場合、
 
 ```shell
 java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887 --port 8888
 ```
 
-ノードはこれらのポートを登録する際に使用します。
+**ノード**はこれらのポートを登録する際に使用します。
 
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
@@ -140,7 +140,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:888
 コンポーネント間で通信をするために、全てのポートを適切に公開することが重要です。
 {{% /alert %}}
 
-1. イベントバスは Grid コンポーネント間での内部通信を可能にします。
+1. **イベントバス**は Grid コンポーネント間での内部通信を可能にします。
 
 デフォルトポートは `4442`, `4443`, `5557` です。
 
@@ -148,7 +148,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:888
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. 新規セッションキューは新規セッションリクエストををキューに積み、ディストリビューターがリクエストを取得できるようにします。
+2. **新規セッションキュー**は新規セッションリクエストををキューに積み、**ディストリビューター**がリクエストを取得できるようにします。
 
 デフォルトポートは `5559` です。
 
@@ -156,28 +156,28 @@ java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-
 java -jar selenium-server-<version>.jar sessionqueue --port 5559
 ```
 
-3. セッションマップはセッション ID とそのセッションが実行中のノードのマップを持ちます。
+3. **セッションマップ**はセッション ID とそのセッションが実行中の**ノード**のマップを持ちます。
 
-デフォルトのセッションマップのポートは `5556` です。
-セッションマップはイベントバスと通信します。
+デフォルトの**セッションマップ**のポートは `5556` です。
+**セッションマップ**は**イベントバス**と通信します。
 
 ```shell
 java -jar selenium-server-<version>.jar sessions --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5556
 ```
 
-4. ディストリビューターは新規セッションキューに新規セッションリクエストを問い合わせ、 capabilities がマッチするノードにアサインします。ノードは、ハブとノード構成の Grid におけるハブの登録と同じように、ディストリビューターに登録します。
+4. **ディストリビューター**は**新規セッションキュー**に新規セッションリクエストを問い合わせ、 capabilities がマッチする**ノード**にアサインします。**ノード**は、**ハブ&ノード**構成の Grid における**ハブ**の登録と同じように、**ディストリビューター**に登録します。
 
-デフォルトのディストリビューターのポートは `5553` です。
-ディストリビューターは新規セッションキュー、セッションマップ、イベントバス、ノードと通信します。
+デフォルトの**ディストリビューター**のポートは `5553` です。
+**ディストリビューター**は**新規セッションキュー**、**セッションマップ**、**イベントバス**、**ノード**と通信します。
 
 ```shell
 java -jar selenium-server-<version>.jar distributor --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --sessions http://<sessions-ip>:5556 --sessionqueue http://<new-session-queue-ip>:5559 --port 5553 --bind-bus false
 ```
 
-5. ルーターは新規セッションリクエストをキューに、既存セッションのリクエストをそのセッションが実行中のノードに転送します。
+5. **ルーター**は**新規セッションリクエスト**をキューに、既存セッションのリクエストをそのセッションが実行中の**ノード**に転送します。
 
-デフォルトのルーターポートは `4444` です。
-ルーターは新規セッションキュー、セッションマップ、ディストリビューターと通信します。
+デフォルトの**ルーター**のポートは `4444` です。
+**ルーター**は**新規セッションキュー**、**セッションマップ**、**ディストリビューター**と通信します。
 
 ```shell
 java -jar selenium-server-<version>.jar router --sessions http://<sessions-ip>:5556 --distributor http://<distributor-ip>:5553 --sessionqueue http://<new-session-queue-ip>:5559 --port 4444
@@ -185,7 +185,7 @@ java -jar selenium-server-<version>.jar router --sessions http://<sessions-ip>:5
 
 6. ノード
 
-デフォルトのノードのポートは `5555` です。
+デフォルトの**ノード**のポートは `5555` です。
 
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443
