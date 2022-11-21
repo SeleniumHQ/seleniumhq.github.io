@@ -34,29 +34,28 @@ WebDriver尽量使用浏览器内置的自动化支持
 </p>
 {{% /pageinfo %}}
 
-## Four Ways to Use Drivers
+## 四种使用驱动的方法
 
 ### 1. Selenium Manager <small>(Beta)</small>
 
 {{< badge-version version="4.6" >}}
 
-Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
-of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
-found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
-will eventually even download browsers if necessary.
+Selenium Manager可以帮助你获得一个运行Selenium的开箱即用的环境。
+如果在`PATH`中没有找到Chrome、Firefox和Edge的驱动，Selenium Manager的Beta 1版将为它们配置。
+不需要额外的配置。如果有必要，Selenium Manager的未来版本也会在必要时一同下载浏览器。
 
-Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+在这篇[公告](/blog/2022/introducing-selenium-manager/)中了解更多有关 Selenium Manager 的信息。
 
 ### 2. 驱动管理软件
 
 大多数机器会自动更新浏览器, 
-但驱动程序不会. 
+但不会自动更新驱动程序. 
 为了确保为浏览器提供正确的驱动程序, 
 这里有许多第三方库可为您提供帮助.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-**Important:** This package does not currently work for IEDriverServer v4+
+**注意：** 这个软件包目前不能用于IEDriverServer v4以上的版本。
 
 1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -117,7 +116,7 @@ driver = Selenium::WebDriver.for :chrome
 
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
- *There is not a recommended driver manager for JavaScript at this time*
+ *暂时还没有推荐的JavaScript驱动管理器*
 {{% /tab %}}
 {{% tab header="Kotlin" %}}
 
@@ -286,7 +285,7 @@ fun main(args: Array<String>) {
 | Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
 | Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
 
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
+备注：Opera驱动不再适用于Selenium的最新功能，目前官方不支持。
 
 
 ## 下一步
