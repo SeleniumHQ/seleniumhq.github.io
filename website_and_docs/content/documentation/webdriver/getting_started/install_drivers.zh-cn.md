@@ -44,7 +44,7 @@ Selenium Manager可以帮助你获得一个运行Selenium的开箱即用的环�
 如果在`PATH`中没有找到Chrome、Firefox和Edge的驱动，Selenium Manager的Beta 1版将为它们配置。
 不需要额外的配置。如果有必要，Selenium Manager的未来版本也会在必要时一同下载浏览器。
 
-阅读有关 [Selenium Manager](/blog/2022/introducing-selenium-manager/) 的文章。
+在这篇[公告](/blog/2022/introducing-selenium-manager/)中了解更多有关 Selenium Manager 的信息。
 
 ### 2. 驱动管理软件
 
