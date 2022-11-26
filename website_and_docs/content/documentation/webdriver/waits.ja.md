@@ -358,10 +358,8 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
 
-WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
-  public WebElement apply(WebDriver driver) {
-    return driver.findElement(By.id("foo"));
-  }
+WebElement foo = wait.until(driver -> {
+  return driver.findElement(By.id("foo"));
 });
   {{< /tab >}}
   {{< tab header="Python" >}}
