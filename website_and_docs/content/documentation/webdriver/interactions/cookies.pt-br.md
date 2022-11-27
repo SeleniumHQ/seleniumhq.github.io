@@ -211,6 +211,7 @@ await driver.get('http://www.example.com');
 await driver.manage().addCookie({name: 'key', value: 'value'});
 //Get cookie details with named cookie 'key'
 const cookie = await driver.manage().getCookie('key');
+console.log(cookie);
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
