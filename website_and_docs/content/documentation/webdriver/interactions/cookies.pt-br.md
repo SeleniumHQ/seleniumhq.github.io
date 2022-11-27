@@ -89,7 +89,18 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context
+await driver.manage().addCookie({name: 'key', value: 'value'});
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -186,7 +197,20 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context
+await driver.manage().addCookie({name: 'key', value: 'value'});
+//Get cookie details with named cookie 'key'
+const cookie = await driver.manage().getCookie('key');
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -290,7 +314,22 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context
+await driver.manage().addCookie({name: 'key', value: 'value'});
+await driver.manage().addCookie({name: 'key2', value: 'value2'});
+//Get all available cookies
+const cookies = await driver.manage().getCookies();
+console.log(cookies);
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -402,7 +441,21 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context
+await driver.manage().addCookie({name: 'key', value: 'value'});
+await driver.manage().addCookie({name: 'key2', value: 'value2'});
+//Deletes a cookie with name 'key'
+await driver.manage().deleteCookie('key');
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -505,7 +558,21 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context
+await driver.manage().addCookie({name: 'key', value: 'value'});
+await driver.manage().addCookie({name: 'key2', value: 'value2'});
+//Deletes all cookies
+await driver.manage().deleteAllCookies();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -631,7 +698,22 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" code=false >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
+import { Builder, Browser } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+
+const options = new chrome.Options();
+//As an argument, you must specify the path to the driver
+//For example: 'C:/chromedriver.exe'
+const service = new chrome.ServiceBuilder('<path>');
+const driver = new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).setChromeService(service).build();
+//Navigate to url
+await driver.get('http://www.example.com');
+//Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+await driver.manage().addCookie({name: 'key', value: 'value', sameSite: 'Strict'});
+await driver.manage().addCookie({name: 'key2', value: 'value2', sameSite: 'Lax'});
+const cookie1 = await driver.manage().getCookie('key');
+const cookie2 = await driver.manage().getCookie('key2');
+console.log(cookie1, cookie2);
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
