@@ -148,7 +148,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:888
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. **新規セッションキュー**は新規セッションリクエストをキューに積み、**ディストリビューター**がリクエストを取得できるようにします。
+2. **新規セッションキュー**は新規セッションリクエストをキューに積み、ディストリビューターがリクエストを取得できるようにします。
 
 デフォルトポートは `5559` です。
 
