@@ -162,8 +162,10 @@ All code examples to be in our
 [example directories](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
 
 This code can be automatically displayed in the documentation using the `gh-codeblock` shortcode.
-The shortcode automatically generates its own html, so set `code=false` to prevent the auto-formatting.
-We still need `langEqualsHeader=true` to keep the language tabs synchronized throughout the page.
+The shortcode automatically generates its own html, so if any tab is using this shortcode,
+set `code=false` in the `tabpane` to prevent the auto-formatting, and add `code=true` in any
+`tab` that still needs to get formatted with code.
+Either way, set `langEqualsHeader=true` to keep the language tabs synchronized throughout the page.
 Note that the `gh-codeblock` line can not be indented at all.
 
 One great thing about using `gh-codeblock` is that it adds a link to the full example.
@@ -225,11 +227,11 @@ then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with 
     {{</* tabpane code=false */>}}
     {{%/* tab header="Java" */%}}
     1. Start the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" */>}}
     2. Navigate to a page
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L18" */>}}
     3. Quit the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" */>}}
     {{%/* /tab */%}}
     < ... >
     {{</* /tabpane */>}}
@@ -239,11 +241,11 @@ This produces:
 {{< tabpane code=false langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 1. Start the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L29" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}
 2. Navigate to a page
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L39" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L18" >}}
 3. Quit the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L34" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
 {{% /tab %}}
 {{< /tabpane >}}
 
