@@ -67,7 +67,7 @@ java -jar selenium-server-<version>.jar standalone
 
 - 様々なマシンを Grid に統合できます
   - 様々な OS やブラウザーバージョンを持つマシンなど
-- WebDriver テストのエントリーポイントをを持っています
+- WebDriver テストのエントリーポイントを持っています
 - Grid を停止せずにキャパシティのスケールアップ・ダウンが可能です
 
 #### ハブ
@@ -108,7 +108,7 @@ java -jar selenium-server-<version>.jar node --port 6666
 
 ##### 異なるマシンでノードとハブを動かす
 
-**ハブ**と**ノード**は HTTP と[イベントバス]({{< ref "components.md#event-bus" >}})を介して通信します (**イベントバス**は**ハブ**の一部として存在します)。
+**ハブ**と**ノード**は HTTP と[**イベントバス**]({{< ref "components.md#event-bus" >}})を介して通信します (**イベントバス**は**ハブ**の一部として存在します)。
 **ノード**は**イベントバス**を通じてメッセージを送信し、登録処理を開始します。
 **ハブ**がメッセージを受け取り、**ノード**の存在を確かめるため HTTP を使って**ノード**にアクセスします。
 
@@ -148,7 +148,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:888
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. **新規セッションキュー**は新規セッションリクエストををキューに積み、**ディストリビューター**がリクエストを取得できるようにします。
+2. **新規セッションキュー**は新規セッションリクエストをキューに積み、**ディストリビューター**がリクエストを取得できるようにします。
 
 デフォルトポートは `5559` です。
 
