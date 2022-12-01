@@ -61,7 +61,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. Invocar o `setup()`:
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L16-L18" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L17-L19" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -74,7 +74,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 2. Use o `install()` para obter a localização usada pelo gerenciador WebDriver e passá-la para a classe de serviço
 
-{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L14-L16" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L15-L17" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -87,7 +87,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. Use o `SetUpDriver()` que requer uma classe de configuração:
 
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L18-L20" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L19-L21" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -123,12 +123,8 @@ Veja o exemplo completo no GitHub.</a>
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. Invoque o método de configuração antes de inicializar o driver como faria normalmente:
-```java
-fun chrome(): WebDriver {
-    WebDriverManager.chromedriver().setup()
-    return ChromeDriver()
-}
-```
+
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/InstallDriversTest.kt#L17-L18" >}}
 
 {{% /tab %}}
 {{< /tabpane >}}

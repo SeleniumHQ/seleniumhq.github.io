@@ -50,16 +50,6 @@ class OpenBrowserTest {
         driver.quit()
     }
 
-    @Disabled("Only runs on Windows")
-    @Test
-    fun internetExplorerCompatibilitySession() {
-        val options = InternetExplorerOptions()
-        options.attachToEdgeChrome()
-        options.withEdgeExecutablePath("/path/to/edge/browser")
-        driver = InternetExplorerDriver(options)
-        driver.quit()
-    }
-
     @Disabled("Requires non-standard browser")
     @Test
     fun operaSession() {

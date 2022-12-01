@@ -10,24 +10,11 @@ namespace SeleniumDocs.Browsers
     [EnabledOnOs("WINDOWS")]
     public class InternetExplorerTest
     {
-        [TestInitialize]
-        public void ReferenceHardCodedDriver()
-        {
-            var hardCodedPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../");
-            var path = Path.GetFullPath(hardCodedPath);
-            Environment.SetEnvironmentVariable("IE_DRIVER_PATH", path);
-        }
-
         [TestMethod]
         public void BasicOptions()
         {
-            var driverPath = Environment.GetEnvironmentVariable("IE_DRIVER_PATH");
-            var service = InternetExplorerDriverService.CreateDefaultService(driverPath);
-            var options = new InternetExplorerOptions
-            {
-                IgnoreZoomLevel = true,
-            };
-            var driver = new InternetExplorerDriver(service, options);
+            var options = new InternetExplorerOptions();
+            var driver = new InternetExplorerDriver(options);
 
             driver.Quit();
         }

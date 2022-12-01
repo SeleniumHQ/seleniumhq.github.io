@@ -63,7 +63,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. 调用 `setup()`:
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L16-L18" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L17-L19" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -76,7 +76,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 2. 使用 `install()` 获取管理器使用的位置, 并将其传递到服务类中
 
-{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L14-L16" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L15-L17" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -89,7 +89,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. 使用 `SetUpDriver()` 时需要一个配置类:
 
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L18-L20" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L19-L21" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -125,12 +125,8 @@ driver = Selenium::WebDriver.for :chrome
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. 在初始化驱动程序之前调用setup方法:
-```java
-fun chrome(): WebDriver {
-    WebDriverManager.chromedriver().setup()
-    return ChromeDriver()
-}
-```
+
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/InstallDriversTest.kt#L17-L18" >}}
 
 {{% /tab %}}
 {{< /tabpane >}}
