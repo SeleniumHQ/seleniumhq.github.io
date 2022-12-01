@@ -1,8 +1,6 @@
 package dev.selenium.browsers;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
@@ -13,11 +11,6 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 public class InternetExplorerTest {
     public InternetExplorerDriver driver;
 
-    @BeforeAll
-    public static void setDriver() {
-        WebDriverManager.iedriver().setup();
-    }
-
     @AfterEach
     public void quit() {
         driver.quit();
@@ -26,7 +19,6 @@ public class InternetExplorerTest {
     @Test
     public void basicOptions() {
         InternetExplorerOptions options = new InternetExplorerOptions();
-        options.ignoreZoomSettings();
         driver = new InternetExplorerDriver(options);
     }
 }

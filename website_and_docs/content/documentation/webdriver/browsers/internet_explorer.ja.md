@@ -29,21 +29,16 @@ Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with b
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#28-L30" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#21-L22" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class for IE to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L13-L16" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-Note that the .NET [Driver Manager]({{< ref "../getting_started/install_drivers#1-driver-management-software" >}})
-does not support Internet Explorer, so the location must be in a
-[directory on PATH]({{< ref "../getting_started/install_drivers#2-the-path-environment-variable" >}}),
-or specified explicitly as in this example.
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L24-L30" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L16-L17" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" code=true >}}
   let driver = await new Builder()
@@ -53,8 +48,6 @@ or specified explicitly as in this example.
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
   val options = InternetExplorerOptions()
-  options.attachToEdgeChrome()
-  options.withEdgeExecutablePath("/path/to/edge/browser")
   val driver = InternetExplorerDriver(options)
 {{< /tab >}}
 {{< /tabpane >}}
@@ -64,6 +57,9 @@ As of Internet Explorer Driver v4.5.0:
 use the two parameters above. IE Driver will use Edge and will automatically locate it. 
 * If IE and Edge are both present on the system, you only need to set attaching to Edge,
 IE Driver will automatically locate Edge on your system.
+
+As of Internet Explorer Driver v4.7.0:
+* No longer need to set Ignore Zoom Level for Edge in IE Mode
 
 Here are a few common use cases with different capabilities:
 
