@@ -1,118 +1,139 @@
 ---
-title: "Observability"
-linkTitle: "Observability"
+title: "可観測性"
+linkTitle: "可観測性"
 weight: 1
 aliases: ["/documentation/ja/grid/grid_4/advanced_features/observability/"]
 ---
 
+## 目次
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
-
-## Table of Contents
- - [Selenium Grid](#selenium-grid)
- - [Observability](#observability)
-	 - [Distributed tracing](#distributed-tracing) 	
-	 -  [Event logging](#event-logging)
-  - [Grid Observability](#grid-observability)
-	  - [Visualizing Traces](#visualizing-traces)
-	  - [Leveraging event logs](#leveraging-event-logs)
-  - [References](#references)
+- [Selenium Grid](#selenium-grid)
+- [可観測性](#可観測性)
+  - [分散トレーシング](#分散トレーシング)
+  - [イベントロギング](#イベントロギング)
+- [Grid の可観測性](#Grid-の可観測性)
+  - [トレースの可視化](#トレースの可視化)
+  - [イベントログの活用](#イベントログの活用)
+- [参考](#参考)
 
 ## Selenium Grid
 
-Grid aids in scaling and distributing tests by executing tests on various browser and operating system combinations.
+Grid は、さまざまなブラウザとオペレーティングシステムの組み合わせでテストを実行することにより、テストのスケーリングと分散を支援します。
 
-## Observability
+## 可観測性
 
-Observability has three pillars: traces, metrics and logs. Since Selenium Grid 4 is designed to be fully distributed, observability will make it easier to understand and debug the internals. 
+可観測性(Observability) には、トレース、メトリクス、ログの 3 つの柱があります。
+Selenium Grid 4 は完全分散型に設計されているため、可観測性を確保することで内部を理解し、デバッグすることが容易になります。
 
-## Distributed tracing
-A single request or transaction spans multiple services and components.  Tracing tracks the request lifecycle as each service executes the request. It is useful in debugging in an error scenario.
-Some key terms used in tracing context are: 
+## 分散トレーシング
 
-**Trace**
-Tracing allows one to trace a request through multiple services, starting from its origin to its final destination. This request's journey helps in debugging, monitoring the end-to-end flow, and identifying failures. A trace depicts the end-to-end request flow. Each trace has a unique id as its identifier.
+1 つのリクエストやトランザクションは、複数のサービスやコンポーネントにまたがります。
+トレースは、各サービスがリクエストを実行する際に、リクエストのライフサイクルをトラックします。これは、エラーシナリオのデバッグに有用です。
+トレースで使用される用語は次のとおりです:
 
-**Span**
-Each trace is made up of timed operations called spans. A span has a start and end time and it represents operations done by a service. The granularity of span depends on how it is instrumented. Each span has a unique identifier.  All spans within a trace have the same trace id.
+**トレース**
+トレースでは、複数のサービスを通じてリクエストの出発点から最終地点までを追跡することができます。
+このリクエストの旅は、デバッグ、エンドツーエンドフローの監視、障害の特定に役立ちます。
+トレースは、エンドツーエンドのリクエストフローを描きます。
+各トレースは識別子としてユニークな ID を持っています。
 
-**Span Attributes**
-Span attributes are key-value pairs which provide additional information about each span.
+**スパン**
 
-**Events**
-Events are timed-stamped logs within a span. They provide additional context to the existing spans. Events also contain key-value pairs as event attributes.
+各トレースは、スパンと呼ばれる時間で区切られたオペレーションで構成されています。
+スパンには開始時刻と終了時刻があり、サービスによって実行される操作を表します。
+スパンの粒度は実装方法に依存します。各スパンは一意の識別子を持ちます。
+トレース内のすべてのスパンは、同じトレース ID を持ちます。
 
-## Event logging
+**スパン属性**
+スパン属性は各スパンの付加的な情報を提供するキーと値のペアです。
 
-Logging is essential to debug an application. Logging is often done in a human-readable format. But for machines to search and analyze the logs, it has to have a well-defined format. Structured logging is a common practice of recording logs consistently in a fixed format. It commonly contains fields like:
- * Timestamp
- * Logging level
- * Logger class
- * Log message (This is further broken down into fields relevant to the operation where the log was recorded)
+**イベント**
+イベントは、スパン内のタイムスタンプ付きログです。
+既存のスパンに追加のコンテキストを提供します。
+イベントには、イベント属性としてキーと値のペアも含まれます。
 
-Logs and events are closely related. Events encapsulate all the possible information available to do a single unit of work. Logs are essentially subsets of an event. At the crux, both aid in debugging.
-Refer following resources for detailed understanding:
- 1. [https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/](https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/)
- 2. [https://charity.wtf/2019/02/05/logs-vs-structured-events/](https://charity.wtf/2019/02/05/logs-vs-structured-events/)
+## イベントロギング
 
-## Grid Observability
+アプリケーションのデバッグには、ロギングが欠かせません。
+ログの記録は多くの場合、人間が読める形式で行われます。
+しかし、機械がログを検索・分析するためには、明確に定義されたフォーマットである必要があります。
+構造化ロギングは、固定フォーマットで一貫してログを記録する一般的な方法です。
+一般的には次のようなフィールドが含まれます。
 
-Selenium server is instrumented with tracing using OpenTelemetry. Every request to the server is traced from start to end. Each trace consists of a series of spans as a request is executed within the server. 
-Most spans in the Selenium server consist of two events:
-1. Normal event - records all information about a unit of work and marks successful completion of the work.
-2. Error event - records all information till the error occurs and then records the error information. Marks an exception event.
+- タイムスタンプ
+- ログレベル
+- ロガークラス
+- ログメッセージ (これはさらに、ログが記録された操作に関するフィールドに分解されます)
 
-Running Selenium server 
- 1. [Standalone](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#standalone-mode)
- 2. [Hub and Node](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#hub-and-node)
- 3. [Fully Distributed](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#fully-distributed)
- 4. [Docker](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#using-docker)
+ログとイベントは密接に関連しています。
+イベントは、1 つの処理を行うための情報を全てカプセル化します。
+ログは基本的にイベントのサブセットです。
+重要なのは、どちらもデバッグを支援することです。
+詳細については、以下のリソースを参照してください。
 
-## Visualizing Traces
-All spans, events and their respective attributes are part of a trace. Tracing works while running the server in all of the above-mentioned modes.
+1.  [https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/](https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/)
+2.  [https://charity.wtf/2019/02/05/logs-vs-structured-events/](https://charity.wtf/2019/02/05/logs-vs-structured-events/)
 
-By default, tracing is enabled in the Selenium server. Selenium server exports the traces via two exporters:
-1. Console - Logs all traces and their included spans at FINE level. By default, Selenium server prints logs at INFO level and above. 
-The **log-level** flag can be used to pass a logging level of choice while running the Selenium Grid jar/s.
+## Grid の可観測性
+
+Selenium サーバーは OpenTelemetry を使ってトレースできるようになっています。
+サーバへのすべてのリクエストは、最初から最後までトレースされます。
+各トレースは、リクエストがサーバ内で実行されるときの一連のスパンから構成されます。
+Selenium サーバのスパンのほとんどは、2 つのイベントから構成されています。
+
+1. 通常イベント- 単一の処理に関するすべての情報を記録し、処理が正常に完了したことを知らせます。
+2. エラーイベント- エラーが発生するまでのすべての情報を記録し、エラー情報を記録します。例外イベントをマークします。
+
+Selenium サーバーを起動する:
+
+1.  [スタンドアロン](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#standalone-mode)
+2.  [ハブ・ノード](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#hub-and-node)
+3.  [完全分散モード](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#fully-distributed)
+4.  [Docker](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#using-docker)
+
+## トレースの可視化
+
+すべてのスパン、イベント、およびそれぞれの属性がトレースの一部となります。
+トレースは、上記のすべてのモードでサーバを実行している間動作します。
+トレースはデフォルトで Selenium サーバで有効になっています。
+
+Selenium サーバーは、2 つのエクスポーター経由でトレースをエクスポートします。
+
+1. コンソール - すべてのトレースと、それに含まれるスパンを FINE レベルでログに出力します。デフォルトでは、Selenium サーバーは INFO レベル以上のログを出力します。
+   **log-level** フラグを使うと、Selenium Grid jar を実行する際に任意のログレベルを指定することができます。
+
 ```shell
 java -jar selenium-server-4.0.0-<selenium-version>.jar standalone --log-level FINE
 ```
-2. Jaeger UI - OpenTelemetry provides the APIs and SDKs to instrument traces in the code. Whereas Jaeger is a tracing backend, that aids in collecting the tracing telemetry data and providing querying, filtering and visualizing features for the data.
 
-Detailed instructions of visualizing traces using Jaeger UI can be obtained by running the command :
+2. Jaeger UI - OpenTelemetry は、コード内のトレースを計測するための API と SDK を提供します。一方、Jaeger はトレースのバックエンドで、トレースのテレメトリデータを収集し、データのクエリ、フィルタリング、ビジュアライズの機能を提供します。
+
+Jaeger UI を用いたトレースの可視化の詳細な手順を確認するには、次のコマンドを実行してください:
 
 ```shell
 java -jar selenium-server-4.0.0-<selenium-version>.jar info tracing
 ```
 
-[A very good example and scripts to run the server and send traces to Jaeger](https://github.com/manoj9788/tracing-selenium-grid)
+[非常に参考になる例と、Jaeger にトレースを送信するスクリプトです](https://github.com/manoj9788/tracing-selenium-grid)
 
-## Leveraging event logs
-Tracing has to be enabled for event logging as well, even if one does not wish to export traces to visualize them.  
-**By default, tracing is enabled. No additional parameters need to be passed to see logs on the console.**
-All events within a span are logged at FINE level. Error events are logged at WARN level.
+## イベントログの活用
 
-All event logs have the following fields :
- | Field | Field value | Description |
-|-|-|-|
-| Event time | eventId | Timestamp of the event record in epoch nanoseconds. |
-| Trace Id  | tracedId | Each trace is uniquely identified by a trace id. |
-| Span Id  | spanId | Each span within a trace is uniquely identified by a span id. |
-| Span Kind | spanKind | Span kind is a property of span indicating the type of span. It helps in understanding the nature of the unit of work done by the Span. |
-| Event name | eventName | This maps to the log message. |
-| Event attributes | eventAttributes | This forms the crux of the event logs, based on the operation executed, it has JSON formatted key-value pairs. This also includes a handler class attribute, to show the logger class. |
+トレースを可視化しない場合でも、イベントロギングではトレースを有効にする必要があります。
+**デフォルトでは、トレースは有効です。コンソールでログを見るために、追加のパラメータを渡す必要はありません。**
+スパン内のすべてのイベントは FINE レベルでログに記録されます。エラーイベントは、WARN レベルでログに記録されます。
 
- Sample log  
+全てのイベントは次のフィールドを持ちます:
 
- 
+| フィールド   | フィールド名    | 概要                                                                                                                                                                                         |
+| ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| イベント時刻 | eventId         | イベントのタイムスタンプ(エポックナノ秒)。                                                                                                                                                   |
+| トレース ID  | tracedId        | 各トレースはトレース ID で一意に識別されます。                                                                                                                                               |
+| スパン ID    | spanId          | トレース内の各スパンは、スパン ID により一意に識別されます。                                                                                                                                 |
+| スパン種別   | spanKind        | スパン種別は、スパンの種類を示すスパンのプロパティです。スパンの処理の性質を識別するのに役立ちます。                                                                                         |
+| イベント名   | eventName       | ログメッセージにマッピングされます。                                                                                                                                                         |
+| イベント属性 | eventAttributes | イベントログの核となるもので、実行された操作に基づいて JSON フォーマットのキーと値のペアが用意されています。また、ロガークラスを表示するために、ハンドラークラスアトリビュートも含まれます。 |
+
+サンプルログ
 
     FINE [LoggingOptions$1.lambda$export$1] - {
       "traceId": "fc8aef1d44b3cc8bc09eb8e581c4a8eb",
@@ -128,17 +149,16 @@ All event logs have the following fields :
         "session.id": "dd35257f104bb43fdfb06242953f4c85"
       }
     }
-    
-In addition to the above fields, based on [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/semantic_conventions/exceptions.md) error logs consist of :
-| Field | Field value | Description |
-|-|-|-|
-| Exception type  | exception.type | The class name of the exception. |
-| Exception message  | exception.message | Reason for the exception. |
-| Exception stacktrace | exception.stacktrace | Prints the call stack at the point of time when the exception was thrown. Helps in understanding the origin of the exception. |
- 
 
-Sample error log 
-  
+上記のフィールドに加えて、[OpenTelemetry の仕様](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/semantic_conventions/exceptions.md)に基づきエラーログは以下のフィールドで構成されます:
+
+| フィールド       | フィールド名         | 概要                                                                                    |
+| ---------------- | -------------------- | --------------------------------------------------------------------------------------- |
+| 例外タイプ       | exception.type       | 例外クラス名。                                                                          |
+| 例外メッセージ   | exception.message    | 例外の原因。                                                                            |
+| スタックトレース | exception.stacktrace | 例外が発生した時点のコールスタックを表示します。 例外の発生源を把握するのに役立ちます。 |
+
+サンプルエラーログ
 
     WARN [LoggingOptions$1.lambda$export$1] - {
       "traceId": "7efa5ea57e02f89cdf8de586fe09f564",
@@ -156,11 +176,12 @@ Sample error log
       }
     }
 
-Note: Logs are pretty printed above for readability. Pretty printing for logs is turned off in Selenium server.
+注: ログは読みやすさのためプリティプリントされています。Selenimu サーバーではぷるティプリントはオフになっています。
 
-The steps above should set you up for seeing traces and logs.
- 
-## References 
+以上がトレースとログをセットアップするための手順です。
+
+## 参考
+
 1. [Understanding Tracing](https://lightstep.com/blog/opentelemetry-101-what-is-tracing/)
 2. [OpenTelemetry Tracing API Specification](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/api.md#status)
 3. [Selenium Wiki](https://github.com/SeleniumHQ/selenium/wiki)

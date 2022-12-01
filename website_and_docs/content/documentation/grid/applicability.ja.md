@@ -1,56 +1,42 @@
 ---
-title: "グリッドを使用する場合"
-linkTitle: "グリッドを使用する場合"
+title: "いつGridを使用すべきか"
+linkTitle: "いつGridを使用すべきか"
 weight: 4
 description: >
- Is Grid right for you?
+ Gridがあなたにとって最適なツールでしょうか？
 aliases: [
 "/documentation/ja/grid/when_to_use_grid/",
 "/ja/documentation/grid/when_to_use_grid"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Japanese. 
-   Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Grid をいつ使うべきでしょうか？
 
+- 複数のブラウザー、異なるタイプまたは異なるバージョンのブラウザー、あるいは異なる OS 上でで実行されているブラウザーに対して並列でテストを実行したい場合
+- テストスイートの実行時間を減らしたい場合
 
-When would you use a Selenium Grid?
+Selenium Grid はノードと呼ばれる複数のマシンを使用して並列でテストスイートを実行します。
+大規模な長時間実行されるテストでは数分から数時間、あるいは数日単位での短縮が可能です。
+つまり、あなたのテスト対象のアプリケーションのテスト結果を得るまでの時間を短縮します。
 
-* To run your tests in parallel, against different browser types, browser versions, operating systems
-* To reduce the time needed to execute a test suite
+Grid は複数の異なるブラウザーに対してテストを実行でき、また同じブラウザーインスタンスに対して複数のテストを実行することも可能です。
+たとえば 6 つのノードで構成された Grid があるとします。
+最初のマシンは FireFox の最新バージョン、2 つめは FireFox の最新から一つ前のバージョン、
+3 つめは 最新の Chrome、そして残りは Mac Mini で最新の Safari を使って 3 つのテストを並行して実行することができます。
 
-Selenium Grid runs test suites in parallel against multiple machines (called Nodes). 
-For large and long-running test suites, this can save minutes, hours, or perhaps days. 
-This shortens the turnaround time for test results as your application under test (AUT) 
-changes.
+実行時間は簡単な式で表すことができます:
 
-Grid can run tests (in parallel) against multiple different browsers, and it can
-run against multiple instances of the same browser. As an example, let's imagine
-a Grid with six Nodes. The first machine has Firefox's latest version,
-the second has Firefox "latest minus one", the third gets the latest Chrome, and
-the remaining three machines are Mac Minis, which allows for three tests to run in
-parallel on the latest version of Safari.
+`テストの数 * 平均テスト時間 / ノード数 = 合計実行時間`
 
-Execution time can be expressed as a simple formula:
+       15      *       45s        /        1        =      11m 15s   // Grid なし
+       15      *       45s        /        5        =      2m 15s    // 5 ノードの Grid
+       15      *       45s        /        15       =      45s       // 15 ノードの Grid
+      100      *       120s       /        15       =      13m 20s   // Grid なしの場合3時間以上かかります
 
-```Number of Tests * Average Test Time / Number of Nodes = Total Execution Time```
+テストスイートが実行されると Grid はテストで設定されたブラウザに対して実行するテストを割り当てます。
 
-       15      *       45s        /        1        =      11m 15s   // Without Grid
-       15      *       45s        /        5        =      2m 15s    // Grid with 5 Nodes
-       15      *       45s        /        15       =      45s       // Grid with 15 Nodes
-      100      *       120s       /        15       =      13m 20s   // Would take over 3 hours without Grid
+このような設定により、大規模な Selenium テストスイートであっても実行時間を大幅に短縮することができます。
 
-As the test suite is executing, the Grid allocates the tests to run against these 
-browsers as configured in the tests.
-
-A configuration such as this can greatly speed up the execution time of even the largest Selenium test suites.
-
-Selenium Grid is a completely native part of the Selenium project, and is maintained in parallel by the same team 
-of committers who work in the core Selenium development. Recognizing the importance of test execution speed, Grid
-has been a critical part of the Selenium project since the earliest days.
+Selenium Grid は Selenium プロジェクトの一部であり、
+Selenium コアの開発コミッターと同じチームによってメンテナンスされています。
+テストの実行速度の重要性を認識し、Grid は Selenium プロジェクトの初期段階から重要な役割を担っています。

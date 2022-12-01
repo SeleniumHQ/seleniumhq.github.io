@@ -1,122 +1,106 @@
 ---
-title: "グリッドのコンポーネント"
-linkTitle: "グリッドのコンポーネント"
+title: "Serenium Grid のコンポーネント"
+linkTitle: "コンポーネント"
 weight: 6
 description: >
-    Understand how to use the different Grid components
+    Grid コンポーネントの使い方について
 aliases: [
 "/documentation/ja/grid/grid_4/components_of_a_grid/",
 "/ja/documentation/grid/components_of_a_grid/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Selenium Grid 4 は以前のバージョンから一新し、全面的に作り直されました。
+全体的なパフォーマンスの改善と標準の準拠に加え、より現代的なコンピューティングとソフトウェア開発
+に適応するために機能ごとに分割されました。
+コンテナ化とクラウド上での分散スケーラビリティのために構築された、現代に適した全く新しいソリューションです。
 
-Selenium Grid 4 is a ground-up rewrite from previous versions. In addition to a comprehensive
-set of improvements to performance and standards compliance, the different functions of the grid were 
-broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
-and cloud-distributed scalability, Selenium Grid 4 is a wholly new solution for the modern era. 
-
-{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
+{{< card header="**Grid Components**" footer="完全分散型モードでのGridコンポーネント" >}}
 ![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
 {{< /card >}}
 
-## Router
+## ルーター
 
-The **Router** is the entry point of the Grid, receiving all external requests, and forwards them to 
-the correct component.
+これは Grid のエントリポイントであり、すべての外部リクエストを受信し正しいコンポーネントへルーティングします。
 
-If the **Router** receives a new session request, it will be forwarded to the **New Session Queue**.
+**ルーター**が**新規セッションリクエスト**を受信すると、**新規セッションキュー**に転送します。
 
-If the request belongs to an existing session, the **Router** will query the **Session Map** to get
-the **Node** ID where the session is running, and then the request will be forwarded directly to the
-**Node**.
+リクエストが既存のセッションのものである場合、**ルーター**は**セッションマップ**に、
+セッションが実行されている **ノード** ID の取得を要求します。そして**ノード**にリクエストを直接転送します。
 
-The **Router** balances the load in the Grid by sending the requests to the component that is able 
-to handle them better, without overloading any component that is not needed in the process.
+**ルーター**は、リクエストをより処理能力の高いコンポーネントに負荷を分散させます。
+この負荷分散処理自体もコンポーネントに不必要に負荷をかけることはありません。
 
-## Distributor
+## ディストリビューター
 
-The **Distributor** has two main responsibilities:
+**ディストリビューター**の主な責務は 2 つあります:
 
-#### Register and keep track of all Nodes and their capabilities
+#### すべてのノードとその capabilities を登録し追跡します
 
-A **Node** registers to the **Distributor** by sending a **Node** registration event through 
-the **Event Bus**. The **Distributor** reads it, and then tries to reach the **Node** via HTTP
-to confirm its existance. If the request is successfull, the **Distributor** registers the Node 
-and keeps track of all **Nodes** capabilities through the **GridModel**.
+**イベントバス**を通じて**ノード**登録イベントを贈ることで**ノード**を**ディストリビューター**に登録します。
+**ディストリビューター**はそのイベントを受けて**ノード**の存在を HTTP リクエストで確認します。
+リクエストが成功した場合、**ディストリビューター**は**ノード**を登録し、**Grid モデル**を通じて追跡を開始します。
 
-#### Query the New Session Queue and process any pending new session requests
+#### 保留中の新規セッションリクエストを処理する
 
-When a new session request is sent to the **Router**, it gets forwarded to the **New Session Queue**,
-where it will wait in the queue. The **Distributor** will poll the **New Session Queue** for pending 
-new session requests, and then finds a suitable **Node** where the session can be created. After the
-session has been created, the **Distributor** stores in the **Session Map** the relation between the 
-session id and **Node** where the session is being executed.
+新規セッションリクエストが**ルーター**に送信されると、リクエストは**新規セッションキュー**に転送されます。
+**ディストリビューター**は**新規セッションキュー**をポーリングし、保留中の新規セッションリクエストを見つけると、
+セッションが作成可能な**ノード**を探します。 セッションが作成されると**ディストリビューター**は
+セッション ID とセッションが実行される**ノード**の紐付けを**セッションマップ**に保存します。
 
-## Session Map
+## セッションマップ
 
-The **Session Map** is a data store that keeps the relationship between the session id and the **Node** 
-where the session is running. It supports the **Router** in the process of forwarding a request to the 
-**Node**. The **Router** will ask the **Session Map** for the **Node** associated to a session id.
+**セッションマップ**はセッション ID とセッションが実行されている**ノード**の紐付けを保存します。
+これにより**ルーター**がリクエストを**ノード**に転送できるようにします。
+**ルーター**は**セッションマップ**にセッション ID に紐づく**ノード**を問い合わせます。
 
-## New Session Queue
+## 新規セッションキュー
 
-The **New Session Queue** holds all the new session requests in a FIFO order. It has configurable 
-parameters for setting the request timeout and request retry interval (how often the timeout will 
-be checked).
+**新規セッションキュー**はすべての新規セッションリクエストを FIFO 順で保持します。
+リクエストのタイムアウトとリトライ間隔の設定が可能です。
 
-The **Router** adds the new session request to the **New Session Queue** and waits for the response.
-The **New Session Queue** regularly checks if any request in the queue has timed out, if so the request 
-is rejected and removed immediately.
+**ルーター**は新規セッションリクエストを**新規セッションキュー**に追加し、レスポンスを待ちます。
+**新規セッションキュー**は定期的にキュー内のリクエストがタイムアウトしていないかをチェックし、
+タイムアウトしたリクエストがあればリクエストを拒否しキューから取り除きます。
 
-The **Distributor** regularly checks if a slot is available. If so, the **Distributor** polls the
-**New Session Queue** for the first matching request. The **Distributor** then attempts to create
-a new session.
+**ディストリビューター**はスロットに空きがあるかを定期的にチェックします。
+もし空きがあれば、**新規セッションキュー**から最初にマッチするリクエストを取り出し、
+新規セッションの作成を試みます。
 
-Once the requested capabilities match the capabilities of any of the free **Node** slots, the **Distributor** 
-attempts to get the available slot. If all the slots are busy, the **Distributor** will send the request back
-to the queue. If request times out while retrying or adding to the front of the queue, it will be rejected.
+リクエストされた capabilities にマッチする空き**ノード**スロットがあれば、
+**ディストリビューター**は空きスロットの確保を試みます。全てのスロットがビジーだった場合、
+**ディストリビューター**はリクエストをキューに戻します。
+リトライ中やキューに戻す最中にリクエストがタイムアウトした場合リクエストは拒否されます。
 
-After a session is created successfully, the **Distributor** sends the session information to the **New Session Queue**,
-which then gets sent back to the **Router**, and finally to the client.
+セッションの作成に成功すると、**ディストリビューター**はセッションの情報を**新規セッションキュー**に送信し、
+これが**ルーター**へのレスポンスとして送信され、最終的にクライアントに返ります。
 
-## Node
+## ノード
 
-A Grid can contain multiple **Nodes**. Each **Node** manages the slots for the available browsers of the machine 
-where it is running.
+Grid は複数の**ノード**を持つことができます。
+**ノード**は、各**ノード**が実行されているマシン上の利用可能なブラウザのスロットを管理します。
 
-The **Node** registers itself to the **Distributor** through the **Event Bus**, and its configuration is sent as 
-part of the registration message.
+**ノード**は、**イベントバス**を介して自身を**ディストリビューター**に登録します。
+構成情報は登録メッセージの一部として送信されます。
 
-By default, the **Node** auto-registers all browser drivers available on the path of the machine where it runs. 
-It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is 
-created. Through a specific [configuration]({{< ref "/configuration" >}}), it can run sessions in Docker 
-containers or relay commands.
+デフォルトでは、**ノード**はマシンのパス上に存在する全てのブラウザドライバーを自動で登録します。
+また FireFox と Chromium ベースブラウザの場合、CPU1 つにつき 1 スロットを作成します。
+Safari の場合は 1 つのスロットのみ作成します。
+[特定の設定によって]({{< ref "/configuration" >}})セッションを Docker コンテナで実行したり、コマンドを中継したりすることも可能です。
 
-A **Node** only executes the received commands, it does not evaluate, make judgments, or control anything other
-than the flow of commands and responses. The machines where the **Node** is running does not need to have the 
-same operating system as the other components. For example, A Windows **Node** might have the capability of 
-offering IE Mode on Edge as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can 
-have multiple **Nodes** configured with Windows, Mac, or Linux.
+**ノード**は受信したコマンドを実行するだけで、コマンドの評価・判断や、フロー制御以外の制御は行いません。
+**ノード**が実行されているマシンは、他のコンポーネントと同じ OS を持つ必要はありません。
+たとえば、Windows **ノード**には IE Mode on Edge をブラウザーオプションとして提供する機能がありますが、
+これは Linux または Mac では不可能です。
+Grid は 複数の Windows, Mac, Linux **ノード**で構成することが可能です。
 
-## Event Bus
+## イベントバス
 
-The **Event Bus** serves as a communication path between the **Nodes**, **Distributor**, **New Session Queue**, 
-and **Session Map**. The Grid does most of its internal communication through messages, avoiding expensive HTTP 
-calls. When starting the Grid in its fully distributed mode, the **Event Bus** is the first component that 
-should be started.
+**イベントバス**は**ノード**、**ディストリビューター**、セッションキュー、**セッションマップ**間の通信経路として機能します。
+Grid は内部通信のほとんどをメッセージで行うことで、負荷の高い HTTP 呼び出しを避けています。
+分散モードで Grid を起動する場合、**イベントバス**は最初に起動されるべきコンポーネントです。
 
-
-{{% alert title="Running your own Grid" color="primary" %}}
-Looking forward to using all these components and run your own Grid? 
-Head to the ["Getting Started"]({{< ref "getting_started.md" >}})
-section to understand how to put all these pieces together. 
+{{% alert title="Gridを動かす" color="primary" %}}
+これらのコンポーネントを使って Grid を実行してみたいですか？
+["Grid を始める"]({{< ref "getting_started.md" >}}) でどのように設定するか見ることができます。
 {{% /alert %}}
