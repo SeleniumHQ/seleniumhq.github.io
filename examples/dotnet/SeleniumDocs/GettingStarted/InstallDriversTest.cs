@@ -10,6 +10,7 @@ using WebDriverManager.DriverConfigs.Impl;
 namespace SeleniumDocs.GettingStarted
 {
     [TestClassCustom]
+    [Ignore("Running these tests can cause problems with other tests")]
     public class InstallDriversTest
     {
         [TestMethod]
@@ -42,7 +43,6 @@ namespace SeleniumDocs.GettingStarted
             driver.Quit();
         }
 
-        [EnabledOnOs("WINDOWS")]
         [TestMethod]
         public void InternetExplorerSession()
         {

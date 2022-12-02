@@ -19,6 +19,8 @@ RSpec.configure do |config|
     guards = Selenium::WebDriver::Support::Guards.new(example,
                                                       bug_tracker: bug_tracker)
     guards.add_condition(:platform, Selenium::WebDriver::Platform.os)
+    guards.add_condition(:ci, Selenium::WebDriver::Platform.ci)
+
     results = guards.disposition
     send(*results) if results
   end
