@@ -1,4 +1,302 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.7.0 for Java,
+.NET, and Javascript as well as the Grid and Internet Explorer Driver;
+for Ruby use 4.7.1, and Python 4.7.2. Links to everything can be found on our
+&lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v106, v107, and v108 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>&lt;a href="/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> now supports IE Driver &amp;amp; has improved error logging.&lt;/li>
+&lt;li>Using Edge in IE Mode no longer requires ignoring zoom levels.&lt;/li>
+&lt;li>We&amp;rsquo;re continuing to remove &lt;a href="https://www.selenium.dev/blog/2022/legacy-protocol-support/">Legacy Protocol&lt;/a> classes in Java and Grid.&lt;/li>
+&lt;li>Java adds WebDriver-BiDi support for Logging.&lt;/li>
+&lt;li>.NET includes an explicit target for net6.0 framework.&lt;/li>
+&lt;li>Ruby is now publishing &lt;a href="https://github.com/SeleniumHQ/selenium/packages/">nightly gems&lt;/a>&lt;/li>
+&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3709715?v=4" class="card-img-top mx-auto" alt="Christian Clauss" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Christian Clauss
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/cclauss">@cclauss&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/59066376?v=4" class="card-img-top mx-auto" alt="Dor Blayzer" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Dor Blayzer
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Dor-bl">@Dor-bl&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/42742240?v=4" class="card-img-top mx-auto" alt="Fenil Mehta" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Fenil Mehta
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/fenilgmehta">@fenilgmehta&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/76849108?v=4" class="card-img-top mx-auto" alt="Jared Webber" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Jared Webber
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jaredwebber">@jaredwebber&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6788579?v=4" class="card-img-top mx-auto" alt="Michael Mintz" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Michael Mintz
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mdmintz">@mdmintz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/352840?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jimevans">@jimevans&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/17887843?v=4" class="card-img-top mx-auto" alt="Simon K" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon K
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/symonk">@symonk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
 &lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of the core Selenium maintainers.
 One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
@@ -6577,73 +6875,4 @@ Once those are done, I’ll be a lot happier with it&lt;/p>
 &lt;p>&lt;em>Diego Molina 9:45 PM&lt;/em>&lt;/p>
 &lt;p>Thanks everyone!&lt;/p>
 &lt;p>&lt;em>Simon Stewart 9:45 PM&lt;/em>
-Thank you, @diemol!&lt;/p></description></item><item><title>Blog: How to delete your master branch</title><link>/blog/2020/how_to_delete_your_master_branch/</link><pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/how_to_delete_your_master_branch/</guid><description>
-&lt;img src="/blog/2020/how_to_delete_your_master_branch/featured_how_to_delete_your_master_branch_2_hu8faf28356324fb6e8174b5f26ec63c14_49150_640x0_resize_catmullrom_3.png" width="640" height="457"/>
-&lt;figure class="img-responsive text-center">
-&lt;img src="/blog/2020/how_to_delete_your_master_branch/featured_how_to_delete_your_master_branch_2.png"/>
-&lt;/figure>
-&lt;p>At the Selenium project we practice
-&lt;a href="https://trunkbaseddevelopment.com/">trunk based development&lt;/a>, in which &lt;code>trunk&lt;/code> is the
-usual name of the default git branch of the repository. However, when the project was
-moved to GitHub, the repository followed the traditional use of &lt;code>master&lt;/code> as a name for
-the default git branch.&lt;/p>
-&lt;p>With the intention of making the Selenium project an even more inclusive place where
-everyone is welcome, a decision was made to use &lt;code>trunk&lt;/code> as the default git branch and,
-after the switch, delete the &lt;code>master&lt;/code> branch. This change created a few challenges.
-This blog post will point out a few things you should watch out if you want to make
-the same change in your GitHub repository.&lt;/p>
-&lt;h4 id="broken-links">Broken Links&lt;/h4>
-&lt;p>It is common to link specific parts of the code in the documentation, and that link
-normally contains the branch name. Double-check your documentation for links pointing
-to files living on the &lt;code>master&lt;/code> branch, as they could end up as broken links after
-the change.&lt;/p>
-&lt;h4 id="mentions-to-the-branch-name">Mentions to the branch name&lt;/h4>
-&lt;p>Similarly, the branch name gets mentioned in different parts of the repository,
-such as code comments, contribution instructions, issue and pull request templates,
-and the readme. Don’t forget to check these places.&lt;/p>
-&lt;h4 id="github-repository-badges">GitHub repository badges&lt;/h4>
-&lt;p>We all like to show off how our GitHub repository is doing by adding as many badges
-as we can. In many cases, those badges report a build status that depends on the branch
-where the build was executed. Make sure your Travis/CircleCI/GitHub Actions badge is
-pointing to the new branch.&lt;/p>
-&lt;h4 id="continuous-integration-setups">Continuous Integration setups&lt;/h4>
-&lt;p>A good practice in open source is to have a continuous integration setup to run the
-builds, execute tests and potentially do automated releases. Nowadays, the CI
-configuration is done in files (e.g. .travis.yml for Travis), and one important
-piece of that configuration is the name of the branch where the build should be
-executed. Similar to the previous point, double check that your new branch name
-is property configured in your CI integration.&lt;/p>
-&lt;h4 id="build-scripts">Build scripts&lt;/h4>
-&lt;p>At the Selenium project, we have a few custom build scripts that get executed
-through the continuous integration setup. An example is the script that generates
-the docs for the Java, Ruby and Python bindings. This script needs to know the code’s
-branch name to generate the docs. If you have scripts with similar purposes, check
-them after changing the branch name.&lt;/p>
-&lt;h4 id="open-pull-requests">Open pull requests&lt;/h4>
-&lt;p>All of the tasks above could probably be achieved with a text editor and a massive,
-but careful, “search and replace” across all the files in the repository. In short,
-the process we followed to move to the new branch &lt;code>trunk&lt;/code> was:&lt;/p>
-&lt;ol>
-&lt;li>Create a new branch called &lt;code>trunk&lt;/code>, based on the &lt;code>master&lt;/code> branch.&lt;/li>
-&lt;li>Do all the items described in the previous points.&lt;/li>
-&lt;li>Commit and push those changes.&lt;/li>
-&lt;li>Delete the &lt;code>master&lt;/code> branch.&lt;/li>
-&lt;/ol>
-&lt;p>Nevertheless, one thing happened that we did not expect: after deleting the &lt;code>master&lt;/code>
-branch, all the open pull requests got closed. This made sense, since they were all
-targeting the &lt;code>master&lt;/code> branch. Therefore, before deleting your &lt;code>master&lt;/code> branch, double
-check and, if needed, edit the open pull requests so they target the new branch.&lt;/p>
-&lt;figure class="img-responsive text-center">
-&lt;img src="/blog/2020/how_to_delete_your_master_branch/how_to_delete_your_master_branch_1.png"/>
-&lt;/figure>
-&lt;p>It goes without saying that the name of your new branch can be any name that works
-well for your context and environment. For example, the
-&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">repository&lt;/a> that has the
-contents of the Selenium &lt;a href="https://www.selenium.dev/">website&lt;/a> uses now &lt;code>dev&lt;/code> as the
-branch with the website source files and &lt;code>publish&lt;/code> as the branch with the generated
-static website that gets &lt;em>published&lt;/em>.&lt;/p>
-&lt;p>These are our lessons learned during the process of deleting the &lt;code>master&lt;/code> branch in
-all the major repositories under the &lt;a href="https://github.com/seleniumhq/">SeleniumHQ GitHub&lt;/a>
-organization. I hope they are helpful if you decide to move from &lt;code>master&lt;/code> as a name
-for your default branch.&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/">https://opensource.saucelabs.com/blog/how_to_delete_your_master_branch/&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
+Thank you, @diemol!&lt;/p></description></item></channel></rss>
