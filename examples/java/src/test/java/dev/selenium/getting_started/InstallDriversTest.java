@@ -12,6 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class InstallDriversTest {
     @Test
+    @Disabled("Do not run in CI")
     public void chromeSession() {
         WebDriverManager.chromedriver().setup();
 
@@ -21,6 +22,7 @@ public class InstallDriversTest {
     }
 
     @Test
+    @Disabled("Do not run in CI")
     public void edgeSession() {
         WebDriverManager.edgedriver().setup();
 
@@ -30,6 +32,7 @@ public class InstallDriversTest {
     }
 
     @Test
+    @Disabled("Do not run in CI")
     public void firefoxSession() {
         WebDriverManager.firefoxdriver().setup();
 
@@ -38,8 +41,8 @@ public class InstallDriversTest {
         driver.quit();
     }
 
-    @Disabled("Only runs on Windows")
     @Test
+    @Disabled("Do not run in CI")
     public void ieSession() {
         WebDriverManager.iedriver().setup();
 

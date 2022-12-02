@@ -12,6 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver
 
 class InstallDriversTest {
     @Test
+    @Disabled("Do not run in CI")
     fun chromeSession() {
         WebDriverManager.chromedriver().setup()
         val driver: WebDriver = ChromeDriver()
@@ -19,6 +20,7 @@ class InstallDriversTest {
     }
 
     @Test
+    @Disabled("Do not run in CI")
     fun edgeSession() {
         WebDriverManager.edgedriver().setup()
         val driver: WebDriver = EdgeDriver()
@@ -26,14 +28,15 @@ class InstallDriversTest {
     }
 
     @Test
+    @Disabled("Do not run in CI")
     fun firefoxSession() {
         WebDriverManager.firefoxdriver().setup()
         val driver: WebDriver = FirefoxDriver()
         driver.quit()
     }
 
-    @Disabled("Only runs on Windows")
     @Test
+    @Disabled("Do not run in CI")
     fun ieSession() {
         WebDriverManager.iedriver().setup()
         val driver: WebDriver = InternetExplorerDriver()
