@@ -62,9 +62,6 @@ options.add_argument("/path/to/profile")
 
 ### 指定したロケーションでブラウザを起動する
 
-The `binary` parameter takes the path of an alternate location of browser to use. For example, with this parameter you can
-use geckodriver to drive Firefox Nightly instead of the production version when both are present on your computer.
-
 `binary` パラメーターは、使用するブラウザーの別のロケーションのパスを取ります。
 たとえば、このパラメーターを使用すると、geckodriver を使用して、製品版とFirefox Nightlyの両方がコンピューターに存在する場合、
 製品版の代わりに Firefox Nightly を駆動できます 。
