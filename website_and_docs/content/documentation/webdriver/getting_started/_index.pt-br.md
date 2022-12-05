@@ -4,7 +4,7 @@ linkTitle: "Começando"
 weight: 2
 needsTranslation: true
 description: >
-  If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+  Se você é novo no Selenium, nós temos alguns recursos que podem te ajudar a se atualizar imediatamente.
 aliases: [
 "/documentation/pt-br/getting_started/", 
 "/documentation/pt-br/getting_started/quick/",
