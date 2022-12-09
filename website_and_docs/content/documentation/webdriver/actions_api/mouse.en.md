@@ -263,13 +263,13 @@ for the remaining languages as of Selenium 4.3.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-**Coming in Selenium 4.3**
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-**Coming in Selenium 4.3**
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
