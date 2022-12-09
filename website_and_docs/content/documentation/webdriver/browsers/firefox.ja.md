@@ -132,13 +132,13 @@ Chromeとは異なり、Firefoxの拡張機能はCapabilityの一部として追
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L38-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L20-L21" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L40-L42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L32-L34" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L15-L16" >}}
@@ -158,14 +158,14 @@ IDはアドオンインストール時の戻り値から取得できます。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L49-L51" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L32-L34" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L29-L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L55-L58" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L24-L26" >}}
@@ -186,14 +186,14 @@ IDはアドオンインストール時の戻り値から取得できます。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L60-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L43-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L40-L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L69-L71" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L61-L63" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.5" >}}
