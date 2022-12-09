@@ -52,3 +52,10 @@ Este é um exemplo de como iniciar uma sessão Safari com um conjunto de opçõe
 
 ### Mobile (celular)
 Se pretende automatizar Safari em iOS, deve olhar para o [Projecto Appium](//appium.io/).
+
+## Safari Technology Preview
+
+Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
+To use this version in your code:
+
+{{< alert-code />}}

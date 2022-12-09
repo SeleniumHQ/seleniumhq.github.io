@@ -52,3 +52,10 @@ Safari独有的Capabilities可以在Apple的页面[关于Safari的WebDriver](htt
 
 ### 移动端
 那些希望在iOS上自动化Safari的人可以参考 [Appium project](//appium.io/).
+
+## Safari Technology Preview
+
+Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
+To use this version in your code:
+
+{{< alert-code />}}

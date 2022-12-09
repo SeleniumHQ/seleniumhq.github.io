@@ -52,3 +52,11 @@ Starting a Safari session with basic defined options looks like this:
 
 ### Mobile
 Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+
+
+## Safari Technology Preview
+
+Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) 
+To use this version in your code:
+
+{{< alert-code />}}
