@@ -103,7 +103,7 @@ copyright = "Software Freedom Conservancy"
 
 # First one is picked as the Twitter card image if not set on page.
 images = ["images/selenium_4_logo.png"]
-social_image_path = ["images/selenium_4_logo.png"]
+social_image_path = ["images/selenium_logo_square_green.png"]
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
