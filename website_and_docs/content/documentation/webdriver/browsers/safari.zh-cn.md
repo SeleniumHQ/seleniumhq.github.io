@@ -37,14 +37,14 @@ Safari独有的Capabilities可以在Apple的页面[关于Safari的WebDriver](htt
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L7-L8" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" code=true >}}
   let options = new safari.Options();
   let driver = await new Builder()
     .forBrowser('safari')
     .setSafariOptions(options)
     .build();
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" code=true >}}
   val options = SafariOptions()
   val driver = SafariDriver(options)
 {{< /tab >}}
