@@ -1,5 +1,5 @@
 ---
-title: "Working with iframes and frames"
+title: "Working with IFrames and frames"
 linkTitle: "Frames"
 weight: 6
 aliases: [

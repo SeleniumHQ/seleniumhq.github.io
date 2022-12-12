@@ -1,5 +1,5 @@
 ---
-title: "iFrame と Frame の操作"
+title: "IFrame と Frame の操作"
 linkTitle: "フレーム"
 weight: 6
 aliases: [
