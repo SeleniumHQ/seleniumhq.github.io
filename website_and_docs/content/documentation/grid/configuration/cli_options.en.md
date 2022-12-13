@@ -224,6 +224,7 @@ pull request updating this page.
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
 | `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
+| `--downloads-path`| string | `/usr/downloads` | The default location wherein all browser triggered file downloads would be available to be retrieved from. This is usually the directory that you configure in your browser as the default location for storing downloaded files. |
 
 ### Relay
 
@@ -349,3 +350,92 @@ driver.quit();
 ```
 
 Set the custom capability to `false` in order to match the Node B.
+
+#### Specifying path from where downloaded files can be retrieved
+
+At times a test may need to access files that were downloaded by it on the Node. To retrieve such files, following can be done.
+
+##### Start the Hub
+```
+java -jar selenium-server-<version>.jar hub
+```
+
+##### Start the Node with downloads path specified
+```
+java -jar selenium-server-<version>.jar node --downloads-path /usr/downloads
+```
+
+##### Sample that retrieves the downloaded file
+
+```java
+import static org.openqa.selenium.remote.http.Contents.string;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.io.Zip;
+import org.openqa.selenium.json.Json;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.HttpClient;
+import org.openqa.selenium.remote.http.HttpMethod;
+import org.openqa.selenium.remote.http.HttpRequest;
+import org.openqa.selenium.remote.http.HttpResponse;
+
+public class DownloadsSample {
+
+  public static void main(String[] args) throws InterruptedException, IOException {
+    File dirToCopyTo = new File("/usr/downloads");
+    URL gridUrl = new URL("http://localhost:4444");
+    RemoteWebDriver driver = new RemoteWebDriver(gridUrl, firefoxOptions());
+    driver.get("http://the-internet.herokuapp.com/download");
+    WebElement element = driver.findElement(By.cssSelector(".example a"));
+    element.click();
+
+    TimeUnit.SECONDS.sleep(10);
+
+    // The file can be downloaded by accessing
+    // curl -X GET "http://localhost:4444/session/<sessionId>/se/file?filename=my_file.pdf"
+
+    HttpRequest request = new HttpRequest(
+        HttpMethod.GET,
+        String.format("/session/%s/se/file", driver.getSessionId()));
+    request.addQueryParameter("filename", "my_appointments-1.pdf");
+    try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
+      HttpResponse response = client.execute(request);
+      Map<String, Object> map = new Json().toType(string(response), Json.MAP_TYPE);
+      // The returned map would contain 2 keys viz.,
+      // filename - This represents the name of the file (same as what was provided by the test)
+      // contents - Base64 encoded String which contains the zipped file.
+      String encodedContents = map.get("contents").toString();
+
+      //The file contents would always be a zip file and has to be unzipped.
+      Zip.unzip(encodedContents, dirToCopyTo);
+    } finally {
+      driver.quit();
+    }
+  }
+
+  private static FirefoxOptions firefoxOptions() {
+    FirefoxOptions options = new FirefoxOptions();
+    options.addPreference("browser.download.manager.showWhenStarting", false);
+    options.addPreference("browser.helperApps.neverAsk.saveToDisk",
+        "images/jpeg, application/pdf, application/octet-stream");
+    options.addPreference("pdfjs.disabled", true);
+    return options;
+  }
+}
+```
+
+##### Points to remember:
+
+* The endpoint to `GET` from is `/session/<sessionId>/se/file?filename=`
+* The response contains two keys viz.,
+    * `filename` - Same as what was specified in the request.
+    * `contents` - Base64 encoded zipped contents of the file.
+* The file contents are Base64 encoded.
+* The contents need to be unzipped.
