@@ -29,7 +29,7 @@ Este é um exemplo de como iniciar uma sessão Safari com um conjunto de opçõe
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#21-L22" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_safari.py#L10-L11" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/SafariTest.cs#L14-L15" >}}
