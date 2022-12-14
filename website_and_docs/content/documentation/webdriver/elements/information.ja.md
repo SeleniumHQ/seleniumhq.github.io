@@ -306,7 +306,7 @@ String cssValue = driver.findElement(By.linkText("More information...")).getCssV
 driver.get('https://www.example.com')
 
 # Retrieves the computed style property 'color' of linktext
-cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
+cssValue = driver.find_element(By.LINK_TEXT, "More information...").value_of_css_property('color')
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
