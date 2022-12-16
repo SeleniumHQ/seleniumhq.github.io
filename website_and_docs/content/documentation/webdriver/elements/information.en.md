@@ -444,7 +444,14 @@ IWebElement emailTxt = driver.FindElement(By.Name(("email_input")));
 String valueInfo = eleSelLink.GetAttribute("value");
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-    # Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+
+#identify the email text box
+email_element=driver.find_element(name: 'email_input')
+
+#fetch the value property associated with the textbox
+emailVal = email_element.attribute("value");
   {{< /tab >}}
     {{< tab header="JavaScript" >}}
 // Help us with a PR for code sample
