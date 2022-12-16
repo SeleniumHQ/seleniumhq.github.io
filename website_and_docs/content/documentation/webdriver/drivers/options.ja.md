@@ -118,10 +118,10 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='normal'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :normal
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -202,10 +202,10 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='eager'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :eager
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -285,10 +285,10 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='none'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :none
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
