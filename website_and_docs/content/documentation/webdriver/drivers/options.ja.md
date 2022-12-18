@@ -125,7 +125,7 @@ driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -209,7 +209,7 @@ driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -292,7 +292,7 @@ driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
