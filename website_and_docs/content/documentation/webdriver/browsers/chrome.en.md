@@ -83,7 +83,9 @@ Add a browser location to options:
 
 ### Add extensions
 
-The `extensions` parameter accepts crx files. As for unpacked directories, please use the `load-extension` argument instead, as mentioned in [this post](https://chromedriver.chromium.org/extensions)
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
 
 Add an extension to options:
 

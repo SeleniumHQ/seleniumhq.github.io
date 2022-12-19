@@ -122,7 +122,15 @@ driver = RemoteWebDriver(options)
 
 ## Add-ons
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
+[this issue](https://github.com/SeleniumHQ/selenium/issues/10278),
+they are created after starting the driver.
+
+The following examples are for local webdrivers.
+For remote webdrivers using Java/Ruby/C#, please refer to
+[this post](https://docs.saucelabs.com/web-apps/automated-testing/selenium/selenium4/#install-and-uninstall-add-ons).
+As for remote webdrivers using Python, please refer to
+[this post](https://github.com/saucelabs/sauce-docs/issues/1621).
 
 ### Installation
 

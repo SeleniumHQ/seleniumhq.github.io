@@ -84,6 +84,10 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 `extensions` パラメーターはcrxファイルを受け入れます
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 オプションに拡張機能を追加します。
 
 {{< alert-code />}}

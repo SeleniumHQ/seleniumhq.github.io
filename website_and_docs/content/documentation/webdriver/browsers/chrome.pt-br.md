@@ -80,6 +80,10 @@ Adicionar uma localização:
 
 O parametro `extensions` aceita ficheiros crx 
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 Adicionar uma extensão:
 
 {{< alert-code />}}
