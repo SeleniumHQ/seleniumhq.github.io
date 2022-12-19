@@ -213,5 +213,5 @@ To be able to retrieve the files that were downloaded by a test at the Node, its
 [node]
 downloads-path = "/usr/downloads"
 ```
-Refer [here]({{< ref "cli_options.md#sample-that-retrieves-the-downloaded-file" >}}) for a complete Java example.
 
+Refer to the [CLI section]({{< ref "cli_options.md#sample-that-retrieves-the-downloaded-file" >}}) for a complete example.

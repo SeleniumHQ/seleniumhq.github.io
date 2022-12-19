@@ -362,7 +362,8 @@ Set the custom capability to `false` in order to match the Node B.
 
 #### Specifying path from where downloaded files can be retrieved
 
-At times a test may need to access files that were downloaded by it on the Node. To retrieve such files, following can be done.
+At times a test may need to access files that were downloaded by it on the Node. To retrieve 
+such files, following can be done.
 
 ##### Start the Hub
 ```
@@ -373,8 +374,25 @@ java -jar selenium-server-<version>.jar hub
 ```
 java -jar selenium-server-<version>.jar node --downloads-path /usr/downloads
 ```
+##### Important information when dowloading a file:
+
+* The endpoint to `GET` from is `/session/<sessionId>/se/file?filename=`
+* The session needs to be active in order for the command to work.
+* The response blob contains two keys,
+    * `filename` - Same as what was specified in the request.
+    * `contents` - Base64 encoded zipped contents of the file.
+* The file contents are Base64 encoded and they need to be unzipped.
 
 ##### Sample that retrieves the downloaded file
+
+Assuming the downloaded file is named `my_file.pdf`, and using `curl`, the 
+file could be downloaded with the following command:
+
+```bash
+curl -X GET "http://localhost:4444/session/<sessionId>/se/file?filename=my_file.pdf"
+```
+
+Below is an example in Java that shows how to download a file named `my_file.pdf`.
 
 ```java
 import static org.openqa.selenium.remote.http.Contents.string;
@@ -398,26 +416,31 @@ import org.openqa.selenium.remote.http.HttpResponse;
 public class DownloadsSample {
 
   public static void main(String[] args) throws InterruptedException, IOException {
-    File dirToCopyTo = new File("/usr/downloads");
+    // Make sure the following directory exists on your machine
+    File dirToCopyTo = new File("/usr/downloads/file");
+    // Assuming the Grid is running locally.
     URL gridUrl = new URL("http://localhost:4444");
     RemoteWebDriver driver = new RemoteWebDriver(gridUrl, firefoxOptions());
+    // This public website resets the available files for dowload on a daily basis, 
+    // check the name of the file that will be downloaded and replace it below.
     driver.get("http://the-internet.herokuapp.com/download");
     WebElement element = driver.findElement(By.cssSelector(".example a"));
     element.click();
 
+    // The download happens in a remote Node, which makes difficult to know when the file 
+    // has been completely downloaded. For demonstration purposes, this example uses a 
+    // 10 second sleep which should be enough time for a file to be downloaded. 
+    // We strongly recommend to avoid hardcoded sleeps, and ideally, to modify your 
+    // application under test so it offers a way to know when the file has been completely 
+    // downloaded. 
     TimeUnit.SECONDS.sleep(10);
 
-    // The file can be downloaded by accessing
-    // curl -X GET "http://localhost:4444/session/<sessionId>/se/file?filename=my_file.pdf"
-
-    HttpRequest request = new HttpRequest(
-        HttpMethod.GET,
-        String.format("/session/%s/se/file", driver.getSessionId()));
-    request.addQueryParameter("filename", "my_appointments-1.pdf");
+    HttpRequest request = new HttpRequest(HttpMethod.GET, String.format("/session/%s/se/file", driver.getSessionId()));
+    request.addQueryParameter("filename", "my_file.pdf");
     try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
       HttpResponse response = client.execute(request);
       Map<String, Object> map = new Json().toType(string(response), Json.MAP_TYPE);
-      // The returned map would contain 2 keys viz.,
+      // The returned map would contain 2 keys,
       // filename - This represents the name of the file (same as what was provided by the test)
       // contents - Base64 encoded String which contains the zipped file.
       String encodedContents = map.get("contents").toString();
@@ -431,6 +454,8 @@ public class DownloadsSample {
 
   private static FirefoxOptions firefoxOptions() {
     FirefoxOptions options = new FirefoxOptions();
+    // Options specific for Firefox to avoid prompting a dialog for downloads. They might 
+    // change in the future, so please refer to the Firefox documentation for up to date details.
     options.addPreference("browser.download.manager.showWhenStarting", false);
     options.addPreference("browser.helperApps.neverAsk.saveToDisk",
         "images/jpeg, application/pdf, application/octet-stream");
@@ -440,11 +465,3 @@ public class DownloadsSample {
 }
 ```
 
-##### Points to remember:
-
-* The endpoint to `GET` from is `/session/<sessionId>/se/file?filename=`
-* The response contains two keys viz.,
-    * `filename` - Same as what was specified in the request.
-    * `contents` - Base64 encoded zipped contents of the file.
-* The file contents are Base64 encoded.
-* The contents need to be unzipped.
