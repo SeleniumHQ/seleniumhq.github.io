@@ -196,3 +196,13 @@ WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options
 driver.get("https://selenium.dev");
 driver.quit();
 ```
+
+### Retrieving downloaded files from Node.
+
+To be able to retrieve the files that were downloaded by a test at the Node, its location can be specified as below:
+
+```toml
+[node]
+downloads-path = "/usr/downloads"
+```
+Refer [here]({{< ref "cli_options.md#sample-that-retrieves-the-downloaded-file" >}}) for a complete Java example.
