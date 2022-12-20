@@ -4,7 +4,7 @@ linkTitle: "Instalando bibliotecas do Selenium"
 weight: 2
 needsTranslation: true
 description: >
-  Setting up the Selenium library for your favourite programming language.
+  Configurando a biblioteca Selenium para sua linguagem de programação favorita.
 aliases: [
 "/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
 "/pt-br/documentation/getting_started/installing_selenium_libraries/",
@@ -15,30 +15,31 @@ aliases: [
 Primeiro você precisa instalar as bibliotecas Selenium para seu projeto de automação.
 O processo de instalação de bibliotecas depende da linguagem que você escolher usar.
 
-## Requirements by language
+## Requisitos por linguagem
 
 {{< tabpane code=false langEqualsHeader=true >}}
   {{% tab header="Java" %}}
-View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
-Installation of Selenium libraries for Java is accomplished using a build tool.
+A instalação da biblioteca Selenium para Java é feita a partir de uma build tool.
+
 
 ### Maven
-Specify the dependency in the project's `pom.xml` file:
+Especifique a dependência no `pom.xml` do seu projeto.
 
 {{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
 
 ### Gradle
-Specify the dependency in the project `build.gradle` file as `testImplementation`:
+Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:
 
 {{< gh-codeblock path="examples/java/build.gradle#L13" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
-The minimum supported Python version for each Selenium version can be found
-in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+A mínima versão suportada do Python para cada versão do Selenium pode ser encontrada 
+em `Supported Python Versions` no [PyPi](https://pypi.org/project/selenium/)
 
-There are a couple different ways to install Selenium.
+Existe muitas formas diferentes de instalar Selenium.
 
 ### Pip
 
@@ -48,24 +49,24 @@ pip install selenium
 
 ### Download
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+Como uma alternativa você pode baixar o [código fonte PyPI](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) e instalar usando _setup.py_:
 
 ```shell
 python setup.py install
 ```
 
-### Require in project
+### Exigir em um projeto
 
-To use it in a project, add it to the `requirements.txt` file:
+Para usar em um projeto, adicione no arquivo `requirements.txt`.
 {{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-A list of all supported frameworks for each version of Selenium 
-is available on [Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
+Uma lista com todos os frameworks suportados para cada versão do Selenium
+pode ser encontrada em [Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
 
-There are a few options for installing Selenium.
+Existe algumas opções para instalar o Selenium.
 
 ### Packet Manager
 
@@ -81,22 +82,23 @@ dotnet add package Selenium.WebDriver
 
 ### CSProj
 
-in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+No arquivo `csproj` do seu projeto, especifique a dependência como `PackageReference` no `ItemGroup`:
 
 {{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
-### Additional considerations
+### Considerações adicionais
 
-Further items of note for using Visual Studio Code (vscode) and C#
+Outras observações para usar o Visual Studio Code (vscode) e C#
 
-Install the compatible .NET SDK as per the section above.
-Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
-Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)
-to create and run the "Hello World" console project using C#.
-You may also create a NUnit starter project using the command line `dotnet new NUnit`.
-Make sure the file `%appdata%\NuGet\nuget.config` is configured properly as some developers reported that it will be empty due to some issues.
-If `nuget.config` is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
-Add the following section to the file `nuget.config` if it is empty:
+Instale a versão compatível do .NET SDK conforme a seção acima.
+Instale também as extensões do vscode (Ctrl-Shift-X) para C# e NuGet.
+Siga as instruções [aqui ](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)para criar e rodar o seu projeto de "Hello World" no console usando C#.
+
+Você também pode criar um projeto inicial do NUnit usando a linha de comando `dotnet new NUnit`.
+Certifique-se de que o arquivo `%appdata%\NuGet\nuget.config` esteja configurado corretamente, pois alguns desenvolvedores relataram que ele estará vazio devido a alguns problemas.
+Se o `nuget.config` estiver vazio ou não estiver configurado corretamente, as compilações .NET falharão para projetos que estiverem usando Selenium.
+Adicione a seguinte seção ao arquivo `nuget.config` se esse estiver vazio:
+
 ```
 <configuration>
   <packageSources>
@@ -105,52 +107,53 @@ Add the following section to the file `nuget.config` if it is empty:
   </packageSources>
 ...
 ```
-For more info about `nuget.config` [click here](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
-You may have to customize `nuget.config` to meet you needs.
+Para mais informações sobre `nuget.config` [clique aqui](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
+Você pode ter que customizar `nuget.config` para atender às suas necessidades.
 
-Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and enter the required Selenium packages such as `Selenium.WebDriver`.
-Press Enter and select the version.
-Now you can use the examples in the documentation related to C# with vscode.
+Agora, volte para o vscode, aperte Ctrl-Shift-P, e digite "NuGet Add Package", e adicione os pacotes necessários para
+o Selenium como o `Selenium.WebDriver`.
+Aperte Enter e selecione a versão.
+Agora você pode usar os exemplos da documentação relacionados ao C# com o vscode.
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-You can see the minimum required version of Ruby for any given Selenium version 
-on [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+Você pode ver a minima versão suportada do Ruby para cada versão do Selenium em 
+[rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
 
-Selenium can be installed two different ways.
+O Selenium pode ser instalado de duas formas diferentes.
 
-### Install manually
+### Instalação manual
 
 ```shell
 gem install selenium-webdriver
 ```
 
-### Add to project's gemfile
+### Adicione para o gemfile do projeto
 
 {{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-You can find the minimum required version of Node for any given version of Selenium in the
-`Node Support Policy` section on [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+Você pode encontrar a mínima versão suportada do Node para cada versão do Selenium 
+na seção `Node Support Policy` no site [npmjs](https://www.npmjs.com/package/selenium-webdriver)
 
-Selenium is typically installed using npm.
+Selenium é normalmente instalado usando npm.
 
-### Install locally
+### Instalação local
 
 ```shell
 npm install selenium-webdriver
 ```
 
-### Add to project
+### Adicione ao seu projeto
 
-In your project's `package.json`, add requirement to `dependencies`:
+No `package.json` do seu projeto, adicione os requisitos em `dependencies`:
 
 {{< gh-codeblock path="examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
-  {{< tab header="Kotlin" >}}
-    Use the Java bindings for Kotlin.
+  {{< tab header="Kotlin" >}}   
+    Use as ligações Java para Kotlin.
   {{< /tab >}}
 {{< /tabpane >}}
 
