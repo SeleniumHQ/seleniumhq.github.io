@@ -13,5 +13,15 @@ suite(function (env) {
       await driver.get('https://www.google.com');
       await driver.quit();
     });
+
+    it('exclude switches', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.excludeSwitches('enable-automation'))
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
   });
 });
