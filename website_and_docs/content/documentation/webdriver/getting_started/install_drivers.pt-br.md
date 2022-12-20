@@ -33,18 +33,19 @@ Leia mais sobre opções avançadas para iniciar um driver
 </p>
 {{% /pageinfo %}}
 
-## QuatroTrês maneiras diferentes de usar os drivers
+## Quatro maneiras diferentes de usar os drivers
 
-### 1. Selenium Manager <small>(Beta)</small>
+### 1. Gerenciador Selenium <small>(Beta)</small>
 
 {{< badge-version version="4.6" >}}
 
-Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
-of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
-found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
-will eventually even download browsers if necessary.
+O Gerenciador Selenium te ajuda a ter um ambiente de desenvolvimento rodando Selenium mais facilmente.
+O primeiro Beta irá configurar os drivers para Chrome, Firefox e Edge se eles não forem
+encontrados no `PATH`. Nem uma configuração extra será necessária. Versões futuras do Gerenciador Selenium
+irão eventualmente poder realizar o download dos browsers se necessário.
 
-Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+Leia mais no anúncio feito no blog sobre o [Gerenciador Selenium](/blog/2022/introducing-selenium-manager/).
+
 
 ### 2. Software de gerenciamento de Driver 
 

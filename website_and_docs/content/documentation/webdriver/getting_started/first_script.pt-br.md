@@ -247,12 +247,13 @@ Vamos combinar essas 8 coisas em um script completo com asserções que podem se
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Test Runners
-If you are using Selenium for testing,
-you will want to execute your Selenium code using test runner tools.
+## Executando Testes
+Se você esta usando selenium para realizar testes,
+você deverá executar seu código usando feramentas para executar testes.
 
-Many of the code examples in this documentation can be found in our example repositories.
-There are multiple options in each language, but here is what we are using in our examples:
+Muitos exemplos de código encontrado nessa documentação podem ser encontrado no nosso repositório de exemplos. 
+Existem múltiplas opções em cada linguagem, mas esta será qual usaremos em nossos exemplos:
+
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -288,6 +289,6 @@ mocha firstScript.spec.js
 
 ## Próximos Passos
 
-Use oque você aprendeu e construa o seu proprio código Selenium.
+Use o que você aprendeu e construa o seu proprio código Selenium.
 
 À medida que você encontrar mais funcionalidades de que necessita, leia o restante da nossa [documentação do WebDriver]({{< ref "/documentation/webdriver/" >}}).
