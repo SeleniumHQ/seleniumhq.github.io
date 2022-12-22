@@ -1,4 +1,41 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: SeleniumConf Chicago 2023 Speakers Announced</title><link>/blog/2022/seleniumconf-chicago-2023-update/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/seleniumconf-chicago-2023-update/</guid><description>
+&lt;p>As many of you know, the &lt;a href="https://seleniumconf.com">Selenium Conference&lt;/a> returns to an in-person event next March 28-30, 2023 in Chicago, IL. The Program Chairs &amp;amp; Committee, as well as the Extended Program Review Committee, have been hard at work putting together an outstanding lineup of speakers and workshops, and we&amp;rsquo;re close to releasing the full agenda and a completely re-branded conference website - stay tuned! In the meantime, we wanted you to be among the first to know who will be presenting, announce a new, additional pre-conference workshop, and provide you with some important updates. Here we go!&lt;/p>
+&lt;h3 id="keynote-sessions">Keynote Sessions&lt;/h3>
+&lt;p>There will be four plenary keynote presentations across the 2-day conference. Selenium Core Committer &lt;strong>Diego Molina&lt;/strong> will open the conference on Wednesday with the &amp;ldquo;Selenium: State of the Union&amp;rdquo; presentation, followed by Quality &amp;amp; Leadership Coach &lt;strong>Erika Chestnut&lt;/strong> presenting &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17864/bigger-than-the-box">&amp;ldquo;Bigger Than The Box&amp;rdquo;&lt;/a>, where she shares how she has crossed the aisles to elevate and expand the role quality in the organizations that she has worked for. Day 2 kicks off with &lt;strong>Mark Winteringham&lt;/strong>, Ministry of Testing OpsBoss, presenting &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17865/what-exactly-do-you-do-in-test-automation">&amp;ldquo;What Exactly Do You Do In Test Automation&amp;rdquo;&lt;/a>. The final keynote session will be a &lt;strong>Q&amp;amp;A with the Selenium Committers&lt;/strong> panel.&lt;/p>
+&lt;h3 id="confirmed-track-session-presenters">Confirmed Track Session Presenters&lt;/h3>
+&lt;p>Following the opening keynote presentations, there will be two separate track sessions running in parallel. Here are the confirmed speakers to date and the presentations they will be giving:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Andrew Knight&lt;/strong>, Developer Advocate, Applitools - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17549/managing-the-test-data-nightmare">Managing the Test Data Nightmare&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Benjamin Bischoff&lt;/strong>, Test Automation Engineer, Trivago N.V. - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17716/identifying-code-smells">Identifying Code Smells&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Bijoya Chatterjee&lt;/strong>, Director, Software QE, Sony Playstation - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17952/using-a-proxy-to-create-a-full-stack-automation-suite">Using A Proxy To Create A Full Stack Automation Suite&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Boni García&lt;/strong>, Staff Software Engineer, Sauce Labs - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17732/selenium-manager-automated-driver-amp-browser-management-for-selenium-webdriver">Selenium Manager: Automated Driver &amp;amp; Browser Management for Selenium WebDriver&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Christian Bromann&lt;/strong>, WebdriverIO Project Lead | Software Engineer, Stateful - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17789/component-testing-with-webdriverio">Component Testing with WebdriverIO&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Corina-Adina Pip&lt;/strong>, QA Lead , Deloitte Digital - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17537/whats-new-and-good-in-selenium">What’s New and Good in Selenium&lt;/a>&lt;/li>
+&lt;li>&lt;strong>David Burns&lt;/strong>, Selenium Core Committer | Head of Open Source Program Office, BrowserStack - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17757/why-browser-engines-real-desktop-browsers-mobile-browsers">Why Browser Engines ≠ Real Desktop Browsers ≠ Mobile Browsers&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Dmitriy Gumeniuk&lt;/strong>, Head of Testing Products, EPAM Systems - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17603/building-quality-gates-and-automated-decisions-in-cicd-pipelines-lessons-learned-with-200000-regressions">Building Quality Gates and Automated Decisions in CI/CD Pipelines. Lessons Learned with 200,000 Regressions.&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Eric Frankenberger&lt;/strong>, DevOps Engineer, Genesys Telecommunications - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17731/deploying-a-large-selenium-grid-with-video-recording-and-autoscaling-when-docker-swarm-amp-kubernetes-are-not-an-option">Deploying a Large Selenium Grid with Video Recording and Autoscaling When Docker Swarm &amp;amp; Kubernetes Are Not an Option&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Ibironke Yekinni&lt;/strong>, Sr. Quality Assurance Engineer, Testify Limited - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17936/solving-unemployment-in-africa-with-testing-and-selenium">Solving Unemployment in Africa with Testing and Selenium&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Jan Molak&lt;/strong>, SerenityJS Project Lead, SmartCode Ltd - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17758/creating-faster-and-more-reliable-web-tests-with-blended-testing">Creating Faster and More Reliable Web Tests with Blended Testing&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Josh Grant&lt;/strong>, Developer Advocate, Code Intelligence - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17448/selenium-in-the-clouds-using-cloud-service-providers-with-selenium-webdriver">Selenium in the Clouds: Using Cloud Service Providers with Selenium WebDriver&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Julia Pottinger&lt;/strong>, Head of Training and Development, QualityWorks - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17943/five-tips-for-executing-tests-using-javascript-and-selenium">Five Tips for Executing Tests Using JavaScript and Selenium&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Liza Ivanova&lt;/strong>, Principal Software Engineer, Salesforce - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17668/declarative-utam-page-objects">Declarative UTAM Page Objects&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Maksim Sadym&lt;/strong>, Software Engineer, Google, &amp;amp; &lt;strong>Sri Harsha&lt;/strong>, SDET, EPAM Systems - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17708/webdriver-bidi-selenium-why-and-how">WebDriver BiDi + Selenium. Why and How?&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Michael Mintz&lt;/strong>, Creator of SeleniumBase | Director of Automation, iboss - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17702/python-selenium-fundamentals-to-frameworks-with-seleniumbase">Python Selenium: Fundamentals to Frameworks (with SeleniumBase)&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Robin Gupta&lt;/strong>, Associate Vice President, Provar - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17748/do-you-use-selenium-only-for-test-automation">Do You Use Selenium Only for Test Automation?&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Roger Abelenda&lt;/strong>, CTO, Abstracta - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17907/evolve-your-selenium-scripts-into-performance-scripts">Evolve Your Selenium Scripts Into Performance Scripts&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Shi Ling Tai&lt;/strong>, CEO, UI-licious - &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17743/untestable-its-just-pressing-a-button-how-hard-could-it-be">UNTestable: It&amp;rsquo;s Just Pressing a Button, How Hard Could it Be?&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="new-workshop-added---state-model-based-testing-using-selenium">New Workshop Added - State Model-Based Testing Using Selenium&lt;/h3>
+&lt;p>We&amp;rsquo;re pleased to announce a new addition to the optional pre-conference workshop day, &lt;a href="https://seleniumconf.com/state-model-based-testing-using-selenium-workshop/">State Model-Based Testing Using Selenium&lt;/a>, led by &lt;strong>Ru Cindrea&lt;/strong>, Managing Partner and Senior Test Consultant, Altom Consulting &amp;amp; &lt;strong>Alex Rotaru&lt;/strong>, Co-owner, Altom Consulting. If you haven&amp;rsquo;t yet heard of State Model-Based Testing (SMBT) is a testing technique that allows testers to visualize their applications and to generate and automate test flows by using different models of the application under test, thus obtaining a large number of test scenarios. When certain paths of the application are changed, the benefit of using SMBT is that you will only have to modify the states and transitions that apply to that change.&lt;/p>
+&lt;p>This workshop rounds out the core pre-conference workshop offerings, which include a &lt;a href="https://seleniumconf.com/selenium-deep-dive-workshop/">Selenium Deep Dive&lt;/a> session led by Selenium Project Core Committer, &lt;strong>Titus Fortner&lt;/strong>; &lt;a href="https://seleniumconf.com/selenium-grid-4-workshop/">Driving Observability with Selenium Grid 4&lt;/a>, led by &lt;strong>Manoj Kumar&lt;/strong>, VP, Developer Relations at LambdaTest and Selenium Project Leadership Committee member, and &lt;a href="https://seleniumconf.com/advanced-appium-workshop/">Advanced Appium 2.0&lt;/a>, with &lt;strong>Srini Sekar&lt;/strong> &amp;amp; &lt;strong>Sai Krishna&lt;/strong>, Lead Consultants at Thoughtworks and long-time Appium workshop instructors.&lt;/p>
+&lt;p>Workshops are one of the most popular offerings at any SeleniumConf and because class sizes are limited they invariably sell-out. Early Bird ticket sales have closed, but you can still find openings for any of these awesome day-long sessions. &lt;a href="https://seleniumconf.com/register/">Register today&lt;/a> and make sure you get a seat at the Conference + Workshop session of your choice.&lt;/p>
+&lt;h3 id="wait-wait---where-is-the-fix-a-bug-become-a-committer-workshop">Wait, Wait - Where is the Fix a Bug, Become a Committer Workshop?&lt;/h3>
+&lt;p>If you&amp;rsquo;re a long-time follower of past Selenium Conferences, or just happened to attend the July, 2022 virtual SeleniumConf, you may be familiar with the long-standing workshop offering &lt;a href="https://confengine.com/conferences/selenium-conf-2022/proposal/16832/fix-a-bug-become-a-committer">&amp;ldquo;Fix a Bug, Become a Committer&amp;rdquo;&lt;/a>. This workshop is a bit different in that the goal is to both enhance your own Selenium experience while offering the ability to contribute back to the project. With this, it&amp;rsquo;s not a learning session, per se, but more of a doing session, and we thought we&amp;rsquo;d take a different approach this time and make it available at no-charge (other than buying a conference ticket) to a limited number of applicants. More details and a link to the application to follow, but if you are familiar with Selenium and want to extend your conference experience an extra day we encourage you to apply. Scholarship applicants (more below) are also welcome to apply.&lt;/p>
+&lt;h3 id="announcing-the-seleniumconf-chicago-2023-scholarship-program">Announcing the SeleniumConf Chicago 2023 Scholarship Program&lt;/h3>
+&lt;p>The mission of the Selenium project is to educate the QA and developer communities about Selenium, the importance of quality assurance, and automated testing in general. Both the Selenium project and the SeleniumConf organizers very much want everyone to be able to attend the conference, but we know that not everyone’s personal or financial circumstances make this possible - so, we&amp;rsquo;re setting aside a number of free tickets, and covering travel expenses, as part of our SeleniumConf Chicago 2023 scholarship program.&lt;/p>
+&lt;p>The program aims to support individuals from underrepresented groups in tech and those facing economic or social hardship so they have access to SeConf content and networking opportunities. If you’re an aspiring software professional looking to use Selenium, or a current one without access to the funds to buy your ticket, you should apply. We will award tickets to people who can show that the knowledge gained will be useful for their ongoing career. The application form will be posted in January, 2023.&lt;/p>
+&lt;h3 id="ready-to-go-but-your-manager-needs-more-convincing">Ready to Go, But Your Manager Needs More Convincing?&lt;/h3>
+&lt;p>You&amp;rsquo;ve now seen the keynotes, the current roster of speakers, and the awesome hands-on workshop descriptions, but you still need more to convince your manager? Download this &lt;a href="https://seleniumconf.com/wp-content/uploads/2022/12/selenium-conf-chicago-2023-convince-your-boss-template.docx">&amp;ldquo;Convince Your Boss&amp;rdquo;&lt;/a> email template and tailor it to your specific rationale using the details you&amp;rsquo;ve gleaned from this post. We&amp;rsquo;d really like to see you next March in Chicago - so &lt;a href="https://seleniumconf.com/register/">register here&lt;/a>!&lt;/p></description></item><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.7.0 for Java,
 .NET, and Javascript as well as the Grid and Internet Explorer Driver;
 for Ruby use 4.7.1, and Python 4.7.2. Links to everything can be found on our
@@ -6640,239 +6677,4 @@ understand the project better.&lt;/p>
 &lt;figure class="img-responsive my-5">
 &lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_8.png"/>
 &lt;/figure>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/">https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Blog: Public Project Meeting - September 24, 2020</title><link>/blog/2020/public-project-meeting-20200924/</link><pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20200924/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on September 24, 2020 (times are on IST).&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;p>The next meeting will be on October 09, 2020, 4:30 PM CET.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 9:00 PM&lt;/em>&lt;/p>
-&lt;p>So this is the proposed agenda, and @AutomatedTester has some more topics:
-General project statistics&lt;/p>
-&lt;ul>
-&lt;li>Previous meeting: 334 open issues, 63 open PRs&lt;/li>
-&lt;li>Current: 281, 61 PRs
-Overall announcements? New people on committees, with the commit bit, etc?&lt;/li>
-&lt;li>Anything new to report from the last PLC/SFC call?&lt;/li>
-&lt;li>Pending work that needs to be done for Alpha 7?&lt;/li>
-&lt;li>Pending work that needs to be done for the first Beta?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>David Burns 9:00 PM&lt;/em>&lt;/p>
-&lt;p>I dont have more topic, I want to discuss some of those topics&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:01 PM&lt;/em>&lt;/p>
-&lt;p>I need to improve reading skill :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>9:01 PM&lt;/em>&lt;/p>
-&lt;p>OK, let’s start&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:01 PM&lt;/em>&lt;/p>
-&lt;p>settles in&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:02 PM&lt;/em>&lt;/p>
-&lt;p>General project statistics
-Previous meeting: 334 open issues, 63 open PRs
-Current: 281, 61 PRs
-We are slowly cleaning the list of issues, more cleaning to come :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:02 PM&lt;/em>&lt;/p>
-&lt;p>Another 32 weeks, and we’ll be done
-(Well, PRs)&lt;/p>
-&lt;p>&lt;em>David Burns 9:03 PM&lt;/em>&lt;/p>
-&lt;p>I think we should pat ourselves on the back. In February we had over 600 issues&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:03 PM&lt;/em>&lt;/p>
-&lt;p>Absolutely&lt;/p>
-&lt;p>&lt;em>9:04&lt;/em>&lt;/p>
-&lt;p>Ok, next topic
-Overall announcements? New people on committees, with the commit bit, etc?
-I am not aware of any announcements…&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:04 PM&lt;/em>&lt;/p>
-&lt;p>Not that I’m aware of&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:04 PM&lt;/em>&lt;/p>
-&lt;p>Ok, so probably the next topic won’t have any updates either
-Anything new to report from the last PLC/SFC call?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:05 PM&lt;/em>&lt;/p>
-&lt;p>Not from me&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:06 PM&lt;/em>&lt;/p>
-&lt;p>Perfect, so let’s jump to the next one
-Pending work that needs to be done for Alpha 7?&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:06 PM&lt;/em>
-.NET needs a fair bit of refactor for CDP
-i’m planning on taking all day tomorrow to look at that.&lt;/p>
-&lt;p>&lt;em>David Burns 9:07 PM&lt;/em>&lt;/p>
-&lt;p>Oh that&amp;rsquo;s awesome&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:07 PM&lt;/em>&lt;/p>
-&lt;p>The java code is in a releasable state, I think
-Though I broke a test in the distributor, so I may want to fix that before landing&lt;/p>
-&lt;p>&lt;em>Rajendra Kadam 9:07 PM&lt;/em>&lt;/p>
-&lt;p>I am working on js cdp stuff&lt;/p>
-&lt;p>&lt;em>David Burns 9:07 PM&lt;/em>&lt;/p>
-&lt;p>The python code for here is just me putting in the work to make the API not suck&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:07 PM&lt;/em>&lt;/p>
-&lt;p>once i get CDP generation redone for C#, i’ll be pretty happy with the state of the .NET code base.&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:07 PM&lt;/em>&lt;/p>
-&lt;p>There’s the session queue PR that it’d be nice to land, but I don’t think it’s essential&lt;/p>
-&lt;p>&lt;em>David Burns 9:07 PM&lt;/em>&lt;/p>
-&lt;p>@p0deje has the Ruby stuff done&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:07 PM&lt;/em>&lt;/p>
-&lt;p>I am reviewing @Puja Jagani’s PR about the session queue, it’d be nice to have it for the alpha&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:07 PM&lt;/em>&lt;/p>
-&lt;p>@jimevans this is good news :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:08 PM&lt;/em>&lt;/p>
-&lt;p>i do need to think about a “version independent API for CDP” for .NET&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:08 PM&lt;/em>&lt;/p>
-&lt;p>Do we need cdp for alpha 7? There are a number of bug fixes from 6 to get out there&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:08 PM&lt;/em>&lt;/p>
-&lt;p>I’d like us to have a fairly unified approach between (at least) java and .net for the unified CDP. Happy to make changes to the java tree to make that happen&lt;/p>
-&lt;p>&lt;em>David Burns 9:08 PM&lt;/em>&lt;/p>
-&lt;p>The queueing stuff I think needs to be in the alpha so we can get it to nightly users&lt;/p>
-&lt;p>and then improve in the betas&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:09 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner i at least need to get that version-independent api done before alpha7. .NET skipped alpha6 altogether, because i suck.&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:09 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner in the java tree, the new CDP stuff has allowed us to hook in a bunch of APIs. It’d be nice if those were in other languages too&lt;/p>
-&lt;p>&lt;em>David Burns 9:10 PM&lt;/em>&lt;/p>
-&lt;p>but&amp;hellip; feature wise after that we&amp;rsquo;re done right?
-I&amp;rsquo;m itching to get us out of alpha
-we&amp;rsquo;re not getting enough usage&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:10 PM&lt;/em>&lt;/p>
-&lt;p>I think we’re basically there once it’s done
-How’s the UI looking?&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:11 PM&lt;/em>&lt;/p>
-&lt;p>Sounds like it, for Alpha 7, to summarise:
-CDP working across bindings
-Session queue in Grid&lt;/p>
-&lt;p>&lt;em>David Burns 9:11 PM&lt;/em>&lt;/p>
-&lt;p>the UI is there, I think. We&amp;rsquo;ve fixed the main UI issues&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:11 PM&lt;/em>&lt;/p>
-&lt;p>i agree with that assessment. once CDP work for .NET is done, i’m considering it feature-complete for 4.x.&lt;/p>
-&lt;p>&lt;em>David Burns 9:11 PM&lt;/em>&lt;/p>
-&lt;p>and that&amp;rsquo;s all in trunk&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:13 PM&lt;/em>&lt;/p>
-&lt;p>Great, I am not sure if there is anything else to add to the topic&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:13 PM&lt;/em>&lt;/p>
-&lt;p>Other than a proposed date to release a7?&lt;/p>
-&lt;p>&lt;em>David Burns 9:13 PM&lt;/em>&lt;/p>
-&lt;p>next week (no pressure everyone)&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:14 PM&lt;/em>&lt;/p>
-&lt;p>wednesday or after of next week. i’m sure i’m not going to get it all done in one day.&lt;/p>
-&lt;p>&lt;em>David Burns 9:14 PM&lt;/em>&lt;/p>
-&lt;p>Thursday and Fridays are our normal release dates so that sounds good&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:14 PM&lt;/em>&lt;/p>
-&lt;p>I’m going to make a decision to gate the release on @jimevans saying that .Net is ready to roll&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:14 PM&lt;/em>&lt;/p>
-&lt;p>to quote @AutomatedTester “no pressure” :slightly_smiling_face:
-we’re putting a stake in the ground saying a7 is our last alpha?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:15 PM&lt;/em>&lt;/p>
-&lt;p>With a hard stop-date of 2020-10-07
-For java, yes
-And I think we have the most moving parts&lt;/p>
-&lt;p>&lt;em>Jim Evans:black_medium_square: 9:15 PM&lt;/em>&lt;/p>
-&lt;p>(agreed as a7 being last alpha for .NET too)&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:17 PM&lt;/em>&lt;/p>
-&lt;p>Any comments from other bindings?
-@AutomatedTester @titusfortner @rajendra @harsha509?&lt;/p>
-&lt;p>&lt;em>David Burns 9:17 PM&lt;/em>&lt;/p>
-&lt;p>I want us out of alpha
-so&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:17 PM&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester we all want to be out of alpha&lt;/p>
-&lt;p>&lt;em>Rajendra Kadam 9:17 PM&lt;/em>&lt;/p>
-&lt;p>working out for js, some tests issues, trying to fix those&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:17 PM&lt;/em>&lt;/p>
-&lt;p>But we also don’t want to move “just because”&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:18 PM&lt;/em>&lt;/p>
-&lt;p>JS is already in alpha 7, can we release JS npm with like alpha7-patch1 with CDP ?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:18 PM&lt;/em>&lt;/p>
-&lt;p>Bump JS to alpha8
-Keep it simple :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:19 PM&lt;/em>&lt;/p>
-&lt;p>ok, Thank you @simonstewart&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:21 PM&lt;/em>&lt;/p>
-&lt;p>Does it make sense to discuss the next topic? “Betas”&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:22 PM&lt;/em>&lt;/p>
-&lt;p>We can move on from “alphas” :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:22 PM&lt;/em>&lt;/p>
-&lt;p>Like, having a timeline or something like that for Betas?&lt;/p>
-&lt;p>&lt;em>David Burns 9:22 PM&lt;/em>&lt;/p>
-&lt;p>There are a number of issues that are &amp;ldquo;assigned&amp;rdquo; in the &amp;ldquo;in Progress&amp;rdquo; part of &lt;a href="https://github.com/SeleniumHQ/selenium/projects/2">https://github.com/SeleniumHQ/selenium/projects/2&lt;/a>
-I think understanding which of those features are needed for use to move through the betas is important&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:23 PM&lt;/em>&lt;/p>
-&lt;p>I have a pile of branches locally with changes
-If it’s in the 4.0 roadmap, that kind of suggests it’s needed before release
-If it’s not in the roadmap, we don’t need to worry about it
-(For the release itself)
-(We do need to worry about it)&lt;/p>
-&lt;p>&lt;em>David Burns 9:24 PM&lt;/em>&lt;/p>
-&lt;p>so&amp;hellip; I guess my request is, if you&amp;rsquo;re doing it, what can we do to get it sorted (like hand off to someone else) or if you&amp;rsquo;ve not started can you unassign yourself
-I think it would be good to get a clearer picture of where people can help&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:25 PM&lt;/em>&lt;/p>
-&lt;p>I’m not actually assigned to that much&lt;/p>
-&lt;p>&lt;em>David Burns 9:25 PM&lt;/em>&lt;/p>
-&lt;p>this is a comment to all of us really&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:25 PM&lt;/em>&lt;/p>
-&lt;p>One code review, one “add support for retries to handlers”
-I’ve a local change that has the skeleton of retries written, as well as fallback URLs for commands&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:27 PM&lt;/em>&lt;/p>
-&lt;p>I’ve seen that one and wanted to check, but time hasn’t been on my side lately&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:27 PM&lt;/em>&lt;/p>
-&lt;p>Join the club :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>David Burns 9:28 PM&lt;/em>&lt;/p>
-&lt;p>so part of my request really is knowing where I can help without having to badger you all
-I being me and my team&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:29 PM&lt;/em>&lt;/p>
-&lt;p>Getting Grid rock solid would be really helpful
-I suspect we’re not really using ZMQ properly
-And if that falls over, we’re in trouble&lt;/p>
-&lt;p>&lt;em>David Burns 9:31 PM&lt;/em>&lt;/p>
-&lt;p>we&amp;rsquo;ve engaged @adamgoucher and he seems Ok, but this is where I want to get more usage from betas
-and the grid is pretty solid
-we&amp;rsquo;ve fixed the main issues from browserstack at least&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:32 PM&lt;/em>&lt;/p>
-&lt;p>One thing I’d quite like is a way to hook in SaaS providers to the Grid&lt;/p>
-&lt;p>&lt;em>David Burns 9:32 PM&lt;/em>&lt;/p>
-&lt;p>and I would love to get a new alpha out so we can start using Jaegar more&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:33 PM&lt;/em>&lt;/p>
-&lt;p>The Docker support also needs some work
-Firebase support and XRay would be nice for use in GCP and AWS
-Our HTTP client needs work: I don’t think reactor is really going to work for us&lt;/p>
-&lt;p>&lt;em>9:34&lt;/em>&lt;/p>
-&lt;p>Every time I try and switch to it, there’s Yet Another Weird Failure&lt;/p>
-&lt;p>&lt;em>David Burns 9:35 PM&lt;/em>&lt;/p>
-&lt;p>I am happy to get Puja involved here&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:36 PM&lt;/em>&lt;/p>
-&lt;p>I think one thing we’d really love to demo is “deploying Grid to EKS” and seeing it start outputting information
-@Puja Jagani’s help would be amazing&lt;/p>
-&lt;p>&lt;em>Puja Jagani 9:36 PM&lt;/em>&lt;/p>
-&lt;p>Would love to help!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:36 PM&lt;/em>&lt;/p>
-&lt;p>Awesomeness :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:36 PM&lt;/em>&lt;/p>
-&lt;p>we can do that, it should not be hard :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:37 PM&lt;/em>&lt;/p>
-&lt;p>Getting a Kafka version of EventBus would allow folks to use other hosted infra, but I think that may be too much for 4.0&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:39 PM&lt;/em>&lt;/p>
-&lt;p>I prefer to see the Gird being rock solid at its core, and when that is the case, add the other things&lt;/p>
-&lt;p>&lt;em>David Burns 9:39 PM&lt;/em>&lt;/p>
-&lt;p>augementing things like that is a definite post 4.0 item&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:39 PM&lt;/em>&lt;/p>
-&lt;p>for example, I would say we can tackle the redis backed distributor after the release&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:40 PM&lt;/em>&lt;/p>
-&lt;p>I’m working on some changes to make the state of the distributor serializable
-Once those are done, I’ll be a lot happier with it&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:43 PM&lt;/em>&lt;/p>
-&lt;p>Great, I think those are the topics for today, is there something else?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:44 PM&lt;/em>&lt;/p>
-&lt;p>Not from me&lt;/p>
-&lt;p>&lt;em>David Burns 9:44 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m done&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:45 PM&lt;/em>&lt;/p>
-&lt;p>Thanks everyone!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:45 PM&lt;/em>
-Thank you, @diemol!&lt;/p></description></item></channel></rss>
+&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/">https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
