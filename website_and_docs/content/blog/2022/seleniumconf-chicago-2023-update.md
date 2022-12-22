@@ -5,9 +5,9 @@ date: 2022-12-22
 tags: ["conference", "meetup", "workshop"]
 categories: ["conference"]
 author: Bill McGee
-description: > The SeleniumConf Chicago 2023 Program Review Committee and conference organizers are finalizing the agenda, but in advance of this here is what you can look forward to.
+description: > 
+  The SeleniumConf Chicago 2023 Program Review Committee and conference organizers are finalizing the agenda, but in advance of this here is what you can look forward to.
 ---
-
 
 As many of you know, the [Selenium Conference](https://seleniumconf.com) returns to an in-person event next March 28-30, 2023 in Chicago, IL. The Program Chairs & Committee, as well as the Extended Program Review Committee, have been hard at work putting together an outstanding lineup of speakers and workshops, and we're close to releasing the full agenda and a completely re-branded conference website - stay tuned! In the meantime, we wanted you to be among the first to know who will be presenting, announce a new, additional pre-conference workshop, and provide you with some important updates. Here we go!
 
