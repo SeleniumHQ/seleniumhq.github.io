@@ -1,4 +1,46 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: SeleniumConf Chicago 2023 Speakers Announced</title><link>/blog/2022/seleniumconf-chicago-2023-update/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/seleniumconf-chicago-2023-update/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Year End Review 2022</title><link>/blog/2022/end-of-year-review/</link><pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/end-of-year-review/</guid><description>
+&lt;p>It was an amazing year here at the Selenium project, and we wanted to remind you of some of the great things we accomplished.&lt;/p>
+&lt;p>In terms of releases, we continued to build on top of Selenium 4 which was launched in October 2021.
+This year we published
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.2.0">v4.2&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.3.0">v4.3&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-4-0-released/">v4.4&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-5-0-released/">v4.5&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-6-0-released/">v4.6&lt;/a>, and
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-7-0-released/">v4.7&lt;/a>.
+These releases included improvements, bug fixes, removal of deprecated functionality, improved error handling,
+updates of the underlying libraries, support for the latest Chrome DevTools
+versions to keep you in sync with new browser releases, but also new features.&lt;/p>
+&lt;p>We introduced the first (beta) version of the embedded
+&lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a>.
+The purpose of this feature is to
+help you manage your driver binaries without having to manually update them yourself each time a new version is released.
+We also introduced observability in the Docker-Selenium images.
+Another major new feature is native support for
+&lt;a href="https://www.selenium.dev/documentation/webdriver/actions_api/wheel/">scrolling&lt;/a> in the Actions API.
+But these are only some of the highlights of what we released. To get the details for each
+language we support, you can check out their corresponding Changelog pages: &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">Java&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">Python&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">Ruby&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">Javascript&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">DotNet&lt;/a>.&lt;/p>
+&lt;p>In terms of events and gatherings, in July our Selenium India Conference took place, this time online. It kicked off with
+an 8 talk pre-conference event, namely Selenium Lite. We then had a full day of workshops, followed by 2 days of conference.
+We had over 50 speakers and over 800 participants from around the world. The talks focused on Selenium, the Selenium ecosystem,
+automation, methodologies and best practices. In case you missed some of these talks, you can still watch them
+&lt;a href="https://www.youtube.com/playlist?list=PL9Z-JgiTsOYRfoG_mcRBlTUIFPIknhQ6S">here&lt;/a>.&lt;/p>
+&lt;p>We also held 2 test automation summits: one in
+&lt;a href="https://www.eventbrite.com/e/test-automation-summit-san-francisco-tickets-484039263467">San Francisco&lt;/a> and one in
+&lt;a href="https://www.selenium.dev/blog/2022/test-automation-summit/">Berlin&lt;/a>. During these workshops the participants,
+together with some of the maintainers of frameworks from the Selenium ecosystem, built their Selenium based projects,
+added tests, new features and fixed bugs. During the first summit the participants focused on the
+&lt;a href="https://w3c.github.io/webdriver-bidi/">BiDi protocol&lt;/a>, while during the second one the focus was on
+&lt;a href="https://appium.io/">Appium&lt;/a> and mobile automation.&lt;/p>
+&lt;p>We are kicking off next year with a few surprises.
+The &lt;a href="https://www.selenium.dev/blog/2022/seleniumconf-chicago-2023-update/">Selenium Conference in Chicago&lt;/a>
+just announced the &lt;a href="https://seleniumconf.com/">Speaker Lineup&lt;/a>. Stay tuned for further details!&lt;/p>
+&lt;p>&lt;strong>Many thanks to &lt;a href="https://www.selenium.dev/project/structure">everyone who has contributed to the Selenium project&lt;/a> for all their hard work this year!&lt;/strong>&lt;/p>
+&lt;p>And special thanks to all of you who are using, following and supporting the Selenium project.&lt;/p>
+&lt;p>From everyone here at SeleniumHQ, may you have the best holidays and an amazing new year. See you in 2023!&lt;/p></description></item><item><title>Blog: SeleniumConf Chicago 2023 Speakers Announced</title><link>/blog/2022/seleniumconf-chicago-2023-update/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/seleniumconf-chicago-2023-update/</guid><description>
 &lt;p>As many of you know, the &lt;a href="https://seleniumconf.com">Selenium Conference&lt;/a> returns to an in-person event next March 28-30, 2023 in Chicago, IL. The Program Chairs &amp;amp; Committee, as well as the Extended Program Review Committee, have been hard at work putting together an outstanding lineup of speakers and workshops, and we&amp;rsquo;re close to releasing the full agenda and a completely re-branded conference website - stay tuned! In the meantime, we wanted you to be among the first to know who will be presenting, announce a new, additional pre-conference workshop, and provide you with some important updates. Here we go!&lt;/p>
 &lt;h3 id="keynote-sessions">Keynote Sessions&lt;/h3>
 &lt;p>There will be four plenary keynote presentations across the 2-day conference. Selenium Core Committer &lt;strong>Diego Molina&lt;/strong> will open the conference on Wednesday with the &amp;ldquo;Selenium: State of the Union&amp;rdquo; presentation, followed by Quality &amp;amp; Leadership Coach &lt;strong>Erika Chestnut&lt;/strong> presenting &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17864/bigger-than-the-box">&amp;ldquo;Bigger Than The Box&amp;rdquo;&lt;/a>, where she shares how she has crossed the aisles to elevate and expand the role quality in the organizations that she has worked for. Day 2 kicks off with &lt;strong>Mark Winteringham&lt;/strong>, Ministry of Testing OpsBoss, presenting &lt;a href="https://confengine.com/conferences/selenium-conference-chicago-2023/proposal/17865/what-exactly-do-you-do-in-test-automation">&amp;ldquo;What Exactly Do You Do In Test Automation&amp;rdquo;&lt;/a>. The final keynote session will be a &lt;strong>Q&amp;amp;A with the Selenium Committers&lt;/strong> panel.&lt;/p>
@@ -6586,95 +6628,4 @@ Alpha 7 talk?&lt;/p>
 ?&lt;/p>
 &lt;p>&lt;em>Diego Molina 9:36 PM&lt;/em>&lt;/p>
 &lt;p>Doesn’t seem like that
-Thank you everyone!&lt;/p></description></item><item><title>Blog: SeleniumConf Virtual 2020 Recap</title><link>/blog/2020/selenium-conf-2020-recap/</link><pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/selenium-conf-2020-recap/</guid><description>
-&lt;img src="/blog/2020/selenium-conf-2020-recap/featured_selenium_conf_2020_recap_1_hu0c05a06f2dec34c46adb7995bcf4e8d5_68229_640x0_resize_catmullrom_3.png" width="640" height="212"/>
-&lt;figure class="img-responsive">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/featured_selenium_conf_2020_recap_1.png"/>
-&lt;/figure>
-&lt;p>This year the &lt;a href="https://2020.seleniumconf.in/">Selenium Conference&lt;/a> was held virtually, and
-despite that, the conference was again that exciting place where the Selenium community
-meets every year to share and learn about the most popular browser automation tool in the
-world. The conference offered talks about improved testing practices, new tools to simplify
-the setup of automated tests, the future of Selenium, and lots of learnings from speakers
-who shared their use cases and practical advice for how they use Selenium at work.&lt;/p>
-&lt;p>Here are some takeaways and interesting talks from this year’s conference:&lt;/p>
-&lt;h2 id="selenium-state-of-the-union">Selenium: State of the Union&lt;/h2>
-&lt;p>A peek at the upcoming Selenium 4 release was possible thanks to the demo
-&lt;a href="https://twitter.com/shs96c">Simon Stewart&lt;/a> gave during this traditional
-&lt;a href="https://confengine.com/selenium-conf-2020/proposal/14020/selenium-state-of-the-union">talk&lt;/a>
-that happens in every Selenium conference. Selenium 4 is shaping up nicely and will leave
-the Alpha state soon. We are all looking forward to the betas, and a candidate release
-shortly after that. The talk also invited other members of the Selenium team to share the
-organizational work they have been doing in the project, including diversity, governance
-and welcoming contributors.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_2.png"/>
-&lt;/figure>
-&lt;h2 id="build-a-responsive-typescript-wdio-framework">Build a responsive typescript wdio framework&lt;/h2>
-&lt;p>&lt;a href="https://twitter.com/vibranttester">Varuna Srivastava&lt;/a> gave a
-&lt;a href="https://confengine.com/selenium-conf-2020/proposal/13629/build-a-responsive-typescript-wdio-framework">talk&lt;/a>
-together with &lt;a href="https://confengine.com/selenium-conf-2020/proposal/13629/build-a-responsive-typescript-wdio-framework">Wim Selles&lt;/a>
-that showed how to build a robust and scalable framework for UI testing, based on WebdriverIO.
-It showed concepts that are important when getting started with JavaScript, NodeJS, and the NPM
-ecosystem. Furthermore, there was a broad overview of WebdriverIO and its shiny features, as well
-as a demo on how to use TypeScript for testing. This is a recommended talk for anyone who wants to
-get started on testing with JavaScript.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_3.png"/>
-&lt;/figure>
-&lt;h2 id="to-test-and-monitor-one-website-is-not-that-hard-but-what-if-you-need-to-do-it-to-over-40-websites">To Test and monitor one website is not that hard, but what if you need to do it to over 40 websites?&lt;/h2>
-&lt;p>This was an interesting &lt;a href="https://confengine.com/selenium-conf-2020/schedule">talk&lt;/a> from
-&lt;a href="https://twitter.com/qa_jesus">Jesus Sanchez&lt;/a>, where in order to avoid having the QA department as
-a bottleneck for the growing team of developers, they took the approach of building tools and resources
-for developers and enabling them to write tests for their over 40 websites. It is an interesting take
-on how the QA role becomes a facilitator and an enabler for the rest of the organization, while
-coaching everyone on how to write automated tests and the value of testing the right thing.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_4.png"/>
-&lt;/figure>
-&lt;h2 id="careers-in-testing--identify-your-superpower">Careers in Testing – Identify your SuperPower&lt;/h2>
-&lt;p>&lt;a href="https://twitter.com/smitapmishra">Smita Mishra&lt;/a> gave a
-&lt;a href="https://confengine.com/selenium-conf-2020/proposal/13771/careers-in-testing-identify-your-superpower">captivating&lt;/a>
-talk where she invited all testers to think what alternative paths could be present in their careers,
-given that some organizations value testing more than others. Smita showed that if you understand what
-you enjoy the most, and find a way to combine that with your current and future skills, it could show
-you how to grow your career by finding and following a path of the least resistance.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_5.png"/>
-&lt;/figure>
-&lt;h2 id="developing-selenium-tests-with-junit-5">Developing Selenium tests with JUnit 5&lt;/h2>
-&lt;p>JUnit 5 is the new iteration of this popular testing framework, and it implements a new programming
-and extension model named Jupiter. &lt;a href="https://twitter.com/boni_gg">Boni García&lt;/a> presents in this
-&lt;a href="https://confengine.com/selenium-conf-2020/proposal/13255/developing-selenium-tests-with-junit-5">talk&lt;/a>
-a JUnit 5 extension called &lt;a href="https://bonigarcia.github.io/selenium-jupiter/">Selenium-Jupiter&lt;/a>,
-the demos showed illustrate how useful this extension is because it simplifies the test configuration
-and reduces the boilerplate code that needs to be written in order to have a test running. Have a
-look at it because it is well maintained and documented, and it will help you by reducing the time
-needed to set up your tests.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_6.png"/>
-&lt;/figure>
-&lt;h2 id="im-not-special">I&amp;rsquo;m Not Special&lt;/h2>
-&lt;p>One of the &lt;a href="https://confengine.com/selenium-conf-2020/proposal/14005/im-not-special">keynotes&lt;/a> in
-the conference was done by &lt;a href="https://twitter.com/jimevansmusic">Jim Evans&lt;/a>, where he relates a
-personal journey through his career and how clearly “not special” he considers himself. One of
-the key takeaways is the fact that you become a major contributor and you do not need to be special
-to do that. No review will make enough justice to highlight how heartwarming and encouraging this
-talk was, it is a must watch for anyone who wants to become a contributor.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_7.png"/>
-&lt;/figure>
-&lt;h2 id="closing-keynote">Closing keynote&lt;/h2>
-&lt;p>The final session of the conference was the
-&lt;a href="https://confengine.com/selenium-conf-2020/proposal/14836/q-a-with-the-selenium-committee">keynote&lt;/a>
-where the project committers do an open Q&amp;amp;A with the community. Different opinions were shared around
-the question of the challenges the Selenium project sees by the growing number of browser automation
-tools. In addition, all project contributors made an open invitation to the community to get involved
-in the project, if you are interested in that, please check the project’s
-&lt;a href="https://www.selenium.dev/governance/">governance document&lt;/a>. This is another recommended session
-to watch, lots of insights about how the project and its individuals work that will help the community
-understand the project better.&lt;/p>
-&lt;figure class="img-responsive my-5">
-&lt;img src="/blog/2020/selenium-conf-2020-recap/selenium_conf_2020_recap_8.png"/>
-&lt;/figure>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/">https://opensource.saucelabs.com/blog/selenium_conf_2020_recap/&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
+Thank you everyone!&lt;/p></description></item></channel></rss>

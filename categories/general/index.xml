@@ -1,4 +1,46 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – general</title><link>/categories/general/</link><description>Recent content in general on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 23 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Year End Review 2022</title><link>/blog/2022/end-of-year-review/</link><pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/end-of-year-review/</guid><description>
+&lt;p>It was an amazing year here at the Selenium project, and we wanted to remind you of some of the great things we accomplished.&lt;/p>
+&lt;p>In terms of releases, we continued to build on top of Selenium 4 which was launched in October 2021.
+This year we published
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.2.0">v4.2&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.3.0">v4.3&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-4-0-released/">v4.4&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-5-0-released/">v4.5&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-6-0-released/">v4.6&lt;/a>, and
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-7-0-released/">v4.7&lt;/a>.
+These releases included improvements, bug fixes, removal of deprecated functionality, improved error handling,
+updates of the underlying libraries, support for the latest Chrome DevTools
+versions to keep you in sync with new browser releases, but also new features.&lt;/p>
+&lt;p>We introduced the first (beta) version of the embedded
+&lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a>.
+The purpose of this feature is to
+help you manage your driver binaries without having to manually update them yourself each time a new version is released.
+We also introduced observability in the Docker-Selenium images.
+Another major new feature is native support for
+&lt;a href="https://www.selenium.dev/documentation/webdriver/actions_api/wheel/">scrolling&lt;/a> in the Actions API.
+But these are only some of the highlights of what we released. To get the details for each
+language we support, you can check out their corresponding Changelog pages: &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">Java&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">Python&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">Ruby&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">Javascript&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">DotNet&lt;/a>.&lt;/p>
+&lt;p>In terms of events and gatherings, in July our Selenium India Conference took place, this time online. It kicked off with
+an 8 talk pre-conference event, namely Selenium Lite. We then had a full day of workshops, followed by 2 days of conference.
+We had over 50 speakers and over 800 participants from around the world. The talks focused on Selenium, the Selenium ecosystem,
+automation, methodologies and best practices. In case you missed some of these talks, you can still watch them
+&lt;a href="https://www.youtube.com/playlist?list=PL9Z-JgiTsOYRfoG_mcRBlTUIFPIknhQ6S">here&lt;/a>.&lt;/p>
+&lt;p>We also held 2 test automation summits: one in
+&lt;a href="https://www.eventbrite.com/e/test-automation-summit-san-francisco-tickets-484039263467">San Francisco&lt;/a> and one in
+&lt;a href="https://www.selenium.dev/blog/2022/test-automation-summit/">Berlin&lt;/a>. During these workshops the participants,
+together with some of the maintainers of frameworks from the Selenium ecosystem, built their Selenium based projects,
+added tests, new features and fixed bugs. During the first summit the participants focused on the
+&lt;a href="https://w3c.github.io/webdriver-bidi/">BiDi protocol&lt;/a>, while during the second one the focus was on
+&lt;a href="https://appium.io/">Appium&lt;/a> and mobile automation.&lt;/p>
+&lt;p>We are kicking off next year with a few surprises.
+The &lt;a href="https://www.selenium.dev/blog/2022/seleniumconf-chicago-2023-update/">Selenium Conference in Chicago&lt;/a>
+just announced the &lt;a href="https://seleniumconf.com/">Speaker Lineup&lt;/a>. Stay tuned for further details!&lt;/p>
+&lt;p>&lt;strong>Many thanks to &lt;a href="https://www.selenium.dev/project/structure">everyone who has contributed to the Selenium project&lt;/a> for all their hard work this year!&lt;/strong>&lt;/p>
+&lt;p>And special thanks to all of you who are using, following and supporting the Selenium project.&lt;/p>
+&lt;p>From everyone here at SeleniumHQ, may you have the best holidays and an amazing new year. See you in 2023!&lt;/p></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
 &lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of the core Selenium maintainers.
 One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
@@ -1677,17 +1719,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>&lt;a href="http://programmingisterrible.com/post/42215715657/postels-principle-is-a-bad-idea">Postel’s Principle is a Bad Idea&lt;/a>. Sacrilege! Oh, wait, there is a patch.&lt;/li>
 &lt;li>&lt;a href="http://armoredbarista.blogspot.de/2013/01/a-brief-chronology-of-ssltls-attacks.html">A brief chronology of SSL/TLS attacks&lt;/a> can’t be automated, but good automation is to know what needs to be looked at by a human&lt;/li>
 &lt;li>&lt;a href="http://michaelfeathers.typepad.com/michael_feathers_blog/2013/01/the-framework-superclass-anti-pattern.html">The Framework Superclass Anti-Pattern&lt;/a> — for the record, &lt;a href="http://element34.ca/products/saunter">my frameworks&lt;/a> ‘require’ you have adapters to prevent lock-in. Oh, and they are Open Source…&lt;/li>
-&lt;/ul></description></item><item><title>Blog: A Smattering of Selenium #141</title><link>/blog/2013/a-smattering-of-selenium-141/</link><pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate><guid>/blog/2013/a-smattering-of-selenium-141/</guid><description>
-&lt;p>Its -12 Celsius plus windchill out. Why the heck is the office air conditioning on. Feel like I need a Mr. Rogers cardigan or something.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://bolinfest.com/javascript/caret-navigation.html">Caret Navigation in Web Applications&lt;/a> starts slow and then hurts your brain while reminding you that this automation thing isn’t easy.&lt;/li>
-&lt;li>I don’t know NUnit or TeamCity so don’t know if &lt;a href="http://blog.diniscruz.com/2013/01/using-teamcity-and-nnit-to-start.html">Using TeamCity and NUnit to Start WebServer, Run Selenium Tests and Stop WebServer&lt;/a> is useful or just a rehash of common knowledge. But here you are anyways.&lt;/li>
-&lt;li>&lt;a href="https://github.com/brianium/paratest-selenium">paratest-selenium&lt;/a> is another parallel phpunit solution. I &lt;em>really&lt;/em> want an official one.&lt;/li>
-&lt;li>&lt;a href="http://nealford.com/memeagora/2013/01/22/why_everyone_eventually_hates_maven.html">Why Everyone (Eventually) Hates (or Leaves) Maven&lt;/a> is not Maven bashing [he says so in the 3rd last paragraph].&lt;/li>
-&lt;li>&lt;a href="https://shanetomlinson.com/2013/testing-javascript-frontend-part-1-anti-patterns-and-fixes/">Writing Testable Frontend Javascript Part 1 – Anti-patterns and their fixes&lt;/a> — looking to carve out a niche for the next couple years for yourself? This is it. And Canvas [which is JS…]&lt;/li>
-&lt;li>The &lt;a href="http://seleniumcamp.com/2013/01/24/program-2013-is-ready/">SeleniumCamp 2013 program&lt;/a> is out. Of course, its in Russian but…&lt;/li>
-&lt;li>&lt;a href="http://www.build-doctor.com/2013/01/21/neo4j-puppet/">Writing a Neo4j Puppet module for fun and profit&lt;/a> is I think how a lot of trial stuff is going to be distributed. And Puppet is fun.&lt;/li>
-&lt;li>Have I mentioned that this automation thing is hard? No? How about &lt;a href="http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/">What is the Execution Context &amp;amp; Stack in JavaScript?&lt;/a>. Still think its easy?&lt;/li>
-&lt;li>&lt;a href="http://simplythetest.tumblr.com/post/41104418417/automated-testing-from-testing-activity-to">Automated Testing: From “Testing” Activity to “Development” Activity&lt;/a> is the sort of epiphany you will see more and more I think. Unsure whether this is a good, bad or just factual trend.&lt;/li>
-&lt;li>About building a framework? Its in! &lt;a href="http://www.maddoxlabs.com/blog/2013/01/25/how-to-make-a-basic-test-framework-in-c/">How to make a basic test framework in C#&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>

@@ -1,4 +1,46 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 23 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Year End Review 2022</title><link>/blog/2022/end-of-year-review/</link><pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/end-of-year-review/</guid><description>
+&lt;p>It was an amazing year here at the Selenium project, and we wanted to remind you of some of the great things we accomplished.&lt;/p>
+&lt;p>In terms of releases, we continued to build on top of Selenium 4 which was launched in October 2021.
+This year we published
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.2.0">v4.2&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.3.0">v4.3&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-4-0-released/">v4.4&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-5-0-released/">v4.5&lt;/a>,
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-6-0-released/">v4.6&lt;/a>, and
+&lt;a href="https://www.selenium.dev/blog/2022/selenium-4-7-0-released/">v4.7&lt;/a>.
+These releases included improvements, bug fixes, removal of deprecated functionality, improved error handling,
+updates of the underlying libraries, support for the latest Chrome DevTools
+versions to keep you in sync with new browser releases, but also new features.&lt;/p>
+&lt;p>We introduced the first (beta) version of the embedded
+&lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a>.
+The purpose of this feature is to
+help you manage your driver binaries without having to manually update them yourself each time a new version is released.
+We also introduced observability in the Docker-Selenium images.
+Another major new feature is native support for
+&lt;a href="https://www.selenium.dev/documentation/webdriver/actions_api/wheel/">scrolling&lt;/a> in the Actions API.
+But these are only some of the highlights of what we released. To get the details for each
+language we support, you can check out their corresponding Changelog pages: &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">Java&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">Python&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">Ruby&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">Javascript&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">DotNet&lt;/a>.&lt;/p>
+&lt;p>In terms of events and gatherings, in July our Selenium India Conference took place, this time online. It kicked off with
+an 8 talk pre-conference event, namely Selenium Lite. We then had a full day of workshops, followed by 2 days of conference.
+We had over 50 speakers and over 800 participants from around the world. The talks focused on Selenium, the Selenium ecosystem,
+automation, methodologies and best practices. In case you missed some of these talks, you can still watch them
+&lt;a href="https://www.youtube.com/playlist?list=PL9Z-JgiTsOYRfoG_mcRBlTUIFPIknhQ6S">here&lt;/a>.&lt;/p>
+&lt;p>We also held 2 test automation summits: one in
+&lt;a href="https://www.eventbrite.com/e/test-automation-summit-san-francisco-tickets-484039263467">San Francisco&lt;/a> and one in
+&lt;a href="https://www.selenium.dev/blog/2022/test-automation-summit/">Berlin&lt;/a>. During these workshops the participants,
+together with some of the maintainers of frameworks from the Selenium ecosystem, built their Selenium based projects,
+added tests, new features and fixed bugs. During the first summit the participants focused on the
+&lt;a href="https://w3c.github.io/webdriver-bidi/">BiDi protocol&lt;/a>, while during the second one the focus was on
+&lt;a href="https://appium.io/">Appium&lt;/a> and mobile automation.&lt;/p>
+&lt;p>We are kicking off next year with a few surprises.
+The &lt;a href="https://www.selenium.dev/blog/2022/seleniumconf-chicago-2023-update/">Selenium Conference in Chicago&lt;/a>
+just announced the &lt;a href="https://seleniumconf.com/">Speaker Lineup&lt;/a>. Stay tuned for further details!&lt;/p>
+&lt;p>&lt;strong>Many thanks to &lt;a href="https://www.selenium.dev/project/structure">everyone who has contributed to the Selenium project&lt;/a> for all their hard work this year!&lt;/strong>&lt;/p>
+&lt;p>And special thanks to all of you who are using, following and supporting the Selenium project.&lt;/p>
+&lt;p>From everyone here at SeleniumHQ, may you have the best holidays and an amazing new year. See you in 2023!&lt;/p></description></item><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.7.0 for Java,
 .NET, and Javascript as well as the Grid and Internet Explorer Driver;
 for Ruby use 4.7.1, and Python 4.7.2. Links to everything can be found on our
@@ -2694,8 +2736,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>If you’re a fan of &lt;a href="http://seleniumhq.org/projects/ide/">Selenium IDE&lt;/a>, then the &lt;a href="http://www.seleniumconf.org/speakers">talk on the SauceBuilder&lt;/a> will be a “must see”. We’ll also have the current owners of Selenium IDE attending the conference, so you’ll get a chance to pick their brains on the future of the tool.&lt;/p>
 &lt;p>If you’re someone who enjoys living in the future, then the mobile focused talks, such as Andreas Tolf Tolfson’s talking about &lt;a href="http://www.seleniumconf.org/speakers#ATT">OperaDriver on mobile devices&lt;/a>, or Dante Briones talking about &lt;a href="http://www.seleniumconf.org/speakers#DB">testing mobile apps on iOS&lt;/a> will be interesting. And Jason Huggins will be talking about &lt;a href="http://www.seleniumconf.org/speakers#JH">robots&lt;/a>. What’s not to love?&lt;/p>
 &lt;p>Better still, we’ve left space in the schedule in Track B for an unconference. If you put forward a talk this year that wasn’t accepted, or if you’ve got something you feel the Selenium community should hear, now’s your chance! If you’ve only got a little to say, or just want to make a single point, then you’re really going to enjoy the lightning talks!&lt;/p>
-&lt;p>All of this is available for the &lt;a href="http://www.seleniumconf.org/tickets/">cost of the ticket&lt;/a>, which you can still buy. Don’t wait! Come to &lt;a href="https://twitter.com/#!/search/realtime/%23seconf">#SeConf&lt;/a>!&lt;/p></description></item><item><title>Blog: Selenium Conf Keynotes: Liz Keogh</title><link>/blog/2012/selenium-conf-keynotes-liz-keogh/</link><pubDate>Sun, 25 Mar 2012 00:00:00 +0000</pubDate><guid>/blog/2012/selenium-conf-keynotes-liz-keogh/</guid><description>
-&lt;p>The tickets for &lt;a href="http://www.seleniumconf.org/">Selenium Conf ’12&lt;/a> are still on sale for about another week, so there’s still time for you to &lt;a href="http://www.seleniumconf.org/tickets/">buy your tickets&lt;/a>. In case you’ve not already gone to the &lt;a href="http://www.seleniumconf.org">conference site&lt;/a> to see the great line up, this week we’ll be letting you know what to expect!&lt;/p>
-&lt;p>I’m really pleased to announce that &lt;a href="http://lunivore.com/">Liz Keogh&lt;/a>, who is a core member of the Behaviour Driven Development (BDD) community and is one of the stalwarts of the London Agile community, as well as a haiku poet, is going to be one of our keynotes! If you’ve ever seen &lt;a href="https://twitter.com/#!/lunivore">Liz&lt;/a> speak then you’ll know just how much a treat we’re in for. She’s got great things to say and always says them in a thoroughly engaging way.&lt;/p>
-&lt;p>Liz’s keynote is titled “How to Test the Inside of Your Head”. When we test code and find it doesn’t do what we thought it did, we change it. But, she asks, wouldn’t it be great if we didn’t have to write the wrong code in the first place? In the talk, Liz will show how we can use examples and scenarios to break the models we make inside our own heads, helping us to avoid premature commitments and their follow-through – whether in code or in life.&lt;/p>
-&lt;p>I’m really looking forward to it! I’m sure you are too.&lt;/p></description></item></channel></rss>
+&lt;p>All of this is available for the &lt;a href="http://www.seleniumconf.org/tickets/">cost of the ticket&lt;/a>, which you can still buy. Don’t wait! Come to &lt;a href="https://twitter.com/#!/search/realtime/%23seconf">#SeConf&lt;/a>!&lt;/p></description></item></channel></rss>
