@@ -1,7 +1,7 @@
-const { By } = require('selenium-webdriver')
-const { suite } = require('selenium-webdriver/testing')
+const {By} = require('selenium-webdriver')
+const {suite} = require('selenium-webdriver/testing')
 const assert = require('assert/strict')
-const { Select } = require('selenium-webdriver')
+const {Select} = require('selenium-webdriver')
 
 suite(function (env) {
   describe('Select Tests', async function () {
@@ -70,7 +70,9 @@ suite(function (env) {
       const selectElement = await driver.findElement(By.name('single_disabled'))
       const select = await new Select(selectElement)
 
-      await assert.rejects(async () => { await select.selectByValue("disabled") }, {
+      await assert.rejects(async () => {
+        await select.selectByValue("disabled")
+      }, {
         name: 'UnsupportedOperationError',
         message: 'You may not select a disabled option'
       })
