@@ -1,13 +1,13 @@
 package dev.selenium;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseFirefoxTest extends BaseTest {
 
     @BeforeEach
     public void setup() {
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
     }
 
 }
