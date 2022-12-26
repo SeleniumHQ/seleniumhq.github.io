@@ -126,7 +126,7 @@ driver = RemoteWebDriver(options)
 Ao invés do Chrome, os extras do Firefos não são adicionados como parte das capacidades, mas sim após iniciar o driver.
 
 Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
-[this issue](https://github.com/SeleniumHQ/selenium/issues/10278),
+[this issue](https://github.com/mozilla/geckodriver/issues/1476),
 they are created after starting the driver.
 
 The following examples are for local webdrivers.
