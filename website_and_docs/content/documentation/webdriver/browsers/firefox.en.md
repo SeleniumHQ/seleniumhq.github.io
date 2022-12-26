@@ -124,11 +124,9 @@ Unlike Chrome, Firefox extensions are not added as part of capabilities as menti
 [this issue](https://github.com/mozilla/geckodriver/issues/1476),
 they are created after starting the driver.
 
-The following examples are for local webdrivers.
-For remote webdrivers using Java/Ruby/C#, please refer to
-[this post](https://docs.saucelabs.com/web-apps/automated-testing/selenium/selenium4/#install-and-uninstall-add-ons).
-As for remote webdrivers using Python, please refer to
-[this post](https://github.com/saucelabs/sauce-docs/issues/1621).
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 ### Installation
 
@@ -212,8 +210,16 @@ example with a directory:
 
 ## Full page screenshots
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Context
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}

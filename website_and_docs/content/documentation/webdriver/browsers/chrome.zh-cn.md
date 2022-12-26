@@ -156,6 +156,10 @@ You can drive Chrome Cast devices, including sharing tabs
 
 You can simulate various network conditions.
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Logs

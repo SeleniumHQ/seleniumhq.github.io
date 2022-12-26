@@ -154,6 +154,10 @@ Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
 Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Logs

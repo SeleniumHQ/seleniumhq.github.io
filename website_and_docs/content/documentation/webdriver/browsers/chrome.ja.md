@@ -158,6 +158,10 @@ Chrome はさまざまな引数を追加します。
 
 さまざまなネットワークの状態をシミュレートできます。
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## ログ
