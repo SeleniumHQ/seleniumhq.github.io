@@ -34,6 +34,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
