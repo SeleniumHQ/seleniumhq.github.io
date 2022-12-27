@@ -1,4 +1,4 @@
-package dev.selenium.bidirectional;
+package dev.selenium.bidirectional.log;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -50,7 +50,6 @@ class LogInspectorTest {
             Assertions.assertNull(logEntry.getRealm());
             Assertions.assertEquals(1, logEntry.getArgs().size());
             Assertions.assertEquals("console", logEntry.getType());
-            Assertions.assertEquals(BaseLogEntry.LogLevel.INFO, logEntry.getLevel());
             Assertions.assertEquals("log", logEntry.getMethod());
             Assertions.assertNull(logEntry.getStackTrace());
         }
@@ -88,7 +87,6 @@ class LogInspectorTest {
 
             Assertions.assertEquals("Error: Not working", logEntry.getText());
             Assertions.assertEquals("javascript", logEntry.getType());
-            Assertions.assertEquals(BaseLogEntry.LogLevel.ERROR, logEntry.getLevel());
         }
     }
 
@@ -127,13 +125,11 @@ class LogInspectorTest {
 
             Assertions.assertEquals("Error: Not working", logEntry.getText());
             Assertions.assertEquals("javascript", logEntry.getType());
-            Assertions.assertEquals(BaseLogEntry.LogLevel.ERROR, logEntry.getLevel());
 
             logEntry = completableFuture2.get(5, TimeUnit.SECONDS);
 
             Assertions.assertEquals("Error: Not working", logEntry.getText());
             Assertions.assertEquals("javascript", logEntry.getType());
-            Assertions.assertEquals(BaseLogEntry.LogLevel.ERROR, logEntry.getLevel());
         }
     }
 }
