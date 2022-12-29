@@ -1,6 +1,6 @@
 ---
-title: "BiDirectional API (CDP implementation)"
-linkTitle: "BiDi API (CDP implementation)"
+title: "BiDirectional API (W3C compliant)"
+linkTitle: "BiDi API (W3C compliant)"
 weight: 12
 
 ---

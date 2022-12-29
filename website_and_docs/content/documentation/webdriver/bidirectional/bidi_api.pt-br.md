@@ -1,6 +1,6 @@
 ---
-title: "API BiDirecional"
-linkTitle: "BiDi API"
+title: "API BiDirecional (CDP implementation)"
+linkTitle: "BiDi API (CDP implementation)"
 weight: 12
 ---
 

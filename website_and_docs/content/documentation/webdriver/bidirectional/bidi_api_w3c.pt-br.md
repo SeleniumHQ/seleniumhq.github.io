@@ -1,29 +1,15 @@
 ---
-title: "BiDirectional API (CDP implementation)"
-linkTitle: "BiDi API (CDP implementation)"
+title: "BiDirectional API (W3C compliant)"
+linkTitle: "BiDi API (W3C compliant)"
 weight: 12
-
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+A seguinte lista de APIs crescerá à medida que o projeto Selenium se prepara
+para suportar casos de uso do mundo real. Se houver funcionalidades adicionais que você gostaria de ver, por favor, levante uma [solicitação de recurso](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
+## Registrar autenticação básica
 
-The following list of APIs will be growing as the Selenium
-project works through supporting real world use cases. If there
-is additional functionality you'd like to see, please raise a
-[feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
-
-## Register Basic Auth
-
-Some applications make use of browser authentication to secure pages.
-With Selenium, you can automate the input of basic auth credentials whenever they arise.
+Alguns aplicativos fazem o uso da autenticação do navegador para proteger suas páginas. Com o Selenium, você pode automatizar a entrada de credenciais básicas de autenticação sempre que for necessário.
 
 {{< tabpane langEqualsHeader=true code=false >}}
 {{< tab header="Java" code=true >}}
@@ -88,9 +74,7 @@ driver.get("https://your-domain.com/login")
 
 ## Mutation Observation
 
-Mutation Observation is the ability to capture events via
-WebDriver BiDi when there are DOM mutations on a specific
-element in the DOM.
+Mutation Observation(Observação de Mutação) é a capacidade de capturar eventos via WebDriver BiDi quando há mutações DOM em um elemento específico no DOM.
 
 {{< tabpane langEqualsHeader=true code=false >}}
   {{< tab header="Java" code=true >}}
@@ -208,9 +192,8 @@ const assert = require("assert");
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Listen to `console.log` events
-
-Listen to the `console.log` events and register callbacks to process the event.
+## Vigie eventos `console.log`
+Vigie os eventos `console.log` e registre os callbacks(retornos de chamada) para processar o evento.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -224,7 +207,7 @@ devTools.addListener(Log.entryAdded(),
                                System.out.println("level: "+logEntry.getLevel());
                            });
 driver.get("http://the-internet.herokuapp.com/broken_images");
-// Check the terminal output for the browser console messages.
+// Para ver as mensagens do console no navegador verifique a saída do terminal.
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -316,10 +299,10 @@ fun kotlinConsoleLogExample() {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Listen to JS Exceptions
+## Vigie exceções JS
 
-Listen to the JS Exceptions
-and register callbacks to process the exception details.
+Vigie as exceções JS
+e registre callbacks(retornos de chamada) para processar os detalhes da exceção.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -359,7 +342,7 @@ async def catchJSException():
       driver.get("<your site url>")
       log = Log(driver, session)
       async with log.add_js_error_listener() as messages:
-          # Operation on the website that throws an JS error
+          # Ação no site que gera um erro JS
       print(messages)
 
   driver.quit()
@@ -398,7 +381,7 @@ begin
     puts exceptions.length
   end
 
-  # Actions causing JS exceptions
+  # Ações que causam exceções JS
 
 ensure
   driver.quit
@@ -449,10 +432,10 @@ fun kotlinJsErrorListener() {
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Network Interception
+## Interceptação de Rede
 
-If you want to capture network events coming into the browser and you want manipulate them you are able to do
-it with the following examples.
+Se você quer capturar eventos de rede que chegam ao navegador e deseja manipulá-los, você pode fazer
+com os exemplos a seguir.
 
 {{< tabpane langEqualsHeader=true code=false >}}
 {{< tab header="Java" code=true >}}
@@ -479,7 +462,7 @@ it with the following examples.
     assertThat(source).contains("delicious cheese!");
 {{< /tab >}}
 {{< tab header="Python" >}}
-Currently unavailable in python due the inability to mix certain async and sync commands
+Atualmente indisponível no python devido à incapacidade de misturar certos comandos async(assíncronos) e de sync(sincronização)
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

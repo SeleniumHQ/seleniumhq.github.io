@@ -1,19 +1,17 @@
 ---
-title: "BiDirectional API (CDP implementation)"
-linkTitle: "BiDi API (CDP implementation)"
+title: "BiDirectional API (W3C compliant)"
+linkTitle: "BiDi API (W3C compliant)"
 weight: 12
-
 ---
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
    <i class="fas fa-language display-4"></i>
    Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
+   English to Japanese. Do you speak Japanese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
-
 
 The following list of APIs will be growing as the Selenium
 project works through supporting real world use cases. If there
