@@ -1,14 +1,19 @@
 ---
 title: "BiDirectional API (W3C compliant)"
 linkTitle: "BiDi API (W3C compliant)"
-weight: 1
+weight: 12
 ---
 
-The following list of APIs will be growing as the [WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/) grows
-and browser vendors implement the same. 
-Additionally, Selenium will also try to support real-world use cases that internally uses a combination of W3C BiDi protocol APIs.
-If there is additional functionality you'd like to see, please raise a
-[feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i>
+   Page being translated from
+   English to Portuguese. Do you speak Portuguese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
+
+This section contains the APIs related to logging. 
 
 ## Listen to `console.log` events
 
@@ -44,6 +49,8 @@ and register callbacks to process the exception details.
 {{< /tabpane >}}
 
 ## Listen to JS Logs
+
+Listen to all JS logs at all levels and register callbacks to process the log.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
