@@ -2,7 +2,7 @@
 
 require 'selenium-webdriver'
 
-RSpec.describe 'Log Inspector' do
+RSpec.describe 'Integration Tests' do
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
   let(:driver) do
     options = Selenium::WebDriver::Options.firefox
