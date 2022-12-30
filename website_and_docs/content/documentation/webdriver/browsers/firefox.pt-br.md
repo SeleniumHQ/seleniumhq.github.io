@@ -56,6 +56,9 @@ options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
   {{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< /tab >}}
 {{< /tabpane >}}
 </div>
 
