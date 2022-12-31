@@ -54,7 +54,7 @@ Adicione uma opção:
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" code=true >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
