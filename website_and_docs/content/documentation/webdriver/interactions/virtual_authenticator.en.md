@@ -34,6 +34,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -60,7 +61,7 @@ It creates a new virtual authenticator with the provided properties.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -85,7 +86,7 @@ Removes the previously added virtual authenticator.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

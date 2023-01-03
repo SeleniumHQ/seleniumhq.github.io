@@ -32,6 +32,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -54,6 +55,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -75,6 +77,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}

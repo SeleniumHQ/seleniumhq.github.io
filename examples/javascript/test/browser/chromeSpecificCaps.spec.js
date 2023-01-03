@@ -35,5 +35,15 @@ suite(function (env) {
       // As tests runs in ci, quitting the driver instance to avoid any failures
       await driver.quit();
     });
+
+    xit('Keep browser open - set detach to true ', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.setChromeBinaryPath(`Path to chrome binary`))
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
   });
 });
