@@ -78,7 +78,26 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 オプションにブラウザのロケーションを追加します。
 
-{{< alert-code />}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L40-L43">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### 拡張機能を追加する
 

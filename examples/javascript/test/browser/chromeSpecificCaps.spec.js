@@ -36,7 +36,7 @@ suite(function (env) {
       await driver.quit();
     });
 
-    xit('Keep browser open - set detach to true ', async function () {
+    xit('Start browser from specified location ', async function () {
       let driver = await env
         .builder()
         .setChromeOptions(options.setChromeBinaryPath(`Path to chrome binary`))

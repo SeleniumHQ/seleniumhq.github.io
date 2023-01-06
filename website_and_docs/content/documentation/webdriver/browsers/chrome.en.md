@@ -79,7 +79,26 @@ use chromedriver to drive various Chromium based browsers.
 
 Add a browser location to options:
 
-{{< alert-code />}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L40-L43">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Add extensions
 
