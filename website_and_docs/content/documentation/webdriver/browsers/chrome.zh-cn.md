@@ -31,7 +31,7 @@ Starting a Chrome session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L7-L8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}

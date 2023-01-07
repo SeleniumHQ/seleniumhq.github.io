@@ -30,7 +30,7 @@ Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opçõe
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L7-L8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}
@@ -60,7 +60,7 @@ Adicione uma opção:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L8-L11">}}
