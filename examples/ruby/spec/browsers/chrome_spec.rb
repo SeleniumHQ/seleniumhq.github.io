@@ -14,5 +14,14 @@ RSpec.describe 'Chrome' do
     options = Selenium::WebDriver::Options.chrome(args: ['--headless=chrome'])
     driver = Selenium::WebDriver.for :chrome, options: options
     driver.get('https://www.google.com')
+    driver.quit
   end
+
+  it 'Keep browser open' do
+      options = Selenium::WebDriver::Options.chrome(detach: true)
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
 end
