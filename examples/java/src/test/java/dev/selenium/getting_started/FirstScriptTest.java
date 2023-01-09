@@ -21,6 +21,8 @@ public class FirstScriptTest {
         assertEquals("Web form", title);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        
+        driver.findElement(By.xpath("//div[text() = 'Accept all']")).click();
 
         WebElement textBox = driver.findElement(By.name("my-text"));
         WebElement submitButton = driver.findElement(By.cssSelector("button"));
