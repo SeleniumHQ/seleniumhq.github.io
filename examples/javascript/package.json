@@ -9,7 +9,7 @@
     "dependencies": {
         "@sitespeed.io/edgedriver": "^108.0.1462-38",
         "assert": "^2.0.0",
-        "chromedriver": "^108.0.0",
+        "chromedriver": "^109.0.0",
         "geckodriver": "^3.2.0",
         "selenium-webdriver": "^4.7.1"
     },
