@@ -1,93 +1,100 @@
 ---
-title: "Understanding Common Errors"
-linkTitle: "Errors"
+title: "理解常见的异常"
+linkTitle: "异常"
 weight: 2
 description: >
-  How to get deal with various problems in your Selenium code.
+  如何处理Selenium代码中的各种问题.
 ---
 
-## Invalid Selector Exception
+## 无效选择器的异常 (Invalid Selector Exception)
 
-CSS and XPath Selectors are sometimes difficult to get correct.
+某些时候难以获得正确的CSS以及XPath选择器.
 
-### Likely Cause
+### 潜在原因
 
-The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+您尝试使用的CSS或XPath选择器包含无效字符或无效查询.
 
-### Possible Solutions
+### 可行方案
 
-Run your selector through a validator service:
-* [CSS Validator](http://csslint.net/)
-* [xPath Validator](http://www.freeformatter.com/xpath-tester.html)
+通过验证器服务运行选择器:
+* [CSS 验证器](http://csslint.net/)
+* [xPath 验证器](http://www.freeformatter.com/xpath-tester.html)
 
-Or use a browser extension to get a known good value:
+或者使用浏览器扩展程序来获取已知的良好值:
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## No Such Element Exception
+## 没有这样元素的异常 (No Such Element Exception)
 
-The element can not be found at the exact moment you attempted to locate it.
+在您尝试找到该元素的当前时刻无法定位元素.
 
-### Likely Cause
+### 潜在原因
 
-* You are looking for the element in the wrong place (perhaps a previous action was unsuccessful).
-* You are looking for the element at the wrong time (the element has not shown up in the DOM, yet)
-* The locator has changed since you wrote the code
+* 您在错误的位置寻找元素 (也许以前的操作不成功).
+* 您在错误的时间寻找元素 (该元素尚未显示在 DOM 中)
+* 自您编写代码以来定位器已变更
 
-### Possible Solutions
+### 可行方案
 
-* Make sure you are on the page you expect to be on, and that previous actions in your code completed correctly
-* Make sure you are using a proper [Waiting Strategy]({{< ref "/documentation/webdriver/waits" >}})
-* Update the locator with the browser's devtools console or use a browser extension like:
+* 确保您位于期望的页面上, 并且代码中的前置操作已正确完成
+* 确保您使用的是正确的 [等待策略]({{< ref "/documentation/webdriver/waits" >}})
+* 使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## Stale Element Reference Exception 
+## 过时元素引用的异常 (Stale Element Reference Exception)
 
-An element goes stale when it was previously located, but can not be currently accessed.
-Elements do not get relocated automatically; the driver creates a reference ID for the element and
-has a particular place it expects to find it in the DOM. If it can not find the element
-in the current DOM, any action using that element will result in this exception.
+元素先前的定位会过时，
+导致当前无法访问.
+元素不会自动重新定位;
+驱动程序为元素创建引用ID，
+并且有一个特定的位置，以期在 DOM 中找到.
+如果在当前 DOM 中找不到元素,
+任何使用该元素的操作都将导致此异常.
 
-### Common Causes
+### 常见因素
 
-This can happen when:
+以下情况可能发生此异常:
 
-* You have refreshed the page, or the DOM of the page has dynamically changed.
-* You have navigated to a different page.
-* You have switched to another window or into or out of a frame or iframe.
+* 您已刷新页面，或者页面的 DOM 已动态更改.
+* 您已导航到其他页面.
+* 您已切换到另一个窗口，或者进入/移出某个frame/iframe.
 
-### Common Solutions
+### 常见方案
 
-**The DOM has changed**
+**DOM已变更**
 
-When the page is refreshed or items on the page have moved around, there is still
-an element with the desired locator on the page, it is just no longer accessible
-by the element object being used, and the element must be relocated before it can be used again.
-This is often done in one of two ways:
+当页面刷新或页面上的项目各处移动时,
+页面上仍然有一个具有所需定位器的元素,
+它只是不再被正在使用的元素对象访问,
+并且必须重新定位该元素才能再次使用.
+这往往通过以下两种方式之一完成:
 
-* Always relocate the element every time you go to use it. The likelihood of
-the element going stale in the microseconds between locating and using the element
-is small, though possible. The downside is that this is not the most efficient approach,
-especially when running on a remote grid.
+* 每次使用时, 始终重新定位元素.
+虽然可能, 但元素在定位和使用元素之间的微秒内过时的可能性很小.
+缺点是这并非最有效的方法, 
+特别是在远程网格上运行时.
 
-* Wrap the Web Element with another object that stores the locator, and caches the
-located Selenium element. When taking actions with this wrapped object, you can
-attempt to use the cached object if previously located, and if it is stale, exception
-can be caught, the element relocated with the stored locator, and the method re-tried.
-This is more efficient, but it can cause problems if the locator you're using
-references a different element (and not the one you want) after the page has changed.
+* 将 Web 元素与存储定位器的另一个对象包装在一起，
+并缓存位于Selenium元素.
+对此包装的对象执行操作时,
+您可以尝试使用缓存的对象(若之前找到),
+如果其已过时, 则异常可以捕获元素,
+使用存储的定位器重新定位元素, 并重试该方法.
+这更有效, 但如果您使用的定位器可能会导致问题,
+在页面更改后引用不同的元素(而不是您想要的元素).
 
-**The Context has changed**
+**上下文已变更**
 
-Element objects are stored for a given context, so if you move to a different context —
-like a different window or a different frame or iframe — the element reference will
-still be valid, but will be temporarily inaccessible. In this scenario, it won't
-help to relocate the element, because it doesn't exist in the current context.
-To fix this, you need to make sure to switch back to the correct context before using the element. 
+元素对象是为给定上下文存储的, 
+因此, 如果您移动到其他上下文 —
+就像不同的窗口或不同的frame或iframe一样 — 元素引用将仍然有效,
+但暂时无法访问. 在这种情况下,
+它不会帮助重新定位元素, 因为它在当前上下文中不存在.
+要解决此问题, 您需要确保在使用元素之前切换回正确的上下文. 
 
-**The Page has changed**
+**页面已变更**
 
-This scenario is when you haven't just changed contexts, you have navigated to another page
-and have destroyed the context in which the element was located. 
-You can't just relocate it from the current context,
-and you can't switch back to an active context where it is valid. If this is the reason
-for your error, you must both navigate back to the correct location and relocate it.
+这种情况是指您不仅更改了上下文, 还导航到了另一个页面, 
+并破坏了元素所在的上下文.
+您不能只是将其从当前上下文中重新定位,
+并且您无法切换回有效的活动上下文.
+如果这是原因, 则对于您的错误, 您必须导航回正确的位置并重新定位它.
