@@ -51,14 +51,26 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 オプションに引数を追加します。
 
 <div>
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Python" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" code=true >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
-  {{< /tab >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 </div>
