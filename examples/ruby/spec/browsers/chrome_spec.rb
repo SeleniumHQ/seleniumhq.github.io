@@ -23,4 +23,11 @@ RSpec.describe 'Chrome' do
     @driver = Selenium::WebDriver.for :chrome, options: options
     @driver.get('https://www.google.com')
   end
+
+  it 'Exclude switches' do
+    options = Selenium::WebDriver::Options.chrome(exclude_switches: ['enable-automation'])
+
+    @driver = Selenium::WebDriver.for :chrome, options: options
+    @driver.get('https://www.google.com')
+  end
 end
