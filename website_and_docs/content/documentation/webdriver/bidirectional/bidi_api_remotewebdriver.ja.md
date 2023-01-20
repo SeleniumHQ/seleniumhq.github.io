@@ -1,6 +1,6 @@
 ---
-title: "RemoteWebDriver BiDirectional API"
-linkTitle: "RemoteWebDriver BiDi API"
+title: "RemoteWebDriver BiDirectional API (CDP implementation)"
+linkTitle: "RemoteWebDriver BiDi API (CDP implementation)"
 weight: 1
 ---
 
