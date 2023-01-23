@@ -4,9 +4,13 @@ on:
   pull_request:
     branches:
       - trunk
+    paths-ignore:
+      - 'examples/**'
   push:
     branches:
       - trunk
+    paths-ignore:
+      - 'examples/**'
 
 jobs:
   test_build:
