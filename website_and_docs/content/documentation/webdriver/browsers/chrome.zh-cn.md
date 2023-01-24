@@ -119,7 +119,7 @@ Ad a binary to options:
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
