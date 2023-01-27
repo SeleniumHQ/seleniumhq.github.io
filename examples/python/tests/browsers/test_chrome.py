@@ -16,3 +16,12 @@ def test_keep_browser_open():
     driver.get('http://selenium.dev')
 
     driver.quit()
+
+def test_headless():
+    chrome_options = ChromeOptions()
+    chrome_options.add_argument("--headless=chrome")
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get('http://selenium.dev')
+
+    driver.quit()
