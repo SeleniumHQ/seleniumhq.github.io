@@ -34,7 +34,7 @@ public abstract class BasePage {
 }
 
 public class GoogleSearchPage extends BasePage {
-    public HomePage(WebDriver driver) {
+    public GoogleSearchPage(WebDriver driver) {
         super(driver);
         Assert.isTrue(new WebDriverWait(driver, Duration.ofSeconds(3))
             .until(d -> d.findElement(By.id("logo"))).isDisplayed);
