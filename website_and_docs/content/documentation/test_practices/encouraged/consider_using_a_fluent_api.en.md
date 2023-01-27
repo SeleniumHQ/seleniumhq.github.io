@@ -25,59 +25,28 @@ The Google page object class with this fluent behavior
 might look like this:
 
 ```java
-public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
-  private final WebDriver driver;
-  private GSPFluentInterface gspfi;
+public abstract class BasePage {
+    protected WebDriver driver;
 
-  public class GSPFluentInterface {
-    private GoogleSearchPage gsp;
-
-    public GSPFluentInterface(GoogleSearchPage googleSearchPage) {
-        gsp = googleSearchPage;
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
     }
+}
 
-    public GSPFluentInterface clickSearchButton() {
-        gsp.searchButton.click();
+public class GoogleSearchPage extends BasePage {
+    public HomePage(WebDriver driver) {
+        super(driver);
+        Assert.isTrue(new WebDriverWait(driver, Duration.ofSeconds(3))
+            .until(d -> d.findElement(By.id("logo"))).isDisplayed);
+    }
+    
+    public GoogleSearchPage setSearchString(String sstr) {
+        driver.findElement(By.id("gbqfq")).sendKeys(sstr);
         return this;
     }
-
-    public GSPFluentInterface setSearchString( String sstr ) {
-        clearAndType( gsp.searchField, sstr );
-        return this;
+    
+    public void clickSearchButton() {
+        driver.findElement(By.id("gbqfb")).click();
     }
-  }
-
-  @FindBy(id = "gbqfq") private WebElement searchField;
-  @FindBy(id = "gbqfb") private WebElement searchButton;
-  public GoogleSearchPage(WebDriver driver) {
-    gspfi = new GSPFluentInterface( this );
-    this.get(); // If load() fails, calls isLoaded() until page is finished loading
-    PageFactory.initElements(driver, this); // Initialize WebElements on page
-  }
-
-  public GSPFluentInterface withFluent() {
-    return gspfi;
-  }
-
-  public void clickSearchButton() {
-    searchButton.click();
-  }
-
-  public void setSearchString( String sstr ) {
-    clearAndType( searchField, sstr );
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    Assert.assertTrue("Google search page is not yet loaded.", isSearchFieldVisible() );
-  }
-
-  @Override
-  protected void load() {
-    if ( isSFieldPresent ) {
-      Wait<WebDriver> wait = new WebDriverWait( driver, Duration.ofSeconds(3) );
-      wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
-    }
-  }
 }
 ```
