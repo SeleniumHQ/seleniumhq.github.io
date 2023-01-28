@@ -25,3 +25,12 @@ def test_headless():
     driver.get('http://selenium.dev')
 
     driver.quit()
+
+def exclude_switches():
+    chrome_options = ChromeOptions()
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get('http://selenium.dev')
+
+    driver.quit()
