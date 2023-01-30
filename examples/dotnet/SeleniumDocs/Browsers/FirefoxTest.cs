@@ -73,7 +73,7 @@ namespace SeleniumDocs.Browsers
         {
             var options = new FirefoxOptions();
             options.AddArgument("--headless");
-            var driver = new FirefoxDriver(options);
+            driver = new FirefoxDriver(options);
         }         
     }
 }
