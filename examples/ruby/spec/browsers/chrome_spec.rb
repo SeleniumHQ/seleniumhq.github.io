@@ -11,7 +11,7 @@ RSpec.describe 'Chrome' do
   end
 
   it 'add arguments' do
-    options = Selenium::WebDriver::Options.chrome(args: ['--headless=chrome'])
+    options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
 
     @driver = Selenium::WebDriver.for :chrome, options: options
     @driver.get('https://www.google.com')

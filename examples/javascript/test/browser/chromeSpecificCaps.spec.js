@@ -7,7 +7,7 @@ suite(function (env) {
     it('headless', async function () {
       let driver = await env
         .builder()
-        .setChromeOptions(options.addArguments('--headless=chrome'))
+        .setChromeOptions(options.addArguments('--headless=new'))
         .build();
 
       await driver.get('https://www.google.com');
