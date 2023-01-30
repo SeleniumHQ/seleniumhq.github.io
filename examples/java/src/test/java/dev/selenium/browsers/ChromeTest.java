@@ -18,4 +18,12 @@ public class ChromeTest {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
     }
+
+    @Test
+    public void headlessOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
+    }
+
 }

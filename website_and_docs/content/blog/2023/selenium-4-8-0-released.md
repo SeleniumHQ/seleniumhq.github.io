@@ -18,7 +18,7 @@ Links to everything can be found on our [downloads page][downloads].
   * Chrome DevTools support is now: v107, v108, and v109 (Firefox still uses v85 for all versions)
   * Large JS executions have the name as a comment to help understand what payload being sent to/from server/driver.
   * Deprecation of headless convenience method. Read more about in the [headless blog post](/blog/2023/headless-is-going-away/).
-  * Ruby overhauls Options classes (again) (needs blog post)
+  * Ruby overhauls Options classes (again)
   * Initial [BiDi] support in JavaScript, Ruby, and improvements in Java.
   * We're continuing to remove [Legacy Protocol](/blog/2022/legacy-protocol-support/) classes in Java and Grid. 
   * Accommodate ability to specify sub-paths in Grid.

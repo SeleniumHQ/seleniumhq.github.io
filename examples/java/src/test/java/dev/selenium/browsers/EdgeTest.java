@@ -18,4 +18,12 @@ public class EdgeTest {
         EdgeOptions options = new EdgeOptions();
         driver = new EdgeDriver(options);
     }
+
+    @Test
+    public void headlessOptions() {
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless=new");
+        driver = new EdgeDriver(options);
+    }
+
 }
