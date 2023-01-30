@@ -1,4 +1,494 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 29 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Headless is Going Away!</title><link>/blog/2023/headless-is-going-away/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/headless-is-going-away/</guid><description>
+&lt;p>Headless is an execution mode for Firefox and Chromium based browsers. It allows users to run automated scripts in
+headless mode, meaning that the browser window wouldn’t be visible. In most of Selenium&amp;rsquo;s bindings there is a
+convenience method to set this execution mode while setting the browser options. However,
+&lt;a href="https://www.selenium.dev/blog/2023/selenium-4-8-0-released/">Selenium 4.8.0&lt;/a> will be deprecated this method and
+and now users need to set it through arguments when setting the browser options.&lt;/p>
+&lt;p>Now that we got your attention,
+We&amp;rsquo;re very happy to announce the release of Selenium 4.8.0 for Java,
+.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
+Links to everything can be found on our [downloads page][downloads].&lt;/p>
+&lt;h3 id="why-is-selenium-doing-this">Why is Selenium doing this?&lt;/h3>
+&lt;p>Chromium based browsers have now two different headless modes (the original one, and one with more
+capabilities added in 2022). When a user sets headless to &lt;code>true&lt;/code> via the convenience method in Selenium,
+it is using the initial method provided by Chromium based browsers.&lt;/p>
+&lt;p>By deprecating the convenience method (and removing it in Selenium 4.10.0), users will be in full control to
+choose which headless mode they want to use.&lt;/p>
+&lt;h3 id="what-are-the-two-headless-modes">What are the two headless modes?&lt;/h3>
+&lt;p>The traditional &lt;code>--headless&lt;/code>, and since version 96, Chrome has a new headless mode that allows users to
+get the full browser functionality (even run extensions). Between versions 96 to 108 it was
+&lt;code>--headless=chrome&lt;/code>, after version 109 &lt;code>--headless=new&lt;/code>.&lt;/p>
+&lt;p>Using &lt;code>--headless=new&lt;/code> should bring a better experience when using headless with Selenium.&lt;/p>
+&lt;p>Thanks to &lt;a href="https://github.com/mdmintz">Michael Mintz&lt;/a> for the detailed
+&lt;a href="https://stackoverflow.com/questions/45631715/downloading-with-chrome-headless-and-selenium/73840130#73840130">explanation&lt;/a>!&lt;/p>
+&lt;h3 id="how-can-i-set-headless-mode-from-now-on">How can I set headless mode from now on?&lt;/h3>
+&lt;p>In short, users can add the headless mode they want to use through arguments in browser options.&lt;/p>
+&lt;h4 id="before">Before&lt;/h4>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active persistLang-java"
+id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab"
+onclick="persistLang(&amp;#34;java&amp;#34;);"
+aria-controls="tabs-0-0" aria-selected="false">Java&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-javascript"
+id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab"
+onclick="persistLang(&amp;#34;javascript&amp;#34;);"
+aria-controls="tabs-0-1" aria-selected="false">JavaScript&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-csharp"
+id="tabs-0-2-tab" data-toggle="tab" href="#tabs-0-2" role="tab"
+onclick="persistLang(&amp;#34;csharp&amp;#34;);"
+aria-controls="tabs-0-2" aria-selected="false">CSharp&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-ruby"
+id="tabs-0-3-tab" data-toggle="tab" href="#tabs-0-3" role="tab"
+onclick="persistLang(&amp;#34;ruby&amp;#34;);"
+aria-controls="tabs-0-3" aria-selected="false">Ruby&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-python"
+id="tabs-0-4-tab" data-toggle="tab" href="#tabs-0-4" role="tab"
+onclick="persistLang(&amp;#34;python&amp;#34;);"
+aria-controls="tabs-0-4" aria-selected="false">Python&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
+id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">ChromeOptions&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">setHeadless&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">get&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://selenium.dev&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">quit&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">let&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">env&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">builder&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">setChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#000;font-weight:bold">().&lt;/span>&lt;span style="color:#000">headless&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">build&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-2" role="tabpanel" aria-labelled-by="tabs-0-2-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-CSharp" data-lang="CSharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// C# did not have a convenience method&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-3" role="tabpanel" aria-labelled-by="tabs-0-3-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">new&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">headless!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">for&lt;/span> &lt;span style="color:#4e9a06">:chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">options&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">options&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-4" role="tabpanel" aria-labelled-by="tabs-0-4-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">headless&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;http://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;h4 id="after">After&lt;/h4>
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active persistLang-java"
+id="tabs-1-0-tab" data-toggle="tab" href="#tabs-1-0" role="tab"
+onclick="persistLang(&amp;#34;java&amp;#34;);"
+aria-controls="tabs-1-0" aria-selected="false">Java&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-javascript"
+id="tabs-1-1-tab" data-toggle="tab" href="#tabs-1-1" role="tab"
+onclick="persistLang(&amp;#34;javascript&amp;#34;);"
+aria-controls="tabs-1-1" aria-selected="false">JavaScript&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-csharp"
+id="tabs-1-2-tab" data-toggle="tab" href="#tabs-1-2" role="tab"
+onclick="persistLang(&amp;#34;csharp&amp;#34;);"
+aria-controls="tabs-1-2" aria-selected="false">CSharp&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-ruby"
+id="tabs-1-3-tab" data-toggle="tab" href="#tabs-1-3" role="tab"
+onclick="persistLang(&amp;#34;ruby&amp;#34;);"
+aria-controls="tabs-1-3" aria-selected="false">Ruby&lt;/a>
+&lt;/li>
+&lt;li class="nav-item">
+&lt;a class="nav-link persistLang-python"
+id="tabs-1-4-tab" data-toggle="tab" href="#tabs-1-4" role="tab"
+onclick="persistLang(&amp;#34;python&amp;#34;);"
+aria-controls="tabs-1-4" aria-selected="false">Python&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;div class="tab-content" id="tabs-1-content">&lt;div class="tab-pane fade show active"
+id="tabs-1-0" role="tabpanel" aria-labelled-by="tabs-1-0-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">ChromeOptions&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">addArguments&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">get&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#a40000">&amp;#34;&lt;/span>&lt;span style="color:#000">https&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">:&lt;/span>&lt;span style="color:#8f5902;font-style:italic">//selenium.dev);
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">quit&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">let&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">env&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">builder&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">setChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">addArguments&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;--headless=new&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">build&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-CSharp" data-lang="CSharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AddArgument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Navigate&lt;/span>&lt;span style="color:#000;font-weight:bold">().&lt;/span>&lt;span style="color:#000">GoToUrl&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://selenium.dev&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-1-3" role="tabpanel" aria-labelled-by="tabs-1-3-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">args&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;--headless=new&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">for&lt;/span> &lt;span style="color:#4e9a06">:chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">options&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">options&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-1-4" role="tabpanel" aria-labelled-by="tabs-1-4-tab">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;http://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;p>If you have any questions or comments, please reach out through any of all the available options
+shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.8.0 Released!</title><link>/blog/2023/selenium-4-8-0-released/</link><pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-8-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.8.0 for Java,
+.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v107, v108, and v109 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Large JS executions have the name as a comment to help understand what payload being sent to/from server/driver.&lt;/li>
+&lt;li>Deprecation of headless convenience method. Read more about in the &lt;a href="/blog/2023/headless-is-going-away/">headless blog post&lt;/a>.&lt;/li>
+&lt;li>Ruby overhauls Options classes (again) (needs blog post)&lt;/li>
+&lt;li>Initial &lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> support in JavaScript, Ruby, and improvements in Java.&lt;/li>
+&lt;li>We&amp;rsquo;re continuing to remove &lt;a href="/blog/2022/legacy-protocol-support/">Legacy Protocol&lt;/a> classes in Java and Grid.&lt;/li>
+&lt;li>Accommodate ability to specify sub-paths in Grid.&lt;/li>
+&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/34425507?v=4" class="card-img-top mx-auto" alt="Kian Eliasi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kian Eliasi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/kianelbo">@kianelbo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3298484?v=4" class="card-img-top mx-auto" alt="James Hilliard" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+James Hilliard
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jameshilliard">@jameshilliard&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/19333856?v=4" class="card-img-top mx-auto" alt="Potapov Dmitriy" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Potapov Dmitriy
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/potapovDim">@potapovDim&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/20457146?v=4" class="card-img-top mx-auto" alt="Johnson" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Johnson
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/j3soon">@j3soon&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/20224954?v=4" class="card-img-top mx-auto" alt="George Adams" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+George Adams
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/gdams">@gdams&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/347634?v=4" class="card-img-top mx-auto" alt="Jon Dufresne" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Jon Dufresne
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jdufresne">@jdufresne&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5081226?v=4" class="card-img-top mx-auto" alt="Valery Yatsynovich" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Valery Yatsynovich
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/valfirst">@valfirst&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;pre>&lt;code>&amp;lt;/div&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/909773?v=4" class="card-img-top mx-auto" alt="Krishnan Mahadevan" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Krishnan Mahadevan
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/krmahadevan">@krmahadevan&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/17887843?v=4" class="card-img-top mx-auto" alt="Simon K" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon K
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/symonk">@symonk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.7.0 for Java,
 .NET, and Javascript as well as the Grid and Internet Explorer Driver;
 for Ruby use 4.7.1, and Python 4.7.2. Links to everything can be found on our
