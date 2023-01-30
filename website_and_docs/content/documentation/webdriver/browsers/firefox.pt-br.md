@@ -52,7 +52,7 @@ Adicione uma opção:
 <div>
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
 {{< /tab >}}
 {{< tab header="Python" code=true >}}
 options=Options()
@@ -60,7 +60,7 @@ options.add_argument("-profile")
 options.add_argument("/path/to/profile")
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
