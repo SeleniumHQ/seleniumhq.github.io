@@ -7,3 +7,12 @@ def test_basic_options():
     driver = webdriver.Edge(options=options)
 
     driver.quit()
+
+def test_headless():
+    options = EdgeOptions()
+    options.add_argument("--headless=new")
+
+    driver = webdriver.Edge(options=options)
+    driver.get('http://selenium.dev')
+
+    driver.quit()
