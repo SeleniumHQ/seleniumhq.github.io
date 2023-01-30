@@ -53,9 +53,9 @@ namespace SeleniumDocs.Browsers
             Assert.AreEqual(driver.FindElements(By.Id("webextensions-selenium-example")).Count, 0);
          }
 
-         [TestMethod]
-         public void InstallUnsignedAddon()
-         {
+        [TestMethod]
+        public void InstallUnsignedAddon()
+        {
             driver = new FirefoxDriver();
 
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
@@ -66,7 +66,7 @@ namespace SeleniumDocs.Browsers
 
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
-         }
+        }
 
         [TestMethod]
         public void HeadlessOptions() 
