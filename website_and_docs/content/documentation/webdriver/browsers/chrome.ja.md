@@ -46,7 +46,7 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 ### 引数
 
 `args` パラメータは、ブラウザの起動時に使用される[コマンドラインスイッチ](https://peter.sh/experiments/chromium-command-line-switches/)のリストです。  
-一般的に使用される引数には、`--start-maximized` および `user-data-dir=/tmp/temp_profile` が含まれます。
+一般的に使用される引数には、`--start-maximized` および `--headless=new` が含まれます。
 
 オプションに引数を追加します。
 

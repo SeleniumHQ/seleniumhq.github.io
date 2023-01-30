@@ -45,7 +45,7 @@ Alguns exemplos de uso com capacidades diferentes:
 ### Argumentos
 
 O parametro `args` é usado para indicar uma lista de [opções](https://peter.sh/experiments/chromium-command-line-switches/) ao iniciar o navegador. 
-Opções mais frequentes incluem `--start-maximized` e `user-data-dir=/tmp/temp_profile`
+Opções mais frequentes incluem `--start-maximized` e `--headless=new`
 
 Adicione uma opção:
 

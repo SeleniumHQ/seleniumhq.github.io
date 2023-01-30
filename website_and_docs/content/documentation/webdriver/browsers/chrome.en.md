@@ -47,7 +47,7 @@ Here are a few common use cases with different capabilities:
 
 The `args` parameter is for a list of [Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
 used when starting the browser.
-Commonly used args include `--start-maximized` and `user-data-dir=/tmp/temp_profile`
+Commonly used args include `--start-maximized` and `--headless=new`
 
 Add an argument to options:
 
