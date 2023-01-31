@@ -40,7 +40,6 @@ Links to everything can be found on our [downloads page][downloads].
 {{< gh-user "https://api.github.com/users/gdams" >}}
 {{< gh-user "https://api.github.com/users/jdufresne" >}}
 {{< gh-user "https://api.github.com/users/valfirst" >}}
-
     </div>
   </div>
 </div>
