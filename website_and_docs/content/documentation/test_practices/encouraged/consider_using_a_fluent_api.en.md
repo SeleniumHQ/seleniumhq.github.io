@@ -36,8 +36,8 @@ public abstract class BasePage {
 public class GoogleSearchPage extends BasePage {
     public GoogleSearchPage(WebDriver driver) {
         super(driver);
-        Assert.isTrue(new WebDriverWait(driver, Duration.ofSeconds(3))
-            .until(d -> d.findElement(By.id("logo"))).isDisplayed);
+        // Throws an exception if the lambda condition is not met.
+        new WebDriverWait(driver, Duration.ofSeconds(3)).until(d -> d.findElement(By.id("logo")));
     }
     
     public GoogleSearchPage setSearchString(String sstr) {
