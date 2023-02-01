@@ -50,11 +50,11 @@ Selenium Blog
 <time datetime=2023-01-29 class=text-muted>Sunday, January 29, 2023</time></div><p>Headless is an execution mode for Firefox and Chromium based browsers. It allows users to run automated scripts in
 headless mode, meaning that the browser window wouldn’t be visible. In most of Selenium&rsquo;s bindings there is a
 convenience method to set this execution mode while setting the browser options. However,
-<a href=https://www.selenium.dev/blog/2023/selenium-4-8-0-released/>Selenium 4.8.0</a> will be deprecated this method and
+<a href=https://www.selenium.dev/blog/2023/selenium-4-8-0-released/>Selenium 4.8.0</a> will be deprecated this method
 and now users need to set it through arguments when setting the browser options.</p><p>Now that we got your attention,
 We&rsquo;re very happy to announce the release of Selenium 4.8.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our [downloads page][downloads].</p><h3 id=why-is-selenium-doing-this>Why is Selenium doing this?</h3><p>Chromium based browsers have now two different headless modes (the original one, and one with more
+Links to everything can be found on our <a href=https://www.selenium.dev/downloads/>downloads page</a>.</p><h3 id=why-is-selenium-doing-this>Why is Selenium doing this?</h3><p>Chromium based browsers have now two different headless modes (the original one, and one with more
 capabilities added in 2022). When a user sets headless to <code>true</code> via the convenience method in Selenium,
 it is using the initial method provided by Chromium based browsers.</p><p>By deprecating the convenience method (and removing it in Selenium 4.10.0), users will be in full control to
 choose which headless mode they want to use.</p><h3 id=what-are-the-two-headless-modes>What are the two headless modes?</h3><p>The traditional <code>--headless</code>, and since version 96, Chrome has a new headless mode that allows users to
