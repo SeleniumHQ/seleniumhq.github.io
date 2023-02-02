@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {Builder, Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const edgedriver = require('@sitespeed.io/edgedriver');
 const edge = require('selenium-webdriver/edge');
@@ -22,4 +22,4 @@ suite(function (env) {
       await driver.get('https://www.google.com');
     });
   });
-});
+}, { browsers: [Browser.EDGE]});

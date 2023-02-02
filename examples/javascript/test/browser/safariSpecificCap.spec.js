@@ -1,5 +1,5 @@
 const safari = require('selenium-webdriver/safari');
-const {Builder} = require("selenium-webdriver");
+const {Builder, Browser} = require("selenium-webdriver");
 const options = new safari.Options();
 
 describe('Should be able to Test Command line arguments', function () {
@@ -12,4 +12,4 @@ describe('Should be able to Test Command line arguments', function () {
     await driver.get('https://www.google.com');
     await driver.quit();
   });
-});
+}, { browsers: [Browser.SAFARI]});

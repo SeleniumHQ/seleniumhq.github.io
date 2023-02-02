@@ -1,4 +1,4 @@
-const { Builder } = require("selenium-webdriver");
+const { Builder, Browser} = require("selenium-webdriver");
 const { Credential, VirtualAuthenticatorOptions, Transport, Protocol } = require("selenium-webdriver/lib/virtual_authenticator");
 const { suite } = require('selenium-webdriver/testing');
 const assert = require('assert')
@@ -194,4 +194,4 @@ suite(function(env) {
         });
 
     });
-});
+}, { browsers: [Browser.CHROME]});
