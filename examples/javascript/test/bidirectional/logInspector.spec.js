@@ -1,7 +1,7 @@
 const { suite } = require('selenium-webdriver/testing');
 const assert = require("assert");
 const firefox = require('selenium-webdriver/firefox');
-const LogInspector = require('selenium-webdriver/bidi/LogInspector');
+const LogInspector = require('selenium-webdriver/bidi/logInspector');
 
 suite(function(env) {
     describe('Log Inspector', function() {
