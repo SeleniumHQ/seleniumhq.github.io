@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {Builder, Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -21,4 +21,4 @@ suite(function (env) {
     });
 
   });
-});
+}, { browsers: [Browser.CHROME]});

@@ -1,6 +1,7 @@
 const {VirtualAuthenticatorOptions, Transport, Protocol} = require("selenium-webdriver/lib/virtual_authenticator");
 const {suite} = require('selenium-webdriver/testing');
 const assert = require('assert')
+const {Browser} = require("selenium-webdriver");
 
 suite(function () {
   describe('Virtual authenticator options', function () {
@@ -25,4 +26,4 @@ suite(function () {
     });
 
   });
-});
+}, { browsers: [Browser.CHROME]});

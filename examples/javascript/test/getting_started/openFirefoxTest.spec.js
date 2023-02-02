@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {Builder, Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const firefox = require('selenium-webdriver/firefox');
 
@@ -20,4 +20,4 @@ suite(function (env) {
       await driver.get('https://www.google.com');
     });
   });
-});
+}, { browsers: [Browser.FIREFOX]});

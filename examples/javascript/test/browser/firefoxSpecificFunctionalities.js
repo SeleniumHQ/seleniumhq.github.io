@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {Builder, Browser} = require('selenium-webdriver');
 const Firefox = require('selenium-webdriver/firefox');
 const options = new Firefox.Options();
 
@@ -12,4 +12,4 @@ describe('Should be able to Test Command line arguments', function () {
     await driver.get('https://www.google.com');
     await driver.quit();
   });
-});
+}, { browsers: [Browser.FIREFOX]});

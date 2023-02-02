@@ -1,4 +1,4 @@
-const { By, Key } = require('selenium-webdriver')
+const { By, Key, Browser} = require('selenium-webdriver')
 const { suite } = require('selenium-webdriver/testing')
 const assert = require('assert')
 const { platform } = require('node:process')
@@ -89,4 +89,4 @@ suite(function(env) {
       assert.deepStrictEqual(await textField.getAttribute('value'), 'SeleniumSelenium!')
     })
   })
-})
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]})

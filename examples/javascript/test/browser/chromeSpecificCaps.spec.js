@@ -1,5 +1,6 @@
 const Chrome = require('selenium-webdriver/chrome');
 const {suite} = require('selenium-webdriver/testing');
+const {Browser} = require("selenium-webdriver");
 const options = new Chrome.Options();
 
 suite(function (env) {
@@ -46,4 +47,4 @@ suite(function (env) {
       await driver.quit();
     });
   });
-});
+}, { browsers: [Browser.CHROME]});
