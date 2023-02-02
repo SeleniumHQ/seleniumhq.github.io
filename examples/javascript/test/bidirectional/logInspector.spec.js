@@ -21,7 +21,7 @@ suite(function(env) {
         it('test listen to console log', async function () {
             let logEntry = null
             const inspector = await LogInspector(driver)
-            await inspector.onConsoleLog(function (log) {
+            await inspector.onConsoleEntry(function (log) {
               logEntry = log
             })
     
