@@ -46,5 +46,16 @@ suite(function (env) {
       await driver.get('https://www.google.com');
       await driver.quit();
     });
+
+    it('Basic Chrome test', async function () {
+      const Options = new Chrome.Options();
+      let driver = await env
+        .builder()
+        .setChromeOptions(Options)
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
   });
 }, { browsers: [Browser.CHROME]});
