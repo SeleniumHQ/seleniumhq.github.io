@@ -1487,11 +1487,11 @@ the Chrome browser and the version of chromedriver must match the major version.
 <i class="fas fa-external-link" aria-hidden=true></i>
 <small>Check code on GitHub</small></a></div></div><div class="tab-body tab-pane fade" id=tabs-1-3 role=tabpanel aria-labelled-by=tabs-1-3-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rb data-lang=rb><span style=display:flex><span>    <span style=color:#000>options</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>Selenium</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#000>WebDriver</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#000>Options</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>chrome</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>args</span><span style=color:#000;font-weight:700>:</span> <span style=color:#ce5c00;font-weight:700>[</span><span style=color:#4e9a06>&#39;--headless=new&#39;</span><span style=color:#ce5c00;font-weight:700>]</span><span style=color:#000;font-weight:700>)</span></span></span></code></pre></div><div class="text-right pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/ruby/spec/browsers/chrome_spec.rb#L14 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
 <i class="fas fa-external-link" aria-hidden=true></i>
-<small>Check code on GitHub</small></a></div></div><div class="tab-body tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>      <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>options</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>chrome</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Options</span><span style=color:#000;font-weight:700>();</span>
-</span></span><span style=display:flex><span>      <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Builder</span><span style=color:#000;font-weight:700>()</span>
-</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>setChromeOptions</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>options</span><span style=color:#000;font-weight:700>)</span>
-</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>forBrowser</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;chrome&#39;</span><span style=color:#000;font-weight:700>)</span>
-</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>build</span><span style=color:#000;font-weight:700>();</span></span></span></code></pre></div><div class="text-right pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
+<small>Check code on GitHub</small></a></div></div><div class="tab-body tab-pane fade" id=tabs-1-4 role=tabpanel aria-labelled-by=tabs-1-4-tab><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>      <span style=color:#204a87;font-weight:700>const</span> <span style=color:#000>Options</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Chrome</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Options</span><span style=color:#000;font-weight:700>();</span>
+</span></span><span style=display:flex><span>      <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>env</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>builder</span><span style=color:#000;font-weight:700>()</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>setChromeOptions</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>Options</span><span style=color:#000;font-weight:700>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>.</span><span style=color:#000>build</span><span style=color:#000;font-weight:700>();</span></span></span></code></pre></div><div class="text-right pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/javascript/test/browser/chromeSpecificCaps.spec.js#L51-L55 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
 <i class="fas fa-external-link" aria-hidden=true></i>
 <small>Check code on GitHub</small></a></div></div><div class="tab-body tab-pane fade" id=tabs-1-5 role=tabpanel aria-labelled-by=tabs-1-5-tab><p><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples><span class=selenium-badge-code data-toggle=tooltip data-placement=right title="Code examples are added to the projects in examples directory of repo; see about section for contribution and style guids">Add Example</span></a></p></div></div><p>Here are a few common use cases with different capabilities:</p><h3 id=arguments>Arguments</h3><p>The <code>args</code> parameter is for a list of <a href=https://peter.sh/experiments/chromium-command-line-switches/>Command Line Switches</a>
 used when starting the browser.
@@ -11406,7 +11406,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/illicitonion>@illicitonion</a></label>
 <span class=contributions>1162 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>996 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>999 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>816 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
@@ -11418,7 +11418,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/mdub>@mdub</a></label>
 <span class=contributions>326 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>294 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/399120?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>295 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/399120?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andreastt>@andreastt</a></label>
 <span class=contributions>289 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/67744?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/krosenvold>@krosenvold</a></label>
@@ -11454,13 +11454,13 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/andrashatvani>@andrashatvani</a></label>
 <span class=contributions>66 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1015125?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ajayk>@ajayk</a></label>
-<span class=contributions>63 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16556?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>63 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5413013?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/bonigarcia>@bonigarcia</a></label>
+<span class=contributions>50 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16556?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/twalpole>@twalpole</a></label>
 <span class=contributions>49 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2410127?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/asashour>@asashour</a></label>
-<span class=contributions>48 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5413013?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/bonigarcia>@bonigarcia</a></label>
-<span class=contributions>47 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/78736?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>48 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/78736?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mikemelia>@mikemelia</a></label>
 <span class=contributions>46 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/87697?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/tebeka>@tebeka</a></label>
@@ -11502,12 +11502,12 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/rbri>@rbri</a></label>
 <span class=contributions>16 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4146725?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bwalderman>@bwalderman</a></label>
-<span class=contributions>15 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16140691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>15 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/279773?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/asolntsev>@asolntsev</a></label>
+<span class=contributions>13 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16140691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/joerg1985>@joerg1985</a></label>
 <span class=contributions>13 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/864213?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bayandin>@bayandin</a></label>
-<span class=contributions>12 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/279773?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/asolntsev>@asolntsev</a></label>
 <span class=contributions>12 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5434964?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/carlosgcampos>@carlosgcampos</a></label>
 <span class=contributions>12 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/696819?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11592,7 +11592,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/corevo>@corevo</a></label>
 <span class=contributions>2445 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/4707505?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/toddtarsi>@toddtarsi</a></label>
-<span class=contributions>149 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/11513917?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>150 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/11513917?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/baimao8437>@baimao8437</a></label>
 <span class=contributions>88 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/58857646?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/coinzdude>@coinzdude</a></label>
@@ -11666,11 +11666,11 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/peter-kehl>@peter-kehl</a></label>
 <span class=contributions>1 commits</span></div></div><h4 id=docker-seleniumgithubcomseleniumhqdocker-selenium><a href=//github.com/SeleniumHQ/docker-selenium/>Docker Selenium</a></h4><style type=text/css>.ghContributors{display:flex;flex-flow:wrap;align-content:flex-start}.ghContributors>div{width:50%;display:inline-flex;margin-bottom:5px}.ghContributors>div label{padding-left:4px}.ghContributors>div span{font-size:x-small;padding-left:4px}</style><div class=ghContributors><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>495 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2972876?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>496 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2972876?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ddavison>@ddavison</a></label>
 <span class=contributions>134 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
-<span class=contributions>97 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/736870?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>98 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/736870?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mtscout6>@mtscout6</a></label>
 <span class=contributions>53 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1564624?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/kayabendroth>@kayabendroth</a></label>
@@ -11868,7 +11868,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>609 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>557 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>558 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
@@ -11948,6 +11948,8 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/kjayachandra2000>@kjayachandra2000</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/45794455?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/peter-kinzelman>@peter-kinzelman</a></label>
+<span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/14896831?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/TamsilAmani>@TamsilAmani</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/51388219?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/ant9112>@ant9112</a></label>
 <span class=contributions>4 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/45083857?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
@@ -11976,8 +11978,6 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/raju249>@raju249</a></label>
 <span class=contributions>3 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/13767532?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/takeya0x86>@takeya0x86</a></label>
-<span class=contributions>3 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/14896831?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/TamsilAmani>@TamsilAmani</a></label>
 <span class=contributions>3 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/31993574?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/TestOpsCloudchen>@TestOpsCloudchen</a></label>
 <span class=contributions>3 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1628243?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
