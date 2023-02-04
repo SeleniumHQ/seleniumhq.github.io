@@ -6,7 +6,6 @@ const process  =  require('node:process');
 describe('Should be able to Test Command line arguments', function () {
   (process.platform === 'darwin' ? it : it.skip)('headless', async function () {
     let driver = new Builder()
-      .forBrowser('safari')
       .setSafariOptions(options)
       .build();
 

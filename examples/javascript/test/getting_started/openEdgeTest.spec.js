@@ -1,4 +1,4 @@
-const {Builder, Browser} = require('selenium-webdriver');
+const {Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const edgedriver = require('@sitespeed.io/edgedriver');
 const edge = require('selenium-webdriver/edge');
@@ -9,9 +9,8 @@ suite(function (env) {
 
     before(async function () {
       let options = new edge.Options();
-      driver = await new Builder()
+      driver = await env.builder()
         .setEdgeOptions(options)
-        .forBrowser('MicrosoftEdge')
         .setEdgeService(new edge.ServiceBuilder(edgedriver.binPath()))
         .build();
     });

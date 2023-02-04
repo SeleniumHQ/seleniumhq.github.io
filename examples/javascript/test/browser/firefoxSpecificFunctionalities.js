@@ -5,7 +5,6 @@ const options = new Firefox.Options();
 describe('Should be able to Test Command line arguments', function () {
   it('headless', async function () {
     let driver = new Builder()
-      .forBrowser('firefox')
       .setFirefoxOptions(options.addArguments('--headless'))
       .build();
 
