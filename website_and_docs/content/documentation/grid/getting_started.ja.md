@@ -247,17 +247,17 @@ jar ファイルは[repo1.maven.org](https://repo1.maven.org/maven2/org/selenium
 Grid を起動する方法は以下の通りです:
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar -—ext selenium-http-jdk-client-<version>.jar standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
 `selenium-http-jdk-client`をダウンロードする別の方法として[Coursier](https://get-coursier.io/docs/cli-installation)を使う方法があります。
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
 ハブ&ノードか分散モードで動かす場合、`-Dwebdriver.http.factory=jdk-http-client`と
-`—-ext`フラグの設定が各コンポーネントに必要になります。
+`--ext`フラグの設定が各コンポーネントに必要になります。
 
 ## Grid サイズ
 
