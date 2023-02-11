@@ -22,4 +22,4 @@ and pass it to a HTTP request library like
 The [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) can download attachments 
 by accessing them as input streams by implementing the 
 [AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html) 
-interface. The AttachmentHandler can the be added to the [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.
+interface. The AttachmentHandler can then be added to the [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.

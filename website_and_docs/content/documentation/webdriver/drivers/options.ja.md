@@ -118,14 +118,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='normal'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :normal
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -202,14 +202,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='eager'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :eager
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -285,14 +285,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='none'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :none
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
