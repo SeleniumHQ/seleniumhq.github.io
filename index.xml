@@ -1,4 +1,44 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Headless is Going Away!</title><link>/blog/2023/headless-is-going-away/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/headless-is-going-away/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Let's meet at SeleniumConf, Once Again!</title><link>/blog/2023/lets-meet-in-person-at-seleniumconf-2023/</link><pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate><guid>/blog/2023/lets-meet-in-person-at-seleniumconf-2023/</guid><description>
+&lt;p>This year is special, thanks to the decision to host an in-person conference after a long hiatus and several years of
+virtual-only events. We&amp;rsquo;ve gone out of our way to reflect this feeling at the conference. We have engrossing keynotes,
+well-researched talks, hands-on pre-conference workshops, hallway tracks, and whatnot!&lt;/p>
+&lt;h3 id="heres-a-quick-list-of-what-to-expect">Here&amp;rsquo;s a quick list of what to expect!&lt;/h3>
+&lt;h3 id="whats-cooking-in-keynotes">What&amp;rsquo;s cooking in Keynotes?&lt;/h3>
+&lt;p>We have Diego Molina kicking things off with
+&amp;lsquo;&lt;a href="https://seleniumconf.com/agenda/#selenium-state-of-the-union">Selenium: State of the Union&lt;/a>&amp;rsquo; where he will talk about
+all things Selenium, including the project, the code, and the community. Think of it as a journey through the times with
+Selenium. A must-attend without any shred of doubt!&lt;/p>
+&lt;p>Next up is Erika Chestnut&amp;rsquo;s &amp;lsquo;&lt;a href="https://seleniumconf.com/agenda/#bigger-than-the-box">Bigger Than The Box&lt;/a>&amp;rsquo; where she
+will focus on the idea of quality and whether it has been restricted to only a single step in the delivery process.
+It is indeed a dialogue that needs to happen given that our lives revolve around quality.&lt;/p>
+&lt;p>On day 2, we have first-time SeleniumConf keynote speaker Mark Winteringham from the Ministry of Testing talking about
+&amp;lsquo;&lt;a href="https://seleniumconf.com/agenda/#what-exactly-do-you-do-in-test-automation">What Exactly Do You Do in Test Automation?&lt;/a>&amp;rsquo;
+Is it just about coding and frameworks or is there more to it? How should a test automation practitioner think about
+their role? Think of this as learning from the ground up or in some cases, back to the basics!&lt;/p>
+&lt;h3 id="talks-talks-and-more-talks">Talks, talks, and more talks&lt;/h3>
+&lt;p>We&amp;rsquo;ve cast our net far and wide this time around.&lt;/p>
+&lt;p>Just as a highlight, across the two days, we will cover a diverse range of topics from crawlers, identifying code
+smells, blended testing, component testing, quality gates, quality metrics to track, testing with real robots, and
+managing the test data nightmare, among others. Quite a list, huh? Trust me, this is just a sneak peek. You can check
+out the entire list &lt;a href="https://seleniumconf.com/agenda/">here&lt;/a>.&lt;/p>
+&lt;p>Also, we&amp;rsquo;ve got a session on how testing with
+&lt;a href="https://seleniumconf.com/agenda/#solving-unemployment-in-africa-with-testing-and-selenium">Selenium is solving unemployment in Africa&lt;/a>.&lt;/p>
+&lt;p>The cherry on the cake is the Q&amp;amp;A with the Selenium Committer&amp;rsquo;s &lt;a href="https://seleniumconf.com/agenda/#q-amp-a-with-the-selenium-committers-panel">Panel&lt;/a>
+where you&amp;rsquo;ll get to pick the brains of the very people who&amp;rsquo;ve built Selenium.&lt;/p>
+&lt;p>In a way, we&amp;rsquo;ve truly tried our best to touch upon the technology, people, and process aspects of testing. We&amp;rsquo;d love to
+have you over to catch these experts in action!&lt;/p>
+&lt;h3 id="getting-your-hands-dirty-with-tailored-workshops">Getting your hands dirty with tailored workshops&lt;/h3>
+&lt;p>Testing is all about exploring. How about exploring and diving into something new?&lt;/p>
+&lt;p>We&amp;rsquo;ve got community leaders doing deep dives into Selenium, Appium 2.0, how to become a committer, state model-based
+testing, and driving observability with Selenium Grid.&lt;/p>
+&lt;p>We truly believe that nothing beats hearing it from the horse&amp;rsquo;s mouth.&lt;/p>
+&lt;h3 id="whats-more">What&amp;rsquo;s more?&lt;/h3>
+&lt;p>While there are some amazing keynotes, well-researched talks, and structured workshops, we really think the biggest
+takeaway for any attendee is the people they&amp;rsquo;ll get to meet. Selenium has been a great example of how the community can
+come together to build something that is greater than the sum of its parts. A conference like this brings together folks
+from across the world, with different levels of experience, and puts them under a single roof.&lt;/p>
+&lt;p>What can be more beautiful than getting to interact with the very community that has built and grown Selenium?&lt;/p>
+&lt;p>What are you waiting for? &lt;a href="https://seleniumconf.com/register/">Register now&lt;/a>! We can&amp;rsquo;t wait to welcome you to Chicago!&lt;/p></description></item><item><title>Blog: Headless is Going Away!</title><link>/blog/2023/headless-is-going-away/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/headless-is-going-away/</guid><description>
 &lt;p>Headless is an execution mode for Firefox and Chromium based browsers. It allows users to run automated scripts in
 headless mode, meaning that the browser window wouldn’t be visible. In most of Selenium&amp;rsquo;s bindings there is a
 convenience method to set this execution mode while setting the browser options. However,
@@ -6942,77 +6982,4 @@ of Selenium 3 a method was deprecated, it’s now probably gone. We’ve taken t
 version bump to delete them and clean up the behind-the-scenes internals people don’t normally get to see.
 If you’re a software developer, you may recognise this as us paying off some of our technical debt :)&lt;/p>
 &lt;p>Stay tuned for the next post, where I’ll go over some new tricks in Selenium 4.&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump">https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Blog: What’s Coming in Selenium 4: How Can I Contribute?</title><link>/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute/</link><pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate><guid>/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute/</guid><description>
-&lt;blockquote>
-&lt;p>In this new blog series all about the upcoming release of Selenium 4, Simon Stewart will
-cover how the Selenium project works, who is involved, how you can get involved, and a
-sneak peek at what’s new in Selenium 4.&lt;/p>
-&lt;/blockquote>
-&lt;p>As the lead of the Selenium project, I wanted to kick off a new blog series leading up to
-the release of Selenium 4. During this series, I’ll talk all about how the Selenium project
-works, who is involved, how you—yes, you!—can get involved, and we’ll get a sneak peek at
-what’s new in Selenium 4. I&amp;rsquo;ve been speaking about this off and on for a while, but now
-the 4.0 release is looming I wanted to start sharing in more depth.&lt;/p>
-&lt;p>In this first post, we’ll start off with a brief discussion about how the Selenium project
-itself runs and who does what, because that’s a really helpful piece to understand how and
-why things happen the way they do on the project. In future posts, we’ll look at the new IDE,
-and then we’ll talk about Selenium 4 in more depth, including the fact that it should be a
-drop-in replacement for you. I’ll also review some new features that we’ve added to Selenium
-4, and talk a bit about the modernized Selenium Grid. So let’s get started!&lt;/p>
-&lt;h2 id="about-the-selenium-project">About the Selenium Project&lt;/h2>
-&lt;p>Selenium is an Open Source project. It&amp;rsquo;s run under the aegis of the Software Freedom
-Conservancy (SFC). The SFC is a group dedicated to pushing forward Free and Open Source
-software. Besides Selenium, they have a handful of projects you may have heard of, including
-Samba, Mercurial and Git. The SFC allows us to focus on writing code and fixing bugs by
-handling all the legal and financial stuff we’re not good at. They’re the ones that help
-us negotiate contracts for when we want to run SeleniumConf, for example.&lt;/p>
-&lt;p>Acting as a bridge between the project and the SFC is the Project Leadership Committee
-(PLC). Currently, it’s made up of Jim Evans, Alexei Barantsev, Marcus Merrell, Manoj Kumar,
-and myself. What do we do? Effectively, the PLC is about providing a smaller group of people
-for the SFC to talk to when decisions need to be made about funding a conference, or how
-best to respond to sponsorship agreements. Because we like to do as much work in the open
-as possible, you can find us on the &lt;code>#selenium-plc&lt;/code> Slack channel, and almost every
-conversation and topic is discussed here.&lt;/p>
-&lt;p>One of the key qualifications for being on the PLC is a demonstrated commitment to helping
-the Selenium project improve and succeed, and we recognise that the project is more than just
-“code.” It’s a community, and the make up of the PLC reflects that.&lt;/p>
-&lt;p>The Technical Leadership Committee (TLC) includes the people who set the technical direction
-for the project. If you come over to the Selenium Slack, you can find the &lt;code>#selenium-tlc&lt;/code> channel,
-which is where a lot of the technical conversations happen for the project. The TLC includes Jim
-Evans, Alexei Barantsev, David Burns, Diego Molina, Titus Fortner, and me.&lt;/p>
-&lt;p>How do you get on the TLC? Although the project governance document goes into more detail,
-it can be summed up as simply as someone who’s demonstrated technical leadership on the project,
-over an extended period of time. Just as with the PLC, being on the TLC doesn’t give someone more
-authority, but they’re the ones who can merge PRs, and who can (if need be) commit directly to the tree.&lt;/p>
-&lt;p>Again, the TLC tries to do as much work as possible in the open. If you’re ever interested in watching
-the design discussions, or asking why a bit of the Selenium code base is structured the way it is, then
-come and join us in the &lt;code>#selenium-tlc&lt;/code> Slack channel. There’s normally someone from the project there
-who’ll be able to answer your questions!&lt;/p>
-&lt;p>I wanted to share how the project works for one simple reason: to highlight one of the really important
-things with Open Source, which is that anyone can contribute! You don&amp;rsquo;t need to be throwing code around
-in order to be contributing, and &lt;a href="https://www.youtube.com/watch?v=PZ-BfM97PZk">you don’t need to be special&lt;/a>
-in order to contribute your time and effort.&lt;/p>
-&lt;p>So obviously there&amp;rsquo;s the people running the projects and writing code, but we couldn&amp;rsquo;t do that all on our own.
-Every release includes contributions from a variety of people, not just the core development team. Also, we&amp;rsquo;re
-always happy to accept patches. If you&amp;rsquo;re not quite sure where to start, I recommend you head to our
-&lt;a href="https://github.com/seleniumhq/selenium/">GitHub page&lt;/a> and take a look at the project tab. That’s where you
-can see the things that need to be done and what we&amp;rsquo;re working on.&lt;/p>
-&lt;p>The other way to get involved is the way that everyone used to get involved with Open Source, which is by
-what&amp;rsquo;s known as “scratching your own itch”. It&amp;rsquo;s if there&amp;rsquo;s something about the project, something about the
-product you think could be a little bit better, download the source, edit it, and then send us a PR.&lt;/p>
-&lt;p>We encourage you to get involved and contribute! On the Selenium website, there is a
-&lt;a href="https://www.selenium.dev/governance/">page&lt;/a> that outlines in detail the steps to join the Selenium team.
-Join the Selenium Slack channel to interact with us and ask questions. If you want to discuss something,
-or if you don&amp;rsquo;t understand why the code is written the way it is, feel free to come on to that Slack channel
-and talk to us. Also, if you&amp;rsquo;d like to see how the decision making is made, then please do feel free to come
-on to the &lt;code>#selenium-tlc&lt;/code> or the &lt;code>#selenium-plc&lt;/code> channels to see those groups. Because we&amp;rsquo;re Open Source, we
-try and do everything in the open.&lt;/p>
-&lt;p>If you’d like to put faces to people’s Slack or IRC handles, then please note that there’s a regular team
-meeting every other Thursday on Google Meet at 4:30pm (UK time!) We tend to just chat and discuss everything
-from the project to the weather, but that’s a great way to get to know people a little better! :)&lt;/p>
-&lt;p>Finally, if you’re having trouble getting to grips with the Selenium code base, then please do come and ask us
-for help. We’ve done our best to make the on-ramp as easy to take as possible, but the project can seem complicated
-and daunting when you’re getting started. We’re here to help!&lt;/p>
-&lt;p>I hope you enjoyed this intro to the Selenium project. Next week, we’ll talk about why the major version bump to
-Selenium 4. Stay tuned!&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/whats-coming-in-selenium-4-how-can-i-contribute">https://saucelabs.com/blog/whats-coming-in-selenium-4-how-can-i-contribute&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump">https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
