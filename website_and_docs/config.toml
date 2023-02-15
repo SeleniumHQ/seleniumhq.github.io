@@ -4,7 +4,7 @@ title = "Selenium"
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["docsy"]
+# theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -79,7 +79,22 @@ description = "Selenium automates browsers. That's it!"
 languageName ="Other"
 weight = 5
 
-
+[module]
+  proxy = "direct"
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/google/docsy -> ../../docsy"
+  [module.hugoVersion]
+    extended = true
+    min = "0.73.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false
+  [[module.mounts]]
+	source = 'assets/scss'
+	target = 'assets/scss/docsy'
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+    disable = false
 
 [markup]
   [markup.goldmark]
