@@ -89,9 +89,39 @@ weight = 5
   [[module.imports]]
     path = "github.com/google/docsy"
     disable = false
-  [[module.mounts]]
-	source = 'assets/scss'
-	target = 'assets/scss/docsy'
+  [[module.imports.mounts]]
+	source = "assets/scss"
+	target = "assets/scss/docsy"
+  [[module.imports.mounts]]
+	source = 'content'
+	target = 'content'
+  [[module.imports.mounts]]
+	source = 'static'
+	target = 'static'
+  [[module.imports.mounts]]
+	source = 'layouts'
+	target = 'layouts'
+  [[module.imports.mounts]]
+	source = 'data'
+	target = 'data'
+  [[module.imports.mounts]]
+	source = 'assets'
+	target = 'assets'
+  [[module.imports.mounts]]
+	source = 'i18n'
+	target = 'i18n'
+  [[module.imports.mounts]]
+	source = 'archetypes'
+	target = 'archetypes'
+  [[module.imports.mounts]]
+	source = 'node_modules/bootstrap'
+	target = 'assets/vendor/bootstrap'
+  [[module.imports.mounts]]
+	source = 'node_modules/@fortawesome/fontawesome-free'
+	target = 'assets/vendor/Font-Awesome'
+  [[module.imports.mounts]]
+	source = 'node_modules/@fortawesome/fontawesome-free/webfonts'
+	target = 'static/webfonts'
   [[module.imports]]
     path = "github.com/google/docsy/dependencies"
     disable = false
