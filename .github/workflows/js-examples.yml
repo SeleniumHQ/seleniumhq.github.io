@@ -46,8 +46,6 @@ jobs:
       working-directory: ./examples/javascript
       run: npm install
     - name: Run tests
-      env:
-        SELENIUM_BROWSER: chrome
       uses: nick-invision/retry@v2.8.2
       with:
         timeout_minutes: 20

@@ -37,4 +37,4 @@ suite(function (env) {
       assert.deepStrictEqual(await driver.getTitle(), `We Arrive Here`)
     });
   });
-});
+}, { browsers: [Browser.CHROME]});

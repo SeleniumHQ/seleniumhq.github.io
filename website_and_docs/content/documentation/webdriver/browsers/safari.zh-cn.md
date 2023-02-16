@@ -38,7 +38,7 @@ Safari独有的Capabilities可以在Apple的页面[关于Safari的WebDriver](htt
 {{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L7-L10" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L10-L12" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
   val options = SafariOptions()

@@ -1,4 +1,4 @@
-const {By, Origin} = require('selenium-webdriver');
+const {By, Origin, Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const assert = require('assert');
 
@@ -47,4 +47,4 @@ suite(function (env) {
       assert.deepStrictEqual(Math.abs(parseInt(result[1]) - 3 - 15) < 2, true)
     });
   });
-});
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]});

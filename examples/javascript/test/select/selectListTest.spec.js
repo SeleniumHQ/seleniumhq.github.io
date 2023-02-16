@@ -1,4 +1,4 @@
-const {By} = require('selenium-webdriver')
+const {By, Browser} = require('selenium-webdriver')
 const {suite} = require('selenium-webdriver/testing')
 const assert = require('assert/strict')
 const {Select} = require('selenium-webdriver')
@@ -78,4 +78,4 @@ suite(function (env) {
       })
     })
   })
-})
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]})

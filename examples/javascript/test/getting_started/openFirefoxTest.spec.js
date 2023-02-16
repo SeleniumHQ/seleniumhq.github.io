@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const firefox = require('selenium-webdriver/firefox');
 
@@ -8,16 +8,15 @@ suite(function (env) {
 
     before(async function () {
       let options = new firefox.Options();
-      driver = await new Builder()
+      driver = await env.builder()
         .setFirefoxOptions(options)
-        .forBrowser('firefox')
         .build();
     });
 
-    after(() => driver.quit());
+    after(async () => await driver.quit());
 
     it('Basic Firefox test', async function () {
       await driver.get('https://www.google.com');
     });
   });
-});
+}, { browsers: [Browser.FIREFOX]});

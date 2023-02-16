@@ -12,7 +12,7 @@ description: >
 Headless is an execution mode for Firefox and Chromium based browsers. It allows users to run automated scripts in 
 headless mode, meaning that the browser window wouldn’t be visible. In most of Selenium's bindings there is a
 convenience method to set this execution mode while setting the browser options. However, 
-[Selenium 4.8.0](https://www.selenium.dev/blog/2023/selenium-4-8-0-released/) will be deprecated this method and
+[Selenium 4.8.0](https://www.selenium.dev/blog/2023/selenium-4-8-0-released/) will be deprecated this method 
 and now users need to set it through arguments when setting the browser options.
 
 
@@ -20,7 +20,7 @@ and now users need to set it through arguments when setting the browser options.
 Now that we got your attention, 
 We're very happy to announce the release of Selenium 4.8.0 for Java, 
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our [downloads page][downloads].
+Links to everything can be found on our [downloads page](https://www.selenium.dev/downloads/).
 
 ### Why is Selenium doing this?
 
