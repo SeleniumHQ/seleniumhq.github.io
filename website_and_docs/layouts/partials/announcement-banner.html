@@ -1,0 +1,19 @@
+{{ $color := "selenium-blue" }}
+{{ $p1 := .p1 }}
+
+<section id="announcement-banner" class="alert-static row -bg-{{ $color }}">
+  <div class="container" style="padding: 20px;">
+    <div class="row justify-content-center my-1">
+      <div class="alert alert-{{ $color }} col-12 fade show mb-0 -bg-{{ $color }}" role="alert">
+        <h4 class="alert-heading pb-2 text-center">
+          Selenium Conference Chicago 2023
+        </h4>
+        <div class="w-100 text-center">
+          The next SeleniumConf will be an in-person event in Chicago, March 28-30, 2023. 
+          <a href="https://seleniumconf.com/" target='_blank' aria-pressed="true">Register now!</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
+

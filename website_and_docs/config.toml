@@ -149,6 +149,9 @@ plausible_analytics = true
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
 
+# Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
+announcement_banner = true
+
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.
