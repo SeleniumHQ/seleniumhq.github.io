@@ -9,15 +9,14 @@ This is the repository used to build and publish the official Selenium [website]
 ## Quick start
 
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
+to build and render the site. You will need the **extended**
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.101.0.
+to use Hugo 0.110.0.
 
 Steps needed to have this working locally and work on it:
 
 - Follow the [Install Hugo](https://www.docsy.dev/docs/get-started/other-options/#install-hugo) instructions from Docsy
 - Clone this repository
-- Run `git submodule update --init --recursive`
 - Run `cd website_and_docs`
 - Run `hugo server`
 
@@ -66,6 +65,4 @@ members, who can help you with that.
 If for any reason, you need to setup the domain redirection again,
 we followed this [guide](http://spector.io/how-to-set-up-github-pages-with-a-custom-domain-on-gandi/),
 but any tutorial/guide showing how to redirect a domain to GitHub pages should do.   
- 
-
 
