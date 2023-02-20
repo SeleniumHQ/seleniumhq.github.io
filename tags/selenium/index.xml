@@ -26,44 +26,44 @@ get the full browser functionality (even run extensions). Between versions 96 to
 &lt;h4 id="before">Before&lt;/h4>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
 &lt;a class="nav-link active persistLang-java"
-id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab"
+id="tabs-0-00-tab" data-toggle="tab" href="#tabs-0-00" role="tab"
 onclick="persistLang(&amp;#34;java&amp;#34;);"
-aria-controls="tabs-0-0" aria-selected="false">Java&lt;/a>
+aria-controls="tabs-0-00" aria-selected="false">Java&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-javascript"
-id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab"
+id="tabs-0-01-tab" data-toggle="tab" href="#tabs-0-01" role="tab"
 onclick="persistLang(&amp;#34;javascript&amp;#34;);"
-aria-controls="tabs-0-1" aria-selected="false">JavaScript&lt;/a>
+aria-controls="tabs-0-01" aria-selected="false">JavaScript&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-csharp"
-id="tabs-0-2-tab" data-toggle="tab" href="#tabs-0-2" role="tab"
+id="tabs-0-02-tab" data-toggle="tab" href="#tabs-0-02" role="tab"
 onclick="persistLang(&amp;#34;csharp&amp;#34;);"
-aria-controls="tabs-0-2" aria-selected="false">CSharp&lt;/a>
+aria-controls="tabs-0-02" aria-selected="false">CSharp&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-ruby"
-id="tabs-0-3-tab" data-toggle="tab" href="#tabs-0-3" role="tab"
+id="tabs-0-03-tab" data-toggle="tab" href="#tabs-0-03" role="tab"
 onclick="persistLang(&amp;#34;ruby&amp;#34;);"
-aria-controls="tabs-0-3" aria-selected="false">Ruby&lt;/a>
+aria-controls="tabs-0-03" aria-selected="false">Ruby&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-python"
-id="tabs-0-4-tab" data-toggle="tab" href="#tabs-0-4" role="tab"
+id="tabs-0-04-tab" data-toggle="tab" href="#tabs-0-04" role="tab"
 onclick="persistLang(&amp;#34;python&amp;#34;);"
-aria-controls="tabs-0-4" aria-selected="false">Python&lt;/a>
+aria-controls="tabs-0-04" aria-selected="false">Python&lt;/a>
 &lt;/li>
 &lt;/ul>
 &lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
-id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
+id="tabs-0-00" role="tabpanel" aria-labelled-by="tabs-0-00-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">ChromeOptions&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">setHeadless&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">get&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://selenium.dev&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">quit&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">
+id="tabs-0-01" role="tabpanel" aria-labelled-by="tabs-0-01-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">let&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">env&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">builder&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">setChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#000;font-weight:bold">().&lt;/span>&lt;span style="color:#000">headless&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
@@ -71,17 +71,17 @@ id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-0-2" role="tabpanel" aria-labelled-by="tabs-0-2-tab">
+id="tabs-0-02" role="tabpanel" aria-labelled-by="tabs-0-02-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-CSharp" data-lang="CSharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// C# did not have a convenience method&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-0-3" role="tabpanel" aria-labelled-by="tabs-0-3-tab">
+id="tabs-0-03" role="tabpanel" aria-labelled-by="tabs-0-03-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">new&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">headless!&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">for&lt;/span> &lt;span style="color:#4e9a06">:chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">options&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">options&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-0-4" role="tabpanel" aria-labelled-by="tabs-0-4-tab">
+id="tabs-0-04" role="tabpanel" aria-labelled-by="tabs-0-04-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">headless&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">True&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
@@ -91,44 +91,44 @@ id="tabs-0-4" role="tabpanel" aria-labelled-by="tabs-0-4-tab">
 &lt;h4 id="after">After&lt;/h4>
 &lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">&lt;li class="nav-item">
 &lt;a class="nav-link active persistLang-java"
-id="tabs-1-0-tab" data-toggle="tab" href="#tabs-1-0" role="tab"
+id="tabs-1-00-tab" data-toggle="tab" href="#tabs-1-00" role="tab"
 onclick="persistLang(&amp;#34;java&amp;#34;);"
-aria-controls="tabs-1-0" aria-selected="false">Java&lt;/a>
+aria-controls="tabs-1-00" aria-selected="false">Java&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-javascript"
-id="tabs-1-1-tab" data-toggle="tab" href="#tabs-1-1" role="tab"
+id="tabs-1-01-tab" data-toggle="tab" href="#tabs-1-01" role="tab"
 onclick="persistLang(&amp;#34;javascript&amp;#34;);"
-aria-controls="tabs-1-1" aria-selected="false">JavaScript&lt;/a>
+aria-controls="tabs-1-01" aria-selected="false">JavaScript&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-csharp"
-id="tabs-1-2-tab" data-toggle="tab" href="#tabs-1-2" role="tab"
+id="tabs-1-02-tab" data-toggle="tab" href="#tabs-1-02" role="tab"
 onclick="persistLang(&amp;#34;csharp&amp;#34;);"
-aria-controls="tabs-1-2" aria-selected="false">CSharp&lt;/a>
+aria-controls="tabs-1-02" aria-selected="false">CSharp&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-ruby"
-id="tabs-1-3-tab" data-toggle="tab" href="#tabs-1-3" role="tab"
+id="tabs-1-03-tab" data-toggle="tab" href="#tabs-1-03" role="tab"
 onclick="persistLang(&amp;#34;ruby&amp;#34;);"
-aria-controls="tabs-1-3" aria-selected="false">Ruby&lt;/a>
+aria-controls="tabs-1-03" aria-selected="false">Ruby&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-python"
-id="tabs-1-4-tab" data-toggle="tab" href="#tabs-1-4" role="tab"
+id="tabs-1-04-tab" data-toggle="tab" href="#tabs-1-04" role="tab"
 onclick="persistLang(&amp;#34;python&amp;#34;);"
-aria-controls="tabs-1-4" aria-selected="false">Python&lt;/a>
+aria-controls="tabs-1-04" aria-selected="false">Python&lt;/a>
 &lt;/li>
 &lt;/ul>
 &lt;div class="tab-content" id="tabs-1-content">&lt;div class="tab-pane fade show active"
-id="tabs-1-0" role="tabpanel" aria-labelled-by="tabs-1-0-tab">
+id="tabs-1-00" role="tabpanel" aria-labelled-by="tabs-1-00-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">ChromeOptions&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">addArguments&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">get&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#a40000">&amp;#34;&lt;/span>&lt;span style="color:#000">https&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">:&lt;/span>&lt;span style="color:#8f5902;font-style:italic">//selenium.dev);
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">quit&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab">
+id="tabs-1-01" role="tabpanel" aria-labelled-by="tabs-1-01-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">let&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">env&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">builder&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">setChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">addArguments&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;--headless=new&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">))&lt;/span>
@@ -136,20 +136,20 @@ id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab">
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
+id="tabs-1-02" role="tabpanel" aria-labelled-by="tabs-1-02-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-CSharp" data-lang="CSharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AddArgument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Navigate&lt;/span>&lt;span style="color:#000;font-weight:bold">().&lt;/span>&lt;span style="color:#000">GoToUrl&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://selenium.dev&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Quit&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-1-3" role="tabpanel" aria-labelled-by="tabs-1-3-tab">
+id="tabs-1-03" role="tabpanel" aria-labelled-by="tabs-1-03-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">args&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;--headless=new&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">for&lt;/span> &lt;span style="color:#4e9a06">:chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">options&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">options&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;https://selenium.dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-1-4" role="tabpanel" aria-labelled-by="tabs-1-4-tab">
+id="tabs-1-04" role="tabpanel" aria-labelled-by="tabs-1-04-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Python" data-lang="Python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--headless=new&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
@@ -2387,19 +2387,19 @@ other kinds of authentication credentials)&lt;/p>
 complicated. Perhaps an example will help?&lt;/p>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
 &lt;a class="nav-link active persistLang-java"
-id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab"
+id="tabs-0-00-tab" data-toggle="tab" href="#tabs-0-00" role="tab"
 onclick="persistLang(&amp;#34;java&amp;#34;);"
-aria-controls="tabs-0-0" aria-selected="false">Java&lt;/a>
+aria-controls="tabs-0-00" aria-selected="false">Java&lt;/a>
 &lt;/li>
 &lt;li class="nav-item">
 &lt;a class="nav-link persistLang-ruby"
-id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab"
+id="tabs-0-01-tab" data-toggle="tab" href="#tabs-0-01" role="tab"
 onclick="persistLang(&amp;#34;ruby&amp;#34;);"
-aria-controls="tabs-0-1" aria-selected="false">Ruby&lt;/a>
+aria-controls="tabs-0-01" aria-selected="false">Ruby&lt;/a>
 &lt;/li>
 &lt;/ul>
 &lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
-id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
+id="tabs-0-00" role="tabpanel" aria-labelled-by="tabs-0-00-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// This &amp;#34;HasAuthentication&amp;#34; interface is the key!
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span> &lt;span style="color:#000">authentication&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">HasAuthentication&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -2412,7 +2412,7 @@ id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">UsernameAndPassword&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;AzureDiamond&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;hunter2&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;div class="tab-pane fade"
-id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">
+id="tabs-0-01" role="tabpanel" aria-labelled-by="tabs-0-01-tab">
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Ruby" data-lang="Ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">register&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">username&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">password&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;admin&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;/div>
