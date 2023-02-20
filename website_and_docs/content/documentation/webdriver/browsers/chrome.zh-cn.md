@@ -97,11 +97,11 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 添加拓展程序
+### 添加扩展程序
 
 `extensions` 参数接受crx文件
 
-添加一个拓展程序到选项中:
+添加一个扩展程序到选项中:
 
 {{< alert-code />}}
 
