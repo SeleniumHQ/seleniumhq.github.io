@@ -49,7 +49,7 @@ Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 #fetch display status
 val = driver.find_element(name: 'email_input').displayed?
