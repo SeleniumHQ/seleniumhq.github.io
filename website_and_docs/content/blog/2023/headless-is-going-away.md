@@ -89,7 +89,7 @@ driver.quit()
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless=new");
 WebDriver driver = new ChromeDriver(options);
-driver.get("https://selenium.dev);
+driver.get("https://selenium.dev");
 driver.quit();
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
