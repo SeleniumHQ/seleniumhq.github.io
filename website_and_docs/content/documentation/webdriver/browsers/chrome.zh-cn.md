@@ -9,16 +9,15 @@ aliases: [
 ]
 ---
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of
-the Chrome browser and the version of chromedriver must match the major version.
+默认情况下，Selenium 4与Chrome v75及更高版本兼容. 但是请注意Chrome浏览器的版本与chromedriver的主版本需要匹配.
 
 ## Options
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+所有浏览器的通用功能请看这 [Options page]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Chrome can be found at Google's page for [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
+Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
-Starting a Chrome session with basic defined options looks like this:
+基于默认选项的Chrome浏览器会话看起来是这样:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,15 +40,14 @@ Starting a Chrome session with basic defined options looks like this:
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+下面是一些不同功能的常见示例:
 
-### Arguments
+### 参数
 
-The `args` parameter is for a list of [Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
-used when starting the browser.
-Commonly used args include `--start-maximized` and `--headless=new`
+`args` 参数是启动浏览器时输入的[浏览器命令行参数](https://peter.sh/experiments/chromium-command-line-switches/).
+常用的参数包括 `--start-maximized` 和 `--headless=new`
 
-Add an argument to options:
+添加一个参数到选项中:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -72,12 +70,11 @@ Add an argument to options:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Start browser in a specified location
+### 从指定位置启动浏览器
 
-The `binary` parameter takes the path of an alternate location of browser to use. With this parameter you can
-use chromedriver to drive various Chromium based browsers.
+`binary` 参数接收一个使用浏览器的备用路径,通过这个参数你可以使用chromedriver 去驱动各种基于Chromium 内核的浏览器.
 
-Add a browser location to options:
+添加一个浏览器地址到选项中:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -100,19 +97,19 @@ Add a browser location to options:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Add extensions
+### 添加扩展程序
 
-The `extensions` parameter accepts crx files
+`extensions` 参数接受crx文件
 
-Add an extension to options:
+添加一个扩展程序到选项中:
 
 {{< alert-code />}}
 
-### Keeping browser open
+### 保持浏览器的打开状态
 
-Setting the `detach` parameter to true will keep the browser open after the driver process has been quit.
+将 `detach` 参数设置为true将在驱动过程结束后保持浏览器的打开状态.
 
-Ad a binary to options:
+添加一个布尔值到选项中:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -135,12 +132,12 @@ Ad a binary to options:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Excluding arguments
+### 排除的参数
 
-Chrome adds various arguments, if you do not want those arguments added, pass them into `excludeSwitches`.
-A common example is to turn the popup blocker back on.
+Chrome 添加了各种参数，如果你不希望添加某些参数，可以将其传入 `excludeSwitches`.
+一个常见的例子是重新打开弹出窗口阻止程序.
 
-Set excluded arguments on options:
+设置排除参数至选项中:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -165,13 +162,13 @@ Set excluded arguments on options:
 
 ## Casting
 
-You can drive Chrome Cast devices, including sharing tabs
+你可以驱动 Chrome Cast 设备，包括共享选项卡
 
 {{< alert-code />}}
 
-## Network conditions
+## 网络条件
 
-You can simulate various network conditions.
+您可以模拟各种网络条件.
 
 {{< alert-code />}}
 
