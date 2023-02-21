@@ -1,19 +1,26 @@
 [build]
-publish = "website_and_docs/public"
-command = "chmod +x build-site.sh && ./build-site.sh"
+base = "website_and_docs/"
+publish = "public"
+command = "hugo"
 
 [context.production.environment]
-HUGO_VERSION = "0.101.0"
+NODE_VERSION = "18.14.1"
+HUGO_VERSION = "0.110.0"
+GO_VERSION = "1.20.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "chmod +x build-site.sh && ./build-site.sh"
+command = "hugo"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.101.0"
+NODE_VERSION = "18.14.1"
+HUGO_VERSION = "0.110.0"
+GO_VERSION = "1.20.1"
 
 [context.branch-deploy]
-command = "chmod +x build-site.sh && ./build-site.sh"
+command = "hugo --minify"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.101.0"
+NODE_VERSION = "18.14.1"
+HUGO_VERSION = "0.110.0"
+GO_VERSION = "1.20.1"
