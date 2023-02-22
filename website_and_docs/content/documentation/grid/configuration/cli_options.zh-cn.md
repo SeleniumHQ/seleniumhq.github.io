@@ -234,7 +234,7 @@ pull request updating this page.
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
 | `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
 | `--downloads-path`| string | `/usr/downloads` | The default location wherein all browser triggered file downloads would be available to be retrieved from. This is usually the directory that you configure in your browser as the default location for storing downloaded files. |
-| `--selenium-manager`| boolean | `true` | When drivers are not available on the current system, use Selenium Manager. True by default. |
+| `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
 
 ### Relay
 
