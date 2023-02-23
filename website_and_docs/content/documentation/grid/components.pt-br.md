@@ -3,120 +3,107 @@ title: "Componentes"
 linkTitle: "Componentes"
 weight: 6
 description: >
-    Understand how to use the different Grid components
+  Compreender como usar os componentes da Grid
 aliases: [
 "/documentation/pt-br/grid/grid_4/components_of_a_grid/",
 "/pt-br/documentation/grid/components_of_a_grid/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+A Selenium Grid 4 é uma re-escrita completa das versões anteriores. Além dos melhoramentos ao desempenho
+e aos cumprimentos dos standards, várias funcionalidades da Grid foram separadas para reflectir uma
+nova era de computação e desenvolvimento de software. Criada de raíz para containerização e
+escalabilidade cloud, Selenium Grid 4 é uma nova solução para a era moderna.
 
-Selenium Grid 4 is a ground-up rewrite from previous versions. In addition to a comprehensive
-set of improvements to performance and standards compliance, the different functions of the grid were 
-broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
-and cloud-distributed scalability, Selenium Grid 4 is a wholly new solution for the modern era. 
 
-{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
-![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
+{{< card header="**Componentes Grid**" footer="Componentes Grid em modo distribuido" >}}
+![Componentes Selenium Grid 4](/images/documentation/grid/components.png "Componentes Selenium Grid 4")
 {{< /card >}}
 
 ## Router
 
-The **Router** is the entry point of the Grid, receiving all external requests, and forwards them to 
-the correct component.
+O **Router** é o ponto de entrada da Grid, recebendo todos os pedidos externos, reenviando para o componente correcto.
 
-If the **Router** receives a new session request, it will be forwarded to the **New Session Queue**.
+Se o **Router** recebe um novo pedido de sessão, este será enviado para **New Session Queue**.
 
-If the request belongs to an existing session, the **Router** will query the **Session Map** to get
-the **Node** ID where the session is running, and then the request will be forwarded directly to the
-**Node**.
+Se o pedido recebido pertence a uma sessão existente, o **Router** irá inquirir o **Session Map** para obter
+o **Node** ID onde esta sessão está em execução, enviando de seguida o pedido directamente para o **Node**.
 
-The **Router** balances the load in the Grid by sending the requests to the component that is able 
-to handle them better, without overloading any component that is not needed in the process.
+O **Router** balança a carga na Grid ao enviar o pedido ao componente que está em condições de o receber,
+sem sobrecarregar qualquer outro componente que não faz parte do processo.
 
 ## Distributor
 
-The **Distributor** has two main responsibilities:
+O **Distributor** tem duas responsabilidades:
 
-#### Register and keep track of all Nodes and their capabilities
+#### Resgistar e manter uma lista de todos os Nodes e as suas capacidades
 
-A **Node** registers to the **Distributor** by sending a **Node** registration event through 
-the **Event Bus**. The **Distributor** reads it, and then tries to reach the **Node** via HTTP
-to confirm its existance. If the request is successfull, the **Distributor** registers the Node 
-and keeps track of all **Nodes** capabilities through the **GridModel**.
+Um **Node** regista-se no **Distributor** enviando um evento de registo **Node** através do
+**Event Bus**. O **Distributor** lê o pedido e tenta contactar o **Node** através de HTTP
+para confirmar a sua existência. Se obtiver resposta com sucesso, o **Distributor** regista
+o Node e mantém uma lista de todas as capacidades **Nodes** através do **GridModel**.
 
-#### Query the New Session Queue and process any pending new session requests
+#### Processar algum pedido pendente que tenha sido criado na New Session Queue
 
-When a new session request is sent to the **Router**, it gets forwarded to the **New Session Queue**,
-where it will wait in the queue. The **Distributor** will poll the **New Session Queue** for pending 
-new session requests, and then finds a suitable **Node** where the session can be created. After the
-session has been created, the **Distributor** stores in the **Session Map** the relation between the 
-session id and **Node** where the session is being executed.
+Quando um novo pedido de sessão é enviado para o **Router**, ele é reenviado para a **New Session Queue**,
+onde ficará na fila em espera. O **Distributor** irá processar pedidos pendentes que existam na **New Session Queue**, 
+encontrando um **Node** com as capacidades certas onde a sessão possa ser criada. Após esta nova
+sessão ter sido criada, o **Distributor** guarda na **Session Map** a relação entre o id da sessão e 
+o **Node** onde a sessão está em execução.
 
 ## Session Map
 
-The **Session Map** is a data store that keeps the relationship between the session id and the **Node** 
-where the session is running. It supports the **Router** in the process of forwarding a request to the 
-**Node**. The **Router** will ask the **Session Map** for the **Node** associated to a session id.
+A **Session Map** é uma data store que mantém a relação entre o id da sessão e o **Node** 
+onde a sessão está em execução. Apoia o **Router** no processo de envio do pedido para um **Node**
+onde a sessão está em execução. O **Router** irá pedir ao **Session Map** qual o **Node** associado
+ao id de sessão.
 
 ## New Session Queue
 
-The **New Session Queue** holds all the new session requests in a FIFO order. It has configurable 
-parameters for setting the request timeout and request retry interval (how often the timeout will 
-be checked).
+A **New Session Queue** contém todos os pedidos de novas sessões em ordem FIFO. Existem parametros
+configuráveis para o timeout de sessão e para o número de tentativas.
 
-The **Router** adds the new session request to the **New Session Queue** and waits for the response.
-The **New Session Queue** regularly checks if any request in the queue has timed out, if so the request 
-is rejected and removed immediately.
+O **Router** adiciona um novo pedido de sessão em **New Session Queue** e aguarda uma resposta.
+A **New Session Queue** verifica regularmente se algum pedido deu timeout e em caso afirmativo,
+rejeita e remove o pedido da queue.
 
-The **Distributor** regularly checks if a slot is available. If so, the **Distributor** polls the
-**New Session Queue** for the first matching request. The **Distributor** then attempts to create
-a new session.
+O **Distributor** verifica regularmente se existe um slot disponível. Em caso afirmativo, o **Distributor**
+obtém um pedido a partir de **New Session Queue** e tenta criar uma nova sessão.
 
-Once the requested capabilities match the capabilities of any of the free **Node** slots, the **Distributor** 
-attempts to get the available slot. If all the slots are busy, the **Distributor** will send the request back
-to the queue. If request times out while retrying or adding to the front of the queue, it will be rejected.
+Assim que existam capacidades pedidas capazes de serem servidas por um dos **Node** que estejam livres,
+o **Distributor** tenta obter o slot disponível. Caso todos os slots estejam ocupados, o **Distributor**
+envia o pedido de volta para a queue. Se o pedido tiver timeout ao ser readicionado à queue, será rejeitado.
 
-After a session is created successfully, the **Distributor** sends the session information to the **New Session Queue**,
-which then gets sent back to the **Router**, and finally to the client.
+Após um id de sessão ser criado, o **Distributor** envia a informação se sessão para **New Session Queue**,
+que por sua vez irá enviar para o **Router** que finalmente entrega ao cliente.
 
 ## Node
 
-A Grid can contain multiple **Nodes**. Each **Node** manages the slots for the available browsers of the machine 
-where it is running.
+A Grid pode ter múltiplos **Nodes**. Cada **Node** gere os slots de disponibilidade para os navegadores existentes
+na máquina onde está a executar.
 
-The **Node** registers itself to the **Distributor** through the **Event Bus**, and its configuration is sent as 
-part of the registration message.
+O **Node** regista-se no **Distributor** através do **Event Bus**, sendo que a sua configuração é enviada
+como parte da mensagem de registo.
 
-By default, the **Node** auto-registers all browser drivers available on the path of the machine where it runs. 
-It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is 
-created. Through a specific [configuration]({{< ref "/configuration" >}}), it can run sessions in Docker 
-containers or relay commands.
+Por omissão, o **Node** regista automaticamente todos os navegadores que estejam disponíveis no PATH da máquina onde
+executa. Cria também um slot de execução por cada CPU para os navegadores Chrome e Firefox. Para Safari,
+apenas é criado um slot. Usando uma [configuração]({{< ref "/configuration" >}}) específica, é também
+possível executar sessões em containers Docker.
 
-A **Node** only executes the received commands, it does not evaluate, make judgments, or control anything other
-than the flow of commands and responses. The machines where the **Node** is running does not need to have the 
-same operating system as the other components. For example, A Windows **Node** might have the capability of 
-offering IE Mode on Edge as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can 
-have multiple **Nodes** configured with Windows, Mac, or Linux.
+O **Node** apenas executa os comandos que recebe, não avalia, faz julgamentos ou controla mais nada que não seja
+o fluxo de comandos e respostas. A máquina onde o **Node** está a executar não necessita de ter o mesmo sistema
+operativo do que os restantes componentes. Por exemplo, um Windows **Node** pode ter a capacidade de oferecer 
+IE Mode no Edge como opção de navegador, coisa que não é possível em Linux ou Mac. A Grid pode ter múltiplos 
+**Node** configurados com Windows, Mac ou Linux.
 
 ## Event Bus
 
-The **Event Bus** serves as a communication path between the **Nodes**, **Distributor**, **New Session Queue**, 
-and **Session Map**. The Grid does most of its internal communication through messages, avoiding expensive HTTP 
-calls. When starting the Grid in its fully distributed mode, the **Event Bus** is the first component that 
-should be started.
+O **Event Bus** serve de canal de comunicações entre **Nodes**, **Distributor**, **New Session Queue**, 
+e **Session Map**. A Grid usa mensagens para a maioria das comunicações internas. evitando chamadas HTTP.
+Quando iniciar a Grid em modo distribuido, deverá iniciar o **Event Bus** antes dos restantes componentes.
 
-
-{{% alert title="Running your own Grid" color="primary" %}}
-Looking forward to using all these components and run your own Grid? 
-Head to the ["Getting Started"]({{< ref "getting_started.md" >}})
-section to understand how to put all these pieces together. 
+{{% alert title="Configurando a sua Grid" color="primary" %}}
+Se pretende usar todos estes componentes para criar a sua Grid, 
+visite a secção ["configurando a sua"]({{< ref "getting_started.md" >}})
+para entender como ligar as peças todas.
 {{% /alert %}}

@@ -1,5 +1,5 @@
 ---
-title: "安装浏览器驱动"
+title: "安装Selenium类库"
 linkTitle: "安装类库"
 weight: 2
 description: >
@@ -14,89 +14,88 @@ aliases: [
 首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。
 
+## 请求对应的程序语言
+
 {{< tabpane code=false langEqualsHeader=true >}}
   {{% tab header="Java" %}}
-可以使用 Maven 安装 Java 的 Selenium 库。
-在项目 pom.xml 中添加 _selenium-java_ 依赖项：
+查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
-```xml
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.4.0</version>
-</dependency>
-```
+应熟练掌握build tool以安装支持java的Selenium库
 
-对于 Gradle, 在您项目的 `build.gradle` 文件中添加 _selenium-java_ 依赖 :
+### Maven
+具体的依赖位于项目中的 `pom.xml` 文件:
 
-```text
-dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
+{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
 
-Gradle 7.0 及以上版本:
+### Gradle
+具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
 
-```text
-dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
-```
-## Supported Minimum Version
-
-Make sure to use the Java version greater than or equal to the minimum supported version by Selenium. 
-Java 8 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
-  可以使用 pip 安装 Python 的 Selenium 库：
+该库所支持的Python版本最低版本可以在
+ `支持的Python版本` 章节中找到 [PyPi](https://pypi.org/project/selenium/)
+
+这里提供了几种不同的方式来安装 Selenium .
+
+### Pip
 
 ```shell
 pip install selenium
 ```
 
-或者，您也可以下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) 并使用 _setup.py_ 进行安装：
+### 下载
+
+此外你可以从这里下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) 并通过: _setup.py_ 文件安装:
 
 ```shell
 python setup.py install
 ```
-## Supported Minimum Version
 
-Make sure to use the Python version greater than or equal to the minimum supported version by Selenium. 
-Python 3.7 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/setup.py#L41).
+### 在项目中使用
+
+为了在项目中使用它,需要将它添加到 `requirements.txt` 文件中:
+{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-  可以使用 NuGet 安装 C# 的 Selenium 库：
+Selenium 所支持的所有平台的列表一览
+见诸于 [Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
+
+该处阐述了一些安装Selenium的选项.
+
+### 包管理器
 
 ```shell
-# Using package manager
 Install-Package Selenium.WebDriver
-# or using .Net CLI
+```
+
+### .NET CLI
+
+```shell
 dotnet add package Selenium.WebDriver
 ```
-## 支持的 .NET 版本
-确保使用与.NET SDK版本兼容的相关[Selenium包](https://www.nuget.org/packages/Selenium.WebDriver).
-检查依赖的部分用以找出[支持的 .NET 版本](https://dotnet.microsoft.com/en-us/download/dotnet).
-在本次升级时, .NET 5.0 (Visual Studio 2019) 是已知的被支持的版本, 并且 .NET 6.0 并未支持.
-您可以下载 [MSBuild Tools 2019 于此](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)
-以安装所需的组件和依赖项, 例如 .NET SDK 和 NuGet 包管理器.
 
-## 使用 Visual Studio Code (vscode) 以及 C#
-这是一个快速指南, 可帮助您开始使用 vscode 和 C#, 但可能需要进行更多调研.
-按照上一节安装兼容的 .NET SDK.
-还要安装适用于 C# 和 NuGet 的 vscode 扩展 (Ctrl-Shift-X).
-参考 [此处指令](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0) 
-创建并且使用C#运行 "Hello World" 的控制台项目.
-您也可以使用命令行 `dotnet new NUnit`创建一个 NUnit 初创项目.
-确保文件 `%appdata%\NuGet\nuget.config` 已正确配置, 
-因为某些开发人员报告说, 
-由于某些问题, 该文件将为空.
-如果 `nuget.config` 为空,
-或者未正确配置, 
-则Selenium项目的.NET构建将失败.
-将以下部分添加到文件 `nuget.config` (如果为空) :
+### CSProj
+
+在 `csproj` 文件里, 具体的依赖 `PackageReference`(包参数) 位于 `ItemGroup` (项目组)中:
+
+{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+
+### 其他附加思虑事项
+
+更多的注意事项,适用于使用 Visual Studio Code (vscode) 和 C# 
+
+安装兼容的 .NET SDK 作为章节的先决条件
+同时安装 vscode 的扩展 (Ctrl-Shift-X)以适配 C# 和 NuGet 
+可以遵照此处进行 [操作指南](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)
+创建 C# 控制台项目并运行 "Hello World".
+你也可以用命令行 `dotnet new NUnit` 创建NUnit初阶项目.
+确保文件 `%appdata%\NuGet\nuget.config` 已经配置完成,就像某位开发者报告的问题一样,它可能因为某种因素被自动清空.
+如果 `nuget.config` 是空的,或者未配置的,那么 .NET 创建的Selenium项目可能失败.
+加入如下章节到文件 `nuget.config` 如果出现清空的情况:
 ```
 <configuration>
   <packageSources>
@@ -105,49 +104,53 @@ dotnet add package Selenium.WebDriver
   </packageSources>
 ...
 ```
-有关 `nuget.config` 的更多信息[点此](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
-你也可以自定义 `nuget.config` 以满足所需.
+更多关于 `nuget.config` 的信息 [点击](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
+你可能需要按照自己的需求配置 `nuget.config` .
 
-现在, 返回 vscode, 按 Ctrl-Shift-P, 
-然后键入"NuGet Add Package", 
-然后输入所需的 Selenium 包, 
-如"Selenium.WebDriver".
-
-按 Enter 并选择版本.
-
-现在, 您可以通过vscode与文档中 C# 相关示例结合使用.
+现在,返回 vscode ,按下 Ctrl-Shift-P, 然后键入 "NuGet Add Package", 并选择自己需要的 Selenium 包,例如 `Selenium.WebDriver`.
+按下回车并选择版本.
+现在你可以使用说明文档中关于 C# vscode下的案例了.
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-  可以使用 gem 安装 Ruby 的 Selenium 库：
+你可以查看 Selenium 对 Ruby 版本支持和最低支持.
+具体位于 [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+
+Selenium 可以使用两种不同方法安装.
+
+### 手动安装
 
 ```shell
 gem install selenium-webdriver
 ```
 
-## Supported Minimum Version
+### 加入项目的 gemfile
 
-Make sure to use the Ruby version greater than or equal to the minimum supported version by Selenium. 
-Ruby 2.7 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/selenium-webdriver.gemspec#L32).
+{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-  可以使用 npm 安装 JavaScript 的 Selenium 库
+You can find the minimum required version of Node for any given version of Selenium in the
+你可以在此查看 Selenium 对 Node 的版本支持情况
+位于 `Node Support Policy` 中的相关章节 [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+
+Selenium is typically installed using npm.
+
+### 本地安装
 
 ```shell
 npm install selenium-webdriver
 ```
 
-## Supported Minimum Version
+### 加入项目
 
-Make sure to use the Node version greater than or equal to the minimum supported version by Selenium. 
-Node 14.20.0 is currently the minimum supported version by Selenium.
-View the updates in the minimum version supported [here](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/package.json#L23).
+在你的项目 `package.json`, 必须加入到 `dependencies`:
+
+{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-  由于缺少Kotlin的原生语言的绑定, 您不得不借助Java的生态环境, 例如Maven [Java](#java)
+    Use the Java bindings for Kotlin.
   {{< /tab >}}
 {{< /tabpane >}}
 

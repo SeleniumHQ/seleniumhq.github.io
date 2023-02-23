@@ -21,17 +21,16 @@ Starting a Firefox session with basic defined options looks like this:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L24-L25" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L11-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L9-L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L31-L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L10-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
@@ -48,7 +47,30 @@ Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
 
 Add an argument to options:
 
-{{< alert-code />}}
+<div>
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
+{{< /tab >}}
+{{< tab header="Python" code=true >}}
+options=Options()
+options.add_argument("-profile")
+options.add_argument("/path/to/profile")
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+</div>
 
 ### Start browser in a specified location
 
@@ -121,13 +143,13 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L38-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L20-L21" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L40-L42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L32-L34" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L15-L16" >}}
@@ -146,14 +168,14 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L49-L51" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L32-L34" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L29-L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L55-L58" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L24-L26" >}}
@@ -174,14 +196,14 @@ example with a directory:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L60-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L43-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L40-L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L69-L71" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L61-L63" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.5" >}}

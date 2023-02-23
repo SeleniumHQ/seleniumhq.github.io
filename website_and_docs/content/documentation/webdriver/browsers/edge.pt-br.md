@@ -1,33 +1,32 @@
 ---
-title: "Edge specific functionality"
+title: "Funcionalidade específica do Edge"
 linkTitle: "Edge"
 weight: 5
 description: >-
-    These are capabilities and features specific to Microsoft Edge browsers.
+    Estas capacidades e características são específicas ao navegador Microsoft Edge.
 ---
 
-Microsoft Edge is implemented with Chromium, with the earliest supported version of v79. Similar to Chrome,
-the major version number of edgedriver must match the major version of the Edge browser.
+Microsoft Edge foi criado com recurso ao Chromium, cuja versão mais antiga suportada é a v79. 
+Tal como o Chrome, a versão (maior) do edgedriver deve ser igual à do navegador Edge.
 
-All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}}) work for Edge as well.
+Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "chrome.md" >}}) irão funcionar de igual forma para o Edge.
 
-## Options
+## Opções
 
-Starting an Edge session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Edge com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L25-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L18-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L8-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L16">}}
@@ -37,8 +36,36 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Internet Explorer Compatibility Mode
+### Argumentos
 
-Microsoft Edge can be driven in "Internet Explorer Compatibility Mode," which uses
-the Internet Explorer Driver classes in conjunction with Microsoft Edge.
-Read the [Internet Explorer page]({{< ref "internet_explorer.md" >}}) for more details.
+O parametro `args` é usado para indicar uma lista de [opções](https://peter.sh/experiments/chromium-command-line-switches/) ao iniciar o navegador. 
+Opções mais frequentes incluem `--start-maximized` e `--headless=new`
+
+Adicione uma opção:
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L24-L26" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L12-L13" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L20-L21" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L14-L15" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+## Modo compatibilidade Internet Explorer
+
+O Microsoft Edge pode ser controlado em modo "compatibilidade Internet Explorer", são usadas
+classes do Internet Explorer Driver em conjunção com o Microsoft Edge.
+Leia a [página Internet Explorer]({{< ref "internet_explorer.md" >}}) para mais detalhes.

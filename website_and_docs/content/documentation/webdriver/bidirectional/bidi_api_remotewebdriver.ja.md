@@ -1,6 +1,6 @@
 ---
-title: "RemoteWebDriver BiDirectional API"
-linkTitle: "RemoteWebDriver BiDi API"
+title: "RemoteWebDriver BiDirectional API (CDP implementation)"
+linkTitle: "RemoteWebDriver BiDi API (CDP implementation)"
 weight: 1
 ---
 
@@ -22,7 +22,7 @@ With Selenium, you can automate the input of basic auth credentials whenever the
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L82-105" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L72-90" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -34,7 +34,7 @@ element in the DOM.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L110-148" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L101-124" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,7 +44,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L153-178" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L139-155" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -52,7 +52,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L183-202" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L164-171" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ it with the following examples.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/augmenter/CdpRemoteWebDriverTest.java#L207-L223" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L188-L198" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

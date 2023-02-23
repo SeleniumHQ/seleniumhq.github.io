@@ -1,53 +1,54 @@
 ---
-title: "Keyboard actions"
-linkTitle: "Keyboard"
+title: "键盘操作"
+linkTitle: "键盘"
 weight: 2
 description: >
-  A representation of any key input device for interacting with a web page.
+  一种适用于任何与网页交互的按键输入设备的表现形式.
 aliases: [
 "/documentation/zh-cn/webdriver/keyboard/",
 "/zh-cn/documentation/webdriver/keyboard/"
 ]
 ---
 
-There are only 2 actions that can be accomplished with a keyboard:
-pressing down on a key, and releasing a pressed key.
-In addition to supporting ASCII characters, each keyboard key has
-a representation that can be pressed or released in designated sequences.
+只有 2 个操作可以使用键盘完成:
+按下某个键，以及释放一个按下的键.
+除了支持 ASCII 字符外，每个键盘按键还具有
+可以按特定顺序按下或释放的表现形式.
 
-## Keys
+## 按键
 
-In addition to the keys represented by regular unicode, 
-unicode values have been assigned to other keyboard keys for use with Selenium. 
-Each language has its own way to reference these keys; the full list can be found
-[here](https://www.w3.org/TR/webdriver/#keyboard-actions).
+除了由常规unicode表示的按键，
+其他键盘按键被分配了一些unicode值以用于操作Selenium
+每种语言都有自己的方式来援引这些按键;
+[这里](https://www.w3.org/TR/webdriver/#keyboard-actions)
+可以找到完整列表
 
 {{< tabpane code=false langEqualsHeader=true >}}
-    {{< tab header="Java" >}}
+{{% tab header="Java" %}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
-    {{< /tab >}}
-    {{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 Use the [Python Keys class](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/py/selenium/webdriver/common/keys.py#L23)
-    {{< /tab >}}
-    {{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 Use the [.NET static Keys class](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/dotnet/src/webdriver/Keys.cs#L28)
-    {{< /tab >}}
-    {{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 Use the [Ruby KEYS constant](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/rb/lib/selenium/webdriver/common/keys.rb#L28)
-    {{< /tab >}}
-    {{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 Use the [JavaScript KEYS constant](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/javascript/node/selenium-webdriver/lib/input.js#L44)
-   {{< /tab >}}
-    {{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
-    {{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
-## Key down
+## 按下按键
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L18-L21" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
@@ -66,11 +67,11 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Key up
+## 释放按键
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L31-L36" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
@@ -89,17 +90,18 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Send keys
+## 键入
 
-This is a convenience method in the Actions API that combines keyDown and keyUp commands in one action.
-Executing this command differs slightly from using the element method, but
-primarily this gets used when needing to type multiple characters in the middle of other actions.
+这是Actions API的一种便捷方法, 
+它将 keyDown 和 keyUp 命令组合在一个操作中.
+执行此命令与使用 element 方法略有不同, 
+但这主要用于，需要在其他操作之间键入多个字符时使用.
 
-### Active Element
+### 活跃元素
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L46-L48" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
@@ -118,7 +120,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Designated Element
+### 指定元素
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -142,24 +144,24 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Copy and Paste
+## 复制粘贴
 
-Here's an example of using all of the above methods to conduct a copy / paste action.
-Note that the key to use for this operation will be different depending on if it is a Mac OS or not.
-This code will end up with the text: `SeleniumSelenium!`
+下面是使用上述所有方法执行复制/粘贴操作的示例.
+请注意, 用于此操作的键位会有所不同, 具体取决于它是否是 Mac OS.
+此代码将以文本收尾: `SeleniumSelenium!`
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L73-L85" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L55-L66" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L56-L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L72-L82" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L63-L73" >}}
+{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L75-L87" >}}

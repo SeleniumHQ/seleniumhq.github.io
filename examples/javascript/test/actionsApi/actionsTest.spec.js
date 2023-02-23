@@ -1,4 +1,4 @@
-const { By, Key } = require('selenium-webdriver')
+const { By, Key, Browser} = require('selenium-webdriver')
 const { suite } = require('selenium-webdriver/testing')
 const assert = require('assert')
 
@@ -49,4 +49,4 @@ suite(function(env) {
       assert.deepStrictEqual('a', value.substring(1, 2))
     })
   })
-})
+}, { browsers: [Browser.CHROME]})

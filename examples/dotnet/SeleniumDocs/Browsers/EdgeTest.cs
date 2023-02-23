@@ -1,7 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Edge;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumDocs.Browsers
 {
@@ -11,11 +9,17 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void BasicOptions()
         {
-            new DriverManager().SetUpDriver(new EdgeConfig());
-
             var options = new EdgeOptions();
             var driver = new EdgeDriver(options);
+            driver.Quit();
+        }
 
+        [TestMethod]
+        public void HeadlessOptions() 
+        {
+            var options = new EdgeOptions();
+            options.AddArgument("--headless=new");
+            var driver = new EdgeDriver(options);
             driver.Quit();
         }
     }

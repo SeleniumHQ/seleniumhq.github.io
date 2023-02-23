@@ -4,7 +4,7 @@ linkTitle: "Começando"
 weight: 2
 needsTranslation: true
 description: >
-  If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+  Se você é novo no Selenium, nós temos alguns recursos que podem te ajudar a se atualizar imediatamente.
 aliases: [
 "/documentation/pt-br/getting_started/", 
 "/documentation/pt-br/getting_started/quick/",
@@ -57,7 +57,6 @@ A instalação do Selenium é dividida nas etapas:
 Se você deseja iniciar com ferramenta low-code / gravação e reprodução, por favor veja:
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-After completing the setup, you can run the code snippet shown at the 
 Depois de completar as etapas de configuração, você pode executar o snippet de codigo em
 [starting page](/pt-br/documentation) na documentação. Então siga para seção
 [WebDriver]({{< ref "/webdriver.md" >}}) para aprender mais sobre automação de navegadores com Selenium.

@@ -23,21 +23,20 @@ This section explains the basic requirements for getting started with the differ
 Read about more advanced options for starting a driver 
 in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) documentation.
 
-## Quick Reference
+## Four Ways to Use Drivers
 
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
-| ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows/macOS | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+### 1. Selenium Manager (Beta)
 
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
+{{< badge-version version="4.6" >}}
 
-## Three Ways to Use Drivers
+Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
+of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
+found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
+will eventually even download browsers if necessary.
 
-### 1. Driver Management Software
+Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+
+### 2. Driver Management Software
 
 Most machines automatically update the browser, but the driver does not. To make sure you get 
 the correct driver for your browser, there are many third party libraries to assist you. 
@@ -46,22 +45,14 @@ the correct driver for your browser, there are many third party libraries to ass
 {{% tab header="Java" %}}
 
 1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
+
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. Calling `setup()` automatically puts the correct browser driver where the code will see it:
-```java
-WebDriverManager.chromedriver().setup();
-```
-3. Just initialize the driver as you normally would:
-```java 
-ChromeDriver driver = new ChromeDriver();
-```
 
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-See full example on GitHub.</a>
-</div>
+2. Call `setup()`:
+
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L17-L19" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -72,21 +63,9 @@ See full example on GitHub.</a>
 from webdriver_manager.chrome import ChromeDriverManager
 ```
 
-2. Use `install()` to get the location used by the manager and pass it into service class
+2. Use `install()` to get the location used by the manager and pass it to the driver in a service class instance:
 
-```py
-service = Service(executable_path=ChromeDriverManager().install())
-```
-
-3. Use `Service` instance when initializing the driver: 
-```py
-driver = webdriver.Chrome(service=service)
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L15-L17" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -101,20 +80,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. Use the `SetUpDriver()` which requires a config class:
 
-```csharp
-new DriverManager().SetUpDriver(new ChromeConfig());
-```
-
-3. Initialize your driver as you normally would:
-
-```csharp
-var driver = new ChromeDriver()
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L19-L21" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -125,19 +91,8 @@ gem 'webdrivers', '~> 5.0'
 ```
 
 2. Require webdrivers in your project:
-```rb
-require 'webdrivers'
-```
 
-3. Initialize driver as you normally would:
-```rb
-driver = Selenium::WebDriver.for :chrome
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/ruby/spec/getting_started/install_drivers_spec.rb">
-See full example on GitHub.</a>
-</div>
+{{< gh-codeblock path="examples/ruby/spec/getting_started/install_drivers_spec.rb#L7-L9" >}}
 
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
@@ -150,17 +105,13 @@ See full example on GitHub.</a>
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. Call the setup method before initializing the driver as you normally would:
-```java
-fun chrome(): WebDriver {
-    WebDriverManager.chromedriver().setup()
-    return ChromeDriver()
-}
-```
+
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/InstallDriversTest.kt#L17-L18" >}}
 
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. The `PATH` Environment Variable
+### 3. The `PATH` Environment Variable
 This option first requires manually downloading the driver (See [Quick Reference Section](#quick-reference) for links).
 
 This is a flexible option to change location of drivers without having to update your code, and will work
@@ -231,9 +182,9 @@ ChromeDriver was started successfully.
 
 You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
 
-### 3. Hard Coded Location
+### 4. Hard Coded Location
 
-Similar to Option 2 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
+Similar to Option 3 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
 Specifying the location in the code itself has the advantage of not needing to figure out Environment Variables on
 your system, but has the drawback of making the code much less flexible.
 
@@ -286,6 +237,18 @@ fun main(args: Array<String>) {
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
+## Quick Reference
+
+| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| ------- | ------------ | ------------- | -------- | ------------- |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.chromium.org/downloads) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows/macOS/Linux | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//github.com/MicrosoftEdge/EdgeWebDriver/issues) |
+| Internet Explorer | Windows | Selenium Project | [Downloads](/downloads) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS High Sierra and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
+
+Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
 
 ## Next Step
 [Create your first Selenium script]({{< ref "first_script.md" >}})

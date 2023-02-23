@@ -1,33 +1,24 @@
 ---
-title: "Virtual Authenticator"
-linkTitle: "Virtual Authenticator"
+title: "虚拟身份验证器"
+linkTitle: "虚拟身份验证器"
 weight: 16
 description: >
-    A representation of the Web Authenticator model.
+    一种Web身份验证器模型的表示形式.
 aliases: [
 "/zh-cn/documentation/webdriver/virtual_authenticator/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身份验证）以无密码方式对用户进行身份验证。
+[Web 身份验证](https://www.w3.org/TR/webauthn-2/) 定义了允许用户创建公钥凭据并将其注册到身份验证器的 API。
+身份验证器可以是硬件设备或软件实体，用于存储用户的公钥凭证并根据请求检索它们。
 
-Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner. 
-[Web Authentication](https://www.w3.org/TR/webauthn-2/) defines APIs that allows a user to create a public-key credential and register it with an authenticator. 
-An authenticator can be a hardware device or a software entity that stores user's public-key credentials and retrieves them on request. 
+顾名思义，虚拟身份验证器模拟此类身份验证器进行测试。
 
-As the name suggests, Virtual Authenticator emulates such authenticators for testing.
+## 虚拟身份验证器选项
 
-## Virtual Authenticator Options
-
-A Virtual Authenticatior has a [set of properties](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
-These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindings.
+虚拟身份验证器具有 [一组属性](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators)。
+这些属性在 Selenium 绑定中映射为 VirtualAuthenticatorOptions。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,15 +32,16 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
 
-## Add Virtual Authenticator
+## 添加虚拟身份验证器
 
-It creates a new virtual authenticator with the provided properties.
+它使用提供的属性创建一个新的虚拟身份验证器。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -63,14 +55,15 @@ It creates a new virtual authenticator with the provided properties.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Remove Virtual Authenticator
+## 删除虚拟身份验证器
 
-Removes the previously added virtual authenticator.
+删除之前添加的虚拟身份验证器。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -84,14 +77,15 @@ Removes the previously added virtual authenticator.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Create Resident Credential
+## 创建永久凭据
 
-Creates a resident (stateful) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
+使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个永久(有状态的)凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -110,9 +104,9 @@ Creates a resident (stateful) credential with the given required credential [par
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Create Non-Resident Credential 
+## 创建临时凭据
 
-Creates a resident (stateless) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
+使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个常驻(无状态)凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -131,9 +125,9 @@ Creates a resident (stateless) credential with the given required credential [pa
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Add Credential
+## 添加凭据
 
-Registers the credential with the authenticator. 
+向身份验证器注册凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -152,9 +146,9 @@ Registers the credential with the authenticator.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Credential
+## 获取凭据
 
-Returns the list of credentials owned by the authenticator.
+返回身份验证者拥有的凭据列表。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -174,9 +168,9 @@ Returns the list of credentials owned by the authenticator.
 {{< /tabpane >}}
 
 
-## Remove Credential
+## 删除凭据
 
- Removes a credential from the authenticator based on the passed credential id.
+根据传递的凭据ID从身份验证器中删除凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -196,9 +190,9 @@ Returns the list of credentials owned by the authenticator.
 {{< /tabpane >}}
 
 
-## Remove All Credentials
+## 删除所有凭据
 
-Removes all the credentials from the authenticator.
+从身份验证器中删除所有凭据。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -217,9 +211,9 @@ Removes all the credentials from the authenticator.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Set User Verified
+## 设置用户验证状态
 
-Sets whether the authenticator will simulate success or fail on user verification.
+设置身份验证器是模拟用户验证成功还是失败。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}

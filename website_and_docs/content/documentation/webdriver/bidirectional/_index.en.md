@@ -22,7 +22,12 @@ better matching the evented nature of the browser DOM.
 As it is not a good idea to tie your tests to a specific version of any browser, the
 Selenium project recommends using WebDriver BiDi wherever possible.
 
-However, until the specification is complete there are many useful things that 
-CDP offers. To help keep your tests independent 
-and portable, Selenium offers some useful helper classes as well. At the 
-moment, they use the CDP, but soon it could be done using WebDriver BiDi.
+While the specification is in works, the browser vendors are parallely implementing
+the [WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/).
+Refer [web-platform-tests dashboard](https://wpt.fyi/results/webdriver/tests/bidi?label=experimental&label=master&aligned&view=subtest)
+to see how far along the browser vendors are. 
+Selenium is trying to keep up with the browser vendors and has started implementing W3C BiDi APIs.
+The goal is to ensure APIs are W3C compliant and uniform among the different language bindings.
+
+However, until the specification and corresponding Selenium implementation is complete there are many useful things that 
+CDP offers. Selenium offers some useful helper classes that use CDP.

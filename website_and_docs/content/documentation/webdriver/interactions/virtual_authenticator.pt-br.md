@@ -3,31 +3,22 @@ title: "Virtual Authenticator"
 linkTitle: "Virtual Authenticator"
 weight: 16
 description: >
-    A representation of the Web Authenticator model.
+    Uma representação do modelo Web Authenticator.
 aliases: [
 "/pt-br/documentation/webdriver/virtual_authenticator/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Aplicações web podem habilitar um mecanismo de autenticação baseado em chaves públicas conhecido como Web Authentication para autenticar usuários sem usar uma senha. 
+[Web Authentication](https://www.w3.org/TR/webauthn-2/) define APIs que permitem ao usuário criar uma credencial e registra-la com um autenticador. 
+Um autenticador pode ser um dispositivo ou um software que guarde as chaves públicas do usuário e as acesse caso seja pedido. 
 
-Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner. 
-[Web Authentication](https://www.w3.org/TR/webauthn-2/) defines APIs that allows a user to create a public-key credential and register it with an authenticator. 
-An authenticator can be a hardware device or a software entity that stores user's public-key credentials and retrieves them on request. 
-
-As the name suggests, Virtual Authenticator emulates such authenticators for testing.
+Como o nome sugere, Virtual Authenticator emula esses autenticadores para testes.
 
 ## Virtual Authenticator Options
 
-A Virtual Authenticatior has a [set of properties](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
-These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindings.
+Um Autenticador Virtual tem uma [série de propriedades](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
+Essas propriedades são mapeadas como VirtualAuthenticatorOptions nos bindings do Selenium.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,6 +32,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -49,7 +41,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 
 ## Add Virtual Authenticator
 
-It creates a new virtual authenticator with the provided properties.
+Cria um novo autenticador virtual com as propriedades fornecidas.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -63,6 +55,7 @@ It creates a new virtual authenticator with the provided properties.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -70,7 +63,7 @@ It creates a new virtual authenticator with the provided properties.
 
 ## Remove Virtual Authenticator
 
-Removes the previously added virtual authenticator.
+Remove o autenticador virtual adicionado anteriormente.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -84,6 +77,7 @@ Removes the previously added virtual authenticator.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -91,7 +85,7 @@ Removes the previously added virtual authenticator.
 
 ## Create Resident Credential
 
-Creates a resident (stateful) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
+Cria uma resident (stateful) credential com os requeridos [parâmetros](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -112,7 +106,7 @@ Creates a resident (stateful) credential with the given required credential [par
 
 ## Create Non-Resident Credential 
 
-Creates a resident (stateless) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
+Cria uma resident (stateless) credential com os requeridos [parâmetros](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -133,7 +127,7 @@ Creates a resident (stateless) credential with the given required credential [pa
 
 ## Add Credential
 
-Registers the credential with the authenticator. 
+Registra a credencial com o autenticador. 
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -154,7 +148,7 @@ Registers the credential with the authenticator.
 
 ## Get Credential
 
-Returns the list of credentials owned by the authenticator.
+Retorna a lista de credenciais que o autenticador possui.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -176,7 +170,7 @@ Returns the list of credentials owned by the authenticator.
 
 ## Remove Credential
 
-Removes a credential from the authenticator based on the passed credential id.
+Remove a credencial do autenticador baseado na id da credencial passado.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -198,7 +192,7 @@ Removes a credential from the authenticator based on the passed credential id.
 
 ## Remove All Credentials
 
-Removes all the credentials from the authenticator.
+Remove todas as credenciais do autenticador.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -219,7 +213,7 @@ Removes all the credentials from the authenticator.
 
 ## Set User Verified
 
-Sets whether the authenticator will simulate success or fail on user verification.
+Diz se o autenticador simulará sucesso ou falha na verificação de usuário.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}

@@ -1,6 +1,6 @@
 package dev.selenium.actions_api;
 
-import dev.selenium.BaseTest;
+import dev.selenium.BaseChromeTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.time.Duration;
 
-public class ActionsTest extends BaseTest {
+public class ActionsTest extends BaseChromeTest {
     @Test
     public void pause() {
         driver.get("https://www.selenium.dev/selenium/web/mouse_interaction.html");

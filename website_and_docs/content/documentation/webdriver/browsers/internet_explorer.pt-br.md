@@ -1,49 +1,44 @@
 ---
-title: "IE specific functionality"
+title: "Funcionalidade específica do IE"
 linkTitle: "Internet Explorer"
 weight: 8
 description: >-
-    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+    Estas capacidades e características são específicas ao navegador Microsoft Internet Explorer.
 aliases: [
 "/pt-br/documentation/capabilities/internet_explorer"
 ]
 ---
 
-As of June 2022, Selenium officially no longer supports standalone Internet Explorer.
-The Internet Explorer driver still supports running Microsoft Edge in "IE Compatibility Mode."
+Desde Junho de 2022, o Projecto Selenium deixou de suportar oficialmente o navegador Internet Explorer.
+O driver Internet Explorer continua a suportar a execução do Microsoft Edge no modo "IE Compatibility Mode."
 
-## Special considerations
+## Considerações especiais
 
-The IE Driver is the only driver maintained by the Selenium Project directly.
-While binaries for both the 32-bit and 64-bit
-versions of Internet Explorer are available, there are some
-[known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+O IE Driver é o único driver mantido directamente pelo Projecto Selenium.
+Embora existam binários para as versões de 32 e 64 bits, existem algumas
+[limitações conhecidas](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
+com o driver de 64 bits. Desta forma, recomenda-se a utilização do driver de 32 bits.
 
-Additional information about using Internet Explorer can be found on the
-[IE Driver Server page]({{< ref "/documentation/ie_driver_server/" >}})
+Informação adicional sobre como usar o Internet Explorer pode ser encontrada na
+[página IE Driver Server]({{< ref "/documentation/ie_driver_server/" >}})
 
-## Options
+## Opções
 
-Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
+Este é um exemplo de como iniciar o navegador Microsoft Edge em modo compatibilidade Internet Explorer
+usando um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#28-L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#21-L22" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L14-L17" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-Note that the .NET [Driver Manager]({{< ref "../getting_started/install_drivers#1-driver-management-software" >}})
-does not support Internet Explorer, so the location must be in a
-[directory on PATH]({{< ref "../getting_started/install_drivers#2-the-path-environment-variable" >}}),
-or specified explicitly as in this example.
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L24-L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L16-L17" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L10" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" code=true >}}
   let driver = await new Builder()
@@ -53,19 +48,21 @@ or specified explicitly as in this example.
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
   val options = InternetExplorerOptions()
-  options.attachToEdgeChrome()
-  options.withEdgeExecutablePath("/path/to/edge/browser")
   val driver = InternetExplorerDriver(options)
 {{< /tab >}}
 {{< /tabpane >}}
 
-As of Internet Explorer Driver v4.5.0:
-* If IE is not present on the system (default in Windows 11), you do not need to 
-use the two parameters above. IE Driver will use Edge and will automatically locate it. 
-* If IE and Edge are both present on the system, you only need to set attaching to Edge,
-IE Driver will automatically locate Edge on your system.
+A partir do driver versão v4.5.0:
+* Se o IE não estiver presente no sistema (ausente por omissão no Windows 11), não necessita
+usar os parametros "attachToEdgeChrome" e "withEdgeExecutablePath", pois o IE Driver 
+irá encontrar e usar o Edge automaticamente.
+* Se o IE e o Edge estiverem ambos presentes no sistema, use o parametro "attachToEdgeChrome",
+o IE Driver irá encontrar e usar o Edge automaticamente.
 
-Here are a few common use cases with different capabilities:
+As of Internet Explorer Driver v4.7.0:
+* No longer need to set Ignore Zoom Level for Edge in IE Mode
+
+Aqui pode ver alguns exemplos de utilização com capacidades diferentes:
 
 ### fileUploadDialogTimeout
 

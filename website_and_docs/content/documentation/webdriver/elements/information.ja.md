@@ -27,34 +27,38 @@ nature and relationship in the tree to return a value.
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Navigate to the url
-driver.get('https://www.google.com');
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Get boolean value for is element display
-boolean isButtonVisible = driver.findElement(By.css("[name='login']")).isDisplayed();
+boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
-driver.get("https://www.google.com")
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 # Get boolean value for is element display
-is_button_visible = driver.find_element(By.CSS_SELECTOR, "[name='login']").is_displayed()
+is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-// Navigate to the url
-driver.Navigate().GoToUrl("https://google.com");
+//Navigate to the url
+driver.Url = "https://www.selenium.dev/selenium/web/inputs.html";
 
-// Get bool value for is element displayed
-bool displayedLogo = driver.FindElement(By.CssSelector("img[alt='Google']")).Displayed;
+//Get boolean value for is element display
+Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+
+#fetch display status
+val = driver.find_element(name: 'email_input').displayed?
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.google.com');
+await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.css("[name='btnK']")).isDisplayed();
+let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
@@ -306,7 +310,7 @@ String cssValue = driver.findElement(By.linkText("More information...")).getCssV
 driver.get('https://www.example.com')
 
 # Retrieves the computed style property 'color' of linktext
-cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
+cssValue = driver.find_element(By.LINK_TEXT, "More information...").value_of_css_property('color')
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}
@@ -394,11 +398,64 @@ val text = driver.findElement(By.cssSelector("h1")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 属性とプロパティ
+## Fetching Attributes or Properties
 
-### 属性
+Fetches the run time value associated with a 
+DOM attribute. It returns the data associated 
+with the DOM attribute or property of the element. 
 
-### DOMの属性
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+//Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-### DOMのプロパティ
+//identify the email text box
+WebElement emailTxt = driver.findElement(By.name(("email_input")));
 
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.getAttribute("value");
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+# Identify the email text box
+email_txt = driver.find_element(By.NAME, "email_input")
+
+# Fetch the value property associated with the textbox
+value_info = email_txt.get_attribute("value")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+ //Navigate to the url
+driver.Url="https://www.selenium.dev/selenium/web/inputs.html";
+
+//identify the email text box
+IWebElement emailTxt = driver.FindElement(By.Name(("email_input")));
+
+//fetch the value property associated with the textbox
+String valueInfo = eleSelLink.GetAttribute("value");
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+
+#identify the email text box
+email_element=driver.find_element(name: 'email_input')
+
+#fetch the value property associated with the textbox
+emailVal = email_element.attribute("value");
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
+// Navigate to the Url
+await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+
+// identify the email text box
+const emailElement = await driver.findElements(By.xpath('//input[@name="email_input"]'));
+
+//fetch the attribute "name" associated with the textbox
+const nameAttribute = await emailElement.getAttribute("name");
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Help us with a PR for code sample
+  {{< /tab >}}
+{{< /tabpane >}}

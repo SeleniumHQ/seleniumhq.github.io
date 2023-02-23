@@ -29,22 +29,18 @@ Starting a Safari session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#21-L22" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_safari.py#L10-L11" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/SafariTest.cs#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L7-L8" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-  let options = new safari.Options();
-  let driver = await new Builder()
-    .forBrowser('safari')
-    .setSafariOptions(options)
-    .build();
+{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L10-L12" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" code=true >}}
   val options = SafariOptions()
   val driver = SafariDriver(options)
 {{< /tab >}}
@@ -52,3 +48,10 @@ Starting a Safari session with basic defined options looks like this:
 
 ### Mobile
 Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+
+## Safari Technology Preview
+
+Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
+To use this version in your code:
+
+{{< alert-code />}}

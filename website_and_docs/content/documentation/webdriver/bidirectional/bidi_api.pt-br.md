@@ -1,6 +1,6 @@
 ---
-title: "API BiDirecional"
-linkTitle: "BiDi API"
+title: "API BiDirecional (CDP implementation)"
+linkTitle: "BiDi API (CDP implementation)"
 weight: 12
 ---
 
@@ -211,6 +211,10 @@ driver.get("http://the-internet.herokuapp.com/broken_images");
 driver.quit();
 {{< /tab >}}
 {{< tab header="Python" >}}
+import trio
+from selenium import webdriver
+from selenium.webdriver.common.log import Log
+
 async def printConsoleLogs():
   chrome_options = webdriver.ChromeOptions()
   driver = webdriver.Chrome()
@@ -224,6 +228,8 @@ async def printConsoleLogs():
       print(messages["message"])
 
   driver.quit()
+
+trio.run(printConsoleLogs)
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 IJavaScriptEngine monitor = new JavaScriptEngine(driver);

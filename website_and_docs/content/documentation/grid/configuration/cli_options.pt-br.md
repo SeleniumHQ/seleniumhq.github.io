@@ -1,36 +1,29 @@
 ---
-title: "CLI Options"
-linkTitle: "CLI Options"
+title: "Opções CLI"
+linkTitle: "Opções CLI"
 weight: 2
-description: All Grid components configuration CLI options in detail.
+description: Todas os detalhes das opções CLI de cada componente Grid.
 aliases: [
 "/pt-br/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i>
-   Page being translated from
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Diferentes secções estão disponíveis para configurar uma Grid. Cada secção tem opções que podem ser configuradas
+através de opções CLI.
 
-Different sections are available to configure a Grid. Each section has options can be configured
-through command line arguments.
+Pode ver abaixo um mapeamento entre o componente e a secção respectiva.
 
-A complete description of the component to section mapping can be seen below.
+
 
 {{% pageinfo color="primary" %}}
-Note that this documentation could be outdated if an option was modified or added
-but has not been documented yet. In case you bump into this situation, please check
-the ["Config help"]({{< ref "help.md" >}}) section and feel free to send us a
-pull request updating this page.
+Note que esta documentação pode estar desactualizada se uma opção foi adicionada ou modificada,
+mas ainda não ter havido oportunidade de actualizar a documentação.
+Caso depare com esta situação, verifique a secção ["ajuda de configuração"]({{< ref "help.md" >}})
+e esteja à vontade para nos enviar um pull request com alterações a esta página.
 {{% /pageinfo %}}
 
 
-## Sections
+## Secções
 
 <table class="table table-bordered text-md-center d-md-table-cell">
 <thead>
@@ -161,20 +154,20 @@ pull request updating this page.
 
 ### Distributor
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
-| `--healthcheck-interval` | int | `120` | How often, in seconds, will the health check run for all Nodes. This ensures the server can ping all the Nodes successfully. |
-| ``--distributor`` | uri | `http://localhost:5553` | Url of the distributor. |
-| `--distributor-host` | string | `localhost` | Host on which the distributor is listening. |
-| `--distributor-implementation` | string | `org.openqa.selenium.grid.distributor.local.LocalDistributor` | Full class name of non-default distributor implementation |
-| `--distributor-port` | int | `5553` | Port on which the distributor is listening. |
-| `--reject-unsupported-caps` | boolean | `false` | Allow the Distributor to reject a request immediately if the Grid does not support the requested capability. Rejecting requests immediately is suitable for a Grid setup that does not spin up Nodes on demand. |
-| `--slot-matcher` | string | `org.openqa.selenium.grid.data.DefaultSlotMatcher` | Full class name of non-default slot matcher to use. This is used to determine whether a Node can support a particular session. |
-| `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Full class name of non-default slot selector. This is used to select a slot in a Node once the Node has been matched. |
+| `--healthcheck-interval` | int | `120` | Tempo em segundos em que se verifica o estado dos Nodes. Isto garante que o servidor consecontactar cada um dos Nodes com sucesso. |
+| ``--distributor`` | uri | `http://localhost:5553` | Url do Distributor. |
+| `--distributor-host` | string | `localhost` | Host onde o Distributor está à escuta. |
+| `--distributor-implementation` | string | `org.openqa.selenium.grid.distributor.local.LocalDistributor` | Nome completo da class para uma implementação não padrão  do Distributor. |
+| `--distributor-port` | int | `5553` | Porta onde o Distributor está à escuta. |
+| `--reject-unsupported-caps` | boolean | `false` | Permitir que o Distributor rejeite imediatamente um pedido de sessão se a Grid não suportar a capacidade pedida. Esta configuração é a ideal para Grid que não inicie Nodes a pedido. |
+| `--slot-matcher` | string | `org.openqa.selenium.grid.data.DefaultSlotMatcher` | Nome completo da class para uma implementação não padrão do comparador de slots. Isto é usado para determinar se um Node pode suportar uma sessão em particular. |
+| `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Nome completo da class para uma implementação não padrão do selector de slots. Isto é usado para selecionar um slot no Node caso tenha sido "matched". |
 
 ### Docker
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--docker-assets-path` | string | `/opt/selenium/assets` | Absolute path where assets will be stored |
 | `--docker-` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Docker configs which map image name to stereotype capabilities (example `-D selenium/standalone-firefox:latest '{"browserName": "firefox"}') |
@@ -186,7 +179,7 @@ pull request updating this page.
 
 ### Events
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--bind-bus` | boolean | `false` | Whether the connection string should be bound or connected. <br> When true, the component will be bound to the Event Bus (as in the Event Bus will also be started by the component, typically by the Distributor and the Hub). <br> When false, the component will connect to the Event Bus. |
 | `--events-implementation` | string | `org.openqa.selenium.events.zeromq.ZeroMqEventBus` | Full class name of non-default event bus implementation |
@@ -195,7 +188,7 @@ pull request updating this page.
 
 ### Logging
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--http-logs` | boolean |  `false` | Enable http logging. Tracing should be enabled to log http logs. |
 | `--log-encoding` | string |  `UTF-8` | Log encoding |
@@ -208,13 +201,13 @@ pull request updating this page.
 
 ### Network
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--relax-checks` | boolean | `false` | Relax checks on origin header and content type of incoming requests, in contravention of strict W3C spec compliance. |
 
 ### Node
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|---|
 | `--detect-drivers` | boolean | `true` | Autodetect which drivers are available on the current system, and add them to the Node. |
 | `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype='{"browserName": "firefox", "browserVersion": "86", "moz:firefoxOptions": {"binary":"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin"}}'` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
@@ -233,10 +226,13 @@ pull request updating this page.
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
 | `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
+| `--downloads-path`| string | `/usr/downloads` | The default location wherein all browser triggered file downloads would be available to be retrieved from. This is usually the directory that you configure in your browser as the default location for storing downloaded files. |
+| `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
+
 
 ### Relay
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--service-url` | string | `http://localhost:4723` | URL for connecting to the service that supports WebDriver commands like an Appium server or a cloud service. |
 | `--service-host` | string | `localhost` | Host name where the service that supports WebDriver commands is running |
@@ -246,7 +242,7 @@ pull request updating this page.
 
 ### Router
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--password` | string | `myStrongPassword` | Password clients must use to connect to the server. Both this and the username need to be set in order to be used. |
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
@@ -254,7 +250,7 @@ pull request updating this page.
 
 ### Server
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--allow-cors` | boolean | `true` | Whether the Selenium server should allow web browser connections from any host |
 | `--host` | string | `localhost` | Server IP or hostname: usually determined automatically. |
@@ -266,7 +262,7 @@ pull request updating this page.
 
 ### SessionQueue
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--sessionqueue` | uri | `http://localhost:1237` | Address of the session queue server. |
 | `-sessionqueue-host` | string | `localhost` | Host on which the session queue server is listening. |
@@ -276,7 +272,7 @@ pull request updating this page.
 
 ### Sessions
 
-| Option | Type | Value/Example | Description |
+| Opção | Tipo | Valor/Exemplo | Descrição |
 |---|---|---|---|
 | `--sessions` | uri | `http://localhost:1234` | Address of the session map server. |
 | `--sessions-host` | string | `localhost` | Host on which the session map server is listening. |
@@ -358,3 +354,110 @@ driver.quit();
 ```
 
 Set the custom capability to `false` in order to match the Node B.
+
+
+#### Specifying path from where downloaded files can be retrieved
+
+At times a test may need to access files that were downloaded by it on the Node. To retrieve 
+such files, following can be done.
+
+##### Start the Hub
+```
+java -jar selenium-server-<version>.jar hub
+```
+
+##### Start the Node with downloads path specified
+```
+java -jar selenium-server-<version>.jar node --downloads-path /usr/downloads
+```
+##### Important information when dowloading a file:
+
+* The endpoint to `GET` from is `/session/<sessionId>/se/file?filename=`
+* The session needs to be active in order for the command to work.
+* The response blob contains two keys,
+    * `filename` - Same as what was specified in the request.
+    * `contents` - Base64 encoded zipped contents of the file.
+* The file contents are Base64 encoded and they need to be unzipped.
+
+##### Sample that retrieves the downloaded file
+
+Assuming the downloaded file is named `my_file.pdf`, and using `curl`, the 
+file could be downloaded with the following command:
+
+```bash
+curl -X GET "http://localhost:4444/session/<sessionId>/se/file?filename=my_file.pdf"
+```
+
+Below is an example in Java that shows how to download a file named `my_file.pdf`.
+
+```java
+import static org.openqa.selenium.remote.http.Contents.string;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.io.Zip;
+import org.openqa.selenium.json.Json;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.HttpClient;
+import org.openqa.selenium.remote.http.HttpMethod;
+import org.openqa.selenium.remote.http.HttpRequest;
+import org.openqa.selenium.remote.http.HttpResponse;
+
+public class DownloadsSample {
+
+  public static void main(String[] args) throws InterruptedException, IOException {
+    // Make sure the following directory exists on your machine
+    File dirToCopyTo = new File("/usr/downloads/file");
+    // Assuming the Grid is running locally.
+    URL gridUrl = new URL("http://localhost:4444");
+    RemoteWebDriver driver = new RemoteWebDriver(gridUrl, firefoxOptions());
+    // This public website resets the available files for dowload on a daily basis, 
+    // check the name of the file that will be downloaded and replace it below.
+    driver.get("http://the-internet.herokuapp.com/download");
+    WebElement element = driver.findElement(By.cssSelector(".example a"));
+    element.click();
+
+    // The download happens in a remote Node, which makes difficult to know when the file 
+    // has been completely downloaded. For demonstration purposes, this example uses a 
+    // 10 second sleep which should be enough time for a file to be downloaded. 
+    // We strongly recommend to avoid hardcoded sleeps, and ideally, to modify your 
+    // application under test so it offers a way to know when the file has been completely 
+    // downloaded. 
+    TimeUnit.SECONDS.sleep(10);
+
+    HttpRequest request = new HttpRequest(HttpMethod.GET, String.format("/session/%s/se/file", driver.getSessionId()));
+    request.addQueryParameter("filename", "my_file.pdf");
+    try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
+      HttpResponse response = client.execute(request);
+      Map<String, Object> map = new Json().toType(string(response), Json.MAP_TYPE);
+      // The returned map would contain 2 keys,
+      // filename - This represents the name of the file (same as what was provided by the test)
+      // contents - Base64 encoded String which contains the zipped file.
+      String encodedContents = map.get("contents").toString();
+
+      //The file contents would always be a zip file and has to be unzipped.
+      Zip.unzip(encodedContents, dirToCopyTo);
+    } finally {
+      driver.quit();
+    }
+  }
+
+  private static FirefoxOptions firefoxOptions() {
+    FirefoxOptions options = new FirefoxOptions();
+    // Options specific for Firefox to avoid prompting a dialog for downloads. They might 
+    // change in the future, so please refer to the Firefox documentation for up to date details.
+    options.addPreference("browser.download.manager.showWhenStarting", false);
+    options.addPreference("browser.helperApps.neverAsk.saveToDisk",
+        "images/jpeg, application/pdf, application/octet-stream");
+    options.addPreference("pdfjs.disabled", true);
+    return options;
+  }
+}
+```
+

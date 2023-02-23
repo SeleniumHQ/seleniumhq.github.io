@@ -15,7 +15,9 @@ aliases: [
 1. Prerequisites
     * Java 11 or higher installed
     * Browser(s) installed
-    * Browser driver(s) [installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+    * Browser driver(s)
+      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
+      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
     * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
 1. Start the Grid
     * `java -jar selenium-server-<version>.jar standalone`
@@ -216,6 +218,38 @@ For simplicity, all command examples shown in this page assume that components a
 locally. More detailed examples and usages can be found in the
 [Configuring Components]({{< ref "/configuration" >}}) section.
 {{% /pageinfo %}}
+
+## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
+
+By default, Grid will use [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
+AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP 
+requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it 
+is a good fit. 
+
+However, AsyncHttpClient is not been actively maintained since June 2021. It coincides with the 
+fact that Java 11+ provides a built-in HTTP and WebSocket client. Currently, Selenium 
+has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. 
+Aligning it with major releases and accompanied announcements  is crucial to ensure the user 
+experience is intact.
+
+To do use the Java 11 client, you will need to download the `selenium-http-jdk-client` jar file 
+and use the `--ext` flag to make it available in the Grid jar's classpath.
+
+The jar file can be downloaded directly from [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/)
+and then start the Grid in the following way:
+
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
+```
+
+An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
+
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+```
+
+If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` 
+and `--ext` flags needs to be done for each one of the components.
 
 ## Grid sizes
 

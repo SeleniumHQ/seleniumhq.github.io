@@ -4,102 +4,91 @@ linkTitle: "Configurando a sua"
 weight: 2
 needsTranslation: true
 description: >
-  Instructions for a simple Selenium Grid
+  Instruções para criar uma Selenium Grid simples
 aliases: [
 "/documentation/pt-br/grid/grid_4/setting_up_your_own_grid/",
 "/pt-br/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Portuguese. 
-   Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+## Início rápido
 
-## Quick start
-
-1. Prerequisites
-    * Java 11 or higher installed
-    * Browser(s) installed
-    * Browser driver(s) [installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
-    * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
-1. Start the Grid
+1. Pré-requisitos
+    * Java 11 ou superior instalado
+    * Navegador(es) instalados
+    * Drivers do(s) navegador(es)
+      * Se usar o Selenium 4.6, o Selenium Manager irá configurar os navegadores Chrome, Firefox e Edge [se não forem encontrados no `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
+    * Obter o ficheiro Selenium Server Jar a partir da [última release](https://github.com/SeleniumHQ/selenium/releases/latest)
+1. Iniciar a Grid
     * `java -jar selenium-server-<version>.jar standalone`
-1. Point* your WebDriver tests to [http://localhost:4444](http://localhost:4444)
-1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
+1. Aponte* os seus testes WebDriver para [http://localhost:4444](http://localhost:4444)
+1. (Opcional) Verifique os testes que estão em execução abrindo o navegador em [http://localhost:4444](http://localhost:4444)
 
-*Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+*Se quer saber como direcionar os seus testes para [http://localhost:4444](http://localhost:4444), veja a secção [`RemoteWebDriver`]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
 
-To learn more about the different configuration options, go through the sections below.
+Para aprender mais sobre as diferentes opções de configuração, veja as secções seguintes.
 
 ## Grid roles
 
-Grid is composed by six different [components]({{< ref "components.md" >}}), which gives
-you the option to deploy it in different ways.
+A Grid é composta de seis [componentes]({{< ref "components.md" >}}) diferentes, o que permite ser
+instalada de várias formas.
 
-Depending on your needs, you can start each one of them on its own (Distributed), group
-them in Hub & Node, or all in one on a single machine (Standalone).
+Dependendo das necessidades, podemos iniciar cada um dos componentes (Distribuido) ou agrupar no formato
+Hub e Node ou ainda numa única máquina (Standalone).
 
 ### Standalone
 
-**Standalone** combines all Grid [components]({{< ref "components.md" >}}) seamlessly 
-into one. Running a Grid in **Standalone** mode gives you a fully functional Grid 
-with a single command, within a single process. **Standalone** can only run on a 
-single machine.
+**Standalone** combina todos os [componentes]({{< ref "components.md" >}}) num só sitio.
+Executar uma Grid em modo **Standalone** permite uma Grid totalmente funcionar com um único
+comando, num único processo. **Standalone** só funcionará numa única máquina.
 
-**Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
-will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
-By default, the server will detect the available drivers that it can use from the System 
+**Standalone** é também a forma mais simples de colocar uma Selenium Grid em funcionamento.
+Por omissão, o servidor irá escutar por pedidos `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
+O servidor irá também detectar os drivers disponíveis no 
 [`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
 ```
 
-After starting successfully the Grid in Standalone mode, point your WebDriver tests 
-to [http://localhost:4444](http://localhost:4444).
+Após iniciar a Selenium Grid no modo Standalone, aponte os seus WebDriver tests para
+[http://localhost:4444](http://localhost:4444).
 
-Common use cases for **Standalone** are:
-* Develop or debug tests using `RemoteWebDriver` locally
-* Running quick test suites before pushing code
-* Have a easy to setup Grid in a CI/CD tool (GitHub Actions, Jenkins, etc...)
+Alguns casos de uso para **Standalone** são:
+* Desenvolver ou debugar testes usando `RemoteWebDriver` localmente
+* Executar baterias de testes rapidamente antes de fazer commit de código
+* Ter uma Grid simples de montar numa ferramenta CI/CD (GitHub Actions, Jenkins, etc...)
 
+### Hub e Node
 
-### Hub and Node
-
-**Hub and Node** is the most used role because it allows to:
-* Combine different machines in a single Grid
-  * Machines with different operating systems and/or browser versions, for example
-* Have a single entry point to run WebDriver tests in different environments
-* Scaling capacity up or down without tearing down the Grid
+**Hub e Node** é uma das formas mais usadas porque permite:
+* Combinar máquinas diferentes na mesma Grid
+  * Máquinas com sistemas operativos diferentes e/ou versões de navegadores diferentes
+* Ter um ponto único de entrada para executar testes WebDriver em ambientes diferentes
+* Escalar a capacidade para cima ou para baixo sem ter que parar a Grid
 
 #### Hub
 
-A Hub is composed by the following [components]({{< ref "components.md" >}}):
-Router, Distributor, Session Map, New Session Queue, and Event Bus.
+O Hub é composto pelos seguintes [componentes]({{< ref "components.md" >}}):
+Router, Distributor, Session Map, New Session Queue, e Event Bus.
 
 ```shell
 java -jar selenium-server-<version>.jar hub
 ```
 
-By default, the server will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444).
+Por omissão, o servidor irá estar à escuta por pedidos de sessão `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
 
 #### Node
 
-During startup time, the **Node** will detect the available drivers that it can use from the System 
+Ao iniciar, o **Node** irá detectar os drivers disponíveis através do 
 [`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
 
-The command below assumes the **Node** is running on the same machine where the **Hub** is running.
+O comando exemplo seguinte assume que o **Node** está a executar na mesma máquina onde o **Hub** está em execução.
 ```shell
 java -jar selenium-server-<version>.jar node
 ```
 
-##### More than one Node on the same machine
+##### Mais do que um Node na mesma máquina
 
 **Node** 1
 ```shell
@@ -111,182 +100,212 @@ java -jar selenium-server-<version>.jar node --port 5555
 java -jar selenium-server-<version>.jar node --port 6666
 ```
 
-##### Node and Hub on different machines
+##### Node e Hub em máquinas diferentes
 
-**Hub** and **Nodes** talk to each other via HTTP and the [**Event Bus**]({{< ref "components.md#event-bus" >}})
-(the **Event Bus** lives inside the **Hub**). A **Node** sends a message to the **Hub** via the **Event Bus** to 
-start the registration process. When the **Hub** receives the message, reaches out to the **Node** via HTTP to 
-confirm its existence.
+A comunicação entre **Hub** e **Nodes** ocorre via HTTP. Para iniciar o processo de registo, o **Node** envia
+uma mensagem para o **Hub** através do [**Event Bus**]({{< ref "components.md#event-bus" >}}) 
+(o **Event Bus** reside dentro do **Hub**). Quando o **Hub** recebe a mensagem, tenta comunicar com o **Node**
+para confirmar a sua existencia.
 
-To successfully register a **Node** to a **Hub**, it is important to expose the **Event Bus** ports (4442 and 4443 by 
-default) on the **Hub** machine. This also applies for the **Node** port. With that, both **Hub** and **Node** will
-be able to communicate.
+Para que um **Node** se consiga registar no **Hub**, é importante que as portas do **Event Bus** sejam expostas 
+na máquina **Hub**. As portas por omissão são 4442 e 4443 para o **Event Bus** e 4444 para o **Hub**.
 
-If the **Hub** is using the default ports, the `--hub` flag can be used to register the **Node**
+Se o **Hub** estiver a usar as portas por omissão, pode usar a flag `--hub` para registar o **Node**
 ```shell
 java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444
 ```
 
-When the **Hub** is not using the default ports, the `--publish-events` and `--subscribe-events` flags are needed.
+Quando o **Hub** não estiver a usar as portas por omissão, necessita usar as flags`--publish-events` e `--subscribe-events`.
 
-For example, if the **Hub** uses ports `8886`, `8887`, and `8888`
+Por exemplo, se o **Hub** usar as portas`8886`, `8887`, e `8888`
 ```shell
 java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887 --port 8888
 ```
-The **Node** needs to use those ports to register successfully
+O **Node** necessita de especificar as portas para conseguir registar-se com sucesso
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
 ```
 
-### Distributed 
+### Distribuida
 
-When using a Distributed Grid, each component is started separately, and ideally on different machines.
+Quando usar uma Grid distribuida, cada componente é iniciado separadamente e preferencialmente em máquinas diferentes.
 
 {{% alert color="primary" %}}
-It is important to expose all ports properly in order to allow fluent communication between all components.
+É de extrema importância expor todas as portas necessárias de forma a que a comunicação flua correctamente entre todos os componentes.
 {{% /alert %}}
 
-1. **Event Bus**: enables internal communication between different Grid components.
+1. **Event Bus**: permite comunicação interna entre os diferentes componentes da Grid.
 
-Default ports are: `4442`, `4443`, and `5557`.
+As portas por omissão são: `4442`, `4443`, and `5557`.
 ```shell
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. **New Session Queue**: adds new session requests to a queue, which will be queried by the Distributor
+2. **New Session Queue**: adiciona novos pedidos de sessão a uma queue, que serão consultadas pelo Distributor
 
-Default port is `5559`.
+A porta por omissão é `5559`.
 ```shell
 java -jar selenium-server-<version>.jar sessionqueue --port 5559
 ```
 
-3. **Session Map**: maps session IDs to the **Node** where the session is running
+3. **Session Map**: estabelece um mapa entre id de sessão e o **Node** onde a sessão está a executar
 
-Default **Session Map** port is `5556`. **Session Map** interacts with the **Event Bus**. 
+A porta por omissão é `5556`. **Session Map** interage com o **Event Bus**. 
 ```shell
 java -jar selenium-server-<version>.jar sessions --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5556
 ```
 
-4. **Distributor**: queries the **New Session Queue** for new session requests, and assigns them to a **Node** when the capabilities match. **Nodes** register to the **Distributor** the way they register to the **Hub** in a **Hub/Node** Grid.
+4. **Distributor**: consulta **New Session Queue** para novos pedidos de sessão, que entrega ao um **Node** quando encontra um capacidade 
+correspondente. **Nodes** registam-se no **Distributor** da mesma forma como numa Grid do tipo **Hub/Node**.
 
-Default **Distributor** port is `5553`. **Distributor** interacts with **New Session Queue**, **Session Map**, **Event Bus**, and the **Node(s)**.
+A porta por omissão é `5553`. **Distributor** interage com **New Session Queue**, **Session Map**, **Event Bus**, e **Node(s)**.
 
 ```shell
 java -jar selenium-server-<version>.jar distributor --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --sessions http://<sessions-ip>:5556 --sessionqueue http://<new-session-queue-ip>:5559 --port 5553 --bind-bus false
 ```
 
-5. **Router**: redirects new session requests to the queue, and redirects running sessions requests to the **Node** running that session.
+5. **Router**: redirecciona novos pedidos de sessão para a queue, e redirecciona pedidos de sessões para o **Node** que estiver a executar a sessão.
 
-Default **Router** port is `4444`. **Router** interacts with **New Session Queue**, **Session Map**, and **Distributor**.
+A porta por omissão é `4444`. **Router** interage com **New Session Queue**, **Session Map**, e **Distributor**.
 ```shell
 java -jar selenium-server-<version>.jar router --sessions http://<sessions-ip>:5556 --distributor http://<distributor-ip>:5553 --sessionqueue http://<new-session-queue-ip>:5559 --port 4444
 ```
 
 6. **Node(s)**
 
-Default **Node** port is `5555`.
+A porta por omissão é `5555`.
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443
 ```
 
-## Metadata in tests
+## Adicionar Metadata nos testes
 
-Add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
-or visualize parts of it (like `se:name`) through the Selenium Grid UI. 
+Adicione Metadata aos testes, através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+ou visualize parcialmente (como `se:name`) através da Selenium Grid UI. 
 
-Metadata can be added by prefixing a capability with `se:`. Here is a quick example in Java showing that.
+Metadata pode ser adicionada como uma capacidade com o prefixo `se:`. Eis um pequeno exemplo em Java.
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
 chromeOptions.setCapability("browserVersion", "100");
 chromeOptions.setCapability("platformName", "Windows");
-// Showing a test name instead of the session id in the Grid UI
+// Mostrando na Grid UI o nome de um teste ao invés de uma session id
 chromeOptions.setCapability("se:name", "My simple test"); 
-// Other type of metadata can be seen in the Grid UI by clicking on the 
-// session info or via GraphQL
-chromeOptions.setCapability("se:sampleMetadata", "Sample metadata value"); 
+// Outros tipos de metadara podem ser visualizados na Grid UI 
+// ao clicar na informação de sessão ou via GraphQL
+chromeOptions.setCapability("se:sampleMetadata", "Valor exemplo de Metadata"); 
 WebDriver driver = new RemoteWebDriver(new URL("http://gridUrl:4444"), chromeOptions);
 driver.get("http://www.google.com");
 driver.quit();
 ```
 
-## Querying Selenium Grid
+## Questionando a Selenium Grid
 
-After starting a Grid, there are mainly two ways of querying its status, through the Grid 
-UI or via an API call.
+Após iniciar a Gris, existem duas formas de saber o seu estado, através da Grid UI ou
+por chamada API.
 
-The Grid UI can be reached by opening your preferred browser and heading to 
-[http://localhost:4444](http://localhost:4444).
-
-API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
-endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+A Grid UI pode ser acedida pelo seu navegador preferido em [http://localhost:4444](http://localhost:4444). 
+As chamadas API podem ser feitas para o endpoint [http://localhost:4444/status](http://localhost:4444/status) ou
+através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}}).
 
 {{% pageinfo color="primary" %}}
-For simplicity, all command examples shown in this page assume that components are running
-locally. More detailed examples and usages can be found in the
-[Configuring Components]({{< ref "/configuration" >}}) section.
+Para simplificar, todos os exemplos apresentados assumem que os componentes estão a ser executados localmente.
+Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "/configuration" >}}).
 {{% /pageinfo %}}
 
-## Grid sizes
+## Usando o cliente HTTP nativo Java 11 {{% badge-version version="4.5" %}}
 
-Choosing a Grid role depends on what operating systems and browsers need to be supported, 
-how many parallel sessions need to be executed, the amount of available machines, and how 
-powerful (CPU, RAM) those machines are.
+Por omissão, a Grid irá usar [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
+AsyncHttpClient é uma biblioteca open-source library criada em cima do Netty. Isto permite a
+execução de pedidos e respostas HTTP de forma assíncrona. Esta biblioteca é uma boa escolha
+pois além de permitir pedidos assíncronos, também suporta WebSockets.
 
-Creating sessions concurrently relies on the available processors to the **Distributor**. 
-For example, if a machine has 4 CPUs, the **Distributor** will only be able to create up
-to 4 sessions concurrently.
+No entanto, a biblioteca AsyncHttpClient não é mantida activamente desde Junho de 2021. Isto coincide com
+o facto de que a partir do Java 11, a JVM tem um cliente nativo que suporta camadas assíncronas
+e contém um cliente WebSocket.
 
-By default, the maximum amount of concurrent sessions a **Node** supports is limited by
-the number of CPUs available. For example, if the **Node** machine has 8CPUs, it can run
-up to 8 concurrent browser sessions (with the exception of Safari, which is always one).
-Additionally, it is expected that each browser session should use around 1GB RAM. 
+Atualmente, o projecto Selenium tem planos de atualizar a versão mínima suportada para Java 11. 
+No entanto, isto é um esforço considerável. Alinhá-lo com os principais lançamentos e anúncios
+acompanhados é crucial para garantir que a experiência do usuário esteja intacta.
 
-In general, it is a recommended to have **Nodes** as small as possible. Instead of having
-a machine with 32CPUs and 32GB RAM to run 32 concurrent browser sessions, it is better to
-have 32 small **Nodes** in order to better isolate processes. With this, if a **Node**
-fails, it will do it in an isolated way. Docker is a good tool to achieve this approach.
+Para usar o cliente Java 11, terá que baixar o ficheiro jar `selenium-http-jdk-client` e usar
+a flag `--ext` para funcionar na Grid.
 
-Note that the default values (1CPU/1GB RAM per browser) are a recommendation and they could
-not apply to your context. It is recommended to use them as a reference, but measuring 
-performance continuously will help to determine the ideal values for your environment.
+Este ficheiro pode ser obtido directamente de [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/)
+e depois pode iniciar a Grid com:
 
-Grid sizes are relative to the amount of supported concurrent sessions and amount of 
-**Nodes**, and there is no "one size fits all". Sizes mentioned below are rough estimations
-thay can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
-might work well when the **Hub** has enough resources. Values below are not set on stone,
-and feedback is welcomed!
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
+```
 
-### Small
+Uma alternativa a baixar o ficheiro jar `selenium-http-jdk-client` é usar [Coursier](https://get-coursier.io/docs/cli-installation).
 
-**Standalone** or **Hub/Node** with 5 or less **Nodes**.
+```bash
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+```
 
-### Middle
+Se está a usar a Grid em modo **Hub/Node** ou **Distributed**, terá que usar as flags 
+`-Dwebdriver.http.factory=jdk-http-client` e `--ext` em cada um dos componentes.
 
-**Hub/Node** between 6 and 60 **Nodes**.
+## Dimensionar Grid
 
-### Large
+A escolha de Grid depende de quais sistemas operacionais e navegadores precisam ser suportados,
+quantas sessões paralelas precisam ser executadas, a quantidade de máquinas disponíveis e quão
+poderosas (CPU, RAM) essas máquinas são.
 
-**Hub/Node** between 60 and 100 **Nodes**. **Distributed** with over 100 **Nodes**.
+A criação de sessões simultaneas depende dos processadores disponíveis para o **Distributor**.
+Por exemplo, se uma máquina tiver 4 CPUs, o **Distributor** só poderá criar quatro sessões
+em simultâneo.
 
-## Warning
+Por omissão, a quantidade máxima de sessões simultâneas que um **Node** suporta é limitada pelo
+número de CPUs disponíveis. Por exemplo, se a máquina **Node** tiver 8 CPUs, ela poderá executar
+até 8 sessões de navegador simultâneas (com exceção do Safari, que é sempre uma).
+Além disso, espera-se que cada sessão do navegador use cerca de 1 GB de RAM.
 
-Selenium Grid must be protected from external access using appropriate
-firewall permissions.
+Em geral, é recomendado ter **Nodes** o mais pequenos possíveis. Em vez de ter
+uma máquina com 32CPUs e 32GB de RAM para executar 32 sessões de navegador simultâneas, é melhor
+tem 32 pequenos **Nodes** para isolar melhor os processos. Com isso, se um **Node**
+falhar, será de forma isolada. Docker é uma boa ferramenta para alcançar essa abordagem.
 
-Failure to protect your Grid could result in one or more of the following occurring:
+Note que os valores 1CPU/1GB RAM por navegador são uma recomendação e podem não ser os mais indicados
+para o seu contexto. Recomenda-se que use estea valores como referência, mas meça o desempenho 
+continuamente para ajudar a determinar os valores ideais para o seu ambiente.
 
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
+Os tamanhos da Grid são relativos à quantidade de sessões simultâneas suportadas e à quantidade de
+**Nodes**, não existindo um "tamanho único". Os tamanhos mencionados abaixo são estimativas aproximadas
+que podem variar entre diferentes ambientes. Por exemplo, um **Hub/Node** com 120 **Nodes**
+pode funcionar bem quando o **Hub** tiver recursos suficientes. Os valores abaixo não são gravados em pedra,
+e comentários são bem-vindos!
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good
-overview of how a publicly exposed Grid could be misused:
+### Pequena
+
+**Standalone** e **Hub/Node** com cinco **Nodes** ou menos.
+
+### Média
+
+**Hub/Node** entre 6 e 60 **Nodes**.
+
+### Grande
+
+**Hub/Node** entre 60 e 100 **Nodes**. **Distributed** com mais de 100 **Nodes**.
+
+## AVISO
+
+Deve proteger a Selenium Grid de acesso externo, usando regras de firewall apropriadas.
+
+Se falhar em proteger a Grid uma ou mais coisas poderão ocorrer:
+
+* Permite acesso aberto à sua infraestrutura da Grid
+* Permitir acesso de terceiros a aplicativos web e a ficheiros
+* Permitir execução remota de ficheiros binários por terceiros
+
+Leia este artigo (em Inglês) em [Detectify](//labs.detectify.com), que dá um bom resumo
+de como uma Grid exposta publicamente pode ser abusada:
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
-## Further reading
+## Leituras adicionais
 
-* [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
-* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
-* [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
+* [Componentes]({{< ref "components.md" >}}): compreender como usar os componentes da Grid
+* [Configuração]({{< ref "/configuration" >}}): personalize a sua configuração Grid.
+* [Arquitectura]({{< ref "architecture.md" >}}): entenda conceitos chave da Grid.
+* [Advanced Features]({{< ref "/advanced_features" >}}): explore mais possibilidades da Grid.

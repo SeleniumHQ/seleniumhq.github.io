@@ -1,6 +1,6 @@
 ---
-title: "Browser Options"
-linkTitle: "Options"
+title: "ブラウザーオプション"
+linkTitle: "オプション"
 weight: 2
 description: >-
   これらのCapabilityはすべてのブラウザで共通です。
@@ -17,22 +17,13 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Selenium 3 では、Capabilitiesは Desired Capabilities クラスを使用してセッションで定義していました。 
+Selenium 4 以降、ブラウザ オプション クラスを使用する必要があります。 
+リモート ドライバー セッションの場合、使用するブラウザーを決めるため、ブラウザーオプションインスタンスが必要です。
 
-In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
-As of Selenium 4, you must use the browser options classes.
-For remote driver sessions, a browser options instance is required as it determines which browser will be used.
+これらのオプションは、[Capabilities](https://w3c.github.io/webdriver/#capabilities) の w3c仕様で説明しています。
 
-These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
-
-Each browser has ({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
+各ブラウザには、w3c仕様で定義しているものに加えて定義可能な [カスタム オプション]({{< ref "../browsers/" >}}) があります。
 
 ## browserName
 
@@ -47,37 +38,34 @@ Each browser has ({{< ref "../browsers/" >}}) that may be defined in addition to
 
 ## pageLoadStrategy
 
-Three types of page load strategies are available.
+3種類のページ読み込み戦略を利用できます。
 
-The page load strategy queries the 
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
+ページ読み込み戦略は、次の表で説明しています。
 
-| Strategy | Ready State | Notes |
+| 戦略 | 準備完了状態 | 注釈 |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | complete | デフォルトで使用され、すべてのリソースをダウンロードするのを待ちます |
+| eager | interactive | DOM アクセスの準備は整っていますが、画像などの他のリソースはまだロード中の可能性があります |
+| none | Any | WebDriver をまったくブロックしません |
 
-The `document.readyState` property of a document describes the loading state of the current document.
+ドキュメントの [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState) 
+プロパティは、現在のドキュメントの読み込み状態を示します。
 
-When navigating to a new page via URL, by default, WebDriver will hold off on completing a navigation 
-method (e.g., driver.navigate().get()) until the document ready state is complete. This _does not 
-necessarily mean that the page has finished loading_, especially for sites like Single Page Applications 
-that use JavaScript to dynamically load content after the Ready State returns complete. Note also 
-that this behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+URL 経由で新しいページに移動する場合、デフォルトでは、WebDriver は、ドキュメントの準備完了状態が完了するまで、
+ナビゲーション メソッド (driver.navigate().get() など) の完了を保留します。 
+_これは必ずしもページの読み込みが完了したことを意味するわけではありません。_ 
+特に、Ready State が完了した後に JavaScript を使用してコンテンツを動的に読み込むシングル ページ アプリケーションのようなサイトの場合はそうです。 
+また、この動作は、要素のクリックまたはフォームの送信の結果であるナビゲーションには適用されないことに注意してください。
 
-If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
-that aren't important to the automation, you can change from the default parameter of `normal` to
-`eager` or `none` to speed up the session. This value applies to the entire session, so make sure 
-that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient to minimize 
-flakiness.
+自動化にとって重要ではないアセット (画像、css、js など) をダウンロードした結果、ページの読み込みに時間がかかる場合は、
+デフォルトのパラメーターである `normal` を `eager` または `none` に変更して、セッションの読み込みを高速化できます。 
+この値はセッション全体に適用されるため、 [待機戦略]({{< ref "/documentation/webdriver/waits.md" >}}) 
+が不安定さを最小限に抑えるのに十分であることを確認してください。
 
+### normal (デフォルト)
 
-### normal (default)
-
-WebDriver waits until the [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) 
-event fire is returned.
+WebDriver は [load](https://developer.mozilla.org/ja/docs/Web/API/Window/load_event) 
+イベント検知するまで待機します。
 
 {{< tabpane langEqualsHeader=true code=false >}}
 {{< tab header="Java" code=true >}}
@@ -130,14 +118,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='normal'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :normal
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L27-L33">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -160,8 +148,8 @@ fun main() {
 
 ### eager
 
-WebDriver waits until [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) 
-event fire is returned.
+WebDriver は、[DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API/Document/DOMContentLoaded_event) 
+イベントを検知するまで待機します。
 
 {{< tabpane langEqualsHeader=true code=false >}}
 {{< tab header="Java" code=true >}}
@@ -214,14 +202,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='eager'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :eager
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L7-L13">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -244,7 +232,7 @@ fun main() {
 
 ### none
 
-WebDriver only waits until the initial page is downloaded.
+WebDriver は、最初のページがダウンロードされるまで待機します。
 
 {{< tabpane langEqualsHeader=true code=false >}}
 {{< tab header="Java" code=true >}}
@@ -297,14 +285,14 @@ namespace pageLoadStrategy {
 {{< /tab >}}
 {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.page_load_strategy='none'
+options = Selenium::WebDriver::Options.chrome
+options.page_load_strategy = :none
 
-driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L17-L23">}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.PageLoadStrategy
@@ -381,7 +369,8 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 
 ## setWindowRect
 
-Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
+リモート エンドがすべての　[サイズ変更および再配置](https://w3c.github.io/webdriver/#resizing-and-positioning-windows)
+[コマンド](https://w3c.github.io/webdriver/#dfn-commands) をサポートするかどうかを示します。
 
 ## strictFileInteractability
 

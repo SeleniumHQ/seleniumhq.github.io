@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'webdrivers'
 
 RSpec.describe 'Firefox' do
   let(:driver) { start_firefox }
@@ -36,5 +35,12 @@ RSpec.describe 'Firefox' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/blank.html'
     injected = driver.find_element(id: 'webextensions-selenium-example')
     expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
+  end
+
+  it 'add arguments' do
+    options = Selenium::WebDriver::Options.firefox(args: ['-headless'])
+
+    @driver = Selenium::WebDriver.for :firefox, options: options
+    @driver.get('https://www.google.com')
   end
 end

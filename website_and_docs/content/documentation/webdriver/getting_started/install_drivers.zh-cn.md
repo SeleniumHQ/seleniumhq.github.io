@@ -25,50 +25,45 @@ WebDriver尽量使用浏览器内置的自动化支持
 在我们的[驱动程序配置]({{< ref "/documentation/webdriver/drivers/" >}}) 文档中
 阅读有关启动驱动程序的更多高级选项.
 
-## 快速参考
+{{% pageinfo color="warning" %}}
+<p class="lead">
+   <i class="fas fa-language display-4"></i> 
+   Page being translated from English to Chinese. 
+   Do you speak Chinese? Help us to translate
+   it by sending us pull requests!
+</p>
+{{% /pageinfo %}}
 
-| 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
-|-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
-| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
-| Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
-| Edge              | Windows/macOS               | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
-| Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
-| Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
+## 四种使用驱动的方法
 
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
+### 1. Selenium Manager <small>(Beta)</small>
 
-## 使用驱动的三种方式
+{{< badge-version version="4.6" >}}
 
-### 1. 驱动管理软件
+Selenium Manager可以帮助你获得一个运行Selenium的开箱即用的环境。
+如果在`PATH`中没有找到Chrome、Firefox和Edge的驱动，Selenium Manager的Beta 1版将为它们配置。
+不需要额外的配置。如果有必要，Selenium Manager的未来版本也会在必要时一同下载浏览器。
+
+在这篇[公告](/blog/2022/introducing-selenium-manager/)中了解更多有关 Selenium Manager 的信息。
+
+### 2. 驱动管理软件
 
 大多数机器会自动更新浏览器, 
-但驱动程序不会. 
+但不会自动更新驱动程序. 
 为了确保为浏览器提供正确的驱动程序, 
 这里有许多第三方库可为您提供帮助.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-**Important:** This package does not currently work for IEDriverServer v4+
+**注意：** 这个软件包目前不能用于IEDriverServer v4以上的版本。
 
 1. 导入 [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
-2. 调用 `setup()` 会自动将正确的浏览器驱动程序
-放在代码可以看到的位置:
+2. 调用 `setup()`:
 
-```java
-WebDriverManager.chromedriver().setup();
-```
-3. 只需像平常一样初始化驱动程序:
-```java 
-ChromeDriver driver = new ChromeDriver();
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L17-L19" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -81,19 +76,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 2. 使用 `install()` 获取管理器使用的位置, 并将其传递到服务类中
 
-```py
-service = Service(executable_path=ChromeDriverManager().install())
-```
-
-3. 使用 `Service` 实例并初始化驱动程序: 
-```py
-driver = webdriver.Chrome(service=service)
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/python/tests/getting_started/test_install_drivers.py">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L15-L17" >}}
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
@@ -106,20 +89,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 2. 使用 `SetUpDriver()` 时需要一个配置类:
 
-```csharp
-new DriverManager().SetUpDriver(new ChromeConfig());
-```
-
-3. 像往常一样初始化驱动程序:
-
-```csharp
-var driver = new ChromeDriver()
-```
-
-<div class="github">
-    <a href ="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/dev/examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs">
-查看GitHub上的完整示例.</a>
-</div>
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L19-L21" >}}
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -146,7 +116,7 @@ driver = Selenium::WebDriver.for :chrome
 
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
- *There is not a recommended driver manager for JavaScript at this time*
+ *暂时还没有推荐的JavaScript驱动管理器*
 {{% /tab %}}
 {{% tab header="Kotlin" %}}
 
@@ -155,17 +125,13 @@ driver = Selenium::WebDriver.for :chrome
 import io.github.bonigarcia.wdm.WebDriverManager;
 ```
 2. 在初始化驱动程序之前调用setup方法:
-```java
-fun chrome(): WebDriver {
-    WebDriverManager.chromedriver().setup()
-    return ChromeDriver()
-}
-```
+
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/InstallDriversTest.kt#L17-L18" >}}
 
 {{% /tab %}}
 {{< /tabpane >}}
 
-### 2. `PATH` 环境变量
+### 3. `PATH` 环境变量
 此选项首先需要手动下载驱动程序
 (有关链接, 请参阅[快速参考](#快速参考) 部分).
 
@@ -244,9 +210,9 @@ ChromeDriver was started successfully.
 
 想要重新控制命令提示符可以按下 <kbd>Ctrl+C</kbd>
 
-### 3. 硬编码位置
+### 4. 硬编码位置
 
-与上面的选项2类似, 
+与上面的选项3类似, 
 您需要手动下载驱动程序(有关链接, 请参阅[快速参考](#快速参考) 部分). 
 在代码中指定位置本身的优点是
 不需要指出系统上的环境变量, 
@@ -304,6 +270,18 @@ fun main(args: Array<String>) {
 {{< /tab >}}
 
 {{< /tabpane >}}
+
+## 快速参考
+
+| 浏览器               | 支持的操作系统                     | 维护者              | 下载                                                                    | 问题追溯                                                             |
+|-------------------|-----------------------------|------------------|-----------------------------------------------------------------------|------------------------------------------------------------------|
+| Chromium/Chrome   | Windows/macOS/Linux         | Google           | [下载](//chromedriver.chromium.org/downloads)                | [Issues](//bugs.chromium.org/p/chromedriver/issues/list)         |
+| Firefox           | Windows/macOS/Linux         | Mozilla          | [下载](//github.com/mozilla/geckodriver/releases)                       | [Issues](//github.com/mozilla/geckodriver/issues)                |
+| Edge              | Windows/macOS/Linux         | Microsoft        | [下载](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](https://github.com/MicrosoftDocs/edge-developer/issues) |
+| Internet Explorer | Windows                     | Selenium Project | [下载](/downloads)                                                      | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE)           |
+| Safari            | macOS High Sierra and newer | Apple            | 内置                                                                    | [Issues](//bugreport.apple.com/logon)                            |
+
+备注：Opera驱动不再适用于Selenium的最新功能，目前官方不支持。
 
 
 ## 下一步

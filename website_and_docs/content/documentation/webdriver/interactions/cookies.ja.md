@@ -24,7 +24,7 @@ Cookieの追加では、一連の定義済みのシリアル化可能なJSONオ�
 サイトとの対話を開始する前にCookieを事前設定しようとしていて、ホームページが大きい場合/代替の読み込みに時間がかかる場合は、サイトで小さいページを見つけることです。（通常、たとえば http://example.com/some404page のような、404ページは小さいです。）
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -42,7 +42,7 @@ public class addCookie {
     }
 }
   {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" code=true >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -52,7 +52,7 @@ driver.get("http://www.example.com")
 # Adds the cookie into current browser context
 driver.add_cookie({"name": "key", "value": "value"})
   {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -73,7 +73,7 @@ namespace AddCookie {
  }
 }
   {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -86,10 +86,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
   {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -112,7 +112,7 @@ fun main() {
 関連付けられているすべてのCookieの中で、Cookie名と一致するシリアル化されたCookieデータを返します。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -132,7 +132,7 @@ public class getCookieNamed {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" code=true >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -146,7 +146,7 @@ driver.add_cookie({"name": "foo", "value": "bar"})
 # Get cookie details with named cookie 'foo'
 print(driver.get_cookie("foo"))
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -169,7 +169,7 @@ namespace GetCookieNamed {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -183,10 +183,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -212,7 +212,7 @@ fun main() {
 ブラウザが使用できなくなった場合、エラーが返されます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Set;
@@ -235,7 +235,7 @@ public class getAllCookies {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" code=true >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -249,7 +249,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Get all available cookies
 print(driver.get_cookies())
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -272,7 +272,7 @@ namespace GetAllCookies {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -287,10 +287,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -317,7 +317,7 @@ fun main() {
 指定されたCookie名と一致するCookieデータを削除します。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -344,7 +344,7 @@ public class deleteCookie {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" code=true >}}
 from selenium import webdriver
 driver = webdriver.Chrome()
 
@@ -356,7 +356,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Delete a cookie with name 'test1'
 driver.delete_cookie("test1")
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -384,7 +384,7 @@ namespace DeleteCookie {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -399,10 +399,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -432,7 +432,7 @@ fun main() {
 現在のブラウジングコンテキストの全てのCookieを削除します。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -452,7 +452,7 @@ public class deleteAllCookies {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" code=true >}}
 from selenium import webdriver
 driver = webdriver.Chrome()
 
@@ -464,7 +464,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 #  Deletes all cookies
 driver.delete_all_cookies()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -487,7 +487,7 @@ namespace DeleteAllCookies {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -502,10 +502,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -545,7 +545,7 @@ CookieのSameSite属性を **Lax** に設定すると、Cookieはサードパー
 Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -566,7 +566,7 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" code=true >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -580,7 +580,7 @@ cookie2 = driver.get_cookie('foo1')
 print(cookie1)
 print(cookie2)
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" code=true >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -611,7 +611,7 @@ namespace SameSiteCookie {
   }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
+  {{< tab header="Ruby" code=true >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -626,10 +626,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=false >}}
+  {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" code=true >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 

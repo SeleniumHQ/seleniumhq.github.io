@@ -10,6 +10,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.microsoft import IEDriverManager
 
 
+@pytest.mark.skip(reason="Do not run in CI")
 def test_driver_manager_chrome():
     service = ChromeService(executable_path=ChromeDriverManager().install())
 
@@ -18,6 +19,7 @@ def test_driver_manager_chrome():
     driver.quit()
 
 
+@pytest.mark.skip(reason="Do not run in CI")
 def test_edge_session():
     service = EdgeService(executable_path=EdgeChromiumDriverManager().install())
 
@@ -26,6 +28,7 @@ def test_edge_session():
     driver.quit()
 
 
+@pytest.mark.skip(reason="Do not run in CI")
 def test_firefox_session():
     service = FirefoxService(executable_path=GeckoDriverManager().install())
 
@@ -34,7 +37,7 @@ def test_firefox_session():
     driver.quit()
 
 
-@pytest.mark.skip(reason="only runs on Windows")
+@pytest.mark.skip(reason="Do not run in CI")
 def test_ie_session():
     service = IEService(executable_path=IEDriverManager().install())
 

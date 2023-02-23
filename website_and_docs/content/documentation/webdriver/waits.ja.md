@@ -235,7 +235,8 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
- new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< /tab >}}
+ new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(driver => driver.FindElement(By.Name("q")));
+  {{< /tab >}}
   {{< tab header="Ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
@@ -256,7 +257,6 @@ DOMと指示を同期しなければならないことは非常に一般的で�
 
 異なる言語バインディングで利用可能な条件は異なりますが、これは少数の抜粋したリストです。
 
-<!-- TODO(ato): Fill in -->
 * alert is present
 * element exists
 * element is visible
@@ -269,7 +269,6 @@ DOMと指示を同期しなければならないことは非常に一般的で�
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 * JavaScript's [selenium-webdriver/lib/until](//seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html) module
 
 
@@ -359,10 +358,8 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
 
-WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
-  public WebElement apply(WebDriver driver) {
-    return driver.findElement(By.id("foo"));
-  }
+WebElement foo = wait.until(driver -> {
+  return driver.findElement(By.id("foo"));
 });
   {{< /tab >}}
   {{< tab header="Python" >}}

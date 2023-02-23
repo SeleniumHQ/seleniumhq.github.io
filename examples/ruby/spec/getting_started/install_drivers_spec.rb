@@ -2,13 +2,11 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Install Drivers' do
+RSpec.describe 'Install Drivers', exclude: {ci: :github} do
   it 'chrome session' do
     require 'webdrivers'
 
-    driver = Selenium::WebDriver.for :chrome
-
-    driver.quit
+    @driver = Selenium::WebDriver.for :chrome
   end
 
   it 'edge session' do

@@ -1,4 +1,4 @@
-const { By, Key } = require('selenium-webdriver');
+const { By, Key, Browser} = require('selenium-webdriver');
 const { suite } = require('selenium-webdriver/testing');
 const assert = require("assert");
 
@@ -30,4 +30,4 @@ suite(function(env) {
         });
 
     });
-});
+},{ browsers: [Browser.CHROME, Browser.FIREFOX]});

@@ -1,37 +1,37 @@
 ---
-title: "Firefox specific functionality"
+title: "Firefox 固有のCapability"
 linkTitle: "Firefox"
 weight: 6
 description: >-
-    These are capabilities and features specific to Mozilla Firefox browsers.
+    Mozilla Firefox ブラウザーに固有のCapabilityです。
 aliases: [
 "/ja/documentation/capabilities/firefox"
 ]
 ---
 
-Selenium 4 requires Firefox 78 or greater. It is recommended to always use the latest version of geckodriver.
+Selenium 4 には Firefox 78 以降が必要です。 
+常に最新バージョンの geckodriver を使用することをお勧めします。
 
-## Options
+## オプション
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+全ブラウザに共通のCapabilityについては、[オプションページ]({{< ref "../drivers/options.md" >}})で説明しています。
 
-Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
+Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions) にあります。
 
-Starting a Firefox session with basic defined options looks like this:
+基本的な定義済みのオプションを使用して Firefox セッションを開始すると、以下のようになります。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L24-L25" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L11-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L9-L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L31-L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L10-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
@@ -41,29 +41,53 @@ Note that Python must specify service class to use [Driver Manager]({{< ref "../
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+さまざまなCapabilityを備えた一般的な使用例をいくつか示します。
 
-### Arguments
+### 引数
 
-The `args` parameter is for a list of Command line switches used when starting the browser.  
-Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
+`args` パラメータは、ブラウザの起動時に使用するコマンドラインスイッチのリストです。
+一般的に使用される引数には、 `-headless` と `"-profile"` 、`"/path/to/profile"` が含まれます。
 
-Add an argument to options:
+オプションに引数を追加します。
+
+<div>
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
+{{< /tab >}}
+{{< tab header="Python" code=true >}}
+options=Options()
+options.add_argument("-profile")
+options.add_argument("/path/to/profile")
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+</div>
+
+### 指定したロケーションでブラウザを起動する
+
+`binary` パラメーターは、使用するブラウザーの別のロケーションのパスを取ります。
+たとえば、このパラメーターを使用すると、geckodriver を使用して、製品版とFirefox Nightlyの両方がコンピューターに存在する場合、
+製品版の代わりに Firefox Nightly を駆動できます 。
+
+オプションにブラウザーのロケーションを追加します。
 
 {{< alert-code />}}
 
-### Start browser in a specified location
+### プロファイル
 
-The `binary` parameter takes the path of an alternate location of browser to use. For example, with this parameter you can
-use geckodriver to drive Firefox Nightly instead of the production version when both are present on your computer.
-
-Add a browser location to options:
-
-{{< alert-code />}}
-
-### Profiles
-
-There are several ways to work with Firefox profiles
+Firefoxプロファイルを操作するにはいくつかの方法があります。
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
@@ -113,23 +137,23 @@ driver = RemoteWebDriver(options)
 {{< /tabpane >}}
 </div>
 
-## Add-ons
+## アドオン
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Chromeとは異なり、Firefoxの拡張機能はCapabilityの一部として追加されるのではなく、ドライバーの起動後に作成されます。
 
-### Installation
+### インストール
 
-A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla.org/en-US/firefox/) 
+[Mozilla Add-Onsページ](https://addons.mozilla.org/ja/firefox/) から取得する署名付きxpiファイル
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L38-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L20-L21" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L40-L42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L32-L34" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L15-L16" >}}
@@ -142,20 +166,21 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Uninstallation
+### アンインストール
 
-Uninstalling an addon requires knowing its id. The id can be obtained from the return value when installing the add-on.
+アドオンをアンインストールするには、そのIDを知る必要があります。
+IDはアドオンインストール時の戻り値から取得できます。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L49-L51" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L32-L34" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L29-L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L55-L58" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L24-L26" >}}
@@ -168,22 +193,22 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Unsigned installation
+### 署名なしのインストール
 
-When working with an unfinished or unpublished extension, it will likely not be signed. As such, it can only
-be installed as "temporary." This can be done by passing in either a zip file or a directory, here's an 
-example with a directory:
+未完成または未公開の拡張機能を使用する場合、署名されていない可能性があります。
+そのため、"一時的なもの" としてのみインストールできます。
+これは、zipファイルまたはディレクトリを渡すことで実行できます。ディレクトリの例を次に示します。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L60-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L43-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L40-L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L69-L71" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L61-L63" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.5" >}}
@@ -197,10 +222,10 @@ example with a directory:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Full page screenshots
+## ページ全体のスクリーンショット
 
 {{< alert-code />}}
 
-## Context
+## コンテキスト
 
 {{< alert-code />}}

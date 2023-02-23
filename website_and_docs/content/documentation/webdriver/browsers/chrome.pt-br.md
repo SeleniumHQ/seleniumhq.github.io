@@ -1,102 +1,173 @@
 ---
-title: "Chrome specific functionality"
+title: "Funcionalidade específica do Chrome"
 linkTitle: "Chrome"
 weight: 4
 description: >-
-    These are capabilities and features specific to Google Chrome browsers.
+    Estas capacidades e características são específicas ao navegador Google Chrome.
 aliases: [
 "/pt-br/documentation/capabilities/chromium"
 ]
 ---
 
-By default, Selenium 4 is compatible with Chrome v75 and greater. Note that the version of
-the Chrome browser and the version of chromedriver must match the major version.
+Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a versão (maior) do navegador e do chromedriver devem ser idênticas.
 
-## Options
+## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
 
-Capabilities unique to Chrome can be found at Google's page for [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
+Capacidades únicas ao Chrome podem ser encontradas na página da Google para [Capacidades e & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
-Starting a Chrome session with basic defined options looks like this:
+Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L25-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Note that Python must specify service class to use [Driver Manager]({{< ref "../getting_started/install_drivers.md" >}})
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L8-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L51-L55">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+Alguns exemplos de uso com capacidades diferentes:
 
-### Arguments
+### Argumentos
 
-The `args` parameter is for a list of [Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
-used when starting the browser.
-Commonly used args include `--start-maximized` and `user-data-dir=/tmp/temp_profile`
+O parametro `args` é usado para indicar uma lista de [opções](https://peter.sh/experiments/chromium-command-line-switches/) ao iniciar o navegador. 
+Opções mais frequentes incluem `--start-maximized` e `--headless=new`
 
-Add an argument to options:
+Adicione uma opção:
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L21-L22" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L18" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L9-L12">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Iniciar navegador numa localização específica
+
+Adicionar uma localização:
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Adicionar extensões
+
+O parametro `extensions` aceita ficheiros crx 
+
+Adicionar uma extensão:
 
 {{< alert-code />}}
 
-### Start browser in a specified location
+### Manter o navegador aberto
 
-The `binary` parameter takes the path of an alternate location of browser to use. With this parameter you can
-use chromedriver to drive various Chromium based browsers.
+Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo depois do driver fechar.
 
-Add a browser location to options:
+Adicionar detach:
 
-{{< alert-code />}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L21" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#29-L32">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
-### Add extensions
+### Excluindo parametros
 
-The `extensions` parameter accepts crx files
+Chrome adiciona vários parametros, se não os pretende adicionar, passe-os em `excludeSwitches`.
 
-Add an extension to options:
+Um exemplo comum é voltar a activar o bloqueador de popups.
 
-{{< alert-code />}}
+Exclua parametros:
 
-### Keeping browser open
-
-Setting the `detach` parameter to true will keep the browser open after the driver process has been quit.
-
-Ad a binary to options:
-
-{{< alert-code />}}
-
-### Excluding arguments
-
-Chrome adds various arguments, if you do not want those arguments added, pass them into `excludeSwitches`.
-A common example is to turn the popup blocker back on.
-
-Set excluded arguments on options:
-
-{{< alert-code />}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L30-L31" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L28" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ## Casting
 
-You can drive Chrome Cast devices, including sharing tabs
+Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
 {{< alert-code />}}
 
-## Network conditions
+## Condições de rede
 
-You can simulate various network conditions.
+Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
 
 {{< alert-code />}}
 
@@ -104,10 +175,10 @@ You can simulate various network conditions.
 
 {{< alert-code />}}
 
-## Permissions
+## Permissões
 
 {{< alert-code />}}
 
 ## DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using Chrome DevTools
+Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) para mais informação em como usar Chrome DevTools

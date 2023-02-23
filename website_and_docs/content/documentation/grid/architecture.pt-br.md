@@ -1,120 +1,104 @@
 ---
-title: "Grid Architecture"
-linkTitle: "Grid Architecture"
+title: "Arquitectura da Grid"
+linkTitle: "Arquitectura da Grid"
 weight: 10
 aliases: [
 "/pt-br/documentation/grid/grid_architecture"
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+A Grid está desenhada como um conjunto de componentes, em que cada tem
+o seu papel crucial em manter a Grid. Isto pode parecer um pouco complicado,
+mas esperamos que este documento ajude a esclarecer alguma confusão.
 
-The Grid is designed as a set of components that all fulfill a role in
-maintaining the Grid. It can seem quite complicated, but hopefully
-this document can help clear up any confusion.
+## Os componentes chave
 
-## The Key Components
-
-The main components of the Grid are:
+Os componentes principais da Grid são:
 
 <dl>
 <dt>Event Bus
-<dd>Used for sending messages which may be received asynchronously
-    between the other components.
+<dd>Usado para enviar mensagens que podem ser recebidas de forma assíncrona
+    entre os outros componentes.
 
 <dt>New Session Queue
-<dd>Maintains a list of incoming sessions which have yet to be
-    assigned to a Node by the Distributor.
+<dd>Mantém uma lista de pedidos de sessão que serão assignadas a um Node
+    pelo Distributor.
 
 <dt>Distributor
-<dd>Responsible for maintaining a model of the available locations in
-    the Grid where a session may run (known as "slots") and taking any
-    incoming <a
-    href="https://w3c.github.io/webdriver/#new-session">new
-    session</a> requests and assigning them to a slot.
+<dd>Responsável por manter um modelo das localizações da Grid (slots) onde uma 
+    sessão pode ser lançada e também por aceitar novos 
+    <a href="https://w3c.github.io/webdriver/#new-session">pedidos de sessão</a> 
+    e assignar a um slot livre.
 
 <dt>Node
-<dd>Runs a <a
-    href="https://w3c.github.io/webdriver/#dfn-sessions">WebDriver
-    session</a>. Each session is assigned to a slot, and each node has
-    one or more slots.
+<dd>Executa uma <a href="https://w3c.github.io/webdriver/#dfn-sessions"> 
+    sessão WebDriver</a>. Cada sessão é assignada a um slot e cada Node tem
+    um ou mais slots.
 
 <dt>Session Map
-<dd>Maintains a mapping between the <a
-    href="https://w3c.github.io/webdriver/#dfn-session-id">session
-    ID</a> and the address of the Node the session is running on.
+<dd>Mantém um mapeamento entre um <a
+    href="https://w3c.github.io/webdriver/#dfn-session-id">ID de sessão</a>
+    e o endereço do Node onde a sessão está a ser executada.
 
 <dt>Router
-<dd>Acts as the front-end of the Grid. This is the only part of the
-    Grid which <i>may</i> be exposed to the wider Web (though we strongly
-    caution against it). This routes incoming requests to either the
-    New Session Queue or the Node on which the session is running.
+<dd>Este é o ponto de entrada da Grid. É também a única parte da Grid
+    que <i>poderá</i> estar exposta à Internet (embora nós não recomendemos).
+    Este componente reencaminha novos pedidos para New Session Queue ou 
+    para o Node onde a sessão esteja a ser executada
 </dl>
 
-While discussing the Grid, there are some other useful concepts to
-keep in mind:
+Ao falar da Grid, há alguns conceitos úteis a ter em mente:
 
- * A **slot** is the place where a session can run.
- * Each slot has a **stereotype**. This is the minimal set of
-   capabilities that a [new session][] session request must match
-   before the Distributor will send that request to the Node owning
-   the slot.
- * The **Grid Model** is how the Distributor tracks the state of the
-   Grid. As the name suggests, this may sometimes fall out of sync
-   with reality (perhaps because the Distributor has only just
-   started). It is used in preference to querying each Node so that
-   the Distributor can quickly assign a slot to a New Session request.
+ * Um **slot** é o sítio onde uma sessão pode ser executada
+ * Cada slot tem um **stereotype**. Isto é um conjunto mínimo de capacidades
+   que um pedido de [nova sessão][new session] terá que corresponder antes que o 
+   Distributor envie esse pedido ao Node que tenha esse slot
+ * O **Grid Model** é como o Distributor mantém o estado actual da Grid.
+   Como o nome sugere, este modelo pode perder o sincronismo com a realidade.
+   Este mecanismo é preferível do que estar a questionar cada Node, e
+   desta forma, o Distributor rapidamente consegue alocar uma nova sessão a um slot.
 
-## Synchronous and Asynchronous Calls
 
-There are two main communication mechanisms used within the Grid:
+## Chamadas Síncronas e Assíncronas
 
- 1. Synchronous "REST-ish" JSON over HTTP requests.
- 2. Asynchronous events sent to the Event Bus.
+Existem duas formas de comunicação dentro da Grid:
 
-How do we pick which communication mechanism to use? After all, we
-could model the entire Grid in an event-based way, and it would work
-out just fine.
+ 1. Chamadas Síncronas "REST-ish" que usam JSON sobre pedidos HTTP.
+ 2. Eventos Assíncronos enviados para o Event Bus.
 
-The answer is that if the action being performed is synchronous
-(eg. most WebDriver calls), or if missing the response would be
-problematic, the Grid uses a synchronous call. If, instead, we want to
-broadcast information to anyone who's interested, or if missing the
-response doesn't matter, then we prefer to use the event bus.
+Como é que escolhemos que tipo de mecanismo de comunicação a usar?
+Afinal, podiamos ter escolhido usar apenas comunicação baseada em eventos
+e tudo iria funcionar sem problemas.
 
-One interesting thing to note is that the async calls are more
-decoupled from their listeners than the synchronous calls are.
+No entanto a resposta correcta é, se a acção em curso é síncrona, por exemplo
+a maioria das chamadas WebDriver, ou se perder uma resposta é problemático,
+a Grid usa chamadas síncronas. Se quisermos propagar informação que pode ter
+várias partes interessadas, ou se perder a mensagem não for crítico, 
+a Grid usará o event bus.
 
-## Start Up Sequence and Dependencies Between Components
+Um facto interessante a notar é que as chamadas assíncronas estão menos
+"presas" aos processos que as executam do que todas as chamadas síncronas.
 
-Although the Grid is designed to allow components to start up in any
-order, conceptually the order in which components starts is:
+## Sequência de início e dependencias entre componentes
 
-1. The Event Bus and Session Map start first. These have no other
-   dependencies, not even on each other, and so are safe to start in
-   parallel.
-2. The Session Queue starts next.
-3. It is now possible to start the Distributor. This will periodically
-   connect to the Session Queue and poll for jobs, though this polling
-   might be initiated either by an event (that a New Session has been
-   added to the queue) or at regular intervals.
-4. The Router(s) can be started. New Session requests will be directed
-   to the Session Queue, and the Distributor will attempt to find a
-   slot to run the session on.
-5. We are now able to start a Node. See below for details about how
-   the Node is registered with the Grid. Once registration is
-   complete, the Grid is ready to serve traffic.
+Embora a Grid seja desenhada para permitir que os componentes possam iniciar
+em qualquer ordem, conceptualmente é esperado que a ordem de início seja:
 
-You can picture the dependencies between components this way, where a
-"✅" indicates that there is a synchronous dependency between the
-components.
+1. O Event Bus e o Session Map iniciam primeiro. Estes componentes não tem qualquer
+   dependencia, nem mesmo entre eles e como tal, podem iniciar em paralelo.
+2. A Session Queue inicia de seguida
+3. O Distributor inicia. Irá periodicamente procurar novos pedidos de sessão 
+   na Session Queue, embora possa também receber um evento de um pedidos de sessão.
+4. O Router pode ser agora iniciado. Novos pedidos de sessão são direccionados para
+   a Session Queue, o Distributor tentará encontrar um slot onde a sessão possa ser 
+   executada.
+5. O Node pode ser iniciado, veja mais abaixo os detalhes de como o Node se 
+   regista na Grid. Uma vez que o registo esteja concluído, a Grid estará 
+   pronta a receber pedidos.
+
+Nesta tabela pode ser visualizada a dependencia ente os vários componentes.
+Um "✅" indica que a dependência é síncrona.
+
 
 |               | Event Bus | Distributor | Node | Router | Session Map | Session Queue |
 |---------------|-----------|-------------|------|--------|-------------|---------------|
@@ -125,66 +109,64 @@ components.
 | Session Map   |           |             |      |        |     X       |               |
 | Session Queue |    ✅     |             |      |        |             |      X        |
 
-## Node Registration
+## Registo de Node
 
-The process of registering a new Node to the Grid is lightweight.
+O processo de registar um Node na Grid é um processo "leve".
 
-  1. When the Node starts, it should emit a "heart beat" event on a
-    regular basis. This heartbeat contains the [node status].
-  2. The Distributor listens for the heart beat events. When it sees
-    one, it attempts to `GET` the `/status` endpoint of the Node. It
-    is from this information that the Grid is set up.
+  1. Quando um Node inicia, vai publicar um evento "heart beat" numa
+     base regular. Este evento contém o estado do Node.
+  2. O Distributor escuta os eventos "heart beat" e quando obtém um,
+     tenta um `GET` ao endpoint `/status` do Node. A Grid é 
+     preparada com base nesta informação.
 
-The Distributor will use the same `/status` endpoint to check the Node
-on a regular basis, but the Node should continue sending heart beat
-events even after started so that a Distributor without a persistent
-store of the Grid state can be restarted and will (eventually) be up
-to date and correct.
+O Distributor irá usar regularmente o endpoint `/status` para continuar
+a obter o estado do Node. Por seu lado, o Node continua a publicar um 
+evento "heart beat" mesmo depois do registo ter sido concluído com 
+sucesso.
+Isto é feito para que mesmo que um Distributor não tenha um estado
+da Grid possa reiniciar e assim obter novamente uma visão do estado
+da Grid e assim ficar actualizado.
 
-### The Node Status Object
+### Objecto Node Status
 
-The Node Status is a JSON blob with the following fields:
+O Node Status é um blob JSON com os seguintes campos:
 
-| Name | Type | Description |
+| Nome | Tipo | Descrição |
 |------|------|-------------|
-| availability | string | A string which is one of `up`, `draining`, or `down`. The important one is `draining`, which indicates that no new sessions should be sent to the Node, and once the last session on it closes, the Node will exit or restart. |
-| externalUrl | string | The URI that the other components in the Grid should connect to. |
-| lastSessionCreated | integer | The epoch timestamp of when the last session was created on this Node. The Distributor will attempt to send new sessions to the Node that has been idle longest if all other things are equal. |
-| maxSessionCount | integer | Although a session count can be inferred by counting the number of available slots, this integer value is used to determine the maximum number of sessions that should be running simultaneously on the Node before it is considered "full". |
-| nodeId | string | A UUID used to identify this instance of the Node. |
-| osInfo | object | An object with `arch`, `name`, and `version` fields. This is used by the Grid UI and the GraphQL queries. |
-| slots | array | An array of Slot objects (described below) |
-| version | string | The version of the Node (for Selenium, this will match the Selenium version number) |
+| availability | string | Uma string com `up`, `draining`, ou `down`. A mais importante é `draining`, que indica que não devem ser enviados novos pedidos de sessão para o Node e assim que a última sessão termine, o Node irá reiniciar ou concluir. |
+| externalUrl | string | Uma URI que os outros componentes da Grid se devem ligar. |
+| lastSessionCreated | integer | Um timestamp da última sessão que foi criada neste Node. O Distributor irá tentar enviar novos pedidos de sessão para o Node que esteja parado há mais tempo. |
+| maxSessionCount | integer | Embora seja possível inferir o número máximo de sessões a partir da lista de slots disponíveis, este número é usado para determinar qual é o máximo de sessões que este Node pode executar em simultâneo antes que se considere que está "cheio". |
+| nodeId | string | Um identificador UUID para esta instância do Node. |
+| osInfo | object | Um objecto contendo os campos `arch`, `name`, e `version`. Isto é usado pela Grid UI e pelas queries GraphQL. |
+| slots | array | Um array de objectos Slot (descritos na secção seguinte) |
+| version | string | A versão do Node (para Selenium, será igual à versão do Selenium) |
 
-It is recommended to put values in all fields.
+É recomendado que todos os campos tenham valores.
 
-### The Slot Object
+### O Objecto Slot
 
-The Slot object represents a single slot within a Node. A "slot" is
-where a single session may be run. It is possible that a Node will
-have more slots than it can run concurrently. For example, a node may
-be able to run up 10 sessions, but they could be any combination of
-Chrome, Edge, or Firefox; in this case, the Node would indicate a "max
-session count" of 10, and then also say it has 10 slots for Chrome, 10
-for Edge, and 10 for Firefox.
+O objecto Slot representa um slot dentro de um Node. Um "slot" é onde uma sessão consegue ser executada. É possível que um Node tenha mais do que um Slot capaz de executar ao mesmo tempo.
+Por exemplo, um Node pode ser capaz de executar até 10 sessões em simultâneo, mas podem ser uma qualquer combinação de Chrome, Firefox ou Edge e neste caso, o Node irá indicar 10 como o
+número máximo de sessões, indicando que podem ser 10 Chrome, 10 Firefox e 10 Edge.
 
-| Name | Type | Description |
+| Nome | Tipo | Descrição |
 |------|------|-------------|
-| id | string | UUID to refer to the slot |
-| lastStarted | string | When the slot last had a session started, in ISO-8601 format |
-| stereotype | object | The minimal set of [capabilities][capabilities] this slot will match against. A minimal example is `{"browserName": "firefox"}` |
-| session | object | The Session object (see below) |
+| id | string | Um identificador UUID para este slot |
+| lastStarted | string | timestamp no formato ISO-8601 contendo a data em que a última sessão iniciou |
+| stereotype | object | Conjunto mínimo de [capacidades][capabilities] que fazem match com este slot. O exemplo mínimo será por exemplo `{"browserName": "firefox"}` |
+| session | object | O objecto Session (descrito na secção seguinte) |
 
-### The Session Object
+### O Objecto Session
 
-This represents a running session within a slot
+Representa uma sessão em execução dentro de um Slot
 
-| Name | Type | Description |
+| Nome | Tipo | Descrição |
 |------|------|-------------|
-| capabilities | object | The actual capabilities provided by the session. Will match the return value from the [new session][new session] command |
-| startTime | string | The start time of the session in ISO-8601 format |
-| stereotype | object | The minimal set of [capabilities][capabilities] this slot will match against. A minimal example is `{"browserName": "firefox"}` |
-| uri | string | The URI used by the Node to communicate with the session |
+| capabilities | object | A lista de capacidades fornecidas pela sessão. Irá coincidir com o valor obtido pelo comando [nova sessão][new session] |
+| startTime | string | timestamp no formato ISO-8601 contendo a data em que a última sessão iniciou |
+| stereotype | object | Conjunto mínimo de [capacidades][capabilities] que fazem match com este slot. O exemplo mínimo será por exemplo `{"browserName": "firefox"}` |
+| uri | string | A URI usada pelo Node para comunicar com a sessão |
 
 [capabilities]: https://w3c.github.io/webdriver/#dfn-merging-capabilities
 [new session]: https://w3c.github.io/webdriver/#new-session

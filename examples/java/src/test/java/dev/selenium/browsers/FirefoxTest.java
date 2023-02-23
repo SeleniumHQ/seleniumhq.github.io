@@ -1,9 +1,7 @@
 package dev.selenium.browsers;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,11 +13,6 @@ import java.nio.file.Paths;
 
 public class FirefoxTest {
     public FirefoxDriver driver;
-
-    @BeforeAll
-    public static void setDriver() {
-        WebDriverManager.firefoxdriver().setup();
-    }
 
     @AfterEach
     public void quit() {
@@ -64,4 +57,11 @@ public class FirefoxTest {
         WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
         Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
+
+    @Test
+    public void headlessOptions() {
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("-headless");
+        driver = new FirefoxDriver(options);
+    }    
 }

@@ -2,17 +2,13 @@
 title: "Selenium IDE"
 linkTitle: "IDE"
 weight: 10
-needsTranslation: true
 description: >
-    The Selenium IDE is a browser extension that records and plays back a user's actions.
+    Selenium IDE é uma extensão do navegador que grava e reproduz uma acção do utilizador.
 ---
 
 Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
-is an easy-to-use browser extension that records a user's
-actions in the browser using existing Selenium commands,
-with parameters defined by the context of each element.
-It provides an excellent way to learn Selenium syntax.
-It's available for Google Chrome, Mozilla Firefox, and Microsoft Edge.
+é uma ferramenta de utilização simples que grava as acções de um utilizador usando comandos Selenium com parametros definidos conforme o contexto de cada elemento.
+Esta é uma forma excelente de aprender todo o sintaxe Selenium.
+Está disponível para os navegadores Google Chrome, Mozilla Firefox, e Microsoft Edge.
 
-For more information, visit the complete
-[Selenium IDE Documentation](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)
+Para mais informações, visite a [Documentação Selenium IDE](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started).

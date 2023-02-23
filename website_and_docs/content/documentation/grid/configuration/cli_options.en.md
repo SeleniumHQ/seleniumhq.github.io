@@ -224,6 +224,8 @@ pull request updating this page.
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
 | `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
+| `--downloads-path`| string | `/usr/downloads` | The default location wherein all browser triggered file downloads would be available to be retrieved from. This is usually the directory that you configure in your browser as the default location for storing downloaded files. |
+| `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
 
 ### Relay
 
@@ -349,3 +351,109 @@ driver.quit();
 ```
 
 Set the custom capability to `false` in order to match the Node B.
+
+#### Specifying path from where downloaded files can be retrieved
+
+At times a test may need to access files that were downloaded by it on the Node. To retrieve 
+such files, following can be done.
+
+##### Start the Hub
+```
+java -jar selenium-server-<version>.jar hub
+```
+
+##### Start the Node with downloads path specified
+```
+java -jar selenium-server-<version>.jar node --downloads-path /usr/downloads
+```
+##### Important information when dowloading a file:
+
+* The endpoint to `GET` from is `/session/<sessionId>/se/file?filename=`
+* The session needs to be active in order for the command to work.
+* The response blob contains two keys,
+    * `filename` - Same as what was specified in the request.
+    * `contents` - Base64 encoded zipped contents of the file.
+* The file contents are Base64 encoded and they need to be unzipped.
+
+##### Sample that retrieves the downloaded file
+
+Assuming the downloaded file is named `my_file.pdf`, and using `curl`, the 
+file could be downloaded with the following command:
+
+```bash
+curl -X GET "http://localhost:4444/session/<sessionId>/se/file?filename=my_file.pdf"
+```
+
+Below is an example in Java that shows how to download a file named `my_file.pdf`.
+
+```java
+import static org.openqa.selenium.remote.http.Contents.string;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.io.Zip;
+import org.openqa.selenium.json.Json;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.HttpClient;
+import org.openqa.selenium.remote.http.HttpMethod;
+import org.openqa.selenium.remote.http.HttpRequest;
+import org.openqa.selenium.remote.http.HttpResponse;
+
+public class DownloadsSample {
+
+  public static void main(String[] args) throws InterruptedException, IOException {
+    // Make sure the following directory exists on your machine
+    File dirToCopyTo = new File("/usr/downloads/file");
+    // Assuming the Grid is running locally.
+    URL gridUrl = new URL("http://localhost:4444");
+    RemoteWebDriver driver = new RemoteWebDriver(gridUrl, firefoxOptions());
+    // This public website resets the available files for dowload on a daily basis, 
+    // check the name of the file that will be downloaded and replace it below.
+    driver.get("http://the-internet.herokuapp.com/download");
+    WebElement element = driver.findElement(By.cssSelector(".example a"));
+    element.click();
+
+    // The download happens in a remote Node, which makes difficult to know when the file 
+    // has been completely downloaded. For demonstration purposes, this example uses a 
+    // 10 second sleep which should be enough time for a file to be downloaded. 
+    // We strongly recommend to avoid hardcoded sleeps, and ideally, to modify your 
+    // application under test so it offers a way to know when the file has been completely 
+    // downloaded. 
+    TimeUnit.SECONDS.sleep(10);
+
+    HttpRequest request = new HttpRequest(HttpMethod.GET, String.format("/session/%s/se/file", driver.getSessionId()));
+    request.addQueryParameter("filename", "my_file.pdf");
+    try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
+      HttpResponse response = client.execute(request);
+      Map<String, Object> map = new Json().toType(string(response), Json.MAP_TYPE);
+      // The returned map would contain 2 keys,
+      // filename - This represents the name of the file (same as what was provided by the test)
+      // contents - Base64 encoded String which contains the zipped file.
+      String encodedContents = map.get("contents").toString();
+
+      //The file contents would always be a zip file and has to be unzipped.
+      Zip.unzip(encodedContents, dirToCopyTo);
+    } finally {
+      driver.quit();
+    }
+  }
+
+  private static FirefoxOptions firefoxOptions() {
+    FirefoxOptions options = new FirefoxOptions();
+    // Options specific for Firefox to avoid prompting a dialog for downloads. They might 
+    // change in the future, so please refer to the Firefox documentation for up to date details.
+    options.addPreference("browser.download.manager.showWhenStarting", false);
+    options.addPreference("browser.helperApps.neverAsk.saveToDisk",
+        "images/jpeg, application/pdf, application/octet-stream");
+    options.addPreference("pdfjs.disabled", true);
+    return options;
+  }
+}
+```
+

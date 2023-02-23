@@ -1,37 +1,38 @@
-const { Capabilities } = require('selenium-webdriver');
-const { suite } = require('selenium-webdriver/testing');
+const Chrome = require('selenium-webdriver/chrome');
+const {suite} = require('selenium-webdriver/testing');
+const {Browser} = require("selenium-webdriver");
+const options = new Chrome.Options()
 
-suite(function(env) {
-    describe('Page loading strategies', function() {
-        it('Navigate using eager page loading strategy', async function() {
-            let caps = new Capabilities();
-            caps.setPageLoadStrategy("eager");
-            let driver = await env.builder().withCapabilities(caps).build();
+suite(function (env) {
+  describe('Page loading strategies', function () {
+    it('Navigate using eager page loading strategy', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.setPageLoadStrategy('eager'))
+        .build();
 
-            await driver.get('https://www.google.com');
-
-            driver.quit();
-        });
-
-        it('Navigate using none page loading strategy', async function() {
-            let caps = new Capabilities();
-            caps.setPageLoadStrategy("none");
-            let driver = await env.builder().withCapabilities(caps).build();
-
-            await driver.get('https://www.google.com');
-
-            driver.quit();
-        });
-
-        it('Navigate using normal page loading strategy', async function() {
-            let caps = new Capabilities();
-            caps.setPageLoadStrategy("normal");
-            let driver = await env.builder().withCapabilities(caps).build();
-
-            await driver.get('https://www.google.com');
-
-            driver.quit();
-        });
-
+      await driver.get('https://www.google.com');
+      await driver.quit();
     });
-});
+
+    it('Navigate using none page loading strategy', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.setPageLoadStrategy('none'))
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
+
+    it('Navigate using normal page loading strategy', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.setPageLoadStrategy('normal'))
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
+  });
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]});
