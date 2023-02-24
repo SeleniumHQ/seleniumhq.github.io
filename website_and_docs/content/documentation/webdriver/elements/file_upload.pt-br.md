@@ -116,7 +116,7 @@ import {Builder,By} from "selenium-webdriver"
 let driver = await new Builder().forBrowser('chrome').build()
 await driver.get("https://the-internet.herokuapp.com/upload");
 
-await driver.findElement(By.id("file-upload")).sendKeys("/data/jsObject/JSWebAutomatedTest/selenium-snapshot.jpg")
+await driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg")
 await driver.findElement(By.id("file-submit")).submit()
 
 driver.getPageSource().then(result => {
@@ -136,7 +136,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 fun main() {
     val driver = ChromeDriver()
     driver.get("https://the-internet.herokuapp.com/upload")
-    driver.findElement(By.id("file-upload")).sendKeys("/data/ktProject/src/main/java/selenium-snapshot.jpg")
+    driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg")
     driver.findElement(By.id("file-submit")).submit()
     if(driver.pageSource.contains("File Uploaded!")) {
         println("file uploaded")
