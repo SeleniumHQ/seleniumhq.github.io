@@ -93,15 +93,58 @@ namespace SeleniumDocumentation.SeleniumPRs
 }
 
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-// Help us by sending a code sample for file upload
+
+{{< tab header="Ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+driver.get("https://the-internet.herokuapp.com/upload")
+driver.find_element(:id,"file-upload").send_keys("selenium-snapshot.jpg")
+driver.find_element(:id,"file-submit").submit()
+
+if driver.page_source().include? "File Uploaded!"
+  puts "file upload success"
+else
+  puts "file upload not successful"
+end
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Help us by sending a code sample for file upload
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-  // Help us by sending a code sample for file upload
+  
+{{< tab header="JavaScript" >}}
+import {Builder,By} from "selenium-webdriver"
+
+
+let driver = await new Builder().forBrowser('chrome').build()
+await driver.get("https://the-internet.herokuapp.com/upload");
+
+await driver.findElement(By.id("file-upload")).sendKeys("/data/jsObject/JSWebAutomatedTest/selenium-snapshot.jpg")
+await driver.findElement(By.id("file-submit")).submit()
+
+driver.getPageSource().then(result => {
+    if (result.indexOf("File Uploaded!")){
+        console.log("file upload success")
+    }else {
+        console.log("file upload not successful")
+    }
+})
+  
+{{< /tab >}}
+
+{{< tab header="Kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    driver.get("https://the-internet.herokuapp.com/upload")
+    driver.findElement(By.id("file-upload")).sendKeys("/data/ktProject/src/main/java/selenium-snapshot.jpg")
+    driver.findElement(By.id("file-submit")).submit()
+    if(driver.pageSource.contains("File Uploaded!")) {
+        println("file uploaded")
+    }
+    else{
+        println("file not uploaded")
+    }
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
