@@ -31,9 +31,6 @@ fi
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"
 rm -rf website_and_docs/public
 
-echo -e "\033[0;32mGit init for Docsy...\033[0m"
-git submodule update -f --init --recursive
-
 echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
 cd website_and_docs && npm install
 

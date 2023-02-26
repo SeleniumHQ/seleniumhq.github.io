@@ -28,13 +28,13 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L7-L8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openChromeTest.spec.js#L10-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L51-L55">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -46,9 +46,37 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 ### 引数
 
 `args` パラメータは、ブラウザの起動時に使用される[コマンドラインスイッチ](https://peter.sh/experiments/chromium-command-line-switches/)のリストです。  
-一般的に使用される引数には、`--start-maximized` および `user-data-dir=/tmp/temp_profile` が含まれます。
+一般的に使用される引数には、`--start-maximized` および `--headless=new` が含まれます。
 
 オプションに引数を追加します。
+
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L21-L22" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L18" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L9-L12">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### 指定したロケーションでブラウザを起動する
+
+`binary`パラメーターは、使用するブラウザの別のロケーションのパスを取ります。 
+このパラメーターを使用すると、chromedriver を使用して、さまざまな Chromium ベースのブラウザを駆動できます。
+
+オプションにブラウザのロケーションを追加します。
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -64,21 +92,12 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L8-L11">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
-
-### 指定したロケーションでブラウザを起動する
-
-`binary`パラメーターは、使用するブラウザの別のロケーションのパスを取ります。 
-このパラメーターを使用すると、chromedriver を使用して、さまざまな Chromium ベースのブラウザを駆動できます。
-
-オプションにブラウザのロケーションを追加します。
-
-{{< alert-code />}}
 
 ### 拡張機能を追加する
 
@@ -103,16 +122,16 @@ please use the `load-extension` argument instead, as mentioned in
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L28-L31">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L29-L32">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -132,16 +151,16 @@ Chrome はさまざまな引数を追加します。
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L30-L31" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L28" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L18-L21">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

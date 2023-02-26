@@ -50,12 +50,27 @@ Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
 Add an argument to options:
 
 <div>
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Python" >}}
+{{< tabpane code=false langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
+{{< /tab >}}
+{{< tab header="Python" code=true >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
-  {{< /tab >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 </div>
 

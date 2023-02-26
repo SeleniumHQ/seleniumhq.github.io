@@ -25,7 +25,7 @@ de começar a interagir com um site e sua página inicial é grande / demora um 
 uma alternativa é encontrar uma página menor no site (normalmente a página 404 é pequena,
 por exemplo http://example.com/some404page)
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -113,7 +113,7 @@ fun main() {
 
 Retorna os dados do cookie serializado correspondentes ao nome do cookie entre todos os cookies associados.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -213,7 +213,7 @@ fun main() {
 Retorna 'dados de cookie serializados com sucesso' para o contexto de navegação atual.
 Se o navegador não estiver mais disponível, ele retornará um erro. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -318,7 +318,7 @@ fun main() {
 
 Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -433,7 +433,7 @@ fun main() {
 
 Exclui todos os cookies do contexto de navegação atual.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -548,7 +548,7 @@ iniciada por um site de terceiros.
 **Nota**: **a partir de agora, esse recurso está disponível no Chrome (versão 80+),
 Firefox (versão 79+) e funciona com Selenium 4 e versões posteriores.**
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

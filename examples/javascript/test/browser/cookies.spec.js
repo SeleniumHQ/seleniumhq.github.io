@@ -1,4 +1,5 @@
 const { suite } = require('selenium-webdriver/testing');
+const {Browser} = require("selenium-webdriver");
 
 suite(function(env) {
     describe('Cookies', function() {
@@ -78,4 +79,4 @@ suite(function(env) {
         });
 
     });
-});
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]});

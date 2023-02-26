@@ -1,4 +1,4 @@
-const { By, Builder } = require('selenium-webdriver');
+const { By, Builder, Browser} = require('selenium-webdriver');
 const { suite } = require('selenium-webdriver/testing');
 
 suite(function(env) {
@@ -23,4 +23,4 @@ suite(function(env) {
         });
 
     });
-});
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]});

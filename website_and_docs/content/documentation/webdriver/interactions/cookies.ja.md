@@ -23,7 +23,7 @@ Cookieの追加では、一連の定義済みのシリアル化可能なJSONオ�
 まず、Cookieが有効になるドメインにいる必要があります。
 サイトとの対話を開始する前にCookieを事前設定しようとしていて、ホームページが大きい場合/代替の読み込みに時間がかかる場合は、サイトで小さいページを見つけることです。（通常、たとえば http://example.com/some404page のような、404ページは小さいです。）
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -111,7 +111,7 @@ fun main() {
 
 関連付けられているすべてのCookieの中で、Cookie名と一致するシリアル化されたCookieデータを返します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -211,7 +211,7 @@ fun main() {
 現在のブラウジングコンテキストの '成功したシリアル化されたCookieデータ' を返します。
 ブラウザが使用できなくなった場合、エラーが返されます。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -316,7 +316,7 @@ fun main() {
 
 指定されたCookie名と一致するCookieデータを削除します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -431,7 +431,7 @@ fun main() {
 
 現在のブラウジングコンテキストの全てのCookieを削除します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -544,7 +544,7 @@ CookieのSameSite属性を **Lax** に設定すると、Cookieはサードパー
 **Note**: **As of now this feature is landed in chrome(80+version), 
 Firefox(79+version) and works with Selenium 4 and later versions.**
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" code=true >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

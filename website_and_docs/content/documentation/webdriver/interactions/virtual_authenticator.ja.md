@@ -64,6 +64,7 @@ It creates a new virtual authenticator with the provided properties.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -85,6 +86,7 @@ Removes the previously added virtual authenticator.
 {{< tab header="Python" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}

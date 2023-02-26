@@ -57,4 +57,11 @@ public class FirefoxTest {
         WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
         Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
+
+    @Test
+    public void headlessOptions() {
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("-headless");
+        driver = new FirefoxDriver(options);
+    }    
 }

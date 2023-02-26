@@ -1,4 +1,4 @@
-const { By } = require('selenium-webdriver')
+const { By, Browser} = require('selenium-webdriver')
 const { suite } = require('selenium-webdriver/testing')
 const assert = require('assert')
 
@@ -92,4 +92,4 @@ suite(function (env) {
       return driver.executeScript("for(var e=arguments[0],f=e.offsetTop,t=e.offsetLeft,o=e.offsetWidth,n=e.offsetHeight;\ne.offsetParent;)f+=(e=e.offsetParent).offsetTop,t+=e.offsetLeft;\nreturn f<window.pageYOffset+window.innerHeight&&t<window.pageXOffset+window.innerWidth&&f+n>\nwindow.pageYOffset&&t+o>window.pageXOffset", element)
     }
   })
-})
+}, { browsers: [Browser.CHROME]})

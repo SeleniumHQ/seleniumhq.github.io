@@ -235,17 +235,17 @@ Este ficheiro pode ser obtido directamente de [repo1.maven.org](https://repo1.ma
 e depois pode iniciar a Grid com:
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar -—ext selenium-http-jdk-client-<version>.jar standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
 Uma alternativa a baixar o ficheiro jar `selenium-http-jdk-client` é usar [Coursier](https://get-coursier.io/docs/cli-installation).
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
 Se está a usar a Grid em modo **Hub/Node** ou **Distributed**, terá que usar as flags 
-`-Dwebdriver.http.factory=jdk-http-client` e `—-ext` em cada um dos componentes.
+`-Dwebdriver.http.factory=jdk-http-client` e `--ext` em cada um dos componentes.
 
 ## Dimensionar Grid
 

@@ -3,9 +3,6 @@ title = "Selenium"
 
 enableRobotsTXT = true
 
-# Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["docsy"]
-
 # Will give values to .Lastmod etc.
 enableGitInfo = true
 #ignoreErrors = ["error-remote-getjson"] 
@@ -79,7 +76,20 @@ description = "Selenium automates browsers. That's it!"
 languageName ="Other"
 weight = 5
 
-
+# Import docsy theme as module
+[module]
+  proxy = "direct"
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/google/docsy -> ../../docsy"
+  [module.hugoVersion]
+    extended = true
+    min = "0.73.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+    disable = false
 
 [markup]
   [markup.goldmark]
@@ -148,6 +158,9 @@ plausible_analytics = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
+
+# Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
+announcement_banner = true
 
 # User interface configuration
 [params.ui]

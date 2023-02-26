@@ -36,4 +36,11 @@ RSpec.describe 'Firefox' do
     injected = driver.find_element(id: 'webextensions-selenium-example')
     expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
   end
+
+  it 'add arguments' do
+    options = Selenium::WebDriver::Options.firefox(args: ['-headless'])
+
+    @driver = Selenium::WebDriver.for :firefox, options: options
+    @driver.get('https://www.google.com')
+  end
 end

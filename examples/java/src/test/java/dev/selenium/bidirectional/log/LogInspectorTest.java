@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.bidi.LogInspector;
-import org.openqa.selenium.bidi.log.BaseLogEntry;
 import org.openqa.selenium.bidi.log.ConsoleLogEntry;
 import org.openqa.selenium.bidi.log.JavascriptLogEntry;
+import org.openqa.selenium.bidi.log.LogLevel;
 import org.openqa.selenium.bidi.log.StackTrace;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -69,7 +69,7 @@ class LogInspectorTest {
 
             Assertions.assertEquals("Error: Not working", logEntry.getText());
             Assertions.assertEquals("javascript", logEntry.getType());
-            Assertions.assertEquals(BaseLogEntry.LogLevel.ERROR, logEntry.getLevel());
+            Assertions.assertEquals(LogLevel.ERROR, logEntry.getLevel());
         }
     }
 

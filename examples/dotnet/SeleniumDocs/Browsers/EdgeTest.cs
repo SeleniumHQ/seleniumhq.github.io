@@ -11,7 +11,15 @@ namespace SeleniumDocs.Browsers
         {
             var options = new EdgeOptions();
             var driver = new EdgeDriver(options);
+            driver.Quit();
+        }
 
+        [TestMethod]
+        public void HeadlessOptions() 
+        {
+            var options = new EdgeOptions();
+            options.AddArgument("--headless=new");
+            var driver = new EdgeDriver(options);
             driver.Quit();
         }
     }

@@ -1,4 +1,4 @@
-const {By, Button} = require('selenium-webdriver');
+const {By, Button, Browser} = require('selenium-webdriver');
 const {suite, ignore} = require('selenium-webdriver/testing');
 const assert = require('assert');
 
@@ -12,7 +12,7 @@ suite(function (env) {
 
     after(async () => await driver.quit());
 
-    it.skip('Back click', async function () {
+    ignore(env.browsers(Browser.FIREFOX, Browser.SAFARI)).it('Back click', async function () {
       await driver.get('https://selenium.dev/selenium/web/mouse_interaction.html');
       await driver.findElement(By.id("click")).click();
 
@@ -24,7 +24,7 @@ suite(function (env) {
       assert.deepStrictEqual(await driver.getTitle(), `BasicMouseInterfaceTest`)
     });
 
-    it.skip('Forward click', async function () {
+    ignore(env.browsers(Browser.FIREFOX, Browser.SAFARI)).it('Forward click', async function () {
       await driver.get('https://selenium.dev/selenium/web/mouse_interaction.html');
       await driver.findElement(By.id("click")).click();
       await driver.navigate().back();
@@ -37,4 +37,4 @@ suite(function (env) {
       assert.deepStrictEqual(await driver.getTitle(), `We Arrive Here`)
     });
   });
-});
+}, { browsers: [Browser.CHROME]});

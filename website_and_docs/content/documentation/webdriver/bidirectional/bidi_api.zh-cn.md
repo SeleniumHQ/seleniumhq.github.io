@@ -1,6 +1,6 @@
 ---
-title: "双向接口"
-linkTitle: "双向接口"
+title: "BiDirectional API (CDP implementation)"
+linkTitle: "BiDi API (CDP implementation)"
 weight: 12
 
 ---

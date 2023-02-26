@@ -2,7 +2,7 @@
 title: "Moving to Trunk"
 linkTitle: "Moving to Trunk"
 date: 2020-07-01
-tags: ["decision"]
+tags: ["decisions"]
 categories: ["technical"]
 author: David Burns ([@AutomatedTester](https://twitter.com/AutomatedTester))
 description: >

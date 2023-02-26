@@ -53,7 +53,7 @@ var vegetable = driver.FindElement(By.ClassName("tomatoes"));
 vegetable = driver.find_element(class: 'tomatoes')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const vegetable = driver.findElement(By.className('tomatoes'));
+const vegetable = await driver.findElement(By.className('tomatoes'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
@@ -86,7 +86,7 @@ fruits = driver.find_element(id: 'fruits')
 fruit = fruits.find_element(class: 'tomatoes')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruits = driver.findElement(By.id('fruits'));
+const fruits = await driver.findElement(By.id('fruits'));
 const fruit = fruits.findElement(By.className('tomatoes'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
@@ -125,7 +125,7 @@ var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
 fruit = driver.find_element(css: '#fruits .tomatoes')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruit = driver.findElement(By.css('#fruits .tomatoes'));
+const fruit = await driver.findElement(By.css('#fruits .tomatoes'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
@@ -154,7 +154,7 @@ IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
 plants = driver.find_elements(tag_name: 'li')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const plants = driver.findElements(By.tagName('li'));
+const plants = await driver.findElements(By.tagName('li'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val plants: List<WebElement> = driver.findElements(By.tagName("li"))

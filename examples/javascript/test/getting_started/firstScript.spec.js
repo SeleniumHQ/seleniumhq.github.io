@@ -1,4 +1,4 @@
-const {By, Builder} = require('selenium-webdriver');
+const {By, Builder, Browser} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const assert = require("assert");
 
@@ -31,4 +31,4 @@ suite(function (env) {
       assert.equal("Received!", value);
     });
   });
-});
+}, { browsers: [Browser.CHROME, Browser.FIREFOX]});
