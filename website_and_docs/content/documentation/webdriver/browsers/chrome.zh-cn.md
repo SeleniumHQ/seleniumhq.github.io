@@ -99,7 +99,9 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 ### 添加扩展程序
 
-`extensions` 参数接受crx文件
+`extensions` 参数接受crx文件. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
 
 添加一个扩展程序到选项中:
 
@@ -169,6 +171,10 @@ Chrome 添加了各种参数，如果你不希望添加某些参数，可以将�
 ## 网络条件
 
 您可以模拟各种网络条件.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

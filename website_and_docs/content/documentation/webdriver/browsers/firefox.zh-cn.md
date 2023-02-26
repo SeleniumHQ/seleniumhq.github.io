@@ -137,7 +137,13 @@ driver = RemoteWebDriver(options)
 
 ## Add-ons
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
+[this issue](https://github.com/mozilla/geckodriver/issues/1476),
+they are created after starting the driver.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 ### Installation
 
@@ -221,8 +227,16 @@ example with a directory:
 
 ## Full page screenshots
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Context
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
