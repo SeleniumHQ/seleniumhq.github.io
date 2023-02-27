@@ -99,6 +99,10 @@ Adicionar uma localização:
 
 O parametro `extensions` aceita ficheiros crx 
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 Adicionar uma extensão:
 
 {{< alert-code />}}
@@ -168,6 +172,10 @@ Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 ## Condições de rede
 
 Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

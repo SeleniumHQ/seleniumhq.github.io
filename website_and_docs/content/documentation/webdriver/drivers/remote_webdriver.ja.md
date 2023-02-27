@@ -285,3 +285,6 @@ driver.quit();
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid 可観測性]({{< ref "observability.md" >}}) 
 
+## Browser specific functionalities
+
+Some [browser specific functionalities]({{< ref "../browsers/" >}}) require workarounds as mentioned in [this issue](https://github.com/SeleniumHQ/selenium/issues/11483).

@@ -103,6 +103,10 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 `extensions` パラメーターはcrxファイルを受け入れます
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 オプションに拡張機能を追加します。
 
 {{< alert-code />}}
@@ -172,6 +176,10 @@ Chrome はさまざまな引数を追加します。
 ## ネットワークの状態
 
 さまざまなネットワークの状態をシミュレートできます。
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

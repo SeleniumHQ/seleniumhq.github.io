@@ -140,6 +140,14 @@ driver = RemoteWebDriver(options)
 
 Ao invés do Chrome, os extras do Firefos não são adicionados como parte das capacidades, mas sim após iniciar o driver.
 
+Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
+[this issue](https://github.com/mozilla/geckodriver/issues/1476),
+they are created after starting the driver.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 ### Instalação
 
 Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mozilla.org/en-US/firefox/) 
@@ -222,8 +230,16 @@ uma pasta, este é um exemplo com uma pasta:
 
 ## Captura de tela inteira
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Contexto
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
