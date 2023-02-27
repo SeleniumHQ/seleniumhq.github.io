@@ -218,58 +218,23 @@ These methods first move the mouse to the designated origin and then
 by the number of pixels in the provided offset.
 Note that the position of the mouse must be in the viewport or else the command will error.
 
-### Offset from Element (Top Left Origin)
+### Offset from Element
 
-This method moves the mouse to the in-view center point of the element
-then attempts to move to the upper left corner of the element and then moves by the
-provided offset.
-
-This will be removed as an option in Selenium 4.3, and only an offset from center of the element
-will be supported. As of Selenium 4.2, this is the default behavior for Ruby, .NET and Python in order
-to be backwards compatible with previous versions of Selenium.
-This approach does not work correctly when the element is not entirely inside the viewport.
-
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-**Not Implemented in Selenium 4**
-{{< /tab >}}
-{{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L118-L121" >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L18-L19" >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< /tabpane >}}
-
-### Offset from Element (Center Origin)
-
-This method moves to the in-view center point of the element, 
-then moves the mouse by the provided offset
-
-This is the default behavior in Java as of Selenium 4.0, and will be the default
-for the remaining languages as of Selenium 4.3.
+This method moves the mouse to the in-view center point of the element,
+then moves by the provided offset.
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-**Coming in Selenium 4.3**
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-**Coming in Selenium 4.3**
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
