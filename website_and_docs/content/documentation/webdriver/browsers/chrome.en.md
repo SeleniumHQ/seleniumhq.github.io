@@ -102,7 +102,9 @@ Add a browser location to options:
 
 ### Add extensions
 
-The `extensions` parameter accepts crx files
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
 
 Add an extension to options:
 
@@ -172,6 +174,10 @@ You can drive Chrome Cast devices, including sharing tabs
 ## Network conditions
 
 You can simulate various network conditions.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 
