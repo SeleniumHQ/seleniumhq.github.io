@@ -71,6 +71,86 @@ is causing a problem. (Unfortunately, we can't blame the driver if Selenium is s
 This is less useful information where we log things about the servers and the sockets, and header information, etc.
 Debug mode is set if either `$DEBUG` is true or `ENV['DEBUG']` has a value.
 
+
+## Javascript
+
+JS has implemented logging APIs. It has also added LogManager to maintain a collection of loggers.
+
+### 1. Getting a logger can be done in two ways:
+
+```
+const logging = require('selenium-webdriver/lib/logging')
+```
+
+First method using manager
+```
+mgr = new logging.LogManager()
+logger = mgr.getLogger('')
+```
+
+Second method without manager
+```
+logger = logging.getLogger('')
+```
+
+Loggers class uses hierarchical, dot-delimited namespaces (e.g. "" > "webdriver" > "webdriver.logging"). For example, the following code will give a hierarchy of loggers:
+```
+logger = mgr.getLogger('foo.bar.baz')
+```
+
+"" (parent of) > "foo" (parent of) > "foo.bar" (parent of) > "foo.bar.baz" (=logger)
+
+
+### 2. Logger Level:
+
+The basic levels for JS loggers are: `OFF`, `SEVERE`, `WARNING`, `INFO`, `DEBUG`, `FINE`, `FINER`, `FINEST`, `ALL`.
+To log messages at the given level pass the level in the `log()` method:
+```
+logger.log(logging.Level.INFO, 'This is an info message')
+```
+
+You can also use the instance methods to target logs of a particular level:
+```
+logger.finest('this is the finest message')
+logger.finer('this is a finer message')
+logger.info('this is an info message')
+logger.warning('this is a warning message')
+logger.severe('this is a severe message')
+```
+
+By default the logger's level is `Level.OFF`
+To change the level of the logger:
+```
+logger.setLevel(logging.Level.INFO)
+```
+
+### 3. Log Output:
+
+As opposed to ruby which by default sends logs to console in stdout, JS has the option to add a handler. The handler will be invoked for each message logged with this instance, or any of its descendants.
+```
+logger.addHandler(callback)
+```
+
+JS has provided a method to add console handler to the given logger. The console handler will log all messages using the JavaScript Console API:
+```
+logging.addConsoleHandler(logger)
+```
+
+Similarly, to add console handler to the root logger:
+```
+logging.installConsoleHandler()
+```
+
+### 4. Logging Preference (remote logging API):
+
+JS gives the ability to define log preference for a remote WebDriver session. There are 5 common log types: `BROWSER`, `CLIENT`, `DRIVER`, `PERFORMANCE`, `SERVER`
+
+To set a log level for a particular log type:
+```
+let prefs = new logging.Preferences()
+prefs.setLevel(logging.Type.BROWSER, logging.Level.FINE)
+```
+
 -----
 
 {{< alert-content >}}
