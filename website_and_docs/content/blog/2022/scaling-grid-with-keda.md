@@ -47,7 +47,7 @@ that will tie into our grid to get the information it needs. Example of the used
 triggers:
   - type: selenium-grid
     metadata:
-      url: 'http://selenium-grid-url-or-ip:4444/graphql'
+      url: 'http://selenium-grid-url-or-ip:4444/status'
       browserName: 'chrome'
 ```
 
@@ -69,7 +69,7 @@ spec:
   triggers:
     - type: selenium-grid
       metadata:
-        url: 'https://selenium-grid-url-or-ip:4444/graphql'
+        url: 'https://selenium-grid-url-or-ip:4444/status'
         browserName: 'chrome'
 ```
 
@@ -155,7 +155,7 @@ spec:
   triggers:
     - type: selenium-grid
       metadata:
-        url: 'https://selenium-grid-url-or-ip:4444/graphql'
+        url: 'https://selenium-grid-url-or-ip:4444/status'
         browserName: 'chrome'
 ```
 You will need one of these for every browser you wish to scale.
@@ -176,7 +176,7 @@ need to include `sessionBrowserName` as well in the trigger metadata:
 triggers:
     - type: selenium-grid
       metadata:
-        url: 'https://selenium-grid-url-or-ip:4444/graphql'
+        url: 'https://selenium-grid-url-or-ip:4444/status'
         browserName: 'MicrosoftEdge'
         sessionBrowserName: 'msedge'
 ```
