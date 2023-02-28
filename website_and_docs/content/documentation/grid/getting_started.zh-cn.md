@@ -26,8 +26,8 @@ aliases: [
     * Java 11 or higher installed
     * Browser(s) installed
     * Browser driver(s)
-      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
-      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
+      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-smallbetasmall" >}}).
+      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-path-环境变量" >}})
     * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
 1. Start the Grid
     * `java -jar selenium-server-<version>.jar standalone`
@@ -35,7 +35,7 @@ aliases: [
 1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
 
 *Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#远程驱动" >}}).
 
 To learn more about the different configuration options, go through the sections below.
 
@@ -57,7 +57,7 @@ single machine.
 **Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
 will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
 By default, the server will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-path-环境变量" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -94,7 +94,7 @@ By default, the server will listen for `RemoteWebDriver` requests on [http://loc
 #### Node
 
 During startup time, the **Node** will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-path-环境变量" >}}). 
 
 The command below assumes the **Node** is running on the same machine where the **Hub** is running.
 ```shell
