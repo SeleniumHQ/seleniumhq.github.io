@@ -256,16 +256,38 @@ There are multiple options in each language, but here is what we are using in ou
 
 {{< tabpane code=false langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-// Add instructions
+```shell
+# install Dependent library
+mvn install
+
+# run all case
+mvn test  
+
+#  run FirstScriptTest only   
+# Modify "**/*Test.java" to "**/FirstScriptTest" add Comment out "<include>**/*Example.java</include>" in pom.xml
+mvn test
+```
 {{< /tab >}}
 {{< tab header="Python" >}}
-// Add instructions
+```shell
+# install Dependent library
+pip install -r requirements.txt
+
+# run your tests using below command
+python test_first_script.py
+````
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 // Add instructions
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-// Add instructions
+```shell
+# install Dependent library
+bundle install
+
+# run your tests using below command
+rspec first_script_spec.rb
+```
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
 Install Mocha Test runner using below command in your terminal
