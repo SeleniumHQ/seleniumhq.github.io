@@ -79,4 +79,4 @@ properties for configuration.
 
 
 [docs]: /documentation/webdriver/
-[hub and node]: /documentation/grid/setting_up_your_own_grid/#hub-and-nodes
+[hub and node]: /documentation/grid/setting_up_your_own_grid/#hub-and-node

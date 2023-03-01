@@ -49,7 +49,7 @@ ecosystem emerged. Such as: [WebDriverManager](https://bonigarcia.dev/webdriverm
 [WebDriverManager.Net](https://github.com/rosolko/WebDriverManager.Net) for C#. 
 
 All these projects served as an 
-[inspiration]({{< ref "../../documentation/webdriver/getting_started/install_drivers.md#1-driver-management-software" >}}) 
+[inspiration]({{< ref "../../documentation/webdriver/getting_started/install_drivers.md#2-driver-management-software" >}}) 
 and as a clear sign that the community needed this feature to be 
 built-in Selenium. In addition, a [survey](https://www.selenium.dev/blog/2021/selenium-survey-results/) 
 done on January 2021 showed that most Selenium users want to get rid of the driver management 
