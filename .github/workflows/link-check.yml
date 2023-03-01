@@ -1,0 +1,54 @@
+# .github/workflows/link-check.yml
+# Run hyperlink link checker on generated HTML output
+name: Link check with hyperlink
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - trunk
+  pull_request:
+
+jobs:
+  htmltest:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.110.0"
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.14.2'
+          cache: 'npm'
+          # The action defaults to search for the dependency file (package-lock.json,
+          # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
+          # hash as a part of the cache key.
+          # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+          cache-dependency-path: '**/package-lock.json'
+
+      - run: npm ci
+        working-directory: website_and_docs
+      - run: hugo --destination $GITHUB_WORKSPACE/website_and_docs/public
+        working-directory: website_and_docs
+
+      - name: Link check
+        continue-on-error: true # <- If set to false, run fails with broken links
+        uses: untitaker/hyperlink@0.1.27
+        with:
+          args: website_and_docs/public/ --check-anchors
+
+      - name: Archive hyperlink results
+        uses: actions/upload-artifact@v3
+        with:
+          name: hyperlink-report
+          path: website_and_docs/tmp/.hyperlink/hyperlink.log
+          retention-days: 7 # default is 90 days
