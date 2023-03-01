@@ -7632,12 +7632,12 @@ with a single command, within a single process. <strong>Standalone</strong> can 
 single machine.</p><p><strong>Standalone</strong> is also the easiest mode to spin up a Selenium Grid. By default, the server
 will listen for <code>RemoteWebDriver</code> requests on <a href=http://localhost:4444>http://localhost:4444</a>.
 By default, the server will detect the available drivers that it can use from the System
-<a href=/documentation/webdriver/getting_started/install_drivers/#2-the-path-environment-variable><code>PATH</code></a>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar standalone
+<a href=/documentation/webdriver/getting_started/install_drivers/#3-the-path-environment-variable><code>PATH</code></a>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar standalone
 </span></span></code></pre></div><p>After starting successfully the Grid in Standalone mode, point your WebDriver tests
 to <a href=http://localhost:4444>http://localhost:4444</a>.</p><p>Common use cases for <strong>Standalone</strong> are:</p><ul><li>Develop or debug tests using <code>RemoteWebDriver</code> locally</li><li>Running quick test suites before pushing code</li><li>Have a easy to setup Grid in a CI/CD tool (GitHub Actions, Jenkins, etc&mldr;)</li></ul><h3 id=hub-and-node>Hub and Node</h3><p><strong>Hub and Node</strong> is the most used role because it allows to:</p><ul><li>Combine different machines in a single Grid<ul><li>Machines with different operating systems and/or browser versions, for example</li></ul></li><li>Have a single entry point to run WebDriver tests in different environments</li><li>Scaling capacity up or down without tearing down the Grid</li></ul><h4 id=hub>Hub</h4><p>A Hub is composed by the following <a href=/documentation/grid/components/>components</a>:
 Router, Distributor, Session Map, New Session Queue, and Event Bus.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar hub
 </span></span></code></pre></div><p>By default, the server will listen for <code>RemoteWebDriver</code> requests on <a href=http://localhost:4444>http://localhost:4444</a>.</p><h4 id=node>Node</h4><p>During startup time, the <strong>Node</strong> will detect the available drivers that it can use from the System
-<a href=/documentation/webdriver/getting_started/install_drivers/#2-the-path-environment-variable><code>PATH</code></a>.</p><p>The command below assumes the <strong>Node</strong> is running on the same machine where the <strong>Hub</strong> is running.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node
+<a href=/documentation/webdriver/getting_started/install_drivers/#3-the-path-environment-variable><code>PATH</code></a>.</p><p>The command below assumes the <strong>Node</strong> is running on the same machine where the <strong>Hub</strong> is running.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node
 </span></span></code></pre></div><h5 id=more-than-one-node-on-the-same-machine>More than one Node on the same machine</h5><p><strong>Node</strong> 1</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node --port <span style=color:#0000cf;font-weight:700>5555</span>
 </span></span></code></pre></div><p><strong>Node</strong> 2</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>java -jar selenium-server-&lt;version&gt;.jar node --port <span style=color:#0000cf;font-weight:700>6666</span>
 </span></span></code></pre></div><h5 id=node-and-hub-on-different-machines>Node and Hub on different machines</h5><p><strong>Hub</strong> and <strong>Nodes</strong> talk to each other via HTTP and the <a href=/documentation/grid/components/#event-bus><strong>Event Bus</strong></a>
@@ -12083,9 +12083,9 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/illicitonion>@illicitonion</a></label>
 <span class=contributions>1162 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>1002 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>1003 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>830 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>833 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/926454?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/lukeis>@lukeis</a></label>
 <span class=contributions>599 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/665846?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/p0deje>@p0deje</a></label>
@@ -12095,7 +12095,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/mdub>@mdub</a></label>
 <span class=contributions>326 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
-<span class=contributions>297 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/399120?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>298 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/399120?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andreastt>@andreastt</a></label>
 <span class=contributions>289 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/67744?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/krosenvold>@krosenvold</a></label>
@@ -12109,7 +12109,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/lmtierney>@lmtierney</a></label>
 <span class=contributions>179 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/12621691?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
-<span class=contributions>161 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17887843?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>162 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/17887843?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/symonk>@symonk</a></label>
 <span class=contributions>155 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/696749?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/freynaud>@freynaud</a></label>
@@ -12133,7 +12133,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/ajayk>@ajayk</a></label>
 <span class=contributions>63 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5413013?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/bonigarcia>@bonigarcia</a></label>
-<span class=contributions>56 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16556?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>57 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/16556?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/twalpole>@twalpole</a></label>
 <span class=contributions>49 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/2410127?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/asashour>@asashour</a></label>
@@ -12157,7 +12157,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/joshbruning>@joshbruning</a></label>
 <span class=contributions>30 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/29110?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
-<span class=contributions>29 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/49635?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>30 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/49635?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/mikebroberts>@mikebroberts</a></label>
 <span class=contributions>28 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10659588?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/JohnChen0>@JohnChen0</a></label>

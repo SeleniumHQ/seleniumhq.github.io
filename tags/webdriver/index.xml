@@ -289,7 +289,7 @@ than writing &lt;code>java -jar ...&lt;/code> you can simply run &lt;code>seleni
 you&amp;rsquo;ll get a handy list of the available sub-commands you can
 execute. There are the old favourites, such as &lt;code>standalone&lt;/code> (for
 starting a standalone selenium server), and &lt;code>hub&lt;/code> and &lt;code>node&lt;/code> (for
-starting a Selenium &lt;a href="/documentation/grid/setting_up_your_own_grid/#hub-and-nodes">Hub and Node&lt;/a> setup), but there are
+starting a Selenium &lt;a href="/documentation/grid/setting_up_your_own_grid/#hub-and-node">Hub and Node&lt;/a> setup), but there are
 other interesting commands that are new to Selenium 4.&lt;/p>
 &lt;p>The first of these is &lt;code>info&lt;/code>. We&amp;rsquo;ve added this to provide easy to find
 and access documentation on common tasks when using the selenium

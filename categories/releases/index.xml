@@ -813,7 +813,7 @@ ecosystem emerged. Such as: &lt;a href="https://bonigarcia.dev/webdrivermanager/
 &lt;a href="https://github.com/titusfortner/webdrivers">webdrivers&lt;/a> for Ruby, and
 &lt;a href="https://github.com/rosolko/WebDriverManager.Net">WebDriverManager.Net&lt;/a> for C#.&lt;/p>
 &lt;p>All these projects served as an
-&lt;a href="/documentation/webdriver/getting_started/install_drivers/#1-driver-management-software">inspiration&lt;/a>
+&lt;a href="/documentation/webdriver/getting_started/install_drivers/#2-driver-management-software">inspiration&lt;/a>
 and as a clear sign that the community needed this feature to be
 built-in Selenium. In addition, a &lt;a href="https://www.selenium.dev/blog/2021/selenium-survey-results/">survey&lt;/a>
 done on January 2021 showed that most Selenium users want to get rid of the driver management
