@@ -47,7 +47,7 @@ Grid は 6 つの異なる[コンポーネント]({{< ref "components.md" >}})�
 
 **スタンドアロン**は Selenium Grid を起動する最も簡単な方法でもあります。
 デフォルトではサーバーは[http://localhost:4444](http://localhost:4444) で `RemoteWebDriver` リクエストをリッスンします。
-サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
+サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -83,7 +83,7 @@ java -jar selenium-server-<version>.jar hub
 
 #### ノード
 
-**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
 が通っている利用可能なドライバーを検出します。
 
 次のコマンドは**ノード**が**ハブ**と同じマシン上で動作していることを前提としています。

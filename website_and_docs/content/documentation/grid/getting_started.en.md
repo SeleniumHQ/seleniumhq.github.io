@@ -47,7 +47,7 @@ single machine.
 **Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
 will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
 By default, the server will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -84,7 +84,7 @@ By default, the server will listen for `RemoteWebDriver` requests on [http://loc
 #### Node
 
 During startup time, the **Node** will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
+[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}}). 
 
 The command below assumes the **Node** is running on the same machine where the **Hub** is running.
 ```shell
