@@ -260,12 +260,9 @@ There are multiple options in each language, but here is what we are using in ou
 # install Dependent library
 mvn install
 
-# run all case
+# run your tests using below command
 mvn test  
 
-#  run FirstScriptTest only   
-# Modify "**/*Test.java" to "**/FirstScriptTest" add Comment out "<include>**/*Example.java</include>" in pom.xml
-mvn test
 ```
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -274,7 +271,7 @@ mvn test
 pip install -r requirements.txt
 
 # run your tests using below command
-python test_first_script.py
+pytest
 ````
 {{< /tab >}}
 {{< tab header="CSharp" >}}
@@ -286,7 +283,7 @@ python test_first_script.py
 bundle install
 
 # run your tests using below command
-rspec first_script_spec.rb
+rspec 
 ```
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
