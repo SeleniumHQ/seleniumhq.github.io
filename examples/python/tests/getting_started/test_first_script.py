@@ -23,3 +23,6 @@ def test_eight_components():
     assert value == "Received!"
 
     driver.quit()
+
+
+test_eight_components()
