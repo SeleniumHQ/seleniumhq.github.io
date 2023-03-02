@@ -19,7 +19,7 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 基于默认选项的Chrome浏览器会话看起来是这样:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 添加一个参数到选项中:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -76,7 +76,7 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 添加一个浏览器地址到选项中:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -113,7 +113,7 @@ please use the `load-extension` argument instead, as mentioned in
 
 添加一个布尔值到选项中:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -141,7 +141,7 @@ Chrome 添加了各种参数，如果你不希望添加某些参数，可以将�
 
 设置排除参数至选项中:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

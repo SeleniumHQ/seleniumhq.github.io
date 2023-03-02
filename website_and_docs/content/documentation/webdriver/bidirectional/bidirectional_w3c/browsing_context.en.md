@@ -10,7 +10,7 @@ This section contains the APIs related to browsing context commands.
 
 Creates a new browsing context in a new window.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L44-44" >}}
 {{< /tab >}}
@@ -26,7 +26,7 @@ Creates a new browsing context in a new window.
 
 Creates a new browsing context in a new tab.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L58-58" >}}
 {{< /tab >}}
@@ -42,7 +42,7 @@ Creates a new browsing context in a new tab.
 
 Creates a browsing context for the existing tab/window to run commands.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L37-38" >}}
 {{< /tab >}}
@@ -59,7 +59,7 @@ Creates a browsing context for the existing tab/window to run commands.
 A reference browsing context is a [top-level browsing context](https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context). 
 The API allows to pass the reference browsing context, which is used to create a new window. The implementation is operating system specific.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L50-52" >}}
 {{< /tab >}}
@@ -75,7 +75,7 @@ The API allows to pass the reference browsing context, which is used to create a
 A reference browsing context is a [top-level browsing context](https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context). 
 The API allows to pass the reference browsing context, which is used to create a new tab. The implementation is operating system specific.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L64-66" >}}
 {{< /tab >}}
@@ -89,7 +89,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 ## Navigate to a URL
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L72-78" >}}
 {{< /tab >}}
@@ -103,7 +103,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 ## Navigate to a URL with readiness state
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L83-90" >}}
 {{< /tab >}}
@@ -119,7 +119,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 Provides a tree of all browsing contexts descending from the parent browsing context, including the parent browsing context.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L95-106" >}}
 {{< /tab >}}
@@ -135,7 +135,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 Provides a tree of all browsing contexts descending from the parent browsing context, including the parent browsing context upto the depth value passed.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L111-121" >}}
 {{< /tab >}}
@@ -149,7 +149,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 ## Get All Top level browsing contexts
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L126-131" >}}
 {{< /tab >}}
@@ -163,7 +163,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 ## Close a tab/window
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L136-141" >}}
 {{< /tab >}}

@@ -53,7 +53,7 @@ Selenium Manager可以帮助你获得一个运行Selenium的开箱即用的环�
 为了确保为浏览器提供正确的驱动程序, 
 这里有许多第三方库可为您提供帮助.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 **注意：** 这个软件包目前不能用于IEDriverServer v4以上的版本。
 
@@ -146,7 +146,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 * 要查看`PATH`上已有哪些目录, 
 请打开命令提示符/终端并键入:  
 
-{{< tabpane code=false persistLang=false >}}
+{{< tabpane text=true persistLang=false >}}
 {{% tab header="Bash" %}}
 
 要查看`PATH`上已经有哪些目录, 请打开Terminal并执行

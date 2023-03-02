@@ -15,7 +15,7 @@ All capabilities and options found on the [Chrome page]({{< ref "chrome.md" >}})
 
 Starting an Edge session with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -44,7 +44,7 @@ Commonly used args include `--start-maximized` and `--headless=new`
 
 Add an argument to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L24-L26" >}}
 {{< /tab >}}

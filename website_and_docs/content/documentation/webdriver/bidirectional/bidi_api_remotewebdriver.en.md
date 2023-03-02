@@ -11,7 +11,7 @@ The following examples demonstrate how to leverage BiDi APIs with [Remote WebDri
 Some applications make use of browser authentication to secure pages.
 With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L72-90" >}}
 {{< /tab >}}
@@ -23,7 +23,7 @@ Mutation Observation is the ability to capture events via
 WebDriver BiDi when there are DOM mutations on a specific
 element in the DOM.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L101-124" >}}
 {{< /tab >}}
@@ -33,7 +33,7 @@ element in the DOM.
 
 Listen to the `console.log` events and register callbacks to process the event.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L139-155" >}}
 {{< /tab >}}
@@ -41,7 +41,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 ## Actions causing JS exceptions
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L164-171" >}}
 {{< /tab >}}
@@ -52,7 +52,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 If you want to capture network events coming into the browser and you want manipulate them you are able to do
 it with the following examples.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L188-L198" >}}
 {{< /tab >}}

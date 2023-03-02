@@ -18,7 +18,7 @@ Most of what you'll do with Selenium is a combination of these basic commands:
 
 For more details on starting a session read our documentation on [driver sessions]({{< ref "../drivers/" >}})
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}
 {{< /tab >}}
@@ -42,7 +42,7 @@ For more details on starting a session read our documentation on [driver session
 ### 2. Take action on browser
 In this example we are [navigating]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) to a web page. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L18" >}}
 {{< /tab >}}
@@ -68,7 +68,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/interactio
 There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/interactions" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L20" >}}
 {{< /tab >}}
@@ -102,7 +102,7 @@ we'll use it as a placeholder.
 
 Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L23" >}}
 {{< /tab >}}
@@ -127,7 +127,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 The majority of commands in most Selenium sessions are element related, and you can't interact
 with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L25-L26" >}}
 {{< /tab >}}
@@ -152,7 +152,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
 but you will use them frequently. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L28-L29" >}}
 {{< /tab >}}
@@ -176,7 +176,7 @@ but you will use them frequently.
 ### 7. Request element information
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L32" >}}
 {{< /tab >}}
@@ -202,7 +202,7 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 This ends the driver process, which by default closes the browser as well. 
 No more commands can be sent to this driver instance. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
 {{< /tab >}}
@@ -226,7 +226,7 @@ No more commands can be sent to this driver instance.
 ## Putting everything together
 Let's combine these 8 things into a complete script with assertions that can be executed by a test runner.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 {{< /tab >}}
@@ -254,7 +254,7 @@ you will want to execute your Selenium code using test runner tools.
 Many of the code examples in this documentation can be found in our example repositories. 
 There are multiple options in each language, but here is what we are using in our examples:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Add instructions
 {{< /tab >}}
@@ -267,7 +267,7 @@ There are multiple options in each language, but here is what we are using in ou
 {{< tab header="Ruby" >}}
 // Add instructions
 {{< /tab >}}
-{{% tab header="JavaScript" %}}
+{{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
 ```shell

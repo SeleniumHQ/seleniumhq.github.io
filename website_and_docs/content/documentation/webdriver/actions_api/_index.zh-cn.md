@@ -44,7 +44,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 但有时您只需要在操作之间等待一下, 
 即可正常工作.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -79,7 +79,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 此方法在每种语言中的实现方式不同, 
 因为它不会使用perform方法执行.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}
