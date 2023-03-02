@@ -44,10 +44,6 @@ headless mode, meaning that the browser window wouldn’t be visible. In most of
 convenience method to set this execution mode while setting the browser options. However,
 &lt;a href="https://www.selenium.dev/blog/2023/selenium-4-8-0-released/">Selenium 4.8.0&lt;/a> will be deprecated this method
 and now users need to set it through arguments when setting the browser options.&lt;/p>
-&lt;p>Now that we got your attention,
-We&amp;rsquo;re very happy to announce the release of Selenium 4.8.0 for Java,
-.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="why-is-selenium-doing-this">Why is Selenium doing this?&lt;/h3>
 &lt;p>Chromium based browsers have now two different headless modes (the original one, and one with more
 capabilities added in 2022). When a user sets headless to &lt;code>true&lt;/code> via the convenience method in Selenium,
