@@ -15,7 +15,7 @@ Chromeと同様に、edgedriverのメジャー バージョン番号は、Edge�
 
 基本的な定義済みオプションを使用して Edgeセッションを開始すると、次のようになります。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -29,7 +29,7 @@ Chromeと同様に、edgedriverのメジャー バージョン番号は、Edge�
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L16">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L15">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -43,7 +43,7 @@ Chromeと同様に、edgedriverのメジャー バージョン番号は、Edge�
 
 オプションに引数を追加します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L24-L26" >}}
 {{< /tab >}}

@@ -27,26 +27,26 @@ Additional information about using Internet Explorer can be found on the
 
 Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#21-L22" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
+{{% tab header="Python" text=true %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
 {{% /tab %}}
-{{% tab header="CSharp" %}}
+{{% tab header="CSharp" text=true %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L16-L17" >}}
 {{% /tab %}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L7-L8" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" code=true >}}
+{{< tab header="JavaScript" >}}
   let driver = await new Builder()
     .forBrowser('internet explorer')
     .setIEOptions(options)
     .build();
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
   val options = InternetExplorerOptions()
   val driver = InternetExplorerDriver(options)
 {{< /tab >}}

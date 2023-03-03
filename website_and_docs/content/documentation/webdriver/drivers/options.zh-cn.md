@@ -78,8 +78,8 @@ aliases: [
 WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)
 事件触发并返回.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -99,7 +99,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -108,7 +108,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -127,7 +127,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :normal
@@ -135,10 +135,10 @@ options.page_load_strategy = :normal
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -162,8 +162,8 @@ fun main() {
 WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event)
 事件触发并返回.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -183,7 +183,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -192,7 +192,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -211,7 +211,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :eager
@@ -219,10 +219,10 @@ options.page_load_strategy = :eager
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -245,8 +245,8 @@ fun main() {
 
 WebDriver 仅等待初始页面已下载. 
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -266,7 +266,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -275,7 +275,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -294,7 +294,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :none
@@ -302,10 +302,10 @@ options.page_load_strategy = :none
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -323,6 +323,7 @@ fun main() {
 }
 {{< /tab >}}
 {{< /tabpane >}}
+
 
 ## platformName
 

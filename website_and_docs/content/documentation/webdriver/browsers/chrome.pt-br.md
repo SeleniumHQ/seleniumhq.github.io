@@ -19,7 +19,7 @@ Capacidades únicas ao Chrome podem ser encontradas na página da Google para [C
 
 Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Opções mais frequentes incluem `--start-maximized` e `--headless=new`
 
 Adicione uma opção:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -74,7 +74,7 @@ Adicione uma opção:
 
 Adicionar uma localização:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -113,7 +113,7 @@ Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo 
 
 Adicionar detach:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -142,7 +142,7 @@ Um exemplo comum é voltar a activar o bloqueador de popups.
 
 Exclua parametros:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

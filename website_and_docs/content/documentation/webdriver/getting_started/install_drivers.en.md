@@ -41,7 +41,7 @@ Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducin
 Most machines automatically update the browser, but the driver does not. To make sure you get 
 the correct driver for your browser, there are many third party libraries to assist you. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 
 1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
@@ -120,7 +120,7 @@ on multiple machines without requiring that each machine put the drivers in the 
 You can either place the drivers in a directory that is already listed in `PATH`, or you can place them in a directory
 and add it to `PATH`.
 
-{{< tabpane code=false persistLang=false >}}
+{{< tabpane text=true persistLang=false >}}
 {{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell

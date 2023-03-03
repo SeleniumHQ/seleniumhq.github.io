@@ -52,7 +52,7 @@ Leia mais no anúncio feito no blog sobre o [Gerenciador Selenium](/blog/2022/in
 A maioria das máquinas atualiza automaticamente o navegador, mas não o driver. Para certificar de obter 
 o driver correto para o seu navegador de internet, existem diversas bibliotecas de terceiros para auxiliá-lo.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 **Important:** This package does not currently work for IEDriverServer v4+
 
@@ -140,7 +140,7 @@ Você pode colocar os drivers em um diretório que já está listado em
 `PATH`, ou você pode colocá-los em um diretório
 e acrescenta-lo ao `PATH`.
 
-{{< tabpane code=false persistLang=false >}}
+{{< tabpane text=true persistLang=false >}}
 {{% tab header="Bash" %}}
 Para ver quais diretórios já estão no `PATH`, abra o Terminal e execute:
 ```shell

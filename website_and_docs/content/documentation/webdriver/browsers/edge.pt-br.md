@@ -15,7 +15,7 @@ Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "ch
 
 Este é um exemplo de como iniciar uma sessão Edge com um conjunto de opções básicas:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -29,7 +29,7 @@ Este é um exemplo de como iniciar uma sessão Edge com um conjunto de opções 
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L16">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L15">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -43,7 +43,7 @@ Opções mais frequentes incluem `--start-maximized` e `--headless=new`
 
 Adicione uma opção:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L24-L26" >}}
 {{< /tab >}}

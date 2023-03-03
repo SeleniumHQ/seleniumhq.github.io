@@ -22,7 +22,7 @@ WebDriver API提供了一种使用内置的方法与Cookie进行交互:
 例如 http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -40,7 +40,7 @@ public class addCookie {
     }
 }
   {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -50,7 +50,7 @@ driver.get("http://www.example.com")
 # Adds the cookie into current browser context
 driver.add_cookie({"name": "key", "value": "value"})
   {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -71,7 +71,7 @@ namespace AddCookie {
  }
 }
   {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -84,10 +84,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
   {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -110,7 +110,7 @@ fun main() {
 此方法返回与cookie名称匹配的序列化cookie数据中所有关联的cookie.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -130,7 +130,7 @@ public class getCookieNamed {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" code=true >}}
+ {{< tab header="Python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -144,7 +144,7 @@ driver.add_cookie({"name": "foo", "value": "bar"})
 # Get cookie details with named cookie 'foo'
 print(driver.get_cookie("foo"))
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -167,7 +167,7 @@ namespace GetCookieNamed {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -181,10 +181,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -209,7 +209,7 @@ fun main() {
 此方法会针对当前访问上下文返回“成功的序列化cookie数据”. 如果浏览器不再可用, 则返回错误. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Set;
@@ -232,7 +232,7 @@ public class getAllCookies {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" code=true >}}
+ {{< tab header="Python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -246,7 +246,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Get all available cookies
 print(driver.get_cookies())
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -269,7 +269,7 @@ namespace GetAllCookies {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -284,10 +284,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -314,7 +314,7 @@ fun main() {
 此方法删除与提供的cookie名称匹配的cookie数据.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -341,7 +341,7 @@ public class deleteCookie {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" code=true >}}
+ {{< tab header="Python" >}}
 from selenium import webdriver
 driver = webdriver.Chrome()
 
@@ -353,7 +353,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Delete a cookie with name 'test1'
 driver.delete_cookie("test1")
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -381,7 +381,7 @@ namespace DeleteCookie {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -396,10 +396,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -429,7 +429,7 @@ fun main() {
 此方法删除当前访问上下文的所有cookie.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -449,7 +449,7 @@ public class deleteAllCookies {
     }
 }
   {{< /tab >}}
- {{< tab header="Python" code=true >}}
+ {{< tab header="Python" >}}
 from selenium import webdriver
 driver = webdriver.Chrome()
 
@@ -461,7 +461,7 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 #  Deletes all cookies
 driver.delete_all_cookies()
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -484,7 +484,7 @@ namespace DeleteAllCookies {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -499,10 +499,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 
@@ -543,7 +543,7 @@ Firefox(79+版本)中提供,
 并适用于Selenium 4以及更高版本.**
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" code=true >}}
+  {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -564,7 +564,7 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" code=true >}}
+ {{< tab header="Python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -578,7 +578,7 @@ cookie2 = driver.get_cookie('foo1')
 print(cookie1)
 print(cookie2)
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -609,7 +609,7 @@ namespace SameSiteCookie {
   }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -624,10 +624,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.chrome.ChromeDriver
 

@@ -19,7 +19,7 @@ Capacidades únicas ao Firefox podem ser encontradas na página da Mozilla para 
 
 Este é um exemplo de como iniciar uma sessão Firefox com um conjunto de opções básicas:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L24-L25" >}}
 {{< /tab >}}
@@ -33,7 +33,7 @@ Este é um exemplo de como iniciar uma sessão Firefox com um conjunto de opçõ
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L13">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -50,25 +50,25 @@ Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`
 Adicione uma opção:
 
 <div>
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
@@ -152,7 +152,7 @@ please refer to the
 
 Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mozilla.org/en-US/firefox/) 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
@@ -177,7 +177,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 
 Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor de retorno durante a instalação.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
@@ -205,7 +205,7 @@ Quando trabalhar em uma extensão não terminada ou não publicada, provavelment
 Desta forma, só pode ser instalada como "temporária". Isto pode ser feito passando uma arquivo ZIP ou
 uma pasta, este é um exemplo com uma pasta:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}

@@ -28,25 +28,25 @@ aliases: [
 {{% /pageinfo %}}
 
 In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
-As of Selenium 4, you must use the browser options classes.
+As of Selenium 4, you must use the browser options classes. 
 For remote driver sessions, a browser options instance is required as it determines which browser will be used.
 
 These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
 
-Each browser has ({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
+Each browser has [custom options]({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
 
 ## browserName
 
-Este recurso é usado para definir o `browserName` para uma determinada sessão.
-Se o navegador especificado não estiver instalado na
-extremidade remota, a criação da sessão irá falhar
+This capability is used to set the `browserName` for a given session. 
+If the specified browser is not installed at the 
+remote end, the session creation will fail.
 
 ## browserVersion
 
-Este recurso é opcional, usado para
-definir a versão do navegador disponível na extremidade remota.
-Por exemplo, se pedir o Chrome versão 75 em um sistema que
-tem apenas a versão 80 instalada, a criação da sessão irá falhar
+This capability is optional, this is used to 
+set the available browser version at remote end. 
+For Example, if ask for Chrome version 75 on a system that 
+only has 80 installed, the session creation will fail.
 
 ## pageLoadStrategy
 
@@ -82,8 +82,8 @@ flakiness.
 WebDriver waits until the [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) 
 event fire is returned.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -103,7 +103,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -112,7 +112,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -131,7 +131,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :normal
@@ -139,10 +139,10 @@ options.page_load_strategy = :normal
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -166,8 +166,8 @@ fun main() {
 WebDriver waits until [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) 
 event fire is returned.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -187,7 +187,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -196,7 +196,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -215,7 +215,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :eager
@@ -223,10 +223,10 @@ options.page_load_strategy = :eager
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -249,8 +249,8 @@ fun main() {
 
 WebDriver only waits until the initial page is downloaded.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -270,7 +270,7 @@ public class pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
@@ -279,7 +279,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("http://www.google.com")
 driver.quit()
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -298,7 +298,7 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 options = Selenium::WebDriver::Options.chrome
 options.page_load_strategy = :none
@@ -306,10 +306,10 @@ options.page_load_strategy = :none
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get('https://www.google.com')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 import org.openqa.selenium.PageLoadStrategy
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -328,68 +328,69 @@ fun main() {
 {{< /tab >}}
 {{< /tabpane >}}
 
+
 ## platformName
 
-Isso identifica o sistema operacional na extremidade remota e 
-buscar o `platformName` retorna o nome do sistema operacional.
+This identifies the operating system at the remote-end, 
+fetching the `platformName` returns the OS name. 
 
-Em provedores baseados em nuvem,
-definir `platformName` define o sistema operacional na extremidade remota.
+In cloud-based providers, 
+setting `platformName` sets the OS at the remote-end.
 
 ## acceptInsecureCerts
 
-Este recurso verifica se um `Certificado TLS`
-expirado (ou) inválido é usado durante a navegação
-durante uma sessão.
+This capability checks whether an expired (or) 
+invalid `TLS Certificate` is used while navigating 
+during a session.
 
-Se o recurso for definido como `false`, um
-[erro de certificado inseguro](//developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/InsecureCertificate)
-será retornado quando a navegação encontrar qualquer
-problema de certificado de domínio. Se definido como `verdadeiro`, o certificado inválido será
-confiável para o navegador.
+If the capability is set to `false`, an 
+[insecure certificate error](//developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/InsecureCertificate) 
+will be returned as navigation encounters any domain 
+certificate problems. If set to `true`, invalid certificate will be 
+trusted by the browser.
 
-Todos os certificados autoassinados serão considerados confiáveis por esse recurso por padrão.
-Uma vez definido, o recurso `acceptInsecureCerts` terá um
-efeito para toda a sessão.
+All self-signed certificates will be trusted by this capability by default. 
+Once set, `acceptInsecureCerts` capability will have an 
+effect for the entire session.
 
-## timeout
+## timeouts
 
-Uma `session` do WebDriver é imposta com um certo intervalo `session timeout`
-durante o qual o usuário pode controlar o comportamento
-de executar scripts ou recuperar informações do navegador.
+A WebDriver `session` is imposed with a certain `session timeout`
+interval, during which the user can control the behaviour
+of executing scripts or retrieving information from the browser.
 
-Cada tempo limite de sessão é configurado com
-combinação de diferentes `timeouts`, conforme descrito abaixo:
+Each session timeout is configured with
+combination of different `timeouts` as described below:
 
-### Timeout de Script:
-Especifica quando interromper um script em execução em
-um contexto de navegação atual. O tempo limite padrão **30.000**
-é imposto quando uma nova sessão é criada pelo WebDriver.
+### Script Timeout
+Specifies when to interrupt an executing script in
+a current browsing context. The default timeout **30,000**
+is imposed when a new session is created by WebDriver.
 
-### Timeout de Carregamento de Página:
-Especifica o intervalo de tempo em que a página da web
-precisa ser carregado em um contexto de navegação atual.
-O tempo limite padrão **300.000** é imposto quando uma
-nova sessão é criada pelo WebDriver. Se os carregamento da página delimitar
-um determinado período de tempo, o script será interrompido por
+### Page Load Timeout
+Specifies the time interval in which web page
+needs to be loaded in a current browsing context.
+The default timeout **300,000** is imposed when a
+new session is created by WebDriver. If page load limits
+a given/default time frame, the script will be stopped by
 _TimeoutException_.
 
-### Timeout de Espera Implícita:
-Isso especifica o tempo de espera pela
-estratégia de implicit element location quando
-localizando de elementos. O tempo limite padrão **0**
-é imposto quando uma nova sessão é criada pelo WebDriver.
+### Implicit Wait Timeout
+This specifies the time to wait for the
+implicit element location strategy when
+locating elements. The default timeout **0**
+is imposed when a new session is created by WebDriver.
 
 ## unhandledPromptBehavior
 
-Especifica o estado do `user prompt handler` da sessão atual.
-O padrão é **dismiss and notify state** (**dispensar e notificar estado**, em português)
+Specifies the state of current session's `user prompt handler`. 
+Defaults to **dismiss and notify state**
 
 ### User Prompt Handler
 
-Isso define qual ação deve ser tomada quando um
-o prompt do usuário se encontra na extremidade remota. Isso é definido pelo
-recurso `unhandledPromptBehavior` e tem os seguintes estados:
+This defines what action must take when a 
+user prompt encounters at the remote-end. This is defined by 
+`unhandledPromptBehavior` capability and has the following states:
 
 * dismiss
 * accept
@@ -403,31 +404,32 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 
 ## strictFileInteractability
 
-O novo recurso indica se as verificações estritas de interatividade
-devem ser aplicadas aos elementos _input type = file_. Como as verificações de
-interatividade estrita estão desativadas por padrão, há uma mudança no comportamento
-ao usar _Element Send Keys_ com controles de upload de arquivos ocultos.
+This new capability indicates if strict interactability checks 
+should be applied to _input type=file_ elements. As strict interactability 
+checks are off by default, there is a change in behaviour 
+when using _Element Send Keys_ with hidden file upload controls.
+
 
 ## proxy
 
-Um servidor proxy atua como intermediário para
-solicitações entre um cliente e um servidor. De forma simples,
-o tráfego flui através do servidor proxy
-a caminho do endereço que você solicitou e de volta.
+A proxy server acts as an intermediary for
+requests between a client and a server. In simple,
+the traffic flows through the proxy server
+on its way to the address you requested and back.
 
-Um servidor proxy para scripts de automação
-com Selenium pode ser útil para:
+A proxy server for automation scripts
+with Selenium could be helpful for:
 
-* Capturar o tráfego da rede
-* Simular chamadas de back-end feitas pelo site
-* Acessar o site necessário em uma rede complexa
-  topologias ou restrições / políticas corporativas estritas.
+* Capture network traffic
+* Mock backend calls made by the website
+* Access the required website under complex network
+  topologies or strict corporate restrictions/policies.
 
-Se você estiver em um ambiente corporativo, e um
-navegador não consegue se conectar a um URL, isso é
-provavelmente porque o ambiente precisa de um proxy para ser acessado.
+If you are in a corporate environment, and a
+browser fails to connect to a URL, this is most
+likely because the environment needs a proxy to be accessed.
 
-O Selenium WebDriver fornece uma maneira de configurações de proxy:
+Selenium WebDriver provides a way to proxy settings:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -462,7 +464,6 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-# Open URL
 driver.get("https://selenium.dev")
 
 {{< /tab >}}
@@ -485,7 +486,6 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# este código foi escrito com Selenium 4
 
 proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
 cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
