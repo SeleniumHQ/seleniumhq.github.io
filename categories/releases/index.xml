@@ -17,6 +17,7 @@ get the full browser functionality (even run extensions). Between versions 96 to
 &lt;p>Using &lt;code>--headless=new&lt;/code> should bring a better experience when using headless with Selenium.&lt;/p>
 &lt;p>Thanks to &lt;a href="https://github.com/mdmintz">Michael Mintz&lt;/a> for the detailed
 &lt;a href="https://stackoverflow.com/questions/45631715/downloading-with-chrome-headless-and-selenium/73840130#73840130">explanation&lt;/a>!&lt;/p>
+&lt;p>Check more details about the &lt;a href="https://developer.chrome.com/articles/new-headless/">new headleass mode at the official Chrome blog&lt;/a>.&lt;/p>
 &lt;h3 id="how-can-i-set-headless-mode-from-now-on">How can I set headless mode from now on?&lt;/h3>
 &lt;p>In short, users can add the headless mode they want to use through arguments in browser options.&lt;/p>
 &lt;h4 id="before">Before&lt;/h4>
