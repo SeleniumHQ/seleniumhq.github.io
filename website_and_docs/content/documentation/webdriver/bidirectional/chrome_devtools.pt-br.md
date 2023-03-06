@@ -29,8 +29,8 @@ locations. Automatizar esses tipos de aplicativos é complicado porque é difíc
 as geolocalizações no navegador usando o Selenium. Mas com a ajuda do Devtools,
 podemos facilmente as emular. O trecho do código abaixo demonstra isso.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-  {{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
 devTools.createSession();
@@ -40,7 +40,7 @@ devTools.send(Emulation.setGeolocationOverride(Optional.of(52.5043),
 driver.get("https://my-location.org/");
 driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" code=true >}}
+  {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
@@ -54,7 +54,7 @@ def geoLocationTest():
     driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
     driver.get("<your site url>")
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
@@ -86,7 +86,7 @@ namespace dotnet_test {
     }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -102,10 +102,10 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+  {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/emulateGeoLocation.spec.js">}}
   {{< /tab >}}
-  {{< tab header="Kotlin" code=true >}}
+  {{< tab header="Kotlin" >}}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.devtools.DevTools
 

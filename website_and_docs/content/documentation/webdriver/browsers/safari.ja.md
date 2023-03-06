@@ -24,23 +24,23 @@ Capabilities unique to Safari can be found at Apple's page [About WebDriver for 
 
 Starting a Safari session with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#21-L22" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_safari.py#L10-L11" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/SafariTest.cs#L14-L15" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L7-L8" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L10-L12" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
   val options = SafariOptions()
   val driver = SafariDriver(options)
 {{< /tab >}}

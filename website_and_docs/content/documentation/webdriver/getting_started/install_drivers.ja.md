@@ -50,7 +50,7 @@ Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducin
 ほとんどのマシンはブラウザを自動的に更新しますが、ドライバは更新しません。
 ブラウザに適切なドライバを確実に入手するために、多くのサードパーティライブラリが役立ちます。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 **Important:** This package does not currently work for IEDriverServer v4+
 
@@ -138,7 +138,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 * すでに `PATH` にあるディレクトリを確認するには、コマンドプロンプト/ターミナルを開いて次のように入力します。
 
-{{< tabpane code=false persistLang=false >}}
+{{< tabpane text=true persistLang=false >}}
 {{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell

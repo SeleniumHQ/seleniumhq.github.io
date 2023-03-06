@@ -18,7 +18,7 @@ you are using the latest version.
 
 ## Requirements by language
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
   {{% tab header="Java" %}}
 View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 

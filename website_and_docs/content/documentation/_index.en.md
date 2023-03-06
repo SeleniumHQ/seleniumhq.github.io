@@ -31,7 +31,7 @@ an interface to write instruction sets that can be run interchangeably in many
 browsers. Once you've installed everything, only a few lines of code get you inside
 a browser. You can find a more comprehensive example in [Writing your first Selenium script]({{< ref "first_script.md" >}})
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}

@@ -23,17 +23,17 @@ is additional functionality you'd like to see, please raise a
 Some applications make use of browser authentication to secure pages.
 With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
 ((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
 driver.get("https://your-domain.com/login");
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="CSharp" code=true >}}
+{{< tab header="CSharp" >}}
 NetworkAuthenticationHandler handler = new NetworkAuthenticationHandler()
 {
     UriMatcher = (d) => d.Host.Contains("your-domain.com"),
@@ -44,7 +44,7 @@ INetwork networkInterceptor = driver.Manage().Network;
 networkInterceptor.AddAuthenticationHandler(handler);
 await networkInterceptor.StartMonitoring();
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -57,7 +57,7 @@ ensure
   driver.quit
 end
 {{< /tab >}}
-{{< tab header="JavaScript" code=true >}}
+{{< tab header="JavaScript" >}}
 const {Builder} = require('selenium-webdriver');
 
 (async function example() {
@@ -75,7 +75,7 @@ const {Builder} = require('selenium-webdriver');
   }
 }())
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 val uriPredicate = Predicate { uri: URI ->
         uri.host.contains("your-domain.com")
     }
@@ -90,8 +90,8 @@ Mutation Observation is the ability to capture events via
 WebDriver BiDi when there are DOM mutations on a specific
 element in the DOM.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-  {{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 
 AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
@@ -112,7 +112,7 @@ assertThat(seen.get().getCurrentValue(), is("gouda"));
 
 driver.quit();
   {{< /tab >}}
-  {{< tab header="Python" code=true >}}
+  {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -129,7 +129,7 @@ assert event["current_value"] == ""
 assert event["old_value"] == "display:none;"
 
   {{< /tab >}}
-  {{< tab header="CSharp" code=true >}}
+  {{< tab header="CSharp" >}}
 List<DomMutationData> attributeValueChanges = new List<DomMutationData>();
 DefaultWait<List<DomMutationData>> wait = new DefaultWait<List<DomMutationData>>(attributeValueChanges);
 wait.Timeout = TimeSpan.FromSeconds(3);
@@ -157,7 +157,7 @@ foreach(var record in attributeValueChanges)
 
 await monitor.DisableDomMutationMonitoring();
   {{< /tab >}}
-  {{< tab header="Ruby" code=true >}}
+  {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
@@ -174,7 +174,7 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" code=true >}}
+  {{< tab header="JavaScript" >}}
 const {Builder, until} = require('selenium-webdriver');
 const assert = require("assert");
 
@@ -201,7 +201,7 @@ const assert = require("assert");
   }
 }())
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+  {{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
@@ -396,7 +396,7 @@ begin
     puts exceptions.length
   end
 
-  # Actions causing JS exceptions
+  #Actions causing JS exceptions
 
 ensure
   driver.quit
@@ -452,8 +452,8 @@ fun kotlinJsErrorListener() {
 If you want to capture network events coming into the browser and you want manipulate them you are able to do
 it with the following examples.
 
-{{< tabpane langEqualsHeader=true code=false >}}
-{{< tab header="Java" code=true >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
     import org.openqa.selenium.WebDriver;
     import org.openqa.selenium.devtools.HasDevTools;
     import org.openqa.selenium.devtools.NetworkInterceptor;
@@ -479,10 +479,10 @@ it with the following examples.
 {{< tab header="Python" >}}
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" code=true >}}
+{{< tab header="Ruby" >}}
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -499,7 +499,7 @@ driver.find_element(tag_name: 'button').click
 expect(driver.find_element(id: 'result').text).to eq('two')
 {{< /tab >}}
 
-{{< tab header="JavaScript" code=true >}}
+{{< tab header="JavaScript" >}}
 const connection = await driver.createCDPConnection('page')
 let url = fileServer.whereIs("/cheese")
 let httpResponse = new HttpResponse(url)
@@ -511,7 +511,7 @@ await driver.onIntercept(connection, httpResponse, async function () {
 })
 driver.get(url)
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
+{{< tab header="Kotlin" >}}
 val driver = ChromeDriver()
 val interceptor = new NetworkInterceptor(
       driver,

@@ -20,7 +20,7 @@ Capabilities unique to Chrome can be found at Google's page for [Capabilities & 
 
 Starting a Chrome session with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -51,7 +51,7 @@ Commonly used args include `--start-maximized` and `--headless=new`
 
 Add an argument to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -79,7 +79,7 @@ use chromedriver to drive various Chromium based browsers.
 
 Add a browser location to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -116,7 +116,7 @@ Setting the `detach` parameter to true will keep the browser open after the driv
 
 Add a binary to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -144,7 +144,7 @@ A common example is to turn the popup blocker back on.
 
 Set excluded arguments on options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

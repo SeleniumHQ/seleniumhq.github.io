@@ -20,7 +20,7 @@ Como o nome sugere, Virtual Authenticator emula esses autenticadores para testes
 Um Autenticador Virtual tem uma [série de propriedades](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
 Essas propriedades são mapeadas como VirtualAuthenticatorOptions nos bindings do Selenium.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L72-78" >}}
 {{< /tab >}}
@@ -43,7 +43,7 @@ Essas propriedades são mapeadas como VirtualAuthenticatorOptions nos bindings d
 
 Cria um novo autenticador virtual com as propriedades fornecidas.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L85-92" >}}
 {{< /tab >}}
@@ -65,7 +65,7 @@ Cria um novo autenticador virtual com as propriedades fornecidas.
 
 Remove o autenticador virtual adicionado anteriormente.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L101-105" >}}
 {{< /tab >}}
@@ -87,7 +87,7 @@ Remove o autenticador virtual adicionado anteriormente.
 
 Cria uma resident (stateful) credential com os requeridos [parâmetros](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L120-123" >}}
 {{< /tab >}}
@@ -108,7 +108,7 @@ Cria uma resident (stateful) credential com os requeridos [parâmetros](https://
 
 Cria uma resident (stateless) credential com os requeridos [parâmetros](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L163-165" >}}
 {{< /tab >}}
@@ -129,7 +129,7 @@ Cria uma resident (stateless) credential com os requeridos [parâmetros](https:/
 
 Registra a credencial com o autenticador. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L157-166" >}}
 {{< /tab >}}
@@ -150,7 +150,7 @@ Registra a credencial com o autenticador.
 
 Retorna a lista de credenciais que o autenticador possui.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L177-191" >}}
 {{< /tab >}}
@@ -172,7 +172,7 @@ Retorna a lista de credenciais que o autenticador possui.
 
 Remove a credencial do autenticador baseado na id da credencial passado.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
 {{< /tab >}}
@@ -194,7 +194,7 @@ Remove a credencial do autenticador baseado na id da credencial passado.
 
 Remove todas as credenciais do autenticador.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L216-225" >}}
 {{< /tab >}}
@@ -215,7 +215,7 @@ Remove todas as credenciais do autenticador.
 
 Diz se o autenticador simulará sucesso ou falha na verificação de usuário.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L231-232" >}}
 {{< /tab >}}

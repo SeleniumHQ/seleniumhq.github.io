@@ -52,7 +52,7 @@ with a`content-editable` attribute. If it is not editable,
 [Here](https://www.w3.org/TR/webdriver/#keyboard-actions) is the list of 
 possible keystrokes that WebDriver Supports.
 
-{{< tabpane >}}
+{{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

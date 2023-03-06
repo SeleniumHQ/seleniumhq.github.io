@@ -21,7 +21,7 @@ Selenium所做的一切,
 
 关于如何启动会话，请浏览我们的文档 [驱动会话]({{< ref "../drivers/" >}})
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}
 {{< /tab >}}
@@ -48,7 +48,7 @@ Selenium所做的一切,
 [导航]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) 
 到一个网页. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L18" >}}
 {{< /tab >}}
@@ -74,7 +74,7 @@ Selenium所做的一切,
 您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/interactions" >}}) , 
 包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L20" >}}
 {{< /tab >}}
@@ -113,7 +113,7 @@ Selenium所做的一切,
 阅读更多关于[等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
 的信息. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L23" >}}
 {{< /tab >}}
@@ -139,7 +139,7 @@ Selenium所做的一切,
 如果不先[找到元素]({{< ref "/documentation/webdriver/elements" >}}), 
 就无法与之交互.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L25-L26" >}}
 {{< /tab >}}
@@ -165,7 +165,7 @@ Selenium所做的一切,
 只有少数几个[操作]({{< ref "/documentation/webdriver/elements/interactions.md" >}})可以执行, 
 但您将经常使用它们. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L28-L29" >}}
 {{< /tab >}}
@@ -189,7 +189,7 @@ Selenium所做的一切,
 ### 7. 获取元素信息
 元素存储了很多[被请求的信息]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L32" >}}
 {{< /tab >}}
@@ -216,7 +216,7 @@ Selenium所做的一切,
 默认情况下, 该进程也会关闭浏览器. 
 无法向此驱动程序实例发送更多命令. 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
 {{< /tab >}}
@@ -245,7 +245,7 @@ Selenium所做的一切,
 按照选项卡底部的链接查看代码示例, 
 因为它将使用测试运行程序而不是独立文件执行.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
 {{< /tab >}}
@@ -273,7 +273,7 @@ you will want to execute your Selenium code using test runner tools.
 Many of the code examples in this documentation can be found in our example repositories.
 There are multiple options in each language, but here is what we are using in our examples:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 // Add instructions
 {{< /tab >}}
@@ -286,7 +286,7 @@ There are multiple options in each language, but here is what we are using in ou
 {{< tab header="Ruby" >}}
 // Add instructions
 {{< /tab >}}
-{{% tab header="JavaScript" %}}
+{{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
 ```shell

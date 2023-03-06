@@ -2,7 +2,6 @@
 title: "Style guide for Selenium documentation"
 linkTitle: "Style"
 weight: 6
-requiresTranslation: true
 description: >-
   Conventions for contributions to the Selenium documentation and code examples
 ---
@@ -129,8 +128,9 @@ The Docsy code tabs look like this:
 
 To generate the above tabs, this is what you need to write.
 Note that the `tabpane` includes `langEqualsHeader=true`.
-This auto-formats the code in each tab to match the header name
-and is also used to synchronize the tabs on the page.
+This auto-formats the code in each tab to match the header name,
+but more importantly it ensures that all tabs on the page with a language
+are set to the same thing, so we always want to include it.
 
     {{</* tabpane langEqualsHeader=true */>}}
       {{</* tab header="Java" */>}}
@@ -163,9 +163,9 @@ All code examples to be in our
 
 This code can be automatically displayed in the documentation using the `gh-codeblock` shortcode.
 The shortcode automatically generates its own html, so if any tab is using this shortcode,
-set `code=false` in the `tabpane` to prevent the auto-formatting, and add `code=true` in any
-`tab` that still needs to get formatted with code.
-Either way, set `langEqualsHeader=true` to keep the language tabs synchronized throughout the page.
+set `text=true` in the `tabpane`/`tab` to prevent the auto-formatting, and add `code=true` in any
+`tab` that still needs to get formatted with code. 
+Either way, set `langEqualsHeader=true` to keep the language tabs synchronized throughout the page. 
 Note that the `gh-codeblock` line can not be indented at all.
 
 One great thing about using `gh-codeblock` is that it adds a link to the full example.
@@ -174,7 +174,7 @@ are needed, and the user can navigate to the repo to see how to use it.
 
 A basic comparison of code looks like:
 
-    {{</* tabpane code=false langEqualsHeader=true */>}}
+    {{</* tabpane text=true langEqualsHeader=true */>}}
     {{</* tab header="Java" */>}}
     {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" */>}}
     {{</* /tab */>}}
@@ -197,7 +197,7 @@ A basic comparison of code looks like:
 
 Which looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L46-L47" >}}
 {{< /tab >}}
@@ -221,10 +221,10 @@ Which looks like this:
 ### Using Markdown in a Tab
 
 If you want your example to include something other than code (default) or html (from `gh-codeblock`),
-you need to first set `code=false`, 
+you need to first set `text=true`, 
 then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with curly braces:
 
-    {{</* tabpane code=false langEqualsHeader=true */>}}
+    {{</* tabpane text=true langEqualsHeader=true */>}}
     {{%/* tab header="Java" */%}}
     1. Start the driver
     {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" */>}}
@@ -238,7 +238,7 @@ then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with 
 
 This produces:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 1. Start the driver
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}

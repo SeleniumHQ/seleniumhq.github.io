@@ -20,7 +20,7 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 基本的な定義済みのオプションを使用して Firefox セッションを開始すると、以下のようになります。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L24-L25" >}}
 {{< /tab >}}
@@ -34,7 +34,7 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L13">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -51,25 +51,25 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 オプションに引数を追加します。
 
 <div>
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
@@ -153,7 +153,7 @@ please refer to the
 
 [Mozilla Add-Onsページ](https://addons.mozilla.org/ja/firefox/) から取得する署名付きxpiファイル
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
@@ -179,7 +179,7 @@ please refer to the
 アドオンをアンインストールするには、そのIDを知る必要があります。
 IDはアドオンインストール時の戻り値から取得できます。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
@@ -207,7 +207,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 そのため、"一時的なもの" としてのみインストールできます。
 これは、zipファイルまたはディレクトリを渡すことで実行できます。ディレクトリの例を次に示します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}
