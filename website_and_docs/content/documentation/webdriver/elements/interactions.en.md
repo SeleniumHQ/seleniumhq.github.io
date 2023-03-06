@@ -46,7 +46,7 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 The [element send keys command](https://w3c.github.io/webdriver/#dfn-element-send-keys) 
 types the provided keys into an [editable](https://w3c.github.io/webdriver/#dfn-editable) element.
 Typically, this means an element is an input element of a form with a `text` type or an element
-with a`content-editable` attribute. If it is not editable,
+with a `content-editable` attribute. If it is not editable,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned.
 
 [Here](https://www.w3.org/TR/webdriver/#keyboard-actions) is the list of 
@@ -240,24 +240,9 @@ ensure
   driver.quit
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-(async function example() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    // Navigate to Url
-    await driver.get('https://www.google.com');
-    // Store 'SearchInput' element
-    let searchInput = driver.findElement(By.name('q'));
-    await searchInput.sendKeys("selenium");
-    // Clears the entered text
-    await searchInput.clear();
-  }
-  finally {
-    await driver.quit();
-  }
-})();
-  {{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L19-L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
