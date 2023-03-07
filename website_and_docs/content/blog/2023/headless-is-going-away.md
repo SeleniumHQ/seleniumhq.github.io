@@ -35,6 +35,7 @@ Using `--headless=new` should bring a better experience when using headless with
 Thanks to [Michael Mintz](https://github.com/mdmintz) for the detailed 
 [explanation](https://stackoverflow.com/questions/45631715/downloading-with-chrome-headless-and-selenium/73840130#73840130)!
 
+Check more details about the [new headleass mode at the official Chrome blog](https://developer.chrome.com/articles/new-headless/).
 
 ### How can I set headless mode from now on?
 
