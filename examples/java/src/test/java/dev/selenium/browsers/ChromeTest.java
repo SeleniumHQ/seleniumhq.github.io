@@ -27,7 +27,7 @@ public class ChromeTest {
     }
 
     @Test
-    public void test_keep_browser_open() {
+    public void keepBrowserOpen() {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("detach", true);
         driver = new ChromeDriver(options);
