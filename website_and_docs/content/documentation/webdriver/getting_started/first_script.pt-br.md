@@ -254,38 +254,57 @@ você deverá executar seu código usando feramentas para executar testes.
 Muitos exemplos de código encontrado nessa documentação podem ser encontrado no nosso repositório de exemplos. 
 Existem múltiplas opções em cada linguagem, mas esta será qual usaremos em nossos exemplos:
 
+{{< tabpane langEqualsHeader=true >}}
+{{% tab header="Java" text=true %}}
+Install Dependent library
+```shell
+mvn install
+```
+Run your tests using below command
+```shell
+mvn test  
+```
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+Install Dependent library
+```shell
+pip install -r requirements.txt
+```
+Run your tests using below command
+```shell
+pytest
+````
+{{< /tab >}}
+{{% tab header="CSharp" text=true %}}
 // Add instructions
 {{< /tab >}}
-{{< tab header="Python" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-// Add instructions
+{{% tab header="Ruby" text=true %}}
+Install Dependent library
+```shell
+bundle install
+```
+Run your tests using below command
+```shell
+rspec 
+```
 {{< /tab >}}
 {{% tab header="JavaScript" text=true %}}
-Install Mocha Test runner using below command in your terminal
-
+Install Dependent library
 ```shell
-npm install mocha
+npm i
 ```
-
-and run your tests using below command
-
+Run your tests using below command
 ```shell
-mocha firstScript.spec.js
+npm test
 ```
 
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% tab header="Kotlin" text=true %}}
 // Add instructions
 {{< /tab >}}
 {{< /tabpane >}}
+
 
 ## Próximos Passos
 

@@ -255,52 +255,52 @@ Many of the code examples in this documentation can be found in our example repo
 There are multiple options in each language, but here is what we are using in our examples:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" text=true %}}
+Install Dependent library
 ```shell
-# install Dependent library
 mvn install
-
-# run your tests using below command
-mvn test  
-
 ```
-{{< /tab >}}
-{{< tab header="Python" >}}
+Run your tests using below command
 ```shell
-# install Dependent library
-pip install -r requirements.txt
+mvn test  
+```
 
-# run your tests using below command
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+Install Dependent library
+```shell
+pip install -r requirements.txt
+```
+Run your tests using below command
+```shell
 pytest
 ````
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% tab header="CSharp" text=true %}}
 // Add instructions
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% tab header="Ruby" text=true %}}
+Install Dependent library
 ```shell
-# install Dependent library
 bundle install
-
-# run your tests using below command
+```
+Run your tests using below command
+```shell
 rspec 
 ```
 {{< /tab >}}
 {{% tab header="JavaScript" text=true %}}
-Install Mocha Test runner using below command in your terminal
-
+Install Dependent library
 ```shell
-npm install mocha
+npm i
 ```
-
-and run your tests using below command
-
+Run your tests using below command
 ```shell
-mocha firstScript.spec.js
+npm test
 ```
 
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% tab header="Kotlin" text=true %}}
 // Add instructions
 {{< /tab >}}
 {{< /tabpane >}}

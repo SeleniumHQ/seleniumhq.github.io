@@ -256,37 +256,57 @@ you will want to execute your Selenium code using test runner tools.
 Many of the code examples in this documentation can be found in our example repositories.
 There are multiple options in each language, but here is what we are using in our examples:
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{% tab header="Java" text=true %}}
+Install Dependent library
+```shell
+mvn install
+```
+Run your tests using below command
+```shell
+mvn test  
+```
+
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+Install Dependent library
+```shell
+pip install -r requirements.txt
+```
+Run your tests using below command
+```shell
+pytest
+````
+{{< /tab >}}
+{{% tab header="CSharp" text=true %}}
 // Add instructions
 {{< /tab >}}
-{{< tab header="Python" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-// Add instructions
+{{% tab header="Ruby" text=true %}}
+Install Dependent library
+```shell
+bundle install
+```
+Run your tests using below command
+```shell
+rspec 
+```
 {{< /tab >}}
 {{% tab header="JavaScript" text=true %}}
-Install Mocha Test runner using below command in your terminal
-
+Install Dependent library
 ```shell
-npm install mocha
+npm i
 ```
-
-and run your tests using below command
-
+Run your tests using below command
 ```shell
-mocha firstScript.spec.js
+npm test
 ```
 
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% tab header="Kotlin" text=true %}}
 // Add instructions
 {{< /tab >}}
 {{< /tabpane >}}
+
 
 ## Next Steps
 
