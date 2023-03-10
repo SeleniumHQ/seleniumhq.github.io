@@ -1510,12 +1510,12 @@ announcements is crucial to ensure the user experience is intact.&lt;/p>
 &lt;p>The Selenium server runs great on Java 11+ already, so while we plan to make that the minimum
 version in a future release, for now we plan to introduce optional components that can take advantage
 of modern Java releases.&lt;/p>
-&lt;p>So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.&lt;/p>
-&lt;h3 id="using-java-11-http-client-in-selenium-450">Using Java 11+ HTTP Client in Selenium 4.5.0&lt;/h3>
+&lt;p>So as a first step towards this move, the Java 11+ HTTP client from Selenium 4.5.0 and above.&lt;/p>
+&lt;h3 id="using-java-11-http-client-in-selenium">Using Java 11+ HTTP Client in Selenium&lt;/h3>
 &lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
 &lt;ul>
 &lt;li>Project configured to use Java 11+&lt;/li>
-&lt;li>Using Selenium 4.5.0&lt;/li>
+&lt;li>Using Selenium 4.5.0 as a minumum version, find the latest in the &lt;a href="/downloads">downloads&lt;/a> page.&lt;/li>
 &lt;/ul>
 &lt;h4 id="integrating-the-java-11-client">Integrating the Java 11+ client&lt;/h4>
 &lt;p>Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.&lt;/p>
@@ -1531,7 +1531,10 @@ of modern Java releases.&lt;/p>
 &amp;lt;artifactId&amp;gt;selenium-http-jdk-client&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>&lt;h5 id="set-the-system-property">Set the system property&lt;/h5>
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>NOTE&lt;/strong>: In the dependencies above version &lt;code>4.5.0&lt;/code> is shown, however we recommend you to check the
+&lt;a href="/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
+matching.&lt;/p>
+&lt;h5 id="set-the-system-property">Set the system property&lt;/h5>
 &lt;p>Set the system property to indicate that Java 11+ Http client needs to be used.
 By default, it uses the AsyncHttpClient.&lt;/p>
 &lt;pre tabindex="0">&lt;code> System.setProperty(&amp;#34;webdriver.http.factory&amp;#34;, &amp;#34;jdk-http-client&amp;#34;);
@@ -1547,6 +1550,9 @@ and then start the Grid in the following way:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>java -Dwebdriver.http.factory&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>jdk-http-client -jar selenium-server-4.5.0.jar —-ext &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:4.5.0&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> standalone
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you are using the Hub/Node(s) mode or the Distributed mode, setting the &lt;code>-Dwebdriver.http.factory=jdk-http-client&lt;/code> and &lt;code>—-ext&lt;/code> flags
 needs to be done for each one of the components.&lt;/p>
+&lt;p>&lt;strong>NOTE&lt;/strong>: In the dependencies above version &lt;code>4.5.0&lt;/code> is shown, however we recommend you to check the
+&lt;a href="/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
+matching.&lt;/p>
 &lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Scaling a Kubernetes Selenium Grid with KEDA</title><link>/blog/2022/scaling-grid-with-keda/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/scaling-grid-with-keda/</guid><description>
 &lt;h2 id="the-issue">The Issue&lt;/h2>
 &lt;p>If you have any experience with Selenium Grid and Kubernetes you will probably
