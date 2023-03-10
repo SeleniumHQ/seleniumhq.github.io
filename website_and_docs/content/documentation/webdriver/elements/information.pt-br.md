@@ -48,7 +48,11 @@ driver.Url = "https://www.selenium.dev/selenium/web/inputs.html";
 Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# Help us with a PR for code sample
+# Navigate to the url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+#Get boolean value for is element display
+val = driver.find_element(name: 'email_input').displayed?
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // Navigate to url
