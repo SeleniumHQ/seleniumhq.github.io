@@ -5,7 +5,7 @@ enableRobotsTXT = true
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
-#ignoreErrors = ["error-remote-getjson"] 
+ignoreErrors = ["error-remote-getjson"] 
 # Language settings
 # contentDir = "content/en"
 defaultContentLanguage = "en"

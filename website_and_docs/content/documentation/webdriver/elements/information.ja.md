@@ -48,7 +48,7 @@ Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 # Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 #fetch display status
 val = driver.find_element(name: 'email_input').displayed?
@@ -446,14 +446,7 @@ email_element=driver.find_element(name: 'email_input')
 emailVal = email_element.attribute("value");
   {{< /tab >}}
     {{< tab header="JavaScript" >}}
-// Navigate to the Url
-await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// identify the email text box
-const emailElement = await driver.findElements(By.xpath('//input[@name="email_input"]'));
-
-//fetch the attribute "name" associated with the textbox
-const nameAttribute = await emailElement.getAttribute("name");
+// Help us with a PR for code sample
     {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
