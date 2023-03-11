@@ -238,8 +238,8 @@ ensure
 driver.quit
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L19-L20" >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L18-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
