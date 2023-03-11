@@ -6,7 +6,7 @@ tags: ["selenium"]
 categories: ["releases"]
 author: Puja Jagani ([@pujagani](https://twitter.com/pujagani))
 description: >
-   We’re happy to share that Selenium 4.5.0 supports Java 11+ HttpClient
+   We’re happy to share that starting from Selenium 4.5.0, a Java 11+ HttpClient is supported
 ---
 
 ### Current HTTP client used in Selenium
@@ -34,13 +34,13 @@ The Selenium server runs great on Java 11+ already, so while we plan to make tha
 version in a future release, for now we plan to introduce optional components that can take advantage 
 of modern Java releases.
 
-So as a first step towards this move, Selenium 4.5.0 client supports the Java 11+ HTTP client.
+So as a first step towards this move, the Java 11+ HTTP client from Selenium 4.5.0 and above.
 
-### Using Java 11+ HTTP Client in Selenium 4.5.0
+### Using Java 11+ HTTP Client in Selenium
 
 #### Prerequisites: 
 * Project configured to use Java 11+
-* Using Selenium 4.5.0 
+* Using Selenium 4.5.0 as a minumum version, find the latest in the [downloads](/downloads) page.
 
 #### Integrating the Java 11+ client
 Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.
@@ -61,6 +61,10 @@ Add the follow dependencies to your pom.xml
   <version>4.5.0</version>
 </dependency>
 ```
+
+**NOTE**: In the dependencies above version `4.5.0` is shown, however we recommend you to check the
+[downloads](/downloads) page to use the latest version released. Make sure the versions used are
+matching.
 
 ##### Set the system property
 
@@ -93,6 +97,11 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-4.5.0.jar —
 
 If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` and `—-ext` flags 
 needs to be done for each one of the components.
+
+**NOTE**: In the dependencies above version `4.5.0` is shown, however we recommend you to check the
+[downloads](/downloads) page to use the latest version released. Make sure the versions used are
+matching.
+
 
 
 Huge thanks to Simon Stewart ([@shs96c](https://twitter.com/shs96c)) for making this possible with his contribution! 
