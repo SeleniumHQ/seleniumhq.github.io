@@ -435,12 +435,14 @@ email_element=driver.find_element(name: 'email_input')
 emailVal = email_element.attribute("value");
   {{< /tab >}}
     {{< tab header="JavaScript" >}}
-// Navigate to URL
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-// identify the element
-let email_element=await driver.find_element(name: 'email_input');
-//fetch the value property
-let emailVal = await email_element.attribute("value");
+// Navigate to the Url
+await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+
+// identify the email text box
+const emailElement = await driver.findElements(By.xpath('//input[@name="email_input"]'));
+
+//fetch the attribute "name" associated with the textbox
+const nameAttribute = await emailElement.getAttribute("name");
     {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
