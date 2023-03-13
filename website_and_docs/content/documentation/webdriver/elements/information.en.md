@@ -445,16 +445,19 @@ String valueInfo = eleSelLink.GetAttribute("value");
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 # Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 #identify the email text box
 email_element=driver.find_element(name: 'email_input')
-
 #fetch the value property associated with the textbox
-emailVal = email_element.attribute("value");
+emailVal = email_element.attribute("value")
   {{< /tab >}}
     {{< tab header="JavaScript" >}}
-// Help us with a PR for code sample
+// Navigate to URL
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
+// identify the element
+let email_element=await driver.find_element(name: 'email_input');
+//fetch the value property
+let emailVal = await email_element.attribute("value");
     {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample

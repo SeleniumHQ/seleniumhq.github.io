@@ -92,11 +92,11 @@ available in Selenium.
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.className('information'));
+	const loc = await driver.findElement(By.className('information'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.className("information"))
+	val loc: WebElement = driver.findElement(By.className("information"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -126,11 +126,11 @@ textbox, using css.
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.css('#fname'));
+	const loc = await driver.findElement(By.css('#fname'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.css("#fname"))
+	val loc: WebElement = driver.findElement(By.css("#fname"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -158,11 +158,11 @@ We will identify the Last Name field using it.
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.id('lname'));
+	const loc = await driver.findElement(By.id('lname'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.id("lname"))
+	val loc: WebElement = driver.findElement(By.id("lname"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -191,11 +191,11 @@ We will identify the Newsletter checkbox using it.
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.name('newsletter'));
+	const loc = await driver.findElement(By.name('newsletter'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.name("newsletter"))
+	val loc: WebElement = driver.findElement(By.name("newsletter"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -222,11 +222,11 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.linkText('Selenium Official Page'));
+	const loc = await driver.findElement(By.linkText('Selenium Official Page'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.linkText("Selenium Official Page"))
+	val loc: WebElement = driver.findElement(By.linkText("Selenium Official Page"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -254,11 +254,11 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.partialLinkText('Official Page'));
+	const loc = await driver.findElement(By.partialLinkText('Official Page'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.partialLinkText("Official Page"))
+	val loc: WebElement = driver.findElement(By.partialLinkText("Official Page"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -284,11 +284,11 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.tagName('a'));
+	const loc = await driver.findElement(By.tagName('a'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.tagName("a"))
+	val loc: WebElement = driver.findElement(By.tagName("a"))
   {{< /tab >}}
 {{< /tabpane >}} 
 
@@ -320,11 +320,11 @@ first name text box. Let us create locator for female radio button using xpath.
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
-	const vegetable = await driver.findElement(By.xpath('//input[@value='f']'));
+	const loc = await driver.findElement(By.xpath('//input[@value='f']'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
-	val vegetable: WebElement = driver.findElement(By.xpath('//input[@value='f']'))
+	val loc: WebElement = driver.findElement(By.xpath('//input[@value='f']'))
   {{< /tab >}}
 {{< /tabpane >}} 
 

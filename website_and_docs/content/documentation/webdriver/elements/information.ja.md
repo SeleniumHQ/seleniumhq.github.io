@@ -446,7 +446,12 @@ email_element=driver.find_element(name: 'email_input')
 emailVal = email_element.attribute("value");
   {{< /tab >}}
     {{< tab header="JavaScript" >}}
-// Help us with a PR for code sample
+// Navigate to URL
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
+// identify the element
+let email_element=await driver.find_element(name: 'email_input');
+//fetch the value property
+let emailVal = await email_element.attribute("value");
     {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Help us with a PR for code sample
