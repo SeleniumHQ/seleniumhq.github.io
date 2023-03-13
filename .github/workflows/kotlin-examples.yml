@@ -40,8 +40,12 @@ jobs:
         java-version: 8
     - name: Install Chrome
       uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
     - name: Install Edge
       uses: browser-actions/setup-edge@latest
+      with:
+        edge-version: stable
     - name: Install Firefox
       uses: abhi1693/setup-browser@v0.3.5
       with:
