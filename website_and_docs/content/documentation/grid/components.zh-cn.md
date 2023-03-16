@@ -19,105 +19,64 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
+Selenium Grid 4 是对以前版本的彻底重写。除了对性能和标准合规性进行全面改进外，还分解了 `Grid` 的不同功能以反映更现代的计算和软件开发时代。 Selenium Grid 4 专为容器化和云分布式可扩展性而构建，是现代时代的全新解决方案。
 
-Selenium Grid 4 is a ground-up rewrite from previous versions. In addition to a comprehensive
-set of improvements to performance and standards compliance, the different functions of the grid were 
-broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
-and cloud-distributed scalability, Selenium Grid 4 is a wholly new solution for the modern era. 
-
-{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
-![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
+{{< card header="**Grid Components**" footer="全分布式展示的Grid组件" >}}
+![Selenium Grid 4 组件](/images/documentation/grid/components.png "Selenium Grid 4 Components")
 {{< /card >}}
 
 ## Router
 
-The **Router** is the entry point of the Grid, receiving all external requests, and forwards them to 
-the correct component.
+**Router** 是 Grid 的入口点，接收所有外部请求，并将它们转发给正确的组件。
 
-If the **Router** receives a new session request, it will be forwarded to the **New Session Queue**.
+如果**路由器**收到新的会话请求，它将被转发到**新会话队列**。
 
-If the request belongs to an existing session, the **Router** will query the **Session Map** to get
-the **Node** ID where the session is running, and then the request will be forwarded directly to the
-**Node**.
+如果请求属于一个已经存在的session，**Router**会查询**Session Map**得到session运行所在的**Node** ID，然后将请求直接转发给**Node**。
 
-The **Router** balances the load in the Grid by sending the requests to the component that is able 
-to handle them better, without overloading any component that is not needed in the process.
+**路由器**通过将请求发送到能够更好地处理它们的组件来平衡网格中的负载，而不会使过程中不需要的任何组件过载。
 
-## Distributor
+## 分发器（Distributor）
 
-The **Distributor** has two main responsibilities:
+**分发器**有两个主要职责：
 
-#### Register and keep track of all Nodes and their capabilities
+#### 注册并跟踪所有节点及其功能
 
-A **Node** registers to the **Distributor** by sending a **Node** registration event through 
-the **Event Bus**. The **Distributor** reads it, and then tries to reach the **Node** via HTTP
-to confirm its existance. If the request is successfull, the **Distributor** registers the Node 
-and keeps track of all **Nodes** capabilities through the **GridModel**.
+**Node**通过**事件总线**发送**Node**注册事件来注册到**分发器**。**分发器**读取它，然后尝试通过 HTTP 到达节点以确认它的存在。如果请求成功，**Distributor**注册节点并通过 **GridModel** 跟踪所有节点功能。
 
-#### Query the New Session Queue and process any pending new session requests
+#### 查询新会话队列并处理任何未决的新会话请求
 
-When a new session request is sent to the **Router**, it gets forwarded to the **New Session Queue**,
-where it will wait in the queue. The **Distributor** will poll the **New Session Queue** for pending 
-new session requests, and then finds a suitable **Node** where the session can be created. After the
-session has been created, the **Distributor** stores in the **Session Map** the relation between the 
-session id and **Node** where the session is being executed.
+当一个新的会话请求被发送到**路由器**时，它被转发到**新会话队列**，它将在队列中等待。 **Distributor** 将轮询**新会话队列**以查找未决的新会话请求，然后找到可以创建会话的合适**Node**。会话创建后，**分发器**将会话 ID 与正在执行会话的节点之间的关系存储在**会话映射**中。
 
-## Session Map
+## 会话映射（Session Map）
 
-The **Session Map** is a data store that keeps the relationship between the session id and the **Node** 
-where the session is running. It supports the **Router** in the process of forwarding a request to the 
-**Node**. The **Router** will ask the **Session Map** for the **Node** associated to a session id.
+**会话映射** 是一个数据存储，用于保存会话 ID 和运行会话的节点之间的关系。它支持**路由器**在将请求转发到**节点**的过程中进行查询。**路由器**将向**会话映射**询问与会话 ID 关联的**节点**。
 
-## New Session Queue
+## 新会话队列（New Session Queue）
 
-The **New Session Queue** holds all the new session requests in a FIFO order. It has configurable 
-parameters for setting the request timeout and request retry interval (how often the timeout will 
-be checked).
+**新会话队列**按先进先出的顺序保存所有新会话请求。它具有可配置的参数，用于设置请求超时和请求重试间隔（检查超时的频率）。
 
-The **Router** adds the new session request to the **New Session Queue** and waits for the response.
-The **New Session Queue** regularly checks if any request in the queue has timed out, if so the request 
-is rejected and removed immediately.
+**路由器**将**新会话请求**添加到**新会话队列**中并等待响应。**新会话队列**定期检查队列中是否有任何请求超时，如果是，则立即拒绝并将其删除。
 
-The **Distributor** regularly checks if a slot is available. If so, the **Distributor** polls the
-**New Session Queue** for the first matching request. The **Distributor** then attempts to create
-a new session.
+**分发器**定期检查是否有可用的插槽。如果有可用的插槽，则**分发器**会轮询**新会话队列**以查找第一个匹配的请求。然后，**分发器**尝试创建**新会话**。
 
-Once the requested capabilities match the capabilities of any of the free **Node** slots, the **Distributor** 
-attempts to get the available slot. If all the slots are busy, the **Distributor** will send the request back
-to the queue. If request times out while retrying or adding to the front of the queue, it will be rejected.
+一旦请求的功能与任何空闲**节点**插槽的功能匹配，**分发器**将尝试获取可用插槽。如果所有插槽都已忙碌，则**分发器**将将请求发送回队列。如果请求在重试或添加到队列的前面时超时，则会被拒绝。
 
-After a session is created successfully, the **Distributor** sends the session information to the **New Session Queue**,
-which then gets sent back to the **Router**, and finally to the client.
+成功创建会话后，**分发器**将会话信息发送到**新会话队列**，该信息然后被发送回**路由器**，最终发送给客户端。
 
-## Node
+## 节点（Node）
 
-A Grid can contain multiple **Nodes**. Each **Node** manages the slots for the available browsers of the machine 
-where it is running.
+一个网格可以包含多个节点。每个节点管理它所在机器上可用浏览器的插槽。
 
-The **Node** registers itself to the **Distributor** through the **Event Bus**, and its configuration is sent as 
-part of the registration message.
+**节点**通过**事件总线**向**分发器**注册自己，并将其配置作为注册消息发送。
 
-By default, the **Node** auto-registers all browser drivers available on the path of the machine where it runs. 
-It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is 
-created. Through a specific [configuration]({{< ref "/configuration" >}}), it can run sessions in Docker 
-containers or relay commands.
+默认情况下，**节点**会自动注册其所在机器上路径中可用的所有浏览器驱动程序。它还为基于Chromium的浏览器和Firefox创建每个可用CPU一个插槽。对于Safari，只创建一个插槽。通过特定的[配置]({{< ref "/configuration" >}})，它可以在Docker容器中运行会话或转发命令。
 
-A **Node** only executes the received commands, it does not evaluate, make judgments, or control anything other
-than the flow of commands and responses. The machines where the **Node** is running does not need to have the 
-same operating system as the other components. For example, A Windows **Node** might have the capability of 
-offering IE Mode on Edge as a browser option, whereas this would not be possible on Linux or Mac, and a Grid can 
-have multiple **Nodes** configured with Windows, Mac, or Linux.
+**节点**仅执行接收到的命令，不评估、不做出判断或控制任何除命令和响应流之外的东西。**节点**所在的机器不需要与其他组件具有相同的操作系统。例如，Windows节点可能具有在Edge上提供IE模式作为浏览器选项的能力，而在Linux或Mac上则不可能，网格可以配置多个具有Windows、Mac或Linux的**节点**。
 
-## Event Bus
+## 事件总线（Event Bus）
 
-The **Event Bus** serves as a communication path between the **Nodes**, **Distributor**, **New Session Queue**, 
-and **Session Map**. The Grid does most of its internal communication through messages, avoiding expensive HTTP 
-calls. When starting the Grid in its fully distributed mode, the **Event Bus** is the first component that 
-should be started.
+**事件总线**作为**节点**、**分发器**、**新会话队列**和**会话映射**之间的通信路径。`Grid` 的大部分内部通信都通过消息进行，避免了频繁的HTTP调用。在完全分布式模式下启动`Grid` 时，**事件总线**应该是第一个组件。
 
-
-{{% alert title="Running your own Grid" color="primary" %}}
-Looking forward to using all these components and run your own Grid? 
-Head to the ["Getting Started"]({{< ref "getting_started.md" >}})
-section to understand how to put all these pieces together. 
+{{% alert title="运行自己的Grid" color="primary" %}}
+想要使用所有这些组件并运行自己的网格？请前往["入门"]({{< ref "getting_started.md" >}})部分了解如何将所有这些部分组合在一起。
 {{% /alert %}}
