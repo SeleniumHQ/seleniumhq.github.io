@@ -159,7 +159,7 @@ java -jar selenium-server-<version>.jar sessions --publish-events tcp://<event-b
 
 4. **分配器（Distributor）**: 查询新 **会话队列（New Session Queue）** 以获取新会话请求，并在能力匹配时将其分配给 **Node**。 **Nodes** 注册到 **Distributor** 的方式与在 **Hub/Node** 网格中注册到 **Hub** 相同。
 
-默认**分配器**端口为`5553`。**分配器**与**新会话队列**、**会话映射**、**事件总线**和**Node(s)**进行交互。
+默认**分配器**端口为`5553`。**分配器** 与 **新会话队列**、**会话映射**、**事件总线** 和 **Node(s)** 进行交互。
 
 ```shell
 java -jar selenium-server-<version>.jar distributor --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --sessions http://<sessions-ip>:5556 --sessionqueue http://<new-session-queue-ip>:5559 --port 5553 --bind-bus false
@@ -182,10 +182,9 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-i
 
 ## 测试中的 Metadata
 
-Add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
-or visualize parts of it (like `se:name`) through the Selenium Grid UI. 
+向测试中添加 `Metadata` 并通过[GraphQL]({{< ref "advanced_features/graphql_support.md" >}})进行消费，或通过 `Selenium Grid UI` 可视化其部分内容（例如`se:name`）。
 
-Metadata can be added by prefixing a capability with `se:`. Here is a quick example in Java showing that.
+可以通过在 `capability` 前加上 `se:` 来添加元数据。以下是一个Java的快速示例。
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
@@ -201,24 +200,25 @@ driver.get("http://www.google.com");
 driver.quit();
 ```
 
-## Querying Selenium Grid
+## 查询 Selenium Grid 相关状态
 
-启动 Grid 后，主要有两种方式查询其状态，通过 Grid UI 或通过 API 调用。
+启动 `Grid` 后，主要有两种方式查询其状态，通过 `Grid UI` 或通过 `API` 调用。
 
 可以通过打开您喜欢的浏览器并前往[http://localhost:4444](http://localhost:4444)。
 
-API 调用可以通过 [http://localhost:4444/status](http://localhost:4444/status) 端点或使用 [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+`API` 调用可以通过 [http://localhost:4444/status](http://localhost:4444/status) 端点或使用 [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 
 {{% pageinfo color="primary" %}}
-为简单起见，本页中显示的所有命令示例均假定组件正在运行
-本地。 更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
+为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
 {{% /pageinfo %}}
 
 ## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
 
 默认情况下，Grid 将使用 [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client)。 AsyncHttpClient 是一个建立在 Netty 之上的开源库。 它允许异步执行 HTTP 请求和响应。 此外，它还提供 WebSocket 支持。 因此它很合适。
 
-然而，AsyncHttpClient 从 2021 年 6 月开始就没有主动维护了。恰逢 Java 11+ 提供了内置的 HTTP 和 WebSocket 客户端。 目前，Selenium 计划将支持的最低版本升级到 Java 11。但是，这是一个相当大的努力。 将其与主要版本和随附的公告保持一致对于确保用户体验完好无损至关重要。
+然而，AsyncHttpClient 从 2021 年 6 月开始就没有主动维护了。恰逢 Java 11+ 提供了内置的 HTTP 和 WebSocket 客户端。
+
+目前，Selenium 计划将支持的最低版本升级到 Java 11。然而，这需要大量的工作。为了确保用户体验不受影响，将其与主要发布版本和相应的公告对齐是至关重要的。
 
 要使用 Java 11 客户端，您需要下载 `selenium-http-jdk-client` jar文件并使用 `--ext` 参数使其在 Grid jar 的类路径中可用。
 
@@ -264,12 +264,11 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 
 ## Warning
 
-必须使用适当的方法保护 Selenium Grid 免受外部访问
-防火墙权限。
+必须使用适当的防火墙权限保护Selenium Grid免受外部访问。
 
-未能保护您的网格可能会导致发生以下一种或多种情况：
+以下一种或多种情况可能会导致你的 `Grid` 处于一个不安全的状态：
 
-* 您提供对您的网格基础设施的开放访问
+* 您提供对您的 `Grid` 基础设施的开放访问
 * 您允许第三方访问内部网络应用程序和文件
 * 您允许第三方运行自定义二进制文件
 
