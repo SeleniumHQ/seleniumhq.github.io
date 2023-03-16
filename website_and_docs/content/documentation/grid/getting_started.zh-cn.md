@@ -212,7 +212,7 @@ driver.quit();
 为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
 {{% /pageinfo %}}
 
-## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
+## 使用 Java 11 中的 HTTP Client {{% badge-version version="4.5" %}}
 
 默认情况下，Grid 将使用 [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client)。 AsyncHttpClient 是一个建立在 Netty 之上的开源库。 它允许异步执行 HTTP 请求和响应。 此外，它还提供 WebSocket 支持。 因此它很合适。
 
@@ -236,9 +236,9 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 
 如果您使用的是集线器/节点模式或分布式模式，则需要为每个组件设置 `-Dwebdriver.http.factory=jdk-http-client` 和 `--ext` 参数。
 
-## Grid sizes
+## Grid 的规模
 
-选择网格角色取决于需要支持什么操作系统和浏览器、需要执行多少个并行会话、可用机器的数量以及这些机器的配置（CPU、RAM）。
+选择 `Grid` 角色取决于需要支持什么操作系统和浏览器、需要执行多少个并行会话、可用机器的数量以及这些机器的配置（CPU、RAM）。
 
 并发创建会话依赖于 **分配器** 的可用处理器。 例如，如果一台机器有 4 个 CPU，则 **分配器** 最多只能同时创建 4 个会话。
 
@@ -248,17 +248,17 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 
 请注意，默认值（每个浏览器 1 个 CPU/1GB RAM）是建议值，它们不适用于您的上下文。 建议将它们用作参考，但持续测量性能将有助于确定您的环境的理想值。
 
-网格大小与支持的并发会话数量和 **Node** 数量有关，没有“一刀切”的说法。 下面提到的尺寸是粗略的估计，不同环境之间可能会有所不同。 例如，当 **Hub** 具有足够的资源时，具有 120 个 **Nodes** 的 **Hub/Node** 可能运行良好。 以下值并非一成不变，欢迎提供反馈！
+`Grid` 大小与支持的并发会话数量和 **Node** 数量有关，没有“一刀切”的说法。 下面提到的尺寸是粗略的估计，不同环境之间可能会有所不同。 例如，当 **Hub** 具有足够的资源时，具有 120 个 **Nodes** 的 **Hub/Node** 可能运行良好。 以下值并非一成不变，欢迎提供反馈！
 
-### Small
+### 小规模
 
 **Standalone** 或 **Hub/Node** 不超过5个 **Nodes**.
 
-### Middle
+### 中等规模
 
 **Hub/Node** 介于6到60个 **Nodes** 之间。
 
-### Large
+### 大规模
 
 **Hub/Node** 介于60到100个 **Nodes** 之间， **Distributed** 超过100个 **Nodes**。
 
@@ -272,13 +272,11 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 * 您允许第三方访问内部网络应用程序和文件
 * 您允许第三方运行自定义二进制文件
 
-请参阅 [Detectify](//labs.detectify.com) 上的这篇博文，它提供了一个很好的
-公开暴露的网格如何被滥用的概述：
-[不要让你的网格全开](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
+请参阅 [Detectify](//labs.detectify.com) 上的这篇博文，它提供了一个很好的公开暴露的 `Grid` 如何被滥用的概述：[不要让你的 `Grid` 暴露在外](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
 ## Further reading
 
-* [Components]({{< ref "components.md" >}})：了解 Grid 的内部组件如何相互关联。
-* [Configuration]({{< ref "/configuration" >}}): 自定义您的网格设置。
-* [Architecture]({{< ref "architecture.md" >}}): 理解网格中的关键概念。
+* [Components]({{< ref "components.md" >}})：了解 `Grid` 的内部组件如何相互关联。
+* [Configuration]({{< ref "/configuration" >}}): 自定义您的 `Grid` 设置。
+* [Architecture]({{< ref "architecture.md" >}}): 理解 `Grid` 中的关键概念。
 * [Advanced Features]({{< ref "/advanced_features" >}}): 通过Grid的特性探索更多的可能性。
