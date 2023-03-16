@@ -20,7 +20,7 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-## Quick start
+## 快速开始
 
 1. 先决条件
     * 需要安装 Java 11 或更高版本
@@ -39,13 +39,13 @@ aliases: [
 
 要了解更多不同的配置选项，请查看以下各小节。
 
-## Grid roles
+## Grid 角色
 
 Grid由六个不同的[组件]({{< ref "components.md" >}})组成，这使您可以以不同的方式部署它。
 
 根据您的需求，您可以单独启动每个组件（分布式），将它们分组为Hub和Node，或者全部在单个机器上运行（独立）。
 
-### Standalone
+### 单机部署（Standalone）
 
 **Standalone** 可以将所有 Grid [组件]({{< ref "components.md" >}}) 无缝地整合成一个单独的实体。在 **Standalone** 模式下运行 Grid，只需一个命令即可获得一个完整的 Grid，并在一个进程中运行。**Standalone** 只能在一台机器上运行。
 
@@ -127,7 +127,7 @@ java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886
 java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
 ```
 
-### Distributed 
+### 分部署部署（Distributed） 
 
 在使用分布式Grid时，每个组件都需要单独启动，并且理想情况下应该在不同的机器上。
 
@@ -262,7 +262,7 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 
 **Hub/Node** 介于60到100个 **Nodes** 之间， **Distributed** 超过100个 **Nodes**。
 
-## Warning
+## 请注意
 
 必须使用适当的防火墙权限保护Selenium Grid免受外部访问。
 
@@ -274,7 +274,7 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 
 请参阅 [Detectify](//labs.detectify.com) 上的这篇博文，它提供了一个很好的公开暴露的 `Grid` 如何被滥用的概述：[不要让你的 `Grid` 暴露在外](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
-## Further reading
+## 延伸阅读
 
 * [Components]({{< ref "components.md" >}})：了解 `Grid` 的内部组件如何相互关联。
 * [Configuration]({{< ref "/configuration" >}}): 自定义您的 `Grid` 设置。
