@@ -22,36 +22,32 @@ issues in the underlying drivers that Selenium sends the commands to. You can ru
 out a driver problem by executing the command in multiple <a href=/zh-cn/documentation/webdriver/browsers/>browsers</a>.</p></li><li><p>If you have questions about how to do things, check out the <a href=/support/>Support options</a>
 for ways get assistance.</p></li><li><p>If you think you&rsquo;ve found a problem with Selenium code, go ahead and file a
 <a href="https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+">Bug Report</a>
-on GitHub.</p></li></ol></div></div><div class=td-content style=page-break-before:always><h1 id=pg-24f04eb459daf14ef77685cc6b843d25>1 - 理解常见的异常</h1><div class=lead>如何处理Selenium代码中的各种问题.</div><h2 id=无效选择器的异常-invalid-selector-exception>无效选择器的异常 (Invalid Selector Exception)</h2><p>某些时候难以获得正确的CSS以及XPath选择器.</p><h3 id=潜在原因>潜在原因</h3><p>您尝试使用的CSS或XPath选择器包含无效字符或无效查询.</p><h3 id=可行方案>可行方案</h3><p>通过验证器服务运行选择器:</p><ul><li><a href=http://csslint.net/>CSS 验证器</a></li><li><a href=http://www.freeformatter.com/xpath-tester.html>xPath 验证器</a></li></ul><p>或者使用浏览器扩展程序来获取已知的良好值:</p><ul><li><a href=https://selectorshub.com/selectorshub/>SelectorsHub</a></li></ul><h2 id=没有这样元素的异常-no-such-element-exception>没有这样元素的异常 (No Such Element Exception)</h2><p>在您尝试找到该元素的当前时刻无法定位元素.</p><h3 id=潜在原因-1>潜在原因</h3><ul><li>您在错误的位置寻找元素 (也许以前的操作不成功).</li><li>您在错误的时间寻找元素 (该元素尚未显示在 DOM 中)</li><li>自您编写代码以来定位器已变更</li></ul><h3 id=可行方案-1>可行方案</h3><ul><li>确保您位于期望的页面上, 并且代码中的前置操作已正确完成</li><li>确保您使用的是正确的 <a href=/zh-cn/documentation/webdriver/waits/>等待策略</a></li><li>使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:<ul><li><a href=https://selectorshub.com/selectorshub/>SelectorsHub</a></li></ul></li></ul><h2 id=过时元素引用的异常-stale-element-reference-exception>过时元素引用的异常 (Stale Element Reference Exception)</h2><p>元素先前的定位会过时，
-导致当前无法访问.
-元素不会自动重新定位;
-驱动程序为元素创建引用ID，
-并且有一个特定的位置，以期在 DOM 中找到.
-如果在当前 DOM 中找不到元素,
-任何使用该元素的操作都将导致此异常.</p><h3 id=常见因素>常见因素</h3><p>以下情况可能发生此异常:</p><ul><li>您已刷新页面，或者页面的 DOM 已动态更改.</li><li>您已导航到其他页面.</li><li>您已切换到另一个窗口，或者进入/移出某个frame/iframe.</li></ul><h3 id=常见方案>常见方案</h3><p><strong>DOM已变更</strong></p><p>当页面刷新或页面上的项目各处移动时,
-页面上仍然有一个具有所需定位器的元素,
-它只是不再被正在使用的元素对象访问,
-并且必须重新定位该元素才能再次使用.
-这往往通过以下两种方式之一完成:</p><ul><li><p>每次使用时, 始终重新定位元素.
-虽然可能, 但元素在定位和使用元素之间的微秒内过时的可能性很小.
-缺点是这并非最有效的方法,
-特别是在远程网格上运行时.</p></li><li><p>将 Web 元素与存储定位器的另一个对象包装在一起，
-并缓存位于Selenium元素.
-对此包装的对象执行操作时,
-您可以尝试使用缓存的对象(若之前找到),
-如果其已过时, 则异常可以捕获元素,
-使用存储的定位器重新定位元素, 并重试该方法.
-这更有效, 但如果您使用的定位器可能会导致问题,
-在页面更改后引用不同的元素(而不是您想要的元素).</p></li></ul><p><strong>上下文已变更</strong></p><p>元素对象是为给定上下文存储的,
-因此, 如果您移动到其他上下文 —
-就像不同的窗口或不同的frame或iframe一样 — 元素引用将仍然有效,
-但暂时无法访问. 在这种情况下,
-它不会帮助重新定位元素, 因为它在当前上下文中不存在.
-要解决此问题, 您需要确保在使用元素之前切换回正确的上下文.</p><p><strong>页面已变更</strong></p><p>这种情况是指您不仅更改了上下文, 还导航到了另一个页面,
-并破坏了元素所在的上下文.
-您不能只是将其从当前上下文中重新定位,
-并且您无法切换回有效的活动上下文.
-如果这是原因, 则对于您的错误, 您必须导航回正确的位置并重新定位它.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-50a81a53af8a6ba57435d202700731ad>2 - Logging Selenium commands</h1><div class=lead>Getting information about Selenium execution.</div><p>Each language adopts a distinctly different approach to logging information about the activity
+on GitHub.</p></li></ol></div></div><div class=td-content style=page-break-before:always><h1 id=pg-24f04eb459daf14ef77685cc6b843d25>1 - 理解常见的异常</h1><div class=lead>如何处理Selenium代码中的各种问题.</div><h2 id=无效选择器的异常-invalid-selector-exception>无效选择器的异常 (Invalid Selector Exception)</h2><p>某些时候难以获得正确的CSS以及XPath选择器。</p><h3 id=潜在原因>潜在原因</h3><p>您尝试使用的CSS或XPath选择器包含无效字符或无效查询。</p><h3 id=可行方案>可行方案</h3><p>通过验证器服务运行选择器：</p><ul><li><a href=http://csslint.net/>CSS 验证器</a></li><li><a href=http://www.freeformatter.com/xpath-tester.html>xPath 验证器</a></li></ul><p>或者使用浏览器扩展程序来获取已知的良好值：</p><ul><li><a href=https://selectorshub.com/selectorshub/>SelectorsHub</a></li></ul><h2 id=没有这样元素的异常-no-such-element-exception>没有这样元素的异常 (No Such Element Exception)</h2><p>在您尝试找到该元素的当前时刻无法定位元素。</p><h3 id=潜在原因-1>潜在原因</h3><ul><li>您在错误的位置寻找元素 (也许以前的操作不成功)</li><li>您在错误的时间寻找元素 (该元素尚未显示在 DOM 中)</li><li>自您编写代码以来定位器已变更</li></ul><h3 id=可行方案-1>可行方案</h3><ul><li>确保您位于期望的页面上，并且代码中的前置操作已正确完成</li><li>确保您使用的是正确的 <a href=/zh-cn/documentation/webdriver/waits/>等待策略</a></li><li>使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:<ul><li><a href=https://selectorshub.com/selectorshub/>SelectorsHub</a></li></ul></li></ul><h2 id=过时元素引用的异常-stale-element-reference-exception>过时元素引用的异常 (Stale Element Reference Exception)</h2><p>当成功定位到元素时，
+WebDriver会为其设置一个引用ID作为标记，
+如果由于上下文环境发生变化，
+导致之前元素的位置发生了变化或者无法找到了，
+WebDriver并不会自动重新定位，
+任何使用之前元素所做的操作将报错该异常。</p><h3 id=常见因素>常见因素</h3><p>以下情况可能发生此异常:</p><ul><li>您已刷新页面，或者页面的 DOM 已动态更改。</li><li>您已导航到其他页面。</li><li>您已切换到另一个窗口，或者进入/移出某个 <code>frame</code> / <code>iframe</code>。</li></ul><h3 id=常见方案>常见方案</h3><p><strong>DOM已变更</strong></p><p>当页面刷新或页面上的项目各处移动时，
+页面上仍然有一个具有所需定位器的元素，
+它只是不再被正在使用的元素对象访问，
+并且必须重新定位该元素才能再次使用。</p><p>这往往通过以下两种方式之一完成：</p><ul><li><p>每次使用时都要重新定位元素。
+尽管有可能元素在定位和使用元素之间的微秒内，
+发生变化的可能性很小。
+缺点是这不是最有效的方法，
+尤其是在 <code>Remote Grid</code>上运行时。</p></li><li><p>用另一个存储定位器的对象包装 Web 元素，并缓存定位的 Selenium 元素。
+对该包装对象执行操作时，您可以尝试使用之前找到的缓存对象，
+如果它是发生了变化，则可以捕获异常，
+使用存储的定位器重新定位元素，并重试该方法。
+这样效率更高，但如果您使用的定位器在页面更改后引用了不同的元素（而不是您想要的元素），则可能会导致问题。</p></li></ul><p><strong>上下文已变更</strong></p><p>元素对象是针对特定的上下文存储的，
+因此如果您切换到不同的上下文，
+比如不同的 <code>Window</code> 或不同的 <code>frame</code> 或 <code>iframe</code> 元素引用仍然有效，
+但暂时无法访问。在这种情况下，
+重新定位元素无济于事，因为它在当前上下文中不存在。</p><p>要解决此问题，您需要确保在使用该元素之前切换回正确的上下文。</p><p><strong>页面已变更</strong></p><p>这种情况发生在您不仅更改了上下文，
+而且导航到另一个页面并破坏了元素所在的上下文。
+您无法仅从当前上下文重新定位它，
+也无法切换回元素有效的活动上下文。
+如果这是您的错误原因，
+您必须回到正确的位置并重新定位元素。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-50a81a53af8a6ba57435d202700731ad>2 - Logging Selenium commands</h1><div class=lead>Getting information about Selenium execution.</div><p>Each language adopts a distinctly different approach to logging information about the activity
 of the program.</p><h2 id=ruby>Ruby</h2><p>Ruby uses a custom implementation of the default <code>Logger</code> class with some interesting additional features.</p><h3 id=logger-output>Logger output</h3><p>By default, logs are sent to the console in <code>stdout</code>.
 if you want to store the logs in a file, add this to your code:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#000>Selenium</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#000>WebDriver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>logger</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>output</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;/path/to/selenium.log&#39;</span>
 </span></span></code></pre></div><h3 id=logger-level>Logger level</h3><p>The basic levels for the Ruby logger are: <code>:debug</code>, <code>:info</code>, <code>:warn</code>, <code>:error</code>, <code>:fatal</code></p><p>Selenium uses <code>:info</code> and <code>:debug</code> similar to &ldquo;verbose&rdquo; and &ldquo;very verbose&rdquo;, so the default
