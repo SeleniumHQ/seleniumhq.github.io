@@ -118,7 +118,7 @@ Add a binary to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L31-L33" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}

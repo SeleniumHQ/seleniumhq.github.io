@@ -242,23 +242,8 @@ ensure
 driver.quit
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-(async function example() {
-let driver = await new Builder().forBrowser('chrome').build();
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
-// Store 'SearchInput' element
-let searchInput = driver.findElement(By.name('q'));
-await searchInput.sendKeys("selenium");
-// Clears the entered text
-await searchInput.clear();
-}
-finally {
-await driver.quit();
-}
-})();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L18-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.By
