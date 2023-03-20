@@ -47,9 +47,11 @@ driver.findElement(By.linkText("new window")).click();
 wait.until(numberOfWindowsToBe(2));
 
 // 循环执行，直到找到一个新的窗口句柄
-for (String windowHandle : driver.getWindowHandles()) {if(!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle);
-break;
-}
+for (String windowHandle : driver.getWindowHandles()) {
+	if(!originalWindow.contentEquals(windowHandle)) {
+		driver.switchTo().window(windowHandle);
+		break;
+	}
 }
 
 // 等待新标签完成加载内容
@@ -324,11 +326,12 @@ driver.switchTo().window(originalWindow)
 /**
 * 使用 JUnit 的例子
 * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-  */
-  @AfterAll
-  public static void tearDown() {driver.quit();
-  }
-  {{< /tab >}}
+*/
+@AfterAll
+public static void tearDown() {
+    driver.quit();
+}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # unittest teardown
     # https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
@@ -365,11 +368,12 @@ end
 /**
 * 使用 JUnit 的例子
 * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-  */
-  @AfterAll
-  fun tearDown() {driver.quit()
-  }
-  {{< /tab >}}
+*/
+@AfterAll
+fun tearDown() {
+	driver.quit()
+}
+{{< /tab >}}
   {{< /tabpane >}}
 
 如果不在测试上下文中运行 WebDriver，您可以考虑使用 `try / finally`，这是大多数语言都提供的，
@@ -377,7 +381,10 @@ end
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-try {//WebDriver 代码…} finally {driver.quit();
+try {
+    //WebDriver 代码…
+} finally {
+    driver.quit();
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -652,13 +659,13 @@ import java.io.*;
 import org.openqa.selenium.*;
 
 public class SeleniumTakeScreenshot {
-public static void main(String args[]) throws IOException {
-WebDriver driver = new ChromeDriver();
-driver.get("http://www.example.com");
-File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(scrFile, new File("./image.png"));
-driver.quit();
-}
+	public static void main(String args[]) throws IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.example.com");
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("./image.png"));
+		driver.quit();
+	}
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -745,13 +752,13 @@ import java.io.IOException;
 
 public class SeleniumelementTakeScreenshot {
 public static void main(String args[]) throws IOException {
-WebDriver driver = new ChromeDriver();
-driver.get("https://www.example.com");
-WebElement element = driver.findElement(By.cssSelector("h1"));
-File scrFile = element.getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(scrFile, new File("./image.png"));
-driver.quit();
-}
+	WebDriver driver = new ChromeDriver();
+		driver.get("https://www.example.com");
+		WebElement element = driver.findElement(By.cssSelector("h1"));
+		File scrFile = element.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("./image.png"));
+		driver.quit();
+	}
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -911,14 +918,14 @@ _注意: 此功能需要无头模式下的Chromium浏览器_
 {{< tab header="Java" >}}
 import org.openqa.selenium.print.PrintOptions;
 
-    driver.get("https://www.selenium.dev");
-    printer = (PrintsPage) driver;
+driver.get("https://www.selenium.dev");
+printer = (PrintsPage) driver;
 
-    PrintOptions printOptions = new PrintOptions();
-    printOptions.setPageRanges("1-2");
+PrintOptions printOptions = new PrintOptions();
+printOptions.setPageRanges("1-2");
 
-    Pdf pdf = printer.print(printOptions);
-    String content = pdf.getContent();
+Pdf pdf = printer.print(printOptions);
+String content = pdf.getContent();
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium.webdriver.common.print_page_options import PrintOptions
