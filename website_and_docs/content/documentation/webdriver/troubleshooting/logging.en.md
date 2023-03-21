@@ -23,6 +23,8 @@ of the program.
   {{< /tab >}}
   {{< tab header="Ruby" >}}
   <p>Ruby uses a custom implementation of the default `Logger` class with some interesting additional features.</p>
+  <pre>
+  logger = Selenium::WebDriver.logger</pre>
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   <pre>
@@ -48,13 +50,13 @@ Logger level helps to filter out logs based on their severity.
   {{< alert-content >}}{{< /alert-content >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  <p>Levels are: <i>`:debug`, `:info`, `:warn`, `:error`, `:fatal`.</i> Default is <i>`:warn`</i>.</p>
+  <p>Levels are: <code>:debug</code>, <code>:info</code>, <code>:warn</code>, <code>:error</code>, <code>:fatal</code>. Default is <code>:warn</code>.</p>
   <p>To change the level of the logger:</p>
   <pre>
-  Selenium::WebDriver.logger.level = :fatal</pre>
+  Selenium::WebDriver.logger.level = :info</pre>
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  <p>Levels are: <i>`OFF`, `SEVERE`, `WARNING`, `INFO`, `DEBUG`, `FINE`, `FINER`, `FINEST`, `ALL`</i>. Default is <i>`OFF`</i>.</p>
+  <p>Levels are: <code>OFF</code>, <code>SEVERE</code>, <code>WARNING</code>, <code>INFO</code>, <code>DEBUG</code>, <code>FINE</code>, <code>FINER</code>, <code>FINEST</code>, <code>ALL</code>. Default is <code>OFF</code>.</p>
   <p>To change the level of the logger:</p>
   <pre>
   logger.setLevel(logging.Level.INFO)</pre>
@@ -64,9 +66,9 @@ Logger level helps to filter out logs based on their severity.
   {{< /tab >}}
 {{< /tabpane >}}
 
-**WARN**
+**Actionable Items**
 
-Warnings include everything we want users to be aware of by default. This is mostly used
+Things are logged as warnings if they are something the user needs to take action on. This is mostly used
 for deprecations. For various reasons, Selenium project does not follow standard Semantic Versioning practices.
 Our policy is to mark things as deprecated for 3 releases and then remove them.
 
@@ -109,14 +111,12 @@ Our policy is to mark things as deprecated for 3 releases and then remove them.
   {{< /tab >}}
 {{< /tabpane >}}
 
-**INFO**
+**Useful Information**
 
-This is where the most useful information gets logged. Selenium logs the endpoints and payloads
-sent to and received from the driver or server. This is a great way to see what Selenium is actually
-doing under the hood, and can be used to determine if it is Selenium code or driver code that
-is causing a problem. (Unfortunately, we can't blame the driver if Selenium is sending incorrect syntax).
+This is the default level where Selenium logs things that users should be aware of but do not need to take actions on.
+It presents information such as requests and responses between driver and server, payload, etc.
 
-Different languages have different level to log requests and response.
+Different languages have different level to log information.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
@@ -129,20 +129,19 @@ Different languages have different level to log requests and response.
   {{< alert-content >}}{{< /alert-content >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  Logs request and response at level: <i>`:info`</i>
+  Logs request and response at level: <code>:info</code>
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  Logs request and response at level: <i>`FINER`</i>
+  Logs request and response at level: <code>FINER</code>
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   {{< alert-content >}}{{< /alert-content >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
-**DEBUG**
+**Debugging Details**
 
-This is less useful information where we log things about the servers and the sockets, and header information, etc.
-Debug mode is set if either `$DEBUG` is true or `ENV['DEBUG']` has a value.
+The debug log level is used for information that may be needed for diagnosing issues and troubleshooting problems.
 
 ### 3. Log Output:
 Logs can be displayed on `stdout` or stored in a file.
@@ -162,12 +161,33 @@ Logs can be displayed on `stdout` or stored in a file.
   <p>To store the logs in a file:</p>
   <pre>
   Selenium::WebDriver.logger.output = '/path/to/selenium.log'</pre>
+  <br>
+  <p>Sample Output:</p>
+  <blockquote>
+  2023-02-08 12:31:23 INFO Selenium -> POST session/8b83ff54712d0a247937d045f8c8e171/url<br>
+  2023-02-08 12:31:23 INFO Selenium    >>> http://127.0.0.1:9515/session/8b83ff54712d0a247937d045f8c8e171/url | {"url":"https://www.selenium.dev/selenium/web/web-form.html"}<br>
+  2023-02-08 12:31:23 INFO Selenium <- {"value":null}</blockquote>
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   <p>Send logs to console output:</p>
   <pre>
   logging.installConsoleHandler()</pre>
   <br>
+  <p>Sample Output:</p>
+  <blockquote>
+  [2023-03-21T22:28:20Z] [FINER] [webdriver.http.Executor] >>> POST /session/0208994573cca3250a1066424c1b915c/url<br>
+  [2023-03-21T22:28:22Z] [FINER] [webdriver.http.Executor] >>>
+  POST /session/0208994573cca3250a1066424c1b915c/url HTTP/1.1<br>
+  accept: application/json; charset=utf-8
+
+  {"url":"https://www.selenium.dev/selenium/web/web-form.html"}<br>
+  <<<
+  HTTP/1.1 200
+  content-length: 14
+  content-type: application/json; charset=utf-8
+  cache-control: no-cache
+
+  {"value":null}</blockquote>
   {{< alert-content >}}
   Store logs in a file.
   {{< /alert-content >}}
