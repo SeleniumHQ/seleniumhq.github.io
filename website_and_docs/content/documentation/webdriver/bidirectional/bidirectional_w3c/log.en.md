@@ -17,6 +17,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< tab header="Ruby" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L23-37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
@@ -34,6 +35,7 @@ and register callbacks to process the exception details.
 {{< tab header="Ruby" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L44-54" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
