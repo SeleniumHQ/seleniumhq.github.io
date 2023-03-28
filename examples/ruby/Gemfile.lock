@@ -51,7 +51,7 @@ GEM
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.8.0)
+    selenium-webdriver (4.8.3)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -74,7 +74,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
-  selenium-webdriver (= 4.8.0)
+  selenium-webdriver (= 4.8.3)
   webdrivers (~> 5.1)
 
 BUNDLED WITH
