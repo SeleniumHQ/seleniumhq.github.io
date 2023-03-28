@@ -2,6 +2,8 @@
 
 require 'spec_helper'
 
+Selenium::WebDriver.logger.level = :debug
+
 RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
   it 'basic options' do
     options = Selenium::WebDriver::Options.ie
