@@ -20,6 +20,8 @@
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
 
         <java.version>1.8</java.version>
+        <selenium.version>4.8.3</selenium.version>
+
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
 
@@ -43,7 +45,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.8.1</version>
+            <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
