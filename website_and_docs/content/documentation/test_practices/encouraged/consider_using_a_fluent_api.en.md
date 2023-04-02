@@ -36,15 +36,16 @@ public abstract class BasePage {
 public class GoogleSearchPage extends BasePage {
     public GoogleSearchPage(WebDriver driver) {
         super(driver);
-        // Throws an exception if the lambda condition is not met.
+        // Generally do not assert within pages or components.
+        // Effectively throws an exception if the lambda condition is not met.
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(d -> d.findElement(By.id("logo")));
     }
-    
+
     public GoogleSearchPage setSearchString(String sstr) {
         driver.findElement(By.id("gbqfq")).sendKeys(sstr);
         return this;
     }
-    
+
     public void clickSearchButton() {
         driver.findElement(By.id("gbqfb")).click();
     }
