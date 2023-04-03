@@ -205,13 +205,14 @@ driver.get("https://selenium.dev");
 driver.quit();
 ```
 
-### Retrieving downloaded files from Node.
+### Enabling Managed downloads by the Node.
 
-To be able to retrieve the files that were downloaded by a test at the Node, its location can be specified as below:
+The Node can be instructed to manage downloads automatically. This will cause the Node to save all files that were downloaded for a particular session into a temp directory, which can later be retrieved from the node.
+To turn this capability on, use the below configuration:
 
 ```toml
 [node]
-downloads-path = "/usr/downloads"
+enable-managed-downloads = true
 ```
 
-Refer to the [CLI section]({{< ref "cli_options.md#sample-that-retrieves-the-downloaded-file" >}}) for a complete example.
+Refer to the [CLI section]({{< ref "cli_options.md#complete-sample-code-in-java" >}}) for a complete example.
