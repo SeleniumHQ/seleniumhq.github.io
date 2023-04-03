@@ -31,9 +31,304 @@ Selenium provides support for these 8 traditional location strategies in WebDriv
 | tag name          | Locates elements whose tag name matches the search value |
 | xpath             | Locates elements matching an XPath expression |
 
-{{< alert-code >}}
-of selecting elements using each locator strategy
-{{< /alert-code >}}
+## Creating Locators
+
+To work on a web element using Selenium, we need to first locate it on the web page.
+Selenium provides us above mentioned ways, using which we can locate element on the 
+page. To understand and create locator we will use the following HTML snippet.
+
+```html
+<html>
+<body>
+<style>
+.information {
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+</style>
+<h2>Contact Selenium</h2>
+
+<form action="/action_page.php">
+  <input type="radio" name="gender" value="m" />Male &nbsp;
+  <input type="radio" name="gender" value="f" />Female <br>
+  <br>
+  <label for="fname">First name:</label><br>
+  <input class="information" type="text" id="fname" name="fname" value="Jane"><br><br>
+  <label for="lname">Last name:</label><br>
+  <input class="information" type="text" id="lname" name="lname" value="Doe"><br><br>
+  <label for="newsletter">Newsletter:</label>
+  <input type="checkbox" name="newsletter" value="1" /><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>To know more about Selenium, visit the official page 
+<a href ="www.selenium.dev">Selenium Official Page</a> 
+</p>
+
+</body>
+</html>
+```
+
+## class name
+The HTML page web element can have attribute class. We can see an example in the
+above shown HTML snippet. We can identify these elements using the class name locator
+available in Selenium. 
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.className("information"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.CLASS_NAME, "information")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.ClassName("information"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(class: 'information')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.className('information'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.className("information"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## css selector
+CSS is the language used to style HTML pages. We can use css selector locator strategy
+to identify the element on the page. If the element has an id, we create the locator
+as css = #id. Otherwise the format we follow is css =[attribute=value] .
+Let us see an example from above HTML snippet. We will create locator for First Name 
+textbox, using css. 
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.cssSelector("#fname"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.CSS_SELECTOR, "#fname")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.CssSelector("#fname"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(css: '#fname')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.css('#fname'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.css("#fname"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## id
+We can use the ID attribute available with element in a web page to locate it. 
+Generally the ID property should be unique for a element on the web page. 
+We will identify the Last Name field using it. 
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.id("lname"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.ID, "lname")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.Id("lname"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(id: 'lname')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.id('lname'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.id("lname"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+
+## name
+We can use the NAME attribute available with element in a web page to locate it. 
+Generally the NAME property should be unique for a element on the web page. 
+We will identify the Newsletter checkbox using it. 
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.name("newsletter"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.NAME, "newsletter")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.Name("newsletter"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(name: 'newsletter')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.name('newsletter'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.name("newsletter"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## link text 
+If the element we want to locate is a link, we can use the link text locator
+to identify it on the web page. The link text is the text displayed of the link. 
+In the HTML snippet shared, we have a link available, lets see how will we locate it. 
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.linkText("Selenium Official Page"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.LINK_TEXT, "Selenium Official Page")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.LinkText("Selenium Official Page"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(link_text: 'Selenium Official Page')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.linkText('Selenium Official Page'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.linkText("Selenium Official Page"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## partial link text 
+If the element we want to locate is a link, we can use the partial link text locator
+to identify it on the web page. The link text is the text displayed of the link. 
+We can pass partial text as value.
+In the HTML snippet shared, we have a link available, lets see how will we locate it. 
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.partialLinkText("Official Page"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.PARTIAL_LINK_TEXT, "Official Page")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.PartialLinkText("Official Page"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(partial_link_text: 'Official Page')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.partialLinkText('Official Page'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.partialLinkText("Official Page"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## tag name
+We can use the HTML TAG itself as a locator to identify the web element on the page.
+From the above HTML snippet shared, lets identify the link, using its html tag "a". 
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.tagName("a"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.TAG_NAME, "a")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.TagName("a"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(tag_name: 'a')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.tagName('a'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.tagName("a"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+## xpath 
+
+A HTML document can be considered as a XML document, and then we can use xpath
+which will be the path traversed to reach the element of interest to locate the element.
+The XPath could be absolute xpath, which is created from the root of the document.
+Example - /html/form/input[1]. This will return the male radio button.
+Or the xpath could be relative. Example- //input[@name='fname']. This will return the
+first name text box. Let us create locator for female radio button using xpath. 
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.xpath("//input[@value='f']"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    driver = webdriver.Chrome()
+	driver.find_element(By.XPATH, "//input[@value='f']")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.Xpath("//input[@value='f']"));
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    driver = Selenium::WebDriver.for :chrome
+	driver.find_element(xpath: '//input[@value='f']')
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.xpath('//input[@value='f']'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.xpath('//input[@value='f']'))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
 
 ## Relative Locators
 
