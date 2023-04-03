@@ -24,15 +24,6 @@ Esta seção explica os requisitos básicos para você começar a usar os difere
 Leia mais sobre opções avançadas para iniciar um driver
  na nossa documentação de [configuração de driver]({{< ref "/documentation/webdriver/drivers/" >}}).
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from English to Portuguese. 
-   Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
 ## Quatro maneiras diferentes de usar os drivers
 
 ### 1. Gerenciador Selenium <small>(Beta)</small>
@@ -52,9 +43,10 @@ Leia mais no anúncio feito no blog sobre o [Gerenciador Selenium](/blog/2022/in
 A maioria das máquinas atualiza automaticamente o navegador, mas não o driver. Para certificar de obter 
 o driver correto para o seu navegador de internet, existem diversas bibliotecas de terceiros para auxiliá-lo.
 
+**Importante:** Este módulo de momento não funciona com IEDriverServer v4+
+
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-**Important:** This package does not currently work for IEDriverServer v4+
 
 1. Importe o [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 ```java
@@ -270,7 +262,8 @@ fun main(args: Array<String>) {
 | Internet Explorer | Windows | Projeto Selenium | [Downloads](/downloads) | [Problemas](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS High Sierra e superiores | Apple | Integrado no Sistema  | [Problemas](//bugreport.apple.com/logon) |
 
-Note: The Opera driver no longer works with the latest functionality of Selenium and is currently officially unsupported.
+Nota: O Opera driver já não inclui as funcionalidades mais recentes do Selenium e oficialmente deixou de ser suportado.
+
 
 ## Próximo Passo
 [Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})
