@@ -129,10 +129,10 @@ Different languages have different level to log information.
   {{< alert-content >}}{{< /alert-content >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  Logs request and response at level: <code>:info</code>
+  Logs useful information at level: <code>:info</code>
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  Logs request and response at level: <code>FINER</code>
+  Logs useful information at level: <code>FINER</code>
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   {{< alert-content >}}{{< /alert-content >}}
@@ -142,6 +142,27 @@ Different languages have different level to log information.
 **Debugging Details**
 
 The debug log level is used for information that may be needed for diagnosing issues and troubleshooting problems.
+
+{{< tabpane langEqualsHeader=true text=true >}}
+  {{< tab header="Java" >}}
+  {{< alert-content >}}{{< /alert-content >}}
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+  {{< alert-content >}}{{< /alert-content >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+  {{< alert-content >}}{{< /alert-content >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+  Logs debugging details at level: <code>:info</code> and <code>:debug</code>
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+  Logs debugging details at level: <code>FINER</code> and <code>FINEST</code>
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  {{< alert-content >}}{{< /alert-content >}}
+  {{< /tab >}}
+{{< /tabpane >}}
 
 ### 3. Log Output:
 Logs can be displayed on `stdout` or stored in a file.
