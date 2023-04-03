@@ -64,8 +64,10 @@ Below is a sample that just prints some messages on to the console whenever ther
 ```java
 package org.seleniumhq.samples;
 
+import java.io.IOException;
 import java.net.URI;
 import java.util.UUID;
+import java.util.function.Supplier;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.WebDriverException;
@@ -83,6 +85,7 @@ import org.openqa.selenium.grid.security.Secret;
 import org.openqa.selenium.grid.security.SecretOptions;
 import org.openqa.selenium.grid.server.BaseServerOptions;
 import org.openqa.selenium.internal.Either;
+import org.openqa.selenium.io.TemporaryFilesystem;
 import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.remote.http.HttpRequest;
 import org.openqa.selenium.remote.http.HttpResponse;
@@ -114,112 +117,102 @@ public class DecoratedLoggingNode extends Node {
   @Override
   public Either<WebDriverException, CreateSessionResponse> newSession(
       CreateSessionRequest sessionRequest) {
-    System.out.println("Before newSession()");
-    try {
-      return this.node.newSession(sessionRequest);
-    } finally {
-      System.out.println("After newSession()");
-    }
+    return perform(() -> node.newSession(sessionRequest), "newSession");
   }
 
   @Override
   public HttpResponse executeWebDriverCommand(HttpRequest req) {
-    try {
-      System.out.println("Before executeWebDriverCommand(): " + req.getUri());
-      return node.executeWebDriverCommand(req);
-    } finally {
-      System.out.println("After executeWebDriverCommand()");
-    }
+    return perform(() -> node.executeWebDriverCommand(req), "executeWebDriverCommand");
   }
 
   @Override
   public Session getSession(SessionId id) throws NoSuchSessionException {
-    try {
-      System.out.println("Before getSession()");
-      return node.getSession(id);
-    } finally {
-      System.out.println("After getSession()");
-    }
+    return perform(() -> node.getSession(id), "getSession");
   }
 
   @Override
   public HttpResponse uploadFile(HttpRequest req, SessionId id) {
-    try {
-      System.out.println("Before uploadFile()");
-      return node.uploadFile(req, id);
-    } finally {
-      System.out.println("After uploadFile()");
-    }
+    return perform(() -> node.uploadFile(req, id), "uploadFile");
+  }
+
+  @Override
+  public HttpResponse downloadFile(HttpRequest req, SessionId id) {
+    return perform(() -> node.downloadFile(req, id), "downloadFile");
+  }
+
+  @Override
+  public TemporaryFilesystem getDownloadsFilesystem(UUID uuid) {
+    return perform(() -> {
+      try {
+        return node.getDownloadsFilesystem(uuid);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }, "downloadsFilesystem");
+  }
+
+  @Override
+  public TemporaryFilesystem getUploadsFilesystem(SessionId id) throws IOException {
+    return perform(() -> {
+      try {
+        return node.getUploadsFilesystem(id);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }, "uploadsFilesystem");
+
   }
 
   @Override
   public void stop(SessionId id) throws NoSuchSessionException {
-    try {
-      System.out.println("Before stop()");
-      node.stop(id);
-    } finally {
-      System.out.println("After stop()");
-    }
+    perform(() -> node.stop(id), "stop");
   }
 
   @Override
   public boolean isSessionOwner(SessionId id) {
-    try {
-      System.out.println("Before isSessionOwner()");
-      return node.isSessionOwner(id);
-    } finally {
-      System.out.println("After isSessionOwner()");
-    }
+    return perform(() -> node.isSessionOwner(id), "isSessionOwner");
   }
 
   @Override
   public boolean isSupporting(Capabilities capabilities) {
-    try {
-      System.out.println("Before isSupporting");
-      return node.isSupporting(capabilities);
-    } finally {
-      System.out.println("After isSupporting()");
-    }
+    return perform(() -> node.isSupporting(capabilities), "isSupporting");
   }
 
   @Override
   public NodeStatus getStatus() {
-    try {
-      System.out.println("Before getStatus()");
-      return node.getStatus();
-    } finally {
-      System.out.println("After getStatus()");
-    }
+    return perform(() -> node.getStatus(), "getStatus");
   }
 
   @Override
   public HealthCheck getHealthCheck() {
-    try {
-      System.out.println("Before getHealthCheck()");
-      return node.getHealthCheck();
-    } finally {
-      System.out.println("After getHealthCheck()");
-    }
+    return perform(() -> node.getHealthCheck(), "getHealthCheck");
   }
 
   @Override
   public void drain() {
-    try {
-      System.out.println("Before drain()");
-      node.drain();
-    } finally {
-      System.out.println("After drain()");
-    }
-
+    perform(() -> node.drain(), "drain");
   }
 
   @Override
   public boolean isReady() {
+    return perform(() -> node.isReady(), "isReady");
+  }
+
+  private void perform(Runnable function, String operation) {
     try {
-      System.out.println("Before isReady()");
-      return node.isReady();
+      System.err.printf("[COMMENTATOR] Before %s()%n", operation);
+      function.run();
     } finally {
-      System.out.println("After isReady()");
+      System.err.printf("[COMMENTATOR] After %s()%n", operation);
+    }
+  }
+
+  private <T> T perform(Supplier<T> function, String operation) {
+    try {
+      System.err.printf("[COMMENTATOR] Before %s()%n", operation);
+      return function.get();
+    } finally {
+      System.err.printf("[COMMENTATOR] After %s()%n", operation);
     }
   }
 }
