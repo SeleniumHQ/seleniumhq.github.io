@@ -86,6 +86,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Mar 20, 2023
+    - logo: "/images/sponsors/kiwiqa-logo.png"
+      url: "https://www.kiwiqa.com/"
+      name: "KiwiQA"
     # Sponsorship start date: Sep 3, 2022
     - logo: "/images/sponsors/SelectorsHub_logo.png"
       url: "https://selectorshub.com/"
