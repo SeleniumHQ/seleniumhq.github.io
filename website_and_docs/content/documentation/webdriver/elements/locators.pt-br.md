@@ -7,16 +7,15 @@ aliases: [
 "/pt-br/documentation/webdriver/relative_locators/"
 ]
 description: >
-  Ways to identify one or more specific elements in the DOM.
+  Formas de identificar um ou mais elementos no DOM.
 ---
 
-A locator is a way to identify elements on a page. It is the argument passed to the
-[Finding element]({{< ref "finders.md" >}}) methods.
+Um localizador é uma forma de identificar elementos numa página. São os argumentos passados aos métodos
+[Finders]({{< ref "finders.md" >}}) .
 
-Check out our [encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) for tips on
-[locators]({{< ref "/documentation/test_practices/encouraged/locators.md" >}}), including which to use when and
-why to declare locators separately from the finding methods.
-
+Visite os nossas [directrizes e recomendações]({{< ref "/documentation/test_practices/encouraged" >}}) para dicas sobre
+[locators]({{< ref "/documentation/test_practices/encouraged/locators.md" >}}), incluindo quais usar e quando, 
+e também porque é que deve declarar localizadores separadamente dos finders.
 
 
 ### Estratégias de seleção de elemento

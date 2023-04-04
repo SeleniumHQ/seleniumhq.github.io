@@ -5,17 +5,17 @@ weight: 1
 aliases: [
 "/pt-br/documentation/webdriver/additional_features/fileupload/"
 ]
+description: >
+  Como subir arquivos com Selenium
+
 ---
 
+A caixa de diálogo para o envio de arquivos pode ser tratada com o Selenium, quando o elemento de entrada é do tipo "file". 
+Pode observar um exemplo neste link https://the-internet.herokuapp.com/upload .
 
-The file upload dialog could be handled using Selenium, 
-when the input element is of type file. 
-An example of it, could be found on this 
-web page-  https://the-internet.herokuapp.com/upload
-We will require to have a file available with us, 
-which we need to upload. 
-The code to upload the file for different programming 
-languages will be as follows - 
+Será necessário ter o arquivo a subir disponível para a operação.
+Apresentamos alguns exemplos de código para subir os arquivos em diversas linguagens de programação:
+
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -148,5 +148,4 @@ fun main() {
 {{< /tab >}}
 {{< /tabpane >}}
 
-So the above example code helps to understand 
-how we can upload a file using Selenium. 
+Esperamos que estes exemplos de código possam ajudar a compreender como subir um arquivo com Selenium.
