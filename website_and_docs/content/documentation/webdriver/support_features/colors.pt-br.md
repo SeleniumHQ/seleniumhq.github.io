@@ -1,7 +1,7 @@
 ---
 title: "Trabalhando com cores"
 linkTitle: "Trabalhando com cores"
-weight: 1
+weight: 3
 aliases: [
 "/documentation/pt-br/support_packages/working_with_colours/",
 "/pt-br/documentation/support_packages/working_with_colours/",
