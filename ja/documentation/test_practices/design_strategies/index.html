@@ -16,7 +16,7 @@ BotStyleTests：PageObjectsが推奨するオブジェクトベースのアプ�
 ロード可能なコンポーネント それは何ですか？ LoadableComponentは、PageObjectsの作成の負担を軽減することを目的としたベースクラスです。 これは、ページがロードされることを保証する標準的な方法を提供し、ページのロードの失敗のデバッグを容易にするフックを提供することによってこれを行います。 これを使用して、テストの定型コードの量を減らすことができます。これにより、テストの保守が面倒になります。
 現在、Selenium 2の一部として出荷されるJavaの実装がありますが、使用されるアプローチは、どの言語でも実装できるほど単純です。
 簡単な使用方法 モデル化するUIの例として、新しいissueのページをご覧ください。 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 基本的なページオブジェクトは次のようになります。
-package com.example.webdriver; import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; public class EditIssue { private final WebDriver driver; public EditIssue(WebDriver driver) { this.driver = driver; } public void setSummary(String summary) { WebElement field = driver.findElement(By.name(&#34;summary&#34;)); clearAndType(field, summary); } public void enterDescription(String description) { WebElement field = driver.findElement(By.name(&#34;comment&#34;)); clearAndType(field, description); } public IssueList submit() { driver."><meta property="og:type" content="article"><meta property="og:url" content="/ja/documentation/test_practices/design_strategies/"><meta property="og:image" content="/images/selenium_4_logo.png"><meta property="article:section" content="documentation"><meta property="article:modified_time" content="2021-12-23T18:11:02+09:00"><meta property="og:site_name" content="Selenium"><meta itemprop=name content="デザインパターンと開発戦略"><meta itemprop=description content="(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
+package com.example.webdriver; import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; public class EditIssue { private final WebDriver driver; public EditIssue(WebDriver driver) { this.driver = driver; } public void setSummary(String summary) { WebElement field = driver.findElement(By.name(&#34;summary&#34;)); clearAndType(field, summary); } public void enterDescription(String description) { WebElement field = driver.findElement(By.name(&#34;comment&#34;)); clearAndType(field, description); } public IssueList submit() { driver."><meta property="og:type" content="article"><meta property="og:url" content="/ja/documentation/test_practices/design_strategies/"><meta property="og:image" content="/images/selenium_4_logo.png"><meta property="article:section" content="documentation"><meta property="article:modified_time" content="2023-04-17T22:48:24+05:30"><meta property="og:site_name" content="Selenium"><meta itemprop=name content="デザインパターンと開発戦略"><meta itemprop=description content="(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
 概要 時間の経過とともに、プロジェクトは多数のテストが積み上がる傾向があります。 テストの総数が増えると、コードベースに変更を加えることが難しくなります。 アプリケーションが正常に機能していても、1回の&#34;単純な&#34;変更で多数のテストが失敗する可能性があります。 これらの問題が避けられない場合もありますが、問題が発生した場合は、できるだけ早く稼働を再開する必要があります。 次のデザインパターンと戦略は、テストの作成と保守を容易にするためにWebDriverで以前に使用されています。 それらもあなたにとって役に立つかもしれません。
 DomainDrivenDesign：アプリのエンドユーザーの言語でテストを表現します。
 PageObjects：WebアプリのUIの単純な抽象化
@@ -25,7 +25,7 @@ BotStyleTests：PageObjectsが推奨するオブジェクトベースのアプ�
 ロード可能なコンポーネント それは何ですか？ LoadableComponentは、PageObjectsの作成の負担を軽減することを目的としたベースクラスです。 これは、ページがロードされることを保証する標準的な方法を提供し、ページのロードの失敗のデバッグを容易にするフックを提供することによってこれを行います。 これを使用して、テストの定型コードの量を減らすことができます。これにより、テストの保守が面倒になります。
 現在、Selenium 2の一部として出荷されるJavaの実装がありますが、使用されるアプローチは、どの言語でも実装できるほど単純です。
 簡単な使用方法 モデル化するUIの例として、新しいissueのページをご覧ください。 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 基本的なページオブジェクトは次のようになります。
-package com.example.webdriver; import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; public class EditIssue { private final WebDriver driver; public EditIssue(WebDriver driver) { this.driver = driver; } public void setSummary(String summary) { WebElement field = driver.findElement(By.name(&#34;summary&#34;)); clearAndType(field, summary); } public void enterDescription(String description) { WebElement field = driver.findElement(By.name(&#34;comment&#34;)); clearAndType(field, description); } public IssueList submit() { driver."><meta itemprop=dateModified content="2021-12-23T18:11:02+09:00"><meta itemprop=wordCount content="739"><meta itemprop=image content="/images/selenium_4_logo.png"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/selenium_4_logo.png"><meta name=twitter:title content="デザインパターンと開発戦略"><meta name=twitter:description content="(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
+package com.example.webdriver; import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; public class EditIssue { private final WebDriver driver; public EditIssue(WebDriver driver) { this.driver = driver; } public void setSummary(String summary) { WebElement field = driver.findElement(By.name(&#34;summary&#34;)); clearAndType(field, summary); } public void enterDescription(String description) { WebElement field = driver.findElement(By.name(&#34;comment&#34;)); clearAndType(field, description); } public IssueList submit() { driver."><meta itemprop=dateModified content="2023-04-17T22:48:24+05:30"><meta itemprop=wordCount content="739"><meta itemprop=image content="/images/selenium_4_logo.png"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/selenium_4_logo.png"><meta name=twitter:title content="デザインパターンと開発戦略"><meta name=twitter:description content="(以前の場所: https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests)
 概要 時間の経過とともに、プロジェクトは多数のテストが積み上がる傾向があります。 テストの総数が増えると、コードベースに変更を加えることが難しくなります。 アプリケーションが正常に機能していても、1回の&#34;単純な&#34;変更で多数のテストが失敗する可能性があります。 これらの問題が避けられない場合もありますが、問題が発生した場合は、できるだけ早く稼働を再開する必要があります。 次のデザインパターンと戦略は、テストの作成と保守を容易にするためにWebDriverで以前に使用されています。 それらもあなたにとって役に立つかもしれません。
 DomainDrivenDesign：アプリのエンドユーザーの言語でテストを表現します。
 PageObjects：WebアプリのUIの単純な抽象化
@@ -59,122 +59,122 @@ package com.example.webdriver; import org.openqa.selenium.By; import org.openqa.
 これは、ページがロードされることを保証する標準的な方法を提供し、ページのロードの失敗のデバッグを容易にするフックを提供することによってこれを行います。
 これを使用して、テストの定型コードの量を減らすことができます。これにより、テストの保守が面倒になります。</p><p>現在、Selenium 2の一部として出荷されるJavaの実装がありますが、使用されるアプローチは、どの言語でも実装できるほど単純です。</p><h3 id=簡単な使用方法>簡単な使用方法</h3><p>モデル化するUIの例として、<a href=https://github.com/SeleniumHQ/selenium/issues/new>新しいissue</a>のページをご覧ください。
 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。
-基本的なページオブジェクトは次のようになります。</p><pre tabindex=0><code>package com.example.webdriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-public class EditIssue {
-
-  private final WebDriver driver;
-
-  public EditIssue(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public void setSummary(String summary) {
-    WebElement field = driver.findElement(By.name(&#34;summary&#34;));
-    clearAndType(field, summary);
-  }
-
-  public void enterDescription(String description) {
-    WebElement field = driver.findElement(By.name(&#34;comment&#34;));
-    clearAndType(field, description);
-  }
-
-  public IssueList submit() {
-    driver.findElement(By.id(&#34;submit&#34;)).click();
-    return new IssueList(driver);
-  }
-
-  private void clearAndType(WebElement field, String text) {
-    field.clear();
-    field.sendKeys(text);
-  }
-}
-</code></pre><p>これをLoadableComponentに変換するには、これを基本型として設定するだけです。</p><pre tabindex=0><code>public class EditIssue extends LoadableComponent&lt;EditIssue&gt; {
-  // rest of class ignored for now
-}
-</code></pre><p>この署名は少し変わっているように見えますが、それは、このクラスがEditIssueページをロードするLoadableComponentを表すことを意味します。</p><p>このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。</p><pre tabindex=0><code>  @Override
-  protected void load() {
-    driver.get(&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;);
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-    assertTrue(&#34;Not on the issue entry page: &#34; + url, url.endsWith(&#34;/new&#34;));
-  }
-</code></pre><p><code>load</code> メソッドはページに移動するために使用され、　<code>isLoaded</code> メソッドは正しいページにいるかどうかを判断するために使用されます。
+基本的なページオブジェクトは次のようになります。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>package</span> <span style=color:#000>com.example.webdriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebElement</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>EditIssue</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>setSummary</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>summary</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>WebElement</span> <span style=color:#000>field</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;summary&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>summary</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>enterDescription</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>description</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>WebElement</span> <span style=color:#000>field</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;comment&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>description</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>IssueList</span> <span style=color:#000>submit</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;submit&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>IssueList</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebElement</span> <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>text</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>clear</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>text</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>これをLoadableComponentに変換するには、これを基本型として設定するだけです。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>EditIssue</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>// rest of class ignored for now
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>この署名は少し変わっているように見えますが、それは、このクラスがEditIssueページをロードするLoadableComponentを表すことを意味します。</p><p>このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>isLoaded</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#204a87;font-weight:700>throws</span> <span style=color:#000>Error</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>String</span> <span style=color:#000>url</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Not on the issue entry page: &#34;</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#000>url</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>url</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>endsWith</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;/new&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p><code>load</code> メソッドはページに移動するために使用され、　<code>isLoaded</code> メソッドは正しいページにいるかどうかを判断するために使用されます。
 このメソッドはブール値を返す必要があるように見えますが、代わりにJUnitのAssertクラスを使用して一連のアサーションを実行します。
 アサーションは好きなだけ少なくても多くてもかまいません。
-これらのアサーションを使用することで、クラスのユーザーにテストのデバッグに使用できる明確な情報を提供することができます。</p><p>少し手直しすると、PageObjectは次のようになります。</p><pre tabindex=0><code>package com.example.webdriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import static junit.framework.Assert.assertTrue;
-
-public class EditIssue extends LoadableComponent&lt;EditIssue&gt; {
-
-  private final WebDriver driver;
-  
-  // By default the PageFactory will locate elements with the same name or id
-  // as the field. Since the summary element has a name attribute of &#34;summary&#34;
-  // we don&#39;t need any additional annotations.
-  private WebElement summary;
-  
-  // Same with the submit element, which has the ID &#34;submit&#34;
-  private WebElement submit;
-  
-  // But we&#39;d prefer a different name in our code than &#34;comment&#34;, so we use the
-  // FindBy annotation to tell the PageFactory how to locate the element.
-  @FindBy(name = &#34;comment&#34;) private WebElement description;
-  
-  public EditIssue(WebDriver driver) {
-    this.driver = driver;
-    
-    // This call sets the WebElement fields.
-    PageFactory.initElements(driver, this);
-  }
-
-  @Override
-  protected void load() {
-    driver.get(&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;);
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-    assertTrue(&#34;Not on the issue entry page: &#34; + url, url.endsWith(&#34;/new&#34;));
-  }
-  
-  public void setSummary(String issueSummary) {
-    clearAndType(summary, issueSummary);
-  }
-
-  public void enterDescription(String issueDescription) {
-    clearAndType(description, issueDescription);
-  }
-
-  public IssueList submit() {
-    submit.click();
-    return new IssueList(driver);
-  }
-
-  private void clearAndType(WebElement field, String text) {
-    field.clear();
-    field.sendKeys(text);
-  }
-}
-</code></pre><p>それは私たちをあまり信じられなかったようですよね？
+これらのアサーションを使用することで、クラスのユーザーにテストのデバッグに使用できる明確な情報を提供することができます。</p><p>少し手直しすると、PageObjectは次のようになります。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>package</span> <span style=color:#000>com.example.webdriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebElement</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.support.FindBy</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.support.PageFactory</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import static</span> <span style=color:#000>junit.framework.Assert.assertTrue</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>EditIssue</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>// By default the PageFactory will locate elements with the same name or id
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// as the field. Since the summary element has a name attribute of &#34;summary&#34;
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// we don&#39;t need any additional annotations.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>WebElement</span> <span style=color:#000>summary</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>// Same with the submit element, which has the ID &#34;submit&#34;
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>WebElement</span> <span style=color:#000>submit</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>// But we&#39;d prefer a different name in our code than &#34;comment&#34;, so we use the
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// FindBy annotation to tell the PageFactory how to locate the element.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#5c35cc;font-weight:700>@FindBy</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>name</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#34;comment&#34;</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>WebElement</span> <span style=color:#000>description</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// This call sets the WebElement fields.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>PageFactory</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>initElements</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>isLoaded</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#204a87;font-weight:700>throws</span> <span style=color:#000>Error</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>String</span> <span style=color:#000>url</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Not on the issue entry page: &#34;</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#000>url</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>url</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>endsWith</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;/new&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>setSummary</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>issueSummary</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>summary</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>issueSummary</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>enterDescription</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>String</span> <span style=color:#000>issueDescription</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>description</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>issueDescription</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>IssueList</span> <span style=color:#000>submit</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>submit</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>IssueList</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>clearAndType</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebElement</span> <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>text</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>clear</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>field</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>text</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>それは私たちをあまり信じられなかったようですよね？
 これまでに行ったことの1つは、ページに移動する方法に関する情報をページ自体にカプセル化することです。
 つまり、この情報はコードベース全体に散らばっていません。
-これは、テストで下記を実行できることも意味します。</p><pre tabindex=0><code>EditIssue page = new EditIssue(driver).get();
-</code></pre><p>この呼び出しにより、ドライバーは必要に応じてページに移動します。</p><h3 id=ネストされたコンポーネント>ネストされたコンポーネント</h3><p>LoadableComponentsは、他のLoadableComponentsと組み合わせて使用すると、より便利になります。
+これは、テストで下記を実行できることも意味します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#000>EditIssue</span> <span style=color:#000>page</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span></code></pre></div><p>この呼び出しにより、ドライバーは必要に応じてページに移動します。</p><h3 id=ネストされたコンポーネント>ネストされたコンポーネント</h3><p>LoadableComponentsは、他のLoadableComponentsと組み合わせて使用すると、より便利になります。
 この例を使用すると、 &ldquo;edit issue&rdquo; ページをプロジェクトのWebサイト内のコンポーネントとして表示できます（結局のところ、そのサイトのタブからアクセスします）。
 また、issue を報告するにはログインする必要があります。
 これをネストされたコンポーネントのツリーとしてモデル化できます。</p><pre tabindex=0><code> + ProjectPage
@@ -183,144 +183,144 @@ public class EditIssue extends LoadableComponent&lt;EditIssue&gt; {
 </code></pre><p>これはコードではどのように見えますか？
 まず、各論理コンポーネントには独自のクラスがあります。
 それぞれの &ldquo;load&rdquo; メソッドは、親クラスを &ldquo;get&rdquo; します。
-上記のEditIssueクラスに加えて、最終結果は次のようになります。</p><p>ProjectPage.java:</p><pre tabindex=0><code>package com.example.webdriver;
-
-import org.openqa.selenium.WebDriver;
-
-import static org.junit.Assert.assertTrue;
-
-public class ProjectPage extends LoadableComponent&lt;ProjectPage&gt; {
-
-  private final WebDriver driver;
-  private final String projectName;
-
-  public ProjectPage(WebDriver driver, String projectName) {
-    this.driver = driver;
-    this.projectName = projectName;
-  }
-
-  @Override
-  protected void load() {
-    driver.get(&#34;http://&#34; + projectName + &#34;.googlecode.com/&#34;);
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-
-    assertTrue(url.contains(projectName));
-  }
-}
-</code></pre><p>and SecuredPage.java:</p><pre tabindex=0><code>package com.example.webdriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import static org.junit.Assert.fail;
-
-public class SecuredPage extends LoadableComponent&lt;SecuredPage&gt; {
-
-  private final WebDriver driver;
-  private final LoadableComponent&lt;?&gt; parent;
-  private final String username;
-  private final String password;
-
-  public SecuredPage(WebDriver driver, LoadableComponent&lt;?&gt; parent, String username, String password) {
-    this.driver = driver;
-    this.parent = parent;
-    this.username = username;
-    this.password = password;
-  }
-
-  @Override
-  protected void load() {
-    parent.get();
-
-    String originalUrl = driver.getCurrentUrl();
-
-    // Sign in
-    driver.get(&#34;https://www.google.com/accounts/ServiceLogin?service=code&#34;);
-    driver.findElement(By.name(&#34;Email&#34;)).sendKeys(username);
-    WebElement passwordField = driver.findElement(By.name(&#34;Passwd&#34;));
-    passwordField.sendKeys(password);
-    passwordField.submit();
-
-    // Now return to the original URL
-    driver.get(originalUrl);
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    // If you&#39;re signed in, you have the option of picking a different login.
-    // Let&#39;s check for the presence of that.
-
-    try {
-      WebElement div = driver.findElement(By.id(&#34;multilogin-dropdown&#34;));
-    } catch (NoSuchElementException e) {
-      fail(&#34;Cannot locate user name link&#34;);
-    }
-  }
-}
-</code></pre><p>EditIssueの &ldquo;load&rdquo; メソッドは次のようになります。</p><pre tabindex=0><code>  @Override
-  protected void load() {
-    securedPage.get();
-
-    driver.get(&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;);
-  }
-</code></pre><p>これは、コンポーネントがすべて相互に &ldquo;ネストされている&rdquo; ことを示しています。
+上記のEditIssueクラスに加えて、最終結果は次のようになります。</p><p>ProjectPage.java:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>package</span> <span style=color:#000>com.example.webdriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import static</span> <span style=color:#000>org.junit.Assert.assertTrue</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>ProjectPage</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>ProjectPage</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>String</span> <span style=color:#000>projectName</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>ProjectPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>projectName</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>projectName</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>projectName</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;http://&#34;</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#000>projectName</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#4e9a06>&#34;.googlecode.com/&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>isLoaded</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#204a87;font-weight:700>throws</span> <span style=color:#000>Error</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>String</span> <span style=color:#000>url</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#000>assertTrue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>url</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>contains</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>projectName</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>and SecuredPage.java:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>package</span> <span style=color:#000>com.example.webdriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.NoSuchElementException</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebElement</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import static</span> <span style=color:#000>org.junit.Assert.fail</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>SecuredPage</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>SecuredPage</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;?&gt;</span> <span style=color:#000>parent</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>String</span> <span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>String</span> <span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>SecuredPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>LoadableComponent</span><span style=color:#ce5c00;font-weight:700>&lt;?&gt;</span> <span style=color:#000>parent</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>parent</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>parent</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>username</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>password</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>parent</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#000>String</span> <span style=color:#000>originalUrl</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// Sign in
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://www.google.com/accounts/ServiceLogin?service=code&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Email&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>username</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>WebElement</span> <span style=color:#000>passwordField</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Passwd&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>passwordField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>password</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>passwordField</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>submit</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// Now return to the original URL
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>originalUrl</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>isLoaded</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#204a87;font-weight:700>throws</span> <span style=color:#000>Error</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// If you&#39;re signed in, you have the option of picking a different login.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#8f5902;font-style:italic>// Let&#39;s check for the presence of that.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>try</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>      <span style=color:#000>WebElement</span> <span style=color:#000>div</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;multilogin-dropdown&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span> <span style=color:#204a87;font-weight:700>catch</span> <span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>NoSuchElementException</span> <span style=color:#000>e</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>      <span style=color:#000>fail</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Cannot locate user name link&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>EditIssueの &ldquo;load&rdquo; メソッドは次のようになります。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>load</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>securedPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;https://github.com/SeleniumHQ/selenium/issues/new&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>これは、コンポーネントがすべて相互に &ldquo;ネストされている&rdquo; ことを示しています。
 EditIssueで <code>get()</code> を呼び出すと、そのすべての依存関係も読み込まれます。
-使用例：</p><pre tabindex=0><code>public class FooTest {
-  private EditIssue editIssue;
-
-  @Before
-  public void prepareComponents() {
-    WebDriver driver = new FirefoxDriver();
-
-    ProjectPage project = new ProjectPage(driver, &#34;selenium&#34;);
-    SecuredPage securedPage = new SecuredPage(driver, project, &#34;example&#34;, &#34;top secret&#34;);
-    editIssue = new EditIssue(driver, securedPage);
-  }
-
-  @Test
-  public void demonstrateNestedLoadableComponents() {
-    editIssue.get();
-
-    editIssue.setSummary(&#34;Summary&#34;);
-    editIssue.enterDescription(&#34;This is an example&#34;);
-  }
-}
-</code></pre><p>テストで <a href=https://github.com/zorzella/guiceberry>Guiceberry</a> などのライブラリを使用している場合は、PageObjectsの設定の前文を省略して、わかりやすく読みやすいテストを作成できます。</p><h2 id=ボットパターン>ボットパターン</h2><p>(以前の場所: <a href=https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests>https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests</a>)</p><p>PageObjectsは、テストでの重複を減らすための便利な方法ですが、チームが快適にフォローできるパターンであるとは限りません。
+使用例：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>FooTest</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#000>EditIssue</span> <span style=color:#000>editIssue</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Before</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>prepareComponents</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>FirefoxDriver</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#000>ProjectPage</span> <span style=color:#000>project</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ProjectPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;selenium&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>SecuredPage</span> <span style=color:#000>securedPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>SecuredPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>project</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;example&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;top secret&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>editIssue</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>EditIssue</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>securedPage</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#5c35cc;font-weight:700>@Test</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>demonstrateNestedLoadableComponents</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>editIssue</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>get</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#000>editIssue</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>setSummary</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Summary&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>editIssue</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>enterDescription</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;This is an example&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>テストで <a href=https://github.com/zorzella/guiceberry>Guiceberry</a> などのライブラリを使用している場合は、PageObjectsの設定の前文を省略して、わかりやすく読みやすいテストを作成できます。</p><h2 id=ボットパターン>ボットパターン</h2><p>(以前の場所: <a href=https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests>https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests</a>)</p><p>PageObjectsは、テストでの重複を減らすための便利な方法ですが、チームが快適にフォローできるパターンであるとは限りません。
 別のアプローチは、より &ldquo;コマンドのような&rdquo; スタイルのテストに従うことです。</p><p>&ldquo;ボット&rdquo; は、生のSeleniumAPIに対するアクション指向の抽象化です。
 つまり、コマンドがアプリに対して正しいことをしていないことがわかった場合、コマンドを簡単に変更できます。
-例として：</p><pre tabindex=0><code>public class ActionBot {
-  private final WebDriver driver;
-
-  public ActionBot(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public void click(By locator) {
-    driver.findElement(locator).click();
-  }
-
-  public void submit(By locator) {
-    driver.findElement(locator).submit();
-  }
-
-  /** 
-   * Type something into an input field. WebDriver doesn&#39;t normally clear these
-   * before typing, so this method does that first. It also sends a return key
-   * to move the focus out of the element.
-   */
-  public void type(By locator, String text) { 
-    WebElement element = driver.findElement(locator);
-    element.clear();
-    element.sendKeys(text + &#34;\n&#34;);
-  }
-}
-</code></pre><p>これらの抽象化が構築され、テストでの重複が特定されると、ボットの上にPageObjectsを階層化することができます。</p><div class="text-muted mt-5 pt-3 border-top">最終更新 December 23, 2021: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/8fce133fe4794fd303115300d9d28c8d3684e976>Japanese Translation of test_practices (#900) (8fce133fe47)</a></div></div></main></div></div><div class="row justify-content-center p-5"><h2 class="selenium text-center">Selenium Level Sponsors</h2></div><div class="row justify-content-around pt-4 pb-5 px-5"><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/browserstack.png alt=BrowserStack></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://saucelabs.com class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/saucelabs.png alt="Sauce Labs"></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://bit.ly/36uZ7ad class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/experitest.png alt=Experitest></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://applitools.com/ class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/applitools.png alt=Applitools></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.perfecto.io/ class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/perfecto-perforce.jpg alt=Perfecto></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.lambdatest.com/selenium-automation class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/lambda-test.png alt=LambdaTest></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/subject7_logo.png alt=Subject7></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="https://www.avoautomation.ai/why-avo//?utm_source=SeleniumHQ&utm_medium=listing&utm_campaign=SeleniumHQ" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/Avo_logo.png alt="Avo Automation"></a></div></div><div class="row justify-content-center pt-2 pb-3 -bg-selenium-cyan"><div class="card text-center border-0 bg-transparent py-5"><div class=card-body><h2 class=card-title>Support the Selenium Project</h2><p class=card-text>Want to support the Selenium project? Learn more or view the full list of sponsors.</p><div class=selenium-button-container><a href=/sponsors class="selenium-button selenium-white-cyan text-uppercase font-weight-bold">Learn more
+例として：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>ActionBot</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>final</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>ActionBot</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>click</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span> <span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>submit</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span> <span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>submit</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#8f5902;font-style:italic>/** 
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>   * Type something into an input field. WebDriver doesn&#39;t normally clear these
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>   * before typing, so this method does that first. It also sends a return key
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>   * to move the focus out of the element.
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>   */</span>
+</span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>type</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span> <span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>String</span> <span style=color:#000>text</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span> 
+</span></span><span style=display:flex><span>    <span style=color:#000>WebElement</span> <span style=color:#000>element</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>locator</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>element</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>clear</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>element</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>text</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#4e9a06>&#34;\n&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>これらの抽象化が構築され、テストでの重複が特定されると、ボットの上にPageObjectsを階層化することができます。</p><div class="text-muted mt-5 pt-3 border-top">最終更新 April 17, 2023: <a href=https://github.com/SeleniumHQ/seleniumhq.github.io/commit/7969613d4a5896d50d73e883db2a0a9ea8dc1e15>Added syntax highlighting for java code (#1359)[deploy site] (7969613d4a5)</a></div></div></main></div></div><div class="row justify-content-center p-5"><h2 class="selenium text-center">Selenium Level Sponsors</h2></div><div class="row justify-content-around pt-4 pb-5 px-5"><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/browserstack.png alt=BrowserStack></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://saucelabs.com class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/saucelabs.png alt="Sauce Labs"></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=http://bit.ly/36uZ7ad class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/experitest.png alt=Experitest></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://applitools.com/ class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/applitools.png alt=Applitools></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.perfecto.io/ class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/perfecto-perforce.jpg alt=Perfecto></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href=https://www.lambdatest.com/selenium-automation class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/lambda-test.png alt=LambdaTest></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/subject7_logo.png alt=Subject7></a></div><div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3"><a href="https://www.avoautomation.ai/why-avo//?utm_source=SeleniumHQ&utm_medium=listing&utm_campaign=SeleniumHQ" class=border-0><img class="w-100 shadow-1-strong rounded selenium-backer-logo" src=/images/sponsors/Avo_logo.png alt="Avo Automation"></a></div></div><div class="row justify-content-center pt-2 pb-3 -bg-selenium-cyan"><div class="card text-center border-0 bg-transparent py-5"><div class=card-body><h2 class=card-title>Support the Selenium Project</h2><p class=card-text>Want to support the Selenium project? Learn more or view the full list of sponsors.</p><div class=selenium-button-container><a href=/sponsors class="selenium-button selenium-white-cyan text-uppercase font-weight-bold">Learn more
 <i class="pl-3 fas fa-caret-right"></i></a></div></div></div></div><footer class="bg-dark py-5 row d-print-none"><div class="container-fluid mx-sm-5"><div class=row><div class="col-6 col-sm-4 text-xs-center order-sm-2"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="User mailing list" aria-label="User mailing list"><a class=text-white target=_blank rel=noopener href=https://groups.google.com/group/selenium-users aria-label="User mailing list"><i class="fas fa-mail-bulk"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Selenium in Twitter" aria-label="Selenium in Twitter"><a class=text-white target=_blank rel=noopener href=https://twitter.com/SeleniumHQ aria-label="Selenium in Twitter"><i class="fab fa-twitter"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="SeleniumConf YouTube Channel" aria-label="SeleniumConf YouTube Channel"><a class=text-white target=_blank rel=noopener href=https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw aria-label="SeleniumConf YouTube Channel"><i class="fab fa-youtube"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Selenium in Facebook" aria-label="Selenium in Facebook"><a class=text-white target=_blank rel=noopener href=https://www.facebook.com/Selenium2.WebDriver aria-label="Selenium in Facebook"><i class="fab fa-facebook"></i></a></li></ul></div><div class="col-6 col-sm-4 text-right text-xs-center order-sm-3"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Software Freedom Conservancy" aria-label="Software Freedom Conservancy"><a class=text-white target=_blank rel=noopener href=mailto:selenium@sfconservancy.org aria-label="Software Freedom Conservancy"><i class="fas fa-envelope-square"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub><a class=text-white target=_blank rel=noopener href=https://github.com/seleniumhq/selenium aria-label=GitHub><i class="fab fa-github"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Slack aria-label=Slack><a class=text-white target=_blank rel=noopener href=https://join.slack.com/t/seleniumhq/shared_invite/zt-1neaoa52v-FTzht5cd2eYKwSobbhQkEw aria-label=Slack><i class="fab fa-slack"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=IRC aria-label=IRC><a class=text-white target=_blank rel=noopener href=https://kiwiirc.com/nextclient/irc.libera.chat/#selenium aria-label=IRC><i class="fas fa-comments"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Developer mailing list" aria-label="Developer mailing list"><a class=text-white target=_blank rel=noopener href=https://groups.google.com/g/selenium-developers aria-label="Developer mailing list"><i class="fa fa-envelope"></i></a></li></ul><a href=https://www.netlify.com><img src=https://www.netlify.com/v3/img/components/netlify-light.svg alt="Deploys by Netlify"></a></div><div class="col-12 col-sm-4 text-center py-2 order-sm-2"><small class=text-white>&copy; 2023 Software Freedom Conservancy All Rights Reserved</small><p class=mt-2><a href=/ja/documentation/about/>このドキュメントについて</a></p></div></div></div></footer></div><script src=/js/main.min.be25a680a0d95dc8b5d6664622e2134aa894220e2f224ef609e00f633a3a1b32.js integrity="sha256-viWmgKDZXci11mZGIuITSqiUIg4vIk72CeAPYzo6GzI=" crossorigin=anonymous></script>
 <script src=/js/prism.js></script>
 <script src=/js/tabpane-persist.js></script>
