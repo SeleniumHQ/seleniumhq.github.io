@@ -40,7 +40,7 @@ the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. From
 the point of view of a test author, this offers the service of being able to 
 file a new issue. A basic Page Object would look like:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -79,7 +79,7 @@ public class EditIssue {
 
 In order to turn this into a LoadableComponent, all we need to do is to set that as the base type:
 
-```
+```java
 public class EditIssue extends LoadableComponent<EditIssue> {
   // rest of class ignored for now
 }
@@ -90,7 +90,7 @@ represents a LoadableComponent that loads the EditIssue page.
 
 By extending this base class, we need to implement two new methods:
 
-```
+```java
   @Override
   protected void load() {
     driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
@@ -113,7 +113,7 @@ used to debug tests.
 
 With a little rework, our PageObject looks like:
 
-```
+```java
 package com.example.webdriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -183,7 +183,7 @@ encapsulate the information about how to navigate to the page into the page
 itself, meaning that this information's not scattered through the code base. 
 It also means that we can do this in our tests:
 
-```
+```java
 EditIssue page = new EditIssue(driver).get();
 ```
 
@@ -209,7 +209,7 @@ the parent. The end result, in addition to the EditIssue class above is:
 
 ProjectPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.WebDriver;
@@ -242,7 +242,7 @@ public class ProjectPage extends LoadableComponent<ProjectPage> {
 
 and SecuredPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -299,7 +299,7 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
 
 The "load" method in EditIssue now looks like:
 
-```
+```java
   @Override
   protected void load() {
     securedPage.get();
@@ -310,7 +310,7 @@ The "load" method in EditIssue now looks like:
 
 This shows that the components are all "nested" within each other. A call to `get()` in EditIssue will cause all its dependencies to load too. The example usage:
 
-```
+```java
 public class FooTest {
   private EditIssue editIssue;
 
@@ -345,7 +345,7 @@ Although PageObjects are a useful way of reducing duplication in your tests, it'
 
 A "bot" is an action-oriented abstraction over the raw Selenium APIs. This means that if you find that commands aren't doing the Right Thing for your app, it's easy to change them. As an example:
 
-```
+```java
 public class ActionBot {
   private final WebDriver driver;
 

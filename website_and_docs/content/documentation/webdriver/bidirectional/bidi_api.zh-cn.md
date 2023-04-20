@@ -136,7 +136,7 @@ List<DomMutationData> attributeValueChanges = new List<DomMutationData>();
 DefaultWait<List<DomMutationData>> wait = new DefaultWait<List<DomMutationData>>(attributeValueChanges);
 wait.Timeout = TimeSpan.FromSeconds(3);
 
-IJavaScriptEngine monitor = new JavaScriptEngine(driver);
+using IJavaScriptEngine monitor = new JavaScriptEngine(driver);
 monitor.DomMutated += (sender, e) =>
 {
     attributeValueChanges.Add(e.AttributeData);
@@ -249,7 +249,7 @@ async def printConsoleLogs():
 trio.run(printConsoleLogs)
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-IJavaScriptEngine monitor = new JavaScriptEngine(driver);
+using IJavaScriptEngine monitor = new JavaScriptEngine(driver);
 List<string> consoleMessages = new List<string>();
 monitor.JavaScriptConsoleApiCalled += (sender, e) =>
 {
@@ -366,7 +366,7 @@ async def catchJSException():
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 List<string> exceptionMessages = new List<string>();
-IJavaScriptEngine monitor = new JavaScriptEngine(driver);
+using IJavaScriptEngine monitor = new JavaScriptEngine(driver);
 monitor.JavaScriptExceptionThrown += (sender, e) =>
 {
     exceptionMessages.Add(e.Message);
