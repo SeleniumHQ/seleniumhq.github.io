@@ -6,7 +6,7 @@ Links to everything can be found on our &lt;a href="/downloads">downloads page&l
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v110, v111, and v112 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Maven BOM for the Java bindings.&lt;/li>
-&lt;li>Remote file downloads are not possible through Selenium Grid.&lt;/li>
+&lt;li>Remote file downloads are now possible through Selenium Grid.&lt;/li>
 &lt;li>First steps taken to phase out CDP in Firefox and replace it with the BiDi implementation.&lt;/li>
 &lt;li>&lt;code>InvalidSelectorException&lt;/code> now extends &lt;code>WebDriverException&lt;/code> instead of &lt;code>NoSuchElementException&lt;/code>.&lt;/li>
 &lt;li>Selenium Manager uses information set in the browser options to get the correct browser driver.&lt;/li>
