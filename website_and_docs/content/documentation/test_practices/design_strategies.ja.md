@@ -34,7 +34,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 
 基本的なページオブジェクトは次のようになります。
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -73,7 +73,7 @@ public class EditIssue {
 
 これをLoadableComponentに変換するには、これを基本型として設定するだけです。
 
-```
+```java
 public class EditIssue extends LoadableComponent<EditIssue> {
   // rest of class ignored for now
 }
@@ -83,7 +83,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
 このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。
 
-```
+```java
   @Override
   protected void load() {
     driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
@@ -103,7 +103,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
 少し手直しすると、PageObjectは次のようになります。
 
-```
+```java
 package com.example.webdriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -173,7 +173,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 つまり、この情報はコードベース全体に散らばっていません。 
 これは、テストで下記を実行できることも意味します。
 
-```
+```java
 EditIssue page = new EditIssue(driver).get();
 ```
 
@@ -199,7 +199,7 @@ LoadableComponentsは、他のLoadableComponentsと組み合わせて使用す�
 
 ProjectPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.WebDriver;
@@ -232,7 +232,7 @@ public class ProjectPage extends LoadableComponent<ProjectPage> {
 
 and SecuredPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -289,7 +289,7 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
 
 EditIssueの "load" メソッドは次のようになります。
 
-```
+```java
   @Override
   protected void load() {
     securedPage.get();
@@ -302,7 +302,7 @@ EditIssueの "load" メソッドは次のようになります。
 EditIssueで `get()` を呼び出すと、そのすべての依存関係も読み込まれます。 
 使用例：
 
-```
+```java
 public class FooTest {
   private EditIssue editIssue;
 
@@ -338,7 +338,7 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 つまり、コマンドがアプリに対して正しいことをしていないことがわかった場合、コマンドを簡単に変更できます。 
 例として：
 
-```
+```java
 public class ActionBot {
   private final WebDriver driver;
 
