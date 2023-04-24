@@ -6,11 +6,12 @@ Links to everything can be found on our &lt;a href="/downloads">downloads page&l
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v110, v111, and v112 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Maven BOM for the Java bindings.&lt;/li>
-&lt;li>Remote file downloads are now possible through Selenium Grid.&lt;/li>
+&lt;li>Remote file downloads are &lt;a href="/documentation/grid/configuration/cli_options/#enabling-managed-downloads-by-the-node">now possible through Selenium Grid&lt;/a>.&lt;/li>
 &lt;li>First steps taken to phase out CDP in Firefox and replace it with the BiDi implementation.&lt;/li>
-&lt;li>&lt;code>InvalidSelectorException&lt;/code> now extends &lt;code>WebDriverException&lt;/code> instead of &lt;code>NoSuchElementException&lt;/code>.&lt;/li>
+&lt;li>&lt;code>InvalidSelectorException&lt;/code> &lt;a href="/blog/2023/invalid-selector-exception-has-changed/">now extends &lt;code>WebDriverException&lt;/code> instead of &lt;code>NoSuchElementException&lt;/code>&lt;/a>.&lt;/li>
 &lt;li>Selenium Manager uses information set in the browser options to get the correct browser driver.&lt;/li>
-&lt;li>A sub-path can be set in Selenium Grid to have a custom Grid url.&lt;/li>
+&lt;li>A &lt;a href="/documentation/grid/configuration/cli_options/#router">sub-path&lt;/a> can be set in Selenium Grid to have a custom Grid url.&lt;/li>
+&lt;li>Complete removal of Json Wire Protocol support in Java and Grid.&lt;/li>
 &lt;/ul>
 &lt;h3 id="contributors">Contributors&lt;/h3>
 &lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
