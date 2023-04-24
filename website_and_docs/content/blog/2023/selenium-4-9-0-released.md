@@ -17,11 +17,12 @@ Links to everything can be found on our [downloads page][downloads].
 
   * Chrome DevTools support is now: v110, v111, and v112 (Firefox still uses v85 for all versions)
   * Maven BOM for the Java bindings.
-  * Remote file downloads are now possible through Selenium Grid.
+  * Remote file downloads are [now possible through Selenium Grid](/documentation/grid/configuration/cli_options/#enabling-managed-downloads-by-the-node).
   * First steps taken to phase out CDP in Firefox and replace it with the BiDi implementation.
-  * `InvalidSelectorException` now extends `WebDriverException` instead of `NoSuchElementException`.
+  * `InvalidSelectorException` [now extends `WebDriverException` instead of `NoSuchElementException`](/blog/2023/invalid-selector-exception-has-changed/).
   * Selenium Manager uses information set in the browser options to get the correct browser driver.
-  * A sub-path can be set in Selenium Grid to have a custom Grid url. 
+  * A [sub-path](/documentation/grid/configuration/cli_options/#router) can be set in Selenium Grid to have a custom Grid url. 
+  * Complete removal of Json Wire Protocol support in Java and Grid.
 
 
 ### Contributors
