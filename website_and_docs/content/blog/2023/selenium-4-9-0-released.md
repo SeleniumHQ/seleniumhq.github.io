@@ -22,7 +22,7 @@ Links to everything can be found on our [downloads page][downloads].
   * `InvalidSelectorException` [now extends `WebDriverException` instead of `NoSuchElementException`](/blog/2023/invalid-selector-exception-has-changed/).
   * Selenium Manager uses information set in the browser options to get the correct browser driver.
   * A [sub-path](/documentation/grid/configuration/cli_options/#router) can be set in Selenium Grid to have a custom Grid url. 
-  * Complete removal of Json Wire Protocol support in Java and Grid.
+  * Complete removal of [Json Wire Protocol support in Java and Grid](https://www.selenium.dev/blog/2022/legacy-protocol-support/).
 
 
 ### Contributors
