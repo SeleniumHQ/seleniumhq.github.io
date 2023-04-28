@@ -449,6 +449,10 @@ const emailElement = await driver.findElements(By.xpath('//input[@name="email_in
 const nameAttribute = await emailElement.getAttribute("name");
     {{< /tab >}}
   {{< tab header="Kotlin" >}}
-// Help us with a PR for code sample
+// Navigate to URL
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+//fetch the value property associated with the textbox
+val attr = driver.findElement(By.name("email_input")).getAttribute("value")
   {{< /tab >}}
 {{< /tabpane >}}
