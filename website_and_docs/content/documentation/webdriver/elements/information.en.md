@@ -61,7 +61,12 @@ await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Help us with a PR for code sample
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+ //returns true if element is displayed else returns false
+ val flag = driver.findElement(By.name("email_input")).isDisplayed()
+
 {{< /tab >}}
 {{< /tabpane >}}
 
