@@ -46,7 +46,7 @@ public class BidiApiRemoteWebdriverTest {
   @BeforeEach
   public void setup() throws MalformedURLException {
     int port = PortProber.findFreePort();
-    Main.main(new String[] { "standalone", "--port", String.valueOf(port), "--selenium-manager", "true", "--log-level", "FINE" });
+    Main.main(new String[] { "standalone", "--port", String.valueOf(port), "--selenium-manager", "true" });
 
     URL gridUrl = new URL(String.format("http://localhost:%d/", port));
     ChromeOptions options = new ChromeOptions();
