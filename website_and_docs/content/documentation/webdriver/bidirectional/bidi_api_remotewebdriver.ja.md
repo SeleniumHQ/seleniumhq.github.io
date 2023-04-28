@@ -22,7 +22,7 @@ With Selenium, you can automate the input of basic auth credentials whenever the
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L72-90" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemoteWebdriverTest.java#L72-90" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -34,7 +34,7 @@ element in the DOM.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L101-124" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemoteWebdriverTest.java#L101-124" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,7 +44,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L139-155" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemoteWebdriverTest.java#L139-155" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -52,7 +52,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L164-171" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemoteWebdriverTest.java#L164-171" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ it with the following examples.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemotewebdriverTest.java#L188-L198" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiRemoteWebdriverTest.java#L188-L198" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
