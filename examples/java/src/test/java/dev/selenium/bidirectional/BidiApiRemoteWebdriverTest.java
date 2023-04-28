@@ -39,18 +39,16 @@ import java.util.concurrent.atomic.AtomicReference;
 import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
 import static org.openqa.selenium.remote.http.Contents.utf8String;
 
-public class BidiApiRemotewebdriverTest {
-
-  private static URL gridUrl;
+public class BidiApiRemoteWebdriverTest {
 
   private WebDriver driver;
 
   @BeforeEach
   public void setup() throws MalformedURLException {
     int port = PortProber.findFreePort();
-    Main.main(new String[] { "standalone", "--port", String.valueOf(port) });
+    Main.main(new String[] { "standalone", "--port", String.valueOf(port), "--selenium-manager", "true" });
 
-    gridUrl = new URL(String.format("http://localhost:%d/", port));
+    URL gridUrl = new URL(String.format("http://localhost:%d/", port));
     ChromeOptions options = new ChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
   }
@@ -189,7 +187,7 @@ public class BidiApiRemotewebdriverTest {
     DevTools devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
 
-    try (NetworkInterceptor interceptor = new NetworkInterceptor(
+    try (NetworkInterceptor ignore = new NetworkInterceptor(
       driver,
       Route.matching(req -> req.getUri().contains("google"))
         .to(() -> req -> new HttpResponse()

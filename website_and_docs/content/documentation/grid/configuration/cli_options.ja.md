@@ -242,6 +242,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | ------------ | ------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | `--password` | string | `myStrongPassword` | クライアントがサーバーに接続する際に使用するパスワード。このパスワードとユーザー名の両方が設定されていないと使用できません。 |
 | `--username` | string | `admin`            | クライアントがサーバーに接続する際に使用するユーザー名。このユーザー名とパスワードの両方が設定されていないと使用できません。 |
+| `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
 
 ### Server
 
