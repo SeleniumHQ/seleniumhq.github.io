@@ -17,8 +17,8 @@ e, em seguida, consulte a página de pesquisa do Google com um snippet de códig
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();
+GoogleSearchPage gsp = new GoogleSearchPage(driver);
+gsp.setSearchString().clickSearchButton();
 ```
 
 A classe de objeto da página do Google com este comportamento fluente

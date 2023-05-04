@@ -16,8 +16,8 @@ Seleniumは既に、`FluentWait`クラスでこのようなものを実装して
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();
+GoogleSearchPage gsp = new GoogleSearchPage(driver);
+gsp.setSearchString().clickSearchButton();
 ```
 
 この流暢な動作を持つGoogleページオブジェクトクラスは次のようになります。
