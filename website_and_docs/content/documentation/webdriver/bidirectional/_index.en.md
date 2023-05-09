@@ -4,7 +4,8 @@ linkTitle: "BiDirectional"
 weight: 16
 aliases: [
 "/documentation/en/webdriver/bidi_apis/",
-"/documentation/webdriver/bidi_apis/"
+"/documentation/webdriver/bidi_apis/",
+"/documentation/webdriver/bidirectional/bidi_api_remotewebdriver"
 ]
 ---
 
