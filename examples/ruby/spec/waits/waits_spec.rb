@@ -25,7 +25,7 @@ RSpec.describe 'Waits' do
   end
 
   it 'implicit' do
-    driver.manage.timeouts.implicit_wait = 1
+    driver.manage.timeouts.implicit_wait = 2
     driver.get 'https://www.selenium.dev/selenium/web/dynamic.html'
     driver.find_element(id: 'adder').click
 
@@ -51,7 +51,7 @@ RSpec.describe 'Waits' do
     revealed = driver.find_element(id: 'revealed')
     errors = [Selenium::WebDriver::Error::NoSuchElementError,
               Selenium::WebDriver::Error::ElementNotInteractableError]
-    wait = Selenium::WebDriver::Wait.new(timeout: 1,
+    wait = Selenium::WebDriver::Wait.new(timeout: 2,
                                          interval: 0.3,
                                          ignore: errors)
 
