@@ -36,7 +36,7 @@ namespace SeleniumDocs.Waits
         [TestMethod]
         public void Implicit()
         {
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
             
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
             driver.FindElement(By.Id("adder")).Click();
@@ -51,7 +51,7 @@ namespace SeleniumDocs.Waits
         {
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
             IWebElement revealed = driver.FindElement(By.Id("revealed"));
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(1));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
 
             driver.FindElement(By.Id("reveal")).Click();
             wait.Until(d => revealed.Displayed);
@@ -65,7 +65,7 @@ namespace SeleniumDocs.Waits
         {
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
             IWebElement revealed = driver.FindElement(By.Id("revealed"));
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(1))
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2))
             {
                 PollingInterval = TimeSpan.FromMilliseconds(300),
             };

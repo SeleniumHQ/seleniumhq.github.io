@@ -17,14 +17,14 @@ def test_sleep(driver):
     driver.get('https://www.selenium.dev/selenium/web/dynamic.html')
     driver.find_element(By.ID, "adder").click()
 
-    time.sleep(1)
+    time.sleep(2)
     added = driver.find_element(By.ID, "box0")
 
     assert added.get_dom_attribute('class') == "redbox"
 
 
 def test_implicit(driver):
-    driver.implicitly_wait(1)
+    driver.implicitly_wait(2)
     driver.get('https://www.selenium.dev/selenium/web/dynamic.html')
     driver.find_element(By.ID, "adder").click()
 
