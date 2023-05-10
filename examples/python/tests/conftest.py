@@ -14,6 +14,7 @@ def driver():
 @pytest.fixture(scope='function')
 def firefox_driver():
     driver = webdriver.Firefox()
+    driver.implicitly_wait(1)
 
     yield driver
 

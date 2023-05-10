@@ -191,7 +191,7 @@ A basic comparison of code looks like:
     {{</* gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" */>}}
     {{</* /tab */>}}
     {{</* tab header="Kotlin" */>}}
-    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" */>}}
+    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" */>}}
     {{</* /tab */>}}
     {{</* /tabpane */>}}
 
@@ -214,7 +214,7 @@ Which looks like this:
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

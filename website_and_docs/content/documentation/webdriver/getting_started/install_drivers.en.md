@@ -29,89 +29,34 @@ in our [driver configuration]({{< ref "/documentation/webdriver/drivers/" >}}) d
 
 {{< badge-version version="4.6" >}}
 
-Selenium Manager helps you to get a working environment to run Selenium out of the box. Beta 1
-of Selenium Manager will configure the drivers for Chrome, Firefox, and Edge if they are not 
-found on the `PATH`. No extra configuration is needed. Future releases of Selenium Manager 
-will eventually even download browsers if necessary.
-
-Read more at the blog announcement for [Selenium Manager ](/blog/2022/introducing-selenium-manager/).
+Selenium Manager helps you to get a working environment to run Selenium out of the box
+(no additional downloads! no additional configurations!). 
+Selenium Manager attempts to obtain the most correct driver for any browser 
+supported by Selenium in a performant way. 
+Selenium Manager is currently "opt-in," which means
+that it is only used if code would otherwise fail. 
+That means if you manage drivers by one of the approaches below, Selenium Manager
+will not be used. 
 
 ### 2. Driver Management Software
 
-Most machines automatically update the browser, but the driver does not. To make sure you get 
-the correct driver for your browser, there are many third party libraries to assist you. 
+Before Selenium Manager was created, many users turned to other projects to automatically
+manage their drivers. Most of the functionality of these libraries exists natively in
+the latest version of Selenium.
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{% tab header="Java" %}}
+If you can't use Selenium Manager because you are using 
+an older version of Selenium (please upgrade), 
+or need an advanced feature not yet implemented by Selenium Manager, 
+you might try one of these tools:
 
-1. Import [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
-
-```java
-import io.github.bonigarcia.wdm.WebDriverManager;
-```
-
-2. Call `setup()`:
-
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/InstallDriversTest.java#L17-L19" >}}
-
-{{% /tab %}}
-{{% tab header="Python" %}}
-
-1. Import [WebDriver Manager for Python](https://github.com/SergeyPirogov/webdriver_manager)
-
-```py
-from webdriver_manager.chrome import ChromeDriverManager
-```
-
-2. Use `install()` to get the location used by the manager and pass it to the driver in a service class instance:
-
-{{< gh-codeblock path="examples/python/tests/getting_started/test_install_drivers.py#L15-L17" >}}
-
-{{% /tab %}}
-{{% tab header="CSharp" %}}
-**Important:** This package does not currently work for IEDriverServer v4+
-
-1. Import [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net)
-
-```csharp
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
-```
-
-2. Use the `SetUpDriver()` which requires a config class:
-
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/InstallDriversTest.cs#L19-L21" >}}
-
-{{% /tab %}}
-{{% tab header="Ruby" %}}
-1. Add [webdrivers gem](https://github.com/titusfortner/webdrivers) to Gemfile:
-
-```rb
-gem 'webdrivers', '~> 5.0'
-```
-
-2. Require webdrivers in your project:
-
-{{< gh-codeblock path="examples/ruby/spec/getting_started/install_drivers_spec.rb#L7-L9" >}}
-
-{{% /tab %}}
-{{% tab header="JavaScript" %}}
- *There is not a recommended driver manager for JavaScript at this time*
-{{% /tab %}}
-{{% tab header="Kotlin" %}}
-
-1. Import [WebDriver Manager](https://github.com/bonigarcia/webdrivermanager)
-```java
-import io.github.bonigarcia.wdm.WebDriverManager;
-```
-2. Call the setup method before initializing the driver as you normally would:
-
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/InstallDriversTest.kt#L17-L18" >}}
-
-{{% /tab %}}
-{{< /tabpane >}}
+* [WebDriverManager](https://github.com/bonigarcia/webdrivermanager) (Java)
+* [WebDriver Manager](https://github.com/SergeyPirogov/webdriver_manager) (Python)
+* [WebDriver Manager Package](https://github.com/rosolko/WebDriverManager.Net) (.NET)
+* [webdrivers gem](https://github.com/titusfortner/webdrivers) (Ruby)
 
 ### 3. The `PATH` Environment Variable
+Note: we highly recommend removing drivers from `PATH` and using [Selenium Manager](#1-selenium-manager--beta-) if possible.
+
 This option first requires manually downloading the driver (See [Quick Reference Section](#quick-reference) for links).
 
 This is a flexible option to change location of drivers without having to update your code, and will work
@@ -132,9 +77,9 @@ you can add a new directory to PATH:
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.bash_profile
 source ~/.bash_profile
 ```
-You can test if it has been added correctly by starting the driver:
+You can test if it has been added correctly by checking the version of the driver:
 ```shell
-chromedriver
+chromedriver --version
 ```
 {{% /tab %}}
 {{% tab header="Zsh" %}}
@@ -148,9 +93,9 @@ you can add a new directory to PATH:
 echo 'export PATH=$PATH:/path/to/driver' >> ~/.zshenv
 source ~/.zshenv
 ```
-You can test if it has been added correctly by starting the driver:
+You can test if it has been added correctly by checking the version of the driver:
 ```shell
-chromedriver
+chromedriver --version
 ```
 {{% /tab %}}
 {{% tab header="Windows" %}}
@@ -163,26 +108,31 @@ you can add a new directory to PATH:
 ```shell
 setx PATH "%PATH%;C:\WebDriver\bin"
 ```
-You can test if it has been added correctly by starting the driver:
+You can test if it has been added correctly by checking the version of the driver:
 ```shell
-chromedriver.exe
+chromedriver.exe --version
 ```
 {{% /tab %}}
 {{< /tabpane >}}
 
 If your `PATH` is configured correctly above,
-you will see some output relating to the startup of the driver:
+you will see the version printed like:
 
-```
-Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
+```shell
+ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995})
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
+If it is not found, you'll see:
+```shell
+chromedriver.exe : The term 'chromedriver.exe' is not recognized as the name of a cmdlet, function, script file, or operable program
+```
+or
+```shell
+chromedriver: command not found
+```
 
 ### 4. Hard Coded Location
+Note: we highly recommend not directly referencing the drivers and using [Selenium Manager](#1-selenium-manager--beta-) if possible.
 
 Similar to Option 3 above, you need to manually download the driver (See [Quick Reference Section](#quick-reference) for links).
 Specifying the location in the code itself has the advantage of not needing to figure out Environment Variables on
