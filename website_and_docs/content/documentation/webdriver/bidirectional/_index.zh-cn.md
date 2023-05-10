@@ -4,7 +4,8 @@ linkTitle: "双向协议"
 weight: 16
 aliases: [
 "/documentation/zh-cn/webdriver/bidi_apis/",
-"/zh-cn/documentation/webdriver/bidi_apis/"
+"/zh-cn/documentation/webdriver/bidi_apis/",
+"/zh-cn/documentation/webdriver/bidirectional/bidi_api_remotewebdriver"
 ]
 ---
 
