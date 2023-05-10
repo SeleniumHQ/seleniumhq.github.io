@@ -1,22 +1,18 @@
 package dev.selenium.virtual_authenticator;
 
+import dev.selenium.BaseChromeTest;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.Base64;
 import java.util.List;
-
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.InvalidArgumentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.virtualauthenticator.Credential;
 import org.openqa.selenium.virtualauthenticator.HasVirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 
-public class VirtualAuthenticatorTest {
+public class VirtualAuthenticatorTest extends BaseChromeTest {
 
   /**
    * A pkcs#8 encoded encrypted RSA private key as a base64url string.
@@ -54,21 +50,8 @@ public class VirtualAuthenticatorTest {
   PKCS8EncodedKeySpec ec256PrivateKey =
     new PKCS8EncodedKeySpec(Base64.getUrlDecoder().decode(base64EncodedEC256PK));
 
-  public WebDriver driver;
-
-  @BeforeEach
-  public void setup() {
-    driver = new ChromeDriver();
-  }
-
-  @AfterEach
-  public void quit() {
-    driver.quit();
-  }
-
   @Test
   public void testVirtualOptions() {
-    // Create virtual authenticator options
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
       .setIsUserVerified(true)
       .setHasUserVerification(true)
@@ -82,12 +65,10 @@ public class VirtualAuthenticatorTest {
 
   @Test
   public void testCreateAuthenticator() {
-    // Create virtual authenticator options
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
       .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)
       .setHasResidentKey(false);
 
-    // Register a virtual authenticator
     VirtualAuthenticator authenticator =
       ((HasVirtualAuthenticator) driver).addVirtualAuthenticator(options);
 
@@ -104,7 +85,6 @@ public class VirtualAuthenticatorTest {
 
     ((HasVirtualAuthenticator) driver).removeVirtualAuthenticator(authenticator);
 
-    // Since the authenticator was removed, any operation using it will throw an error
     Assertions.assertThrows(InvalidArgumentException.class, authenticator::getCredentials);
   }
 

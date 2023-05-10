@@ -1,5 +1,6 @@
 package dev.selenium.browsers;
 
+import dev.selenium.BaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,11 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class FirefoxTest {
+public class FirefoxTest extends BaseTest {
     public FirefoxDriver driver;
 
     @AfterEach
