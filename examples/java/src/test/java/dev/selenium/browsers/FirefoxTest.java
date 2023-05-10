@@ -54,7 +54,7 @@ public class FirefoxTest extends BaseTest {
         driver.installExtension(path, true);
 
         driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        WebElement injected = getLocatedElement(driver, By.id("webextensions-selenium-example"));
         Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
