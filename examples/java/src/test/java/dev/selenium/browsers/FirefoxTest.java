@@ -1,5 +1,6 @@
 package dev.selenium.browsers;
 
+import dev.selenium.BaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,11 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class FirefoxTest {
+public class FirefoxTest extends BaseTest {
     public FirefoxDriver driver;
 
     @AfterEach
@@ -54,7 +54,7 @@ public class FirefoxTest {
         driver.installExtension(path, true);
 
         driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        WebElement injected = getLocatedElement(driver, By.id("webextensions-selenium-example"));
         Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
