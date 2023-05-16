@@ -18,7 +18,7 @@
   <div class="col-sm-8 pr-5 pl-5">
     <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
       <div class="card-body px-0">
-        <p class="card-text">{{ .Description }}</p>
+        <p class="card-text">{{ .Description | markdownify }}</p>
         <a href="{{ .Permalink }}" class="selenium-link">Read More <i class="fas fa-caret-right"></i></a>
       </div>
     </div>

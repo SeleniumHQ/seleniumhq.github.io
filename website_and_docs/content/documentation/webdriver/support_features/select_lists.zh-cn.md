@@ -74,7 +74,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L13-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
@@ -103,7 +103,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
@@ -130,7 +130,7 @@ Select对象现在将为您提供一系列命令,
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L56" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
@@ -161,7 +161,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
@@ -186,7 +186,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L23" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
@@ -211,7 +211,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
@@ -245,7 +245,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L62-L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
@@ -271,7 +271,7 @@ Select类提供了三种选择选项的方法.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}

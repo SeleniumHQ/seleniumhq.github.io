@@ -5,13 +5,13 @@ set -e
 SELENIUM_GITHUB_API_PULLS_URL=https://api.github.com/repos/SeleniumHQ/seleniumhq.github.io/pulls
 SELENIUM_ACCEPT_HEADER="Accept: application/vnd.github+json"
 SELENIUM_AUTH_HEADER="Authorization: Bearer ${SELENIUM_CI_TOKEN}"
-SELENIUM_EXAMPLES_BRANCH=trunk
 SELENIUM_EXAMPLES_REPO=seleniumhq.github.io
 SELENIUM_EXAMPLES_ORG=SeleniumHQ
 
 if [[ "${GITHUB_ACTIONS}" = "true" ]]; then
   SELENIUM_EXAMPLES_BRANCH=${GITHUB_HEAD_REF}
 fi
+
 
 USE_BASE_URL_SITE=""
 if [[ "${NETLIFY}" = "true" ]]; then
@@ -26,6 +26,11 @@ if [[ "${NETLIFY}" = "true" ]]; then
     SELENIUM_EXAMPLES_REPO=$(echo $REPO_INFO | jq -r .head.repo.name)
     SELENIUM_EXAMPLES_ORG=$(echo $REPO_INFO | jq -r .head.repo.owner.login)
   fi
+fi
+
+if [[ "${SELENIUM_EXAMPLES_BRANCH}" = "" ]]; then
+  echo -e "\033[0;32mEmpty SELENIUM_EXAMPLES_BRANCH, setting to trunk...\033[0m"
+  SELENIUM_EXAMPLES_BRANCH=trunk
 fi
 
 echo -e "\033[0;32mDeleting Hugo previously generated directories...\033[0m"

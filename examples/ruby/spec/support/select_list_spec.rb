@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 RSpec.describe 'Chrome' do
-
   let(:driver) { start_session }
 
   before do
@@ -18,13 +17,13 @@ RSpec.describe 'Chrome' do
     four_element = driver.find_element(css: 'option[value=four]')
     count_element = driver.find_element(css: "option[value='still learning how to count, apparently']")
 
-    select.select_by(:text,'Four')
+    select.select_by(:text, 'Four')
     expect(four_element).to be_selected
 
-    select.select_by(:value,'two')
+    select.select_by(:value, 'two')
     expect(two_element).to be_selected
 
-    select.select_by(:index,3)
+    select.select_by(:index, 3)
     expect(count_element).to be_selected
   end
 
