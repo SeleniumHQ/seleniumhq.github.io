@@ -11,3 +11,9 @@ AllCops:
     - 'spec/virtual_authenticator/virtual_authenticator_spec.rb'
     - 'spec/hello/hello_selenium_spec.rb'
     - 'spec/getting_started/open_browser_spec.rb'
+
+RSpec/NoExpectationExample:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false

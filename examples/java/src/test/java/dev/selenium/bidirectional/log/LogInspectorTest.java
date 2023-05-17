@@ -1,11 +1,14 @@
 package dev.selenium.bidirectional.log;
 
-import org.junit.jupiter.api.AfterEach;
+import dev.selenium.BaseTest;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.bidi.LogInspector;
 import org.openqa.selenium.bidi.log.ConsoleLogEntry;
 import org.openqa.selenium.bidi.log.JavascriptLogEntry;
@@ -14,14 +17,7 @@ import org.openqa.selenium.bidi.log.StackTrace;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
-class LogInspectorTest {
-
-    private WebDriver driver;
+class LogInspectorTest extends BaseTest {
 
     @BeforeEach
     public void setup() {
@@ -30,16 +26,11 @@ class LogInspectorTest {
         driver = new FirefoxDriver(options);
     }
 
-    @AfterEach
-    public void cleanup() {
-        driver.quit();
-    }
-
     @Test
     void testListenToConsoleLog() throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
-            logInspector.onConsoleLog(future::complete);
+            logInspector.onConsoleEntry(future::complete);
 
             driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
             driver.findElement(By.id("consoleLog")).click();

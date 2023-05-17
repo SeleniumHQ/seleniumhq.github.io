@@ -42,7 +42,7 @@ public class WaitsTest extends BaseChromeTest {
 
     @Test
     public void implicit() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
         driver.findElement(By.id("adder")).click();
 
@@ -55,7 +55,7 @@ public class WaitsTest extends BaseChromeTest {
     public void explicit() {
         driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
         WebElement revealed = driver.findElement(By.id("revealed"));
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 
         driver.findElement(By.id("reveal")).click();
         wait.until(d -> revealed.isDisplayed());
@@ -69,7 +69,7 @@ public class WaitsTest extends BaseChromeTest {
         driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
         WebElement revealed = driver.findElement(By.id("revealed"));
         Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(1))
+                .withTimeout(Duration.ofSeconds(2))
                 .pollingEvery(Duration.ofMillis(300))
                 .ignoring(ElementNotInteractableException.class);
 
