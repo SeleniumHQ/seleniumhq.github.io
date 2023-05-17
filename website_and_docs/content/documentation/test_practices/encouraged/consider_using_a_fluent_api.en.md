@@ -17,8 +17,8 @@ and then query the Google search page with a code snippet like this one:
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();
+GoogleSearchPage gsp = new GoogleSearchPage(driver);
+gsp.setSearchString().clickSearchButton();
 ```
 
 The Google page object class with this fluent behavior
