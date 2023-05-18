@@ -345,7 +345,7 @@ public class ProductsTest {
 }
 ```
 
-The page is represented by an object. The component is represented by another object. Both naturally model the real-world application in object-oriented programming.
+The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application in object-oriented programming.
 
 You can even
 nest component objects inside other component objects for more complex
