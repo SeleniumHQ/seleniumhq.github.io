@@ -544,15 +544,27 @@ APIの呼び出しとデータベースとの対話は、ブラウザを開い�
 &ldquo;ガイドラインとレコメンデーション"というアイデアを好みます。
 これらを一通り読み、特定の環境でどのアプローチが効果的かを慎重に決定することをお勧めします。</p><p>機能テストは、多くの理由で適切に行うのが困難です。
 まるでアプリケーションの状態、複雑さ、および依存関係が、テストを十分に難しくしないと思えるほど、ブラウザ（特にクロスブラウザの非互換性）を扱うのは、良いテストの作成を難しくします。</p><p>Seleniumは、機能的なユーザーインタラクションを簡単にするツールを提供しますが、適切に設計されたテストスイートの作成には役立ちません。
-この章では、機能的なWebページの自動化に取り組む方法に関するアドバイス、ガイドライン、および推奨事項を提供します。</p><p>この章では、長年にわたって成功を収めてきたSeleniumの多くのユーザーの間で人気のあるソフトウェア設計パターンを記録します。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-42bae4628f031de88c649b709ec0f8c6>4.1 - ページオブジェクトモデル</h1><p>ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。
-ページオブジェクトは、AUT（テスト対象アプリケーション）のページへのインターフェイスとして機能するオブジェクト指向クラスです。
-テストは、そのページのUIと対話する必要があるときは常に、このページオブジェクトクラスのメソッドを使用します。
-利点は、ページのUIが変更された場合、テスト自体を変更する必要はなく、ページオブジェクト内のコードのみを変更する必要があることです。
-その後、その新しいUIをサポートするためのすべての変更は1か所に配置されます。</p><p>ページオブジェクトデザインパターンには、次の利点があります。</p><ul><li>テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。</li><li>これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。</li></ul><p>どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。
-この&rsquo;テストデザインパターン&rsquo;が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。
-詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。
-多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。
-ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。</p><p>最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/***
+この章では、機能的なWebページの自動化に取り組む方法に関するアドバイス、ガイドライン、および推奨事項を提供します。</p><p>この章では、長年にわたって成功を収めてきたSeleniumの多くのユーザーの間で人気のあるソフトウェア設計パターンを記録します。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-42bae4628f031de88c649b709ec0f8c6>4.1 - ページオブジェクトモデル</h1><p>Note: this page has merged contents from multiple sources, including
+the <a href=https://github.com/SeleniumHQ/selenium/wiki/PageObjects>Selenium wiki</a></p><h2 id=overview>Overview</h2><p>Within your web app&rsquo;s UI, there are areas where your tests interact with.
+A Page Object only models these as objects within the test code.
+This reduces the amount of duplicated code and means that if the UI changes,
+the fix needs only to be applied in one place.</p><p>Page Object is a Design Pattern that has become popular in test automation for
+enhancing test maintenance and reducing code duplication. A page object is an
+object-oriented class that serves as an interface to a page of your AUT. The
+tests then use the methods of this page object class whenever they need to
+interact with the UI of that page. The benefit is that if the UI changes for
+the page, the tests themselves don’t need to change, only the code within the
+page object needs to change. Subsequently, all changes to support that new UI
+are located in one place.</p><h3 id=advantages>Advantages</h3><ul><li>There is a clean separation between the test code and page-specific code, such as
+locators (or their use if you’re using a UI Map) and layout.</li><li>There is a single repository for the services or operations the page offers
+rather than having these services scattered throughout the tests.</li></ul><p>In both cases, this allows any modifications required due to UI changes to all
+be made in one place. Helpful information on this technique can be found on
+numerous blogs as this ‘test design pattern’ is becoming widely used. We
+encourage readers who wish to know more to search the internet for blogs
+on this subject. Many have written on this design pattern and can provide
+helpful tips beyond the scope of this user guide. To get you started,
+we’ll illustrate page objects with a simple example.</p><h3 id=examples>Examples</h3><p>First, consider an example, typical of test automation, that does not use a
+page object:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/***
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic> * Tests login feature
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic> */</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>Login</span> <span style=color:#ce5c00;font-weight:700>{</span>
@@ -561,16 +573,19 @@ APIの呼び出しとデータベースとの対話は、ブラウザを開い�
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// fill login data on sign-in page
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;user_name&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;userName&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;password&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>sendKeys</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;my supersecret password&#34;</span><span style=color:#ce5c00;font-weight:700>);</span>
-</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;sign_in&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>name</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;sign-in&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// verify h1 tag is &#34;Hello userName&#34; after login
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>tagName</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>isDisplayed</span><span style=color:#ce5c00;font-weight:700>();</span>
 </span></span><span style=display:flex><span>    <span style=color:#000>assertThat</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>tagName</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;h1&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>getText</span><span style=color:#ce5c00;font-weight:700>(),</span> <span style=color:#000>is</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Hello userName&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
 </span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
-</span></span></code></pre></div><p>このアプローチには2つの問題があります。</p><ul><li>テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。
-どちらも単一のメソッドで絡み合っています。
-AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。</li><li>IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。</li></ul><p>ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span></code></pre></div><p>There are two problems with this approach.</p><ul><li>There is no separation between the test method and the AUT’s locators (IDs in
+this example); both are intertwined in a single method. If the AUT’s UI changes
+its identifiers, layout, or how a login is input and processed, the test itself
+must change.</li><li>The ID-locators would be spread in multiple tests, in all tests that had to
+use this login page.</li></ul><p>Applying the page object techniques, this example could be rewritten like this
+in the following example of a page object for a Sign-in page.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/**
@@ -588,7 +603,7 @@ AUTのUIが識別子、レイアウト、またはログインの入力および
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>SignInPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>){</span>
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
-</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(!</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getTitle</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>equals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sign In Page&#34;</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>     <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(!</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getTitle</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>equals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Sign In Page&#34;</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#ce5c00;font-weight:700>{</span>
 </span></span><span style=display:flex><span>      <span style=color:#204a87;font-weight:700>throw</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>IllegalStateException</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;This is not Sign In Page,&#34;</span> <span style=color:#ce5c00;font-weight:700>+</span>
 </span></span><span style=display:flex><span>            <span style=color:#4e9a06>&#34; current page is: &#34;</span> <span style=color:#ce5c00;font-weight:700>+</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getCurrentUrl</span><span style=color:#ce5c00;font-weight:700>());</span>
 </span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
@@ -608,7 +623,7 @@ AUTのUIが識別子、レイアウト、またはログインの入力および
 </span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>HomePage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
 </span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
-</span></span></code></pre></div><p>そして、ホームページのページオブジェクトは次のようになります。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span></code></pre></div><p>and page object for a Home page could look like this.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.By</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>org.openqa.selenium.WebDriver</span><span style=color:#ce5c00;font-weight:700>;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/**
@@ -645,7 +660,7 @@ AUTのUIが識別子、レイアウト、またはログインの入力および
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>  of Logged User. These methods in turn might return more Page Objects
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>  for example click on Compose mail button could return ComposeMail class object */</span>
 </span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
-</span></span></code></pre></div><p>したがって、ログインテストでは、これら2つのページオブジェクトを次のように使用します。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/***
+</span></span></code></pre></div><p>So now, the login test would use these two page objects as follows.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8f5902;font-style:italic>/***
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic> * Tests login feature
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic> */</span>
 </span></span><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>TestLogin</span> <span style=color:#ce5c00;font-weight:700>{</span>
@@ -658,18 +673,238 @@ AUTのUIが識別子、レイアウト、またはログインの入力および
 </span></span><span style=display:flex><span>  <span style=color:#ce5c00;font-weight:700>}</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
-</span></span></code></pre></div><p>ページオブジェクトの設計方法には多くの柔軟性がありますが、テストコードの望ましい保守性を得るための基本的なルールがいくつかあります。</p><p>ページオブジェクト自体は、検証やアサーションを行うべきではありません。
-これはテストの一部であり、常にページオブジェクトではなく、テストのコード内にある必要があります。
-ページオブジェクトには、ページの表現と、ページがメソッドを介して提供するサービスが含まれますが、テスト対象に関連するコードはページオブジェクト内に存在しないようにします。</p><p>ページオブジェクト内に存在する可能性のある単一の検証があります。
-これは、ページおよびページ上の重要な要素が正しく読み込まれたことを検証するためのものです。
-この検証は、ページオブジェクトをインスタンス化する間に実行する必要があります。
-上記の例では、SignInPageコンストラクターとHomePageコンストラクターの両方が期待するページを取得し、テストからの要求に対応できることを確認します。</p><p>ページオブジェクトは、必ずしもページ全体を表す必要はありません。
-ページオブジェクトデザインパターンは、ページ上のコンポーネントを表すために使用できます。
-AUTのページに複数のコンポーネントがある場合、コンポーネントごとに個別のページオブジェクトがあると、保守性が向上する場合があります。</p><p>また、テストで使用できる他のデザインパターンがあります。
-ページファクトリを使用してページオブジェクトをインスタンス化するものもあります。
-これらすべてについて議論することは、このユーザーガイドの範囲を超えています。
-ここでは、読者にできることのいくつかを認識させるための概念を紹介したいだけです。
-前述のように、多くの人がこのトピックについてブログを書いていますし、読者がこれらのトピックに関するブログを検索することをお勧めします。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-733a3a2cedeac8ca6de96d3d413edbd9>4.2 - ドメイン固有言語（DSL）</h1><p>ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。
+</span></span></code></pre></div><p>There is a lot of flexibility in how the page objects may be designed, but
+there are a few basic rules for getting the desired maintainability of your
+test code.</p><h2 id=assertions-in-page-objects>Assertions in Page Objects</h2><p>Page objects themselves should never make verifications or assertions. This is
+part of your test and should always be within the test’s code, never in an page
+object. The page object will contain the representation of the page, and the
+services the page provides via methods but no code related to what is being
+tested should be within the page object.</p><p>There is one, single, verification which can, and should, be within the page
+object and that is to verify that the page, and possibly critical elements on
+the page, were loaded correctly. This verification should be done while
+instantiating the page object. In the examples above, both the SignInPage and
+HomePage constructors check that the expected page is available and ready for
+requests from the test.</p><h2 id=page-component-objects>Page Component Objects</h2><p>A page object does not necessarily need to represent all the parts of a
+page itself. The same principles used for page objects can be used to
+create &ldquo;Page <em>Component</em> Objects&rdquo; that represent discrete chunks of the
+page and can be included in page objects. These component objects can
+provide references to the elements inside those discrete chunks, and
+methods to leverage the functionality provided by them.</p><p>For example, a Product page has multiple products.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#8f5902;font-style:italic>&lt;!-- Products Page --&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;header_container&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>span</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;title&#34;</span><span style=color:#000;font-weight:700>&gt;</span>Products<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>span</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_list&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span></code></pre></div><p>Each product is a component of the Products page.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#8f5902;font-style:italic>&lt;!-- Inventory Item --&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item_name&#34;</span><span style=color:#000;font-weight:700>&gt;</span>Backpack<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;pricebar&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>class</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;inventory_item_price&#34;</span><span style=color:#000;font-weight:700>&gt;</span>$29.99<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>button</span> <span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;add-to-cart-backpack&#34;</span><span style=color:#000;font-weight:700>&gt;</span>Add to cart<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>button</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span></code></pre></div><p>The Product page HAS-A list of products. This relationship is called Composition. In simpler terms, something is <em>composed of</em> another thing.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>abstract</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>BasePage</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>BasePage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>driver</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Page Object
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>ProductsPage</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>BasePage</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>ProductsPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebDriver</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>super</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#8f5902;font-style:italic>// No assertions, throws an exception if the element is not loaded
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>        <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>WebDriverWait</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>Duration</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>ofSeconds</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>3</span><span style=color:#ce5c00;font-weight:700>))</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>until</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>d</span> <span style=color:#ce5c00;font-weight:700>-&gt;</span> <span style=color:#000>d</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>className</span><span style=color:#a40000>​</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;header_container&#34;</span><span style=color:#ce5c00;font-weight:700>)));</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// Returning a list of products is a service of the page
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>List</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>Product</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#000>getProducts</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElements</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>className</span><span style=color:#a40000>​</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;inventory_item&#34;</span><span style=color:#ce5c00;font-weight:700>))</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>stream</span><span style=color:#ce5c00;font-weight:700>()</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>map</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>e</span> <span style=color:#ce5c00;font-weight:700>-&gt;</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>Product</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>e</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#8f5902;font-style:italic>// Map WebElement to a product component
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>toList</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// Return a specific product using a boolean-valued function (predicate)
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#8f5902;font-style:italic>// This is the behavioral Strategy Pattern from GoF
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>Product</span> <span style=color:#000>getProduct</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>Predicate</span><span style=color:#ce5c00;font-weight:700>&lt;</span><span style=color:#000>Product</span><span style=color:#ce5c00;font-weight:700>&gt;</span> <span style=color:#000>condition</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>getProducts</span><span style=color:#ce5c00;font-weight:700>()</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>stream</span><span style=color:#ce5c00;font-weight:700>()</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>filter</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>condition</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#8f5902;font-style:italic>// Filter by product name or price
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findFirst</span><span style=color:#ce5c00;font-weight:700>()</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>orElseThrow</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>The Product component object is used inside the Products page object.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>abstract</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>BaseComponent</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>protected</span> <span style=color:#000>WebElement</span> <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>BaseComponent</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebElement</span> <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>this</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>root</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Page Component Object
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>Product</span> <span style=color:#204a87;font-weight:700>extends</span> <span style=color:#000>BaseComponent</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic>// The root element contains the entire component
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>Product</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>WebElement</span> <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>super</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>);</span> <span style=color:#8f5902;font-style:italic>// inventory_item
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>String</span> <span style=color:#000>getName</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#8f5902;font-style:italic>// Locating an element begins at the root of the component
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>className</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;inventory_item_name&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>getText</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>BigDecimal</span> <span style=color:#000>getPrice</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>BigDecimal</span><span style=color:#ce5c00;font-weight:700>(</span>
+</span></span><span style=display:flex><span>                <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>className</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;inventory_item_price&#34;</span><span style=color:#ce5c00;font-weight:700>))</span>
+</span></span><span style=display:flex><span>                    <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getText</span><span style=color:#ce5c00;font-weight:700>()</span>
+</span></span><span style=display:flex><span>                    <span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>replace</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;$&#34;</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#4e9a06>&#34;&#34;</span><span style=color:#ce5c00;font-weight:700>)</span>
+</span></span><span style=display:flex><span>            <span style=color:#ce5c00;font-weight:700>).</span><span style=color:#c4a000>setScale</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>2</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>RoundingMode</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>UNNECESSARY</span><span style=color:#ce5c00;font-weight:700>);</span> <span style=color:#8f5902;font-style:italic>// Sanitation and formatting
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>addToCart</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>root</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>findElement</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>By</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;add-to-cart-backpack&#34;</span><span style=color:#ce5c00;font-weight:700>)).</span><span style=color:#c4a000>click</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>So now, the products test would use the page object and the page component object as follows.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>ProductsTest</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#5c35cc;font-weight:700>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>testProductInventory</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>var</span> <span style=color:#000>productsPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ProductsPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>var</span> <span style=color:#000>products</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>productsPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getProducts</span><span style=color:#ce5c00;font-weight:700>();</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>6</span><span style=color:#ce5c00;font-weight:700>,</span> <span style=color:#000>products</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>size</span><span style=color:#ce5c00;font-weight:700>());</span> <span style=color:#8f5902;font-style:italic>// expected, actual
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#5c35cc;font-weight:700>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>testProductPrices</span><span style=color:#ce5c00;font-weight:700>()</span> <span style=color:#ce5c00;font-weight:700>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>var</span> <span style=color:#000>productsPage</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>ProductsPage</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8f5902;font-style:italic>// Pass a lambda expression (predicate) to filter the list of products
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>        <span style=color:#8f5902;font-style:italic>// The predicate or &#34;strategy&#34; is the behavior passed as parameter
+</span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span>        <span style=color:#000>var</span> <span style=color:#000>backpack</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>productsPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getProduct</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>p</span> <span style=color:#ce5c00;font-weight:700>-&gt;</span> <span style=color:#000>p</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getName</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>equals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Backpack&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>var</span> <span style=color:#000>bikeLight</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>productsPage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getProduct</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>p</span> <span style=color:#ce5c00;font-weight:700>-&gt;</span> <span style=color:#000>p</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getName</span><span style=color:#ce5c00;font-weight:700>().</span><span style=color:#c4a000>equals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;Bike Light&#34;</span><span style=color:#ce5c00;font-weight:700>));</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>BigDecimal</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;29.99&#34;</span><span style=color:#ce5c00;font-weight:700>),</span> <span style=color:#000>backpack</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getPrice</span><span style=color:#ce5c00;font-weight:700>());</span>
+</span></span><span style=display:flex><span>        <span style=color:#000>assertEquals</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>BigDecimal</span><span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#34;9.99&#34;</span><span style=color:#ce5c00;font-weight:700>),</span> <span style=color:#000>bikeLight</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#c4a000>getPrice</span><span style=color:#ce5c00;font-weight:700>());</span>
+</span></span><span style=display:flex><span>    <span style=color:#ce5c00;font-weight:700>}</span>
+</span></span><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>}</span>
+</span></span></code></pre></div><p>The page and component are represented by their own objects. Both objects only have methods for the <strong>services</strong> they offer, which matches the real-world application in object-oriented programming.</p><p>You can even
+nest component objects inside other component objects for more complex
+pages. If a page in the AUT has multiple components, or common
+components used throughout the site (e.g. a navigation bar), then it
+may improve maintainability and reduce code duplication.</p><h2 id=other-design-patterns-used-in-testing>Other Design Patterns Used in Testing</h2><p>There are other design patterns that also may be used in testing. Some use a
+Page Factory for instantiating their page objects. Discussing all of these is
+beyond the scope of this user guide. Here, we merely want to introduce the
+concepts to make the reader aware of some of the things that can be done. As
+was mentioned earlier, many have blogged on this topic and we encourage the
+reader to search for blogs on these topics.</p><h2 id=implementation-notes>Implementation Notes</h2><p>PageObjects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the <strong>services</strong> offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It&rsquo;s simplest to think of the methods on a Page Object as offering the &ldquo;services&rdquo; that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn&rsquo;t matter to the test.</p><p>Because we&rsquo;re encouraging the developer of a test to try and think about the services they&rsquo;re interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means we can effectively model the user&rsquo;s journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn&rsquo;t do that), simply changing the appropriate method&rsquo;s signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.</p><p>One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app&rsquo;s state. When this happens, it is common to have multiple methods on the PageObject:</p><pre tabindex=0><code>public class LoginPage {
+    public HomePage loginAs(String username, String password) {
+        // ... clever magic happens here
+    }
+    
+    public LoginPage loginAsExpectingError(String username, String password) {
+        //  ... failed login here, maybe because one or both of the username and password are wrong
+    }
+    
+    public String getErrorMessage() {
+        // So we can verify that the correct error is shown
+    }
+}
+</code></pre><p>The code presented above shows an important point: the tests, not the PageObjects, should be responsible for making assertions about the state of a page. For example:</p><pre tabindex=0><code>public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    inbox.assertMessageWithSubjectIsUnread(&#34;I like cheese&#34;);
+    inbox.assertMessageWithSubjectIsNotUnread(&#34;I&#39;m not fond of tofu&#34;);
+}
+</code></pre><p>could be re-written as:</p><pre tabindex=0><code>public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    assertTrue(inbox.isMessageWithSubjectIsUnread(&#34;I like cheese&#34;));
+    assertFalse(inbox.isMessageWithSubjectIsUnread(&#34;I&#39;m not fond of tofu&#34;));
+}
+</code></pre><p>Of course, as with every guideline, there are exceptions, and one that is commonly seen with PageObjects is to check that the WebDriver is on the correct page when we instantiate the PageObject. This is done in the example below.</p><p>Finally, a PageObject need not represent an entire page. It may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.</p><h2 id=summary>Summary</h2><ul><li>The public methods represent the services that the page offers</li><li>Try not to expose the internals of the page</li><li>Generally don&rsquo;t make assertions</li><li>Methods return other PageObjects</li><li>Need not represent an entire page</li><li>Different results for the same action are modelled as different methods</li></ul><h2 id=example>Example</h2><pre tabindex=0><code>public class LoginPage {
+    private final WebDriver driver;
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+
+        // Check that we&#39;re on the right page.
+        if (!&#34;Login&#34;.equals(driver.getTitle())) {
+            // Alternatively, we could navigate to the login page, perhaps logging out first
+            throw new IllegalStateException(&#34;This is not the login page&#34;);
+        }
+    }
+
+    // The login page contains several HTML elements that will be represented as WebElements.
+    // The locators for these elements should only be defined once.
+        By usernameLocator = By.id(&#34;username&#34;);
+        By passwordLocator = By.id(&#34;passwd&#34;);
+        By loginButtonLocator = By.id(&#34;login&#34;);
+
+    // The login page allows the user to type their username into the username field
+    public LoginPage typeUsername(String username) {
+        // This is the only place that &#34;knows&#34; how to enter a username
+        driver.findElement(usernameLocator).sendKeys(username);
+
+        // Return the current page object as this action doesn&#39;t navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to type their password into the password field
+    public LoginPage typePassword(String password) {
+        // This is the only place that &#34;knows&#34; how to enter a password
+        driver.findElement(passwordLocator).sendKeys(password);
+
+        // Return the current page object as this action doesn&#39;t navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to submit the login form
+    public HomePage submitLogin() {
+        // This is the only place that submits the login form and expects the destination to be the home page.
+        // A seperate method should be created for the instance of clicking login whilst expecting a login failure. 
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the login page ever
+        // go somewhere else (for example, a legal disclaimer) then changing the method signature
+        // for this method will mean that all tests that rely on this behaviour won&#39;t compile.
+        return new HomePage(driver);	
+    }
+
+    // The login page allows the user to submit the login form knowing that an invalid username and / or password were entered
+    public LoginPage submitLoginExpectingFailure() {
+        // This is the only place that submits the login form and expects the destination to be the login page due to login failure.
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submiting a login with credentials 
+        // expected to fail login, the script will fail when it attempts to instantiate the LoginPage PageObject.
+        return new LoginPage(driver);	
+    }
+
+    // Conceptually, the login page offers the user the service of being able to &#34;log into&#34;
+    // the application using a user name and password. 
+    public HomePage loginAs(String username, String password) {
+        // The PageObject methods that enter username, password &amp; submit login have already defined and should not be repeated here.
+        typeUsername(username);
+        typePassword(password);
+        return submitLogin();
+    }
+}
+</code></pre><h2 id=support-in-webdriver>Support in WebDriver</h2><p>There is a PageFactory in the support package that provides support for this pattern and helps to remove some boiler-plate code from your Page Objects at the same time.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-733a3a2cedeac8ca6de96d3d413edbd9>4.2 - ドメイン固有言語（DSL）</h1><p>ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。
 それによって、ユーザーは、プログラマーの言葉でなく、自分の言葉でシステムとやりとりすることができます。</p><p>通常、ユーザーはサイトの外観を気にしません。
 装飾、アニメーション、グラフィックスは気にしません。
 彼らはあなたのシステムを使用して、新しい従業員を最小限の難しさでプロセスに押し込みたいと考えています。
