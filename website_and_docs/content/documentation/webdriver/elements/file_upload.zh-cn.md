@@ -21,10 +21,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 class fileUploadDoc{
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://the-internet.herokuapp.com/upload");
@@ -44,8 +42,6 @@ class fileUploadDoc{
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.get("https://the-internet.herokuapp.com/upload");
 driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")

@@ -14,8 +14,8 @@ Selenium已经在其 `FluentWait` 类中实现了类似的东西, 这是对标�
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();
+GoogleSearchPage gsp = new GoogleSearchPage(driver);
+gsp.setSearchString().clickSearchButton();
 ```
 
 Google页面对象类具有这种流畅行为后可能看起来像这样:

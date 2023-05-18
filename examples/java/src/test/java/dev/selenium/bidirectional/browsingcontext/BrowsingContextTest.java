@@ -1,10 +1,10 @@
 package dev.selenium.bidirectional.browsingcontext;
 
-import org.junit.jupiter.api.AfterEach;
+import dev.selenium.BaseTest;
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
@@ -14,22 +14,13 @@ import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.util.List;
-
-class BrowsingContextTest {
-
-    private WebDriver driver;
+class BrowsingContextTest extends BaseTest {
 
     @BeforeEach
     public void setup() {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
-    }
-
-    @AfterEach
-    public void cleanup() {
-        driver.quit();
     }
 
     @Test
