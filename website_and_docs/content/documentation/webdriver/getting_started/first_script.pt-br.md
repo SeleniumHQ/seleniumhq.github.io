@@ -34,7 +34,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -58,7 +58,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/interactions
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -83,7 +83,7 @@ pode solicitar, incluindo window handles, tamanho / posição do navegador, cook
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -118,7 +118,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -144,7 +144,7 @@ com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdrive
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -169,7 +169,7 @@ mas você irá usá-las com frequência.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -193,7 +193,7 @@ Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -219,7 +219,7 @@ Nenhum outro comando pode ser enviado para esta instância do driver.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

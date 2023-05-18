@@ -1,3 +1,4 @@
+import atexit
 import logging
 import os
 
@@ -24,4 +25,6 @@ def test_logging():
         with open(log_path, 'r') as fp:
             assert len(fp.readlines()) == 3
     finally:
-        os.remove(log_path)
+        atexit.register(delete_path, log_path)
+def delete_path(path):
+    os.remove(path)

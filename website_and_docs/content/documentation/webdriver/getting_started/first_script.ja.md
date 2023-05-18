@@ -36,7 +36,7 @@ For more details on starting a session read our documentation on  [driver sessio
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -60,7 +60,7 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -86,7 +86,7 @@ can request, including window handles, browser size / position, cookies, alerts,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -120,7 +120,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -145,7 +145,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -170,7 +170,7 @@ but you will use them frequently.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -194,7 +194,7 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -220,7 +220,7 @@ No more commands can be sent to this driver instance.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
