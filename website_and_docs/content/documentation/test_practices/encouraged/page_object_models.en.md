@@ -354,8 +354,7 @@ components used throughout the site (e.g. a navigation bar), then it
 may improve maintainability and reduce code duplication.
 
 ## Other Design Patterns Used in Testing
-There are other design patterns that also may be used in testing. Some use a
-Page Factory for instantiating their page objects. Discussing all of these is
+There are other design patterns that also may be used in testing. Discussing all of these is
 beyond the scope of this user guide. Here, we merely want to introduce the
 concepts to make the reader aware of some of the things that can be done. As
 was mentioned earlier, many have blogged on this topic and we encourage the
@@ -492,8 +491,3 @@ public class LoginPage {
 }
 
 ```
-
-
-## Support in WebDriver
-
-There is a PageFactory in the support package that provides support for this pattern and helps to remove some boiler-plate code from your Page Objects at the same time.
