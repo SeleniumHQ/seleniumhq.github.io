@@ -9,24 +9,43 @@ aliases: [
 ]
 ---
 
-ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。
-ページオブジェクトは、AUT（テスト対象アプリケーション）のページへのインターフェイスとして機能するオブジェクト指向クラスです。
-テストは、そのページのUIと対話する必要があるときは常に、このページオブジェクトクラスのメソッドを使用します。
-利点は、ページのUIが変更された場合、テスト自体を変更する必要はなく、ページオブジェクト内のコードのみを変更する必要があることです。
-その後、その新しいUIをサポートするためのすべての変更は1か所に配置されます。
+Note: this page has merged contents from multiple sources, including
+the [Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) 
 
-ページオブジェクトデザインパターンには、次の利点があります。
+## Overview
 
-* テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。
-* これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。
+Within your web app's UI, there are areas where your tests interact with. 
+A Page Object only models these as objects within the test code. 
+This reduces the amount of duplicated code and means that if the UI changes, 
+the fix needs only to be applied in one place.
 
-どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。
-この'テストデザインパターン'が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。
-詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。
-多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。
-ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
+Page Object is a Design Pattern that has become popular in test automation for
+enhancing test maintenance and reducing code duplication. A page object is an
+object-oriented class that serves as an interface to a page of your AUT. The
+tests then use the methods of this page object class whenever they need to
+interact with the UI of that page. The benefit is that if the UI changes for
+the page, the tests themselves don’t need to change, only the code within the
+page object needs to change. Subsequently, all changes to support that new UI
+are located in one place.
 
-最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。
+### Advantages
+
+* There is a clean separation between the test code and page-specific code, such as
+  locators (or their use if you’re using a UI Map) and layout.
+* There is a single repository for the services or operations the page offers
+  rather than having these services scattered throughout the tests.
+
+In both cases, this allows any modifications required due to UI changes to all
+be made in one place. Helpful information on this technique can be found on
+numerous blogs as this ‘test design pattern’ is becoming widely used. We
+encourage readers who wish to know more to search the internet for blogs
+on this subject. Many have written on this design pattern and can provide
+helpful tips beyond the scope of this user guide. To get you started,
+we’ll illustrate page objects with a simple example.
+
+### Examples
+First, consider an example, typical of test automation, that does not use a
+page object:
 
 ```java
 /***
@@ -38,7 +57,7 @@ public class Login {
     // fill login data on sign-in page
     driver.findElement(By.name("user_name")).sendKeys("userName");
     driver.findElement(By.name("password")).sendKeys("my supersecret password");
-    driver.findElement(By.name("sign_in")).click();
+    driver.findElement(By.name("sign-in")).click();
 
     // verify h1 tag is "Hello userName" after login
     driver.findElement(By.tagName("h1")).isDisplayed();
@@ -47,14 +66,17 @@ public class Login {
 }
 ```
 
-このアプローチには2つの問題があります。
+There are two problems with this approach.
 
-* テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。
-どちらも単一のメソッドで絡み合っています。
-AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。
-* IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。
+* There is no separation between the test method and the AUT’s locators (IDs in 
+this example); both are intertwined in a single method. If the AUT’s UI changes 
+its identifiers, layout, or how a login is input and processed, the test itself 
+must change.
+* The ID-locators would be spread in multiple tests, in all tests that had to 
+use this login page.
 
-ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
+Applying the page object techniques, this example could be rewritten like this
+in the following example of a page object for a Sign-in page.
 
 ```java
 import org.openqa.selenium.By;
@@ -75,7 +97,7 @@ public class SignInPage {
 
   public SignInPage(WebDriver driver){
     this.driver = driver;
-    if (!driver.getTitle().equals("Sign In Page")) {
+     if (!driver.getTitle().equals("Sign In Page")) {
       throw new IllegalStateException("This is not Sign In Page," +
             " current page is: " + driver.getCurrentUrl());
     }
@@ -97,7 +119,7 @@ public class SignInPage {
 }
 ```
 
-そして、ホームページのページオブジェクトは次のようになります。
+and page object for a Home page could look like this.
 
 ```java
 import org.openqa.selenium.By;
@@ -139,7 +161,7 @@ public class HomePage {
 }
 ```
 
-したがって、ログインテストでは、これら2つのページオブジェクトを次のように使用します。
+So now, the login test would use these two page objects as follows.
 
 ```java
 /***
@@ -157,23 +179,322 @@ public class TestLogin {
 }
 ```
 
-ページオブジェクトの設計方法には多くの柔軟性がありますが、テストコードの望ましい保守性を得るための基本的なルールがいくつかあります。
+There is a lot of flexibility in how the page objects may be designed, but
+there are a few basic rules for getting the desired maintainability of your
+test code.
 
-ページオブジェクト自体は、検証やアサーションを行うべきではありません。
-これはテストの一部であり、常にページオブジェクトではなく、テストのコード内にある必要があります。
-ページオブジェクトには、ページの表現と、ページがメソッドを介して提供するサービスが含まれますが、テスト対象に関連するコードはページオブジェクト内に存在しないようにします。
+## Assertions in Page Objects
+Page objects themselves should never make verifications or assertions. This is
+part of your test and should always be within the test’s code, never in an page
+object. The page object will contain the representation of the page, and the
+services the page provides via methods but no code related to what is being
+tested should be within the page object.
 
-ページオブジェクト内に存在する可能性のある単一の検証があります。
-これは、ページおよびページ上の重要な要素が正しく読み込まれたことを検証するためのものです。
-この検証は、ページオブジェクトをインスタンス化する間に実行する必要があります。
-上記の例では、SignInPageコンストラクターとHomePageコンストラクターの両方が期待するページを取得し、テストからの要求に対応できることを確認します。
+There is one, single, verification which can, and should, be within the page
+object and that is to verify that the page, and possibly critical elements on
+the page, were loaded correctly. This verification should be done while
+instantiating the page object. In the examples above, both the SignInPage and
+HomePage constructors check that the expected page is available and ready for
+requests from the test.
 
-ページオブジェクトは、必ずしもページ全体を表す必要はありません。
-ページオブジェクトデザインパターンは、ページ上のコンポーネントを表すために使用できます。
-AUTのページに複数のコンポーネントがある場合、コンポーネントごとに個別のページオブジェクトがあると、保守性が向上する場合があります。
+## Page Component Objects
+A page object does not necessarily need to represent all the parts of a
+page itself. The same principles used for page objects can be used to
+create "Page _Component_ Objects" that represent discrete chunks of the
+page and can be included in page objects. These component objects can
+provide references to the elements inside those discrete chunks, and
+methods to leverage the functionality provided by them.
 
-また、テストで使用できる他のデザインパターンがあります。
-ページファクトリを使用してページオブジェクトをインスタンス化するものもあります。
-これらすべてについて議論することは、このユーザーガイドの範囲を超えています。
-ここでは、読者にできることのいくつかを認識させるための概念を紹介したいだけです。
-前述のように、多くの人がこのトピックについてブログを書いていますし、読者がこれらのトピックに関するブログを検索することをお勧めします。
+For example, a Product page has multiple products.
+
+```html
+<!-- Products Page -->
+<div class="header_container">
+    <span class="title">Products</span>
+</div>
+
+<div class="inventory_list">
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+</div>
+```
+
+Each product is a component of the Products page.
+
+
+```html
+<!-- Inventory Item -->
+<div class="inventory_item">
+    <div class="inventory_item_name">Backpack</div>
+    <div class="pricebar">
+        <div class="inventory_item_price">$29.99</div>
+        <button id="add-to-cart-backpack">Add to cart</button>
+    </div>
+</div>
+```
+
+The Product page HAS-A list of products. This relationship is called Composition. In simpler terms, something is _composed of_ another thing.
+
+```java
+public abstract class BasePage {
+    protected WebDriver driver;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+}
+
+// Page Object
+public class ProductsPage extends BasePage {
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+        // No assertions, throws an exception if the element is not loaded
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+            .until(d -> d.findElement(By.className​("header_container")));
+    }
+
+    // Returning a list of products is a service of the page
+    public List<Product> getProducts() {
+        return driver.findElements(By.className​("inventory_item"))
+            .stream()
+            .map(e -> new Product(e)) // Map WebElement to a product component
+            .toList();
+    }
+
+    // Return a specific product using a boolean-valued function (predicate)
+    // This is the behavioral Strategy Pattern from GoF
+    public Product getProduct(Predicate<Product> condition) {
+        return getProducts()
+            .stream()
+            .filter(condition) // Filter by product name or price
+            .findFirst()
+            .orElseThrow();
+    }
+}
+```
+
+The Product component object is used inside the Products page object.
+
+```java
+public abstract class BaseComponent {
+    protected WebElement root;
+
+    public BaseComponent(WebElement root) {
+        this.root = root;
+    }
+}
+
+// Page Component Object
+public class Product extends BaseComponent {
+    // The root element contains the entire component
+    public Product(WebElement root) {
+        super(root); // inventory_item
+    }
+
+    public String getName() {
+        // Locating an element begins at the root of the component
+        return root.findElement(By.className("inventory_item_name")).getText();
+    }
+
+    public BigDecimal getPrice() {
+        return new BigDecimal(
+                root.findElement(By.className("inventory_item_price"))
+                    .getText()
+                    .replace("$", "")
+            ).setScale(2, RoundingMode.UNNECESSARY); // Sanitation and formatting
+    }
+
+    public void addToCart() {
+        root.findElement(By.id("add-to-cart-backpack")).click();
+    }
+}
+```
+
+So now, the products test would use the page object and the page component object as follows.
+
+```java
+public class ProductsTest {
+    @Test
+    public void testProductInventory() {
+        var productsPage = new ProductsPage(driver);
+        var products = productsPage.getProducts();
+        assertEquals(6, products.size()); // expected, actual
+    }
+    
+    @Test
+    public void testProductPrices() {
+        var productsPage = new ProductsPage(driver);
+
+        // Pass a lambda expression (predicate) to filter the list of products
+        // The predicate or "strategy" is the behavior passed as parameter
+        var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack"));
+        var bikeLight = productsPage.getProduct(p -> p.getName().equals("Bike Light"));
+
+        assertEquals(new BigDecimal("29.99"), backpack.getPrice());
+        assertEquals(new BigDecimal("9.99"), bikeLight.getPrice());
+    }
+}
+```
+
+The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application in object-oriented programming.
+
+You can even
+nest component objects inside other component objects for more complex
+pages. If a page in the AUT has multiple components, or common
+components used throughout the site (e.g. a navigation bar), then it
+may improve maintainability and reduce code duplication.
+
+## Other Design Patterns Used in Testing
+There are other design patterns that also may be used in testing. Some use a
+Page Factory for instantiating their page objects. Discussing all of these is
+beyond the scope of this user guide. Here, we merely want to introduce the
+concepts to make the reader aware of some of the things that can be done. As
+was mentioned earlier, many have blogged on this topic and we encourage the
+reader to search for blogs on these topics.
+
+## Implementation Notes
+
+
+PageObjects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
+
+Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
+
+One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the PageObject:
+
+```
+public class LoginPage {
+    public HomePage loginAs(String username, String password) {
+        // ... clever magic happens here
+    }
+    
+    public LoginPage loginAsExpectingError(String username, String password) {
+        //  ... failed login here, maybe because one or both of the username and password are wrong
+    }
+    
+    public String getErrorMessage() {
+        // So we can verify that the correct error is shown
+    }
+}
+```
+
+The code presented above shows an important point: the tests, not the PageObjects, should be responsible for making assertions about the state of a page. For example:
+
+```
+public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    inbox.assertMessageWithSubjectIsUnread("I like cheese");
+    inbox.assertMessageWithSubjectIsNotUnread("I'm not fond of tofu");
+}
+```
+
+could be re-written as:
+
+```
+public void testMessagesAreReadOrUnread() {
+    Inbox inbox = new Inbox(driver);
+    assertTrue(inbox.isMessageWithSubjectIsUnread("I like cheese"));
+    assertFalse(inbox.isMessageWithSubjectIsUnread("I'm not fond of tofu"));
+}
+```
+
+Of course, as with every guideline, there are exceptions, and one that is commonly seen with PageObjects is to check that the WebDriver is on the correct page when we instantiate the PageObject. This is done in the example below.
+
+Finally, a PageObject need not represent an entire page. It may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.
+
+## Summary
+
+* The public methods represent the services that the page offers
+* Try not to expose the internals of the page
+* Generally don't make assertions
+* Methods return other PageObjects
+* Need not represent an entire page
+* Different results for the same action are modelled as different methods
+
+## Example
+
+```
+public class LoginPage {
+    private final WebDriver driver;
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+
+        // Check that we're on the right page.
+        if (!"Login".equals(driver.getTitle())) {
+            // Alternatively, we could navigate to the login page, perhaps logging out first
+            throw new IllegalStateException("This is not the login page");
+        }
+    }
+
+    // The login page contains several HTML elements that will be represented as WebElements.
+    // The locators for these elements should only be defined once.
+        By usernameLocator = By.id("username");
+        By passwordLocator = By.id("passwd");
+        By loginButtonLocator = By.id("login");
+
+    // The login page allows the user to type their username into the username field
+    public LoginPage typeUsername(String username) {
+        // This is the only place that "knows" how to enter a username
+        driver.findElement(usernameLocator).sendKeys(username);
+
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to type their password into the password field
+    public LoginPage typePassword(String password) {
+        // This is the only place that "knows" how to enter a password
+        driver.findElement(passwordLocator).sendKeys(password);
+
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
+        return this;	
+    }
+
+    // The login page allows the user to submit the login form
+    public HomePage submitLogin() {
+        // This is the only place that submits the login form and expects the destination to be the home page.
+        // A seperate method should be created for the instance of clicking login whilst expecting a login failure. 
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the login page ever
+        // go somewhere else (for example, a legal disclaimer) then changing the method signature
+        // for this method will mean that all tests that rely on this behaviour won't compile.
+        return new HomePage(driver);	
+    }
+
+    // The login page allows the user to submit the login form knowing that an invalid username and / or password were entered
+    public LoginPage submitLoginExpectingFailure() {
+        // This is the only place that submits the login form and expects the destination to be the login page due to login failure.
+        driver.findElement(loginButtonLocator).submit();
+
+        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submiting a login with credentials 
+        // expected to fail login, the script will fail when it attempts to instantiate the LoginPage PageObject.
+        return new LoginPage(driver);	
+    }
+
+    // Conceptually, the login page offers the user the service of being able to "log into"
+    // the application using a user name and password. 
+    public HomePage loginAs(String username, String password) {
+        // The PageObject methods that enter username, password & submit login have already defined and should not be repeated here.
+        typeUsername(username);
+        typePassword(password);
+        return submitLogin();
+    }
+}
+
+```
+
+
+## Support in WebDriver
+
+There is a PageFactory in the support package that provides support for this pattern and helps to remove some boiler-plate code from your Page Objects at the same time.
