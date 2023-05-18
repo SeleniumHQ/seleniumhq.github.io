@@ -366,11 +366,11 @@ reader to search for blogs on these topics.
 
 PageObjects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
 
-Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
+Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, **methods on the PageObject should return other PageObjects**. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
 
 One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the PageObject:
 
-```
+```java
 public class LoginPage {
     public HomePage loginAs(String username, String password) {
         // ... clever magic happens here
@@ -388,7 +388,7 @@ public class LoginPage {
 
 The code presented above shows an important point: the tests, not the PageObjects, should be responsible for making assertions about the state of a page. For example:
 
-```
+```java
 public void testMessagesAreReadOrUnread() {
     Inbox inbox = new Inbox(driver);
     inbox.assertMessageWithSubjectIsUnread("I like cheese");
@@ -398,7 +398,7 @@ public void testMessagesAreReadOrUnread() {
 
 could be re-written as:
 
-```
+```java
 public void testMessagesAreReadOrUnread() {
     Inbox inbox = new Inbox(driver);
     assertTrue(inbox.isMessageWithSubjectIsUnread("I like cheese"));
@@ -421,7 +421,7 @@ Finally, a PageObject need not represent an entire page. It may represent a sect
 
 ## Example
 
-```
+```java
 public class LoginPage {
     private final WebDriver driver;
 
