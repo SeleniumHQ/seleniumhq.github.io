@@ -482,34 +482,37 @@ Below is an example in Java that does the following:
 * Picks one file and downloads the file from the remote node to the local machine.
 
 ```java
-import static java.util.Collections.singletonMap;
-import static org.openqa.selenium.remote.http.Contents.string;
+import com.google.common.collect.ImmutableMap;
 
-import java.io.File;
-import java.lang.reflect.Type;
-import java.net.URL;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.io.Zip;
 import org.openqa.selenium.json.Json;
-import org.openqa.selenium.json.TypeToken;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.http.Contents;
 import org.openqa.selenium.remote.http.HttpClient;
-import org.openqa.selenium.remote.http.HttpMethod;
 import org.openqa.selenium.remote.http.HttpRequest;
 import org.openqa.selenium.remote.http.HttpResponse;
+
+import java.io.File;
+import java.net.URL;
+import java.nio.file.Files;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.remote.http.Contents.asJson;
+import static org.openqa.selenium.remote.http.Contents.string;
+import static org.openqa.selenium.remote.http.HttpMethod.GET;
+import static org.openqa.selenium.remote.http.HttpMethod.POST;
 
 public class DownloadsSample {
 
   public static void main(String[] args) throws Exception {
     // Assuming the Grid is running locally.
     URL gridUrl = new URL("http://localhost:4444");
-    RemoteWebDriver driver = new RemoteWebDriver(gridUrl, firefoxOptions());
+		ChromeOptions options = new ChromeOptions();
+		options.setCapability("se:downloadsEnabled", true);
+    RemoteWebDriver driver = new RemoteWebDriver(gridUrl, options);
     try {
       demoFileDownloads(driver, gridUrl);
     } finally {
@@ -517,84 +520,67 @@ public class DownloadsSample {
     }
   }
 
-  private static void demoFileDownloads(RemoteWebDriver driver, URL gridUrl) throws Exception {
-    // Make sure the following directory exists on your machine
-    File dirToCopyTo = new File("/usr/downloads/file");
-    driver.get("http://the-internet.herokuapp.com/download");
-    WebElement element = driver.findElement(By.cssSelector(".example a"));
-    element.click();
+	private static void demoFileDownloads(RemoteWebDriver driver, URL gridUrl) throws Exception {
+		driver.get("https://www.selenium.dev/selenium/web/downloads/download.html");
+		// Download the two available files on the page
+		driver.findElement(By.id("file-1")).click();
+		driver.findElement(By.id("file-2")).click();
 
-    // The download happens in a remote Node, which makes it difficult to know when the file
-    // has been completely downloaded. For demonstration purposes, this example uses a
-    // 10-second sleep which should be enough time for a file to be downloaded.
-    // We strongly recommend to avoid hardcoded sleeps, and ideally, to modify your
-    // application under test so it offers a way to know when the file has been completely
-    // downloaded.
-    TimeUnit.SECONDS.sleep(10);
+		// The download happens in a remote Node, which makes it difficult to know when the file
+		// has been completely downloaded. For demonstration purposes, this example uses a
+		// 10-second sleep which should be enough time for a file to be downloaded.
+		// We strongly recommend to avoid hardcoded sleeps, and ideally, to modify your
+		// application under test, so it offers a way to know when the file has been completely
+		// downloaded.
+		TimeUnit.SECONDS.sleep(10);
 
-    //This is the endpoint which will provide us with list of files to download and also to
-    //let us download a specific file.
-    String uri = String.format("/session/%s/se/files", driver.getSessionId());
+		//This is the endpoint which will provide us with list of files to download and also to
+		//let us download a specific file.
+		String downloadsEndpoint = String.format("/session/%s/se/files", driver.getSessionId());
 
-    String fileToDownload = null;
+		String fileToDownload;
 
-    try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
-      // To list all files that are were downloaded on the remote node for the current session
-      // we trigger GET request.
-      HttpRequest request = new HttpRequest(HttpMethod.GET, uri);
-      HttpResponse response = client.execute(request);
-      String text = string(response);
-      Type responseType = new TypeToken<Map<String, Map<String, List<String>>>>() {
-      }.getType();
-      Map<String, Map<String, List<String>>> map = new Json().toType(text, responseType);
-      Map<String, List<String>> parsedResponse = map.get("value");
-      for (String eachFile : parsedResponse.get("names")) {
-        if (fileToDownload == null) {
-          // Let's say there were "n" files downloaded for the current session, we would like
-          // to retrieve ONLY the first file.
-          fileToDownload = eachFile;
-        }
-      }
-    }
-    try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
-      // To retrieve a specific file from one or more files that were downloaded by the current session
-      // on a remote node, we use a POST request.
+		try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
+			// To list all files that are were downloaded on the remote node for the current session
+			// we trigger GET request.
+			HttpRequest request = new HttpRequest(GET, downloadsEndpoint);
+			HttpResponse response = client.execute(request);
+			Map<String, Object> jsonResponse = new Json().toType(string(response), Json.MAP_TYPE);
+			@SuppressWarnings("unchecked")
+			Map<String, Object> value = (Map<String, Object>) jsonResponse.get("value");
+			@SuppressWarnings("unchecked")
+			List<String> names = (List<String>) value.get("names");
+			// Let's say there were "n" files downloaded for the current session, we would like
+			// to retrieve ONLY the first file.
+			fileToDownload = names.get(0);
+		}
 
-      HttpRequest request = new HttpRequest(HttpMethod.POST, uri);
-      request.setContent(Contents.asJson(singletonMap("name", fileToDownload)));
-      HttpResponse response = client.execute(request);
-      String text = string(response);
-      Type responseType = new TypeToken<Map<String, Map<String, String>>>() {
-      }.getType();
+		// Now, let's download the file
+		try (HttpClient client = HttpClient.Factory.createDefault().createClient(gridUrl)) {
+			// To retrieve a specific file from one or more files that were downloaded by the current session
+			// on a remote node, we use a POST request.
+			HttpRequest request = new HttpRequest(POST, downloadsEndpoint);
+			request.setContent(asJson(ImmutableMap.of("name", fileToDownload)));
+			HttpResponse response = client.execute(request);
+			Map<String, Object> jsonResponse = new Json().toType(string(response), Json.MAP_TYPE);
+			@SuppressWarnings("unchecked")
+			Map<String, Object> value = (Map<String, Object>) jsonResponse.get("value");
+			// The returned map would contain 2 keys,
+			// filename - This represents the name of the file (same as what was provided by the test)
+			// contents - Base64 encoded String which contains the zipped file.
+			String zippedContents = value.get("contents").toString();
+			// The file contents would always be a zip file and has to be unzipped.
+			File downloadDir = Zip.unzipToTempDir(zippedContents, "download", "");
+			// Read the file contents
+			File downloadedFile = Optional.ofNullable(downloadDir.listFiles()).orElse(new File[]{})[0];
+			String fileContent = String.join("", Files.readAllLines(downloadedFile.toPath()));
+			System.out.println("The file which was "
+					+ "downloaded in the node is now available in the directory: "
+					+ downloadDir.getAbsolutePath() + " and has the contents: " + fileContent);
+		}
+	}
 
-      Map<String, Map<String, String>> map = new Json().toType(text, responseType);
-      Map<String, String> parsedResponse = map.get("value");
-      // The returned map would contain 2 keys,
-      // filename - This represents the name of the file (same as what was provided by the test)
-      // contents - Base64 encoded String which contains the zipped file.
-      String encodedContents = parsedResponse.get("contents");
 
-      //The file contents would always be a zip file and has to be unzipped.
-      Zip.unzip(encodedContents, dirToCopyTo);
-      System.out.println("The file which was "
-          + "downloaded in the node is now available in the directory: "
-          + dirToCopyTo.getAbsolutePath());
-    }
-  }
-
-  private static FirefoxOptions firefoxOptions() {
-    FirefoxOptions options = new FirefoxOptions();
-    // This capability tells the Grid, that this test should be routed ONLY to a node that can
-    // auto manage downloads.
-    options.setCapability("se:downloadsEnabled", true);
-    // Options specific for Firefox to avoid prompting a dialog for downloads. They might
-    // change in the future, so please refer to the Firefox documentation for up to date details.
-    options.addPreference("browser.download.manager.showWhenStarting", false);
-    options.addPreference("browser.helperApps.neverAsk.saveToDisk",
-        "images/jpeg, application/pdf, application/octet-stream");
-    options.addPreference("pdfjs.disabled", true);
-    return options;
-  }
 }
 ```
 
