@@ -237,57 +237,57 @@ let value = await driver.findElement(By.name('email_input')).getTagName();
 * 要素の幅
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+  {{< tab header="Java" >}}
 // Navigate to url
-driver.get("https://www.example.com");
+driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Returns height, width, x and y coordinates referenced element
-Rectangle res =  driver.findElement(By.cssSelector("h1")).getRect();
+Rectangle res =  driver.findElement(By.name("range_input")).getRect();
 
 // Rectangle class provides getX,getY, getWidth, getHeight methods
 System.out.println(res.getX());
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to url
-driver.get("https://www.example.com")
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-# Returns height, width, x and y coordinates referenced element
-res = driver.find_element(By.CSS_SELECTOR, "h1").rect
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+    # Returns height, width, x and y coordinates referenced element
+res = driver.find_element(By.NAME, "range_input").rect
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 // Navigate to Url
-driver.Navigate().GoToUrl("https://example.com");
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
 
-var res = driver.FindElement(By.CssSelector("h1"));
+var res = driver.FindElement(By.Name("range_input"));
 // Return x and y coordinates referenced element
 System.Console.WriteLine(res.Location);
 // Returns height, width
 System.Console.WriteLine(res.Size);
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Navigate to url
-driver.get 'https://www.example.com'
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-# Returns height, width, x and y coordinates referenced element
-res = driver.find_element(css: "h1").rect
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+    # Returns height, width, x and y coordinates referenced element
+res = driver.find_element(name: "range_input").rect
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.example.com');
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
 
 // Returns height, width, x and y coordinates referenced element
-let element =  await driver.findElement(By.css("h1")).getRect();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+let element =  await driver.findElement(By.name("range_input")).getRect();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
 // Navigate to url
-driver.get("https://www.example.com")
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 // Returns height, width, x and y coordinates referenced element
-val res = driver.findElement(By.cssSelector("h1")).rect
+val res = driver.findElement(By.name("range_input")).rect
 
 // Rectangle class provides getX,getY, getWidth, getHeight methods
 println(res.getX())
-{{< /tab >}}
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## 要素のCSSの値を取得
@@ -295,107 +295,110 @@ println(res.getX())
 現在のブラウジングコンテキスト内の要素の指定された計算したスタイル属性の値を取得します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+  {{< tab header="Java" >}}
 
 // Navigate to Url
-driver.get("https://www.example.com");
+driver.get("https://www.selenium.dev/selenium/web/colorPage.html");
 
 // Retrieves the computed style property 'color' of linktext
-String cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color");
+String cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-color");
 
-{{< /tab >}}
-{{< tab header="Python" >}}
+  {{< /tab >}}
+  {{< tab header="Python" >}}
 
-# Navigate to Url
-driver.get('https://www.example.com')
+    # Navigate to Url
+driver.get('https://www.selenium.dev/selenium/web/colorPage.html')
 
-# Retrieves the computed style property 'color' of linktext
-cssValue = driver.find_element(By.LINK_TEXT, "More information...").value_of_css_property('color')
+    # Retrieves the computed style property 'color' of linktext
+cssValue = driver.find_element(By.ID, "namedColor").value_of_css_property('background-color')
 
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 
 // Navigate to Url
-driver.Navigate().GoToUrl("https://www.example.com");
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/colorPage.html");
 
 // Retrieves the computed style property 'color' of linktext
-String cssValue = driver.FindElement(By.LinkText("More information...")).GetCssValue("color");
+String cssValue = driver.FindElement(By.Id("namedColor")).GetCssValue("background-color");
 
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
 
-# Navigate to Url
-driver.get 'https://www.example.com'
+    # Navigate to Url
+driver.get 'https://www.selenium.dev/selenium/web/colorPage.html'
 
-# Retrieves the computed style property 'color' of linktext
-cssValue = driver.find_element(:link_text, 'More information...').css_value('color')
+    # Retrieves the computed style property 'color' of linktext
+cssValue = driver.find_element(:id, 'namedColor').css_value('background-color')
 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-// Navigate to Url
-await driver.get('https://www.example.com');
-
-// Retrieves the computed style property 'color' of linktext
-let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
 
 // Navigate to Url
-driver.get("https://www.example.com")
+await driver.get('https://www.selenium.dev/selenium/web/colorPage.html');
 
 // Retrieves the computed style property 'color' of linktext
-val cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color")
+let cssValue = await driver.findElement(By.id("namedColor")).getCssValue('background-color');
 
-{{< /tab >}}
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+// Navigate to Url
+driver.get("https://www.selenium.dev/selenium/web/colorPage.html")
+
+// Retrieves the computed style property 'color' of linktext
+val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-color")
+
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## 要素テキストを取得
 
 指定された要素のレンダリングされたテキストを取得します。
 
+
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+  {{< tab header="Java" >}}
 // Navigate to url
-driver.get("https://example.com");
+driver.get("https://www.selenium.dev/selenium/web/linked_image.html");
 
 // Retrieves the text of the element
-String text = driver.findElement(By.cssSelector("h1")).getText();
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to url
-driver.get("https://www.example.com")
+String text = driver.findElement(By.id("justanotherlink")).getText();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
 
-# Retrieves the text of the element
-text = driver.find_element(By.CSS_SELECTOR, "h1").text
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+    # Retrieves the text of the element
+text = driver.find_element(By.ID, "justanotherlink").text
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 // Navigate to url
-driver.Url="https://example.com";
+driver.Url="https://www.selenium.dev/selenium/web/linked_image.html";
 
 // Retrieves the text of the element
-String text = driver.FindElement(By.CssSelector("h1")).Text;
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Navigate to url
-driver.get 'https://www.example.com'
+String text = driver.FindElement(By.Id("justanotherlink")).Text;
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'https://www.selenium.dev/selenium/web/linked_image.html'
 
-# Retrieves the text of the element
-text = driver.find_element(:css, 'h1').text
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+    # Retrieves the text of the element
+text = driver.find_element(:id, 'justanotherlink').text
+  {{< /tab >}}
+    {{< tab header="JavaScript" >}}
 // Navigate to URL
-await driver.get('http://www.example.com');
+await driver.get('https://www.selenium.dev/selenium/web/linked_image.html');
 
 // retrieves the text of the element
-let text = await driver.findElement(By.css('h1')).getText();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+let text = await driver.findElement(By.id('justanotherlink')).getText();
+    {{< /tab >}}
+  {{< tab header="Kotlin" >}}
 // Navigate to URL
-driver.get("https://www.example.com")
+driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
 
 // retrieves the text of the element
-val text = driver.findElement(By.cssSelector("h1")).getText()
-{{< /tab >}}
+val text = driver.findElement(By.id("justanotherlink")).getText()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## Fetching Attributes or Properties
