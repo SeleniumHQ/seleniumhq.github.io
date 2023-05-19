@@ -519,8 +519,8 @@ public class DownloadsSample {
   public static void main(String[] args) throws Exception {
     // Assuming the Grid is running locally.
     URL gridUrl = new URL("http://localhost:4444");
-		ChromeOptions options = new ChromeOptions();
-		options.setCapability("se:downloadsEnabled", true);
+    ChromeOptions options = new ChromeOptions();
+    options.setCapability("se:downloadsEnabled", true);
     RemoteWebDriver driver = new RemoteWebDriver(gridUrl, options);
     try {
       demoFileDownloads(driver, gridUrl);
