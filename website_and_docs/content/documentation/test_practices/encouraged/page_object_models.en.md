@@ -198,13 +198,15 @@ requests from the test.
 
 ## Page Component Objects
 A page object does not necessarily need to represent all the parts of a
-page itself. The same principles used for page objects can be used to
-create "Page _Component_ Objects" that represent discrete chunks of the
+page itself. This was [noted by Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) in the early days, while first coining the term "panel objects".
+
+The same principles used for page objects can be used to
+create "Page _Component_ Objects", as it was later called, that represent discrete chunks of the
 page and can be included in page objects. These component objects can
 provide references to the elements inside those discrete chunks, and
 methods to leverage the functionality provided by them.
 
-For example, a Product page has multiple products.
+For example, a Products page has multiple products.
 
 ```html
 <!-- Products Page -->
@@ -242,7 +244,7 @@ Each product is a component of the Products page.
 </div>
 ```
 
-The Product page HAS-A list of products. This relationship is called Composition. In simpler terms, something is _composed of_ another thing.
+The Products page HAS-A list of products. This object relationship is called Composition. In simpler terms, something is _composed of_ another thing.
 
 ```java
 public abstract class BasePage {
@@ -325,7 +327,7 @@ So now, the products test would use the page object and the page component objec
 public class ProductsTest {
     @Test
     public void testProductInventory() {
-        var productsPage = new ProductsPage(driver);
+        var productsPage = new ProductsPage(driver); // page object
         var products = productsPage.getProducts();
         assertEquals(6, products.size()); // expected, actual
     }
@@ -336,7 +338,7 @@ public class ProductsTest {
 
         // Pass a lambda expression (predicate) to filter the list of products
         // The predicate or "strategy" is the behavior passed as parameter
-        var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack"));
+        var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack")); // page component object
         var bikeLight = productsPage.getProduct(p -> p.getName().equals("Bike Light"));
 
         assertEquals(new BigDecimal("29.99"), backpack.getPrice());
@@ -489,5 +491,4 @@ public class LoginPage {
         return submitLogin();
     }
 }
-
 ```
