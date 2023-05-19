@@ -202,7 +202,152 @@ page itself. The same principles used for page objects can be used to
 create "Page _Component_ Objects" that represent discrete chunks of the
 page and can be included in page objects. These component objects can
 provide references to the elements inside those discrete chunks, and
-methods to leverage the functionality provided by them. You can even
+methods to leverage the functionality provided by them.
+
+For example, a Product page has multiple products.
+
+```html
+<!-- Products Page -->
+<div class="header_container">
+    <span class="title">Products</span>
+</div>
+
+<div class="inventory_list">
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+</div>
+```
+
+Each product is a component of the Products page.
+
+
+```html
+<!-- Inventory Item -->
+<div class="inventory_item">
+    <div class="inventory_item_name">Backpack</div>
+    <div class="pricebar">
+        <div class="inventory_item_price">$29.99</div>
+        <button id="add-to-cart-backpack">Add to cart</button>
+    </div>
+</div>
+```
+
+The Product page HAS-A list of products. This relationship is called Composition. In simpler terms, something is _composed of_ another thing.
+
+```java
+public abstract class BasePage {
+    protected WebDriver driver;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+}
+
+// Page Object
+public class ProductsPage extends BasePage {
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+        // No assertions, throws an exception if the element is not loaded
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+            .until(d -> d.findElement(By.className​("header_container")));
+    }
+
+    // Returning a list of products is a service of the page
+    public List<Product> getProducts() {
+        return driver.findElements(By.className​("inventory_item"))
+            .stream()
+            .map(e -> new Product(e)) // Map WebElement to a product component
+            .toList();
+    }
+
+    // Return a specific product using a boolean-valued function (predicate)
+    // This is the behavioral Strategy Pattern from GoF
+    public Product getProduct(Predicate<Product> condition) {
+        return getProducts()
+            .stream()
+            .filter(condition) // Filter by product name or price
+            .findFirst()
+            .orElseThrow();
+    }
+}
+```
+
+The Product component object is used inside the Products page object.
+
+```java
+public abstract class BaseComponent {
+    protected WebElement root;
+
+    public BaseComponent(WebElement root) {
+        this.root = root;
+    }
+}
+
+// Page Component Object
+public class Product extends BaseComponent {
+    // The root element contains the entire component
+    public Product(WebElement root) {
+        super(root); // inventory_item
+    }
+
+    public String getName() {
+        // Locating an element begins at the root of the component
+        return root.findElement(By.className("inventory_item_name")).getText();
+    }
+
+    public BigDecimal getPrice() {
+        return new BigDecimal(
+                root.findElement(By.className("inventory_item_price"))
+                    .getText()
+                    .replace("$", "")
+            ).setScale(2, RoundingMode.UNNECESSARY); // Sanitation and formatting
+    }
+
+    public void addToCart() {
+        root.findElement(By.id("add-to-cart-backpack")).click();
+    }
+}
+```
+
+So now, the products test would use the page object and the page component object as follows.
+
+```java
+public class ProductsTest {
+    @Test
+    public void testProductInventory() {
+        var productsPage = new ProductsPage(driver);
+        var products = productsPage.getProducts();
+        assertEquals(6, products.size()); // expected, actual
+    }
+    
+    @Test
+    public void testProductPrices() {
+        var productsPage = new ProductsPage(driver);
+
+        // Pass a lambda expression (predicate) to filter the list of products
+        // The predicate or "strategy" is the behavior passed as parameter
+        var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack"));
+        var bikeLight = productsPage.getProduct(p -> p.getName().equals("Bike Light"));
+
+        assertEquals(new BigDecimal("29.99"), backpack.getPrice());
+        assertEquals(new BigDecimal("9.99"), bikeLight.getPrice());
+    }
+}
+```
+
+The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application in object-oriented programming.
+
+You can even
 nest component objects inside other component objects for more complex
 pages. If a page in the AUT has multiple components, or common
 components used throughout the site (e.g. a navigation bar), then it
