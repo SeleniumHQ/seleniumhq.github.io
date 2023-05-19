@@ -69,10 +69,6 @@ let result =  await driver.findElement(By.name("email_input")).isDisplayed();
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< alert-code >}}
-for element displayedness
-{{< /alert-code >}}
-
 
 ## 要素が有効か
 
@@ -81,51 +77,51 @@ for element displayedness
 **有効（enabled）** になっている場合は **True** 、そうでない場合は **false** を返します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-//navigates to url
-driver.get("https://www.google.com/");
+  {{< tab header="Java" >}}
+  //navigates to url
+  driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-//returns true if element is enabled else returns false
-boolean value = driver.findElement(By.name("btnK")).isEnabled();
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to url
-driver.get("http://www.google.com")
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("button_input")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-# Returns true if element is enabled else returns false
-value = driver.find_element(By.NAME, 'btnK').is_enabled()
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+    # Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'button_input').is_enabled()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 // Navigate to Url
-driver.Navigate().GoToUrl("https://google.com");
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Store the WebElement
-IWebElement element = driver.FindElement(By.Name("btnK"));
+IWebElement element = driver.FindElement(By.Name("button_input"));
 
 // Prints true if element is enabled else returns false
 System.Console.WriteLine(element.Enabled);
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Navigate to url
-driver.get 'http://www.google.com/'
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-# Returns true if element is enabled else returns false
-ele = driver.find_element(name: 'btnK').enabled?
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+    # Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'button_input').enabled?
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://www.google.com');
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
 
 // Resolves Promise and returns boolean value
-let element =  await driver.findElement(By.name("btnK")).isEnabled();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-//navigates to url
-driver.get("https://www.google.com/")
+let element =  await driver.findElement(By.name("button_input")).isEnabled();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-//returns true if element is enabled else returns false
-val attr = driver.findElement(By.name("btnK")).isEnabled()
-{{< /tab >}}
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("button_input")).isEnabled()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## 要素が選択されているかどうか
@@ -136,48 +132,48 @@ val attr = driver.findElement(By.name("btnK")).isEnabled()
 ブール値を返し、現在のブラウジングコンテキストで参照された要素が **選択されている** 場合は **True** 、そうでない場合は **false** を返します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-//navigates to url
-driver.get("https://the-internet.herokuapp.com/checkboxes");
+  {{< tab header="Java" >}}
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-//returns true if element is checked else returns false
-boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to url
-driver.get("https://the-internet.herokuapp.com/checkboxes")
+ //returns true if element is checked else returns false
+ boolean value = driver.findElement(By.name("checkbox_input")).isSelected();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-# Returns true if element is checked else returns false
-value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+    # Returns true if element is checked else returns false
+value = driver.find_element(By.NAME, "checkbox_input").is_selected()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 // Navigate to Url
-driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Returns true if element ins checked else returns false
-bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Navigate to url
-driver.get 'https://the-internet.herokuapp.com/checkboxes'
+bool value = driver.FindElement(By.Name("checkbox_input")).Selected;
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-# Returns true if element is checked else returns false
-ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+    # Returns true if element is checked else returns false
+ele = driver.find_element(name: "checkbox_input").selected?
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
 // Navigate to url
-await driver.get('https://the-internet.herokuapp.com/checkboxes');
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
 
 // Returns true if element ins checked else returns false
-let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-//navigates to url
-driver.get("https://the-internet.herokuapp.com/checkboxes")
+let res = await driver.findElement(By.name("checkbox_input")).isSelected();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-//returns true if element is checked else returns false
-val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
-{{< /tab >}}
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.name("checkbox_input")).isSelected()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## 要素のタグ名を取得
@@ -186,48 +182,48 @@ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-t
 [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) を取得するために使います。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-//navigates to url
-driver.get("https://www.example.com");
+  {{< tab header="Java" >}}
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-//returns TagName of the element
-String value = driver.findElement(By.cssSelector("h1")).getTagName();
-{{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to url
-driver.get("https://www.example.com")
+ //returns TagName of the element
+ String value = driver.findElement(By.name("email_input")).getTagName();
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    # Navigate to url
+driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-# Returns TagName of the element
-attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+    # Returns TagName of the element
+attr = driver.find_element(By.NAME, "email_input").tag_name
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
 // Navigate to Url
-driver.Navigate().GoToUrl("https://www.example.com");
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
 
 // Returns TagName of the element
-string attr = driver.FindElement(By.CssSelector("h1")).TagName;
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-# Navigate to url
-driver.get 'https://www.example.com'
+string attr = driver.FindElement(By.Name("email_input")).TagName;
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+    # Navigate to url
+driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-# Returns TagName of the element
-attr = driver.find_element(css: "h1").tag_name
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+    # Returns TagName of the element
+attr = driver.find_element(name: "email_input").tag_name
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
 // Navigate to URL
-await driver.get('https://www.example.com');
+await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
 
 // Returns TagName of the element
-let value = await driver.findElement(By.css('h1')).getTagName();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-//navigates to url
-driver.get("https://www.example.com")
+let value = await driver.findElement(By.name('email_input')).getTagName();
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+ //navigates to url
+ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-//returns TagName of the element
-val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
-{{< /tab >}}
+ //returns TagName of the element
+ val attr =  driver.findElement(By.name("email_input")).getTagName()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## 要素矩形を取得
