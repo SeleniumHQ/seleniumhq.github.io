@@ -204,7 +204,7 @@ The same principles used for page objects can be used to
 create "Page _Component_ Objects", as it was later called, that represent discrete chunks of the
 page and **can be included in page objects**. These component objects can
 provide references to the elements inside those discrete chunks, and
-methods to leverage the functionality provided by them.
+methods to leverage the functionality or behavior provided by them.
 
 For example, a Products page has multiple products.
 
