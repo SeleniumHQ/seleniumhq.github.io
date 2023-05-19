@@ -100,8 +100,8 @@ RSpec.describe 'Mouse' do
             .perform
 
       rect = mouse_tracker.rect
-      center_x = rect.width/2
-      center_y = rect.height/2
+      center_x = rect.width / 2
+      center_y = rect.height / 2
       x_coord, y_coord = driver.find_element(id: 'relative-location').text.split(',').map(&:to_i)
 
       expect(x_coord).to be_within(1).of(center_x + 8)

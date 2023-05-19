@@ -69,7 +69,7 @@ Note that as of Selenium 4.5, you can't create a `Select` object if the `<select
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L13-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
@@ -98,7 +98,7 @@ Get a list of all options in the `<select>` element:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
@@ -125,7 +125,7 @@ zero or many elements.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L56" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
@@ -156,7 +156,7 @@ Select the option based on its visible text
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
@@ -181,7 +181,7 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L23" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
@@ -206,7 +206,7 @@ Select the option based on its position in the list
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
@@ -240,7 +240,7 @@ Options with a `disabled` attribute may not be selected.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L62-L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
@@ -266,7 +266,7 @@ You can repeat these methods for each element you want to select.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}
