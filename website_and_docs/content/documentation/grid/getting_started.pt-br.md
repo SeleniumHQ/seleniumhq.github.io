@@ -17,7 +17,8 @@ aliases: [
     * Java 11 ou superior instalado
     * Navegador(es) instalados
     * Drivers do(s) navegador(es)
-      * Se usar o Selenium 4.6, o Selenium Manager irá configurar os navegadores Chrome, Firefox e Edge [se não forem encontrados no `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-gerenciador-selenium-smallbetasmall" >}}).
+      * If using Selenium 4.6+, Selenium Manager will configure the drivers automatically if you add `--selenium-manager true`.
+      * [Installed and on the `PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-the-path-environment-variable" >}})
     * Obter o ficheiro Selenium Server Jar a partir da [última release](https://github.com/SeleniumHQ/selenium/releases/latest)
 1. Iniciar a Grid
     * `java -jar selenium-server-<version>.jar standalone`
@@ -45,7 +46,7 @@ comando, num único processo. **Standalone** só funcionará numa única máquin
 **Standalone** é também a forma mais simples de colocar uma Selenium Grid em funcionamento.
 Por omissão, o servidor irá escutar por pedidos `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
 O servidor irá também detectar os drivers disponíveis no 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-a-variável-de-ambiente--path" >}}).
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-a-variável-de-ambiente--path" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -81,7 +82,7 @@ Por omissão, o servidor irá estar à escuta por pedidos de sessão `RemoteWebD
 #### Node
 
 Ao iniciar, o **Node** irá detectar os drivers disponíveis através do 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-a-variável-de-ambiente--path" >}}). 
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-a-variável-de-ambiente--path" >}}). 
 
 O comando exemplo seguinte assume que o **Node** está a executar na mesma máquina onde o **Hub** está em execução.
 ```shell
