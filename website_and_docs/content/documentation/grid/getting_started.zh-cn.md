@@ -26,7 +26,7 @@ aliases: [
     * 需要安装 Java 11 或更高版本
     * 需要安装浏览器
     * 需要安装浏览器驱动程序
-      * If using Selenium 4.6+, Selenium Manager will configure the drivers automatically if you add `--selenium-manager true`.
+      * [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
       * [需要已经安装并配置了 PATH 环境变量]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}})
     * 从[最新的发布版本](https://github.com/SeleniumHQ/selenium/releases/latest)下载 Selenium Server jar 文件
 1. 启动 Grid

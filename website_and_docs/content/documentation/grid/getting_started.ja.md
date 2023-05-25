@@ -18,8 +18,8 @@ aliases: [
    - Java 11 もしくはそれ以上がインストールされていること
    - ブラウザーがインストールされていること
    - ブラウザードライバー
-     - If using Selenium 4.6+, Selenium Manager will configure the drivers automatically if you add `--selenium-manager true`.
-     - [`PATH` が通っているインストール済みのもの]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-the-path-environment-variable" >}})
+     - [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
+     - [`PATH` が通っているインストール済みのもの]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
    - [最新の](https://github.com/SeleniumHQ/selenium/releases/latest) Selenium Server jar ファイルをダウンロードしていること
 
 1. Grid の起動
@@ -47,7 +47,7 @@ Grid は 6 つの異なる[コンポーネント]({{< ref "components.md" >}})�
 
 **スタンドアロン**は Selenium Grid を起動する最も簡単な方法でもあります。
 デフォルトではサーバーは[http://localhost:4444](http://localhost:4444) で `RemoteWebDriver` リクエストをリッスンします。
-サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
+サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -83,7 +83,7 @@ java -jar selenium-server-<version>.jar hub
 
 #### ノード
 
-**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-the-path-environment-variable" >}})
+**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
 が通っている利用可能なドライバーを検出します。
 
 次のコマンドは**ノード**が**ハブ**と同じマシン上で動作していることを前提としています。

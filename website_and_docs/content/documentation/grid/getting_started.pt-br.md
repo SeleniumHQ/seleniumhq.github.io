@@ -17,8 +17,8 @@ aliases: [
     * Java 11 ou superior instalado
     * Navegador(es) instalados
     * Drivers do(s) navegador(es)
-      * If using Selenium 4.6+, Selenium Manager will configure the drivers automatically if you add `--selenium-manager true`.
-      * [Installed and on the `PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-the-path-environment-variable" >}})
+      * [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
+      * [Installed and on the `PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
     * Obter o ficheiro Selenium Server Jar a partir da [última release](https://github.com/SeleniumHQ/selenium/releases/latest)
 1. Iniciar a Grid
     * `java -jar selenium-server-<version>.jar standalone`
