@@ -7,10 +7,10 @@
     "author": "The Selenium project",
     "license": "Apache-2.0",
     "dependencies": {
-        "@sitespeed.io/edgedriver": "^112.0.1722-34",
+        "@sitespeed.io/edgedriver": "^113.0.1774-9",
         "assert": "^2.0.0",
-        "chromedriver": "^112.0.0",
-        "geckodriver": "^3.2.0",
+        "chromedriver": "^113.0.0",
+        "geckodriver": "^4.0.0",
         "selenium-webdriver": "^4.9.2"
     },
     "devDependencies": {
