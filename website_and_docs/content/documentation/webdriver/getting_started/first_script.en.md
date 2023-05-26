@@ -6,8 +6,11 @@ description: >
     Step-by-step instructions for constructing a Selenium script
 ---
 
-Once you have [Selenium installed]({{< ref "install_library.md" >}}) and
-[Drivers installed]({{< ref "install_drivers.md" >}}), you're ready to write Selenium code.
+Once you have [Selenium installed]({{< ref "install_library.md" >}}), 
+you're ready to write Selenium code.
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the 
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## Eight Basic Components
 

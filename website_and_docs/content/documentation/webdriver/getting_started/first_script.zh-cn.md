@@ -6,8 +6,10 @@ description: >
     逐步构建一个Selenium脚本的说明
 ---
 
-当你完成 [Selenium安装]({{< ref "install_library.md" >}}) and
-[驱动安装]({{< ref "install_drivers.md" >}}) 后, 便可以开始书写Selenium脚本了.
+当你完成 [Selenium安装]({{< ref "install_library.md" >}})  后, 便可以开始书写Selenium脚本了.
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## 八个基本组成部分
 

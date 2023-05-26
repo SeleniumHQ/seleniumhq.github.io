@@ -24,15 +24,15 @@ Seleniumは可能な場合これらのサードパーティ製のdriverを使い
 
 Seleniumフレームワークはこれら全ての要素をユーザ向けのインターフェイスを通して結びつけます。このインターフェイスは異なるブラウザバックエンドを透過的に使えるようにし、クロスブラウザ・クロスプラットフォームの自動化を可能にします。
 
-Seleniumのセットアップは他の商用ツールと少し違います。自動化プロジェクトでSeleniumを使うためには、選択した言語の言語バインディングライブラリをインストールする必要があります。加えて、自動化でテストを実行したいブラウザのWebDriverバイナリも必要となります。
+Selenium setup is quite different from the setup of other commercial tools.
+Before you can start writing Selenium code, you have to 
+install the language bindings libraries for your language of choice, the browser you
+want to use, and the driver for that browser.
 
-Seleniumのインストールは、次の3つのステップに分類することができます。
+***Follow the links below to get up and going with Selenium WebDriver.***
 
-1. 希望するプログラミング言語の[Seleniumライブラリをインストール]({{< ref "install_library.md" >}})する。
-2. ブラウザを自動化するように[ブラウザードライバを設定]({{< ref "install_drivers.md" >}})する。（例：Firefox用のGeckoDriver）
-3. （オプション）テストをスケールアップする場合は、[Selenium Grid]({{< ref "/grid.md" >}})をセットアップして構成する。
+If you wish to start with a low-code/record and playback tool, please check
+[Selenium IDE](https://selenium.dev/selenium-ide)
 
-ローコード/記録および再生ツールから始めたい場合は、[Selenium IDE](https://selenium.dev/selenium-ide) をチェックしてください。
-
-セットアップが完了したら、ドキュメントの[トップページ](/ja/documentation)に表示されているコードスニペットを実行できます。 
-次に、[WebDriver]({{< ref "/webdriver.md" >}})の章に移動して、Seleniumを使用したブラウザーの自動化について詳しく学びます。
+Once you get things working, if you want to scale up your tests, check out the 
+[Selenium Grid]({{< ref "/documentation/grid" >}}).

@@ -158,4 +158,4 @@ No `package.json` do seu projeto, adicione os requisitos em `dependencies`:
 {{< /tabpane >}}
 
 ## Próximo passo
-[Instale os drivers do navegador]({{< ref "install_drivers.md" >}})
+[Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})

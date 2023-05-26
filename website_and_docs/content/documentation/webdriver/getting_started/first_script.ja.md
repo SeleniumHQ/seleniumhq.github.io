@@ -8,7 +8,10 @@ description: >
 ---
 
 [Seleniumをインストール]({{< ref "install_library.md" >}})し、
-[ドライバーをインストール]({{< ref "install_drivers.md" >}})すると、Seleniumコードを書く準備が整います。
+すると、Seleniumコードを書く準備が整います。
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## Eight Basic Components
 
