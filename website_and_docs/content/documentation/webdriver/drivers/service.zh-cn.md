@@ -16,27 +16,24 @@ to the command line. Most of the useful arguments are related to logging.
 
 To start a driver with a default service instance:
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-ChromeDriverService service = new ChromeDriverService.Builder().build();
-WebDriver driver = new ChromeDriver(service);
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L28-L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-from selenium.webdriver.chrome.service import Service
-from selenium import webdriver
-
-service = Service()
-driver = webdriver.Chrome(service=service)
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-service = Selenium::WebDriver::Service.chrome
-driver = Selenium::WebDriver.for :chrome, service: service
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -45,61 +42,133 @@ driver = Selenium::WebDriver.for :chrome, service: service
 **Note:** If you are using Selenium 4.6 or greater, you shouldn't need to set a driver location.
 If you can not update Selenium or have an advanced use case here is how to specify the driver location:
 
-{{< tabpane langEqualsHeader=true >}}
-{{% tab header="Java" text=true %}}
-In Java you can also set the driver location with a System Property:
-```java
-System.setProperty("webdriver.chrome.driver", driver_location);
-```
-
-Otherwise:
-```java 
-ChromeDriverService service = new ChromeDriverService.Builder()
-    .usingDriverExecutable(driverLocation)
-    .build();
-
-ChromeDriver driver = new ChromeDriver(service);
-```
-{{% /tab %}}
-
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L34-L36" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}
-from selenium.webdriver.chrome.service import Service
-from selenium import webdriver
-
-service = Service(executable_path=driver_location)
-driver = webdriver.Chrome(service=service)
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L16" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-var driver = new ChromeDriver(driverLocation);
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-service = Selenium::WebDriver::Service.chrome(path: driver_location)
-driver = Selenium::WebDriver.for :chrome, service: service
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-
-const service = new chrome.ServiceBuilder(driverLocation);
-const driver = new Builder().forBrowser('chrome').setChromeService(service).build();
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-import org.openqa.selenium.chrome.ChromeDriver
-
-fun main(args: Array<String>) {
-System.setProperty("webdriver.chrome.driver", driverLocation)
-val driver = ChromeDriver()
-}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
 ## Driver port
 
+If you want the driver to run on a specific port, you may specify it as follows:
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L43-L45" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L24" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L35" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L25" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ## Setting log output
 
+Getting driver logs can be helpful for debugging various issues. The Service class lets you
+direct where the logs will go
+
+Currently, the default behavior for logging varies by language (and sometimes browser):
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+Logging output defaults to STDERR
+{{% /tab %}}
+{{% tab header="Python" %}}
+Logging output defaults to none, except for Firefox, which defaults to "geckodriver.log"
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+Logging output defaults to none
+{{% /tab %}}
+{{% tab header="Ruby" %}}
+Logging output defaults to none, unless the WebDriver logger level is set to `:debug`,
+in which case the driver logging is sent to the same output as the Selenium logging.
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+Logging output defaults to STDERR
+{{% /tab %}}
+{{< /tabpane >}}
+
+### File output
+
+To change the logging output to save to a specific file:
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+Java allows you to set this by method:
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L52-L54" >}}
+Or by System Property:
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L61-L62" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L33" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L46" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L32" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Console output
 
+To change the logging output to display in the console as STDOUT:
 
-### File output
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+Java allows you to set this by method:
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L69-L71" >}}
+Or by System Property:
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L78-L79" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
+This is not yet supported in Python
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+This is not yet supported in .NET
+{{% /tab %}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L41" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
