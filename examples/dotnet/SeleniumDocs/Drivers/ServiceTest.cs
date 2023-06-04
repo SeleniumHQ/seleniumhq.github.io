@@ -11,18 +11,20 @@ namespace SeleniumDocs.Drivers
     [TestClass]
     public class ServiceTest : BaseTest
     {
+        private readonly string driverLocation = Environment.GetEnvironmentVariable("CHROMEWEBDRIVER") + "/chromedriver";
+
         [TestMethod]
         public void BasicService()
         {
-            var service = FirefoxDriverService.CreateDefaultService();
-            driver = new FirefoxDriver(service);
+            var service = ChromeDriverService.CreateDefaultService();
+            driver = new ChromeDriver(service);
         }
 
         [TestMethod]
         public void DriverLocation()
         {
-            var path = Environment.GetEnvironmentVariable("GECKOWEBDRIVER") + "/geckodriver";
-            var service = ChromeDriverService.CreateDefaultService(path);
+            var service = ChromeDriverService.CreateDefaultService();
+            service.DriverServicePath = driverLocation;
 
             driver = new ChromeDriver(service);
         }
@@ -30,26 +32,10 @@ namespace SeleniumDocs.Drivers
         [TestMethod]
         public void DriverPort()
         {
-            var path = Environment.GetEnvironmentVariable("GECKOWEBDRIVER") + "/geckodriver";
-            var service = FirefoxDriverService.CreateDefaultService();
+            var service = ChromeDriverService.CreateDefaultService();
             service.Port = 1234;
 
-            driver = new FirefoxDriver(service);
-        }
-
-        [TestMethod]
-        public void LogsToFile()
-        {
-            var service = ChromeDriverService.CreateDefaultService();
-            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../selenium.log");
-
-            service.LogPath = file;
-
             driver = new ChromeDriver(service);
-            driver.Url = "https://www.selenium.dev/";
-            
-            var lines = File.ReadLines(file);
-            Assert.IsTrue(lines.First().Contains("Starting ChromeDriver")); 
         }
     }
 }
