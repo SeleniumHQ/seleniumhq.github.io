@@ -454,7 +454,7 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-driver.get("https://selenium.dev")
+    driver.get("https://selenium.dev")
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}

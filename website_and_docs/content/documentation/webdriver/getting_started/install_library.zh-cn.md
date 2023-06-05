@@ -155,4 +155,4 @@ npm install selenium-webdriver
 {{< /tabpane >}}
 
 ## 下一步
-[安装浏览器驱动]({{< ref "install_drivers.md" >}})
+[创建你的第一个Selenium脚本]({{< ref "first_script.md" >}})

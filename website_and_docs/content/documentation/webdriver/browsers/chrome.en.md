@@ -28,7 +28,7 @@ Starting a Chrome session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L6-L7" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L9-L10" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L9-L10" >}}
@@ -59,7 +59,7 @@ Add an argument to options:
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L21-L22" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L16-L18" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L19" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
@@ -165,13 +165,45 @@ Set excluded arguments on options:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Casting
+## Service
+
+Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+
+### Log level
+There are 6 available log levels: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, and `OFF`.
+Note that `--verbose` is equivalent to `--log-level=ALL` and `--silent` is equivalent to `--log-level=OFF`,
+so this examples is just for setting the log level generically:
+
+```ruby
+      service.args = '--log-level=INFO'
+```
+
+
+### Log features
+There are 2 features that are only available when logging to a file:
+* append log
+* readable timestamps
+
+### Disabling build check
+
+By default. Chrome only allows
+
+```shell
+
+```
+
+
+
+## Special Features
+Some browsers have implemented additional features that are unique to them.
+
+### Casting
 
 You can drive Chrome Cast devices, including sharing tabs
 
 {{< alert-code />}}
 
-## Network conditions
+### Network conditions
 
 You can simulate various network conditions.
 
@@ -181,14 +213,14 @@ please refer to the
 
 {{< alert-code />}}
 
-## Logs
+### Logs
 
 {{< alert-code />}}
 
-## Permissions
+### Permissions
 
 {{< alert-code />}}
 
-## DevTools
+### DevTools
 
 See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using Chrome DevTools

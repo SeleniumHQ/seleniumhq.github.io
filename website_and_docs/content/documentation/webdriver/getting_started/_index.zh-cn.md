@@ -28,23 +28,15 @@ Selenium 框架通过一个面向用户的界面将所有这些部分连接在�
 该界面允许透明地使用不同的浏览器后端，
 从而实现跨浏览器和跨平台自动化。
 
-Selenium 设置与其他商业工具的设置完全不同。
-要在自动化项目中使用 Selenium，您需要为您选择的语言安装语言绑定库。
-此外，对于要自动运行并运行测试的浏览器，您将需要 WebDriver 二进制文件。
+Selenium setup is quite different from the setup of other commercial tools.
+Before you can start writing Selenium code, you have to 
+install the language bindings libraries for your language of choice, the browser you
+want to use, and the driver for that browser.
 
+***Follow the links below to get up and going with Selenium WebDriver.***
 
-安装Selenium可分为三个步骤:
-
-1. [安装Selenium类库]({{< ref "install_library.md" >}}) 为你最喜爱的编程语言
-2. [配置浏览器驱动]({{< ref "install_drivers.md" >}}) 用以驱动你的浏览器 (例如GeckoDriver用于Firefox)
-3. (可选) 设置和配置 [Selenium Grid]({{< ref "/grid" >}}) 如果你想要扩展你的测试
-
-如果您希望从低代码/录制和播放工具开始, 请检查
+If you wish to start with a low-code/record and playback tool, please check
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-完成安装后，可以在你的文档
-[starting page](/zh-cn/documentation) 中运行. 
-然后前往
-[WebDriver]({{< ref "/webdriver.md" >}}) 部分
-了解更多关于
-使用Selenium实现浏览器自动化的信息.
+Once you get things working, if you want to scale up your tests, check out the 
+[Selenium Grid]({{< ref "/documentation/grid" >}}).
