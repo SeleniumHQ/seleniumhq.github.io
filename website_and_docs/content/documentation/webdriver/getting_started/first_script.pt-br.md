@@ -7,8 +7,11 @@ description: >
     Instruções passo a passo para programar um script Selenium
 ---
 
-Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}) e os
-[Drivers instalados]({{< ref "install_drivers.md" >}}), você estará pronto para programar códigos Selenium.
+Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}), 
+você estará pronto para programar códigos Selenium.
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## Oito Componentes Básicos
 Tudo que o Selenium faz é enviar comandos ao navegador de internet para fazer algo ou solicitar informações dele.
