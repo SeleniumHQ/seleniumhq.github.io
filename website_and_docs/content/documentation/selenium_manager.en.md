@@ -83,4 +83,4 @@ Selenium Manager is written in Rust. Find the source code for it in the [Seleniu
 
 Selenium Manager is compiled using GitHub Actions workflows. The workflows create binaries for Windows, Linux, and MacOS. These binaries work in both x86 and ARM architectures, so these 3 binaries should be enough for almost all use cases. You can find the build job definitions [here](https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml).
 
-The build artifacts are manually checked into the selenium repo and stored under the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager). The [bazel build tasks](https://github.com/SeleniumHQ/selenium/blob/trunk/README.md#bazel) then copy these pre-built binaries for testing and packaging the binary within Selenium releases.
+The build artifacts are manually checked into the selenium repo and stored under the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager). The [bazel build tasks](https://github.com/SeleniumHQ/selenium/blob/trunk/README.md#bazel) then copy these pre-built binaries for packaging the binary within Selenium releases.
