@@ -16,7 +16,7 @@ Links to everything can be found on our [downloads page][downloads].
 ### Highlights
 
   * Chrome DevTools support is now: v112, v113, and v114 (Firefox still uses v85 for all versions)
-  * Selenium Manager supports proxy usage by uses the proxy information set in the browser options.
+  * Selenium Manager supports proxy usage by using the proxy information set in the browser options.
   * Adding support for [`webview2`](https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/webdriver) in Edge for Java, JavaScript, and Ruby
   * Error messages across bindings now include links to the Selenium documentation.  
   * Overhaul of the service classes and logging output options.
