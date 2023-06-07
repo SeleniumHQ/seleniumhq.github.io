@@ -20,7 +20,7 @@ Links to everything can be found on our [downloads page][downloads].
   * Adding support for [`webview2`](https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/webdriver) in Edge for Java, JavaScript, and Ruby
   * Error messages across bindings now include links to the Selenium documentation.  
   * Overhaul of the service classes and logging output options.
-  * Logger in Ruby was updated default behavior to match other languages; added features to improve filtering types of logging
+  * Logger in Ruby updated default behavior to match other languages and added features to improve filtering types of logging.
   * Python - removal of seveal sections of deprecated code.
     * Most of them were arguments that can be set in the `Options` classes (browser values) or `Service` classes (browser driver values).
     * They have been deprecated since the [first Selenium 4 release](https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#python-1)
