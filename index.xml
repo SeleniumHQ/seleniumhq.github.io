@@ -1,4 +1,785 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: InvalidSelectorException has changed</title><link>/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>/blog/2023/invalid-selector-exception-has-changed/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.10.0 for Java,
+.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v112, v113, and v114 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Selenium Manager supports proxy usage by using the proxy information set in the browser options.&lt;/li>
+&lt;li>Adding support for &lt;a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/webdriver">&lt;code>webview2&lt;/code>&lt;/a> in Edge for Java, JavaScript, and Ruby&lt;/li>
+&lt;li>Error messages across bindings now include links to the Selenium documentation.&lt;/li>
+&lt;li>Overhaul of the service classes and logging output options.&lt;/li>
+&lt;li>Logger in Ruby updated default behavior to match other languages and added features to improve filtering types of logging.&lt;/li>
+&lt;li>Python - removal of seveal sections of deprecated code.
+&lt;ul>
+&lt;li>Most of them were arguments that can be set in the &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/options/">&lt;code>Options&lt;/code> classes&lt;/a> (browser values) or &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/service/">&lt;code>Service&lt;/code> classes&lt;/a> (browser driver values).&lt;/li>
+&lt;li>They have been deprecated since the &lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#python-1">first Selenium 4 release&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;h4 id="seleniumhttpsgithubcomseleniumhqselenium">&lt;a href="https://github.com/SeleniumHQ/selenium">Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/278940?v=4" class="card-img-top mx-auto" alt="Boris Petrov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boris Petrov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/boris-petrov">@boris-petrov&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/37146904?v=4" class="card-img-top mx-auto" alt="Maid" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Maid
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ParadiseWitch">@ParadiseWitch&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/13018267?v=4" class="card-img-top mx-auto" alt="Rishav Trivedi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Rishav Trivedi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/rishav887">@rishav887&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/23129441?v=4" class="card-img-top mx-auto" alt="Alex" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/iampopovich">@iampopovich&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6788579?v=4" class="card-img-top mx-auto" alt="Michael Mintz" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Michael Mintz
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mdmintz">@mdmintz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/111522705?v=4" class="card-img-top mx-auto" alt="Vladislav Velichko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Vladislav Velichko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vlad8x8">@vlad8x8&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1313584?v=4" class="card-img-top mx-auto" alt="Moritz Kiefer" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Moritz Kiefer
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/cocreature">@cocreature&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5081226?v=4" class="card-img-top mx-auto" alt="Valery Yatsynovich" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Valery Yatsynovich
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/valfirst">@valfirst&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/18628677?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bhecquet">@bhecquet&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61578484?v=4" class="card-img-top mx-auto" alt="Oboleninov Anton" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Oboleninov Anton
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/M1troll">@M1troll&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6551471?v=4" class="card-img-top mx-auto" alt="Scott Stevens" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Scott Stevens
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ShadowLNC">@ShadowLNC&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/26169602?v=4" class="card-img-top mx-auto" alt="Sandeep Suryaprasad" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sandeep Suryaprasad
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sandeepsuryaprasad">@sandeepsuryaprasad&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1508117?v=4" class="card-img-top mx-auto" alt="Alpatron" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alpatron
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/alpatron">@alpatron&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/118820152?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ce86f3bb9faf71e">@ce86f3bb9faf71e&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/42799254?v=4" class="card-img-top mx-auto" alt="Tarek Oraby" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tarek Oraby
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/tarekoraby">@tarekoraby&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/7482112?v=4" class="card-img-top mx-auto" alt="robin gupta" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+robin gupta
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/smilinrobin">@smilinrobin&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61235494?v=4" class="card-img-top mx-auto" alt="Pallavi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Pallavi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pallavigitwork">@pallavigitwork&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28589393?v=4" class="card-img-top mx-auto" alt="Kat Rollo" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kat Rollo
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/kathyrollo">@kathyrollo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/43414979?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/gulifeng8">@gulifeng8&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/35474886?v=4" class="card-img-top mx-auto" alt="Brandon Squizzato" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Brandon Squizzato
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bsquizz">@bsquizz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/191885?v=4" class="card-img-top mx-auto" alt="Luis Correia" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luis Correia
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luisfcorreia">@luisfcorreia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/11957158?v=4" class="card-img-top mx-auto" alt="Stephan Erlank" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Stephan Erlank
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/serlank">@serlank&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/11902836?v=4" class="card-img-top mx-auto" alt="Jordan Zimmitti" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Jordan Zimmitti
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/JordanZimmitti">@JordanZimmitti&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/7103208?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/uluzox">@uluzox&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/25645228?v=4" class="card-img-top mx-auto" alt="Brian Schreder" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Brian Schreder
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bschreder">@bschreder&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-docs--websitehttpsgithubcomseleniumhqseleniumhqgithubio">&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">Selenium Docs &amp;amp; Website&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/42799254?v=4" class="card-img-top mx-auto" alt="Tarek Oraby" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tarek Oraby
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/tarekoraby">@tarekoraby&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/7482112?v=4" class="card-img-top mx-auto" alt="robin gupta" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+robin gupta
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/smilinrobin">@smilinrobin&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61235494?v=4" class="card-img-top mx-auto" alt="Pallavi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Pallavi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pallavigitwork">@pallavigitwork&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28589393?v=4" class="card-img-top mx-auto" alt="Kat Rollo" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Kat Rollo
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/kathyrollo">@kathyrollo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/43414979?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/gulifeng8">@gulifeng8&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/35474886?v=4" class="card-img-top mx-auto" alt="Brandon Squizzato" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Brandon Squizzato
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bsquizz">@bsquizz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="docker-seleniumhttpsgithubcomseleniumhqdocker-selenium">&lt;a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/191885?v=4" class="card-img-top mx-auto" alt="Luis Correia" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luis Correia
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luisfcorreia">@luisfcorreia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/11957158?v=4" class="card-img-top mx-auto" alt="Stephan Erlank" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Stephan Erlank
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/serlank">@serlank&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/11902836?v=4" class="card-img-top mx-auto" alt="Jordan Zimmitti" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Jordan Zimmitti
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/JordanZimmitti">@JordanZimmitti&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/7103208?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/uluzox">@uluzox&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/25645228?v=4" class="card-img-top mx-auto" alt="Brian Schreder" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Brian Schreder
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bschreder">@bschreder&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/909773?v=4" class="card-img-top mx-auto" alt="Krishnan Mahadevan" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Krishnan Mahadevan
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/krmahadevan">@krmahadevan&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1315816?v=4" class="card-img-top mx-auto" alt="James Mortensen" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+James Mortensen
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: InvalidSelectorException has changed</title><link>/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>/blog/2023/invalid-selector-exception-has-changed/</guid><description>
 &lt;p>Before Selenium 4.8.2 in Java and C#, when an invalid locator was used to identify an element, the resulting behavior would be
 inconsistent in our bindings.&lt;/p>
 &lt;p>For example, let&amp;rsquo;s check the following code:&lt;/p>
@@ -7014,182 +7795,4 @@ for you, we also expose the raw CDP APIs too, giving you flexibility to choose w
 a better fit for testers.&lt;/p>
 &lt;p>I am leaving out of this post all the details related to another important trick in Selenium 4, the new
 Selenium Grid, which I will cover in the next post. Stay tuned!&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/new-tricks-in-selenium-4">https://saucelabs.com/blog/new-tricks-in-selenium-4&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Blog: Public Project Meeting - December 03, 2020</title><link>/blog/2020/public-project-meeting-20201203/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>/blog/2020/public-project-meeting-20201203/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on December 03, 2020,5:30 PM CET.&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 5:32 PM&lt;/em>&lt;/p>
-&lt;p>So, things from the previous meeting&lt;/p>
-&lt;p>General project statistics&lt;/p>
-&lt;ul>
-&lt;li>Previous meeting: 280 open issues, 62 open PRs&lt;/li>
-&lt;li>Current: 278, 60 PRs&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Diego Molina 5:35 PM&lt;/em>&lt;/p>
-&lt;p>here are the topics that we initially cover today:&lt;/p>
-&lt;p>Overall announcements? New people on committees, with the commit bit, etc?&lt;/p>
-&lt;p>Anything new to report from the last PLC/SFC call?&lt;/p>
-&lt;p>Pending work that needs to be done for the first Beta?&lt;/p>
-&lt;p>are we all around to start?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:38 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner @jimevans @p0deje @barancev @AutomatedTester @harsha509&lt;/p>
-&lt;p>&lt;em>David Burns 5:39 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m here&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:41 PM&lt;/em>&lt;/p>
-&lt;p>The first topic is:
-Overall announcements? New people on committees, with the commit bit, etc?
-I believe there is not much about this, right?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:41 PM&lt;/em>&lt;/p>
-&lt;p>Nothing from me&lt;/p>
-&lt;p>&lt;em>David Burns 5:42 PM&lt;/em>&lt;/p>
-&lt;p>nope&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:43 PM&lt;/em>&lt;/p>
-&lt;p>Maybe, just for awareness of the meeting minutes, for the ones who read them
-we are doing a survey that will help with the future of Selenium
-&lt;a href="https://twitter.com/SeleniumHQ/status/1333830343368077319">https://twitter.com/SeleniumHQ/status/1333830343368077319&lt;/a>&lt;/p>
-&lt;p>&lt;em>David Burns 5:44 PM&lt;/em>&lt;/p>
-&lt;p>We&amp;rsquo;ve had nearly 400 respondents&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:44 PM&lt;/em>&lt;/p>
-&lt;p>and Boni García replied to it with &lt;a href="https://www.mdpi.com/2079-9292/9/7/1067">https://www.mdpi.com/2079-9292/9/7/1067&lt;/a>
-I have not read it yet&lt;/p>
-&lt;p>&lt;em>David Burns 5:44 PM&lt;/em>&lt;/p>
-&lt;p>if you haven&amp;rsquo;t retweeted the survey, could you do that please?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:44 PM&lt;/em>&lt;/p>
-&lt;p>I hadn’t seen the reply&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:46 PM&lt;/em>&lt;/p>
-&lt;p>Boni is the creator of WebDriverManager and a JUnit 5 extension for Selenium
-I think he is a professor at a university in Madrid&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:47 PM&lt;/em>&lt;/p>
-&lt;p>I’m glad WebDriverManager exists&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:47 PM&lt;/em>&lt;/p>
-&lt;p>Alright, maybe we should have a read at that document and report our findings :slightly_smiling_face:&lt;/p>
-&lt;p>So, probably we can move to the next topic:
-Anything new to report from the last PLC/SFC call?&lt;/p>
-&lt;p>I think there was one call a couple of days ago&lt;/p>
-&lt;p>&lt;em>David Burns 5:50 PM&lt;/em>&lt;/p>
-&lt;p>Main question: did someone follow up on my CoC request?&lt;/p>
-&lt;p>I did email again&lt;/p>
-&lt;p>and mentioned it to @mmerrell&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:51 PM&lt;/em>&lt;/p>
-&lt;p>Monday is my next Selenium day. If no-one has responded by then, I’ll chase&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:52 PM&lt;/em>&lt;/p>
-&lt;p>ok, probably we can move to the next topic and circle back to this one if someone has more information&lt;/p>
-&lt;p>Pending work that needs to be done for the first Beta?&lt;/p>
-&lt;p>This is what we wrote/discussed in the previous meeting:&lt;/p>
-&lt;p>Client facing changes:&lt;/p>
-&lt;ul>
-&lt;li>Make relative locators return elements sorted by proximity&lt;/li>
-&lt;li>Fix Java Module System problems&lt;/li>
-&lt;li>Allow locator strategies to be pluggable&lt;/li>
-&lt;li>Enable fallbacks for commands&lt;/li>
-&lt;/ul>
-&lt;p>Server changes:&lt;/p>
-&lt;ul>
-&lt;li>Enable retries of commands where necessary using failsafe&lt;/li>
-&lt;li>Get the Grid UI looking nice, and returning useful data&lt;/li>
-&lt;li>Allow locator strategies to be pluggable&lt;/li>
-&lt;li>Pipe VNC connectors through the websocket plumbing for live video&lt;/li>
-&lt;/ul>
-&lt;p>I have on me the task to map this list into GitHub issues in case they do not exist (I have not done it yet)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:54 PM&lt;/em>&lt;/p>
-&lt;p>I’ve made relative locators return elements sorted by proximity&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:54 PM&lt;/em>&lt;/p>
-&lt;p>is there something else to add? do we have an status update on any item?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:55 PM&lt;/em>&lt;/p>
-&lt;p>My plan on Monday is to look at pluggable locator strategies&lt;/p>
-&lt;p>Which will require fallbacks for commands&lt;/p>
-&lt;p>&lt;em>David Burns 5:55 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ve been working with the Mozilla folk to add bidi support for Firefox, there are bugs on their side that they are working on&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 5:55 PM&lt;/em>&lt;/p>
-&lt;p>I’m sorry, @AutomatedTester , I never received an email about it. I don’t know if there’s a list I’m not on, or if my address is wrong, or if it went to spam, but I don’t have it&lt;/p>
-&lt;p>I’ll be glad to follow up if I can get the info&lt;/p>
-&lt;p>&lt;em>David Burns 5:56 PM&lt;/em>&lt;/p>
-&lt;p>@mmerrell I emailed selenium@sfc&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 5:56 PM&lt;/em>&lt;/p>
-&lt;p>Right&amp;hellip; guess I need to verify that I’m on that&lt;/p>
-&lt;p>&lt;em>Simon Stewart 5:58 PM&lt;/em>&lt;/p>
-&lt;p>You should be.&lt;/p>
-&lt;p>&lt;em>Diego Molina 5:59 PM&lt;/em>&lt;/p>
-&lt;p>Which will require fallbacks for commands
-I am sorry I never found the time to check your branch and work on it&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 5:59 PM&lt;/em>&lt;/p>
-&lt;p>I haven’t seen any of the sponsor emails either&amp;hellip; starting to think there’s a problem&lt;/p>
-&lt;p>&lt;em>Diego Molina 6:02 PM&lt;/em>&lt;/p>
-&lt;p>ok, so I believe we don’t have any more comments for this?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 6:02 PM&lt;/em>&lt;/p>
-&lt;p>Not from me&lt;/p>
-&lt;p>(Looks like a short meeting today, he says. Jinxing it)&lt;/p>
-&lt;p>&lt;em>Alexei Barantsev 6:04 PM&lt;/em>&lt;/p>
-&lt;p>as for the beta1, I&amp;rsquo;m going to add commands getAriaRole and getAccessibilityName and I call java api complete&lt;/p>
-&lt;p>&lt;em>Diego Molina 6:05 PM&lt;/em>&lt;/p>
-&lt;p>perhaps the last thing to mention is that I have pending to fill out the table about who has access to the distribution engines (npmi, sonartype, etc…)
-so the idea is that I will make sure we all have access to all of them&lt;/p>
-&lt;p>&lt;em>Simon Stewart 6:05 PM&lt;/em>&lt;/p>
-&lt;p>Speaking of which, we really do need to push a JS release&lt;/p>
-&lt;p>Anyone want to volunteer for that?&lt;/p>
-&lt;p>&lt;em>David Burns 6:05 PM&lt;/em>&lt;/p>
-&lt;p>If it&amp;rsquo;s not done this evening I will do it&lt;/p>
-&lt;p>about to take youngest to ballet so will be out for a few hours&lt;/p>
-&lt;p>&lt;em>Alexei Barantsev 6:06 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ve enabled GitHub integration in sonarcube, so it should sync org members and provide access&lt;/p>
-&lt;p>&lt;em>Simon Stewart 6:07 PM&lt;/em>&lt;/p>
-&lt;p>That’s nice&lt;/p>
-&lt;p>Thank you&lt;/p>
-&lt;p>&lt;em>Diego Molina 6:09 PM&lt;/em>&lt;/p>
-&lt;p>well, so I think that’s it for this meeting, right?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 6:10 PM&lt;/em>&lt;/p>
-&lt;p>I think so&lt;/p>
-&lt;p>&lt;em>Diego Molina 6:11 PM&lt;/em>&lt;/p>
-&lt;p>ok, then, thank you all!&lt;/p>
-&lt;p>&lt;em>Titus Fortner 6:49 PM&lt;/em>&lt;/p>
-&lt;p>Sorry to miss; I was giving training. Also, I miss getting to travel for these; Zoom is just not the same&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Titus Fortner 7:02 PM&lt;/em>&lt;/p>
-&lt;p>I haven&amp;rsquo;t looked, has the print pdf endpoint been added to all the bindings?
-I haven&amp;rsquo;t looked in past 2 weeks, but Ruby &amp;amp; .NET needs to implement FF Full Page screenshot,
-Java (.NET?) need to be able to tell Firefox to take a full Page Screenshot when using RemoteWebDriver
-Java &amp;amp; Ruby need to re-fix the STP browser name&lt;/p>
-&lt;p>Ruby stuff was on my to-do list, until my paid work job gave me a daunting task with a short timeline&lt;/p>
-&lt;p>&lt;em>Jim Evans 7:04 PM&lt;/em>&lt;/p>
-&lt;p>.NET hasn’t added print-to-pdf yet.&lt;/p>
-&lt;p>nor full-page screenshot.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 7:06 PM&lt;/em>&lt;/p>
-&lt;p>on that note @barancev I couldn&amp;rsquo;t duplicate the Ruby Remote Firefox bug on Mac, and VirtualBox appears to be a disaster running on Mac because I can&amp;rsquo;t even get it to play nicely with a Linux install to test it there. NET read timeout is often a random network problem, but it looks like we&amp;rsquo;ve been seeing the error consistently, so I&amp;rsquo;m concerned about it being a real problem. @p0deje do you have a linux machine available to see if we can replicate locally?&lt;/p>
-&lt;p>&lt;em>Alex Rodionov 9:35 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner Not really and frankly I don’t have spare time to set it up to investigate&lt;/p>
-&lt;p>Speaking of which, I’ll be leaving for a 1 month road trip next week and I won’t be able to do any Selenium work during that time. Likely till early February in fact. If there is anything I can do before that, please let me know.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:39 PM&lt;/em>&lt;/p>
-&lt;p>@p0deje when do you leave?&lt;/p>
-&lt;p>&lt;em>Alex Rodionov 9:40 PM&lt;/em>&lt;/p>
-&lt;p>Next Wednesday&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:45 PM&lt;/em>&lt;/p>
-&lt;p>oof, well I&amp;rsquo;ve been assigned to create and give 20+ hours of classroom training on Selenium for a client between now and EOY, and I have maybe half of that right now :)
-I should be more available in January to help, but I&amp;rsquo;ve spent more time with the Selenium java code than Ruby code recently, so I&amp;rsquo;m not sure how we have the DevTools stuff implemented.
-@twalpole what&amp;rsquo;s your availability this month? :-D&lt;/p>
-&lt;p>&lt;em>David Burns 9:49 PM&lt;/em>
-do we have people to do releases for ruby with @p0deje away?&lt;/p>
-&lt;p>&lt;em>Alex Rodionov 9:50 PM&lt;/em>&lt;/p>
-&lt;p>According to &lt;a href="https://github.com/SeleniumHQ/selenium/issues/8168">https://github.com/SeleniumHQ/selenium/issues/8168&lt;/a>, a currently missing CDP stuff in Ruby is:
-Intercept network requests allowing to mock backend requests
-Bootstrap script
-Record traffic
-The first two I believe are implemented in Java so it should not be hard to redo it in Ruby. I might give it a shot this weekend.
-The latter I think is missing in all bindings.
-@titusfortner we can hop on pairing session and I’ll guide you through the code. Otherwise, it all lives in devtools directory&lt;/p>
-&lt;p>@AutomatedTester Yes, Titus can do releases&lt;/p>
-&lt;p>&lt;em>David Burns 9:52 PM&lt;/em>&lt;/p>
-&lt;p>don&amp;rsquo;t forget that @rajendra can help, BS is a ruby shop so we can help&lt;/p>
-&lt;p>he&amp;rsquo;s been looking through the code for the devtools stuff and is working the print stuff&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:02 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ll have bandwidth to do a release, but not to dig through the implementations until January :)&lt;/p></description></item></channel></rss>
+&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/new-tricks-in-selenium-4">https://saucelabs.com/blog/new-tricks-in-selenium-4&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
