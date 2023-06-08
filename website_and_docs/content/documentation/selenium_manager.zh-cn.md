@@ -77,4 +77,10 @@ located by default at `~/.cache/selenium/selenium-manager-config.toml`.
 
 ## Development
 
-Selenium Manager is written in Rust and compiled into binaries using GitHub Actions.
+Selenium Manager is written in Rust. Find the source code for it in the [Selenium GitHub repository](https://github.com/SeleniumHQ/selenium/tree/trunk/rust).
+
+## Build and Release
+
+Selenium Manager is compiled using GitHub Actions workflows. The workflows create binaries for Windows, Linux, and MacOS. These binaries work in both x86 and ARM architectures, so these 3 binaries should be enough for almost all use cases. You can find the build job definitions [here](https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml).
+
+The build artifacts are manually checked into the selenium repo and stored under the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager). The [bazel build tasks](https://github.com/SeleniumHQ/selenium/blob/trunk/README.md#bazel) then copy these pre-built binaries for packaging the binary within Selenium releases.
