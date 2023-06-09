@@ -33,19 +33,19 @@
                   {{ $counter := $.Scratch.Get "counter" }}
                   <p>
                     <button class="btn btn-link no-focus" type="button" data-bs-toggle="collapse" data-bs-target="#release-{{ $counter }}" aria-expanded="false" aria-controls="release-{{ $counter }}">
-                      <i class="fas fa-plus-circle show-collapsed selenium-ide pr-2"></i>
-                      <i class="fas fa-minus-circle show-expanded selenium-ide pr-2"></i>
+                      <i class="fas fa-plus-circle show-collapsed selenium-ide pe-2"></i>
+                      <i class="fas fa-minus-circle show-expanded selenium-ide pe-2"></i>
                       <span class="-text-900 fw-bold">{{ .name }}</span>
                     </button>
                   </p>
                   <div class="collapse pb-3" id="release-{{ $counter }}">
                     <div class="card card-body">
-                      <h6 class="card-title pl-2 pb-3">
+                      <h6 class="card-title ps-2 pb-3">
                         <span class="selenium-ide fw-bold">Release date:</span>
-                        <span class="pl-2">
+                        <span class="ps-2">
                           <a href="{{ .html_url }}" target="_blank">
                             {{ time.Format "January 2, 2006" .created_at }}
-                            <i class="fas fa-external-link-alt pl-2"></i>
+                            <i class="fas fa-external-link-alt ps-2"></i>
                           </a>
                         </span>
                       </h6>
@@ -82,7 +82,7 @@
               <div class="modal-footer selenium-button-container">
                 <a href="#previous-releases" class="selenium-button selenium text-uppercase fw-bold" data-bs-dismiss="modal">
                   Close
-                  <i class="pl-3 fas fa-caret-right"></i>
+                  <i class="ps-3 fas fa-caret-right"></i>
                 </a>
               </div>
             </div>
