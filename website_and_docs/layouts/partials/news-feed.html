@@ -7,7 +7,7 @@
   <div class="col-sm-4 pl-5 pr-5">
     <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
       <div class="card-body px-0">
-        <h4 class="card-title font-weight-bold">{{ .Title }}</h4>
+        <h4 class="card-title fw-bold">{{ .Title }}</h4>
         <p class="card-text mb-1">{{ .Date.Format "Monday, January 02, 2006" }}</p>
         {{ with .Params.author }}
         <p class="card-text">{{ T "post_byline_by" }} {{ . | markdownify }}</p>
@@ -27,7 +27,7 @@
 {{ end }}
 <div class="row td-box--100">
   <div class="selenium-button-container justify-content-end pr-5">
-    <a href="{{"blog" | relURL}}" class="selenium-button selenium text-uppercase font-weight-bold">
+    <a href="{{"blog" | relURL}}" class="selenium-button selenium text-uppercase fw-bold">
       More news <i class="pl-3 fas fa-caret-right"></i>
     </a>
   </div>

@@ -25,7 +25,7 @@
     <div class="card-footer bg-white p-0 border-0 bg-transparent">
       {{ with .Get "url" }}
       <div class="selenium-button-container">
-        <a href="{{ . }}" class="selenium-button {{ $col_id }} text-uppercase font-weight-bold">
+        <a href="{{ . }}" class="selenium-button {{ $col_id }} text-uppercase fw-bold">
           {{ with $url_text }}{{ $url_text }}{{ else }}{{ T "ui_read_more" }}{{ end }}
           <i class="pl-3 fas fa-caret-right"></i>
         </a>
