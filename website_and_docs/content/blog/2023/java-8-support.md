@@ -17,11 +17,12 @@ both the Java bindings and the Selenium Grid.
 
 Selenium has long supported Java 8, but as technology evolves, so must we. One of 
 the primary reasons for this change is that Java 8 reached the end of active support 
-[over a year ago](https://endoflife.date/java). In addition, a 
-[bug](https://github.com/SeleniumHQ/selenium/issues/9528) while using a third party Java 8 
-HTTP client motivated us to [implement a Java 11 HTTP client](blog/2022/using-java11-httpclient/).
-Finally, although Selenium has very few dependencies we cannot rely on these supporting 
-Java 8 forever.
+[over a year ago](https://endoflife.date/java). In addition, our default HTTP 
+Client has not had a major release in several years, and a
+[bug](https://github.com/SeleniumHQ/selenium/issues/9528) has been found that we can not fix.
+We have decided to move to [move to the native Java HTTP Client](blog/2022/using-java11-httpclient/),
+but it requires using Java 11 or greater. The sooner we make this change, the sooner 
+we can avoid dealing with this issue.
 
 Our new minimum version will be Java 11. September 30, 2023 is also the end of 
 active support for Java 11. However, we want to take a cautious and conservative path 
