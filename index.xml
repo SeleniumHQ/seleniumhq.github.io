@@ -8,7 +8,7 @@ the primary reasons for this change is that Java 8 reached the end of active sup
 &lt;a href="https://endoflife.date/java">over a year ago&lt;/a>. In addition, our default HTTP
 Client has not had a major release in several years, and a
 &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">bug&lt;/a> has been found that we can not fix.
-We have decided to &lt;a href="blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
+We have decided to &lt;a href="/blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
 but it requires using Java 11 or greater. The sooner we make this change, the sooner
 we can avoid dealing with this issue.&lt;/p>
 &lt;p>Our new minimum version will be Java 11. September 30, 2023 is also the end of
