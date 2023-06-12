@@ -20,7 +20,7 @@ the primary reasons for this change is that Java 8 reached the end of active sup
 [over a year ago](https://endoflife.date/java). In addition, a 
 [bug](https://github.com/SeleniumHQ/selenium/issues/9528) while using a third party Java 8 
 HTTP client motivated us to [implement a Java 11 HTTP client](blog/2022/using-java11-httpclient/).
-Finally, although Selenium have very few dependencies we cannot rely on these supporting 
+Finally, although Selenium has very few dependencies we cannot rely on these supporting 
 Java 8 forever.
 
 Our new minimum version will be Java 11. September 30, 2023 is also the end of 
