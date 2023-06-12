@@ -1,4 +1,29 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+&lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
+it’s necessary to move on from our old favorites. That’s why we’re announcing that
+&lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
+both the Java bindings and the Selenium Grid.&lt;/p>
+&lt;p>Selenium has long supported Java 8, but as technology evolves, so must we. One of
+the primary reasons for this change is that Java 8 reached the end of active support
+&lt;a href="https://endoflife.date/java">over a year ago&lt;/a>. In addition, our default HTTP
+Client has not had a major release in several years, and a
+&lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">bug&lt;/a> has been found that we can not fix.
+We have decided to move to &lt;a href="blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
+but it requires using Java 11 or greater. The sooner we make this change, the sooner
+we can avoid dealing with this issue.&lt;/p>
+&lt;p>Our new minimum version will be Java 11. September 30, 2023 is also the end of
+active support for Java 11. However, we want to take a cautious and conservative path
+forward, and not force our users to make the big jump from Java 8 to Java 17, as we
+understand the community might need longer to move to that version. We will revisit
+this topic in the future to announce the plan to support Java 17 as a minimum version.&lt;/p>
+&lt;p>We understand that this change may require some of our users to make adjustments, but
+we believe that it’s a necessary step for the continued growth of Selenium. Please
+take some time to check your infrastructure and ensure you’re running on Java 11 or
+higher. We understand that some may be hesitant or may find it difficult to make
+the switch, but we believe it will pay off in the long run.&lt;/p>
+&lt;p>Please let us know your questions, concerns, and feedback through our
+&lt;a href="https://www.selenium.dev/support/#ChatRoom">community chat&lt;/a>.&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.10.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -4560,7 +4585,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>&lt;img src="https://mail.google.com/mail/u/0/images/cleardot.gif" alt="">So we cut in the talks with a score between 2 and 3. This put us up to 23 talks, so we had to begin some horse-trading. We started to have some difficult conversations when I realized that I had somehow not scored one talk at the bottom of one tab. I applied the formula to that cell, and it had one of the best scores of all–so we had 24! Huzzah!&lt;/p>
 &lt;p>Where does this leave us? With &lt;a href="http://www.seleniumconf.org/speakers/">2 days of Track A and one day of Track B&lt;/a>. Given 8 presentations per track per day, that leaves us with an entire day of “open” talks for Track B. Be sure to sign up right when you get there–these slots went really fast last year, and will probably go fast again. We also will have a day of &lt;a href="http://www.seleniumconf.org/workshops/">workshops on four different topics&lt;/a>, with two in the morning and two in the afternoon.&lt;/p>
 &lt;p>We’d like people’s feedback on how the conference “flows” this year. As I said, we wanted someone with just about any background and interest to be able to find a path through this conference, so I’d like to hear whether or not we achieved it.&lt;/p>
-&lt;p>…and I hope to see you all in Boston! (&lt;a href="http://www.seleniumconf.org/tickets/">PS: Tickets are going fast!&lt;/a>).&lt;/p></description></item><item><title>Blog: Selenium Conf 2013: Call for Papers and Early Bird Tickets</title><link>/blog/2013/selenium-conf-2013-call-for-papers-and-early-bird-tickets/</link><pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate><guid>/blog/2013/selenium-conf-2013-call-for-papers-and-early-bird-tickets/</guid><description>
-&lt;p>This year’s &lt;a href="http://www.seleniumconf.org/">Selenium Conference&lt;/a> is slated for June 10 – 12 in beautiful Boston, Massachusetts. The conference will be held at the &lt;a href="http://www.seleniumconf.org/venue/">Renaissance Boston Waterfront Hotel&lt;/a>. Similar to last year, this year’s conference will kick off with a full day of Selenium Workshops, followed by a two day, two track conference. If you’ve always dreamed of speaking at a Selenium Conference there’s still time to submit a talk to us at &lt;a href="http://www.seleniumconf.org/speakers/">http://www.seleniumconf.org/speakers/&lt;/a>.&lt;/p>
-&lt;p>As we have done every year, we’re pleased to announce that a batch of early bird tickets to the Conference is on sale now, even before the talks have been finalized. You can get your ticket(s) by visiting &lt;a href="http://seconf2013.eventbrite.com/">http://seconf2013.eventbrite.com/&lt;/a>. There are only 45 early bird tickets available at the special rate of $299, and they are only available until February 4th, so act now! After that the regular price of $350 will be in effect for all tickets. You’ll also notice that tickets to our workshop day are for sale as well. These cost $75 and entitle you to attend a full day of Selenium workshops on Monday June 10th.&lt;/p>
-&lt;p>More information on the conference is available at &lt;a href="http://www.seleniumconf.org/">http://www.seleniumconf.org/&lt;/a>, and we are still accepting speaker proposals. We’re looking forward to seeing you in June!&lt;/p></description></item></channel></rss>
+&lt;p>…and I hope to see you all in Boston! (&lt;a href="http://www.seleniumconf.org/tickets/">PS: Tickets are going fast!&lt;/a>).&lt;/p></description></item></channel></rss>

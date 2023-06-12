@@ -1,4 +1,29 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+&lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
+it’s necessary to move on from our old favorites. That’s why we’re announcing that
+&lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
+both the Java bindings and the Selenium Grid.&lt;/p>
+&lt;p>Selenium has long supported Java 8, but as technology evolves, so must we. One of
+the primary reasons for this change is that Java 8 reached the end of active support
+&lt;a href="https://endoflife.date/java">over a year ago&lt;/a>. In addition, our default HTTP
+Client has not had a major release in several years, and a
+&lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">bug&lt;/a> has been found that we can not fix.
+We have decided to move to &lt;a href="blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
+but it requires using Java 11 or greater. The sooner we make this change, the sooner
+we can avoid dealing with this issue.&lt;/p>
+&lt;p>Our new minimum version will be Java 11. September 30, 2023 is also the end of
+active support for Java 11. However, we want to take a cautious and conservative path
+forward, and not force our users to make the big jump from Java 8 to Java 17, as we
+understand the community might need longer to move to that version. We will revisit
+this topic in the future to announce the plan to support Java 17 as a minimum version.&lt;/p>
+&lt;p>We understand that this change may require some of our users to make adjustments, but
+we believe that it’s a necessary step for the continued growth of Selenium. Please
+take some time to check your infrastructure and ensure you’re running on Java 11 or
+higher. We understand that some may be hesitant or may find it difficult to make
+the switch, but we believe it will pay off in the long run.&lt;/p>
+&lt;p>Please let us know your questions, concerns, and feedback through our
+&lt;a href="https://www.selenium.dev/support/#ChatRoom">community chat&lt;/a>.&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.10.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -7713,86 +7738,4 @@ alt="Breakdown of answers of areas needing improvement. Main 3 areas are flakine
 &lt;/figure>
 &lt;h2 id="happiness">Happiness&lt;/h2>
 &lt;p>Of the 410 respondents, 219 had something nice to say about Selenium and were thankful for the product being around.&lt;/p>
-&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: New Tricks in Selenium 4</title><link>/blog/2020/what-is-coming-in-selenium-4-new-tricks/</link><pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate><guid>/blog/2020/what-is-coming-in-selenium-4-new-tricks/</guid><description>
-&lt;blockquote>
-&lt;p>In the third post in his series, Simon Stewart continues talking about what&amp;rsquo;s coming in
-Selenium 4 and reviews some of the tricks in the new release.&lt;/p>
-&lt;/blockquote>
-&lt;p>In my last posts, we talked about
-&lt;a href="/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute">how to contribute to Selenium&lt;/a>, and
-&lt;a href="/blog/2020/what-is-coming-in-selenium-4-why-the-major-version-bump">why we’re bumping the version number to 4&lt;/a>.
-That’s enough preamble! Today, we’ll cover some details about the new tricks and capabilities
-that Selenium 4 offers.&lt;/p>
-&lt;h2 id="finding-elements-and-relative-locators">Finding Elements, and Relative Locators&lt;/h2>
-&lt;p>You know, finding elements on a page can be really difficult. I&amp;rsquo;ve seen loads of people using
-very complicated XPATH expressions, and trying to figure out complex CSS selectors and things
-like that. There have been whole talks about the subject at SeleniumConf. Surely there must
-be a better way to do this?&lt;/p>
-&lt;p>Think about how we describe where an element is on the page. Think about how you’d do this
-over the phone. You’d never talk about the raw DOM, “Ah, find the fifth DIV element nested
-inside the SPAN with an ‘id’ of ‘foo’”. You’d just never say that! Instead, you’d say
-something like, “just find that thing above that image, and to the right of that link,”
-when talking about where things are located on the page.&lt;/p>
-&lt;p>A long time ago, a project called &lt;a href="https://sahipro.com">Sahi&lt;/a> started to locate elements
-like this. Sahi had &lt;a href="https://sahipro.com/docs/sahi-apis/accessor-api-basics.html#Use%20of%20Positional%20Relation%20APIs">Relation APIs&lt;/a>, which are a lovely way of finding elements,
-and it was very, very fluent and pleasant to use. When I was starting WebDriver years ago,
-I was talking with &lt;a href="https://twitter.com/narayanraman">Narayan&lt;/a> (creator of Sahi) and I
-promised him that I was going to hold off implementing this flagship feature of Sahi. It
-was something that was lovely, but it was also something Sahi was rightly proud of. However,
-there are now other tools, such as Tyco, that are implementing this style of API, so it
-seems like the time is right to do the same in Selenium. In Selenium 4 we call them
-“relative locators.” You may sometimes see us refer to them as “friendly locators,” since the
-initial implementation called them that, but “relative” better describes how they work. We
-have a handful of them: near, above, below, left of, right of. They allow you to talk in human
-language about where an element is on a page.&lt;/p>
-&lt;p>Looking at the future, we are also planning to enable users to add new types of locators,
-not only on the, on the client side, but also to the Selenium Server. For example, although
-JS UI frameworks come and go (anyone else remember using jquery?), it’d be nice to be able
-to add a custom locator for the current tools people like, such as React.&lt;/p>
-&lt;h2 id="authenticating-to-web-sites">Authenticating to Web Sites&lt;/h2>
-&lt;p>One feature that people have been asking for since we started the project has been the ability
-to authenticate to a web site. Previously, you could do this by crafting the URL the browser
-went to properly, but this leaks credentials to any man-in-the-middle and leaves them in server
-logs, so browsers have slowly removed this piece of functionality. That’s unfortunate, since
-it’s something that we know people frequently need to do in their tests. In Selenium 4, we
-now offer a mechanism to register a username and password that can be used to authenticate against these sites.&lt;/p>
-&lt;h2 id="intercepting-network-traffic">Intercepting Network Traffic&lt;/h2>
-&lt;p>A common complaint of Selenium tests is that they’re slow and flaky. While the bindings to the
-browser are excellent, and fully described by the W3C WebDriver spec, it is true that any end-to-end
-test is likely to suffer more flakiness than a simple unit test—there are just more moving parts,
-and more possibilities for things to go wrong.&lt;/p>
-&lt;p>One way to resolve this issue is to stub out the backend of the application, intercepting network
-traffic in the test and returning pre-canned responses. Tools such as &lt;a href="http://www.mbtest.org">mountebank&lt;/a>
-make this easy for API testing. Wouldn’t it be nice if there was a similar tool for Selenium?&lt;/p>
-&lt;p>With Selenium 4, we now provide a mechanism to do this, using the NetworkInterceptor (well, that’s
-what we call it in the Java bindings). Pass it your WebDriver instance, and it’ll be called every time
-the browser is about to make an HTTP request, allowing you to return almost anything you want&lt;/p>
-&lt;h2 id="the-chrome-debugging-protocol">The Chrome Debugging Protocol&lt;/h2>
-&lt;p>As I mentioned previously, one of the nice things about Selenium 4 is our work to ensure a stable
-and modern user-facing API. What does this mean? To start, we need to acknowledge that after a long
-time there’s now competition back in the browser automation space. Notably in the form of Puppeteer
-and Cypress, and taking a step back, what do they offer? They build upon the
-&lt;a href="https://chromedevtools.github.io/devtools-protocol/">Chrome DevTools Protocol (CDP)&lt;/a>&amp;gt;, which is a
-protocol developed to enable a debugger inside Chromium-based browsers.&lt;/p>
-&lt;p>Because of what it was designed to do, it is a chatty protocol, and not a user-facing API that
-allows you to introspect into the browser. Worse, introduce a network hop between the test and the
-browser, this chattiness leads to slower tests as the network latency increases. That is why tools
-such as Puppeteer want you to run on the local machine. That’s great for the speed of an individual
-test, but makes parallelisation harder, as you can&amp;rsquo;t use services such as Sauce Labs easily.&lt;/p>
-&lt;p>To complicate matters, because the CDP is designed as a &lt;em>debugging&lt;/em> protocol, it can change with no
-notice between versions. That’s why Puppeteer and Cypress are tied to specific versions of browsers,
-and that causes a dilemma for you as a test author: how do you test on multiple versions of a browser?
-Updating the test API to get a different browser can lead to you no longer making valid API calls.
-Not doing so ties you to a potentially outdated version of a browser.&lt;/p>
-&lt;p>Despite this, using the CDP opens up a host of possibilities, and that’s why we’ve added support
-for it in Selenium 4. In fact, some of our new features are built on top of it (though we hide the details!)&lt;/p>
-&lt;p>But we’ve also gone further that just adding basic support. Selenium 4 can support multiple versions
-of the CDP at the same time, meaning you can test with both the current and beta versions of Chromium-based
-browsers without needing to rewrite tests. We do this by providing an “idealised CDP”, which is
-stable and covers the features we feel tests need. If that idealised view of the world isn’t enough
-for you, we also expose the raw CDP APIs too, giving you flexibility to choose what’s best for your tests.&lt;/p>
-&lt;p>We’re feeding this experience into the new W3C WebDriver Bidi specification, which is helping make that
-a better fit for testers.&lt;/p>
-&lt;p>I am leaving out of this post all the details related to another important trick in Selenium 4, the new
-Selenium Grid, which I will cover in the next post. Stay tuned!&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/new-tricks-in-selenium-4">https://saucelabs.com/blog/new-tricks-in-selenium-4&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
+&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item></channel></rss>
