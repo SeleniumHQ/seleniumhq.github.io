@@ -20,7 +20,7 @@ the primary reasons for this change is that Java 8 reached the end of active sup
 [over a year ago](https://endoflife.date/java). In addition, our default HTTP 
 Client has not had a major release in several years, and a
 [bug](https://github.com/SeleniumHQ/selenium/issues/9528) has been found that we can not fix.
-We have decided to move to [move to the native Java HTTP Client](blog/2022/using-java11-httpclient/),
+We have decided to [move to the native Java HTTP Client](blog/2022/using-java11-httpclient/),
 but it requires using Java 11 or greater. The sooner we make this change, the sooner 
 we can avoid dealing with this issue.
 
