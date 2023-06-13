@@ -39,6 +39,62 @@ the [center of the element](https://w3c.github.io/webdriver/#dfn-center-point).
 If the center of the element is [obscured](https://w3c.github.io/webdriver/#dfn-obscuring) for some reason,
 Selenium will return an [element click intercepted](https://w3c.github.io/webdriver/#dfn-element-click-intercepted) error.
 
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+    // Navigate to Url
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+	// Click on the element 
+    driver.findElement(By.name("color_input")).click();
+   
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+
+    # Navigate to url
+	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    # Click on the element 
+	driver.find_element(By.NAME, "color_input").click()
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+
+  // Navigate to Url
+  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
+
+  // Click the element
+  driver.FindElement(By.Name("color_input")).Click();
+  
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+
+    # Navigate to URL
+  driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
+
+    # Click the element
+  driver.find_element(name: 'color_input').click
+
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+
+    // Navigate to Url
+    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
+
+    // Click the element
+    await driver.findElement(By.name('color_input')).click();
+  
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+    // Navigate to Url
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    // Click the element
+    driver.findElement(By.name("color_input")).click();
+  
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
 ## Send keys
 
 The [element send keys command](https://w3c.github.io/webdriver/#dfn-element-send-keys)
@@ -50,101 +106,82 @@ with a `content-editable` attribute. If it is not editable,
 [Here](https://www.w3.org/TR/webdriver/#keyboard-actions) is the list of
 possible keystrokes that WebDriver Supports.
 
-{{< tabpane >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" >}}
+      // Navigate to Url
+      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-public class HelloSelenium {
-public static void main(String[] args) {
-WebDriver driver = new FirefoxDriver();
-try {
-// Navigate to Url
-driver.get("https://google.com");
+      // Clear field to empty it from any previous data
+      driver.findElement(By.name("email_input")).clear();
+	  
+	  //Enter Text
+	  driver.findElement(By.name("email_input")).sendKeys("admin@localhost.dev");
+    
 
-      // Enter text "q" and perform keyboard action "Enter"
-      driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER);
-    } finally {
-      driver.quit();
-    }
-}
-}
+  {{< /tab >}}
+  {{< tab header="Python" >}}
 
-{{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-driver = webdriver.Firefox()
 
     # Navigate to url
-driver.get("http://www.google.com")
+	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-    # Enter "webdriver" text and perform "ENTER" keyboard action
-driver.find_element(By.NAME, "q").send_keys("webdriver" + Keys.ENTER)
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-using (var driver = new FirefoxDriver())
-{
-// Navigate to Url
-driver.Navigate().GoToUrl("https://google.com");
+    # Clear field to empty it from any previous data
+	driver.find_element(By.NAME, "email_input").clear()
 
-// Enter "webdriver" text and perform "ENTER" keyboard action
-driver.FindElement(By.Name("q")).SendKeys("webdriver" + Keys.Enter);
+	# Enter Text
+	driver.find_element(By.NAME, "email_input").send_keys("admin@localhost.dev" )
+
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+
+  // Navigate to Url
+  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
+
+  // Clear field to empty it from any previous data
+  driver.FindElement(By.Name("email_input")).Clear();
+  
+  //Enter Text
+  driver.FindElement(By.Name("email_input")).SendKeys("admin@localhost.dev");
+  
+  
 }
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :firefox
-begin
-# Navigate to URL
-driver.get 'https://google.com'
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
 
-    # Enter "webdriver" text and perform "ENTER" keyboard action
-driver.find_element(name: 'q').send_keys 'webdriver', :return
+    # Navigate to URL
+	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-ensure
-driver.quit
-end
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, By, Key} = require('selenium-webdriver');
+    # Clear field to empty it from any previous data
+	driver.find_element(name: 'email_input').clear
+	
+	# Enter Text
+	driver.find_element(name: 'email_input').send_keys 'admin@localhost.dev'
 
-(async function example() {
-let driver = await new Builder().forBrowser('firefox').build();
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
 
-try {
-// Navigate to Url
-await driver.get('https://www.google.com');
+    // Navigate to Url
+    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
 
-    // Enter text "webdriver" and perform keyboard action "Enter"
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.ENTER);
-}
-finally {
-await driver.quit();
-}
-})();
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.Keys
-import org.openqa.selenium.firefox.FirefoxDriver
+	//Clear field to empty it from any previous data
+	await driver.findElement(By.name('email_input')).clear();
 
-fun main() {
-val driver = FirefoxDriver()
-try {
-// Navigate to Url
-driver.get("https://google.com")
+    // Enter text 
+    await driver.findElement(By.name('email_input')).sendKeys('admin@localhost.dev');
+  
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  
+    // Navigate to Url
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-    // Enter text "q" and perform keyboard action "Enter"
-    driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
-} finally {
-driver.quit()
-}
-}
-{{< /tab >}}
+	//Clear field to empty it from any previous data
+	driver.findElement(By.name("email_input")).clear()
+	
+    // Enter text 
+    driver.findElement(By.name("email_input")).sendKeys("admin@localhost.dev")
+  
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## Clear
@@ -157,108 +194,68 @@ with a`content-editable` attribute. If these conditions are not met,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+  {{< tab header="Java" >}}
+      // Navigate to Url
+      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-public class clear {
-public static void main(String[] args) {
-WebDriver driver = new ChromeDriver();
-try {
-// Navigate to Url
-driver.get("https://www.google.com");
-// Store 'SearchInput' element
-WebElement searchInput = driver.findElement(By.name("q"));
-searchInput.sendKeys("selenium");
-// Clears the entered text
-searchInput.clear();
-} finally {
-driver.quit();
-}
-}
-}
-{{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-driver = webdriver.Chrome()
+      // Clear field to empty it from any previous data
+      driver.findElement(By.name("email_input")).clear();
+	  
+	 
+
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+
 
     # Navigate to url
-driver.get("http://www.google.com")
-# Store 'SearchInput' element
-SearchInput = driver.find_element(By.NAME, "q")
-SearchInput.send_keys("selenium")
-# Clears the entered text
-SearchInput.clear()
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
+	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-namespace SnipetProjectDelete
-{
-class Program
-{
-static void Main(string[] args)
-{
-IWebDriver driver = new ChromeDriver();
-try
-{
-// Navigate to Url
-driver.Navigate().GoToUrl(@"https://www.google.com");
-// Store 'SearchInput' element
-IWebElement searchInput = driver.FindElement(By.Name("q"));
-searchInput.SendKeys("selenium");
-// Clears the entered text
-searchInput.Clear();
+    # Clear field to empty it from any previous data
+	driver.find_element(By.NAME, "email_input").clear()
+
+	
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+
+  // Navigate to Url
+  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
+
+  // Clear field to empty it from any previous data
+  driver.FindElement(By.Name("email_input")).Clear();
+  
+ 
+  
 }
-finally
-{
-driver.Quit();
-}
-}
-}
-}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-begin
-# Navigate to URL
-driver.get 'https://google.com'
-# store 'search_input' element
-search_input = driver.find_element(name: 'q')
-search_input.send_keys('selenium')
-# Clears the entered text
-search_input.clear
-ensure
-driver.quit
-end
-{{< /tab >}}
-{{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L18-L20" >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
-fun main() {
-val driver =  ChromeDriver()
-try {
-// Navigate to Url
-driver.get("https://www.google.com")
-// Store 'searchInput' element
-val searchInput = driver.findElement(By.name("q"))
-searchInput.sendKeys("selenium")
-// Clears the entered text
-searchInput.clear()
-} finally {
-driver.quit()
-}
-}
-{{< /tab >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" >}}
+
+    # Navigate to URL
+	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
+
+    # Clear field to empty it from any previous data
+	driver.find_element(name: 'email_input').clear
+
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+
+    // Navigate to Url
+    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
+
+	//Clear field to empty it from any previous data
+	await driver.findElement(By.name('email_input')).clear();
+
+   
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+  
+    // Navigate to Url
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+	//Clear field to empty it from any previous data
+	driver.findElement(By.name("email_input")).clear()
+	
+  
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## Submit
