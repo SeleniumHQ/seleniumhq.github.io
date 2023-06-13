@@ -21,10 +21,20 @@ aliases: ["/governance/"]
 <div class="row -bg-selenium-cyan-20 justify-content-center">
   <div class="col-12 px-5 pt-5 bg-transparent">
     <h2>Roles and Responsibilities</h2>
+    <ul>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#contributors">Contributors</a></li>
+        <li><a href="#triagers">Triagers</a></li>
+        <li><a href="#documenters">Documenters</a></li>
+        <li><a href="#translators">Translators</a></li>
+        <li><a href="#project-committers">Committers</a></li>
+        <li><a href="#technical-leadership-committee-tlc">Technical Leadership Committee Members</a></li>
+        <li><a href="#project-leadership-committee-plc">Project Leadership Committee Members</a></li>
+    </ul>
   </div>
   <div class="col-11 p-5 bg-transparent border-bottom border-dark">
     <div class="pb-5">
-      <h3>Users</h3>
+      <h3 id="users">Users</h3>
 
       Users are community members who have a need for the project. Anyone can be a
       User; there are no special requirements. Common User contributions include:
@@ -47,7 +57,7 @@ aliases: ["/governance/"]
     </div>
 
     <div class="pb-5">
-      <h3>Contributors</h3>
+      <h3 id="contributors">Contributors</h3>
 
       Contributors are community members who contribute in concrete ways to the project,
       most often in the form of code and/or documentation. Anyone can become a Contributor,
@@ -93,7 +103,7 @@ aliases: ["/governance/"]
     </div>
 
     <div class="pb-5">
-      <h3>Triagers</h3>
+      <h3 id="triagers">Triagers</h3>
       As contributors grow into the project they will be added as members of the triage team. Their
       role is to help triage issues and potentially submit Pull Requests with fixes or at least a
       failing test to help committers recreate the issue.
@@ -113,7 +123,29 @@ aliases: ["/governance/"]
     </div>
 
     <div class="pb-5">
-      <h3>Translators</h3>
+        <h3 id="documenters">Documenters</h3>
+
+        Good documentation is crucial to all software projects. Documenters are community members
+        who have shown that they are committed to improving the examples and descriptions of
+        the various features and functionality of the project. Documenters are given push
+        access to the project's Documentation GitHub repo.
+
+        <h4 class="pt-4">Process for becoming a documenter</h4>
+        <ol>
+            <li>
+                Add the GitHub user to <code>selenium-docs-and-site</code> GitHub team
+            </li>
+            <li>
+                Invite to Slack team chat room (<code>selenium-docs</code>)
+            </li>
+            <li>
+                Tweet congratulations to the new documenter from the SeleniumHQ Twitter account
+            </li>
+        </ol>
+    </div>
+
+    <div class="pb-5">
+      <h3 id="translators">Translators</h3>
 
       To better support our international community, we provide translations of our documentation. A translator is
       responsible for all content in a given language. This includes creating and updating content, helping ensure
@@ -135,7 +167,7 @@ aliases: ["/governance/"]
     </div>
 
     <div class="pb-5">
-      <h3>Project Committers</h3>
+      <h3 id="project-committers">Project Committers</h3>
 
       <p class="pb-4">
         Committers are community members who have shown that they are committed to the
@@ -571,7 +603,6 @@ aliases: ["/governance/"]
         please see the <a href="#sponsorship">Sponsorship</a> section of this document.
       </p>
     </div>
-
 
     <div class="pb-5">
       <h2>Raising Issues Related to Governance</h2>
