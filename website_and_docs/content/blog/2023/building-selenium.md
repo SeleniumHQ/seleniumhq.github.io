@@ -17,7 +17,7 @@ Java.
 To complicate matters, there’s plenty of pieces we want to share
 between the language bindings you’ll be using. Examples include the
 “atoms” (re-usable pieces of javascript that perform common functions
-– such as “isDisplayed” or “getText” – that we want to work the same
+– such as “isDisplayed” or “getAttribute” – that we want to work the same
 way no matter which language you prefer to write tests in), things
 like our CDP support, which uses shared files that describe all the
 available functions we can call, and the new Selenium Manager, which
