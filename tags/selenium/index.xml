@@ -1,4 +1,90 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – selenium</title><link>/tags/selenium/</link><description>Recent content in selenium on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 12 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/selenium/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Building Selenium</title><link>/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/building-selenium/</guid><description>
+&lt;p>One of the things that we knew from the very beginning of the Selenium
+project was that people like to code in more than one language. Some
+people love a bit of JS, others Ruby, and still others prefer C# or
+Java.&lt;/p>
+&lt;p>To complicate matters, there’s plenty of pieces we want to share
+between the language bindings you’ll be using. Examples include the
+“atoms” (re-usable pieces of javascript that perform common functions
+– such as “isDisplayed” or “getAttribute” – that we want to work the same
+way no matter which language you prefer to write tests in), things
+like our CDP support, which uses shared files that describe all the
+available functions we can call, and the new Selenium Manager, which
+is written in Rust, but we bundle with each of the language bindings.&lt;/p>
+&lt;p>The process of converting the source code and other artefacts (such as
+the atoms) together into the artefacts we distribute (such as the
+Selenium Server, or the language bindings) is called the
+“build”. There are plenty of build tools out there. If you’re a java
+developer, you’ve probably come across Maven or Gradle. If you’re a JS
+hacker, then perhaps something like npm or yarn is something you’ve
+used. If you’re a C developer (there are still plenty out there!) then
+you’re likely using make or CMake.&lt;/p>
+&lt;p>The problem with many build tools is that they’re focused on one
+language. Npm is great, but it’s a terrible choice for a Java
+project. Gradle is fine, but not if you’re working in Ruby.&lt;/p>
+&lt;p>Why is this a problem? Because in the Selenium codebase we want to
+support multiple different languages, and we want to be able to
+“stitch” them together into a single cohesive whole. For example, the
+Selenium jars contain a fairly large amount of JS. The Ruby gems do
+too.&lt;/p>
+&lt;p>What we want is a single build tool that can cope with lots of
+different languages, so we can weave our build into something where we
+only need that one tool.&lt;/p>
+&lt;p>Enter &lt;a href="https://bazel.build">Bazel&lt;/a>. This was a build tool originally
+developed by Google, but which is now Open Source and increasingly
+widely used. Bazel itself is relatively limited in what it can do, but
+it can be extended easily using “rulesets” that allow it to support
+everything we need, and more!&lt;/p>
+&lt;p>Bazel is one of a new generation of build tools, and focuses on
+exposing how each part of the build process relates to the other
+parts. You could imagine drawing a chart, with each thing we need to
+compile (eg. Selenium Manager, or the atoms, or one of the jars we
+ship) connected by lines to other parts that they depend upon. In
+Computer Science, that chart is called a “graph”, and because each
+line has a direction (“this thing depends upon that thing”) we call it
+a directed graph. Because we can’t depend on something that depends on
+itself, we can introduce a “cycle”. Bazel is a build tool designed to
+work with these “directed acyclic graphs”.&lt;/p>
+&lt;p>One nice thing about these graphs is that there are well-known ways to
+figure out which parts of the build can be performed in parallel. A
+modern computer has a CPU with many (4, 8, 16!) cores, plenty of
+memory, and fast SSDs: it can comfortably perform many tasks at the
+same time. So Bazel takes advantage of this, running as many parts of
+the build at the same time as it can. This makes our builds
+significantly faster than they used to be!&lt;/p>
+&lt;p>Better yet, Bazel makes us list all the things that each part of the
+build depends on. Not just the source code, but which versions of
+which tools we’re using. That makes it a lot easier for a developer
+new to the project to get started: they just need to clone &lt;a href="https://github.com/seleniumhq/selenium">our
+repo&lt;/a>, make sure they have
+Bazel installed, and the build process will take care of making sure
+that they have everything they need (although that first build may be
+very slow as everything that’s needed will be downloaded from the
+Net). That’s not just nice for people new to the project, it’s nice
+for the existing developers. They no longer need to know how to
+install and set up toolchains that they may not be familiar with –
+they just run the build.&lt;/p>
+&lt;p>Using the “build graph”, Bazel is able to tell which pieces of code in
+the Selenium source code depend on which other parts. This means that
+although we can tell Bazel to “run all our tests” when we make a
+change, it’s smart enough to know that it only needs to run those
+tests which are actually affected by a change. You can &lt;a href="https://www.youtube.com/watch?v=lqqXHEBvU0Y">see this in
+action in this video&lt;/a>,
+but needless to say, this can save us a huge amount of time! We can
+also ask Bazel to re-run flaky tests&lt;/p>
+&lt;p>But there’s another advantage of describing all the things we need for
+a build. Since we’ve described everything we need to Bazel, and how
+all the pieces fit together, there’s no need to just run the build on
+our own machines. We’re working with
+&lt;a href="https://www.engflow.com">EngFlow&lt;/a> to make use of their build
+grid. Rather than just running a small number of things at the same
+time on our machines, we can run many times that on their build
+grid. Our builds there are incredibly fast!&lt;/p>
+&lt;p>So, that’s why we use Bazel on our project: it supports all the
+languages we want to use in a single tool, allows us to not think
+about how to set up our development machines, runs builds incredibly
+quickly, and we can make use of build grids to build things even
+faster.&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
 &lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
 it’s necessary to move on from our old favorites. That’s why we’re announcing that
 &lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
@@ -4564,25 +4650,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>What does this mean? For mobile users, the Selenium project will be hosting a suite of tests to facilitate interoperability between the many different projects available that are extending the WebDriver API to also cope with mobile. Developers from projects such as &lt;a href="http://appium.io/">Appium&lt;/a>, &lt;a href="http://ios-driver.github.io/ios-driver/">ios-driver&lt;/a> and &lt;a href="http://selendroid.io/">selendroid&lt;/a> will be working on the suite of tests to enable this.&lt;/p>
 &lt;p>We’ll also be working on making the technology behind Selenium as stable and capable as possible. For this reason, Selenium 3 will see the removal of the original Selenium Core implementations, and consequently we’ll be deprecating the RC APIs too. The old versions will still be available as a separate download, but active development will cease, except for very urgent fixes. We will still be providing an implementation of the RC APIs backed by WebDriver, so you can continue running your existing tests, but now would be a great time to make the move to using the WebDriver APIs directly.&lt;/p>
 &lt;p>For those of you exporting your tests from IDE and running the HTML suites, we’ll provide an alternative runner that allows you to continue running those tests too, though it’ll be backed by the same “WebDriver-backed” RC implementation as offered by the main download. Again, the original implementation will be available as a download, but it will no longer be actively developed once we release 3.0.&lt;/p>
-&lt;p>Our current plan is to start shipping 3.0 by Christmas this year: it’s going to be a lot of fun!&lt;/p></description></item><item><title>Blog: Curious to know how we picked speakers for the 2013 SeConf? Read on…</title><link>/blog/2013/curious-to-know-how-we-picked-speakers-for-the-2013-seconf-read-on/</link><pubDate>Mon, 25 Mar 2013 00:00:00 +0000</pubDate><guid>/blog/2013/curious-to-know-how-we-picked-speakers-for-the-2013-seconf-read-on/</guid><description>
-&lt;p>&lt;strong>This is a guest post by Marcus Merrell, one of the organizers of the 2013 &lt;a href="http://seleniumconf.org">Selenium Conference&lt;/a>.&lt;/strong>&lt;/p>
-&lt;p>Selenium/Webdriver has kept my family fed since 2007. Since I’ve never committed a line of code to this magical project, I thought the least I could do was spend a few hours helping put SeConf 2013 together. When they asked for a volunteer to put the speaker program together, I was thrilled to step forward!&lt;/p>
-&lt;p>Ultimately, I decided on a more conventional approach than straight-up dictatorship–and I can only credit the 5 awesome people on the committee and their ruthless adherence to the principle that “data wins”. I wanted a mix of hard-core browser techs, language-binding mavens, and people who ultimately made their living keeping a large variety of clients happy. And Simon–always Simon. I left myself out of the voting, because these are the experts’ experts: I figured the best thing I could do was ensure a smooth process and remove the burdens of book-keeping.&lt;/p>
-&lt;p>Here they are, the People You Can Blame:&lt;/p>
-&lt;p>– Dave Hunt, Mozilla&lt;br>
-– Jim Evans, Salesforce.com&lt;br>
-– Santiago Suarez-Ordoñez, Sauce Labs&lt;br>
-– Jari Bakken, The Matrix&lt;br>
-– Simon Stewart, Mt Olympus&lt;/p>
-&lt;p>I don’t know if it was beginner’s luck, but there was zero drama. These folks are all pros, and we’ve put together a hell of a great conference for Boston.&lt;/p>
-&lt;p>We had 24 slots to fill, but only ~45 submissions, and without the variety of topics we wanted. Specifically, we were dismayed by the low number of submissions from female presenters. Given a high proportion of female testers in the industry, we believed their voice was under-represented. The call was extended in part to attempt to correct this, and ended up netting us ~20 more submissions in total.&lt;/p>
-&lt;p>With the proposals all gathered in one place (thanks, Ashley!), I then set about trying to find “themes” in the submissions. Several leapt out immediately–lots of case studies showed up from large household-name companies that I knew people would find interesting. Some deep-dives appeared, describing the inner workings of browser implementations or talking about a new tool-set people might find interesting.&lt;/p>
-&lt;p>Another theme I saw, a blend of the previous two, were the Best Practices–people who wanted to talk about processes for applying disparate tool sets to the problems we face every day. I believe these talks have the broadest appeal, and are a primary driver of attendance. We also had enough mobile offerings to put together a “bloc”, which will consume a whole afternoon.&lt;/p>
-&lt;p>Simon suggested “blind auditions” for the selection process, and everyone loved the idea. Voting would take place not knowing anything about the speaker outside of hints left in their abstract. Since we had extended the call to invite submissions from female presenters, we therefore believed this would “correct” for that bias. It should at least remove all doubt that any speaker was chosen specifically for their gender.&lt;/p>
-&lt;p>I created a Google spreadsheet with a separate tab for each of these themes. Each tab contained only a few columns–the title, abstract, “notes to organizers” (if it was relevant), and one column for each person on the committee to vote. I did not include author bios, and if someone’s name showed up in anywhere else, I redacted it. I *did*, however, leave in speaker’s company. I figured if I saw two talks, “Success and Failure at Google” and, “Continuous Integration with Selenium at Bob’s House of HTML and Gumbo”, it would be completely reasonable to make the decision based on the company.&lt;/p>
-&lt;p>My thinking was, rather than have each person go through each talk individually, all these folks would have to do is read a paragraph and assign a number 1-5 (1=want, 5=don’t want). That way they would rank the talks in terms of the best subjects for that particular theme, thereby making sure just about anyone would have a good “path” through the conference. The committee was given a short deadline (1 week!) to fill out the voting columns, after which we’d sync up on the phone.&lt;/p>
-&lt;p>Somehow we managed to get people from California, Texas, Florida, the UK, and Norway into the same Google Hangout at the same time. We averaged the scores into a column in the spreadsheet, and Simon expertly sorted, manipulated, and color-coded the rows. As I said, we had 24 slots to fill, so Simon just drew a line: every talk in every theme that scored below a 2 was “in”. This left us with around 10 talks–we all agreed on two points: a) those talks were awesome, and b) we needed more.&lt;/p>
-&lt;p>&lt;img src="https://mail.google.com/mail/u/0/images/cleardot.gif" alt="">So we cut in the talks with a score between 2 and 3. This put us up to 23 talks, so we had to begin some horse-trading. We started to have some difficult conversations when I realized that I had somehow not scored one talk at the bottom of one tab. I applied the formula to that cell, and it had one of the best scores of all–so we had 24! Huzzah!&lt;/p>
-&lt;p>Where does this leave us? With &lt;a href="http://www.seleniumconf.org/speakers/">2 days of Track A and one day of Track B&lt;/a>. Given 8 presentations per track per day, that leaves us with an entire day of “open” talks for Track B. Be sure to sign up right when you get there–these slots went really fast last year, and will probably go fast again. We also will have a day of &lt;a href="http://www.seleniumconf.org/workshops/">workshops on four different topics&lt;/a>, with two in the morning and two in the afternoon.&lt;/p>
-&lt;p>We’d like people’s feedback on how the conference “flows” this year. As I said, we wanted someone with just about any background and interest to be able to find a path through this conference, so I’d like to hear whether or not we achieved it.&lt;/p>
-&lt;p>…and I hope to see you all in Boston! (&lt;a href="http://www.seleniumconf.org/tickets/">PS: Tickets are going fast!&lt;/a>).&lt;/p></description></item></channel></rss>
+&lt;p>Our current plan is to start shipping 3.0 by Christmas this year: it’s going to be a lot of fun!&lt;/p></description></item></channel></rss>

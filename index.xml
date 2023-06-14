@@ -1,4 +1,90 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Building Selenium</title><link>/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/building-selenium/</guid><description>
+&lt;p>One of the things that we knew from the very beginning of the Selenium
+project was that people like to code in more than one language. Some
+people love a bit of JS, others Ruby, and still others prefer C# or
+Java.&lt;/p>
+&lt;p>To complicate matters, there’s plenty of pieces we want to share
+between the language bindings you’ll be using. Examples include the
+“atoms” (re-usable pieces of javascript that perform common functions
+– such as “isDisplayed” or “getAttribute” – that we want to work the same
+way no matter which language you prefer to write tests in), things
+like our CDP support, which uses shared files that describe all the
+available functions we can call, and the new Selenium Manager, which
+is written in Rust, but we bundle with each of the language bindings.&lt;/p>
+&lt;p>The process of converting the source code and other artefacts (such as
+the atoms) together into the artefacts we distribute (such as the
+Selenium Server, or the language bindings) is called the
+“build”. There are plenty of build tools out there. If you’re a java
+developer, you’ve probably come across Maven or Gradle. If you’re a JS
+hacker, then perhaps something like npm or yarn is something you’ve
+used. If you’re a C developer (there are still plenty out there!) then
+you’re likely using make or CMake.&lt;/p>
+&lt;p>The problem with many build tools is that they’re focused on one
+language. Npm is great, but it’s a terrible choice for a Java
+project. Gradle is fine, but not if you’re working in Ruby.&lt;/p>
+&lt;p>Why is this a problem? Because in the Selenium codebase we want to
+support multiple different languages, and we want to be able to
+“stitch” them together into a single cohesive whole. For example, the
+Selenium jars contain a fairly large amount of JS. The Ruby gems do
+too.&lt;/p>
+&lt;p>What we want is a single build tool that can cope with lots of
+different languages, so we can weave our build into something where we
+only need that one tool.&lt;/p>
+&lt;p>Enter &lt;a href="https://bazel.build">Bazel&lt;/a>. This was a build tool originally
+developed by Google, but which is now Open Source and increasingly
+widely used. Bazel itself is relatively limited in what it can do, but
+it can be extended easily using “rulesets” that allow it to support
+everything we need, and more!&lt;/p>
+&lt;p>Bazel is one of a new generation of build tools, and focuses on
+exposing how each part of the build process relates to the other
+parts. You could imagine drawing a chart, with each thing we need to
+compile (eg. Selenium Manager, or the atoms, or one of the jars we
+ship) connected by lines to other parts that they depend upon. In
+Computer Science, that chart is called a “graph”, and because each
+line has a direction (“this thing depends upon that thing”) we call it
+a directed graph. Because we can’t depend on something that depends on
+itself, we can introduce a “cycle”. Bazel is a build tool designed to
+work with these “directed acyclic graphs”.&lt;/p>
+&lt;p>One nice thing about these graphs is that there are well-known ways to
+figure out which parts of the build can be performed in parallel. A
+modern computer has a CPU with many (4, 8, 16!) cores, plenty of
+memory, and fast SSDs: it can comfortably perform many tasks at the
+same time. So Bazel takes advantage of this, running as many parts of
+the build at the same time as it can. This makes our builds
+significantly faster than they used to be!&lt;/p>
+&lt;p>Better yet, Bazel makes us list all the things that each part of the
+build depends on. Not just the source code, but which versions of
+which tools we’re using. That makes it a lot easier for a developer
+new to the project to get started: they just need to clone &lt;a href="https://github.com/seleniumhq/selenium">our
+repo&lt;/a>, make sure they have
+Bazel installed, and the build process will take care of making sure
+that they have everything they need (although that first build may be
+very slow as everything that’s needed will be downloaded from the
+Net). That’s not just nice for people new to the project, it’s nice
+for the existing developers. They no longer need to know how to
+install and set up toolchains that they may not be familiar with –
+they just run the build.&lt;/p>
+&lt;p>Using the “build graph”, Bazel is able to tell which pieces of code in
+the Selenium source code depend on which other parts. This means that
+although we can tell Bazel to “run all our tests” when we make a
+change, it’s smart enough to know that it only needs to run those
+tests which are actually affected by a change. You can &lt;a href="https://www.youtube.com/watch?v=lqqXHEBvU0Y">see this in
+action in this video&lt;/a>,
+but needless to say, this can save us a huge amount of time! We can
+also ask Bazel to re-run flaky tests&lt;/p>
+&lt;p>But there’s another advantage of describing all the things we need for
+a build. Since we’ve described everything we need to Bazel, and how
+all the pieces fit together, there’s no need to just run the build on
+our own machines. We’re working with
+&lt;a href="https://www.engflow.com">EngFlow&lt;/a> to make use of their build
+grid. Rather than just running a small number of things at the same
+time on our machines, we can run many times that on their build
+grid. Our builds there are incredibly fast!&lt;/p>
+&lt;p>So, that’s why we use Bazel on our project: it supports all the
+languages we want to use in a single tool, allows us to not think
+about how to set up our development machines, runs builds incredibly
+quickly, and we can make use of build grids to build things even
+faster.&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
 &lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
 it’s necessary to move on from our old favorites. That’s why we’re announcing that
 &lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
@@ -7655,87 +7741,4 @@ improve docs ftw&lt;/p>
 &lt;p>&lt;em>Jim Evans 10:45 PM&lt;/em>&lt;/p>
 &lt;p>re beta readiness: i have a refactor to .NET i want to do to make CDP via RemoteWebDriver easier/more correct, but it can wait until post-beta1&lt;/p>
 &lt;p>&lt;em>10:45&lt;/em>&lt;/p>
-&lt;p>otherwise, i think .NET is ready for beta.&lt;/p></description></item><item><title>Blog: Results of the first ever selenium survey</title><link>/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-survey-results/</guid><description>
-&lt;p>Below is a summary of the Selenium survey that was collected.&lt;/p>
-&lt;h2 id="batteries-included">Batteries included&lt;/h2>
-&lt;h3 id="browser-management">Browser Management&lt;/h3>
-&lt;p>Unsurprisingly, people find having to manage browsers a task they wish they didn’t have to do and wish that Selenium did this. 59.5% of respondents want Selenium to manage the browsers for them. This, though the question didn’t ask this, is to include the browser drivers.&lt;/p>
-&lt;h3 id="frameworks">Frameworks&lt;/h3>
-&lt;p>The results show an interesting view into framework usage. 61% of users use a framework. When we look closer at some of the responses there could be a little language bias in there. Some responses in the “both” category are “depends on the language” or “depends on the project”. Frameworks, from a couple responses seem to be around JavaScript mostly.&lt;/p>
-&lt;h2 id="how-tests-are-run">How tests are run&lt;/h2>
-&lt;p>One of the questions that was the most surprising was that people dislike running their tests in headless. 57% of people don’t want headless. This is surprising since puppeteer and playwright are up and coming tools that default to headless.&lt;/p>
-&lt;h3 id="browsers">Browsers&lt;/h3>
-&lt;p>People tend to favour evergreen, or the latest version from auto updating browsers, with over 55% of people wanting that. When we look at the data closer then people tend to do evergreen and then a specific version for IE.&lt;/p>
-&lt;p>People are also, overwhelmingly I should add, wanting to test on multiple browsers. 78% of people test with multiple browsers. This goes against the Chrome only support that we see on social media. The most used browsers for testing are (Percentage of respondents testing with browser):&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Google Chrome (98%)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Firefox (67%)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Microsoft Edge (33%)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Safari (29%)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>IE (13.5%)&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>One thing that is clear is that Testing against multiple browsers is hard. 51.6% say it’s hard and a further 27.3% being 3 out of 5. This is likely where some frameworks are becoming popular as it removes some of the need to understand the asynchronicity of browsers. This still has its problems in puppeteer and playwright as they add similar wait libraries to what Selenium has.&lt;/p>
-&lt;h3 id="mobile-browsers">Mobile Browsers&lt;/h3>
-&lt;p>One of the most surprising things to have come out of survey was the want to use mobile browsers more.&lt;/p>
-&lt;p>Of the 410 respondents 367 want to test on mobile. Interestingly, this goes well past just Chrome for Android and Safari for iOS.&lt;/p>
-&lt;p>Below is a list of browsers and percentage of users wanting to use it. Questions were designed for Android unless it said iOS. See note at the end of the section.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Firefox for Android: 38%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Chrome: 91%*&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Microsoft Edge: 14%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Samsung Internet: 16.6%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Safari on iOS: 69%&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>*Note that the questionaire only mentioned Chrome so it could be a conflation between platforms here. 1 Person used the other field to add Chrome for iOS.&lt;/p>
-&lt;h3 id="language-support">Language support&lt;/h3>
-&lt;p>Language support is what one would suspect with most users using Java or python.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>java: 67%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>python: 31%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>ruby: 6.1%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>.NET: 17.6%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>JavaScript: 21.4%&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>PHP: 1.5%&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="improvements">Improvements&lt;/h2>
-&lt;p>After reviewing the “What one thing would you improve about Selenium I was able to narrow most of the responses down to similar types.&lt;/p>
-&lt;p>Below is a breakdown of the issues that people would like to see improved.&lt;/p>
-&lt;figure>
-&lt;img src="/images/blog/2021/breakdown_of_answers.png"
-alt="Breakdown of answers of areas needing improvement. Main 3 areas are flakiness, documentation, Browser Management, Shadow DOM"/>
-&lt;/figure>
-&lt;h2 id="happiness">Happiness&lt;/h2>
-&lt;p>Of the 410 respondents, 219 had something nice to say about Selenium and were thankful for the product being around.&lt;/p>
-&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item></channel></rss>
+&lt;p>otherwise, i think .NET is ready for beta.&lt;/p></description></item></channel></rss>

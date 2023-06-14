@@ -11,7 +11,81 @@
 <a class=dropdown-item href=/ja/>日本語</a>
 <a class=dropdown-item href=/other/>Other</a></div></li></ul><div class=navbar-nav><div id=docsearch></div></div></div></nav><section id=announcement-banner class="alert-static row -bg-selenium-blue"><div class=container style=padding:10px><div class="row justify-content-center"><div class="alert alert-selenium-blue col-12 fade show mb-0 p-0 -bg-selenium-blue" role=alert><h4 class="alert-heading text-center m-0">SeleniumConf Chicago 2023 is a wrap!
 <a href="https://www.youtube.com/playlist?list=PLRdSclUtJDYXDEsWI0vwBmJxW17NgsaAk" target=_blank aria-pressed=true>Watch the Videos</a></h4></div></div></div></section></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/blog/2023/>Return to the regular view of this page</a>.</p></div><h1 class=title>Blog Posts - 2023</h1><ul><li><a href=#pg-de60a7465ad337a50499af39309bff94>Java 8 support in Selenium</a></li><li><a href=#pg-82ee1f22abd94fbeb5f4ec6c93bb4bcc>Selenium 4.10.0 Released!</a></li><li><a href=#pg-2942dfd285e3baeb8e5c75512c22728d>InvalidSelectorException has changed</a></li><li><a href=#pg-2a73efe5229af97ccf1c30c7130462b8>Selenium 4.9.0 Released!</a></li><li><a href=#pg-1f920f8282ffafb3c64c6d6a7414be11>Let's meet at SeleniumConf, Once Again!</a></li><li><a href=#pg-15b45d7707cfa6ce19c7f6654f9479df>Headless is Going Away!</a></li><li><a href=#pg-85ee9f44c5a9c0dcddd2a4c3e9d97d48>Selenium 4.8.0 Released!</a></li></ul><div class=content></div></div><div class=td-content><h1 id=pg-de60a7465ad337a50499af39309bff94>Java 8 support in Selenium</h1><div class=lead>On September 30, 2023, Java 11 will be the minimum version supported by Selenium.</div><div class="td-byline mb-4">By <b>Diego Molina (<a href=https://twitter.com/diegofmolina>@diegofmolina</a>)</b> |
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/blog/2023/>Return to the regular view of this page</a>.</p></div><h1 class=title>Blog Posts - 2023</h1><ul><li><a href=#pg-de9bae291647b747c55f31f893daff6b>Building Selenium</a></li><li><a href=#pg-de60a7465ad337a50499af39309bff94>Java 8 support in Selenium</a></li><li><a href=#pg-82ee1f22abd94fbeb5f4ec6c93bb4bcc>Selenium 4.10.0 Released!</a></li><li><a href=#pg-2942dfd285e3baeb8e5c75512c22728d>InvalidSelectorException has changed</a></li><li><a href=#pg-2a73efe5229af97ccf1c30c7130462b8>Selenium 4.9.0 Released!</a></li><li><a href=#pg-1f920f8282ffafb3c64c6d6a7414be11>Let's meet at SeleniumConf, Once Again!</a></li><li><a href=#pg-15b45d7707cfa6ce19c7f6654f9479df>Headless is Going Away!</a></li><li><a href=#pg-85ee9f44c5a9c0dcddd2a4c3e9d97d48>Selenium 4.8.0 Released!</a></li></ul><div class=content></div></div><div class=td-content><h1 id=pg-de9bae291647b747c55f31f893daff6b>Building Selenium</h1><div class=lead>How does the Selenium team build Selenium itself, and why did we chose the tools we chose?</div><div class="td-byline mb-4">By <b>Simon Mavi Stewart (<a href=https://hachyderm.io/@shs96c>@shs96c@hachyderm.io</a>)</b> |
+<time datetime=2023-06-12 class=text-muted>Monday, June 12, 2023</time></div><p>One of the things that we knew from the very beginning of the Selenium
+project was that people like to code in more than one language. Some
+people love a bit of JS, others Ruby, and still others prefer C# or
+Java.</p><p>To complicate matters, there’s plenty of pieces we want to share
+between the language bindings you’ll be using. Examples include the
+“atoms” (re-usable pieces of javascript that perform common functions
+– such as “isDisplayed” or “getAttribute” – that we want to work the same
+way no matter which language you prefer to write tests in), things
+like our CDP support, which uses shared files that describe all the
+available functions we can call, and the new Selenium Manager, which
+is written in Rust, but we bundle with each of the language bindings.</p><p>The process of converting the source code and other artefacts (such as
+the atoms) together into the artefacts we distribute (such as the
+Selenium Server, or the language bindings) is called the
+“build”. There are plenty of build tools out there. If you’re a java
+developer, you’ve probably come across Maven or Gradle. If you’re a JS
+hacker, then perhaps something like npm or yarn is something you’ve
+used. If you’re a C developer (there are still plenty out there!) then
+you’re likely using make or CMake.</p><p>The problem with many build tools is that they’re focused on one
+language. Npm is great, but it’s a terrible choice for a Java
+project. Gradle is fine, but not if you’re working in Ruby.</p><p>Why is this a problem? Because in the Selenium codebase we want to
+support multiple different languages, and we want to be able to
+“stitch” them together into a single cohesive whole. For example, the
+Selenium jars contain a fairly large amount of JS. The Ruby gems do
+too.</p><p>What we want is a single build tool that can cope with lots of
+different languages, so we can weave our build into something where we
+only need that one tool.</p><p>Enter <a href=https://bazel.build>Bazel</a>. This was a build tool originally
+developed by Google, but which is now Open Source and increasingly
+widely used. Bazel itself is relatively limited in what it can do, but
+it can be extended easily using “rulesets” that allow it to support
+everything we need, and more!</p><p>Bazel is one of a new generation of build tools, and focuses on
+exposing how each part of the build process relates to the other
+parts. You could imagine drawing a chart, with each thing we need to
+compile (eg. Selenium Manager, or the atoms, or one of the jars we
+ship) connected by lines to other parts that they depend upon. In
+Computer Science, that chart is called a “graph”, and because each
+line has a direction (“this thing depends upon that thing”) we call it
+a directed graph. Because we can’t depend on something that depends on
+itself, we can introduce a “cycle”. Bazel is a build tool designed to
+work with these “directed acyclic graphs”.</p><p>One nice thing about these graphs is that there are well-known ways to
+figure out which parts of the build can be performed in parallel. A
+modern computer has a CPU with many (4, 8, 16!) cores, plenty of
+memory, and fast SSDs: it can comfortably perform many tasks at the
+same time. So Bazel takes advantage of this, running as many parts of
+the build at the same time as it can. This makes our builds
+significantly faster than they used to be!</p><p>Better yet, Bazel makes us list all the things that each part of the
+build depends on. Not just the source code, but which versions of
+which tools we’re using. That makes it a lot easier for a developer
+new to the project to get started: they just need to clone <a href=https://github.com/seleniumhq/selenium>our
+repo</a>, make sure they have
+Bazel installed, and the build process will take care of making sure
+that they have everything they need (although that first build may be
+very slow as everything that’s needed will be downloaded from the
+Net). That’s not just nice for people new to the project, it’s nice
+for the existing developers. They no longer need to know how to
+install and set up toolchains that they may not be familiar with –
+they just run the build.</p><p>Using the “build graph”, Bazel is able to tell which pieces of code in
+the Selenium source code depend on which other parts. This means that
+although we can tell Bazel to “run all our tests” when we make a
+change, it’s smart enough to know that it only needs to run those
+tests which are actually affected by a change. You can <a href="https://www.youtube.com/watch?v=lqqXHEBvU0Y">see this in
+action in this video</a>,
+but needless to say, this can save us a huge amount of time! We can
+also ask Bazel to re-run flaky tests</p><p>But there’s another advantage of describing all the things we need for
+a build. Since we’ve described everything we need to Bazel, and how
+all the pieces fit together, there’s no need to just run the build on
+our own machines. We’re working with
+<a href=https://www.engflow.com>EngFlow</a> to make use of their build
+grid. Rather than just running a small number of things at the same
+time on our machines, we can run many times that on their build
+grid. Our builds there are incredibly fast!</p><p>So, that’s why we use Bazel on our project: it supports all the
+languages we want to use in a single tool, allows us to not think
+about how to set up our development machines, runs builds incredibly
+quickly, and we can make use of build grids to build things even
+faster.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-de60a7465ad337a50499af39309bff94>Java 8 support in Selenium</h1><div class=lead>On September 30, 2023, Java 11 will be the minimum version supported by Selenium.</div><div class="td-byline mb-4">By <b>Diego Molina (<a href=https://twitter.com/diegofmolina>@diegofmolina</a>)</b> |
 <time datetime=2023-06-09 class=text-muted>Friday, June 09, 2023</time></div><p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
 it’s necessary to move on from our old favorites. That’s why we’re announcing that
 <strong>Selenium will stop supporting Java 8 on September 30, 2023</strong>. This applies for
