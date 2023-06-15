@@ -1,5 +1,6 @@
 baseURL = "/"
 title = "Selenium"
+timeout = "60s"
 
 enableRobotsTXT = true
 
