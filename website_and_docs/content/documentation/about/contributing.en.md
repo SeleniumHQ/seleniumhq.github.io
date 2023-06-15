@@ -85,17 +85,17 @@ directly on top of `dev`.
 
 ### Step 3: Make changes
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependencies (see commands below). To make changes to the site, 
+The repository contains the site and docs. To make changes to the site, 
 work on the `website_and_docs` directory. To see a live preview of 
 your changes, run `hugo server` on the site's root directory.
 
 ```shell
-% git submodule update --init --recursive
 % cd website_and_docs
 % hugo server
 ```
+
+The project loads code from GitHub, if that code has been updated, and it isn't
+reflected in your preview, you can run hugo without the cache: `hugo server --ignoreCache`
 
 See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution 
 

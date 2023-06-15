@@ -520,8 +520,6 @@ Selenium 4では、非推奨の警告を防ぐために、Serviceオブジェク
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option("useAutomationExtension", False)
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 ```
 {{< /card >}}
@@ -530,8 +528,6 @@ driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option("useAutomationExtension", False)
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 ```

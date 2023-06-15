@@ -533,8 +533,6 @@ In Selenium 4, you'll need to set the driver's ``executable_path`` from a Servic
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option("useAutomationExtension", False)
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 ```
 {{< /card >}}
@@ -543,8 +541,6 @@ driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option("useAutomationExtension", False)
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 ```
