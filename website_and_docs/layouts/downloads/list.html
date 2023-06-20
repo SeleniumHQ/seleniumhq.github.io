@@ -5,6 +5,8 @@
 	{{ .Content }}
 </div>
 
+{{ partial "selenium-clients-and-webdriver-bindings.html" . }}
+
 <div class="row justify-content-center p-5">
   <div class="col-sm-6 py-3 pl-3 pr-0">
     <div class="card h-100 bg-transparent border-top-0 border-left-0 border-bottom-0">
@@ -72,7 +74,31 @@
   </div>
 </div>
 
-{{ partial "selenium-clients-and-webdriver-bindings.html" . }}
+<div class="row justify-content-left p-5">
+  <div class="card border-0 w-100 bg-transparent">
+    <div class="card-body">
+      <h2 class="card-title">
+        Selenium IDE
+      </h2>
+      <p class="card-text w-lg-75">
+        Selenium IDE is a Chrome, Firefox and Edge plugin which records and plays
+        back user interactions with the browser. Use this to either create
+        simple scripts or assist in exploratory testing.
+      </p>
+      <p class="card-text w-lg-75">
+        Download latest released version for
+        <a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd">Chrome</a>
+        or <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Firefox</a> or
+        <a href="https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp">
+          Edge</a>. View the <a href="https://github.com/SeleniumHQ/selenium-ide/releases">Release Notes.</a>
+      </p>
+      <p class="card-text w-lg-75">
+        Download previous IDE
+        <a href="https://addons.mozilla.org/en-GB/firefox/addon/selenium-ide/versions/">versions</a>.
+      </p>
+    </div>
+  </div>
+</div>
 
 <div class="row justify-content-left p-5 td-box--100">
   <div class="card border-0 w-100 bg-transparent">
@@ -105,32 +131,6 @@
           </p>
         </li>
       </ul>
-    </div>
-  </div>
-</div>
-
-<div class="row justify-content-left p-5">
-  <div class="card border-0 w-100 bg-transparent">
-    <div class="card-body">
-      <h2 class="card-title">
-        Selenium IDE
-      </h2>
-      <p class="card-text w-lg-75">
-        Selenium IDE is a Chrome, Firefox and Edge plugin which records and plays
-        back user interactions with the browser. Use this to either create
-        simple scripts or assist in exploratory testing.
-      </p>
-      <p class="card-text w-lg-75">
-        Download latest released version for
-        <a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd">Chrome</a>
-        or <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Firefox</a> or
-        <a href="https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp">
-          Edge</a>. View the <a href="https://github.com/SeleniumHQ/selenium-ide/releases">Release Notes.</a>
-      </p>
-      <p class="card-text w-lg-75">
-        Download previous IDE
-        <a href="https://addons.mozilla.org/en-GB/firefox/addon/selenium-ide/versions/">versions</a>.
-      </p>
     </div>
   </div>
 </div>
