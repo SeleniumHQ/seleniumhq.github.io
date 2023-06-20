@@ -31,7 +31,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/virtual_authenticator/virtual_authenticator_test.py#LL40C1-L40C1" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
