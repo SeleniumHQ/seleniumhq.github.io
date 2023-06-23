@@ -33,4 +33,11 @@ public class ChromeTest {
         driver = new ChromeDriver(options);
     }
 
+    @Test
+    public void extensionOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addExtensions(new File("/path/to/extension.crx"));
+        ChromeDriver driver = new ChromeDriver(options);
+    }
+
 }

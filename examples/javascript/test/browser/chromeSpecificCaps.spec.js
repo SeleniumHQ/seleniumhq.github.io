@@ -47,6 +47,17 @@ suite(function (env) {
       await driver.quit();
     });
 
+    it('Add Extension', async function () {
+      const options = new Chrome.Options();
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.addExtensions(['/path/to/extension.crx']))
+        .build();
+
+      await driver.get('https://www.google.com');
+      await driver.quit();
+    });
+
     it('Basic Chrome test', async function () {
       const Options = new Chrome.Options();
       let driver = await env

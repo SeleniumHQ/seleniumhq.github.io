@@ -34,3 +34,12 @@ def exclude_switches():
     driver.get('http://selenium.dev')
 
     driver.quit()
+
+def test_add_extension():
+    chrome_options = ChromeOptions()
+    chrome_options.add_extension("/path/to/extension.crx")
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get('http://selenium.dev')
+
+    driver.quit()
