@@ -11,7 +11,7 @@ suite(function (env) {
         .setChromeOptions(options.addArguments('--headless=new'))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
@@ -21,7 +21,7 @@ suite(function (env) {
         .setChromeOptions(options.excludeSwitches('enable-automation'))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
@@ -31,7 +31,7 @@ suite(function (env) {
         .setChromeOptions(options.detachDriver(true))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
       // As tests runs in ci, quitting the driver instance to avoid any failures
       await driver.quit();
@@ -43,7 +43,7 @@ suite(function (env) {
         .setChromeOptions(options.setChromeBinaryPath(`Path to chrome binary`))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
@@ -54,7 +54,7 @@ suite(function (env) {
         .setChromeOptions(Options)
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
   });
