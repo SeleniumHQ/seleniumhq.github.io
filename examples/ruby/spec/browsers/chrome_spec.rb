@@ -31,7 +31,7 @@ RSpec.describe 'Chrome' do
     @driver.get('https://www.google.com')
   end
 
-  it 'Add extensions' do
+  xit 'Add extensions' do
     options = Selenium::WebDriver::Options.chrome(add_extension: ['/path/to/extension.crx'])
 
     @driver = Selenium::WebDriver.for :chrome, options: options

@@ -107,10 +107,10 @@ please use the `load-extension` argument instead, as mentioned in
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L38-L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L40-L42" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L39-L40">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L42-L43">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
