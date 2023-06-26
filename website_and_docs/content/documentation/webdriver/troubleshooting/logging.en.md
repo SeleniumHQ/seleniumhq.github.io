@@ -26,7 +26,7 @@ take a look at the [Selenium Logger project](https://github.com/titusfortner/sel
   {{% tab header="Python" %}}
 Python logs are typically created per module. You can match all submodules by referencing the top
 level module. So to work with all loggers in selenium module, you can do this:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L5" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
 ```text
@@ -70,7 +70,7 @@ You have to change both the level of the logger and the level of the handlers on
   The default is `WARNING`
  
 To change the level of the logger:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L11" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L7" >}}
 Things get complicated when you use PyTest, though. By default, PyTest hides logging unless the test
 fails. You need to set 3 things to get PyTest to display logs on passing tests.
 
@@ -268,7 +268,7 @@ By default all logs are sent to `System.err`. To direct output to a file, you ne
   {{% tab header="Python" %}}
   By default all logs are sent to `sys.stderr`. To direct output somewhere else, you need to add a
 handler with either a `StreamHandler` or a `FileHandler`:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L13-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9-L10" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
 ```text
@@ -306,7 +306,7 @@ basis:
   {{< tab header="Python" >}}
 Because logging is managed by module, instead of working with just "selenium", you can specify
 different levels for different modules:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L17-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L12-L13" >}}
   {{< /tab >}}
   {{% tab header="CSharp" %}}
 ```text
