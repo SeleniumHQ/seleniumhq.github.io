@@ -11,7 +11,7 @@ suite(function (env) {
         .setChromeOptions(options.setPageLoadStrategy('eager'))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
@@ -21,7 +21,7 @@ suite(function (env) {
         .setChromeOptions(options.setPageLoadStrategy('none'))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
@@ -31,7 +31,7 @@ suite(function (env) {
         .setChromeOptions(options.setPageLoadStrategy('normal'))
         .build();
 
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
   });

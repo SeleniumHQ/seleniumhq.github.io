@@ -8,7 +8,7 @@ describe('Should be able to Test Command line arguments', function () {
       .setFirefoxOptions(options.addArguments('--headless'))
       .build();
 
-    await driver.get('https://www.google.com');
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
     await driver.quit();
   });
 }, { browsers: [Browser.FIREFOX]});

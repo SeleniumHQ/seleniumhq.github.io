@@ -15,12 +15,12 @@ suite(function(env) {
       await driver.manage().setTimeouts({implicit: 5000});
 
       // Navigate to URL
-      await driver.get('https://the-internet.herokuapp.com/upload');
+      await driver.get('https://www.selenium.dev/selenium/web/upload.html');
 
       // Upload snapshot
-      await driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg");
+      await driver.findElement(By.id("upload")).sendKeys("selenium-snapshot.jpg");
 
-      await driver.findElement(By.id("file-submit")).submit();
+      await driver.findElement(By.id("go")).submit();
     });
 
   });
