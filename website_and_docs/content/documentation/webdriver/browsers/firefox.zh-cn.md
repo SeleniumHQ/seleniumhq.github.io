@@ -66,7 +66,7 @@ options.add_argument("/path/to/profile")
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L12-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
@@ -163,7 +163,7 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L15-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -189,7 +189,7 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L24-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L25">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

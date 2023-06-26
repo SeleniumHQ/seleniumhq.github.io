@@ -66,7 +66,7 @@ options.add_argument("/path/to/profile")
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L12-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
@@ -166,7 +166,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L15-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -192,7 +192,7 @@ Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor 
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L24-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L25">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
