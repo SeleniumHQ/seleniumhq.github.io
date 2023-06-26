@@ -4,7 +4,8 @@ require 'spec_helper'
 
 RSpec.describe 'Logging' do
   describe 'Options' do
-    let(:file_name) { File.expand_path('selenium.log') }
+    let(:file_name) { Tempfile.new('logging').path }
+
     after { FileUtils.rm_f(file_name) }
 
     it 'logs things' do

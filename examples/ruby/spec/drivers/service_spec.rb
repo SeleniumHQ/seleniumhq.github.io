@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Service' do
   let(:file_name) { File.expand_path('driver.log') }
-  let(:driver_path) { "#{ENV['CHROMEWEBDRIVER']}/chromedriver" }
+  let(:driver_path) { "#{ENV.fetch('CHROMEWEBDRIVER', nil)}/chromedriver" }
 
   after { FileUtils.rm_f(file_name) }
 

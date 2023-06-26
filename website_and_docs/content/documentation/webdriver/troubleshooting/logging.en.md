@@ -41,7 +41,7 @@ For more fine-tuned control, Ruby Selenium created its own Logger class to wrap 
 This implementation provides some interesting additional features. 
 Obtain the logger directly from the `#logger`class method on the `Selenium::WebDriver` module:
 
-{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L12" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
 ```javascript
@@ -101,7 +101,7 @@ logging.basicConfig(level=logging.WARN)
   As of Selenium v4.9.1, The default is `:info`.  
   
 To change the level of the logger:
-{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L13" >}}
+{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L14" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
   JavaScript has 9 logger levels: `OFF`, `SEVERE`, `WARNING`, `INFO`, `DEBUG`, `FINE`, `FINER`, `FINEST`, `ALL`. 
@@ -279,7 +279,7 @@ handler with either a `StreamHandler` or a `FileHandler`:
   By default, logs are sent to the console in `stdout`.  
   To store the logs in a file:
 
-{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L16" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
 JavaScript does not currently support sending output to a file.  
@@ -319,9 +319,9 @@ Everything that Selenium logs includes an ID. You can also turn on or off all de
 using `:deprecations`.
 
 These methods accept one or more symbols or an array of symbols:
-{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#18" >}}
 or
-{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L18" >}}
+{{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L19" >}}
   {{% /tab %}}
   {{< tab header="JavaScript" >}}
   {{< alert-content >}}{{< /alert-content >}}
