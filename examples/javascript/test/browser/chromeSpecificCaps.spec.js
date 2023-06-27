@@ -57,5 +57,16 @@ suite(function (env) {
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
+
+    it('Add Extension', async function () {
+      const options = new Chrome.Options();
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
+        .build();
+
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+      await driver.quit();
+    });
   });
 }, { browsers: [Browser.CHROME]});

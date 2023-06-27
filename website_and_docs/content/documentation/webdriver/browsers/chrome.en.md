@@ -112,19 +112,19 @@ Add an extension to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L137-L139" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L105-L107">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L94-L96" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

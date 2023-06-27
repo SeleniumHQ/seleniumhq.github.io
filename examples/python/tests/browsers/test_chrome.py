@@ -1,3 +1,4 @@
+import os
 import re
 import subprocess
 
@@ -98,3 +99,14 @@ def test_build_checks(log_path):
 
     driver.quit()
 
+    driver.quit()
+
+def test_add_extension():
+    chrome_options = webdriver.ChromeOptions()
+    path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
+    chrome_options.add_extension(path)
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.selenium.dev/selenium/web/blank.html");
+
+    driver.quit()
