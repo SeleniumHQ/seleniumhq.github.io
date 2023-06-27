@@ -119,7 +119,7 @@ the <strong>Node</strong> ID where the session is running, and then the request 
 <strong>Node</strong>.</p><p>The <strong>Router</strong> balances the load in the Grid by sending the requests to the component that is able
 to handle them better, without overloading any component that is not needed in the process.</p><h2 id=distributor>Distributor</h2><p>The <strong>Distributor</strong> has two main responsibilities:</p><h4 id=register-and-keep-track-of-all-nodes-and-their-capabilities>Register and keep track of all Nodes and their capabilities</h4><p>A <strong>Node</strong> registers to the <strong>Distributor</strong> by sending a <strong>Node</strong> registration event through
 the <strong>Event Bus</strong>. The <strong>Distributor</strong> reads it, and then tries to reach the <strong>Node</strong> via HTTP
-to confirm its existance. If the request is successfull, the <strong>Distributor</strong> registers the Node
+to confirm its existence. If the request is successful, the <strong>Distributor</strong> registers the Node
 and keeps track of all <strong>Nodes</strong> capabilities through the <strong>GridModel</strong>.</p><h4 id=query-the-new-session-queue-and-process-any-pending-new-session-requests>Query the New Session Queue and process any pending new session requests</h4><p>When a new session request is sent to the <strong>Router</strong>, it gets forwarded to the <strong>New Session Queue</strong>,
 where it will wait in the queue. The <strong>Distributor</strong> will poll the <strong>New Session Queue</strong> for pending
 new session requests, and then finds a suitable <strong>Node</strong> where the session can be created. After the
