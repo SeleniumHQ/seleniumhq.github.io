@@ -102,7 +102,7 @@ def test_build_checks(log_path):
     driver.quit()
 
 def test_add_extension():
-    chrome_options = ChromeOptions()
+    options = webdriver.ChromeOptions()
     path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
     chrome_options.add_extension(path)
 
