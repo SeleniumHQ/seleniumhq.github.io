@@ -8,13 +8,30 @@ namespace SeleniumDocs.Browsers
     [EnabledOnOs("OSX")]
     public class SafariTest
     {
+        private SafariDriver driver;
+
+        [TestCleanup]
+        public void QuitDriver()
+        {
+            driver.Quit();
+        }
+
         [TestMethod]
         public void BasicOptions()
         {
             var options = new SafariOptions();
-            var driver = new SafariDriver(options);
+            driver = new SafariDriver(options);
+        }
 
-            driver.Quit();
+        [TestMethod]
+        [Ignore("Not implemented")]
+        public void EnableLogs()
+        {
+            var service = SafariDriverService.CreateDefaultService();
+
+            //service.EnableLogging = true;
+
+            driver = new SafariDriver(service);
         }
     }
 }

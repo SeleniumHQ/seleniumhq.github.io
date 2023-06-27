@@ -1,16 +1,11 @@
-import atexit
 import logging
-import os
-
-import pytest
 
 
-def test_logging():
+def test_logging(log_path):
     logger = logging.getLogger('selenium')
 
     logger.setLevel(logging.DEBUG)
 
-    log_path = "selenium.log"
     handler = logging.FileHandler(log_path)
     logger.addHandler(handler)
 
@@ -21,10 +16,5 @@ def test_logging():
     logger.warning("this is a warning")
     logger.debug("this is detailed debug information")
 
-    try:
-        with open(log_path, 'r') as fp:
-            assert len(fp.readlines()) == 3
-    finally:
-        atexit.register(delete_path, log_path)
-def delete_path(path):
-    os.remove(path)
+    with open(log_path, 'r') as fp:
+        assert len(fp.readlines()) == 3

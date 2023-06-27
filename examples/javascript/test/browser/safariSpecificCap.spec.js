@@ -11,7 +11,7 @@ suite(function(env) {
       .setSafariOptions(options)
       .build();
 
-    await driver.get('https://www.google.com');
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
     await driver.quit();
     });
   });
