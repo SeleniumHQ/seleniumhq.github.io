@@ -39,7 +39,7 @@ def exclude_switches():
 
 def test_add_extension():
     chrome_options = ChromeOptions()
-    path = os.path.abspath("examples/python/tests/extensions/webextensions-selenium-example.crx")
+    path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
     chrome_options.add_extension(path)
 
     driver = webdriver.Chrome(options=chrome_options)
