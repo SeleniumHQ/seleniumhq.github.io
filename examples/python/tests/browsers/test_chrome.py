@@ -1,4 +1,4 @@
-import pytest
+import os
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -37,10 +37,10 @@ def exclude_switches():
 
     driver.quit()
 
-@pytest.mark.skip(reason="Skipping extension related test")
 def test_add_extension():
     chrome_options = ChromeOptions()
-    chrome_options.add_extension("/path/to/extension.crx")
+    path = os.path.abspath("examples/python/tests/extensions/webextensions-selenium-example.crx")
+    chrome_options.add_extension(path)
 
     driver = webdriver.Chrome(options=chrome_options)
     driver.get('http://selenium.dev')

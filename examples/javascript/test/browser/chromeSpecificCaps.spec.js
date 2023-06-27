@@ -47,11 +47,11 @@ suite(function (env) {
       await driver.quit();
     });
 
-    xit('Add Extension', async function () {
+    it('Add Extension', async function () {
       const options = new Chrome.Options();
       let driver = await env
         .builder()
-        .setChromeOptions(options.addExtensions(['/path/to/extension.crx']))
+        .setChromeOptions(options.addExtensions(['examples/javascript/test/extensions/webextensions-selenium-example.crx']))
         .build();
 
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');

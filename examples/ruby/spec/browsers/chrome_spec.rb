@@ -14,27 +14,28 @@ RSpec.describe 'Chrome' do
     options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
 
     @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.google.com')
+    @driver.get('https://www.selenium.dev')
   end
 
   it 'Keep browser open' do
     options = Selenium::WebDriver::Options.chrome(detach: true)
 
     @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.google.com')
+    @driver.get('https://www.selenium.dev')
   end
 
   it 'Exclude switches' do
     options = Selenium::WebDriver::Options.chrome(exclude_switches: ['enable-automation'])
 
     @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.google.com')
+    @driver.get('https://www.selenium.dev')
   end
 
-  xit 'Add extensions' do
-    options = Selenium::WebDriver::Options.chrome(add_extension: ['/path/to/extension.crx'])
+  it 'Add extensions' do
+    extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.crx', __dir__)
+    options = Selenium::WebDriver::Options.chrome(add_extension: [extension_file_path])
 
     @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.google.com')
+    @driver.get('https://www.selenium.dev')
   end
 end
