@@ -117,26 +117,13 @@ please use the `load-extension` argument instead, as mentioned in
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L41-L43">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L51-L55">}}
-{{< badge-code >}}
-{{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
-{{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L50" >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
