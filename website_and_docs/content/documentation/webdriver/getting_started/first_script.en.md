@@ -274,7 +274,7 @@ There are multiple options in each language, but here is what we are using in ou
 Install Mocha Test runner using below command in your terminal
 
 ```shell
-npm install mocha
+npm install -g mocha
 ```
 
 and run your tests using below command
