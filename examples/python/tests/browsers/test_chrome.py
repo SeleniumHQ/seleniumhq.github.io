@@ -43,6 +43,6 @@ def test_add_extension():
     chrome_options.add_extension(path)
 
     driver = webdriver.Chrome(options=chrome_options)
-    driver.get('http://selenium.dev')
+    driver.get("https://www.selenium.dev/selenium/web/blank.html");
 
     driver.quit()
