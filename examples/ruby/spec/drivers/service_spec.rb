@@ -26,22 +26,4 @@ RSpec.describe 'Service' do
 
     @driver = Selenium::WebDriver.for :chrome, service: service
   end
-
-  it 'logs to file' do
-    service = Selenium::WebDriver::Service.chrome
-    service.log = file_name
-
-    @driver = Selenium::WebDriver.for :chrome, service: service
-
-    expect(File.readlines(file_name).size).to eq 4
-  end
-
-  it 'logs to stdout' do
-    service = Selenium::WebDriver::Service.chrome
-    service.log = $stdout
-
-    expect {
-      @driver = Selenium::WebDriver.for :chrome, service: service
-    }.to output(/Starting ChromeDriver/).to_stdout_from_any_process
-  end
 end

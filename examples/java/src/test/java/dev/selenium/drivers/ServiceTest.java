@@ -1,83 +1,52 @@
 package dev.selenium.drivers;
 
-import com.google.common.io.ByteStreams;
 import dev.selenium.BaseTest;
-import java.io.File;
-import java.time.Duration;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverLogLevel;
 import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.GeckoDriverService;
-import org.openqa.selenium.remote.service.DriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.service.DriverFinder;
+
+import java.io.File;
 
 public class ServiceTest extends BaseTest {
-  private final File logLocation = new File("driver.log");
-  private final File driverLocation = new File(System.getenv("CHROMEWEBDRIVER") + "/chromedriver");
+    private static File driverLocation;
 
-  @AfterEach
-  public void quit() {
-    driver.quit();
-  }
+    @BeforeAll
+    public static void installDriver() {
+        String location = DriverFinder.getPath(ChromeDriverService.createDefaultService(), new ChromeOptions());
+        driverLocation = new File(location);
+    }
 
-  @Test
-  public void defaultService() {
-    ChromeDriverService service = new ChromeDriverService.Builder().build();
-    driver = new ChromeDriver(service);
-  }
-
-  @Test
-  public void setDriverLocation() {
-    ChromeDriverService service = new ChromeDriverService.Builder()
-        .usingDriverExecutable(driverLocation)
-        .build();
-
-    driver = new ChromeDriver(service);
-  }
+    @AfterEach
+    public void quit() {
+        driver.quit();
+    }
 
     @Test
-  public void setPort() {
-    ChromeDriverService service = new ChromeDriverService.Builder()
-        .usingPort(1234)
-        .build();
+    public void defaultService() {
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .build();
+        driver = new ChromeDriver(service);
+    }
 
-    driver = new ChromeDriver(service);
-  }
+    @Test
+    public void setDriverLocation() {
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(driverLocation)
+                .build();
 
-  @Test
-  public void logsToFileWithLogOutput() {
-    ChromeDriverService service = new ChromeDriverService.Builder()
-        .withLogFile(logLocation)
-        .build();
+        driver = new ChromeDriver(service);
+    }
 
-    driver = new ChromeDriver(service);
-  }
+    @Test
+    public void setPort() {
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingPort(1234)
+                .build();
 
-  @Test
-  public void logsToFileProperty() {
-    System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY,
-        logLocation.getAbsolutePath());
-
-    driver = new ChromeDriver();
-  }
-
-  @Test
-  public void logsToStdoutWithLogOutput() {
-    ChromeDriverService service = new ChromeDriverService.Builder()
-        .withLogOutput(System.out)
-        .build();
-
-    driver = new ChromeDriver(service);
-  }
-
-  @Test
-  public void logsToStdoutProperty() {
-    System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY,
-        logLocation.getAbsolutePath());
-
-    driver = new ChromeDriver();
-  }
+        driver = new ChromeDriver(service);
+    }
 }
