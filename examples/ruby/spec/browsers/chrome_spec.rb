@@ -37,36 +37,17 @@ RSpec.describe 'Chrome' do
   describe 'Service' do
     let(:file_name) { File.expand_path('chromedriver.log') }
 
-    @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.selenium.dev')
-  end
     after { FileUtils.rm_f(file_name) }
 
     it 'logs to file' do
       service = Selenium::WebDriver::Service.chrome
       service.log = file_name
 
-    @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.selenium.dev')
-  end
       @driver = Selenium::WebDriver.for :chrome, service: service
 
       expect(File.readlines(file_name).first).to include('Starting ChromeDriver')
     end
 
-    @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get('https://www.selenium.dev')
-  end
-
-  it 'Add extensions' do
-    extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.crx', __dir__)
-    options = Selenium::WebDriver::Options.chrome
-    options.add_extension(extension_file_path)
-
-    @driver = Selenium::WebDriver.for :chrome, options: options
-    @driver.get("https://www.selenium.dev/selenium/web/blank.html");
-    injected = @driver.find_element(:id, 'webextensions-selenium-example')
-    expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     it 'logs to console' do
       service = Selenium::WebDriver::Service.chrome
       service.log = $stdout
@@ -108,5 +89,17 @@ RSpec.describe 'Chrome' do
       warning = /\[WARNING\]: You are using an unsupported command-line switch: --disable-build-check/
       expect(File.readlines(file_name).grep(warning).any?).to eq true
     end
+
+    it 'Add extensions' do
+      extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.crx', __dir__)
+      options = Selenium::WebDriver::Options.chrome
+      options.add_extension(extension_file_path)
+  
+      @driver = Selenium::WebDriver.for :chrome, options: options
+      @driver.get("https://www.selenium.dev/selenium/web/blank.html");
+      injected = @driver.find_element(:id, 'webextensions-selenium-example')
+      expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
+    end
+    
   end
 end

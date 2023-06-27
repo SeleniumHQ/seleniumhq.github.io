@@ -55,17 +55,6 @@ public class ChromeTest {
         driver = new ChromeDriver(options);
     }
 
-    @Test
-    public void extensionOptions() {
-        ChromeOptions options = new ChromeOptions();
-        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-        options.addExtensions(new File(path.toUri()));
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
-        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
-    }
-
     public void logsToFile() throws IOException {
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .withLogFile(getLogLocation())
@@ -141,6 +130,17 @@ public class ChromeTest {
         String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
         String expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
         Assertions.assertTrue(fileContent.contains(expected));
+    }
+
+     @Test
+    public void extensionOptions() {
+        ChromeOptions options = new ChromeOptions();
+        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+        options.addExtensions(new File(path.toUri()));
+        driver = new ChromeDriver(options);
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
     private File getLogLocation() throws IOException {

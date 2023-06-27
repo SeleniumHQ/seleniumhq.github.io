@@ -47,22 +47,22 @@ suite(function (env) {
       await driver.quit();
     });
 
-    it('Add Extension', async function () {
-      const options = new Chrome.Options();
+    it('Basic Chrome test', async function () {
+      const Options = new Chrome.Options();
       let driver = await env
         .builder()
-        .setChromeOptions(options.addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
+        .setChromeOptions(Options)
         .build();
 
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
 
-    it('Basic Chrome test', async function () {
-      const Options = new Chrome.Options();
+    it('Add Extension', async function () {
+      const options = new Chrome.Options();
       let driver = await env
         .builder()
-        .setChromeOptions(Options)
+        .setChromeOptions(options.addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
         .build();
 
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');
