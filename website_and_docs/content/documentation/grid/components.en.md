@@ -41,7 +41,7 @@ The **Distributor** has two main responsibilities:
 
 A **Node** registers to the **Distributor** by sending a **Node** registration event through 
 the **Event Bus**. The **Distributor** reads it, and then tries to reach the **Node** via HTTP
-to confirm its existance. If the request is successfull, the **Distributor** registers the Node 
+to confirm its existence. If the request is successful, the **Distributor** registers the Node 
 and keeps track of all **Nodes** capabilities through the **GridModel**.
 
 #### Query the New Session Queue and process any pending new session requests
