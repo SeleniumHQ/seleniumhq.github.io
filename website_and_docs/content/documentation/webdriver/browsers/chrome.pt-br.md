@@ -218,6 +218,7 @@ Property value: String representing path to log file
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L74" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -234,6 +235,7 @@ To change the logging output to display in the console as STDOUT:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L74" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
@@ -247,6 +249,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
@@ -264,6 +267,7 @@ so this example is just setting the log level generically:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L89" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
@@ -276,6 +280,7 @@ Property value: String representation of `ChromiumDriverLogLevel` enum
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -296,6 +301,7 @@ The log output will be managed by the driver, not the process, so minor differen
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L106-L107" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
@@ -308,6 +314,7 @@ Property value: `"true"` or `"false"`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L74-L75" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -326,6 +333,7 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L125" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
@@ -338,6 +346,7 @@ Property value: `"true"` or `"false"`
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L144" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L85" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

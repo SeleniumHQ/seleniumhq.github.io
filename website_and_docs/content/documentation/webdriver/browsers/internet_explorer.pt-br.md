@@ -603,6 +603,7 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L53" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
@@ -615,6 +616,7 @@ Property value: String representing path to log file
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L32" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -631,6 +633,7 @@ To change the logging output to display in the console as STDOUT:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L67" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
@@ -643,6 +646,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -671,6 +675,7 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -697,6 +702,7 @@ Property value: String representing path to supporting files directory
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L62" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
