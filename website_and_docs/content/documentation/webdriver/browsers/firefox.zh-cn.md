@@ -159,6 +159,7 @@ Property value: String representing path to log file
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L31" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -175,6 +176,7 @@ To change the logging output to display in the console:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L65" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
@@ -187,6 +189,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -206,6 +209,7 @@ so this examples is just for setting the log level generically:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L80" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
@@ -218,6 +222,7 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L50" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -235,6 +240,7 @@ Firefox truncates lines by default. To turn off truncation:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L97" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
@@ -247,6 +253,7 @@ Property value: `"true"` or `"false"`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L60" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -264,6 +271,7 @@ or want profiles to be created some place specific, you can change the profile r
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L109" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
@@ -276,6 +284,7 @@ Property value: String representing path to profile root directory
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L69" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

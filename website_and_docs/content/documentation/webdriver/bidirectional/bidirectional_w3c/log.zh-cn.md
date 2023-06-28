@@ -28,6 +28,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L23-37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -48,6 +49,7 @@ and register callbacks to process the exception details.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L44-54" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
