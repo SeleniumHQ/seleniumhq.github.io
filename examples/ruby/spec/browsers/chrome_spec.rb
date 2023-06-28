@@ -94,9 +94,9 @@ RSpec.describe 'Chrome' do
       extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.crx', __dir__)
       options = Selenium::WebDriver::Options.chrome
       options.add_extension(extension_file_path)
-  
+
       @driver = Selenium::WebDriver.for :chrome, options: options
-      @driver.get("https://www.selenium.dev/selenium/web/blank.html");
+      @driver.get('https://www.selenium.dev/selenium/web/blank.html')
       injected = @driver.find_element(:id, 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end

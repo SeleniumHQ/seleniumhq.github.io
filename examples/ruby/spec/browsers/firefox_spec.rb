@@ -71,7 +71,7 @@ RSpec.describe 'Firefox' do
       @driver = Selenium::WebDriver.for :firefox, service: service
 
       profile_location = Dir.new(@driver.capabilities['moz:profile'])
-      expect(profile_location.path.gsub('\\','/')).to include(root_directory)
+      expect(profile_location.path.gsub('\\', '/')).to include(root_directory)
     end
   end
 
