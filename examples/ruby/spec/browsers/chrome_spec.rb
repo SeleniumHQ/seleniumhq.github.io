@@ -100,6 +100,5 @@ RSpec.describe 'Chrome' do
       injected = @driver.find_element(:id, 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
-    
   end
 end
