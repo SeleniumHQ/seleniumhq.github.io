@@ -274,8 +274,15 @@ Existem múltiplas opções em cada linguagem, mas esta será qual usaremos em n
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
+Install with npm globally:
+
 ```shell
-npm install mocha
+npm install -g mocha
+```
+or as a development dependency for your project:
+
+```shell
+npm install --save-dev mocha
 ```
 
 and run your tests using below command
