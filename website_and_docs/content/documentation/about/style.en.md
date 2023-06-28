@@ -132,26 +132,6 @@ This auto-formats the code in each tab to match the header name,
 but more importantly it ensures that all tabs on the page with a language
 are set to the same thing, so we always want to include it.
 
-    {{</* tabpane langEqualsHeader=true */>}}
-      {{</* tab header="Java" */>}}
-        WebDriver driver = new ChromeDriver();
-      {{</* /tab */>}}
-      {{</* tab header="Python" */>}}
-        driver = webdriver.Chrome()
-      {{</* /tab */>}}
-      {{</* tab header="CSharp" */>}}
-        var driver = new ChromeDriver();
-      {{</* /tab */>}}
-      {{</* tab header="Ruby" */>}}
-        driver = Selenium::WebDriver.for :chrome
-      {{</* /tab */>}}
-      {{</* tab header="JavaScript" */>}}
-        let driver = await new Builder().forBrowser('chrome').build();
-      {{</* /tab */>}}
-      {{</* tab header="Kotlin" */>}}
-        val driver = ChromeDriver()
-      {{</* /tab */>}}
-    {{</* /tabpane */>}}
 
 #### Reference Github Examples
 
