@@ -273,12 +273,16 @@ There are multiple options in each language, but here is what we are using in ou
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
+Install with npm globally:
+
 ```shell
-npm install mocha
+npm install -g mocha
 ```
-
+or as a development dependency for your project:
+```shell
+npm install --save-dev mocha
+```
 and run your tests using below command
-
 ```shell
 mocha firstScript.spec.js
 ```
