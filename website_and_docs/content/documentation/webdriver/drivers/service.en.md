@@ -95,6 +95,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< /tab >}}
 {{< /tabpane >}}
 
+<span id="setting-log-output"></span>
 ## Logging
 
 Logging functionality varies between browsers. Most browsers allow you to 
