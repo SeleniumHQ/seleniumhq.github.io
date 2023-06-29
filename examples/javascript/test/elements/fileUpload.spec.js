@@ -19,10 +19,8 @@ suite(function(env) {
 
       // Navigate to URL
       await driver.get('https://www.selenium.dev/selenium/web/upload.html');
-
       // Upload snapshot
       await driver.findElement(By.id("upload")).sendKeys(image);
-
       await driver.findElement(By.id("go")).submit();
     });
 
