@@ -50,6 +50,7 @@ If you can not update Selenium or have an advanced use case here is how to speci
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L12" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+Note: Unlike the other languages, the driver location should not include the file name, only the path to the directory the driver is in.
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L27" >}}
 {{< /tab >}}
