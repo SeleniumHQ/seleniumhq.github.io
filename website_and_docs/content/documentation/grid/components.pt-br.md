@@ -16,9 +16,7 @@ nova era de computação e desenvolvimento de software. Criada de raíz para con
 escalabilidade cloud, Selenium Grid 4 é uma nova solução para a era moderna.
 
 
-{{< card header="**Componentes Grid**" footer="Componentes Grid em modo distribuido" >}}
-![Componentes Selenium Grid 4](/images/documentation/grid/components.png "Componentes Selenium Grid 4")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## Router
 

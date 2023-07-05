@@ -21,9 +21,7 @@ aliases: [
 
 Selenium Grid 4 是对以前版本的彻底重写。除了对性能和标准合规性进行全面改进外，还分解了 `Grid` 的不同功能以反映更现代的计算和软件开发时代。 Selenium Grid 4 专为容器化和云分布式可扩展性而构建，是现代时代的全新解决方案。
 
-{{< card header="**Grid Components**" footer="全分布式展示的Grid组件" >}}
-![Selenium Grid 4 组件](/images/documentation/grid/components.png "Selenium Grid 4 Components")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## 路由器（Router）
 
