@@ -10,10 +10,10 @@ selenium:
     - logo: "/images/sponsors/saucelabs.png"
       url: "http://saucelabs.com"
       name: "Sauce Labs"
-    # Sponsorship start date: June 24, 2015
-    - logo: "/images/sponsors/experitest.png"
+    # Sponsorship start date: June 24, 2015, updated July 2023
+    - logo: "/images/sponsors/Digital.ai.jpg"
       url: "http://bit.ly/36uZ7ad"
-      name: "Experitest"
+      name: "Digital.ai"
     # Sponsorship start date: March 21, 2017
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
