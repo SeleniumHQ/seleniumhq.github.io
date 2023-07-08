@@ -158,10 +158,10 @@ driver = webdriver.Remote(cloud_url, options=options)
 The utility methods to find elements in the Java bindings (`FindsBy` interfaces) have been removed 
 as they were meant for internal use only. The following code samples explain this better.
 
-Finding a single element with `findElement*`
+#### Finding a single element with `findElement*`
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```java
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
@@ -172,8 +172,9 @@ driver.findElementByPartialLinkText("partialText");
 driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```java
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
@@ -184,14 +185,11 @@ driver.findElement(By.partialLinkText("partialText"));
 driver.findElement(By.tagName("elementTagName"));
 driver.findElement(By.xpath("xPath"));
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
+#### Finding a multiple elements with `findElements*`
 
-Finding a multiple elements with `findElements*`
+##### Before
 
-{{< cardpane >}}
-{{< card header="Before" >}}
 ```java
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
@@ -202,8 +200,9 @@ driver.findElementsByPartialLinkText("partialText");
 driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```java
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
@@ -214,9 +213,6 @@ driver.findElements(By.partialLinkText("partialText"));
 driver.findElements(By.tagName("elementTagName"));
 driver.findElements(By.xpath("xPath"));
 ```
-{{< /card >}}
-{{< /cardpane >}}
-
 
 ## Upgrading dependencies
 
@@ -230,8 +226,8 @@ most common ones for Java, which are [Maven](https://maven.apache.org/) and
 
 #### Maven
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```xml
 <dependencies>
   <!-- more dependencies ... -->
@@ -243,8 +239,9 @@ most common ones for Java, which are [Maven](https://maven.apache.org/) and
   <!-- more dependencies ... -->
 </dependencies>
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```xml
 <dependencies>
     <!-- more dependencies ... -->
@@ -256,16 +253,15 @@ most common ones for Java, which are [Maven](https://maven.apache.org/) and
     <!-- more dependencies ... -->
 </dependencies>
 ```
-{{< /card >}}
-{{< /cardpane >}}
+
 
 After making the change, you could execute `mvn clean compile` on the same directory where the 
 `pom.xml` file is.
 
 #### Gradle
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```jsonpath
 plugins {
     id 'java'
@@ -284,8 +280,9 @@ test {
     useJUnitPlatform()
 }
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```jsonpath
 plugins {
     id 'java'
@@ -304,8 +301,6 @@ test {
     useJUnitPlatform()
 }
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 After making the change, you could execute `./gradlew clean build`
 on the same directory where the `build.gradle` file is.
@@ -385,30 +380,29 @@ encounter after upgrading to Selenium 4.
 The parameters received in Timeout have switched from expecting `(long time, TimeUnit unit)` to 
 expect `(Duration duration)`.
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```java
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```java
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 Waits are also expecting different parameters now. `WebDriverWait` is now expecting a `Duration` 
 instead of a `long` for timeout in seconds and milliseconds. The `withTimeout` and `pollingEvery` 
 utility methods from `FluentWait` have switched from expecting `(long time, TimeUnit unit)` to 
 expect `(Duration duration)`.
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```java
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
@@ -418,8 +412,9 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .pollingEvery(5, TimeUnit.SECONDS)
   .ignoring(NoSuchElementException.class);
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```java
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
@@ -429,16 +424,14 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 #### Merging capabilities is no longer changing the calling object
 
 It was possible to merge a different set of capabilities into another set, and it was 
 mutating the calling object. Now, the result of the merge operation needs to be assigned.
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
@@ -446,9 +439,11 @@ FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
 ```
-As a result, the `options` object was getting modified.
-{{< /card >}}
-{{< card header="After" >}}
+As a result, the `options` object was getting modified. 
+
+
+##### After
+
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
@@ -457,8 +452,7 @@ options.setHeadless(true);
 options = options.merge(capabilities);
 ```
 The result of the `merge` call needs to be assigned to an object.
-{{< /card >}}
-{{< /cardpane >}}
+
 
 #### Firefox Legacy
 
@@ -478,22 +472,21 @@ options.setLegacy(true);
 The `BrowserType` interface has been around for a long time, however it is getting 
 deprecated in favour of the new `Browser` interface.
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```java
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", Browser.FIREFOX);
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 ### C#
 
@@ -501,8 +494,8 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 
 Instead of it, `AddAdditionalOption` is recommended. Here is an example showing this:
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+##### Before
+
 ```cs
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -510,8 +503,9 @@ browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud:options", cloudOptions, true);
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+##### After
+
 ```cs
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -519,8 +513,6 @@ browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 ### Python
 
@@ -528,15 +520,16 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 
 In Selenium 4, you'll need to set the driver's ``executable_path`` from a Service object to prevent deprecation warnings. (Or don't set the path and instead make sure that the driver you need is on the System PATH.)
 
-{{< cardpane >}}
-{{< card header="Before" >}}
+#### Before
+
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 ```
-{{< /card >}}
-{{< card header="After" >}}
+
+#### After
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -544,8 +537,6 @@ options = webdriver.ChromeOptions()
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
 ```
-{{< /card >}}
-{{< /cardpane >}}
 
 ## Summary
 
