@@ -173,8 +173,7 @@ driver = webdriver.Remote(cloud_url, options=options)
 使用 `findElement*` 查找单个元素
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
 driver.findElementById("elementId");
@@ -183,10 +182,8 @@ driver.findElementByName("elementName");
 driver.findElementByPartialLinkText("partialText");
 driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
 driver.findElement(By.id("elementId"));
@@ -195,7 +192,6 @@ driver.findElement(By.name("elementName"));
 driver.findElement(By.partialLinkText("partialText"));
 driver.findElement(By.tagName("elementTagName"));
 driver.findElement(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -203,8 +199,7 @@ driver.findElement(By.xpath("xPath"));
 使用 `findElements*` 查找多个元素
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
 driver.findElementsById("elementId");
@@ -213,10 +208,8 @@ driver.findElementsByName("elementName");
 driver.findElementsByPartialLinkText("partialText");
 driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
 driver.findElements(By.id("elementId"));
@@ -225,7 +218,6 @@ driver.findElements(By.name("elementName"));
 driver.findElements(By.partialLinkText("partialText"));
 driver.findElements(By.tagName("elementTagName"));
 driver.findElements(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -246,8 +238,7 @@ driver.findElements(By.xpath("xPath"));
 #### Maven
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```xml
+{{< card header="Before" code=true lang="xml" >}}
 <dependencies>
   <!-- more dependencies ... -->
   <dependency>
@@ -257,10 +248,8 @@ driver.findElements(By.xpath("xPath"));
   </dependency>
   <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
-{{< card header="After" >}}
-```xml
+{{< card header="After" code=true lang="xml" >}}
 <dependencies>
     <!-- more dependencies ... -->
     <dependency>
@@ -270,7 +259,6 @@ driver.findElements(By.xpath("xPath"));
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -281,8 +269,7 @@ driver.findElements(By.xpath("xPath"));
 #### Gradle
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```jsonpath
+{{< card header="Before" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -299,10 +286,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
-{{< card header="After" >}}
-```jsonpath
+{{< card header="After" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -319,7 +304,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -416,19 +400,15 @@ Timeout 中接收到的参数
 切换到期待 `(Duration duration)` .
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -441,8 +421,7 @@ driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 期待`(Duration duration)` .
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -450,10 +429,8 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .withTimeout(30, TimeUnit.SECONDS)
   .pollingEvery(5, TimeUnit.SECONDS)
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -461,7 +438,6 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
   .withTimeout(Duration.ofSeconds(30))
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -472,27 +448,23 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
 现在, 需要分配合并操作的结果.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
-```
-作为结果, `options` 对象被修改
 
+//作为结果, `options` 对象被修改
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options = options.merge(capabilities);
-```
-`merge` 调用的结果需要分配给一个对象.
 
+// `merge` 调用的结果需要分配给一个对象.
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -520,19 +492,15 @@ options.setLegacy(true);
 且推荐使用新的 `Browser` 接口.
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", Browser.FIREFOX);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -544,23 +512,19 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 以下为一个示例: 
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```cs
+{{< card header="Before" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud: options", cloudOptions, true);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```cs
+{{< card header="After" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalOption("cloud: options", cloudOptions);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -574,21 +538,20 @@ browserOptions.AddAdditionalOption("cloud: options", cloudOptions);
 (或者不要设置路径, 而是确保所需的驱动程序位于系统路径上.)
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```python
+{{< card header="Before" code=true lang="Python" >}}
 from selenium import webdriver
 options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
-```
+driver = webdriver.Chrome(
+    executable_path=CHROMEDRIVER_PATH, 
+    options=options
+)
 {{< /card >}}
-{{< card header="After" >}}
-```python
+{{< card header="After" code=true lang="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
-```
 {{< /card >}}
 {{< /cardpane >}}
 
