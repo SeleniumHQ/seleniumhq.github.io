@@ -160,8 +160,7 @@ visto que se destinavam apenas a uso interno. Os exemplos de código a seguir ex
 Encontrando um único elemento com `findElement*`
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
 driver.findElementById("elementId");
@@ -170,10 +169,8 @@ driver.findElementByName("elementName");
 driver.findElementByPartialLinkText("partialText");
 driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
 driver.findElement(By.id("elementId"));
@@ -182,15 +179,13 @@ driver.findElement(By.name("elementName"));
 driver.findElement(By.partialLinkText("partialText"));
 driver.findElement(By.tagName("elementTagName"));
 driver.findElement(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
 Encontrando multiplos elementos com `findElements*`
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
 driver.findElementsById("elementId");
@@ -199,10 +194,8 @@ driver.findElementsByName("elementName");
 driver.findElementsByPartialLinkText("partialText");
 driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
 driver.findElements(By.id("elementId"));
@@ -211,7 +204,6 @@ driver.findElements(By.name("elementName"));
 driver.findElements(By.partialLinkText("partialText"));
 driver.findElements(By.tagName("elementTagName"));
 driver.findElements(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -226,8 +218,7 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
 #### Maven
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```xml
+{{< card header="Antes" code=true lang="xml" >}}
 <dependencies>
   <!-- more dependencies ... -->
   <dependency>
@@ -237,10 +228,8 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
   </dependency>
   <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```xml
+{{< card header="Depois" code=true lang="xml" >}}
 <dependencies>
     <!-- more dependencies ... -->
     <dependency>
@@ -250,7 +239,6 @@ O processo de atualização do Selenium depende de  qual ferramenta de compilaç
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
 {{< /cardpane >}}
 Após realizar a mudança, você pode executar `mvn clean compile` no mesmo diretório, onde o 
@@ -259,8 +247,7 @@ arquivo `pom.xml` está.
 #### Gradle
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```jsonpath
+{{< card header="Antes" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -277,10 +264,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```jsonpath
+{{< card header="Depois" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -297,7 +282,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -373,19 +357,15 @@ Os parametros que eram esperados de ser recebidos em um Timeout trocaram de `(lo
 o `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-```
 {{< /card >}}
 {{< /cardpane >}}
 As esperas(waits) também esperam parâmetros diferentes agora. O `WebDriverWait` 
@@ -394,8 +374,7 @@ Os métodos utilitários `withTimeout` e `pollingEvery` do `FluentWait` passaram
 `(long time, TimeUnit unit)` para o `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -403,10 +382,8 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .withTimeout(30, TimeUnit.SECONDS)
   .pollingEvery(5, TimeUnit.SECONDS)
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -414,7 +391,6 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
   .withTimeout(Duration.ofSeconds(30))
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -423,25 +399,23 @@ Antes era possível fundir um conjunto diferente de recursos em outro counjunto,
 alterava o objeto de chamada. Agora, o resultado da operação de fusão precisa ser atribuído.
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
-```
-Como resultado, o objeto `options` estava sendo modificado.
+
+//Como resultado, o objeto `options` estava sendo modificado.
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options = options.merge(capabilities);
-```
-O resultado da chamada `merge`  precisa ser atribuído a um objeto.
+
+// O resultado da chamada `merge`  precisa ser atribuído a um objeto.
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -463,19 +437,15 @@ A interface `BrowserType` existe há um bom tempo, más ela está ficando
 obsoleta a favor da nova interface `Browser`.
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```java
+{{< card header="Antes" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```java
+{{< card header="Depois" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", Browser.FIREFOX);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -486,23 +456,19 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 Em vez dela, `AddAdditionalOption` é recomendada. Aqui está um exemplo mostrando isso:
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```cs
+{{< card header="Antes" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud:options", cloudOptions, true);
-```
 {{< /card >}}
-{{< card header="Depois" >}}
-```cs
+{{< card header="Depois" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -513,21 +479,20 @@ No Selenium 4, você precisara definir o ``executable_path`` a partir de um obje
 (Ou não defina o caminho e, em vez disso, certifique-se de que o driver que você precisa esteja no System PATH.)
 
 {{< cardpane >}}
-{{< card header="Antes" >}}
-```python
+{{< card header="Antes" code=true lang="Python" >}}
 from selenium import webdriver
 options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
-```
+driver = webdriver.Chrome(
+    executable_path=CHROMEDRIVER_PATH, 
+    options=options
+)
 {{< /card >}}
-{{< card header="Depois" >}}
-```python
+{{< card header="Depois" code=true lang="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
-```
 {{< /card >}}
 {{< /cardpane >}}
 
