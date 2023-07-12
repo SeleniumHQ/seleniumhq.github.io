@@ -15,9 +15,7 @@ Selenium Grid 4 は以前のバージョンから一新し、全面的に作り�
 に適応するために機能ごとに分割されました。
 コンテナ化とクラウド上での分散スケーラビリティのために構築された、現代に適した全く新しいソリューションです。
 
-{{< card header="**Grid Components**" footer="完全分散型モードでのGridコンポーネント" >}}
-![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## ルーター
 

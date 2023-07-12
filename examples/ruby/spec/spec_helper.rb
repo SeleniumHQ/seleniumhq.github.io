@@ -15,6 +15,12 @@ RSpec.configure do |config|
   end
 
   config.before do |example|
+    unless ENV.fetch('CHROMEWEBDRIVER', nil)
+      chromedriver = Selenium::WebDriver::DriverFinder.path(Selenium::WebDriver::Options.chrome,
+                                                            Selenium::WebDriver::Chrome::Service)
+      ENV['CHROMEWEBDRIVER'] = File.dirname chromedriver
+    end
+
     bug_tracker = 'https://gigithub.com/SeleniumHQ/seleniumhq.github.io/issues'
     guards = Selenium::WebDriver::Support::Guards.new(example,
                                                       bug_tracker: bug_tracker)

@@ -6,7 +6,7 @@ weight: 12
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i>
+   <i class="fas fa-language d-4"></i>
    Page being translated from
    English to Portuguese. Do you speak Portuguese? Help us to translate
    it by sending us pull requests!
@@ -21,6 +21,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/log/LogInspectorTest.java#L31-L38" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -60,6 +61,7 @@ Listen to all JS logs at all levels and register callbacks to process the log.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/log/LogInspectorTest.java#L52-L59" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}

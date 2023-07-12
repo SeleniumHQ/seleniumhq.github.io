@@ -12,6 +12,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/log/LogInspectorTest.java#L31-L38" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -51,6 +52,7 @@ Listen to all JS logs at all levels and register callbacks to process the log.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/log/LogInspectorTest.java#L52-L59" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
