@@ -12,13 +12,17 @@ Creates a new browsing context in a new window.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L44-44" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -28,13 +32,17 @@ Creates a new browsing context in a new tab.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L58-58" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L49" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,13 +52,17 @@ Creates a browsing context for the existing tab/window to run commands.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L37-38" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L28-L29" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -61,13 +73,17 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L50-52" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L41-L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -77,13 +93,17 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L64-66" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L55-L57" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -91,13 +111,17 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L72-78" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L63-L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -105,13 +129,17 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L83-90" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L74-L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -121,13 +149,17 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L95-106" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L86-L91" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -137,13 +169,17 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L111-121" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L102-L105" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -151,13 +187,17 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L126-131" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L117-L120" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -165,12 +205,16 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L136-141" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L127-L130" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}

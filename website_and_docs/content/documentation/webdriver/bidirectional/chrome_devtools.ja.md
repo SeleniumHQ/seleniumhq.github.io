@@ -10,7 +10,7 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
     Page being translated from English to Japanese. 
     Do you speak Japanese? Help us to translate
     it by sending us pull requests!
@@ -338,8 +338,6 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools;
 using System.Threading.Tasks;
 using OpenQA.Selenium.DevTools.V91.Emulation;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 using DevToolsSessionDomains = OpenQA.Selenium.DevTools.V91.DevToolsSessionDomains;
 
 namespace Selenium4Sample {
@@ -350,7 +348,6 @@ public class ExampleDevice {
     protected DevToolsSessionDomains devToolsSession;
 
     public async Task DeviceModeTest() {
-      new DriverManager().SetUpDriver(new ChromeConfig());
       ChromeOptions chromeOptions = new ChromeOptions();
       //Set ChromeDriver
       driver = new ChromeDriver();

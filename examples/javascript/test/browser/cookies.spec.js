@@ -12,14 +12,14 @@ suite(function(env) {
         after(() => driver.quit());
 
         it('Create a cookie', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // set a cookie on the current domain
             await driver.manage().addCookie({ name: 'key', value: 'value' });
         });
 
         it('Create cookies with sameSite', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
             await driver.manage().addCookie({ name: 'key', value: 'value', sameSite: 'Strict' });
@@ -27,7 +27,7 @@ suite(function(env) {
         });
 
         it('Read cookie', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // set a cookie on the current domain
             await driver.manage().addCookie({ name: 'foo', value: 'bar' });
@@ -39,7 +39,7 @@ suite(function(env) {
         });
 
         it('Read all cookies', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // Add few cookies
             await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
@@ -52,7 +52,7 @@ suite(function(env) {
         });
 
         it('Delete a cookie', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // Add few cookies
             await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
@@ -68,7 +68,7 @@ suite(function(env) {
         });
 
         it('Delete all cookies', async function() {
-            await driver.get('https://www.example.com');
+            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
             // Add few cookies
             await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });

@@ -23,10 +23,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 class fileUploadDoc{
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://the-internet.herokuapp.com/upload");
@@ -46,8 +44,6 @@ class fileUploadDoc{
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.get("https://the-internet.herokuapp.com/upload");
 driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")
@@ -108,25 +104,9 @@ else
 end
 
   {{< /tab >}}
-  
-{{< tab header="JavaScript" >}}
-import {Builder,By} from "selenium-webdriver"
 
-
-let driver = await new Builder().forBrowser('chrome').build()
-await driver.get("https://the-internet.herokuapp.com/upload");
-
-await driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg")
-await driver.findElement(By.id("file-submit")).submit()
-
-driver.getPageSource().then(result => {
-    if (result.indexOf("File Uploaded!")){
-        console.log("file upload success")
-    }else {
-        console.log("file upload not successful")
-    }
-})
-  
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L21-L24">}}
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}

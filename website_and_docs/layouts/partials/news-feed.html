@@ -1,13 +1,13 @@
-<div class="row justify-content-center p-5 td-box--100">
+<div class="d-flex justify-content-center p-5 td-box--100">
   <h2 class="selenium">News</h2>
 </div>
 {{ $regular_pages := .regular_pages }}
 {{ range first 3 (where $regular_pages "Type" "blog") }}
 <div class="row td-box--100 pb-4">
-  <div class="col-sm-4 pl-5 pr-5">
-    <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
+  <div class="col-sm-4 ps-5 pe-5">
+    <div class="card h-100 bg-transparent border-end-0 border-bottom-0 border-start-0 border-top border-dark rounded-0">
       <div class="card-body px-0">
-        <h4 class="card-title font-weight-bold">{{ .Title }}</h4>
+        <h4 class="card-title fw-bold">{{ .Title }}</h4>
         <p class="card-text mb-1">{{ .Date.Format "Monday, January 02, 2006" }}</p>
         {{ with .Params.author }}
         <p class="card-text">{{ T "post_byline_by" }} {{ . | markdownify }}</p>
@@ -15,10 +15,10 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-8 pr-5 pl-5">
-    <div class="card h-100 bg-transparent border-right-0 border-bottom-0 border-left-0 border-top border-dark rounded-0">
+  <div class="col-sm-8 pe-5 ps-5">
+    <div class="card h-100 bg-transparent border-end-0 border-bottom-0 border-start-0 border-top border-dark rounded-0">
       <div class="card-body px-0">
-        <p class="card-text">{{ .Description }}</p>
+        <p class="card-text">{{ .Description | markdownify }}</p>
         <a href="{{ .Permalink }}" class="selenium-link">Read More <i class="fas fa-caret-right"></i></a>
       </div>
     </div>
@@ -26,9 +26,9 @@
 </div>
 {{ end }}
 <div class="row td-box--100">
-  <div class="selenium-button-container justify-content-end pr-5">
-    <a href="{{"blog" | relURL}}" class="selenium-button selenium text-uppercase font-weight-bold">
-      More news <i class="pl-3 fas fa-caret-right"></i>
+  <div class="selenium-button-container justify-content-end pe-5">
+    <a href="{{"blog" | relURL}}" class="selenium-button selenium text-uppercase fw-bold">
+      More news <i class="ps-3 fas fa-caret-right"></i>
     </a>
   </div>
 </div>

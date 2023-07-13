@@ -27,7 +27,7 @@ A instalação da biblioteca Selenium para Java é feita a partir de uma build t
 ### Maven
 Especifique a dependência no `pom.xml` do seu projeto.
 
-{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L32-L36" >}}
 
 ### Gradle
 Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:
@@ -158,4 +158,4 @@ No `package.json` do seu projeto, adicione os requisitos em `dependencies`:
 {{< /tabpane >}}
 
 ## Próximo passo
-[Instale os drivers do navegador]({{< ref "install_drivers.md" >}})
+[Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})

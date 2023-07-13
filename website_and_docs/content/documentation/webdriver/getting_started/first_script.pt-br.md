@@ -7,8 +7,11 @@ description: >
     Instruções passo a passo para programar um script Selenium
 ---
 
-Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}) e os
-[Drivers instalados]({{< ref "install_drivers.md" >}}), você estará pronto para programar códigos Selenium.
+Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}), 
+você estará pronto para programar códigos Selenium.
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## Oito Componentes Básicos
 Tudo que o Selenium faz é enviar comandos ao navegador de internet para fazer algo ou solicitar informações dele.
@@ -34,7 +37,7 @@ Para ter mais detalhes sobre como iniciar uma sessão, leia nossa documentação
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -58,7 +61,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/interactions
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -83,7 +86,7 @@ pode solicitar, incluindo window handles, tamanho / posição do navegador, cook
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -118,7 +121,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -144,7 +147,7 @@ com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdrive
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -169,7 +172,7 @@ mas você irá usá-las com frequência.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -193,7 +196,7 @@ Elementos podem guardar muitas [informações que podem ser solicitadas]({{< ref
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -219,7 +222,7 @@ Nenhum outro comando pode ser enviado para esta instância do driver.
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -271,8 +274,15 @@ Existem múltiplas opções em cada linguagem, mas esta será qual usaremos em n
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
+Install with npm globally:
+
 ```shell
-npm install mocha
+npm install -g mocha
+```
+or as a development dependency for your project:
+
+```shell
+npm install --save-dev mocha
 ```
 
 and run your tests using below command

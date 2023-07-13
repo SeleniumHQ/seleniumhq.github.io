@@ -20,7 +20,7 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
    Page being translated from English to Portuguese. 
    Do you speak Portuguese? Help us to translate
    it by sending us pull requests!
@@ -438,17 +438,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class proxyTest {
-public static void main(String[] args) {
-Proxy proxy = new Proxy();
-proxy.setHttpProxy("<HOST:PORT>");
-ChromeOptions options = new ChromeOptions();
-options.setCapability("proxy", proxy);
-WebDriver driver = new ChromeDriver(options);
-driver.get("https://www.google.com/");
-driver.manage().window().maximize();
-driver.quit();
-}
+public class ProxyTest {
+  public static void main(String[] args) {
+    Proxy proxy = new Proxy();
+    proxy.setHttpProxy("<HOST:PORT>");
+    ChromeOptions options = new ChromeOptions();
+    options.setCapability("proxy", proxy);
+    WebDriver driver = new ChromeDriver(options);
+    driver.get("https://www.google.com/");
+    driver.manage().window().maximize();
+    driver.quit();
+  }
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -464,7 +464,7 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-driver.get("https://selenium.dev")
+    driver.get("https://selenium.dev")
 
 {{< /tab >}}
 {{< tab header="CSharp" >}}

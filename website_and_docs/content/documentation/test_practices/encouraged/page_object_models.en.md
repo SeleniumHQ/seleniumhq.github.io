@@ -198,19 +198,165 @@ requests from the test.
 
 ## Page Component Objects
 A page object does not necessarily need to represent all the parts of a
-page itself. The same principles used for page objects can be used to
-create "Page _Component_ Objects" that represent discrete chunks of the
-page and can be included in page objects. These component objects can
+page itself. This was [noted by Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) in the early days, while first coining the term "panel objects".
+
+The same principles used for page objects can be used to
+create "Page _Component_ Objects", as it was later called, that represent discrete chunks of the
+page and **can be included in page objects**. These component objects can
 provide references to the elements inside those discrete chunks, and
-methods to leverage the functionality provided by them. You can even
+methods to leverage the functionality or behavior provided by them.
+
+For example, a Products page has multiple products.
+
+```html
+<!-- Products Page -->
+<div class="header_container">
+    <span class="title">Products</span>
+</div>
+
+<div class="inventory_list">
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+    <div class="inventory_item">
+    </div>
+</div>
+```
+
+Each product is a component of the Products page.
+
+
+```html
+<!-- Inventory Item -->
+<div class="inventory_item">
+    <div class="inventory_item_name">Backpack</div>
+    <div class="pricebar">
+        <div class="inventory_item_price">$29.99</div>
+        <button id="add-to-cart-backpack">Add to cart</button>
+    </div>
+</div>
+```
+
+The Products page HAS-A list of products. This object relationship is called Composition. In simpler terms, something is _composed of_ another thing.
+
+```java
+public abstract class BasePage {
+    protected WebDriver driver;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+}
+
+// Page Object
+public class ProductsPage extends BasePage {
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+        // No assertions, throws an exception if the element is not loaded
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+            .until(d -> d.findElement(By.className​("header_container")));
+    }
+
+    // Returning a list of products is a service of the page
+    public List<Product> getProducts() {
+        return driver.findElements(By.className​("inventory_item"))
+            .stream()
+            .map(e -> new Product(e)) // Map WebElement to a product component
+            .toList();
+    }
+
+    // Return a specific product using a boolean-valued function (predicate)
+    // This is the behavioral Strategy Pattern from GoF
+    public Product getProduct(Predicate<Product> condition) {
+        return getProducts()
+            .stream()
+            .filter(condition) // Filter by product name or price
+            .findFirst()
+            .orElseThrow();
+    }
+}
+```
+
+The Product component object is used inside the Products page object.
+
+```java
+public abstract class BaseComponent {
+    protected WebElement root;
+
+    public BaseComponent(WebElement root) {
+        this.root = root;
+    }
+}
+
+// Page Component Object
+public class Product extends BaseComponent {
+    // The root element contains the entire component
+    public Product(WebElement root) {
+        super(root); // inventory_item
+    }
+
+    public String getName() {
+        // Locating an element begins at the root of the component
+        return root.findElement(By.className("inventory_item_name")).getText();
+    }
+
+    public BigDecimal getPrice() {
+        return new BigDecimal(
+                root.findElement(By.className("inventory_item_price"))
+                    .getText()
+                    .replace("$", "")
+            ).setScale(2, RoundingMode.UNNECESSARY); // Sanitation and formatting
+    }
+
+    public void addToCart() {
+        root.findElement(By.id("add-to-cart-backpack")).click();
+    }
+}
+```
+
+So now, the products test would use the page object and the page component object as follows.
+
+```java
+public class ProductsTest {
+    @Test
+    public void testProductInventory() {
+        var productsPage = new ProductsPage(driver); // page object
+        var products = productsPage.getProducts();
+        assertEquals(6, products.size()); // expected, actual
+    }
+    
+    @Test
+    public void testProductPrices() {
+        var productsPage = new ProductsPage(driver);
+
+        // Pass a lambda expression (predicate) to filter the list of products
+        // The predicate or "strategy" is the behavior passed as parameter
+        var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack")); // page component object
+        var bikeLight = productsPage.getProduct(p -> p.getName().equals("Bike Light"));
+
+        assertEquals(new BigDecimal("29.99"), backpack.getPrice());
+        assertEquals(new BigDecimal("9.99"), bikeLight.getPrice());
+    }
+}
+```
+
+The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application in object-oriented programming.
+
+You can even
 nest component objects inside other component objects for more complex
 pages. If a page in the AUT has multiple components, or common
 components used throughout the site (e.g. a navigation bar), then it
 may improve maintainability and reduce code duplication.
 
 ## Other Design Patterns Used in Testing
-There are other design patterns that also may be used in testing. Some use a
-Page Factory for instantiating their page objects. Discussing all of these is
+There are other design patterns that also may be used in testing. Discussing all of these is
 beyond the scope of this user guide. Here, we merely want to introduce the
 concepts to make the reader aware of some of the things that can be done. As
 was mentioned earlier, many have blogged on this topic and we encourage the
@@ -221,11 +367,11 @@ reader to search for blogs on these topics.
 
 PageObjects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
 
-Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, methods on the PageObject should return other PageObjects. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
+Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, **methods on the PageObject should return other PageObjects**. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.
 
 One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the PageObject:
 
-```
+```java
 public class LoginPage {
     public HomePage loginAs(String username, String password) {
         // ... clever magic happens here
@@ -243,7 +389,7 @@ public class LoginPage {
 
 The code presented above shows an important point: the tests, not the PageObjects, should be responsible for making assertions about the state of a page. For example:
 
-```
+```java
 public void testMessagesAreReadOrUnread() {
     Inbox inbox = new Inbox(driver);
     inbox.assertMessageWithSubjectIsUnread("I like cheese");
@@ -253,7 +399,7 @@ public void testMessagesAreReadOrUnread() {
 
 could be re-written as:
 
-```
+```java
 public void testMessagesAreReadOrUnread() {
     Inbox inbox = new Inbox(driver);
     assertTrue(inbox.isMessageWithSubjectIsUnread("I like cheese"));
@@ -276,7 +422,7 @@ Finally, a PageObject need not represent an entire page. It may represent a sect
 
 ## Example
 
-```
+```java
 public class LoginPage {
     private final WebDriver driver;
 
@@ -345,10 +491,4 @@ public class LoginPage {
         return submitLogin();
     }
 }
-
 ```
-
-
-## Support in WebDriver
-
-There is a PageFactory in the support package that provides support for this pattern and helps to remove some boiler-plate code from your Page Objects at the same time.

@@ -27,28 +27,24 @@ Additional information about using Internet Explorer can be found on the
 
 Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#21-L22" >}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#38-L41" >}}
 {{< /tab >}}
-{{% tab header="Python" text=true %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L13-L16" >}}
 {{% /tab %}}
-{{% tab header="CSharp" text=true %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L16-L17" >}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L35-L38" >}}
 {{% /tab %}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L7-L8" >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-  let driver = await new Builder()
-    .forBrowser('internet explorer')
-    .setIEOptions(options)
-    .build();
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-  val options = InternetExplorerOptions()
-  val driver = InternetExplorerDriver(options)
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -58,8 +54,33 @@ use the two parameters above. IE Driver will use Edge and will automatically loc
 * If IE and Edge are both present on the system, you only need to set attaching to Edge,
 IE Driver will automatically locate Edge on your system.
 
-As of Internet Explorer Driver v4.7.0:
-* No longer need to set Ignore Zoom Level for Edge in IE Mode
+So, if IE is not on the system, you only need:
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L23-L24" >}}
+{{% /tab %}}
+{{% tab header="CSharp" text=true %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L44-L45" >}}
+{{% /tab %}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L15-L16" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+let driver = await new Builder()
+.forBrowser('internet explorer')
+.setIEOptions(options)
+.build();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-examples >}}
+val options = InternetExplorerOptions()
+val driver = InternetExplorerDriver(options)
+{{< /tab >}}
+{{< /tabpane >}}
 
 Here are a few common use cases with different capabilities:
 
@@ -547,3 +568,131 @@ fun main() {
 
   {{< /tab >}}
 {{< /tabpane >}}
+
+
+
+## Service
+
+Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+
+### Log output
+
+Getting driver logs can be helpful for debugging various issues. The Service class lets you
+direct where the logs will go. Logging output is ignored unless the user directs it somewhere.
+
+#### File output
+
+To change the logging output to save to a specific file:
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L53" >}}
+**Note**: Java also allows setting file output by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
+Property value: String representing path to log file
+{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L30" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L32" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+#### Console output
+
+To change the logging output to display in the console as STDOUT:
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L67" >}}
+**Note**: Java also allows setting console output by System Property;\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
+Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
+{{% /tab %}}
+{{< tab header="Python" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L41" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Log Level
+There are 6 available log levels: `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`
+If logging output is specified, the default level is `FATAL`
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L82" >}}
+**Note**: Java also allows setting log level by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
+Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
+{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L53" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L52" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Supporting Files Path
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L94" >}}
+**Note**: Java also allows setting log level by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
+Property value: String representing path to supporting files directory
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L62" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+

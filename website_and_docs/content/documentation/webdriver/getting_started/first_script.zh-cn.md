@@ -6,8 +6,10 @@ description: >
     逐步构建一个Selenium脚本的说明
 ---
 
-当你完成 [Selenium安装]({{< ref "install_library.md" >}}) and
-[驱动安装]({{< ref "install_drivers.md" >}}) 后, 便可以开始书写Selenium脚本了.
+当你完成 [Selenium安装]({{< ref "install_library.md" >}})  后, 便可以开始书写Selenium脚本了.
+
+**Note**: if you get an error about drivers not found, please read about troubleshooting the
+[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
 
 ## 八个基本组成部分
 
@@ -38,7 +40,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L22" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -65,7 +67,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -91,7 +93,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L34" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -130,7 +132,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L37" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -156,7 +158,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L39-L40" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -182,7 +184,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L42-L43" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -206,7 +208,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L46" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -233,7 +235,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L27" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -289,8 +291,15 @@ There are multiple options in each language, but here is what we are using in ou
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
+Install with npm globally:
+
 ```shell
-npm install mocha
+npm install -g mocha
+```
+or as a development dependency for your project:
+
+```shell
+npm install --save-dev mocha
 ```
 
 and run your tests using below command
