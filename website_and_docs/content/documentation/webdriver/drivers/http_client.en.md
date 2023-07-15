@@ -16,8 +16,8 @@ with a driver or the grid.
 Here's a brief explanation of the default setup in each language:
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-**background**
+{{% tab header="Java" %}}
+**Background**
 
 The default client has changed several times (Apache http client; OkHttp; currently it is Async HTTP Library).
 We are moving to the standard Java library, but the features Selenium requires were not added to the standard library until Java 11, 
@@ -27,30 +27,31 @@ We describe this here, but we should summarize it for the documentation rather t
 because people care about the "what" more than they "why"
 https://www.selenium.dev/blog/2022/using-java11-httpclient/
 
-**configuration**
+\
+**Configuration**
 
 Rather than having users adjust the http client settings with system properties, Java created a `ClientConfig` class
 for Selenium 4.0.
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 Python switched from httplib to urllib3 to support asynchronous communication for CDP functionality. 
 Settings affecting the http client have been supported in constructors of various classes as well as with class methods
 in the `RemoteConnection()` class itself.
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 .NET switched from HttpWebRequest to the standard library HttpClient.
 Configuration is only possible for the timeout value which can be set in the driver constructor.
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 Ruby has always used the standard http library.
 Rather than passing in a configuration, Ruby allows users to change behaviors by subclassing a provided wrapper class. 
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 Who can possibly understand the innerworkings of this language?
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 Just do what Java does until told otherwise
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -59,8 +60,8 @@ Just do what Java does until told otherwise
 HTTP Clients are more important for Remote Server connections so these examples will show how to use them with
 the Grid:
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{% tab text=true header="Java" %}}
 Java only supports setting cient config when using the RemoteWebDriverBuilder:
 ```java
 ClientConfig config = ClientConfig.defaultConfig()
@@ -71,29 +72,25 @@ WebDriver driver = RemoteWebDriver
   .config(config)
   .build();
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< tab header="Python" >}}
-```py
 config = ClientConfig()
 driver = webdriver.Remote(client_config: config)
-```
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% tab text=true header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< tab header="Ruby" >}}
-```rb
 http_client = Selenium::WebDriver::Remote::Http::Default.new
 options = Selenium::WebDriver::Options.chrome
 driver = Selenium::WebDriver.for :remote, options: chrome, http_client: http_client
-```
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% tab text=true header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab text=true header="Kotlin" %}}
 {{< badge-code >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -104,24 +101,24 @@ This setting can dramatically improve performance with SSL over remote connectio
 It is not recommended to change this.
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ## Timeouts
@@ -136,24 +133,24 @@ applies the first time, if it is false it applies every time.
 The default value is: ???
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-code >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### Read
@@ -164,24 +161,24 @@ Read timeout should always be higher than these other timeouts.
 The default value in all bindings as of Selenium 4.11 is: 120 seconds
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-code >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 ## Max Redirects
@@ -190,24 +187,24 @@ This value represents how many of these redirects the client will allow before s
 The default value in all bindings as of Selenium 4.11 is: 20
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -218,24 +215,24 @@ For routing network traffic going into the browser, you must set a proxy in the 
 Note: the proxy required in Java is different from the proxy required in Options; does that make sense?
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-code >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -244,24 +241,24 @@ Most bindings you would just add the username and password to the proxy in use, 
 specified independently. Does this make sense?
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -269,24 +266,24 @@ specified independently. Does this make sense?
 Python allows you to specify this. Do other bindings need it?
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
 
 
@@ -294,22 +291,22 @@ Python allows you to specify this. Do other bindings need it?
 This is set in Java, but I have no idea what it does.
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 {{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
 {{< badge-implementation >}}
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabpane >}}
