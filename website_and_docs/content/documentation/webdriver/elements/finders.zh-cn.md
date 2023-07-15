@@ -61,7 +61,7 @@ val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
 {{< /tabpane >}}
 
 
-### 在部分DOM中查找元素
+### 在部分DOM（DOM子集）中查找元素
 
 以上代码无法获取在样例第二个列表中的"tomato"元素。如果知道目标元素所属位置且希望获取指定范围里的元素而不是整个上下文中的第一个，可以进行部分搜索。
 
@@ -108,7 +108,7 @@ val fruit = fruits.findElement(By.className("tomatoes"))
 
 为了略微提高性能，我们可以使用 CSS 或 XPath 在单个命令中查找该元素。请查看在[最佳实践]({{< ref "/documentation/test_practices/encouraged" >}})中的[使用定位器的提示]({{< ref "/documentation/test_practices/encouraged/locators" >}})部分。
 
-如下所示，我们通过CSS路径定位器查找元素：
+如下所示，我们通过CSS选择器查找元素：
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
