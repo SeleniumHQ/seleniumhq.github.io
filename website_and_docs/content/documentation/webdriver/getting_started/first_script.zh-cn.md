@@ -208,7 +208,7 @@ Selenium所做的一切,
 {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -291,8 +291,15 @@ There are multiple options in each language, but here is what we are using in ou
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
 
+Install with npm globally:
+
 ```shell
-npm install mocha
+npm install -g mocha
+```
+or as a development dependency for your project:
+
+```shell
+npm install --save-dev mocha
 ```
 
 and run your tests using below command

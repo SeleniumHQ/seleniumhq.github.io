@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Service' do
   let(:file_name) { File.expand_path('driver.log') }
-  let(:driver_path) { "#{ENV['CHROMEWEBDRIVER']}/chromedriver" }
+  let(:driver_path) { "#{ENV.fetch('CHROMEWEBDRIVER', nil)}/chromedriver" }
 
   after { FileUtils.rm_f(file_name) }
 
@@ -25,23 +25,5 @@ RSpec.describe 'Service' do
     service.port = 1234
 
     @driver = Selenium::WebDriver.for :chrome, service: service
-  end
-
-  it 'logs to file' do
-    service = Selenium::WebDriver::Service.chrome
-    service.log = file_name
-
-    @driver = Selenium::WebDriver.for :chrome, service: service
-
-    expect(File.readlines(file_name).size).to eq 4
-  end
-
-  it 'logs to stdout' do
-    service = Selenium::WebDriver::Service.chrome
-    service.log = $stdout
-
-    expect {
-      @driver = Selenium::WebDriver.for :chrome, service: service
-    }.to output(/Starting ChromeDriver/).to_stdout_from_any_process
   end
 end

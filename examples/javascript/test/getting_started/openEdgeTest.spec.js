@@ -18,7 +18,7 @@ suite(function (env) {
     after(async () => await driver.quit());
 
     it('Basic Edge test', async function () {
-      await driver.get('https://www.google.com');
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
     });
   });
 }, { browsers: [Browser.EDGE]});

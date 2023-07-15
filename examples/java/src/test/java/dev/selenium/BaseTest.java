@@ -13,11 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseTest {
     public WebDriver driver;
 
-    @BeforeAll
-    public static void defaultLogging() {
-        System.setProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY, DriverService.LOG_NULL);
-    }
-
     public WebElement getLocatedElement(WebDriver driver, By by) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         return wait.until(d -> driver.findElement(by));

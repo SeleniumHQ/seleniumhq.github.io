@@ -19,13 +19,13 @@
         {{ end }}
 			</p>
 			<div class="selenium-button-container">
-				<a href="{{"sponsors" | relURL}}" class="selenium-button {{ $col_button }} text-uppercase font-weight-bold">
+				<a href="{{"sponsors" | relURL}}" class="selenium-button {{ $col_button }} text-uppercase fw-bold">
 					{{ if eq .Page.File.Ext "md" }}
 						{{ $button_text | markdownify }}
 					{{ else }}
 						{{ $button_text | htmlUnescape | safeHTML }}
 					{{ end }}
-					<i class="pl-3 fas fa-caret-right"></i>
+					<i class="ps-3 fas fa-caret-right"></i>
 				</a>
 			</div>
 		</div>

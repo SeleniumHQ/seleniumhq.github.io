@@ -102,25 +102,9 @@ else
 end
 
   {{< /tab >}}
-  
-{{< tab header="JavaScript" >}}
-import {Builder,By} from "selenium-webdriver"
 
-
-let driver = await new Builder().forBrowser('chrome').build()
-await driver.get("https://the-internet.herokuapp.com/upload");
-
-await driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg")
-await driver.findElement(By.id("file-submit")).submit()
-
-driver.getPageSource().then(result => {
-    if (result.indexOf("File Uploaded!")){
-        console.log("file upload success")
-    }else {
-        console.log("file upload not successful")
-    }
-})
-  
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L21-L24">}}
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}

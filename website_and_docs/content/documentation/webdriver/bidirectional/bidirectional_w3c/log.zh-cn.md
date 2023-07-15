@@ -7,7 +7,7 @@ weight: 12
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i>
+   <i class="fas fa-language d-4"></i>
    Page being translated from
    English to Chinese. Do you speak Chinese? Help us to translate
    it by sending us pull requests!
@@ -28,6 +28,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L23-37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -48,6 +49,7 @@ and register callbacks to process the exception details.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/javascript/test/bidirectional/logInspector.spec.js#L44-54" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}

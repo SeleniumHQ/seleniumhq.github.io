@@ -157,8 +157,7 @@ Javaバインディング（`FindsBy` インターフェイス）の要素を検
 `findElement *` で単一の要素を検索する。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
 driver.findElementById("elementId");
@@ -167,10 +166,8 @@ driver.findElementByName("elementName");
 driver.findElementByPartialLinkText("partialText");
 driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
 driver.findElement(By.id("elementId"));
@@ -179,7 +176,6 @@ driver.findElement(By.name("elementName"));
 driver.findElement(By.partialLinkText("partialText"));
 driver.findElement(By.tagName("elementTagName"));
 driver.findElement(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -187,8 +183,7 @@ driver.findElement(By.xpath("xPath"));
 `findElements *` で複数の要素を検索する。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
 driver.findElementsById("elementId");
@@ -197,10 +192,8 @@ driver.findElementsByName("elementName");
 driver.findElementsByPartialLinkText("partialText");
 driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
 driver.findElements(By.id("elementId"));
@@ -209,7 +202,6 @@ driver.findElements(By.name("elementName"));
 driver.findElements(By.partialLinkText("partialText"));
 driver.findElements(By.tagName("elementTagName"));
 driver.findElements(By.xpath("xPath"));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -227,8 +219,7 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
 #### Maven
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```xml
+{{< card header="Before" code=true lang="xml" >}}
 <dependencies>
   <!-- more dependencies ... -->
   <dependency>
@@ -238,10 +229,8 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
   </dependency>
   <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
-{{< card header="After" >}}
-```xml
+{{< card header="After" code=true lang=xml >}}
 <dependencies>
     <!-- more dependencies ... -->
     <dependency>
@@ -251,7 +240,6 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
     </dependency>
     <!-- more dependencies ... -->
 </dependencies>
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -260,8 +248,7 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
 #### Gradle
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```jsonpath
+{{< card header="Before" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -278,10 +265,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
-{{< card header="After" >}}
-```jsonpath
+{{< card header="After" code=true lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -298,7 +283,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -375,19 +359,15 @@ npm install selenium-webdriver
 タイムアウトで受信するパラメーターは、期待値 `(long time, TimeUnit unit)` から期待値 `(Duration duration)` に替わりました。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -396,8 +376,7 @@ driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 `FluentWait` の `withTimeout` および `pollingEvery` ユーティリティメソッドは、期待値 `(long time, TimeUnit unit)` から `(Duration duration)` に替わりました。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -405,10 +384,8 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .withTimeout(30, TimeUnit.SECONDS)
   .pollingEvery(5, TimeUnit.SECONDS)
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -416,7 +393,6 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
   .withTimeout(Duration.ofSeconds(30))
   .pollingEvery(Duration.ofSeconds(5))
   .ignoring(NoSuchElementException.class);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -426,24 +402,20 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
 今は、ここで、マージ操作の結果を割り当てる必要があります。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
-```
 As a result, the `options` object was getting modified.
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options = options.merge(capabilities);
-```
 The result of the `merge` call needs to be assigned to an object.
 {{< /card >}}
 {{< /cardpane >}}
@@ -465,19 +437,15 @@ options.setLegacy(true);
 `BrowserType` インターフェースは長い間使用されてきましたが、新しい `Browser` インターフェースを優先して非推奨になります。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```java
+{{< card header="Before" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```java
+{{< card header="After" code=true lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", Browser.FIREFOX);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -488,23 +456,19 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 その代わりに、 `AddAdditionalOption` をお勧めします。 これを示す例を次に示します。
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```cs
+{{< card header="Before" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud:options", cloudOptions, true);
-```
 {{< /card >}}
-{{< card header="After" >}}
-```cs
+{{< card header="After" code=true lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
-```
 {{< /card >}}
 {{< /cardpane >}}
 
@@ -516,21 +480,20 @@ Selenium 4では、非推奨の警告を防ぐために、Serviceオブジェク
 （または、PATHを設定せず、代わりに必要なドライバーがシステムPATH上にあることを確認してください。）
 
 {{< cardpane >}}
-{{< card header="Before" >}}
-```python
+{{< card header="Before" code=true lang="Python" >}}
 from selenium import webdriver
 options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
-```
+driver = webdriver.Chrome(
+    executable_path=CHROMEDRIVER_PATH, 
+    options=options
+)
 {{< /card >}}
-{{< card header="After" >}}
-```python
+{{< card header="After" code=true lang="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
 service = ChromeService(executable_path=CHROMEDRIVER_PATH)
 driver = webdriver.Chrome(service=service, options=options)
-```
 {{< /card >}}
 {{< /cardpane >}}
 

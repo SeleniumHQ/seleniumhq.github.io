@@ -17,7 +17,7 @@ Java logs are typically created per class. You can work with the default logger 
 work with all loggers. To filter out specific classes, see [Filtering](#logger-filtering)
 
 Get the root logger:
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L31" >}}
 
 Java Logging is not exactly straightforward, and if you are just looking for an easy way 
 to look at the important Selenium logs, 
@@ -26,7 +26,7 @@ take a look at the [Selenium Logger project](https://github.com/titusfortner/sel
   {{% tab header="Python" %}}
 Python logs are typically created per module. You can match all submodules by referencing the top
 level module. So to work with all loggers in selenium module, you can do this:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L5" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
 ```text
@@ -41,6 +41,7 @@ For more fine-tuned control, Ruby Selenium created its own Logger class to wrap 
 This implementation provides some interesting additional features. 
 Obtain the logger directly from the `#logger`class method on the `Selenium::WebDriver` module:
 
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L11" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -63,14 +64,14 @@ Logger level helps to filter out logs based on their severity.
 The default is `INFO`. 
 
 You have to change both the level of the logger and the level of the handlers on the root logger:
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L22-L25" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L32-L35" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
   Python has 6 logger levels: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`, and `NOTSET`. 
   The default is `WARNING`
  
 To change the level of the logger:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L11" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L7" >}}
 Things get complicated when you use PyTest, though. By default, PyTest hides logging unless the test
 fails. You need to set 3 things to get PyTest to display logs on passing tests.
 
@@ -98,9 +99,10 @@ logging.basicConfig(level=logging.WARN)
   {{% /tab %}}
   {{% tab header="Ruby" %}}
   Ruby logger has 5 logger levels: `:debug`, `:info`, `:warn`, `:error`, `:fatal`. 
-  As of Selenium v4.9.1, The default is `:info`.  
+  The default is `:info`.  
   
 To change the level of the logger:
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L13" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -263,12 +265,12 @@ Logs can be displayed in the console or stored in a file. Different languages ha
   {{% tab header="Java" %}}
 By default all logs are sent to `System.err`. To direct output to a file, you need to add a handler:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L27-L28" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L37-L38" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
   By default all logs are sent to `sys.stderr`. To direct output somewhere else, you need to add a
 handler with either a `StreamHandler` or a `FileHandler`:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L13-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9-L10" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
 ```text
@@ -279,6 +281,7 @@ handler with either a `StreamHandler` or a `FileHandler`:
   By default, logs are sent to the console in `stdout`.  
   To store the logs in a file:
 
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L15" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -301,12 +304,12 @@ logging.installConsoleHandler()
 Java logging is managed on a per class level, so 
 instead of using the root logger (`Logger.getLogger("")`), set the level you want to use on a per-class
 basis:
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L30-L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L40-L41" >}}
   {{% /tab %}}
   {{< tab header="Python" >}}
 Because logging is managed by module, instead of working with just "selenium", you can specify
 different levels for different modules:
-{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L17-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L12-L13" >}}
   {{< /tab >}}
   {{% tab header="CSharp" %}}
 ```text
@@ -319,8 +322,10 @@ Everything that Selenium logs includes an ID. You can also turn on or off all de
 using `:deprecations`.
 
 These methods accept one or more symbols or an array of symbols:
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#17" >}}
 or
+{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L18" >}}
   {{% /tab %}}
   {{< tab header="JavaScript" >}}

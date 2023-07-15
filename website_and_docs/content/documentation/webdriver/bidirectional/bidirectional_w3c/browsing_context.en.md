@@ -12,6 +12,7 @@ Creates a new browsing context in a new window.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -31,6 +32,7 @@ Creates a new browsing context in a new tab.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L49" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -50,6 +52,7 @@ Creates a browsing context for the existing tab/window to run commands.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L28-L29" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -70,6 +73,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L41-L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -89,6 +93,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L55-L57" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -106,6 +111,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L63-L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -123,6 +129,7 @@ The API allows to pass the reference browsing context, which is used to create a
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L74-L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -142,6 +149,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L86-L91" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -161,6 +169,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L102-L105" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -178,6 +187,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L117-L120" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -195,6 +205,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/bidirectional/browsingcontext/BrowsingContextTest.java#L127-L130" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}

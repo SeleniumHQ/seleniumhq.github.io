@@ -3,25 +3,24 @@
 require 'spec_helper'
 
 RSpec.describe 'Logging' do
-  describe 'Options' do
-    let(:file_name) { File.expand_path('selenium.log') }
-    after { FileUtils.rm_f(file_name) }
+  let(:file_name) { Tempfile.new('logging').path }
 
-    it 'logs things' do
-      logger = Selenium::WebDriver.logger
+  after { FileUtils.rm_f(file_name) }
 
-      logger.level = :debug
+  it 'logs things' do
+    logger = Selenium::WebDriver.logger
 
-      logger.output = file_name
+    logger.level = :debug
 
-      logger.ignore(:jwp_caps, :logger_info)
-      logger.allow(%i[selenium_manager example_id])
+    logger.output = file_name
 
-      logger.warn('this is a warning', id: :example_id)
-      logger.info('this is useful information', id: :example_id)
-      logger.debug('this is detailed debug information', id: :example_id)
+    logger.ignore(:jwp_caps, :logger_info)
+    logger.allow(%i[selenium_manager example_id])
 
-      expect(File.readlines(file_name).grep(/\[:example_id\]/).size).to eq 3
-    end
+    logger.warn('this is a warning', id: :example_id)
+    logger.info('this is useful information', id: :example_id)
+    logger.debug('this is detailed debug information', id: :example_id)
+
+    expect(File.readlines(file_name).grep(/\[:example_id\]/).size).to eq 3
   end
 end
