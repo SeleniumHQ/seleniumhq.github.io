@@ -270,7 +270,7 @@ fun main() {
 
 ## 由父节点查找子节点元素
 
-类`WebElement`本身支持`findElements`函数。当需要查找一个父节点之下的某个元素，且拥有父节点元素引用时，可以通过对父节点执行查找获取目标元素（或元素列表）。
+此功能用于在父元素的上下文中查找匹配的子WebElements列表。为实现此功能，父 WebElement 与 "findElements "连锁，以访问子元素。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
