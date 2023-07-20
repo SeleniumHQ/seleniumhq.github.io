@@ -18,7 +18,7 @@ Dentro da interface de usuário (UI) do seu aplicativo web, existem áreas com a
 
 Page Object é um padrão de design (Design Pattern) que se tornou popular na automação de testes para melhorar a manutenção de testes e reduzir a duplicação de código. Page Object é uma classe orientada a objetos que serve como interface para uma página do seu AUT (Aplicativo Sob Teste). Os testes usam então os métodos desta classe de Page Object sempre que precisam interagir com a UI dessa página. A vantagem é que, se a UI da página mudar, os próprios testes não precisam mudar, apenas o código dentro do Page Object precisa mudar. Subsequentemente, todas as mudanças para suportar essa nova UI estão localizadas em um lugar.
 
-### Vantagensc
+### Vantagens
 
 * Existe uma separação bem definida entre o código do teste e o código da página especifica.
 * Existe um repositório único para os serviços ou operações que a página oferece, em vez de ter esses serviços espalhados pelos testes.
