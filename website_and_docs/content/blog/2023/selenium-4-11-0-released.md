@@ -26,7 +26,7 @@ Links to everything can be found on our [downloads page][downloads].
 
   * Java
     * Make user defined SlotMatcher used everywhere in Grid code ([#12240](https://github.com/SeleniumHQ/selenium/pull/12240))
-    * Add support for FedCM commands ([#12096](https://github.com/SeleniumHQ/selenium/pull/12096))
+    * Add support for [FedCM](https://fedidcg.github.io/FedCM/) commands ([#12096](https://github.com/SeleniumHQ/selenium/pull/12096))
   
   <br>
   
