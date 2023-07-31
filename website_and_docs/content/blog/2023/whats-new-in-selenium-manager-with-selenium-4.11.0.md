@@ -17,6 +17,8 @@ So far, the main feature of Selenium Manager is called *automated driver managem
 2. Driver version discovery. With the discovered browser version, the proper driver version is resolved. For this step, the online metadata maintained by the browser vendors (e.g., [chromedriver](https://chromedriver.chromium.org/downloads), [geckodriver](https://github.com/mozilla/geckodriver/releases), or [msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)) are used.
 3. Driver download. With the resolved driver version, the driver URL is obtained, and with that URL, the driver artifact is downloaded, uncompressed, and stored locally in a cache folder (`~/.cache/selenium`). The next time the same driver is required, it is used from the cache.
 
+Driver management through Selenium Manager is *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.
+
 ### Entering Chrome for Testing (CfT)
 
 The Chrome team started a very relevant initiative for the testing community in 2023: [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/). CfT is a reduced release of Chrome primarily addressed to the testing use case.
@@ -29,30 +31,25 @@ This change has been very relevant for the so-called driver managers. Luckily, S
 
 ### Automated browser management
 
-Moreover, as of Selenium 4.11.0, Selenium Manager implements automated browser management based on CfT. In other words, Selenium Manager uses the CfT endpoints to discover, download, and cache the different CfT releases, making them seamlessly available for Selenium. Let's consider the following line of code (this is Java, although the behavior is the same in all the Selenium binding languages):
+Moreover, as of Selenium 4.11.0, Selenium Manager implements automated browser management based on CfT. In other words, Selenium Manager uses the CfT endpoints to discover, download, and cache the different CfT releases, making them seamlessly available for Selenium. 
 
-```
-WebDriver driver = new ChromeDriver();
-```
-
-So far, Selenium Manager manages chromedriver for us. This way, all the complexity related to CfT endpoints, driver versions, etc., is transparent, and we can rely on Selenium Manager to discover, download, and cache the proper driver for us.
+Let's suppose we want to driver Chrome with Selenium (see the doc about how to [start a session with Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). Before the session begins, and when the driver is unavailable, Selenium Manager manages chromedriver for us. This way, all the complexity related to CfT endpoints, driver versions, etc., is transparent, and we can rely on Selenium Manager to discover, download, and cache the proper driver for us.
 
 In addition, and as a significant novelty starting on Selenium 4.11.0, if Chrome is not installed on the local machine when executing the previous line, the current stable CfT release is discovered, downloaded, and cached (in `~/.cache/selenium/chrome`). But there is more. In addition to the stable CfT version, Selenium Manager also allows downloading of older versions of CfT (starting in version 113, which is the first version published as CfT). 
 
-Let's consider a simple example. The following lines will download CfT 114 and its proper chromedriver version. Then Selenium will start Chrome to be driven programmatically, as usual:
+To set a browser version with Selenium, we use a browser option called [browserVersion](https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion).
+Until now, the value of this option had no effect when using the local browser since Selenium could not change what is installed in the system. But things are different with Selenium 4.11.0.
 
-```
-ChromeOptions options = new ChromeOptions();
-options.setBrowserVersion("114");
-WebDriver driver = new ChromeDriver(options);
-```
+Let's consider a simple example. Suppose we set `browserVersion` to `114` using [Chrome options](https://www.selenium.dev/documentation/webdriver/browsers/chrome/). In this case, Selenium Manager will check if Chrome 114 is already installed. If it is, it will be used. If not, Selenium Manager will manage (i.e., discover, download, and cache) CfT 114. And in either case, the chromedriver is also managed. Finally, Selenium will start Chrome to be driven programmatically, as usual.
 
-But there is even more. In addition to fixed browser versions (e.g., `113`, `114`, `115`, etc.), we can use the following labels for browser versions:
+But there is even more. In addition to fixed browser versions (e.g., `113`, `114`, `115`, etc.), we can use the following labels for `browserVersion`:
 
 - `stable`: Current CfT version.
 - `beta`: Next version to stable.
 - `dev`: Version in development at this moment.
 - `canary`: Nightly build for developers.
+
+When these labels are specified, Selenium Manager first checks if a given Chrome is already installed (`beta`, `dev`, etc.), and when it is not detected, CfT is automatically managed.
 
 ### Under the hood
 
@@ -108,18 +105,10 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.49\c
 
 ### Troubleshooting in the bindings
 
-If you want to get the Selenium Manager debugging information when using the Selenium bindings languages, you can enable it as follows (in Java):
+If you want to get the Selenium Manager debugging information (as shown in the section before) when using the Selenium bindings languages, you can enable the logging capabilities of Selenium. 
+Please visit the [Selenium troubleshooting page](https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/) for details.
 
-```
-Arrays.stream(Logger.getLogger("").getHandlers()).forEach(handler -> {
-    handler.setLevel(Level.FINE);
-});
-Logger.getLogger(SeleniumManager.class.getName()).setLevel(Level.FINE);
-```
-
-For the equivalence in other bindings languages, visit the [Selenium troubleshooting page](https://www.selenium.dev/documentation/webdriver/troubleshooting/).
 
 ### Next steps
 
-The following features to be implemented in Selenium Manager will continue the automated browser management mechanism, this time for **Firefox** and **Edge**. Stay tuned!
-
+You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). The following features to be implemented in Selenium Manager will continue the automated browser management mechanism, this time for **Firefox** and **Edge**. Stay tuned!
