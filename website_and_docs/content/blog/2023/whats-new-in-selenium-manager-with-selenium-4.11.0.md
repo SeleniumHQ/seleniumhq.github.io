@@ -1,7 +1,7 @@
 ---
 title: "What's new in Selenium Manager with Selenium 4.11.0"
 linkTitle: "What's new in Selenium Manager with Selenium 4.11.0"
-date: 2027-07-31
+date: 2023-07-31
 tags: ["selenium", "manager", "chrome", "chromedriver", "cft"]
 categories: ["releases"]
 author: Boni García ([@boni_gg](https://twitter.com/boni_gg))
