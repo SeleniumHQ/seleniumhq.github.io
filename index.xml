@@ -1,4 +1,725 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Building Selenium</title><link>/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/building-selenium/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.11.0 Released!</title><link>/blog/2023/selenium-4-11-0-released/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-11-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.11.0 for Java,
+.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v113, v114, and v115 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Support for &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing (CfT)&lt;/a> through Selenium Manager. Read more at the new Selenium Manager features &lt;a href="/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/">blog post&lt;/a>.&lt;/li>
+&lt;li>Selenium Manager now locates the browser driver binary on PATH or the configured path, checks for potential incompatibilities, and gives better warning and error messages.&lt;/li>
+&lt;li>&lt;a href="/downloads/#nightly">Nightly builds&lt;/a> are being pushed for Ruby and Java. Support for other languages is coming soon.&lt;/li>
+&lt;li>Ignore process id match when finding the window handle - IE Mode on Edge. (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12246">#12246&lt;/a>) (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12279">#12279&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h4 id="relevant-improvements-per-language">Relevant improvements per language&lt;/h4>
+&lt;ul>
+&lt;li>Java
+&lt;ul>
+&lt;li>Make user defined SlotMatcher used everywhere in Grid code (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12240">#12240&lt;/a>)&lt;/li>
+&lt;li>Add support for &lt;a href="https://fedidcg.github.io/FedCM/">FedCM&lt;/a> commands (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12096">#12096&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>JavaScript
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> Add Network module events (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12197">#12197&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>.NET
+&lt;ul>
+&lt;li>Implementation of event wrapped shadow root element (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12073">#12073&lt;/a>)&lt;/li>
+&lt;li>Allow setting a different pointer, keyboard, or wheel on input device (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/11513">#11513&lt;/a>)&lt;/li>
+&lt;li>Add move to location method to Actions (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/11509">#11509&lt;/a>)&lt;/li>
+&lt;li>Add support for Safari Technology Preview (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12342">#12342&lt;/a>)&lt;/li>
+&lt;li>Fix error when we send non-base64 data for fetch command (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12431">#12431&lt;/a>)&lt;/li>
+&lt;li>Fix continueResponse method in CDP (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12445">#12445&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Python
+&lt;ul>
+&lt;li>removed redundant attributes &lt;code>capabilities&lt;/code> and &lt;code>set_capability&lt;/code> in wpewebkit/options.py (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12169">#12169&lt;/a>)&lt;/li>
+&lt;li>improve driver logging, implement log_output() for flexibility and consistency of driver logging (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12103">#12103&lt;/a>)&lt;/li>
+&lt;li>let users pass service args to IE driver (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12272">#12272&lt;/a>)&lt;/li>
+&lt;li>Expose &lt;code>WPEWebKitService&lt;/code> and &lt;code>WebKitGTKService&lt;/code> in the public API&lt;/li>
+&lt;li>Remove deprecated &lt;code>ActionChains.scroll(...)&lt;/code>&lt;/li>
+&lt;li>Add creation flag for windows in selenium_manager (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12435">#12435&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Ruby
+&lt;ul>
+&lt;li>Made network interception threads fail silently (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12226">#12226&lt;/a>)&lt;/li>
+&lt;li>Remove deprecated code (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12417">#12417&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;h4 id="seleniumhttpsgithubcomseleniumhqselenium">&lt;a href="https://github.com/SeleniumHQ/selenium">Selenium&lt;/a>&lt;/h4>
+&lt;div class="d-flex justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/100381276?v=4" class="card-img-top mx-auto" alt="Oscar Devora" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Oscar Devora
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/RevealOscar">@RevealOscar&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6788579?v=4" class="card-img-top mx-auto" alt="Michael Mintz" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Michael Mintz
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mdmintz">@mdmintz&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/26169602?v=4" class="card-img-top mx-auto" alt="Sandeep Suryaprasad" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sandeep Suryaprasad
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sandeepsuryaprasad">@sandeepsuryaprasad&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1092670?v=4" class="card-img-top mx-auto" alt="Hanbo Wang" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Hanbo Wang
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bswhb">@bswhb&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/467294?v=4" class="card-img-top mx-auto" alt="Sebastian Meyer" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sebastian Meyer
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bastimeyer">@bastimeyer&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/11715448?v=4" class="card-img-top mx-auto" alt="Daniel Brown" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Daniel Brown
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/djbrown">@djbrown&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61700595?v=4" class="card-img-top mx-auto" alt="Vedanth Vasu Dev" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Vedanth Vasu Dev
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vedanthvdev">@vedanthvdev&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/104073199?v=4" class="card-img-top mx-auto" alt="Aditya Pratap Singh" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Aditya Pratap Singh
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Hyphenhypen">@Hyphenhypen&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/27357499?v=4" class="card-img-top mx-auto" alt="Bartek Florczak" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Bartek Florczak
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/baflQA">@baflQA&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/81536237?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AdamPDotty">@AdamPDotty&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/18648391?v=4" class="card-img-top mx-auto" alt="João Luca Ripardo" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+João Luca Ripardo
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jlucartc">@jlucartc&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/115367874?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ggkiokas">@ggkiokas&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/40191957?v=4" class="card-img-top mx-auto" alt="Debanjan Choudhury" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Debanjan Choudhury
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/debanjanc01">@debanjanc01&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/18628677?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bhecquet">@bhecquet&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1483109?v=4" class="card-img-top mx-auto" alt="Christian Biesinger" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Christian Biesinger
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/cbiesinger">@cbiesinger&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/90490506?v=4" class="card-img-top mx-auto" alt="Sen ZmaKi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sen ZmaKi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/SenZmaKi">@SenZmaKi&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-docs--websitehttpsgithubcomseleniumhqseleniumhqgithubio">&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">Selenium Docs &amp;amp; Website&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61235494?v=4" class="card-img-top mx-auto" alt="Pallavi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Pallavi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pallavigitwork">@pallavigitwork&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10348798?v=4" class="card-img-top mx-auto" alt="Cristian Greco" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Cristian Greco
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/cristianrgreco">@cristianrgreco&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/115712743?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/GautamJ700">@GautamJ700&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/85332623?v=4" class="card-img-top mx-auto" alt="Gayathri Rukmadhavan" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Gayathri Rukmadhavan
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/by-gayathri">@by-gayathri&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1052281?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/danksearle">@danksearle&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/44262112?v=4" class="card-img-top mx-auto" alt="Mikhail C." style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Mikhail C.
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/konflic">@konflic&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/97362299?v=4" class="card-img-top mx-auto" alt="nevinaydin" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+nevinaydin
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nevinaydin">@nevinaydin&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/48537932?v=4" class="card-img-top mx-auto" alt="Erick Ribeiro" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Erick Ribeiro
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/erick-ribeiro">@erick-ribeiro&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="docker-seleniumhttpsgithubcomseleniumhqdocker-selenium">&lt;a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/191885?v=4" class="card-img-top mx-auto" alt="Luis Correia" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luis Correia
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luisfcorreia">@luisfcorreia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5337626?v=4" class="card-img-top mx-auto" alt="alb3ric" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+alb3ric
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/alb3ric">@alb3ric&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/27357499?v=4" class="card-img-top mx-auto" alt="Bartek Florczak" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Bartek Florczak
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/baflQA">@baflQA&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3265455?v=4" class="card-img-top mx-auto" alt="Mårten Svantesson" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Mårten Svantesson
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/msvticket">@msvticket&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3581556?v=4" class="card-img-top mx-auto" alt="wintersolutions" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+wintersolutions
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/wintersolutions">@wintersolutions&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14896831?v=4" class="card-img-top mx-auto" alt="Tamsil Sajid Amani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tamsil Sajid Amani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/17887843?v=4" class="card-img-top mx-auto" alt="Simon K" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon K
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/symonk">@symonk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/909773?v=4" class="card-img-top mx-auto" alt="Krishnan Mahadevan" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Krishnan Mahadevan
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/krmahadevan">@krmahadevan&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1315816?v=4" class="card-img-top mx-auto" alt="James Mortensen" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+James Mortensen
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager with Selenium 4.11.0</title><link>/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</guid><description>
+&lt;p>As of version &lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">4.6.0&lt;/a>, all releases of Selenium (Java, JavaScript, Python, Ruby, and .Net) are shipped with &lt;strong>Selenium Manager&lt;/strong>. &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a> is a binary tool (implemented in Rust) that provides automated driver management for Selenium. &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a> is still in beta, although it is becoming a relevant component of Selenium.&lt;/p>
+&lt;p>So far, the main feature of Selenium Manager is called &lt;em>automated driver management&lt;/em>. I use the term &lt;em>management&lt;/em> for this feature (and not just &lt;em>download&lt;/em>) since this process is broader and implies different steps:&lt;/p>
+&lt;ol>
+&lt;li>Browser version discovery. Selenium Manager discovers the browser version (e.g., Chrome, Firefox, Edge) installed in the machine that executes Selenium. For this step, shell commands are used (e.g., &lt;code>google-chrome --version&lt;/code>).&lt;/li>
+&lt;li>Driver version discovery. With the discovered browser version, the proper driver version is resolved. For this step, the online metadata maintained by the browser vendors (e.g., &lt;a href="https://chromedriver.chromium.org/downloads">chromedriver&lt;/a>, &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a>, or &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">msedgedriver&lt;/a>) are used.&lt;/li>
+&lt;li>Driver download. With the resolved driver version, the driver URL is obtained, and with that URL, the driver artifact is downloaded, uncompressed, and stored locally in a cache folder (&lt;code>~/.cache/selenium&lt;/code>). The next time the same driver is required, it is used from the cache.&lt;/li>
+&lt;/ol>
+&lt;p>Driver management through Selenium Manager is &lt;em>opt-in&lt;/em> for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the &lt;code>PATH&lt;/code> or using system properties) or rely on a third-party &lt;em>manager&lt;/em> to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.&lt;/p>
+&lt;h3 id="entering-chrome-for-testing-cft">Entering Chrome for Testing (CfT)&lt;/h3>
+&lt;p>The Chrome team started a very relevant initiative for the testing community in 2023: &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing (CfT)&lt;/a>. CfT is a reduced release of Chrome primarily addressed to the testing use case.&lt;/p>
+&lt;p>One of the key differences between a regular Chrome release and CfT is that Chrome is &lt;em>evergreen&lt;/em>, i.e., it upgrades automatically and silently to the next stable version when available. On the other hand, CfT is not &lt;em>evergreen&lt;/em>, to allow pined browsers for testing. CfT releases are portable binaries (for Windows, Linux, and macOS) for different versions, including the stable, beta, dev, and canary channels. These releases can be programmatically discovered using the &lt;a href="https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints">CfT JSON endpoints&lt;/a>.&lt;/p>
+&lt;p>As of version 114, the chromedriver team has stopped publishing the chromedriver releases and metadata using their traditional &lt;a href="https://chromedriver.chromium.org/downloads">chromedriver download repository&lt;/a>. This way, and as of version 115, chromedriver releases can only be discovered programmatically using the abovementioned &lt;a href="https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints">CfT JSON endpoints&lt;/a>.&lt;/p>
+&lt;p>This change has been very relevant for the so-called driver managers. Luckily, Selenium already supports this new way of chromedriver discovery. The last version of Selenium Manager uses the CfT endpoints for chromedriver management. Therefore, if you are using Selenium Manager and Chrome, you must be updated to Selenium 4.11.0 to continue managing chromedriver automatically.&lt;/p>
+&lt;h3 id="automated-browser-management">Automated browser management&lt;/h3>
+&lt;p>Moreover, as of Selenium 4.11.0, Selenium Manager implements automated browser management based on CfT. In other words, Selenium Manager uses the CfT endpoints to discover, download, and cache the different CfT releases, making them seamlessly available for Selenium.&lt;/p>
+&lt;p>Let&amp;rsquo;s suppose we want to driver Chrome with Selenium (see the doc about how to &lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session">start a session with Selenium&lt;/a>). Before the session begins, and when the driver is unavailable, Selenium Manager manages chromedriver for us. This way, all the complexity related to CfT endpoints, driver versions, etc., is transparent, and we can rely on Selenium Manager to discover, download, and cache the proper driver for us.&lt;/p>
+&lt;p>In addition, and as a significant novelty starting on Selenium 4.11.0, if Chrome is not installed on the local machine when executing the previous line, the current stable CfT release is discovered, downloaded, and cached (in &lt;code>~/.cache/selenium/chrome&lt;/code>). But there is more. In addition to the stable CfT version, Selenium Manager also allows downloading of older versions of CfT (starting in version 113, which is the first version published as CfT).&lt;/p>
+&lt;p>To set a browser version with Selenium, we use a browser option called &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion">browserVersion&lt;/a>.
+Until now, the value of this option had no effect when using the local browser since Selenium could not change what is installed in the system. But things are different with Selenium 4.11.0.&lt;/p>
+&lt;p>Let&amp;rsquo;s consider a simple example. Suppose we set &lt;code>browserVersion&lt;/code> to &lt;code>114&lt;/code> using &lt;a href="https://www.selenium.dev/documentation/webdriver/browsers/chrome/">Chrome options&lt;/a>. In this case, Selenium Manager will check if Chrome 114 is already installed. If it is, it will be used. If not, Selenium Manager will manage (i.e., discover, download, and cache) CfT 114. And in either case, the chromedriver is also managed. Finally, Selenium will start Chrome to be driven programmatically, as usual.&lt;/p>
+&lt;p>But there is even more. In addition to fixed browser versions (e.g., &lt;code>113&lt;/code>, &lt;code>114&lt;/code>, &lt;code>115&lt;/code>, etc.), we can use the following labels for &lt;code>browserVersion&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>stable&lt;/code>: Current CfT version.&lt;/li>
+&lt;li>&lt;code>beta&lt;/code>: Next version to stable.&lt;/li>
+&lt;li>&lt;code>dev&lt;/code>: Version in development at this moment.&lt;/li>
+&lt;li>&lt;code>canary&lt;/code>: Nightly build for developers.&lt;/li>
+&lt;/ul>
+&lt;p>When these labels are specified, Selenium Manager first checks if a given Chrome is already installed (&lt;code>beta&lt;/code>, &lt;code>dev&lt;/code>, etc.), and when it is not detected, CfT is automatically managed.&lt;/p>
+&lt;h3 id="under-the-hood">Under the hood&lt;/h3>
+&lt;p>Selenium Manager is a CLI (command line interface) tool implemented in Rust and compiled for Windows, Linux, and macOS. The Selenium Manager binaries are shipped with each Selenium release. This way, each Selenium binding language invokes Selenium Manager to carry out the automated driver and browser management previously explained.&lt;/p>
+&lt;p>For most users, Selenium Manager should work silently and transparently. But if you want to &lt;em>play&lt;/em> with Selenium Manager or use it for your own use case (e.g., to download drivers or CfT releases), you can get the Selenium Manager binaries from the &lt;a href="https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager">Selenium main repository&lt;/a>.&lt;/p>
+&lt;p>For instance, to manage Chrome/chromedriver, the Selenium Manager command we need to invoke from the shell is the following (notice that the flag &lt;code>--debug&lt;/code> is optional, but it helps us to understand what Selenium Manager is doing):&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;gt; selenium-manager --browser chrome --debug
+DEBUG Checking chromedriver in PATH
+DEBUG Running command: chromedriver --version
+DEBUG Output: &amp;#34;&amp;#34;
+DEBUG chromedriver not found in PATH
+DEBUG chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+DEBUG Using shell command to find out chrome version
+DEBUG Running command: wmic datafile where name=&amp;#39;C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe&amp;#39; get Version /value
+DEBUG Output: &amp;#34;\r\r\n\r\r\nVersion=115.0.5790.110\r\r\n\r\r\n\r\r\n\r&amp;#34;
+DEBUG Detected browser: chrome 115.0.5790.110
+DEBUG Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG Required driver: chromedriver 115.0.5790.102
+DEBUG Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.102/win64/chromedriver-win64.zip
+INFO Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\115.0.5790.102\chromedriver.exe
+INFO Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+&lt;/code>&lt;/pre>&lt;p>In this case, the local Chrome (in Windows) is detected by Selenium Manager. Then, using its version and the CfT endpoints, the proper chromedriver version (115, in this example) is downloaded to the local cache. Finally, Selenium Manager provides two results: i) the driver path (downloaded) and ii) the browser path (local).&lt;/p>
+&lt;p>Let&amp;rsquo;s consider another example. Now we want to use Chrome beta. Therefore, we invoke Selenium Manager specifying that version label as follows (notice that the CfT beta is discovered, downloaded, and stored in the local cache):&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;gt; selenium-manager --browser chrome --debug --browser-version beta
+DEBUG Checking chromedriver in PATH
+DEBUG Running command: chromedriver --version
+DEBUG Output: &amp;#34;&amp;#34;
+DEBUG chromedriver not found in PATH
+DEBUG Checking chrome in PATH
+DEBUG Running command: where chrome
+DEBUG Output: &amp;#34;&amp;#34;
+DEBUG chrome not found in PATH
+DEBUG chrome has not been discovered in the system
+DEBUG Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
+DEBUG Required browser: chrome 116.0.5845.49
+DEBUG Downloading chrome 116.0.5845.49 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.49/win64/chrome-win64.zip
+DEBUG chrome 116.0.5845.49 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.49\chrome.exe
+DEBUG Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG Required driver: chromedriver 116.0.5845.49
+DEBUG Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.49/win64/chromedriver-win64.zip
+INFO Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.49\chromedriver.exe
+INFO Browser path: C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.49\chrome.exe
+&lt;/code>&lt;/pre>&lt;h3 id="troubleshooting-in-the-bindings">Troubleshooting in the bindings&lt;/h3>
+&lt;p>If you want to get the Selenium Manager debugging information (as shown in the section before) when using the Selenium bindings languages, you can enable the logging capabilities of Selenium.
+Please visit the &lt;a href="https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/">Selenium troubleshooting page&lt;/a> for details.&lt;/p>
+&lt;h3 id="next-steps">Next steps&lt;/h3>
+&lt;p>You can trace the work in progress in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>. The following features to be implemented in Selenium Manager will continue the automated browser management mechanism, this time for &lt;strong>Firefox&lt;/strong> and &lt;strong>Edge&lt;/strong>. Stay tuned!&lt;/p></description></item><item><title>Blog: Building Selenium</title><link>/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/building-selenium/</guid><description>
 &lt;p>One of the things that we knew from the very beginning of the Selenium
 project was that people like to code in more than one language. Some
 people love a bit of JS, others Ruby, and still others prefer C# or
@@ -6988,401 +7709,4 @@ flexibility, we’ve chosen to provide a GraphQL endpoint for the Grid. To ensur
 sufficiently flexible, we’re building the new Grid console using it. That should allow you to also extract useful
 metrics and information from the Grid for your monitoring needs.&lt;/p>
 &lt;p>Those are some highlights of the new Selenium Grid. What are you the most excited about?&lt;/p>
-&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/whats-coming-in-selenium-4-the-new-selenium-grid">https://saucelabs.com/blog/whats-coming-in-selenium-4-the-new-selenium-grid&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Blog: Public Project Meeting - January 28, 2021</title><link>/blog/2021/public-project-meeting-20210128/</link><pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210128/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on January 28, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 9:17 PM&lt;/em>&lt;/p>
-&lt;p>Yes, here is the short agenda:&lt;/p>
-&lt;ul>
-&lt;li>General project statistics (Previous meeting: 262 open issues, 54 open PRs, Current: 252, 35 PRs)&lt;/li>
-&lt;li>Overall announcements? New people on committees, with the commit bit, etc?&lt;/li>
-&lt;li>Pending work that needs to be done for the first Beta?&lt;/li>
-&lt;li>CoC, next steps?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Alexei Barantsev 9:44 PM&lt;/em>&lt;/p>
-&lt;p>can the Bot drop the meeting link to the chat, please, I always forget where to get it…&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:53 PM&lt;/em>&lt;/p>
-&lt;p>this is the written one&lt;/p>
-&lt;p>&lt;em>Alexei Barantsev 9:58 PM&lt;/em>&lt;/p>
-&lt;p>awesome! I’m in yet I have nothing to add to the agenda&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:01 PM&lt;/em>&lt;/p>
-&lt;p>sounds good
-I’ll ping people around and we can wait a couple of minutes, Simon said he was going to be slightly late&lt;/p>
-&lt;p>&lt;em>10:02 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner @jimevans @mmerrell @manoj9788 @AutomatedTester @harsha509 @luke&lt;/p>
-&lt;p>&lt;em>Jim Evans 10:03 PM&lt;/em>&lt;/p>
-&lt;p>i’m not going to be able to make the video chat, but i can contribute here if people have questions. the only thing missing from .NET for beta1 is making CDP work via remote, which i don’t think needs to be in beta1 for .NET.&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:06 PM&lt;/em>&lt;/p>
-&lt;p>this is just the written one, the video chat is just to hangout, that one is next week&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 10:06 PM&lt;/em>&lt;/p>
-&lt;p>no status chance on the Chicago conference at this point - still looking at COVID numbers to determine whether or not it&amp;rsquo;s going to be feasible&lt;/p>
-&lt;p>&lt;em>David Burns 10:07 PM&lt;/em>&lt;/p>
-&lt;p>here!
-sorry&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:07 PM&lt;/em>&lt;/p>
-&lt;p>Marcus
-are we still looking into an online event, Marcus?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 10:07 PM&lt;/em>&lt;/p>
-&lt;p>we can look into that
-haven&amp;rsquo;t been to this point&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:08 PM&lt;/em>&lt;/p>
-&lt;p>I only ask because (I think) it was mentioned last time
-ok, perhaps we can start, the first topic is:
-Overall announcements? New people on committees, with the commit bit, etc?&lt;/p>
-&lt;p>&lt;em>10:10 PM&lt;/em>&lt;/p>
-&lt;p>Aside from @luke joining recently, there are no more things to announce, right?&lt;/p>
-&lt;p>&lt;em>Sri Harsha 10:10 PM&lt;/em>&lt;/p>
-&lt;p>I think luke joined recently!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:10 PM&lt;/em>&lt;/p>
-&lt;p>Nothing that I can think off&lt;/p>
-&lt;p>&lt;em>Alexei Barantsev 10:12 PM&lt;/em>&lt;/p>
-&lt;p>I support @diemol’s appeal to focus attention to the issue tracker. let’s try to clean it up in view of the forthcoming v.4 release&lt;/p>
-&lt;p>&lt;em>10:13&lt;/em>&lt;/p>
-&lt;p>close all outdated issues and PRs, apply everything that worth applying&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:13 PM&lt;/em>&lt;/p>
-&lt;p>the work done during the recent week on the issue tracker has been great, hopefully we keep that going&lt;/p>
-&lt;p>&lt;em>10:14 PM&lt;/em>&lt;/p>
-&lt;p>we could jump into the next topic perhaps…
-Pending work that needs to be done for the first Beta?
-here is the list I have from the last meeting&lt;/p>
-&lt;p>&lt;em>10:15 PM&lt;/em>&lt;/p>
-&lt;h3 id="client-facing-changes">Client facing changes:&lt;/h3>
-&lt;ul>
-&lt;li>Make relative locators return elements sorted by proximity&lt;/li>
-&lt;li>Fix Java Module System problems (I think @simonstewart did this already)&lt;/li>
-&lt;li>Allow locator strategies to be pluggable Enable fallbacks for commands&lt;/li>
-&lt;/ul>
-&lt;h3 id="server-changes">Server changes:&lt;/h3>
-&lt;ul>
-&lt;li>Enable retries of commands where necessary using failsafe&lt;/li>
-&lt;li>Get the Grid UI looking nice, and returning useful data (@diemol is working on this)&lt;/li>
-&lt;li>Allow locator strategies to be pluggable&lt;/li>
-&lt;li>Pipe VNC connectors through the websocket plumbing for live video&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 10:15 PM&lt;/em>&lt;/p>
-&lt;p>Relative locators now sort by proximity
-I think the Java Module stuff is working
-I&amp;rsquo;m working on fallbacks for locators&lt;/p>
-&lt;p>&lt;em>Alexei Barantsev 10:15 PM&lt;/em>&lt;/p>
-&lt;p>I can confirm that java 9 modules are usable now&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:16 PM&lt;/em>&lt;/p>
-&lt;p>Locator strategies are pluggable on the server side
-Once I get the locator strategies falling back on the local end, I&amp;rsquo;m fine with shipping the beta&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:17 PM&lt;/em>&lt;/p>
-&lt;p>we had some issue reports related to the Grid, in most of the cases it is a matter of showing the correct information on the UI
-and I am working on that&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:18 PM&lt;/em>&lt;/p>
-&lt;p>Also there&amp;rsquo;s a nasty issue with starting a large number of sessions concurrently&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:18 PM&lt;/em>&lt;/p>
-&lt;p>yeah, I was going to point that one out, &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9112">https://github.com/SeleniumHQ/selenium/issues/9112&lt;/a>
-I have not had time to research enough, but most of the results when googling point to: either we are creating too many Netty clients or something is wrong with the way the client is created&lt;/p>
-&lt;p>&lt;em>David Burns 10:20 PM&lt;/em>&lt;/p>
-&lt;p>Feel free to pull in @Puja Jagani on the sessions one, I know she was looking at one about starting up a grid and things not working&lt;/p>
-&lt;p>&lt;em>10:20 PM&lt;/em>&lt;/p>
-&lt;p>(can&amp;rsquo;t remember the issue #)&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:20 PM&lt;/em>&lt;/p>
-&lt;p>that’d be great, I can sync with @Puja Jagani later
-what do you all estimate for a beta release? 3-4 weeks?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:21 PM&lt;/em>&lt;/p>
-&lt;p>Maybe less&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:23 PM&lt;/em>&lt;/p>
-&lt;p>ok, I think we do not have more things pending for beta 1?
-the only topic left is the CoC
-New&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:24 PM&lt;/em>&lt;/p>
-&lt;p>Is this a good time/forum to ask about wiki/docs?&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:24 PM&lt;/em>&lt;/p>
-&lt;p>always&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:25 PM&lt;/em>&lt;/p>
-&lt;p>Diego pointed me at a couple issues @AutomatedTester created for docs &amp;amp; wiki cleanup things
-did we have an idea for what we want in the language specific wiki page vs in the docs; and user vs developer focused?
-The Ruby wiki stuff is way out of date, not even just Selenium 4 things :)
-just want to know where we should be cleaning it up to&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:28 PM&lt;/em>&lt;/p>
-&lt;p>are those two different things?
-language specific things
-and
-dev docs? (people who want to contribute to Selenium, what technical steps to follow?)&lt;/p>
-&lt;p>&lt;em>David Burns 10:28 PM&lt;/em>&lt;/p>
-&lt;p>CoC is still waiting on SFC.
-New&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:29 PM&lt;/em>&lt;/p>
-&lt;p>What we did with Watir was to make the wiki about things devs need to know about the project building/deploying, etc
-and everything user related went into the documentation
-oh, heh, looks like we ended up deleting the wiki and sending everything to the website&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:32 PM&lt;/em>&lt;/p>
-&lt;p>Why do we need a language bindings specific things on the user docs?
-Do they differ too much on how they work?&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:33 PM&lt;/em>&lt;/p>
-&lt;p>So our current documentation has tabs to show the examples in each of the languages
-the wiki is currently just a big page of examples for using Ruby Selenium (&lt;a href="https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings">https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings&lt;/a>)&lt;/p>
-&lt;p>&lt;em>10:37&lt;/em>&lt;/p>
-&lt;p>I guess I haven&amp;rsquo;t spent much time with the docs anyway, so maybe I should play around and see what makes sense.
-Didn&amp;rsquo;t know if anyone else had opinions on any of it. :)
-Guess not&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:38 PM&lt;/em>&lt;/p>
-&lt;p>ah ok, that Wiki seems to be duplicating the user docs
-but some parts of the Wiki could evolve to be part of the user docs&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:39 PM&lt;/em>&lt;/p>
-&lt;p>yeah, it&amp;rsquo;s 2 approaches to organization as well; here&amp;rsquo;s everything in ruby, vs here&amp;rsquo;s everything, click the tab for each to see the ruby.&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:39 PM&lt;/em>&lt;/p>
-&lt;p>I think the 2nd could work well
-someone needs to take the time and take the contents of that Wiki and put them in the docs&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:39 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ll take a look at what might make sense since now that I no longer have any looming work pressing things for the first time in forever&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:40 PM&lt;/em>&lt;/p>
-&lt;p>cool
-thank you&lt;/p>
-&lt;p>I think that was it for today, right?&lt;/p>
-&lt;p>Thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - January 14, 2021</title><link>/blog/2021/public-project-meeting-20210114/</link><pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210114/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on January 14, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 10:02 PM&lt;/em>&lt;/p>
-&lt;p>Alright, :wave: everyone, let me share the agenda&lt;/p>
-&lt;p>&lt;em>10:02 PM&lt;/em>&lt;/p>
-&lt;ul>
-&lt;li>Overall announcements? New people on committees, with the commit bit, etc?&lt;/li>
-&lt;li>Anything new to report from the last PLC/SFC call?&lt;/li>
-&lt;li>Pending work that needs to be done for the first Beta?&lt;/li>
-&lt;li>CoC, next steps?&lt;/li>
-&lt;li>Any other topics?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>10:04 PM&lt;/em>&lt;/p>
-&lt;p>pinging @titusfortner, @AutomatedTester, @mmerrell, @barancev&lt;/p>
-&lt;p>who else?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:04 PM&lt;/em>&lt;/p>
-&lt;p>@jimevans
-@p0deje
-@harsha509&lt;/p>
-&lt;p>&lt;em>Jim Evans 10:05 PM&lt;/em>&lt;/p>
-&lt;p>i’m already in another meeting at the moment.&lt;/p>
-&lt;p>Sri Harsha 10:05 PM&lt;/p>
-&lt;p>m available&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:05 PM&lt;/em>&lt;/p>
-&lt;p>ok, let’s bring the first topic:
-Overall announcements? New people on committees, with the commit bit, etc?&lt;/p>
-&lt;p>&lt;em>David Burns 10:05 PM&lt;/em>&lt;/p>
-&lt;p>here&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:06 PM&lt;/em>&lt;/p>
-&lt;p>So, I asked both to the TLC members about adding @luke as a committer,
-and I also reached out to Luke, both sides are happy with it.&lt;/p>
-&lt;p>&lt;em>David Burns 10:06 PM&lt;/em>&lt;/p>
-&lt;p>cool!&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:07 PM&lt;/em>&lt;/p>
-&lt;p>Then, I will add Luke during the next couple of days
-and follow the steps we have in the Governance model&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:08 PM&lt;/em>&lt;/p>
-&lt;p>Congratulations, @luke!
-:tada:&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:09 PM&lt;/em>&lt;/p>
-&lt;p>great!
-So, I think we have nothing else to add to this point?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 10:09 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ve got approval emails out to SFC to get the new contractor on the Code of Conduct. It&amp;rsquo;s time to poke again.
-We&amp;rsquo;ve tentatively selected dates for a Chicago SeConf (sometime in September, I believe).
-We&amp;rsquo;re still hopeful that with the vaccine, this will be possible. we&amp;rsquo;ll look to make a final decision, based on numbers, in ~April
-:parrot:&lt;/p>
-&lt;p>&lt;em>10:11 PM&lt;/em>&lt;/p>
-&lt;p>We need to consider whether or not to run a virtual conference in the case that it doesn&amp;rsquo;t work out to have an irl conference&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:11 PM&lt;/em>&lt;/p>
-&lt;p>Can that decision also be delayed until April?&lt;/p>
-&lt;p>&lt;em>Marcus Merrell 10:11 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m a little uncomfortable waiting that long&amp;ndash;not for the hotel and
-the risk of losing the deposit $$, but because of marketing/CFP stuff
-let&amp;rsquo;s say &amp;ldquo;early April&amp;rdquo;&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:12 PM&lt;/em>&lt;/p>
-&lt;p>Great news about the CoC!
-ok, seems we covered also the “Anything new to report from the last PLC/SFC call?” topic as well, right?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:14 PM&lt;/em>&lt;/p>
-&lt;p>I think so&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:15 PM&lt;/em>&lt;/p>
-&lt;p>ok, so let’s jump to “Pending work that needs to be done for the first Beta?”&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:15 PM&lt;/em>&lt;/p>
-&lt;p>There’s a few things&lt;/p>
-&lt;p>&lt;em>10:16 PM&lt;/em>&lt;/p>
-&lt;p>I’ve a PR out for the new RemoteWebDriverBuilder, which is one piece.
-The other big bit for me is the pluggable locators, tying up the local and remote ends bits we already have.
-That’ll be easier with the RemoteWebDriverBuilder in place.&lt;/p>
-&lt;p>&lt;em>10:17 PM&lt;/em>&lt;/p>
-&lt;p>(As it’s essentially creating new decorators of the CommandExecutor)
-I’d also like to ensure that things like the relative locators and script pinning work as advertised, but that’s a relatively slim tranche of work
-My next hacking days are Monday and Tuesday next week&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:18 PM&lt;/em>&lt;/p>
-&lt;p>here is a list from the previous status meeting:
-Client facing changes:&lt;/p>
-&lt;ul>
-&lt;li>Make relative locators return elements sorted by proximity&lt;/li>
-&lt;li>Fix Java Module System problems&lt;/li>
-&lt;li>Allow locator strategies to be pluggable
-Enable fallbacks for commands&lt;/li>
-&lt;li>Server changes:&lt;/li>
-&lt;li>Enable retries of commands where necessary using failsafe&lt;/li>
-&lt;li>Get the Grid UI looking nice, and returning useful data&lt;/li>
-&lt;li>Allow locator strategies to be pluggable&lt;/li>
-&lt;li>Pipe VNC connectors through the websocket plumbing for live video&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>10:19 PM&lt;/em>&lt;/p>
-&lt;p>I think this is (partly?) done “Allow locator strategies to be pluggable”
-and I remember @simonstewart did this “Make relative locators return elements sorted by proximity”&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:19 PM&lt;/em>&lt;/p>
-&lt;p>I did
-The Java Module System thing is a good point, but not a huge amount of work&lt;/p>
-&lt;p>&lt;em>10:20 PM&lt;/em>&lt;/p>
-&lt;p>Though it’s a little fiddly&lt;/p>
-&lt;p>&lt;em>Titus Fortner 10:20 PM&lt;/em>&lt;/p>
-&lt;p>is the &amp;ldquo;pluggable&amp;rdquo; part a Java specific thing, or something new that the server is going to support that opens up new opportunities for dynamic languages?&lt;/p>
-&lt;p>&lt;em>David Burns 10:20 PM&lt;/em>&lt;/p>
-&lt;p>@Puja Jagani could probably look at the Java Module work&lt;/p>
-&lt;p>&lt;em>Puja Jagani&lt;/em>&lt;/p>
-&lt;p>Sure! I can take that up&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:20 PM&lt;/em>&lt;/p>
-&lt;p>I can discuss the changes with her&lt;/p>
-&lt;p>&lt;em>10:21 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner the remote end bits of the pluggable locators allow us to avoid sending large payloads across the wire for (eg) finding by react
-But it requires the local end to know in advance that it can use that mechanism
-Tying the pieces together with a fallback allows the local end to try the efficient way first and then fallback to the inefficient way&lt;/p>
-&lt;p>&lt;em>10:22 PM&lt;/em>&lt;/p>
-&lt;p>It shouldn’t be a particularly challenging thing to do once the pieces are all nicely lined up, but getting the pieces lined up has taken time :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:24 PM&lt;/em>&lt;/p>
-&lt;p>I am slowly getting more time to work on some open issues and getting some items from that list on the server done, like using failsafe for retries&lt;/p>
-&lt;p>&lt;em>Puja Jagani&lt;/em>&lt;/p>
-&lt;p>I created a PR to get started on that front for transient errors, please have a look when time permits. I think that might serve as the starting point.&lt;/p>
-&lt;p>&lt;em>Diego Molina&lt;/em>&lt;/p>
-&lt;p>perfect, will do&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:24 PM&lt;/em>&lt;/p>
-&lt;p>I think the BrowserStack folks (particularly @rajendra?) are hacking on the Grid UI and can give an update on that
-I’m happy to punt the failsafe stuff for the beta, but it really should be in place for the 4.0 release&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:24 PM&lt;/em>&lt;/p>
-&lt;p>I saw one or two GH issues related to that, if I am faster than @rajendra I can tackle it and get familiar with the UI
-I would leave this one out as well
-Pipe VNC connectors through the websocket plumbing for live video&lt;/p>
-&lt;p>&lt;em>10:25 PM&lt;/em>
-for beta 1
-hopefully it could be there for the 4.0 release&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:25 PM&lt;/em>&lt;/p>
-&lt;p>I think that’s just a case of adding the video URL to the se:options in the server
-Should be in the same place as we add the bit for cdp&lt;/p>
-&lt;p>&lt;em>David Burns 10:26 PM&lt;/em>&lt;/p>
-&lt;p>I had a quick look at the grid-ui in a stream&amp;hellip; my CSS sucksbut happy to pair up and fix&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:26 PM&lt;/em>&lt;/p>
-&lt;p>ah, so the scope is way smaller than what I was thinking&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:26 PM&lt;/em>&lt;/p>
-&lt;p>The WebSocket forwarding either works or it doesn’t. If it doesn’t, CDP over the Grid is broken
-And I already got the CDP over Grid working :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>David Burns 10:26 PM&lt;/em>&lt;/p>
-&lt;p>@Puja Jagani is looking at adding a few more issues with graphql that we can surface&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:27 PM&lt;/em>&lt;/p>
-&lt;p>so we offer the WebSocket endpoint and the user can use it to stream&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:27 PM&lt;/em>&lt;/p>
-&lt;p>Can we “drain” using GraphQL yet?&lt;/p>
-&lt;p>&lt;em>David Burns&lt;/em>&lt;/p>
-&lt;p>I dont think so&lt;/p>
-&lt;p>&lt;em>David Burns&lt;/em>&lt;/p>
-&lt;p>we can get the grid ui to call a normal url&lt;/p>
-&lt;p>&lt;em>Simon Stewart&lt;/em>&lt;/p>
-&lt;p>The idea would be to use GraphQL for the entire UI….&lt;/p>
-&lt;p>&lt;em>David Burns&lt;/em>&lt;/p>
-&lt;p>We can add it &amp;ldquo;soon&amp;rdquo; but since it works we don&amp;rsquo;t need to block a beta on it. Let&amp;rsquo;s have a stretch for it&lt;/p>
-&lt;p>&lt;em>Simon Stewart&lt;/em>&lt;/p>
-&lt;p>But it doesn’t work if you have a distributed grid&lt;/p>
-&lt;p>&lt;em>Simon Stewart&lt;/em>&lt;/p>
-&lt;p>It’s one of the “tracer bullets” of the graphql stuff, and really does need to be in&lt;/p>
-&lt;p>&lt;em>Simon Stewart&lt;/em>&lt;/p>
-&lt;p>I want the beta as much as anyone, but there are some corners we should avoid cutting&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:27 PM&lt;/em>&lt;/p>
-&lt;p>@diemol it’s a tiny bit more than that, but, yeah&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:27 PM&lt;/em>&lt;/p>
-&lt;p>I thought we wanted to put that in the Grid UI&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:27 PM&lt;/em>&lt;/p>
-&lt;p>We do before 4.0&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:27 PM&lt;/em>&lt;/p>
-&lt;p>we would need to embed a VNC client in the UI for that&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:27 PM&lt;/em>&lt;/p>
-&lt;p>But for the alpha, I’m happy with the endpoint being exposed and being able to wire up a vnc viewer locally that goes through the grid
-@diemol what did zalenium use?&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:28 PM&lt;/em>&lt;/p>
-&lt;p>noVNC, but that was something that you need to install on the host, IIRC&lt;/p>
-&lt;p>&lt;em>10:29 PM&lt;/em>&lt;/p>
-&lt;p>ah, I think it also has a JS library, it “should” work
-there is also an alternative called “Guacamole”&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:29 PM&lt;/em>&lt;/p>
-&lt;p>&lt;a href="http://guacamole.apache.org">http://guacamole.apache.org&lt;/a> might be useful
-Ha!&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:30 PM&lt;/em>&lt;/p>
-&lt;p>right, so I can look at that at some point&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:30 PM&lt;/em>&lt;/p>
-&lt;p>Awesome. Thank you&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:30 PM&lt;/em>&lt;/p>
-&lt;p>coming back to pluggable locators, it is working in Java
-but we would need the other bindings to implement it, right?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:31 PM&lt;/em>&lt;/p>
-&lt;p>When it’s working in Java, yes :slightly_smiling_face:
-But I think it’s enough to get them in one binding for the beta, and the others can follow&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:31 PM&lt;/em>&lt;/p>
-&lt;p>Also, the reworked logic for relative locators has been implemented only in Java?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:32 PM&lt;/em>&lt;/p>
-&lt;p>The reworked logic was in the atom.
-Everyone has it
-Yay for the atoms!&lt;/p>
-&lt;p>&lt;em>10:32&lt;/em>&lt;/p>
-&lt;p>:slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:32 PM&lt;/em>&lt;/p>
-&lt;p>That’s great!
-Do we have anything else?
-I will (for sure) this time create GitHub issues for the different items&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:34 PM&lt;/em>&lt;/p>
-&lt;p>And add them to the project plan, please!&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:34 PM&lt;/em>&lt;/p>
-&lt;p>absolutely&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:35 PM&lt;/em>&lt;/p>
-&lt;p>Thank you&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:36 PM&lt;/em>&lt;/p>
-&lt;p>Well, I think we do not have other topics, should we cut it short?
-New&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:38 PM&lt;/em>&lt;/p>
-&lt;p>I’m down with that. Thanking for running this!
-Unless @jimevans has something to add? I see he’s typing&lt;/p>
-&lt;p>&lt;em>Jim Evans 10:38 PM&lt;/em>&lt;/p>
-&lt;p>re pluggable locators: that’s just having findElement(s) call down the wire using the end point without validating the using and value params, yeah?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:39 PM&lt;/em>&lt;/p>
-&lt;p>That’s what the java code does at the moment&lt;/p>
-&lt;p>&lt;em>Jim Evans 10:39 PM&lt;/em>&lt;/p>
-&lt;p>cool. .NET can do that too right now, i think (will have to confirm)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 10:39 PM&lt;/em>&lt;/p>
-&lt;p>I want to land a few more smarts&lt;/p>
-&lt;p>&lt;em>David Burns 10:39 PM&lt;/em>&lt;/p>
-&lt;p>I expect the python and ruby code can do it to since monkey patching is easy
-and then add smarts too
-improve docs ftw&lt;/p>
-&lt;p>&lt;em>Diego Molina 10:43 PM&lt;/em>&lt;/p>
-&lt;p>ok, seems we are done with the status meeting, thank you everyone!&lt;/p>
-&lt;p>&lt;em>Jim Evans 10:45 PM&lt;/em>&lt;/p>
-&lt;p>re beta readiness: i have a refactor to .NET i want to do to make CDP via RemoteWebDriver easier/more correct, but it can wait until post-beta1&lt;/p>
-&lt;p>&lt;em>10:45&lt;/em>&lt;/p>
-&lt;p>otherwise, i think .NET is ready for beta.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;em>This was originally posted at &lt;a href="https://saucelabs.com/blog/whats-coming-in-selenium-4-the-new-selenium-grid">https://saucelabs.com/blog/whats-coming-in-selenium-4-the-new-selenium-grid&lt;/a>&lt;/em>&lt;/p></description></item></channel></rss>
