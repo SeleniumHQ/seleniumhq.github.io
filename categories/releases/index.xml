@@ -121,7 +121,7 @@ Links to everything can be found on our &lt;a href="/downloads">downloads page&l
 &lt;li>Error messages across bindings now include links to the Selenium documentation.&lt;/li>
 &lt;li>Overhaul of the service classes and logging output options.&lt;/li>
 &lt;li>Logger in Ruby updated default behavior to match other languages and added features to improve filtering types of logging.&lt;/li>
-&lt;li>Python - removal of seveal sections of deprecated code.
+&lt;li>Python - removal of several sections of deprecated code.
 &lt;ul>
 &lt;li>Most of them were arguments that can be set in the &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/options/">&lt;code>Options&lt;/code> classes&lt;/a> (browser values) or &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/service/">&lt;code>Service&lt;/code> classes&lt;/a> (browser driver values).&lt;/li>
 &lt;li>They have been deprecated since the &lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#python-1">first Selenium 4 release&lt;/a>&lt;/li>
