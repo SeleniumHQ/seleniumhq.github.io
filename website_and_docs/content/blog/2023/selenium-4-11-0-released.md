@@ -18,7 +18,6 @@ Links to everything can be found on our [downloads page][downloads].
   * Chrome DevTools support is now: v113, v114, and v115 (Firefox still uses v85 for all versions)
   * Support for [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/) through Selenium Manager. Read more at the new Selenium Manager features [blog post](/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/). 
   * [Nightly builds](/downloads/#nightly) are being pushed for Ruby and Java. Support for other languages is coming soon.
-  * Deprecated all the code inside the Java `lift` package ([#12263](https://github.com/SeleniumHQ/selenium/pull/12263))
   * Ignore process id match when finding the window handle - IE Mode on Edge. ([#12246](https://github.com/SeleniumHQ/selenium/pull/12246)) ([#12279](https://github.com/SeleniumHQ/selenium/pull/12279))
 
 
