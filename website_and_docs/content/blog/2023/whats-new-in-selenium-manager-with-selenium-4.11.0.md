@@ -15,7 +15,8 @@ So far, the main feature of Selenium Manager is called *automated driver managem
 
 1. Browser version discovery. Selenium Manager discovers the browser version (e.g., Chrome, Firefox, Edge) installed in the machine that executes Selenium. For this step, shell commands are used (e.g., `google-chrome --version`).
 2. Driver version discovery. With the discovered browser version, the proper driver version is resolved. For this step, the online metadata maintained by the browser vendors (e.g., [chromedriver](https://chromedriver.chromium.org/downloads), [geckodriver](https://github.com/mozilla/geckodriver/releases), or [msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)) are used.
-3. Driver download. With the resolved driver version, the driver URL is obtained, and with that URL, the driver artifact is downloaded, uncompressed, and stored locally in a cache folder (`~/.cache/selenium`). The next time the same driver is required, it is used from the cache.
+3. Driver download. With the resolved driver version, the driver URL is obtained; with that URL, the driver artifact is downloaded, uncompressed, and stored locally.
+4. Driver cache. Uncompressed driver binaries are stored in a local cache folder (`~/.cache/selenium`). The next time the same driver is required, if the driver is already in the cache, it will be used from there.
 
 ### Drivers on the PATH
 
