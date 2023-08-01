@@ -15,15 +15,26 @@ So far, the main feature of Selenium Manager is called *automated driver managem
 
 1. Browser version discovery. Selenium Manager discovers the browser version (e.g., Chrome, Firefox, Edge) installed in the machine that executes Selenium. For this step, shell commands are used (e.g., `google-chrome --version`).
 2. Driver version discovery. With the discovered browser version, the proper driver version is resolved. For this step, the online metadata maintained by the browser vendors (e.g., [chromedriver](https://chromedriver.chromium.org/downloads), [geckodriver](https://github.com/mozilla/geckodriver/releases), or [msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)) are used.
-3. Driver download. With the resolved driver version, the driver URL is obtained, and with that URL, the driver artifact is downloaded, uncompressed, and stored locally in a cache folder (`~/.cache/selenium`). The next time the same driver is required, it is used from the cache.
+3. Driver download. With the resolved driver version, the driver URL is obtained; with that URL, the driver artifact is downloaded, uncompressed, and stored locally.
+4. Driver cache. Uncompressed driver binaries are stored in a local cache folder (`~/.cache/selenium`). The next time the same driver is required, if the driver is already in the cache, it will be used from there.
 
-Driver management through Selenium Manager is *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.
+### Drivers on the PATH
+
+Driver management through Selenium Manager is *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue. Nevertheless, Selenium Manager also helps users to identify potential problems with the drivers on the `PATH`.
+
+Let's consider an example. Imagine you manually manage your chromedriver for your Selenium tests. When you carry out this management, the stable version of Chrome is 113, so you download chromedriver 113 and put it in your `PATH`. Your Selenium tests execute. Everything is fine. But the *problem* here is that Chrome is *evergreen*. This name refers to Chrome's ability to upgrade automatically and silently to the next stable version when available. This feature is excellent for end-users but potentially dangerous for automated testing. Let's go back to the example to discover it. Your local Chrome will eventually update to version 115. And that moment, your Selenium tests will be broken due to the incompatibility of the manually managed driver (113) and your Chrome (115). That day, your test dashboard will be red due to the following error message: *"session not created: This version of ChromeDriver only supports Chrome version 113"*.
+
+This problem is the primary reason for the existence of the so-called *driver managers*. And as of Selenium 4.11, Selenium Manager helps to understand potential issues related to the drivers in the `PATH`. When an incompatible driver release is found in the `PATH`, a warning message like the following is displayed to the user:
+
+```
+WARN    The chromedriver version (113.0.5672.63) detected in PATH at C:\my-drivers\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.110); currently, chromedriver 115.0.5790.102 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry
+```
 
 ### Entering Chrome for Testing (CfT)
 
 The Chrome team started a very relevant initiative for the testing community in 2023: [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/). CfT is a reduced release of Chrome primarily addressed to the testing use case.
 
-One of the key differences between a regular Chrome release and CfT is that Chrome is *evergreen*, i.e., it upgrades automatically and silently to the next stable version when available. On the other hand, CfT is not *evergreen*, to allow pined browsers for testing. CfT releases are portable binaries (for Windows, Linux, and macOS) for different versions, including the stable, beta, dev, and canary channels. These releases can be programmatically discovered using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints). 
+One of the key differences between a regular Chrome release and CfT is that Chrome is *evergreen*, but CfT is not. This way, CfT allows pined browsers for testing. CfT releases are portable binaries (for Windows, Linux, and macOS) for different versions, including the stable, beta, dev, and canary channels. These releases can be programmatically discovered using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints). 
 
 As of version 114, the chromedriver team has stopped publishing the chromedriver releases and metadata using their traditional [chromedriver download repository](https://chromedriver.chromium.org/downloads). This way, and as of version 115, chromedriver releases can only be discovered programmatically using the abovementioned [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints).
 
