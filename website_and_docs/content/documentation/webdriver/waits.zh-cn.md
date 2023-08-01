@@ -164,7 +164,7 @@ println(firstResult.text)
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
 WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
-          .until(driver -> driver.findElement(By.name("q")));
+          .until(driver -> driver.findElement(By.tagName("p")));
 assertEquals(foo.getText(), "Hello from JavaScript!");         
   {{< /tab >}}
   {{< tab header="Python" >}}
