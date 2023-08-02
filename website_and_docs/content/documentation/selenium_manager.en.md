@@ -68,7 +68,6 @@ located by default at `~/.cache/selenium/selenium-manager-config.toml`.
 | --proxy user@pass:myproxy:8080   | SE_PROXY=user@pass:myproxy:8080                    | proxy = "user@pass:myproxy:8080"                    |
 | --browser-ttl 0                  | SE_BROWSER_TTL=0                                   | browser-ttl = 0                                     |
 | --driver-ttl 86400               | SE_DRIVER_TTL=86400                                | driver-ttl = 86400                                  |
-|                                  | SE_DRIVER_MIRROR=http://my-chromedriver-mirror.net | driver-mirror = "http://my-chromedriver-mirror.net" |
 | --clear-cache                    |                                                    |                                                     |
 | --clear-metadata                 |                                                    |                                                     |
 |                                  | SE_CACHE_PATH=/my/custom/cache                     | cache-path = "/my/custom/cache"                     |
