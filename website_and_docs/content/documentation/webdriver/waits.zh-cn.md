@@ -24,7 +24,7 @@ when the code is ready to execute the next Selenium command.
 Similarly, in a lot of single page applications, elements get dynamically
 added to a page or change visibility based on a click.
 An element must be both present and
-[displayed](({{< ref "elements/information/#is-displayed" >}})) on the page
+[displayed]({{< ref "elements/information/#is-displayed" >}}) on the page
 in order for Selenium to interact with it.
 
 Take this page for example: https://www.selenium.dev/selenium/web/dynamic.html
@@ -46,7 +46,7 @@ Selenium provides two different mechanisms for synchronization that are better.
 
 ## Implicit waits
 Selenium has a built-in way to automatically wait for elements called an _implicit wait_.
-An implicit wait value can be set either with the [timeouts](({{< ref "drivers/options#timeouts" >}}))
+An implicit wait value can be set either with the [timeouts]({{< ref "drivers/options#timeouts" >}})
 capability in the browser options, or with a driver method (as shown below).
 
 This is a global setting that applies to every element location call for the entire session.
@@ -99,12 +99,12 @@ Another nice feature is that, by default, the Selenium Wait class automatically 
 {{< tabpane text=true langEqualsHeader=true >}}
   {{% tab header="Java" %}}
 This example shows the condition being waited for as a _lambda_. Java also supports
-[Expected Conditions](({{< ref "support_features/expected_conditions" >}}))
+[Expected Conditions]({{< ref "support_features/expected_conditions" >}})
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L57-L63" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
 This example shows the condition being waited for as a _lambda_. Python also supports
-[Expected Conditions](({{< ref "support_features/expected_conditions" >}}))
+[Expected Conditions]({{< ref "support_features/expected_conditions" >}})
 {{< gh-codeblock path="examples/python/tests/waits/test_waits.py#L38-L44" >}}
   {{% /tab %}}
   {{< tab header="CSharp" >}}
@@ -114,7 +114,7 @@ This example shows the condition being waited for as a _lambda_. Python also sup
 {{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L39-L45" >}}
   {{< /tab >}}
   {{% tab header="JavaScript" %}}
-JavaScript also supports [Expected Conditions](({{< ref "support_features/expected_conditions" >}}))
+JavaScript also supports [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
 {{< badge-code >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

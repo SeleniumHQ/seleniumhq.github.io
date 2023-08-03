@@ -6,7 +6,7 @@ description: >
   These are classes used to describe what needs to be waited for.
 ---
 
-Expected Conditions are used with [Explicit Waits](({{< ref "waits#explicit-waits" >}})).
+Expected Conditions are used with [Explicit Waits]({{< ref "../waits#explicit-waits" >}}).
 Instead of defining the block of code to be executed with a _lambda_, an expected
 conditions method can be created to represent common things that get waited on. Some
 methods take locators as arguments, others take elements as arguments.
