@@ -70,7 +70,6 @@ located by default at `~/.cache/selenium/selenium-manager-config.toml`.
 | --driver-ttl 86400               | SE_DRIVER_TTL=86400                                | driver-ttl = 86400                                  |
 | --clear-cache                    |                                                    |                                                     |
 | --clear-metadata                 |                                                    |                                                     |
-|                                  | SE_CACHE_PATH=/my/custom/cache                     | cache-path = "/my/custom/cache"                     |
 | --debug                          | SE_DEBUG=true                                      | debug true                                          |
 | --trace                          | SE_TRACE=true                                      |                                                     |
 
