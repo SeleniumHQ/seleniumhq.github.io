@@ -82,7 +82,7 @@ var capabilities = Capabilities.firefox();
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 firefoxOptions = FirefoxOptions()
-driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions)
+driver: WebDriver = RemoteWebDriver(URL("http://www.example.com"), firefoxOptions)
 driver.get("http://www.google.com")
 driver.quit()
   {{< /tab >}}
@@ -159,7 +159,7 @@ opts.setPlatform('Windows XP');
 val chromeOptions = ChromeOptions()
 chromeOptions.setCapability("browserVersion", "67")
 chromeOptions.setCapability("platformName", "Windows XP")
-val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
+val driver: WebDriver = RemoteWebDriver(URL("http://www.example.com"), chromeOptions)
 driver.get("http://www.google.com")
 driver.quit()
   {{< /tab >}}

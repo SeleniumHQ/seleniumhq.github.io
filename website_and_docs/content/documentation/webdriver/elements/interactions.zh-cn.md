@@ -12,7 +12,7 @@ description: >
 * [发送键位](https://w3c.github.io/webdriver/#element-send-keys) (仅适用于文本字段和内容可编辑元素)
 * [清除](https://w3c.github.io/webdriver/#element-send-keys) (仅适用于文本字段和内容可编辑元素)
 * 提交 (仅适用于表单元素)
-* 选择 (参见 [选择列表元素]({{< ref "select_lists.md" >}}))
+* 选择 (参见 [选择列表元素]({{< ref "select_lists.md" >}})
 
 ## 附加验证
 
