@@ -14,7 +14,7 @@ git clone https://github.com/SeleniumHQ/seleniumhq.github.io.git
 cd seleniumhq.github.io/examples/ruby
 ```
 
-3. Install dependencies using node
+3. Install dependencies using bundler
 
 ```
 bundler install
