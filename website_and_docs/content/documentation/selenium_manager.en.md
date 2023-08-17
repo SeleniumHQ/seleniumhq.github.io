@@ -3,13 +3,13 @@ title: "Selenium Manager (Beta)"
 linkTitle: "Selenium Manager"
 weight: 11
 description: >
-    Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+    Selenium Manager is a binary tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
 ---
 
 ## Motivation
-**TL;DR**: **Selenium Manager** is the official *driver manager* of the Selenium project, and it is shipped out of the box with every Selenium release as of version 4.6.
+**TL;DR**: **Selenium Manager** is the official *driver manager* of the Selenium project, and it is shipped out of the box with every Selenium release.
 
-Selenium uses the native support implemented by each browser to carry out the automation process. For this reason, Selenium users need to place a component called _driver_ (e.g., chromedriver, geckodriver, msedgedriver, etc.) between the script using the Selenium API and the browser. For many years, managing these drivers was a manual process for Selenium users. This way, they had to download the required driver for a browser (e.g., chromedriver for Chrome, geckodriver for Firefox, etc.) and place it in the `PATH` or export the driver path as a system property (e.g., Java, JavaScript, etc.). But this process was cumbersome and led to maintainability issues.
+Selenium uses the native support implemented by each browser to carry out the automation process. For this reason, Selenium users need to place a component called _driver_ (chromedriver, geckodriver, msedgedriver, etc.) between the script using the Selenium API and the browser. For many years, managing these drivers was a manual process for Selenium users. This way, they had to download the required driver for a browser (chromedriver for Chrome, geckodriver for Firefox, etc.) and place it in the `PATH` or export the driver path as a system property (Java, JavaScript, etc.). But this process was cumbersome and led to maintainability issues.
 
 Let's consider an example. Imagine you manually downloaded the required chromedriver for driving your Chrome with Selenium. When you did this process, the stable version of Chrome was 113, so you downloaded chromedriver 113 and put it in your `PATH`. At that moment, your Selenium script executed correctly. But the *problem* is that Chrome is *evergreen*. This name refers to Chrome's ability to upgrade automatically and silently to the next stable version when available. This feature is excellent for end-users but potentially dangerous for browser automation. Let's go back to the example to discover it. Your local Chrome eventually updates to version 115. And that moment, your Selenium script is broken due to the incompatibility between the manually downloaded driver (113) and the Chrome version (115). Thus, your Selenium script fails with the following error message: *"session not created: This version of ChromeDriver only supports Chrome version 113"*.
 
@@ -19,9 +19,9 @@ This problem is the primary reason for the existence of the so-called *driver ma
 ## Usage
 **TL;DR**: Selenium Manager is used by the Selenium bindings when the drivers (chromedriver, geckodriver, etc.) are unavailable.
 
-Driver management through Selenium Manager is currently *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *driver manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.
+Driver management through Selenium Manager is *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *driver manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.
 
-Selenium Manager is a CLI (command line interface) tool implemented in Rust to allow cross-platform execution and compiled for Windows, Linux, and macOS. The Selenium Manager binaries are shipped with each Selenium release. This way, each Selenium binding language invokes the correct Selenium Manager executable to carry out the automated driver and browser management explained in the following sections.
+Selenium Manager is a CLI (command line interface) tool implemented in Rust to allow cross-platform execution and compiled for Windows, Linux, and macOS. The Selenium Manager binaries are shipped with each Selenium release. This way, each Selenium binding language invokes Selenium Manager to carry out the automated driver and browser management explained in the following sections.
 
 ## Automated driver management
 **TL;DR**: Selenium Manager **automatically discovers, downloads, and caches the drivers** required by Selenium when these drivers are unavailable.
@@ -60,7 +60,7 @@ But there is even more. In addition to fixed browser versions (e.g., `113`, `114
 When these labels are specified, Selenium Manager first checks if a given browser is already installed (`beta`, `dev`, etc.), and when it is not detected, the browser is automatically managed.
 
 ## Configuration
-**TL;DR**: Selenium Manager should work silently and transparently for most users. Nevertheless, there are scenarios (e.g., when a proxy or firewall forbids making network requests) where custom configuration is required.
+**TL;DR**: Selenium Manager should work silently and transparently for most users. Nevertheless, there are scenarios (e.g., to specify a custom cache path or setup globally a proxy) where custom configuration can be required.
 
 Selenium Manager is a CLI tool. Therefore, under the hood, the Selenium bindings call Selenium Manager by invoking shell commands. Like any other CLI tool, arguments can be used to specify specific capabilities in Selenium Manager. The different arguments supported by Selenium Manager can be checked by running the following command:
 
@@ -105,7 +105,7 @@ In addition to the configuration keys specified in the table before, there are s
 
 - Browser version. In addition to `browser-version`, we can use the specific configuration keys to specify custom versions per supported browser. This way, the keys `chrome-version`, `firefox-version`, `edge-version`, etc., are supported. The same applies to environment variables (i.e., `SE_CHROME_VERSION`, `SE_FIREFOX_VERSION`, `SE_EDGE_VERSION`, etc.).
 - Driver version. Following the same pattern, we can use `chromedriver-version`, `geckodriver-version`,  `msedgedriver-version`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_VERSION`, `SE_GECKODRIVER_VERSION`, `SE_MSEDGEDRIVER_VERSION`,  etc. (as environment variables).
-- Browser path. Following the same pattern, we can use `chrome-path`, `firefox-path`,  `edge-path`,  etc. (in the configuration file), and `SE_CHROME_PATH`, `SE_FIREFOX_PATH`, `SE_EDGE_PATH`,  etc. (as environment variables).
+- Browser path. Following the same pattern, we can use `chrome-path`, `firefox-path`,  `edge-path`,  etc. (in the configuration file), and `SE_CHROME_PATH`, `SE_FIREFOX_PATH`, `SE_EDGE_PATH`,  etc. (as environment variables). The Selenium bindings also allow to specify a custom location of the browser path using options, namely: [Chrome](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location)), [Edge](https://www.selenium.dev/documentation/webdriver/browsers/edge/#start-browser-in-a-specified-location), or [Firefox](https://www.selenium.dev/documentation/webdriver/browsers/firefox/#start-browser-in-a-specified-location).
 
 ## Caching
 **TL;DR**: The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).
@@ -134,7 +134,7 @@ Selenium Manager follows the same versioning schema as Selenium. Nevertheless, w
 ## Getting Selenium Manager
 For most users, direct interaction with Selenium Manager is not required since the Selenium bindings use it internally. Nevertheless, if you want to *play* with Selenium Manager or use it for your use case involving driver or browser management, you can get the Selenium Manager binaries in different ways:
 
-- From the cache. As of Selenium 4.12.0, the Selenium Manager binaries are extracted from each binding distribution and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.12.0 will be stored in the folder `~/.cache/selenium/manager/0.4.12`).
+- From the cache (under development). In the upcoming versions of Selenium, the Selenium Manager binaries will be extracted from each binding distribution and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.13.0 will be stored in the folder `~/.cache/selenium/manager/0.4.13`).
 - From the Selenium repository. The Selenium Manager source code is stored in the main Selenium repo under the folder [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust). Moreover, you can find the compiled versions for Windows, Linux, and macOS in the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager) of this repo.
 - From the build workflow. Selenium Manager is compiled using a [GitHub Actions workflow]((https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml)). This workflow creates binaries for Windows, Linux, and macOS. You can download these binaries from these workflow executions.
 
