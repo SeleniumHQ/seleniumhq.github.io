@@ -21,7 +21,7 @@ This problem is the primary reason for the existence of the so-called *driver ma
 
 Driver management through Selenium Manager is currently *opt-in* for the Selenium bindings. Thus, users can continue managing their drivers manually (putting the driver in the `PATH` or using system properties) or rely on a third-party *driver manager* to do it automatically. Selenium Manager only operates as a fallback: if no driver is provided, Selenium Manager will come to the rescue.
 
-Selenium Manager is a CLI (command line interface) tool implemented in Rust to allow cross-platform execution and compiled for Windows, Linux, and macOS. The Selenium Manager binaries are shipped with each Selenium release. This way, each Selenium binding language invokes Selenium Manager to carry out the automated driver and browser management explained in the following sections.
+Selenium Manager is a CLI (command line interface) tool implemented in Rust to allow cross-platform execution and compiled for Windows, Linux, and macOS. The Selenium Manager binaries are shipped with each Selenium release. This way, each Selenium binding language invokes the correct Selenium Manager executable to carry out the automated driver and browser management explained in the following sections.
 
 ## Automated driver management
 **TL;DR**: Selenium Manager **automatically discovers, downloads, and caches the drivers** required by Selenium when these drivers are unavailable.
