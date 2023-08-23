@@ -125,8 +125,8 @@ Let's consider an example. A Selenium binding asks Selenium Manager to resolve c
 
 Selenium Manager includes two additional arguments two handle the cache, namely:
 
-- `clear-cache`: To remove the cache folder.
-- `clear-metadata`: To remove the metadata file.
+- `--clear-cache`: To remove the cache folder.
+- `--clear-metadata`: To remove the metadata file.
 
 ## Versioning
 Selenium Manager follows the same versioning schema as Selenium. Nevertheless, we use the major version 0 for Selenium Manager releases because it is still in beta. For example, the Selenium Manager binaries shipped with Selenium 4.12.0 corresponds to version 0.4.12.
