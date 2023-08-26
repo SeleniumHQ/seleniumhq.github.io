@@ -55,6 +55,12 @@ public class ChromeTest {
         driver = new ChromeDriver(options);
     }
 
+    @Test
+    public void arguments() {
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("Path to chrome binary");
+        driver = new ChromeDriver(options);
+    }
     public void logsToFile() throws IOException {
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .withLogFile(getLogLocation())
