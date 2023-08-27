@@ -83,7 +83,7 @@ Add a browser location to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L58-L63">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L59-67">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< badge-code >}}

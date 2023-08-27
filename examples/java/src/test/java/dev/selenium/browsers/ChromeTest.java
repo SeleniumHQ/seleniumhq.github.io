@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.service.DriverFinder;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -56,10 +57,13 @@ public class ChromeTest {
     }
 
     @Test
-    public void arguments() {
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("Path to chrome binary");
-        driver = new ChromeDriver(options);
+    public void setBinaryOption() {
+        ChromeOptions options=new ChromeOptions();
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .build();
+        String browserPath=DriverFinder.getPath(service,options).getBrowserPath();
+        options.setBinary(browserPath);
+        driver=new ChromeDriver(options);
     }
 
     public void logsToFile() throws IOException {
