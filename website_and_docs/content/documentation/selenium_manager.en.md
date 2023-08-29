@@ -41,8 +41,8 @@ As of Selenium 4.11.0, Selenium Manager also implements *automated browser manag
 The browser automatically managed by Selenium Manager are:
 
 - Chrome. Based on [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/), as of Selenium 4.11.0.
-- Firefox. Currently in development.
-- Edge. Planned for upcoming releases.
+- Firefox. Based on [public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), as of Selenium 4.12.0.
+- Edge. Planned for Selenium 4.13.0.
 
 Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
 
@@ -147,12 +147,12 @@ $ ./selenium-manager --browser chrome --debug
 DEBUG   chromedriver not found in PATH
 DEBUG   chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
 DEBUG   Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
-DEBUG   Output: "\r\r\n\r\r\nVersion=115.0.5790.171\r\r\n\r\r\n\r\r\n\r"
-DEBUG   Detected browser: chrome 115.0.5790.171
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 115.0.5790.170
-DEBUG   Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.170/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\115.0.5790.170\chromedriver.exe
+DEBUG   Output: "\r\r\n\r\r\nVersion=116.0.5845.111\r\r\n\r\r\n\r\r\n\r"
+DEBUG   Detected browser: chrome 116.0.5845.111
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG   Required driver: chromedriver 116.0.5845.96
+DEBUG   Downloading chromedriver 116.0.5845.96 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win64/chromedriver-win64.zip
+INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.96\chromedriver.exe
 INFO    Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
 ```
 
@@ -164,16 +164,16 @@ Let's consider another example. Now we want to use Chrome beta. Therefore, we in
 $ ./selenium-manager --browser chrome --browser-version beta --debug
 DEBUG   chromedriver not found in PATH
 DEBUG   chrome not found in PATH
-DEBUG   chrome not discovered in the system
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
-DEBUG   Required browser: chrome 116.0.5845.82
-DEBUG   Downloading chrome 116.0.5845.82 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.82/win64/chrome-win64.zip
-DEBUG   chrome 116.0.5845.82 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.82\chrome.exe
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 116.0.5845.82
-DEBUG   Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.82/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.82\chromedriver.exe
-INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.82\chrome.exe
+DEBUG   chrome beta not found in the system
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
+DEBUG   Required browser: chrome 117.0.5938.22
+DEBUG   Downloading chrome 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chrome-win64.zip
+DEBUG   chrome 117.0.5938.22 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG   Required driver: chromedriver 117.0.5938.22
+DEBUG   Downloading chromedriver 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chromedriver-win64.zip
+INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\117.0.5938.22\chromedriver.exe
+INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
 ```
 
 ## Selenium Grid
