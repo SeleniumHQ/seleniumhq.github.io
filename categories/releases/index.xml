@@ -1,4 +1,402 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: What's new in Selenium Manager 0.4.12, shipped with Selenium 4.12.0</title><link>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate><guid>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.12.0 Released!</title><link>/blog/2023/selenium-4-12-0-released/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-12-0-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.12.0 for Java,
+.NET, Ruby, Python, and Javascript as well as the Grid.
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v114, v115, and v116 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Quite a few fixes for Selenium Manager, and now with Firefox browser management!
+Read about all the &lt;a href="/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/">new Selenium Manager features&lt;/a>&lt;/li>
+&lt;li>.NET only explicitly targets &lt;code>netstandard2.0&lt;/code>&lt;/li>
+&lt;li>Python no longer supports Python 3.7&lt;/li>
+&lt;li>Ruby no longer supports &lt;code>:capabilities&lt;/code> arguments for local drivers (must use &lt;code>:options&lt;/code> now)&lt;/li>
+&lt;/ul>
+&lt;h4 id="relevant-improvements-per-language">Relevant improvements per language&lt;/h4>
+&lt;ul>
+&lt;li>Java
+&lt;ul>
+&lt;li>Several improvements in working with Selenium Manager&lt;/li>
+&lt;li>Allow deleting remote downloaded files from grid (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12501">#12501&lt;/a>)&lt;/li>
+&lt;li>Removed deprecated &lt;code>UNEXPECTED_ALERT_BEHAVIOR&lt;/code>, &lt;code>BROWSER_LOGFILE&lt;/code>, &lt;code>createPointerDown&lt;/code>, &lt;code>createPointerUp&lt;/code> and JWP &lt;code>/file&lt;/code> endpoint&lt;/li>
+&lt;li>Deprecated &lt;code>disableNativeEvents&lt;/code> and Remote Response status field&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>JavaScript
+&lt;ul>
+&lt;li>Fix how browsers and drivers are discovered (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12456">#12456&lt;/a>)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>.NET
+&lt;ul>
+&lt;li>Several big fixes for improving DevTools execution (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12486">#12486&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12614">#12614&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/selenium/pull/12592">#12592&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12591">#12591&lt;/a>)&lt;/li>
+&lt;li>Bug fix for how driver location is specified in Service class (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12473">#12473&lt;/a>)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Python
+&lt;ul>
+&lt;li>Support Selenium Manager in conda installs (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12536">#12536&lt;/a>)&lt;/li>
+&lt;li>Several bug fixes in Typing suggestions (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12477">#12477&lt;/a>,
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12477">#12464&lt;/a>)&lt;/li>
+&lt;li>allow setting http client certifications with REQUESTS_CA_BUNDLE env (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/11957">#11957&lt;/a>)&lt;/li>
+&lt;li>Fix bugs for &lt;a href="#12462">ElementScrollBehavior&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/selenium/pull/12474">sending keys with long strings&lt;/a>
+and &lt;a href="https://github.com/SeleniumHQ/selenium/pull/12499">getting capabilities from options&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Ruby
+&lt;ul>
+&lt;li>Fix bug preventing good error messages in Selenium Manager when stdout empty&lt;/li>
+&lt;li>Fix bug with Firefox not loading net/http library by default (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12506">#12506&lt;/a>)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;h4 id="seleniumhttpsgithubcomseleniumhqselenium">&lt;a href="https://github.com/SeleniumHQ/selenium">Selenium&lt;/a>&lt;/h4>
+&lt;div class="d-flex justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/26169602?v=4" class="card-img-top mx-auto" alt="Sandeep Suryaprasad" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sandeep Suryaprasad
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sandeepsuryaprasad">@sandeepsuryaprasad&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3493745?v=4" class="card-img-top mx-auto" alt="Scott Babcock" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Scott Babcock
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sbabcoc">@sbabcoc&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-docs--websitehttpsgithubcomseleniumhqseleniumhqgithubio">&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">Selenium Docs &amp;amp; Website&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/36703491?v=4" class="card-img-top mx-auto" alt="Andrii Maliuta" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Andrii Maliuta
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/ahndmal">@ahndmal&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/279773?v=4" class="card-img-top mx-auto" alt="Andrei Solntsev" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Andrei Solntsev
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/asolntsev">@asolntsev&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61235494?v=4" class="card-img-top mx-auto" alt="Pallavi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Pallavi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pallavigitwork">@pallavigitwork&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6233068?v=4" class="card-img-top mx-auto" alt="Tahanima Chowdhury" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Tahanima Chowdhury
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Tahanima">@Tahanima&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/140634716?v=4" class="card-img-top mx-auto" alt="Veerendra Jana" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Veerendra Jana
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/veerendrajana">@veerendrajana&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="docker-seleniumhttpsgithubcomseleniumhqdocker-selenium">&lt;a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/79552807?v=4" class="card-img-top mx-auto" alt="Mario Segura" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Mario Segura
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/SurelyMario">@SurelyMario&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/352840?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jimevans">@jimevans&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/605053?v=4" class="card-img-top mx-auto" alt="Jonathan Lipps" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Jonathan Lipps
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jlipps">@jlipps&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/20105237?v=4" class="card-img-top mx-auto" alt="Luke Hill" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luke Hill
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luke-hill">@luke-hill&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/17887843?v=4" class="card-img-top mx-auto" alt="Simon K" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon K
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/symonk">@symonk&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager 0.4.12, shipped with Selenium 4.12.0</title><link>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate><guid>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</guid><description>
 &lt;p>A new release of Selenium Manager is out. For this release, we made a relevant decision concerning the Selenium Manager versioning format. From now on, Selenium Manager will follow the same version as Selenium. Nevertheless, since Selenium Manager is still in beta, its major version is &lt;em>0&lt;/em>. Thus, Selenium &lt;strong>4.12.0&lt;/strong> is shipped with Selenium Manager &lt;strong>0.4.12&lt;/strong>.&lt;/p>
 &lt;p>First, we made a substantial effort to stabilize the already available features on Selenium Manager. This way, the version includes several bug-fixing related to automated driver management or caching. You can find the details of the changes implemented in Selenium Manager 0.4.12 in the (newly created) &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md">changelog file&lt;/a>.&lt;/p>
 &lt;p>Besides, for this release, we made a significant update to the &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">documentation page of Selenium Manager&lt;/a>. This page contains all the fine-grained information related to automated driver and browser management, configuration, etc. Also, it has several &lt;strong>TL;DR&lt;/strong> summarizing the main ideas for the eager reader.&lt;/p>
@@ -4032,17 +4430,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Android support&lt;/li>
 &lt;li>A new API to support writing tests involving complex user interactions.&lt;/li>
 &lt;li>Far more integration of the underlying architecture.&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Selenium Grid 1.0.6 Released</title><link>/blog/2010/selenium-grid-1-0-6-released/</link><pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate><guid>/blog/2010/selenium-grid-1-0-6-released/</guid><description>
-&lt;p>Following up on the Selenium Grid 1.0.5 release, which added &lt;a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features&lt;/a> to ease grid management, we’re pleased to announce the release of Selenium Grid 1.0.6. This is a bug fix release for 1.0.5 with some minor new additions.&lt;/p>
-&lt;p>You can &lt;a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.6-bin.zip">download it now&lt;/a> or &lt;a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog&lt;/a>. The summary of changes are:&lt;/p>
-&lt;ul>
-&lt;li>Fixed some concurrent modification issues that may have resulted in NullPointerExceptions&lt;/li>
-&lt;li>Fixed issue with shutting down workers with Rakefile&lt;/li>
-&lt;li>Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit&lt;/li>
-&lt;/ul>
-&lt;p>In case you missed the announcement, Philippe is &lt;a href="http://ph7spot.com/blog/selenium-grid-needs-a-new-maintainer">no longer maintaining&lt;/a> Selenium Grid. We thank him for his years of effort and helping the project get to where it is today. This is my first release as the &lt;a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new Selenium Grid maintainer&lt;/a>. I will be getting out a new post shortly that lays out the future for the project &lt;em>[UPDATE: The &lt;a href="/blog/2010/the-future-of-selenium-grid/">promised post&lt;/a> is live]&lt;/em>. In the meanwhile, please note the new location of several key resources:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://github.com/nirvdrum/selenium-grid/">Code repository&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://code.google.com/p/selenium/issues/list">Issue tracker&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question. Ongoing discussion about grid development should take place on the developer list. We look forward to hearing what you think about how we can improve the project.&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>
