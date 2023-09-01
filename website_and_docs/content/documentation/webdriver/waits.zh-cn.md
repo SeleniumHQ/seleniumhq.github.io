@@ -79,7 +79,7 @@ Solving our example with an implicit wait looks like this:
 {{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L28-L32" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L37-L41" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -115,7 +115,7 @@ This example shows the condition being waited for as a _lambda_. Python also sup
   {{< /tab >}}
   {{% tab header="JavaScript" %}}
 JavaScript also supports [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L47-L51" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}
