@@ -475,8 +475,25 @@ it with the following examples.
 {{< tab header="Python" >}}
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
-{{< tab header="CSharp" text=true >}}
-{{< badge-code >}}
+{{< tab header="CSharp" >}}
+var handler = new NetworkRequestHandler()
+{
+    RequestMatcher = httprequest => true,
+    ResponseSupplier = http => new()
+    {
+        StatusCode = 200,
+        Body = "Creamy, delicious cheese!"
+    }
+};
+
+INetwork networkInterceptor = driver.Manage().Network;
+networkInterceptor.AddRequestHandler(handler);
+
+await networkInterceptor.StartMonitoring();
+driver.Navigate().GoToUrl("https://google.com");
+await networkInterceptor.StopMonitoring();
+
+StringAssert.Contains(driver.PageSource, "delicious cheese");
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
