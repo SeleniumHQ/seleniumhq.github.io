@@ -58,7 +58,7 @@ you can read about the [Selenium Manager]({{< ref "/documentation/selenium_manag
 
 ### Use the `PATH` environment variable
 
-This option first requires manually [downloading the driver](#quick-reference).
+This option first requires manually [downloading the driver](#download-the-driver).
 
 This is a flexible option to change location of drivers without having to update your code, 
 and will work on multiple machines without requiring that each machine put the 
