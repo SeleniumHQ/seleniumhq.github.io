@@ -37,7 +37,7 @@ public class InternetExplorerTest {
     public void basicOptionsWin10() {
         InternetExplorerOptions options = new InternetExplorerOptions();
         options.attachToEdgeChrome();
-        options.withEdgeExecutablePath(System.getProperty("webdriver.edge.binary"));
+        options.withEdgeExecutablePath(getEdgeLocation());
         driver = new InternetExplorerDriver(options);
     }
 
@@ -112,5 +112,9 @@ public class InternetExplorerTest {
         }
 
         return tempDirectory;
+    }
+
+    private String getEdgeLocation() {
+        return System.getenv("EDGE_BIN");
     }
 }

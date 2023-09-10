@@ -4,6 +4,8 @@ import dev.selenium.BaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.*;
@@ -15,7 +17,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.stream.Stream;
 
 public class FirefoxTest extends BaseTest {
     private FirefoxDriver driver;
@@ -30,6 +31,9 @@ public class FirefoxTest extends BaseTest {
         if (tempDirectory  != null && tempDirectory.exists()) {
             tempDirectory.delete();
         }
+        System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY);
+        System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY);
+
         driver.quit();
     }
 
@@ -42,7 +46,19 @@ public class FirefoxTest extends BaseTest {
     @Test
     public void arguments() {
         FirefoxOptions options = new FirefoxOptions();
+
         options.addArguments("-headless");
+
+        driver = new FirefoxDriver(options);
+    }
+
+    @Test
+    @DisabledOnOs(OS.WINDOWS)
+    public void setBrowserLocation() {
+        FirefoxOptions options = new FirefoxOptions();
+
+        options.setBinary(getFirefoxLocation());
+
         driver = new FirefoxDriver(options);
     }
 
@@ -120,6 +136,7 @@ public class FirefoxTest extends BaseTest {
     public void installAddon() {
         driver = startDriver();
         Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
+
         driver.installExtension(xpiPath);
 
         driver.get("https://www.selenium.dev/selenium/web/blank.html");
@@ -132,6 +149,7 @@ public class FirefoxTest extends BaseTest {
         driver = startDriver();
         Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
         String id = driver.installExtension(xpiPath);
+
         driver.uninstallExtension(id);
 
         driver.get("https://www.selenium.dev/selenium/web/blank.html");
@@ -142,6 +160,7 @@ public class FirefoxTest extends BaseTest {
     public void installUnsignedAddonPath() {
         driver = startDriver();
         Path path = Paths.get("src/test/resources/extensions/selenium-example");
+
         driver.installExtension(path, true);
 
         driver.get("https://www.selenium.dev/selenium/web/blank.html");
@@ -149,7 +168,7 @@ public class FirefoxTest extends BaseTest {
         Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
-    public File getLogLocation() throws IOException {
+    private File getLogLocation() throws IOException {
         if (logLocation == null || !logLocation.exists()) {
             logLocation = File.createTempFile("geckodriver-", ".log");
         }
@@ -171,11 +190,7 @@ public class FirefoxTest extends BaseTest {
         return new FirefoxDriver(options);
     }
 
-    private boolean logFileContains(File file, String content) {
-        try (Stream<String> stream = Files.lines(file.toPath())) {
-            return stream.anyMatch(line -> line.contains(content));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    private String getFirefoxLocation() {
+        return System.getenv("FF_BIN");
     }
 }

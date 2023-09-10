@@ -43,13 +43,39 @@ public class ChromeTest {
     @Test
     public void arguments() {
         ChromeOptions options = new ChromeOptions();
+
         options.addArguments("--start-maximized");
+
         driver = new ChromeDriver(options);
+    }
+
+    @Test
+    public void setBrowserLocation() {
+        ChromeOptions options = new ChromeOptions();
+
+        options.setBinary(getChromeLocation());
+
+        driver = new ChromeDriver(options);
+    }
+
+    @Test
+    public void extensionOptions() {
+        ChromeOptions options = new ChromeOptions();
+        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+        File extensionPath = new File(path.toUri());
+
+        options.addExtensions(extensionPath);
+
+        driver = new ChromeDriver(options);
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
     @Test
     public void excludeSwitches() {
         ChromeOptions options = new ChromeOptions();
+
         options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
 
         driver = new ChromeDriver(options);
@@ -133,22 +159,16 @@ public class ChromeTest {
         Assertions.assertTrue(fileContent.contains(expected));
     }
 
-     @Test
-    public void extensionOptions() {
-        ChromeOptions options = new ChromeOptions();
-        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-        options.addExtensions(new File(path.toUri()));
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
-        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
-    }
-
     private File getLogLocation() throws IOException {
         if (logLocation == null || !logLocation.exists()) {
             logLocation = File.createTempFile("chromedriver-", ".log");
         }
 
         return logLocation;
+    }
+
+    private File getChromeLocation() {
+        File location = new File(System.getenv("CHROME_BIN"));
+        return location.exists() ? location : null;
     }
 }
