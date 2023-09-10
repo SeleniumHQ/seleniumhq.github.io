@@ -4,10 +4,12 @@ require 'spec_helper'
 
 RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
   describe 'Options' do
+    let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
+
     it 'basic options Win10' do
       options = Selenium::WebDriver::Options.ie
       options.attach_to_edge_chrome = true
-      options.edge_executable_path = ENV.fetch('EDGE_BINARY', nil)
+      options.edge_executable_path = edge_location
       @driver = Selenium::WebDriver.for :ie, options: options
     end
 
