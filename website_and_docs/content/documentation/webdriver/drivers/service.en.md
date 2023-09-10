@@ -18,7 +18,7 @@ To start a driver with a default service instance:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L30-L32" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L34-L36" >}}
 **Note**: Java Service classes only allow values to be set during construction with a Builder pattern.
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -48,7 +48,7 @@ If you cannot update Selenium or have an advanced use case, here is how to speci
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L38" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L12" >}}
@@ -76,7 +76,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L47" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L20" >}}
