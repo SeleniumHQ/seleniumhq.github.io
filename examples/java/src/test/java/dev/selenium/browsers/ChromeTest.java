@@ -4,21 +4,19 @@ import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 public class ChromeTest {
@@ -30,6 +28,8 @@ public class ChromeTest {
         if (logLocation != null && logLocation.exists()) {
             logLocation.delete();
         }
+        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
+        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
 
         driver.quit();
     }
@@ -55,6 +55,7 @@ public class ChromeTest {
         driver = new ChromeDriver(options);
     }
 
+    @Test
     public void logsToFile() throws IOException {
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .withLogFile(getLogLocation())

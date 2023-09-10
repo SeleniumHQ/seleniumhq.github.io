@@ -13,6 +13,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class EdgeTest {
@@ -24,6 +27,8 @@ public class EdgeTest {
         if (logLocation != null && logLocation.exists()) {
             logLocation.delete();
         }
+        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY);
+        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY);
 
         driver.quit();
     }
@@ -63,6 +68,12 @@ public class EdgeTest {
 
     @Test
     public void logsToConsole() throws IOException {
+        Logger logger = Logger.getLogger("");
+        logger.setLevel(Level.FINE);
+        Arrays.stream(logger.getHandlers()).forEach(handler -> {
+            handler.setLevel(Level.FINE);
+        });
+
         System.setOut(new PrintStream(getLogLocation()));
 
         EdgeDriverService service = new EdgeDriverService.Builder()

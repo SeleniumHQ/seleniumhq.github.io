@@ -65,7 +65,7 @@ class BrowsingContextTest extends BaseTest {
         NavigationResult info = browsingContext.navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
         Assertions.assertNotNull(browsingContext.getId());
-        Assertions.assertNull(info.getNavigationId());
+        Assertions.assertNotNull(info.getNavigationId());
         Assertions.assertTrue(info.getUrl().contains("/bidi/logEntryAdded.html"));
     }
 
@@ -77,7 +77,7 @@ class BrowsingContextTest extends BaseTest {
                 ReadinessState.COMPLETE);
 
         Assertions.assertNotNull(browsingContext.getId());
-        Assertions.assertNull(info.getNavigationId());
+        Assertions.assertNotNull(info.getNavigationId());
         Assertions.assertTrue(info.getUrl().contains("/bidi/logEntryAdded.html"));
     }
 
