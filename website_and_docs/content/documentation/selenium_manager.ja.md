@@ -189,5 +189,35 @@ After this command, Selenium Manager discovers the latest version of Selenium Gr
 
 Optionally, the argument `--grid` allows to specify a Selenium Grid version (`--grid <GRID_VERSION>`).
 
+## Known Limitations
+
+### Custom package managers
+If you are using a linux package manager (Anaconda, snap, etc) that requires a specific driver be used for your browsers,
+you'll need to either specify the
+[driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location),
+the [browser location](),
+or both, depending on the requirements.
+
+### Alternative Architecture
+Selenium supports all five architectures managed by Google's Chrome for Testing, and all six drivers provided for Microsoft Edge.
+
+Each release of the Selenium bindings comes with three separate Selenium Manager binaries — one for Linux, Windows, and Mac.
+* The Mac version supports both x64 and aarch64 (Intel and Apple).
+* The Windows version should work for both x86 and x64 (32-bit and 64-bit OS).
+* The Linux version has only been verified to work for x64.
+
+Reasons for not supporting more architectures:
+1. Neither Chrome for Testing nor Microsoft Edge supports additional architectures, so Selenium Manager would need to
+   manage something unofficial for it to work.
+2. We currently build the binaries from existing GitHub actions runners, which do not support these architectures
+3. Any additional architectures would get distributed with all Selenium releases, increasing the total build size
+
+If you are running linux on arm64/aarch64, 32-bit architecture, or a Raspberry Pi, Selenium Manager will not work for you.
+The biggest issue for people is that they used to get custom-built drivers and put them on PATH and have them work.
+Now that Selenium Manager is responsible for locating drivers on PATH, this approach no longer works, and users
+need to use a `Service` class and [set the location directly](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
+There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic
+in each of the bindings, so that's currently a trade-off we are comfortable with.
+
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).
