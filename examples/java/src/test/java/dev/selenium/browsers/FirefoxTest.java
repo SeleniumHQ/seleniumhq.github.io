@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.stream.Stream;
 
 public class FirefoxTest extends BaseTest {
     private FirefoxDriver driver;
@@ -170,4 +171,11 @@ public class FirefoxTest extends BaseTest {
         return new FirefoxDriver(options);
     }
 
+    private boolean logFileContains(File file, String content) {
+        try (Stream<String> stream = Files.lines(file.toPath())) {
+            return stream.anyMatch(line -> line.contains(content));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
