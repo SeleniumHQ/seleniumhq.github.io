@@ -34,7 +34,7 @@ namespace SeleniumDocs.Browsers
         {
             var options = new InternetExplorerOptions();
             options.AttachToEdgeChrome = true;
-            options.EdgeExecutablePath = Environment.GetEnvironmentVariable("EDGE_BINARY");
+            options.EdgeExecutablePath = GetEdgeLocation();
             driver = new InternetExplorerDriver(options);
         }
 
@@ -119,6 +119,11 @@ namespace SeleniumDocs.Browsers
             }
 
             return _tempPath;
+        }
+
+        private string GetEdgeLocation()
+        {
+            return Environment.GetEnvironmentVariable("EDGE_BIN");
         }
     }
 }
