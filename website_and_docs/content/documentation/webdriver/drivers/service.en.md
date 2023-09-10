@@ -26,7 +26,7 @@ To start a driver with a default service instance:
 **Note**: Python Service classes only allow values to be set as arguments to the constructor.
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L19-L20" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L17-L18" >}}
 **Note**: .NET Service classes allow values to be set as properties.
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -56,7 +56,7 @@ If you cannot update Selenium or have an advanced use case, here is how to speci
 {{< tab header="CSharp" >}}
 Note: Unlike the other languages, the driver location should not include the file name, only the path to the directory the driver is in.
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L27" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -82,7 +82,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L36" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
