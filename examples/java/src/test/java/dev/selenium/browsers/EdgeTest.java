@@ -68,12 +68,6 @@ public class EdgeTest {
 
     @Test
     public void logsToConsole() throws IOException {
-        Logger logger = Logger.getLogger("");
-        logger.setLevel(Level.FINE);
-        Arrays.stream(logger.getHandlers()).forEach(handler -> {
-            handler.setLevel(Level.FINE);
-        });
-
         System.setOut(new PrintStream(getLogLocation()));
 
         EdgeDriverService service = new EdgeDriverService.Builder()
