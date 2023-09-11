@@ -1,7 +1,6 @@
 [build]
-base = "website_and_docs/"
-publish = "public"
-command = "hugo"
+publish = "website_and_docs/public"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]
 NODE_VERSION = "18.14.1"
