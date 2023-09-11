@@ -10,7 +10,7 @@ GO_VERSION = "1.20.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.deploy-preview.environment]
 NODE_VERSION = "18.14.1"
@@ -18,7 +18,7 @@ HUGO_VERSION = "0.110.0"
 GO_VERSION = "1.20.1"
 
 [context.branch-deploy]
-command = "hugo --minify"
+command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.branch-deploy.environment]
 NODE_VERSION = "18.14.1"
