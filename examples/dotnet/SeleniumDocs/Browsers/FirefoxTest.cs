@@ -119,7 +119,7 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void InstallAddon()
         {
-            driver = new FirefoxDriver();
+            SetWaitingDriver();
 
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.xpi");
@@ -148,7 +148,7 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void InstallUnsignedAddon()
         {
-            driver = new FirefoxDriver();
+            SetWaitingDriver();
 
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string extensionDirPath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example/");
@@ -178,6 +178,12 @@ namespace SeleniumDocs.Browsers
             }
 
             return _tempPath;
+        }
+
+        private void SetWaitingDriver()
+        {
+            driver = new FirefoxDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
     }
 }
