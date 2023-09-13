@@ -475,7 +475,7 @@ it with the following examples.
 {{< tab header="Python" >}}
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ChromeDevTools/NetworkInterceptor.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
