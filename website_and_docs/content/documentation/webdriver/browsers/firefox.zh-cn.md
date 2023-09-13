@@ -21,16 +21,16 @@ Starting a Firefox session with basic defined options looks like this:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L43" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L9-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L12-L13" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L35-L36" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L34-L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L10-L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L13">}}
@@ -51,16 +51,16 @@ Add an argument to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L44" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L50" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L17" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L21" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L12-L14">}}
@@ -77,7 +77,26 @@ use geckodriver to drive Firefox Nightly instead of the production version when 
 
 Add a browser location to options:
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L60" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L30" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L53" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L25" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Profiles
 
@@ -147,20 +166,21 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L51" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L68" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L38" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L31" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -177,20 +197,21 @@ To change the logging output to display in the console:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L65" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L82" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L50" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L40" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -210,20 +231,21 @@ so this examples is just for setting the log level generically:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L80" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L97" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `FirefoxDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L61" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L50" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -241,20 +263,21 @@ Firefox truncates lines by default. To turn off truncation:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L97" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L114" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L72" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L60" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -272,20 +295,20 @@ or want profiles to be created some place specific, you can change the profile r
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L109" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L126" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
 Property value: String representing path to profile root directory
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L73" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L83" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L69" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -314,16 +337,16 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L122" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L140" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L86" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L96" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L126" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L137" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L83" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L95" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L24">}}
@@ -339,17 +362,17 @@ Uninstalling an addon requires knowing its id. The id can be obtained from the r
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L134" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L153" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L98" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L108" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L142" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L151" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L93" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L25">}}
@@ -367,18 +390,18 @@ example with a directory:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L144" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L164" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L107" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L117" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L165" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L101" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
