@@ -18,6 +18,7 @@ persistent in a single session. You can get the window handle of the
 current window by using:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
   {{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
@@ -41,6 +42,7 @@ However, Selenium 4 provides a new api [NewWindow](#create-new-window-or-new-tab
 which creates a new tab (or) new window and automatically switches to it.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Store the ID of the original window
 String originalWindow = driver.getWindowHandle();
@@ -211,6 +213,7 @@ and switch to the one which is not the original.
 __Note: This feature works with Selenium 4 and later versions.__
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 // Opens a new tab and switches to new tab
 driver.switchTo().newWindow(WindowType.TAB);
@@ -268,6 +271,7 @@ code sample in the previous section you will have the previous window
 handle stored in a variable. Put this together and you will get:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Close the tab or window
 driver.close();
@@ -324,6 +328,7 @@ When you are finished with the browser session you should call quit,
 instead of close:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.quit();{{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
@@ -347,6 +352,7 @@ Some test frameworks offer methods and annotations which you can hook
 into to tear down at the end of a test.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 /**
  * Example using JUnit
@@ -408,6 +414,7 @@ If not running WebDriver in a test context, you may consider using
 will still clean up the WebDriver session.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 try {
     //WebDriver code here...
@@ -471,6 +478,7 @@ window.
 Fetches the size of the browser window in pixels.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Access each dimension individually
 int width = driver.manage().window().getSize().getWidth();
@@ -536,6 +544,7 @@ val height1 = size.height
 
 Restores the window and sets the window size.
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< /tab >}}
   {{< tab header="Python" >}}driver.set_window_size(1024, 768){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< /tab >}}

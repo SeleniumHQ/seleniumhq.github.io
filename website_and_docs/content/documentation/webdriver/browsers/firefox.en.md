@@ -100,9 +100,9 @@ Add a browser location to options:
 
 There are several ways to work with Firefox profiles.
 
-<div>
 {{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 FirefoxProfile profile = new FirefoxProfile();
 FirefoxOptions options = new FirefoxOptions();
@@ -147,7 +147,6 @@ options.profile = FirefoxProfile()
 driver = FirefoxDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 
 ## Service

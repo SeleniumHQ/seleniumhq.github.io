@@ -42,6 +42,7 @@ This value can be stored and used for future element actions. In our example HTM
 two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
@@ -73,6 +74,7 @@ One solution is to locate an element with a unique attribute that is an ancestor
 ancestor of the undesired element, then call find element on that object:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
@@ -119,6 +121,7 @@ See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/en
 For this example, we'll use a CSS Selector:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
@@ -148,6 +151,7 @@ If there are no matches, an empty list is returned. In this case,
 references to all fruits and vegetable list items will be returned in a collection. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
@@ -174,6 +178,7 @@ need to iterate over the collection and identify the one you want.
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 List<WebElement> elements = driver.findElements(By.tagName("li"));
 
@@ -284,6 +289,7 @@ It is used to find the list of matching child WebElements within the context of 
 To achieve this, the parent WebElement is chained with 'findElements' to access child elements
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
   import org.openqa.selenium.By;
   import org.openqa.selenium.WebDriver;
@@ -422,6 +428,7 @@ namespace FindElementsFromElement {
 It is used to track (or) find DOM element which has the focus in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
   import org.openqa.selenium.*;
   import org.openqa.selenium.chrome.ChromeDriver;

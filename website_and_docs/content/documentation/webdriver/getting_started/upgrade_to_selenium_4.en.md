@@ -54,6 +54,7 @@ to wrap them in a `cloud:options` block (check with your cloud vendor for the ap
 
 #### Before 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 DesiredCapabilities caps = DesiredCapabilities.firefox();
 caps.setCapability("platform", "Windows 10");
@@ -100,6 +101,7 @@ driver = webdriver.Remote(cloud_url, desired_capabilities=caps)
 
 #### After
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 FirefoxOptions browserOptions = new FirefoxOptions();
 browserOptions.setPlatformName("Windows 10");

@@ -106,6 +106,7 @@ and the code itself should be placed inside code tabs.
 The Docsy code tabs look like this:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
   {{< /tab >}}

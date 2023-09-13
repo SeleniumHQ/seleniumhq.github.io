@@ -258,6 +258,7 @@ Many of the code examples in this documentation can be found in our example repo
 There are multiple options in each language, but here is what we are using in our examples:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{% tab header="Java" text=true %}}
 Install JUnit 5 test runner using a build tool.
 

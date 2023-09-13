@@ -16,6 +16,7 @@ aliases: [
 You can read the current page title from the browser:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
   {{< tab header="Python" >}}driver.title{{< /tab >}}
   {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
@@ -30,6 +31,7 @@ You can read the current page title from the browser:
 You can read the current URL from the browser's address bar using:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
 {{< tab header="Python" >}}driver.current_url{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}

@@ -25,6 +25,8 @@ Capabilities unique to Safari can be found at Apple's page [About WebDriver for 
 Starting a Safari session with basic defined options looks like this:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+{{< badge-examples >}}
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#24-L25" >}}
 {{< /tab >}}

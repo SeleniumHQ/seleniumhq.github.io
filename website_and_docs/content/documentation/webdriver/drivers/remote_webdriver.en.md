@@ -26,6 +26,7 @@ pointing to our remote web server, _www.example.com_,
 running our tests on Firefox.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 FirefoxOptions firefoxOptions = new FirefoxOptions();
 WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
@@ -89,6 +90,7 @@ For example, suppose you wanted to run Chrome on Windows XP,
 using Chrome version 67:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 ChromeOptions chromeOptions = new ChromeOptions();
 chromeOptions.setCapability("browserVersion", "67");
@@ -168,6 +170,7 @@ running the test. It is not enabled by default and can be enabled in
 the following way:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 driver.setFileDetector(new LocalFileDetector());
   {{< /tab >}}
@@ -202,6 +205,7 @@ driver.fileDetector = LocalFileDetector()
 Once the above code is defined, you can upload a file in your test in the following way:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
 WebElement upload = driver.findElement(By.id("myfile"));
@@ -263,6 +267,7 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
 #### Add/pass the required system properties while running the client
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 System.setProperty("otel.traces.exporter", "jaeger");
 System.setProperty("otel.exporter.jaeger.endpoint", "http://localhost:14250");

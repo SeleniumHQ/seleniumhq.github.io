@@ -25,6 +25,7 @@ WebDriver can get the text from the popup and accept or dismiss these
 alerts.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Click the link to activate the alert
 driver.findElement(By.linkText("See an example alert")).click();
@@ -119,6 +120,7 @@ a sample confirm</a>.
 This example also shows a different approach to storing an alert:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Click the link to activate the alert
 driver.findElement(By.linkText("See a sample confirm")).click();
@@ -227,6 +229,7 @@ See a sample prompt</a>.
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Click the link to activate the alert
 driver.findElement(By.linkText("See a sample prompt")).click();
