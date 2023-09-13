@@ -1,7 +1,10 @@
 ---
 title: "Command Listeners"
 linkTitle: "Listeners"
-weight: 3
+weight: 2
+aliases: [
+  "/documentation/webdriver/drivers/listeners",
+]
 ---
 
 These allow you to execute custom actions in every time specific Selenium commands are sent

@@ -1,10 +1,13 @@
 ---
-title: "Command Listeners"
-linkTitle: "Listeners"
-weight: 3
+title: "命令监听器"
+linkTitle: "监听器"
+weight: 2
+aliases: [
+  "/zh-cn/documentation/webdriver/drivers/listeners",
+]
 ---
 
-These allow you to execute custom actions in every time specific Selenium commands are sent
+允许您在每次发送特定 Selenium 命令时执行自定义操作
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
