@@ -476,24 +476,7 @@ it with the following examples.
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-var handler = new NetworkRequestHandler()
-{
-    RequestMatcher = httprequest => true,
-    ResponseSupplier = http => new()
-    {
-        StatusCode = 200,
-        Body = "Creamy, delicious cheese!"
-    }
-};
-
-INetwork networkInterceptor = driver.Manage().Network;
-networkInterceptor.AddRequestHandler(handler);
-
-await networkInterceptor.StartMonitoring();
-driver.Navigate().GoToUrl("https://google.com");
-await networkInterceptor.StopMonitoring();
-
-StringAssert.Contains(driver.PageSource, "delicious cheese");
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ChromeDevTools/NetworkInterceptor.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
