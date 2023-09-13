@@ -44,14 +44,15 @@ If you are not sure about what you have found is an issue or not,
 please ask through the communication channels described at 
 https://selenium.dev/support.
 
+
 ## What to Help With
 
-### Moving Examples
+### Creating Examples
 
-Examples that need to be moved are marked with: {{% badge-examples %}}
+Examples that need to be moved are marked with: {{% badge-code %}}
 
 We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
-execute everything on the site. So we put the code where it belongs in the 
+execute everything on the site. So we put the code where it belongs in the
 [examples directory](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/).
 Each page in the documentation correlates to a test file in each of the languages, and should follow naming conventions.
 For instance examples for this page https://www.selenium.dev/documentation/webdriver/browsers/chrome/ get added in these
@@ -67,23 +68,31 @@ Once the code is copied to its own test in the proper file, it needs to be refer
 
 For example, the tab in Ruby would look like this:
 
-        {{</* tab header="Ruby" text=true */>}}
+        {{</* tab header="Ruby" */>}}
         {{</* gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" */>}}
         {{</* /tab */>}}
 
 The line numbers at the end represent only the line or lines of code that actually represent the item being displayed.
-If a user wants more context, they can click the link to the github page that will show the full context.
-
-Make sure the tab header includes `text=true`. By default, the tabs get formatted
-for code, so to use markdown or other shortcode statements (like `gh-codeblock`) it needs to be declared as text.
-For most examples, the `tabpane` declares the `text=true`, but if some of the tabs have code examples, the `tabpane` 
-cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
+If a user wants more context, they can click the link to the GitHub page that will show the full context.
 
 Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
 correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
 number for that file.
 
-Finally, make sure that the code is compatible with the latest version of Selenium, and the tests pass.
+Finally, make sure that the tests pass in the CI.
+
+
+### Moving Examples
+
+Examples that need to be moved are marked with: {{% badge-examples %}}
+
+Everything from the [Creating Examples](#creating-examples) section applies, with one addition.
+
+Make sure the tab includes `text=true`. By default, the tabs get formatted
+for code, so to use markdown or other shortcode statements (like `gh-codeblock`) it needs to be declared as text.
+For most examples, the `tabpane` declares the `text=true`, but if some of the tabs have code examples, the `tabpane`
+cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
+
 
 ## Contribution Mechanics
 

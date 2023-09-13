@@ -25,9 +25,26 @@ weight: 3
 
 * [Service]({{< ref "service.md" >}})オブジェクトはローカルドライバーにのみ適用され、ブラウザーのドライバーに関する情報を提供します。
 
-{{< alert-code >}}
-Show Starting Local driver with multiple arguments.
-{{< /alert-code >}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### リモートドライバー
 
@@ -41,6 +58,23 @@ Show Starting Local driver with multiple arguments.
 重要:  `quit` メソッドは `close` メソッドとは異なり、
 セッションを終了するには常に `quit` を使用することをお勧めします。
 
-{{< alert-code >}}
-Show quitting a session.
-{{< /alert-code >}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}

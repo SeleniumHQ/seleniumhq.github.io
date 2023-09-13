@@ -558,6 +558,7 @@ Restores the window and sets the window size.
 Fetches the coordinates of the top left coordinate of the browser window.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 // Access each dimension individually
 int x = driver.manage().window().getPosition().getX();
@@ -625,6 +626,7 @@ val y1 = position.y
 Moves the window to the chosen position.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 // Move the window to the top left of the primary monitor
 driver.manage().window().setPosition(new Point(0, 0));
@@ -656,6 +658,7 @@ the screen, without blocking the operating system's own menus and
 toolbars.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.manage().window().maximize();{{< /tab >}}
   {{< tab header="Python" >}}driver.maximize_window(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Manage().Window.Maximize();{{< /tab >}}
@@ -674,6 +677,7 @@ Minimize Window typically hides the window in the system tray.
 __Note: This feature works with Selenium 4 and later versions.__
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.manage().window().minimize();{{< /tab >}}
   {{< tab header="Python" >}}driver.minimize_window(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Manage().Window.Minimize();{{< /tab >}}
@@ -687,6 +691,7 @@ __Note: This feature works with Selenium 4 and later versions.__
 Fills the entire screen, similar to pressing F11 in most browsers.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.manage().window().fullscreen();{{< /tab >}}
   {{< tab header="Python" >}}driver.fullscreen_window(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Manage().Window.FullScreen();{{< /tab >}}
@@ -702,6 +707,7 @@ The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-sc
 returns screenshot which is encoded in Base64 format.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -792,6 +798,7 @@ The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-elemen
 returns screenshot which is encoded in Base64 format.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -895,6 +902,7 @@ Executes JavaScript code snippet in the
 current context of a selected frame or window.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     //Creating the JavascriptExecutor interface object by Type casting
       JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -965,6 +973,7 @@ _Note: This requires Chromium Browsers to be in headless mode_
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     import org.openqa.selenium.print.PrintOptions;
 
