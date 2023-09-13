@@ -1,10 +1,10 @@
 ---
-title: "Command executors"
-linkTitle: "Executors"
+title: "HTTP Client Configuration"
+linkTitle: "HTTP Client"
 weight: 3
 ---
 
-These allow you to set various parameters for the HTTP library
+允许您为HTTP库设置各种参数.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}

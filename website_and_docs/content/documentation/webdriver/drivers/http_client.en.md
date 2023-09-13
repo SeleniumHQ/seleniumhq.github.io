@@ -1,10 +1,10 @@
 ---
-title: "命令执行器"
-linkTitle: "执行器"
+title: "HTTP Client Configuration"
+linkTitle: "HTTP Client"
 weight: 3
 ---
 
-允许您为HTTP库设置各种参数.
+These allow you to set various parameters for the HTTP library
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}

@@ -15,7 +15,7 @@ The session is created automatically by initializing a new Driver class object.
 Each language allows a session to be created with arguments from one of these classes (or equivalent):
 
 * [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but this is required for remote
-* Some form of [CommandExecutor]({{< ref "executors.md" >}}) (the implementation varies between languages)
+* Some form of [Http Client Configuration]({{< ref "http_client.md" >}}) (the implementation varies between languages)
 * [Listeners]({{< ref "listeners.md" >}})
 
 ### Local Driver

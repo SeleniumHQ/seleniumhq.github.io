@@ -1,6 +1,6 @@
 ---
-title: "Command executors"
-linkTitle: "Executors"
+title: "HTTP Client Configuration"
+linkTitle: "HTTP Client"
 weight: 3
 ---
 
