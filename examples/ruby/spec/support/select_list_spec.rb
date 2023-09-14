@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Chrome' do
+RSpec.describe 'Select List' do
   let(:driver) { start_session }
 
   before do
