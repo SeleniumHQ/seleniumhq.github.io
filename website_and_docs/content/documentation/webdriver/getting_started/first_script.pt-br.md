@@ -301,8 +301,18 @@ gradle clean test
 {{< tab header="CSharp" >}}
 // Add instructions
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-// Add instructions
+{{% tab header="Ruby" text=true %}}
+1. Install the `rspec` gem, if you don't have it already.
+
+```shell
+gem install 'rspec'
+```
+2. Run your test.
+
+```shell
+rspec first_script_spec.rb
+```
+For easier gem management in your projects you should use [Gemfiles with Bundler](https://bundler.io/guides/gemfile.html).
 {{< /tab >}}
 {{% tab header="JavaScript" text=true %}}
 Install Mocha Test runner using below command in your terminal
