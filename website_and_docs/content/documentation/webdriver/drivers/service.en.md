@@ -22,6 +22,7 @@ To start a driver with a default service instance:
 **Note**: Java Service classes only allow values to be set during construction with a Builder pattern.
 {{% /tab %}}
 {{% tab header="Python" %}}
+{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L5-L6" >}}
 **Note**: Python Service classes only allow values to be set as arguments to the constructor.
 {{% /tab %}}
@@ -51,6 +52,7 @@ If you cannot update Selenium or have an advanced use case, here is how to speci
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L12" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
@@ -79,6 +81,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
