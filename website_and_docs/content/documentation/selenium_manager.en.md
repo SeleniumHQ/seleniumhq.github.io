@@ -97,6 +97,7 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--timeout <TIMEOUT>`|`timeout = TIMEOUT`|`SE_TIMEOUT=TIMEOUT`|Timeout for network requests (in seconds). Default: `300`|
 |`--offline`|`offline = true`|`SE_OFFLINE=true`|Offline mode (i.e., disabling network requests and downloads)|
 |`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser|
+|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser|
 |`--debug`|`debug = true`|`SE_DEBUG=true`|Display `DEBUG` messages|
 |`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
 |`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`|
