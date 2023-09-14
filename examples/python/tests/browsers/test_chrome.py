@@ -2,7 +2,6 @@ import os
 import re
 import subprocess
 
-import pytest
 from selenium import webdriver
 
 CHROME_LOCATION = os.getenv("CHROME_BIN")
@@ -71,7 +70,7 @@ def test_exclude_switches():
 
 
 def test_log_to_file(log_path):
-    service = webdriver.ChromeService(log_path=log_path)
+    service = webdriver.ChromeService(log_output=log_path)
 
     driver = webdriver.Chrome(service=service)
 
@@ -81,7 +80,6 @@ def test_log_to_file(log_path):
     driver.quit()
 
 
-@pytest.mark.skip(reason="this is not supported, yet")
 def test_log_to_stdout(capfd):
     service = webdriver.ChromeService(log_output=subprocess.STDOUT)
 
@@ -93,35 +91,35 @@ def test_log_to_stdout(capfd):
     driver.quit()
 
 
-def test_log_level(log_path):
-    service = webdriver.ChromeService(service_args=['--log-level=DEBUG'], log_path=log_path)
+def test_log_level(capfd):
+    service = webdriver.ChromeService(service_args=['--log-level=DEBUG'], log_output=subprocess.STDOUT)
 
     driver = webdriver.Chrome(service=service)
 
-    with open(log_path, 'r') as f:
-        assert '[DEBUG]' in f.read()
+    out, err = capfd.readouterr()
+    assert '[DEBUG]' in err
 
     driver.quit()
 
 
 def test_log_features(log_path):
-    service = webdriver.ChromeService(service_args=['--append-log', '--readable-timestamp'], log_path=log_path)
+    service = webdriver.ChromeService(service_args=['--append-log', '--readable-timestamp'], log_output=log_path)
 
     driver = webdriver.Chrome(service=service)
 
     with open(log_path, 'r') as f:
-        assert re.match("\[\d\d-\d\d-\d\d\d\d", f.read())
+        assert re.match(r"\[\d\d-\d\d-\d\d\d\d", f.read())
 
     driver.quit()
 
 
-def test_build_checks(log_path):
-    service = webdriver.ChromeService(service_args=['--disable-build-check'], log_path=log_path)
+def test_build_checks(capfd):
+    service = webdriver.ChromeService(service_args=['--disable-build-check'], log_output=subprocess.STDOUT)
 
     driver = webdriver.Chrome(service=service)
 
     expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check"
-    with open(log_path, 'r') as f:
-        assert expected in f.read()
+    out, err = capfd.readouterr()
+    assert expected in err
 
     driver.quit()
