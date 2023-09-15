@@ -6,7 +6,7 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumDocs.GettingStarted
 {
     [TestClass]
-    public class FirstScriptTest
+    public class RunningTestsTest
     {
 
         [TestMethod]

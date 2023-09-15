@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'First Script' do
+RSpec.describe 'Running Tests' do
   it 'uses eight components' do
     driver = Selenium::WebDriver.for :chrome
 
