@@ -228,9 +228,15 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< /tabpane >}}
 
 
+## Running Selenium File
+
+{{< alert-code >}}
+Add example for how to execute each of the above pages via command line
+{{< /alert-code >}}
+
+
 ## Próximos Passos
 
 Most Selenium users execute many sessions and need to organize them to minimize duplication and keep the code
-more maintainable.
-To see these 8 components in a single script as part of a test runner,
-read on to learn about [Organizing and Executing Selenium in Tests]({{< ref "running_tests.md" >}}).
+more maintainable. Read on to learn about how to put this code into context for your use case with
+[Using Selenium]({{< ref "using_selenium.md" >}}).

@@ -6,11 +6,11 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumDocs.GettingStarted
 {
     [TestClass]
-    public class RunningTestsTest
+    public class UsingSeleniumTest
     {
 
         [TestMethod]
-        public void ChromeSession()
+        public void EightComponents()
         {
             IWebDriver driver = new ChromeDriver();
 

@@ -1,28 +1,48 @@
 ---
-title: "Organizing and Executing Selenium in Tests"
-linkTitle: "Running Tests"
+title: "Organizing and Executing Selenium Code"
+linkTitle: "Using Selenium"
 weight: 10
 description: >
-    Scaling Selenium execution with a Test Runner Framework
+    Scaling Selenium execution with an IDE and a Test Runner library
 ---
 
 If you want to run more than a handful of one-off scripts, you need to 
-be able to organize and work with your code.
-Most people use Selenium for testing, so that is the context that often
-gets used to talk about executing Selenium code, so it is worth giving
-an overview of how to use Selenium in this context.
-Running Selenium in tests requires making assertions and using common setup and teardown code. 
-It often involves running multiple sessions in parallel, 
-and sometimes running specific subsets of sessions.
+be able to organize and work with your code. This page should give you
+ideas for how to actually do productive things with your Selenium code.
+
+## Common Uses
+
+Most people use Selenium to execute automated tests for web applications, 
+but Selenium support any use case of browser automation.
+
+### Repetitive Tasks
+
+### Testing
+
+Running Selenium for testing requires making assertions on actions taken by Selenium.
+So a good assertion library is required. Additional features to provide structure for tests
+require use of [Test Runner](#test-runners)
 
 
 ## IDEs
 
-First and foremost, you won't be very effective in building out a test suite without a good
+Regardless of how you use Selenium code, 
+you won't be very effective writing or executing it without a good
 Integrated Developer Environment. Here are some common options...
 
+* Eclipse
+* IntelliJ
+* PyCharm
+* RubyMine
+* Rider
+* WebStorm
+* VS Code
 
-## Test Runners
+## Test Runner
+
+Even if you aren't using Selenium for testing, if you have advanced use cases, it might make
+sense to use a test runner to better organize your code. Being able to use before/after hooks 
+and run things in groups or in parallel can be very useful.
 
 ### Choosing
 There are many different test runners available.
@@ -145,7 +165,7 @@ Use the Java bindings for Kotlin.
 ### Executing
 
 {{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
 ### Maven
 
 ```shell
@@ -158,7 +178,7 @@ mvn clean test
 gradle clean test
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
 {{% /tab %}}
@@ -168,11 +188,11 @@ gradle clean test
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% tab header="JavaScript" %}}
 ```shell
 mocha runningTests.spec.js
 ```
-{{< /tab >}}
+{{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -185,16 +205,16 @@ Here's an example of that code using a test runner:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/RunningTestsTest.java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_running_tests.py" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/RunningTestsTest.cs" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/running_tests_spec.rb" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
