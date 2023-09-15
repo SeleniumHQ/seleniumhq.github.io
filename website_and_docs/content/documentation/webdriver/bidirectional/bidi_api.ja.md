@@ -33,16 +33,8 @@ driver.get("https://your-domain.com/login");
 {{< tab header="Python" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-NetworkAuthenticationHandler handler = new NetworkAuthenticationHandler()
-{
-    UriMatcher = (d) => d.Host.Contains("your-domain.com"),
-    Credentials = new PasswordCredentials("admin", "password")
-};
-
-INetwork networkInterceptor = driver.Manage().Network;
-networkInterceptor.AddAuthenticationHandler(handler);
-await networkInterceptor.StartMonitoring();
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -452,6 +444,8 @@ fun kotlinJsErrorListener() {
 If you want to capture network events coming into the browser and you want manipulate them you are able to do
 it with the following examples.
 
+### Intercept Responses
+
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
     import org.openqa.selenium.WebDriver;
@@ -480,7 +474,7 @@ it with the following examples.
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ChromeDevTools/NetworkInterceptor.cs#L13-L24" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L33-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -524,5 +518,28 @@ val interceptor = new NetworkInterceptor(
     driver.get(appServer.whereIs("/cheese"))
 
     String source = driver.getPageSource()
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Intercept Requests
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L56-L71" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
