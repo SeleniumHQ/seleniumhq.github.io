@@ -26,7 +26,7 @@ driver.get("https://your-domain.com/login");
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L13-L24" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -470,7 +470,7 @@ it with the following examples.
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L33-L48" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L33-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -527,7 +527,7 @@ val interceptor = new NetworkInterceptor(
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L56-L71" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BiDiApiTest.cs#L56-L71" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
