@@ -33,6 +33,7 @@ the geo-locations in the browser using Selenium. But with the help of Devtools,
 we can easily emulate them. Below code snippet demonstrates that.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
@@ -127,6 +128,7 @@ fun main() {
 ## Emulate Geo Location with the Remote WebDriver:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 ChromeOptions chromeOptions = new ChromeOptions();
 WebDriver driver = new RemoteWebDriver(new URL("<grid-url>"), chromeOptions);
@@ -288,6 +290,7 @@ are required parameters. Optional parameters include scale, screenWidth,
 screenHeight, positionX, positionY, dontSetVisible, screenOrientation, viewport, and displayFeature.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
@@ -432,6 +435,7 @@ fun kotlinOverridDeviceMode() {
 Collect various performance metrics while navigating the application.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;

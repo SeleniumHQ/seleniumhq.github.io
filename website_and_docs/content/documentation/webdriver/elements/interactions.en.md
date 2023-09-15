@@ -43,6 +43,7 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     // Navigate to Url
     driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -109,6 +110,7 @@ with a `content-editable` attribute. If it is not editable,
 possible keystrokes that WebDriver Supports.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
       // Navigate to Url
       driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -196,6 +198,7 @@ with a`content-editable` attribute. If these conditions are not met,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
       // Navigate to Url
       driver.get("https://www.selenium.dev/selenium/web/inputs.html");

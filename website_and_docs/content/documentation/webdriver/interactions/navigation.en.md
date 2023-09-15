@@ -14,6 +14,7 @@ The first thing you will want to do after launching a browser is to
 open your website. This can be achieved in a single line:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Convenient
 driver.get("https://selenium.dev");
@@ -47,6 +48,7 @@ driver.navigate().to("https://selenium.dev")
 Pressing the browser's back button:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.navigate().back();{{< /tab >}}
   {{< tab header="Python" >}}driver.back(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
@@ -59,6 +61,7 @@ Pressing the browser's back button:
 Pressing the browser's forward button:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.navigate().forward();{{< /tab >}}
   {{< tab header="Python" >}}driver.forward(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
@@ -72,6 +75,7 @@ Pressing the browser's forward button:
 Refresh the current page:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}driver.navigate().refresh();{{< /tab >}}
   {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}

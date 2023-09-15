@@ -24,13 +24,13 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L10-L11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L11-L12" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L30-L31" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L10-L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L51-L55">}}
@@ -55,16 +55,16 @@ Add an argument to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L47" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L18" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L20" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L9-L12">}}
@@ -82,16 +82,16 @@ Add an argument to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L56" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L31">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L25" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
@@ -111,16 +111,16 @@ please use the `load-extension` argument instead, as mentioned in
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L139" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L67" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L105">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L42">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L50" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L96" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
@@ -141,13 +141,13 @@ please use the `load-extension` argument instead, as mentioned in
 **Note**: This is already the default behavior in Java.
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L28" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L53" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 **Note**: This is already the default behavior in .NET.
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L22" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L29-L32">}}
@@ -169,16 +169,16 @@ can be parsed from the
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L53" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L79" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L38" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L64" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L64" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L30" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
@@ -205,20 +205,21 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L60" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L87" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L47" >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L73" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L74" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L44" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -235,13 +236,14 @@ To change the logging output to display in the console as STDOUT:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L74" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L101" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L84" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -249,7 +251,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L76" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -267,20 +269,21 @@ so this example is just setting the log level generically:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L89" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L116" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L70" >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L95" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L63" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -301,20 +304,20 @@ The log output will be managed by the driver, not the process, so minor differen
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L106-L107" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L133-L134" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L81" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L106" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L74-L75" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L97-L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -333,20 +336,21 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L125" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L152" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L92" >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L117" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L144" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L85" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -363,7 +367,26 @@ Property value: `"true"` or `"false"`
 
 你可以驱动 Chrome Cast 设备，包括共享选项卡
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### 网络条件
 
@@ -373,15 +396,72 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Logs
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Permissions
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### DevTools
 

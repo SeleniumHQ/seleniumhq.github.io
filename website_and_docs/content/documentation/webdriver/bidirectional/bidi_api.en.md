@@ -15,6 +15,7 @@ Some applications make use of browser authentication to secure pages.
 With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
@@ -82,6 +83,7 @@ WebDriver BiDi when there are DOM mutations on a specific
 element in the DOM.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 
@@ -202,6 +204,7 @@ const assert = require("assert");
 Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
@@ -311,6 +314,7 @@ Listen to the JS Exceptions
 and register callbacks to process the exception details.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -444,6 +448,7 @@ If you want to capture network events coming into the browser and you want manip
 it with the following examples.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
     import org.openqa.selenium.WebDriver;
     import org.openqa.selenium.devtools.HasDevTools;

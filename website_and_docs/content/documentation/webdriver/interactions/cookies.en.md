@@ -26,6 +26,7 @@ an alternative is to find a smaller page on the site (typically the 404 page is 
 e.g. http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -114,6 +115,7 @@ fun main() {
 It returns the serialized cookie data matching with the cookie name among all associated cookies.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -214,6 +216,7 @@ It returns a ‘successful serialized cookie data’ for current browsing contex
 If browser is no longer available it returns error. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -319,6 +322,7 @@ fun main() {
 It deletes the cookie data matching with the provided cookie name.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -434,6 +438,7 @@ fun main() {
 It deletes all the cookies of the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -549,6 +554,7 @@ request initiated by third party website.
 Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

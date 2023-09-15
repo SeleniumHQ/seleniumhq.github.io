@@ -20,20 +20,21 @@ Worry not. There is a solution: the _Color_ class!
 First of all, you will need to import the class:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.support.Color;
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium.webdriver.support.color import Color
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 include Selenium::WebDriver::Support
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
 {{< /tabpane >}}
@@ -44,6 +45,7 @@ your colour.
 Supported colour representations are:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
 private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
@@ -62,8 +64,8 @@ RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
 HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 HEX_COLOUR = Color.from_string('#2F7ED8')
@@ -74,8 +76,8 @@ RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
 HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -93,6 +95,7 @@ specified in
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 private final Color BLACK = Color.fromString("black");
 private final Color CHOCOLATE = Color.fromString("chocolate");
@@ -103,16 +106,16 @@ BLACK = Color.from_string('black')
 CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 BLACK = Color.from_string('black')
 CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -126,20 +129,21 @@ if no colour has been set on an element.
 The Color class also supports this:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 private final Color TRANSPARENT = Color.fromString("transparent");
   {{< /tab >}}
   {{< tab header="Python" >}}
 TRANSPARENT = Color.from_string('transparent')
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 TRANSPARENT = Color.from_string('transparent')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
@@ -152,6 +156,7 @@ any response will be correctly parsed
 and converted into a valid Color object:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
 
@@ -162,16 +167,16 @@ login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value
 
 login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
 
 login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
@@ -184,20 +189,21 @@ You can then directly compare colour objects:
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 assert loginButtonBackgroundColour.equals(HOTPINK);
   {{< /tab >}}
   {{< tab header="Python" >}}
 assert login_button_background_colour == HOTPINK
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 assert(login_button_background_colour == HOTPINK)
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
@@ -208,6 +214,7 @@ Or you can convert the colour into one of the following formats
 and perform a static validation:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
 assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
@@ -218,16 +225,16 @@ assert login_button_background_colour.hex == '#ff69b4'
 assert login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)'
 assert login_button_background_colour.rgb == 'rgb(255, 105, 180)'
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="CSharp" text=true text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 assert(login_button_background_colour.hex == '#ff69b4')
 assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// This feature is not implemented - Help us by sending a pr to implement this feature
+  {{< tab header="JavaScript" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))

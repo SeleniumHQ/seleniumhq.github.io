@@ -18,6 +18,7 @@ languages will be as follows -
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
