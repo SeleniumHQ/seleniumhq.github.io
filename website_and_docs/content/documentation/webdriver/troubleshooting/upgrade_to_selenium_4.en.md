@@ -1,55 +1,61 @@
 ---
-title: "Selenium4にアップグレードする方法"
-linkTitle: "Selenium4にアップグレードする方法"
+title: "Upgrade to Selenium 4"
+linkTitle: "Upgrade to Selenium 4"
 weight: 10
 description: >
-  Selenium 4に興味がありますか？ 最新リリースへのアップグレードに役立つこのガイドを確認してください。
+  Are you still using Selenium 3? This guide will help you upgrade to the latest release!
 aliases: [
-"/ja/documentation/getting_started/how_to_upgrade_to_selenium_4/"
+"/documentation/getting_started/how_to_upgrade_to_selenium_4/",
+"/documentation/getting_started/upgrade_to_selenium_4/"
 ]
 ---
 
-公式にサポートされている言語（Ruby、JavaScript、C＃、Python、およびJava）のいずれかを使用している場合、
-Selenium4へのアップグレードは簡単なプロセスです。 
-いくつかの問題が発生する可能性がある場合があるかもしれません。このガイドは、それらを整理するのに役立ちます。 
-プロジェクトの依存関係をアップグレードする手順を実行し、バージョンのアップグレードによってもたらされる主な非推奨と変更を理解します。
+Upgrading to Selenium 4 should be a painless process if you are using one of the officially 
+supported languages (Ruby, JavaScript, C#, Python, and Java). There might be some cases where 
+a few issues can happen, and this guide will help you to sort them out. We will go through 
+the steps to upgrade your project dependencies and understand the major deprecations and 
+changes the version upgrade brings.
 
-これが、Selenium4にアップグレードするために実行する手順です。
-* テストコードの準備
-* 依存関係のアップグレード
-* 潜在的なエラーと非推奨メッセージ
+These are the steps we will follow to upgrade to Selenium 4:
+* Preparing our test code
+* Upgrading dependencies
+* Potential errors and deprecation messages
 
-注：Selenium 3.xバージョンの開発中に、W3CWebDriver標準のサポートが実装されました。 
-この新しいプロトコルと従来のJSONワイヤープロトコルの両方がサポートされました。 
-バージョン3.11の前後で、SeleniumコードはレベルW3C1仕様に準拠するようになりました。 
-Selenium 3の最新バージョンのW3C準拠のコードは、Selenium4で期待どおりに機能します。
+Note: while Selenium 3.x versions were being developed, support for the W3C WebDriver standard 
+was implemented. Both this new protocol and the legacy JSON Wire Protocol were supported. Around 
+version 3.11, Selenium code became compliant with the level W3C 1 specification. The W3C compliant 
+code in the latest version of Selenium 3 will work as expected in Selenium 4.
 
-## テストコードの準備
-Selenium 4は、レガシープロトコルのサポートを削除し、内部でデフォルトでW3CWebDriver標準を使用します。 
-ほとんどの場合、この実装はエンドユーザーに影響を与えません。 
-主な例外は、`Capabilities`と `アクション` クラスです。
+
+## Preparing our test code
+
+Selenium 4 removes support for the legacy protocol and uses the W3C WebDriver standard by 
+default under the hood. For most things, this implementation will not affect end users. 
+The major exceptions are `Capabilities` and the `Actions` class.
 
 ### Capabilities
-テスト機能がW3Cに準拠するように構成されていない場合、セッションが開始されない可能性があります。 
-W3CWebDriverの標準機能のリストは次のとおりです。
+If the test capabilities are not structured to be W3C compliant, may cause a session to not 
+be started. Here is the list of W3C WebDriver standard capabilities:
 * `browserName`
-* `browserVersion` (`version` に変更)
-* `platformName` (`platform` に変更)
+* `browserVersion` (replaces `version`)
+* `platformName` (replaces `platform`)
 * `acceptInsecureCerts`
 * `pageLoadStrategy`
 * `proxy`
 * `timeouts`
 * `unhandledPromptBehavior`
 
-標準Capabilitiesの最新リストは、 [W3C WebDriver](https://www.w3.org/TR/webdriver1/#capabilities) にあります。
+An up-to-date list of standard capabilities can be found at 
+[W3C WebDriver](https://www.w3.org/TR/webdriver1/#capabilities).
 
-上記のリストに含まれていないCapabilitiesには、ベンダープレフィックスを含める必要があります。 
-これは、ブラウザ固有のCapabilitiesとクラウドベンダー固有のCapabilitiesに適用されます。 
-たとえば、クラウドベンダーがテストに `build` Capabilities と `name` Capabilitiesを使用している場合は、
-それらを `cloud:options` ブロックでラップする必要があります（適切なプレフィックスについては、クラウドベンダーに確認してください）。
+Any capability that is not contained in the list above, needs to include a vendor prefix. 
+This applies to browser specific capabilities as well as cloud vendor specific capabilities. 
+For example, if your cloud vendor uses `build` and `name` capabilities for your tests, you need
+to wrap them in a `cloud:options` block (check with your cloud vendor for the appropriate prefix).
 
 #### Before 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 DesiredCapabilities caps = DesiredCapabilities.firefox();
 caps.setCapability("platform", "Windows 10");
@@ -96,6 +102,7 @@ driver = webdriver.Remote(cloud_url, desired_capabilities=caps)
 
 #### After
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 FirefoxOptions browserOptions = new FirefoxOptions();
 browserOptions.setPlatformName("Windows 10");
@@ -150,14 +157,14 @@ driver = webdriver.Remote(cloud_url, options=options)
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Javaで要素ユーティリティメソッドを検索する
-Javaバインディング（`FindsBy` インターフェイス）の要素を検索するユーティリティメソッドは、内部使用のみを目的としていたため、削除されました。 
-次のコードサンプルは、これを分かりやすく説明しています。
+### Find element(s) utility methods in Java
+The utility methods to find elements in the Java bindings (`FindsBy` interfaces) have been removed 
+as they were meant for internal use only. The following code samples explain this better.
 
-`findElement *` で単一の要素を検索する。
+Finding a single element with `findElement*`
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 driver.findElementByClassName("className");
 driver.findElementByCssSelector(".className");
 driver.findElementById("elementId");
@@ -167,7 +174,7 @@ driver.findElementByPartialLinkText("partialText");
 driver.findElementByTagName("elementTagName");
 driver.findElementByXPath("xPath");
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 driver.findElement(By.className("className"));
 driver.findElement(By.cssSelector(".className"));
 driver.findElement(By.id("elementId"));
@@ -180,10 +187,10 @@ driver.findElement(By.xpath("xPath"));
 {{< /cardpane >}}
 
 
-`findElements *` で複数の要素を検索する。
+Finding a multiple elements with `findElements*`
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 driver.findElementsByClassName("className");
 driver.findElementsByCssSelector(".className");
 driver.findElementsById("elementId");
@@ -193,7 +200,7 @@ driver.findElementsByPartialLinkText("partialText");
 driver.findElementsByTagName("elementTagName");
 driver.findElementsByXPath("xPath");
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 driver.findElements(By.className("className"));
 driver.findElements(By.cssSelector(".className"));
 driver.findElements(By.id("elementId"));
@@ -206,20 +213,20 @@ driver.findElements(By.xpath("xPath"));
 {{< /cardpane >}}
 
 
-## 依存関係のアップグレード
+## Upgrading dependencies
 
-以下のサブセクションを確認してSelenium4をインストールし、プロジェクトの依存関係をアップグレードしてください。
+Check the subsections below to install Selenium 4 and have your project dependencies upgraded.
 
 ### Java
 
-Seleniumをアップグレードするプロセスは、使用されているビルドツールによって異なります。 
-Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gradle](https://gradle.org/)について説明します。 
-必要なJavaの最小バージョンはまだ8です。
+The process of upgrading Selenium depends on which build tool is being used. We will cover the 
+most common ones for Java, which are [Maven](https://maven.apache.org/) and 
+[Gradle](https://gradle.org/). The minimum Java version required is still 8.
 
 #### Maven
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="xml" >}}
+{{< card code=true header="Before" lang="xml" >}}
 <dependencies>
   <!-- more dependencies ... -->
   <dependency>
@@ -230,7 +237,7 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
   <!-- more dependencies ... -->
 </dependencies>
 {{< /card >}}
-{{< card header="After" code=true lang=xml >}}
+{{< card code=true header="After" lang="xml" >}}
 <dependencies>
     <!-- more dependencies ... -->
     <dependency>
@@ -243,12 +250,13 @@ Javaで最も一般的なものである[Maven](https://maven.apache.org/)と[Gr
 {{< /card >}}
 {{< /cardpane >}}
 
-変更を加えた後、`pom.xml` ファイルと同じディレクトリで `mvn clean compile` を実行できます。
+After making the change, you could execute `mvn clean compile` on the same directory where the 
+`pom.xml` file is.
 
 #### Gradle
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="jsonpath" >}}
+{{< card code=true header="Before" lang="jsonpath" >}}
 plugins {
     id 'java'
 }
@@ -266,7 +274,7 @@ test {
     useJUnitPlatform()
 }
 {{< /card >}}
-{{< card header="After" code=true lang="jsonpath" >}}
+{{< card code=true header="After" lang="jsonpath">}}
 plugins {
     id 'java'
 }
@@ -286,15 +294,17 @@ test {
 {{< /card >}}
 {{< /cardpane >}}
 
-変更を加えた後、 `build.gradle` ファイルと同じディレクトリで `./gradlew cleanbuild` を実行できます。
+After making the change, you could execute `./gradlew clean build`
+on the same directory where the `build.gradle` file is.
 
-すべてのJavaリリースを確認するには、 [MVNRepository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java) にアクセスしてください。
+To check all the Java releases, you can head to [MVNRepository](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java).
 
 ### C#
 
-C#でSelenium4の更新を取得する場所は [NuGet](https://www.nuget.org/) です。 
-[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.4.0) パッケージの下で、最新バージョンに更新するための手順を入手できます。 
-Visual Studio内では、NuGetパッケージマネージャーを使用して次の操作を実行できます。
+The place to get updates for Selenium 4 in C# is [NuGet](https://www.nuget.org/). Under the 
+[`Selenium.WebDriver`](https://www.nuget.org/packages/Selenium.WebDriver/4.4.0) package you 
+can get the instructions to update to the latest version. Inside of Visual Studio, through the 
+NuGet Package Manager you can execute:
 
 ```shell
 PM> Install-Package Selenium.WebDriver -Version 4.4.0
@@ -302,10 +312,10 @@ PM> Install-Package Selenium.WebDriver -Version 4.4.0
 
 ### Python
 
-Pythonを使用するための最も重要な変更は、最低限必要なバージョンです。 
-Selenium 4には、Python3.7以降が必要です。 
-詳細については、[Python Package Index](https://pypi.org/project/selenium/4.4.3/)を参照してください。 
-コマンドラインからアップグレードするには、次のコマンドを実行できます。
+The most important change to use Python is the minimum required version. Selenium 4 will 
+require a minimum Python 3.7 or higher. More details can be found at the 
+[Python Package Index](https://pypi.org/project/selenium/4.4.3/). To upgrade from the 
+command line, you can execute:
 
 ```shell
 pip install selenium==4.4.3
@@ -313,14 +323,15 @@ pip install selenium==4.4.3
 
 ### Ruby
 
-Selenium 4の更新の詳細は、RubyGemsの[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.4.0)で確認できます。 
-最新バージョンをインストールするには、次のコマンドを実行できます。
+The update details for Selenium 4 can be seen at the 
+[selenium-webdriver](https://rubygems.org/gems/selenium-webdriver/versions/4.4.0) 
+gem in RubyGems. To install the latest version, you can execute:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Gemfileには下記のように追加します。
+To add it to your Gemfile:
 
 ```shell
 gem 'selenium-webdriver', '~> 4.4.0'
@@ -328,15 +339,16 @@ gem 'selenium-webdriver', '~> 4.4.0'
 
 ### JavaScript
 
-selenium-webdriverパッケージは、Nodeパッケージマネージャーの[npmjs](https://www.npmjs.com)にあります。 
-Selenium4は[here](https://www.npmjs.com/package/selenium-webdriver/v/4.4.0)にあります。 
-これをインストールするには、次のいずれかを実行します。
+The selenium-webdriver package can be found at the Node package manager, 
+[npmjs](https://www.npmjs.com). Selenium 4 can be found 
+[here](https://www.npmjs.com/package/selenium-webdriver/v/4.4.0). To install it, you 
+could either execute:
 
 ```shell
 npm install selenium-webdriver
 ```
 
-または、package.jsonを更新して、 `npm install` を実行します。
+Or, update your package.json and run` npm install`:
 
 ```json
 {
@@ -348,35 +360,38 @@ npm install selenium-webdriver
 }
 ```
 
-## 潜在的なエラーと非推奨メッセージ
+## Potential errors and deprecation messages
 
-これは、Selenium4にアップグレードした後に発生する可能性のある非推奨メッセージを克服するのに役立つ一連のコード例です。
+Here is a set of code examples that will help to overcome the deprecation messages you might 
+encounter after upgrading to Selenium 4.
 
 ### Java
 
-#### 待機とタイムアウト
+#### Waits and Timeout
 
-タイムアウトで受信するパラメーターは、期待値 `(long time, TimeUnit unit)` から期待値 `(Duration duration)` に替わりました。
+The parameters received in Timeout have switched from expecting `(long time, TimeUnit unit)` to 
+expect `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().timeouts().setScriptTimeout(2, TimeUnit.MINUTES);
 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 {{< /card >}}
 {{< /cardpane >}}
 
-現在、待機も異なるパラメーターを期待しています。 
-`WebDriverWait`は、秒とミリ秒単位のタイムアウトに、 `long` ではなく`Duration`を期待するようになりました。 
-`FluentWait` の `withTimeout` および `pollingEvery` ユーティリティメソッドは、期待値 `(long time, TimeUnit unit)` から `(Duration duration)` に替わりました。
+Waits are also expecting different parameters now. `WebDriverWait` is now expecting a `Duration` 
+instead of a `long` for timeout in seconds and milliseconds. The `withTimeout` and `pollingEvery` 
+utility methods from `FluentWait` have switched from expecting `(long time, TimeUnit unit)` to 
+expect `(Duration duration)`.
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 new WebDriverWait(driver, 3)
 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -385,7 +400,7 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
   .pollingEvery(5, TimeUnit.SECONDS)
   .ignoring(NoSuchElementException.class);
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 new WebDriverWait(driver, Duration.ofSeconds(3))
   .until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id")));
 
@@ -396,37 +411,40 @@ new WebDriverWait(driver, Duration.ofSeconds(3))
 {{< /card >}}
 {{< /cardpane >}}
 
-#### マージCapabilitiesは、もはや呼び出し元のオブジェクトを変更しなくなりました
+#### Merging capabilities is no longer changing the calling object
 
-以前は、別のCapabilitiesセットを別のセットにマージすることが可能であり、呼び出し元のオブジェクトを変更していました。 
-今は、ここで、マージ操作の結果を割り当てる必要があります。
+It was possible to merge a different set of capabilities into another set, and it was 
+mutating the calling object. Now, the result of the merge operation needs to be assigned.
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options.merge(capabilities);
-As a result, the `options` object was getting modified.
+
+// As a result, the `options` object was getting modified.
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("platformVersion", "Windows 10");
 FirefoxOptions options = new FirefoxOptions();
 options.setHeadless(true);
 options = options.merge(capabilities);
-The result of the `merge` call needs to be assigned to an object.
+
+// The result of the `merge` call needs to be assigned to an object.
 {{< /card >}}
 {{< /cardpane >}}
 
-#### 古いFirefox
+#### Firefox Legacy
 
-GeckoDriverが登場する前は、SeleniumプロジェクトにはFirefoxを自動化するためのドライバー実装がありました（バージョン<48）。 
-ただし、この実装は最近のバージョンのFirefoxでは機能しないため、もう必要ありません。 
-Selenium 4にアップグレードする際の大きな問題を回避するために、`setLegacy` オプションは非推奨として表示されます。 
-古い実装の使用をやめ、GeckoDriverのみに依存することをお勧めします。 
-次のコードは、アップグレード後に非推奨になった`setLegacy` 行を示しています。
+Before GeckoDriver was around, the Selenium project had a driver implementation to automate 
+Firefox (version <48). However, this implementation is not needed anymore as it does not work 
+in recent versions of Firefox. To avoid major issues when upgrading to Selenium 4, the `setLegacy` 
+option will be shown as deprecated. The recommendation is to stop using the old implementation 
+and rely only on GeckoDriver. The following code will show the `setLegacy` line deprecated after 
+upgrading.
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
@@ -434,15 +452,16 @@ options.setLegacy(true);
 ```
 
 #### `BrowserType`
-`BrowserType` インターフェースは長い間使用されてきましたが、新しい `Browser` インターフェースを優先して非推奨になります。
+The `BrowserType` interface has been around for a long time, however it is getting 
+deprecated in favour of the new `Browser` interface.
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Java" >}}
+{{< card code=true header="Before" lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", BrowserType.FIREFOX);
 {{< /card >}}
-{{< card header="After" code=true lang="Java" >}}
+{{< card code=true header="After" lang="Java" >}}
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability("browserVersion", "92");
 capabilities.setCapability("browserName", Browser.FIREFOX);
@@ -451,19 +470,19 @@ capabilities.setCapability("browserName", Browser.FIREFOX);
 
 ### C#
 
-#### `AddAdditionalCapability` は非推奨になりました
+#### `AddAdditionalCapability` is deprecated
 
-その代わりに、 `AddAdditionalOption` をお勧めします。 これを示す例を次に示します。
+Instead of it, `AddAdditionalOption` is recommended. Here is an example showing this:
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="CS" >}}
+{{< card code=true header="Before" lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
 var cloudOptions = new Dictionary<string, object>();
 browserOptions.AddAdditionalCapability("cloud:options", cloudOptions, true);
 {{< /card >}}
-{{< card header="After" code=true lang="CS" >}}
+{{< card code=true header="After" lang="CS" >}}
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "latest";
@@ -474,13 +493,12 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 
 ### Python
 
-#### `execute_pathは非推奨になりました。Serviceオブジェクトを渡してください`
+#### `executable_path has been deprecated, please pass in a Service object`
 
-Selenium 4では、非推奨の警告を防ぐために、Serviceオブジェクトからドライバーの ``executable_path`` を設定する必要があります。 
-（または、PATHを設定せず、代わりに必要なドライバーがシステムPATH上にあることを確認してください。）
+In Selenium 4, you'll need to set the driver's ``executable_path`` from a Service object to prevent deprecation warnings. (Or don't set the path and instead make sure that the driver you need is on the System PATH.)
 
 {{< cardpane >}}
-{{< card header="Before" code=true lang="Python" >}}
+{{< card code=true header="Before" lang="python" >}}
 from selenium import webdriver
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(
@@ -488,7 +506,7 @@ driver = webdriver.Chrome(
     options=options
 )
 {{< /card >}}
-{{< card header="After" code=true lang="Python" >}}
+{{< card code=true header="After" lang="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 options = webdriver.ChromeOptions()
@@ -497,11 +515,12 @@ driver = webdriver.Chrome(service=service, options=options)
 {{< /card >}}
 {{< /cardpane >}}
 
-## まとめ
+## Summary
 
-Selenium 4にアップグレードする際に考慮すべき主な変更点を確認しました。
-アップグレードのためにテストコードを準備する際にカバーするさまざまな側面について説明します。
-これには、新しいバージョンのSeleniumを使用する時に発生する可能性のある潜在的な問題を防ぐ方法の提案も含まれます。
-最後に、アップグレード後に発生する可能性のある一連の問題についても説明し、それらの問題に対する潜在的な修正を共有しました。
+We went through the major changes to be taken into consideration when upgrading to Selenium 4. 
+Covering the different aspects to cover when test code is prepared for the upgrade, including 
+suggestions on how to prevent potential issues that can show up when using the new version of 
+Selenium. To finalize, we also covered a set of possible issues that you can bump into after 
+upgrading, and we shared potential fixes for those issues.
 
-*これは元々は https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4 に投稿されました*
+*This was originally posted at  https://saucelabs.com/resources/articles/how-to-upgrade-to-selenium-4*
