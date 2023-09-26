@@ -28,7 +28,7 @@ def test_basic_options_win11():
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_log_to_file(log_path):
-    service = webdriver.IeService(log_file=log_path, log_level='INFO')
+    service = webdriver.IeService(log_output=log_path, log_level='INFO')
 
     driver = webdriver.Ie(service=service)
 
@@ -52,7 +52,7 @@ def test_log_to_stdout(capfd):
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_log_level(log_path):
-    service = webdriver.IeService(log_file=log_path, log_level='WARN')
+    service = webdriver.IeService(log_output=log_path, log_level='WARN')
 
     driver = webdriver.Ie(service=service)
 
