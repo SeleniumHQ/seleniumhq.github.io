@@ -21,7 +21,7 @@
         {{ template "footer-links-block"  . }}
         {{ end }}
         {{ end }}
-        <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
+        <a href="https://www.netlify.com"> <img style="margin-right: 50px;" src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" /> </a>
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
         {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} {{ .}} {{ T "footer_all_rights_reserved" }}</small>{{ end }}

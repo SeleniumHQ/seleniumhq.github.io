@@ -14,7 +14,7 @@ There are only 5 basic commands that can be executed on an element:
 * [send keys](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * [clear](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * submit (only applies to form elements)
-* select (see [Select List Elements]({{< ref "select_lists.md" >}}))
+* select (see [Select List Elements]({{< ref "select_lists.md" >}})
 
 ## Additional validations
 
@@ -43,6 +43,7 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     // Navigate to Url
     driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -109,6 +110,7 @@ with a `content-editable` attribute. If it is not editable,
 possible keystrokes that WebDriver Supports.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
       // Navigate to Url
       driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -196,6 +198,7 @@ with a`content-editable` attribute. If these conditions are not met,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
       // Navigate to Url
       driver.get("https://www.selenium.dev/selenium/web/inputs.html");

@@ -15,6 +15,7 @@ Some applications make use of browser authentication to secure pages.
 With Selenium, you can automate the input of basic auth credentials whenever they arise.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
 
@@ -24,16 +25,8 @@ driver.get("https://your-domain.com/login");
 {{< tab header="Python" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-NetworkAuthenticationHandler handler = new NetworkAuthenticationHandler()
-{
-    UriMatcher = (d) => d.Host.Contains("your-domain.com"),
-    Credentials = new PasswordCredentials("admin", "password")
-};
-
-INetwork networkInterceptor = driver.Manage().Network;
-networkInterceptor.AddAuthenticationHandler(handler);
-await networkInterceptor.StartMonitoring();
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -82,6 +75,7 @@ WebDriver BiDi when there are DOM mutations on a specific
 element in the DOM.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 
@@ -202,6 +196,7 @@ const assert = require("assert");
 Listen to the `console.log` events and register callbacks to process the event.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 ChromeDriver driver = new ChromeDriver();
 DevTools devTools = driver.getDevTools();
@@ -311,6 +306,7 @@ Listen to the JS Exceptions
 and register callbacks to process the exception details.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -443,7 +439,10 @@ fun kotlinJsErrorListener() {
 If you want to capture network events coming into the browser and you want manipulate them you are able to do
 it with the following examples.
 
+### Intercept Responses
+
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
     import org.openqa.selenium.WebDriver;
     import org.openqa.selenium.devtools.HasDevTools;
@@ -471,7 +470,7 @@ it with the following examples.
 Currently unavailable in python due the inability to mix certain async and sync commands
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L33-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -515,5 +514,28 @@ val interceptor = new NetworkInterceptor(
     driver.get(appServer.whereIs("/cheese"))
 
     String source = driver.getPageSource()
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Intercept Requests
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L56-L71" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}

@@ -4,21 +4,19 @@ import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 public class ChromeTest {
@@ -30,6 +28,8 @@ public class ChromeTest {
         if (logLocation != null && logLocation.exists()) {
             logLocation.delete();
         }
+        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
+        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
 
         driver.quit();
     }
@@ -43,18 +43,45 @@ public class ChromeTest {
     @Test
     public void arguments() {
         ChromeOptions options = new ChromeOptions();
+
         options.addArguments("--start-maximized");
+
         driver = new ChromeDriver(options);
+    }
+
+    @Test
+    public void setBrowserLocation() {
+        ChromeOptions options = new ChromeOptions();
+
+        options.setBinary(getChromeLocation());
+
+        driver = new ChromeDriver(options);
+    }
+
+    @Test
+    public void extensionOptions() {
+        ChromeOptions options = new ChromeOptions();
+        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+        File extensionPath = new File(path.toUri());
+
+        options.addExtensions(extensionPath);
+
+        driver = new ChromeDriver(options);
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
     @Test
     public void excludeSwitches() {
         ChromeOptions options = new ChromeOptions();
+
         options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
 
         driver = new ChromeDriver(options);
     }
 
+    @Test
     public void logsToFile() throws IOException {
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .withLogFile(getLogLocation())
@@ -132,22 +159,16 @@ public class ChromeTest {
         Assertions.assertTrue(fileContent.contains(expected));
     }
 
-     @Test
-    public void extensionOptions() {
-        ChromeOptions options = new ChromeOptions();
-        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-        options.addExtensions(new File(path.toUri()));
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
-        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
-    }
-
     private File getLogLocation() throws IOException {
         if (logLocation == null || !logLocation.exists()) {
             logLocation = File.createTempFile("chromedriver-", ".log");
         }
 
         return logLocation;
+    }
+
+    private File getChromeLocation() {
+        File location = new File(System.getenv("CHROME_BIN"));
+        return location.exists() ? location : null;
     }
 }

@@ -257,20 +257,53 @@ you will want to execute your Selenium code using test runner tools.
 Many of the code examples in this documentation can be found in our example repositories. 
 There are multiple options in each language, but here is what we are using in our examples:
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// Add instructions
+{{< tabpane langEqualsHeader=true text=true >}}
+{{% tab header="Java" %}}
+Install JUnit 5 test runner using a build tool.
+
+### Maven
+
+In the project’s `pom.xml` file, specify the dependency: 
+
+{{< gh-codeblock path="examples/java/pom.xml#L53-L58" >}}
+
+and configure the build plugin:
+
+{{< gh-codeblock path="examples/java/pom.xml#L63-L73" >}}
+
+Now, run your tests using:
+
+```shell
+mvn clean test
+```
+
+### Gradle
+
+In the project's `build.gradle` file,  specify the dependency: 
+
+{{< gh-codeblock path="examples/java/build.gradle#L15" >}}
+
+and add the following in the `test` task:
+
+{{< gh-codeblock path="examples/java/build.gradle#L19" >}}
+
+Now, run your tests using:
+
+```shell
+gradle clean test
+```
+
 {{< /tab >}}
 {{< tab header="Python" >}}
-// Add instructions
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-// Add instructions
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-// Add instructions
+{{< badge-code >}}
 {{< /tab >}}
-{{% tab header="JavaScript" text=true %}}
+{{% tab header="JavaScript" %}}
 Install Mocha Test runner using below command in your terminal
 
 Install with npm globally:
@@ -289,7 +322,7 @@ mocha firstScript.spec.js
 
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-// Add instructions
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

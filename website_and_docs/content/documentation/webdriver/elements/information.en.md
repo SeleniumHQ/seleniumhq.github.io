@@ -25,6 +25,7 @@ This function makes many approximations about an element's
 nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 // Navigate to the url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -80,6 +81,7 @@ Returns a boolean value, **True** if the connected element is
 **enabled** in the current browsing context else returns **false**.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
   //navigates to url
   driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -137,6 +139,7 @@ Returns a boolean value, **True** if referenced element is
 **selected** in the current browsing context else returns **false**.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -187,6 +190,7 @@ It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-eleme
 of the referenced Element which has the focus in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -243,6 +247,7 @@ The fetched data body contain the following details:
 * Width of the element
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 // Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html");
@@ -302,6 +307,7 @@ Retrieves the value of specified computed style property
 of an element in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 
 // Navigate to Url
@@ -363,6 +369,7 @@ val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-c
 Retrieves the rendered text of the specified element.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 // Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/linked_image.html");
@@ -416,6 +423,7 @@ DOM attribute. It returns the data associated
 with the DOM attribute or property of the element. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 //Navigate to the url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html");
