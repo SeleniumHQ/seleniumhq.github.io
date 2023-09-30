@@ -1,6 +1,6 @@
 ---
-title: "What's new in Selenium Manager 0.4.13"
-linkTitle: "What's new in Selenium Manager 0.4.13"
+title: "Selenium Manager updates in September 2023"
+linkTitle: "Selenium Manager updates in September 2023"
 date: 2023-09-30
 tags: ["selenium", "manager", "edge"]
 categories: ["releases"]
@@ -20,7 +20,7 @@ To make the driver resolution procedure more robust, as of version 0.4.13, Selen
 ### Locating Selenium Manager binary with an environment variable
 The next feature related to Selenium Manager 0.4.13 has been implemented in the Selenium bindings (i.e., Java, JavaScript, Python, .Net, and Ruby). As of Selenium 4.13.0, the Selenium bindings allow locating the Selenium Manager binary using an environment variable called `SE_MANAGER_PATH`. This way, if this variable is set, the bindings will use its value as the Selenium Manager path in the local filesystem. This feature will allow users to provide a custom compilation of Selenium Manager, for instance, if the default binaries (compiled for Windows, Linux, and macOS) are incompatible with a given system (e.g., ARM64 in Linux).
 
-### Automated Edge management
+### Automated Edge management (to be released in 0.4.14)
 Most of the effort on Selenium Manager in the last month has been in implementing the automated Edge management. This browser is the last we have in mind for this feature, after Chrome and Firefox.
 
 This feature has been implemented in the same way that Chrome and Firefox for macOS and Linux. In other words, Selenium Manager allows to automatically manage (i.e., discover, downloads, and cache) the latest Edge versions (i.e., stable, beta, dev, canary) and old versions (e.g., 115, 116, etc.). The downloaded binaries, as usual, are stored in the Selenium cache. The following output commands showcase this feature in macOS (first snipped) and Linux (second snippet):
