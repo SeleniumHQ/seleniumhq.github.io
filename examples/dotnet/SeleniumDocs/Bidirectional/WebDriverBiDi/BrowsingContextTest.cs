@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SeleniumDocs.Bidirectional.BidirectionalW3c
+namespace SeleniumDocs.Bidirectional.WebDriverBiDi
 {
     [TestClass]
     public class BrowsingContextTest : BaseTest
