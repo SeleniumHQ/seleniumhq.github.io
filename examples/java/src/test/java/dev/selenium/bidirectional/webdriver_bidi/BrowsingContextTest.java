@@ -1,4 +1,4 @@
-package dev.selenium.bidirectional.bidirectional_w3c;
+package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
 import java.util.List;

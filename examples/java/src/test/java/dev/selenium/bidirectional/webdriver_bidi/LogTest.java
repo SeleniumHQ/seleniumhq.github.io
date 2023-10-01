@@ -1,10 +1,10 @@
-package dev.selenium.bidirectional.bidirectional_w3c;
+package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+
+import java.time.Duration;
+import java.util.concurrent.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +16,7 @@ import org.openqa.selenium.bidi.log.LogLevel;
 import org.openqa.selenium.bidi.log.StackTrace;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 class LogTest extends BaseTest {
 
@@ -24,6 +25,21 @@ class LogTest extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
+    }
+
+    @Test
+    public void jsErrors() {
+        CopyOnWriteArrayList<ConsoleLogEntry> logs = new CopyOnWriteArrayList<>();
+
+        try (LogInspector logInspector = new LogInspector(driver)) {
+            logInspector.onConsoleEntry(logs::add);
+        }
+
+        driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+        driver.findElement(By.id("consoleLog")).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(_d -> !logs.isEmpty());
+        Assertions.assertEquals("Hello, world!", logs.get(0).getText());
     }
 
     @Test
