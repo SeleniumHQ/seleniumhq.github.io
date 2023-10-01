@@ -1,7 +1,10 @@
 ---
-title: "BiDirectional API (CDP implementation)"
-linkTitle: "BiDi API (CDP implementation)"
-weight: 1
+title: "Chrome Devtools Protocol with BiDi API"
+linkTitle: "BiDi API"
+weight: 6
+description: >
+  These examples are currently implemented with CDP, but the same code should work when the functionality
+  is re-implemented with WebDriver-BiDi.
 ---
 
 The following list of APIs will be growing as the Selenium
@@ -9,36 +12,32 @@ project works through supporting real world use cases. If there
 is additional functionality you'd like to see, please raise a
 [feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
+As these examples are re-implemented with the [WebDriver-Bidi](https://w3c.github.io/webdriver-bidi) protocol, they will
+be moved to the [WebDriver Bidi]({{< ref "../webdriver_bidi/" >}}) pages.
+
 ## Register Basic Auth
 
 Some applications make use of browser authentication to secure pages.
-With Selenium, you can automate the input of basic auth credentials whenever they arise.
+It used to be common to handle them in the URL, but browser stopped supporting this.
+With BiDi, you can now provide the credentials when necessary
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java#L34-L36" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
+{{< badge-implementation >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L16-L24" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
+{{< gh-codeblock path="/examples/ruby/spec/bidirectional/bidi_api_spec.rb#L9-L11" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
 {{< badge-examples >}}
-{{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java/#L29-L32" >}}
-{{< /tab >}}
-{{< tab header="Python" text=true >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L13-L24" >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
 
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.devtools.new
-  driver.register(username: 'username', password: 'password')
-  driver.get '<your site url>'
-ensure
-  driver.quit
-end
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+```js
 const {Builder} = require('selenium-webdriver');
 
 (async function example() {
@@ -55,15 +54,49 @@ const {Builder} = require('selenium-webdriver');
     console.log(e)
   }
 }())
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+```
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+{{< badge-examples >}}
+
+```java
 val uriPredicate = Predicate { uri: URI ->
         uri.host.contains("your-domain.com")
     }
 (driver as HasAuthentication).register(uriPredicate, UsernameAndPassword.of("admin", "password"))
 driver.get("https://your-domain.com/login")
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< /tabpane >}}
+
+
+## Pin Scripts
+This can be especially useful when executing on a remote server. For example,
+whenever you check the visibility of an element, or whenever you use
+the classic get attribute method, Selenium is sending the contents of a js file
+to the script execution endpoint. These files are each about 50kB, which adds up.
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{% tab header="Java" %}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java#L54-L61" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
+{{< badge-implementation >}}
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.cs#L16-L24" >}}
+{{% /tab %}}
+{{% tab header="Ruby" %}}
+{{< gh-codeblock path="/examples/ruby/spec/bidirectional/bidi_api_spec.rb#L38-L45" >}}
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+{{< badge-implementation >}}
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< /tabpane >}}
+
 
 ## Mutation Observation
 
@@ -73,9 +106,27 @@ element in the DOM.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-{{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java/#L39-L50" >}}
-{{< /tab >}}
+  {{< tab header="Java" >}}
+ChromeDriver driver = new ChromeDriver();
+
+AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
+CountDownLatch latch = new CountDownLatch(1);
+((HasLogEvents) driver).onLogEvent(domMutation(mutation -> {
+    seen.set(mutation);
+    latch.countDown();
+}));
+
+driver.get("https://www.google.com");
+WebElement span = driver.findElement(By.cssSelector("span"));
+
+((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('cheese', 'gouda');", span);
+
+assertThat(latch.await(10, SECONDS), is(true));
+assertThat(seen.get().getAttributeName(), is("cheese"));
+assertThat(seen.get().getCurrentValue(), is("gouda"));
+
+driver.quit();
+  {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -423,7 +474,27 @@ it with the following examples.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.java#L59-L66" >}}
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.devtools.HasDevTools;
+    import org.openqa.selenium.devtools.NetworkInterceptor;
+    import org.openqa.selenium.remote.http.Contents;
+    import org.openqa.selenium.remote.http.Filter;
+    import org.openqa.selenium.remote.http.HttpResponse;
+    import org.openqa.selenium.remote.http.Route;
+
+    NetworkInterceptor interceptor = new NetworkInterceptor(
+      driver,
+      Route.matching(req -> true)
+        .to(() -> req -> new HttpResponse()
+          .setStatus(200)
+          .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
+          .setContent(utf8String("Creamy, delicious cheese!"))));
+
+   driver.get("https://example-sausages-site.com");
+
+    String source = driver.getPageSource();
+
+    assertThat(source).contains("delicious cheese!");
 {{< /tab >}}
 {{< tab header="Python" >}}
 Currently unavailable in python due the inability to mix certain async and sync commands
