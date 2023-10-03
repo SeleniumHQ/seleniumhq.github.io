@@ -1,27 +1,30 @@
 ---
-title: "Logging Selenium commands"
-linkTitle: "Logging"
+title: "记录 Selenium 命令"
+linkTitle: "日志"
 weight: 4
 description: >
-  Getting information about Selenium execution.
+  获取Selenium的执行信息.
 ---
 
-Turning on logging is a valuable way to get extra information that might help you determine
-why you might be having a problem.
+启用日志记录是获取额外信息的宝贵方法, 
+这些信息可能有助于您确定
+遇到问题的原因.
 
-## Getting a logger
+## 获取一个logger
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-Java logs are typically created per class. You can work with the default logger to 
-work with all loggers. To filter out specific classes, see [Filtering](#logger-filtering)
+Java 日志通常是按类创建的. 
+您可以通过默认logger来使用所有loggers.
+为了过滤特定类, 请参考 [过滤器](#logger-过滤)
 
-Get the root logger:
+获取根logger:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L31" >}}
 
-Java Logging is not exactly straightforward, and if you are just looking for an easy way 
-to look at the important Selenium logs, 
-take a look at the [Selenium Logger project](https://github.com/titusfortner/selenium-logger#selenium-logger)
+Java日志并不简单直接,
+如果您只是在寻找一种简单的方法
+查看重要的Selenium日志, 
+请参阅 [Selenium Logger 项目](https://github.com/titusfortner/selenium-logger#selenium-logger)
   {{% /tab %}}
   {{% tab header="Python" %}}
 Python logs are typically created per module. You can match all submodules by referencing the top
@@ -54,15 +57,15 @@ logger = logging.getLogger('webdriver')
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Logger level
-Logger level helps to filter out logs based on their severity.
+## 日志级别
+Logger级别有助于根据日志的严重性过滤日志.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-  Java has 7 logger levels: `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, and `FINEST`.
-The default is `INFO`. 
+  Java有七种logger级别: `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, 以及 `FINEST`.
+默认是 `INFO`. 
 
-You have to change both the level of the logger and the level of the handlers on the root logger:
+您必须更改logger的级别和根logger上的处理程序的级别:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L32-L35" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -120,14 +123,15 @@ logger.setLevel(logging.Level.INFO)
 
 ### Actionable items
 
-Things are logged as warnings if they are something the user needs to take action on. This is often used
-for deprecations. For various reasons, Selenium project does not follow standard Semantic Versioning practices.
-Our policy is to mark things as deprecated for 3 releases and then remove them, so deprecations
-may be logged as warnings.
+对于需要用户后续行动的操作, 会将其记录为警告. 
+这经常用于被弃用的内容. 
+由于各种原因, Selenium项目不遵循标准的语义版本控制实践. 
+我们的政策是将 3 个版本的内容标记为已弃用后, 
+再删除它们, 因此弃用可能记录为警告.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-Java logs actionable content at logger level `WARN`
+Java 日志可操作的内容在logger级别 `WARN`
 
 Example:
 ```text
@@ -169,12 +173,12 @@ For example:
 
 ### Useful information
 
-This is the default level where Selenium logs things that users should be aware of but do not need to take actions on.
-This might reference a new method or direct users to more information about something
+这是默认级别, Selenium 记录用户应该注意但不需要对其执行操作的内容. 
+这可能会引用新方法或将用户定向到有关某些内容的详细信息
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-  Java logs useful information at logger level `INFO`
+  Java 日志有用的信息在logger 级别 `INFO`
 
 Example:
 ```text
@@ -214,11 +218,11 @@ Example:
 
 ### Debugging Details
 
-The debug log level is used for information that may be needed for diagnosing issues and troubleshooting problems.
+调试日志级别用于诊断问题和解决问题可能需要的信息.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-Java logs most debug content at logger level `FINE`
+Java日志的大多数调试信息在logger 级别 `FINE`
 
 Example:
 ```text
@@ -255,13 +259,15 @@ Example:
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Logger output
+## Logger 输出
 
-Logs can be displayed in the console or stored in a file. Different languages have different defaults.
+日志可以显示在控制台中, 也可以存储在文件中. 
+不同的语言有不同的默认值. 
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{% tab header="Java" %}}
-By default all logs are sent to `System.err`. To direct output to a file, you need to add a handler:
+默认情况下, 所有日志都发送到 `System.err`.
+要将输出定向到文件, 您需要添加一个处理程序:
 
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L37-L38" >}}
   {{% /tab %}}
@@ -294,13 +300,14 @@ logging.installConsoleHandler()
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Logger filtering
+## Logger 过滤
 
 {{< tabpane langEqualsHeader=true text=true >}}
 {{% tab header="Java" %}}
-Java logging is managed on a per class level, so 
-instead of using the root logger (`Logger.getLogger("")`), set the level you want to use on a per-class
-basis:
+Java 日志记录是按类级别管理的, 
+因此不要使用根logger  (`Logger.getLogger("")`), 
+而是在每个类的基础上设置要使用的级别:
+
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/troubleshooting/LoggingTest.java#L40-L41" >}}
   {{% /tab %}}
   {{< tab header="Python" >}}
