@@ -6,7 +6,7 @@ description:  >
   对Selenium 4感兴趣? 查看本指南, 它将帮助您升级到最新版本!
 aliases: [
 "/zh-cn/documentation/getting_started/how_to_upgrade_to_selenium_4/",
-"/zh-cn/documentation/getting_started/upgrade_to_selenium_4/"
+"/zh-cn/documentation/webdriver/getting_started/upgrade_to_selenium_4/"
 ]
 ---
 
