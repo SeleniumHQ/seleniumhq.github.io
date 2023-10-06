@@ -57,7 +57,7 @@ def test_log_level(log_path):
     driver = webdriver.Ie(service=service)
 
     with open(log_path, 'r') as fp:
-        assert 'Invalid capability setting: timeouts is type null' in fp.readline()
+        assert 'Started InternetExplorerDriver server (32-bit)' in fp.readline()
 
     driver.quit()
 
