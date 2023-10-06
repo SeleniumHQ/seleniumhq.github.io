@@ -5,18 +5,19 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Pdf;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
+import org.openqa.selenium.print.PrintOptions;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.regex.Pattern;
 
 public class ChromeTest {
@@ -35,9 +36,14 @@ public class ChromeTest {
     }
 
     @Test
-    public void basicOptions() {
+    public void basicOptions() throws IOException {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
+        driver.get("https://www.selenium.dev");
+
+        String content = driver.print(new PrintOptions()).getContent();
+        byte[] bytes = Base64.getDecoder().decode(content);
+        Files.write(Paths.get("printed.pdf"), bytes);
     }
 
     @Test

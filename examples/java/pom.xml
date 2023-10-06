@@ -9,13 +9,9 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-        <java.version>8</java.version>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <project.encoding>UTF-8</project.encoding>
-        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <repositories>
@@ -35,19 +31,14 @@
             <version>4.13.0</version>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.4.6</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-http-jdk-client</artifactId>
+            <version>4.13.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.2</version>
+            <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -57,12 +48,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
+                <version>3.1.2</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Example.java</include>
-                    </includes>
+                    <systemPropertyVariables>
+                        <webdriver.http.factory>jdk-http-client</webdriver.http.factory>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

@@ -31,7 +31,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
@@ -56,4 +56,3 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 在大型分布式环境,
 以及不同操作系统上的环境上
 运行多个浏览器的测试.
-
