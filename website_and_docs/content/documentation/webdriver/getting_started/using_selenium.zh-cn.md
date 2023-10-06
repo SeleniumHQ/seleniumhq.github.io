@@ -17,11 +17,20 @@ but Selenium support any use case of browser automation.
 
 ### Repetitive Tasks
 
+Perhaps you need to log into a website and download something, or submit a form.
+You can create a Selenium script to run with a service at preset times.
+
+### Web Scraping
+
+Are you looking to collect data from a site that doesn't have an API? Selenium
+will let you do this, but please make sure you are familiar with the website's
+terms of service as some websites do not permit it and others will even block Selenium.
+
 ### Testing
 
 Running Selenium for testing requires making assertions on actions taken by Selenium.
 So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners)
+require use of [Test Runner](#test-runners).
 
 
 ## IDEs
@@ -30,13 +39,13 @@ Regardless of how you use Selenium code,
 you won't be very effective writing or executing it without a good
 Integrated Developer Environment. Here are some common options...
 
-* Eclipse
-* IntelliJ
-* PyCharm
-* RubyMine
-* Rider
-* WebStorm
-* VS Code
+- [Eclipse](https://www.eclipse.org/)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [RubyMine](https://www.jetbrains.com/ruby/)
+- [Rider](https://www.jetbrains.com/rider/)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
+- [VS Code](https://code.visualstudio.com/)
 
 ## Test Runner
 
@@ -54,39 +63,43 @@ that will be used for all examples on this page.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-* JUnit 5
-* 
+- [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
+- [TestNG](https://testng.org/doc/) - Offers extra features like parallel test execution and parameterized tests.
 {{% /tab %}}
+
 {{% tab header="Python" %}}
-* PyTest
-*
+- [pytest](https://pytest.org/) - A preferred choice for many, thanks to its simplicity and powerful plugins.
+- [unittest](https://docs.python.org/3/library/unittest.html) - Python's standard library testing framework.
 {{% /tab %}}
+
 {{% tab header="CSharp" %}}
-* MS Test
-*
+- [NUnit](https://nunit.org/) - A popular unit-testing framework for .NET.
+- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft's own unit testing framework.
 {{% /tab %}}
+
 {{% tab header="Ruby" %}}
-* RSpec
-*
+- [RSpec](https://rspec.info/) - The most widely used testing library for running Selenium tests in Ruby.
+- [Minitest](https://github.com/seattlerb/minitest) - A lightweight testing framework that comes with Ruby standard library.
 {{% /tab %}}
+
 {{% tab header="JavaScript" %}}
-* Mocha
-*
+- [Jest](https://jestjs.io/) - Primarily known as a testing framework for React, it can also be used for Selenium tests.
+- [Mocha](https://mochajs.org/) - The most common JS library for running Selenium tests.
 {{% /tab %}}
+
 {{% tab header="Kotlin" %}}
-*
-*
+
 {{% /tab %}}
 {{< /tabpane >}}
 
+
 ### Installing
 
-This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}})
+This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}}).
+This code is only showing examples for what is being used in our Documentation Examples project.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-
-Popular test runners for Java are [JUnit] and [TestNG]
 
 **Maven**
 
@@ -112,7 +125,6 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 {{% /tab %}}
 {{< tab header="Kotlin" >}}
-Use the Java bindings for Kotlin.
 {{< /tab >}}
 {{< /tabpane >}}
 
