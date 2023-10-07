@@ -104,7 +104,7 @@ end
   {{< /tab >}}
 
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L21-L24">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L22-L25">}}
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
