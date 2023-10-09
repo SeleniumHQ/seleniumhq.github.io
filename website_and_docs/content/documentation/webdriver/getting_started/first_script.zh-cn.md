@@ -36,7 +36,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L3" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L8" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
@@ -63,7 +63,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L5" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L9" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
@@ -89,7 +89,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L7" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L11" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
@@ -128,7 +128,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
@@ -154,7 +154,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L11-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
@@ -180,7 +180,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
@@ -204,7 +204,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
@@ -233,7 +233,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
