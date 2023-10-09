@@ -16,11 +16,11 @@ public class FileUploadTest {
 
     @Test
     public void fileUploadTest() {
-        WebDriver driver = new ChromeDriver();
+    WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
 		driver.get("https://the-internet.herokuapp.com/upload");
 		Path path = Paths.get("src/test/resources/selenium-snapshot.png");
-        File imagePath = new File(path.toUri());
+    File imagePath = new File(path.toUri());
 
 		//we want to import selenium-snapshot file.
 		driver.findElement(By.id("file-upload")).sendKeys(imagePath.toString());
