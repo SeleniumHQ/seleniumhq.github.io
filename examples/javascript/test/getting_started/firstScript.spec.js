@@ -1,4 +1,4 @@
-const {By, Builder, Browser} = require('selenium-webdriver');
+const {By, Builder} = require('selenium-webdriver');
 const assert = require("assert");
 
 (async function firstTest() {

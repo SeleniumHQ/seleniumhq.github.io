@@ -233,7 +233,7 @@ Here's an example of that code using a test runner:
 {{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
