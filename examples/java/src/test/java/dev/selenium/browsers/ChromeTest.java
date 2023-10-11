@@ -63,6 +63,11 @@ public class ChromeTest {
 
         driver = new ChromeDriver(options);
     }
+    @Test
+    public void browserStartInspecifiedLocation() {
+        ChromeOptions options = new ChromeOptions().setBinary("Path to chrome binary");
+        driver = new ChromeDriver(options);
+    }
 
     @Test
     public void extensionOptions() {
