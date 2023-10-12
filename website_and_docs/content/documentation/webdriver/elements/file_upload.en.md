@@ -23,10 +23,13 @@ languages will be as follows -
     {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L26-L27">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
+import os
 from selenium import webdriver
+
 driver.implicitly_wait(10)
-driver.get("https://the-internet.herokuapp.com/upload");
-driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")
+driver.get("https://the-internet.herokuapp.com/upload")
+file_path =  os.path.join(os.getcwd(), "selenium-snapshot.jpg")
+driver.find_element(By.ID,"file-upload").send_keys(file_path)
 driver.find_element(By.ID,"file-submit").submit()
 if(driver.page_source.find("File Uploaded!")):
     print("file upload success")
