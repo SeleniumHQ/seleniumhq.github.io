@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -40,7 +39,19 @@ namespace SeleniumDocs.Browsers
         public void Arguments()
         {
             var options = new FirefoxOptions();
+
             options.AddArgument("-headless");
+
+            driver = new FirefoxDriver(options);
+        }
+
+        [TestMethod]
+        public void SetBinary()
+        {
+            var options = new FirefoxOptions();
+
+            options.BinaryLocation = GetFirefoxLocation();
+
             driver = new FirefoxDriver(options);
         }
 
@@ -119,14 +130,13 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void InstallAddon()
         {
-            driver = new FirefoxDriver();
-
+            SetWaitingDriver();
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.xpi");
+
             driver.InstallAddOnFromFile(Path.GetFullPath(extensionFilePath));
 
             driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
-
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
         }
@@ -135,10 +145,10 @@ namespace SeleniumDocs.Browsers
         public void UnInstallAddon()
         {
             driver = new FirefoxDriver();
-
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.xpi");
             string extensionId = driver.InstallAddOnFromFile(Path.GetFullPath(extensionFilePath));
+
             driver.UninstallAddOn(extensionId);
 
             driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
@@ -148,14 +158,13 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void InstallUnsignedAddon()
         {
-            driver = new FirefoxDriver();
-
+            SetWaitingDriver();
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string extensionDirPath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example/");
+
             driver.InstallAddOnFromDirectory(Path.GetFullPath(extensionDirPath), true);
 
             driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
-
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
         }
@@ -178,6 +187,17 @@ namespace SeleniumDocs.Browsers
             }
 
             return _tempPath;
+        }
+
+        private void SetWaitingDriver()
+        {
+            driver = new FirefoxDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+        }
+
+        private string GetFirefoxLocation()
+        {
+            return Environment.GetEnvironmentVariable("FF_BIN");
         }
     }
 }

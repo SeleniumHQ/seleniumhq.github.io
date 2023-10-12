@@ -41,8 +41,8 @@ As of Selenium 4.11.0, Selenium Manager also implements *automated browser manag
 The browser automatically managed by Selenium Manager are:
 
 - Chrome. Based on [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/), as of Selenium 4.11.0.
-- Firefox. Currently in development.
-- Edge. Planned for upcoming releases.
+- Firefox. Based on [public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), as of Selenium 4.12.0.
+- Edge. Planned for Selenium 4.13.0.
 
 Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
 
@@ -93,9 +93,11 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), or `SHELL` (Unix-like). Default: `LOGGER`|
 |`--os <OS>`|`os = "OS"`|`SE_OS=OS`|Operating system for drivers and browsers (i.e., `windows`, `linux`, or `macos`)|
 |`--arch <ARCH>`|`arch = "ARCH"`|`SE_ARCH=ARCH`|System architecture for drivers and browsers (i.e., `x32`, `x64`, or `arm64`)|
+|`--proxy <PROXY>`|`proxy = "PROXY"`|`SE_PROXY=PROXY`|HTTP proxy for network connection (e.g., `myproxy:port`, `myuser:mypass@myproxy:port`)|
 |`--timeout <TIMEOUT>`|`timeout = TIMEOUT`|`SE_TIMEOUT=TIMEOUT`|Timeout for network requests (in seconds). Default: `300`|
 |`--offline`|`offline = true`|`SE_OFFLINE=true`|Offline mode (i.e., disabling network requests and downloads)|
 |`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser|
+|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser|
 |`--debug`|`debug = true`|`SE_DEBUG=true`|Display `DEBUG` messages|
 |`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
 |`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`|
@@ -146,12 +148,12 @@ $ ./selenium-manager --browser chrome --debug
 DEBUG   chromedriver not found in PATH
 DEBUG   chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
 DEBUG   Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
-DEBUG   Output: "\r\r\n\r\r\nVersion=115.0.5790.171\r\r\n\r\r\n\r\r\n\r"
-DEBUG   Detected browser: chrome 115.0.5790.171
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 115.0.5790.170
-DEBUG   Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.170/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\115.0.5790.170\chromedriver.exe
+DEBUG   Output: "\r\r\n\r\r\nVersion=116.0.5845.111\r\r\n\r\r\n\r\r\n\r"
+DEBUG   Detected browser: chrome 116.0.5845.111
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG   Required driver: chromedriver 116.0.5845.96
+DEBUG   Downloading chromedriver 116.0.5845.96 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win64/chromedriver-win64.zip
+INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.96\chromedriver.exe
 INFO    Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
 ```
 
@@ -163,16 +165,16 @@ Let's consider another example. Now we want to use Chrome beta. Therefore, we in
 $ ./selenium-manager --browser chrome --browser-version beta --debug
 DEBUG   chromedriver not found in PATH
 DEBUG   chrome not found in PATH
-DEBUG   chrome not discovered in the system
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
-DEBUG   Required browser: chrome 116.0.5845.82
-DEBUG   Downloading chrome 116.0.5845.82 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.82/win64/chrome-win64.zip
-DEBUG   chrome 116.0.5845.82 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.82\chrome.exe
-DEBUG   Reading metadata from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 116.0.5845.82
-DEBUG   Driver URL: https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.82/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.82\chromedriver.exe
-INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.82\chrome.exe
+DEBUG   chrome beta not found in the system
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
+DEBUG   Required browser: chrome 117.0.5938.22
+DEBUG   Downloading chrome 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chrome-win64.zip
+DEBUG   chrome 117.0.5938.22 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
+DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG   Required driver: chromedriver 117.0.5938.22
+DEBUG   Downloading chromedriver 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chromedriver-win64.zip
+INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\117.0.5938.22\chromedriver.exe
+INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
 ```
 
 ## Selenium Grid
@@ -187,6 +189,36 @@ $ ./selenium-manager --grid
 After this command, Selenium Manager discovers the latest version of Selenium Grid, storing the `selenium-server.jar` in the local cache.
 
 Optionally, the argument `--grid` allows to specify a Selenium Grid version (`--grid <GRID_VERSION>`).
+
+## Known Limitations
+
+### Custom package managers
+If you are using a linux package manager (Anaconda, snap, etc) that requires a specific driver be used for your browsers,
+you'll need to either specify the
+[driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location),
+the [browser location](),
+or both, depending on the requirements.
+
+### Alternative Architecture
+Selenium supports all five architectures managed by Google's Chrome for Testing, and all six drivers provided for Microsoft Edge.
+
+Each release of the Selenium bindings comes with three separate Selenium Manager binaries — one for Linux, Windows, and Mac.
+* The Mac version supports both x64 and aarch64 (Intel and Apple).
+* The Windows version should work for both x86 and x64 (32-bit and 64-bit OS).
+* The Linux version has only been verified to work for x64.
+
+Reasons for not supporting more architectures:
+1. Neither Chrome for Testing nor Microsoft Edge supports additional architectures, so Selenium Manager would need to
+   manage something unofficial for it to work.
+2. We currently build the binaries from existing GitHub actions runners, which do not support these architectures
+3. Any additional architectures would get distributed with all Selenium releases, increasing the total build size
+
+If you are running linux on arm64/aarch64, 32-bit architecture, or a Raspberry Pi, Selenium Manager will not work for you.
+The biggest issue for people is that they used to get custom-built drivers and put them on PATH and have them work.
+Now that Selenium Manager is responsible for locating drivers on PATH, this approach no longer works, and users
+need to use a `Service` class and [set the location directly](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
+There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic
+in each of the bindings, so that's currently a trade-off we are comfortable with.
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).

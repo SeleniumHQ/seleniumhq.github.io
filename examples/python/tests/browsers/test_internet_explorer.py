@@ -5,14 +5,14 @@ import sys
 import pytest
 from selenium import webdriver
 
-EDGE_BINARY = os.getenv("EDGE_BINARY")
+EDGE_LOCATION = os.getenv("EDGE_BIN")
 
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_basic_options_win10():
     options = webdriver.IeOptions()
     options.attach_to_edge_chrome = True
-    options.edge_executable_path = EDGE_BINARY
+    options.edge_executable_path = EDGE_LOCATION
     driver = webdriver.Ie(options=options)
 
     driver.quit()
@@ -28,7 +28,7 @@ def test_basic_options_win11():
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_log_to_file(log_path):
-    service = webdriver.ie.service.Service(log_file=log_path, log_level='INFO')
+    service = webdriver.IeService(log_output=log_path, log_level='INFO')
 
     driver = webdriver.Ie(service=service)
 
@@ -38,9 +38,9 @@ def test_log_to_file(log_path):
     driver.quit()
 
 
-@pytest.mark.skip(reason="this is not supported, yet")
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_log_to_stdout(capfd):
-    service = webdriver.ie.service.Service(log_output=subprocess.STDOUT)
+    service = webdriver.IeService(log_output=subprocess.STDOUT)
 
     driver = webdriver.Ie(service=service)
 
@@ -52,19 +52,19 @@ def test_log_to_stdout(capfd):
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_log_level(log_path):
-    service = webdriver.ie.service.Service(log_file=log_path, log_level='WARN')
+    service = webdriver.IeService(log_output=log_path, log_level='WARN')
 
     driver = webdriver.Ie(service=service)
 
     with open(log_path, 'r') as fp:
-        assert 'Invalid capability setting: timeouts is type null' in fp.readline()
+        assert 'Started InternetExplorerDriver server (32-bit)' in fp.readline()
 
     driver.quit()
 
 
-@pytest.mark.skip(reason="this is not supported, yet")
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
 def test_supporting_files(temp_dir):
-    service = webdriver.ie.service.Service(service_args=["–extract-path="+temp_dir])
+    service = webdriver.IeService(service_args=["–extract-path="+temp_dir])
 
     driver = webdriver.Ie(service=service)
 

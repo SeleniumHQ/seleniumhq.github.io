@@ -57,6 +57,7 @@ IE Driver will automatically locate Edge on your system.
 So, if IE is not on the system, you only need:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
 {{< /tab >}}
@@ -76,7 +77,6 @@ let driver = await new Builder()
 .build();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-examples >}}
 val options = InternetExplorerOptions()
 val driver = InternetExplorerDriver(options)
 {{< /tab >}}
@@ -90,9 +90,8 @@ In some environments, Internet Explorer may timeout when opening the
 File Upload dialog. IEDriver has a default timeout of 1000ms, but you
 can increase the timeout using the fileUploadDialogTimeout capability.
 
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
@@ -132,7 +131,6 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### ensureCleanSession
 
@@ -147,9 +145,8 @@ gets cleared before launching the IE browser.
 
 This capability accepts a Boolean value as parameter.
 
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.destructivelyEnsureCleanSession();
@@ -189,7 +186,6 @@ options.destructivelyEnsureCleanSession()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### ignoreZoomSetting
 
@@ -199,9 +195,8 @@ can be disabled by setting the _ignoreZoomSetting_ to _true_.
 
 This capability accepts a Boolean value as parameter.
  
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.ignoreZoomSettings();
@@ -241,7 +236,6 @@ options.ignoreZoomSettings()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### ignoreProtectedModeSettings
 
@@ -261,9 +255,8 @@ only a "best effort" at support will be given.
 
 This capability accepts a Boolean value as parameter.
  
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.introduceFlakinessByIgnoringSecurityDomains();
@@ -303,7 +296,6 @@ options.introduceFlakinessByIgnoringSecurityDomains()
 val driver = RemoteWebDriver(options)
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### silent
 
@@ -312,9 +304,8 @@ diagnostic output of the IEDriverServer.
 
 This capability accepts a Boolean value as parameter.
  
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.setCapability("silent", true);
@@ -376,7 +367,6 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### Command-Line Options
 
@@ -395,9 +385,8 @@ This option specifically used to troubleshoot problems with browser add-ons. Wor
 
 Note: __forceCreateProcessApi__ should to enabled in-order for command line arguments to work.
 
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -494,7 +483,6 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
 
 ### forceCreateProcessApi
 
@@ -504,9 +492,8 @@ using the CreateProcess API. The default value is false.
 For IE 8 and above, this option requires the 
 "TabProcGrowth" registry value to be set to 0.
 
-<div>
-{{< badge-examples >}}
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -595,8 +582,6 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
-</div>
-
 
 ## Service
 
@@ -620,14 +605,14 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L30" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L32" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -650,14 +635,15 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L43" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L41" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -679,14 +665,14 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
 Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L53" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L55" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L52" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -706,14 +692,15 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
 Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L62" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
