@@ -42,15 +42,11 @@ If the center of the element is [obscured](https://w3c.github.io/webdriver/#dfn-
 Selenium will return an [element click intercepted](https://w3c.github.io/webdriver/#dfn-element-click-intercepted) error.
 
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-    // Navigate to Url
-    driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-	// Click on the element 
-    driver.findElement(By.name("color_input")).click();
-   
-  {{< /tab >}}
+
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
     # Navigate to url
@@ -109,20 +105,11 @@ with a `content-editable` attribute. If it is not editable,
 [Here](https://www.w3.org/TR/webdriver/#keyboard-actions) is the list of 
 possible keystrokes that WebDriver Supports.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
+{{< /tab >}}
 
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	  //Enter Text
-	  driver.findElement(By.name("email_input")).sendKeys("admin@localhost.dev");
-    
-
-  {{< /tab >}}
   {{< tab header="Python" >}}
 
 
@@ -197,18 +184,10 @@ this means an element is an input element of a form with a `text` type or an ele
 with a`content-editable` attribute. If these conditions are not met, 
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned. 
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	 
-
-  {{< /tab >}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
 
