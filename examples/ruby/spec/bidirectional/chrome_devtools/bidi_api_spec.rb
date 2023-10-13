@@ -16,70 +16,66 @@ RSpec.describe 'BiDi API' do
   end
 
   it 'pins script' do
-    driver.get('https://www.selenium.dev/selenium/web/javascriptPage.html')
-    is_displayed_script = Class.new.extend(Selenium::WebDriver::Atoms).atom_script(:isDisplayed)
+    driver.get('https://www.selenium.dev/selenium/web/xhtmlTest.html')
+    element = driver.find_element(id: 'id1')
 
-    script = driver.pin_script(is_displayed_script)
+    key = driver.pin_script('return arguments;')
+    arguments = driver.execute_script(key, 1, true, element)
 
-    visible = driver.find_element(id: 'visibleSubElement')
-    hidden = driver.find_element(id: 'hiddenlink')
-
-    visible_displayed = driver.execute_script(script, visible)
-    hidden_displayed = driver.execute_script(script, hidden)
-
-    expect(visible_displayed).to eq true
-    expect(hidden_displayed).to eq false
+    expect(arguments).to eq([1, true, element])
   end
 
-  it 'notifies about DOM mutations' do
+  it 'gets mutated elements' do
     driver.get 'https://www.selenium.dev/selenium/web/dynamic.html'
 
     mutations = []
-    driver.on_log_event(:mutation) { |mutation| mutations << mutation }
+    driver.on_log_event(:mutation) { |mutation| mutations << mutation.element }
 
     driver.find_element(id: 'reveal').click
-    Selenium::WebDriver::Wait.new.until { mutations.any? }
+    Selenium::WebDriver::Wait.new(timeout: 30).until { mutations.any? }
 
-    expect(mutations.first&.element).to eq(driver.find_element(id: 'revealed'))
+    expect(mutations).to include(driver.find_element(id: 'revealed'))
   end
 
   it 'listens for console logs' do
     driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
 
     logs = []
-    driver.on_log_event(:console) { |log| logs << log }
+    driver.on_log_event(:console) { |log| logs << log.args.first }
 
     driver.find_element(id: 'consoleLog').click
-
-    Selenium::WebDriver::Wait.new.until { logs.any? }
-    expect(logs.first&.args).to include 'Hello, world!'
-  end
-
-  it 'listens for console error' do
-    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
-
-    logs = []
-    driver.on_log_event(:console) { |log| logs << log }
-
     driver.find_element(id: 'consoleError').click
 
-    Selenium::WebDriver::Wait.new.until { logs.any? }
-    expect(logs.first&.args).to include 'I am console error'
+    Selenium::WebDriver::Wait.new.until { logs.size > 1 }
+    expect(logs).to include 'Hello, world!'
+    expect(logs).to include 'I am console error'
   end
 
-  it 'listens for js errors' do
+  it 'listens for js exception' do
     driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
 
-    errors = []
-    driver.on_log_event(:exception) { |error| errors << error }
+    exceptions = []
+    driver.on_log_event(:exception) { |exception| exceptions << exception }
 
     driver.find_element(id: 'jsException').click
 
-    Selenium::WebDriver::Wait.new.until { errors.any? }
-    expect(errors.first&.description).to include 'Error: Not working'
+    Selenium::WebDriver::Wait.new.until { exceptions.any? }
+    expect(exceptions.first&.description).to include 'Error: Not working'
   end
 
-  it 'intercepts network response' do
+  it 'records network response' do
+    content_type = []
+    driver.intercept do |request, &continue|
+      continue.call(request) do |response|
+        content_type << response.headers["content-type"]
+      end
+    end
+
+    driver.get('https://www.selenium.dev/selenium/web/blank.html')
+    expect(content_type.first).to eq('text/html; charset=utf-8')
+  end
+
+  it 'transforms network response' do
     driver.intercept do |request, &continue|
       continue.call(request) do |response|
         response.body = 'Creamy, delicious cheese!' if request.url.include?('blank')

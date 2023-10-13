@@ -40,5 +40,5 @@ def test_basic_auth(driver):
 
     driver.get('https://the-internet.herokuapp.com/basic_auth')
 
-    success = driver.find_element(by=By.TAG_NAME,value='p')
+    success = driver.find_element(by=By.TAG_NAME, value='p')
     assert success.text == 'Congratulations! You must have the proper credentials.'

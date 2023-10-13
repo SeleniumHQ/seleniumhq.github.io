@@ -11,6 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.print.PrintOptions;
 
 import java.io.*;
@@ -18,6 +21,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
+import java.util.logging.Level;
 import java.util.regex.Pattern;
 
 public class ChromeTest {
@@ -38,8 +42,15 @@ public class ChromeTest {
     @Test
     public void basicOptions() throws IOException {
         ChromeOptions options = new ChromeOptions();
+//        options.setExperimentalOption("perfLoggingPrefs", ImmutableMap.of("enableNetwork", true));
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.BROWSER, Level.ALL);
+        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+        options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
+
         driver = new ChromeDriver(options);
         driver.get("https://www.selenium.dev");
+        driver.manage().logs().get(LogType.PERFORMANCE).forEach(System.out::println);
 
         String content = driver.print(new PrintOptions()).getContent();
         byte[] bytes = Base64.getDecoder().decode(content);
@@ -85,6 +96,20 @@ public class ChromeTest {
         options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
 
         driver = new ChromeDriver(options);
+    }
+
+    @Test
+    public void loggingPreferences() {
+        ChromeOptions options = new ChromeOptions();
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+        options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
+
+        driver = new ChromeDriver(options);
+        driver.get("https://www.selenium.dev");
+
+        LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
+        Assertions.assertFalse(logEntries.getAll().isEmpty());
     }
 
     @Test

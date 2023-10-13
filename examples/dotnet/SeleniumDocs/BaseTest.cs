@@ -13,6 +13,15 @@ namespace SeleniumDocs
             driver = new ChromeDriver();
         }
         
+        public void StartDriver(string browserVersion)
+        {
+            ChromeOptions options = new ChromeOptions
+            {
+                BrowserVersion = browserVersion
+            };
+            driver = new ChromeDriver(options);
+        }
+        
         [TestCleanup]
         public void QuitDriver()
         {

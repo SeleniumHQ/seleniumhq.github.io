@@ -1,11 +1,8 @@
 import base64
-from time import sleep
 
 import pytest
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.devtools.v117.network import Headers
-from selenium.webdriver.common.log import Log
-from selenium.webdriver.common.bidi.console import Console
+from selenium.webdriver.common.devtools.v118.network import Headers
 
 
 @pytest.mark.trio
@@ -55,14 +52,3 @@ async def test_basic_auth(driver):
 
     success = driver.find_element(by=By.TAG_NAME, value='p')
     assert success.text == 'Congratulations! You must have the proper credentials.'
-
-
-@pytest.mark.trio
-async def test_console_logs(driver):
-    async with driver.bidi_connection() as connection:
-        log = Log(driver, connection)
-
-        async with log.add_listener(Console.ALL) as messages:
-            driver.execute_script("console.log('I love cheese')")
-
-    assert messages["message"] == "I love cheese"

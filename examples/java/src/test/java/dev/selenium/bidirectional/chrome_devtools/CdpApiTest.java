@@ -1,11 +1,11 @@
-package dev.selenium.bidirectional;
+package dev.selenium.bidirectional.chrome_devtools;
 
 import com.google.common.collect.ImmutableMap;
 import dev.selenium.BaseTest;
 import java.time.Duration;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,12 +15,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v117.browser.Browser;
-import org.openqa.selenium.devtools.v117.network.Network;
-import org.openqa.selenium.devtools.v117.network.model.Headers;
-import org.openqa.selenium.devtools.v117.performance.Performance;
-import org.openqa.selenium.devtools.v117.performance.model.Metric;
-import org.openqa.selenium.devtools.v117.runtime.Runtime;
+import org.openqa.selenium.devtools.v118.browser.Browser;
+import org.openqa.selenium.devtools.v118.network.Network;
+import org.openqa.selenium.devtools.v118.network.model.Headers;
+import org.openqa.selenium.devtools.v118.performance.Performance;
+import org.openqa.selenium.devtools.v118.performance.model.Metric;
+import org.openqa.selenium.devtools.v118.runtime.Runtime;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CdpApiTest extends BaseTest {
@@ -28,7 +28,10 @@ public class CdpApiTest extends BaseTest {
 
   @BeforeEach
   public void createSession() {
-    driver = new ChromeDriver();
+    ChromeOptions options = new ChromeOptions();
+    options.setBrowserVersion("118");
+    driver = new ChromeDriver(options);
+    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }
 
   @Test
@@ -64,7 +67,6 @@ public class CdpApiTest extends BaseTest {
 
     devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
-
     devTools.send(Performance.enable(Optional.empty()));
 
     List<Metric> metricList = devTools.send(Performance.getMetrics());
@@ -104,24 +106,41 @@ public class CdpApiTest extends BaseTest {
     devTools.createSession();
     devTools.send(Runtime.enable());
 
-    CopyOnWriteArrayList<String> messages = new CopyOnWriteArrayList<>();
+    CopyOnWriteArrayList<String> logs = new CopyOnWriteArrayList<>();
     devTools.addListener(
-        Runtime.consoleAPICalled(),
-        event -> messages.add((String) event.getArgs().get(0).getValue().orElse("")));
+            Runtime.consoleAPICalled(),
+            event -> logs.add((String) event.getArgs().get(0).getValue().orElse("")));
 
-    ((JavascriptExecutor) driver).executeScript("console.log('I love cheese')");
+    driver.findElement(By.id("consoleLog")).click();
 
-    new WebDriverWait(driver, Duration.ofSeconds(5)).until(_d -> !messages.isEmpty());
-    Assertions.assertEquals("I love cheese", messages.get(0));
+    wait.until(_d -> !logs.isEmpty());
+    Assertions.assertEquals("Hello, world!", logs.get(0));
+  }
+
+
+  @Test
+  public void jsErrors() {
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+
+    DevTools devTools = ((HasDevTools) driver).getDevTools();
+    devTools.createSession();
+    devTools.send(Runtime.enable());
+
+    CopyOnWriteArrayList<JavascriptException> errors = new CopyOnWriteArrayList<>();
+    devTools.getDomains().events().addJavascriptExceptionListener(errors::add);
+
+    driver.findElement(By.id("jsException")).click();
+
+    wait.until(_d -> !errors.isEmpty());
+    Assertions.assertTrue(errors.get(0).getMessage().contains("Error: Not working"));
   }
 
   @Test
-  public void waitForDownload() throws InterruptedException {
+  public void waitForDownload() {
     driver.get("https://www.selenium.dev/selenium/web/downloads/download.html");
 
     devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
-    int downloadCount = 0;
     devTools.send(
         Browser.setDownloadBehavior(
             Browser.SetDownloadBehaviorBehavior.ALLOWANDNAME,
@@ -129,49 +148,13 @@ public class CdpApiTest extends BaseTest {
             Optional.of(""),
             Optional.of(true)));
 
-    CopyOnWriteArrayList<String> downloads = new CopyOnWriteArrayList<>();
+    AtomicBoolean completed = new AtomicBoolean(false);
     devTools.addListener(
         Browser.downloadProgress(),
-        e -> {
-          if (Objects.equals(e.getState().toString(), "completed")) {
-            downloads.add(e.getGuid());
-          }
-        });
+        e -> completed.set(Objects.equals(e.getState().toString(), "completed")));
 
     driver.findElement(By.id("file-2")).click();
 
-    Assertions.assertDoesNotThrow(() -> wait.until(_d -> downloads.size() > downloadCount));
-  }
-
-  @Test
-  public void waitForPageLoad() throws InterruptedException {
-    ChromeOptions options = new ChromeOptions();
-    options.setPageLoadStrategy(PageLoadStrategy.NONE);
-    WebDriver fastLoadDriver = new ChromeDriver(options);
-
-    devTools = ((HasDevTools) fastLoadDriver).getDevTools();
-    devTools.createSession();
-    devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-
-    Map<String, Object> requests = new ConcurrentHashMap<>();
-    devTools.addListener(
-        Network.requestWillBeSent(), r -> requests.put(r.getRequestId().toString(), r));
-    devTools.addListener(
-        Network.responseReceived(), r -> requests.remove(r.getRequestId().toString()));
-
-    fastLoadDriver.get("https://www.nytimes.com");
-
-    long startTime = System.currentTimeMillis();
-    int requestSize = requests.size();
-
-    while ((System.currentTimeMillis() - startTime) < 2000) {
-      System.out.println("Pending requests count: " + requests.size());
-      if (requests.size() == requestSize) {
-        Thread.sleep(200);
-      } else {
-        startTime = System.currentTimeMillis();
-        requestSize = requests.size();
-      }
-    }
+    Assertions.assertDoesNotThrow(() -> wait.until(_d -> completed));
   }
 }

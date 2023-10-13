@@ -1,4 +1,4 @@
-package dev.selenium.bidirectional;
+package dev.selenium.bidirectional.chrome_devtools;
 
 import com.google.common.collect.ImmutableMap;
 import dev.selenium.BaseTest;

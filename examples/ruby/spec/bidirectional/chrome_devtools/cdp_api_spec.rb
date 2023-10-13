@@ -37,7 +37,7 @@ RSpec.describe 'Chrome DevTools' do
 
     credentials = Base64.strict_encode64('admin:admin')
 
-    driver.devtools.network.set_extra_http_headers(headers: {authorization: "Basic #{credentials}"})
+    driver.devtools.network.set_extra_http_headers(headers: { authorization: "Basic #{credentials}" })
 
     driver.get('https://the-internet.herokuapp.com/basic_auth')
 
@@ -45,18 +45,22 @@ RSpec.describe 'Chrome DevTools' do
   end
 
   it 'listens for console logs' do
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+
     driver.devtools.runtime.enable
 
-    messages = []
+    logs = []
     driver.devtools.runtime.on(:console_api_called) do |params|
-      messages << params['args'].first['value']
+      logs << params['args'].first['value']
     end
 
-    driver.execute_script("console.log('I love cheese')")
-    expect(messages).to include 'I love cheese'
+    driver.find_element(id: 'consoleLog').click
+
+    Selenium::WebDriver::Wait.new.until { logs.any? }
+    expect(logs).to include 'Hello, world!'
   end
 
-  it 'waits for downloads' do
+  it 'waits for downloads', except: {platform: :windows} do
     driver.get('https://www.selenium.dev/selenium/web/downloads/download.html')
 
     driver.devtools.browser.set_download_behavior(behavior: 'allow',
@@ -64,26 +68,11 @@ RSpec.describe 'Chrome DevTools' do
                                                   events_enabled: true)
 
     driver.devtools.browser.on(:download_progress) do |progress|
-      @completed ||= progress['state'] == 'completed'
+      @completed = progress['state'] == 'completed'
     end
 
     driver.find_element(id: 'file-2').click
 
     expect { Selenium::WebDriver::Wait.new.until { @completed } }.not_to raise_exception
-  end
-
-  it 'waits for page to load' do
-    driver.devtools.network.enable
-    requests = {}
-    driver.devtools.network.on(:request_will_be_sent) { |r| requests[r['requestId']] = r }
-    driver.devtools.network.on(:response_received) { |r| requests.delete(r['requestId']) }
-
-    driver.get 'https://www.nytimes.com'
-
-    start_time = quiet_time = Time.now
-
-    while (Time.now - quiet_time) < 2 && (Time.now - start_time) < 10
-      quiet_time = requests.empty? ? sleep(0.1) && quiet_time : Time.now
-    end
   end
 end

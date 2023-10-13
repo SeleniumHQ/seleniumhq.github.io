@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
-using OpenQA.Selenium.DevTools.V117.Performance;
-using OpenQA.Selenium.DevTools.V117.Network;
+using OpenQA.Selenium.DevTools.V118.Network;
+using OpenQA.Selenium.DevTools.V118.Performance;
 
-namespace SeleniumDocs.Bidirectional
+namespace SeleniumDocs.Bidirectional.ChromeDevtools
 {
     [TestClass]
     public class CdpApiTest : BaseTest
@@ -16,16 +16,15 @@ namespace SeleniumDocs.Bidirectional
         [TestInitialize]
         public void Startup()
         {
-            StartDriver();
+            StartDriver("118");
         }
 
         [TestMethod]
         public async Task SetCookie()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V117.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V117.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V118.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V118.Network.EnableCommandSettings());
 
             var cookieCommandSettings = new SetCookieCommandSettings
             {
@@ -47,10 +46,9 @@ namespace SeleniumDocs.Bidirectional
         {
             driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
 
-            DevToolsSession session = ((IDevTools)driver).GetDevToolsSession();
-
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V117.DevToolsSessionDomains>();
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V117.Performance.EnableCommandSettings());
+            var session = ((IDevTools)driver).GetDevToolsSession();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V118.DevToolsSessionDomains>();
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V118.Performance.EnableCommandSettings());
 
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
@@ -69,12 +67,12 @@ namespace SeleniumDocs.Bidirectional
         [TestMethod]
         public async Task BasicAuth()
         {
-            DevToolsSession session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V117.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V117.Network.EnableCommandSettings());
+            var session = ((IDevTools)driver).GetDevToolsSession();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V118.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V118.Network.EnableCommandSettings());
 
-            string encodedAuth = Convert.ToBase64String(Encoding.Default.GetBytes("admin:admin"));
-            SetExtraHTTPHeadersCommandSettings headerSettings = new SetExtraHTTPHeadersCommandSettings
+            var encodedAuth = Convert.ToBase64String(Encoding.Default.GetBytes("admin:admin"));
+            var headerSettings = new SetExtraHTTPHeadersCommandSettings
             {
                 Headers = new Headers()
                 {

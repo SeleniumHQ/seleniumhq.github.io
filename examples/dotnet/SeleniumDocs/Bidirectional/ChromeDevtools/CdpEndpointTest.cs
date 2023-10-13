@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumDocs.Bidirectional
+namespace SeleniumDocs.Bidirectional.ChromeDevtools
 {
     [TestClass]
     public class CdpEndpointTest : BaseTest
@@ -47,8 +47,8 @@ namespace SeleniumDocs.Bidirectional
 
             Dictionary<string, object> response = (Dictionary<string, object>)((ChromeDriver)driver)
                 .ExecuteCdpCommand("Performance.getMetrics", emptyDictionary);
-            Object[] metricList = (object[])response["metrics"];
 
+            Object[] metricList = (object[])response["metrics"];
             var metrics = metricList.OfType<Dictionary<string, object>>()
                 .ToDictionary(
                     dict => (string)dict["name"], 
