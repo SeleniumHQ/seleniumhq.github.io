@@ -43,8 +43,8 @@ description: >
 Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#dfn-element-click-intercepted) 错误.
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
@@ -105,8 +105,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 [以下](https://www.w3.org/TR/webdriver/#keyboard-actions) 
 是WebDriver支持的按键列表.
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
 {{< /tab >}}
 
@@ -185,8 +185,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 如果不满足这些条件, 将返回
 [无效元素状态](https://w3c.github.io/webdriver/#dfn-invalid-element-state) 错误.
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
