@@ -14,7 +14,7 @@ There are only 5 basic commands that can be executed on an element:
 * [send keys](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * [clear](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * submit (only applies to form elements)
-* select (see [Select List Elements]({{< ref "select_lists.md" >}})
+* select (see [Select List Elements]({{< ref "select_lists.md" >}}))
 
 ## Additional validations
 
