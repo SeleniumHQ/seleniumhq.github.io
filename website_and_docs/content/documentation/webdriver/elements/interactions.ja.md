@@ -12,7 +12,7 @@ There are only 5 basic commands that can be executed on an element:
 * [send keys](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * [clear](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * submit (only applies to form elements)
-* select (see [Select List Elements]({{< ref "select_lists.md" >}})
+* select (see [Select List Elements]({{< ref "select_lists.md" >}}))
 
 ## Additional validations
 
@@ -39,14 +39,11 @@ the [center of the element](https://w3c.github.io/webdriver/#dfn-center-point).
 If the center of the element is [obscured](https://w3c.github.io/webdriver/#dfn-obscuring) for some reason,
 Selenium will return an [element click intercepted](https://w3c.github.io/webdriver/#dfn-element-click-intercepted) error.
 
+
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    // Navigate to Url
-    driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-	// Click on the element 
-    driver.findElement(By.name("color_input")).click();
-   
-  {{< /tab >}}
+{{< tab header="Java"  text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
     # Navigate to url
@@ -105,18 +102,10 @@ with a `content-editable` attribute. If it is not editable,
 possible keystrokes that WebDriver Supports.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+{{< tab header="Java"  text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
+{{< /tab >}}
 
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	  //Enter Text
-	  driver.findElement(By.name("email_input")).sendKeys("admin@localhost.dev");
-    
-
-  {{< /tab >}}
   {{< tab header="Python" >}}
 
 
@@ -192,16 +181,9 @@ with a`content-editable` attribute. If these conditions are not met,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	 
-
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
 

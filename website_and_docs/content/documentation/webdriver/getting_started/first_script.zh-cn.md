@@ -8,16 +8,15 @@ description: >
 
 当你完成 [Selenium安装]({{< ref "install_library.md" >}})  后, 便可以开始书写Selenium脚本了.
 
-**Note**: if you get an error about drivers not found, please read about troubleshooting the
-[driver location error]({{< ref "../troubleshooting/errors/driver_location.md" >}})
-
 ## 八个基本组成部分
 
 Selenium所做的一切, 
 就是发送给浏览器命令,
 用以执行某些操作或为信息发送请求.
 您将使用Selenium执行的大部分操作,
-都是以下基本命令的组合:
+都是以下基本命令的组合
+
+Click on the link to "View full example on GitHub" to see the code in context.
 
 ### 1. 使用驱动实例开启会话
 
@@ -25,19 +24,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L17" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L6" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L4" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L15" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L11" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L7" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L3" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L10" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L8" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
@@ -52,19 +51,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L18" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L8" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L6" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L17" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L9" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L5" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L9" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
@@ -78,19 +77,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L20" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#16" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L10" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L8" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L19" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L11" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L7" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L18" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L11" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
@@ -117,19 +116,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L23" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L13" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L22" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L17" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L14" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L21" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
@@ -143,19 +142,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L25-L26" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L20-L21" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L15-L16" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L24-L25" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L16-L17" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L11-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
@@ -169,19 +168,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L28-L29" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L18-L19" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L15-L16" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L27-L28" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L22-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L19-L20" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L26-L27" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
@@ -193,19 +192,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L32" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L22" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L31" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L26" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L23" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L30" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
@@ -218,139 +217,39 @@ Selenium所做的一切,
 默认情况下, 该进程也会关闭浏览器. 
 无法向此驱动程序实例发送更多命令. 
 
+See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
+
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java#L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py#L25" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L21" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs#L34" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb#L26" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L13" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 组合所有事情
 
-让我们将这8个部分组合成一个完整的脚本, 
-包括需要使用的库:
+## Running Selenium File
 
-按照选项卡底部的链接查看代码示例, 
-因为它将使用测试运行程序而不是独立文件执行.
+{{< alert-code >}}
+Add example for how to execute each of the above pages via command line
+{{< /alert-code >}}
 
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScriptTest.java" >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/test_first_script.py" >}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScriptTest.cs" >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script_spec.rb" >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js" >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt" >}}
-{{< /tab >}}
-{{< /tabpane >}}
-
-## Test Runners
-If you are using Selenium for testing,
-you will want to execute your Selenium code using test runner tools.
-
-Many of the code examples in this documentation can be found in our example repositories.
-There are multiple options in each language, but here is what we are using in our examples:
-
-{{< tabpane text=true langEqualsHeader=true >}}
-{{% tab header="Java" text=true %}}
-Install JUnit 5 test runner using a build tool.
-
-### Maven
-
-In the project’s `pom.xml` file, specify the dependency: 
-
-{{< gh-codeblock path="examples/java/pom.xml#L53-L58" >}}
-
-and configure the build plugin:
-
-{{< gh-codeblock path="examples/java/pom.xml#L63-L73" >}}
-
-Now, run your tests using:
-
-```shell
-mvn clean test
-```
-
-### Gradle
-
-In the project's `build.gradle` file,  specify the dependency: 
-
-{{< gh-codeblock path="examples/java/build.gradle#L15" >}}
-
-and add the following in the `test` task:
-
-{{< gh-codeblock path="examples/java/build.gradle#L19" >}}
-
-Now, run your tests using:
-
-```shell
-gradle clean test
-```
-
-{{< /tab >}}
-{{< tab header="Python" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// Add instructions
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-// Add instructions
-{{< /tab >}}
-{{% tab header="JavaScript" text=true %}}
-Install Mocha Test runner using below command in your terminal
-
-Install with npm globally:
-
-```shell
-npm install -g mocha
-```
-or as a development dependency for your project:
-
-```shell
-npm install --save-dev mocha
-```
-
-and run your tests using below command
-
-```shell
-mocha firstScript.spec.js
-```
-
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-// Add instructions
-{{< /tab >}}
-{{< /tabpane >}}
 
 ## 接下来的步骤
 
-利用你所学的知识, 
-构建你的Selenium代码. 
-
-当您发现需要更多功能时, 
-请阅读我们的[WebDriver文档]({{< ref "/documentation/webdriver/" >}})的其余部分. 
+Most Selenium users execute many sessions and need to organize them to minimize duplication and keep the code
+more maintainable. Read on to learn about how to put this code into context for your use case with
+[Using Selenium]({{< ref "using_selenium.md" >}}).

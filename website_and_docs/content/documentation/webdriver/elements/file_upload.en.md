@@ -19,29 +19,8 @@ languages will be as follows -
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-class fileUploadDoc{
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("https://the-internet.herokuapp.com/upload");
-		//we want to import selenium-snapshot file. 
-		driver.findElement(By.id("file-upload")).sendKeys("selenium-snapshot.jpg");
-		driver.findElement(By.id("file-submit")).submit();
-		if(driver.getPageSource().contains("File Uploaded!")) {
-			System.out.println("file uploaded");
-		}
-		else{
-				System.out.println("file not uploaded");
-			}
-		driver.quit();
-	}
-}
-
+  {{< tab header="Java" text=true >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L26-L27">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -107,7 +86,7 @@ end
   {{< /tab >}}
   
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L21-L24">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L22-L25">}}
 {{< /tab >}}
 
 {{< tab header="Kotlin" >}}
