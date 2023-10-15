@@ -42,7 +42,7 @@ The browser automatically managed by Selenium Manager are:
 
 - Chrome. Based on [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/), as of Selenium 4.11.0.
 - Firefox. Based on [public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), as of Selenium 4.12.0.
-- Edge. Planned for Selenium 4.13.0.
+- Edge. Planned for Selenium 4.14.0.
 
 Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
 
