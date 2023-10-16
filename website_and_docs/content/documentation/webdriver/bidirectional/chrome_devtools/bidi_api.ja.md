@@ -46,6 +46,7 @@ An alternate implementation may be found at
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
 {{< badge-examples >}}
+
 ```js
 const {Builder} = require('selenium-webdriver');
 
@@ -67,6 +68,7 @@ const {Builder} = require('selenium-webdriver');
 {{% /tab %}}
 {{% tab header="Kotlin" %}}
 {{< badge-examples >}}
+
 ```java
 val uriPredicate = Predicate { uri: URI ->
         uri.host.contains("your-domain.com")

@@ -469,4 +469,4 @@ please refer to the
 
 ### デベロッパー ツール
 
-Chromeデベロッパーツールの使用に関する詳細については、[Chromeデベロッパー ツール]({{< ref "../bidirectional/chrome_devtools.md" >}})セクションを参照してください。
+Chromeデベロッパーツールの使用に関する詳細については、[Chromeデベロッパー ツール]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}})セクションを参照してください。

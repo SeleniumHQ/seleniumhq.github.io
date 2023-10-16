@@ -3,8 +3,8 @@ title: "Chrome DevTools"
 linkTitle: "Chrome DevTools"
 weight: 2
 aliases: [
-"/documentation/en/support_packages/chrome_devtools/",
-"/documentation/support_packages/chrome_devtools/"
+"/documentation/pt-br/support_packages/chrome_devtools/",
+"/pt-br/documentation/support_packages/chrome_devtools/"
 ]
 ---
 

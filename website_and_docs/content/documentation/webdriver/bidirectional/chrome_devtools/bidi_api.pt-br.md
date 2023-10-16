@@ -9,10 +9,8 @@ description: >
 
 ## Usage
 
-The following list of APIs will be growing as the Selenium
-project works through supporting real world use cases. If there
-is additional functionality you'd like to see, please raise a
-[feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+A seguinte lista de APIs crescerá à medida que o projeto Selenium se prepara
+para suportar casos de uso do mundo real. Se houver funcionalidades adicionais que você gostaria de ver, por favor, levante uma [solicitação de recurso](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
 
 As these examples are re-implemented with the [WebDriver-Bidi](https://w3c.github.io/webdriver-bidi) protocol, they will
 be moved to the [WebDriver Bidi]({{< ref "../webdriver_bidi/" >}}) pages.
@@ -21,9 +19,7 @@ be moved to the [WebDriver Bidi]({{< ref "../webdriver_bidi/" >}}) pages.
 
 ### Basic authentication
 
-Some applications make use of browser authentication to secure pages.
-It used to be common to handle them in the URL, but browser stopped supporting this.
-With BiDi, you can now provide the credentials when necessary
+Alguns aplicativos fazem o uso da autenticação do navegador para proteger suas páginas. Com o Selenium, você pode automatizar a entrada de credenciais básicas de autenticação sempre que for necessário.
 
 Alternate implementations can be found at
 [CDP Endpoint Basic Authentication]({{< ref "cdp_endpoint#basic-authentication" >}})
@@ -79,7 +75,6 @@ driver.get("https://your-domain.com/login")
 
 
 ### Pin scripts
-
 This can be especially useful when executing on a remote server. For example,
 whenever you check the visibility of an element, or whenever you use
 the classic get attribute method, Selenium is sending the contents of a js file
@@ -109,9 +104,7 @@ to the script execution endpoint. These files are each about 50kB, which adds up
 
 ### Mutation observation
 
-Mutation Observation is the ability to capture events via
-WebDriver BiDi when there are DOM mutations on a specific
-element in the DOM.
+Mutation Observation(Observação de Mutação) é a capacidade de capturar eventos via WebDriver BiDi quando há mutações DOM em um elemento específico no DOM.
 
 {{< tabpane text=true langEqualsHeader=true >}}
   {{% tab text=true header="Java" %}}
@@ -163,8 +156,7 @@ const assert = require("assert");
 
 
 ### Console logs and errors
-
-Listen to the `console.log` events and register callbacks to process the event.
+Vigie os eventos `console.log` e registre os callbacks(retornos de chamada) para processar o evento.
 
 [CDP API Console logs]({{< ref "cdp_api#console-logs-and-errors" >}})
 and [WebDriver BiDi Console logs]({{< ref "../webdriver_bidi/log#console-logs" >}})
@@ -231,11 +223,10 @@ fun kotlinConsoleLogExample() {
 {{% /tab %}}
 {{< /tabpane >}}
 
-
 ### JavaScript exceptions
 
-Listen to the JS Exceptions
-and register callbacks to process the exception details.
+Vigie as exceções JS
+e registre callbacks(retornos de chamada) para processar os detalhes da exceção.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
@@ -259,7 +250,7 @@ Use the [WebDriver BiDi JavaScript exceptions]({{< ref "../webdriver_bidi/log#ja
 {{< /tabpane >}}
 
 
-### Network Interception
+### Interceptação de Rede
 
 Both requests and responses can be recorded or transformed.
 

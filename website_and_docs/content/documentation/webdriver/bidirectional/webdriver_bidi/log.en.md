@@ -9,7 +9,7 @@ aliases: [
 
 This section contains the APIs related to logging. 
 
-## Listen to `console.log` events
+## Console logs
 
 Listen to the `console.log` events and register callbacks to process the event.
 
@@ -29,7 +29,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Listen to JS Exceptions
+## JavaScript exceptions
 
 Listen to the JS Exceptions
 and register callbacks to process the exception details.
