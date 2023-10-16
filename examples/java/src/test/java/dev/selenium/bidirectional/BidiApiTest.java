@@ -58,7 +58,7 @@ public class BidiApiTest extends BaseChromeTest {
   public void interceptNetworkResponse() {
     NetworkInterceptor interceptor = new NetworkInterceptor(
         driver, Route.matching(req -> true)
-        .to(() -> resp -> new HttpResponse()
+        .to(() -> req -> new HttpResponse()
             .setStatus(200)
             .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
             .setContent(utf8String("Creamy, delicious cheese!"))));
