@@ -24,7 +24,7 @@ Apresentamos alguns exemplos de código para subir os arquivos em diversas lingu
   {{< tab header="Python" >}}
 from selenium import webdriver
 driver.implicitly_wait(10)
-driver.get("https://the-internet.herokuapp.com/upload");
+driver.get("https://the-internet.herokuapp.com/upload")
 driver.find_element(By.ID,"file-upload").send_keys("selenium-snapshot.jpg")
 driver.find_element(By.ID,"file-submit").submit()
 if(driver.page_source.find("File Uploaded!")):
