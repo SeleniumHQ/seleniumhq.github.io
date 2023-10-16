@@ -17,10 +17,7 @@ With Selenium, you can automate the input of basic auth credentials whenever the
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" >}}
-Predicate<URI> uriPredicate = uri -> uri.getHost().contains("your-domain.com");
-
-((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "password"));
-driver.get("https://your-domain.com/login");
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java/#L29-L32" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< badge-code >}}
@@ -76,27 +73,9 @@ element in the DOM.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-ChromeDriver driver = new ChromeDriver();
-
-AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
-CountDownLatch latch = new CountDownLatch(1);
-((HasLogEvents) driver).onLogEvent(domMutation(mutation -> {
-    seen.set(mutation);
-    latch.countDown();
-}));
-
-driver.get("https://www.google.com");
-WebElement span = driver.findElement(By.cssSelector("span"));
-
-((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('cheese', 'gouda');", span);
-
-assertThat(latch.await(10, SECONDS), is(true));
-assertThat(seen.get().getAttributeName(), is("cheese"));
-assertThat(seen.get().getCurrentValue(), is("gouda"));
-
-driver.quit();
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/BidiApiTest.java/#L39-L50" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -444,27 +423,7 @@ it with the following examples.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" >}}
-    import org.openqa.selenium.WebDriver;
-    import org.openqa.selenium.devtools.HasDevTools;
-    import org.openqa.selenium.devtools.NetworkInterceptor;
-    import org.openqa.selenium.remote.http.Contents;
-    import org.openqa.selenium.remote.http.Filter;
-    import org.openqa.selenium.remote.http.HttpResponse;
-    import org.openqa.selenium.remote.http.Route;
-
-    NetworkInterceptor interceptor = new NetworkInterceptor(
-      driver,
-      Route.matching(req -> true)
-        .to(() -> req -> new HttpResponse()
-          .setStatus(200)
-          .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
-          .setContent(utf8String("Creamy, delicious cheese!"))));
-
-   driver.get("https://example-sausages-site.com");
-
-    String source = driver.getPageSource();
-
-    assertThat(source).contains("delicious cheese!");
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/BidiApiTest.java#L59-L66" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 Currently unavailable in python due the inability to mix certain async and sync commands
