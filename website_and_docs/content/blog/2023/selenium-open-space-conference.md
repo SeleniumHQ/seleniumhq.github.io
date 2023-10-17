@@ -1,7 +1,7 @@
 ---
 title: "Selenium Open Space Conference Oct 28th"
 linkTitle: "Selenium Open Space Conference Oct 28th"
-date: 2023-10-18
+date: 2023-10-17
 tags: ["event"]
 categories: ["conference"]
 author: Maaret Pyhäjärvi ([@maaretp](https://mas.to/maaretp))
