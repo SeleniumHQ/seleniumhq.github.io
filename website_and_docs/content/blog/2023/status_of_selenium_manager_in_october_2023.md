@@ -1,15 +1,15 @@
 ---
-title: "Selenium Manager updates in September 2023"
-linkTitle: "Selenium Manager updates in September 2023"
-date: 2023-09-30
-tags: ["selenium", "manager", "edge"]
+title: "Status of Selenium Manager in October 2023"
+linkTitle: "Status of Selenium Manager in October 2023"
+date: 2023-10-17
+tags: ["selenium", "manager", "edge", "chromium"]
 categories: ["releases"]
 author: Boni García ([@boni_gg](https://twitter.com/boni_gg))
 description: >
-   Selenium Manager 0.4.13 is shipped with Selenium 4.13.0. This release includes a couple of bug fixes. Moreover, the Selenium 4.13.0 bindings allow locating the Selenium Manager binding using an environment variable called `SE_MANAGER_PATH`. Finally, the feature for automated browser management for Edge has been prepared for the next version.
+   This blog post summarizes the novelties introduced in the latest two versions of Selenium Manager (i.e., 0.4.13 and 0.4.14).
 ---
 
-Selenium Manager 0.4.13 is out there. As usual, for this version, we have fixed the problems reported so far, this time, related to the extraction of the Firefox binary from the self-extracting archive (SFX) in Windows and the advanced configuration through the configuration file (`se-config.toml`) and environment variables (e.g., `SE_BROWSER`).
+Selenium Manager continues its development plan. As usual, in the latest releases, i.e., 0.4.13 and 0.4.14 (shipped with Selenium 4.13 and 4.14, respectively), we have fixed the problems reported so far. In these releases, the issues were related to the extraction of the Firefox binary from the self-extracting archive (SFX) in Windows and the advanced configuration through the configuration file (`se-config.toml`) and environment variables (e.g., `SE_BROWSER`). Moreover, these recent releases include new features, as explained below.
 
 ### Search for the best driver possible in the cache
 By default, Selenium Manager needs to request online endpoints (such as [Chrome for Testing JSON API](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints) or [Firefox product-details JSON API](https://wiki.mozilla.org/Release_Management/Product_details)
@@ -20,8 +20,8 @@ To make the driver resolution procedure more robust, as of version 0.4.13, Selen
 ### Locating Selenium Manager binary with an environment variable
 The next feature related to Selenium Manager 0.4.13 has been implemented in the Selenium bindings (i.e., Java, JavaScript, Python, .Net, and Ruby). As of Selenium 4.13.0, the Selenium bindings allow locating the Selenium Manager binary using an environment variable called `SE_MANAGER_PATH`. This way, if this variable is set, the bindings will use its value as the Selenium Manager path in the local filesystem. This feature will allow users to provide a custom compilation of Selenium Manager, for instance, if the default binaries (compiled for Windows, Linux, and macOS) are incompatible with a given system (e.g., ARM64 in Linux).
 
-### Automated Edge management (to be released in 0.4.14)
-Most of the effort on Selenium Manager in the last month has been in implementing the automated Edge management. This browser is the last we have in mind for this feature, after Chrome and Firefox.
+### Automated Edge management
+Selenium Manager 0.4.14 includes automated Edge management. This browser is the last we have in mind for this feature, after Chrome and Firefox.
 
 This feature has been implemented in the same way that Chrome and Firefox for macOS and Linux. In other words, Selenium Manager allows to automatically manage (i.e., discover, downloads, and cache) the latest Edge versions (i.e., stable, beta, dev, canary) and old versions (e.g., 115, 116, etc.). The downloaded binaries, as usual, are stored in the Selenium cache. The following output commands showcase this feature in macOS (first snipped) and Linux (second snippet):
 
@@ -62,7 +62,7 @@ Nevertheless, this feature cannot be implemented similarly for Windows. The reas
 This way, when Edge is attempted to be installed with Selenium Manager in Windows with a non-administrator session, a warning message will be displayed as follows:
 
 ```
-selenium-manager --debug --browser edge --browser-version beta
+./selenium-manager --debug --browser edge --browser-version beta
 
 DEBUG   msedgedriver not found in PATH
 DEBUG   edge not found in PATH
@@ -74,7 +74,7 @@ INFO    Driver path: C:\Users\boni\.cache\selenium\msedgedriver\win64\118.0.2088
 But when Selenium Manager is executed with administrator grants in Windows, it will be able to automatically discover, download, and install Edge (stable, beta, dev, canary, and older versions):
 
 ```
-selenium-manager --debug --browser edge --browser-version beta
+./selenium-manager --debug --browser edge --browser-version beta
 
 DEBUG   msedgedriver not found in PATH
 DEBUG   edge not found in PATH
@@ -90,5 +90,27 @@ INFO    Driver path: C:\Users\boni\.cache\selenium\msedgedriver\win64\118.0.2088
 INFO    Browser path: C:\Program Files (x86)\Microsoft\Edge Beta\Application\msedge.exe
 ```
 
+### Chromium support
+Chromium is released as portable binaries, distributed as zip files for Windows, Linux, and macOS (see [Chromium download page](https://www.chromium.org/getting-involved/download-chromium/)). Nevertheless, there is a case in which Chromium is actually installed in the system. This happens in Linux systems when installing Chromium through package managers like `atp` or `snap`, for instance, as follows:
+
+```
+sudo snap install chromium
+```
+
+Therefore, as of 0.4.14, Selenium Manager looks for the Chromium binaries in the PATH when Chrome is not discovered. The following snippet showcases how this feature works in a Linux machine in which Chrome is not available, but Chromium has been installed through `snap`:
+
+```
+./selenium-manager --browser chrome --debug
+DEBUG   chromedriver not found in PATH
+DEBUG   Found chromium in PATH: /snap/bin/chromium
+DEBUG   Running command: /snap/bin/chromium --version
+DEBUG   Output: "Chromium 117.0.5938.149 snap"
+DEBUG   Detected browser: chrome 117.0.5938.149
+DEBUG   Required driver: chromedriver 117.0.5938.149
+DEBUG   chromedriver 117.0.5938.149 already in the cache
+INFO   Driver path: /home/user/.cache/selenium/chromedriver/linux64/117.0.5938.149/chromedriver
+INFO   Browser path: /snap/bin/chromium
+```
+
 ### Next steps
-We expect the next release of Selenium Manager (i.e., 0.4.14) will deliver the feature for automated Edge management. Also, you can trace the rest of the features in development in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5).
+We are close to implementing all the features initially planned for Selenium Manager. You can trace the status of the development activities in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5).
