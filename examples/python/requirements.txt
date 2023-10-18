@@ -1,3 +1,5 @@
 selenium==4.14.0
 pytest
+trio
+pytest-trio
 flake8
