@@ -47,12 +47,8 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 #fetch display status
 val = driver.find_element(name: 'email_input').displayed?
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.name("email_input")).isDisplayed();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L16-L17">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 //navigates to url
@@ -101,13 +97,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns true if element is enabled else returns false
 ele = driver.find_element(name: 'button_input').enabled?
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Resolves Promise and returns boolean value
-let element =  await driver.findElement(By.name("button_input")).isEnabled();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L23-L24">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -152,13 +144,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns true if element is checked else returns false
 ele = driver.find_element(name: "checkbox_input").selected?
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Returns true if element ins checked else returns false
-let res = await driver.findElement(By.name("checkbox_input")).isSelected();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L30-L31">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -201,13 +189,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns TagName of the element
 attr = driver.find_element(name: "email_input").tag_name
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to URL
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Returns TagName of the element
-let value = await driver.findElement(By.name('email_input')).getTagName();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L37-L38">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
