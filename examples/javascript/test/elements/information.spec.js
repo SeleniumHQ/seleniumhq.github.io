@@ -40,5 +40,53 @@ describe('Element Information Test', function () {
     assert.equal(value, "input");
   });
   
+  it('Should be able to fetch element size and position ', async function () {
+    // Returns height, width, x and y position of the element
+    let object = await driver.findElement(By.name('range_input')).getRect();
+    
+    assert.ok(object.height!==null)
+    assert.ok(object.width!==null)
+    assert.ok(object.y!==null)
+    assert.ok(object.x!==null)
+    
+  });
+  
+  it('Should be able to fetch attributes and properties ', async function () {
+    // identify the email text box
+    const emailElement = await driver.findElement(By.xpath('//input[@name="email_input"]'));
+    
+    //fetch the attribute "name" associated with the textbox
+    const nameAttribute = await emailElement.getAttribute("name");
+  
+    assert.equal(nameAttribute, "email_input")
+  });
+  
+  after(async () => await driver.quit());
+});
+
+
+describe('Element Information Test', function () {
+  let driver;
+  
+  before(async function () {
+    driver = await new Builder().forBrowser('chrome').build();
+  });
+  
+  it('Should return the css specified CSS value', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/colorPage.html');
+    // Returns background color of the element
+    let value = await driver.findElement(By.id('namedColor')).getCssValue('background-color');
+    
+    assert.equal(value, "rgba(0, 128, 0, 1)");
+  });
+  
+  it('Should return the css specified CSS value', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/linked_image.html');
+    // Returns text of the element
+    let text = await driver.findElement(By.id('justanotherLink')).getText();
+    
+    assert.equal(text, "Just another link.");
+  });
+  
   after(async () => await driver.quit());
 });
