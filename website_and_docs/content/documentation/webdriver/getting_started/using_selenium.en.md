@@ -17,7 +17,7 @@ ideas for how to actually do productive things with your Selenium code.
 ## Common Uses
 
 Most people use Selenium to execute automated tests for web applications, 
-but Selenium support any use case of browser automation.
+but Selenium supports any use case of browser automation.
 
 ### Repetitive Tasks
 

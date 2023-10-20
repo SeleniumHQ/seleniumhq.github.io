@@ -138,8 +138,8 @@ textbox, using css.
 {{< /tabpane >}} 
 
 ## id
-We can use the ID attribute available with element in a web page to locate it. 
-Generally the ID property should be unique for a element on the web page. 
+We can use the ID attribute of an element in a web page to locate it. 
+Generally the ID property should be unique for each element on the web page. 
 We will identify the Last Name field using it. 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -172,8 +172,8 @@ We will identify the Last Name field using it.
 
 
 ## name
-We can use the NAME attribute available with element in a web page to locate it. 
-Generally the NAME property should be unique for a element on the web page. 
+We can use the NAME attribute of an element in a web page to locate it. 
+Generally the NAME property should be unique for each element on the web page. 
 We will identify the Newsletter checkbox using it. 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -207,7 +207,7 @@ We will identify the Newsletter checkbox using it.
 ## link text 
 If the element we want to locate is a link, we can use the link text locator
 to identify it on the web page. The link text is the text displayed of the link. 
-In the HTML snippet shared, we have a link available, lets see how will we locate it. 
+In the HTML snippet shared, we have a link available, let's see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
@@ -341,7 +341,7 @@ first name text box. Let us create locator for female radio button using xpath.
 ## Relative Locators
 
 **Selenium 4** introduces Relative Locators (previously
-called as _Friendly Locators_). These locators are helpful when it is not easy to construct a locator for
+called _Friendly Locators_). These locators are helpful when it is not easy to construct a locator for
 the desired element, but easy to describe spatially where the element is in relation to an element that does have
 an easily constructed locator.
 
@@ -349,8 +349,7 @@ an easily constructed locator.
 
 Selenium uses the JavaScript function
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to determine the size and position of elements on the page, and can use this information to locate neighboring elements.  
-find the relative elements. 
+to determine the size and position of elements on the page, and can use this information to locate neighboring elements.
 
 Relative locator methods can take as the argument for the point of origin, either a previously located element reference, 
 or another locator. In these examples we'll be using locators only, but you could swap the locator in the final method with

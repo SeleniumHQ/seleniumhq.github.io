@@ -613,7 +613,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 ## proxy
 
 A proxy server acts as an intermediary for
-requests between a client and a server. In simple,
+requests between a client and a server. In simple terms,
 the traffic flows through the proxy server
 on its way to the address you requested and back.
 
