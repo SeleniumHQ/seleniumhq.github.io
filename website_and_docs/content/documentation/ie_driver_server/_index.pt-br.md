@@ -1,184 +1,183 @@
 ---
-title: "IE Driver Server"
-linkTitle: "IE Driver Server"
+title: "Servidor de drivers do IE"
+linkTitle: "Servidor de drivers do IE"
 weight: 8
 description: >
-    The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+    O Internet Explorer Driver é um servidor autónomo que implementa a especificação WebDriver.
 ---
-This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
+Esta documentação estava anteriormente localizada [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
-The `InternetExplorerDriver` is a standalone server which implements WebDriver's wire protocol.
-This driver has been tested with IE 11, and on Windows 10. It might work with older versions
-of IE and Windows, but this is not supported.
+O `InternetExplorerDriver` é um servidor autónomo que implementa o protocolo wire do WebDriver.
+Este driver foi testado com o IE 11 e no Windows 10. Ele pode funcionar com versões mais antigas
+do IE e do Windows, mas isso não é suportado.
 
-The driver supports running 32-bit and 64-bit versions of the browser. The choice of how to 
-determine which "bit-ness" to use in launching the browser depends on which version of the 
-IEDriverServer.exe is launched. If the 32-bit version of `IEDriverServer.exe` is launched, 
-the 32-bit version of IE will be launched. Similarly, if the 64-bit version of 
-IEDriverServer.exe is launched, the 64-bit version of IE will be launched.
+O controlador suporta a execução de versões de 32 e 64 bits do browser. A escolha de como 
+determinar qual o "bit-ness" a utilizar no lançamento do browser depende de qual a versão do 
+IEDriverServer.exe é lançada. Se a versão de 32 bits do `IEDriverServer.exe` for iniciada, 
+a versão de 32 bits do IE será iniciada. Da mesma forma, se a versão de 64 bits do 
+IEDriverServer.exe for iniciada, a versão de 64 bits do IE será iniciada.
 
-## Installing
+## Instalação
 
-You do not need to run an installer before using the `InternetExplorerDriver`, though some 
-configuration is required. The standalone server executable must be downloaded from 
-the [Downloads](https://www.selenium.dev/downloads/) page and placed in your 
-[PATH](http://en.wikipedia.org/wiki/PATH_(variable)).
+Não é necessário executar um instalador antes de usar o `InternetExplorerDriver`, embora seja necessária alguma 
+configuração seja necessária. O executável do servidor standalone deve ser baixado da página 
+da página [Downloads](https://www.selenium.dev/downloads/) e colocado no seu 
+[PATH](http://en.wikipedia.org/wiki/PATH_(variável)).
 
 ## Pros
 
-* Runs in a real browser and supports JavaScript
+* Funciona num browser real e suporta JavaScript
 
 ## Cons
 
-* Obviously the InternetExplorerDriver will only work on Windows!
-* Comparatively slow (though still pretty snappy :)
+* Obviamente, o InternetExplorerDriver só funciona no Windows!
+* Comparativamente lento (embora ainda bastante rápido :)
 
 ## Command-Line Switches
 
-As a standalone executable, the behavior of the IE driver can be modified through various 
-command-line arguments. To set the value of these command-line arguments, you should 
-consult the documentation for the language binding you are using. The command line 
-switches supported are described in the table below. All -`<switch>`, --`<switch>` 
-and /`<switch>` are supported.
+Como um executável autónomo, o comportamento do controlador IE pode ser modificado através de vários 
+argumentos de linha de comando. Para definir o valor destes argumentos da linha de comandos, deve 
+consultar a documentação do language binding que está a utilizar. As opções de linha de comando 
+suportadas são descritas na tabela abaixo. Todas as opções -`<switch>`, --`<switch>` 
+e /`<switch>` são suportados.
 
-| Switch | Meaning |
+| Switch | Significado |
 |:-------|:--------|
-| --port=`<portNumber>` | Specifies the port on which the HTTP server of the IE driver will listen for commands from language bindings. Defaults to 5555. |
-| --host=`<hostAdapterIPAddress>` | Specifies the IP address of the host adapter on which the HTTP server of the IE driver will listen for commands from language bindings. Defaults to 127.0.0.1. |
-| --log-level=`<logLevel>` | Specifies the level at which logging messages are output. Valid values are FATAL, ERROR, WARN, INFO, DEBUG, and TRACE. Defaults to FATAL. |
-| --log-file=`<logFile>` | Specifies the full path and file name of the log file. Defaults to stdout. |
-| --extract-path=`<path>` | Specifies the full path to the directory used to extract supporting files used by the server. Defaults to the TEMP directory if not specified. |
-| --silent | Suppresses diagnostic output when the server is started. |
+| Especifica a porta na qual o servidor HTTP do driver IE escutará os comandos das associações de idioma. O padrão é 5555. |
+| Especifica o endereço IP do adaptador de anfitrião no qual o servidor HTTP do controlador IE irá escutar os comandos das Language Bindings. O padrão é 127.0.0.1. |
+| --log-level=`<logLevel>` | Especifica o nível em que as mensagens de registo são emitidas. Os valores válidos são FATAL, ERROR, WARN, INFO, DEBUG e TRACE. O padrão é FATAL. |
+| --log-file=`<logFile>` | Especifica o caminho completo e o nome do arquivo de log. O padrão é stdout. |
+| --extract-path=`<path>` | Especifica o caminho completo para o diretório usado para extrair arquivos de suporte usados pelo servidor. O padrão é o diretório TEMP se não for especificado. |
+| --silent | Suprime a saída de diagnóstico quando o servidor é iniciado. |
 
-## Important System Properties
+## Propriedades importantes do sistema
 
-The following system properties (read using `System.getProperty()` and set using
-`System.setProperty()` in Java code or the "`-DpropertyName=value`" command line flag) 
-are used by the `InternetExplorerDriver`:
+As seguintes propriedades do sistema (lidas usando `System.getProperty()` e definidas usando
+`System.setProperty()` no código Java ou o sinalizador de linha de comando "`-DpropertyName=value`") 
+são utilizados pelo `InternetExplorerDriver`:
 
-| **Property** | **What it means** |
+| **Propriedade** | **O que significa** |
 |:-------------|:------------------|
-| `webdriver.ie.driver` | The location of the IE driver binary. |
-| `webdriver.ie.driver.host` | Specifies the IP address of the host adapter on which the IE driver will listen. |
-| `webdriver.ie.driver.loglevel` | Specifies the level at which logging messages are output. Valid values are FATAL, ERROR, WARN, INFO, DEBUG, and TRACE. Defaults to FATAL. |
-| `webdriver.ie.driver.logfile` | Specifies the full path and file name of the log file. |
-| `webdriver.ie.driver.silent` | Suppresses diagnostic output when the IE driver is started. |
-| `webdriver.ie.driver.extractpath` | Specifies the full path to the directory used to extract supporting files used by the server. Defaults to the TEMP directory if not specified. |
+| `webdriver.ie.driver` | A localização do binário do driver do IE. |
+| Especifica o endereço IP do adaptador do host no qual o driver do IE escutará. |
+| Especifica o nível em que as mensagens de registo são emitidas. Os valores válidos são FATAL, ERROR, WARN, INFO, DEBUG e TRACE. O padrão é FATAL. |
+| Especifica o caminho completo e o nome do arquivo de log. |
+| `webdriver.ie.driver.silent` | Suprime a saída de diagnóstico quando o driver do IE é iniciado. |
+| Especifica o caminho completo para o diretório usado para extrair arquivos de suporte usados pelo servidor. O padrão é o diretório TEMP se não for especificado. |
 
-## Required Configuration
+## Configuração Necessária
 
-* The `IEDriverServer` executable must be [downloaded](https://www.selenium.dev/downloads/) and placed in your [PATH](http://en.wikipedia.org/wiki/PATH_(variable)).
-* On IE 7 or higher on Windows Vista, Windows 7, or Windows 10, you must set the Protected Mode settings for each zone to be the same value. The value can be on or off, as long as it is the same for every zone. To set the Protected Mode settings, choose "Internet Options..." from the Tools menu, and click on the Security tab. For each zone, there will be a check box at the bottom of the tab labeled "Enable Protected Mode".
-* Additionally, "Enhanced Protected Mode" must be disabled for IE 10 and higher. This option is found in the Advanced tab of the Internet Options dialog.
-* The browser zoom level must be set to 100% so that the native mouse events can be set to the correct coordinates.
-* For Windows 10, you also need to set "Change the size of text, apps, and other items" to 100% in display settings.
-* For IE 11 _only_, you will need to set a registry entry on the target computer so that the driver can maintain a connection to the instance of Internet Explorer it creates. For 32-bit Windows installations, the key you must examine in the registry editor is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. For 64-bit Windows installations, the key is `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. Please note that the `FEATURE_BFCACHE` subkey may or may not be present, and should be created if it is not present. **Important:** Inside this key, create a DWORD value named `iexplore.exe` with the value of 0.
+* O executável `IEDriverServer` deve ser [descarregado](https://www.selenium.dev/downloads/) e colocado no seu [PATH](http://en.wikipedia.org/wiki/PATH_(variável)).
+* No IE 7 ou superior no Windows Vista, Windows 7 ou Windows 10, você deve definir as configurações do Modo Protegido para cada zona com o mesmo valor. O valor pode ser ligado ou desligado, desde que seja o mesmo para todas as zonas. Para definir as definições do Modo Protegido, escolha "Opções da Internet..." no menu Ferramentas e clique no separador Segurança. Para cada zona, existe uma caixa de verificação na parte inferior do separador com a designação "Ativar Modo Protegido".
+* Além disso, o "Modo Protegido Avançado" deve ser desativado para o IE 10 e superior. Esta opção encontra-se no separador Avançadas da caixa de diálogo Opções da Internet.
+* O nível de zoom do navegador deve ser definido para 100% para que os eventos nativos do rato possam ser definidos para as coordenadas correctas.
+* Para o Windows 10, também é necessário definir "Alterar o tamanho do texto, das aplicações e de outros itens" para 100% nas definições de visualização.
+* Para o IE 11 _apenas_, terá de definir uma entrada de registo no computador de destino para que o controlador possa manter uma ligação à instância do Internet Explorer que cria. Para instalações Windows de 32 bits, a chave que deve examinar no editor de registo é `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. Para instalações do Windows de 64 bits, a chave é `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`. Tenha em atenção que a subchave `FEATURE_BFCACHE` pode ou não estar presente, e deve ser criada se não estiver presente. **Importante:** Dentro desta chave, crie um valor DWORD chamado `iexplore.exe` com o valor 0.
 
-## Native Events and Internet Explorer
+## Eventos Nativos e Internet Explorer
 
-As the `InternetExplorerDriver` is Windows-only, it attempts to use so-called "native", or OS-level 
-events to perform mouse and keyboard operations in the browser. This is in contrast to using 
-simulated JavaScript events for the same operations. The advantage of using native events is that 
-it does not rely on the JavaScript sandbox, and it ensures proper JavaScript event propagation 
-within the browser. However, there are currently some issues with mouse events when the IE 
-browser window does not have focus, and when attempting to hover over elements.
+Como o `InternetExplorerDriver` é apenas para Windows, ele tenta usar os chamados eventos "nativos", ou de nível de SO 
+para executar operações de mouse e teclado no navegador. Isto está em contraste com o uso de 
+eventos JavaScript simulados para as mesmas operações. A vantagem de usar eventos nativos é que 
+não depende da sandbox do JavaScript e garante a propagação adequada de eventos JavaScript 
+dentro do navegador. No entanto, existem atualmente alguns problemas com eventos de rato quando a janela do browser IE 
+não tem foco, e quando se tenta passar o mouse sobre elementos.
 
-### Browser Focus
+### Foco no navegador
 
-The challenge is that IE itself appears to not fully respect the Windows messages we send the 
-IE browser window (`WM\_MOUSEDOWN` and `WM\_MOUSEUP`) if the window doesn't have the focus. 
-Specifically, the element being clicked on will receive a focus window around it, but the click 
-will not be processed by the element. Arguably, we shouldn't be sending messages at all; rather, 
-we should be using the `SendInput()` API, but that API explicitly requires the window to have the 
-focus. We have two conflicting goals with the WebDriver project.
+O desafio é que o próprio IE parece não respeitar totalmente as mensagens do Windows que enviamos para a 
+janela do navegador IE (`WM\_MOUSEDOWN` e `WM\_MOUSEUP`) se a janela não tiver o foco. 
+Especificamente, o elemento que está sendo clicado receberá uma janela de foco em torno dele, mas o clique 
+não será processado pelo elemento. Provavelmente, nós não deveríamos estar enviando mensagens; ao invés disso, 
+deveríamos estar usando a API `SendInput()`, mas essa API requer explicitamente que a janela tenha o 
+foco. Nós temos dois objetivos conflitantes com o projeto WebDriver.
 
-First, we strive to emulate the user as closely as possible. This means using native events 
-rather than simulating the events using JavaScript.
+Primeiro, nós nos esforçamos para emular o usuário o mais próximo possível. Isso significa usar eventos nativos 
+em vez de simular os eventos usando JavaScript.
 
-Second, we want to not require focus of the browser window being automated. This means that 
-just forcing the browser window to the foreground is suboptimal.
+Em segundo lugar, queremos não exigir o foco da janela do browser que está a ser automatizada. Isto significa que 
+apenas forçar a janela do navegador para o primeiro plano é subótimo.
 
-An additional consideration is the possibility of multiple IE instances running under multiple 
-WebDriver instances, which means any such "bring the window to the foreground" solution will 
-have to be wrapped in some sort of synchronizing construct (mutex?) within the IE driver's 
-C++ code. Even so, this code will still be subject to race conditions, if, for example, the 
-user brings another window to the foreground between the driver bringing IE to the foreground 
-and executing the native event.
+Uma consideração adicional é a possibilidade de várias instâncias do IE serem executadas em várias instâncias do 
+instâncias do WebDriver, o que significa que qualquer solução do tipo "trazer a janela para o primeiro plano" terá 
+terá que ser envolvida em algum tipo de construção de sincronização (mutex?) dentro do código C++ do driver do IE. 
+código C++ do driver do IE. Mesmo assim, esse código ainda estará sujeito a condições de corrida, se, por exemplo, o 
+utilizador colocar outra janela em primeiro plano entre o driver colocar o IE em primeiro plano 
+e a execução do evento nativo.
 
-The discussion around the requirements of the driver and how to prioritize these two 
-conflicting goals is ongoing. The current prevailing wisdom is to prioritize the former over 
-the latter, and document that your machine will be unavailable for other tasks when using 
-the IE driver. However, that decision is far from finalized, and the code to implement it is 
-likely to be rather complicated.
+A discussão sobre os requisitos do controlador e a forma de dar prioridade a estes dois objectivos 
+objectivos contraditórios está em curso. A sabedoria predominante atual é dar prioridade ao primeiro em detrimento do segundo e documentar que a sua máquina 
+o segundo, e documentar que sua máquina ficará indisponível para outras tarefas ao usar 
+o driver do IE. No entanto, essa decisão está longe de ser finalizada, e o código para implementá-la é 
+provavelmente será bastante complicado.
 
-### Hovering Over Elements
+### Passar o rato sobre elementos
 
-When you attempt to hover over elements, and your physical mouse cursor is within the boundaries 
-of the IE browser window, the hover will not work. More specifically, the hover will appear 
-to work for a fraction of a second, and then the element will revert back to its previous 
-state. The prevailing theory why this occurs is that IE is doing hit-testing of some sort 
-during its event loop, which causes it to respond to the physical mouse position when the 
-physical cursor is within the window bounds. The WebDriver development team has been unable 
-to discover a workaround for this behavior of IE.
+Quando você tenta passar o mouse sobre elementos e o cursor físico do mouse está dentro dos limites 
+da janela do navegador IE, o hover não funcionará. Mais especificamente, o hover parecerá 
+funcionar por uma fração de segundo, e então o elemento voltará ao seu estado anterior. 
+anterior. A teoria prevalecente sobre o motivo pelo qual isso ocorre é que o IE está fazendo algum tipo de teste de acerto 
+durante o seu ciclo de eventos, o que faz com que responda à posição física do rato quando o 
+quando o cursor físico está dentro dos limites da janela. A equipa de desenvolvimento do WebDriver não conseguiu 
+de descobrir uma solução alternativa para esse comportamento do IE.
 
-### Clicking `<option>` Elements or Submitting Forms and `alert()`
+### Clicando em elementos `<option>` ou enviando formulários e `alert()`
 
-There are two places where the IE driver does not interact with elements using native events. 
-This is in clicking `<option>` elements within a `<select>` element. Under normal circumstances, 
-the IE driver calculates where to click based on the position and size of the element, typically 
-as returned by the JavaScript `getBoundingClientRect()` method. However, for `<option>` elements, 
-`getBoundingClientRect()` returns a rectangle with zero position and zero size. The IE driver 
-handles this one scenario by using the `click()` Automation Atom, which essentially sets 
-the `.selected` property of the element and simulates the `onChange` event in JavaScript. 
-However, this means that if the `onChange` event of the `<select>` element contains JavaScript 
-code that calls `alert()`, `confirm()` or `prompt()`, calling WebElement's `click()` method will 
-hang until the modal dialog is manually dismissed. There is no known workaround for this behavior 
-using only WebDriver code.
+Há dois lugares onde o driver do IE não interage com elementos usando eventos nativos
+Isso ocorre ao clicar em elementos `<option>` dentro de um elemento `<select>`. Sob circunstâncias normais,
+o driver do IE calcula onde clicar com base na posição e tamanho do elemento, normalmente
+conforme retornado pelo método JavaScript `getBoundingClientRect()`. No entanto, para elementos `<option>`,
+`getBoundingClientRect()` retorna um retângulo com posição zero e tamanho zero. O driver do IE
+lida com esse cenário usando o Automation Atom `click()`, que essencialmente define
+a propriedade `.selected` do elemento e simula o evento `onChange` em JavaScript.
+No entanto, isso significa que se o evento `onChange` do elemento `<select>` contiver JavaScript
+código que chama `alert()`, `confirm()` ou `prompt()`, chamar o método `click()` do WebElement irá
+aguarde até que a caixa de diálogo modal seja descartada manualmente. Não há solução alternativa conhecida para esse comportamento usando apenas o código WebDriver.
 
-Similarly, there are some scenarios when submitting an HTML form via WebElement's `submit()` 
-method may have the same effect. This can happen if the driver calls the JavaScript `submit()` 
-function on the form, and there is an onSubmit event handler that calls the JavaScript `alert()`, 
-`confirm()`, or `prompt()` functions.
+Da mesma forma, há alguns cenários em que a submissão de um formulário HTML através do método `submit()` do WebElement pode ter o mesmo efeito. 
+do WebElement pode ter o mesmo efeito. Isso pode acontecer se o driver chamar a função JavaScript `submit()` 
+do JavaScript no formulário, e houver um manipulador de eventos onSubmit que chame o método JavaScript `alert()`, 
+`confirm()`, ou `prompt()` do JavaScript.
 
-This restriction is filed as issue 3508 (on Google Code).
+Esta restrição está registada como problema 3508 (no Google Code).
 
-## Multiple instances of `InternetExplorerDriver`
+## Múltiplas instâncias do `InternetExplorerDriver`
 
-With the creation of the `IEDriverServer.exe`, it should be possible to create and use multiple 
-simultaneous instances of the `InternetExplorerDriver`. However, this functionality is largely 
-untested, and there may be issues with cookies, window focus, and the like. If you attempt to 
-use multiple instances of the IE driver, and run into such issues, consider using the 
-`RemoteWebDriver` and virtual machines.
+Com a criação do `IEDriverServer.exe`, deve ser possível criar e utilizar múltiplas instâncias simultâneas do `InternetExplorerDriver`. 
+instâncias simultâneas do `InternetExplorerDriver`. Entretanto, esta funcionalidade ainda não foi 
+não foi testada, e pode haver problemas com cookies, foco de janela, e coisas do tipo. Se você tentar 
+utilizar múltiplas instâncias do driver do IE, e se deparar com tais problemas, considere utilizar o 
+`RemoteWebDriver` e máquinas virtuais.
 
-There are 2 solutions for problem with cookies (and another session items) shared between 
-multiple instances of InternetExplorer.
+Existem 2 soluções para o problema dos cookies (e outros itens de sessão) partilhados entre 
+várias instâncias do InternetExplorer.
 
-The first is to start your InternetExplorer in private mode. After that InternetExplorer will be 
-started with clean session data and will not save changed session data at quiting. To do so you 
-need to pass 2 specific capabilities to driver: `ie.forceCreateProcessApi` with `true` value 
-and `ie.browserCommandLineSwitches` with `-private` value. Be note that it will work only 
-for InternetExplorer 8 and newer, and Windows Registry 
-`HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main` path should contain key 
-`TabProcGrowth` with `0` value.
+A primeira é iniciar o InternetExplorer em modo privado. Depois disso, o InternetExplorer será 
+iniciado com dados de sessão limpos e não guardará os dados de sessão alterados ao sair. Para o fazer, é necessário 
+precisa passar 2 capacidades específicas para o driver: `ie.forceCreateProcessApi` com valor `true 
+e `ie.browserCommandLineSwitches` com o valor `private`. Note que isso só funcionará 
+para o InternetExplorer 8 e mais recentes, e o Registo do Windows 
+O caminho `HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main` deve conter a chave 
+`TabProcGrowth` com o valor `0`.
 
-The second is to clean session during InternetExplorer starting. For this you need to pass 
-specific `ie.ensureCleanSession` capability with `true` value to driver. This clears the cache 
-for all running instances of InternetExplorer, including those started manually.
+A segunda é limpar a sessão durante a inicialização do InternetExplorer. Para isso é necessário passar 
+capacidade específica `ie.ensureCleanSession` com valor `true` para o driver. Isso limpa o cache 
+para todas as instâncias em execução do InternetExplorer, incluindo aquelas iniciadas manualmente.
 
-## Running `IEDriverServer.exe` Remotely
+## Executando o `IEDriverServer.exe` remotamente
 
-The HTTP server started by the `IEDriverServer.exe` sets an access control list to only accept 
-connections from the local machine, and disallows incoming connections from remote machines. 
-At present, this cannot be changed without modifying the source code to the `IEDriverServer.exe`. 
-To run the Internet Explorer driver on a remote machine, use the Java standalone remote server 
-in connection with your language binding's equivalent of `RemoteWebDriver`.
+O servidor HTTP iniciado pelo `IEDriverServer.exe` define uma lista de controlo de acesso para aceitar apenas 
+conexões da máquina local, e não permite conexões de entrada de máquinas remotas. 
+No momento, isso não pode ser alterado sem modificar o código fonte do `IEDriverServer.exe`. 
+Para executar o driver do Internet Explorer em uma máquina remota, use o servidor remoto Java standalone 
+em conexão com o equivalente do `RemoteWebDriver` da sua linguagem de ligação.
 
-## Running `IEDriverServer.exe` Under a Windows Service
+## Executando o `IEDriverServer.exe` em um serviço do Windows
 
-Attempting to use IEDriverServer.exe as part of a Windows Service application is expressly 
-unsupported. Service processes, and processes spawned by them, have much different requirements 
-than those executing in a regular user context. `IEDriverServer.exe` is explicitly untested in 
-that environment, and includes Windows API calls that are documented to be prohibited to be used 
-in service processes. While it may be possible to get the IE driver to work while running under 
-a service process, users encountering problems in that environment will need to seek out their 
-own solutions.
+A tentativa de usar o IEDriverServer.exe como parte de um aplicativo de serviço do Windows é expressamente 
+não é suportado. Os processos de serviço, e os processos gerados por eles, têm requisitos muito diferentes 
+do que aqueles que são executados num contexto de utilizador normal. O `IEDriverServer.exe` não é explicitamente testado nesse 
+ambiente, e inclui chamadas da API do Windows que são documentadas como proibidas de serem usadas 
+em processos de serviço. Embora seja possível fazer com que o driver do IE funcione durante a execução em um processo de serviço, os usuários que encontrarem problemas 
+um processo de serviço, os utilizadores que encontrarem problemas nesse ambiente terão de procurar as suas 
+suas próprias soluções.
