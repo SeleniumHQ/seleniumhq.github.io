@@ -350,7 +350,7 @@ Property value: `"true"` or `"false"`
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -466,4 +466,4 @@ please refer to the
 
 ### DevTools
 
-Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) para mais informação em como usar Chrome DevTools
+Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) para mais informação em como usar Chrome DevTools

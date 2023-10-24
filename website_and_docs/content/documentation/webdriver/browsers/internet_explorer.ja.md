@@ -593,14 +593,14 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L30" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L32" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -623,14 +623,15 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L43" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L41" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -652,14 +653,14 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
 Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L53" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L55" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L52" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -679,14 +680,15 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
 Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L62" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

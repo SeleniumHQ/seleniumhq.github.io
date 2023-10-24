@@ -345,7 +345,7 @@ Property value: `"true"` or `"false"`
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
+{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -465,4 +465,4 @@ You can simulate various network conditions.
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using DevTools in Edge
+See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using DevTools in Edge

@@ -69,7 +69,7 @@ def test_exclude_switches():
 
 
 def test_log_to_file(log_path):
-    service = webdriver.EdgeService(log_path=log_path)
+    service = webdriver.EdgeService(log_output=log_path)
 
     driver = webdriver.Edge(service=service)
 
@@ -92,7 +92,7 @@ def test_log_to_stdout(capfd):
 
 
 def test_log_level(log_path):
-    service = webdriver.EdgeService(service_args=['--log-level=DEBUG'], log_path=log_path)
+    service = webdriver.EdgeService(service_args=['--log-level=DEBUG'], log_output=log_path)
 
     driver = webdriver.Edge(service=service)
 
@@ -103,7 +103,7 @@ def test_log_level(log_path):
 
 
 def test_log_features(log_path):
-    service = webdriver.EdgeService(service_args=['--append-log', '--readable-timestamp'], log_path=log_path)
+    service = webdriver.EdgeService(service_args=['--append-log', '--readable-timestamp'], log_output=log_path)
 
     driver = webdriver.Edge(service=service)
 
@@ -114,7 +114,7 @@ def test_log_features(log_path):
 
 
 def test_build_checks(log_path):
-    service = webdriver.EdgeService(service_args=['--disable-build-check'], log_path=log_path)
+    service = webdriver.EdgeService(service_args=['--disable-build-check'], log_output=log_path)
 
     driver = webdriver.Edge(service=service)
 

@@ -25,14 +25,14 @@ View the minimum supported Java version [here](https://github.com/SeleniumHQ/sel
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
 ### Maven
-Specify the dependency in the project's `pom.xml` file:
+Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="examples/java/pom.xml#L32-L36" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L29-L33" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}} 

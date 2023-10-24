@@ -23,10 +23,12 @@ Selenium正在与浏览器供应商合作创建
 通过这样完善流事件的能力, 
 以便更好地匹配浏览器DOM的事件性质.
 
-因为将测试受限于特定浏览器的特定版本是个坏主意, 
-Selenium项目建议尽可能使用WebDriver BiDi.
-然而, 在规范完成之前, CDP提供了许多有用的东西.
-为了帮助保持测试的独立性和可移植性, 
-Selenium提供了一些有用的辅助类.
-目前, 这些应用程序使用CDP, 
-但我们将尽快提供WebDriver Bidi的实现.
+While the specification is in works, the browser vendors are parallely implementing
+the [WebDriver BiDirectional Protocol](https://w3c.github.io/webdriver-bidi/).
+Refer [web-platform-tests dashboard](https://wpt.fyi/results/webdriver/tests/bidi?label=experimental&label=master&aligned&view=subtest)
+to see how far along the browser vendors are.
+Selenium is trying to keep up with the browser vendors and has started implementing W3C BiDi APIs.
+The goal is to ensure APIs are W3C compliant and uniform among the different language bindings.
+
+However, until the specification and corresponding Selenium implementation is complete there are many useful things that
+CDP offers. Selenium offers some useful helper classes that use CDP.

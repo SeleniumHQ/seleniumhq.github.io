@@ -42,7 +42,7 @@ The browser automatically managed by Selenium Manager are:
 
 - Chrome. Based on [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/), as of Selenium 4.11.0.
 - Firefox. Based on [public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), as of Selenium 4.12.0.
-- Edge. Planned for Selenium 4.13.0.
+- Edge. Based on [Edge downloads](https://www.microsoft.com/en-us/edge/download), as of Selenium 4.14.0.
 
 Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
 
@@ -58,6 +58,15 @@ But there is even more. In addition to fixed browser versions (e.g., `113`, `114
 - `canary`: Nightly build for developers.
 
 When these labels are specified, Selenium Manager first checks if a given browser is already installed (`beta`, `dev`, etc.), and when it is not detected, the browser is automatically managed.
+
+### Edge in Windows
+Automated Edge management by Selenium Manager in Windows is different from other browsers. Both Chrome and Firefox (and Edge in macOS and Linux) are downloaded automatically to the local cache (`~/.cache/selenium`) by Selenium Manager. Nevertheless, the same cannot be done for Edge in Windows. The reason is that the Edge installer for Windows is distributed as a Microsoft Installer (MSI) file, designed to be executed with administrator rights. This way, when Edge is attempted to be installed with Selenium Manager in Windows with a non-administrator session, a warning message will be displayed by Selenium Manager as follows:
+
+```
+edge can only be installed in Windows with administrator permissions
+```
+
+Therefore, administrator permissions are required to install Edge in Windows automatically through Selenium Manager, and Edge is eventually installed in the usual program files folder (e.g., `C:\Program Files (x86)\Microsoft\Edge`).
 
 ## Configuration
 ***TL;DR:*** *Selenium Manager should work silently and transparently for most users. Nevertheless, there are scenarios (e.g., to specify a custom cache path or setup globally a proxy) where custom configuration can be required.*
@@ -96,11 +105,11 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--proxy <PROXY>`|`proxy = "PROXY"`|`SE_PROXY=PROXY`|HTTP proxy for network connection (e.g., `myproxy:port`, `myuser:mypass@myproxy:port`)|
 |`--timeout <TIMEOUT>`|`timeout = TIMEOUT`|`SE_TIMEOUT=TIMEOUT`|Timeout for network requests (in seconds). Default: `300`|
 |`--offline`|`offline = true`|`SE_OFFLINE=true`|Offline mode (i.e., disabling network requests and downloads)|
-|`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser|
-|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser|
+|`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser, e.g., when a browser is already installed in the system, but you want Selenium Manager to download and use it|
+|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser, e.g., when a browser is supposed to be downloaded by Selenium Manager, but you prefer to avoid it|
 |`--debug`|`debug = true`|`SE_DEBUG=true`|Display `DEBUG` messages|
 |`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
-|`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`|
+|`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`. For Windows paths in the TOML configuration file, double backslashes are required (e.g., `C:\\custom\\cache`).|
 |`--ttl <TTL>`|`ttl = TTL`|`SE_TTL=TTL`|Time-to-live in seconds. See next section for details. Default: `3600` (1 hour)|
 
 In addition to the configuration keys specified in the table before, there are some special cases, namely:
@@ -136,9 +145,9 @@ Selenium Manager follows the same versioning schema as Selenium. Nevertheless, w
 ## Getting Selenium Manager
 For most users, direct interaction with Selenium Manager is not required since the Selenium bindings use it internally. Nevertheless, if you want to *play* with Selenium Manager or use it for your use case involving driver or browser management, you can get the Selenium Manager binaries in different ways:
 
-- From the cache (under development). In the upcoming versions of Selenium, the Selenium Manager binaries will be extracted from each binding distribution and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.13.0 will be stored in the folder `~/.cache/selenium/manager/0.4.13`).
 - From the Selenium repository. The Selenium Manager source code is stored in the main Selenium repo under the folder [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust). Moreover, you can find the compiled versions for Windows, Linux, and macOS in the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager) of this repo.
 - From the build workflow. Selenium Manager is compiled using a [GitHub Actions workflow]((https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml)). This workflow creates binaries for Windows, Linux, and macOS. You can download these binaries from these workflow executions.
+- From the cache (under development - just in Java). In the upcoming versions of the Selenium Java bindings, the Selenium Manager binaries will be extracted from each binding distribution and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 will be stored in the folder `~/.cache/selenium/manager/0.4.15`).
 
 ## Examples
 Let's consider a typical example: we want to manage chromedriver automatically. For that, we invoke Selenium Manager as follows (notice that the flag `--debug` is optional, but it helps us to understand what Selenium Manager is doing):
@@ -192,33 +201,79 @@ Optionally, the argument `--grid` allows to specify a Selenium Grid version (`--
 
 ## Known Limitations
 
+### Connectivity issues
+Selenium Manager requests remote endpoints (like Chrome for Testing (CfT), among others) to discover and download drivers and browsers from online repositories. When this operation is done in a corporate environment with a proxy or firewall, it might lead to connectivity problems like the following:
+
+```
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)
+```
+
+```
+error trying to connect: dns error: failed to lookup address information
+```
+
+```
+error trying to connect: An existing connection was forcibly closed by the remote host. (os error 10054)
+```
+
+When that happens, consider the following solutions:
+
+- Use the proxy capabilities of Selenium (see [documentation](https://www.selenium.dev/documentation/webdriver/drivers/options/#proxy)). Alternatively, use the environment variable `SE_PROXY` to set the proxy URL or use the configuration file (see [configuration](https://www.selenium.dev/documentation/selenium_manager/#configuration)).
+- Review your network setup to enable the remote requests and downloads required by Selenium Manager.
+
 ### Custom package managers
-If you are using a linux package manager (Anaconda, snap, etc) that requires a specific driver be used for your browsers,
-you'll need to either specify the
-[driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location),
-the [browser location](),
+If you are using a Linux package manager (Anaconda, snap, etc) that requires a specific driver be used for your browsers,
+you'll need to either specify the 
+[driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location), 
+the [browser location](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location),
 or both, depending on the requirements.
 
-### Alternative Architecture
+### Alternative architectures
 Selenium supports all five architectures managed by Google's Chrome for Testing, and all six drivers provided for Microsoft Edge.
 
-Each release of the Selenium bindings comes with three separate Selenium Manager binaries — one for Linux, Windows, and Mac.
+Each release of the Selenium bindings comes with three separate Selenium Manager binaries — one for Linux, Windows, and Mac. 
 * The Mac version supports both x64 and aarch64 (Intel and Apple).
-* The Windows version should work for both x86 and x64 (32-bit and 64-bit OS).
+* The Windows version should work for both x86 and x64 (32-bit and 64-bit OS). 
 * The Linux version has only been verified to work for x64.
 
 Reasons for not supporting more architectures:
-1. Neither Chrome for Testing nor Microsoft Edge supports additional architectures, so Selenium Manager would need to
-   manage something unofficial for it to work.
+1. Neither Chrome for Testing nor Microsoft Edge supports additional architectures, so Selenium Manager would need to 
+manage something unofficial for it to work. 
 2. We currently build the binaries from existing GitHub actions runners, which do not support these architectures
 3. Any additional architectures would get distributed with all Selenium releases, increasing the total build size
 
-If you are running linux on arm64/aarch64, 32-bit architecture, or a Raspberry Pi, Selenium Manager will not work for you.
+If you are running Linux on arm64/aarch64, 32-bit architecture, or a Raspberry Pi, Selenium Manager will not work for you.
 The biggest issue for people is that they used to get custom-built drivers and put them on PATH and have them work.
 Now that Selenium Manager is responsible for locating drivers on PATH, this approach no longer works, and users
 need to use a `Service` class and [set the location directly](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
-There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic
+There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic 
 in each of the bindings, so that's currently a trade-off we are comfortable with.
+
+### Browser dependencies
+When automatically managing browsers in Linux, Selenium Manager relies on the releases published by the browser vendors (i.e., Chrome, Firefox, and Edge). These releases are portable in most cases. Nevertheless, there might be cases in which existing libraries are required. In Linux, this problem might be experienced when trying to run Firefox, e.g., as follows:
+
+```
+libdbus-glib-1.so.2: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+```
+
+If that happens, the solution is to install that library, for instance, as follows:
+
+```
+sudo apt-get install libdbus-glib-1-2
+```
+
+A similar issue might happen when trying to execute Chrome for Testing in Linux:
+
+```
+error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
+```
+
+In this case, the library to be installed is the following:
+
+```
+sudo apt-get install libatk-bridge2.0-0
+```
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).

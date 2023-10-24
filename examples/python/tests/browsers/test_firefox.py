@@ -35,7 +35,7 @@ def test_set_browser_location():
 
 
 def test_log_to_file(log_path):
-    service = webdriver.FirefoxService(log_path=log_path, service_args=['--log', 'debug'])
+    service = webdriver.FirefoxService(log_output=log_path, service_args=['--log', 'debug'])
 
     driver = webdriver.Firefox(service=service)
     driver.get("https://www.selenium.dev")
@@ -58,7 +58,7 @@ def test_log_to_stdout(capfd):
 
 
 def test_log_level(log_path):
-    service = webdriver.FirefoxService(log_path=log_path, service_args=['--log', 'debug'])
+    service = webdriver.FirefoxService(log_output=log_path, service_args=['--log', 'debug'])
 
     driver = webdriver.Firefox(service=service)
 
@@ -69,7 +69,7 @@ def test_log_level(log_path):
 
 
 def test_log_truncation(log_path):
-    service = webdriver.FirefoxService(service_args=['--log-no-truncate', '--log', 'debug'], log_path=log_path)
+    service = webdriver.FirefoxService(service_args=['--log-no-truncate', '--log', 'debug'], log_output=log_path)
 
     driver = webdriver.Firefox(service=service)
 
