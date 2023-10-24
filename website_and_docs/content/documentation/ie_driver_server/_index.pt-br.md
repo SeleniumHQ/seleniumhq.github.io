@@ -3,7 +3,7 @@ title: "IE Driver Server"
 linkTitle: "IE Driver Server"
 weight: 8
 description: >
-    The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+    El Internet Explorer driver es un servidor autónomo que implementa la especificación WebDriver.
 ---
 This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
