@@ -75,6 +75,7 @@ The HTML page web element can have attribute class. We can see an example in the
 above shown HTML snippet. We can identify these elements using the class name locator
 available in Selenium. 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.className("information"));
@@ -109,6 +110,7 @@ Let us see an example from above HTML snippet. We will create locator for First 
 textbox, using css. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.cssSelector("#fname"));
@@ -136,11 +138,12 @@ textbox, using css.
 {{< /tabpane >}} 
 
 ## id
-We can use the ID attribute available with element in a web page to locate it. 
-Generally the ID property should be unique for a element on the web page. 
+We can use the ID attribute of an element in a web page to locate it. 
+Generally the ID property should be unique for each element on the web page. 
 We will identify the Last Name field using it. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.id("lname"));
@@ -169,11 +172,12 @@ We will identify the Last Name field using it.
 
 
 ## name
-We can use the NAME attribute available with element in a web page to locate it. 
-Generally the NAME property should be unique for a element on the web page. 
+We can use the NAME attribute of an element in a web page to locate it. 
+Generally the NAME property should be unique for each element on the web page. 
 We will identify the Newsletter checkbox using it. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.name("newsletter"));
@@ -203,8 +207,9 @@ We will identify the Newsletter checkbox using it.
 ## link text 
 If the element we want to locate is a link, we can use the link text locator
 to identify it on the web page. The link text is the text displayed of the link. 
-In the HTML snippet shared, we have a link available, lets see how will we locate it. 
+In the HTML snippet shared, we have a link available, let's see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.linkText("Selenium Official Page"));
@@ -237,6 +242,7 @@ to identify it on the web page. The link text is the text displayed of the link.
 We can pass partial text as value.
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.partialLinkText("Official Page"));
@@ -267,6 +273,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 We can use the HTML TAG itself as a locator to identify the web element on the page.
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.tagName("a"));
@@ -303,6 +310,7 @@ Or the xpath could be relative. Example- //input[@name='fname']. This will retur
 first name text box. Let us create locator for female radio button using xpath. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.xpath("//input[@value='f']"));
@@ -333,7 +341,7 @@ first name text box. Let us create locator for female radio button using xpath.
 ## Relative Locators
 
 **Selenium 4** introduces Relative Locators (previously
-called as _Friendly Locators_). These locators are helpful when it is not easy to construct a locator for
+called _Friendly Locators_). These locators are helpful when it is not easy to construct a locator for
 the desired element, but easy to describe spatially where the element is in relation to an element that does have
 an easily constructed locator.
 
@@ -341,8 +349,7 @@ an easily constructed locator.
 
 Selenium uses the JavaScript function
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to determine the size and position of elements on the page, and can use this information to locate neighboring elements.  
-find the relative elements. 
+to determine the size and position of elements on the page, and can use this information to locate neighboring elements.
 
 Relative locator methods can take as the argument for the point of origin, either a previously located element reference, 
 or another locator. In these examples we'll be using locators only, but you could swap the locator in the final method with
@@ -360,6 +367,7 @@ If the email text field element is not easily identifiable for some reason, but 
 we can locate the text field element using the fact that it is an "input" element "above" the password element. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password"));
 {{< /tab >}}
@@ -386,6 +394,7 @@ If the password text field element is not easily identifiable for some reason, b
 we can locate the text field element using the fact that it is an "input" element "below" the email element.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"));
 {{< /tab >}}
@@ -412,6 +421,7 @@ If the cancel button is not easily identifiable for some reason, but the submit 
 we can locate the cancel button element using the fact that it is a "button" element to the "left of" the submit element.
     
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"));
 {{< /tab >}}
@@ -438,6 +448,7 @@ If the submit button is not easily identifiable for some reason, but the cancel 
 we can locate the submit button element using the fact that it is a "button" element "to the right of" the cancel element.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel"));
 {{< /tab >}}
@@ -466,6 +477,7 @@ One great use case for this is to work with a form element that doesn't have an 
 but its associated [input label element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) does.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email"));
 {{< /tab >}}
@@ -491,6 +503,7 @@ val emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-ema
 You can also chain locators if needed. Sometimes the element is most easily identified as being both above/below one element and right/left of another.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" >}}
 By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"));
 {{< /tab >}}

@@ -4,6 +4,8 @@ import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
@@ -13,6 +15,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 public class EdgeTest {
@@ -24,6 +28,8 @@ public class EdgeTest {
         if (logLocation != null && logLocation.exists()) {
             logLocation.delete();
         }
+        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY);
+        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY);
 
         driver.quit();
     }
@@ -37,13 +43,39 @@ public class EdgeTest {
     @Test
     public void arguments() {
         EdgeOptions options = new EdgeOptions();
+
         options.addArguments("--start-maximized");
+
         driver = new EdgeDriver(options);
+    }
+
+    @Test
+    public void setBrowserLocation() {
+        EdgeOptions options = new EdgeOptions();
+
+        options.setBinary(getEdgeLocation());
+
+        driver = new EdgeDriver(options);
+    }
+
+    @Test
+    public void extensionOptions() {
+        EdgeOptions options = new EdgeOptions();
+        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+        File extensionPath = new File(path.toUri());
+
+        options.addExtensions(extensionPath);
+
+        driver = new EdgeDriver(options);
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
     }
 
     @Test
     public void excludeSwitches() {
         EdgeOptions options = new EdgeOptions();
+
         options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
 
         driver = new EdgeDriver(options);
@@ -133,5 +165,10 @@ public class EdgeTest {
         }
 
         return logLocation;
+    }
+
+    private File getEdgeLocation() {
+        File location = new File(System.getenv("EDGE_BIN"));
+        return location.exists() ? location : null;
     }
 }

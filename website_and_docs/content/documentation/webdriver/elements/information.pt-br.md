@@ -54,12 +54,8 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 #fetch display status
 val = driver.find_element(name: 'email_input').displayed?
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Resolves Promise and returns boolean value
-let result =  await driver.findElement(By.name("email_input")).isDisplayed();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L16-L17">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 //navigates to url
@@ -109,13 +105,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns true if element is enabled else returns false
 ele = driver.find_element(name: 'button_input').enabled?
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Resolves Promise and returns boolean value
-let element =  await driver.findElement(By.name("button_input")).isEnabled();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L23-L24">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -166,13 +158,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns true if element is checked else returns false
 ele = driver.find_element(name: "checkbox_input").selected?
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Returns true if element ins checked else returns false
-let res = await driver.findElement(By.name("checkbox_input")).isSelected();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L30-L31">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -216,13 +204,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns TagName of the element
 attr = driver.find_element(name: "email_input").tag_name
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to URL
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Returns TagName of the element
-let value = await driver.findElement(By.name('email_input')).getTagName();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L37-L38">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
  //navigates to url
  driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -278,13 +262,9 @@ driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
     # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(name: "range_input").rect
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Navigate to url
-await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-// Returns height, width, x and y coordinates referenced element
-let element =  await driver.findElement(By.name("range_input")).getRect();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L45">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -339,15 +319,9 @@ driver.get 'https://www.selenium.dev/selenium/web/colorPage.html'
 cssValue = driver.find_element(:id, 'namedColor').css_value('background-color')
 
   {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-
-// Navigate to Url
-await driver.get('https://www.selenium.dev/selenium/web/colorPage.html');
-
-// Retrieves the computed style property 'color' of linktext
-let cssValue = await driver.findElement(By.id("namedColor")).getCssValue('background-color');
-
-    {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L76-L78">}}
+  {{< /tab >}}
   {{< tab header="Kotlin" >}}
 
 // Navigate to Url
@@ -394,13 +368,9 @@ driver.get 'https://www.selenium.dev/selenium/web/linked_image.html'
     # Retrieves the text of the element
 text = driver.find_element(:id, 'justanotherlink').text
   {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-// Navigate to URL
-await driver.get('https://www.selenium.dev/selenium/web/linked_image.html');
-
-// retrieves the text of the element
-let text = await driver.findElement(By.id('justanotherlink')).getText();
-    {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L84-L86">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Navigate to URL
 driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
@@ -457,16 +427,9 @@ email_element=driver.find_element(name: 'email_input')
 #fetch the value property associated with the textbox
 emailVal = email_element.attribute("value");
   {{< /tab >}}
-    {{< tab header="JavaScript" >}}
-// Navigate to the Url
-await driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// identify the email text box
-const emailElement = await driver.findElements(By.xpath('//input[@name="email_input"]'));
-
-//fetch the attribute "name" associated with the textbox
-const nameAttribute = await emailElement.getAttribute("name");
-    {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L55-L59">}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Navigate to URL
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")

@@ -21,7 +21,7 @@ Links to everything can be found on our [downloads page][downloads].
   * Error messages across bindings now include links to the Selenium documentation.  
   * Overhaul of the service classes and logging output options.
   * Logger in Ruby updated default behavior to match other languages and added features to improve filtering types of logging.
-  * Python - removal of seveal sections of deprecated code.
+  * Python - removal of several sections of deprecated code.
     * Most of them were arguments that can be set in the [`Options` classes](https://www.selenium.dev/documentation/webdriver/drivers/options/) (browser values) or [`Service` classes](https://www.selenium.dev/documentation/webdriver/drivers/service/) (browser driver values).
     * They have been deprecated since the [first Selenium 4 release](https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#python-1)
 

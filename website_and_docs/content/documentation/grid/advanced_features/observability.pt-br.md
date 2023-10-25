@@ -1,116 +1,118 @@
 ---
-title: "Observability"
-linkTitle: "Observability"
+title: "Observabilidade"
+linkTitle: "Observabilidade"
 weight: 1
 aliases: ["/documentation/pt-br/grid/grid_4/advanced_features/observability/"]
 ---
 
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i> 
-   Page being translated from 
-   English to Portuguese. Do you speak Portuguese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
-
-
-## Table of Contents
+## Índice
  - [Selenium Grid](#selenium-grid)
- - [Observability](#observability)
-	 - [Distributed tracing](#distributed-tracing) 	
-	 -  [Event logging](#event-logging)
-  - [Grid Observability](#grid-observability)
-	  - [Visualizing Traces](#visualizing-traces)
-	  - [Leveraging event logs](#leveraging-event-logs)
-  - [References](#references)
+ - [Observabilidade](#observabilidade)
+	 - [Rastreamento distribuído](#rastreamento-distribuído) 	
+	 -  [Registro de eventos](#Registro-de-eventos)
+  - [Observabilidade da Grade](#observabilidade-da-grade)
+	  - [Visualizando Traços](#visualizando-traços)
+	  - [Aproveitando logs de eventos](#Aproveitando-logs-de-eventos)
+  - [Referências](#referências)
 
 ## Selenium Grid
 
-Grid aids in scaling and distributing tests by executing tests on various browser and operating system combinations.
+O Grid auxilia na escalabilidade e distribuição de testes, executando testes em várias combinações de navegadores e sistemas operacionais.
 
-## Observability
+## Observabilidade
 
-Observability has three pillars: traces, metrics and logs. Since Selenium Grid 4 is designed to be fully distributed, observability will make it easier to understand and debug the internals. 
+A observabilidade tem três pilares: rastreamentos, métricas e registros. Como o Selenium Grid 4 foi projetado para ser totalmente distribuído, a observabilidade tornará mais fácil entender e depurar os detalhes internos.
 
-## Distributed tracing
-A single request or transaction spans multiple services and components.  Tracing tracks the request lifecycle as each service executes the request. It is useful in debugging in an error scenario.
-Some key terms used in tracing context are: 
+## Rastreamento Distribuído
+Uma única solicitação ou transação abrange vários serviços e componentes. O rastreamento acompanha o ciclo de vida da solicitação à medida que cada serviço a executa. Isso é útil para depurar cenários de erro.
+Alguns termos-chave usados no contexto de rastreamento são:
 
-**Trace**
-Tracing allows one to trace a request through multiple services, starting from its origin to its final destination. This request's journey helps in debugging, monitoring the end-to-end flow, and identifying failures. A trace depicts the end-to-end request flow. Each trace has a unique id as its identifier.
 
-**Span**
-Each trace is made up of timed operations called spans. A span has a start and end time and it represents operations done by a service. The granularity of span depends on how it is instrumented. Each span has a unique identifier.  All spans within a trace have the same trace id.
+**Rastreamento**
+O rastreamento permite rastrear uma solicitação por meio de vários serviços, desde sua origem até seu destino final. A jornada dessa solicitação ajuda na depuração, no monitoramento do fluxo de ponta a ponta e na identificação de falhas. Um rastreamento representa o fluxo da solicitação de ponta a ponta. Cada rastreamento possui um identificador único.
 
-**Span Attributes**
-Span attributes are key-value pairs which provide additional information about each span.
 
-**Events**
-Events are timed-stamped logs within a span. They provide additional context to the existing spans. Events also contain key-value pairs as event attributes.
+**Segmento**
+Cada rastreamento é composto por operações cronometradas chamadas segmentos. Um segmento possui um horário de início e término e representa operações realizadas por um serviço. A granularidade do segmento depende de como ele é instrumentado. Cada segmento possui um identificador único. Todos os segmentos dentro de um rastreamento têm o mesmo ID de rastreamento.
 
-## Event logging
 
-Logging is essential to debug an application. Logging is often done in a human-readable format. But for machines to search and analyze the logs, it has to have a well-defined format. Structured logging is a common practice of recording logs consistently in a fixed format. It commonly contains fields like:
- * Timestamp
- * Logging level
- * Logger class
- * Log message (This is further broken down into fields relevant to the operation where the log was recorded)
+**Atributos de Segmento**
+Atributos de segmento são pares de chave e valor que fornecem informações adicionais sobre cada segmento.
 
-Logs and events are closely related. Events encapsulate all the possible information available to do a single unit of work. Logs are essentially subsets of an event. At the crux, both aid in debugging.
-Refer following resources for detailed understanding:
+**Eventos**
+Eventos são registros com carimbo de data/hora dentro de um segmento. Eles fornecem contexto adicional para os segmentos existentes. Os eventos também contêm pares de chave e valor como atributos de evento.
+
+## Registro de Eventos
+
+O registro é essencial para depurar um aplicativo. O registro é frequentemente feito em um formato legível por humanos. Mas, para que as máquinas possam pesquisar e analisar os registros, é necessário ter um formato bem definido. O registro estruturado é uma prática comum de registrar logs de forma consistente em um formato fixo. Ele normalmente contém campos como:
+
+ * Carimbo de data/horas
+ * Nível de registro
+ * Classe de registro
+ * Mensagem de registro (isso é detalhado em campos relevantes à operação em que o registro foi feito)
+
+Registros e eventos estão intimamente relacionados. Os eventos encapsulam todas as informações possíveis para realizar uma única unidade de trabalho. Os registros são essencialmente subconjuntos de um evento. No cerne, ambos auxiliam na depuração.
+
+Consulte os recursos a seguir para entender em detalhes:
+
  1. [https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/](https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/)
  2. [https://charity.wtf/2019/02/05/logs-vs-structured-events/](https://charity.wtf/2019/02/05/logs-vs-structured-events/)
 
-## Grid Observability
+## Observabilidade do Grid
 
-Selenium server is instrumented with tracing using OpenTelemetry. Every request to the server is traced from start to end. Each trace consists of a series of spans as a request is executed within the server. 
-Most spans in the Selenium server consist of two events:
-1. Normal event - records all information about a unit of work and marks successful completion of the work.
-2. Error event - records all information till the error occurs and then records the error information. Marks an exception event.
 
-Running Selenium server 
+O servidor Selenium é instrumentado com rastreamento usando o OpenTelemetry. Cada solicitação ao servidor é rastreada do início ao fim. Cada rastreamento consiste em uma série de segmentos à medida que uma solicitação é executada no servidor. A maioria dos segmentos no servidor Selenium consiste em dois eventos:
+
+1. Evento normal - registra todas as informações sobre uma unidade de trabalho e marca a conclusão bem-sucedida do trabalho.
+2. Evento de erro - registra todas as informações até que ocorra o erro e, em seguida, registra as informações do erro. Marca um evento de exceção.
+
+Executando servidor Selenium
+
  1. [Standalone](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#standalone-mode)
  2. [Hub and Node](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#hub-and-node)
  3. [Fully Distributed](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#fully-distributed)
  4. [Docker](https://github.com/SeleniumHQ/selenium/wiki/Selenium-Grid-4#using-docker)
 
-## Visualizing Traces
-All spans, events and their respective attributes are part of a trace. Tracing works while running the server in all of the above-mentioned modes.
+##  Visualizando Rastreamentos
+Todos os segmentos, eventos e seus respectivos atributos fazem parte de um rastreamento. O rastreamento funciona enquanto o servidor é executado em todos os modos mencionados acima.
 
-By default, tracing is enabled in the Selenium server. Selenium server exports the traces via two exporters:
-1. Console - Logs all traces and their included spans at FINE level. By default, Selenium server prints logs at INFO level and above. 
-The **log-level** flag can be used to pass a logging level of choice while running the Selenium Grid jar/s.
+Por padrão, o rastreamento está habilitado no servidor Selenium. O servidor Selenium exporta os rastreamentos por meio de dois exportadores:
+
+1. Console - Registra todos os rastreamentos e os segmentos incluídos com nível FINE. Por padrão, o servidor Selenium imprime registros no nível INFO e acima.
+
+A opção **log-level** pode ser usada para definir um nível de registro de sua escolha ao executar o arquivo JAR do Selenium Grid jar/s.
+
 ```shell
 java -jar selenium-server-4.0.0-<selenium-version>.jar standalone --log-level FINE
 ```
-2. Jaeger UI - OpenTelemetry provides the APIs and SDKs to instrument traces in the code. Whereas Jaeger is a tracing backend, that aids in collecting the tracing telemetry data and providing querying, filtering and visualizing features for the data.
+2. Jaeger UI - OpenTelemetry fornece as APIs e SDKs para instrumentar rastreamentos no código. Enquanto o Jaeger é um sistema de rastreamento de backend que auxilia na coleta de dados de telemetria de rastreamento e oferece recursos de consulta, filtragem e visualização dos dados.
 
-Detailed instructions of visualizing traces using Jaeger UI can be obtained by running the command :
+Instruções detalhadas sobre como visualizar rastreamentos usando a interface do Jaeger podem ser obtidas executando o seguinte comando:
 
 ```shell
 java -jar selenium-server-4.0.0-<selenium-version>.jar info tracing
 ```
 
-[A very good example and scripts to run the server and send traces to Jaeger](https://github.com/manoj9788/tracing-selenium-grid)
+[Um exemplo muito bom e scripts para executar o servidor e enviar rastreamentos para o Jaeger](https://github.com/manoj9788/tracing-selenium-grid)
 
-## Leveraging event logs
-Tracing has to be enabled for event logging as well, even if one does not wish to export traces to visualize them.  
-**By default, tracing is enabled. No additional parameters need to be passed to see logs on the console.**
-All events within a span are logged at FINE level. Error events are logged at WARN level.
+## Explorando logs de eventos
+O rastreamento deve estar habilitado para o registro de eventos, mesmo que alguém não deseje exportar rastreamentos para visualizá-los.
 
-All event logs have the following fields :
- | Field | Field value | Description |
-|-|-|-|
-| Event time | eventId | Timestamp of the event record in epoch nanoseconds. |
-| Trace Id  | tracedId | Each trace is uniquely identified by a trace id. |
-| Span Id  | spanId | Each span within a trace is uniquely identified by a span id. |
-| Span Kind | spanKind | Span kind is a property of span indicating the type of span. It helps in understanding the nature of the unit of work done by the Span. |
-| Event name | eventName | This maps to the log message. |
-| Event attributes | eventAttributes | This forms the crux of the event logs, based on the operation executed, it has JSON formatted key-value pairs. This also includes a handler class attribute, to show the logger class. |
+**Por padrão, o rastreamento está habilitado. Não é necessário passar parâmetros adicionais para ver os logs no console.**
 
- Sample log  
+Todos os eventos dentro de um segmento são registrados no nível FINE. Eventos de erro são registrados no nível WARN..
+
+| Campo | Valor do Campo | Descrição |
+|------|------|------|
+| Hora do Evento | eventId | Carimbo de data/hora do registro do evento em nanossegundos desde a época. |
+| ID de Rastreamento | tracedId | Cada rastreamento é identificado exclusivamente por um ID de rastreamento. |
+| ID de Segmento | spanId | Cada segmento dentro de um rastreamento é identificado exclusivamente por um ID de segmento. |
+| Tipo de Segmento | spanKind | O tipo de segmento é uma propriedade do segmento que indica o tipo de segmento. Isso ajuda a entender a natureza da unidade de trabalho realizada pelo segmento. |
+| Nome do Evento | eventName | Isso mapeia para a mensagem de registro. |
+| Atributos do Evento | eventAttributes | Isso forma a essência dos registros de eventos, com base na operação executada, ele contém pares chave-valor formatados em JSON. Isso também inclui um atributo de classe do manipulador, para mostrar a classe do registro. |
+
+ Simples log  
 
  
 
@@ -129,15 +131,17 @@ All event logs have the following fields :
       }
     }
     
-In addition to the above fields, based on [OpenTelemetry specification](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/semantic_conventions/exceptions.md) error logs consist of :
-| Field | Field value | Description |
-|-|-|-|
-| Exception type  | exception.type | The class name of the exception. |
-| Exception message  | exception.message | Reason for the exception. |
-| Exception stacktrace | exception.stacktrace | Prints the call stack at the point of time when the exception was thrown. Helps in understanding the origin of the exception. |
+Além dos campos mencionados anteriormente, com base na [especificação do OpenTelemetry](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/semantic_conventions/exceptions.md) os registros de erro consistem nos seguintes campos: :
+
+| Campo | Valor do Campo | Descrição |
+|------|------|------|
+| Tipo de Exceção | exception.type | O nome da classe da exceção. |
+| Mensagem da Exceção | exception.message | Motivo da exceção. |
+| Rastreamento de Exceção | exception.stacktrace | Imprime a pilha de chamadas no momento em que a exceção foi lançada. Ajuda a entender a origem da exceção. |
+
  
 
-Sample error log 
+Simples error log 
   
 
     WARN [LoggingOptions$1.lambda$export$1] - {
@@ -156,13 +160,14 @@ Sample error log
       }
     }
 
-Note: Logs are pretty printed above for readability. Pretty printing for logs is turned off in Selenium server.
 
-The steps above should set you up for seeing traces and logs.
- 
-## References 
-1. [Understanding Tracing](https://lightstep.com/blog/opentelemetry-101-what-is-tracing/)
-2. [OpenTelemetry Tracing API Specification](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/api.md#status)
+**Observação:** Os logs são formatados acima para facilitar a leitura. A formatação de logs está desativada no servidor Selenium.
+
+Os passos acima devem configurá-lo para visualizar rastreamentos e logs.
+
+## Referências
+1. [Compreendendo o Rastreamento](https://lightstep.com/blog/opentelemetry-101-what-is-tracing/)
+2. [Especificação da API de Rastreamento do OpenTelemetry](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/api.md#status)
 3. [Selenium Wiki](https://github.com/SeleniumHQ/selenium/wiki)
-4. [Structured logs vs events](https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/)
-5. [Jaeger framework](https://github.com/jaegertracing/jaeger)
+4. [Logs Estruturados vs. Eventos](https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events/)
+5. [Framework Jaeger](https://github.com/jaegertracing/jaeger)
