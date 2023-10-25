@@ -28,9 +28,9 @@ Essas propriedades são mapeadas como VirtualAuthenticatorOptions nos bindings d
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L48-55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/virtual_authenticator/virtual_authenticator_test.py#LL40C1-L40C1" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
