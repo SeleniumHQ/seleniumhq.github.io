@@ -1,23 +1,21 @@
-[expected_conditions.ja.md](expected_conditions.ja.md)---
-title: "Waiting with Expected Conditions"
-linkTitle: "Expected Conditions"
+---
+title: "Aguardando com Condições Esperadas"
+linkTitle: "Condições Esperadas"
 weight: 1
 description: >
-  These are classes used to describe what needs to be waited for.
+  Essas são classes usadas para descrever o que deve ser aguardado.
 ---
 
-Expected Conditions are used with [Explicit Waits]({{< ref "../waits#explicit-waits" >}}).
-Instead of defining the block of code to be executed with a _lambda_, an expected
-conditions method can be created to represent common things that get waited on. Some
-methods take locators as arguments, others take elements as arguments.
+As "Condições Esperadas" são usadas com [Esperas Explícitas]({{< ref "../waits#explicit-waits" >}}). Em vez de definir um bloco de código a ser executado com um _lambda_, um método de condição esperada pode ser criado para representar coisas comuns que precisam ser aguardadas. Alguns métodos recebem localizadores como argumentos, enquanto outros recebem elementos como argumentos.
 
-These methods can include conditions such as:
+Esses métodos podem incluir condições como:
 
-* element exists
-* element is stale
-* element is visible
-* text is visible
-* title contains specified value
+* elemento existe
+* elemento está obsoleto
+* elemento está visível
+* texto está visível
+* título contém o valor especificado
+
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
