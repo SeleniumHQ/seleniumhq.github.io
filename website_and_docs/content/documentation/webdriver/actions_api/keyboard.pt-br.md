@@ -1,26 +1,21 @@
 ---
-title: "Keyboard actions"
-linkTitle: "Keyboard"
+title: "Ações de Teclado"
+linkTitle: "Teclado"
 weight: 2
 description: >
-  A representation of any key input device for interacting with a web page.
+  Uma representação de qualquer dispositivo de entrada de teclado para interagir com uma página da web.
 aliases: [
 "/documentation/pt-br/webdriver/keyboard/",
 "/pt-br/documentation/webdriver/keyboard/"
 ]
 ---
 
-There are only 2 actions that can be accomplished with a keyboard:
-pressing down on a key, and releasing a pressed key.
-In addition to supporting ASCII characters, each keyboard key has
-a representation that can be pressed or released in designated sequences.
+Existem apenas 2 ações que podem ser realizadas com um teclado: pressionar uma tecla e liberar uma tecla pressionada. Além de suportar caracteres ASCII, cada tecla do teclado possui uma representação que pode ser pressionada ou liberada em sequências designadas.
 
-## Keys
+## Chaves
 
-In addition to the keys represented by regular unicode, 
-unicode values have been assigned to other keyboard keys for use with Selenium. 
-Each language has its own way to reference these keys; the full list can be found
-[here](https://www.w3.org/TR/webdriver/#keyboard-actions).
+Além das teclas representadas pelo Unicode regular, valores Unicode foram atribuídos a outras teclas de teclado para uso com o Selenium. Cada linguagem tem sua própria maneira de fazer referência a essas teclas; a lista completa pode ser encontrada
+[aqui](https://www.w3.org/TR/webdriver/#keyboard-actions).
 
 {{< tabpane text=true langEqualsHeader=true >}}
     {{< tab header="Java" >}}
@@ -43,7 +38,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
     {{< /tab >}}
 {{< /tabpane >}}
 
-## Key down
+## Pressione a tecla
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -66,7 +61,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Key up
+## Liberar a tecla
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -89,13 +84,13 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Send keys
+## Enviar teclas
 
 This is a convenience method in the Actions API that combines keyDown and keyUp commands in one action.
 Executing this command differs slightly from using the element method, but
 primarily this gets used when needing to type multiple characters in the middle of other actions.
 
-### Active Element
+### Elemento Ativo
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -118,7 +113,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Designated Element
+### Elemento Designado
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -142,11 +137,9 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Copy and Paste
+## Copiar e Colar
 
-Here's an example of using all of the above methods to conduct a copy / paste action.
-Note that the key to use for this operation will be different depending on if it is a Mac OS or not.
-This code will end up with the text: `SeleniumSelenium!`
+Aqui está um exemplo de uso de todos os métodos acima para realizar uma ação de copiar/colar. Note que a tecla a ser usada para essa operação será diferente, dependendo se for um sistema Mac OS ou não. Este código resultará no texto: `SeleniumSelenium!`
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
