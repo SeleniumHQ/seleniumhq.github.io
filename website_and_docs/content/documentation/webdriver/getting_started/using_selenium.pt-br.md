@@ -1,43 +1,43 @@
 ---
-title: "Organizing and Executing Selenium Code"
-linkTitle: "Using Selenium"
+title: "Organizando e executando o código Selenium"
+linkTitle: "Utilizando o Selenium"
 weight: 10
 description: >
-    Scaling Selenium execution with an IDE and a Test Runner library
+    Escalonamento da execução do Selenium com um IDE e uma biblioteca do Test Runner
 ---
 
-If you want to run more than a handful of one-off scripts, you need to 
-be able to organize and work with your code. This page should give you
-ideas for how to actually do productive things with your Selenium code.
+Se quiser executar mais do que um punhado de scripts pontuais, precisa de 
+ser capaz de organizar e trabalhar com seu código. Esta página deve dar a você
+ideias de como fazer coisas produtivas com seu código Selenium.
 
-## Common Uses
+## Usos comuns
 
-Most people use Selenium to execute automated tests for web applications, 
-but Selenium support any use case of browser automation.
+A maioria das pessoas usa o Selenium para executar testes automatizados para aplicações web, 
+mas o Selenium suporta qualquer caso de uso de automação de navegador.
 
-### Repetitive Tasks
+### Tarefas Repetitivas
 
-Perhaps you need to log into a website and download something, or submit a form.
-You can create a Selenium script to run with a service at preset times.
+Talvez seja necessário fazer login em um site e baixar algo ou enviar um formulário.
+Você pode criar um script Selenium para ser executado com um serviço em horários pré-definidos.
 
-### Web Scraping
+### Web Scrapping
 
-Are you looking to collect data from a site that doesn't have an API? Selenium
-will let you do this, but please make sure you are familiar with the website's
-terms of service as some websites do not permit it and others will even block Selenium.
+Está a tentar recolher dados de um site que não tem uma API? O Selenium
+permitirá que você faça isso, mas certifique-se de estar familiarizado com os termos de serviço do site
+termos de serviço do site, pois alguns sites não permitem isso e outros até bloqueiam o Selenium.
 
-### Testing
+### Testes
 
-Running Selenium for testing requires making assertions on actions taken by Selenium.
-So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners).
+Executar o Selenium para testes requer fazer asserções sobre as ações tomadas pelo Selenium.
+Então uma boa biblioteca de asserções é necessária. Características adicionais para prover estrutura para testes
+requerem o uso de [Test Runner] (#test-runners).
 
 
 ## IDEs
 
-Regardless of how you use Selenium code, 
-you won't be very effective writing or executing it without a good
-Integrated Developer Environment. Here are some common options...
+Independentemente de como você usa o código do Selenium, 
+não será muito eficaz escrevendo ou executando-o sem um bom
+ambiente de desenvolvimento integrado. Aqui estão algumas opções comuns...
 
 - [Eclipse](https://www.eclipse.org/)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
@@ -47,44 +47,44 @@ Integrated Developer Environment. Here are some common options...
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [VS Code](https://code.visualstudio.com/)
 
-## Test Runner
+## Executador de teste
 
-Even if you aren't using Selenium for testing, if you have advanced use cases, it might make
-sense to use a test runner to better organize your code. Being able to use before/after hooks 
-and run things in groups or in parallel can be very useful.
+Mesmo que não esteja a usar o Selenium para testes, se tiver casos de uso avançado, pode fazer
+sentido usar um executor de testes para organizar melhor seu código. Ser capaz de usar hooks antes/depois 
+e executar coisas em grupos ou em paralelo pode ser muito útil.
 
-### Choosing
-There are many different test runners available.
+### Escolhendo
+Há muitos executores de teste diferentes disponíveis.
 
-All the code examples in this documentation can be found in (or is being moved to) our
-example directories that use test runners and get executed every release to ensure all the code is correct and updated.
-Here is a list of test runners with links. The first item is the one that is used by this repository and the one
-that will be used for all examples on this page.
+Todos os exemplos de código nesta documentação podem ser encontrados em (ou estão sendo movidos para) nossos diretórios
+que usam test runners e são executados a cada lançamento para garantir que todo o código esteja correto e atualizado.
+Aqui está uma lista de executores de teste com links. O primeiro item é o que é usado por este repositório e o que
+que será usado para todos os exemplos nesta página.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-- [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
-- [TestNG](https://testng.org/doc/) - Offers extra features like parallel test execution and parameterized tests.
+- [JUnit](https://junit.org/junit5/) - Uma estrutura de teste amplamente utilizada para testes Selenium baseados em Java.
+- [TestNG](https://testng.org/doc/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
 {{% /tab %}}
 
 {{% tab header="Python" %}}
-- [pytest](https://pytest.org/) - A preferred choice for many, thanks to its simplicity and powerful plugins.
-- [unittest](https://docs.python.org/3/library/unittest.html) - Python's standard library testing framework.
+- [pytest](https://pytest.org/) -Uma escolha preferida por muitos, graças à sua simplicidade e aos seus poderosos plugins.
+- [unittest](https://docs.python.org/3/library/unittest.html) - A estrutura de testes da biblioteca padrão do Python.
 {{% /tab %}}
 
 {{% tab header="CSharp" %}}
-- [NUnit](https://nunit.org/) - A popular unit-testing framework for .NET.
-- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft's own unit testing framework.
+- [NUnit](https://nunit.org/) - Um popular framework de teste unitário para .NET.
+- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - O Framework de testes unitários da Microsoft.
 {{% /tab %}}
 
 {{% tab header="Ruby" %}}
-- [RSpec](https://rspec.info/) - The most widely used testing library for running Selenium tests in Ruby.
-- [Minitest](https://github.com/seattlerb/minitest) - A lightweight testing framework that comes with Ruby standard library.
+- [RSpec](https://rspec.info/) - A biblioteca de testes mais utilizada para executar testes Selenium em Ruby.
+- [Minitest](https://github.com/seattlerb/minitest) - Um framework de testes leve que vem com a biblioteca padrão do Ruby.
 {{% /tab %}}
 
 {{% tab header="JavaScript" %}}
-- [Jest](https://jestjs.io/) - Primarily known as a testing framework for React, it can also be used for Selenium tests.
-- [Mocha](https://mochajs.org/) - The most common JS library for running Selenium tests.
+- [Jest](https://jestjs.io/) - Principalmente conhecido como um framework de teste para React, também pode ser utilizado para testes Selenium.
+- [Mocha](https://mochajs.org/) - A biblioteca JS mais comum para executar testes Selenium.
 {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
@@ -93,10 +93,10 @@ that will be used for all examples on this page.
 {{< /tabpane >}}
 
 
-### Installing
+### Instalando
 
-This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}}).
-This code is only showing examples for what is being used in our Documentation Examples project.
+Isto é muito semelhante ao que foi requerido em [Install a Selenium Library]({{< ref "install_library.md" >}}).
+Este código está apenas a mostrar exemplos do que está a ser usado no nosso projeto de Exemplos de Documentação.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
@@ -108,11 +108,11 @@ This code is only showing examples for what is being used in our Documentation E
 {{% /tab %}}
 {{% tab header="Python" %}}
 
-To use it in a project, add it to the `requirements.txt` file:
+Para usá-lo em um projeto, adicione-o ao arquivo `requirements.txt`:
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+in the project's `csproj` especifique a dependência como `PackageReference` em `ItemGroup`:
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
@@ -121,14 +121,14 @@ Add to project's gemfile
 
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
-In your project's `package.json`, add requirement to `dependencies`:
+In your project's `package.json`, adicionar requisito às `dependências`:
 
 {{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Asserting
+### Afirmar
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -151,7 +151,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Setting Up and Tearing Down
+### Configuarar e Desconfigurar
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -174,7 +174,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Executing
+### Executando
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
@@ -210,7 +210,7 @@ mocha runningTests.spec.js
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Examples
+### Examplos
 
 In [First script]({{< ref "first_script.md" >}}), we saw each of the components of a Selenium script.
 Here's an example of that code using a test runner:
@@ -236,9 +236,9 @@ Here's an example of that code using a test runner:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Steps
+## Proximos passos
 
-Take what you've learned and build out your Selenium code! 
+Pegue no que aprendeu e desenvolva o seu código Selenium!
 
-As you find more functionality that you need, read up on the rest of our
-[WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
+À medida que encontrar mais funcionalidades de que precisa, leia o resto da nossa
+[documentação do WebDriver]({{< ref "/documentation/webdriver/" >}}).

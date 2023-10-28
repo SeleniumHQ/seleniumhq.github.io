@@ -1,24 +1,21 @@
 ---
-title: "Mouse actions"
+title: "Ações do Mouse"
 linkTitle: "Mouse"
 weight: 4
 needsTranslation: true
 description: >
-  A representation of any pointer device for interacting with a web page.
+  Uma representação de qualquer dispositivo de ponteiro para interagir com uma página da web.
 aliases: [
 "/documentation/pt-br/support_packages/mouse_and_keyboard_actions_in_detail/",
 "/pt-br/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 
-There are only 3 actions that can be accomplished with a mouse:
-pressing down on a button, releasing a pressed button, and moving the mouse.
-Selenium provides convenience methods that combine these actions in the most common ways.
+Existem apenas 3 ações que podem ser realizadas com um mouse: pressionar um botão, liberar um botão pressionado e mover o mouse. O Selenium fornece métodos de conveniência que combinam essas ações da maneira mais comum.
 
-## Click and hold
+## Clicar e Manter Pressionado
 
-This method combines moving the mouse to the center of an element with pressing the left mouse button.
-This is useful for focusing a specific element:
+Este método combina mover o mouse para o centro de um elemento com a pressão do botão esquerdo do mouse. Isso é útil para focar em um elemento específico:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -41,10 +38,9 @@ This is useful for focusing a specific element:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Click and release
+## Clicar e Liberar
 
-This method combines moving to the center of an element with pressing and releasing the left mouse button.
-This is otherwise known as "clicking":
+Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão esquerdo do mouse. Isso é conhecido como "clicar":
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -67,19 +63,20 @@ This is otherwise known as "clicking":
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Alternate Button Clicks
+## Clique com o Botão Alternativo
 
-There are a total of 5 defined buttons for a Mouse:
-* 0 — Left Button (the default)
-* 1 — Middle Button (currently unsupported)
-* 2 — Right Button
-* 3 — X1 (Back) Button
-* 4 — X2 (Forward) Button
+Existem um total de 5 botões definidos para um mouse:
+- 0 — Botão Esquerdo (o padrão)
+- 1 — Botão do Meio (atualmente não suportado)
+- 2 — Botão Direito
+- 3 — Botão X1 (Voltar)
+- 4 — Botão X2 (Avançar)
 
-### Context Click
 
-This method combines moving to the center of an element with pressing and releasing the right mouse button (button 2).
-This is otherwise known as "right-clicking":
+###  Context Click
+
+Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão direito do mouse (botão 2). Isso é conhecido como "clicar com o botão direito" ou "menu de contexto"
+
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -102,9 +99,9 @@ This is otherwise known as "right-clicking":
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Back Click
+### Click botão de voltar do mouse
 
-There is no convenience method for this, it is just pressing and releasing mouse button 3
+Este termo pode se referir a um clique com o botão X1 (botão de voltar) do mouse. No entanto, essa terminologia específica pode variar dependendo do contexto.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -131,9 +128,9 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Forward Click
+### botão de avançar) do mouse
 
-There is no convenience method for this, it is just pressing and releasing mouse button 4
+Este termo se refere a um clique com o botão X2 (botão de avançar) do mouse. Não existe um método de conveniência específico para essa ação, sendo apenas a pressão e liberação do botão do mouse de número 4.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -160,9 +157,9 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Double click
+## Duplo click
 
-This method combines moving to the center of an element with pressing and releasing the left mouse button twice.
+Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão esquerdo do mouse duas vezes. Isso é conhecido como "duplo clique".
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -185,11 +182,9 @@ This method combines moving to the center of an element with pressing and releas
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Move to element
+## Mover para o Elemento
 
-This method moves the mouse to the in-view center point of the element. 
-This is otherwise known as "hovering."
-Note that the element must be in the viewport or else the command will error.
+Este método move o mouse para o ponto central do elemento que está visível na tela. Isso é conhecido como "hovering" ou "pairar". É importante observar que o elemento deve estar no viewport (área visível na tela) ou então o comando resultará em erro.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -212,16 +207,13 @@ Note that the element must be in the viewport or else the command will error.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Move by offset
+## Mover por Deslocamento
 
-These methods first move the mouse to the designated origin and then
-by the number of pixels in the provided offset.
-Note that the position of the mouse must be in the viewport or else the command will error.
+Esses métodos primeiro movem o mouse para a origem designada e, em seguida, pelo número de pixels especificado no deslocamento fornecido. É importante observar que a posição do mouse deve estar dentro da janela de visualização (viewport) ou, caso contrário, o comando resultará em erro.
 
-### Offset from Element
+### Deslocamento a partir do Elemento
 
-This method moves the mouse to the in-view center point of the element,
-then moves by the provided offset.
+Este método move o mouse para o ponto central do elemento visível na tela e, em seguida, move o mouse pelo deslocamento fornecido.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -244,10 +236,9 @@ then moves by the provided offset.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Offset from Viewport
+### Deslocamento a partir da Janela de Visualização
 
-This method moves the mouse from the upper left corner of the current viewport by the provided
-offset.
+Este método move o mouse a partir do canto superior esquerdo da janela de visualização atual pelo deslocamento fornecido.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -270,16 +261,10 @@ offset.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Offset from Current Pointer Location
+### Deslocamento a partir da Localização Atual do Ponteiro
+Este método move o mouse a partir de sua posição atual pelo deslocamento fornecido pelo usuário. Se o mouse não tiver sido movido anteriormente, a posição será no canto superior esquerdo da janela de visualização. É importante notar que a posição do ponteiro não muda quando a página é rolada.
 
-This method moves the mouse from its current position by the offset provided by the user.
-If the mouse has not previously been moved, the position will be in the upper left
-corner of the viewport.
-Note that the pointer position does not change when the page is scrolled.
-
-Note that the first argument X specifies to move right when positive, while the second argument
-Y specifies to move down when positive. So `moveByOffset(30, -10)` moves right 30 and up 10 from
-the current mouse position.
+Observe que o primeiro argumento, X, especifica o movimento para a direita quando positivo, enquanto o segundo argumento, Y, especifica o movimento para baixo quando positivo. Portanto, `moveByOffset(30, -10)` move o mouse 30 unidades para a direita e 10 unidades para cima a partir da posição atual do mouse.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -302,10 +287,9 @@ the current mouse position.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Drag and Drop on Element
+## Arrastar e Soltar no Elemento
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+Este método primeiro realiza um clique e mantém pressionado no elemento de origem, move para a localização do elemento de destino e, em seguida, libera o botão do mouse.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -328,9 +312,9 @@ moves to the location of the target element and then releases the mouse.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Drag and Drop by Offset
+## Arrastar e Soltar pelo Deslocamento
 
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+Este método primeiro realiza um clique e mantém pressionado no elemento de origem, move para o deslocamento fornecido e, em seguida, libera o botão do mouse.
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}

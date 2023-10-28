@@ -42,6 +42,16 @@ feito diretamente com o Selenium, simulando os retornos esperados.
 Esta simulação pode ser feita por gravação / reprodução ou por meio de
 os diferentes idiomas suportados, conforme explicado nesta documentação.
 
+### Testes de Integração
+
+Os testes de integração verificam as interações entre diferentes componentes ou módulos de um sistema. Vários módulos são testados juntos. O objetivo dos testes de integração é garantir que todos os módulos se integrem e funcionem juntos conforme esperado. Os testes de integração automatizados ajudam a garantir que essas interações funcionem conforme o esperado e que os componentes integrados funcionem corretamente juntos.
+>Por exemplo, **_Testando o fluxo de pedido de um item em um site de comércio eletrônico junto com o pagamento._**
+
+### Testes de sistema
+
+O System Testing é um teste de produto completo e totalmente integrado. É um teste ponta a ponta onde o ambiente de teste é semelhante ao ambiente de produção. Aqui, navegamos por todos os recursos do software e testamos se o negócio final/recurso final funciona. Apenas testamos o recurso final e não verificamos o fluxo de dados, nem fazemos testes funcionais e tudo mais.
+>Por exemplo, **_Testando o fluxo de ponta a ponta desde o login até a colocação e pedido e verificando novamente o pedido na página Meus Pedidos e logoff de um site de comércio eletrônico._**
+
 ### Teste de performance/desempenho
 Como o próprio nome indica, testes de desempenho são feitos
 para medir o desempenho de um aplicativo.

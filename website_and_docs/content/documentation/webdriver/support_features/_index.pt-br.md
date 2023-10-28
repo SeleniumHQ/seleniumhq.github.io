@@ -1,9 +1,9 @@
 ---
-title: "Support Features"
-linkTitle: "Support Features"
+title: "Recursos de suporte"
+linkTitle: "Recursos de suporte"
 weight: 18
 description: >
-  Support classes provide optional higher level features.
+ As classes de suporte fornecem características opcionais de nível superior.
 aliases: [
 "/documentation/pt-br/support_packages/",
 "/pt-br/documentation/support_packages/",
@@ -11,6 +11,6 @@ aliases: [
 ]
 ---
 
-The core libraries of Selenium try to be low level and non-opinionated.
-The Support classes in each language provide opinionated wrappers for common interactions
-that may be used to simplify some behaviors.
+As bibliotecas principais do Selenium tentam ser de baixo nível e não opinativas.
+As classes de suporte em cada linguagem fornecem invólucros opinativos para interações comuns
+que podem ser usadas para simplificar alguns comportamentos.
