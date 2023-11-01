@@ -57,6 +57,16 @@ jobs:
         echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
         echo "EDGE_BIN=${{ steps.setup-edge.outputs.edge-path }}" >> "$GITHUB_ENV"
         echo "FF_BIN=${{ steps.setup-firefox.outputs.firefox-path }}" >> "$GITHUB_ENV"
+    - name: Remove driver directories Windows
+      if: matrix.os == 'windows'
+      run: |
+        rm "$env:ChromeWebDriver" -r -v
+        rm "$env:EdgeWebDriver" -r -v
+        rm "$env:GeckoWebDriver" -r -v
+    - name: Remove driver directories Non-Windows
+      if: matrix.os != 'windows'
+      run: |
+        sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
