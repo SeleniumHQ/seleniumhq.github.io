@@ -12,9 +12,9 @@ gem 'selenium-devtools', '~> 0.116'
 if ENV['SE_NIGHTLY']
   source 'https://rubygems.pkg.github.com/seleniumhq' do
     selenium = 'selenium-webdriver'
-    gem selenium, '~> 4.15.0.nightly'
+    gem selenium, '~> 4.16.0.nightly'
   end
 else
-  gem 'selenium-webdriver', '= 4.14.0'
+  gem 'selenium-webdriver', '= 4.15.0'
 end
 
