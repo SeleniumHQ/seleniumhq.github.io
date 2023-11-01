@@ -68,6 +68,68 @@ edge can only be installed in Windows with administrator permissions
 
 Therefore, administrator permissions are required to install Edge in Windows automatically through Selenium Manager, and Edge is eventually installed in the usual program files folder (e.g., `C:\Program Files (x86)\Microsoft\Edge`).
 
+## Example WebDriver Code
+
+These are provided in C# but similar code would work for other languages. 
+
+If you want to use ChromeDriver for the version currently installed on your machine, then you can run:
+
+```
+using OpenQA.Selenium.Chrome;
+
+namespace drivermanagertest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var driverOptions = new ChromeOptions();
+            var driver = new ChromeDriver(driverOptions);
+            driver.Navigate().GoToUrl("https://example.com");
+            driver.Quit();
+        }
+    }
+}
+```
+
+When executed on a Windows x64 machine with Chrome version 119.x installed then SeleniumManager would generate the following directory structure and files in the `~/.cache/selenium` directory:
+
+```
+se-metadata.json
+chromedriver/win64/119.0.6045.105/chromedriver.exe
+```
+
+If you wanted to use an older version of Chrome, let's say 117, then you can run:
+
+```
+using OpenQA.Selenium.Chrome;
+
+namespace drivermanagertest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var driverOptions = new ChromeOptions();
+            var driver = new ChromeDriver(driverOptions);
+            driverOptions.BrowserVersion = "117";
+            driver.Navigate().GoToUrl("https://example.com");
+            driver.Quit();
+        }
+    }
+}
+```
+
+When executed on a Windows x64 machine then SeleniumManager would generate the following directory structure and files in the `~/.cache/selenium` directory:
+
+```
+se-metadata.json
+chromedriver/win64/117.0.5938.149/chromedriver.exe
+chrome/win64/117.0.5938.149 # The Chrome for Testing browser files are present here
+```
+
+Selenium Manager in both cases uses the available Browsers, Drivers, and requested Versions to determine what is necessary and obtains the files from remote locations. Reruns would use the cached files as explained fruther on.
+
 ## Configuration
 ***TL;DR:*** *Selenium Manager should work silently and transparently for most users. Nevertheless, there are scenarios (e.g., to specify a custom cache path or setup globally a proxy) where custom configuration can be required.*
 
