@@ -1,4 +1,4 @@
-selenium==4.15.0
+selenium==4.15.1
 pytest
 trio
 pytest-trio
