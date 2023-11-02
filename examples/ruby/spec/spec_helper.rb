@@ -41,16 +41,4 @@ RSpec.configure do |config|
     options = Selenium::WebDriver::Options.firefox(timeouts: {implicit: 1500})
     @driver = Selenium::WebDriver.for :firefox, options: options
   end
-
-  # This can be removed with Selenium 4.14
-  module Selenium
-    module WebDriver
-      module Atoms
-        def atom_script(function_name)
-          format("/* #{function_name} */return (%<atom>s).apply(null, arguments)",
-                 atom: read_atom(function_name))
-        end
-      end
-    end
-  end
 end

@@ -17,4 +17,3 @@ if ENV['SE_NIGHTLY']
 else
   gem 'selenium-webdriver', '= 4.15.0'
 end
-
