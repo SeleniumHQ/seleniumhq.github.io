@@ -4,8 +4,6 @@ import subprocess
 
 from selenium import webdriver
 
-CHROME_LOCATION = os.getenv("CHROME_BIN")
-
 
 def test_basic_options():
     options = webdriver.ChromeOptions()
@@ -25,10 +23,10 @@ def test_args():
     driver.quit()
 
 
-def test_set_browser_location():
+def test_set_browser_location(chrome_bin):
     options = webdriver.ChromeOptions()
 
-    options.binary_location = CHROME_LOCATION
+    options.binary_location = chrome_bin
 
     driver = webdriver.Chrome(options=options)
 
@@ -37,9 +35,9 @@ def test_set_browser_location():
 
 def test_add_extension():
     options = webdriver.ChromeOptions()
-    path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
+    extension_file_path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
 
-    options.add_extension(path)
+    options.add_extension(extension_file_path)
 
     driver = webdriver.Chrome(options=options)
     driver.get("https://www.selenium.dev/selenium/web/blank.html")

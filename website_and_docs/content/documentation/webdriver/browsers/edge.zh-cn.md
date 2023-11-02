@@ -22,10 +22,10 @@ Capabilities unique to Chromium are documented at Google's page for
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L39-L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L37-L38" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L12-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L30-L31" >}}
@@ -54,10 +54,10 @@ Add an argument to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L47" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L45" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L21" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L18" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L39" >}}
@@ -82,10 +82,10 @@ Add a browser location to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L56" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L54" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#32">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L29">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L49" >}}
@@ -111,10 +111,10 @@ Add an extension to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L67" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L65" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L43" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L40" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L61" >}}
@@ -140,7 +140,7 @@ so long as the quit command is not sent to the driver.
 **Note**: This is already the default behavior in Java.
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L54" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L51" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 **Note**: This is already the default behavior in .NET.
@@ -168,10 +168,10 @@ Set excluded arguments on options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L79" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L78" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L65" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L76" >}}
@@ -205,13 +205,13 @@ To change the logging output to save to a specific file:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L87" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L100" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L74" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
@@ -235,7 +235,7 @@ To change the logging output to display in the console as STDOUT:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L113" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
@@ -267,13 +267,13 @@ so this example is just setting the log level generically:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L116" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L126-L127" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L97" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -301,13 +301,13 @@ The log output will be managed by the driver, not the process, so minor differen
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L133-L134" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L142-L143" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` and `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L108" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -333,13 +333,13 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L152" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L160-L161" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L119" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}

@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Edge' do
   describe 'Options' do
-    let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
+    let(:edge_location) { driver_finder && ENV.fetch('EDGE_BIN', nil) }
 
     it 'basic options' do
       options = Selenium::WebDriver::Options.edge
@@ -14,7 +14,7 @@ RSpec.describe 'Edge' do
     it 'add arguments' do
       options = Selenium::WebDriver::Options.edge
 
-      options.args << '--maximize'
+      options.args << '--start-maximized'
 
       @driver = Selenium::WebDriver.for :edge, options: options
     end
@@ -50,7 +50,7 @@ RSpec.describe 'Edge' do
     it 'excludes switches' do
       options = Selenium::WebDriver::Options.edge
 
-      options.exclude_switches << 'enable-automation'
+      options.exclude_switches << 'disable-popup-blocking'
 
       @driver = Selenium::WebDriver.for :edge, options: options
     end
@@ -111,5 +111,11 @@ RSpec.describe 'Edge' do
       warning = /\[WARNING\]: You are using an unsupported command-line switch: --disable-build-check/
       expect(File.readlines(file_name).grep(warning).any?).to eq true
     end
+  end
+
+  def driver_finder
+    options = Selenium::WebDriver::Options.edge(browser_version: 'stable')
+    ENV['EDGEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Edge::Service)
+    ENV['EDGE_BIN'] = options.binary
   end
 end

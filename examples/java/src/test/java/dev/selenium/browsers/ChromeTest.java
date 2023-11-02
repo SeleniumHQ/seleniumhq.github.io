@@ -1,11 +1,19 @@
 package dev.selenium.browsers;
 
-import com.google.common.collect.ImmutableList;
+import dev.selenium.BaseTest;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Pdf;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -14,192 +22,163 @@ import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.print.PrintOptions;
+import org.openqa.selenium.manager.SeleniumManagerOutput;
+import org.openqa.selenium.remote.service.DriverFinder;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Base64;
-import java.util.logging.Level;
-import java.util.regex.Pattern;
+public class ChromeTest extends BaseTest {
+  @AfterEach
+  public void clearProperties() {
+    System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
+    System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
+  }
 
-public class ChromeTest {
-    private ChromeDriver driver;
-    private File logLocation;
+  @Test
+  public void basicOptions() {
+    ChromeOptions options = new ChromeOptions();
+    driver = new ChromeDriver(options);
+  }
 
-    @AfterEach
-    public void quit() {
-        if (logLocation != null && logLocation.exists()) {
-            logLocation.delete();
-        }
-        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
-        System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
+  @Test
+  public void arguments() {
+    ChromeOptions options = new ChromeOptions();
 
-        driver.quit();
-    }
+    options.addArguments("--start-maximized");
 
-    @Test
-    public void basicOptions() throws IOException {
-        ChromeOptions options = new ChromeOptions();
-//        options.setExperimentalOption("perfLoggingPrefs", ImmutableMap.of("enableNetwork", true));
-        LoggingPreferences logPrefs = new LoggingPreferences();
-        logPrefs.enable(LogType.BROWSER, Level.ALL);
-        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
-        options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
+    driver = new ChromeDriver(options);
+  }
 
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev");
-        driver.manage().logs().get(LogType.PERFORMANCE).forEach(System.out::println);
+  @Test
+  public void setBrowserLocation() {
+    ChromeOptions options = new ChromeOptions();
 
-        String content = driver.print(new PrintOptions()).getContent();
-        byte[] bytes = Base64.getDecoder().decode(content);
-        Files.write(Paths.get("printed.pdf"), bytes);
-    }
+    options.setBinary(getChromeLocation());
 
-    @Test
-    public void arguments() {
-        ChromeOptions options = new ChromeOptions();
+    driver = new ChromeDriver(options);
+  }
 
-        options.addArguments("--start-maximized");
+  @Test
+  public void extensionOptions() {
+    ChromeOptions options = new ChromeOptions();
+    Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+    File extensionFilePath = new File(path.toUri());
 
-        driver = new ChromeDriver(options);
-    }
+    options.addExtensions(extensionFilePath);
 
-    @Test
-    public void setBrowserLocation() {
-        ChromeOptions options = new ChromeOptions();
+    driver = new ChromeDriver(options);
+    driver.get("https://www.selenium.dev/selenium/web/blank.html");
+    WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+    Assertions.assertEquals(
+        "Content injected by webextensions-selenium-example", injected.getText());
+  }
 
-        options.setBinary(getChromeLocation());
+  @Test
+  public void excludeSwitches() {
+    ChromeOptions options = new ChromeOptions();
 
-        driver = new ChromeDriver(options);
-    }
+    options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
-    @Test
-    public void extensionOptions() {
-        ChromeOptions options = new ChromeOptions();
-        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-        File extensionPath = new File(path.toUri());
+    driver = new ChromeDriver(options);
+  }
 
-        options.addExtensions(extensionPath);
+  @Test
+  public void loggingPreferences() {
+    ChromeOptions options = new ChromeOptions();
+    LoggingPreferences logPrefs = new LoggingPreferences();
+    logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+    options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
 
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
-        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
-    }
+    driver = new ChromeDriver(options);
+    driver.get("https://www.selenium.dev");
 
-    @Test
-    public void excludeSwitches() {
-        ChromeOptions options = new ChromeOptions();
+    LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
+    Assertions.assertFalse(logEntries.getAll().isEmpty());
+  }
 
-        options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
+  @Test
+  public void logsToFile() throws IOException {
+    File logLocation = getTempFile("logsToFile", ".log");
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().withLogFile(logLocation).build();
 
-        driver = new ChromeDriver(options);
-    }
+    driver = new ChromeDriver(service);
 
-    @Test
-    public void loggingPreferences() {
-        ChromeOptions options = new ChromeOptions();
-        LoggingPreferences logPrefs = new LoggingPreferences();
-        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
-        options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("Starting ChromeDriver"));
+  }
 
-        driver = new ChromeDriver(options);
-        driver.get("https://www.selenium.dev");
+  @Test
+  public void logsToConsole() throws IOException {
+    File logLocation = getTempFile("logsToConsole", ".log");
+    System.setOut(new PrintStream(logLocation));
 
-        LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
-        Assertions.assertFalse(logEntries.getAll().isEmpty());
-    }
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().withLogOutput(System.out).build();
 
-    @Test
-    public void logsToFile() throws IOException {
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .withLogFile(getLogLocation())
-                .build();
+    driver = new ChromeDriver(service);
 
-        driver = new ChromeDriver(service);
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("Starting ChromeDriver"));
+  }
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("Starting ChromeDriver"));
-    }
+  @Test
+  public void logsWithLevel() throws IOException {
+    File logLocation = getTempFile("logsWithLevel", ".log");
+    System.setProperty(
+        ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
 
-    @Test
-    public void logsToConsole() throws IOException {
-        System.setOut(new PrintStream(getLogLocation()));
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().withLogLevel(ChromiumDriverLogLevel.DEBUG).build();
 
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .withLogOutput(System.out)
-                .build();
+    driver = new ChromeDriver(service);
 
-        driver = new ChromeDriver(service);
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
+  }
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("Starting ChromeDriver"));
-    }
+  @Test
+  public void configureDriverLogs() throws IOException {
+    File logLocation = getTempFile("configureDriverLogs", ".log");
+    System.setProperty(
+        ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
+    System.setProperty(
+        ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY,
+        ChromiumDriverLogLevel.DEBUG.toString());
 
-    @Test
-    public void logsWithLevel() throws IOException {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().withAppendLog(true).withReadableTimestamp(true).build();
 
-        ChromeDriverService service = new ChromeDriverService.Builder()
-            .withLogLevel(ChromiumDriverLogLevel.DEBUG)
-            .build();
+    driver = new ChromeDriver(service);
 
-        driver = new ChromeDriver(service);
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+    Assertions.assertTrue(pattern.matcher(fileContent).find());
+  }
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
-    }
+  @Test
+  public void disableBuildChecks() throws IOException {
+    File logLocation = getTempFile("disableBuildChecks", ".log");
+    System.setProperty(
+        ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
+    System.setProperty(
+        ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY,
+        ChromiumDriverLogLevel.WARNING.toString());
 
-    @Test
-    public void configureDriverLogs() throws IOException {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY,
-                ChromiumDriverLogLevel.DEBUG.toString());
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().withBuildCheckDisabled(true).build();
 
-        ChromeDriverService service = new ChromeDriverService.Builder()
-            .withAppendLog(true)
-            .withReadableTimestamp(true)
-            .build();
+    driver = new ChromeDriver(service);
 
-        driver = new ChromeDriver(service);
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    String expected =
+        "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
+    Assertions.assertTrue(fileContent.contains(expected));
+  }
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
-        Assertions.assertTrue(pattern.matcher(fileContent).find());
-    }
-
-    @Test
-    public void disableBuildChecks() throws IOException {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY,
-                ChromiumDriverLogLevel.WARNING.toString());
-
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .withBuildCheckDisabled(true)
-                .build();
-
-        driver = new ChromeDriver(service);
-
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        String expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-        Assertions.assertTrue(fileContent.contains(expected));
-    }
-
-    private File getLogLocation() throws IOException {
-        if (logLocation == null || !logLocation.exists()) {
-            logLocation = File.createTempFile("chromedriver-", ".log");
-        }
-
-        return logLocation;
-    }
-
-    private File getChromeLocation() {
-        File location = new File(System.getenv("CHROME_BIN"));
-        return location.exists() ? location : null;
-    }
+  private File getChromeLocation() {
+    ChromeOptions options = new ChromeOptions();
+    options.setBrowserVersion("stable");
+    SeleniumManagerOutput.Result output =
+        DriverFinder.getPath(ChromeDriverService.createDefaultService(), options);
+    return new File(output.getBrowserPath());
+  }
 }

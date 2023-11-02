@@ -171,9 +171,14 @@ namespace SeleniumDocs.Browsers
             return _logLocation;
         }
 
-        private string GetEdgeLocation()
+        private static string GetEdgeLocation()
         {
-            return Environment.GetEnvironmentVariable("EDGE_BIN");
+            var options = new EdgeOptions
+            {
+                BrowserVersion = "stable"
+            };
+            DriverFinder.FullPath(options);
+            return options.BinaryLocation;
         }
     }
 }

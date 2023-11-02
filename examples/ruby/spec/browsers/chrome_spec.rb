@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Chrome' do
   describe 'Options' do
-    let(:chrome_location) { ENV.fetch('CHROME_BIN', nil) }
+    let(:chrome_location) { driver_finder && ENV.fetch('CHROME_BIN', nil) }
 
     it 'basic options' do
       options = Selenium::WebDriver::Options.chrome
@@ -14,7 +14,7 @@ RSpec.describe 'Chrome' do
     it 'add arguments' do
       options = Selenium::WebDriver::Options.chrome
 
-      options.args << '--maximize'
+      options.args << '--start-maximized'
 
       @driver = Selenium::WebDriver.for :chrome, options: options
     end
@@ -50,7 +50,7 @@ RSpec.describe 'Chrome' do
     it 'excludes switches' do
       options = Selenium::WebDriver::Options.chrome
 
-      options.exclude_switches << 'enable-automation'
+      options.exclude_switches << 'disable-popup-blocking'
 
       @driver = Selenium::WebDriver.for :chrome, options: options
     end
@@ -111,5 +111,11 @@ RSpec.describe 'Chrome' do
       warning = /\[WARNING\]: You are using an unsupported command-line switch: --disable-build-check/
       expect(File.readlines(file_name).grep(warning).any?).to eq true
     end
+  end
+
+  def driver_finder
+    options = Selenium::WebDriver::Options.chrome(browser_version: 'stable')
+    ENV['CHROMEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Chrome::Service)
+    ENV['CHROME_BIN'] = options.binary
   end
 end

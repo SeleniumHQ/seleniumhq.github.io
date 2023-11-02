@@ -65,13 +65,13 @@ jobs:
         echo "EDGE_BIN=/opt/hostedtoolcache/msedge/stable/x64/msedge" >> "$GITHUB_ENV"
         echo "FF_BIN=/opt/hostedtoolcache/firefox/latest/x64/firefox" >> "$GITHUB_ENV"
     - name: Remove driver directories Windows
-      if: matrix.os == 'windows'
+      if: matrix.os == 'windows-latest'
       run: |
         rm "$env:ChromeWebDriver" -r -v
         rm "$env:EdgeWebDriver" -r -v
         rm "$env:GeckoWebDriver" -r -v
     - name: Remove driver directories Non-Windows
-      if: matrix.os != 'windows'
+      if: matrix.os != 'windows-latest'
       run: |
         sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb

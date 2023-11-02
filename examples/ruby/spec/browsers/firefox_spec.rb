@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Firefox' do
   describe 'Options' do
-    let(:firefox_location) { ENV.fetch('FF_BIN', nil) }
+    let(:firefox_location) { driver_finder && ENV.fetch('FIREFOX_BIN', nil) }
 
     it 'basic options' do
       options = Selenium::WebDriver::Options.firefox
@@ -118,5 +118,11 @@ RSpec.describe 'Firefox' do
       injected = driver.find_element(id: 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
+  end
+
+  def driver_finder
+    options = Selenium::WebDriver::Options.firefox(browser_version: 'stable')
+    ENV['GECKODRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Firefox::Service)
+    ENV['FIREFOX_BIN'] = options.binary
   end
 end
