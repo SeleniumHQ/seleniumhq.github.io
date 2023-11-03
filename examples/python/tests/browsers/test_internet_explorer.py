@@ -5,14 +5,12 @@ import sys
 import pytest
 from selenium import webdriver
 
-EDGE_LOCATION = os.getenv("EDGE_BIN")
-
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
-def test_basic_options_win10():
+def test_basic_options_win10(edge_bin):
     options = webdriver.IeOptions()
     options.attach_to_edge_chrome = True
-    options.edge_executable_path = EDGE_LOCATION
+    options.edge_executable_path = edge_bin
     driver = webdriver.Ie(options=options)
 
     driver.quit()

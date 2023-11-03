@@ -32,13 +32,13 @@ Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with b
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#38-L41" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L13-L16" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L11-L14" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L35-L38" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L8-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L10-L13" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -61,13 +61,13 @@ So, if IE is not on the system, you only need:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
 {{< /tab >}}
 {{% tab header="Python" text=true %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L23-L24" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L21-L22" >}}
 {{% /tab %}}
 {{% tab header="CSharp" text=true %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L44-L45" >}}
 {{% /tab %}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L15-L16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let driver = await new Builder()
@@ -603,7 +603,7 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L31" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L29" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -634,7 +634,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L43" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -663,7 +663,7 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
 Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L55" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L53" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
@@ -691,7 +691,7 @@ Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L67" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L65" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}

@@ -195,9 +195,14 @@ namespace SeleniumDocs.Browsers
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
 
-        private string GetFirefoxLocation()
+        private static string GetFirefoxLocation()
         {
-            return Environment.GetEnvironmentVariable("FF_BIN");
+            var options = new FirefoxOptions()
+            {
+                BrowserVersion = "stable"
+            };
+            DriverFinder.FullPath(options);
+            return options.BinaryLocation;
         }
     }
 }

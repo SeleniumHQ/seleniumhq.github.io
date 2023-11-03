@@ -5,8 +5,6 @@ import sys
 import pytest
 from selenium import webdriver
 
-FIREFOX_LOCATION = os.getenv("FF_BIN")
-
 
 def test_basic_options():
     options = webdriver.FirefoxOptions()
@@ -24,10 +22,10 @@ def test_arguments():
     driver.quit()
 
 
-def test_set_browser_location():
+def test_set_browser_location(firefox_bin):
     options = webdriver.FirefoxOptions()
 
-    options.binary_location = FIREFOX_LOCATION
+    options.binary_location = firefox_bin
 
     driver = webdriver.Firefox(options=options)
 

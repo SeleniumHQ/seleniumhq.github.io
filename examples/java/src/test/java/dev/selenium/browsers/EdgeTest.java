@@ -1,6 +1,15 @@
 package dev.selenium.browsers;
 
-import com.google.common.collect.ImmutableList;
+import dev.selenium.BaseTest;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,165 +19,160 @@ import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.manager.SeleniumManagerOutput;
+import org.openqa.selenium.remote.service.DriverFinder;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.regex.Pattern;
+public class EdgeTest extends BaseTest {
+  @AfterEach
+  public void clearProperties() {
+    System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY);
+    System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY);
+  }
 
-public class EdgeTest {
-    private EdgeDriver driver;
-    private File logLocation;
+  @Test
+  public void basicOptions() {
+    EdgeOptions options = new EdgeOptions();
+    driver = new EdgeDriver(options);
+  }
 
-    @AfterEach
-    public void quit() {
-        if (logLocation != null && logLocation.exists()) {
-            logLocation.delete();
-        }
-        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY);
-        System.clearProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY);
+  @Test
+  public void arguments() {
+    EdgeOptions options = new EdgeOptions();
 
-        driver.quit();
-    }
+    options.addArguments("--start-maximized");
 
-    @Test
-    public void basicOptions() {
-        EdgeOptions options = new EdgeOptions();
-        driver = new EdgeDriver(options);
-    }
+    driver = new EdgeDriver(options);
+  }
 
-    @Test
-    public void arguments() {
-        EdgeOptions options = new EdgeOptions();
+  @Test
+  public void setBrowserLocation() {
+    EdgeOptions options = new EdgeOptions();
 
-        options.addArguments("--start-maximized");
+    options.setBinary(getEdgeLocation());
 
-        driver = new EdgeDriver(options);
-    }
+    driver = new EdgeDriver(options);
+  }
 
-    @Test
-    public void setBrowserLocation() {
-        EdgeOptions options = new EdgeOptions();
+  @Test
+  public void extensionOptions() {
+    EdgeOptions options = new EdgeOptions();
+    Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
+    File extensionFilePath = new File(path.toUri());
 
-        options.setBinary(getEdgeLocation());
+    options.addExtensions(extensionFilePath);
 
-        driver = new EdgeDriver(options);
-    }
+    driver = new EdgeDriver(options);
+    driver.get("https://www.selenium.dev/selenium/web/blank.html");
+    WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
+    Assertions.assertEquals(
+        "Content injected by webextensions-selenium-example", injected.getText());
+  }
 
-    @Test
-    public void extensionOptions() {
-        EdgeOptions options = new EdgeOptions();
-        Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-        File extensionPath = new File(path.toUri());
+  @Test
+  public void excludeSwitches() {
+    EdgeOptions options = new EdgeOptions();
 
-        options.addExtensions(extensionPath);
+    options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
-        driver = new EdgeDriver(options);
-        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-        WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
-        Assertions.assertEquals("Content injected by webextensions-selenium-example", injected.getText());
-    }
+    driver = new EdgeDriver(options);
+  }
 
-    @Test
-    public void excludeSwitches() {
-        EdgeOptions options = new EdgeOptions();
+  @Test
+  public void loggingPreferences() {
+    EdgeOptions options = new EdgeOptions();
+    LoggingPreferences logPrefs = new LoggingPreferences();
+    logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+    options.setCapability(EdgeOptions.LOGGING_PREFS, logPrefs);
 
-        options.setExperimentalOption("excludeSwitches", ImmutableList.of("disable-popup-blocking"));
+    driver = new EdgeDriver(options);
+    driver.get("https://www.selenium.dev");
 
-        driver = new EdgeDriver(options);
-    }
+    LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
+    Assertions.assertFalse(logEntries.getAll().isEmpty());
+  }
 
-    @Test
-    public void logsToFile() throws IOException {
-        EdgeDriverService service = new EdgeDriverService.Builder()
-                .withLogFile(getLogLocation())
-                .build();
+  @Test
+  public void logsToFile() throws IOException {
+    File logLocation = getTempFile("logsToFile", ".log");
+    EdgeDriverService service = new EdgeDriverService.Builder().withLogFile(logLocation).build();
 
-        driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service);
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
-    }
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
+  }
 
-    @Test
-    public void logsToConsole() throws IOException {
-        System.setOut(new PrintStream(getLogLocation()));
+  @Test
+  public void logsToConsole() throws IOException {
+    File logLocation = getTempFile("logsToConsole", ".log");
+    System.setOut(new PrintStream(logLocation));
 
-        EdgeDriverService service = new EdgeDriverService.Builder()
-                .withLogOutput(System.out)
-                .build();
+    EdgeDriverService service = new EdgeDriverService.Builder().withLogOutput(System.out).build();
 
-        driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service);
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
-    }
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
+  }
 
-    @Test
-    public void logsWithLevel() throws IOException {
-        System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
+  @Test
+  public void logsWithLevel() throws IOException {
+    File logLocation = getTempFile("logsWithLevel", ".log");
+    System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
 
-        EdgeDriverService service = new EdgeDriverService.Builder()
-            .withLoglevel(ChromiumDriverLogLevel.DEBUG)
-            .build();
+    EdgeDriverService service =
+        new EdgeDriverService.Builder().withLoglevel(ChromiumDriverLogLevel.DEBUG).build();
 
-        driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service);
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
-    }
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
+  }
 
-    @Test
-    public void configureDriverLogs() throws IOException {
-        System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
-        System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY,
-                ChromiumDriverLogLevel.DEBUG.toString());
+  @Test
+  public void configureDriverLogs() throws IOException {
+    File logLocation = getTempFile("configureDriverLogs", ".log");
+    System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
+    System.setProperty(
+        EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY, ChromiumDriverLogLevel.DEBUG.toString());
 
-        EdgeDriverService service = new EdgeDriverService.Builder()
-            .withAppendLog(true)
-            .withReadableTimestamp(true)
-            .build();
+    EdgeDriverService service =
+        new EdgeDriverService.Builder().withAppendLog(true).withReadableTimestamp(true).build();
 
-        driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service);
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
-        Assertions.assertTrue(pattern.matcher(fileContent).find());
-    }
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+    Assertions.assertTrue(pattern.matcher(fileContent).find());
+  }
 
-    @Test
-    public void disableBuildChecks() throws IOException {
-        System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY,
-                getLogLocation().getAbsolutePath());
-        System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY,
-                ChromiumDriverLogLevel.WARNING.toString());
+  @Test
+  public void disableBuildChecks() throws IOException {
+    File logLocation = getTempFile("disableBuildChecks", ".log");
+    System.setProperty(EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY, logLocation.getAbsolutePath());
+    System.setProperty(
+        EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY,
+        ChromiumDriverLogLevel.WARNING.toString());
 
-        EdgeDriverService service = new EdgeDriverService.Builder()
-                .withBuildCheckDisabled(true)
-                .build();
+    EdgeDriverService service =
+        new EdgeDriverService.Builder().withBuildCheckDisabled(true).build();
 
-        driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service);
 
-        String fileContent = new String(Files.readAllBytes(getLogLocation().toPath()));
-        String expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-        Assertions.assertTrue(fileContent.contains(expected));
-    }
+    String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
+    String expected =
+        "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
+    Assertions.assertTrue(fileContent.contains(expected));
+  }
 
-    private File getLogLocation() throws IOException {
-        if (logLocation == null || !logLocation.exists()) {
-            logLocation = File.createTempFile("msedgedriver-", ".log");
-        }
-
-        return logLocation;
-    }
-
-    private File getEdgeLocation() {
-        File location = new File(System.getenv("EDGE_BIN"));
-        return location.exists() ? location : null;
-    }
+  private File getEdgeLocation() {
+    EdgeOptions options = new EdgeOptions();
+    options.setBrowserVersion("stable");
+    SeleniumManagerOutput.Result output =
+        DriverFinder.getPath(EdgeDriverService.createDefaultService(), options);
+    return new File(output.getBrowserPath());
+  }
 }

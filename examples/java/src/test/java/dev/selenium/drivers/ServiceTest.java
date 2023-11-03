@@ -1,7 +1,7 @@
 package dev.selenium.drivers;
 
 import dev.selenium.BaseTest;
-import org.junit.jupiter.api.AfterEach;
+import java.io.File;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -9,41 +9,38 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.manager.SeleniumManagerOutput;
 import org.openqa.selenium.remote.service.DriverFinder;
 
-import java.io.File;
-
 public class ServiceTest extends BaseTest {
-    public File getDriverLocation() {
-        SeleniumManagerOutput.Result location = DriverFinder.getPath(ChromeDriverService.createDefaultService(), new ChromeOptions());
-        return new File(location.getDriverPath());
-    }
+  @Test
+  public void defaultService() {
+    ChromeDriverService service = new ChromeDriverService.Builder().build();
+    driver = new ChromeDriver(service);
+  }
 
-    @AfterEach
-    public void quit() {
-        driver.quit();
-    }
+  @Test
+  public void setDriverLocation() {
+    setBinaryPaths();
+    ChromeOptions options = new ChromeOptions();
+    options.setBinary(browserPath);
 
-    @Test
-    public void defaultService() {
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .build();
-        driver = new ChromeDriver(service);
-    }
+    ChromeDriverService service =
+        new ChromeDriverService.Builder().usingDriverExecutable(driverPath).build();
 
-    @Test
-    public void setDriverLocation() {
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingDriverExecutable(getDriverLocation())
-                .build();
+    driver = new ChromeDriver(service, options);
+  }
 
-        driver = new ChromeDriver(service);
-    }
+  @Test
+  public void setPort() {
+    ChromeDriverService service = new ChromeDriverService.Builder().usingPort(1234).build();
 
-    @Test
-    public void setPort() {
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingPort(1234)
-                .build();
+    driver = new ChromeDriver(service);
+  }
 
-        driver = new ChromeDriver(service);
-    }
+  private void setBinaryPaths() {
+    ChromeOptions options = new ChromeOptions();
+    options.setBrowserVersion("stable");
+    SeleniumManagerOutput.Result location =
+        DriverFinder.getPath(ChromeDriverService.createDefaultService(), options);
+    driverPath = new File(location.getDriverPath());
+    browserPath = new File(location.getBrowserPath());
+  }
 }

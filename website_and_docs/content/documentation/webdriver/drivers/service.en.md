@@ -18,7 +18,7 @@ To start a driver with a default service instance:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L34-L36" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L15-L16" >}}
 **Note**: Java Service classes only allow values to be set during construction with a Builder pattern.
 {{% /tab %}}
 {{% tab header="Python" %}}
@@ -31,7 +31,7 @@ To start a driver with a default service instance:
 **Note**: .NET Service classes allow values to be set as properties.
 {{% /tab %}}
 {{% tab header="Ruby" %}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L12-L13" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L14-L15" >}}
 **Note**: Ruby Service classes allow values to be set either as arguments in the constructor or as attributes.
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
@@ -49,19 +49,19 @@ If you cannot update Selenium or have an advanced use case, here is how to speci
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L25-L26" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L12" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L24" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L18" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -77,18 +77,18 @@ If you want the driver to run on a specific port, you may specify it as follows:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L44" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L33" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L20" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L23" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L33" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L34" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L25" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
