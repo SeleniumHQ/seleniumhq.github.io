@@ -56,6 +56,7 @@ But there is even more. In addition to fixed browser versions (e.g., `113`, `114
 - `beta`: Next version to stable.
 - `dev`: Version in development at this moment.
 - `canary`: Nightly build for developers.
+- `esr`: Extended Support Release (only for Firefox).
 
 When these labels are specified, Selenium Manager first checks if a given browser is already installed (`beta`, `dev`, etc.), and when it is not detected, the browser is automatically managed.
 
@@ -94,11 +95,13 @@ The following table summarizes all the supported arguments supported by Selenium
 
 | CLI argument| Configuration file | Env variable | Description |
 |-------------|--------------------|--------------|-------------|
-|`--browser BROWSER`|`browser = "BROWSER"`|`SE_BROWSER=BROWSER`|Browser name: `chrome`, `firefox`, `edge`, `iexplorer`, `safari`, or `safaritp`|
+|`--browser BROWSER`|`browser = "BROWSER"`|`SE_BROWSER=BROWSER`|Browser name: `chrome`, `firefox`, `edge`, `iexplorer`, `safari`, `safaritp`, or `webview2`|
 |`--driver <DRIVER>`|`driver = "DRIVER"`|`SE_DRIVER=DRIVER`|Driver name: `chromedriver`, `geckodriver`, `msedgedriver`, `IEDriverServer`, or `safaridriver`|
-|`--browser-version <BROWSER_VERSION>`|`browser-version = "BROWSER_VERSION"`|`SE_BROWSER_VERSION=BROWSER_VERSION`|Major browser version (e.g., `105`, `106`, etc. Also: `beta`, `dev`, `canary` -or `nightly`- is accepted)|
+|`--browser-version <BROWSER_VERSION>`|`browser-version = "BROWSER_VERSION"`|`SE_BROWSER_VERSION=BROWSER_VERSION`|Major browser version (e.g., `105`, `106`, etc. Also: `beta`, `dev`, `canary` -or `nightly`-, and `esr` -in Firefox- are accepted)|
 |`--driver-version <DRIVER_VERSION>`|`driver-version = "DRIVER_VERSION"`|`SE_DRIVER_VERSION=DRIVER_VERSION`|Driver version (e.g., `106.0.5249.61, 0.31.0`, etc.)|
 |`--browser-path <BROWSER_PATH>`|`browser-path = "BROWSER_PATH"`|`SE_BROWSER_PATH=BROWSER_PATH`|Browser path (absolute) for browser version detection (e.g., `/usr/bin/google-chrome`, `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, `C:\Program Files\Google\Chrome\Application\chrome.exe`)|
+|`--driver-mirror-url <DRIVER_MIRROR_URL>`|`driver-mirror-url = "DRIVER_MIRROR_URL"`|`SE_DRIVER_MIRROR_URL=DRIVER_MIRROR_URL`|Mirror URL for driver repositories|
+|`--browser-mirror-url <BROWSER_MIRROR_URL>`|`browser-mirror-url = "BROWSER_MIRROR_URL"`|`SE_BROWSER_MIRROR_URL=BROWSER_MIRROR_URL`|Mirror URL for browser repositories|
 |`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), or `SHELL` (Unix-like). Default: `LOGGER`|
 |`--os <OS>`|`os = "OS"`|`SE_OS=OS`|Operating system for drivers and browsers (i.e., `windows`, `linux`, or `macos`)|
 |`--arch <ARCH>`|`arch = "ARCH"`|`SE_ARCH=ARCH`|System architecture for drivers and browsers (i.e., `x32`, `x64`, or `arm64`)|
@@ -117,6 +120,8 @@ In addition to the configuration keys specified in the table before, there are s
 - Browser version. In addition to `browser-version`, we can use the specific configuration keys to specify custom versions per supported browser. This way, the keys `chrome-version`, `firefox-version`, `edge-version`, etc., are supported. The same applies to environment variables (i.e., `SE_CHROME_VERSION`, `SE_FIREFOX_VERSION`, `SE_EDGE_VERSION`, etc.).
 - Driver version. Following the same pattern, we can use `chromedriver-version`, `geckodriver-version`,  `msedgedriver-version`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_VERSION`, `SE_GECKODRIVER_VERSION`, `SE_MSEDGEDRIVER_VERSION`,  etc. (as environment variables).
 - Browser path. Following the same pattern, we can use `chrome-path`, `firefox-path`,  `edge-path`,  etc. (in the configuration file), and `SE_CHROME_PATH`, `SE_FIREFOX_PATH`, `SE_EDGE_PATH`,  etc. (as environment variables). The Selenium bindings also allow to specify a custom location of the browser path using options, namely: [Chrome](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location)), [Edge](https://www.selenium.dev/documentation/webdriver/browsers/edge/#start-browser-in-a-specified-location), or [Firefox](https://www.selenium.dev/documentation/webdriver/browsers/firefox/#start-browser-in-a-specified-location).
+- Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
+- Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
@@ -147,7 +152,7 @@ For most users, direct interaction with Selenium Manager is not required since t
 
 - From the Selenium repository. The Selenium Manager source code is stored in the main Selenium repo under the folder [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust). Moreover, you can find the compiled versions for Windows, Linux, and macOS in the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager) of this repo.
 - From the build workflow. Selenium Manager is compiled using a [GitHub Actions workflow]((https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml)). This workflow creates binaries for Windows, Linux, and macOS. You can download these binaries from these workflow executions.
-- From the cache (under development - just in Java). In the upcoming versions of the Selenium Java bindings, the Selenium Manager binaries will be extracted from each binding distribution and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 will be stored in the folder `~/.cache/selenium/manager/0.4.15`).
+- From the cache. As of version 4.15.0 of the Selenium Java bindings, the Selenium Manager binary is extracted and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 is stored in the folder `~/.cache/selenium/manager/0.4.15`).
 
 ## Examples
 Let's consider a typical example: we want to manage chromedriver automatically. For that, we invoke Selenium Manager as follows (notice that the flag `--debug` is optional, but it helps us to understand what Selenium Manager is doing):
