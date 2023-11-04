@@ -28,7 +28,7 @@ RSpec.describe 'Edge' do
     end
 
     it 'add extensions' do
-      extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.crx', __dir__)
+      extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.crx', __dir__)
       options = Selenium::WebDriver::Options.chrome
 
       options.add_extension(extension_file_path)

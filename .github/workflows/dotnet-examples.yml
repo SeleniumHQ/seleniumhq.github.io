@@ -47,6 +47,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 11
     - name: Run tests
       uses: nick-invision/retry@v2.8.3
       with:
