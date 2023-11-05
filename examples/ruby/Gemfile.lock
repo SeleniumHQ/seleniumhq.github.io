@@ -52,7 +52,7 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-devtools (0.117.0)
+    selenium-devtools (0.119.0)
       selenium-webdriver (~> 4.2)
     selenium-webdriver (4.15.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -73,7 +73,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
-  selenium-devtools (~> 0.116)
+  selenium-devtools (~> 0.119)
   selenium-webdriver (= 4.15.0)
 
 BUNDLED WITH
