@@ -1,4 +1,425 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium Open Space Conference Oct 28th</title><link>/blog/2023/selenium-open-space-conference/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-open-space-conference/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.15 Released!</title><link>/blog/2023/selenium-4-15-released/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-15-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.15.0 for Java,
+Javascript, Ruby, .NET and the Grid; 4.15.2 for Python.
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v117, v118, and v119 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Implemented &lt;a href="/documentation/webdriver/drivers/remote_webdriver/#downloads">Remote File Downloads&lt;/a>&lt;/li>
+&lt;li>Selenium Manager supports webview2, Firefox ESR and Driver and Browser Mirrors&lt;/li>
+&lt;/ul>
+&lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
+&lt;ul>
+&lt;li>Java
+&lt;ul>
+&lt;li>Numerous BiDi implementations&lt;/li>
+&lt;li>Remove CDP version dependencies in the server&lt;/li>
+&lt;li>Selenium Manager now gets copied to cache directory instead of being used from temp directory&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>JavaScript
+&lt;ul>
+&lt;li>Replaced calls to console.log with managed loggers&lt;/li>
+&lt;li>Added several BiDi methods&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>.NET
+&lt;ul>
+&lt;li>Improved nuget packages metadata&lt;/li>
+&lt;li>Allows starting service object directly&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Python
+&lt;ul>
+&lt;li>Remove selenium manager accommodation for Conda&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Ruby
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Rust
+&lt;ul>
+&lt;li>Included debug and split-debuginfo in dev profile&lt;/li>
+&lt;li>Changed windows target to stable-i686-pc-windows-gnu&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;h4 id="seleniumhttpsgithubcomseleniumhqselenium">&lt;a href="https://github.com/SeleniumHQ/selenium">Selenium&lt;/a>&lt;/h4>
+&lt;div class="d-flex justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/6851003?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pinterior">@pinterior&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-docs--websitehttpsgithubcomseleniumhqseleniumhqgithubio">&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">Selenium Docs &amp;amp; Website&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/65099941?v=4" class="card-img-top mx-auto" alt="Afranio Alves" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Afranio Alves
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Afranioalves">@Afranioalves&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/657698?v=4" class="card-img-top mx-auto" alt="Anselmo Pfeifer" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Anselmo Pfeifer
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AnselmoPfeifer">@AnselmoPfeifer&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/69565038?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/BlazerYoo">@BlazerYoo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/191885?v=4" class="card-img-top mx-auto" alt="Luis Correia" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luis Correia
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luisfcorreia">@luisfcorreia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/61235494?v=4" class="card-img-top mx-auto" alt="Pallavi" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Pallavi
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pallavigitwork">@pallavigitwork&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14201772?v=4" class="card-img-top mx-auto" alt="Sang Nguyen" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sang Nguyen
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sangcnguyen">@sangcnguyen&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/64757262?v=4" class="card-img-top mx-auto" alt="Vicente Sombo" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Vicente Sombo
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sombo20">@sombo20&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/59474320?v=4" class="card-img-top mx-auto" alt="sripriyapkulkarni" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+sripriyapkulkarni
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/SripriyaPKulkarni">@SripriyaPKulkarni&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/85812228?v=4" class="card-img-top mx-auto" alt="Zachary Zollman" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Zachary Zollman
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/zacharyzollman">@zacharyzollman&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/108852184?v=4" class="card-img-top mx-auto" alt="Vinicius Caetano" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Vinicius Caetano
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/zViniicius">@zViniicius&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="docker-seleniumhttpsgithubcomseleniumhqdocker-selenium">&lt;a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/191885?v=4" class="card-img-top mx-auto" alt="Luis Correia" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Luis Correia
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/luisfcorreia">@luisfcorreia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/3265455?v=4" class="card-img-top mx-auto" alt="Mårten Svantesson" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Mårten Svantesson
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/msvticket">@msvticket&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/33348891?v=4" class="card-img-top mx-auto" alt="Matt Colman" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Matt Colman
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/mtcolman">@mtcolman&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5667657?v=4" class="card-img-top mx-auto" alt="Philippe GRANET" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Philippe GRANET
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/philippe-granet">@philippe-granet&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/283482?v=4" class="card-img-top mx-auto" alt="sebastian haas" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+sebastian haas
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/sehaas">@sehaas&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/23253546?v=4" class="card-img-top mx-auto" alt="Viet Nguyen Duc" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Viet Nguyen Duc
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vietnd96">@vietnd96&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Simon Stewart
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium Open Space Conference Oct 28th</title><link>/blog/2023/selenium-open-space-conference/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-open-space-conference/</guid><description>
 &lt;p>In less than two weeks, Selenium project is holding space for free and online community meetup, the inaugural Selenium Open Space Conference. Open space conferences are ones where everyone is a speaker, and we co-create our agenda for conversations, questions or answers, workshops, sharing and learning.&lt;/p>
 &lt;p>We start our 24 hour event at time of 19 years from the tracked Selenium release announcement. We split the day into four segments to facilitate the global community. We set up an &lt;a href="https://selenium.dev/sosc">event site&lt;/a>, and a mechanism to enroll: by pull request or issue to the &lt;a href="https://github.com/SeleniumHQ/sosc">site in github&lt;/a>.&lt;/p>
 &lt;p>With enrollment, you can already tell if you have a topic in mind you would like to host, and see some (not all!) of the sessions people have in mind for the day.&lt;/p>
@@ -7680,333 +8101,4 @@ release the IDE, and we will post here in #selenium-tlc&lt;/p>
 &lt;p>ok, I think that is all for today, right?&lt;/p>
 &lt;p>does anyone have an extra topic?&lt;/p>
 &lt;p>seems not, thank you everyone!&lt;/p>
-&lt;p>(and thanks @harsha509 for publishing the notes to our blog :slightly_smiling_face:)&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 08, 2021</title><link>/blog/2021/public-project-meeting-20210408/</link><pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210408/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on April 08, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 8:59 PM&lt;/em>&lt;/p>
-&lt;p>Ok, proposed agenda is:&lt;/p>
-&lt;ul>
-&lt;li>General project statistics&lt;/li>
-&lt;li>Stuff implemented/fixed in the last two weeks&lt;/li>
-&lt;li>Pending work that needs to be done for the third Beta?&lt;/li>
-&lt;li>PRs that need to be reviewed&lt;/li>
-&lt;/ul>
-&lt;p>please feel free to add any other topics&lt;/p>
-&lt;p>pinging @titusfortner @manoj9788 @mmerrell @simonstewart @barancev @Puja Jagani @AutomatedTester @harsha509 @jimevans&lt;/p>
-&lt;p>Alright, let’s start with today’s public meeting :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>9:02 PM&lt;/em>&lt;/p>
-&lt;p>General project statistics&lt;/p>
-&lt;ul>
-&lt;li>Previous meeting: 178 open issues, 23 open PRs&lt;/li>
-&lt;li>Current: 163, 24 PRs&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Marcus Merrell 9:03 PM&lt;/em>&lt;/p>
-&lt;p>no news to report from me&amp;ndash;still working on the CoC with Karen,
-and working on either booking the Chicago venue for a 2022 conference,
-or getting our $40,000 back&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:04 PM&lt;/em>&lt;/p>
-&lt;p>thanks for sharing @mmerrell&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:04 PM&lt;/em>&lt;/p>
-&lt;p>Presumably we&amp;rsquo;re looking at late 2022 for the in-person conference?&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:05 PM&lt;/em>&lt;/p>
-&lt;p>I hope so&lt;/p>
-&lt;p>are there any thoughts around a virtual conference this year?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:06 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m lukewarm about virtual conferences. It&amp;rsquo;s hard to sit and watch YouTube videos all day&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:06 PM&lt;/em>&lt;/p>
-&lt;p>me too, but as a project we should consider that alternative&lt;/p>
-&lt;p>&lt;em>David Burns 9:06 PM&lt;/em>&lt;/p>
-&lt;p>having just done one for work there is a &amp;ldquo;we&amp;rsquo;ve had enough&amp;rdquo; vibe going&lt;/p>
-&lt;p>&lt;em>9:07 PM&lt;/em>&lt;/p>
-&lt;p>it was a success but I don&amp;rsquo;t think we could have done it later this year&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:07 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;d love to do some short videos on topics, though&lt;/p>
-&lt;p>Things like relative locators, shadow DOM, CDP, etc&lt;/p>
-&lt;p>And we can do a &amp;ldquo;q&amp;amp;a&amp;rdquo; one with committers and a host&lt;/p>
-&lt;p>We should ask folks if they&amp;rsquo;d like to do something, and then maybe post one or two a month?&lt;/p>
-&lt;p>Diego Molina 9:08 PM
-right, a mini conference would be nice&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:08 PM&lt;/em>&lt;/p>
-&lt;p>Provided we pay for someone to help make the videos and edit them&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:08 PM&lt;/em>&lt;/p>
-&lt;p>less &amp;ldquo;talks&amp;rdquo; and more &amp;ldquo;video tutorials with Q&amp;amp;A?&amp;rdquo; :)&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:08 PM&lt;/em>&lt;/p>
-&lt;p>perhaps one day of workshops and one day of short talks&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:09 PM&lt;/em>&lt;/p>
-&lt;p>Workshops are a really good thing to do&lt;/p>
-&lt;p>&lt;em>David Burns 9:09 PM&lt;/em>&lt;/p>
-&lt;p>I would like to think on it more before committing either way&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:09 PM&lt;/em>&lt;/p>
-&lt;p>Not even sure about &amp;ldquo;one day of short talks&amp;rdquo;. Just posting things regularly on the YT channel&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:09 PM&lt;/em>&lt;/p>
-&lt;p>I really like it when there is a &amp;ldquo;time&amp;rdquo; that a video is shown,
-and the author can chat with people about it in whatever room,
-and then answer questions at the end&lt;/p>
-&lt;p>&lt;em>9:10 PM&lt;/em>&lt;/p>
-&lt;p>then everything can be posted in whatever channel for people to watch&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:10 PM&lt;/em>&lt;/p>
-&lt;p>I can see that&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:10 PM&lt;/em>&lt;/p>
-&lt;p>well, there we have a whole topic to think about :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:10 PM&lt;/em>&lt;/p>
-&lt;p>Ha! :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:10 PM&lt;/em>&lt;/p>
-&lt;p>but I do like the idea of a series of shorts on different pertinent selenium topics&lt;/p>
-&lt;p>&lt;em>9:11 PM&lt;/em>&lt;/p>
-&lt;p>less &amp;ldquo;why testing is like a toaster oven&amp;rdquo; and
-more practical on how to get the most out of new Selenium 4, etc :-D&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:11 PM&lt;/em>&lt;/p>
-&lt;p>Right&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:12 PM&lt;/em>&lt;/p>
-&lt;p>ok, I am a bit short of time today, so I suggest to go back to
-the agenda and if there is time, we can circle back to ideas about a “conference”&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:12 PM&lt;/em>&lt;/p>
-&lt;p>:thumbsup:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:12 PM&lt;/em>&lt;/p>
-&lt;p>Next topic:&lt;/p>
-&lt;ul>
-&lt;li>Stuff implemented/fixed in the last two weeks&lt;/li>
-&lt;/ul>
-&lt;p>I have a short list of things I know they were done, so I will paste it here&lt;/p>
-&lt;ul>
-&lt;li>CDP url for Firefox&lt;/li>
-&lt;li>Platform matching but when platform is Windows&lt;/li>
-&lt;li>noVNC added to docker-selenium&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 9:12 PM&lt;/em>&lt;/p>
-&lt;p>Been quiet from me, but I have landed the bits to plumb
-through se:cdpVersion and have started on a unified New Session Queue&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:13 PM&lt;/em>&lt;/p>
-&lt;p>(there was a bug when matching Windows as a platform)&lt;/p>
-&lt;p>&lt;em>9:14 PM&lt;/em>&lt;/p>
-&lt;p>yeah, if you try the Grid right now, CDP for Firefox should work also
-(but there are some CI tests failing for Firefox)&lt;/p>
-&lt;p>I also added noVNC to the docker containers,
-that bring us closer to have the live view in the Grid UI&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:15 PM&lt;/em>&lt;/p>
-&lt;p>That&amp;rsquo;s very cool&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:15 PM&lt;/em>&lt;/p>
-&lt;p>Ok, so now having said what we have done during the last two weeks,
-we can now talk about what is left for beta 3:&lt;/p>
-&lt;p>Pending work that needs to be done for the third Beta?&lt;/p>
-&lt;p>I will paste the things that come from the
-previous meeting, but please add/remove as you wish&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:16 PM&lt;/em>&lt;/p>
-&lt;p>Thank you&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:16 PM&lt;/em>&lt;/p>
-&lt;p>Server changes:&lt;/p>
-&lt;ul>
-&lt;li>Enable retries of commands where necessary using failsafe&lt;/li>
-&lt;li>Pipe VNC connectors through the websocket plumbing for live video&lt;/li>
-&lt;li>Investigate: Grid gets stuck when screenshot is taken in a terminated session&lt;/li>
-&lt;li>Investigate: Router request timeouts when forwarding command to Node&lt;/li>
-&lt;/ul>
-&lt;p>Things left in Java, Python, JS, Ruby, C#?&lt;/p>
-&lt;ul>
-&lt;li>“se:cdpVersion”?&lt;/li>
-&lt;li>Can all bindings do CDP over Grid?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Marcus Merrell 9:16 PM&lt;/em>&lt;/p>
-&lt;p>(just to close out the 2022 conference idea&amp;ndash;yes, Fall of 2022 in Chicago)&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:16 PM&lt;/em>&lt;/p>
-&lt;p>Adding: unify the new session queue&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:18 PM&lt;/em>&lt;/p>
-&lt;p>We had this comment from the last meeting:&lt;/p>
-&lt;p>Here’s the plan, then. We’ll ship beta3 when two of these conditions are met:&lt;/p>
-&lt;ul>
-&lt;li>The .net bindings support CDP over Grid&lt;/li>
-&lt;li>We send se:cdpVersion in Capabilities and that’s also handled by Grid&lt;/li>
-&lt;/ul>
-&lt;p>is this still valid? what do you all think?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:18 PM&lt;/em>&lt;/p>
-&lt;p>Time has elapsed. I&amp;rsquo;m not convinced we&amp;rsquo;re using se:cdpVersion properly on the local end yet&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:19 PM&lt;/em>&lt;/p>
-&lt;p>looks like Java is the only one using it&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:19 PM&lt;/em>&lt;/p>
-&lt;p>@jimevans can tell us whether the .Net bindings work&lt;/p>
-&lt;p>&lt;em>David Burns 9:19 PM&lt;/em>&lt;/p>
-&lt;p>I will look at the Python/JS stuff for that tomorrow&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:20 PM&lt;/em>&lt;/p>
-&lt;p>There are several Ruby bugs that we fixed, so I&amp;rsquo;m for releasing beta 3 even without cdpversion implemented&lt;/p>
-&lt;p>&lt;em>9:21 PM&lt;/em>&lt;/p>
-&lt;p>I would like to get v90 &amp;amp; v91 devtools support added&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:21 PM&lt;/em>&lt;/p>
-&lt;p>Grid is now returning se:cdpVersion properly, and the
-Java bindings (when running locally) are also returning it properly&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:21 PM&lt;/em>&lt;/p>
-&lt;p>or at least v90&lt;/p>
-&lt;p>&lt;em>David Burns 9:21 PM&lt;/em>&lt;/p>
-&lt;p>that seems simple then&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:21 PM&lt;/em>&lt;/p>
-&lt;p>but I wonder if the other bindings also create and
-manage se:cdpVersion when running locally (not over Grid)&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:22 PM&lt;/em>&lt;/p>
-&lt;p>wait is Firefox using CDP 85 or 86?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:22 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner I can help you land the CDP v90 stuff&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:22 PM&lt;/em>&lt;/p>
-&lt;p>86&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:23 PM&lt;/em>&lt;/p>
-&lt;p>I think I followed the guid and have the pdl files for the latest v90&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:23 PM&lt;/em>&lt;/p>
-&lt;p>@diemol I&amp;rsquo;m not sure the java bindings use se:cdpVersion properly&lt;/p>
-&lt;p>&lt;em>David Burns 9:23 PM&lt;/em>&lt;/p>
-&lt;p>firefox is 85 unless they changed it&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:23 PM&lt;/em>&lt;/p>
-&lt;p>Well, if we aren&amp;rsquo;t hard coding it to 85, then I need to
-figure out how we want to approach that going forward :slightly_smiling_face:&lt;/p>
-&lt;p>I just see that trunk has FirefoxDriver set to use 86&lt;/p>
-&lt;p>(in Java)&lt;/p>
-&lt;p>which I didn&amp;rsquo;t think was correct&lt;/p>
-&lt;p>&lt;em>David Burns 9:24 PM&lt;/em>&lt;/p>
-&lt;p>Java is wrong then&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:24 PM&lt;/em>&lt;/p>
-&lt;p>Easy fix&lt;/p>
-&lt;p>&lt;em>David Burns 9:24 PM&lt;/em>&lt;/p>
-&lt;p>r-&lt;/p>
-&lt;p>&lt;em>9:24&lt;/em>&lt;/p>
-&lt;p>:stuck_out_tongue:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:25 PM&lt;/em>&lt;/p>
-&lt;p>Seems we need to create a GitHub issue to track that&lt;/p>
-&lt;p>I’ll do that now&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:26 PM&lt;/em>&lt;/p>
-&lt;p>Thanks&lt;/p>
-&lt;p>&lt;em>Jim Evans 9:27 PM&lt;/em>&lt;/p>
-&lt;p>.NET still doesn’t proxy CDP across RemoteWebDriver yet.&lt;/p>
-&lt;p>is jumping through corporate IT/security/legal hoops right now.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:29 PM&lt;/em>&lt;/p>
-&lt;p>that sounds joyful&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:30 PM&lt;/em>&lt;/p>
-&lt;p>ok, created this to track it &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9365">https://github.com/SeleniumHQ/selenium/issues/9365&lt;/a>&lt;/p>
-&lt;p>please feel free to add more details&lt;/p>
-&lt;p>(if needed)&lt;/p>
-&lt;p>&lt;em>9:32 PM&lt;/em>&lt;/p>
-&lt;p>So, IMO, we should have se:cdpVersion working and all bindings doing CDP over Grid before beta 3, right?&lt;/p>
-&lt;p>what do you think?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:32 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m letting @jimevans call it&lt;/p>
-&lt;p>&lt;em>Jim Evans 9:33 PM&lt;/em>&lt;/p>
-&lt;p>let’s not hold up beta3 for that. if i get to it before then, fine, but i’m swamped right now.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:33 PM&lt;/em>&lt;/p>
-&lt;p>I definitely don&amp;rsquo;t think we need cdpVersion&lt;/p>
-&lt;p>&lt;em>9:34 PM&lt;/em>&lt;/p>
-&lt;p>doing CDP over grid doesn&amp;rsquo;t require that per se&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:34 PM&lt;/em>&lt;/p>
-&lt;p>no, it does not, they are two separate things&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:34 PM&lt;/em>&lt;/p>
-&lt;p>Does Python &amp;amp; JS have CDP over grid working?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:34 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;d like to get the java bindings consuming se:cdpVersion properly.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:35 PM&lt;/em>&lt;/p>
-&lt;p>can we save that for beta4?&lt;/p>
-&lt;p>&lt;em>David Burns 9:35 PM&lt;/em>&lt;/p>
-&lt;p>replied to a thread:
-Does Python &amp;amp; JS have CDP over grid working?&lt;/p>
-&lt;p>It should do&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:35 PM&lt;/em>&lt;/p>
-&lt;p>I know it would be ideal to get a beta 3 soon,
-but if we need to wait to have all bindings working with CDP, I am ok with that&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:35 PM&lt;/em>&lt;/p>
-&lt;p>I generally don&amp;rsquo;t like putting off a release until Java gets
-something working, because that just means we wait for everyone
-else to implement it or Java is off from the rest of us. :smile:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:36 PM&lt;/em>&lt;/p>
-&lt;p>I have seen issues asking “can we have in JS what it is already done in Java”, and similar&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:36 PM&lt;/em>&lt;/p>
-&lt;p>Like I said, I have several bug fixes that would be nice to get into people&amp;rsquo;s hands sooner&lt;/p>
-&lt;p>I guess I can always do a beta 2.1 for ruby, but&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:36 PM&lt;/em>&lt;/p>
-&lt;p>Let&amp;rsquo;s aim for next Tuesday for beta 3&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:37 PM&lt;/em>&lt;/p>
-&lt;p>I am also ok with that&lt;/p>
-&lt;p>but I don’t want to reach RC without some
-degree of feature parity between bindings&lt;/p>
-&lt;p>even if it takes longer&lt;/p>
-&lt;p>&lt;em>Jim Evans 9:38 PM&lt;/em>&lt;/p>
-&lt;p>i get my second vaccine dose on tuesday, so it’ll be in the afternoon&lt;/p>
-&lt;p>&lt;em>9:38 PM&lt;/em>&lt;/p>
-&lt;p>(US eastern time)&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:38 PM&lt;/em>&lt;/p>
-&lt;p>woo hoo!&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:38 PM&lt;/em>&lt;/p>
-&lt;p>oh, that’s amazing!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:38 PM&lt;/em>&lt;/p>
-&lt;p>RC should have feature parity&lt;/p>
-&lt;p>I&amp;rsquo;d like that one out for a few days, and then we ship 4.0.0&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:39 PM&lt;/em>&lt;/p>
-&lt;p>oh, while we&amp;rsquo;re here, I think Java &amp;amp; .NET are the only ones who
-have implemented these? &lt;a href="https://w3c.github.io/webdriver/#get-computed-role">https://w3c.github.io/webdriver/#get-computed-role&lt;/a>&lt;/p>
-&lt;p>&lt;em>9:40 PM&lt;/em>&lt;/p>
-&lt;p>These new endpoints sneak up on me&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:40 PM&lt;/em>&lt;/p>
-&lt;p>There are a few. The Shadow DOM ones are new as well&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:41 PM&lt;/em>&lt;/p>
-&lt;p>oh no, python &amp;amp; java&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:41 PM&lt;/em>&lt;/p>
-&lt;p>I think @AutomatedTester has snuck in a broader API
-than the rest of us since he actually reads specs&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:41 PM&lt;/em>&lt;/p>
-&lt;p>sneaky&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:41 PM&lt;/em>&lt;/p>
-&lt;p>Clever lad&lt;/p>
-&lt;p>&lt;em>David Burns 9:41 PM&lt;/em>&lt;/p>
-&lt;p>none of the shadow dom stuff is done&lt;/p>
-&lt;p>&lt;em>9:42 PM&lt;/em>&lt;/p>
-&lt;p>but I am adding it to Firefox&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:42 PM&lt;/em>&lt;/p>
-&lt;p>JS bindings have it too, only left with shadow-dom&lt;/p>
-&lt;p>&lt;em>Jim Evans 9:42 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner.NET does the get computed ones too&lt;/p>
-&lt;p>&lt;em>David Burns 9:42 PM&lt;/em>&lt;/p>
-&lt;p>If you watched todays twitch you would have seen why&amp;hellip; I am not sure of the API for things not Java/.NET&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:43 PM&lt;/em>&lt;/p>
-&lt;p>so what everyone is saying is that it&amp;rsquo;s just Ruby slacking&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:43 PM&lt;/em>&lt;/p>
-&lt;p>ok, so we’ll aim beta 3 for next Tuesday :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>David Burns 9:43 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner not ruby&amp;hellip; whistles
-:stuck_out_tongue_winking_eye:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:43 PM&lt;/em>&lt;/p>
-&lt;p>last topic is:&lt;/p>
-&lt;ul>
-&lt;li>PRs that need to be reviewed&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>9:44 PM&lt;/em>&lt;/p>
-&lt;p>there are a few ones that could be an “easy” merge and ideally they do not need a lot of time for a review&lt;/p>
-&lt;p>I also see @Puja Jagani now contributing to the C# bindings, which is great!&lt;/p>
-&lt;p>I’ll list the PRs here:&lt;/p>
-&lt;p>C#&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/9363">https://github.com/SeleniumHQ/selenium/pull/9363&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/9361">https://github.com/SeleniumHQ/selenium/pull/9361&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Python&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/9336">https://github.com/SeleniumHQ/selenium/pull/9336&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>David Burns&lt;/em>&lt;/p>
-&lt;p>done&lt;/p>
-&lt;p>&lt;em>Diego Molina&lt;/em>&lt;/p>
-&lt;p>thank you!&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:47 PM&lt;/em>&lt;/p>
-&lt;p>Java:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/8977">https://github.com/SeleniumHQ/selenium/pull/8977&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/8815">https://github.com/SeleniumHQ/selenium/pull/8815&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>9:48 PM&lt;/em>&lt;/p>
-&lt;p>in case you have some spare time, @AutomatedTester @jimevans @simonstewart&lt;/p>
-&lt;p>that’s all I had in the agenda :slightly_smiling_face:&lt;/p></description></item></channel></rss>
+&lt;p>(and thanks @harsha509 for publishing the notes to our blog :slightly_smiling_face:)&lt;/p></description></item></channel></rss>
