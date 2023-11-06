@@ -42,11 +42,22 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
+        public void SetBrowserLocation()
+        {
+            var options = new ChromeOptions();
+
+            options.BinaryLocation = GetChromeLocation();
+
+            driver = new ChromeDriver(options);
+        }
+
+        [TestMethod]
         public void InstallExtension()
         {
             var options = new ChromeOptions();
             var baseDir = AppDomain.CurrentDomain.BaseDirectory;
             var extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.crx");
+
             options.AddExtension(extensionFilePath);
 
             driver = new ChromeDriver(options);
@@ -61,6 +72,7 @@ namespace SeleniumDocs.Browsers
         public void ExcludeSwitch()
         {
             var options = new ChromeOptions();
+
             options.AddExcludedArgument("disable-popup-blocking");
 
             driver = new ChromeDriver(options);
@@ -74,7 +86,6 @@ namespace SeleniumDocs.Browsers
             service.LogPath = GetLogLocation();
 
             driver = new ChromeDriver(service);
-
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting ChromeDriver")));
@@ -144,7 +155,6 @@ namespace SeleniumDocs.Browsers
             service.DisableBuildCheck = true;
 
             driver = new ChromeDriver(service);
-
             driver.Quit(); // Close the Service log file before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
             var lines = File.ReadLines(GetLogLocation());
@@ -159,6 +169,16 @@ namespace SeleniumDocs.Browsers
             }
 
             return _logLocation;
+        }
+
+        private static string GetChromeLocation()
+        {
+            var options = new ChromeOptions
+            {
+                BrowserVersion = "stable"
+            };
+            DriverFinder.FullPath(options);
+            return options.BinaryLocation;
         }
     }
 }

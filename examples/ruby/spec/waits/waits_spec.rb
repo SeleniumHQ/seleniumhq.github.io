@@ -37,9 +37,9 @@ RSpec.describe 'Waits' do
   it 'explicit' do
     driver.get 'https://www.selenium.dev/selenium/web/dynamic.html'
     revealed = driver.find_element(id: 'revealed')
-    wait = Selenium::WebDriver::Wait.new
-
     driver.find_element(id: 'reveal').click
+
+    wait = Selenium::WebDriver::Wait.new
     wait.until { revealed.displayed? }
 
     revealed.send_keys('Displayed')
@@ -49,13 +49,14 @@ RSpec.describe 'Waits' do
   it 'options with explicit' do
     driver.get 'https://www.selenium.dev/selenium/web/dynamic.html'
     revealed = driver.find_element(id: 'revealed')
+    driver.find_element(id: 'reveal').click
+
     errors = [Selenium::WebDriver::Error::NoSuchElementError,
               Selenium::WebDriver::Error::ElementNotInteractableError]
     wait = Selenium::WebDriver::Wait.new(timeout: 2,
                                          interval: 0.3,
                                          ignore: errors)
 
-    driver.find_element(id: 'reveal').click
     wait.until { revealed.send_keys('Displayed') || true }
 
     expect(revealed.property(:value)).to eq('Displayed')

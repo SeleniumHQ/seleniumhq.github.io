@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 
 import pytest
 from selenium import webdriver
@@ -14,15 +15,25 @@ def test_basic_options():
 
 def test_arguments():
     options = webdriver.FirefoxOptions()
+
     options.add_argument("-headless")
 
     driver = webdriver.Firefox(options=options)
     driver.quit()
 
 
-@pytest.mark.skip(reason="implemented in 4.11")
+def test_set_browser_location(firefox_bin):
+    options = webdriver.FirefoxOptions()
+
+    options.binary_location = firefox_bin
+
+    driver = webdriver.Firefox(options=options)
+
+    driver.quit()
+
+
 def test_log_to_file(log_path):
-    service = webdriver.firefox.service.Service(log_path=log_path, service_args=['--log', 'debug'])
+    service = webdriver.FirefoxService(log_output=log_path, service_args=['--log', 'debug'])
 
     driver = webdriver.Firefox(service=service)
     driver.get("https://www.selenium.dev")
@@ -33,9 +44,8 @@ def test_log_to_file(log_path):
     driver.quit()
 
 
-@pytest.mark.skip(reason="implemented in 4.11")
 def test_log_to_stdout(capfd):
-    service = webdriver.firefox.service.Service(log_output=subprocess.STDOUT)
+    service = webdriver.FirefoxService(log_output=subprocess.STDOUT)
 
     driver = webdriver.Firefox(service=service)
 
@@ -45,9 +55,8 @@ def test_log_to_stdout(capfd):
     driver.quit()
 
 
-@pytest.mark.skip(reason="broken in 4.10 fixed in 4.11")
 def test_log_level(log_path):
-    service = webdriver.firefox.service.Service(service_args=['--log', 'debug'])
+    service = webdriver.FirefoxService(log_output=log_path, service_args=['--log', 'debug'])
 
     driver = webdriver.Firefox(service=service)
 
@@ -57,9 +66,8 @@ def test_log_level(log_path):
     driver.quit()
 
 
-@pytest.mark.skip(reason="implemented in 4.11")
 def test_log_truncation(log_path):
-    service = webdriver.firefox.service.Service(service_args=['--log-no-truncate', '--log', 'debug'], log_path=log_path)
+    service = webdriver.FirefoxService(service_args=['--log-no-truncate', '--log', 'debug'], log_output=log_path)
 
     driver = webdriver.Firefox(service=service)
 
@@ -70,7 +78,7 @@ def test_log_truncation(log_path):
 
 
 def test_profile_location(temp_dir):
-    service = webdriver.firefox.service.Service(service_args=['--profile-root', temp_dir])
+    service = webdriver.FirefoxService(service_args=['--profile-root', temp_dir])
 
     driver = webdriver.Firefox(service=service)
     profile_name = driver.capabilities.get('moz:profile').replace('\\', '/').split('/')[-1]

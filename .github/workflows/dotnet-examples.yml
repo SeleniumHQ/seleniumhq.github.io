@@ -30,6 +30,16 @@ jobs:
     steps:
     - name: Checkout GitHub repo
       uses: actions/checkout@v3
+    - name: Remove driver directories Windows
+      if: matrix.os == 'windows-latest'
+      run: |
+        rm "$env:ChromeWebDriver" -r -v
+        rm "$env:EdgeWebDriver" -r -v
+        rm "$env:GeckoWebDriver" -r -v
+    - name: Remove driver directories Non-Windows
+      if: matrix.os != 'windows-latest'
+      run: |
+        sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
@@ -37,6 +47,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 11
     - name: Run tests
       uses: nick-invision/retry@v2.8.3
       with:

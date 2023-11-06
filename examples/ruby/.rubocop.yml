@@ -33,3 +33,6 @@ RSpec/MultipleExpectations:
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
 
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - spec/getting_started/first_script.rb

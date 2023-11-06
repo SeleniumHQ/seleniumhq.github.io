@@ -11,8 +11,6 @@ namespace SeleniumDocs.Drivers
     [TestClass]
     public class ServiceTest : BaseTest
     {
-        private readonly string driverLocation = Environment.GetEnvironmentVariable("CHROMEWEBDRIVER");
-
         [TestMethod]
         public void BasicService()
         {
@@ -23,10 +21,10 @@ namespace SeleniumDocs.Drivers
         [TestMethod]
         public void DriverLocation()
         {
-            var service = ChromeDriverService.CreateDefaultService();
-            service.DriverServicePath = driverLocation;
+            var options = GetLatestChromeOptions();
+            var service = ChromeDriverService.CreateDefaultService(GetDriverLocation(options));
 
-            driver = new ChromeDriver(service);
+            driver = new ChromeDriver(service, options);
         }
 
         [TestMethod]
@@ -36,6 +34,19 @@ namespace SeleniumDocs.Drivers
             service.Port = 1234;
 
             driver = new ChromeDriver(service);
+        }
+        
+        private static string GetDriverLocation(ChromeOptions options)
+        {
+            return DriverFinder.FullPath(options);
+        }
+
+        private static ChromeOptions GetLatestChromeOptions()
+        {
+            return new ChromeOptions
+            {
+                BrowserVersion = "stable"
+            };
         }
     }
 }

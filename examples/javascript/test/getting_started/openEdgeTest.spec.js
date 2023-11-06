@@ -10,7 +10,6 @@ suite(function (env) {
       let options = new edge.Options();
       driver = await env.builder()
         .setEdgeOptions(options)
-        .setEdgeService(new edge.ServiceBuilder(edgedriver.binPath()))
         .build();
     });
 

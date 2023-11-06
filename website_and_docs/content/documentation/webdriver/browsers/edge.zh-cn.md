@@ -22,7 +22,7 @@ Capabilities unique to Chromium are documented at Google's page for
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L33-L34" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L37-L38" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L10" >}}
@@ -31,7 +31,7 @@ Capabilities unique to Chromium are documented at Google's page for
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L30-L31" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L8-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L10-L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L15">}}
@@ -54,16 +54,16 @@ Add an argument to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L45" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L17" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L18" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -80,7 +80,26 @@ use chromedriver to drive various Chromium based browsers.
 
 Add a browser location to options:
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L54" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L29">}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L49" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L25" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Add extensions
 
@@ -92,16 +111,16 @@ Add an extension to options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L65" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L40" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L50" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -116,20 +135,18 @@ Add an extension to options:
 Setting the `detach` parameter to true will keep the browser open after the process has ended,
 so long as the quit command is not sent to the driver.
 
-Add a binary to options:
-
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 **Note**: This is already the default behavior in Java.
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L27" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L51" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 **Note**: This is already the default behavior in .NET.
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L22" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -151,16 +168,16 @@ Set excluded arguments on options:
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L47" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L78" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L37" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L64" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L30" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -188,20 +205,20 @@ To change the logging output to save to a specific file:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L55" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L100" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L46" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L74" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L44" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -218,7 +235,7 @@ To change the logging output to display in the console as STDOUT:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L69" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L113" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
@@ -232,7 +249,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -250,20 +267,20 @@ so this example is just setting the log level generically:
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L84" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L126-L127" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L69" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L63" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -284,20 +301,20 @@ The log output will be managed by the driver, not the process, so minor differen
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101-L102" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L142-L143" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` and `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L80" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L74-L75" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -316,20 +333,20 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L120" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L160-L161" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L91" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L144" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L85" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -354,22 +371,98 @@ Some browsers have implemented additional features that are unique to them.
 
 You can drive Chrome Cast devices with Edge, including sharing tabs
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Network conditions
 
 You can simulate various network conditions.
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Logs
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Permissions
 
-{{< alert-code />}}
+{{< tabpane text=true langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) section for more information about using DevTools in Edge
+See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using DevTools in Edge

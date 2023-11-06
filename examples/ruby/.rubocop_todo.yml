@@ -12,8 +12,14 @@ AllCops:
     - 'spec/hello/hello_selenium_spec.rb'
     - 'spec/getting_started/open_browser_spec.rb'
 
+Lint/EmptyBlock:
+  Enabled: false
+
 RSpec/NoExpectationExample:
   Enabled: false
 
 RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/EmptyExampleGroup:
   Enabled: false

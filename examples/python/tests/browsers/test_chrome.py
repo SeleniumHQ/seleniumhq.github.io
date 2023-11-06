@@ -2,7 +2,6 @@ import os
 import re
 import subprocess
 
-import pytest
 from selenium import webdriver
 
 
@@ -15,6 +14,7 @@ def test_basic_options():
 
 def test_args():
     options = webdriver.ChromeOptions()
+
     options.add_argument("--start-maximized")
 
     driver = webdriver.Chrome(options=options)
@@ -23,8 +23,31 @@ def test_args():
     driver.quit()
 
 
+def test_set_browser_location(chrome_bin):
+    options = webdriver.ChromeOptions()
+
+    options.binary_location = chrome_bin
+
+    driver = webdriver.Chrome(options=options)
+
+    driver.quit()
+
+
+def test_add_extension():
+    options = webdriver.ChromeOptions()
+    extension_file_path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
+
+    options.add_extension(extension_file_path)
+
+    driver = webdriver.Chrome(options=options)
+    driver.get("https://www.selenium.dev/selenium/web/blank.html")
+
+    driver.quit()
+
+
 def test_keep_browser_open():
     options = webdriver.ChromeOptions()
+
     options.add_experimental_option("detach", True)
 
     driver = webdriver.Chrome(options=options)
@@ -35,6 +58,7 @@ def test_keep_browser_open():
 
 def test_exclude_switches():
     options = webdriver.ChromeOptions()
+
     options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
 
     driver = webdriver.Chrome(options=options)
@@ -44,7 +68,7 @@ def test_exclude_switches():
 
 
 def test_log_to_file(log_path):
-    service = webdriver.chrome.service.Service(log_path=log_path)
+    service = webdriver.ChromeService(log_output=log_path)
 
     driver = webdriver.Chrome(service=service)
 
@@ -54,9 +78,8 @@ def test_log_to_file(log_path):
     driver.quit()
 
 
-@pytest.mark.skip(reason="this is not supported, yet")
 def test_log_to_stdout(capfd):
-    service = webdriver.chrome.service.Service(log_output=subprocess.STDOUT)
+    service = webdriver.ChromeService(log_output=subprocess.STDOUT)
 
     driver = webdriver.Chrome(service=service)
 
@@ -66,45 +89,35 @@ def test_log_to_stdout(capfd):
     driver.quit()
 
 
-def test_log_level(log_path):
-    service = webdriver.chrome.service.Service(service_args=['--log-level=DEBUG'], log_path=log_path)
+def test_log_level(capfd):
+    service = webdriver.ChromeService(service_args=['--log-level=DEBUG'], log_output=subprocess.STDOUT)
 
     driver = webdriver.Chrome(service=service)
 
-    with open(log_path, 'r') as f:
-        assert '[DEBUG]' in f.read()
+    out, err = capfd.readouterr()
+    assert '[DEBUG]' in err
 
     driver.quit()
 
 
 def test_log_features(log_path):
-    service = webdriver.chrome.service.Service(service_args=['--append-log', '--readable-timestamp'], log_path=log_path)
+    service = webdriver.ChromeService(service_args=['--append-log', '--readable-timestamp'], log_output=log_path)
 
     driver = webdriver.Chrome(service=service)
 
     with open(log_path, 'r') as f:
-        assert re.match("\[\d\d-\d\d-\d\d\d\d", f.read())
+        assert re.match(r"\[\d\d-\d\d-\d\d\d\d", f.read())
 
     driver.quit()
 
 
-def test_build_checks(log_path):
-    service = webdriver.chrome.service.Service(service_args=['--disable-build-check'], log_path=log_path)
+def test_build_checks(capfd):
+    service = webdriver.ChromeService(service_args=['--disable-build-check'], log_output=subprocess.STDOUT)
 
     driver = webdriver.Chrome(service=service)
 
     expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check"
-    with open(log_path, 'r') as f:
-        assert expected in f.read()
-
-    driver.quit()
-
-def test_add_extension():
-    chrome_options = webdriver.ChromeOptions()
-    path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
-    chrome_options.add_extension(path)
-
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.get("https://www.selenium.dev/selenium/web/blank.html");
+    out, err = capfd.readouterr()
+    assert expected in err
 
     driver.quit()

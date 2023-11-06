@@ -25,12 +25,12 @@ aliases: [
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="examples/java/pom.xml#L32-L36" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L29-L33" >}}
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
