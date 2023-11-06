@@ -51,6 +51,11 @@ jobs:
       - name: Install Gems
         working-directory: ./examples/ruby
         run: bundle install
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 11
       - name: Run tests
         uses: nick-invision/retry@v2.8.3
         with:

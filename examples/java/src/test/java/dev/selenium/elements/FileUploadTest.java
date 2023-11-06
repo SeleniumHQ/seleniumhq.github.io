@@ -1,35 +1,24 @@
 package dev.selenium.elements;
 
+import dev.selenium.BaseChromeTest;
+import java.io.File;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.time.Duration;
 
-import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+public class FileUploadTest extends BaseChromeTest {
 
-public class FileUploadTest {
-
-    @Test
-    public void fileUploadTest() {
-    WebDriver driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+  @Test
+  public void fileUploadTest() {
     driver.get("https://the-internet.herokuapp.com/upload");
-    Path path = Paths.get("src/test/resources/selenium-snapshot.png");
-    File imagePath = new File(path.toUri());
+    File uploadFile = new File("src/test/resources/selenium-snapshot.png");
 
-    //we want to import selenium-snapshot file.
-    driver.findElement(By.id("file-upload")).sendKeys(imagePath.toString());
-    driver.findElement(By.id("file-submit")).submit();
-   if(driver.getPageSource().contains("File Uploaded!")) {
-	System.out.println("file uploaded");
-   }
-   else{
-        System.out.println("file not uploaded");
-       }
-    driver.quit();
-    }
+    WebElement fileInput = driver.findElement(By.cssSelector("input[type=file]"));
+    fileInput.sendKeys(uploadFile.getAbsolutePath());
+    driver.findElement(By.id("file-submit")).click();
+
+    WebElement fileName = driver.findElement(By.id("uploaded-files"));
+    Assertions.assertEquals("selenium-snapshot.png", fileName.getText());
+  }
 }

@@ -2,6 +2,7 @@ package dev.selenium;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.time.Duration;
 import org.junit.jupiter.api.AfterEach;
@@ -12,6 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.grid.Main;
+import org.openqa.selenium.net.PortProber;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
@@ -46,7 +49,7 @@ public class BaseTest {
     return (ChromeDriver) driver;
   }
 
-  protected File getTempDirectory(String prefix)  {
+  protected File getTempDirectory(String prefix) {
     File tempDirectory = null;
     try {
       tempDirectory = Files.createTempDirectory(prefix).toFile();
@@ -68,6 +71,27 @@ public class BaseTest {
     logLocation.deleteOnExit();
 
     return logLocation;
+  }
+
+  protected URL startStandaloneGrid() {
+    int port = PortProber.findFreePort();
+    try {
+      Main.main(
+          new String[] {
+            "standalone",
+            "--port",
+            String.valueOf(port),
+            "--selenium-manager",
+            "true",
+            "--enable-managed-downloads",
+            "true",
+            "--log-level",
+            "WARNING"
+          });
+      return new URL("http://localhost:" + port);
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
   }
 
   @AfterEach
