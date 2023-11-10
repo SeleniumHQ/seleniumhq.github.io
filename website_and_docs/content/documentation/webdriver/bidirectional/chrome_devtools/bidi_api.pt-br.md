@@ -27,7 +27,7 @@ and [CDP API Basic Authentication]({{< ref "cdp_api#basic-authentication" >}})
 
 {{< tabpane text=true langEqualsHeader=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L35-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L36-L39" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 An alternate implementation may be found at
