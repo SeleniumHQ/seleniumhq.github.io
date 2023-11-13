@@ -254,6 +254,8 @@ need to use a `Service` class and [set the location directly](https://www.seleni
 There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic 
 in each of the bindings, so that's currently a trade-off we are comfortable with.
 
+However, as of Selenium 4.13.0, the Selenium bindings allow locating the Selenium Manager binary using an environment variable called `SE_MANAGER_PATH`. If this variable is set, the bindings will use its value as the Selenium Manager path in the local filesystem. This feature will allow users to provide a custom compilation of Selenium Manager, for instance, if the default binaries (compiled for Windows, Linux, and macOS) are incompatible with a given system (e.g., ARM64 in Linux).
+
 ### Browser dependencies
 When automatically managing browsers in Linux, Selenium Manager relies on the releases published by the browser vendors (i.e., Chrome, Firefox, and Edge). These releases are portable in most cases. Nevertheless, there might be cases in which existing libraries are required. In Linux, this problem might be experienced when trying to run Firefox, e.g., as follows:
 
