@@ -1,4 +1,35 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.15 Released!</title><link>/blog/2023/selenium-4-15-released/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-15-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Novelties in Selenium Manager 0.4.15</title><link>/blog/2023/novelties_in_selenium_manager_0.4.15/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/novelties_in_selenium_manager_0.4.15/</guid><description>
+&lt;h3 id="support-for-firefox-esr">Support for Firefox ESR&lt;/h3>
+&lt;p>Selenium Manager 0.4.15 includes support for Firefox Extended Support Release (ESR). This way, Firefox ESR can be automatically managed with Selenium using the label &lt;code>esr&lt;/code> in the browser version. Bindings languages set this browser version (like other accepted labels for browser versions, such as &lt;code>stable,&lt;/code> &lt;code>beta,&lt;/code> &lt;code>dev,&lt;/code> &lt;code>canary,&lt;/code> and &lt;code>nightly&lt;/code>) using a browser option called &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion">browserVersion&lt;/a>.&lt;/p>
+&lt;h3 id="support-for-edge-webview2">Support for Edge WebView2&lt;/h3>
+&lt;p>Selenium Manager 0.4.15 allows automated driver management for &lt;a href="https://developer.microsoft.com/microsoft-edge/webview2">Microsoft Edge WebView2&lt;/a>. WebView2 is a component that enables embedding web technologies (HTML, CSS, and JavaScript) in native apps, using Microsoft Edge as the rendering engine to display web content. At the time of this writing, WebView2 is available in Windows.&lt;/p>
+&lt;p>This way, Selenium Manager allows detecting WebView2 in Windows machines and resolving the proper msedgedriver binary for it. Internally, Selenium Manager uses the browser name &lt;code>webview2&lt;/code> to handle WebView2, detecting its version based on &lt;a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution#detect-if-a-suitable-webview2-runtime-is-already-installed">registry queries&lt;/a>. In the bindings, WebView2 is enabled through a browser option called &lt;code>useWebView&lt;/code>.&lt;/p>
+&lt;h3 id="support-for-mirror-repositories">Support for mirror repositories&lt;/h3>
+&lt;p>Selenium Manager 0.4.15 includes a couple of new arguments in Selenium Manager for specifying custom URLs for drivers and browsers (instead of the default ones, such as &lt;a href="https://chromedriver.storage.googleapis.com/">chromedriver&lt;/a>, &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing&lt;/a>, etc.). These arguments are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--driver-mirror-url&lt;/code>: Mirror URL for driver repositories.&lt;/li>
+&lt;li>&lt;code>--browser-mirror-url&lt;/code>: Mirror URL for browser repositories.&lt;/li>
+&lt;/ul>
+&lt;p>As usual, these values can be configured using the config file or environment variable (e.g., &lt;code>SE_DRIVER_MIRROR_URL&lt;/code> or &lt;code>SE_BROWSER_MIRROR_URL&lt;/code>). Moreover, there are browser and driver-specific configuration keys, i.e. &lt;code>chrome-mirror-url&lt;/code>, &lt;code>firefox-mirror-url&lt;/code>, &lt;code>edge-mirror-url&lt;/code>, etc. (in the configuration file), and &lt;code>SE_CHROME_MIRROR_URL&lt;/code>, &lt;code>SE_FIREFOX_MIRROR_URL&lt;/code>, &lt;code>SE_EDGE_MIRROR_URL&lt;/code>, etc. (as environment variables).&lt;/p>
+&lt;p>Here is an example of this feature calling Selenium Manager from the shell:&lt;/p>
+&lt;pre tabindex="0">&lt;code>./selenium-manager --debug --browser chrome --browser-version 100 --avoid-browser-download --driver-mirror-url=https://registry.npmmirror.com/-/binary/chromedriver/
+DEBUG chromedriver not found in PATH
+DEBUG chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+DEBUG Running command: wmic datafile where name=&amp;#39;C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe&amp;#39; get Version /value
+DEBUG Output: &amp;#34;\r\r\n\r\r\nVersion=117.0.5938.150\r\r\n\r\r\n\r\r\n\r&amp;#34;
+DEBUG Detected browser: chrome 117.0.5938.150
+DEBUG Discovered chrome version (117) different to specified browser version (100)
+DEBUG Required driver: chromedriver 100.0.4896.60
+DEBUG Downloading chromedriver 100.0.4896.60 from https://registry.npmmirror.com/-/binary/chromedriver/100.0.4896.60/chromedriver_win32.zip
+INFO Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\100.0.4896.60\chromedriver.exe
+INFO Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+&lt;/code>&lt;/pre>&lt;h3 id="debug-release">Debug release&lt;/h3>
+&lt;p>To troubleshoot Selenium Manager in complex error cases, it is interesting to capture the backtrace. But to do that, the Selenium Manager binaries must be created with the debug symbols. Since the resulting binaries with debug symbols are much larger than the default release artifacts, we generate them on demand using a custom &lt;a href="https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml">workflow in GitHub Actions&lt;/a>. This way, we have included a checkbox in the workflow for triggering the Selenium Manager build. When this checkbox is enabled when building Selenium Manager, the debug symbols will be added to the resulting binaries (for Windows, Linux, and macOS). All in all, these binaries will be used on demand to troubleshoot complicated problems.&lt;/p>
+&lt;p>&lt;img src="selenium-manager-workflow-debug.png" alt="Selenium Manager workflow screenshot">&lt;/p>
+&lt;h3 id="selenium-manager-in-cache-only-for-java-bindings">Selenium Manager in cache (only for Java bindings)&lt;/h3>
+&lt;p>As of version 4.15.0 of the Selenium Java bindings, the Selenium Manager binary is extracted and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 is stored in the folder &lt;code>~/.cache/selenium/manager/0.4.15&lt;/code>). This feature will allow direct manipulation of Selenium Manager as a CLI tool, for instance, for troubleshooting. This feature is only available for Java bindings since Java is the only language that does not have direct access to the Selenium Manager binaries (since they are released compressed into the JAR files of the &lt;code>selenium-java&lt;/code> artifacts).&lt;/p>
+&lt;h3 id="next-steps">Next steps&lt;/h3>
+&lt;p>Look at &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager documentation&lt;/a> for a detailed description of its features. Also, you can trace the status of the development activities in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.15 Released!</title><link>/blog/2023/selenium-4-15-released/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-15-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.15.0 for Java,
 Javascript, Ruby, .NET and the Grid; 4.15.2 for Python.
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -7920,173 +7951,4 @@ alt="Trace example"/>
 alt="Error event log example"/>
 &lt;/figure>
 &lt;p>Observe the request latency to identify potential bottlenecks. Each trace will also contain time taken by each span. The issue could be in the underlying infrastructure setup, the network latency, or the code itself. Irrespective of the cause, it is easier to identify the problem area.&lt;/p>
-&lt;p>Observability is slowly becoming a must-have property of a system. Selenium is now observable! Go ahead try it out. Let us know if you find anything that requires improvement on our end.&lt;/p></description></item><item><title>Blog: Public Project Meeting - April 22, 2021</title><link>/blog/2021/public-project-meeting-20210422/</link><pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210422/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on April 22, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Diego Molina 9:02 PM&lt;/em>&lt;/p>
-&lt;p>pinging @simonstewart @AutomatedTester @harsha509 @Puja Jagani @jimevans @barancev @manoj9788 @mmerrell @titusfortner @p0deje&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:02 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m going to be at SauceCon&lt;/p>
-&lt;p>&lt;em>9:02 PM&lt;/em>&lt;/p>
-&lt;p>Things I want for beta 4:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:02 PM&lt;/em>&lt;/p>
-&lt;p>and whoever else is around :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>9:03 PM&lt;/em>&lt;/p>
-&lt;p>General project statistics&lt;/p>
-&lt;ul>
-&lt;li>Previous meeting: 163 open issues, 24 open pull requests&lt;/li>
-&lt;li>Currently: 157 open issues, 25 open pull requests&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 9:03 PM&lt;/em>&lt;/p>
-&lt;p>Things I want for beta 4:&lt;/p>
-&lt;ul>
-&lt;li>Refresh the NewSessionQueue&lt;/li>
-&lt;li>Stress test the new Grid on AWS or similar with &amp;gt;50 simultaneous tests&lt;/li>
-&lt;li>Check that the Redis/JDBC backed services actually function&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Diego Molina 9:06 PM&lt;/em>&lt;/p>
-&lt;p>Next topic:&lt;/p>
-&lt;ul>
-&lt;li>Pending work for the 4th Beta?&lt;/li>
-&lt;li>Server - Grid&lt;/li>
-&lt;li>Pipe VNC connectors through the WebSocket plumbing for live video&lt;/li>
-&lt;li>Investigate: Grid gets stuck when screenshot is taken in a terminated session&lt;/li>
-&lt;li>Investigate: Grid gets stuck when the browser driver process cannot be killed&lt;/li>
-&lt;li>Investigate: Router request timeouts when forwarding command to Node&lt;/li>
-&lt;li>Unify new Session Queue&lt;/li>
-&lt;li>Stress test the new Grid on AWS or similar with &amp;gt;50 simultaneous tests&lt;/li>
-&lt;li>Check that the Redis/JDBC backed services actually function&lt;/li>
-&lt;li>More than 1 IE session per Node? &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9388">https://github.com/SeleniumHQ/selenium/issues/9388&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Language bindings&lt;/p>
-&lt;ul>
-&lt;li>“se:cdpVersion” is missing in C#, Java and JS&lt;/li>
-&lt;li>Can all bindings do CDP over Grid?&lt;/li>
-&lt;li>What are the features present in Selenium 4?&lt;/li>
-&lt;li>Do all bindings implement them?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 9:06 PM&lt;/em>&lt;/p>
-&lt;p>The &amp;ldquo;unify new session queue&amp;rdquo; is mostly done, I think&lt;/p>
-&lt;p>&lt;em>9:07 pm&lt;/em>&lt;/p>
-&lt;p>(Famous last words)&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:07 PM&lt;/em>&lt;/p>
-&lt;p>That is the PR you sent, which we will work with @Puja Jagani, I believe&lt;/p>
-&lt;p>&lt;em>Luke Hill 9:07 PM&lt;/em>&lt;/p>
-&lt;p>Someone (In fact a couple), were asking me about the alphas / betas.
-And they were asking more along the lines of are we expecting a whole host of them like we had for v3.&lt;/p>
-&lt;p>&lt;em>9:08 PM&lt;/em>&lt;/p>
-&lt;p>I gave them the whole spiel - We don&amp;rsquo;t do release timelines e.t.c.
-But figured I&amp;rsquo;d ask here if anyone has a finger in air idea.&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:08 PM&lt;/em>&lt;/p>
-&lt;p>For the Grid work, I am taking the items related to “investigate”&lt;/p>
-&lt;p>&lt;em>9:09 PM&lt;/em>&lt;/p>
-&lt;p>But I wanted to ask folks here, what do you think about
-“More than 1 IE session per Node? &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9388">https://github.com/SeleniumHQ/selenium/issues/9388&lt;/a>”&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:10 PM&lt;/em>&lt;/p>
-&lt;p>@luke tell them it doesn&amp;rsquo;t matter and if they are only using
-the bindings they should already have updated. The only stuff really being worked on at this point is grid functionality and adding in the various new features from w3c spec, etc
-There is no technological advantage to sticking with 3.x at this point&lt;/p>
-&lt;p>&lt;em>Luke Hill 9:10 PM&lt;/em>&lt;/p>
-&lt;p>That went against all advice and articles published that explicitly stated
-&amp;ldquo;Do not use more than 1 IE session per node&amp;rdquo; @diemol&lt;/p>
-&lt;p>&lt;em>David Burns 9:10 PM&lt;/em>&lt;/p>
-&lt;p>re: se:cdpVersion, it&amp;rsquo;s easy to add but I noticed we never use the versions, we seem to use the latest one&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:10 PM&lt;/em>&lt;/p>
-&lt;p>Some people are complaining they cannot run more than one test per Node, which we recommend against
-Because they have been able to do it. The code change is small, and I believe we should let them, with the caveat of “you are on your own here”&lt;/p>
-&lt;p>&lt;em>Luke Hill 9:11 PM&lt;/em>&lt;/p>
-&lt;p>Do we know when/where this restriction came in? With an accompanying PR?&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:11 PM&lt;/em>&lt;/p>
-&lt;p>IE restriction? Since the moment zero Grid 4 was built&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:12 PM&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester the java bindings should be using the version&lt;/p>
-&lt;p>&lt;em>David Burns 9:12 PM&lt;/em>&lt;/p>
-&lt;p>@simonstewart sorry, meant JS&lt;/p>
-&lt;p>JS bindings only use latest&amp;hellip;&lt;/p>
-&lt;p>&lt;em>David Burns 9:12 PM&lt;/em>&lt;/p>
-&lt;p>@simonstewart sorry, meant JS&lt;/p>
-&lt;p>&lt;em>9:13 PM&lt;/em>&lt;/p>
-&lt;p>JS bindings only use latest&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:14 PM&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester I believe it has not been implemented in C# and JS (I need to double check Java)&lt;/p>
-&lt;p>&lt;em>David Burns 9:14 PM&lt;/em>&lt;/p>
-&lt;p>JS doesn&amp;rsquo;t need it&amp;hellip; yet without a bit of rearchitecting&lt;/p>
-&lt;p>I, or @Puja Jagani since she has been dabbling in .NET, can do the c# ones&lt;/p>
-&lt;p>or @jimevans obvs&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:15 PM&lt;/em>&lt;/p>
-&lt;p>I believe the idea is to use the “right” CDP version depending on the browser version,
-so it’d be nice if JS has it&lt;/p>
-&lt;p>&lt;em>David Burns 9:16 PM&lt;/em>&lt;/p>
-&lt;p>maybe @harsha509 has time to look into it&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:17 PM&lt;/em>&lt;/p>
-&lt;p>it requires rewriting the CDP in JS. i will look into it then.&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:17 PM&lt;/em>&lt;/p>
-&lt;p>that’d be amazing&lt;/p>
-&lt;p>cool, so I believe we need to work a bit on the pending items
-and see where we are in two weeks :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:18 PM&lt;/em>&lt;/p>
-&lt;p>From a bugs standpoint, #9359 is an absolute blocker for Sauce users to move to Selenium 4,
-but @Puja Jagani is helping confirm it.&lt;/p>
-&lt;p>Would be nice to at least know what is going on before next release&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:20 PM&lt;/em>&lt;/p>
-&lt;p>I think we have enough time to figure that one out&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:20 PM&lt;/em>&lt;/p>
-&lt;p>The reproducible test case is helpful&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:20 PM&lt;/em>&lt;/p>
-&lt;p>yeah, should have done that from the start&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:20 PM&lt;/em>&lt;/p>
-&lt;p>I wonder if someone asked @titusfortner for a reproducible test case :smile:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:21 PM&lt;/em>&lt;/p>
-&lt;p>tbf I did put exactly what needed to go into the POM&lt;/p>
-&lt;p>&lt;em>9:21 PM&lt;/em>&lt;/p>
-&lt;p>I just didn&amp;rsquo;t create a whole project that can be cloned to see the issue&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:21 PM&lt;/em>&lt;/p>
-&lt;p>anyway, we could move to the last topic for today, the IDE&lt;/p>
-&lt;p>&lt;em>9:21 PM&lt;/em>&lt;/p>
-&lt;p>Selenium IDE&lt;/p>
-&lt;ul>
-&lt;li>Who knows what the release process is?&lt;/li>
-&lt;li>What is needed?&lt;/li>
-&lt;li>Who can help reviewing pull requests?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Sri Harsha 9:22 PM&lt;/em>&lt;/p>
-&lt;p>By beta 4, i will be resolving JS api docs too. May be i can pass it to @diemol for review and upload&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:22 PM&lt;/em>&lt;/p>
-&lt;p>What is needed for a release*&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:23 PM&lt;/em>&lt;/p>
-&lt;p>@Todd Tarsi is here and they want to contribute, so it would be nice to give them a hand&lt;/p>
-&lt;p>&lt;em>David Burns 9:23 PM&lt;/em>&lt;/p>
-&lt;p>if @corevo or @tourdedave have documented the release process I think I have some of the keys to do it&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:23 PM&lt;/em>&lt;/p>
-&lt;p>I can check if it is documented, else reach out to them&lt;/p>
-&lt;p>&lt;em>Todd Tarsi 9:23 PM&lt;/em>&lt;/p>
-&lt;p>Hi all, yep if I can help in any way, please let me.
-I&amp;rsquo;ve been doing selenium ide stuff since it was UI with zanarkand (is that the right name?) back in the day&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:24 PM&lt;/em>&lt;/p>
-&lt;p>We need the keys for the 3 stores, right? Edge, Chrome and Firefox&lt;/p>
-&lt;p>&lt;em>9:25 PM&lt;/em>&lt;/p>
-&lt;p>we should also update the docs to mention it is available in Edge&lt;/p>
-&lt;p>&lt;em>Todd Tarsi 9:27 PM&lt;/em>&lt;/p>
-&lt;p>I can PR simple docs changes if we want.&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:27 PM&lt;/em>&lt;/p>
-&lt;p>cool&lt;/p>
-&lt;p>so we will check what is needed to properly test and
-release the IDE, and we will post here in #selenium-tlc&lt;/p>
-&lt;p>thanks for showing interest, @Todd Tarsi&lt;/p>
-&lt;p>ok, I think that is all for today, right?&lt;/p>
-&lt;p>does anyone have an extra topic?&lt;/p>
-&lt;p>seems not, thank you everyone!&lt;/p>
-&lt;p>(and thanks @harsha509 for publishing the notes to our blog :slightly_smiling_face:)&lt;/p></description></item></channel></rss>
+&lt;p>Observability is slowly becoming a must-have property of a system. Selenium is now observable! Go ahead try it out. Let us know if you find anything that requires improvement on our end.&lt;/p></description></item></channel></rss>
