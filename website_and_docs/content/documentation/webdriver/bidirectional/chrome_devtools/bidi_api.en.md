@@ -114,7 +114,7 @@ WebDriver BiDi when there are DOM mutations on a specific
 element in the DOM.
 
 {{< tabpane text=true >}}
-  {{% tab text=true header="Java" %}}
+  {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L64-L65" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -156,7 +156,7 @@ const assert = require("assert");
 }())
 ```
 {{% /tab %}}
-  {{< tab header="Kotlin" text=true >}}
+  {{< tab header="Kotlin" >}}
 {{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
@@ -295,7 +295,7 @@ Both requests and responses can be recorded or transformed.
 {{< tab header="Python" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
-{{< tab header="CSharp" text=true >}}
+{{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/ChromeDevtools/BidiApiTest.cs#L143-L156" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
