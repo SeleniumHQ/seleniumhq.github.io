@@ -23,7 +23,7 @@ for all the various ways the grid can be configured.
 The driver needs to know where to send commands to and which browser to start on the Remote computer. So an address
 and an options instance are both required.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L37-L38" >}}
 {{< /tab >}}
@@ -55,7 +55,7 @@ the file, and send it to the remote machine, so the driver can see the reference
 Some bindings include a basic local file detector by default, and all of them allow 
 for a custom file detector.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 Java does not include a Local File Detector by default, so you must always add one to do uploads.
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L48-L51" >}}
@@ -100,7 +100,7 @@ you must add the flag:
 The grid uses the `se:downloadsEnabled` capability to toggle whether to be responsible for managing the browser location.
 Each of the bindings have a method in the options class to set this.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L59-L61" >}}
 {{< /tab >}}
@@ -126,7 +126,7 @@ Each of the bindings have a method in the options class to set this.
 Be aware that Selenium is not waiting for files to finish downloading, 
 so the list is an immediate snapshot of what file names are currently in the directory for the given session.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L72" >}}
 {{< /tab >}}
@@ -151,7 +151,7 @@ so the list is an immediate snapshot of what file names are currently in the dir
 
 Selenium looks for the name of the provided file in the list and downloads it to the provided target directory.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L78" >}}
 {{< /tab >}}
@@ -177,7 +177,7 @@ Selenium looks for the name of the provided file in the list and downloads it to
 By default, the download directory is deleted at the end of the applicable session,
 but you can also delete all files during the session.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
 {{< /tab >}}
@@ -204,7 +204,7 @@ but you can also delete all files during the session.
 Each [browser](({{< ref "../browsers/" >}})) has implemented special functionality that is available only to that browser.
 Each of the Selenium bindings has implemented a different way to use those features in a Remote Session
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Java requires you to use the Augmenter class, which allows it to automatically pull in implementations for
 all interfaces that match the capabilities used with the RemoteWebDriver

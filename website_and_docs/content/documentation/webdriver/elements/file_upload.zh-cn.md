@@ -11,7 +11,7 @@ Because Selenium cannot interact with the file upload dialog, it provides a way
 to upload files without opening the dialog. If the element is an `input` element with type `file`, 
 you can use the send keys method to send the full path to the file that will be uploaded.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L17-L19" >}}
 {{< /tab >}}

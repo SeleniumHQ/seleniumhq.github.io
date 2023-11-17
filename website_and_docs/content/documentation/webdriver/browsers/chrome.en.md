@@ -21,7 +21,7 @@ Capabilities unique to Chrome and Chromium are documented at Google's page for
 
 Starting a Chrome session with basic defined options looks like this:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L37-L38" >}}
 {{< /tab >}}
@@ -53,7 +53,7 @@ Commonly used args include `--start-maximized`, `--headless=new` and `--user-dat
 
 Add an argument to options:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L45" >}}
 {{< /tab >}}
@@ -81,7 +81,7 @@ use chromedriver to drive various Chromium based browsers.
 
 Add a browser location to options:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L54" >}}
 {{< /tab >}}
@@ -110,7 +110,7 @@ please use the `load-extension` argument instead, as mentioned in
 
 Add an extension to options:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L65" >}}
 {{< /tab >}}
@@ -136,7 +136,7 @@ Add an extension to options:
 Setting the `detach` parameter to true will keep the browser open after the process has ended,
 so long as the quit command is not sent to the driver.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **Note**: This is already the default behavior in Java. 
 {{% /tab %}}
@@ -167,7 +167,7 @@ can be parsed from the
 
 Set excluded arguments on options:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L78" >}}
 {{< /tab >}}
@@ -203,7 +203,7 @@ direct where the logs will go. Logging output is ignored unless the user directs
 
 To change the logging output to save to a specific file:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
 **Note**: Java also allows setting file output by System Property:\
@@ -233,7 +233,7 @@ Property value: String representing path to log file
 
 To change the logging output to display in the console as STDOUT:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
@@ -266,7 +266,7 @@ There are 6 available log levels: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, a
 Note that `--verbose` is equivalent to `--log-level=ALL` and `--silent` is equivalent to `--log-level=OFF`,
 so this example is just setting the log level generically:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
@@ -301,7 +301,7 @@ There are 2 features that are only available when logging to a file:
 To use them, you need to also explicitly specify the log path and log level.
 The log output will be managed by the driver, not the process, so minor differences may be seen.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
@@ -333,7 +333,7 @@ Chromedriver and Chrome browser versions should match, and if they don't the dri
 If you disable the build check, you can force the driver to be used with any version of Chrome.
 Note that this is an unsupported feature, and bugs will not be investigated.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
@@ -368,7 +368,7 @@ Some browsers have implemented additional features that are unique to them.
 
 You can drive Chrome Cast devices, including sharing tabs
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -394,7 +394,7 @@ You can drive Chrome Cast devices, including sharing tabs
 
 You can simulate various network conditions.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -417,7 +417,7 @@ You can simulate various network conditions.
 
 ### Logs
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -440,7 +440,7 @@ You can simulate various network conditions.
 
 ### Permissions
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

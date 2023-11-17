@@ -48,7 +48,7 @@ defina a versão do navegador disponível na extremidade remota.
 Por exemplo, se solicitar o Chrome versão 75 em um sistema que
 tiver apenas 80 instalados, a criação da sessão falhará.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -359,7 +359,7 @@ fetching the `platformName` returns the OS name.
 In cloud-based providers, 
 setting `platformName` sets the OS at the remote-end.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -397,7 +397,7 @@ All self-signed certificates will be trusted by this capability by default.
 Once set, `acceptInsecureCerts` capability will have an 
 effect for the entire session.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -433,7 +433,7 @@ Specifies when to interrupt an executing script in
 a current browsing context. The default timeout **30,000**
 is imposed when a new session is created by WebDriver.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -462,7 +462,7 @@ new session is created by WebDriver. If page load limits
 a given/default time frame, the script will be stopped by
 _TimeoutException_.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -489,7 +489,7 @@ implicit element location strategy when
 locating elements. The default timeout **0**
 is imposed when a new session is created by WebDriver.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -528,7 +528,7 @@ user prompt encounters at the remote-end. This is defined by
 * accept and notify
 * ignore
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -554,7 +554,7 @@ user prompt encounters at the remote-end. This is defined by
 
 Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -583,7 +583,7 @@ should be applied to _input type=file_ elements. As strict interactability
 checks are off by default, there is a change in behaviour 
 when using _Element Send Keys_ with hidden file upload controls.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

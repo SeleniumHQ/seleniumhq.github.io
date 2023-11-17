@@ -17,7 +17,7 @@ Felizmente, provavelmente você não precisa aprender a usar os comandos de baix
 
 Movimentos de ponteiro e rolagem da roda permitem que o usuário defina uma duração para a ação, mas às vezes você só precisa esperar um momento entre as ações para que as coisas funcionem corretamente.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -46,7 +46,7 @@ Um ponto importante a ser observado é que o driver lembra o estado de todos os 
 
 Existe um método especial para liberar todas as teclas pressionadas e botões do ponteiro atualmente pressionados. Esse método é implementado de maneira diferente em cada uma das linguagens porque não é executado com o método de execução (perform).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}

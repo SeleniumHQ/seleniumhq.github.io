@@ -17,7 +17,7 @@ Existem apenas 3 ações que podem ser realizadas com um mouse: pressionar um bo
 
 Este método combina mover o mouse para o centro de um elemento com a pressão do botão esquerdo do mouse. Isso é útil para focar em um elemento específico:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L22-L25" >}}
 {{< /tab >}}
@@ -42,7 +42,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão d
 
 Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão esquerdo do mouse. Isso é conhecido como "clicar":
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
 {{< /tab >}}
@@ -78,7 +78,7 @@ Existem um total de 5 botões definidos para um mouse:
 Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão direito do mouse (botão 2). Isso é conhecido como "clicar com o botão direito" ou "menu de contexto"
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
 {{< /tab >}}
@@ -103,7 +103,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão e
 
 Este termo pode se referir a um clique com o botão X1 (botão de voltar) do mouse. No entanto, essa terminologia específica pode variar dependendo do contexto.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L60-L66" >}}
 {{< /tab >}}
@@ -132,7 +132,7 @@ Este termo pode se referir a um clique com o botão X1 (botão de voltar) do mou
 
 Este termo se refere a um clique com o botão X2 (botão de avançar) do mouse. Não existe um método de conveniência específico para essa ação, sendo apenas a pressão e liberação do botão do mouse de número 4.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L78-L84" >}}
 {{< /tab >}}
@@ -161,7 +161,7 @@ Este termo se refere a um clique com o botão X2 (botão de avançar) do mouse. 
 
 Este método combina mover o mouse para o centro de um elemento com a pressão e liberação do botão esquerdo do mouse duas vezes. Isso é conhecido como "duplo clique".
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L93-L96" >}}
 {{< /tab >}}
@@ -186,7 +186,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão e
 
 Este método move o mouse para o ponto central do elemento que está visível na tela. Isso é conhecido como "hovering" ou "pairar". É importante observar que o elemento deve estar no viewport (área visível na tela) ou então o comando resultará em erro.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L105-L108" >}}
 {{< /tab >}}
@@ -215,7 +215,7 @@ Esses métodos primeiro movem o mouse para a origem designada e, em seguida, pel
 
 Este método move o mouse para o ponto central do elemento visível na tela e, em seguida, move o mouse pelo deslocamento fornecido.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
 {{< /tab >}}
@@ -240,7 +240,7 @@ Este método move o mouse para o ponto central do elemento visível na tela e, e
 
 Este método move o mouse a partir do canto superior esquerdo da janela de visualização atual pelo deslocamento fornecido.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
 {{< /tab >}}
@@ -266,7 +266,7 @@ Este método move o mouse a partir de sua posição atual pelo deslocamento forn
 
 Observe que o primeiro argumento, X, especifica o movimento para a direita quando positivo, enquanto o segundo argumento, Y, especifica o movimento para baixo quando positivo. Portanto, `moveByOffset(30, -10)` move o mouse 30 unidades para a direita e 10 unidades para cima a partir da posição atual do mouse.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
@@ -291,7 +291,7 @@ Observe que o primeiro argumento, X, especifica o movimento para a direita quand
 
 Este método primeiro realiza um clique e mantém pressionado no elemento de origem, move para a localização do elemento de destino e, em seguida, libera o botão do mouse.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
@@ -316,7 +316,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 
 Este método primeiro realiza um clique e mantém pressionado no elemento de origem, move para o deslocamento fornecido e, em seguida, libera o botão do mouse.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}

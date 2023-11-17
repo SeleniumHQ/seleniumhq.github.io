@@ -65,7 +65,7 @@ could cause a timeout to occur after 20 seconds.
 
 Solving our example with an implicit wait looks like this:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L50" >}}
   {{< /tab >}}
@@ -96,7 +96,7 @@ so explicit waits are a great choice to specify the exact condition to wait for
 in each place it is needed.
 Another nice feature is that, by default, the Selenium Wait class automatically waits for the designated element to exist.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 This example shows the condition being waited for as a _lambda_. Java also supports
 [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
@@ -136,7 +136,7 @@ For instance, if the _element not interactable_ error is retried by default, the
 add an action on a method inside the code getting executed (we just need to 
 make sure that the code returns `true` when it is successful):
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L82-L92" >}}

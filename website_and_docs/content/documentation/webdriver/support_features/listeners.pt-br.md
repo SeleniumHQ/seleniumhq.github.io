@@ -9,7 +9,7 @@ aliases: [
 
 These allow you to execute custom actions in every time specific Selenium commands are sent
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

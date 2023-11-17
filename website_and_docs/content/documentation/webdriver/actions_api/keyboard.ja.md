@@ -22,7 +22,7 @@ unicode values have been assigned to other keyboard keys for use with Selenium.
 Each language has its own way to reference these keys; the full list can be found
 [here](https://www.w3.org/TR/webdriver/#keyboard-actions).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
     {{< tab header="Java" >}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
     {{< /tab >}}
@@ -45,7 +45,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ## Key down
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
 {{< /tab >}}
@@ -68,7 +68,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ## Key up
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
 {{< /tab >}}
@@ -97,7 +97,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 
 ### Active Element
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
 {{< /tab >}}
@@ -120,7 +120,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 
 ### Designated Element
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
 {{< /tab >}}
@@ -148,7 +148,7 @@ Here's an example of using all of the above methods to conduct a copy / paste ac
 Note that the key to use for this operation will be different depending on if it is a Mac OS or not.
 This code will end up with the text: `SeleniumSelenium!`
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
 {{< /tab >}}

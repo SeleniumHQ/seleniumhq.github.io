@@ -19,7 +19,7 @@ These methods can include conditions such as:
 * text is visible
 * title contains specified value
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 [Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
 {{< badge-code >}}

@@ -13,7 +13,7 @@ This section contains the APIs related to logging.
 
 Listen to the `console.log` events and register callbacks to process the event.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L31-L38" >}}
@@ -34,7 +34,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 Listen to the JS Exceptions
 and register callbacks to process the exception details.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L70-L77" >}}
 {{< /tab >}}
@@ -53,7 +53,7 @@ and register callbacks to process the exception details.
 
 Listen to all JS logs at all levels and register callbacks to process the log.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L52-L59" >}}

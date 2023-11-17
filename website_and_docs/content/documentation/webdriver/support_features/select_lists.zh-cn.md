@@ -63,7 +63,7 @@ Select对象现在将为您提供一系列命令,
 您无法针对禁用的 `<select>` 元素构建 `Select` 对象.
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L23-L24" >}}
 {{< /tab >}}
@@ -92,7 +92,7 @@ Select对象现在将为您提供一系列命令,
 
 获取 `<select>` 元素中所有选项列表:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L51" >}}
 {{< /tab >}}
@@ -119,7 +119,7 @@ Select对象现在将为您提供一系列命令,
 对于标准选择列表这将只是一个包含一个元素的列表, 
 对于复选列表则表示包含的零个或多个元素.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L54" >}}
 {{< /tab >}}
@@ -150,7 +150,7 @@ Select类提供了三种选择选项的方法.
 
 根据其可见文本选择选项
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L30" >}}
 {{< /tab >}}
@@ -175,7 +175,7 @@ Select类提供了三种选择选项的方法.
 
 根据其值属性选择选项
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L33" >}}
 {{< /tab >}}
@@ -200,7 +200,7 @@ Select类提供了三种选择选项的方法.
 
 根据其在列表中的位置选择选项
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L36" >}}
 {{< /tab >}}
@@ -234,7 +234,7 @@ Select类提供了三种选择选项的方法.
     </select>
 ```
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L77-L79" >}}
 {{< /tab >}}
@@ -260,7 +260,7 @@ Select类提供了三种选择选项的方法.
 只有复选类型的选择列表才能取消选择选项.
 您可以对要选择的每个元素重复使用这些方法.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L66" >}}
 {{< /tab >}}

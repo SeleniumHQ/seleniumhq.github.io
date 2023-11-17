@@ -15,7 +15,7 @@ aliases: [
 Historically, this is the most common error beginning Selenium users get 
 when trying to run code for the first time:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 The path to the driver executable must 
 be set by the webdriver.chrome.driver system property; 

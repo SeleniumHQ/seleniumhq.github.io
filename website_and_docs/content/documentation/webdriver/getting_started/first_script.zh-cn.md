@@ -22,7 +22,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 
 关于如何启动会话，请浏览我们的文档 [驱动会话]({{< ref "../drivers/" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 [导航]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) 
 到一个网页. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 {{< /tab >}}
@@ -75,7 +75,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/interactions" >}}) , 
 包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#16" >}}
 {{< /tab >}}
@@ -114,7 +114,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 阅读更多关于[等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
 的信息. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
 {{< /tab >}}
@@ -140,7 +140,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 如果不先[找到元素]({{< ref "/documentation/webdriver/elements" >}}), 
 就无法与之交互.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L20-L21" >}}
 {{< /tab >}}
@@ -166,7 +166,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 只有少数几个[操作]({{< ref "/documentation/webdriver/elements/interactions.md" >}})可以执行, 
 但您将经常使用它们. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L23-L24" >}}
 {{< /tab >}}
@@ -190,7 +190,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 ### 7. 获取元素信息
 元素存储了很多[被请求的信息]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
 {{< /tab >}}
@@ -219,7 +219,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 
 See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}

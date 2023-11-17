@@ -65,7 +65,7 @@ example directories that use test runners and get executed every release to ensu
 Here is a list of test runners with links. The first item is the one that is used by this repository and the one
 that will be used for all examples on this page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 - [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
 - [TestNG](https://testng.org/doc/) - Offers extra features like parallel test execution and parameterized tests.
@@ -102,7 +102,7 @@ that will be used for all examples on this page.
 This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}}).
 This code is only showing examples for what is being used in our Documentation Examples project.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
 **Maven**
@@ -134,7 +134,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Asserting
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -157,7 +157,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Setting Up and Tearing Down
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -180,7 +180,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Executing
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 ### Maven
 
@@ -219,7 +219,7 @@ mocha runningTests.spec.js
 In [First script]({{< ref "first_script.md" >}}), we saw each of the components of a Selenium script.
 Here's an example of that code using a test runner:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}

@@ -18,7 +18,7 @@ Seleniumの中核は[WebDriver]({{< ref "/webdriver.md" >}})であり、様々�
 インストラクションの一つです:
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
