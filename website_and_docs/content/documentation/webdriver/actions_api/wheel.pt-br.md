@@ -19,7 +19,7 @@ Este método recebe um elemento da web como único argumento.
 
 Independentemente de o elemento estar acima ou abaixo da tela de visualização atual, a janela de visualização será rolada de forma que a parte inferior do elemento esteja na parte inferior da tela.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L17-L20" >}}
 {{< /tab >}}
@@ -44,7 +44,7 @@ Independentemente de o elemento estar acima ou abaixo da tela de visualização 
 
 Este é o segundo cenário mais comum para a rolagem. Passe um valor delta x e um valor delta y para o quanto rolar nas direções direita e para baixo. Valores negativos representam esquerda e para cima, respectivamente.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L29-L33" >}}
 {{< /tab >}}
@@ -73,7 +73,7 @@ Para executar isso, use o método "Rolar a Partir de", que recebe 3 argumentos. 
 
 Se o elemento estiver fora da janela de visualização, ele será rolado para a parte inferior da tela e, em seguida, a página será rolada pelos valores delta x e delta y fornecidos.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
 {{< /tab >}}
@@ -104,7 +104,7 @@ Se o elemento estiver fora da janela de visualização, primeiro ele será rolad
 
 Observe que se o deslocamento a partir do centro do elemento estiver fora da janela de visualização, isso resultará em uma exceção.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L57-L61" >}}
 {{< /tab >}}
@@ -133,7 +133,7 @@ Isso utiliza novamente o método "Rolar a Partir", mas a janela de visualizaçã
 
 Observe que se o deslocamento a partir do canto superior esquerdo da janela de visualização sair da tela, isso resultará em uma exceção.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
 {{< /tab >}}

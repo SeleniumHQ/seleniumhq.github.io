@@ -19,7 +19,7 @@ Capacidades únicas ao Firefox podem ser encontradas na página da Mozilla para 
 
 Este é um exemplo de como iniciar uma sessão Firefox com um conjunto de opções básicas:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L36-L37" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Opções mais frequentes incluem `-headless` e `"-profile", "/path/to/profile"`
 
 Adicione uma opção:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L44" >}}
 {{< /tab >}}
@@ -78,7 +78,7 @@ versão de produção, quando ambas versões estão presentes no seu computador.
 
 Adicionar uma localização:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L54" >}}
 {{< /tab >}}
@@ -165,7 +165,7 @@ direct where the logs will go. Logging output is ignored unless the user directs
 
 To change the logging output to save to a specific file:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
 **Note**: Java also allows setting file output by System Property:\
@@ -195,7 +195,7 @@ Property value: String representing path to log file
 
 To change the logging output to display in the console:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
@@ -229,7 +229,7 @@ If logging is specified the level defaults to `info`.
 Note that `-v` is equivalent to `-log debug` and `-vv` is equivalent to `log trace`,
 so this examples is just for setting the log level generically:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
@@ -261,7 +261,7 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 The driver logs everything that gets sent to it, including string representations of large binaries, so
 Firefox truncates lines by default. To turn off truncation:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
@@ -293,7 +293,7 @@ Property value: `"true"` or `"false"`
 The default directory for profiles is the system temporary directory. If you do not have access to that directory,
 or want profiles to be created some place specific, you can change the profile root directory:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
@@ -338,7 +338,7 @@ please refer to the
 
 Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mozilla.org/en-US/firefox/) 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L132" >}}
 {{< /tab >}}
@@ -363,7 +363,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 
 Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor de retorno durante a instalação.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L146" >}}
 {{< /tab >}}
@@ -391,7 +391,7 @@ Quando trabalhar em uma extensão não terminada ou não publicada, provavelment
 Desta forma, só pode ser instalada como "temporária". Isto pode ser feito passando uma arquivo ZIP ou
 uma pasta, este é um exemplo com uma pasta:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L157" >}}
 {{< /tab >}}
@@ -420,7 +420,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -447,7 +447,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

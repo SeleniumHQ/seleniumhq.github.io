@@ -29,7 +29,7 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 Browser name is set by default when using an Options class instance.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -57,7 +57,7 @@ This capability is optional, this is used to set the available browser version a
 In recent versions of Selenium, if the version is not found on the system,
 it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -363,7 +363,7 @@ fun main() {
 
 クラウドベースのプロバイダーでは、 `platformName` を設定すると、リモートエンドのOSが設定されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -395,7 +395,7 @@ fun main() {
 すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。
 一度設定すると、 `acceptInsecureCerts` Capabilityはセッション全体に影響します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -427,7 +427,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 現在のブラウジングコンテキストで実行中のスクリプトをいつ中断するかを指定します。
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **30,000** が課されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -453,7 +453,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **300,000** が課されます。
 ページの読み込みが指定/デフォルトの時間枠を制限する場合、スクリプトは　_TimeoutException_　によって停止されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -478,7 +478,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 これは、要素を検索するときに暗黙的な要素の検索戦略を待つ時間を指定します。
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **0** が課されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -515,7 +515,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 * accept and notify (受け入れて通知)
 * ignore (無視)
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -541,7 +541,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 リモート エンドがすべての　[サイズ変更および再配置](https://w3c.github.io/webdriver/#resizing-and-positioning-windows)
 [コマンド](https://w3c.github.io/webdriver/#dfn-commands) をサポートするかどうかを示します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -568,7 +568,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 厳密な相互作用チェックはデフォルトでオフになっているため、隠しファイルのアップロードコントロールで _Element Send Keys_ 
 を使用する場合の動作が変更されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

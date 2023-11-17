@@ -20,7 +20,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 虚拟身份验证器具有 [一组属性](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators)。
 这些属性在 Selenium 绑定中映射为 VirtualAuthenticatorOptions。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L55-L61" >}}
 {{< /tab >}}
@@ -45,7 +45,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 它使用提供的属性创建一个新的虚拟身份验证器。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L68-L73" >}}
 {{< /tab >}}
@@ -69,7 +69,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 删除之前添加的虚拟身份验证器。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L86" >}}
 {{< /tab >}}
@@ -93,7 +93,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个永久(有状态的)凭据。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L100-L103" >}}
 {{< /tab >}}
@@ -116,7 +116,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个常驻(无状态)凭据。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L143-L145" >}}
 {{< /tab >}}
@@ -139,7 +139,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 向身份验证器注册凭据。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L137-L146" >}}
 {{< /tab >}}
@@ -162,7 +162,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 返回身份验证者拥有的凭据列表。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L157-L171" >}}
 {{< /tab >}}
@@ -186,7 +186,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 根据传递的凭据ID从身份验证器中删除凭据。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L181-L190" >}}
 {{< /tab >}}
@@ -210,7 +210,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 从身份验证器中删除所有凭据。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L196-L205" >}}
 {{< /tab >}}
@@ -233,7 +233,7 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 
 设置身份验证器是模拟用户验证成功还是失败。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L211-L212" >}}
 {{< /tab >}}

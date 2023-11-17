@@ -12,7 +12,7 @@ description: >
 
 ## 获取一个logger
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java 日志通常是按类创建的. 
 您可以通过默认logger来使用所有loggers.
@@ -60,7 +60,7 @@ logger = logging.getLogger('webdriver')
 ## 日志级别
 Logger级别有助于根据日志的严重性过滤日志.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
   Java有七种logger级别: `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, 以及 `FINEST`.
 默认是 `INFO`. 
@@ -129,7 +129,7 @@ logger.setLevel(logging.Level.INFO)
 我们的政策是将 3 个版本的内容标记为已弃用后, 
 再删除它们, 因此弃用可能记录为警告.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java 日志可操作的内容在logger级别 `WARN`
 
@@ -176,7 +176,7 @@ For example:
 这是默认级别, Selenium 记录用户应该注意但不需要对其执行操作的内容. 
 这可能会引用新方法或将用户定向到有关某些内容的详细信息
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
   Java 日志有用的信息在logger 级别 `INFO`
 
@@ -220,7 +220,7 @@ Example:
 
 调试日志级别用于诊断问题和解决问题可能需要的信息.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java日志的大多数调试信息在logger 级别 `FINE`
 
@@ -264,7 +264,7 @@ Example:
 日志可以显示在控制台中, 也可以存储在文件中. 
 不同的语言有不同的默认值. 
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 默认情况下, 所有日志都发送到 `System.err`.
 要将输出定向到文件, 您需要添加一个处理程序:
@@ -302,7 +302,7 @@ logging.installConsoleHandler()
 
 ## Logger 过滤
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Java 日志记录是按类级别管理的, 
 因此不要使用根logger  (`Logger.getLogger("")`), 

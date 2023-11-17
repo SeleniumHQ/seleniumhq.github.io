@@ -29,7 +29,7 @@ uma interface para escrever conjuntos de instruções que podem ser executados a
 navegadores. Aqui está uma das instruções mais simples que você pode fazer:
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}

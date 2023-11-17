@@ -6,7 +6,7 @@ weight: 3
 
 These allow you to set various parameters for the HTTP library
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

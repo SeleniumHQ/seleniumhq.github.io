@@ -20,7 +20,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 
 For more details on starting a session read our documentation on [driver sessions]({{< ref "../drivers/" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 {{< /tab >}}
@@ -44,7 +44,7 @@ For more details on starting a session read our documentation on [driver session
 ### 2. Take action on browser
 In this example we are [navigating]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) to a web page. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 {{< /tab >}}
@@ -70,7 +70,7 @@ In this example we are [navigating]({{< ref "/documentation/webdriver/interactio
 There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/interactions" >}}) you
 can request, including window handles, browser size / position, cookies, alerts, etc.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#16" >}}
 {{< /tab >}}
@@ -104,7 +104,7 @@ we'll use it as a placeholder.
 
 Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
 {{< /tab >}}
@@ -129,7 +129,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 The majority of commands in most Selenium sessions are element related, and you can't interact
 with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L20-L21" >}}
 {{< /tab >}}
@@ -154,7 +154,7 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
 but you will use them frequently. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L23-L24" >}}
 {{< /tab >}}
@@ -178,7 +178,7 @@ but you will use them frequently.
 ### 7. Request element information
 Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
 {{< /tab >}}
@@ -205,7 +205,7 @@ This ends the driver process, which by default closes the browser as well.
 No more commands can be sent to this driver instance. 
 See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}

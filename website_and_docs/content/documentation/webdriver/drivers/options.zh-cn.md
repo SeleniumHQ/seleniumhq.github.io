@@ -32,7 +32,7 @@ aliases: [
 
 Browser name is set by default when using an Options class instance.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -60,7 +60,7 @@ This capability is optional, this is used to set the available browser version a
 In recent versions of Selenium, if the version is not found on the system,
 it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -375,7 +375,7 @@ fun main() {
 在基于云的供应者中, 
 设置 `platformName` 将在远程端设置操作系统.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -410,7 +410,7 @@ fun main() {
 默认情况下, 此功能将信任所有自签名证书. 
 设置后,  `acceptInsecureCerts` 功能将在整个会话中生效.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -445,7 +445,7 @@ WebDriver `session` 具有一定的 `session timeout` 间隔,
 WebDriver创建新会话时, 
 将设置默认的超时时间为 **30,000** .
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -473,7 +473,7 @@ WebDriver创建新会话时,
 如果页面加载限制了给定 (或默认) 的时间范围, 
 则该脚本将被 _TimeoutException_ 停止.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -499,7 +499,7 @@ WebDriver创建新会话时,
 WebDriver创建新会话时, 
 将设置默认超时时间为 **0** .
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -538,7 +538,7 @@ WebDriver创建新会话时,
 * accept and notify
 * ignore
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -565,7 +565,7 @@ WebDriver创建新会话时,
 用于所有支持 [调整大小和重新定位](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) 
 [命令](https://w3c.github.io/webdriver/#dfn-commands) 的远程终端.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -594,7 +594,7 @@ WebDriver创建新会话时,
 在将 _元素的Send Keys_ 方法作用于隐藏的文件上传时, 
 会有控制方面的行为区别.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

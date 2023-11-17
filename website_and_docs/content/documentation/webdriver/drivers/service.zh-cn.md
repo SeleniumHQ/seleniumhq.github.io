@@ -16,7 +16,7 @@ to the command line. Most of the useful arguments are related to logging.
 
 To start a driver with a default service instance:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L15-L16" >}}
 {{< /tab >}}
@@ -43,7 +43,7 @@ To start a driver with a default service instance:
 **Note:** If you are using Selenium 4.6 or greater, you shouldn't need to set a driver location.
 If you can not update Selenium or have an advanced use case here is how to specify the driver location:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L25-L26" >}}
 {{< /tab >}}
@@ -71,7 +71,7 @@ If you can not update Selenium or have an advanced use case here is how to speci
 
 If you want the driver to run on a specific port, you may specify it as follows:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L33" >}}
 {{< /tab >}}

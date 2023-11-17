@@ -23,7 +23,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 
 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}

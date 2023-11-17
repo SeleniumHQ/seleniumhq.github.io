@@ -11,7 +11,7 @@ why you might be having a problem.
 
 ## Getting a logger
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java logs are typically created per class. You can work with the default logger to 
 work with all loggers. To filter out specific classes, see [Filtering](#logger-filtering)
@@ -58,7 +58,7 @@ logger = logging.getLogger('webdriver')
 ## Logger level
 Logger level helps to filter out logs based on their severity.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
   Java has 7 logger levels: `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, and `FINEST`.
 The default is `INFO`. 
@@ -127,7 +127,7 @@ for deprecations. For various reasons, Selenium project does not follow standard
 Our policy is to mark things as deprecated for 3 releases and then remove them, so deprecations
 may be logged as warnings.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java logs actionable content at logger level `WARN`
 
@@ -174,7 +174,7 @@ For example:
 This is the default level where Selenium logs things that users should be aware of but do not need to take actions on.
 This might reference a new method or direct users to more information about something
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
   Java logs useful information at logger level `INFO`
 
@@ -218,7 +218,7 @@ Example:
 
 The debug log level is used for information that may be needed for diagnosing issues and troubleshooting problems.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Java logs most debug content at logger level `FINE`
 
@@ -261,7 +261,7 @@ Example:
 
 Logs can be displayed in the console or stored in a file. Different languages have different defaults.
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 By default all logs are sent to `System.err`. To direct output to a file, you need to add a handler:
 
@@ -299,7 +299,7 @@ logging.installConsoleHandler()
 
 ## Logger filtering
 
-{{< tabpane langEqualsHeader=true text=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Java logging is managed on a per class level, so 
 instead of using the root logger (`Logger.getLogger("")`), set the level you want to use on a per-class

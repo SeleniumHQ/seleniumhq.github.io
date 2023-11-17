@@ -16,7 +16,7 @@ aliases: [
 
 ## 请求对应的程序语言
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 

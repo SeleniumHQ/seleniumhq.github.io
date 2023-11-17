@@ -31,7 +31,7 @@ lower level commands for you. These are all documented in
 Pointer movements and Wheel scrolling allow the user to set a duration for the action, but sometimes you just need
 to wait a beat between actions for things to work correctly.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -64,7 +64,7 @@ There is a special method to release all currently depressed keys and pointer bu
 This method is implemented differently in each of the languages because
 it does not get executed with the perform method.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}

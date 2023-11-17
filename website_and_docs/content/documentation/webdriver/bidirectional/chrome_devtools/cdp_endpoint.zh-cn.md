@@ -30,7 +30,7 @@ any actual asynchronous interactions require another implementation
 
 An alternate implementation can be found at [CDP API Set Cookie]({{< ref "cdp_api#set-cookie" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpEndpointTest.java#L26-32" >}}
 {{% /tab %}}
@@ -56,7 +56,7 @@ The [CDP API Set Cookie]({{< ref "cdp_api#set-cookie" >}}) implementation should
 
 An alternate implementation can be found at [CDP API Performance Metrics]({{< ref "cdp_api#performance-metrics" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 The [CDP API Performance Metrics]({{< ref "cdp_api#performance-metrics" >}}) implementation should be preferred
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpEndpointTest.java#L43-L46" >}}
@@ -84,7 +84,7 @@ The [CDP API Performance Metrics]({{< ref "cdp_api#performance-metrics" >}}) imp
 Alternate implementations can be found at [CDP API Basic Authentication]({{< ref "cdp_api#basic-authentication" >}})
 and [BiDi API Basic Authentication]({{< ref "bidi_api#basic-authentication" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 The [BiDi API Basic Authentication]({{< ref "bidi_api#basic-authentication" >}}) implementation should be preferred
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpEndpointTest.java#L60-L66" >}}

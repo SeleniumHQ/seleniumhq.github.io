@@ -61,7 +61,7 @@ que usam test runners e são executados a cada lançamento para garantir que tod
 Aqui está uma lista de executores de teste com links. O primeiro item é o que é usado por este repositório e o que
 que será usado para todos os exemplos nesta página.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 - [JUnit](https://junit.org/junit5/) - Uma estrutura de teste amplamente utilizada para testes Selenium baseados em Java.
 - [TestNG](https://testng.org/doc/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
@@ -98,7 +98,7 @@ que será usado para todos os exemplos nesta página.
 Isto é muito semelhante ao que foi requerido em [Install a Selenium Library]({{< ref "install_library.md" >}}).
 Este código está apenas a mostrar exemplos do que está a ser usado no nosso projeto de Exemplos de Documentação.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
 **Maven**
@@ -130,7 +130,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 
 ### Afirmar
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -153,7 +153,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 
 ### Configuarar e Desconfigurar
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -176,7 +176,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 
 ### Executando
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 ### Maven
 
@@ -215,7 +215,7 @@ mocha runningTests.spec.js
 In [First script]({{< ref "first_script.md" >}}), we saw each of the components of a Selenium script.
 Here's an example of that code using a test runner:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}

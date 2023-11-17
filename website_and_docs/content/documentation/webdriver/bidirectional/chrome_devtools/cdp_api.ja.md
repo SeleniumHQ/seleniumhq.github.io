@@ -27,7 +27,7 @@ especially in Ruby.
 
 An alternate implementation can be found at [CDP Endpoint Set Cookie]({{< ref "cdp_endpoint#set-cookie" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Because Java requires using all the parameters example, the Map approach used in
 [CDP Endpoint Set Cookie]({{< ref "cdp_endpoint#set-cookie" >}}) might be more simple.
@@ -58,7 +58,7 @@ Due to the added complexity in .NET of obtaining the domains and executing with 
 
 An alternate implementation can be found at [CDP Endpoint Performance Metrics]({{< ref "cdp_endpoint#performance-metrics" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpApiTest.java#L77-L81" >}}
 {{% /tab %}}
@@ -89,7 +89,7 @@ Alternate implementations can be found at
 [CDP Endpoint Basic Authentication]({{< ref "cdp_endpoint#basic-authentication" >}}) 
 and [BiDi API Basic Authentication]({{< ref "bidi_api#basic-authentication" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 The [BiDi API Basic Authentication]({{< ref "bidi_api#basic-authentication" >}}) implementation should be preferred
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpApiTest.java#L94-L101" >}}
@@ -124,7 +124,7 @@ Alternate implementations can be found at
 [BiDi API Console logs and errors]({{< ref "bidi_api#console-logs-and-errors" >}})
 and [WebDriver BiDi Console logs]({{< ref "../webdriver_bidi/log#console-logs" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Use the [WebDriver BiDi Console logs]({{< ref "../webdriver_bidi/log#console-logs" >}}) implementation
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpApiTest.java#L114-L121" >}}
@@ -156,7 +156,7 @@ Alternate implementations can be found at
 [BiDi API JavaScript exceptions]({{< ref "bidi_api#javascript-exceptions" >}})
 and [WebDriver BiDi JavaScript exceptions]({{< ref "../webdriver_bidi/log#javascript-exceptions" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Use the [WebDriver BiDi JavaScript exceptions]({{< ref "../webdriver_bidi/log#javascript-exceptions" >}}) implementation
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpApiTest.java#L133-L138" >}}
@@ -186,7 +186,7 @@ Use the [BiDi API JavaScript exceptions]({{< ref "bidi_api#javascript-exceptions
 Wait for a download to finish before continuing.
 Because getting download status requires setting a listener, this cannot be done with a CDP Endpoint implementation.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/CdpApiTest.java#L150-L162" >}}
 {{% /tab %}}

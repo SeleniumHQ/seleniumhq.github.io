@@ -20,7 +20,7 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 基本的な定義済みのオプションを使用して Firefox セッションを開始すると、以下のようになります。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L36-L37" >}}
 {{< /tab >}}
@@ -50,7 +50,7 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 オプションに引数を追加します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L44" >}}
 {{< /tab >}}
@@ -79,7 +79,7 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 オプションにブラウザーのロケーションを追加します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L54" >}}
 {{< /tab >}}
@@ -166,7 +166,7 @@ direct where the logs will go. Logging output is ignored unless the user directs
 
 To change the logging output to save to a specific file:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
 **Note**: Java also allows setting file output by System Property:\
@@ -196,7 +196,7 @@ Property value: String representing path to log file
 
 To change the logging output to display in the console:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
@@ -230,7 +230,7 @@ If logging is specified the level defaults to `info`.
 Note that `-v` is equivalent to `-log debug` and `-vv` is equivalent to `log trace`,
 so this examples is just for setting the log level generically:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
@@ -262,7 +262,7 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 The driver logs everything that gets sent to it, including string representations of large binaries, so
 Firefox truncates lines by default. To turn off truncation:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
@@ -294,7 +294,7 @@ Property value: `"true"` or `"false"`
 The default directory for profiles is the system temporary directory. If you do not have access to that directory,
 or want profiles to be created some place specific, you can change the profile root directory:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
@@ -339,7 +339,7 @@ please refer to the
 
 [Mozilla Add-Onsページ](https://addons.mozilla.org/ja/firefox/) から取得する署名付きxpiファイル
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L132" >}}
 {{< /tab >}}
@@ -365,7 +365,7 @@ please refer to the
 アドオンをアンインストールするには、そのIDを知る必要があります。
 IDはアドオンインストール時の戻り値から取得できます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L146" >}}
 {{< /tab >}}
@@ -393,7 +393,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 そのため、"一時的なもの" としてのみインストールできます。
 これは、zipファイルまたはディレクトリを渡すことで実行できます。ディレクトリの例を次に示します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L157" >}}
 {{< /tab >}}
@@ -422,7 +422,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -449,7 +449,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
