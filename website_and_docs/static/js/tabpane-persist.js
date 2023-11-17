@@ -121,9 +121,6 @@ function tdGetAndActivatePersistedTabs(tabs) {
     tdActivateTabsWithKey(key);
   });
 
-  // Adjust tab content heights
-  adjustTabContentHeights();
-
   return key_ageList;
 }
 
@@ -150,4 +147,6 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     tdGetAndActivatePersistedTabs(allTabsInThisPage);
   }
+  // Adjust tab content heights
+  adjustTabContentHeights();
 });
