@@ -41,6 +41,28 @@ function getActiveTabFromURL() {
   return activeTab ? activeTab.toLowerCase() : null;
 }
 
+function adjustTabContentHeights() {
+  const contentTabs = document.querySelectorAll('.tab-content');
+
+  // Loop through each tabpane
+  contentTabs.forEach(contentTab => {
+    let maxHeight = 0;
+    const tabPanes = contentTab.querySelectorAll('.tab-pane');
+
+    // Loop through each tab in the tabpanes list to find max
+    tabPanes.forEach(tab => {
+      tab.style.display = 'block';
+      maxHeight = Math.max(maxHeight, tab.clientHeight);
+      tab.style.display = '';
+    });
+
+    // Loop through each tab in the tabpanes list to set height
+    tabPanes.forEach(tab => {
+      tab.style.height = maxHeight + 'px';
+    });
+  });
+}
+
 // Retrieve, increment, and store tab-select event count, then returns it.
 function tdGetTabSelectEventCountAndInc() {
   // @requires: tdSupportsLocalStorage();
@@ -98,6 +120,9 @@ function tdGetAndActivatePersistedTabs(tabs) {
   key_ageList.forEach(([key]) => {
     tdActivateTabsWithKey(key);
   });
+
+  // Adjust tab content heights
+  adjustTabContentHeights();
 
   return key_ageList;
 }
