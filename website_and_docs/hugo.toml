@@ -152,7 +152,7 @@ offlineSearch = false
 offlineSearchMaxResults = 30
 
 # Enable Algolia DocSearch
-algolia_docsearch = true
+search.algolia = true
 
 # Enable Plausible.io
 plausible_analytics = true
