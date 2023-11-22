@@ -3704,33 +3704,33 @@ get the full browser functionality (even run extensions). Between versions 96 to
 &lt;h4 id="before">Before&lt;/h4>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
 &lt;li class="nav-item">
-&lt;button class="nav-link active persistLang-Java"
+&lt;button class="nav-link active"
 id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
-onclick="persistLang(&amp;#34;Java&amp;#34;);"aria-controls="tabs-00-00" aria-selected="true">
+data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
 Java
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-JavaScript"
+&lt;button class="nav-link"
 id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
-onclick="persistLang(&amp;#34;JavaScript&amp;#34;);"aria-controls="tabs-00-01" aria-selected="false">
+data-td-tp-persist="javascript" aria-controls="tabs-00-01" aria-selected="false">
 JavaScript
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-CSharp"
+&lt;button class="nav-link"
 id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
-onclick="persistLang(&amp;#34;CSharp&amp;#34;);"aria-controls="tabs-00-02" aria-selected="false">
+data-td-tp-persist="csharp" aria-controls="tabs-00-02" aria-selected="false">
 CSharp
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Ruby"
+&lt;button class="nav-link"
 id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
-onclick="persistLang(&amp;#34;Ruby&amp;#34;);"aria-controls="tabs-00-03" aria-selected="false">
+data-td-tp-persist="ruby" aria-controls="tabs-00-03" aria-selected="false">
 Ruby
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Python"
+&lt;button class="nav-link"
 id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
-onclick="persistLang(&amp;#34;Python&amp;#34;);"aria-controls="tabs-00-04" aria-selected="false">
+data-td-tp-persist="python" aria-controls="tabs-00-04" aria-selected="false">
 Python
 &lt;/button>
 &lt;/li>
@@ -3777,33 +3777,33 @@ id="tabs-00-04" role="tabpanel" aria-labelled-by="tabs-00-04-tab" tabindex="0">
 &lt;h4 id="after">After&lt;/h4>
 &lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
 &lt;li class="nav-item">
-&lt;button class="nav-link active persistLang-Java"
+&lt;button class="nav-link active"
 id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
-onclick="persistLang(&amp;#34;Java&amp;#34;);"aria-controls="tabs-01-00" aria-selected="true">
+data-td-tp-persist="java" aria-controls="tabs-01-00" aria-selected="true">
 Java
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-JavaScript"
+&lt;button class="nav-link"
 id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
-onclick="persistLang(&amp;#34;JavaScript&amp;#34;);"aria-controls="tabs-01-01" aria-selected="false">
+data-td-tp-persist="javascript" aria-controls="tabs-01-01" aria-selected="false">
 JavaScript
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-CSharp"
+&lt;button class="nav-link"
 id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
-onclick="persistLang(&amp;#34;CSharp&amp;#34;);"aria-controls="tabs-01-02" aria-selected="false">
+data-td-tp-persist="csharp" aria-controls="tabs-01-02" aria-selected="false">
 CSharp
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Ruby"
+&lt;button class="nav-link"
 id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
-onclick="persistLang(&amp;#34;Ruby&amp;#34;);"aria-controls="tabs-01-03" aria-selected="false">
+data-td-tp-persist="ruby" aria-controls="tabs-01-03" aria-selected="false">
 Ruby
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Python"
+&lt;button class="nav-link"
 id="tabs-01-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-04" role="tab"
-onclick="persistLang(&amp;#34;Python&amp;#34;);"aria-controls="tabs-01-04" aria-selected="false">
+data-td-tp-persist="python" aria-controls="tabs-01-04" aria-selected="false">
 Python
 &lt;/button>
 &lt;/li>
@@ -5899,15 +5899,15 @@ other kinds of authentication credentials)&lt;/p>
 complicated. Perhaps an example will help?&lt;/p>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
 &lt;li class="nav-item">
-&lt;button class="nav-link active persistLang-Java"
+&lt;button class="nav-link active"
 id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
-onclick="persistLang(&amp;#34;Java&amp;#34;);"aria-controls="tabs-00-00" aria-selected="true">
+data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
 Java
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Ruby"
+&lt;button class="nav-link"
 id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
-onclick="persistLang(&amp;#34;Ruby&amp;#34;);"aria-controls="tabs-00-01" aria-selected="false">
+data-td-tp-persist="ruby" aria-controls="tabs-00-01" aria-selected="false">
 Ruby
 &lt;/button>
 &lt;/li>

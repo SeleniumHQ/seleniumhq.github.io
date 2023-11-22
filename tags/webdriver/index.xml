@@ -373,15 +373,15 @@ other kinds of authentication credentials)&lt;/p>
 complicated. Perhaps an example will help?&lt;/p>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
 &lt;li class="nav-item">
-&lt;button class="nav-link active persistLang-Java"
+&lt;button class="nav-link active"
 id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
-onclick="persistLang(&amp;#34;Java&amp;#34;);"aria-controls="tabs-00-00" aria-selected="true">
+data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
 Java
 &lt;/button>
 &lt;/li>&lt;li class="nav-item">
-&lt;button class="nav-link persistLang-Ruby"
+&lt;button class="nav-link"
 id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
-onclick="persistLang(&amp;#34;Ruby&amp;#34;);"aria-controls="tabs-00-01" aria-selected="false">
+data-td-tp-persist="ruby" aria-controls="tabs-00-01" aria-selected="false">
 Ruby
 &lt;/button>
 &lt;/li>
