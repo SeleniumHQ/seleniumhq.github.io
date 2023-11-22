@@ -101,7 +101,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 ### ステップ 1: フォーク
 
-[Github](https://github.com/seleniumhq/seleniumhq.github.io)上のプロジェクトをフォークし、コピーをローカルにチェックアウトしてください。
+[GitHub](https://github.com/seleniumhq/seleniumhq.github.io)上のプロジェクトをフォークし、コピーをローカルにチェックアウトしてください。
 
 ```shell
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git
