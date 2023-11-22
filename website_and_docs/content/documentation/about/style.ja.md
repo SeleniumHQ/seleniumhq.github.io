@@ -127,7 +127,7 @@ and ensures that all tabs on the page with a language are set to the same thing.
       {{</* /tab */>}}
     {{</* /tabpane */>}}
 
-#### Reference Gitub Examples
+#### Reference GitHub Examples
 
 To ensure that all code is kept up to date, our goal is to write the code in the repo where it
 can be executed when Selenium versions are updated to ensure that everything is correct.
