@@ -81,7 +81,6 @@ and the code itself should be placed inside code tabs.
 The Docsy code tabs look like this:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
   {{< /tab >}}
@@ -201,11 +200,11 @@ then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with 
     {{</* tabpane text=true */>}}
     {{%/* tab header="Java" */%}}
     1. Start the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L17" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" */>}}
     2. Navigate to a page
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" */>}}
     3. Quit the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L35" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" */>}}
     {{%/* /tab */%}}
     < ... >
     {{</* /tabpane */>}}
@@ -215,11 +214,11 @@ This produces:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 1. Start the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L17" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 2. Navigate to a page
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 3. Quit the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{% /tab %}}
 {{< /tabpane >}}
 
