@@ -214,7 +214,7 @@ Para simplificar, todos os exemplos apresentados assumem que os componentes est�
 Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "/configuration" >}}).
 {{% /pageinfo %}}
 
-## Usando o cliente HTTP nativo Java 11 {{% badge-version version="4.5" %}}
+## Usando o cliente HTTP nativo Java 11
 
 Por omissão, a Grid irá usar [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
 AsyncHttpClient é uma biblioteca open-source library criada em cima do Netty. Isto permite a

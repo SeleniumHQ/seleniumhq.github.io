@@ -598,7 +598,6 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L53" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
@@ -611,7 +610,6 @@ Property value: String representing path to log file
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -628,21 +626,18 @@ To change the logging output to display in the console as STDOUT:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L67" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -671,7 +666,6 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -692,14 +686,12 @@ Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
 Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L65" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

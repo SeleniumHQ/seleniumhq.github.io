@@ -108,19 +108,15 @@ Este termo pode se referir a um clique com o botão X1 (botão de voltar) do mou
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L60-L66" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L49-L52" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L59-L63" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-version version="4.5.0" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L21-L22" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -137,19 +133,15 @@ Este termo se refere a um clique com o botão X2 (botão de avançar) do mouse. 
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L78-L84" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L77-L81" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L61-L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-version version="4.5.0" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L34-L35" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}

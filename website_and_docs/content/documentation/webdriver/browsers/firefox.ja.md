@@ -174,14 +174,12 @@ Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L36" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -198,21 +196,18 @@ To change the logging output to display in the console:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -232,21 +227,18 @@ so this examples is just for setting the log level generically:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `FirefoxDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L59" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -264,21 +256,18 @@ Firefox truncates lines by default. To turn off truncation:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.11" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L70" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -296,7 +285,6 @@ or want profiles to be created some place specific, you can change the profile r
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
@@ -309,7 +297,6 @@ Property value: String representing path to profile root directory
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -373,7 +360,6 @@ IDはアドオンインストール時の戻り値から取得できます。
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L106" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-version version="4.5" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L152" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -401,11 +387,9 @@ IDはアドオンインストール時の戻り値から取得できます。
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-version version="4.5" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L165" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.5" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

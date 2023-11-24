@@ -204,7 +204,6 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L100" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
@@ -217,7 +216,6 @@ Property value: String representing path to log file
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -234,7 +232,6 @@ To change the logging output to display in the console as STDOUT:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L113" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
@@ -248,7 +245,6 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
@@ -266,7 +262,6 @@ so this example is just setting the log level generically:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L126-L127" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
@@ -279,7 +274,6 @@ Property value: String representation of `ChromiumDriverLogLevel` enum
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -300,7 +294,6 @@ The log output will be managed by the driver, not the process, so minor differen
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L142-L143" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` and `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
@@ -313,7 +306,6 @@ Property value: `"true"` or `"false"`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -332,7 +324,6 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L160-L161" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
@@ -345,7 +336,6 @@ Property value: `"true"` or `"false"`
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

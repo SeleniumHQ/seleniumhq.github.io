@@ -136,7 +136,6 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-version version="4.5.0" >}}
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L61-L65" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}

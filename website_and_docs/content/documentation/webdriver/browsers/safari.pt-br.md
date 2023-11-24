@@ -61,7 +61,6 @@ available is to turn logs off or on. If logs are toggled on, they can be found a
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L31" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
@@ -74,7 +73,6 @@ Property value: `"true"` or `"false"`
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.8" >}}
 {{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

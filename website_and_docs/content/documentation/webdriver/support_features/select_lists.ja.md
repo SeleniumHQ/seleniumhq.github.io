@@ -218,7 +218,6 @@ Select the option based on its position in the list
 
 ### Disabled options
 
-{{< badge-version version="4.5" >}}
 
 Options with a `disabled` attribute may not be selected.
 
