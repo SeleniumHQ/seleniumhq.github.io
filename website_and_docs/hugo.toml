@@ -118,7 +118,7 @@ social_image_path = ["images/selenium_logo_square_green.png"]
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Releases"
+version_menu = "v4.0"
 
 # Flag used in the "version-banner" partial to decide whether to display a
 # banner on every page indicating that this is an archived version of the docs.
@@ -343,3 +343,10 @@ year = "year"
     methods = ['(?i)GET|POST']
     urls = ['.*']
 
+[[params.versions]]
+  version = "v4.0"
+  url = "/documentation"
+
+[[params.versions]]
+  version = "Legacy"
+  url = "/legacy/"
