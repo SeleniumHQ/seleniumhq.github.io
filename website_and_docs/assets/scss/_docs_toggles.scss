@@ -1,10 +1,14 @@
-.version-selector a {
+.docs-toggles {
+    float: right;
+}
+
+.docs-toggles a {
     border-bottom: 0px;
     text-align: right;
     font-size: 1.5rem;
 }
 
-.version-selector ul {
+.docs-toggles ul {
     right: 0 !important;
     left: auto !important;
 }

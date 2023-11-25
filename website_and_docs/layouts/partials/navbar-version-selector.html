@@ -1,20 +1,18 @@
-<div class="version-selector">
-    <div class="dropdown">
-        <a  id="versionDropdownToggle" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{- if in .RelPermalink "legacy" -}}
-            Legacy
-            {{- else -}}
-            {{- .Site.Params.version_menu -}}
-            {{- end -}}
-        </a>
-        <ul class="dropdown-menu">
-            {{ $path := "" -}}
-            {{ if .Site.Params.version_menu_pagelinks -}}
-            {{ $path = .Page.RelPermalink -}}
-            {{ end -}}
-            {{ range .Site.Params.versions -}}
-            <li><a class="dropdown-item" href="{{ .url }}{{ $path }}">{{ .version }}</a></li>
-            {{ end -}}
-        </ul>
-    </div>
+<div class="dropdown">
+    <a  id="versionDropdownToggle" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{- if in .RelPermalink "legacy" -}}
+        Legacy
+        {{- else -}}
+        {{- .Site.Params.version_menu -}}
+        {{- end -}}
+    </a>
+    <ul class="dropdown-menu">
+        {{ $path := "" -}}
+        {{ if .Site.Params.version_menu_pagelinks -}}
+        {{ $path = .Page.RelPermalink -}}
+        {{ end -}}
+        {{ range .Site.Params.versions -}}
+        <li><a class="dropdown-item" href="{{ .url }}{{ $path }}">{{ .version }}</a></li>
+        {{ end -}}
+    </ul>
 </div>

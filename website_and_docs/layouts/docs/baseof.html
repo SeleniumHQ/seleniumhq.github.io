@@ -22,9 +22,18 @@
           <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}
-            {{ if .Site.Params.versions }}
-            {{ partial "navbar-version-selector.html" . }}
+            <ul class="docs-toggles">
+            {{ if and (gt (len .Site.Home.Translations) 0) (ne .RelPermalink "/legacy/") }}
+            <li class="nav-item dropdown d-none d-lg-block">
+              {{ partial "navbar-lang-selector.html" . }}
+            </li>
             {{ end }}
+            {{ if .Site.Params.versions }}
+              <li class="nav-item dropdown d-none d-lg-block">
+            {{ partial "navbar-version-selector.html" . }}
+              </li>
+              {{ end }}
+            </ul>
             {{ partial "breadcrumb.html" . }}
             {{ end }}
             {{ block "main" . }}{{ end }}
