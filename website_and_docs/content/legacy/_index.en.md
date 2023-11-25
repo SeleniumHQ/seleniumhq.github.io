@@ -1,6 +1,6 @@
 ---
 title: "Legacy Documentation"
-linkTitle: "Legacy"
+linkTitle: "Legacy Documentation"
 weight: 14
 cascade:
   - type: docs
