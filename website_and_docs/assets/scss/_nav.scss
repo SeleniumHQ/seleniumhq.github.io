@@ -23,7 +23,6 @@
 
 .td-navbar {
   @extend .navbar;
-  @extend .navbar-expand;
 
   background: $primary;
   min-height: 4rem;
