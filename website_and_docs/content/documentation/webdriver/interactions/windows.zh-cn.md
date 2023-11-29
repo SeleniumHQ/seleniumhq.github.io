@@ -223,10 +223,10 @@ driver.SwitchTo().NewWindow(WindowType.Window)
     # 用户必须切换到新选项卡 (或) 新窗口
 
     # 打开新标签页并切换到新标签页
-    driver.switch_to.new_window(:tab)
+    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9-L12" >}}
 
     # 打开一个新窗口并切换到新窗口
-    driver.switch_to.new_window(:window)
+    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L18-L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // 打开新标签页并切换到新标签页
