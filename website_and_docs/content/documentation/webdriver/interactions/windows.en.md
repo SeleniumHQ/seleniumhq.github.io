@@ -236,14 +236,11 @@ driver.SwitchTo().NewWindow(WindowType.Tab)
 driver.SwitchTo().NewWindow(WindowType.Window)
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-    # Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
-    # The user has to switch to new tab (or) new window
-
     # Opens a new tab and switches to new tab
-    driver.switch_to.new_window(:tab)
+    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9-L12" >}}
 
     # Opens a new window and switches to new window
-    driver.switch_to.new_window(:window)
+    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L18-L21" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // Opens a new tab and switches to new tab
