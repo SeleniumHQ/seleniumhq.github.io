@@ -236,10 +236,10 @@ driver.SwitchTo().NewWindow(WindowType.Window)
     # The user has to switch to new tab (or) new window
 
     # Opens a new tab and switches to new tab
-driver.manage.new_window(:tab)
+    driver.switch_to.new_window(:tab)
 
     # Opens a new window and switches to new window
-driver.manage.new_window(:window)
+    driver.switch_to.new_window(:window)
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // Opens a new tab and switches to new tab

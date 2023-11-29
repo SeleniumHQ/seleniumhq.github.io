@@ -223,10 +223,10 @@ driver.SwitchTo().NewWindow(WindowType.Window)
     # 用户必须切换到新选项卡 (或) 新窗口
 
     # 打开新标签页并切换到新标签页
-driver.manage.new_window(:tab)
+    driver.switch_to.new_window(:tab)
 
     # 打开一个新窗口并切换到新窗口
-driver.manage.new_window(:window)
+    driver.switch_to.new_window(:window)
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 // 打开新标签页并切换到新标签页
