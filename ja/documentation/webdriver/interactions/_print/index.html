@@ -1284,15 +1284,130 @@ Kotlin</button></li></ul><div class=tab-content id=tabs-2-content><div class="ta
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Opens a new window and switches to new window</span>
 </span></span><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>SwitchTo</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>NewWindow</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>WindowType</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Window</span><span style=color:#000;font-weight:700>)</span>
-</span></span><span style=display:flex><span>  </span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-02-03 role=tabpanel aria-labelled-by=tabs-02-03-tab tabindex=2><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic># Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically</span>
-</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic># The user has to switch to new tab (or) new window</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic># Opens a new tab and switches to new tab</span>
-</span></span><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>manage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>new_window</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>:tab</span><span style=color:#000;font-weight:700>)</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8f5902;font-style:italic># Opens a new window and switches to new window</span>
-</span></span><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>manage</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>new_window</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>:window</span><span style=color:#000;font-weight:700>)</span>
-</span></span><span style=display:flex><span>  </span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-02-04 role=tabpanel aria-labelled-by=tabs-02-04-tab tabindex=2><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Opens a new tab and switches to new tab
+</span></span><span style=display:flex><span>  </span></span></code></pre></div></div><div class="tab-body tab-pane fade" id=tabs-02-03 role=tabpanel aria-labelled-by=tabs-02-03-tab tabindex=2><pre><code>Opens a new tab and switches to new tab
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    
+    
+  
+
+  &lt;div class=&quot;highlight&quot;&gt;&lt;pre tabindex=&quot;0&quot; style=&quot;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&quot;&gt;&lt;code class=&quot;language-rb&quot; data-lang=&quot;rb&quot;&gt;&lt;span style=&quot;display:flex;&quot;&gt;&lt;span&gt;    &lt;span style=&quot;color:#000&quot;&gt;driver&lt;/span&gt;&lt;span style=&quot;color:#ce5c00;font-weight:bold&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color:#000&quot;&gt;switch_to&lt;/span&gt;&lt;span style=&quot;color:#ce5c00;font-weight:bold&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color:#000&quot;&gt;new_window&lt;/span&gt;&lt;span style=&quot;color:#000;font-weight:bold&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color:#4e9a06&quot;&gt;:tab&lt;/span&gt;&lt;span style=&quot;color:#000;font-weight:bold&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;text-end pb-2&quot;&gt;
+    &lt;a href=&quot;https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/ruby/spec/interactions/windows_spec.rb#L9&quot; target=&quot;_blank&quot;&gt;
+      &lt;i class=&quot;fas fa-external-link-alt pl-2&quot;&gt;&lt;/i&gt;
+        &lt;strong&gt;View full example on GitHub&lt;/strong&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+
+
+
+
+Opens a new window and switches to new window
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    
+    
+  
+
+  &lt;div class=&quot;highlight&quot;&gt;&lt;pre tabindex=&quot;0&quot; style=&quot;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&quot;&gt;&lt;code class=&quot;language-rb&quot; data-lang=&quot;rb&quot;&gt;&lt;span style=&quot;display:flex;&quot;&gt;&lt;span&gt;    &lt;span style=&quot;color:#000&quot;&gt;driver&lt;/span&gt;&lt;span style=&quot;color:#ce5c00;font-weight:bold&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color:#000&quot;&gt;switch_to&lt;/span&gt;&lt;span style=&quot;color:#ce5c00;font-weight:bold&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color:#000&quot;&gt;new_window&lt;/span&gt;&lt;span style=&quot;color:#000;font-weight:bold&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color:#4e9a06&quot;&gt;:window&lt;/span&gt;&lt;span style=&quot;color:#000;font-weight:bold&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;text-end pb-2&quot;&gt;
+    &lt;a href=&quot;https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/ruby/spec/interactions/windows_spec.rb#L15&quot; target=&quot;_blank&quot;&gt;
+      &lt;i class=&quot;fas fa-external-link-alt pl-2&quot;&gt;&lt;/i&gt;
+        &lt;strong&gt;View full example on GitHub&lt;/strong&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+</code></pre></div><div class="tab-pane fade" id=tabs-02-04 role=tabpanel aria-labelled-by=tabs-02-04-tab tabindex=2><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Opens a new tab and switches to new tab
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>switchTo</span><span style=color:#000;font-weight:700>().</span><span style=color:#000>newWindow</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;tab&#39;</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>// Opens a new window and switches to new window
