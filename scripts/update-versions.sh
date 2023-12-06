@@ -6,8 +6,6 @@ OLD_VERSION=$((NEW_VERSION - 1))
 NEXT_VERSION=$((NEW_VERSION + 1))
 
 FILES=(
-    "website_and_docs/layouts/partials/selenium-clients-and-webdriver-bindings.html"
-    "website_and_docs/layouts/downloads/list.html"
     "examples/java/build.gradle"
     "examples/dotnet/SeleniumDocs/SeleniumDocs.csproj"
     "examples/python/requirements.txt"
