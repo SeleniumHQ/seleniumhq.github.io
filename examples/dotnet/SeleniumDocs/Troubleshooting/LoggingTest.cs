@@ -3,21 +3,21 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Internal.Logging;
 using OpenQA.Selenium.Remote;
 using System;
-using System.Collections.Generic;
+using System.IO;
 
 namespace SeleniumDocs.Troubleshooting
 {
     [TestClass]
     public class LoggingTest
     {
+        private const string filePath = "Selenium.log";
+
         [TestMethod]
         public void Logging()
         {
             Log.SetLevel(LogEventLevel.Trace);
 
-            // TODO: Replace it with coming FileLogHandler
-            var testLogHandler = new TestLogHandler();
-            Log.Handlers.Add(testLogHandler);
+            Log.Handlers.Add(new FileLogHandler(filePath));
 
             Log.SetLevel(typeof(RemoteWebDriver), LogEventLevel.Debug);
             Log.SetLevel(typeof(SeleniumManager), LogEventLevel.Info);
@@ -26,9 +26,11 @@ namespace SeleniumDocs.Troubleshooting
             Info("this is useful information");
             Debug("this is detailed debug information");
 
-            Assert.IsTrue(testLogHandler.Messages.Contains("this is a warning"));
-            Assert.IsTrue(testLogHandler.Messages.Contains("this is useful information"));
-            Assert.IsTrue(testLogHandler.Messages.Contains("this is detailed debug information"));
+            var fileLogContent = File.ReadAllText(filePath);
+
+            StringAssert.Contains(fileLogContent, "this is a warning");
+            StringAssert.Contains(fileLogContent, "this is useful information");
+            StringAssert.Contains(fileLogContent, "this is detailed debug information");
         }
 
         [TestCleanup]
@@ -38,6 +40,8 @@ namespace SeleniumDocs.Troubleshooting
             Log.SetLevel(LogEventLevel.Info)
                 .Handlers.Clear()
                 .Handlers.Add(new ConsoleLogHandler());
+
+            File.Delete(filePath);
         }
 
         // logging is only for internal usage
@@ -67,21 +71,6 @@ namespace SeleniumDocs.Troubleshooting
             var emitMethod = logger.GetType().GetMethod(methodName);
 
             emitMethod.Invoke(logger, new object[] { message });
-        }
-
-        class TestLogHandler : ILogHandler
-        {
-            public ILogHandler Clone()
-            {
-                return this;
-            }
-
-            public void Handle(LogEvent logEvent)
-            {
-                Messages.Add(logEvent.Message);
-            }
-
-            public List<string> Messages { get; } = new List<string>();
         }
     }
 }
