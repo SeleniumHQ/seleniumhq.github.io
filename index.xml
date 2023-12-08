@@ -1,4 +1,133 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.16 Released!</title><link>/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-16-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener</title><link>/blog/2023/java-removal-of-deprecated-events-classes/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-removal-of-deprecated-events-classes/</guid><description>
+&lt;h3 id="upgrading-to-webdriverlistener-and-eventfiringdecorator">Upgrading to WebDriverListener and EventFiringDecorator&lt;/h3>
+&lt;p>Decorating the webdriver&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringWebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// Old approach
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringDecorator&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">decorate&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// New approach
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="implementing-method-wrappers">Implementing method wrappers&lt;/h3>
+&lt;p>One may find the need to have their own custom implementations be used for underlying decorated method calls. An example may be wanting to use your own findElement implementation to store metadata from web elements. One can go down a deep rabbit hole of decorators ( extending WebDriverDecorator and such ), so to keep things simple we will extend EventFiringDecorator since we want a single decorator to handle all our listener events.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">WebDriverWrapper&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">private&lt;/span> &lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">WebDriverWrapper&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">this&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">By&lt;/span> &lt;span style="color:#000">by&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">by&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">testDecorator&lt;/span> &lt;span style="color:#204a87;font-weight:bold">extends&lt;/span> &lt;span style="color:#000">EventFiringDecorator&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#000">Object&lt;/span> &lt;span style="color:#000">call&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Decorated&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;?&amp;gt;&lt;/span> &lt;span style="color:#000">target&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Method&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Object&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#204a87;font-weight:bold">throws&lt;/span> &lt;span style="color:#000">Throwable&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">String&lt;/span> &lt;span style="color:#000">methodName&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;findElement&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">equals&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">methodName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">))&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">WebDriverWrapper&lt;/span> &lt;span style="color:#000">newDriver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">WebDriverWrapper&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">((&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">target&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getOriginal&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#000">newDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">((&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#204a87;font-weight:bold">super&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">call&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">target&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some notes about the above example, we are only overriding the ‘general’ call method and checking the method name against every call made.
+Without going too deep decorators one can also override calls made by class instances to offer a more targeted approach.
+Just to expose some more functionality, let&amp;rsquo;s modify our example.
+We can modify WebElement context since we might care about child elements and elements found by WebDriver ( WebDriver and WebElement both extend the SearchContext ).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">WebElementWrapper&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">private&lt;/span> &lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">WebElementWrapper&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">this&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">element&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">By&lt;/span> &lt;span style="color:#000">by&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">by&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">WebElementDecorator&lt;/span> &lt;span style="color:#204a87;font-weight:bold">extends&lt;/span> &lt;span style="color:#000">EventFiringDecorator&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#000">Decorated&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">WebElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#000">createDecorated&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">original&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">DefaultDecorated&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&amp;gt;(&lt;/span>&lt;span style="color:#000">original&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#204a87;font-weight:bold">this&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#000">Object&lt;/span> &lt;span style="color:#000">call&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Method&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Object&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#204a87;font-weight:bold">throws&lt;/span> &lt;span style="color:#000">Throwable&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">String&lt;/span> &lt;span style="color:#000">methodName&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;findElement&amp;#34;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">equals&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">methodName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">))&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#000">WebElementWrapper&lt;/span> &lt;span style="color:#000">element&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">WebElementWrapper&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">getOriginal&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">((&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#204a87;font-weight:bold">super&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">call&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the sample above, we are still doing a very similar approach of overriding the call method but now we are also targeting WebElement instances.&lt;/p>
+&lt;h3 id="registering-listeners">Registering Listeners&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringWebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">).&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">listener1&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">).&lt;/span>&lt;span style="color:#c4a000">register&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">listener2&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// Old approach
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringDecorator&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">listener1&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">listener2&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// New approach
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="listening-to-events">Listening to Events&lt;/h3>
+&lt;p>A quality of life change that is featured in WebDriverListener class is the use of ‘default’.
+In Java, the &lt;code>default&lt;/code> keyword, when used in the context of an interface method, indicates that the method has a default implementation.
+If a class implementing the interface chooses not to override the method, it will inherit the default implementation.
+This change allows for splitting up listeners without needing to implement the unnecessary methods you don&amp;rsquo;t need or care about.&lt;/p>
+&lt;h4 id="listening-to-specific-events-using-beforeafter-methods-call">Listening to specific events using before/after methods call&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// Old approach
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">AlertListener&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebDriverEventListener&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">beforeAlertAccept&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// implement every method in interface
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// New approach
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">AlertListener&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebDriverListener&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">beforeAccept&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Alert&lt;/span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic">// custom implementation goes here
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// does not need to implement every method in interface
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="listening-to-generic-events">Listening to Generic Events&lt;/h4>
+&lt;p>A change that was brought on is the ability to listen to generic events.
+One use case is logging information in a parallelized test suite.
+Rather than create a listener and override every method to add a simple log statement, there is now a simpler alternative of overriding one method call.
+Below I override beforeAnyCall, but afterAnyCall exists as well which also has the results of the call to the decorated method.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">Listener&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebDriverEventListener&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">private&lt;/span> &lt;span style="color:#204a87;font-weight:bold">static&lt;/span> &lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">Logger&lt;/span> &lt;span style="color:#000">LOGGER&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Logger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getLogger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Listener&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">class&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">beforeAnyCall&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Object&lt;/span> &lt;span style="color:#000">target&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Method&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Object&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">logger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">debug&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Thread: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Thread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">currentThread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Name: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Args: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Arrays&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">toString&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>There also was an addition listening to more specific generic events.
+Going back to the logging example, beforeAnyCall is a good method for debugging information or tracking the actions of a thread but might generate too much noise.
+In the same use case we might only care about WebDriver or WebElement calls.
+One can override instances of WebDriver and derived objects( WebElement, Alert, etc.) for before/after events.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">Listener&lt;/span> &lt;span style="color:#204a87;font-weight:bold">implements&lt;/span> &lt;span style="color:#000">WebDriverEventListener&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">private&lt;/span> &lt;span style="color:#204a87;font-weight:bold">static&lt;/span> &lt;span style="color:#204a87;font-weight:bold">final&lt;/span> &lt;span style="color:#000">Logger&lt;/span> &lt;span style="color:#000">LOGGER&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">Logger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getLogger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Listener&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">class&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">beforeAnyWebDriverCall&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Method&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Object&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">logger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">debug&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Thread: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Thread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">currentThread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Name: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Args: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Arrays&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">toString&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#5c35cc;font-weight:bold">@Override&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">void&lt;/span> &lt;span style="color:#000">beforeAnyWebElementCall&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">WebElement&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Method&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#000">Object&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span> &lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">logger&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">debug&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Thread: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Thread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">currentThread&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">().&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Name: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">method&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">getName&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34; | Method Args: &amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">+&lt;/span> &lt;span style="color:#000">Arrays&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">toString&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>So that&amp;rsquo;s some general examples on how to transition your code!
+Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.16 Released!</title><link>/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-16-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.16.0 for
 Javascript, Ruby, Python, and Selenium 4.16.1 for .NET, Java and the Grid.
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -8160,262 +8289,4 @@ that&amp;rsquo;s proper context&lt;/p>
 &lt;p>The major decision was to wait for @jimevans to give us the green light for shipping beta 4.&lt;/p>
 &lt;p>I&amp;rsquo;m totally fine waiting as long as necessary for that, but I also heard @AutomatedTester suggest that maybe @Puja Jagani could help with that&lt;/p>
 &lt;p>&lt;em>Titus Fortner 10:06 PM&lt;/em>&lt;/p>
-&lt;p>sounds great, thanks @simonstewart!&lt;/p></description></item><item><title>Blog: Public Project Meeting - May 06, 2021</title><link>/blog/2021/public-project-meeting-20210506/</link><pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210506/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on May 06, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>Simon Stewart 9:01 PM&lt;/em>&lt;/p>
-&lt;p>Alright then. It&amp;rsquo;s time&lt;/p>
-&lt;p>&lt;em>9:02&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester, @titusfortner @p0deje, @jimevans, @harsha509, @barancev, @Puja Jagani, and @diemol (plus anyone else who&amp;rsquo;s interested)&lt;/p>
-&lt;p>Let&amp;rsquo;s get the show on the road&lt;/p>
-&lt;p>&lt;em>9:02 PM&lt;/em>&lt;/p>
-&lt;p>I think we can wait for @diemol to be back for the stats for the past couple of weeks&lt;/p>
-&lt;p>Any agenda items?&lt;/p>
-&lt;p>&lt;em>9:03 PM&lt;/em>&lt;/p>
-&lt;ul>
-&lt;li>Stats&lt;/li>
-&lt;li>What do we want in Beta 4?&lt;/li>
-&lt;li>When do we ship Beta 4?&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Diego Molina 9:03 PM&lt;/em>&lt;/p>
-&lt;p>Here, quick meeting with my manager done&lt;/p>
-&lt;p>&lt;em>David Burns 9:04 PM&lt;/em>&lt;/p>
-&lt;p>Managers are the worst&amp;hellip;&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:04 PM&lt;/em>&lt;/p>
-&lt;p>hands over meeting reigns to @diemol&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:04 PM&lt;/em>&lt;/p>
-&lt;p>Stats from previous meeting:&lt;/p>
-&lt;ul>
-&lt;li>157 open issues,&lt;/li>
-&lt;li>25 open pull requests&lt;/li>
-&lt;li>Current: 163 open issues, 30 open pull requests&lt;/li>
-&lt;/ul>
-&lt;p>Data taken from this link[https://www.diemol.com/github-repo-stats/seleniumhq_selenium/index.html]&lt;/p>
-&lt;p>&lt;em>David Burns 9:05 PM&lt;/em>&lt;/p>
-&lt;p>A lot of those are from @Puja Jagani&lt;/p>
-&lt;p>&lt;em>9:05 PM&lt;/em>&lt;/p>
-&lt;p>she has been busy&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:06 PM&lt;/em>&lt;/p>
-&lt;p>She&amp;rsquo;s been rocking it&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:06 PM&lt;/em>&lt;/p>
-&lt;p>the issues or the PRs?&lt;/p>
-&lt;p>&lt;em>9:07&lt;/em>&lt;/p>
-&lt;p>Right, work that we want for the next beta (4)&lt;/p>
-&lt;p>(I could not contribute that much during the last two weeks :confused:)&lt;/p>
-&lt;p>&lt;em>9:08 PM&lt;/em>&lt;/p>
-&lt;p>These are items from the last meeting:&lt;/p>
-&lt;ul>
-&lt;li>Pipe VNC connectors through the WebSocket plumbing for live video&lt;/li>
-&lt;li>Investigate: Grid gets stuck when screenshot is taken in a terminated session&lt;/li>
-&lt;li>Investigate: Grid gets stuck when the browser driver process cannot be killed&lt;/li>
-&lt;li>Investigate: Router request timeouts when forwarding command to Node&lt;/li>
-&lt;li>Unify new Session Queue&lt;/li>
-&lt;li>Stress test the new Grid on AWS or similar with &amp;gt;50 simultaneous tests&lt;/li>
-&lt;li>Check that the Redis/JDBC backed services actually function&lt;/li>
-&lt;li>More than 1 IE session per Node? &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9388">https://github.com/SeleniumHQ/selenium/issues/9388&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Maybe only this one got done? “Unify new Session Queue”&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:08 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;d like to add:&lt;/p>
-&lt;ul>
-&lt;li>Distributor follows spec when allocating new sessions&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>David Burns 9:08 PM&lt;/em>&lt;/p>
-&lt;p>Do we have issues/docs on the investigate stuff?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:08 PM&lt;/em>&lt;/p>
-&lt;p>Yeah. We unified the new session queue&lt;/p>
-&lt;p>&lt;em>9:09 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ve a PR in the works for the &amp;ldquo;follow the spec&amp;rdquo; bit&lt;/p>
-&lt;p>&lt;em>David Burns 9:09 PM&lt;/em>&lt;/p>
-&lt;p>for the last item about IE&amp;hellip; we can allow that to happen but it seems like a major footgun&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:10 PM&lt;/em>&lt;/p>
-&lt;p>There are issues for the investigation items,
-and maybe there is a PR from @Puja Jagani solving the
-“browser driver process cannot be killed” one&lt;/p>
-&lt;p>I will double check that all items have a GitHub issue, and if not, I will create one&lt;/p>
-&lt;p>&lt;em>David Burns 9:12 PM&lt;/em>&lt;/p>
-&lt;p>thank you&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:14 PM&lt;/em>&lt;/p>
-&lt;p>For language bindings we had this:&lt;/p>
-&lt;p>Language bindings&lt;/p>
-&lt;ul>
-&lt;li>“se:cdpVersion” is missing in C#, Java and JS&lt;/li>
-&lt;li>Can all bindings do CDP over Grid&lt;/li>
-&lt;li>Document features and double check all bindings implement all features&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Saksham Gupta 9:14 PM&lt;/em>&lt;/p>
-&lt;p>Hello all, been a year since I started my internship. Thought I&amp;rsquo;ll drop by to say hi.&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:15 PM&lt;/em>&lt;/p>
-&lt;p>Java should be doing se:cdpVersion now&lt;/p>
-&lt;p>&lt;em>David Burns 9:15 PM&lt;/em>&lt;/p>
-&lt;p>@harsha509 do you need a hand with the cdpVersion stuff for JS?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:16 PM&lt;/em>&lt;/p>
-&lt;p>I think we need to review what&amp;rsquo;s in the python bindings that&amp;rsquo;s
-not elsewhere: my impression is that there&amp;rsquo;s been a few things added&lt;/p>
-&lt;p>&lt;em>David Burns 9:17 PM&lt;/em>&lt;/p>
-&lt;p>@simonstewart only 1 thing which is mobile options&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:17 PM&lt;/em>&lt;/p>
-&lt;p>kk&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:17 PM&lt;/em>&lt;/p>
-&lt;p>Yes @AutomatedTester, i have been busy with paid work,
-didnt got a chance to look into it&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:17 PM&lt;/em>&lt;/p>
-&lt;p>what are mobile options?&lt;/p>
-&lt;p>&lt;em>David Burns 9:17 PM&lt;/em>&lt;/p>
-&lt;p>@diemol the ability to set android* config better&lt;/p>
-&lt;p>you could do it before but I made it a little nicer after a request from whimboo&lt;/p>
-&lt;p>&lt;em>9:18 PM&lt;/em>&lt;/p>
-&lt;p>I actually want to change it to support iOS better&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:18 PM&lt;/em>&lt;/p>
-&lt;p>Nice!&lt;/p>
-&lt;p>&lt;em>David Burns 9:19 PM&lt;/em>&lt;/p>
-&lt;p>but it means you can create a normal chrome/firefox options and
-pass it through to the driver to connect to said browser on android
-:+1:
-1&lt;/p>
-&lt;p>&lt;em>9:20 PM&lt;/em>&lt;/p>
-&lt;p>you could before if you knew the magic for it&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:20 PM&lt;/em>&lt;/p>
-&lt;p>Something else we need to figure out is how to release the IDE,
-given that @Todd Tarsi is helping us and contributing to it&lt;/p>
-&lt;p>&lt;em>9:20 PM&lt;/em>&lt;/p>
-&lt;p>does anyone know about it?&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:20 PM&lt;/em>&lt;/p>
-&lt;p>Who did the last release? @corevo, I thought&lt;/p>
-&lt;p>&lt;em>9:20 PM&lt;/em>&lt;/p>
-&lt;p>?&lt;/p>
-&lt;p>&lt;em>David Burns 9:21 PM&lt;/em>&lt;/p>
-&lt;p>I think it was him. I will email him and Dave for guidance here&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:21 PM&lt;/em>&lt;/p>
-&lt;p>great, thank you&lt;/p>
-&lt;p>and I have one last thing from my side&lt;/p>
-&lt;p>I have spoken to @Puja Jagani and asked her if she is interested in becoming a committer
-Therefore, I have created this PR &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/pull/679">https://github.com/SeleniumHQ/seleniumhq.github.io/pull/679&lt;/a>
-Folks, please go an check it out&lt;/p>
-&lt;p>I think she has done so much great work and without her we would not have moved at the speed we are currently moving :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Puja Jagani&lt;/em>&lt;/p>
-&lt;p>Thank you David, Diego and Simon for the constant support and help
-:relaxed: Very happy working with the Selenium TLC folks!&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:25 PM&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;m onboard with this&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:25 PM&lt;/em>&lt;/p>
-&lt;p>(there is probably a shorter way to say what I said, but my English is no bueno sometimes)&lt;/p>
-&lt;p>&lt;em>David Burns 9:26 PM&lt;/em>&lt;/p>
-&lt;p>+1 but I am biased :smile:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:26 PM&lt;/em>&lt;/p>
-&lt;p>We simply need PR approvals :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:27 PM&lt;/em>&lt;/p>
-&lt;p>Sorry, I&amp;rsquo;m showing up late. :slightly_smiling_face:&lt;/p>
-&lt;p>Did we get the blockers for beta 4?&lt;/p>
-&lt;p>Have a couple bug fixes that would be nice to get released&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:27 PM&lt;/em>&lt;/p>
-&lt;p>@diemol’s in charge here&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:28 PM&lt;/em>&lt;/p>
-&lt;p>No @titusfortner, sorry. I think we need to improve with PR reviews
-in the next days so we can get closer to beta 4&lt;/p>
-&lt;p>&lt;em>9:28 PM&lt;/em>&lt;/p>
-&lt;p>I believe you are talking about the JUnit issue?&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:29 PM&lt;/em>&lt;/p>
-&lt;p>i will update few things in ide stuff, electron version bump and updating rules_nodejs&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:29 PM&lt;/em>&lt;/p>
-&lt;p>No, that&amp;rsquo;s a different issue :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:30 PM&lt;/em>&lt;/p>
-&lt;p>Which issues did you have in time?&lt;/p>
-&lt;p>&lt;em>9:30 PM&lt;/em>&lt;/p>
-&lt;p>in mind*&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:32 PM&lt;/em>&lt;/p>
-&lt;p>some fixes in Ruby code&lt;/p>
-&lt;p>&lt;em>9:32 PM&lt;/em>&lt;/p>
-&lt;p>just wanted to get stuff out there sooner if that&amp;rsquo;s an option&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:33 PM&lt;/em>&lt;/p>
-&lt;p>We&amp;rsquo;ve yet to agree when we want to ship beta4, so there&amp;rsquo;s probably time&lt;/p>
-&lt;p>&lt;em>9:34 PM&lt;/em>&lt;/p>
-&lt;p>Unless you want the fixes to be blockers&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:35 PM&lt;/em>&lt;/p>
-&lt;p>I mean, Alex changed something that was blocking
-someone and I&amp;rsquo;m wondering when we can get it released to him :smile:&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:36 PM&lt;/em>&lt;/p>
-&lt;p>Ah! So you want the release sooner :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:36 PM&lt;/em>&lt;/p>
-&lt;p>&lt;em>9:36 PM&lt;/em>&lt;/p>
-&lt;p>apparently there is a project that refuses to look at firstMatch values&lt;/p>
-&lt;p>&lt;em>Sri Harsha 9:36 PM&lt;/em>&lt;/p>
-&lt;p>For JS i want to:&lt;/p>
-&lt;ul>
-&lt;li>Implement “se:cdpVersion”&lt;/li>
-&lt;li>API documentation for beta 4&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Simon Stewart 9:37 PM&lt;/em>&lt;/p>
-&lt;p>@titusfortner I have no idea how a project not following the
-spec is a reason for us to ship sooner, but I assume there&amp;rsquo;s context I&amp;rsquo;m missing….&lt;/p>
-&lt;p>&lt;em>David Burns 9:37 PM&lt;/em>&lt;/p>
-&lt;p>is this appium?&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:40 PM&lt;/em>&lt;/p>
-&lt;p>A Watir user is using aerokube/ggr&lt;/p>
-&lt;p>Ruby code defaults to F/M, but the project doesn&amp;rsquo;t accept it (&lt;a href="https://github.com/aerokube/ggr/issues/314">https://github.com/aerokube/ggr/issues/314&lt;/a>)&lt;/p>
-&lt;p>He asked the devs and their private reply: Ggr does not support &amp;ldquo;sophisticated&amp;rdquo; selenium &amp;ldquo;match&amp;rdquo;
-rules and we do not plan to implement that, because it is ambiguous&lt;/p>
-&lt;p>So Ruby changed default implementation to be A/M since it *shouldn&amp;rsquo;t matter but apparently does&lt;/p>
-&lt;p>just trying to help the user&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:41 PM&lt;/em>&lt;/p>
-&lt;p>It&amp;rsquo;s the exact opposite of ambiguous&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:41 PM&lt;/em>&lt;/p>
-&lt;p>oh, I know&lt;/p>
-&lt;p>&lt;em>9:41 PM&lt;/em>&lt;/p>
-&lt;p>if this had been a public response i&amp;rsquo;d have been all over it&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:41 PM&lt;/em>&lt;/p>
-&lt;p>WE should probably have a chat with the Aerokube folks&lt;/p>
-&lt;p>&lt;em>9:42 PM&lt;/em>&lt;/p>
-&lt;p>Because Se4 will break them a lot&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:42 PM&lt;/em>&lt;/p>
-&lt;p>The suggestion I got is either to try their new product: aerokube.com/moon
-or do not use ggr and go with selenium.&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:43 PM&lt;/em>&lt;/p>
-&lt;p>So moon supports the w3c payload but not ggr?&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:44 PM&lt;/em>&lt;/p>
-&lt;p>that&amp;rsquo;s what it sounds like&lt;/p>
-&lt;p>&lt;em>David Burns 9:44 PM&lt;/em>&lt;/p>
-&lt;p>Aerokube… the group that bad mouths selenium… that aerokube?&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:44 PM&lt;/em>&lt;/p>
-&lt;p>I don&amp;rsquo;t know what ggr vs moon is,
-didn&amp;rsquo;t get too deep into it&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:45 PM&lt;/em>&lt;/p>
-&lt;p>Moon is their paid-for product.&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:45 PM&lt;/em>&lt;/p>
-&lt;p>ah of course it is&lt;/p>
-&lt;p>you want fancy, you pay the money!&lt;/p>
-&lt;p>s/fancy/sophisticated&lt;/p>
-&lt;p>&lt;em>Simon Stewart 9:45 PM&lt;/em>&lt;/p>
-&lt;p>A perfectly valid business model&lt;/p>
-&lt;p>&lt;em>David Burns 9:45 PM&lt;/em>&lt;/p>
-&lt;p>In which they they tell everyone that selenium grid is useless&lt;/p>
-&lt;p>&lt;em>9:46 PM&lt;/em>&lt;/p>
-&lt;p>I’m happy to help those that don’t bad mouth us&lt;/p>
-&lt;p>Difference of opinion is also fine&lt;/p>
-&lt;p>&lt;em>9:47 PM&lt;/em>&lt;/p>
-&lt;p>But… *channels his inner @jimevans *&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:47 PM&lt;/em>&lt;/p>
-&lt;p>I don&amp;rsquo;t remember off hand which bindings default to A/M and which to F/M&lt;/p>
-&lt;p>&lt;em>9:47 PM&lt;/em>&lt;/p>
-&lt;p>I was going to run some tests&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:50 PM&lt;/em>&lt;/p>
-&lt;p>I think we should not hurry for a project that does not support standards&lt;/p>
-&lt;p>&lt;em>Titus Fortner 9:51 PM&lt;/em>&lt;/p>
-&lt;p>I don&amp;rsquo;t care about them&lt;/p>
-&lt;p>&lt;em>9:51 PM&lt;/em>&lt;/p>
-&lt;p>I care about a user who needs to change because of them&lt;/p>
-&lt;p>&lt;em>Diego Molina 9:51 PM&lt;/em>&lt;/p>
-&lt;p>Anyway, I think those were all the topics we had :slightly_smiling_face:&lt;/p></description></item></channel></rss>
+&lt;p>sounds great, thanks @simonstewart!&lt;/p></description></item></channel></rss>
