@@ -46,7 +46,7 @@ def test_downloads(server, temp_dir):
 
     files = driver.get_downloadable_files()
 
-    assert files == file_names
+    assert sorted(files) == sorted(file_names)
     downloadable_file = files[0]
     target_directory = temp_dir
 
