@@ -1,6 +1,6 @@
 ---
 title: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener
-date: 2021-09-22
+date: 2023-12-08
 tags: [java, events, webdriver]
 categories: [general]
 author: Oscar Devora ([@oscardevora](https://twitter.com/Yo_Oscarr))
