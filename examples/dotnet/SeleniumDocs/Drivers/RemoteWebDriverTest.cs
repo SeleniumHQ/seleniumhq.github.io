@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -65,9 +66,9 @@ namespace SeleniumDocs.Drivers
             driver.FindElement(By.Id("file-1")).Click();
             driver.FindElement(By.Id("file-2")).Click();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
-            wait.Until(d => ((RemoteWebDriver)d).GetDownloadableFiles().Contains("file_2.jpg"));
+            wait.Until(d => ((RemoteWebDriver)d).GetDownloadableFiles().Any(f => f == "file_2.jpg"));
 
-            List<string> names = ((RemoteWebDriver)driver).GetDownloadableFiles();
+            IReadOnlyList<string> names = ((RemoteWebDriver)driver).GetDownloadableFiles();
 
             Assert.IsTrue(names.Contains("file_1.txt"));
             Assert.IsTrue(names.Contains("file_2.jpg"));
