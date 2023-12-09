@@ -40,8 +40,6 @@ namespace SeleniumDocs.Troubleshooting
             Log.SetLevel(LogEventLevel.Info)
                 .Handlers.Clear()
                 .Handlers.Add(new ConsoleLogHandler());
-
-            File.Delete(filePath);
         }
 
         // logging is only for internal usage
