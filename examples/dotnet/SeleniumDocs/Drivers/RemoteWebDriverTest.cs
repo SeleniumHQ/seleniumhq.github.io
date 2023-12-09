@@ -73,7 +73,7 @@ namespace SeleniumDocs.Drivers
 
             Assert.IsTrue(names.Contains("file_1.txt"));
             Assert.IsTrue(names.Contains("file_2.jpg"));
-            string downloadableFile = names[0];
+            string downloadableFile = names.First(f => f == "file_1.txt");
             string targetDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
 
             ((RemoteWebDriver)driver).DownloadFile(downloadableFile, targetDirectory);
