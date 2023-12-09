@@ -26,11 +26,17 @@ namespace SeleniumDocs.Troubleshooting
             Info("this is useful information");
             Debug("this is detailed debug information");
 
-            var fileLogContent = File.ReadAllText(filePath);
+            using (var fileStream = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                using (var streamReader = new StreamReader(fileStream))
+                {
+                    var fileLogContent = streamReader.ReadToEnd();
 
-            StringAssert.Contains(fileLogContent, "this is a warning");
-            StringAssert.Contains(fileLogContent, "this is useful information");
-            StringAssert.Contains(fileLogContent, "this is detailed debug information");
+                    StringAssert.Contains(fileLogContent, "this is a warning");
+                    StringAssert.Contains(fileLogContent, "this is useful information");
+                    StringAssert.Contains(fileLogContent, "this is detailed debug information");
+                }
+            }
         }
 
         [TestCleanup]
