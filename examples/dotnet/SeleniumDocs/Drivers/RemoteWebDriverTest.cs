@@ -60,13 +60,14 @@ namespace SeleniumDocs.Drivers
             {
                 EnableDownloads = true
             };
+
             driver = new RemoteWebDriver(GridUrl, options);
 
             driver.Url = "https://selenium.dev/selenium/web/downloads/download.html";
             driver.FindElement(By.Id("file-1")).Click();
             driver.FindElement(By.Id("file-2")).Click();
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
-            wait.Until(d => ((RemoteWebDriver)d).GetDownloadableFiles().Any(f => f == "file_2.jpg"));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(d => ((RemoteWebDriver)d).GetDownloadableFiles().Contains("file_2.jpg"));
 
             IReadOnlyList<string> names = ((RemoteWebDriver)driver).GetDownloadableFiles();
 
