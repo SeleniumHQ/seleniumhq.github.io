@@ -33,12 +33,7 @@ namespace SeleniumDocs
             }
         }
 
-        protected void StartDriver()
-        {
-            driver = new ChromeDriver();
-        }
-
-        protected void StartDriver(string browserVersion)
+        protected void StartDriver(string browserVersion = "stable")
         {
             ChromeOptions options = new ChromeOptions
             {
