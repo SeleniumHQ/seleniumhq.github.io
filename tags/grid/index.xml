@@ -174,13 +174,13 @@ and we need to be able to properly meet the needs of the vast majority of our us
 &lt;p>TL/DR:&lt;/p>
 &lt;ul>
 &lt;li>Support for the legacy &lt;a href="https://www.selenium.dev/documentation/legacy/json_wire_protocol/">JSON Wire Protocol&lt;/a>
-will be removed from Java Selenium 4.3 (other languages have already removed this support)&lt;/li>
-&lt;li>Protocol conversions will stop in Selenium 4.3 Grid&lt;/li>
+will be removed from Java Selenium 4.9 (other languages have already removed this support)&lt;/li>
+&lt;li>Protocol conversions will stop in Selenium 4.9 Grid&lt;/li>
 &lt;li>You can ensure your sessions are W3C compliant by using
 &lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#after">Browser Options classes&lt;/a>
 instead of the deprecated Desired Capabilities classes (and avoid using &amp;ldquo;set capability&amp;rdquo; methods directly)&lt;/li>
 &lt;li>If you rely on the current protocol conversion functionality, and it works for you,
-you can continue to use it with Selenium Grid 4.2&lt;/li>
+you can continue to use it with Selenium Grid 4.8&lt;/li>
 &lt;/ul>
 &lt;p>By far the biggest challenge in the past seven years of Selenium development has been
 transitioning the underlying implementation from the legacy &lt;a href="https://www.selenium.dev/documentation/legacy/json_wire_protocol/">JSON Wire Protocol&lt;/a>
@@ -201,7 +201,7 @@ re-translates the results back to the legacy protocol.
 Because the code must make some assumptions and guesses for this to work, there are a lot of frustrating edge cases.&lt;/p>
 &lt;p>For Selenium 4.0, the Ruby, JavaScript, and .NET bindings, each removed the handshake code,
 so no legacy commands are used. Due to some issues that couldn&amp;rsquo;t be resolved before freezing the 3.x code,
-Python is waiting until Selenium 4.3 to remove its handshake code.
+Python is waiting until Selenium 4.9 to remove its handshake code.
 The Selenium team intended to continue to support both protocols in the
 Grid and Java bindings throughout the 4.x releases, but running test suites written for Selenium 2
 on the Selenium 4 Grid resulted in a larger than expected number of failures.
