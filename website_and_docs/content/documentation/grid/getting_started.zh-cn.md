@@ -212,7 +212,7 @@ driver.quit();
 为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
 {{% /pageinfo %}}
 
-## 使用 Java 11 中的 HTTP Client {{% badge-version version="4.5" %}}
+## 使用 Java 11 中的 HTTP Client
 
 默认情况下，Grid 将使用 [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client)。 AsyncHttpClient 是一个建立在 Netty 之上的开源库。 它允许异步执行 HTTP 请求和响应。 此外，它还提供 WebSocket 支持。 因此它很合适。
 

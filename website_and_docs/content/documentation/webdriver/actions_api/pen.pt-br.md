@@ -18,18 +18,15 @@ Uma caneta é um tipo de entrada de ponteiro que possui a maior parte do mesmo c
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L26-L33" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/python/tests/actions_api/test_pen.py#L12-L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/PenTest.cs#L19-L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/ruby/spec/actions_api/pen_spec.rb#L11-L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -42,7 +39,6 @@ Uma caneta é um tipo de entrada de ponteiro que possui a maior parte do mesmo c
 
 ## Adicionando Atributos de Evento de Ponteiro
 
-{{< badge-version version="4.2" >}}
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

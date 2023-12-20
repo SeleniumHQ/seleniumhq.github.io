@@ -219,7 +219,7 @@ locally. More detailed examples and usages can be found in the
 [Configuring Components]({{< ref "/configuration" >}}) section.
 {{% /pageinfo %}}
 
-## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
+## Using the Java 11 HTTP Client
 
 By default, Grid will use [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
 AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP 

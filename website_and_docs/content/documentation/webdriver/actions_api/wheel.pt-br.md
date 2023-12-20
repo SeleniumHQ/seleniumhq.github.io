@@ -6,7 +6,6 @@ description: >
     "Uma representação de um dispositivo de entrada de roda de rolagem para interagir com uma página da web."
 ---
 
-{{< badge-version version="4.2" >}}
 {{< badge-browser browser=Chromium wpt="perform_actions/wheel.py" >}}
 
 Existem 5 cenários para rolagem em uma página.

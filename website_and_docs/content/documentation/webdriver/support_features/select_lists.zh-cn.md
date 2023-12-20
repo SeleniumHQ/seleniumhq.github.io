@@ -223,7 +223,6 @@ Select类提供了三种选择选项的方法.
 
 ### 禁用的选项
 
-{{< badge-version version="4.5" >}}
 
 具有 `disabled` 属性的选项可能无法被选择.
 

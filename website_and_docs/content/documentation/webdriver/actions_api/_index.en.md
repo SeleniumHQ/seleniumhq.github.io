@@ -39,11 +39,9 @@ to wait a beat between actions for things to work correctly.
 {{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}

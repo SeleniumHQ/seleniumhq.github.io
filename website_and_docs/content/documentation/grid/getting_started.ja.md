@@ -229,7 +229,7 @@ API 呼び出しは[http://localhost:4444/status](http://localhost:4444/status)�
 より詳細な例と使用方法は[コンポーネント]({{< ref "components.md" >}})の章を参照してください。
 {{% /pageinfo %}}
 
-## Java 11 の HTTP クライアントを利用する {{% badge-version version="4.5" %}}
+## Java 11 の HTTP クライアントを利用する
 
 デフォルトでは Grid は[AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client)を使用します。
 AsyncHttpClient は Netty を使ったオープンソースのライブラリで、非同期での HTTP リクエストを実現します。

@@ -1,0 +1,7 @@
+.td-main main {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  @include media-breakpoint-up(md) {
+    padding-top: 1.5rem;
+  }
+}

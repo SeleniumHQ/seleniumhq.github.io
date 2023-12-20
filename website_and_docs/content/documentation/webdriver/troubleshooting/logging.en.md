@@ -41,7 +41,6 @@ For more fine-tuned control, Ruby Selenium created its own Logger class to wrap 
 This implementation provides some interesting additional features. 
 Obtain the logger directly from the `#logger`class method on the `Selenium::WebDriver` module:
 
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L11" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -102,7 +101,6 @@ logging.basicConfig(level=logging.WARN)
   The default is `:info`.  
   
 To change the level of the logger:
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L13" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -281,7 +279,6 @@ handler with either a `StreamHandler` or a `FileHandler`:
   By default, logs are sent to the console in `stdout`.  
   To store the logs in a file:
 
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L15" >}}
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -322,10 +319,8 @@ Everything that Selenium logs includes an ID. You can also turn on or off all de
 using `:deprecations`.
 
 These methods accept one or more symbols or an array of symbols:
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#17" >}}
 or
-{{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/ruby/spec/troubleshooting/logging_spec.rb#L18" >}}
   {{% /tab %}}
   {{< tab header="JavaScript" >}}

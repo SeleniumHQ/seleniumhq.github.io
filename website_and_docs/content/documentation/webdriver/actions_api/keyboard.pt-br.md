@@ -129,7 +129,6 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-version version="4.5.0" >}}
 {{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L61-L65" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
