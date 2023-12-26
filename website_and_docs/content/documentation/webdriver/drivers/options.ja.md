@@ -114,14 +114,8 @@ WebDriver は [load](https://developer.mozilla.org/ja/docs/Web/API/Window/load_e
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'normal'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -181,14 +175,8 @@ WebDriver は、[DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'eager'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L17-L18">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -247,14 +235,8 @@ WebDriver は、最初のページがダウンロードされるまで待機し�
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'none'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L27-L28">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
