@@ -131,7 +131,7 @@ Create a feature branch and start hacking:
 ```
 
 We practice HEAD-based development, which means all changes are applied
-directly on top of `dev`.
+directly on top of `trunk`.
 
 ### Step 3: Make changes
 
