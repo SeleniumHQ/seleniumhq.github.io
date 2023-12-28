@@ -138,13 +138,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :normal
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -200,13 +195,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :eager
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -261,13 +251,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :none
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
