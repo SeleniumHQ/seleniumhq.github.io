@@ -73,6 +73,12 @@ def firefox_driver():
 
 
 @pytest.fixture(scope='function')
+def log():
+    logging.basicConfig(level=logging.WARN)
+    logging.getLogger('selenium').setLevel(logging.DEBUG)
+
+
+@pytest.fixture(scope='function')
 def log_path():
     suffix = datetime.now().strftime("%y%m%d_%H%M%S")
     log_path = 'log_file_' + suffix + '.log'
