@@ -219,11 +219,11 @@ driver.SwitchTo().NewWindow(WindowType.Tab)
 driver.SwitchTo().NewWindow(WindowType.Window)
 {{< /tab >}}
   {{% tab header="Ruby" text=true %}}
-    打开新标签页并切换到新标签页
-    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+打开新标签页并切换到新标签页
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
 
-    打开一个新窗口并切换到新窗口
-    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
 {{< tab header="JavaScript" >}}
 // 打开新标签页并切换到新标签页

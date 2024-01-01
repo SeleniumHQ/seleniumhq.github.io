@@ -232,11 +232,11 @@ driver.SwitchTo().NewWindow(WindowType.Tab)
 driver.SwitchTo().NewWindow(WindowType.Window)
   {{< /tab >}}
   {{% tab header="Ruby" text=true %}}
-    Opens a new tab and switches to new tab
-    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
 
-    Opens a new window and switches to new window
-    {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+Opens a new window and switches to new window
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
   {{< tab header="JavaScript" >}}
 // Opens a new tab and switches to new tab
