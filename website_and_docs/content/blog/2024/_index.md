@@ -1,5 +1,5 @@
 ---
 title: "Blog Posts - 2024"
 linkTitle: "2024"
-weight: 88
+weight: 86
 ---
