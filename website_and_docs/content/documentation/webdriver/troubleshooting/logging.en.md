@@ -95,7 +95,6 @@ logging.basicConfig(level=logging.WARN)
 
 To change the level of the logger:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L18" >}}
-
   {{% /tab %}}
   {{% tab header="Ruby" %}}
   Ruby logger has 5 logger levels: `:debug`, `:info`, `:warn`, `:error`, `:fatal`. 
@@ -282,7 +281,7 @@ handler with either a `StreamHandler` or a `FileHandler`:
 {{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9-L10" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-By default all logs are sent to `Console.Error` output. To direct output somewhere else, you need to add a handler with a `FileLogHandler`:
+By default all logs are sent to `System.Console.Error` output. To direct output somewhere else, you need to add a handler with a `FileLogHandler`:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L20" >}}
   {{% /tab %}}
   {{% tab header="Ruby" %}}
