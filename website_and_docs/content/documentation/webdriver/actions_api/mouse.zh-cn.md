@@ -15,10 +15,10 @@ There are only 3 actions that can be accomplished with a mouse:
 pressing down on a button, releasing a pressed button, and moving the mouse.
 Selenium provides convenience methods that combine these actions in the most common ways.
 
-## Click and hold
+## 按下鼠标左键
 
-This method combines moving the mouse to the center of an element with pressing the left mouse button.
-This is useful for focusing a specific element:
+这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键不松开。
+这对于聚焦一个特殊元素很有用：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -41,10 +41,10 @@ This is useful for focusing a specific element:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Click and release
+## 点击鼠标左键
 
-This method combines moving to the center of an element with pressing and releasing the left mouse button.
-This is otherwise known as "clicking":
+这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键后再松开。
+另一种叫法“点击”：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -67,19 +67,19 @@ This is otherwise known as "clicking":
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Alternate Button Clicks
+## 点击鼠标备用按钮
 
-There are a total of 5 defined buttons for a Mouse:
-* 0 — Left Button (the default)
-* 1 — Middle Button (currently unsupported)
-* 2 — Right Button
-* 3 — X1 (Back) Button
-* 4 — X2 (Forward) Button
+鼠标一共有5个定义好的按钮:
+* 0 — 左键 (默认值)
+* 1 — 中间键 (当前不支持)
+* 2 — 右键
+* 3 — X1 (返回) 按钮
+* 4 — X2 (前进) 按钮
 
-### Context Click
+### 点击鼠标右键
 
-This method combines moving to the center of an element with pressing and releasing the right mouse button (button 2).
-This is otherwise known as "right-clicking":
+这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后点击鼠标右键。
+另一种叫法“点击右键”：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -102,9 +102,9 @@ This is otherwise known as "right-clicking":
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Back Click
+### 点击鼠标回退键
 
-There is no convenience method for this, it is just pressing and releasing mouse button 3
+除了这个没有更方便的方法，只是点击鼠标回退按钮
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -131,9 +131,9 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Forward Click
+### 点击鼠标前进键
 
-There is no convenience method for this, it is just pressing and releasing mouse button 4
+除了这个没有更方便的方法，只是点击鼠标前进按钮
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -160,9 +160,9 @@ There is no convenience method for this, it is just pressing and releasing mouse
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Double click
+## 双击鼠标左键
 
-This method combines moving to the center of an element with pressing and releasing the left mouse button twice.
+这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后双击鼠标左键。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -185,11 +185,11 @@ This method combines moving to the center of an element with pressing and releas
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Move to element
+## 移动光标到元素上
 
-This method moves the mouse to the in-view center point of the element. 
-This is otherwise known as "hovering."
-Note that the element must be in the viewport or else the command will error.
+这个方法是将光标移动到元素的中心点。
+另一种叫法“悬浮”。
+元素必须在可视窗口范围内否则这条命令将会报错。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -212,16 +212,14 @@ Note that the element must be in the viewport or else the command will error.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Move by offset
+## 通过偏移量移动动光标
 
-These methods first move the mouse to the designated origin and then
-by the number of pixels in the provided offset.
-Note that the position of the mouse must be in the viewport or else the command will error.
+这些方法让光标先移动到指定的坐标原点，然后通过单位为px的偏移量进行光标相对原点的偏移移动。
+注意光标位置必须在可视窗口区域否则会报错。
 
-### Offset from Element
+### 从元素中心点（原点）偏移
 
-This method moves the mouse to the in-view center point of the element,
-then moves by the provided offset.
+这个方法是指先将光标移动到元素中心点（原点），然后通过偏移量进行光标相对原点的偏移。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -244,10 +242,9 @@ then moves by the provided offset.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Offset from Viewport
+### 从视窗左上角（原点）偏移
 
-This method moves the mouse from the upper left corner of the current viewport by the provided
-offset.
+这个方法是指先将光标移动到视窗左上角（原点），然后通过偏移量进行光标相对原点的偏移。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -270,16 +267,13 @@ offset.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Offset from Current Pointer Location
+### 从当前光标位置（原点）偏移
 
-This method moves the mouse from its current position by the offset provided by the user.
-If the mouse has not previously been moved, the position will be in the upper left
-corner of the viewport.
-Note that the pointer position does not change when the page is scrolled.
+这个方法是指光标位于当前位置（原点），然后通过偏移量进行光标相对原点的偏移。
+如果之前没有移动过光标位置，则这个位置是视窗左上角（原点）。
+注意当页面发生滚动后光标位置不会发生变化。
 
-Note that the first argument X specifies to move right when positive, while the second argument
-Y specifies to move down when positive. So `moveByOffset(30, -10)` moves right 30 and up 10 from
-the current mouse position.
+注意第一个参数指定为正数时向右移动，第二个参数指定为正数时向下移动。所以 `moveByOffset(30, -10)` 是指从当前光标位置向右移动30个像素位置和向上移动10个像素位置。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -302,10 +296,9 @@ the current mouse position.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Drag and Drop on Element
+## 拖动和放下元素
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+这个方法首先在原元素上提交执行按下鼠标左键，移动到目标元素位置后是释放鼠标左键。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -328,9 +321,8 @@ moves to the location of the target element and then releases the mouse.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Drag and Drop by Offset
-
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+## 通过偏移量拖动和放下元素
+这个方法首先在原元素上提交执行按下鼠标左键，通过给出的偏移量移动元素后释放鼠标左键。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
