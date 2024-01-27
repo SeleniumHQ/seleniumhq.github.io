@@ -21,9 +21,10 @@ namespace SeleniumDocs.Drivers
         [TestMethod]
         public void DriverLocation()
         {
-            var service = ChromeDriverService.CreateDefaultService(GetDriverLocation());
+            var options = GetLatestChromeOptions();
+            var service = ChromeDriverService.CreateDefaultService(GetDriverLocation(options));
 
-            driver = new ChromeDriver(service);
+            driver = new ChromeDriver(service, options);
         }
 
         [TestMethod]
@@ -35,9 +36,17 @@ namespace SeleniumDocs.Drivers
             driver = new ChromeDriver(service);
         }
         
-        private string GetDriverLocation()
+        private static string GetDriverLocation(ChromeOptions options)
         {
-            return DriverFinder.FullPath(new ChromeOptions());
+            return DriverFinder.FullPath(options);
+        }
+
+        private static ChromeOptions GetLatestChromeOptions()
+        {
+            return new ChromeOptions
+            {
+                BrowserVersion = "stable"
+            };
         }
     }
 }

@@ -30,40 +30,16 @@ jobs:
     steps:
     - name: Checkout GitHub repo
       uses: actions/checkout@v3
-    - name: Install Chrome for set binary test
-      uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
-      id: setup-chrome
-    - name: Install Edge for set binary test
-      uses: browser-actions/setup-edge@v1
-      with:
-        edge-version: stable
-      id: setup-edge
-    - name: Install Firefox for set binary test
-      if: matrix.os != 'windows-latest'
-      uses: browser-actions/setup-firefox@v1
-      with:
-        firefox-version: latest
-      id: setup-firefox
-    - name: Set ENV Windows
+    - name: Remove driver directories Windows
       if: matrix.os == 'windows-latest'
       run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> $env:GITHUB_ENV
-        echo "EDGE_BIN=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" >> $env:GITHUB_ENV
-        echo "FF_BIN=C:\Program Files (x86)\Mozilla Firefox\firefox-browser.exe" >> $env:GITHUB_ENV
-    - name: Set ENV Mac
-      if: matrix.os == 'macos-latest'
+        rm "$env:ChromeWebDriver" -r -v
+        rm "$env:EdgeWebDriver" -r -v
+        rm "$env:GeckoWebDriver" -r -v
+    - name: Remove driver directories Non-Windows
+      if: matrix.os != 'windows-latest'
       run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
-        echo "EDGE_BIN=/Users/runner/hostedtoolcache/msedge/stable/x64/Contents/MacOS/Microsoft Edge" >> "$GITHUB_ENV"
-        echo "FF_BIN=/Users/runner/hostedtoolcache/firefox/latest/x64/Contents/MacOS/firefox" >> "$GITHUB_ENV"
-    - name: Set ENV Linux
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
-        echo "EDGE_BIN=/opt/hostedtoolcache/msedge/stable/x64/msedge" >> "$GITHUB_ENV"
-        echo "FF_BIN=/opt/hostedtoolcache/firefox/latest/x64/firefox" >> "$GITHUB_ENV"
+        sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &

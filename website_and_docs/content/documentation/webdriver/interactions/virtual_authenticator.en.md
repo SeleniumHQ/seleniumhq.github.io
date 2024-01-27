@@ -20,7 +20,7 @@ As the name suggests, Virtual Authenticator emulates such authenticators for tes
 A Virtual Authenticatior has a [set of properties](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators).
 These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindings.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L55-L61" >}}
 {{< /tab >}}
@@ -47,7 +47,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 
 It creates a new virtual authenticator with the provided properties.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L68-L73" >}}
 {{< /tab >}}
@@ -72,7 +72,7 @@ It creates a new virtual authenticator with the provided properties.
 
 Removes the previously added virtual authenticator.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L86" >}}
 {{< /tab >}}
@@ -97,7 +97,7 @@ Removes the previously added virtual authenticator.
 
 Creates a resident (stateful) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L100-L103" >}}
 {{< /tab >}}
@@ -122,7 +122,7 @@ Creates a resident (stateful) credential with the given required credential [par
 
 Creates a resident (stateless) credential with the given required credential [parameters](https://w3c.github.io/webauthn/#sctn-automation-add-credential). 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L143-L145" >}}
 {{< /tab >}}
@@ -147,7 +147,7 @@ Creates a resident (stateless) credential with the given required credential [pa
 
 Registers the credential with the authenticator. 
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L137-L146" >}}
 {{< /tab >}}
@@ -172,7 +172,7 @@ Registers the credential with the authenticator.
 
 Returns the list of credentials owned by the authenticator.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L157-L171" >}}
 {{< /tab >}}
@@ -197,7 +197,7 @@ Returns the list of credentials owned by the authenticator.
 
 Removes a credential from the authenticator based on the passed credential id.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L181-L190" >}}
 {{< /tab >}}
@@ -223,7 +223,7 @@ Removes a credential from the authenticator based on the passed credential id.
 
 Removes all the credentials from the authenticator.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L196-L205" >}}
 {{< /tab >}}
@@ -248,7 +248,7 @@ Removes all the credentials from the authenticator.
 
 Sets whether the authenticator will simulate success or fail on user verification.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L211-L212" >}}
 {{< /tab >}}

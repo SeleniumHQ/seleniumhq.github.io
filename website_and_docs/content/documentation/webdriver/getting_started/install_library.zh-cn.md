@@ -16,7 +16,7 @@ aliases: [
 
 ## 请求对应的程序语言
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
@@ -25,12 +25,12 @@ aliases: [
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="examples/java/pom.xml#L32-L36" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L29-L33" >}}
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}

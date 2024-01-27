@@ -49,7 +49,6 @@ Links to everything can be found on our [downloads page][downloads].
 {{< gh-user "https://api.github.com/users/ShadowLNC" >}}
 {{< gh-user "https://api.github.com/users/sandeepsuryaprasad" >}}
 {{< gh-user "https://api.github.com/users/alpatron" >}}
-{{< gh-user "https://api.github.com/users/ce86f3bb9faf71e" >}}
 
 
 

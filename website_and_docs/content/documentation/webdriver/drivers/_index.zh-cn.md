@@ -25,7 +25,7 @@ weight: 3
 
 * [服务]({{< ref "service.md" >}}) 对象仅适用于本地驱动，并提供有关浏览器驱动的信息
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -59,7 +59,7 @@ weight: 3
 重要提示: `quit` 方法与 `close` 方法不同,
 建议始终使用 `quit` 来结束会话
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

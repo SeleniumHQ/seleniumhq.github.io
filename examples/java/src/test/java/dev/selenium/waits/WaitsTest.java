@@ -1,84 +1,96 @@
 package dev.selenium.waits;
 
-import dev.selenium.BaseChromeTest;
+import dev.selenium.BaseTest;
+import java.time.Duration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+public class WaitsTest extends BaseTest {
+  @Test
+  public void fails() {
+    startChromeDriver(new ChromeOptions());
 
-public class WaitsTest extends BaseChromeTest {
-    @Test
-    public void fails() {
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        driver.findElement(By.id("adder")).click();
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+    driver.findElement(By.id("adder")).click();
 
-        Assertions.assertThrows(NoSuchElementException.class, () -> {
-            driver.findElement(By.id("box0"));
+    Assertions.assertThrows(
+        NoSuchElementException.class,
+        () -> {
+          driver.findElement(By.id("box0"));
         });
-    }
+  }
 
-    @Test
-    public void sleep() throws InterruptedException {
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        driver.findElement(By.id("adder")).click();
+  @Test
+  public void sleep() throws InterruptedException {
+    startChromeDriver(new ChromeOptions());
 
-        Thread.sleep(1000);
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+    driver.findElement(By.id("adder")).click();
 
-        WebElement added = driver.findElement(By.id("box0"));
+    Thread.sleep(1000);
 
-        Assertions.assertEquals("redbox", added.getDomAttribute("class"));
-    }
+    WebElement added = driver.findElement(By.id("box0"));
 
-    @Test
-    public void implicit() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        driver.findElement(By.id("adder")).click();
+    Assertions.assertEquals("redbox", added.getDomAttribute("class"));
+  }
 
-        WebElement added = driver.findElement(By.id("box0"));
+  @Test
+  public void implicit() {
+    startChromeDriver(new ChromeOptions());
 
-        Assertions.assertEquals("redbox", added.getDomAttribute("class"));
-    }
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+    driver.findElement(By.id("adder")).click();
 
-    @Test
-    public void explicit() {
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        WebElement revealed = driver.findElement(By.id("revealed"));
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    WebElement added = driver.findElement(By.id("box0"));
 
-        driver.findElement(By.id("reveal")).click();
-        wait.until(d -> revealed.isDisplayed());
+    Assertions.assertEquals("redbox", added.getDomAttribute("class"));
+  }
 
-        revealed.sendKeys("Displayed");
-        Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
-    }
+  @Test
+  public void explicit() {
+    startChromeDriver(new ChromeOptions());
 
-    @Test
-    public void explicitWithOptions() {
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        WebElement revealed = driver.findElement(By.id("revealed"));
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(2))
-                .pollingEvery(Duration.ofMillis(300))
-                .ignoring(ElementNotInteractableException.class);
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+    WebElement revealed = driver.findElement(By.id("revealed"));
+    driver.findElement(By.id("reveal")).click();
 
-        driver.findElement(By.id("reveal")).click();
-        wait.until(d -> {
-            revealed.sendKeys("Displayed");
-            return true;
+    Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    wait.until(d -> revealed.isDisplayed());
+
+    revealed.sendKeys("Displayed");
+    Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
+  }
+
+  @Test
+  public void explicitWithOptions() {
+    startChromeDriver(new ChromeOptions());
+
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+    WebElement revealed = driver.findElement(By.id("revealed"));
+    driver.findElement(By.id("reveal")).click();
+
+    Wait<WebDriver> wait =
+        new FluentWait<>(driver)
+            .withTimeout(Duration.ofSeconds(2))
+            .pollingEvery(Duration.ofMillis(300))
+            .ignoring(ElementNotInteractableException.class);
+
+    wait.until(
+        d -> {
+          revealed.sendKeys("Displayed");
+          return true;
         });
 
-        Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
-    }
+    Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
+  }
 }

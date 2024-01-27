@@ -19,12 +19,12 @@ Capacidades únicas ao Chrome podem ser encontradas na página da Google para [C
 
 Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L39-L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L37-L38" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L11-L12" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L30-L31" >}}
@@ -53,12 +53,12 @@ Commonly used args include `--start-maximized`, `--headless=new` and `--user-dat
 
 Add an argument to options:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L47" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L45" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L20" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L18" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L39" >}}
@@ -78,12 +78,12 @@ Add an argument to options:
 
 Adicionar uma localização:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L56" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L54" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L31">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L29">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
@@ -109,12 +109,12 @@ please use the `load-extension` argument instead, as mentioned in
 
 Adicionar uma extensão:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L67" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L65" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L42">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L40">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
@@ -136,12 +136,12 @@ Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo 
 
 Adicionar detach:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **Note**: This is already the default behavior in Java.
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L53" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L51" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 **Note**: This is already the default behavior in .NET.
@@ -168,12 +168,12 @@ can be parsed from the
 
 Exclua parametros:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L79" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L78" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L64" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L76" >}}
@@ -204,16 +204,16 @@ direct where the logs will go. Logging output is ignored unless the user directs
 
 To change the logging output to save to a specific file:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L87" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L73" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
@@ -234,17 +234,17 @@ Property value: String representing path to log file
 
 To change the logging output to display in the console as STDOUT:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L101" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L84" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -267,17 +267,17 @@ There are 6 available log levels: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, a
 Note that `--verbose` is equivalent to `--log-level=ALL` and `--silent` is equivalent to `--log-level=OFF`,
 so this example is just setting the log level generically:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L116" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L95" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -302,16 +302,16 @@ There are 2 features that are only available when logging to a file:
 To use them, you need to also explicitly specify the log path and log level.
 The log output will be managed by the driver, not the process, so minor differences may be seen.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L133-L134" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L106" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -334,17 +334,17 @@ Chromedriver and Chrome browser versions should match, and if they don't the dri
 If you disable the build check, you can force the driver to be used with any version of Chrome.
 Note that this is an unsupported feature, and bugs will not be investigated.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L152" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L117" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
@@ -368,7 +368,7 @@ Property value: `"true"` or `"false"`
 
 Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -397,7 +397,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -420,7 +420,7 @@ please refer to the
 
 ### Logs
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -443,7 +443,7 @@ please refer to the
 
 ### Permissões
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -466,4 +466,4 @@ please refer to the
 
 ### DevTools
 
-Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools.md" >}}) para mais informação em como usar Chrome DevTools
+Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) para mais informação em como usar Chrome DevTools

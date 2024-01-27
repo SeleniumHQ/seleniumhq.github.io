@@ -17,7 +17,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 
 ## Requisitos por linguagem
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
@@ -27,12 +27,12 @@ A instalação da biblioteca Selenium para Java é feita a partir de uma build t
 ### Maven
 Especifique a dependência no `pom.xml` do seu projeto.
 
-{{< gh-codeblock path="examples/java/pom.xml#L32-L36" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L29-L33" >}}
 
 ### Gradle
 Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}

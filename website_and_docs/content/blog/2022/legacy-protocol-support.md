@@ -6,7 +6,7 @@ tags: ["webdriver", "java", "grid"]
 categories: ["general"]
 author: Titus Fortner ([@titusfortner](https://twitter.com/titusfortner))
 description: >
-  Selenium 4.3 will only support W3C compliant WebDriver syntax
+  Selenium 4.9 will only support W3C compliant WebDriver syntax
 ---
 
 The Selenium team prides itself on how seriously it takes backwards compatibility. 
@@ -17,13 +17,13 @@ and we need to be able to properly meet the needs of the vast majority of our us
 
 TL/DR:
 * Support for the legacy [JSON Wire Protocol](https://www.selenium.dev/documentation/legacy/json_wire_protocol/) 
-will be removed from Java Selenium 4.3 (other languages have already removed this support)
-* Protocol conversions will stop in Selenium 4.3 Grid
+will be removed from Java Selenium 4.9 (other languages have already removed this support)
+* Protocol conversions will stop in Selenium 4.9 Grid
 * You can ensure your sessions are W3C compliant by using 
 [Browser Options classes](https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/#after) 
 instead of the deprecated Desired Capabilities classes (and avoid using "set capability" methods directly)
 * If you rely on the current protocol conversion functionality, and it works for you, 
-you can continue to use it with Selenium Grid 4.2
+you can continue to use it with Selenium Grid 4.8
 
 By far the biggest challenge in the past seven years of Selenium development has been 
 transitioning the underlying implementation from the legacy [JSON Wire Protocol](https://www.selenium.dev/documentation/legacy/json_wire_protocol/) 
@@ -46,7 +46,7 @@ Because the code must make some assumptions and guesses for this to work, there 
 
 For Selenium 4.0, the Ruby, JavaScript, and .NET bindings, each removed the handshake code, 
 so no legacy commands are used. Due to some issues that couldn't be resolved before freezing the 3.x code, 
-Python is waiting until Selenium 4.3 to remove its handshake code. 
+Python is waiting until Selenium 4.9 to remove its handshake code. 
 The Selenium team intended to continue to support both protocols in the 
 Grid and Java bindings throughout the 4.x releases, but running test suites written for Selenium 2 
 on the Selenium 4 Grid resulted in a larger than expected number of failures. 

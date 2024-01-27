@@ -12,7 +12,7 @@ description: >
 * [发送键位](https://w3c.github.io/webdriver/#element-send-keys) (仅适用于文本字段和内容可编辑元素)
 * [清除](https://w3c.github.io/webdriver/#element-send-keys) (仅适用于文本字段和内容可编辑元素)
 * 提交 (仅适用于表单元素)
-* 选择 (参见 [选择列表元素]({{< ref "select_lists.md" >}})
+* 选择 (参见 [选择列表元素]({{< ref "select_lists.md" >}}))
 
 ## 附加验证
 
@@ -44,13 +44,9 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    // Navigate to Url
-    driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-	// Click on the element 
-    driver.findElement(By.name("color_input")).click();
-   
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
     # Navigate to url
@@ -110,18 +106,10 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 是WebDriver支持的按键列表.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
+{{< /tab >}}
 
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	  //Enter Text
-	  driver.findElement(By.name("email_input")).sendKeys("admin@localhost.dev");
-    
-
-  {{< /tab >}}
   {{< tab header="Python" >}}
 
 
@@ -198,16 +186,9 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 [无效元素状态](https://w3c.github.io/webdriver/#dfn-invalid-element-state) 错误.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-      // Navigate to Url
-      driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-      // Clear field to empty it from any previous data
-      driver.findElement(By.name("email_input")).clear();
-	  
-	 
-
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
 

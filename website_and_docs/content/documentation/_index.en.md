@@ -31,7 +31,7 @@ an interface to write instruction sets that can be run interchangeably in many
 browsers. Once you've installed everything, only a few lines of code get you inside
 a browser. You can find a more comprehensive example in [Writing your first Selenium script]({{< ref "first_script.md" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
@@ -39,7 +39,7 @@ a browser. You can find a more comprehensive example in [Writing your first Sele
 {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
@@ -59,6 +59,3 @@ You should continue on to [Getting Started]({{< ref "webdriver/getting_started" 
 to understand how you can install Selenium and successfully use it as a test 
 automation tool, and scaling simple tests like this to run in large, distributed 
 environments on multiple browsers, on several different operating systems.
-
-
-

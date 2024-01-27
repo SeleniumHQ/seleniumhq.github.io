@@ -1,6 +1,7 @@
 const { suite } = require('selenium-webdriver/testing');
-const {Browser, By} = require("selenium-webdriver");
+const {Browser, By, until} = require("selenium-webdriver");
 const path = require("path");
+const assert = require('node:assert');
 
 suite(function(env) {
   describe('File Upload Test', function() {
@@ -18,10 +19,16 @@ suite(function(env) {
       await driver.manage().setTimeouts({implicit: 5000});
 
       // Navigate to URL
-      await driver.get('https://www.selenium.dev/selenium/web/upload.html');
+      await driver.get('https://the-internet.herokuapp.com/upload');
       // Upload snapshot
-      await driver.findElement(By.id("upload")).sendKeys(image);
-      await driver.findElement(By.id("go")).submit();
+      await driver.findElement(By.id("file-upload")).sendKeys(image);
+      await driver.findElement(By.id("file-submit")).submit();
+      
+      const revealed = await driver.findElement(By.id('uploaded-files'))
+      await driver.wait(until.elementIsVisible(revealed), 2000);
+      const data = await driver.findElement(By.css('h3'));
+      
+      assert.equal(await data.getText(), `File Uploaded!`);
     });
 
   });

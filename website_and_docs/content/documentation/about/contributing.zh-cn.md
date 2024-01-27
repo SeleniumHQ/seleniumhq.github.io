@@ -99,7 +99,7 @@ Selenium项目欢迎新的贡献者.
 
 ### 步骤 1: Fork
 
-在 [Github](https://github.com/seleniumhq/seleniumhq.github.io)上Fork本项目, 
+在 [GitHub](https://github.com/seleniumhq/seleniumhq.github.io)上Fork本项目, 
 并check out到您的本地
 
 
@@ -113,7 +113,7 @@ Selenium项目欢迎新的贡献者.
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站. 
 你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
-我们推荐使用0.101.0或更高版本的Hugo.
+我们推荐使用0.110.0或更高版本的Hugo.
 
 请参考来自Docsy的说明
 [安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .
