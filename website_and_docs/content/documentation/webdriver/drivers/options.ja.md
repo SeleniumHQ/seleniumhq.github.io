@@ -29,7 +29,7 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 Browser name is set by default when using an Options class instance.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -57,7 +57,7 @@ This capability is optional, this is used to set the available browser version a
 In recent versions of Selenium, if the version is not found on the system,
 it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -111,34 +111,11 @@ WebDriver は [load](https://developer.mozilla.org/ja/docs/Web/API/Window/load_e
 イベント検知するまで待機します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'normal'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -159,13 +136,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :normal
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -195,34 +167,11 @@ WebDriver は、[DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API
 イベントを検知するまで待機します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'eager'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L17-L18">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -243,13 +192,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :eager
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -278,34 +222,11 @@ fun main() {
 WebDriver は、最初のページがダウンロードされるまで待機します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'none'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L27-L28">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -326,13 +247,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :none
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -363,7 +279,7 @@ fun main() {
 
 クラウドベースのプロバイダーでは、 `platformName` を設定すると、リモートエンドのOSが設定されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -395,7 +311,7 @@ fun main() {
 すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。
 一度設定すると、 `acceptInsecureCerts` Capabilityはセッション全体に影響します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -427,7 +343,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 現在のブラウジングコンテキストで実行中のスクリプトをいつ中断するかを指定します。
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **30,000** が課されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -453,7 +369,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **300,000** が課されます。
 ページの読み込みが指定/デフォルトの時間枠を制限する場合、スクリプトは　_TimeoutException_　によって停止されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -478,7 +394,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 これは、要素を検索するときに暗黙的な要素の検索戦略を待つ時間を指定します。
 新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **0** が課されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -515,7 +431,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 * accept and notify (受け入れて通知)
 * ignore (無視)
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -541,7 +457,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 リモート エンドがすべての　[サイズ変更および再配置](https://w3c.github.io/webdriver/#resizing-and-positioning-windows)
 [コマンド](https://w3c.github.io/webdriver/#dfn-commands) をサポートするかどうかを示します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -568,7 +484,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 厳密な相互作用チェックはデフォルトでオフになっているため、隠しファイルのアップロードコントロールで _Element Send Keys_ 
 を使用する場合の動作が変更されます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

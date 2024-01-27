@@ -8,10 +8,13 @@ def test_basic_service():
     driver.quit()
 
 
-def test_driver_location(chromedriver_path):
-    service = webdriver.ChromeService(executable_path=chromedriver_path)
+def test_driver_location(chromedriver_bin, chrome_bin):
+    options = webdriver.ChromeOptions()
+    options.binary_location = chrome_bin
 
-    driver = webdriver.Chrome(service=service)
+    service = webdriver.ChromeService(executable_path=chromedriver_bin)
+
+    driver = webdriver.Chrome(service=service, options=options)
 
     driver.quit()
 

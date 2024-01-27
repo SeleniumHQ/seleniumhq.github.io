@@ -32,7 +32,7 @@ aliases: [
 
 Browser name is set by default when using an Options class instance.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -60,7 +60,7 @@ This capability is optional, this is used to set the available browser version a
 In recent versions of Selenium, if the version is not found on the system,
 it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -121,34 +121,11 @@ WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Wi
 事件触发并返回.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'normal'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -169,13 +146,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :normal
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -205,34 +177,11 @@ WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/doc
 事件触发并返回.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'eager'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L17-L18">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -253,13 +202,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :eager
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -288,34 +232,11 @@ fun main() {
 WebDriver 仅等待初始页面已下载. 
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'none'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L27-L28">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -336,13 +257,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :none
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -375,7 +291,7 @@ fun main() {
 在基于云的供应者中, 
 设置 `platformName` 将在远程端设置操作系统.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -410,7 +326,7 @@ fun main() {
 默认情况下, 此功能将信任所有自签名证书. 
 设置后,  `acceptInsecureCerts` 功能将在整个会话中生效.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -445,7 +361,7 @@ WebDriver `session` 具有一定的 `session timeout` 间隔,
 WebDriver创建新会话时, 
 将设置默认的超时时间为 **30,000** .
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -473,7 +389,7 @@ WebDriver创建新会话时,
 如果页面加载限制了给定 (或默认) 的时间范围, 
 则该脚本将被 _TimeoutException_ 停止.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -499,7 +415,7 @@ WebDriver创建新会话时,
 WebDriver创建新会话时, 
 将设置默认超时时间为 **0** .
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -538,7 +454,7 @@ WebDriver创建新会话时,
 * accept and notify
 * ignore
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -565,7 +481,7 @@ WebDriver创建新会话时,
 用于所有支持 [调整大小和重新定位](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) 
 [命令](https://w3c.github.io/webdriver/#dfn-commands) 的远程终端.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -594,7 +510,7 @@ WebDriver创建新会话时,
 在将 _元素的Send Keys_ 方法作用于隐藏的文件上传时, 
 会有控制方面的行为区别.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

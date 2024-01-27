@@ -99,7 +99,7 @@ Selenium项目欢迎新的贡献者.
 
 ### 步骤 1: Fork
 
-在 [Github](https://github.com/seleniumhq/seleniumhq.github.io)上Fork本项目, 
+在 [GitHub](https://github.com/seleniumhq/seleniumhq.github.io)上Fork本项目, 
 并check out到您的本地
 
 

@@ -10,233 +10,230 @@ aliases: [
 
 ---
 
-You can use WebDriver remotely the same way you would use it
-locally. The primary difference is that a remote WebDriver needs to be
-configured so that it can run your tests on a separate machine.
+Selenium lets you automate browsers on remote computers if
+there is a [Selenium Grid]({{< ref "../../grid" >}}) running on them. The computer that
+executes the code is referred to as the client computer, and the computer with the browser and driver is 
+referred to as the remote computer or sometimes as an end-node.
+To direct Selenium tests to the remote computer, you need to use a Remote WebDriver class
+and pass the URL including the port of the grid on that machine. Please see the grid documentation
+for all the various ways the grid can be configured.
 
-A remote WebDriver is composed of two pieces: a client and a
-server. The client is your WebDriver test and the server is simply a
-Java servlet, which can be hosted in any modern JEE app server.
+## Basic Example
 
-To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
-We do this by pointing the URL to the address of the server running our tests.
-In order to customize our configuration, we set desired capabilities.
-Below is an example of instantiating a remote WebDriver object
-pointing to our remote web server, _www.example.com_,
-running our tests on Firefox.
+The driver needs to know where to send commands to and which browser to start on the Remote computer. So an address
+and an options instance are both required.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-FirefoxOptions firefoxOptions = new FirefoxOptions();
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
-driver.get("http://www.google.com");
-driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-firefox_options = webdriver.FirefoxOptions()
-driver = webdriver.Remote(
-    command_executor='http://www.example.com',
-    options=firefox_options
-)
-driver.get("http://www.google.com")
-driver.quit() 
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
- FirefoxOptions firefoxOptions = new FirefoxOptions();
- IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), firefoxOptions);
- driver.Navigate().GoToUrl("http://www.google.com");
- driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :remote, url: "http://www.example.com", desired_capabilities: :firefox
-driver.get "http://www.google.com"
-driver.close
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-var capabilities = Capabilities.firefox();
-(async function helloSelenium() {
-    let driver = new Builder()
-        .usingServer("http://example.com")   
-        .withCapabilities(capabilities)
-        .build();
-    try {
-        await driver.get('http://www.google.com');
-    } finally {
-        await driver.quit();
-    }
-})();  
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val firefoxOptions = FirefoxOptions()
-val driver: WebDriver = RemoteWebDriver(URL("http://www.example.com"), firefoxOptions)
-driver.get("http://www.google.com")
-driver.quit()
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L37-L38" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L10-L11" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
-To further customize our test configuration, we can add other desired capabilities.
+## Uploads
 
+[Uploading a file]({{< ref "../elements/file_upload" >}}) is more complicated for Remote WebDriver sessions because the file you want to 
+upload is likely on the computer executing the code, but the driver on the
+remote computer is looking for the provided path on its local file system.
+The solution is to use a Local File Detector. When one is set, Selenium will bundle
+the file, and send it to the remote machine, so the driver can see the reference to it.
+Some bindings include a basic local file detector by default, and all of them allow 
+for a custom file detector.
 
-## Browser options
-
-For example, suppose you wanted to run Chrome on Windows XP,
-using Chrome version 67:
-
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-ChromeOptions chromeOptions = new ChromeOptions();
-chromeOptions.setCapability("browserVersion", "67");
-chromeOptions.setCapability("platformName", "Windows XP");
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions);
-driver.get("http://www.google.com");
-driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-chrome_options = webdriver.ChromeOptions()
-chrome_options.set_capability("browserVersion", "67")
-chrome_options.set_capability("platformName", "Windows XP")
-driver = webdriver.Remote(
-    command_executor='http://www.example.com',
-    options=chrome_options
-)
-driver.get("http://www.google.com")
-driver.quit()  
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var chromeOptions = new ChromeOptions();
-chromeOptions.BrowserVersion = "67";
-chromeOptions.PlatformName = "Windows XP";
-IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), chromeOptions);
-driver.Navigate().GoToUrl("http://www.google.com");
-driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.platform = Windows XP
-caps.version = 67
-
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
-let opts = new chrome.Options();
-opts.setAcceptInsecureCerts(true);
-opts.setBrowserVersion('67');
-opts.setPlatform('Windows XP');
-(async function helloSelenium() {
-    let driver = new Builder()
-        .usingServer("http://example.com")
-        .forBrowser('chrome')
-        .setChromeOptions(opts)
-        .build();
-    try {
-        await driver.get('http://www.google.com');
-    }
-    finally {
-        await driver.quit();
-    }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val chromeOptions = ChromeOptions()
-chromeOptions.setCapability("browserVersion", "67")
-chromeOptions.setCapability("platformName", "Windows XP")
-val driver: WebDriver = RemoteWebDriver(URL("http://www.example.com"), chromeOptions)
-driver.get("http://www.google.com")
-driver.quit()
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+Java does not include a Local File Detector by default, so you must always add one to do uploads.
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L48-L51" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+Python adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L25-L28" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+.NET adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L47-L50" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+Ruby adds a local file detector to remote webdriver instances by default, but you can also create your own lambda:
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
-## Local file detector
+## Downloads
 
-The Local File Detector allows the transfer of files from the client
-machine to the remote server.  For example, if a test needs to upload a
-file to a web application, a remote WebDriver can automatically transfer
-the file from the local machine to the remote web server during
-runtime. This allows the file to be uploaded from the remote machine
-running the test. It is not enabled by default and can be enabled in
-the following way:
+Chrome, Edge and Firefox each allow you to set the location of the download directory.
+When you do this on a remote computer, though, the location is on the remote computer's local file system. 
+Selenium allows you to enable downloads to get these files onto the client computer.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-driver.setFileDetector(new LocalFileDetector());
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.remote.file_detector import LocalFileDetector
+### Enable Downloads in the Grid
 
-driver.file_detector = LocalFileDetector()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var allowsDetection = this.driver as IAllowsFileDetection;
-if (allowsDetection != null)
-{
-   allowsDetection.FileDetector = new LocalFileDetector();
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-@driver.file_detector = lambda do |args|
-  # args => ["/path/to/file"]
-  str = args.first.to_s
-  str if File.exist?(str)
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-var remote = require('selenium-webdriver/remote');
-driver.setFileDetector(new remote.FileDetector);  
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-driver.fileDetector = LocalFileDetector()
-  {{< /tab >}}
+Regardless of the client, when starting the grid in node or standalone mode, 
+you must add the flag: 
+```
+--enable-managed-downloads true
+``` 
+
+### Enable Downloads in the Client
+
+The grid uses the `se:downloadsEnabled` capability to toggle whether to be responsible for managing the browser location.
+Each of the bindings have a method in the options class to set this.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L59-L61" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L37-L39" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L59-L64" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
-Once the above code is defined, you can upload a file in your test in the following way:
+### List Downloadable Files
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-WebElement upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
+Be aware that Selenium is not waiting for files to finish downloading, 
+so the list is an immediate snapshot of what file names are currently in the directory for the given session.
 
-driver.find_element(By.ID, "myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-IWebElement upload = driver.FindElement(By.Id("myfile"));
-upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
-    element = @driver.find_element(:id, 'myfile')
-    element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-var upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");  
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
-val upload: WebElement = driver.findElement(By.id("myfile"))
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L72" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L47" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L72" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
+
+### Download a File
+
+Selenium looks for the name of the provided file in the list and downloads it to the provided target directory.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L79" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L53" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L78" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Delete Downloaded Files
+
+By default, the download directory is deleted at the end of the applicable session,
+but you can also delete all files during the session.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L59" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L84" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+## Browser specific functionalities
+
+Each [browser](({{< ref "../browsers/" >}})) has implemented special functionality that is available only to that browser.
+Each of the Selenium bindings has implemented a different way to use those features in a Remote Session
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+Java requires you to use the Augmenter class, which allows it to automatically pull in implementations for
+all interfaces that match the capabilities used with the RemoteWebDriver
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L93" >}}
+
+Of interest, using the `RemoteWebDriverBuilder` automatically augments the driver, so it is a great way
+to get all the functionality by default:
+
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L100-L106" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
+{{< badge-implementation >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+.NET uses a custom command executor for executing commands that are valid for the given browser in the remote driver.
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L96-L100" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+Ruby uses mixins to add applicable browser specific methods to the Remote WebDriver session; 
+the methods should always just work for you.
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 
 ## Tracing client requests
 
@@ -246,7 +243,7 @@ To set up the visualization framework Jaeger UI and Selenium Grid 4, please refe
 
 For client-side setup, follow the steps below.
 
-#### Add the required dependencies
+### Add the required dependencies
 
 Installation of external libraries for tracing exporter can be done using Maven.
 Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
@@ -264,10 +261,9 @@ Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your proj
     </dependency>
 ``` 
  
-#### Add/pass the required system properties while running the client
+### Add/pass the required system properties while running the client
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
   {{< tab header="Java" >}}
 System.setProperty("otel.traces.exporter", "jaeger");
 System.setProperty("otel.exporter.jaeger.endpoint", "http://localhost:14250");
@@ -293,7 +289,3 @@ More information can be found at:
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid Observability]({{< ref "observability.md" >}}) 
-
-## Browser specific functionalities
-
-Some [browser specific functionalities]({{< ref "../browsers/" >}}) require workarounds as mentioned in [this issue](https://github.com/SeleniumHQ/selenium/issues/11483).

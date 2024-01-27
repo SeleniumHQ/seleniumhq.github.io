@@ -25,7 +25,7 @@ weight: 3
 
 * [Service]({{< ref "service.md" >}})オブジェクトはローカルドライバーにのみ適用され、ブラウザーのドライバーに関する情報を提供します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -58,7 +58,7 @@ weight: 3
 重要:  `quit` メソッドは `close` メソッドとは異なり、
 セッションを終了するには常に `quit` を使用することをお勧めします。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

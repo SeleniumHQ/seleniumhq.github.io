@@ -1,28 +1,25 @@
 ---
-title: "Scroll wheel actions"
-linkTitle: "Wheel"
+title: "Ações de Roda de Rolagem"
+linkTitle: "Roda"
 weight: 6
 description: >
-    A representation of a scroll wheel input device for interacting with a web page.
+    "Uma representação de um dispositivo de entrada de roda de rolagem para interagir com uma página da web."
 ---
 
 {{< badge-version version="4.2" >}}
 {{< badge-browser browser=Chromium wpt="perform_actions/wheel.py" >}}
 
-There are 5 scenarios for scrolling on a page.
+Existem 5 cenários para rolagem em uma página.
 
-## Scroll to element
+## Rolagem até o Elemento
 
-This is the most common scenario. Unlike traditional click and send keys methods,
-the actions class does not automatically scroll the target element into view,
-so this method will need to be used if elements are not already inside the viewport.
+Este é o cenário mais comum. Diferentemente dos métodos tradicionais de clique e envio de teclas, a classe de ações não rolará automaticamente o elemento de destino para a visualização, portanto, este método precisará ser usado se os elementos não estiverem dentro da janela de visualização.
 
-This method takes a web element as the sole argument.
+Este método recebe um elemento da web como único argumento.
 
-Regardless of whether the element is above or below the current viewscreen,
-the viewport will be scrolled so the bottom of the element is at the bottom of the screen.
+Independentemente de o elemento estar acima ou abaixo da tela de visualização atual, a janela de visualização será rolada de forma que a parte inferior do elemento esteja na parte inferior da tela.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L17-L20" >}}
 {{< /tab >}}
@@ -43,12 +40,11 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll by given amount
+## Rolar por uma Quantidade Especificada
 
-This is the second most common scenario for scrolling. Pass in an delta x and a delta y value for how much to scroll
-in the right and down directions. Negative values represent left and up, respectively.
+Este é o segundo cenário mais comum para a rolagem. Passe um valor delta x e um valor delta y para o quanto rolar nas direções direita e para baixo. Valores negativos representam esquerda e para cima, respectivamente.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L29-L33" >}}
 {{< /tab >}}
@@ -69,19 +65,15 @@ in the right and down directions. Negative values represent left and up, respect
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from an element by a given amount
+## Rolagem a partir de um Elemento por uma Quantidade Especificada"
 
-This scenario is effectively a combination of the above two methods.
+Este cenário é efetivamente uma combinação dos dois métodos mencionados anteriormente.
 
-To execute this use the "Scroll From" method, which takes 3 arguments.
-The first represents the origination point, which we designate as the element,
-and the second two are the delta x and delta y values.
+Para executar isso, use o método "Rolar a Partir de", que recebe 3 argumentos. O primeiro representa o ponto de origem, que designamos como o elemento, e os dois seguintes são os valores delta x e delta y.
 
-If the element is out of the viewport,
-it will be scrolled to the bottom of the screen, then the page will be scrolled by the provided
-delta x and delta y values.
+Se o elemento estiver fora da janela de visualização, ele será rolado para a parte inferior da tela e, em seguida, a página será rolada pelos valores delta x e delta y fornecidos.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
 {{< /tab >}}
@@ -102,25 +94,17 @@ delta x and delta y values.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from an element with an offset
+## Rolagem a partir de um Elemento com um Deslocamento
 
-This scenario is used when you need to scroll only a portion of the screen, and it is outside the viewport.
-Or is inside the viewport and the portion of the screen that must be scrolled
-is a known offset away from a specific element.
+Este cenário é usado quando você precisa rolar apenas uma parte da tela que está fora da janela de visualização ou dentro da janela de visualização, mas a parte da tela que deve ser rolada está a uma distância conhecida de um elemento específico.
 
-This uses the "Scroll From" method again, and in addition to specifying the element,
-an offset is specified to indicate the origin point of the scroll. The offset is
-calculated from the center of the provided element.
+Isso utiliza novamente o método "Rolar a Partir", e além de especificar o elemento, é especificado um deslocamento para indicar o ponto de origem da rolagem. O deslocamento é calculado a partir do centro do elemento fornecido.
 
-If the element is out of the viewport,
-it first will be scrolled to the bottom of the screen, then the origin of the scroll will be determined
-by adding the offset to the coordinates of the center of the element, and finally
-the page will be scrolled by the provided delta x and delta y values.
+Se o elemento estiver fora da janela de visualização, primeiro ele será rolado até a parte inferior da tela. Em seguida, a origem da rolagem será determinada adicionando o deslocamento às coordenadas do centro do elemento, e, finalmente, a página será rolada pelos valores delta x e delta y fornecidos.
 
-Note that if the offset from the center of the element falls outside of the viewport,
-it will result in an exception.
+Observe que se o deslocamento a partir do centro do elemento estiver fora da janela de visualização, isso resultará em uma exceção.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L57-L61" >}}
 {{< /tab >}}
@@ -141,20 +125,15 @@ it will result in an exception.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from a offset of origin (element) by given amount
+## Rolar a partir de um Deslocamento de Origem (Elemento) por uma Quantidade Especificada
 
-The final scenario is used when you need to scroll only a portion of the screen,
-and it is already inside the viewport.
+O cenário final é usado quando você precisa rolar apenas uma parte da tela que já está dentro da janela de visualização.
 
-This uses the "Scroll From" method again, but the viewport is designated instead
-of an element. An offset is specified from the upper left corner of the
-current viewport. After the origin point is determined,
-the page will be scrolled by the provided delta x and delta y values.
+Isso utiliza novamente o método "Rolar a Partir", mas a janela de visualização é designada em vez de um elemento. Um deslocamento é especificado a partir do canto superior esquerdo da janela de visualização atual. Após determinar o ponto de origem, a página será rolada pelos valores delta x e delta y fornecidos.
 
-Note that if the offset from the upper left corner of the viewport falls outside of the screen,
-it will result in an exception.
+Observe que se o deslocamento a partir do canto superior esquerdo da janela de visualização sair da tela, isso resultará em uma exceção.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
 {{< /tab >}}

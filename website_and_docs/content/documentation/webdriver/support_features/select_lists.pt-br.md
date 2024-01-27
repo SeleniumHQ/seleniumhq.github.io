@@ -59,7 +59,7 @@ This only applies to `<select>` elements with the `multiple` attribute.
 First locate a `<select>` element, then use it to initialize a `Select` object.
 Note that as of Selenium 4.5, you can't create a `Select` object if the `<select>` element is disabled.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L23-L24" >}}
 {{< /tab >}}
@@ -88,7 +88,7 @@ There are two lists that can be obtained:
 
 Get a list of all options in the `<select>` element:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L51" >}}
 {{< /tab >}}
@@ -115,7 +115,7 @@ Get a list of selected options in the `<select>` element. For a standard select 
 this will only be a list with one element, for a multiple select list it can contain
 zero or many elements.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L54" >}}
 {{< /tab >}}
@@ -146,7 +146,7 @@ for each element you want to select.
 
 Select the option based on its visible text
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L30" >}}
 {{< /tab >}}
@@ -171,7 +171,7 @@ Select the option based on its visible text
 
 Select the option based on its value attribute
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L33" >}}
 {{< /tab >}}
@@ -196,7 +196,7 @@ Select the option based on its value attribute
 
 Select the option based on its position in the list
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L36" >}}
 {{< /tab >}}
@@ -230,7 +230,7 @@ Options with a `disabled` attribute may not be selected.
     </select>
 ```
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L77-L79" >}}
 {{< /tab >}}
@@ -256,7 +256,7 @@ Options with a `disabled` attribute may not be selected.
 Only multiple select type select lists can have options de-selected. 
 You can repeat these methods for each element you want to select.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L66" >}}
 {{< /tab >}}

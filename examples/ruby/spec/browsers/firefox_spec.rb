@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Firefox' do
   describe 'Options' do
-    let(:firefox_location) { ENV.fetch('FF_BIN', nil) }
+    let(:firefox_location) { driver_finder && ENV.fetch('FIREFOX_BIN', nil) }
 
     it 'basic options' do
       options = Selenium::WebDriver::Options.firefox
@@ -90,7 +90,7 @@ RSpec.describe 'Firefox' do
     let(:driver) { start_firefox }
 
     it 'installs addon' do
-      extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.xpi', __dir__)
+      extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
 
       driver.install_addon(extension_file_path)
 
@@ -100,7 +100,7 @@ RSpec.describe 'Firefox' do
     end
 
     it 'uninstalls addon' do
-      extension_file_path = File.expand_path('../extensions/webextensions-selenium-example.xpi', __dir__)
+      extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
       extension_id = driver.install_addon(extension_file_path)
 
       driver.uninstall_addon(extension_id)
@@ -110,7 +110,7 @@ RSpec.describe 'Firefox' do
     end
 
     it 'installs unsigned addon' do
-      extension_dir_path = File.expand_path('../extensions/webextensions-selenium-example/', __dir__)
+      extension_dir_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example/', __dir__)
 
       driver.install_addon(extension_dir_path, true)
 
@@ -118,5 +118,11 @@ RSpec.describe 'Firefox' do
       injected = driver.find_element(id: 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
+  end
+
+  def driver_finder
+    options = Selenium::WebDriver::Options.firefox(browser_version: 'stable')
+    ENV['GECKODRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Firefox::Service)
+    ENV['FIREFOX_BIN'] = options.binary
   end
 end

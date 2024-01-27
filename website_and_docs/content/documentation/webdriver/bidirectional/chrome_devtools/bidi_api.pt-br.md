@@ -25,9 +25,9 @@ Alternate implementations can be found at
 [CDP Endpoint Basic Authentication]({{< ref "cdp_endpoint#basic-authentication" >}})
 and [CDP API Basic Authentication]({{< ref "cdp_api#basic-authentication" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L35-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L36-L39" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 An alternate implementation may be found at
@@ -80,7 +80,7 @@ whenever you check the visibility of an element, or whenever you use
 the classic get attribute method, Selenium is sending the contents of a js file
 to the script execution endpoint. These files are each about 50kB, which adds up.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-implementation >}}
 {{% /tab %}}
@@ -106,8 +106,8 @@ to the script execution endpoint. These files are each about 50kB, which adds up
 
 Mutation Observation(Observação de Mutação) é a capacidade de capturar eventos via WebDriver BiDi quando há mutações DOM em um elemento específico no DOM.
 
-{{< tabpane text=true langEqualsHeader=true >}}
-  {{% tab text=true header="Java" %}}
+{{< tabpane text=true >}}
+  {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L64-L65" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -149,7 +149,7 @@ const assert = require("assert");
 }())
 ```
 {{% /tab %}}
-  {{< tab header="Kotlin" text=true >}}
+  {{< tab header="Kotlin" >}}
 {{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
@@ -161,7 +161,7 @@ Vigie os eventos `console.log` e registre os callbacks(retornos de chamada) para
 [CDP API Console logs]({{< ref "cdp_api#console-logs-and-errors" >}})
 and [WebDriver BiDi Console logs]({{< ref "../webdriver_bidi/log#console-logs" >}})
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Use the [WebDriver BiDi Console logs]({{< ref "../webdriver_bidi/log#console-logs" >}}) implementation. `HasLogEvents`
 will likely end up deprecated because it does not implement `Closeable`.
@@ -228,7 +228,7 @@ fun kotlinConsoleLogExample() {
 Vigie as exceções JS
 e registre callbacks(retornos de chamada) para processar os detalhes da exceção.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Use the [WebDriver BiDi JavaScript exceptions]({{< ref "../webdriver_bidi/log#javascript-exceptions" >}}) implementation
 {{% /tab %}}
@@ -256,7 +256,7 @@ Both requests and responses can be recorded or transformed.
 
 #### Response information
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L90-L101" >}}
 {{% /tab %}}
@@ -279,14 +279,14 @@ Both requests and responses can be recorded or transformed.
 
 #### Response transformation
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/chrome_devtools/BidiApiTest.java#L111-L121" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
-{{< tab header="CSharp" text=true >}}
+{{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Bidirectional/ChromeDevtools/BidiApiTest.cs#L143-L156" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -328,7 +328,7 @@ val interceptor = new NetworkInterceptor(
 
 #### Request interception
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-implementation >}}
 {{< /tab >}}

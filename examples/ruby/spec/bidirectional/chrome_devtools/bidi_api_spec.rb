@@ -67,7 +67,7 @@ RSpec.describe 'BiDi API' do
     content_type = []
     driver.intercept do |request, &continue|
       continue.call(request) do |response|
-        content_type << response.headers["content-type"]
+        content_type << response.headers['content-type']
       end
     end
 

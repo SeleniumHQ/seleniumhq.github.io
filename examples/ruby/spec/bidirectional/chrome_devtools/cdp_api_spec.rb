@@ -37,7 +37,7 @@ RSpec.describe 'Chrome DevTools' do
 
     credentials = Base64.strict_encode64('admin:admin')
 
-    driver.devtools.network.set_extra_http_headers(headers: { authorization: "Basic #{credentials}" })
+    driver.devtools.network.set_extra_http_headers(headers: {authorization: "Basic #{credentials}"})
 
     driver.get('https://the-internet.herokuapp.com/basic_auth')
 

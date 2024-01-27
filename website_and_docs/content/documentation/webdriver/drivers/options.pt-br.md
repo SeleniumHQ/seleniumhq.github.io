@@ -1,10 +1,10 @@
 ---
-title: "Browser Options"
+title: "Opções do navegador"
 linkTitle: "Options"
 weight: 2
 needsTranslation: true
 description: >-
-  These capabilities are shared by all browsers.
+  Esses recursos são compartilhados por todos os navegadores.
 aliases: [
 "/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
 "/pt-br/documentation/webdriver/capabilities/shared_capabilities/",
@@ -27,47 +27,28 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
-As of Selenium 4, you must use the browser options classes. 
-For remote driver sessions, a browser options instance is required as it determines which browser will be used.
+No Selenium 3, os recursos foram definidos em uma sessão usando classes de recursos desejados.
+A partir do Selenium 4, você deve usar as classes de opções do navegador.
+Para sessões remotas de driver, uma instância de opções do navegador é necessária, pois determina qual navegador será usado.
 
-These options are described in the w3c specification for [Capabilities](https://w3c.github.io/webdriver/#capabilities).
+Essas opções são descritas na especificação w3c para [Capabilities](https://w3c.github.io/webdriver/#capabilities).
 
-Each browser has [custom options]({{< ref "../browsers/" >}}) that may be defined in addition to the ones defined in the specification.
+Cada navegador tem [custom options]({{< ref "../browsers/" >}}) que podem ser definidas além das definidas na especificação.
 
 ## browserName
 
-Browser name is set by default when using an Options class instance.
-
-{{< tabpane text=true langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
-{{< tab header="CSharp" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-{{< badge-code >}}
-{{< /tab >}}
-{{< /tabpane >}}
-
+Esta capacidade é usada para definir o `browserName` para uma determinada sessão.
+Se o navegador especificado não estiver instalado no
+extremidade remota, a criação da sessão falhará.
 
 ## browserVersion
 
-This capability is optional, this is used to set the available browser version at remote end.
-In recent versions of Selenium, if the version is not found on the system,
-it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
+Esta capacidade é opcional, é usada para
+defina a versão do navegador disponível na extremidade remota.
+Por exemplo, se solicitar o Chrome versão 75 em um sistema que
+tiver apenas 80 instalados, a criação da sessão falhará.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -91,31 +72,31 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 
 ## pageLoadStrategy
 
-Three types of page load strategies are available.
+Três tipos de estratégias de carregamento de página estão disponíveis.
 
-The page load strategy queries the 
+A estratégia de carregamento da página consulta o
 [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
+conforme descrito na tabela abaixo:
 
-| Strategy | Ready State | Notes |
+| Estratégia | Estado pronto | Notas |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | completo | Usado por padrão, aguarda o download de todos os recursos |
+| ansioso | interativo | O acesso DOM está pronto, mas outros recursos como imagens ainda podem estar carregando |
+| nenhum | Qualquer | Não bloqueia o WebDriver |
 
-The `document.readyState` property of a document describes the loading state of the current document.
+A propriedade `document.readyState` de um documento descreve o estado de carregamento do documento atual.
 
-When navigating to a new page via URL, by default, WebDriver will hold off on completing a navigation 
-method (e.g., driver.navigate().get()) until the document ready state is complete. This _does not 
-necessarily mean that the page has finished loading_, especially for sites like Single Page Applications 
-that use JavaScript to dynamically load content after the Ready State returns complete. Note also 
-that this behavior does not apply to navigation that is a result of clicking an element or submitting a form.
+Ao navegar para uma nova página via URL, por padrão, o WebDriver irá adiar a conclusão de uma navegação
+(por exemplo, driver.navigate().get()) até que o estado pronto do documento seja concluído. isso _não
+significa necessariamente que a página terminou de carregar_, especialmente para sites como Single Page Applications
+que usam JavaScript para carregar conteúdo dinamicamente depois que o estado Pronto retorna completo. Observe também
+que esse comportamento não se aplica à navegação resultante de clicar em um elemento ou enviar um formulário.
 
-If a page takes a long time to load as a result of downloading assets (e.g., images, css, js) 
-that aren't important to the automation, you can change from the default parameter of `normal` to
-`eager` or `none` to speed up the session. This value applies to the entire session, so make sure 
-that your [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) is sufficient to minimize 
-flakiness.
+Se uma página demorar muito para carregar como resultado do download de ativos (por exemplo, imagens, css, js)
+que não são importantes para a automação, você pode mudar do parâmetro padrão de `normal` para
+`eager` ou `none` para acelerar a sessão. Esse valor se aplica a toda a sessão, portanto, certifique-se
+que sua [waiting strategy]({{< ref "/documentation/webdriver/waits.md" >}}) é suficiente para minimizar
+descamação.
 
 
 ### normal (default)
@@ -124,34 +105,11 @@ WebDriver waits until the [load](https://developer.mozilla.org/en-US/docs/Web/AP
 event fire is returned.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'normal'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -172,13 +130,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :normal
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -208,34 +161,11 @@ WebDriver waits until [DOMContentLoaded](https://developer.mozilla.org/en-US/doc
 event fire is returned.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'eager'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L17-L18">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -256,13 +186,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :eager
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -291,34 +216,11 @@ fun main() {
 WebDriver only waits until the initial page is downloaded.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class pageLoadStrategy {
-  public static void main(String[] args) {
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-    WebDriver driver = new ChromeDriver(chromeOptions);
-    try {
-      // Navigate to Url
-      driver.get("https://google.com");
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.page_load_strategy = 'none'
-driver = webdriver.Chrome(options=options)
-driver.get("http://www.google.com")
-driver.quit()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L27-L28">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -339,13 +241,8 @@ namespace pageLoadStrategy {
   }
 }
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::Options.chrome
-options.page_load_strategy = :none
-
-driver = Selenium::WebDriver.for :chrome, options: options
-driver.get('https://www.google.com')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -378,7 +275,7 @@ fetching the `platformName` returns the OS name.
 In cloud-based providers, 
 setting `platformName` sets the OS at the remote-end.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -416,7 +313,7 @@ All self-signed certificates will be trusted by this capability by default.
 Once set, `acceptInsecureCerts` capability will have an 
 effect for the entire session.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -452,7 +349,7 @@ Specifies when to interrupt an executing script in
 a current browsing context. The default timeout **30,000**
 is imposed when a new session is created by WebDriver.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -481,7 +378,7 @@ new session is created by WebDriver. If page load limits
 a given/default time frame, the script will be stopped by
 _TimeoutException_.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -508,7 +405,7 @@ implicit element location strategy when
 locating elements. The default timeout **0**
 is imposed when a new session is created by WebDriver.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -547,7 +444,7 @@ user prompt encounters at the remote-end. This is defined by
 * accept and notify
 * ignore
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -573,7 +470,7 @@ user prompt encounters at the remote-end. This is defined by
 
 Indicates whether the remote end supports all of the [resizing and repositioning](https://w3c.github.io/webdriver/#resizing-and-positioning-windows) [commands](https://w3c.github.io/webdriver/#dfn-commands).
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -602,7 +499,7 @@ should be applied to _input type=file_ elements. As strict interactability
 checks are off by default, there is a change in behaviour 
 when using _Element Send Keys_ with hidden file upload controls.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

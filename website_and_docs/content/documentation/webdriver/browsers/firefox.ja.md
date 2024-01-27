@@ -20,12 +20,12 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 基本的な定義済みのオプションを使用して Firefox セッションを開始すると、以下のようになります。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L43" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L36-L37" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L12-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L10-L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L34-L35" >}}
@@ -50,12 +50,12 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 オプションに引数を追加します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L50" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L44" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L21" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L43" >}}
@@ -79,12 +79,12 @@ Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](htt
 
 オプションにブラウザーのロケーションを追加します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L60" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L54" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L30" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L28" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L53" >}}
@@ -166,16 +166,16 @@ direct where the logs will go. Logging output is ignored unless the user directs
 
 To change the logging output to save to a specific file:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L68" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L38" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L36" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -196,17 +196,17 @@ Property value: String representing path to log file
 
 To change the logging output to display in the console:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L82" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L50" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -230,17 +230,17 @@ If logging is specified the level defaults to `info`.
 Note that `-v` is equivalent to `-log debug` and `-vv` is equivalent to `log trace`,
 so this examples is just for setting the log level generically:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L97" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `FirefoxDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L61" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L59" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -262,17 +262,17 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 The driver logs everything that gets sent to it, including string representations of large binaries, so
 Firefox truncates lines by default. To turn off truncation:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L114" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L72" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L70" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -294,16 +294,16 @@ Property value: `"true"` or `"false"`
 The default directory for profiles is the system temporary directory. If you do not have access to that directory,
 or want profiles to be created some place specific, you can change the profile root directory:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L126" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
 Property value: String representing path to profile root directory
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L83" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L81" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -339,12 +339,12 @@ please refer to the
 
 [Mozilla Add-Onsページ](https://addons.mozilla.org/ja/firefox/) から取得する署名付きxpiファイル
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L140" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L132" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L96" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L94" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L137" >}}
@@ -365,16 +365,16 @@ please refer to the
 アドオンをアンインストールするには、そのIDを知る必要があります。
 IDはアドオンインストール時の戻り値から取得できます。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L153" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L146" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L108" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L106" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L151" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L152" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L106" >}}
@@ -393,12 +393,12 @@ IDはアドオンインストール時の戻り値から取得できます。
 そのため、"一時的なもの" としてのみインストールできます。
 これは、zipファイルまたはディレクトリを渡すことで実行できます。ディレクトリの例を次に示します。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L164" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L157" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L117" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.5" >}}
@@ -422,7 +422,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -449,7 +449,7 @@ The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
 [Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

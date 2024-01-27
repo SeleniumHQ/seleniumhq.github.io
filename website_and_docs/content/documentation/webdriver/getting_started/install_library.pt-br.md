@@ -17,7 +17,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 
 ## Requisitos por linguagem
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
