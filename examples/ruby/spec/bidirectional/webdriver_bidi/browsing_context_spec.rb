@@ -15,6 +15,4 @@ RSpec.describe 'Browsing Context' do
   it 'gets all browsing contexts'
   it 'closes a tab'
   it 'closes a window'
-
-
 end

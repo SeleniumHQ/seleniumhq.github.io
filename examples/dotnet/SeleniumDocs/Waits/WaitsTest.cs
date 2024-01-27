@@ -51,9 +51,9 @@ namespace SeleniumDocs.Waits
         {
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
             IWebElement revealed = driver.FindElement(By.Id("revealed"));
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
-
             driver.FindElement(By.Id("reveal")).Click();
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
             wait.Until(d => revealed.Displayed);
 
             revealed.SendKeys("Displayed");
@@ -65,13 +65,14 @@ namespace SeleniumDocs.Waits
         {
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
             IWebElement revealed = driver.FindElement(By.Id("revealed"));
+            driver.FindElement(By.Id("reveal")).Click();
+
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2))
             {
                 PollingInterval = TimeSpan.FromMilliseconds(300),
             };
             wait.IgnoreExceptionTypes(typeof(ElementNotInteractableException));
 
-            driver.FindElement(By.Id("reveal")).Click();
             wait.Until(d => {
                 revealed.SendKeys("Displayed");
                 return true;

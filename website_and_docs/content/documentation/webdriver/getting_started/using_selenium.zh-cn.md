@@ -46,7 +46,7 @@ description: >
 
 这个教程中所有使用到test runner的代码示例都可以在我们的示例目录中找到（或者正在被迁移过去），而且这些示例在每一次发版都会被执行，以确保代码是正确的和最新的。下面是一份包含对应链接的test runner清单，其中第一项是被这个仓库和本页所有用例所使用的。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 - [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
 - [TestNG](https://testng.org/doc/) - Offers extra features like parallel test execution and parameterized tests.
@@ -82,7 +82,7 @@ description: >
 
 在[安装Selenium类库]({{< ref "install_library.md" >}})一节中详细说明了需要哪些东西。这里的代码只展示在我们的文档示例项目中用到的示例。
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
 **Maven**
@@ -114,7 +114,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### 断言
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -137,7 +137,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Setting Up and Tearing Down
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -160,7 +160,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### 执行
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 ### Maven
 
@@ -198,7 +198,7 @@ mocha runningTests.spec.js
 
 在[第一个脚本]({{< ref "first_script.md" >}})一节中，我们了解了Selenium脚本的每一个组件。这里是使用test runner重新组织那个脚本的一个示例：
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}

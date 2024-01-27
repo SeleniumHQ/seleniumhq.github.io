@@ -218,16 +218,13 @@ driver.SwitchTo().NewWindow(WindowType.Tab)
 // 打开一个新窗口并切换到新窗口
 driver.SwitchTo().NewWindow(WindowType.Window)
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-    # 注意：ruby 中的 new_window 只打开一个新标签页(或)窗口，不会自动切换
-    # 用户必须切换到新选项卡 (或) 新窗口
+  {{% tab header="Ruby" text=true %}}
+打开新标签页并切换到新标签页
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
 
-    # 打开新标签页并切换到新标签页
-driver.manage.new_window(:tab)
-
-    # 打开一个新窗口并切换到新窗口
-driver.manage.new_window(:window)
-{{< /tab >}}
+打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
 {{< tab header="JavaScript" >}}
 // 打开新标签页并切换到新标签页
 await driver.switchTo().newWindow('tab');

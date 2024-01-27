@@ -6,7 +6,7 @@ weight: 3
 
 允许您为HTTP库设置各种参数.
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

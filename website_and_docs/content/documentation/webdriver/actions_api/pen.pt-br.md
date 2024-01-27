@@ -16,7 +16,7 @@ Uma caneta é um tipo de entrada de ponteiro que possui a maior parte do mesmo c
 
 ## Usando uma Caneta
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L26-L33" >}}
@@ -44,7 +44,7 @@ Uma caneta é um tipo de entrada de ponteiro que possui a maior parte do mesmo c
 
 {{< badge-version version="4.2" >}}
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L67-L81" >}}
 {{< /tab >}}

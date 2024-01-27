@@ -16,7 +16,7 @@ aliases: [
 Historically, this is the most common error beginning Selenium users get 
 when trying to run code for the first time:
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 The path to the driver executable must 
 be set by the webdriver.chrome.driver system property; 
@@ -68,7 +68,7 @@ drivers in the same place.
 You can either place the drivers in a directory that is already listed in `PATH`, 
 or you can place them in a directory and add it to `PATH`.
 
-{{< tabpane text=true persistLang=false >}}
+{{< tabpane text=true persist=disabled >}}
 {{% tab header="Bash" %}}
 To see what directories are already on `PATH`, open a Terminal and execute:
 ```shell

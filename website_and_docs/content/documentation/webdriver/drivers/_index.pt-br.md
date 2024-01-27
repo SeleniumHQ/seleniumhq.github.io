@@ -25,7 +25,7 @@ on the local machine.
 
 * [Service]({{< ref "service.md" >}}) object applies only to local drivers and provides information about the browser driver
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -59,7 +59,7 @@ Quitting a session corresponds to W3C command for [Deleting a Session](https://w
 Important note: the `quit` method is different from the `close` method, 
 and it is recommended to always use `quit` to end the session
 
-{{< tabpane text=true langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}

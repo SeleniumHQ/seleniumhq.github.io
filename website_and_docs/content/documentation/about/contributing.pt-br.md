@@ -105,7 +105,7 @@ Este guia irá guiá-lo através do processo de contribuição.
 
 ### Passo 1: Fork
 
-Faça um fork do projeto [no Github](https://github.com/seleniumhq/seleniumhq.github.io)
+Faça um fork do projeto [no GitHub](https://github.com/seleniumhq/seleniumhq.github.io)
 e faça checkout na sua cópia localmente.
 
 ```shell

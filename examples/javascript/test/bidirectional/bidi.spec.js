@@ -35,7 +35,7 @@ suite(function(env) {
             let info = await browsingContext.navigate('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
             
             assert.notEqual(browsingContext.id, null)
-            assert.equal(info.navigationId, null)
+            assert.notEqual(info.navigationId, null)
             assert(info.url.includes('/bidi/logEntryAdded.html'))
             
             await driver.wait(until.urlIs('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'))

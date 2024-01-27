@@ -151,8 +151,6 @@ github_branch= "trunk"
 offlineSearch = false
 offlineSearchMaxResults = 30
 
-# Enable Algolia DocSearch
-algolia_docsearch = true
 
 # Enable Plausible.io
 plausible_analytics = true
@@ -162,6 +160,12 @@ prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
 announcement_banner = true
+
+# Enable Algolia DocSearch
+[params.search.algolia]
+appId = "6IOXA5JK7Z"
+apiKey = "2b44a1d3530f9951dd6502059058984a"
+indexName = "selenium"
 
 # User interface configuration
 [params.ui]

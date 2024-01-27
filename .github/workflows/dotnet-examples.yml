@@ -30,33 +30,16 @@ jobs:
     steps:
     - name: Checkout GitHub repo
       uses: actions/checkout@v3
-    - name: Install Chrome for set binary test
-      uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
-      id: setup-chrome
-    - name: Install Edge for set binary test
-      uses: browser-actions/setup-edge@v1
-      with:
-        edge-version: stable
-      id: setup-edge
-    - name: Install Firefox for set binary test
-      if: matrix.os != 'windows-latest'
-      uses: browser-actions/setup-firefox@v1
-      with:
-        firefox-version: latest
-      id: setup-firefox
-    - name: Set ENV Windows
+    - name: Remove driver directories Windows
       if: matrix.os == 'windows-latest'
       run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> $env:GITHUB_ENV
-        echo "EDGE_BIN=${{ steps.setup-edge.outputs.edge-path }}" >> $env:GITHUB_ENV
-    - name: Set ENV Other
+        rm "$env:ChromeWebDriver" -r -v
+        rm "$env:EdgeWebDriver" -r -v
+        rm "$env:GeckoWebDriver" -r -v
+    - name: Remove driver directories Non-Windows
       if: matrix.os != 'windows-latest'
       run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
-        echo "EDGE_BIN=${{ steps.setup-edge.outputs.edge-path }}" >> "$GITHUB_ENV"
-        echo "FF_BIN=${{ steps.setup-firefox.outputs.firefox-path }}" >> "$GITHUB_ENV"
+        sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
@@ -64,6 +47,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 11
     - name: Run tests
       uses: nick-invision/retry@v2.8.3
       with:
