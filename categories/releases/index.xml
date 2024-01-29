@@ -304,7 +304,6 @@ Viet Nguyen Duc
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
-{
 &lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
 &lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
 &lt;div class="card-body pb-0 px-1">
@@ -344,7 +343,18 @@ Sri Harsha
 &lt;/p>
 &lt;/div>
 &lt;/div>
-{&lt; gh-user "https://api.github.com/users/joerg1985" >}}
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/16140691?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
 &lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
 &lt;div class="card-body pb-0 px-1">
