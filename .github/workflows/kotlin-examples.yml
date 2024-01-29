@@ -81,7 +81,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
-        java-version: 8
+        java-version: 11
     - name: Run tests
       uses: nick-invision/retry@v2.8.3
       with:
