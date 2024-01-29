@@ -7,7 +7,7 @@ aliases: ["/documentation/zh-cn/webdriver/waits/"]
 
 浏览器自动处理最大的挑战可能是确保网页在某个确定的、期望的状态下执行 Selenium 命令。
 这些过程通常处于 混乱竞争状态, 有时候网页先处理好，有时候 Selenium 命令先执行。
-这就是为什么需要稳定性测试。
+这就是为什么需要稳定性测试(flaky tests)。
 
 所有导航命令都需要一个准确的 `Ready状态` 值, 这取决于 [网页加载策略]({{< ref "drivers/options#pageloadstrategy" >}}) (一个默认的完成值)，之后`浏览器 Driver`将控制权交回给代码进行处理。
 这个 `Ready状态` 只关心在html 中定义的 css js 是否被加载，但 js 加载通常导致网页资源的变动，执行下一个 Selenium 命令时，网页元素在交互后可能还没有出现在网页中，。
@@ -27,7 +27,7 @@ aliases: ["/documentation/zh-cn/webdriver/waits/"]
 
 Selenium 提供了两种方式，来帮助解决这些问题
 
-## 隐形等待(自动等待) Implicit waits
+## 隐形等待(Implicit waits)
 
 Selenium 通过内建的机制自动等待元素被称为_隐形等待_。
 这个隐形等待值可以设置在 浏览器选项中或者 Selenium Driver 方法中(如下)。
@@ -63,7 +63,7 @@ Selenium 通过内建的机制自动等待元素被称为_隐形等待_。
   {{< /tab >}}
 {{< /tabpane >}}
 
-## 显性等待(精确条件等待)Explicit waits
+## 显性等待(Explicit waits)
 
 _Explicit waits_ 使用循环等待应用中某个特定条件时生效，将会退出该循环继续执行命令
 如果循环时间到了但条件未被触发，将会报错。
