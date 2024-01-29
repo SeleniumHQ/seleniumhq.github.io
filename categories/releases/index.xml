@@ -1,4 +1,407 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.16 Released!</title><link>/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-16-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.17 Released!</title><link>/blog/2024/selenium-4-17-released/</link><pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-17-released/</guid><description>
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.17.0 for
+Javascript, Ruby, Python, .NET, Java and the Grid!
+Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;h3 id="highlights">Highlights&lt;/h3>
+&lt;ul>
+&lt;li>Chrome DevTools support is now: v119, v120, and v121 (Firefox still uses v85 for all versions)&lt;/li>
+&lt;li>Selenium Manager &lt;a href="https://plausible.io/manager.selenium.dev">records usage&lt;/a> set
+environment variable &lt;code>SE_AVOID_STATS&lt;/code> to &lt;code>&amp;quot;true&amp;quot;&lt;/code> to avoid sending information&lt;/li>
+&lt;li>Chrome headless changed the name of the browser to reflect that it is not actually chrome; Selenium now handles this seamlessly,
+but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="https://www.selenium.dev/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
+&lt;ul>
+&lt;li>Java
+&lt;ul>
+&lt;li>Remove deprecated event listener classes; update to EventFiringDecorator and WebDriverListener classes&lt;/li>
+&lt;li>Allow disabling Grid UI&lt;/li>
+&lt;li>Deprecated FirefoxBinary class and legacy Error Codes&lt;/li>
+&lt;li>Deprecated HTML5 features for offline storage, location, and network connection&lt;/li>
+&lt;li>No longer accepting session requests with desiredCapabilities keyword&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>JavaScript
+&lt;ul>
+&lt;li>Remove deprecated headless methods and associated references&lt;/li>
+&lt;li>Implemented remote file downloading&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>.NET
+&lt;ul>
+&lt;li>Improvements to the new logging implementation&lt;/li>
+&lt;li>Removed previously deprecated code&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Python
+&lt;ul>
+&lt;li>Updated WPEWebKit support&lt;/li>
+&lt;li>Removed previously deprecated code&lt;/li>
+&lt;li>Deprecated FirefoxBinary and several outdated FirefoxProfile methods&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Ruby
+&lt;ul>
+&lt;li>Logger defaults output to stderr instead of stdout&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;ul>
+&lt;li>Rust
+&lt;ul>
+&lt;li>Use latest browser from cache when browser path is not discovered&lt;/li>
+&lt;li>Throw a descriptive message when error parsing JSON from response&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="contributors">Contributors&lt;/h3>
+&lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
+&lt;h4 id="seleniumhttpsgithubcomseleniumhqselenium">&lt;a href="https://github.com/SeleniumHQ/selenium">Selenium&lt;/a>&lt;/h4>
+&lt;div class="d-flex justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14981592?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Earlopain">@Earlopain&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/1215585?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/EdwinVanVliet">@EdwinVanVliet&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/279773?v=4" class="card-img-top mx-auto" alt="Andrei Solntsev" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Andrei Solntsev
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/asolntsev">@asolntsev&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/8990777?v=4" class="card-img-top mx-auto" alt="James Braza" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+James Braza
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/jamesbraza">@jamesbraza&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/534772?v=4" class="card-img-top mx-auto" alt="Lauro Moura" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Lauro Moura
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/lauromoura">@lauromoura&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/38708390?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/middlingphys">@middlingphys&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/89313929?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/take0x">@take0x&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5081226?v=4" class="card-img-top mx-auto" alt="Valery Yatsynovich" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Valery Yatsynovich
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/valfirst">@valfirst&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/23253546?v=4" class="card-img-top mx-auto" alt="Viet Nguyen Duc" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Viet Nguyen Duc
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vietnd96">@vietnd96&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/129603?v=4" class="card-img-top mx-auto" alt="Henrik Skupin" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Henrik Skupin
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/whimboo">@whimboo&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-docs--websitehttpsgithubcomseleniumhqseleniumhqgithubio">&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io">Selenium Docs &amp;amp; Website&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/100381276?v=4" class="card-img-top mx-auto" alt="Oscar Devora" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Oscar Devora
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/RevealOscar">@RevealOscar&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10154945?v=4" class="card-img-top mx-auto" alt="Yevgeniy Shunevych" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Yevgeniy Shunevych
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="docker-seleniumhttpsgithubcomseleniumhqdocker-selenium">&lt;a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium&lt;/a>&lt;/h4>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/48491431?v=4" class="card-img-top mx-auto" alt="Auto81" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Auto81
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Auto81">@Auto81&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/14981592?v=4" class="card-img-top mx-auto" alt="" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/Earlopain">@Earlopain&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/50517840?v=4" class="card-img-top mx-auto" alt="Amar Deep Singh" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Amar Deep Singh
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/amardeep2006">@amardeep2006&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/23253546?v=4" class="card-img-top mx-auto" alt="Viet Nguyen Duc" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Viet Nguyen Duc
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/vietnd96">@vietnd96&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="selenium-team-membersteam">&lt;a href="/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
+&lt;p>&lt;strong>Thanks as well to all the team members who contributed to this release:&lt;/strong>&lt;/p>
+&lt;div class="row justify-content-center">
+&lt;div class="col-11 p-4 bg-transparent">
+&lt;div class="row justify-content-center">
+{
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/128518?v=4" class="card-img-top mx-auto" alt="David Burns" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+David Burns
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Diego Molina
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/diemol">@diemol&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/12621691?v=4" class="card-img-top mx-auto" alt="Sri Harsha" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Sri Harsha
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+{&lt; gh-user "https://api.github.com/users/joerg1985" >}}
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/22616990?v=4" class="card-img-top mx-auto" alt="Nikolay Borisenko" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Nikolay Borisenko
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/665846?v=4" class="card-img-top mx-auto" alt="Alex Rodionov" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Alex Rodionov
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/p0deje">@p0deje&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/10705590?v=4" class="card-img-top mx-auto" alt="Puja Jagani" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Puja Jagani
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Titus Fortner
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.16 Released!</title><link>/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-16-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.16.0 for
 Javascript, Ruby, Python, and Selenium 4.16.1 for .NET, Java and the Grid.
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -6110,18 +6513,4 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>You can read the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/index.html">javadocs&lt;/a> and the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html">ruby docs&lt;/a>.&lt;/p>
 &lt;p>An obvious question is “When will the beta end?” The short answer is when we’ve implemented the alerts and prompts and advanced user interactions APIs in all supported browsers. We expect there to be some flex in some APIs (removing deprecated methods, and within the advanced user interactions API) but what you have here is basically what you’re going to get when we hit 2.0 final. I have no idea how long this will take, but if you’re interested in helping out, &lt;a href="http://groups.google.com/group/selenium-developers">let us know!&lt;/a>&lt;/p>
 &lt;p>Thanks are due to all the committers who have worked so hard to get this code into shape. Thanks are also due to all the people who have taken the time to file bugs, ask for features and participated on the mailing lists. Thank you to you too, for going out and trying this new beta of Selenium 2.&lt;/p>
-&lt;p>You rock. 🙂&lt;/p></description></item><item><title>Blog: Selenium 2.0a6 Released</title><link>/blog/2010/selenium-2-0a6-released/</link><pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate><guid>/blog/2010/selenium-2-0a6-released/</guid><description>
-&lt;p>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the &lt;a href="http://code.google.com/p/selenium/downloads/list">downloads page&lt;/a> to get it while it’s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and &lt;a href="http://rubygems.org/gems/selenium-webdriver">ruby libraries&lt;/a> have been having smaller, more frequent releases all this time.&lt;/p>
-&lt;p>You’ll be pleased to hear that the Selenium 1.0 APIs have remained constant, so what’s changed? Here, in no particular order are the major changes you’ll find in 2.0a6:&lt;/p>
-&lt;ul>
-&lt;li>Android support: you can now &lt;a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk">download the APK&lt;/a> and run webdriver tests using Android 1.6 to 2.2.&lt;/li>
-&lt;li>Firefox 4 support.&lt;/li>
-&lt;li>Experimental IE9 support&lt;/li>
-&lt;li>New APIs for dealing with &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html">HTML5 elements&lt;/a> (best implemented, for now, by the mobile webdrivers)&lt;/li>
-&lt;li>A richer .Net API&lt;/li>
-&lt;li>A move to &lt;a href="http://sizzlejs.com/">Sizzle&lt;/a> for locating elements using CSS in browsers that don’t have a native API for that.&lt;/li>
-&lt;li>Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.&lt;/li>
-&lt;/ul>
-&lt;p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html">FirefoxProfiles&lt;/a>, better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.&lt;/p>
-&lt;p>Thank you to everyone who has taken the time to report a bug on our &lt;a href="http://code.google.com/p/selenium/issues/list">issue tracker&lt;/a>, or raised problems on one of our &lt;a href="https://groups.google.com/group/webdriver">mailing&lt;/a> &lt;a href="http://www.google.com/url?q=http://groups.google.com/group/selenium-users">lists&lt;/a>, or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn’t be half as much fun, and wouldn’t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)&lt;/p>
-&lt;p>Hope you like it!&lt;/p></description></item></channel></rss>
+&lt;p>You rock. 🙂&lt;/p></description></item></channel></rss>
