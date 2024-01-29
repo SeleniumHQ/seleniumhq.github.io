@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ElementInformation {
+public class InformationTest {
 
     @Test
     public void informationWithElements() {
