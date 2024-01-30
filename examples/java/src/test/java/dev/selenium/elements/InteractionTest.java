@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InteractionTest {
+public class InteractionTest{
 
     @Test
     public void interactWithElements() {
