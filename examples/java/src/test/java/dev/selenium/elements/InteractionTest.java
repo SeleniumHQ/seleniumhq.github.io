@@ -1,5 +1,5 @@
 package dev.selenium.elements;
-import dev.selenium.BaseTest;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InteractionTest extends BaseTest {
+public class InteractionTest{
 
     @Test
     public void interactWithElements() {
