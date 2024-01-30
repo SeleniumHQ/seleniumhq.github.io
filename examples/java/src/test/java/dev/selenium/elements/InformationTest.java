@@ -46,9 +46,9 @@ public class InformationTest {
         assertEquals(res.getX(),10);
         
      
-     // Retrieves the computed style property 'color' of field
-        String cssValue = driver.findElement(By.name("color_input")).getCssValue("background-color");
-        assertEquals(cssValue, "rgba(240, 240, 240, 1)");
+     // Retrieves the computed style property 'font-size' of field
+     String cssValue = driver.findElement(By.name("color_input")).getCssValue("font-size");
+     assertEquals(cssValue, "13.3333px");
         
         
         //GetText
