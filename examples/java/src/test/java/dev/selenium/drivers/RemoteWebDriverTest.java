@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import org.junit.jupiter.api.Assertions;
@@ -71,6 +72,10 @@ public class RemoteWebDriverTest extends BaseTest {
 
     List<String> files = ((HasDownloads) driver).getDownloadableFiles();
 
+    // Sorting them to avoid differences when comparing the files
+    fileNames.sort(Comparator.naturalOrder());
+    files.sort(Comparator.naturalOrder());
+    
     Assertions.assertEquals(fileNames, files);
     String downloadableFile = files.get(0);
     Path targetDirectory = Files.createTempDirectory("download");
