@@ -11,13 +11,14 @@ aliases: [
 ]
 ---
 
-There are only 3 actions that can be accomplished with a mouse:
-pressing down on a button, releasing a pressed button, and moving the mouse.
-Selenium provides convenience methods that combine these actions in the most common ways.
+一个鼠标仅可以完成3个操作：
+按住按钮，松开按钮，还有移动光标。
+Selenium组合了常见的操作并提供了方便的方法。
 
-## 按下鼠标左键
 
-这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键不松开。
+## 按住鼠标左键
+
+这个方法包含2个操作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键不松开。
 这对于聚焦一个特殊元素很有用：
 
 {{< tabpane text=true >}}
@@ -43,7 +44,7 @@ Selenium provides convenience methods that combine these actions in the most com
 
 ## 点击鼠标左键
 
-这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键后再松开。
+这个方法包含2个操作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键后再松开。
 另一种叫法“点击”：
 
 {{< tabpane text=true >}}
@@ -78,7 +79,7 @@ Selenium provides convenience methods that combine these actions in the most com
 
 ### 点击鼠标右键
 
-这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后点击鼠标右键。
+这个方法包含2个操作，首先将光标移动到被操作元素的正中心，然后点击鼠标右键。
 另一种叫法“点击右键”：
 
 {{< tabpane text=true >}}
@@ -162,7 +163,7 @@ Selenium provides convenience methods that combine these actions in the most com
 
 ## 双击鼠标左键
 
-这个方法包含2个动作，首先将光标移动到被操作元素的正中心，然后双击鼠标左键。
+这个方法包含2个操作，首先将光标移动到被操作元素的正中心，然后双击鼠标左键。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -188,7 +189,7 @@ Selenium provides convenience methods that combine these actions in the most com
 ## 移动光标到元素上
 
 这个方法是将光标移动到元素的中心点。
-另一种叫法“悬浮”。
+另一种叫法“悬停”。
 元素必须在可视窗口范围内否则这条命令将会报错。
 
 {{< tabpane text=true >}}
@@ -296,7 +297,7 @@ Selenium provides convenience methods that combine these actions in the most com
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 拖动和放下元素
+## 拖放元素
 
 这个方法首先在原元素上提交执行按下鼠标左键，移动到目标元素位置后是释放鼠标左键。
 
@@ -321,7 +322,7 @@ Selenium provides convenience methods that combine these actions in the most com
 {{< /tab >}}
 {{< /tabpane >}}
 
-## 通过偏移量拖动和放下元素
+## 通过偏移量拖放元素
 这个方法首先在原元素上提交执行按下鼠标左键，通过给出的偏移量移动元素后释放鼠标左键。
 
 {{< tabpane text=true >}}
