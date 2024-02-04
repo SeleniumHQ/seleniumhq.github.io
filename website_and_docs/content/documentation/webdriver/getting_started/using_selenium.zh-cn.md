@@ -1,43 +1,33 @@
 ---
-title: "Organizing and Executing Selenium Code"
-linkTitle: "Using Selenium"
+title: "组织和执行Selenium代码"
+linkTitle: "使用Selenium"
 weight: 10
 description: >
-    Scaling Selenium execution with an IDE and a Test Runner library
+    使用IDE和Test Runner库组织Selenium的执行
 ---
 
-If you want to run more than a handful of one-off scripts, you need to 
-be able to organize and work with your code. This page should give you
-ideas for how to actually do productive things with your Selenium code.
+如果你不仅仅只是想执行一小撮的一次性脚本，你需要能组织和安排好你的代码。这一页会启发你如何真正地使用Selenium代码做高效的事情。
 
-## Common Uses
+## 常见用法
 
-Most people use Selenium to execute automated tests for web applications, 
-but Selenium support any use case of browser automation.
+大部分人使用Selenium执行针对Web应用的自动化测试，但是Selenium其实可以支持任何场景的浏览器自动化。
 
-### Repetitive Tasks
+### 重复性任务
 
-Perhaps you need to log into a website and download something, or submit a form.
-You can create a Selenium script to run with a service at preset times.
+有时候你需要往网站记录日志或者下载一些东西，或者提交一个表单，你可以在预设的时间创建一个Selenium脚本去执行一个服务。
 
-### Web Scraping
+### 网页爬虫
 
-Are you looking to collect data from a site that doesn't have an API? Selenium
-will let you do this, but please make sure you are familiar with the website's
-terms of service as some websites do not permit it and others will even block Selenium.
+你是否期望从一个不提供API的网站收集数据？Selenium可以满足你，但是请确保你了解该网站的服务条例，因为有些网站不允许你这样做，甚至有些网站会屏蔽Selenium。
 
-### Testing
+### 测试
 
-Running Selenium for testing requires making assertions on actions taken by Selenium.
-So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners).
+使用Selenium做测试需要在Selenium执行操作后进行断言，所以一个好的断言类库是很有必要的。至于组织测试用例结构的一些额外特性则需要[Test Runner](#test-runners)来完成。
 
 
 ## IDEs
 
-Regardless of how you use Selenium code, 
-you won't be very effective writing or executing it without a good
-Integrated Developer Environment. Here are some common options...
+不管你要用Selenium来做什么，没有一个好的集成开发环境，你的工作肯定不会高效。以下是一些常见的IDE选择：
 
 - [Eclipse](https://www.eclipse.org/)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
@@ -49,17 +39,12 @@ Integrated Developer Environment. Here are some common options...
 
 ## Test Runner
 
-Even if you aren't using Selenium for testing, if you have advanced use cases, it might make
-sense to use a test runner to better organize your code. Being able to use before/after hooks 
-and run things in groups or in parallel can be very useful.
+即使不使用Selenium做测试，如果你有高级用例，使用一个test runner去更好地组织你的代码是很有意义的。学会使用before/after hooks和分组执行或者并行执行将会非常有用。
 
-### Choosing
-There are many different test runners available.
+### 待选
+有非常多不同的test runner可供选择。
 
-All the code examples in this documentation can be found in (or is being moved to) our
-example directories that use test runners and get executed every release to ensure all the code is correct and updated.
-Here is a list of test runners with links. The first item is the one that is used by this repository and the one
-that will be used for all examples on this page.
+这个教程中所有使用到test runner的代码示例都可以在我们的示例目录中找到（或者正在被迁移过去），而且这些示例在每一次发版都会被执行，以确保代码是正确的和最新的。下面是一份包含对应链接的test runner清单，其中第一项是被这个仓库和本页所有用例所使用的。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -93,10 +78,9 @@ that will be used for all examples on this page.
 {{< /tabpane >}}
 
 
-### Installing
+### 安装
 
-This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}}).
-This code is only showing examples for what is being used in our Documentation Examples project.
+在[安装Selenium类库]({{< ref "install_library.md" >}})一节中详细说明了需要哪些东西。这里的代码只展示在我们的文档示例项目中用到的示例。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -128,7 +112,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Asserting
+### 断言
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -174,7 +158,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Executing
+### 执行
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -210,10 +194,9 @@ mocha runningTests.spec.js
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Examples
+### 示例
 
-In [First script]({{< ref "first_script.md" >}}), we saw each of the components of a Selenium script.
-Here's an example of that code using a test runner:
+在[第一个脚本]({{< ref "first_script.md" >}})一节中，我们了解了Selenium脚本的每一个组件。这里是使用test runner重新组织那个脚本的一个示例：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -236,9 +219,8 @@ Here's an example of that code using a test runner:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Steps
+## 下一步
 
-Take what you've learned and build out your Selenium code! 
+使用你目前所学到的知识建立你自己的Selenium代码吧！
 
-As you find more functionality that you need, read up on the rest of our
-[WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
+想要了解更多的功能特性，请继续阅读我们接下来的[WebDriver教程]({{< ref "/documentation/webdriver/" >}})

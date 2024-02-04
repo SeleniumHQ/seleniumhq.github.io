@@ -25,13 +25,10 @@ executing a large JavaScript function directly.
 This function makes many approximations about an element's
 nature and relationship in the tree to return a value.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-// Get boolean value for is element display
-boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L25" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
@@ -74,13 +71,9 @@ Returns a boolean value, **True** if the connected element is
 **enabled** in the current browsing context else returns **false**.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-  //navigates to url
-  driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-  //returns true if element is enabled else returns false
-  boolean value = driver.findElement(By.name("button_input")).isEnabled();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L30" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -130,13 +123,9 @@ Retorna um valor booleano, **true** se o elemento referenciado for
 **false**.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
- //navigates to url
- driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
- //returns true if element is checked else returns false
- boolean value = driver.findElement(By.name("checkbox_input")).isSelected();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L35" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -176,13 +165,9 @@ ele = driver.find_element(name: "checkbox_input").selected?
 do elemento referenciado que tem o foco no contexto de navegação atual.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
- //navigates to url
- driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
- //returns TagName of the element
- String value = driver.findElement(By.name("email_input")).getTagName();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L40" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -227,17 +212,11 @@ O corpo de dados buscado contém os seguintes detalhes:
 * Altura do elemento
 * Largura do elemento
 
+
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Returns height, width, x and y coordinates referenced element
-Rectangle res =  driver.findElement(By.name("range_input")).getRect();
-
-// Rectangle class provides getX,getY, getWidth, getHeight methods
-System.out.println(res.getX());
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L46" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -283,15 +262,9 @@ Recupera o valor da propriedade de estilo computado especificada
 de um elemento no contexto de navegação atual.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-
-// Navigate to Url
-driver.get("https://www.selenium.dev/selenium/web/colorPage.html");
-
-// Retrieves the computed style property 'color' of linktext
-String cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-color");
-
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L51" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
     # Navigate to Url
@@ -338,15 +311,10 @@ val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-c
 
 Recupera o texto renderizado do elemento especificado.
 
-
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/linked_image.html");
-
-// Retrieves the text of the element
-String text = driver.findElement(By.id("justanotherlink")).getText();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L57" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
@@ -387,16 +355,9 @@ DOM attribute. It returns the data associated
 with the DOM attribute or property of the element. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-//identify the email text box
-WebElement emailTxt = driver.findElement(By.name(("email_input")));
-
-//fetch the value property associated with the textbox
-String valueInfo = eleSelLink.getAttribute("value");
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L65" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 # Navigate to the url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
