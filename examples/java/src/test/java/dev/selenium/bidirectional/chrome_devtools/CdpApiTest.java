@@ -23,12 +23,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v118.browser.Browser;
-import org.openqa.selenium.devtools.v118.network.Network;
-import org.openqa.selenium.devtools.v118.network.model.Headers;
-import org.openqa.selenium.devtools.v118.performance.Performance;
-import org.openqa.selenium.devtools.v118.performance.model.Metric;
-import org.openqa.selenium.devtools.v118.runtime.Runtime;
+import org.openqa.selenium.devtools.v121.browser.Browser;
+import org.openqa.selenium.devtools.v121.network.Network;
+import org.openqa.selenium.devtools.v121.network.model.Headers;
+import org.openqa.selenium.devtools.v121.performance.Performance;
+import org.openqa.selenium.devtools.v121.performance.model.Metric;
+import org.openqa.selenium.devtools.v121.runtime.Runtime;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CdpApiTest extends BaseTest {
@@ -37,7 +37,7 @@ public class CdpApiTest extends BaseTest {
   @BeforeEach
   public void createSession() {
     ChromeOptions options = new ChromeOptions();
-    options.setBrowserVersion("118");
+    options.setBrowserVersion("121");
     driver = new ChromeDriver(options);
     wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }

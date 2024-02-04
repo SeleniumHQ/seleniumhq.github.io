@@ -18,13 +18,10 @@ description: >
 因此，Selenium不能期望驱动程序直接实现这种功能，现在依赖于直接执行大量JavaScript函数。
 这个函数对一个元素的性质和在树中的关系做了许多近似的判断，以返回一个值。
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
 
-// Get boolean value for is element display
-boolean isEmailVisible = driver.findElement(By.name("email_input")).isDisplayed();
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L25" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 # Navigate to the url
@@ -66,13 +63,9 @@ val = driver.find_element(name: 'email_input').displayed?
 返回一个布尔值，如果在当前浏览上下文中是 **启用** 状态，则返回 **true**，否则返回 **false**。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-  //navigates to url
-  driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-  //returns true if element is enabled else returns false
-  boolean value = driver.findElement(By.name("button_input")).isEnabled();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L30" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -116,13 +109,9 @@ ele = driver.find_element(name: 'button_input').enabled?
 该方法返回一个布尔值，如果在当前浏览上下文中 **选择了** 引用的元素，则返回 **True**，否则返回 **False**。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
- //navigates to url
- driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
- //returns true if element is checked else returns false
- boolean value = driver.findElement(By.name("checkbox_input")).isSelected();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L35" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -161,13 +150,9 @@ ele = driver.find_element(name: "checkbox_input").selected?
 此方法用于获取在当前浏览上下文中具有焦点的被引用元素的[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
- //navigates to url
- driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
- //returns TagName of the element
- String value = driver.findElement(By.name("email_input")).getTagName();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L40" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -211,17 +196,11 @@ attr = driver.find_element(name: "email_input").tag_name
 * 元素的高度
 * 元素的宽度
 
+
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Returns height, width, x and y coordinates referenced element
-Rectangle res =  driver.findElement(By.name("range_input")).getRect();
-
-// Rectangle class provides getX,getY, getWidth, getHeight methods
-System.out.println(res.getX());
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L46" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -265,17 +244,10 @@ println(res.getX())
 
 获取当前浏览上下文中元素的特定计算样式属性的值。
 
-
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-
-// Navigate to Url
-driver.get("https://www.selenium.dev/selenium/web/colorPage.html");
-
-// Retrieves the computed style property 'color' of linktext
-String cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-color");
-
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L51" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 
     # Navigate to Url
@@ -324,13 +296,9 @@ val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-c
 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/linked_image.html");
-
-// Retrieves the text of the element
-String text = driver.findElement(By.id("justanotherlink")).getText();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L57" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Navigate to url
 driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
@@ -370,16 +338,9 @@ val text = driver.findElement(By.id("justanotherlink")).getText()
 它返回与该元素的 DOM 特性或属性关联的数据。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html");
-
-//identify the email text box
-WebElement emailTxt = driver.findElement(By.name(("email_input")));
-
-//fetch the value property associated with the textbox
-String valueInfo = eleSelLink.getAttribute("value");
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L65" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 # Navigate to the url
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")

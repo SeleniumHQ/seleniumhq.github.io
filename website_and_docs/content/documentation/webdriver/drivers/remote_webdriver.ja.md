@@ -25,7 +25,7 @@ and an options instance are both required.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L37-L38" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L10-L11" >}}
@@ -58,7 +58,7 @@ for a custom file detector.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 Java does not include a Local File Detector by default, so you must always add one to do uploads.
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L48-L51" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L49-L52" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 Python adds a local file detector to remote webdriver instances by default, but you can also create your own class.
@@ -102,7 +102,7 @@ Each of the bindings have a method in the options class to set this.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L59-L61" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L60-L62" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L37-L39" >}}
@@ -128,7 +128,7 @@ so the list is an immediate snapshot of what file names are currently in the dir
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L72" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L73" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L47" >}}
@@ -153,7 +153,7 @@ Selenium looks for the name of the provided file in the list and downloads it to
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L79" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L53" >}}
@@ -179,7 +179,7 @@ but you can also delete all files during the session.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L88" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L59" >}}
@@ -208,12 +208,12 @@ Each of the Selenium bindings has implemented a different way to use those featu
 {{% tab header="Java" %}}
 Java requires you to use the Augmenter class, which allows it to automatically pull in implementations for
 all interfaces that match the capabilities used with the RemoteWebDriver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L93" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L98" >}}
 
 Of interest, using the `RemoteWebDriverBuilder` automatically augments the driver, so it is a great way
 to get all the functionality by default:
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L100-L106" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L106-L111" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}
