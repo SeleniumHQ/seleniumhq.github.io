@@ -208,7 +208,7 @@ pull request updating this page.
 | Option | Type | Value/Example | Description |
 |---|---|---|---|---|
 | `--detect-drivers` | boolean | `true` | Autodetect which drivers are available on the current system, and add them to the Node. |
-| `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype='{"browserName": "firefox", "browserVersion": "86", "moz:firefoxOptions": {"binary":"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin"}}'` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
+| `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype="{\"browserName\": \"firefox\", \"browserVersion\": \"86\", \"moz:firefoxOptions\": {\"binary\":\"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin\"}}"` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
 | `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. |
 | `--driver-implementation` | string[] | `"firefox"` | Drivers that should be checked. If specified, will skip autoconfiguration. |
 | `--node-implementation` | string | `"org.openqa.selenium.grid.node.local.LocalNodeFactory"` | Full classname of non-default Node implementation. This is used to manage a session's lifecycle. |
