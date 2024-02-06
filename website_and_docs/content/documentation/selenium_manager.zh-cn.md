@@ -69,6 +69,21 @@ edge can only be installed in Windows with administrator permissions
 
 Therefore, administrator permissions are required to install Edge in Windows automatically through Selenium Manager, and Edge is eventually installed in the usual program files folder (e.g., `C:\Program Files (x86)\Microsoft\Edge`).
 
+## Data collection
+
+Selenium Manager will report anonymised usage [statistics](https://plausible.io/privacy-focused-web-analytics) to [Plausible](https://plausible.io/manager.selenium.dev). This allows the Selenium team to understand more about how Selenium is being used so that we can better focus our development efforts. The data being collected is:
+
+| Data | Purpose |
+| -----|---------|
+| Selenium version | This allows the Selenium developers to safely deprecate and remove features, as well as determine which new features may be available to you | 
+| OS and architecture Selenium Manager is running on | The Selenium developers can use this information to help prioritise bug reports, and to identify if there are systemic OS-related issues |
+| Browser and browser version | Helping for prioritising bug reports |
+| Rough geolocation | Derived from the IP address you connect from. This is useful for determining where we need to focus our documentation efforts | 
+
+### Opting out of data collection
+
+**Data collection is on by default.** To disable it, set the `SE_AVOID_STATS` environment variable to `true`. You may also disable data collection in the configuration file (see below) by setting `avoid-stats = true`.
+
 ## Configuration
 ***TL;DR:*** *Selenium Manager should work silently and transparently for most users. Nevertheless, there are scenarios (e.g., to specify a custom cache path or setup globally a proxy) where custom configuration can be required.*
 

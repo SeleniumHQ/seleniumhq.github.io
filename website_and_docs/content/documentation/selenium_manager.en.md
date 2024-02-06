@@ -71,7 +71,7 @@ Therefore, administrator permissions are required to install Edge in Windows aut
 
 ## Data collection
 
-Selenium Manager will report anonymised usage statistics to [Plausible](https://plausible.io/manager.selenium.dev). This allows the Selenium team to understand more about how Selenium is being used so that we can better focus our development efforts. The data being collected is:
+Selenium Manager will report anonymised usage [statistics](https://plausible.io/privacy-focused-web-analytics) to [Plausible](https://plausible.io/manager.selenium.dev). This allows the Selenium team to understand more about how Selenium is being used so that we can better focus our development efforts. The data being collected is:
 
 | Data | Purpose |
 | -----|---------|
