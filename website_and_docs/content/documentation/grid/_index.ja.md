@@ -1,7 +1,7 @@
 ---
 title: "Grid"
 linkTitle: "Grid"
-weight: 6
+weight: 4
 description: >
   複数のマシンで並行してテストを実行したいですか？ Grid が手助けします。
 aliases:
