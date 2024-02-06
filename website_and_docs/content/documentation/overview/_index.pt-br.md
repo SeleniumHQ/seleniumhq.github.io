@@ -1,7 +1,7 @@
 ---
 title: "Resumo"
 linkTitle: "Resumo"
-weight: 2
+weight: 1
 description: >
   Será Selenium a ferramenta para você? Veja um resumo dos componentes do projecto.
 aliases: ["/documentation/pt-br/introduction/"]

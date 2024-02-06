@@ -1,7 +1,7 @@
 ---
 title: "概述"
 linkTitle: "概述"
-weight: 2
+weight: 1
 description: >
   Selenium适合你吗? 请参见不同项目组件的概述.
 aliases: ["/documentation/zh-cn/introduction/"]
