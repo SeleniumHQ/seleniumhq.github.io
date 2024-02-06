@@ -100,8 +100,8 @@ public class DecoratedLoggingNode extends Node {
 
   private Node node;
 
-  protected DecoratedLoggingNode(Tracer tracer, URI uri, Secret registrationSecret) {
-    super(tracer, new NodeId(UUID.randomUUID()), uri, registrationSecret);
+  protected DecoratedLoggingNode(Tracer tracer, NodeId nodeId, URI uri, Secret registrationSecret) {
+	super(tracer, nodeId, uri, registrationSecret);
   }
 
   public static Node create(Config config) {
@@ -114,7 +114,9 @@ public class DecoratedLoggingNode extends Node {
     Node node = LocalNodeFactory.create(config);
 
     DecoratedLoggingNode wrapper = new DecoratedLoggingNode(loggingOptions.getTracer(),
-        uri, secretOptions.getRegistrationSecret());
+				node.getId(),
+				uri,
+				secretOptions.getRegistrationSecret());
     wrapper.node = node;
     return wrapper;
   }
