@@ -4,7 +4,12 @@ import dev.selenium.BaseTest;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
@@ -13,6 +18,11 @@ import org.openqa.selenium.bidi.browsingcontext.NavigationResult;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.print.PrintOptions;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 class BrowsingContextTest extends BaseTest {
 
@@ -140,5 +150,190 @@ class BrowsingContextTest extends BaseTest {
         tab2.close();
 
         Assertions.assertThrows(BiDiException.class, tab2::getTree);
+    }
+
+    @Test
+    void testActivateABrowsingContext() {
+        BrowsingContext window1 = new BrowsingContext(driver, driver.getWindowHandle());
+        BrowsingContext window2 = new BrowsingContext(driver, WindowType.WINDOW);
+
+        window1.activate();
+
+        boolean isFocused = (boolean) ((JavascriptExecutor) driver).executeScript("return document.hasFocus();");
+
+        Assertions.assertTrue(isFocused);
+    }
+
+    @Test
+    void testReloadABrowsingContext() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, WindowType.TAB);
+
+        browsingContext.navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", ReadinessState.COMPLETE);
+
+        NavigationResult reloadInfo = browsingContext.reload(ReadinessState.INTERACTIVE);
+
+        Assertions.assertNotNull(reloadInfo.getNavigationId());
+        Assertions.assertTrue(reloadInfo.getUrl().contains("/bidi/logEntryAdded.html"));
+    }
+
+    @Test
+    void testHandleUserPrompt() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        driver.findElement(By.id("alert")).click();
+
+        browsingContext.handleUserPrompt();
+
+        Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
+    }
+
+    @Test
+    void testAcceptUserPrompt() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        driver.findElement(By.id("alert")).click();
+
+        browsingContext.handleUserPrompt("true");
+
+        Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
+    }
+
+    @Test
+    void testDismissUserPrompt() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        driver.findElement(By.id("alert")).click();
+
+        browsingContext.handleUserPrompt("true");
+
+        Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
+    }
+
+    @Test
+    void testPassUserTextToUserPrompt() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        driver.findElement(By.id("prompt-with-default")).click();
+
+        String userText = "Selenium automates browsers";
+        browsingContext.handleUserPrompt(true, userText);
+
+        Assertions.assertTrue(driver.getPageSource().contains(userText));
+    }
+
+    @Test
+    void testDismissUserPromptWithText() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        driver.findElement(By.id("prompt-with-default")).click();
+
+        String userText = "Selenium automates browsers";
+        browsingContext.handleUserPrompt(false, userText);
+
+        Assertions.assertFalse(driver.getPageSource().contains(userText));
+    }
+
+    @Test
+    void textCaptureScreenshot() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+
+        String screenshot = browsingContext.captureScreenshot();
+
+        Assertions.assertTrue(screenshot.length() > 0);
+    }
+
+    @Test
+    void textCaptureViewportScreenshot() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/coordinates_tests/simple_page.html");
+
+        WebElement element = driver.findElement(By.id("box"));
+        Rectangle elementRectangle = element.getRect();
+
+        String screenshot =
+                browsingContext.captureBoxScreenshot(
+                        elementRectangle.getX(), elementRectangle.getY(), 5, 5);
+
+        Assertions.assertTrue(screenshot.length() > 0);
+    }
+
+    @Test
+    void textCaptureElementScreenshot() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/formPage.html");
+        WebElement element = driver.findElement(By.id("checky"));
+
+        String screenshot = browsingContext.captureElementScreenshot(((RemoteWebElement) element).getId());
+
+        Assertions.assertTrue(screenshot.length() > 0);
+    }
+
+    @Test
+    void textSetViewport() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+        driver.get("https://www.selenium.dev/selenium/web/formPage.html");
+
+        browsingContext.setViewport(250, 300);
+
+        List<Long> newViewportSize =
+                (List<Long>)
+                        ((JavascriptExecutor) driver)
+                                .executeScript("return [window.innerWidth, window.innerHeight];");
+
+        Assertions.assertEquals(250, newViewportSize.get(0));
+        Assertions.assertEquals(300, newViewportSize.get(1));
+    }
+
+    @Test
+    @Disabled("Supported by Firefox Nightly 124")
+    void textSetViewportWithDevicePixelRatio() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+        driver.get("https://www.selenium.dev/selenium/web/formPage.html");
+
+        browsingContext.setViewport(250, 300, 5);
+
+        Long newDevicePixelRatio =
+                (Long) ((JavascriptExecutor) driver).executeScript("return window.devicePixelRatio");
+
+        Assertions.assertEquals(5, newDevicePixelRatio);
+    }
+
+    @Test
+    void canPrintPage() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+
+        driver.get("https://www.selenium.dev/selenium/web/formPage.html");
+        PrintOptions printOptions = new PrintOptions();
+
+        String printPage = browsingContext.print(printOptions);
+
+        Assertions.assertTrue(printPage.length() > 0);
+    }
+
+    @Test
+    @Disabled("Supported by Firefox Nightly 124")
+    void testNavigateBackInTheBrowserHistory() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+        browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);
+
+        wait.until(visibilityOfElementLocated(By.id("imageButton"))).submit();
+        wait.until(titleIs("We Arrive Here"));
+
+        browsingContext.back();
+        Assertions.assertTrue(driver.getPageSource().contains("We Leave From Here"));
     }
 }
