@@ -6,11 +6,18 @@ import java.util.Optional;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.bidi.Script;
+import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
+import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.bidi.script.EvaluateResult;
 import org.openqa.selenium.bidi.script.EvaluateResultExceptionValue;
 import org.openqa.selenium.bidi.script.EvaluateResultSuccess;
+import org.openqa.selenium.bidi.script.LocalValue;
 import org.openqa.selenium.bidi.script.RealmInfo;
+import org.openqa.selenium.bidi.script.RemoteReference;
 import org.openqa.selenium.bidi.script.ResultOwnership;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -201,17 +208,35 @@ class ScriptTest extends BaseTest {
     }
 
     @Test
-    void  canDisownHandles() {
-        String tab = driver.getWindowHandle();
-        try (Script script = new Script(tab, driver)) {
-            List<RealmInfo> realms = script.getAllRealms();
-            String realmId = realms.get(0).getRealmId();
+    void  canDisownHandle() {
+        String window = driver.getWindowHandle();
+        try (Script script = new Script(window, driver)) {
+            BrowsingContext context = new BrowsingContext(driver, window);
 
-            EvaluateResult result =
-                    script.evaluateFunctionInRealm(
-                            realmId, "window.foo", true, Optional.empty());
+            context.navigate("https://www.selenium.dev/selenium/web/dynamic.html", ReadinessState.COMPLETE);
 
-            Assertions.assertEquals(EvaluateResult.Type.SUCCESS, result.getResultType());
+            driver.findElement(By.id("adder")).click();
+
+            getLocatedElement(driver, By.id("box0"));
+
+            String boxId = (String) ((JavascriptExecutor)driver).executeScript(
+                    "var box = document.querySelector('.redbox');" +
+                            "return box.id;");
+
+            script.disownBrowsingContextScript(
+                            window, List.of(boxId));
+
+            LocalValue value =
+                    LocalValue.remoteReference(
+                            RemoteReference.Type.HANDLE, boxId);
+
+            // Since the handle is now eligible for garbage collections, it is no longer available to be used.
+            Assertions.assertThrows(WebDriverException.class, () ->script.callFunctionInBrowsingContext(
+                    window,
+                    "arg => arg.a",
+                    false, Optional.of(List.of(value)),
+                    Optional.empty(),
+                    Optional.empty()));
         }
     }
 }
