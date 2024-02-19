@@ -6,9 +6,9 @@ Links to everything can be found on our &lt;a href="/downloads">downloads page&l
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v119, v120, and v121 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Selenium Manager &lt;a href="https://plausible.io/manager.selenium.dev">records usage&lt;/a> set
-environment variable &lt;code>SE_AVOID_STATS&lt;/code> to &lt;code>&amp;quot;true&amp;quot;&lt;/code> to avoid sending information&lt;/li>
+environment variable &lt;a href="/documentation/selenium_manager/#data-collection">&lt;code>SE_AVOID_STATS&lt;/code> to &lt;code>&amp;quot;true&amp;quot;&lt;/code>&lt;/a> to avoid sending information.&lt;/li>
 &lt;li>Chrome headless changed the name of the browser to reflect that it is not actually chrome; Selenium now handles this seamlessly,
-but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="https://www.selenium.dev/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
+but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
 &lt;ul>
