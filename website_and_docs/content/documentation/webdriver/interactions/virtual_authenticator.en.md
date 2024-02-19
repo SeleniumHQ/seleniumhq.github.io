@@ -31,7 +31,7 @@ These properties are mapped as VirtualAuthenticatorOptions in the Selenium bindi
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/virtual_authenticator/virtual_authenticator_test.py#LL40C1-L40C1" >}}
+{{< gh-codeblock path="examples/python/tests/virtual_authenticator/virtual_authenticator_test.py#L40C1-L40C1" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
