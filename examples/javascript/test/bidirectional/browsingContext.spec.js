@@ -2,6 +2,7 @@ const {suite} = require('selenium-webdriver/testing');
 const assert = require("assert");
 const firefox = require('selenium-webdriver/firefox');
 const BrowsingContext = require('selenium-webdriver/bidi/browsingContext');
+const {By, until} = require("selenium-webdriver");
 
 suite(function (env) {
     describe('Browsing Context', function () {
@@ -131,5 +132,211 @@ suite(function (env) {
             })
             await assert.rejects(tab2.getTree(), {message: 'no such frame'})
         })
+
+        it('can print PDF with all valid parameters', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/printPage.html")
+            const result = await browsingContext.printPage({
+                orientation: 'landscape',
+                scale: 1,
+                background: true,
+                width: 30,
+                height: 30,
+                top: 1,
+                bottom: 1,
+                left: 1,
+                right: 1,
+                shrinkToFit: true,
+                pageRanges: ['1-2'],
+            })
+
+            let base64Code = result.data.slice(0, 5)
+            assert.strictEqual(base64Code, 'JVBER')
+        })
+
+        it('can take box screenshot', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            const response = await browsingContext.captureBoxScreenshot(5, 5, 10, 10)
+
+            const base64code = response.slice(0, 5)
+            assert.equal(base64code, 'iVBOR')
+        })
+
+        it('can take element screenshot', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/formPage.html")
+            const element = await driver.findElement(By.id('checky'))
+            const elementId = await element.getId()
+            const response = await browsingContext.captureElementScreenshot(elementId)
+
+            const base64code = response.slice(0, 5)
+            assert.equal(base64code, 'iVBOR')
+        })
+
+        it('can activate a browsing context', async function () {
+            const id = await driver.getWindowHandle()
+            const window1 = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await BrowsingContext(driver, {
+                type: 'window',
+            })
+
+            const result = await driver.executeScript('return document.hasFocus();')
+
+            assert.equal(result, false)
+
+            await window1.activate()
+            const result2 = await driver.executeScript('return document.hasFocus();')
+
+            assert.equal(result2, true)
+        })
+
+        it('can handle user prompt', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('alert')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            await browsingContext.handleUserPrompt()
+
+            const result = await driver.getTitle()
+
+            assert.equal(result, 'Testing Alerts')
+        })
+
+        it('can accept user prompt', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('alert')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            await browsingContext.handleUserPrompt(true)
+
+            const result = await driver.getTitle()
+
+            assert.equal(result, 'Testing Alerts')
+        })
+
+        it('can dismiss user prompt', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('alert')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            await browsingContext.handleUserPrompt(false)
+
+            const result = await driver.getTitle()
+
+            assert.equal(result, 'Testing Alerts')
+        })
+
+        it('can pass user text to user prompt', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('prompt')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            const userText = 'Selenium automates browsers'
+
+            await browsingContext.handleUserPrompt(undefined, userText)
+
+            const result = await driver.getPageSource()
+            assert.equal(result.includes(userText), true)
+        })
+
+        it('can accept user prompt with user text', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('prompt')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            const userText = 'Selenium automates browsers'
+
+            await browsingContext.handleUserPrompt(true, userText)
+
+            const result = await driver.getPageSource()
+            assert.equal(result.includes(userText), true)
+        })
+
+        it('can dismiss user prompt with user text', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+
+            await driver.findElement(By.id('alert')).click()
+
+            await driver.wait(until.alertIsPresent())
+
+            const userText = 'Selenium automates browsers'
+
+            await browsingContext.handleUserPrompt(false, userText)
+
+            const result = await driver.getPageSource()
+            assert.equal(result.includes(userText), false)
+        })
+
+        it('can set viewport', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await driver.get("https://www.selenium.dev/selenium/web/blankPage.html")
+
+            await browsingContext.setViewport(250, 300)
+
+            const result = await driver.executeScript('return [window.innerWidth, window.innerHeight];')
+            assert.equal(result[0], 250)
+            assert.equal(result[1], 300)
+        })
+
+
     })
 }, {browsers: ['firefox']})
