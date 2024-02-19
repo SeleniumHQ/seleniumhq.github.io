@@ -49,7 +49,7 @@ description: >
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 - [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
-- [TestNG](https://testng.org/doc/) - Offers extra features like parallel test execution and parameterized tests.
+- [TestNG](https://testng.org/) - Offers extra features like parallel test execution and parameterized tests.
 {{% /tab %}}
 
 {{% tab header="Python" %}}

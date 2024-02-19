@@ -64,7 +64,7 @@ que será usado para todos os exemplos nesta página.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 - [JUnit](https://junit.org/junit5/) - Uma estrutura de teste amplamente utilizada para testes Selenium baseados em Java.
-- [TestNG](https://testng.org/doc/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
+- [TestNG](https://testng.org/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
 {{% /tab %}}
 
 {{% tab header="Python" %}}
