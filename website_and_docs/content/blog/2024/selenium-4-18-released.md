@@ -74,16 +74,14 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
 <div class="d-flex justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/Earlopain" >}}
-{{< gh-user "https://api.github.com/users/EdwinVanVliet" >}}
-{{< gh-user "https://api.github.com/users/asolntsev" >}}
-{{< gh-user "https://api.github.com/users/jamesbraza" >}}
-{{< gh-user "https://api.github.com/users/lauromoura" >}}
-{{< gh-user "https://api.github.com/users/middlingphys" >}}
-{{< gh-user "https://api.github.com/users/take0x" >}}
+{{< gh-user "https://api.github.com/users/RevealOscar" >}}
+{{< gh-user "https://api.github.com/users/Trigtrig" >}}
+{{< gh-user "https://api.github.com/users/manuelsblanco" >}}
+{{< gh-user "https://api.github.com/users/mtrea" >}}
+{{< gh-user "https://api.github.com/users/oleg-rd" >}}
+{{< gh-user "https://api.github.com/users/semaperepelitsa" >}}
+{{< gh-user "https://api.github.com/users/symonk" >}}
 {{< gh-user "https://api.github.com/users/valfirst" >}}
-{{< gh-user "https://api.github.com/users/vietnd96" >}}
-{{< gh-user "https://api.github.com/users/whimboo" >}}
     </div>
   </div>
 </div>
@@ -94,8 +92,14 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/RevealOscar" >}}
-{{< gh-user "https://api.github.com/users/YevgeniyShunevych" >}}
+{{< gh-user "https://api.github.com/users/BlazerYoo" >}}
+{{< gh-user "https://api.github.com/users/bhecquet" >}}
+{{< gh-user "https://api.github.com/users/geekmister" >}}
+{{< gh-user "https://api.github.com/users/justnpT" >}}
+{{< gh-user "https://api.github.com/users/mmonfared" >}}
+{{< gh-user "https://api.github.com/users/netassa" >}}
+{{< gh-user "https://api.github.com/users/nvborisenko" >}}
+{{< gh-user "https://api.github.com/users/pallavigitwork" >}}
     </div>
   </div>
 </div>
@@ -105,10 +109,10 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/Auto81" >}}
-{{< gh-user "https://api.github.com/users/Earlopain" >}}
-{{< gh-user "https://api.github.com/users/amardeep2006" >}}
-{{< gh-user "https://api.github.com/users/vietnd96" >}}
+{{< gh-user "https://api.github.com/users/0xC4N1" >}}
+{{< gh-user "https://api.github.com/users/Doofus100500" >}}
+{{< gh-user "https://api.github.com/users/Opvolger" >}}
+{{< gh-user "https://api.github.com/users/VietND96" >}}
     </div>
   </div>
 </div>
@@ -128,6 +132,7 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
 {{< gh-user "https://api.github.com/users/p0deje" >}}
 {{< gh-user "https://api.github.com/users/pujagani" >}}
 {{< gh-user "https://api.github.com/users/titusfortner" >}}
+{{< gh-user "https://api.github.com/users/shs96c" >}}
  </div>
   </div>
 </div>
