@@ -328,7 +328,7 @@ suite(function (env) {
                 browsingContextId: id,
             })
 
-            await driver.get("https://www.selenium.dev/selenium/web/blankPage.html")
+            await driver.get("https://www.selenium.dev/selenium/web/blank.html")
 
             await browsingContext.setViewport(250, 300)
 
@@ -336,7 +336,5 @@ suite(function (env) {
             assert.equal(result[0], 250)
             assert.equal(result[1], 300)
         })
-
-
     })
 }, {browsers: ['firefox']})
