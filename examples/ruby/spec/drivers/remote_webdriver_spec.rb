@@ -51,7 +51,7 @@ RSpec.describe 'Remote WebDriver' do
 
     files = driver.downloadable_files
 
-    expect(files).to eq file_names
+    expect(files.sort).to eq file_names.sort
     downloadable_file = files.first
 
     driver.download_file(downloadable_file, target_directory)
