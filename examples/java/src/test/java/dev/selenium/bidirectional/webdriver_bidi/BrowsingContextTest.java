@@ -313,7 +313,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
-    void canPrintPage() {
+    void testPrintPage() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
 
         driver.get("https://www.selenium.dev/selenium/web/formPage.html");

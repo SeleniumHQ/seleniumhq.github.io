@@ -63,7 +63,7 @@ suite(function (env) {
             assert.equal(beforeRequestEvent.request.cookies[1].value.value, 'dosa')
         })
 
-        xit('can redirect http equiv', async function () {
+        it('can redirect http equiv', async function () {
             let beforeRequestEvent = []
             const network = await NetworkInspector(driver)
             await network.beforeRequestSent(function (event) {

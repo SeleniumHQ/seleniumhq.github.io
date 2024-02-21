@@ -163,4 +163,23 @@ class BrowsingContextInspectorTest extends BaseTest {
             Assertions.assertEquals(context.getId(), userPromptClosed.getBrowsingContextId());
         }
     }
+
+    @Test
+    void canListenToBrowsingContextDestroyedEvent()
+            throws ExecutionException, InterruptedException, TimeoutException {
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<BrowsingContextInfo> future = new CompletableFuture<>();
+
+            inspector.onBrowsingContextDestroyed(future::complete);
+
+            String windowHandle = driver.switchTo().newWindow(WindowType.WINDOW).getWindowHandle();
+
+            driver.close();
+
+            BrowsingContextInfo browsingContextInfo = future.get(5, TimeUnit.SECONDS);
+
+            Assertions.assertEquals(windowHandle, browsingContextInfo.getId());
+            Assertions.assertTrue(browsingContextInfo.getUrl().contains("about:blank"));
+        }
+    }
 }

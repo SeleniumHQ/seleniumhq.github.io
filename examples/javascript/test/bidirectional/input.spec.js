@@ -38,5 +38,28 @@ suite(function (env) {
                 assert(text.includes('oquefort parmigiano cheddar'))
             })
         })
+
+        it('can execute release in browsing context', async function () {
+            const browsingContextId = await driver.getWindowHandle()
+            const input = await Input(driver)
+            await driver.get('https://www.selenium.dev/selenium/web/bidi/release_action.html')
+
+            let inputTextBox = await driver.findElement(By.id('keys'))
+
+            await driver.executeScript('arguments[0].focus()', inputTextBox)
+
+            const actions = await driver.actions().keyDown('a').keyDown('b').getSequences()
+
+            await input.perform(browsingContextId, actions)
+
+            await driver.executeScript('resetEvents()')
+
+            await input.release(browsingContextId)
+
+            const events = await driver.executeScript('return allEvents.events')
+
+            assert.strictEqual(events[0].code, 'KeyB')
+            assert.strictEqual(events[1].code, 'KeyA')
+        })
     })
 }, {browsers: ['firefox']})

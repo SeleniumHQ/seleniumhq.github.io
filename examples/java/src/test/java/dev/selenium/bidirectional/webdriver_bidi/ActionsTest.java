@@ -51,7 +51,6 @@ class ActionsTest extends BaseTest {
         }
 
     @Test
-    @Disabled
     void canPerformReleaseAction() {
         driver.get("https://www.selenium.dev/selenium/web/bidi/release_action.html");
 

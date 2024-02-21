@@ -100,5 +100,23 @@ suite(function (env) {
             assert.equal(navigationInfo.browsingContextId, browsingContext.id)
             assert.strictEqual(navigationInfo.url.includes('linkToAnchorOnThisPage'), true)
         })
+
+        it('can listen to browsing context destroyed event', async function () {
+            let contextInfo = null
+            const browsingContextInspector = await BrowsingContextInspector(driver)
+            await browsingContextInspector.onBrowsingContextDestroyed((entry) => {
+                contextInfo = entry
+            })
+
+            await driver.switchTo().newWindow('window')
+
+            const windowHandle = await driver.getWindowHandle()
+            await driver.close()
+
+            assert.equal(contextInfo.id, windowHandle)
+            assert.equal(contextInfo.url, 'about:blank')
+            assert.equal(contextInfo.children, null)
+            assert.equal(contextInfo.parentBrowsingContext, null)
+        })
     })
 }, {browsers: ['firefox']})
