@@ -467,6 +467,19 @@ Simon Stewart
 &lt;/p>
 &lt;/div>
 &lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
