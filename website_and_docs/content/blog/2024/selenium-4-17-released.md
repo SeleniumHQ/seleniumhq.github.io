@@ -123,6 +123,7 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/AutomatedTester" >}}
+{{< gh-user "https://api.github.com/users/bonigarcia" >}}
 {{< gh-user "https://api.github.com/users/diemol" >}}
 {{< gh-user "https://api.github.com/users/harsha509" >}}
 {{< gh-user "https://api.github.com/users/joerg1985" >}}
