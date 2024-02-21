@@ -70,18 +70,19 @@ edge can only be installed in Windows with administrator permissions
 Therefore, administrator permissions are required to install Edge in Windows automatically through Selenium Manager, and Edge is eventually installed in the usual program files folder (e.g., `C:\Program Files (x86)\Microsoft\Edge`).
 
 ## Data collection
-
 Selenium Manager will report anonymised usage [statistics](https://plausible.io/privacy-focused-web-analytics) to [Plausible](https://plausible.io/manager.selenium.dev). This allows the Selenium team to understand more about how Selenium is being used so that we can better focus our development efforts. The data being collected is:
 
 | Data | Purpose |
 | -----|---------|
-| Selenium version | This allows the Selenium developers to safely deprecate and remove features, as well as determine which new features may be available to you | 
+| Selenium version | This allows the Selenium developers to safely deprecate and remove features, as well as determine which new features may be available to you |
+| Language binding | Programming language used to execute Selenium scripts (Java, JavaScript, Python, .Net, Ruby) |
 | OS and architecture Selenium Manager is running on | The Selenium developers can use this information to help prioritise bug reports, and to identify if there are systemic OS-related issues |
 | Browser and browser version | Helping for prioritising bug reports |
-| Rough geolocation | Derived from the IP address you connect from. This is useful for determining where we need to focus our documentation efforts | 
+| Rough geolocation | Derived from the IP address you connect from. This is useful for determining where we need to focus our documentation efforts |
+
+Selenium Manager sends these data to Plausible once a day. This period is based on the TTL value (see [configuration](https://www.selenium.dev/documentation/selenium_manager/#configuration)).
 
 ### Opting out of data collection
-
 **Data collection is on by default.** To disable it, set the `SE_AVOID_STATS` environment variable to `true`. You may also disable data collection in the configuration file (see below) by setting `avoid-stats = true`.
 
 ## Configuration
@@ -129,6 +130,8 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
 |`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`. For Windows paths in the TOML configuration file, double backslashes are required (e.g., `C:\\custom\\cache`).|
 |`--ttl <TTL>`|`ttl = TTL`|`SE_TTL=TTL`|Time-to-live in seconds. See next section for details. Default: `3600` (1 hour)|
+|`--language-binding <LANGUAGE>`|`language-binding = "LANGUAGE"`|`SE_LANGUAGE_BINDING=LANGUAGE`|Language that invokes Selenium Manager (e.g., Java, JavaScript, Python, DotNet, Ruby)|
+|`--avoid-stats`|`avoid-stats = true`|`SE_AVOID_STATS=true`|Avoid sends usage statistics to plausible.io. Default: `false`|
 
 In addition to the configuration keys specified in the table before, there are some special cases, namely:
 
@@ -165,8 +168,8 @@ Selenium Manager follows the same versioning schema as Selenium. Nevertheless, w
 ## Getting Selenium Manager
 For most users, direct interaction with Selenium Manager is not required since the Selenium bindings use it internally. Nevertheless, if you want to *play* with Selenium Manager or use it for your use case involving driver or browser management, you can get the Selenium Manager binaries in different ways:
 
-- From the Selenium repository. The Selenium Manager source code is stored in the main Selenium repo under the folder [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust). Moreover, you can find the compiled versions for Windows, Linux, and macOS in the [common folder](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager) of this repo.
-- From the build workflow. Selenium Manager is compiled using a [GitHub Actions workflow]((https://github.com/SeleniumHQ/selenium/actions/workflows/build-selenium-manager.yml)). This workflow creates binaries for Windows, Linux, and macOS. You can download these binaries from these workflow executions.
+- From the Selenium repository. The Selenium Manager source code is stored in the main Selenium repo under the folder [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust). Moreover, you can find the compiled versions for Windows, Linux, and macOS in the [Selenium Manager Artifacts](https://github.com/SeleniumHQ/selenium_manager_artifacts) repo. The stable Selenium Manager binaries (i.e., those distributed in the latest stable Selenium version) are linked in this [file](https://github.com/SeleniumHQ/selenium/blob/trunk/common/selenium_manager.bzl).
+- From the build workflow. Selenium Manager is compiled using a [GitHub Actions workflow]((https://github.com/SeleniumHQ/selenium/actions/workflows/ci-rust.yml)). This workflow creates binaries for Windows, Linux, and macOS. You can download these binaries from these workflow executions.
 - From the cache. As of version 4.15.0 of the Selenium Java bindings, the Selenium Manager binary is extracted and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 is stored in the folder `~/.cache/selenium/manager/0.4.15`).
 
 ## Examples
