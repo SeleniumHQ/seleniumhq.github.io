@@ -13,7 +13,7 @@ text_box = driver.find_element(by=By.NAME, value="my-text")
 submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
 text_box.send_keys("Selenium")
-submit_button.click()
+submit_button.submit()
 
 message = driver.find_element(by=By.ID, value="message")
 text = message.text
