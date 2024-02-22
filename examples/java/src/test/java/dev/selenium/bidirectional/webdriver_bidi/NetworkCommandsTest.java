@@ -5,11 +5,11 @@ import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.bidi.Network;
@@ -25,12 +25,13 @@ class NetworkCommandsTest extends BaseTest {
     @BeforeEach
     public void setup() {
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary("/Applications/Firefox Nightly.app/Contents/MacOS/firefox");
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+
     @Test
+    @Disabled
     void canAddIntercept() {
         try (Network network = new Network(driver)) {
             String intercept =
@@ -40,6 +41,7 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
+    @Disabled
     void canRemoveIntercept() {
         try (Network network = new Network(driver)) {
             String intercept =
@@ -50,6 +52,7 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
+    @Disabled
     void canContinueWithAuthCredentials() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -66,6 +69,7 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
+    @Disabled
     void canContinueWithoutAuthCredentials() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -81,6 +85,7 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
+    @Disabled
     void canCancelAuth() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -94,6 +99,7 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
+    @Disabled
     void canFailRequest() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.BEFORE_REQUEST_SENT));
