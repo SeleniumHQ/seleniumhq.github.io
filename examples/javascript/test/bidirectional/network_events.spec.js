@@ -1,7 +1,7 @@
 const {suite} = require('selenium-webdriver/testing');
 const assert = require("assert");
 const firefox = require('selenium-webdriver/firefox');
-const NetworkInspector = require("selenium-webdriver/bidi/networkInspector");
+const Network = require("selenium-webdriver/bidi/network");
 const {until} = require("selenium-webdriver");
 
 suite(function (env) {
@@ -21,7 +21,7 @@ suite(function (env) {
 
         it('can listen to event before request is sent', async function () {
             let beforeRequestEvent = null
-            const network = await NetworkInspector(driver)
+            const network = await Network(driver)
             await network.beforeRequestSent(function (event) {
                 beforeRequestEvent = event
             })
@@ -34,7 +34,7 @@ suite(function (env) {
         })
 
         it('can request cookies', async function () {
-            const network = await NetworkInspector(driver)
+            const network = await Network(driver)
             let beforeRequestEvent = null
             await network.beforeRequestSent(function (event) {
                 beforeRequestEvent = event
@@ -65,7 +65,7 @@ suite(function (env) {
 
         it('can redirect http equiv', async function () {
             let beforeRequestEvent = []
-            const network = await NetworkInspector(driver)
+            const network = await Network(driver)
             await network.beforeRequestSent(function (event) {
                 beforeRequestEvent.push(event)
             })
@@ -81,7 +81,7 @@ suite(function (env) {
 
         it('can subscribe to response started', async function () {
             let onResponseStarted = []
-            const network = await NetworkInspector(driver)
+            const network = await Network(driver)
             await network.responseStarted(function (event) {
                 onResponseStarted.push(event)
             })
@@ -95,7 +95,7 @@ suite(function (env) {
 
         it('can subscribe to response completed', async function () {
             let onResponseCompleted = []
-            const network = await NetworkInspector(driver)
+            const network = await Network(driver)
             await network.responseCompleted(function (event) {
                 onResponseCompleted.push(event)
             })
