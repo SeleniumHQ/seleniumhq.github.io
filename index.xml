@@ -365,6 +365,19 @@ David Burns
 &lt;/div>
 &lt;/div>
 &lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
 &lt;img src="https://avatars.githubusercontent.com/u/5992658?v=4" class="card-img-top mx-auto" alt="Diego Molina" style="max-width: 122px;">
 &lt;div class="card-body pb-0 px-1">
 &lt;p class="card-text m-0">
@@ -442,19 +455,6 @@ Puja Jagani
 &lt;/div>
 &lt;/div>
 &lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
-&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
-&lt;div class="card-body pb-0 px-1">
-&lt;p class="card-text m-0">
-Titus Fortner
-&lt;/p>
-&lt;/div>
-&lt;div class="card-footer bg-transparent border-0 px-1">
-&lt;p>
-&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
-&lt;/p>
-&lt;/div>
-&lt;/div>
-&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
 &lt;img src="https://avatars.githubusercontent.com/u/28229?v=4" class="card-img-top mx-auto" alt="Simon Stewart" style="max-width: 122px;">
 &lt;div class="card-body pb-0 px-1">
 &lt;p class="card-text m-0">
@@ -468,15 +468,15 @@ Simon Stewart
 &lt;/div>
 &lt;/div>
 &lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
-&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;img src="https://avatars.githubusercontent.com/u/777185?v=4" class="card-img-top mx-auto" alt="Titus Fortner" style="max-width: 122px;">
 &lt;div class="card-body pb-0 px-1">
 &lt;p class="card-text m-0">
-Boni García
+Titus Fortner
 &lt;/p>
 &lt;/div>
 &lt;div class="card-footer bg-transparent border-0 px-1">
 &lt;p>
-&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
+&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>
 &lt;/p>
 &lt;/div>
 &lt;/div>
@@ -800,6 +800,19 @@ David Burns
 &lt;div class="card-footer bg-transparent border-0 px-1">
 &lt;p>
 &lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
+&lt;img src="https://avatars.githubusercontent.com/u/5413013?v=4" class="card-img-top mx-auto" alt="Boni García" style="max-width: 122px;">
+&lt;div class="card-body pb-0 px-1">
+&lt;p class="card-text m-0">
+Boni García
+&lt;/p>
+&lt;/div>
+&lt;div class="card-footer bg-transparent border-0 px-1">
+&lt;p>
+&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>
 &lt;/p>
 &lt;/div>
 &lt;/div>
