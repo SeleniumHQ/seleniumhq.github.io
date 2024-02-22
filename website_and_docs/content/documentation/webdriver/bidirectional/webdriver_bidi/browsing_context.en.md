@@ -16,7 +16,7 @@ Creates a new browsing context in a new window.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L35" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L44-L47" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -36,7 +36,7 @@ Creates a new browsing context in a new tab.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L49" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L58-L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -56,7 +56,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L28-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L37-L41" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -77,7 +77,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L41-L43" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L50-L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -97,7 +97,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L55-L57" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L64-L69" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -115,7 +115,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L63-L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L72-L80" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -133,7 +133,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L74-L77" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L83-L92" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -153,7 +153,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L86-L91" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L95-L108" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -173,7 +173,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L102-L105" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L111-L123" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -191,7 +191,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L117-L120" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L126-L133" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -209,7 +209,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L127-L130" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L136-L153" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
