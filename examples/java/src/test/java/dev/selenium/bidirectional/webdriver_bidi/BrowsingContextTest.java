@@ -336,4 +336,33 @@ class BrowsingContextTest extends BaseTest {
         browsingContext.back();
         Assertions.assertTrue(driver.getPageSource().contains("We Leave From Here"));
     }
+
+    @Test
+    @Disabled("Supported by Firefox Nightly 124")
+    void canNavigateForwardInTheBrowserHistory() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+        browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);
+
+        wait.until(visibilityOfElementLocated(By.id("imageButton"))).submit();
+        wait.until(titleIs("We Arrive Here"));
+
+        browsingContext.back();
+        Assertions.assertTrue(driver.getPageSource().contains("We Leave From Here"));
+
+        browsingContext.forward();
+        wait.until(titleIs("We Arrive Here"));
+    }
+
+    @Test
+    @Disabled("Supported by Firefox Nightly 124")
+    void canTraverseBrowserHistory() {
+        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
+        browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);
+
+        wait.until(visibilityOfElementLocated(By.id("imageButton"))).submit();
+        wait.until(titleIs("We Arrive Here"));
+
+        browsingContext.traverseHistory(-1);
+        Assertions.assertTrue(driver.getPageSource().contains("We Leave From Here"));
+    }
 }
