@@ -1,6 +1,8 @@
 package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -24,6 +26,7 @@ import org.openqa.selenium.bidi.script.EvaluateResult;
 import org.openqa.selenium.bidi.script.EvaluateResultExceptionValue;
 import org.openqa.selenium.bidi.script.EvaluateResultSuccess;
 import org.openqa.selenium.bidi.script.LocalValue;
+import org.openqa.selenium.bidi.script.PrimitiveProtocolValue;
 import org.openqa.selenium.bidi.script.RealmInfo;
 import org.openqa.selenium.bidi.script.RealmType;
 import org.openqa.selenium.bidi.script.RemoteReference;
@@ -49,6 +52,30 @@ class ScriptTest extends BaseTest {
                             id, "()=>{return 1+2;}", false, Optional.empty(), Optional.empty(), Optional.empty());
             EvaluateResultSuccess successResult = (EvaluateResultSuccess) result;
             Assertions.assertEquals(3L, (Long) successResult.getResult().getValue().get());
+        }
+    }
+
+    @Test
+    void canCallFunctionWithArguments() {
+        String id = driver.getWindowHandle();
+        try (Script script = new Script(id, driver)) {
+            List<LocalValue> arguments = new ArrayList<>();
+            LocalValue value1 = PrimitiveProtocolValue.stringValue("ARGUMENT_STRING_VALUE");
+            LocalValue value2 = PrimitiveProtocolValue.numberValue(42);
+            arguments.add(value1);
+            arguments.add(value2);
+
+            EvaluateResult result =
+                    script.callFunctionInBrowsingContext(
+                            id,
+                            "(...args)=>{return args}",
+                            false,
+                            Optional.of(arguments),
+                            Optional.empty(),
+                            Optional.empty());
+
+            EvaluateResultSuccess successResult = (EvaluateResultSuccess) result;
+            Assertions.assertEquals(2, ((List<Object>) successResult.getResult().getValue().get()).size());
         }
     }
 
