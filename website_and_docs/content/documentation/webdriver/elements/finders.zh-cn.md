@@ -1,6 +1,6 @@
 ---
-title: "查询网络元素"
-linkTitle: "查询器"
+title: "查找网页元素"
+linkTitle: "查找器"
 weight: 2
 needsTranslation: true
 aliases: [
@@ -8,13 +8,10 @@ aliases: [
 "/zh-cn/documentation/webdriver/locating_elements/"
 ]
 description: >
-  根据提供的定位值定位元素.
+  通过定位器的值确定元素的位置.
 ---
 
-One of the most fundamental aspects of using Selenium is obtaining element references to work with.
-Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
+在工作中使用`Selenium`最重要的且最基本的方面是获得元素的引用。`Selenium`提供内置定位器策略用来唯一地标识一个元素。在非常复杂的场景中，有很多使用定位器的方式。为了表达这篇文档的目的，让我们探讨下这段`HTML`片段。
 
 
 ```html
