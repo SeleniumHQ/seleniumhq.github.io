@@ -296,6 +296,12 @@ url = "/sponsors"
 weight = 60
 
 [[menus.main]]
+name = "Sponsor Us"
+parent = "About"
+url = "/sponsor"
+weight = 70
+
+[[menus.main]]
 identifier = "Downloads"
 name = "Downloads"
 url = "/downloads"
