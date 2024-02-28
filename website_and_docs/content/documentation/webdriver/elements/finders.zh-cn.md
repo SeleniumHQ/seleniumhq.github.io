@@ -401,7 +401,7 @@ namespace FindElementsFromElement {
 
 ## 获得活动元素
 
-它是使用路径查找`DOM`元素，这种元素在当前浏览的上下文内处于焦点。
+它使用跟踪查找`DOM`元素，这种元素在当前浏览的上下文内处于焦点。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
