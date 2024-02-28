@@ -27,12 +27,11 @@ description: >
 </ul>
 ```
 
-## First matching element 
+## 匹配第一个元素 
 
-Many locators will match multiple elements on the page. The singular find element method will return a reference to the
-first element found within a given context.
+在网页中许多定位器会匹配到多个元素。单个元素查找方法将会返回在给定上下文范围内找到的第一个元素的索引。
 
-### Evaluating entire DOM
+### 评估整个文档
 
 When the find element method is called on the driver instance, it 
 returns a reference to the first element in the DOM that matches with the provided locator. 
