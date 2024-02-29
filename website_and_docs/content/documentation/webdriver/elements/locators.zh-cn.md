@@ -69,9 +69,9 @@ description: >
 </html>
 ```
 
-## 样式类名
+## CSS Class Name
 
-`HTML`页面的网页元素可以有一个`class`的属性。我们可以参考上面`HTML`片段的一个例子。我们可以使用样式类名识别这些元素。
+`HTML`页面的网页元素可以有一个`class`的属性。我们可以参考上面`HTML`片段的一个例子。我们可以使用`CSS class name`识别这些元素。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -100,12 +100,9 @@ description: >
   {{< /tab >}}
 {{< /tabpane >}} 
 
-## css selector
-CSS is the language used to style HTML pages. We can use css selector locator strategy
-to identify the element on the page. If the element has an id, we create the locator
-as css = #id. Otherwise the format we follow is css =[attribute=value] .
-Let us see an example from above HTML snippet. We will create locator for First Name 
-textbox, using css. 
+## CSS 选择器
+
+`CSS`是用来描述`HTML`页面样式的语言。在网页中我们可以使用`CSS`选择器定位策略识别元素。如果这个元素有`id`，我们可以创建`css = #id`的选择器的定位器。否则我们遵循`css =[attribute=value]`的格式。让我们看一下`HTML`片段上的示例。我们将要为`First Name`的文本框使用`CSS`创建定位器。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
