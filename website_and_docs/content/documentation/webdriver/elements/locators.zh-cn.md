@@ -132,9 +132,8 @@ description: >
 {{< /tabpane >}} 
 
 ## id
-We can use the ID attribute available with element in a web page to locate it. 
-Generally the ID property should be unique for a element on the web page. 
-We will identify the Last Name field using it. 
+
+我们可以在一个网页中使用元素可用属性`ID`来定位它。通常在网页中元素的`ID`属性应该是唯一的。我们将使用`ID`来识别`Last Name`字段。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -165,9 +164,8 @@ We will identify the Last Name field using it.
 
 
 ## name
-We can use the NAME attribute available with element in a web page to locate it. 
-Generally the NAME property should be unique for a element on the web page. 
-We will identify the Newsletter checkbox using it. 
+
+我们可以在一个网页中使用元素可用属性`NAME`来定位它。通常在网页中严肃`NAME`属性应该是唯一的。我们将使用`NAME`来识别`Newsletter`复选框。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
