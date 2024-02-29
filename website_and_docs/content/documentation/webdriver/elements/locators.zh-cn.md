@@ -1,5 +1,5 @@
 ---
-title: "定位策略"
+title: "定位器策略"
 linkTitle: "定位器"
 weight: 4
 needsTranslation: true
@@ -7,13 +7,12 @@ aliases: [
 "/zh-cn/documentation/webdriver/relative_locators/"
 ]
 description: >
-  在DOM中标识一个或多个特定元素的方法.
+  在DOM中有多种方法识别一个或多个指定元素.
 ---
 
-定位器是在页面上标识元素的一种方法。它是传送给
-[查找元素]({{< ref "finders.md" >}}) 方法的参数。
+定位器是一种在页面上识别元素的方法。定位器是[查找元素]({{< ref "finders.md" >}}) 方法的参数。
 
-查看 [鼓励测试练习]({{< ref "/documentation/test_practices/encouraged" >}}) 寻找
+查阅我们[鼓励测试练习]({{< ref "/documentation/test_practices/encouraged" >}})的定位器提示 寻找
 [定位器]({{< ref "/documentation/test_practices/encouraged/locators.md" >}})的小技巧， 包含在查找方法中，不同时间，不同原因下，单独声明的定位器的使用方法。
 
 
@@ -33,11 +32,9 @@ description: >
 | tag name | 定位标签名称与搜索值匹配的元素 |
 | xpath | 定位与 XPath 表达式匹配的元素 |
 
-## Creating Locators
+## 创建定位器
 
-To work on a web element using Selenium, we need to first locate it on the web page.
-Selenium provides us above mentioned ways, using which we can locate element on the 
-page. To understand and create locator we will use the following HTML snippet.
+使用`Selenium`在一个网页元素上操作，我们首先需要在网页中定位它。`Selenium`提供给我们上面提及的方法，我们可以使用其中一个定位网页的元素。我们将使用下面`HTML`片段用来理解和创建定位器。
 
 ```html
 <html>
@@ -72,10 +69,10 @@ page. To understand and create locator we will use the following HTML snippet.
 </html>
 ```
 
-## class name
-The HTML page web element can have attribute class. We can see an example in the
-above shown HTML snippet. We can identify these elements using the class name locator
-available in Selenium. 
+## 样式类名
+
+`HTML`页面的网页元素可以有一个`class`的属性。我们可以参考上面`HTML`片段的一个例子。我们可以使用样式类名识别这些元素。
+
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
     WebDriver driver = new ChromeDriver();
