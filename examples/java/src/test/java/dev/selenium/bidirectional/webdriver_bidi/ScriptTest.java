@@ -3,7 +3,9 @@ package dev.selenium.bidirectional.webdriver_bidi;
 import dev.selenium.BaseTest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -26,6 +28,7 @@ import org.openqa.selenium.bidi.script.EvaluateResult;
 import org.openqa.selenium.bidi.script.EvaluateResultExceptionValue;
 import org.openqa.selenium.bidi.script.EvaluateResultSuccess;
 import org.openqa.selenium.bidi.script.LocalValue;
+import org.openqa.selenium.bidi.script.ObjectLocalValue;
 import org.openqa.selenium.bidi.script.PrimitiveProtocolValue;
 import org.openqa.selenium.bidi.script.RealmInfo;
 import org.openqa.selenium.bidi.script.RealmType;
@@ -41,6 +44,39 @@ class ScriptTest extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
+    }
+
+    @Test
+    void canCallFunction() {
+        String id = driver.getWindowHandle();
+        try (Script script = new Script(id, driver)) {
+            List<LocalValue> arguments = new ArrayList<>();
+            arguments.add(PrimitiveProtocolValue.numberValue(22));
+
+            Map<Object, LocalValue> value = new HashMap<>();
+            value.put("some_property", LocalValue.numberValue(42));
+            LocalValue thisParameter = LocalValue.objectValue(value);
+
+            arguments.add(thisParameter);
+
+            EvaluateResult result =
+                    script.callFunctionInBrowsingContext(
+                            id,
+                            "function processWithPromise(argument) {\n"
+                                    + "  return new Promise((resolve, reject) => {\n"
+                                    + "    setTimeout(() => {\n"
+                                    + "      resolve(argument + this.some_property);\n"
+                                    + "    }, 1000)\n"
+                                    + "  })\n"
+                                    + "}",
+                            true,
+                            Optional.of(arguments),
+                            Optional.of(thisParameter),
+                            Optional.of(ResultOwnership.ROOT));
+
+            EvaluateResultSuccess successResult = (EvaluateResultSuccess) result;
+            Assertions.assertEquals(64L, (Long) successResult.getResult().getValue().get());
+        }
     }
 
     @Test
@@ -96,6 +132,29 @@ class ScriptTest extends BaseTest {
                         Optional.empty());
         EvaluateResultSuccess successResult = (EvaluateResultSuccess) result;
         Assertions.assertEquals("SOME_DELAYED_RESULT", (String) successResult.getResult().getValue().get());
+        }
+    }
+
+    @Test
+    void canCallFunctionWithThisParameter() {
+        String id = driver.getWindowHandle();
+    try (Script script = new Script(id, driver)) {
+        Map<Object, LocalValue> value = new HashMap<>();
+        value.put("some_property", PrimitiveProtocolValue.numberValue(42));
+        LocalValue thisParameter = LocalValue.objectValue(value);
+
+        EvaluateResult result =
+                script.callFunctionInBrowsingContext(
+                        id,
+                        "function(){return this.some_property}",
+                        false,
+                        Optional.empty(),
+                        Optional.of(thisParameter),
+                        Optional.empty());
+
+        EvaluateResultSuccess successResult = (EvaluateResultSuccess) result;
+        Assertions.assertEquals("number", successResult.getResult().getType());
+        Assertions.assertEquals(42L, (Long) successResult.getResult().getValue().get());
         }
     }
 
