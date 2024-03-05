@@ -49,7 +49,7 @@ jobs:
         distribution: 'temurin'
         java-version: 11
     - name: Run Tests
-      uses: nick-invision/retry@v2.8.3
+      uses: nick-invision/retry@v3.0.0
       with:
         timeout_minutes: 20
         max_attempts: 3
