@@ -1,11 +1,12 @@
-const {By, Builder} = require('selenium-webdriver');
+// doc: https://www.npmjs.com/package/selenium-webdriver?activeTab=code
+const {By, Builder, Browser} = require('selenium-webdriver');
 const assert = require("assert");
 
 (async function firstTest() {
   let driver;
   
   try {
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser(Browser.CHROME).build();
     await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
   
     let title = await driver.getTitle();
