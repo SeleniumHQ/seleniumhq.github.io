@@ -47,7 +47,7 @@ jobs:
           args: website_and_docs/public/ --check-anchors
 
       - name: Archive hyperlink results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hyperlink-report
           path: website_and_docs/tmp/.hyperlink/hyperlink.log
