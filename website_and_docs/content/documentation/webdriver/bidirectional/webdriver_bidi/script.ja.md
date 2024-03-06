@@ -29,7 +29,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L32-L53" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -47,7 +48,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L202-L204" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -65,7 +67,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L222-L227" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -83,7 +86,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L237-L239" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -101,7 +105,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L279-L283" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -119,7 +124,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L292-L299" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -137,7 +143,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L330-L330" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -155,7 +162,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L372-L372" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -173,7 +181,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L383-L385" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -191,7 +200,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L393-L395" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -209,7 +219,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L403-L405" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -227,7 +238,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.9" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L416-L416" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -245,7 +257,8 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L424-L426" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -263,12 +276,12 @@ This section contains the APIs related to script commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L471-L471" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
-
 
 
