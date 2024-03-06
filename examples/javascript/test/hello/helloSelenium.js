@@ -1,7 +1,7 @@
-const {Builder} = require('selenium-webdriver');
+const {By, Builder, Browser} = require('selenium-webdriver');
 
 (async function helloSelenium() {
-  let driver = await new Builder().forBrowser('chrome').build();
+  let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
   await driver.get('https://selenium.dev');
 
