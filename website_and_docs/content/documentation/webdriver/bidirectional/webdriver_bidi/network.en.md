@@ -20,7 +20,8 @@ This section contains the APIs related to network commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L29-L29" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -38,7 +39,8 @@ This section contains the APIs related to network commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L34-L35" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -56,7 +58,8 @@ This section contains the APIs related to network commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L42-L46" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -74,7 +77,8 @@ This section contains the APIs related to network commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L56-L60" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -92,7 +96,8 @@ This section contains the APIs related to network commands.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L71-L75" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
