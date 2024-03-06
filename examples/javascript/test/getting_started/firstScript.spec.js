@@ -1,4 +1,3 @@
-// doc: https://www.npmjs.com/package/selenium-webdriver?activeTab=code
 const {By, Builder, Browser} = require('selenium-webdriver');
 const assert = require("assert");
 
