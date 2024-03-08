@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -92,6 +96,14 @@ public class BaseTest {
     } catch (Exception e) {
       throw new RuntimeException(e);
     }
+  }
+
+  protected void enableLogging() {
+    Logger logger = Logger.getLogger("");
+    logger.setLevel(Level.FINE);
+    Arrays.stream(logger.getHandlers()).forEach(handler -> {
+      handler.setLevel(Level.FINE);
+    });
   }
 
   @AfterEach
