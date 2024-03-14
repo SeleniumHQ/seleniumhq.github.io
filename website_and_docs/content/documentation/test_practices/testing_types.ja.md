@@ -34,6 +34,18 @@ Webアプリケーションの場合、ユーザーの予想される動作を�
 Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。
 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
 
+### 統合テスト
+
+統合テストでは、システムのさまざまなコンポーネントまたはモジュール間の相互作用を検証します。 いくつかのモジュールが一緒にテストされます。 統合テストの目的は、すべてのモジュールが統合され、期待どおりに連携していることを確認することです。 自動化された統合テストは、これらの相互作用が期待どおりに機能し、統合されたコンポーネントが適切に連携して機能することを確認するのに役立ちます。
+>例: **_e コマース Web サイトでの商品の注文と支払いのフローをテストします。_**
+### Tōgō tesuto tōgō tesutode wa, shisutemu no samazamana konpōnento matawa mojūru-kan no sōgo sayō o kenshō shimasu. Ikutsu ka no mojūru ga issho ni tesuto sa remasu. Tōgō tesuto no mokuteki wa, subete no mojūru ga tōgō sa re, kitai-dōri ni renkei shite iru koto o kakunin suru kotodesu. Jidō-ka sa reta tōgō tesuto wa, korera no sōgo sayō ga kitai-dōri ni kinō shi, tōgō sa reta konpōnento ga tekisetsu ni renkei shite kinō suru koto o kakunin suru no ni yakudachimasu. > Rei: **_ E komāsu u~ebu saito de no shōhin no chūmon to shiharai no furō o tesuto shimasu._**
+
+### システムテスト
+
+システム テストは、完全に統合された製品テストです。 これは、テスト環境が運用環境と同様のエンドツーエンドのテストです。 ここでは、ソフトウェアのすべての機能をナビゲートし、エンドビジネス/エンド機能が機能するかどうかをテストします。 私たちは最終機能をテストするだけで、データ フローのチェックや機能テストなどは行いません。
+>例: **_ログインから発注、注文までのエンドツーエンドのフローをテストし、[注文] ページで注文を再確認して、e コマース Web サイトからログオフします。_**
+### Shisutemu tesuto shisutemu tesuto wa, kanzen ni tōgō sa reta seihin tesutodesu. Kore wa, tesuto kankyō ga un'yō kankyō to dōyō no endotsūendo no tesutodesu. Kokode wa, sofutō~ea no subete no kinō o nabigēto shi, endo bijinesu/ endo kinō ga kinō suru ka dō ka o tesuto shimasu. Watashitachiha saishū kinō o tesuto suru dake de, dēta furō no chekku ya kinō tesuto nado wa okonaimasen. > Rei: **_ Roguin kara hatchū, chūmon made no endotsūendo no furō o tesuto shi,[chūmon] pēji de chūmon o sai kakunin shite, e komāsu u~ebu saito kara roguofu shimasu._**
+
 ### パフォーマンステスト
 その名前が示すように、パフォーマンステストは、アプリケーションのパフォーマンスを測定するために行われます。
 
