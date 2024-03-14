@@ -88,10 +88,10 @@ def test_profile_location(temp_dir):
     driver.quit()
 
 
-def test_install_addon(firefox_driver, addon_path):
+def test_install_addon(firefox_driver, addon_path_xpi):
     driver = firefox_driver
 
-    driver.install_addon(addon_path)
+    driver.install_addon(addon_path_xpi)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
@@ -99,20 +99,31 @@ def test_install_addon(firefox_driver, addon_path):
     assert injected.text == "Content injected by webextensions-selenium-example"
 
 
-def test_uninstall_addon(firefox_driver, addon_path):
+def test_uninstall_addon(firefox_driver, addon_path_xpi):
     driver = firefox_driver
 
-    id = driver.install_addon(addon_path)
+    id = driver.install_addon(addon_path_xpi)
     driver.uninstall_addon(id)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     assert len(driver.find_elements(webdriver.common.by.By.ID, "webextensions-selenium-example")) == 0
 
 
-def test_install_unsigned_addon_directory(firefox_driver, addon_path):
+def test_install_unsigned_addon_directory(firefox_driver, addon_path_dir):
     driver = firefox_driver
 
-    driver.install_addon(addon_path, temporary=True)
+    driver.install_addon(addon_path_dir, temporary=True)
+
+    driver.get("https://www.selenium.dev/selenium/web/blank.html")
+    injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
+
+    assert injected.text == "Content injected by webextensions-selenium-example"
+
+
+def test_install_unsigned_addon_directory_slash(firefox_driver, addon_path_dir_slash):
+    driver = firefox_driver
+
+    driver.install_addon(addon_path_dir_slash, temporary=True)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
