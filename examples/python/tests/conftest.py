@@ -94,11 +94,31 @@ def log_path():
 
 
 @pytest.fixture(scope='function')
-def addon_path():
+def addon_path_xpi():
     if os.path.abspath("").endswith("tests"):
         path = os.path.abspath("extensions/webextensions-selenium-example.xpi")
     else:
         path = os.path.abspath("tests/extensions/webextensions-selenium-example.xpi")
+
+    yield path
+
+
+@pytest.fixture(scope='function')
+def addon_path_dir():
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath("extensions/webextensions-selenium-example")
+    else:
+        path = os.path.abspath("tests/extensions/webextensions-selenium-example")
+
+    yield path
+
+
+@pytest.fixture(scope='function')
+def addon_path_dir_slash():
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath("extensions/webextensions-selenium-example/")
+    else:
+        path = os.path.abspath("tests/extensions/webextensions-selenium-example/")
 
     yield path
 
