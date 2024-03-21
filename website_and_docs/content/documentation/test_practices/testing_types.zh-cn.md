@@ -36,7 +36,24 @@ aliases: [
 对于Web应用程序, 
 可以通过模拟预期的结果, 直接使用Selenium来完成此测试的自动化. 
 可以通过记录/回放或通过本文档中说明的各种支持的语言来完成此模拟.
+### 集成测试
 
+集成测试验证系统的不同组件或模块之间的交互。 几个模块一起测试。 集成测试的目的是确保所有模块按预期集成并协同工作。 自动化集成测试有助于确保这些交互按预期工作并且集成组件能够正常运行。
+>例如，**_测试在电子商务网站上下订单并付款的流程。_**
+### Jíchéng cèshì
+
+jíchéng cèshì yànzhèng xìtǒng de bùtóng zǔjiàn huò mókuài zhī jiān de jiāohù. Jǐ gè mókuài yīqǐ cèshì. Jíchéng cèshì de mùdì shì quèbǎo suǒyǒu mókuài àn yùqí jíchéng bìng xiétóng gōngzuò. Zìdònghuà jíchéng cèshì yǒu zhù yú quèbǎo zhèxiē jiāohù àn yùqí gōngzuò bìngqiě jíchéng zǔjiàn nénggòu zhèngcháng yùnxíng.
+>Lìrú,**_cèshì zài diànzǐ shāngwù wǎngzhàn shàngxià dìngdān bìng fùkuǎn de liúchéng._**
+>
+### 系统测试
+
+系统测试是一个完整的完全集成的产品测试。 这是一种端到端测试，测试环境与生产环境类似。 在这里，我们浏览软件的所有功能并测试最终业务/最终功能是否有效。 我们只测试最终功能，不检查数据流或进行功能测试等。
+>例如，**_测试从登录到下单和订购的端到端流程，并在“我的订单”页面中重新检查订单并从电子商务网站注销。_**
+### Xìtǒng cèshì
+
+xìtǒng cèshì shì yīgè wánzhěng de wánquán jíchéng de chǎnpǐn cèshì. Zhè shì yī zhǒng duān dào duān cèshì, cèshì huánjìng yǔ shēngchǎn huánjìng lèisì. Zài zhèlǐ, wǒmen liúlǎn ruǎnjiàn de suǒyǒu gōngnéng bìng cèshì zuìzhōng yèwù/zuìzhōng gōngnéng shìfǒu yǒuxiào. Wǒmen zhǐ cèshì zuìzhōng gōngnéng, bù jiǎnchá shùjù liú huò jìnxíng gōngnéng cèshì děng.
+>Lìrú,**_cèshì cóng dēnglù dào xià dān hé dìnggòu de duān dào duān liúchéng, bìng zài “wǒ de dìngdān” yèmiàn zhōng chóngxīn jiǎnchá dìngdān bìng cóng diànzǐ shāngwù wǎngzhàn zhùxiāo._**
+>
 ### 性能测试
 顾名思义, 进行性能测试是为了衡量应用程序的性能.
 
