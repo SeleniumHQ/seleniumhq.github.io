@@ -380,7 +380,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L22-L25">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L25">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
