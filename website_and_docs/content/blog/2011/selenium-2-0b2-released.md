@@ -16,10 +16,10 @@ Between beta 1 and beta 2, we held a week-long Bug Bash, during which we closed 
 *   A more stable, capable iPhone driver.
 *   Updated [Android driver](http://code.google.com/p/selenium/downloads/detail?name=selenium-server-2.0b2.zip&can=2&q=).
 *   Improved python bindings for Selenium WebDriver. The namespace is now “selenium.webdriver”
-*   Added “[Selenium.getCssCount](http://selenium.googlecode.com/svn/trunk/docs/api/java/com/thoughtworks/selenium/Selenium.html#getCssCount(java.lang.String))” to mirror “Selenium.getXpathCount”
-*   “[WebElement.getText()](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getText())” performs more consistently across different browsers.
+*   Added Selenium.getCssCount (`http://selenium.googlecode.com/svn/trunk/docs/api/java/com/thoughtworks/selenium/Selenium.html#getCssCount(java.lang.String)`) to mirror “Selenium.getXpathCount”
+*   WebElement.getText() (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getText()`) performs more consistently across different browsers.
 *   Mono users can use the .Net bindings
-*   Continued to improve the [WebDriverBackedSelenium](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html). If you’re looking to migrate from Selenium 1 to Selenium 2, and want to take your time, this is a useful stepping stone.
+*   Continued to improve the WebDriverBackedSelenium (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html`). If you’re looking to migrate from Selenium 1 to Selenium 2, and want to take your time, this is a useful stepping stone.
 *   Reworked the Advanced User Interactions APIs. The big change is that the WebDriver APIs no longer rely on classes from the AWT.
 *   .Net users now have more support classes, to make writing tests less tiresome.
 *   The remote webdriver makes better use of sockets, which improves stability and scalability on Windows.

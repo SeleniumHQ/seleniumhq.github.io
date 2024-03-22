@@ -11,7 +11,7 @@ description: >
 
 
 Hot off the heals of [1.0.2](/blog/2010/selenium-1.0.2-released-firefox-3.6-and-snow-leopard-support/), 
-we’re releasing Selenium Remote Control 1.0.3. You can [download it now](http://selenium.googlecode.com/files/selenium-remote-control-1.0.3.zip).
+we’re releasing Selenium Remote Control 1.0.3. You can download it now (`http://selenium.googlecode.com/files/selenium-remote-control-1.0.3.zip`).
 
 There is no functional difference between this version and 1.0.2, other than it is packaged up a little nicer and we’ve clarified the relationship between selenium-server and the client drivers. That is: we are **not** releasing new client drivers with future 1.x releases. The reason is that we locked down the API in version 1.0.1 and so there is no need to push out the same code each time. As such, when you download 1.0.3, you’ll see all the client drivers are labeled version 1.0.1, which is expected.
 
