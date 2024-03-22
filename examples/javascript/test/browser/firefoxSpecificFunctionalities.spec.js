@@ -30,5 +30,19 @@ describe('Should be able to Test Command line arguments', function () {
     assert.equal(ele.length, 0);
     await driver.quit();
   });
+  
+  it('Should be able to install unsigned addon', async function () {
+    
+    const xpiPath = path.resolve('./test/resources/extensions/selenium-example')
+    let driver = await env.builder().build();
+    let id = await driver.installAddon(xpiPath, true);
+    await driver.uninstallAddon(id);
+    
+    
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+    const ele = await driver.findElements(By.id("webextensions-selenium-example"));
+    assert.equal(ele.length, 0);
+    await driver.quit();
+  });
 });
 }, { browsers: [Browser.FIREFOX]});

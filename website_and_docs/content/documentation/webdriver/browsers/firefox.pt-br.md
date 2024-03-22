@@ -63,7 +63,7 @@ Adicione uma opção:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L12-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L12-L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -352,7 +352,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L95" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L24">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L22-L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -378,7 +378,7 @@ Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor 
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L25">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L22-L25">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
