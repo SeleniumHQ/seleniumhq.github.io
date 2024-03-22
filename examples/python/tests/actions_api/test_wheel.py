@@ -1,6 +1,6 @@
 from time import sleep
 
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 
@@ -9,8 +9,8 @@ def test_can_scroll_to_element(driver):
     driver.get("https://selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html")
 
     iframe = driver.find_element(By.TAG_NAME, "iframe")
-    ActionChains(driver)\
-        .scroll_to_element(iframe)\
+    ActionChains(driver) \
+        .scroll_to_element(iframe) \
         .perform()
 
     assert _in_viewport(driver, iframe)
@@ -21,8 +21,8 @@ def test_can_scroll_from_viewport_by_amount(driver):
 
     footer = driver.find_element(By.TAG_NAME, "footer")
     delta_y = footer.rect['y']
-    ActionChains(driver)\
-        .scroll_by_amount(0, delta_y)\
+    ActionChains(driver) \
+        .scroll_by_amount(0, delta_y) \
         .perform()
 
     sleep(0.5)
@@ -34,8 +34,8 @@ def test_can_scroll_from_element_by_amount(driver):
 
     iframe = driver.find_element(By.TAG_NAME, "iframe")
     scroll_origin = ScrollOrigin.from_element(iframe)
-    ActionChains(driver)\
-        .scroll_from_origin(scroll_origin, 0, 200)\
+    ActionChains(driver) \
+        .scroll_from_origin(scroll_origin, 0, 200) \
         .perform()
 
     sleep(0.5)
@@ -49,8 +49,8 @@ def test_can_scroll_from_element_with_offset_by_amount(driver):
 
     footer = driver.find_element(By.TAG_NAME, "footer")
     scroll_origin = ScrollOrigin.from_element(footer, 0, -50)
-    ActionChains(driver)\
-        .scroll_from_origin(scroll_origin, 0, 200)\
+    ActionChains(driver) \
+        .scroll_from_origin(scroll_origin, 0, 200) \
         .perform()
 
     sleep(0.5)
@@ -65,8 +65,8 @@ def test_can_scroll_from_viewport_with_offset_by_amount(driver):
 
     scroll_origin = ScrollOrigin.from_viewport(10, 10)
 
-    ActionChains(driver)\
-        .scroll_from_origin(scroll_origin, 0, 200)\
+    ActionChains(driver) \
+        .scroll_from_origin(scroll_origin, 0, 200) \
         .perform()
 
     sleep(0.5)
@@ -84,3 +84,13 @@ def _in_viewport(driver, element):
         "window.pageYOffset&&t+o>window.pageXOffset"
     )
     return driver.execute_script(script, element)
+
+
+def test_scroll_down_with_arrow_keys(firefox_driver):
+    firefox_driver.get("https://www.selenium.dev/")
+    body = firefox_driver.find_element(By.TAG_NAME, "body")
+    prev_height = body.size['height']
+    body.send_keys(Keys.ARROW_DOWN)
+    new_height = body.size['height']
+    assert new_height == prev_height
+    firefox_driver.close()
