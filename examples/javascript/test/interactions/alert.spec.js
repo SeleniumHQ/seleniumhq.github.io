@@ -18,10 +18,9 @@ suite(function (env) {
             await driver.wait(until.alertIsPresent());
             let alert = await driver.switchTo().alert();
             let alertText = await alert.getText();
+            await alert.accept();
             // Verify
             assert.equal(alertText, "cheese");
-            //Press the OK button
-            await alert.accept();
         });
 
         it('Should be able to getText from alert and dismiss', async function () {
