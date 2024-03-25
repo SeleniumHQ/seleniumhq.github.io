@@ -73,7 +73,7 @@ alert_text = alert.text
 # Press on OK button
 alert.accept
   {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}

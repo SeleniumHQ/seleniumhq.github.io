@@ -89,7 +89,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
