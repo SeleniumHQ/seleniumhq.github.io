@@ -29,10 +29,9 @@ suite(function (env) {
             await driver.wait(until.alertIsPresent());
             let alert = await driver.switchTo().alert();
             let alertText = await alert.getText();
+            await alert.dismiss();
             // Verify
             assert.equal(alertText, "Are you sure?");
-            //dismiss alert
-            await alert.dismiss();
         });
 
         it('Should be able to enter text in alert prompt', async function () {
