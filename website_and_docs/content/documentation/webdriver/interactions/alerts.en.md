@@ -78,23 +78,8 @@ alert_text = alert.text
 # Press on OK button
 alert.accept
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-//Click the link to activate the alert
-await driver.findElement(By.linkText('See an example alert')).click();
-
-// Wait for the alert to be displayed
-await driver.wait(until.alertIsPresent());
-
-// Store the alert in a variable
-let alert = await driver.switchTo().alert();
-
-//Store the alert text in a variable
-let alertText = await alert.getText();
-
-//Press the OK button
-await alert.accept();
-
-// Note: To use await, the above code should be inside an async function
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -182,23 +167,8 @@ alert_text = alert.text
 # Press on Cancel button
 alert.dismiss
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-//Click the link to activate the alert
-await driver.findElement(By.linkText('See a sample confirm')).click();
-
-// Wait for the alert to be displayed
-await driver.wait(until.alertIsPresent());
-
-// Store the alert in a variable
-let alert = await driver.switchTo().alert();
-
-//Store the alert text in a variable
-let alertText = await alert.getText();
-
-//Press the Cancel button
-await alert.dismiss();
-
-// Note: To use await, the above code should be inside an async function
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -285,24 +255,9 @@ alert.send_keys("selenium")
 # Press on Ok button
 alert.accept
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-//Click the link to activate the alert
-await driver.findElement(By.linkText('See a sample prompt')).click();
-
-// Wait for the alert to be displayed
-await driver.wait(until.alertIsPresent());
-
-// Store the alert in a variable
-let alert = await driver.switchTo().alert();
-
-//Type your message
-await alert.sendKeys("Selenium");
-
-//Press the OK button
-await alert.accept();
-
-//Note: To use await, the above code should be inside an async function
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
 driver.findElement(By.linkText("See a sample prompt")).click()

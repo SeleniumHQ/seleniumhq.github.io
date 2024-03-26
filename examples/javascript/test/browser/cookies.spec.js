@@ -9,7 +9,7 @@ suite(function(env) {
             driver = await env.builder().build();
         });
 
-        after(() => driver.quit());
+        after(async () => await driver.quit());
 
         it('Create a cookie', async function() {
             await driver.get('https://www.selenium.dev/selenium/web/blank.html');
