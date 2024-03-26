@@ -18,6 +18,3 @@ message = driver.find_element(id: 'message')
 message.text
 
 driver.quit
-
-# To run this script, execute the following command:
-# ruby first_script.rb
