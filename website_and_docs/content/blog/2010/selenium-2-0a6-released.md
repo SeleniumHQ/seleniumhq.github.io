@@ -16,12 +16,12 @@ You’ll be pleased to hear that the Selenium 1.0 APIs have remained constant, s
 *   Android support: you can now [download the APK](http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk) and run webdriver tests using Android 1.6 to 2.2.
 *   Firefox 4 support.
 *   Experimental IE9 support
-*   New APIs for dealing with [HTML5 elements](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html) (best implemented, for now, by the mobile webdrivers)
+*   New APIs for dealing with HTML5 elements (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html`) (best implemented, for now, by the mobile webdrivers)
 *   A richer .Net API
 *   A move to [Sizzle](http://sizzlejs.com/) for locating elements using CSS in browsers that don’t have a native API for that.
 *   Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.
 
-There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of [FirefoxProfiles](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html), better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.
+There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of FirefoxProfiles (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html`), better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.
 
 Thank you to everyone who has taken the time to report a bug on our [issue tracker](http://code.google.com/p/selenium/issues/list), or raised problems on one of our [mailing](https://groups.google.com/group/webdriver) [lists](http://www.google.com/url?q=http://groups.google.com/group/selenium-users), or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn’t be half as much fun, and wouldn’t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)
 

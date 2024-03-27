@@ -12,7 +12,7 @@ description: >
 Eventually I’ll get back on the once-a-week schedule. But not today!
 
 *   [Falsehoods Programmers believe about Time](http://news.ycombinator.com/item?id=4128208). Time is hard; let’s go shopping!
-*   Speaking of hard. [Concurrency is not Parallelism (it’s better)](http://concur.rspace.googlecode.com/hg/talk/concur.html) — also has gophers
+*   Speaking of hard. Concurrency is not Parallelism (it’s better) (`http://concur.rspace.googlecode.com/hg/talk/concur.html`) — also has gophers
 *   Did Netflix actually [Open Source Army of Cloud Monkeys](http://www.wired.com/wiredenterprise/2012/04/netflix_monkeys/all/1)? I don’t see anything on their [github](https://github.com/netflix) account (and that is the trendy place to release stuff these days)
 *   ![](https://i0.wp.com/cdn.memegenerator.net/instances/400x/18503305.jpg)Need I say more?
 *   I’ve used this trick a couple times [Python introspection – how to check current module / line of call from within function](http://stackoverflow.com/questions/5326539/python-introspection-how-to-check-current-module-line-of-call-from-within-fu)

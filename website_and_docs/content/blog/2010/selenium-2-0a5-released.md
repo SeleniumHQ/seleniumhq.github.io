@@ -11,8 +11,8 @@ description: >
 
 I’m pleased to announce the release of Selenium 2.0a5, available for [immediate download](http://code.google.com/p/selenium/downloads/list). This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:
 
-*   New [interfaces](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-frame.html) for dealing with HTML 5 elements.
-*   An API for “[implicit waits](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.Timeouts.html)“: quietly waiting until an element is present before continuing with a test. You can use them like this: `driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS)`
+*   New interfaces (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-frame.html`) for dealing with HTML 5 elements.
+*   An API for implicit waits (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.Timeouts.html`): quietly waiting until an element is present before continuing with a test. You can use them like this: `driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS)`
 *   A revamped Firefox driver.
 *   More shared code between Selenium and WebDriver.
 *   You can now pass firefox profiles to the remote webdriver (this includes extensions and proxy settings!)

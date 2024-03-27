@@ -14,6 +14,6 @@ of our efforts are on Selenium 2.0, we understand that there are millions of Sel
 still need the 1.x line supported. That’s why we’ve said from the start that our goal is make 2.x 
 100% backwards compatible with 1.x. And that’s why we’re releasing a new version of Selenium RC today.
 
-[Download it here](http://selenium.googlecode.com/files/selenium-remote-control-1.0.2.zip).
+Download it here (`http://selenium.googlecode.com/files/selenium-remote-control-1.0.2.zip`).
 
 In addition to many bug fixes, the biggest improvements in this version are support for both **Firefox 3.6 and OS X Snow Leopard**.
