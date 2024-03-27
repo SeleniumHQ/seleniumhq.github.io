@@ -1,3 +1,15 @@
+developers:
+  enable: true
+  item:
+      # Sponsorship start date: July 30, 2014, renewed January 2020
+    - logo: "/images/sponsors/browserstack.png"
+      url: "http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral"
+      name: "BrowserStack"
+    # Sponsorship start date: August 23, 2014
+    - logo: "/images/sponsors/saucelabs.png"
+      url: "http://saucelabs.com"
+      name: "Sauce Labs"
+
 selenium:
   # Set to false if no items are present
   enable: true
