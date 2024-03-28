@@ -1,4 +1,59 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.18 Released!</title><link>/blog/2024/selenium-4-18-released/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-18-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Update imports to use BiDi Java</title><link>/blog/2024/bidi-java-breaking-change/</link><pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate><guid>/blog/2024/bidi-java-breaking-change/</guid><description>
+&lt;h2 id="what-part-of-the-code-base-is-impacted">What part of the code base is impacted?&lt;/h2>
+&lt;p>Selenium WebDriver BiDi APIs in Java bindings are impacted.&lt;/p>
+&lt;h2 id="what-is-impacted-by-the-breaking-change">What is impacted by the breaking change?&lt;/h2>
+&lt;p>The WebDriver BiDi APIs stay as they are, so you can continue to use them. However, the import statements need to be updated.&lt;/p>
+&lt;h2 id="what-is-the-breaking-change">What is the breaking change?&lt;/h2>
+&lt;p>The import statements need to be updated when using the BiDi APIs.&lt;/p>
+&lt;h3 id="before-selenium-419">Before Selenium 4.19:&lt;/h3>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+&lt;li class="nav-item">
+&lt;button class="nav-link active"
+id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
+Java
+&lt;/button>
+&lt;/li>
+&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">
+&lt;div class="tab-pane fade show active"
+id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.LogInspector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.BrowsingContextInspector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.Input&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.Script&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.Network&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="after-selenium-419-and-above">After Selenium 4.19 and above:&lt;/h3>
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
+&lt;li class="nav-item">
+&lt;button class="nav-link active"
+id="tabs-01-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-00" role="tab"
+data-td-tp-persist="java" aria-controls="tabs-01-00" aria-selected="true">
+Java
+&lt;/button>
+&lt;/li>
+&lt;/ul>
+&lt;div class="tab-content" id="tabs-1-content">
+&lt;div class="tab-pane fade show active"
+id="tabs-01-00" role="tabpanel" aria-labelled-by="tabs-01-00-tab" tabindex="1">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.module.LogInspector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.module.BrowsingContextInspector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.module.Input&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.module.Script&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">org.openqa.selenium.bidi.module.Network&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="why-the-breaking-change">Why the breaking change?&lt;/h2>
+&lt;p>Selenium is actively working to implement the &lt;a href="https://w3c.github.io/webdriver-bidi">W3C BiDi&lt;/a>. The long-term goal of W3C BiDi is to port all W3C WebDriver Classic APIs to use the WebDriver BiDi APIs under the hood.
+When &lt;a href="https://w3c.github.io/webdriver-bidi/#command-browsingContext-locateNodes">browsingContext.locateNodes&lt;/a> command, which is the BiDi counterpart of &lt;a href="https://www.w3.org/TR/webdriver2/#find-elements">findElements&lt;/a> command, was introduced, the major goal was to ensure that the &amp;rsquo;locateNodes&amp;rsquo; command returns a &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/java/src/org/openqa/selenium/WebElement.java">WebElement&lt;/a>. This would be make the porting smoother in the future and allows users to continue calling APIs of the WebElement.&lt;/p>
+&lt;p>During the implementation, a circular dependency was encountered in the underlying build tool &lt;a href="https://bazel.build/about/intro">Bazel&lt;/a>.
+The solution to this was to follow the &lt;a href="https://bazel.build/configure/best-practices#packages">best practices of Bazel&lt;/a>.&lt;/p>
+&lt;p>So, the W3C BiDi related classes of a module were grouped into Bazel &lt;a href="https://bazel.build/concepts/build-ref#packages">package&lt;/a>. The classes that themselves call commands or events were all grouped under a package named &amp;lsquo;module&amp;rsquo;.
+Thus, following the recommended practice and avoiding Bazel&amp;rsquo;s circular dependency proved to be a win-win solution.&lt;/p>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>The W3C BiDi protocol is in under development, and parallelly browsers and clients are working to add the complementary APIs. While Selenium works on implementing it, the protocol is constantly changing, with new modules or APIs being added or existing ones being updated. While the team strives to avoid breaking changes and deprecate APIs for at least 2 versions before removal, it can be challenging to adhere to this for some changes, such as the one described in this blog post.&lt;/p></description></item><item><title>Blog: Selenium 4.18 Released!</title><link>/blog/2024/selenium-4-18-released/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-18-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.18.0 and 4.18.1 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
@@ -8315,118 +8370,4 @@ Website
 &lt;p>&lt;em>&lt;em>&lt;strong>9:33&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
 &lt;p>Right now I&amp;rsquo;m busy updating all of my Java test examples from JUnit 4 to JUnit 5 thanks to @Puja Jagani&lt;/p>
 &lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:36 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>ok, so it seems we are done with today’s public meeting, thank you everyone!&lt;/p></description></item><item><title>Blog: Public Project Meeting - June 17, 2021</title><link>/blog/2021/public-project-meeting-20210617/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>/blog/2021/public-project-meeting-20210617/</guid><description>
-&lt;div class="row justify-content-center my-1">
-&lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
-&lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
-&lt;div class="w-100 text-center">
-All meeting minutes can now be found &lt;a href="/meetings">here&lt;/a>.
-&lt;/div>
-&lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-&lt;span aria-hidden="true">&amp;times;&lt;/span>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on June 17, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
-&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 8:52 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Here is the proposed agenda:&lt;/p>
-&lt;h2 id="general-project-statistics">General project statistics&lt;/h2>
-&lt;ul>
-&lt;li>Previous meeting: 167 open issues, 28 open pull requests&lt;/li>
-&lt;li>Currently: 170 open issues, 23 open pull requests&lt;/li>
-&lt;/ul>
-&lt;h2 id="pending-work-for-the-rc-1">Pending work for the RC 1?&lt;/h2>
-&lt;ul>
-&lt;li>Server - Grid&lt;/li>
-&lt;li>Hub reports Nodes going down &lt;a href="https://github.com/SeleniumHQ/docker-selenium/issues/1257">https://github.com/SeleniumHQ/docker-selenium/issues/1257&lt;/a>&lt;/li>
-&lt;li>TimeoutException &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">https://github.com/SeleniumHQ/selenium/issues/9528&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="language-bindings">Language bindings&lt;/h2>
-&lt;ul>
-&lt;li>“se:cdpVersion” is missing in C# and JS&lt;/li>
-&lt;li>Can all bindings do CDP over Grid?&lt;/li>
-&lt;li>What are the features present in Selenium 4?&lt;/li>
-&lt;li>Do all bindings implement them?&lt;/li>
-&lt;/ul>
-&lt;h2 id="release-process">Release process&lt;/h2>
-&lt;p>After beta 4, we should document how each binding and the Grid are released&lt;/p>
-&lt;h2 id="selenium-ide">Selenium IDE&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>Who knows what the release process is? What is needed?&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Who can help reviewing pull requests?&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://github.com/SeleniumHQ/docker-selenium%7CSeleniumHQ/docker-selenium">#1257 Hub reporting no available nodes after a few hours&lt;/a> SeleniumHQ/docker-selenium | Apr 8th | Added by GitHub&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium%7CSeleniumHQ/selenium">#9528 java.util.concurrent.TimeoutException thrown at random netty read timeouts with RemoteWebDriver&lt;/a> SeleniumHQ/selenium | May 28th | Added by GitHub&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>&lt;em>&lt;strong>8:56 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>btw, there is no hurry to start, we can also start when most folks are available, I believe this won’t be a long one&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:01 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Just a comment from the increased number of issues…
-I believe users are starting to give more feedback, so that’s good&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:05 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I believe we can slowly jump into the first topic:
-Pending work for the RC 1?&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:06 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Regarding the Grid, I would say it is feature complete&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:07 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>but we have a couple of bugs we are checking with @Puja Jagani&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:08 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I think we can sort them out during the next week
-(fingers crossed :slightly_smiling_face:)&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:13 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>talking about the language bindings, I think the most relevant thing for RC1 is to check feature parity&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:14 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>@AutomatedTester did the shadow Dom work you did end up in geckodriver /Firefox yet?&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:15 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I know some bindings implemented the endpoints already&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>David Burns 9:15 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>No, it’s nearly done&lt;/p>
-&lt;p>Maybe I should hand it to the Mozilla folks and maybe they could finish it off&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:15 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I kind of wanted to wait until I could make sure tests
-passed and stuff because I never trust myself :)&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>David Burns 9:16 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>There is an issue with something between marionette and geckodriver but those are super hard to diagnose&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:17 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>There were some accessibility endpoints? I&amp;rsquo;m not sure we&amp;rsquo;ve all added.
-And I think ruby deprecated methods that other languages implemented with JS&lt;/p>
-&lt;p>I&amp;rsquo;ve been meaning to do a deeper dive into the various tests, but haven&amp;rsquo;t gotten there yet.
-Ruby broke CDP in last beta release, we need to figure out&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:21 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>We probably need to do a beta 4.1 just for ruby with that fix&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:22 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Since the VNC stuff has been implemented, I have a bit of time next week to start working in an issue to document feature parity&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:23 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I&amp;rsquo;ll dedicate some time this month to helping with it&lt;/p>
-&lt;p>Probably the last topic is
-Release process&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>9:24 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Last week Simon recorded the Java release and shared the video so I can document it&lt;/p>
-&lt;p>It’d be great if the other folks who also do releases do the same,
-so we can document and potentially automate releases&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:30 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I believe that was everything we had in the agenda&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:36 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Documentation. We got an offer from a company to help us with documentation so they can integrate it with their product which is an executable browser IDE thing&lt;/p>
-&lt;p>Or something. I&amp;rsquo;m not entirely certain, but sounds potentially interesting.&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:37 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>tell us more, @titusfortner :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:37 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>I at least want to get a demo and see what they mean.&lt;/p>
-&lt;p>I don&amp;rsquo;t know more, yet. :)&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:37 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>ah ok, they reached out to you privately :slightly_smiling_face:&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Titus Fortner 9:38 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>Yeah, I&amp;rsquo;ll loop you in when we set up a demo. Might not work for what we need&lt;/p>
-&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:39 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
-&lt;p>sounds good&lt;/p></description></item></channel></rss>
+&lt;p>ok, so it seems we are done with today’s public meeting, thank you everyone!&lt;/p></description></item></channel></rss>
