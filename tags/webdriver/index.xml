@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – webdriver</title><link>/tags/webdriver/</link><description>Recent content in webdriver on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/webdriver/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener</title><link>/blog/2023/java-removal-of-deprecated-events-classes/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-removal-of-deprecated-events-classes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – webdriver</title><link>https://www.selenium.dev/tags/webdriver/</link><description>Recent content in webdriver on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/webdriver/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener</title><link>https://www.selenium.dev/blog/2023/java-removal-of-deprecated-events-classes/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/java-removal-of-deprecated-events-classes/</guid><description>
 &lt;h3 id="upgrading-to-webdriverlistener-and-eventfiringdecorator">Upgrading to WebDriverListener and EventFiringDecorator&lt;/h3>
 &lt;p>Decorating the webdriver&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringWebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// Old approach
@@ -127,7 +127,7 @@ One can override instances of WebDriver and derived objects( WebElement, Alert, 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>So that&amp;rsquo;s some general examples on how to transition your code!
-Happy testing!&lt;/p></description></item><item><title>Blog: InvalidSelectorException has changed</title><link>/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>/blog/2023/invalid-selector-exception-has-changed/</guid><description>
+Happy testing!&lt;/p></description></item><item><title>Blog: InvalidSelectorException has changed</title><link>https://www.selenium.dev/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/invalid-selector-exception-has-changed/</guid><description>
 &lt;p>Before Selenium 4.8.2 in Java and C#, when an invalid locator was used to identify an element, the resulting behavior would be
 inconsistent in our bindings.&lt;/p>
 &lt;p>For example, let&amp;rsquo;s check the following code:&lt;/p>
@@ -153,7 +153,7 @@ and implemented through the pull request &lt;a href="https://github.com/Selenium
 &lt;p>Please note that this may have an impact on backwards compatibility if you are not expecting this exception to be thrown while
 handling invalid locators.&lt;/p>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</guid><description>
 &lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of the core Selenium maintainers.
 One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
@@ -169,20 +169,20 @@ One huge advantage of BELLATRIX is its cross-technology readiness. It allows you
 &lt;p>&lt;a href="https://docs.java.bellatrix.solutions/overview/">&lt;strong>BELLATRIX Java Documentation&lt;/strong>&lt;/a>&lt;/p>
 &lt;p>Let&amp;rsquo;s investigate how easy it is to create your first test with BELLATRIX in 15 minutes. The sample will showcase how to create a very basic test login into a website:
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;ol>
 &lt;li>Open the &lt;strong>BellatrixTestFramework.sln&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
 &lt;/figure>
 &lt;ol start="2">
 &lt;li>Under the &lt;strong>starthere&lt;/strong> folder, find the project you prefer: web, mobile, desktop, API&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
 &lt;/figure>
 &lt;ol start="3">
 &lt;li>Open the &lt;strong>BellatrixLoginTest.cs&lt;/strong> file. There you will find a sample test automating the login.&lt;/li>
@@ -232,7 +232,7 @@ The sample code uses MSTest as the default test framework, but by changing the a
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="complex-controls">Complex Controls&lt;/h3>
 &lt;p>BELLATRIX provides API that makes handling HTML tables and grids much easier &lt;strong>&lt;a href="https://docs.bellatrix.solutions/web-automation/complex-components/">HTML tables and grids&lt;/a>&lt;/strong>.
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
 &lt;/figure>
 Here is an example for asserting grid cells:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ForEachCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">cell&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">cell&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AssertFontSize&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;14px&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">));&lt;/span>
@@ -253,7 +253,7 @@ You are not limited to PDFs only. You can use the same feature for extracting te
 &lt;strong>&lt;a href="https://docs.bellatrix.solutions/product-integrations/">All BELLATRIX Integrations&lt;/a>&lt;/strong>&lt;/p>
 &lt;p>Using BELLATRIX in your projects might save months/years of effort even if you have the required programming knowledge. This way, you can quickly focus on writing automated tests for your project.
 Usually, there are 4-6 major releases each year, including all bug fixes and new features. Check our &lt;strong>&lt;a href="https://bellatrix.solutions/roadmap/release-3-6-0-0-chamaeleon/">release notes history&lt;/a>&lt;/strong>. The framework is fully covered with over 4000 automated tests and offers rich documentation. We make sure to merge the new feature branches only when we are sure that everything is working. If some issue emerges after a major release, it is quickly fixed within a few days.&lt;/p>
-&lt;p>For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our &lt;strong>&lt;a href="https://bellatrix.solutions/contact-us/">contact us form&lt;/a>&lt;/strong>.&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
+&lt;p>For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our &lt;strong>&lt;a href="https://bellatrix.solutions/contact-us/">contact us form&lt;/a>&lt;/strong>.&lt;/p></description></item><item><title>Blog: Dev and Beta Channel Browsers via Docker Selenium</title><link>https://www.selenium.dev/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</link><pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/dev-and-beta-channel-browsers-via-docker-selenium/</guid><description>
 &lt;p>The Docker Selenium browser Beta and Dev channel releases are now regularly published to &lt;a href="https://hub.docker.com/u/selenium">Docker Hub&lt;/a> and updated every two days. This enables testers and developers to test their applications on pre-release versions of Google Chrome, Mozilla Firefox, and Microsoft Edge before their official releases, using container tools, such as Docker. This empowers teams to stay ahead of the curve and catch potential showstoppers in their CI environment &lt;em>before&lt;/em> those issues have an impact on their users.&lt;/p>
 &lt;h3 id="what-are-release-channels">What are &amp;ldquo;release channels&amp;rdquo;?&lt;/h3>
 &lt;p>Here&amp;rsquo;s some background on release channels: Google, Mozilla, and Microsoft all maintain different &amp;ldquo;channels&amp;rdquo; for their respective browser releases. Most end users use the &amp;ldquo;Stable&amp;rdquo; channel. The Stable channel releases have passed rigorous testing, and these versions are considered &amp;ldquo;production-ready&amp;rdquo;. Up until now, this was the only option for a tester or developer when using Docker Selenium. Today, we&amp;rsquo;re pleased to announce teams can also test on versions of these browsers yet to be released to the general population. These are the Beta and Dev channels.&lt;/p>
@@ -328,7 +328,7 @@ Usually, there are 4-6 major releases each year, including all bug fixes and new
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#4e9a06">&amp;#34;4444:4444&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To run on the more cutting edge &amp;ndash; and hence potentially more buggy &amp;ndash; Dev channel, simply replace the &amp;ldquo;beta&amp;rdquo; tags with &amp;ldquo;dev&amp;rdquo;.&lt;/p>
 &lt;h3 id="support">Support&lt;/h3>
-&lt;p>These Beta and Dev images represent pre-release browsers and WebDrivers, and they&amp;rsquo;re not guaranteed to be 100% stable. Should you run into any issues with these images, support from the Selenium community is limited and is dependent on the browser vendors. However, if you believe the issue is related to Selenium, please contact us in the &lt;a href="/support/">various support channels&lt;/a>.&lt;/p></description></item><item><title>Blog: Removing Legacy Protocol Support</title><link>/blog/2022/legacy-protocol-support/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>/blog/2022/legacy-protocol-support/</guid><description>
+&lt;p>These Beta and Dev images represent pre-release browsers and WebDrivers, and they&amp;rsquo;re not guaranteed to be 100% stable. Should you run into any issues with these images, support from the Selenium community is limited and is dependent on the browser vendors. However, if you believe the issue is related to Selenium, please contact us in the &lt;a href="https://www.selenium.dev/support/">various support channels&lt;/a>.&lt;/p></description></item><item><title>Blog: Removing Legacy Protocol Support</title><link>https://www.selenium.dev/blog/2022/legacy-protocol-support/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/legacy-protocol-support/</guid><description>
 &lt;p>The Selenium team prides itself on how seriously it takes backwards compatibility.
 A lot of care has gone into the Java bindings, especially, to ensure very few breaking changes over the years.
 There is Selenium code written 15 years ago that can still run with Selenium 4 libraries!
@@ -379,7 +379,7 @@ has already been marked deprecated, so double-check your usage to ensure there a
 exploring this problem, you can look at the discussion in
 &lt;a href="https://github.com/SeleniumHQ/selenium/issues/10374">Selenium Issue #10374&lt;/a>.&lt;/p>
 &lt;p>For more information on ensuring compatibility with the Grid, please follow our
-&lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/">Selenium 4 Upgrade Guide&lt;/a>&lt;/p></description></item><item><title>Blog: Locate your locators - Python bindings changes upcoming</title><link>/blog/2022/python-locators-se4/</link><pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate><guid>/blog/2022/python-locators-se4/</guid><description>
+&lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/">Selenium 4 Upgrade Guide&lt;/a>&lt;/p></description></item><item><title>Blog: Locate your locators - Python bindings changes upcoming</title><link>https://www.selenium.dev/blog/2022/python-locators-se4/</link><pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/python-locators-se4/</guid><description>
 &lt;p>In real estate, the mantra for finding a new house or office space is
 &amp;ldquo;location, location, location!&amp;rdquo;.
 It could be said that when working with Selenium, a critical aspect of
@@ -417,7 +417,7 @@ to recent versions of Selenium 4, definitely keep these changes in mind.
 It&amp;rsquo;s a good time to update your locator strategy and structure.&lt;/p>
 &lt;p>(This article was originally posted
 &lt;a href="https://simplythetest.tumblr.com/post/674917293614039040/locate-your-locators-python-bindings-changes">here&lt;/a>.
-Thanks to the Selenium core contributors for adding this here!)&lt;/p></description></item><item><title>Blog: IE Mode in Edge supported by IEDriver</title><link>/blog/2022/ie-edge-support/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>/blog/2022/ie-edge-support/</guid><description>
+Thanks to the Selenium core contributors for adding this here!)&lt;/p></description></item><item><title>Blog: IE Mode in Edge supported by IEDriver</title><link>https://www.selenium.dev/blog/2022/ie-edge-support/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/ie-edge-support/</guid><description>
 &lt;p>With the retirement of Internet Explorer 11 (IE 11) later this year, the folks in Redmond have helped the
 Selenium project with getting IE Mode in Microsoft Edge working in IEDriver.&lt;/p>
 &lt;p>IE 11 is due to retire on 15 June 2022 for certain versions of Windows 10. After this date, the Selenium project
@@ -425,10 +425,10 @@ recommends that you test your IE sites with IE Mode in Microsoft Edge. The Selen
 support for IE 11 when it retires but we will not actively fix issues as we have done with previous versions of IE.&lt;/p>
 &lt;p>The Microsoft Edge team have committed to supporting IE Mode in Edge until 2029 when support for Windows 10 is retired.&lt;/p>
 &lt;p>Microsoft have written up all the details on &lt;a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-testing-tools-to-help-prepare-for-ie-retirement/ba-p/3059947">how to use and how to migrate your site&lt;/a>
-and we recommend you go read and follow their steps to make sure you&amp;rsquo;re ready.&lt;/p></description></item><item><title>Blog: A Tour of 4: New Commands</title><link>/blog/2021/a-tour-of-4-new-commands/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-new-commands/</guid><description>
+and we recommend you go read and follow their steps to make sure you&amp;rsquo;re ready.&lt;/p></description></item><item><title>Blog: A Tour of 4: New Commands</title><link>https://www.selenium.dev/blog/2021/a-tour-of-4-new-commands/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/a-tour-of-4-new-commands/</guid><description>
 &lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
 some of the new features in-depth. Of course, all of the features
-we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
+we&amp;rsquo;re covering are in the main &lt;a href="https://www.selenium.dev/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
 you&amp;rsquo;re not one for reading blog posts, then feel free to dive in
 there!&lt;/p>
 &lt;p>You may well be familiar with how to start a Selenium server: you just
@@ -444,7 +444,7 @@ than writing &lt;code>java -jar ...&lt;/code> you can simply run &lt;code>seleni
 you&amp;rsquo;ll get a handy list of the available sub-commands you can
 execute. There are the old favourites, such as &lt;code>standalone&lt;/code> (for
 starting a standalone selenium server), and &lt;code>hub&lt;/code> and &lt;code>node&lt;/code> (for
-starting a Selenium &lt;a href="/documentation/grid/setting_up_your_own_grid/#hub-and-node">Hub and Node&lt;/a> setup), but there are
+starting a Selenium &lt;a href="https://www.selenium.dev/documentation/grid/setting_up_your_own_grid/#hub-and-node">Hub and Node&lt;/a> setup), but there are
 other interesting commands that are new to Selenium 4.&lt;/p>
 &lt;p>The first of these is &lt;code>info&lt;/code>. We&amp;rsquo;ve added this to provide easy to find
 and access documentation on common tasks when using the selenium
@@ -482,10 +482,10 @@ configured is the &lt;code>--dump-config&lt;/code> flag. When run with a server 
 such as &lt;code>standalone&lt;/code> or &lt;code>hub&lt;/code>, it will dump the configuration options
 used by the Grid as a JSON blob. This can be helpful for tracking down
 subtle issues with configurations, especially when using environment
-properties for configuration.&lt;/p></description></item><item><title>Blog: A Tour of 4: Authentication</title><link>/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/a-tour-of-4-authentication/</guid><description>
+properties for configuration.&lt;/p></description></item><item><title>Blog: A Tour of 4: Authentication</title><link>https://www.selenium.dev/blog/2021/a-tour-of-4-authentication/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/a-tour-of-4-authentication/</guid><description>
 &lt;p>Before we ship Selenium 4, I thought it would be nice to introduce
 some of the new features in-depth. Of course, all of the features
-we&amp;rsquo;re covering are in the main &lt;a href="/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
+we&amp;rsquo;re covering are in the main &lt;a href="https://www.selenium.dev/documentation/webdriver/">WebDriver documentation&lt;/a>, so if
 you&amp;rsquo;re not one for reading blog posts, then feel free to dive in
 there!&lt;/p>
 &lt;p>The first thing I&amp;rsquo;d like to introduce you to is Selenium 4&amp;rsquo;s new-found
@@ -542,7 +542,7 @@ you&amp;rsquo;ve given it.&lt;/p>
 &lt;p>This feature is currently implemented on top of Selenium 4&amp;rsquo;s &lt;a href="https://chromedevtools.github.io/devtools-protocol/">CDP&lt;/a>
 support, and so only works on those browser that support that
 protocol, but as we push forwards with development of &lt;a href="https://w3c.github.io/webdriver-bidi/">WebDriver
-Bidi&lt;/a> implementations will switch to that when they can.&lt;/p></description></item><item><title>Blog: Results of the first ever selenium survey</title><link>/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-survey-results/</guid><description>
+Bidi&lt;/a> implementations will switch to that when they can.&lt;/p></description></item><item><title>Blog: Results of the first ever selenium survey</title><link>https://www.selenium.dev/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-survey-results/</guid><description>
 &lt;p>Below is a summary of the Selenium survey that was collected.&lt;/p>
 &lt;h2 id="batteries-included">Batteries included&lt;/h2>
 &lt;h3 id="browser-management">Browser Management&lt;/h3>
@@ -620,12 +620,12 @@ Bidi&lt;/a> implementations will switch to that when they can.&lt;/p></descripti
 &lt;p>After reviewing the “What one thing would you improve about Selenium I was able to narrow most of the responses down to similar types.&lt;/p>
 &lt;p>Below is a breakdown of the issues that people would like to see improved.&lt;/p>
 &lt;figure>
-&lt;img src="/images/blog/2021/breakdown_of_answers.png"
+&lt;img src="https://www.selenium.dev/images/blog/2021/breakdown_of_answers.png"
 alt="Breakdown of answers of areas needing improvement. Main 3 areas are flakiness, documentation, Browser Management, Shadow DOM"/>
 &lt;/figure>
 &lt;h2 id="happiness">Happiness&lt;/h2>
 &lt;p>Of the 410 respondents, 219 had something nice to say about Selenium and were thankful for the product being around.&lt;/p>
-&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: Browser Testing and Tools WG Meeting @ TPAC 2020</title><link>/blog/2020/webdriver-tpac-meeting-2020/</link><pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate><guid>/blog/2020/webdriver-tpac-meeting-2020/</guid><description>
+&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: Browser Testing and Tools WG Meeting @ TPAC 2020</title><link>https://www.selenium.dev/blog/2020/webdriver-tpac-meeting-2020/</link><pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/webdriver-tpac-meeting-2020/</guid><description>
 &lt;p>It&amp;rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that
 are being worked on.&lt;/p>
 &lt;p>Within the Browser Testing and Tools Working Group, there are 2 different standards.&lt;/p>
@@ -637,8 +637,8 @@ are being worked on.&lt;/p>
 &lt;p>The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.&lt;/p>
 &lt;p>As the world has moved on we have felt the need to add new APIs and move Selenium to be more event-driven. This is where we are learning, and collaborating, with projects like Puppeteer to make sure that we can improve the Browser Automation space. This is where the &lt;a href="https://w3c.github.io/webdriver-bidi">WebDriver-Bidi&lt;/a> Specification comes in. It has broad support from the browser vendors so you can use official browsers and not be limited by the JavaScript sandbox. Some of the newer frameworks can&amp;rsquo;t guarantee that.&lt;/p>
 &lt;p>If you&amp;rsquo;re curious about we discussed this week, feel free to read it up on the &lt;a href="https://www.w3.org/wiki/WebDriver/2020-TPAC">W3 Wiki&lt;/a>.&lt;/p>
-&lt;p>This post was originally shared on David Burns&amp;rsquo; &lt;a href="https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/">Blog&lt;/a>&lt;/p></description></item><item><title>Blog: Atoms have come to Selenium IDE</title><link>/blog/2010/atoms-have-come-to-selenium-ide/</link><pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate><guid>/blog/2010/atoms-have-come-to-selenium-ide/</guid><description>
-&lt;p>As mentioned in Simon’s &lt;a href="/blog/2010/going-atomic-why/">Going Atomic: Why?&lt;/a> and &lt;a href="/blog/2010/going-atomic-how/">Going Atomic: How&lt;/a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, ‘atoms’ is now included.&lt;/p>
+&lt;p>This post was originally shared on David Burns&amp;rsquo; &lt;a href="https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/">Blog&lt;/a>&lt;/p></description></item><item><title>Blog: Atoms have come to Selenium IDE</title><link>https://www.selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</link><pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</guid><description>
+&lt;p>As mentioned in Simon’s &lt;a href="https://www.selenium.dev/blog/2010/going-atomic-why/">Going Atomic: Why?&lt;/a> and &lt;a href="https://www.selenium.dev/blog/2010/going-atomic-how/">Going Atomic: How&lt;/a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, ‘atoms’ is now included.&lt;/p>
 &lt;p>Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the ‘why’ and suggests how to fix them as well.&lt;/p>
 &lt;p>The HTML spec has the notion of a &lt;em>boolean attribute&lt;/em> which is one that does something just by being there rather than by its value; &lt;em>checked&lt;/em> and &lt;em>selected&lt;/em> are two such examples of this. Optionally, you could give these boolean attributes a value that is the same as their name (checked=”checked”) and your page would still validate, but really, the browsers only care that the attribute exist.&lt;/p>
 &lt;p>Prior to 1.0.10, it was not uncommon for people to do something like&lt;/p>

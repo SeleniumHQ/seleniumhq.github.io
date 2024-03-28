@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – status</title><link>/tags/status/</link><description>Recent content in status on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/status/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Announcing Selenium 4</title><link>/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/announcing-selenium-4/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – status</title><link>https://www.selenium.dev/tags/status/</link><description>Recent content in status on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/status/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Announcing Selenium 4</title><link>https://www.selenium.dev/blog/2021/announcing-selenium-4/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/announcing-selenium-4/</guid><description>
 &lt;p>It’s with very great pleasure that &lt;strong>we are announcing the release of
 Selenium 4&lt;/strong>. This is available for Java, .Net, Python, Ruby, and
 Javascript. You can download it from your favourite package manager or
@@ -9,13 +9,13 @@ ensure that this is a “drop-in” upgrade, having focused on keeping the
 public APIs as stable as possible.&lt;/p>
 &lt;p>Of course, we’ve made changes, so if you relied on code that was
 marked as internal to Selenium, or that was deprecated, you might
-experience some hiccups. Please &lt;a href="/documentation/getting_started/how_to_upgrade_to_selenium_4/">check our documentation&lt;/a> for
+experience some hiccups. Please &lt;a href="https://www.selenium.dev/documentation/getting_started/how_to_upgrade_to_selenium_4/">check our documentation&lt;/a> for
 advice on how to deal with each of the common problems we’re aware of.&lt;/p>
 &lt;p>But there’s more to Selenium 4 than just being a stable release of
 what was there before! It brings a whole host of new and exciting
 features that we hope will make your tests more fun to write, and more
 stable when you run them. Let’s take a look at some of them!&lt;/p>
-&lt;p>We’ve introduced “&lt;a href="/documentation/webdriver/locating_elements/#relative-locators">relative locators&lt;/a>”. These allow you to specify
+&lt;p>We’ve introduced “&lt;a href="https://www.selenium.dev/documentation/webdriver/locating_elements/#relative-locators">relative locators&lt;/a>”. These allow you to specify
 where on the page an element can be found using language that people
 use too; things like “above that element”, or “to the right of this
 other element”. This will hopefully provide you all with a tool to
@@ -26,15 +26,15 @@ belongs to &lt;a href="https://www.sahipro.com">Sahi&lt;/a> &amp;ndash; but if y
 you like them!&lt;/p>
 &lt;p>If you’re using &lt;a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox&lt;/a> or a browser that is derived from
 &lt;a href="https://www.chromium.org/Home">Chromium&lt;/a>, we’ve added a slew of new capabilities
-too. These include ways of handling &lt;a href="/documentation/webdriver/bidirectional/bidi_api/#register-basic-auth">“basic” and “digest”
+too. These include ways of handling &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#register-basic-auth">“basic” and “digest”
 authentication&lt;/a>, Network Interception (&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418">Are you an HTTP
 418?&lt;/a>), and also performing commonly requested tasks, like
-waiting for a &lt;a href="/documentation/webdriver/bidirectional/bidi_api/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
-look at &lt;a href="/documentation/webdriver/bidirectional/bidi_api/#listen-to-js-exceptions">Javascript errors&lt;/a>.&lt;/p>
+waiting for a &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
+look at &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#listen-to-js-exceptions">Javascript errors&lt;/a>.&lt;/p>
 &lt;p>We’ve added these new features in a way that fits in with our existing
 APIs. There’s no need to rewrite your tests: just use the new features
 when it feels right to you.&lt;/p>
-&lt;p>We have also rebuilt the &lt;a href="/documentation/grid/">Selenium Grid&lt;/a>, taking lessons from
+&lt;p>We have also rebuilt the &lt;a href="https://www.selenium.dev/documentation/grid/">Selenium Grid&lt;/a>, taking lessons from
 successful projects such as &lt;a href="https://opensource.zalando.com/zalenium/">Zalenium&lt;/a> and
 &lt;a href="https://aerokube.com/selenoid/latest/">Selenoid&lt;/a> to enhance the capabilities. This new Grid runs
 just as well as a single process, running on a single machine, as it
@@ -74,7 +74,7 @@ improve when we know that there’s something that needs work!&lt;/p>
 &lt;a href="https://www.selenium.dev/sponsors/">Selenium-Level sponsors&lt;/a> for getting this release ready for
 our users.&lt;/p>
 &lt;p>&lt;strong>We hope you enjoy Selenium 4, and we can’t wait to see what you do
-with it!&lt;/strong>&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate 2</title><link>/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-2/</guid><description>
+with it!&lt;/strong>&lt;/p></description></item><item><title>Blog: Selenium 4 Release Candidate 2</title><link>https://www.selenium.dev/blog/2021/selenium-4-rc-2/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-4-rc-2/</guid><description>
 &lt;p>We&amp;rsquo;ve listeneed and responded to the feedback from the first release
 candidate of Selenium 4, and we&amp;rsquo;re now happy to announce the second
 release candidate of Selenium 4. This is shipping for .Net, Java,
@@ -91,7 +91,7 @@ few other cleanups and fixes.&lt;/p>
 latest version of the &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a> If you don&amp;rsquo;t, there may be
 problems starting sessions as we rely on new features that are
 included in this new geckodriver release.&lt;/p>
-&lt;p>If you&amp;rsquo;re new Selenium 4, then you may want to read this &lt;a href="/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog
+&lt;p>If you&amp;rsquo;re new Selenium 4, then you may want to read this &lt;a href="https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog
 post&lt;/a>, which explains more, but you might want to have a look at:&lt;/p>
 &lt;ul>
 &lt;li>Relative locators, which provide a way of finding elements by
@@ -112,7 +112,7 @@ that you enjoy this release candidate too!&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">&lt;a href="https://twitter.com/hashtag/Selenium?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Selenium&lt;/a> 4.0.0.rc2 &lt;a href="https://twitter.com/hashtag/ruby?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ruby&lt;/a> gem has been published. All of the less pleasant work went into this one - polishing and making sure things match up between the different bindings, etc. This should essentially be Selenium 4, so upgrade already and tell us what you think!&lt;/p>&amp;mdash; Titus Fortner (@titusfortner) &lt;a href="https://twitter.com/titusfortner/status/1443575623822151688?ref_src=twsrc%5Etfw">September 30, 2021&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Exciting times! Selenium 4.0 RC2 for Java has been released. We&amp;#39;re planning on this being the last release before the stable 4.0 release, so this is your last chance for you to give us feedback and for us to react before then! &lt;a href="https://twitter.com/hashtag/selenium4?src=hash&amp;amp;ref_src=twsrc%5Etfw">#selenium4&lt;/a>&lt;/p>&amp;mdash; Simon Mavi Stewart (@shs96c) &lt;a href="https://twitter.com/shs96c/status/1443606189791662080?ref_src=twsrc%5Etfw">September 30, 2021&lt;/a>&lt;/blockquote>
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>https://www.selenium.dev/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-4-rc-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the first release candidate of Selenium
 4. We&amp;rsquo;re shipping this for .Net, Java, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
@@ -134,7 +134,7 @@ tried our beta releases, and gave us great and valuable feedback.&lt;/p>
 can do before updating the dependency itself!) is to update the
 drivers you need. In particular, please update &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a> to
 0.29.1 or later.&lt;/p>
-&lt;p>Most of the new features in Selenium 4 are mentioned in this &lt;a href="/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog entry&lt;/a>,
+&lt;p>Most of the new features in Selenium 4 are mentioned in this &lt;a href="https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog entry&lt;/a>,
 but the main highlights are:&lt;/p>
 &lt;ul>
 &lt;li>Relative locators, for finding elements using terms that make
@@ -144,13 +144,13 @@ sense to us humans.&lt;/li>
 &lt;/ul>
 &lt;p>If this sounds interesting, please download the release candidate from your
 favourite package manager (maven, nuget, npm, pip, or the gem), or
-directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Beta 1 Released</title><link>/blog/2021/selenium-4-beta-1/</link><pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-beta-1/</guid><description>
+directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Beta 1 Released</title><link>https://www.selenium.dev/blog/2021/selenium-4-beta-1/</link><pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-4-beta-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of the first beta of Selenium
 4. We&amp;rsquo;re shipping this for Java, .Net, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
 package manager of choice!&lt;/p>
 &lt;p>This has been the culmination of a lot of work by so many people, not
-only the &lt;a href="/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
+only the &lt;a href="https://www.selenium.dev/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
 205 since we released Selenium 3.141.59, at the last count. A big
 thank you to everybody who&amp;rsquo;s helped make this possible!&lt;/p>
 &lt;p>So, what&amp;rsquo;s changed since Selenium 3? The answer is both &amp;ldquo;&lt;strong>not much&lt;/strong>&amp;rdquo;
@@ -178,7 +178,7 @@ that scales well.&lt;/p>
 exposes a &lt;a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/graphql/selenium-grid-schema.graphqls">GraphQL endpoint&lt;/a>, so that figuring what&amp;rsquo;s going
 on in the Grid, and tracking down what&amp;rsquo;s gone wrong if something
 happens, is easier than ever.&lt;/p>
-&lt;p>Not all the changes are server-side. We recently wrote about the &lt;a href="/blog/2020/what-is-coming-in-selenium-4-new-tricks/">new
+&lt;p>Not all the changes are server-side. We recently wrote about the &lt;a href="https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-new-tricks/">new
 features in Selenium 4&lt;/a> that you can use in your tests, but some
 of the main highlights are:&lt;/p>
 &lt;ul>
@@ -191,7 +191,7 @@ sense to us humans.&lt;/li>
 and as we improve our documentation.&lt;/p>
 &lt;p>If this sounds interesting, please download the beta from your
 favourite package manager (maven, nuget, npm, pip, or the gem), or
-directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: The Current Status of Selenium 1 and Selenium 2</title><link>/blog/2010/the-current-status-of-selenium-1-and-selenium-2/</link><pubDate>Wed, 21 Jul 2010 00:00:00 +0000</pubDate><guid>/blog/2010/the-current-status-of-selenium-1-and-selenium-2/</guid><description>
+directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: The Current Status of Selenium 1 and Selenium 2</title><link>https://www.selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/</link><pubDate>Wed, 21 Jul 2010 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/</guid><description>
 &lt;p>In the beginning there was Se1, and it was good. But it could have been better — in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.&lt;/p>
 &lt;p>And then the confusion began. Let’s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.&lt;/p>
 &lt;p>&lt;em>There are a couple annoying bugs in Se-RC 1.03; when is the 1.0.4 release?&lt;/em>&lt;/p>

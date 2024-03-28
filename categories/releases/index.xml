@@ -1,13 +1,13 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.19 Released!</title><link>/blog/2024/selenium-4-19-released/</link><pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-19-released/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – releases</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in releases on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.19 Released!</title><link>https://www.selenium.dev/blog/2024/selenium-4-19-released/</link><pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2024/selenium-4-19-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.19.0 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v121, v122, and v123 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Thanks to Selenium Manager&amp;rsquo;s &lt;a href="https://plausible.io/manager.selenium.dev">records usage&lt;/a>, we know Selenium has at least 1.8M active users in the last 30 days!&lt;/li>
 &lt;li>Java and JavaScript keep adding more WebDriver &lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> features.&lt;/li>
-&lt;li>The WebDriver &lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> features in Java have a new home, read it at Puja&amp;rsquo;s &lt;a href="/blog/2024/bidi-java-breaking-change">blog post&lt;/a>.&lt;/li>
+&lt;li>The WebDriver &lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> features in Java have a new home, read it at Puja&amp;rsquo;s &lt;a href="https://www.selenium.dev/blog/2024/bidi-java-breaking-change">blog post&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
 &lt;ul>
@@ -272,7 +272,7 @@ Mårten Svantesson
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="selenium-team-membersteam">&lt;a href="/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
+&lt;h4 id="selenium-team-membersteam">&lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Thanks as well to all the team members who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
@@ -410,16 +410,16 @@ David Burns
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following SeleniumHQ on &lt;a href="https://twitter.com/seleniumhq">X (Formerly Twitter&lt;/a> or &lt;a href="https://www.linkedin.com/company/selenium/">LinkedIn&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.18 Released!</title><link>/blog/2024/selenium-4-18-released/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-18-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.18 Released!</title><link>https://www.selenium.dev/blog/2024/selenium-4-18-released/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2024/selenium-4-18-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.18.0 and 4.18.1 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v120, v121, and v122 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Selenium Manager &lt;a href="https://plausible.io/manager.selenium.dev">records usage&lt;/a> has been decreased to reduce impact on users.&lt;/li>
 &lt;li>Chrome headless changed the name of the browser to reflect that it is not actually chrome; Selenium now handles this seamlessly,
-but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
+but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="https://www.selenium.dev/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
 &lt;ul>
@@ -758,7 +758,7 @@ Viet Nguyen Duc
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="selenium-team-membersteam">&lt;a href="/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
+&lt;h4 id="selenium-team-membersteam">&lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Thanks as well to all the team members who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
@@ -896,17 +896,17 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.17 Released!</title><link>/blog/2024/selenium-4-17-released/</link><pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-17-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.17 Released!</title><link>https://www.selenium.dev/blog/2024/selenium-4-17-released/</link><pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2024/selenium-4-17-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.17.0 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v119, v120, and v121 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Selenium Manager &lt;a href="https://plausible.io/manager.selenium.dev">records usage&lt;/a> set
-environment variable &lt;a href="/documentation/selenium_manager/#data-collection">&lt;code>SE_AVOID_STATS&lt;/code> to &lt;code>&amp;quot;true&amp;quot;&lt;/code>&lt;/a> to avoid sending information.&lt;/li>
+environment variable &lt;a href="https://www.selenium.dev/documentation/selenium_manager/#data-collection">&lt;code>SE_AVOID_STATS&lt;/code> to &lt;code>&amp;quot;true&amp;quot;&lt;/code>&lt;/a> to avoid sending information.&lt;/li>
 &lt;li>Chrome headless changed the name of the browser to reflect that it is not actually chrome; Selenium now handles this seamlessly,
-but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
+but you should still switch to &lt;code>--headless=new&lt;/code> (see: &lt;a href="https://www.selenium.dev/blog/2023/headless-is-going-away/">Headless is going away&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
 &lt;ul>
@@ -1197,7 +1197,7 @@ Viet Nguyen Duc
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="selenium-team-membersteam">&lt;a href="/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
+&lt;h4 id="selenium-team-membersteam">&lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Thanks as well to all the team members who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
@@ -1322,10 +1322,10 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.16 Released!</title><link>/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-16-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.16 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-16-released/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-16-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.16.0 for
 Javascript, Ruby, Python, and Selenium 4.16.1 for .NET, Java and the Grid.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v118, v119, and v120 (Firefox still uses v85 for all versions)&lt;/li>
@@ -1675,7 +1675,7 @@ Viet Nguyen Duc
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="selenium-team-membersteam">&lt;a href="/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
+&lt;h4 id="selenium-team-membersteam">&lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Thanks as well to all the team members who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
@@ -1826,7 +1826,7 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Novelties in Selenium Manager 0.4.15</title><link>/blog/2023/novelties_in_selenium_manager_0.4.15/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/novelties_in_selenium_manager_0.4.15/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Novelties in Selenium Manager 0.4.15</title><link>https://www.selenium.dev/blog/2023/novelties_in_selenium_manager_0.4.15/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/novelties_in_selenium_manager_0.4.15/</guid><description>
 &lt;h3 id="support-for-firefox-esr">Support for Firefox ESR&lt;/h3>
 &lt;p>Selenium Manager 0.4.15 includes support for Firefox Extended Support Release (ESR). This way, Firefox ESR can be automatically managed with Selenium using the label &lt;code>esr&lt;/code> in the browser version. Bindings languages set this browser version (like other accepted labels for browser versions, such as &lt;code>stable,&lt;/code> &lt;code>beta,&lt;/code> &lt;code>dev,&lt;/code> &lt;code>canary,&lt;/code> and &lt;code>nightly&lt;/code>) using a browser option called &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion">browserVersion&lt;/a>.&lt;/p>
 &lt;h3 id="support-for-edge-webview2">Support for Edge WebView2&lt;/h3>
@@ -1857,14 +1857,14 @@ INFO Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
 &lt;h3 id="selenium-manager-in-cache-only-for-java-bindings">Selenium Manager in cache (only for Java bindings)&lt;/h3>
 &lt;p>As of version 4.15.0 of the Selenium Java bindings, the Selenium Manager binary is extracted and copied to the cache folder. For instance, the Selenium Manager binary shipped with Selenium 4.15.0 is stored in the folder &lt;code>~/.cache/selenium/manager/0.4.15&lt;/code>). This feature will allow direct manipulation of Selenium Manager as a CLI tool, for instance, for troubleshooting. This feature is only available for Java bindings since Java is the only language that does not have direct access to the Selenium Manager binaries (since they are released compressed into the JAR files of the &lt;code>selenium-java&lt;/code> artifacts).&lt;/p>
 &lt;h3 id="next-steps">Next steps&lt;/h3>
-&lt;p>Look at &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager documentation&lt;/a> for a detailed description of its features. Also, you can trace the status of the development activities in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.15 Released!</title><link>/blog/2023/selenium-4-15-released/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-15-released/</guid><description>
+&lt;p>Look at &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager documentation&lt;/a> for a detailed description of its features. Also, you can trace the status of the development activities in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.15 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-15-released/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-15-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.15.0 for Java,
 Javascript, Ruby, .NET and the Grid; 4.15.2 for Python.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v117, v118, and v119 (Firefox still uses v85 for all versions)&lt;/li>
-&lt;li>Implemented &lt;a href="/documentation/webdriver/drivers/remote_webdriver/#downloads">Remote File Downloads&lt;/a>&lt;/li>
+&lt;li>Implemented &lt;a href="https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/#downloads">Remote File Downloads&lt;/a>&lt;/li>
 &lt;li>Selenium Manager supports webview2, Firefox ESR and Driver and Browser Mirrors&lt;/li>
 &lt;/ul>
 &lt;h4 id="noteworthy-changes-per-language">Noteworthy changes per language&lt;/h4>
@@ -2167,7 +2167,7 @@ Viet Nguyen Duc
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -2278,7 +2278,7 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Status of Selenium Manager in October 2023</title><link>/blog/2023/status_of_selenium_manager_in_october_2023/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>/blog/2023/status_of_selenium_manager_in_october_2023/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Status of Selenium Manager in October 2023</title><link>https://www.selenium.dev/blog/2023/status_of_selenium_manager_in_october_2023/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/status_of_selenium_manager_in_october_2023/</guid><description>
 &lt;p>Selenium Manager continues its development plan. As usual, in the latest releases, i.e., 0.4.13 and 0.4.14 (shipped with Selenium 4.13 and 4.14, respectively), we have fixed the problems reported so far. In these releases, the issues were related to the extraction of the Firefox binary from the self-extracting archive (SFX) in Windows and the advanced configuration through the configuration file (&lt;code>se-config.toml&lt;/code>) and environment variables (e.g., &lt;code>SE_BROWSER&lt;/code>). Moreover, these recent releases include new features, as explained below.&lt;/p>
 &lt;h3 id="search-for-the-best-driver-possible-in-the-cache">Search for the best driver possible in the cache&lt;/h3>
 &lt;p>By default, Selenium Manager needs to request online endpoints (such as &lt;a href="https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints">Chrome for Testing JSON API&lt;/a> or &lt;a href="https://wiki.mozilla.org/Release_Management/Product_details">Firefox product-details JSON API&lt;/a>
@@ -2350,14 +2350,14 @@ DEBUG chromedriver 117.0.5938.149 already in the cache
 INFO Driver path: /home/user/.cache/selenium/chromedriver/linux64/117.0.5938.149/chromedriver
 INFO Browser path: /snap/bin/chromium
 &lt;/code>&lt;/pre>&lt;h3 id="next-steps">Next steps&lt;/h3>
-&lt;p>We are close to implementing all the features initially planned for Selenium Manager. You can trace the status of the development activities in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.13 Released!</title><link>/blog/2023/selenium-4-13-0-released/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-13-0-released/</guid><description>
+&lt;p>We are close to implementing all the features initially planned for Selenium Manager. You can trace the status of the development activities in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.13 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-13-0-released/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-13-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.13.0 for Java,
 Python, Javascript and the Grid; and 4.13.1 for .NET and Ruby.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v115, v116, and v117 (Firefox still uses v85 for all versions)&lt;/li>
-&lt;li>Reminder: this is the last version of Selenium with &lt;a href="/blog/2023/java-8-support/">Java 8 support&lt;/a>.
+&lt;li>Reminder: this is the last version of Selenium with &lt;a href="https://www.selenium.dev/blog/2023/java-8-support/">Java 8 support&lt;/a>.
 Please upgrade to at least Java 11.&lt;/li>
 &lt;li>The location of Selenium Manager can be set manually in all bindings with &lt;code>SE_MANAGER_PATH&lt;/code> environment variable.&lt;/li>
 &lt;/ul>
@@ -2677,7 +2677,7 @@ William Lacerda
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -2788,14 +2788,14 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.14 Released!</title><link>/blog/2023/selenium-4-14-released/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-14-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.14 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-14-released/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-14-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.14.0 for Java,
 Python, Javascript, Ruby, .NET and the Grid.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v116, v117, and v118 (Firefox still uses v85 for all versions)&lt;/li>
-&lt;li>If you are using Java, this release requires Java 11! (see post on &lt;a href="/blog/2023/java-8-support/">Java 8 support&lt;/a>)&lt;/li>
+&lt;li>If you are using Java, this release requires Java 11! (see post on &lt;a href="https://www.selenium.dev/blog/2023/java-8-support/">Java 8 support&lt;/a>)&lt;/li>
 &lt;li>Selenium supports automatic downloading and management of the Microsoft Edge browser&lt;/li>
 &lt;/ul>
 &lt;h4 id="relevant-improvements-per-language">Relevant improvements per language&lt;/h4>
@@ -2983,7 +2983,7 @@ William Lacerda
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -3106,15 +3106,15 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.12.0 Released!</title><link>/blog/2023/selenium-4-12-0-released/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-12-0-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.12.0 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-12-0-released/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-12-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.12.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v114, v115, and v116 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Quite a few fixes for Selenium Manager, and now with Firefox browser management!
-Read about all the &lt;a href="/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/">new Selenium Manager features&lt;/a>&lt;/li>
+Read about all the &lt;a href="https://www.selenium.dev/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/">new Selenium Manager features&lt;/a>&lt;/li>
 &lt;li>.NET only explicitly targets &lt;code>netstandard2.0&lt;/code>&lt;/li>
 &lt;li>Python no longer supports Python 3.7&lt;/li>
 &lt;li>Ruby no longer supports &lt;code>:capabilities&lt;/code> arguments for local drivers (must use &lt;code>:options&lt;/code> now)&lt;/li>
@@ -3329,7 +3329,7 @@ Mario Segura
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -3504,7 +3504,7 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager 0.4.12, shipped with Selenium 4.12.0</title><link>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate><guid>/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager 0.4.12, shipped with Selenium 4.12.0</title><link>https://www.selenium.dev/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</link><pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/whats_new_in_selenium_manager_0.4.12_shipped_with_selenium_4.12.0/</guid><description>
 &lt;p>A new release of Selenium Manager is out. For this release, we made a relevant decision concerning the Selenium Manager versioning format. From now on, Selenium Manager will follow the same version as Selenium. Nevertheless, since Selenium Manager is still in beta, its major version is &lt;em>0&lt;/em>. Thus, Selenium &lt;strong>4.12.0&lt;/strong> is shipped with Selenium Manager &lt;strong>0.4.12&lt;/strong>.&lt;/p>
 &lt;p>First, we made a substantial effort to stabilize the already available features on Selenium Manager. This way, the version includes several bug-fixing related to automated driver management or caching. You can find the details of the changes implemented in Selenium Manager 0.4.12 in the (newly created) &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md">changelog file&lt;/a>.&lt;/p>
 &lt;p>Besides, for this release, we made a significant update to the &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">documentation page of Selenium Manager&lt;/a>. This page contains all the fine-grained information related to automated driver and browser management, configuration, etc. Also, it has several &lt;strong>TL;DR&lt;/strong> summarizing the main ideas for the eager reader.&lt;/p>
@@ -3518,16 +3518,16 @@ Titus Fortner
 &lt;p>A minor change in Selenium Manager 0.4.12 is related to the metadata file, now called &lt;code>se-metadata.json&lt;/code>. As usual, this file is stored in the root of the cache folder. This file contains versions discovered by Selenium Manager making network requests and the &lt;em>time-to-live&lt;/em> (TTL) in which they are valid. Since the TTL for browsers and drivers is now the same concept, Selenium Manager unifies these two configuration elements (previously, &lt;code>browser_ttl&lt;/code> and &lt;code>driver_ttl&lt;/code>) in a single one called &lt;code>ttl&lt;/code> (with a default value of 3600 seconds, i.e., 1 hour). For further details, visit the Selenium Manager page about &lt;a href="https://www.selenium.dev/documentation/selenium_manager/#caching">caching&lt;/a>.&lt;/p>
 &lt;p>Last but not least, the Selenium Manager binary compiled for macOS is &lt;em>universal&lt;/em>, in the sense that it can be executed both in &lt;em>x64&lt;/em> and &lt;em>arm64&lt;/em> architectures out of the box. Previously, the binary was compiled for &lt;em>x64&lt;/em>, and so, &lt;a href="https://support.apple.com/en-us/HT211861">Rosetta&lt;/a> should be available in &lt;em>arm64&lt;/em> macOS machines (i.e., M1 or M2). With the new Selenium Manager macOS binary, Rosetta is no longer mandatory.&lt;/p>
 &lt;h3 id="next-steps">Next steps&lt;/h3>
-&lt;p>The next release of Selenium Manager will continue delivering automated browser management, this time for &lt;strong>Edge&lt;/strong>, and other features. As usual, you can trace the work in progress in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.11.0 Released!</title><link>/blog/2023/selenium-4-11-0-released/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-11-0-released/</guid><description>
+&lt;p>The next release of Selenium Manager will continue delivering automated browser management, this time for &lt;strong>Edge&lt;/strong>, and other features. As usual, you can trace the work in progress in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.11.0 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-11-0-released/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-11-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.11.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v113, v114, and v115 (Firefox still uses v85 for all versions)&lt;/li>
-&lt;li>Support for &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing (CfT)&lt;/a> through Selenium Manager. Read more at the new Selenium Manager features &lt;a href="/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/">blog post&lt;/a>.&lt;/li>
+&lt;li>Support for &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing (CfT)&lt;/a> through Selenium Manager. Read more at the new Selenium Manager features &lt;a href="https://www.selenium.dev/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/">blog post&lt;/a>.&lt;/li>
 &lt;li>Selenium Manager now locates the browser driver binary on PATH or the configured path, checks for potential incompatibilities, and gives better warning and error messages.&lt;/li>
-&lt;li>&lt;a href="/downloads/#nightly">Nightly builds&lt;/a> are being pushed for Ruby and Java. Support for other languages is coming soon.&lt;/li>
+&lt;li>&lt;a href="https://www.selenium.dev/downloads/#nightly">Nightly builds&lt;/a> are being pushed for Ruby and Java. Support for other languages is coming soon.&lt;/li>
 &lt;li>Ignore process id match when finding the window handle - IE Mode on Edge. (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12246">#12246&lt;/a>) (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/12279">#12279&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;h4 id="relevant-improvements-per-language">Relevant improvements per language&lt;/h4>
@@ -3990,7 +3990,7 @@ wintersolutions
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -4166,7 +4166,7 @@ James Mortensen
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager with Selenium 4.11.0</title><link>/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: What's new in Selenium Manager with Selenium 4.11.0</title><link>https://www.selenium.dev/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</link><pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/whats-new-in-selenium-manager-with-selenium-4.11.0/</guid><description>
 &lt;p>As of version &lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">4.6.0&lt;/a>, all releases of Selenium (Java, JavaScript, Python, Ruby, and .Net) are shipped with &lt;strong>Selenium Manager&lt;/strong>. &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a> is a binary tool (implemented in Rust) that provides automated driver management for Selenium. &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a> is still in beta, although it is becoming a relevant component of Selenium.&lt;/p>
 &lt;p>So far, the main feature of Selenium Manager is called &lt;em>automated driver management&lt;/em>. I use the term &lt;em>management&lt;/em> for this feature (and not just &lt;em>download&lt;/em>) since this process is broader and implies different steps:&lt;/p>
 &lt;ol>
@@ -4244,7 +4244,7 @@ INFO Browser path: C:\Users\boni\.cache\selenium\chrome\win64\116.0.5845.49\chro
 &lt;p>If you want to get the Selenium Manager debugging information (as shown in the section before) when using the Selenium bindings languages, you can enable the logging capabilities of Selenium.
 Please visit the &lt;a href="https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/">Selenium troubleshooting page&lt;/a> for details.&lt;/p>
 &lt;h3 id="next-steps">Next steps&lt;/h3>
-&lt;p>You can trace the work in progress in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>. The following features to be implemented in Selenium Manager will continue the automated browser management mechanism, this time for &lt;strong>Firefox&lt;/strong> and &lt;strong>Edge&lt;/strong>. Stay tuned!&lt;/p></description></item><item><title>Blog: Building Selenium</title><link>/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/building-selenium/</guid><description>
+&lt;p>You can trace the work in progress in the &lt;a href="https://github.com/orgs/SeleniumHQ/projects/5">Selenium Manager project dashboard&lt;/a>. The following features to be implemented in Selenium Manager will continue the automated browser management mechanism, this time for &lt;strong>Firefox&lt;/strong> and &lt;strong>Edge&lt;/strong>. Stay tuned!&lt;/p></description></item><item><title>Blog: Building Selenium</title><link>https://www.selenium.dev/blog/2023/building-selenium/</link><pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/building-selenium/</guid><description>
 &lt;p>One of the things that we knew from the very beginning of the Selenium
 project was that people like to code in more than one language. Some
 people love a bit of JS, others Ruby, and still others prefer C# or
@@ -4330,7 +4330,7 @@ grid. Our builds there are incredibly fast!&lt;/p>
 languages we want to use in a single tool, allows us to not think
 about how to set up our development machines, runs builds incredibly
 quickly, and we can make use of build grids to build things even
-faster.&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+faster.&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>https://www.selenium.dev/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/java-8-support/</guid><description>
 &lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
 it’s necessary to move on from our old favorites. That’s why we’re announcing that
 &lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
@@ -4340,7 +4340,7 @@ the primary reasons for this change is that Java 8 reached the end of active sup
 &lt;a href="https://endoflife.date/java">over a year ago&lt;/a>. In addition, our default HTTP
 Client has not had a major release in several years, and a
 &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">bug&lt;/a> has been found that we can not fix.
-We have decided to &lt;a href="/blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
+We have decided to &lt;a href="https://www.selenium.dev/blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
 but it requires using Java 11 or greater. The sooner we make this change, the sooner
 we can avoid dealing with this issue.&lt;/p>
 &lt;p>Our new minimum version will be Java 11. September 30, 2023 is also the end of
@@ -4355,10 +4355,10 @@ higher. We understand that some may be hesitant or may find it difficult to make
 the switch, but we believe it will pay off in the long run.&lt;/p>
 &lt;p>Please let us know your questions, concerns, and feedback through our
 &lt;a href="https://www.selenium.dev/support/#ChatRoom">community chat&lt;/a>.&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.10.0 Released!</title><link>/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-10-0-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.10.0 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-10-0-released/</link><pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-10-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.10.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v112, v113, and v114 (Firefox still uses v85 for all versions)&lt;/li>
@@ -4875,7 +4875,7 @@ Brian Schreder
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -5026,19 +5026,19 @@ James Mortensen
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.9.0 Released!</title><link>/blog/2023/selenium-4-9-0-released/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-9-0-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.9.0 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-9-0-released/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-9-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.9.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v110, v111, and v112 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Maven BOM for the Java bindings.&lt;/li>
-&lt;li>Remote file downloads are &lt;a href="/documentation/grid/configuration/cli_options/#enabling-managed-downloads-by-the-node">now possible through Selenium Grid&lt;/a>.&lt;/li>
+&lt;li>Remote file downloads are &lt;a href="https://www.selenium.dev/documentation/grid/configuration/cli_options/#enabling-managed-downloads-by-the-node">now possible through Selenium Grid&lt;/a>.&lt;/li>
 &lt;li>First steps taken to phase out CDP in Firefox and replace it with the BiDi implementation.&lt;/li>
-&lt;li>&lt;code>InvalidSelectorException&lt;/code> &lt;a href="/blog/2023/invalid-selector-exception-has-changed/">now extends &lt;code>WebDriverException&lt;/code> instead of &lt;code>NoSuchElementException&lt;/code>&lt;/a>.&lt;/li>
+&lt;li>&lt;code>InvalidSelectorException&lt;/code> &lt;a href="https://www.selenium.dev/blog/2023/invalid-selector-exception-has-changed/">now extends &lt;code>WebDriverException&lt;/code> instead of &lt;code>NoSuchElementException&lt;/code>&lt;/a>.&lt;/li>
 &lt;li>Selenium Manager uses information set in the browser options to get the correct browser driver.&lt;/li>
-&lt;li>A &lt;a href="/documentation/grid/configuration/cli_options/#router">sub-path&lt;/a> can be set in Selenium Grid to have a custom Grid url.&lt;/li>
+&lt;li>A &lt;a href="https://www.selenium.dev/documentation/grid/configuration/cli_options/#router">sub-path&lt;/a> can be set in Selenium Grid to have a custom Grid url.&lt;/li>
 &lt;li>Complete removal of &lt;a href="https://www.selenium.dev/blog/2022/legacy-protocol-support/">Json Wire Protocol support in Java and Grid&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;h3 id="contributors">Contributors&lt;/h3>
@@ -5356,7 +5356,7 @@ Mark Mayo
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -5507,7 +5507,7 @@ Puja Jagani
 &lt;/div>
 &lt;/div>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Headless is Going Away!</title><link>/blog/2023/headless-is-going-away/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/headless-is-going-away/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Headless is Going Away!</title><link>https://www.selenium.dev/blog/2023/headless-is-going-away/</link><pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/headless-is-going-away/</guid><description>
 &lt;p>Headless is an execution mode for Firefox and Chromium based browsers. It allows users to run automated scripts in
 headless mode, meaning that the browser window wouldn’t be visible. In most of Selenium&amp;rsquo;s bindings there is a
 convenience method to set this execution mode while setting the browser options. However,
@@ -5681,20 +5681,20 @@ id="tabs-01-04" role="tabpanel" aria-labelled-by="tabs-01-04-tab" tabindex="1">
 &lt;p>If you have any questions or comments, please reach out through any of all the available options
 shown at our &lt;a href="https://www.selenium.dev/support/">support page&lt;/a>.&lt;/p>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.8.0 Released!</title><link>/blog/2023/selenium-4-8-0-released/</link><pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023/selenium-4-8-0-released/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.8.0 Released!</title><link>https://www.selenium.dev/blog/2023/selenium-4-8-0-released/</link><pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/selenium-4-8-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.8.0 for Java,
 .NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v107, v108, and v109 (Firefox still uses v85 for all versions)&lt;/li>
 &lt;li>Large JS executions have the name as a comment to help understand what payload being sent to/from server/driver.&lt;/li>
-&lt;li>Deprecation of headless convenience method. Read more about in the &lt;a href="/blog/2023/headless-is-going-away/">headless blog post&lt;/a>.&lt;/li>
+&lt;li>Deprecation of headless convenience method. Read more about in the &lt;a href="https://www.selenium.dev/blog/2023/headless-is-going-away/">headless blog post&lt;/a>.&lt;/li>
 &lt;li>Ruby overhauls Options classes (again)&lt;/li>
 &lt;li>Initial &lt;a href="https://github.com/w3c/webdriver-bidi">BiDi&lt;/a> support in JavaScript, Ruby, and improvements in Java.&lt;/li>
-&lt;li>We&amp;rsquo;re continuing to remove &lt;a href="/blog/2022/legacy-protocol-support/">Legacy Protocol&lt;/a> classes in Java and Grid.&lt;/li>
+&lt;li>We&amp;rsquo;re continuing to remove &lt;a href="https://www.selenium.dev/blog/2022/legacy-protocol-support/">Legacy Protocol&lt;/a> classes in Java and Grid.&lt;/li>
 &lt;li>Accommodate ability to specify sub-paths in Grid.&lt;/li>
-&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="https://www.selenium.dev/downloads#bindings">Changelogs&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="contributors">Contributors&lt;/h3>
 &lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
@@ -5820,7 +5820,7 @@ Valery Yatsynovich
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -5969,21 +5969,21 @@ Tamsil Sajid Amani
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Blog: Selenium 4.7.0 Released!</title><link>/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-7-0-released/</guid><description>
+&lt;/div></description></item><item><title>Blog: Selenium 4.7.0 Released!</title><link>https://www.selenium.dev/blog/2022/selenium-4-7-0-released/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/selenium-4-7-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.7.0 for Java,
 .NET, and Javascript as well as the Grid and Internet Explorer Driver;
 for Ruby use 4.7.1, and Python 4.7.2. Links to everything can be found on our
-&lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Chrome DevTools support is now: v106, v107, and v108 (Firefox still uses v85 for all versions)&lt;/li>
-&lt;li>&lt;a href="/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> now supports IE Driver &amp;amp; has improved error logging.&lt;/li>
+&lt;li>&lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> now supports IE Driver &amp;amp; has improved error logging.&lt;/li>
 &lt;li>Using Edge in IE Mode no longer requires ignoring zoom levels.&lt;/li>
 &lt;li>We&amp;rsquo;re continuing to remove &lt;a href="https://www.selenium.dev/blog/2022/legacy-protocol-support/">Legacy Protocol&lt;/a> classes in Java and Grid.&lt;/li>
 &lt;li>Java adds WebDriver-BiDi support for Logging.&lt;/li>
 &lt;li>.NET includes an explicit target for net6.0 framework.&lt;/li>
 &lt;li>Ruby is now publishing &lt;a href="https://github.com/SeleniumHQ/selenium/packages/">nightly gems&lt;/a>&lt;/li>
-&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;li>Plus various language specific bug fixes; see the full list of changes in the &lt;a href="https://www.selenium.dev/downloads#bindings">Changelogs&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="contributors">Contributors&lt;/h3>
 &lt;p>&lt;strong>Special shout-out to everyone who helped the Selenium Team get this release out!&lt;/strong>&lt;/p>
@@ -6096,7 +6096,7 @@ Tamsil Sajid Amani
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Thanks as well to all the &lt;a href="/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Thanks as well to all the &lt;a href="https://www.selenium.dev/project/structure">Selenium Team Members&lt;/a> who contributed to this release:&lt;/strong>&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
 &lt;div class="row justify-content-center">
@@ -6231,7 +6231,7 @@ Titus Fortner
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Blog: Introducing Selenium Manager</title><link>/blog/2022/introducing-selenium-manager/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/introducing-selenium-manager/</guid><description>
+&lt;/div></description></item><item><title>Blog: Introducing Selenium Manager</title><link>https://www.selenium.dev/blog/2022/introducing-selenium-manager/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/introducing-selenium-manager/</guid><description>
 &lt;p>Most people&amp;rsquo;s first experience with Selenium ends up with an error message like this one:&lt;/p>
 &lt;pre tabindex="0">&lt;code>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver
 system property; for more information, see https://chromedriver.chromium.org/. The latest version can be
@@ -6259,7 +6259,7 @@ ecosystem emerged. Such as: &lt;a href="https://bonigarcia.dev/webdrivermanager/
 &lt;a href="https://github.com/titusfortner/webdrivers">webdrivers&lt;/a> for Ruby, and
 &lt;a href="https://github.com/rosolko/WebDriverManager.Net">WebDriverManager.Net&lt;/a> for C#.&lt;/p>
 &lt;p>All these projects served as an
-&lt;a href="/documentation/webdriver/troubleshooting/errors/driver_location/#driver-management-libraries">inspiration&lt;/a>
+&lt;a href="https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/#driver-management-libraries">inspiration&lt;/a>
 and as a clear sign that the community needed this feature to be
 built-in Selenium. In addition, a &lt;a href="https://www.selenium.dev/blog/2021/selenium-survey-results/">survey&lt;/a>
 done on January 2021 showed that most Selenium users want to get rid of the driver management
@@ -6279,26 +6279,26 @@ parameters and options by running the following command:&lt;/p>
 &lt;pre tabindex="0">&lt;code>$ ./selenium-manager --browser chrome
 INFO /home/boni/.cache/selenium/chromedriver/linux64/106.0.5249.61/chromedriver
 &lt;/code>&lt;/pre>&lt;p>If you maintain a WebDriver based project and would like to use Selenium Manager as well,
-join us in our &lt;a href="/support/#ChatRoom">community channels&lt;/a> and we would be happy to help.
+join us in our &lt;a href="https://www.selenium.dev/support/#ChatRoom">community channels&lt;/a> and we would be happy to help.
 Also, if you are interested in contributing, for detailed instructions and information
 check the project&amp;rsquo;s &lt;a href="https://github.com/SeleniumHQ/selenium/tree/trunk/rust">README&lt;/a>.&lt;/p>
 &lt;h3 id="next-steps">Next steps&lt;/h3>
 &lt;p>Selenium Manager is still under development, features will be added and bugs fixed along with each release.
 However, you as a member of the Selenium community are key part on the future success of this new tool. Please
 report ideas or bugs through our &lt;a href="https://github.com/SeleniumHQ/selenium/issues">issue tracker&lt;/a> and join
-the conversation through our &lt;a href="/support/#ChatRoom">community channels&lt;/a>. Looking forward to your feedback!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.6.0 Released!</title><link>/blog/2022/selenium-4-6-0-released/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-6-0-released/</guid><description>
+the conversation through our &lt;a href="https://www.selenium.dev/support/#ChatRoom">community channels&lt;/a>. Looking forward to your feedback!&lt;/p>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Selenium 4.6.0 Released!</title><link>https://www.selenium.dev/blog/2022/selenium-4-6-0-released/</link><pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/selenium-4-6-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.6.0 for Java,
 .NET, Python, Ruby, and JavaScript bindings as well as the Grid and
 Internet Explorer Driver. Links to everything can be found on our
-&lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
+&lt;a href="https://www.selenium.dev/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Adding support for CDP released in Chrome v105, v106, and v107, while v104 was removed&lt;/li>
-&lt;li>Initial implementation of &lt;a href="/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> across bindings&lt;/li>
+&lt;li>Initial implementation of &lt;a href="https://www.selenium.dev/blog/2022/introducing-selenium-manager/">Selenium Manager&lt;/a> across bindings&lt;/li>
 &lt;li>Improvements to the new Java HTTP 11 client and important Grid fixes.&lt;/li>
 &lt;li>Observability enabled in the &lt;a href="https://github.com/SeleniumHQ/docker-selenium#tracing-in-grid">Docker-Selenium images&lt;/a>.&lt;/li>
-&lt;li>Various language specific bug fixes; see the full list of changes in the &lt;a href="/downloads#bindings">Changelogs&lt;/a>&lt;/li>
+&lt;li>Various language specific bug fixes; see the full list of changes in the &lt;a href="https://www.selenium.dev/downloads#bindings">Changelogs&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Huge thanks to all the contributors who made this version possible:&lt;/p>
 &lt;div class="row justify-content-center">
@@ -6578,10 +6578,10 @@ Krishnan Mahadevan
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Blog: Selenium 4.5.0 Released!</title><link>/blog/2022/selenium-4-5-0-released/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-5-0-released/</guid><description>
+&lt;/div></description></item><item><title>Blog: Selenium 4.5.0 Released!</title><link>https://www.selenium.dev/blog/2022/selenium-4-5-0-released/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/selenium-4-5-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.5.0 for
 Java, .NET, Python, Ruby, and JavaScript bindings as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our &lt;a href="/downloads">Downloads Page&lt;/a>.&lt;/p>
+Links to everything can be found on our &lt;a href="https://www.selenium.dev/downloads">Downloads Page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
 &lt;ul>
 &lt;li>Adding support for CDP released in Chrome v105 and v106, while v102 and v103 were removed&lt;/li>
@@ -6590,7 +6590,7 @@ Links to everything can be found on our &lt;a href="/downloads">Downloads Page&l
 &lt;li>IE driver automatically uses &lt;a href="https://titusfortner.com/2022/09/28/edge-ie-mode.html">Edge in IE Mode if IE is not present&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.selenium.dev/blog/2022/using-java11-httpclient">Java 11 HTTP Client supported&lt;/a> for Java users running Java versions 11+&lt;/li>
 &lt;li>Various language specific bug fixes; see the full list of changes in the
-&lt;a href="/downloads#bindings">Changelogs&lt;/a>.&lt;/li>
+&lt;a href="https://www.selenium.dev/downloads#bindings">Changelogs&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;p>Huge thanks to all the external contributors who made this version possible:&lt;/p>
 &lt;div class="row justify-content-center">
@@ -6805,7 +6805,7 @@ Henrik Skupin
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/using-java11-httpclient/</guid><description>
+&lt;/div></description></item><item><title>Blog: Using Java 11+ HTTP Client in Selenium 4.5.0 and beyond</title><link>https://www.selenium.dev/blog/2022/using-java11-httpclient/</link><pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/using-java11-httpclient/</guid><description>
 &lt;h3 id="current-http-client-used-in-selenium">Current HTTP client used in Selenium&lt;/h3>
 &lt;p>Selenium uses an HTTP client and associated WebSocket client for multiple purposes&lt;/p>
 &lt;ul>
@@ -6833,7 +6833,7 @@ of modern Java releases.&lt;/p>
 &lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
 &lt;ul>
 &lt;li>Project configured to use Java 11+&lt;/li>
-&lt;li>Using Selenium 4.5.0 as a minumum version, find the latest in the &lt;a href="/downloads">downloads&lt;/a> page.&lt;/li>
+&lt;li>Using Selenium 4.5.0 as a minumum version, find the latest in the &lt;a href="https://www.selenium.dev/downloads">downloads&lt;/a> page.&lt;/li>
 &lt;/ul>
 &lt;h4 id="integrating-the-java-11-client">Integrating the Java 11+ client&lt;/h4>
 &lt;p>Java 11+ HTTP client sits in its own artifact. It can be imported into projects that use Java 11+.&lt;/p>
@@ -6850,7 +6850,7 @@ of modern Java releases.&lt;/p>
 &amp;lt;version&amp;gt;4.5.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>&lt;strong>NOTE&lt;/strong>: In the dependencies above version &lt;code>4.5.0&lt;/code> is shown, however we recommend you to check the
-&lt;a href="/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
+&lt;a href="https://www.selenium.dev/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
 matching.&lt;/p>
 &lt;h5 id="set-the-system-property">Set the system property&lt;/h5>
 &lt;p>Set the system property to indicate that Java 11+ Http client needs to be used.
@@ -6869,9 +6869,9 @@ and then start the Grid in the following way:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you are using the Hub/Node(s) mode or the Distributed mode, setting the &lt;code>-Dwebdriver.http.factory=jdk-http-client&lt;/code> and &lt;code>—-ext&lt;/code> flags
 needs to be done for each one of the components.&lt;/p>
 &lt;p>&lt;strong>NOTE&lt;/strong>: In the dependencies above version &lt;code>4.5.0&lt;/code> is shown, however we recommend you to check the
-&lt;a href="/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
+&lt;a href="https://www.selenium.dev/downloads">downloads&lt;/a> page to use the latest version released. Make sure the versions used are
 matching.&lt;/p>
-&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Selenium 4.4.0 Released!</title><link>/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>/blog/2022/selenium-4-4-0-released/</guid><description>
+&lt;p>Huge thanks to Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>) for making this possible with his contribution!&lt;/p></description></item><item><title>Blog: Selenium 4.4.0 Released!</title><link>https://www.selenium.dev/blog/2022/selenium-4-4-0-released/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/selenium-4-4-0-released/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.4.0. We&amp;rsquo;re shipping
 this for Java, .Net, Python, Ruby, and JavaScript, so if you&amp;rsquo;re using any
 of those languages, go and grab it from your package manager of choice!&lt;/p>
@@ -6884,7 +6884,7 @@ of those languages, go and grab it from your package manager of choice!&lt;/p>
 &lt;/ul>
 &lt;p>Check the complete changelog and download the artifacts at the
 &lt;a href="https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.4.0">Selenium 4.4.0 release in GitHub&lt;/a>
-or directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p>
+or directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&lt;/a>.&lt;/p>
 &lt;p>Huge thanks to all the contributors who made this version possible:&lt;/p>
 &lt;div class="row justify-content-center">
 &lt;div class="col-11 p-4 bg-transparent">
@@ -7138,7 +7138,7 @@ Sri Harsha
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-rc-1/</guid><description>
+&lt;/div></description></item><item><title>Blog: Selenium 4 Release Candidate</title><link>https://www.selenium.dev/blog/2021/selenium-4-rc-1/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-4-rc-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the first release candidate of Selenium
 4. We&amp;rsquo;re shipping this for .Net, Java, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
@@ -7160,7 +7160,7 @@ tried our beta releases, and gave us great and valuable feedback.&lt;/p>
 can do before updating the dependency itself!) is to update the
 drivers you need. In particular, please update &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a> to
 0.29.1 or later.&lt;/p>
-&lt;p>Most of the new features in Selenium 4 are mentioned in this &lt;a href="/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog entry&lt;/a>,
+&lt;p>Most of the new features in Selenium 4 are mentioned in this &lt;a href="https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-new-tricks/">blog entry&lt;/a>,
 but the main highlights are:&lt;/p>
 &lt;ul>
 &lt;li>Relative locators, for finding elements using terms that make
@@ -7170,13 +7170,13 @@ sense to us humans.&lt;/li>
 &lt;/ul>
 &lt;p>If this sounds interesting, please download the release candidate from your
 favourite package manager (maven, nuget, npm, pip, or the gem), or
-directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Beta 1 Released</title><link>/blog/2021/selenium-4-beta-1/</link><pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-4-beta-1/</guid><description>
+directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4 Beta 1 Released</title><link>https://www.selenium.dev/blog/2021/selenium-4-beta-1/</link><pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-4-beta-1/</guid><description>
 &lt;p>We&amp;rsquo;re very happy to announce the release of the first beta of Selenium
 4. We&amp;rsquo;re shipping this for Java, .Net, Python, Ruby, and JavaScript,
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
 package manager of choice!&lt;/p>
 &lt;p>This has been the culmination of a lot of work by so many people, not
-only the &lt;a href="/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
+only the &lt;a href="https://www.selenium.dev/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
 205 since we released Selenium 3.141.59, at the last count. A big
 thank you to everybody who&amp;rsquo;s helped make this possible!&lt;/p>
 &lt;p>So, what&amp;rsquo;s changed since Selenium 3? The answer is both &amp;ldquo;&lt;strong>not much&lt;/strong>&amp;rdquo;
@@ -7204,7 +7204,7 @@ that scales well.&lt;/p>
 exposes a &lt;a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/graphql/selenium-grid-schema.graphqls">GraphQL endpoint&lt;/a>, so that figuring what&amp;rsquo;s going
 on in the Grid, and tracking down what&amp;rsquo;s gone wrong if something
 happens, is easier than ever.&lt;/p>
-&lt;p>Not all the changes are server-side. We recently wrote about the &lt;a href="/blog/2020/what-is-coming-in-selenium-4-new-tricks/">new
+&lt;p>Not all the changes are server-side. We recently wrote about the &lt;a href="https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-new-tricks/">new
 features in Selenium 4&lt;/a> that you can use in your tests, but some
 of the main highlights are:&lt;/p>
 &lt;ul>
@@ -7217,7 +7217,7 @@ sense to us humans.&lt;/li>
 and as we improve our documentation.&lt;/p>
 &lt;p>If this sounds interesting, please download the beta from your
 favourite package manager (maven, nuget, npm, pip, or the gem), or
-directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.0 Alpha 6 is out!</title><link>/blog/2020/selenium-4-alpha-6-is-out/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>/blog/2020/selenium-4-alpha-6-is-out/</guid><description>
+directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&lt;/a>.&lt;/p></description></item><item><title>Blog: Selenium 4.0 Alpha 6 is out!</title><link>https://www.selenium.dev/blog/2020/selenium-4-alpha-6-is-out/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/selenium-4-alpha-6-is-out/</guid><description>
 &lt;p>We are very pleased to announce the release of &lt;a href="http://www.selenium.dev/downloads/">Selenium 4.0 Alpha 6&lt;/a>.&lt;/p>
 &lt;p>All the information can be seen in different tweets from the project contributors, here they are all in one place:&lt;/p>
 &lt;p>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Happy Friday! I&amp;#39;ve just pushed Selenium 4.0a6 for Java. There&amp;#39;s a lot of nice changes:&lt;br>&lt;br>* Full remoting of the CDP protocol across the Grid&lt;br>* The skeleton of our GraphQL support&lt;br>* Better configuration options, especially for Nodes, via TOML&lt;br>* A bajillion improvements &amp;amp; fixes&lt;br>&lt;br>1/5&lt;/p>&amp;mdash; Simon Mavi Stewart (@shs96c) &lt;a href="https://twitter.com/shs96c/status/1266307374941437952?ref_src=twsrc%5Etfw">May 29, 2020&lt;/a>&lt;/blockquote>
@@ -7235,7 +7235,7 @@ directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></descript
 &lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">selenium-webdriver 4.0.0.alpha6 has just been released. The biggest change is an experimental support for Chrome DevTools protocol! Read more in changelog &lt;a href="https://t.co/1l2XYkaEfB">https://t.co/1l2XYkaEfB&lt;/a>.&lt;a href="https://twitter.com/hashtag/selenium?src=hash&amp;amp;ref_src=twsrc%5Etfw">#selenium&lt;/a> &lt;a href="https://twitter.com/hashtag/ruby?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ruby&lt;/a> &lt;a href="https://twitter.com/hashtag/devtools?src=hash&amp;amp;ref_src=twsrc%5Etfw">#devtools&lt;/a>&lt;/p>&amp;mdash; Alex Rodionov (@p0deje) &lt;a href="https://twitter.com/p0deje/status/1266144106885111814?ref_src=twsrc%5Etfw">May 28, 2020&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;/p>
-&lt;p>Happy hacking!&lt;/p></description></item><item><title>Blog: Selenium 3.0: Out Now!</title><link>/blog/2016/selenium-3-0-out-now/</link><pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate><guid>/blog/2016/selenium-3-0-out-now/</guid><description>
+&lt;p>Happy hacking!&lt;/p></description></item><item><title>Blog: Selenium 3.0: Out Now!</title><link>https://www.selenium.dev/blog/2016/selenium-3-0-out-now/</link><pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2016/selenium-3-0-out-now/</guid><description>
 &lt;p>We are very pleased to announce the release of &lt;a href="http://www.seleniumhq.org/download/">Selenium 3.0&lt;/a>. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:&lt;/p>
 &lt;p>As &lt;a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">we’ve said before&lt;/a>, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as &lt;a href="https://chromedriver.chromium.org/downloads">Chrome&lt;/a> and &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge&lt;/a> will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability. Selenium Grid users may require updates to their configuration as the json config file format has been updated, as have some of command line parameter options, but the upgrade should also be smooth.&lt;/p>
 &lt;p>The major change in Selenium 3.0 is we’re removing the original Selenium Core implementation and replacing it with one backed by WebDriver. This will affect all users of the &lt;a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium RC&lt;/a> APIs. For more information, please see the &lt;a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">previous post&lt;/a>.&lt;/p>
@@ -7244,7 +7244,7 @@ directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></descript
 &lt;p>Mozilla has been a front-runner in implementing the W3C WebDriver protocol. On the plus side, this has exposed problems with the spec as it has evolved, but it also means that Firefox support is hard to track as their engineering efforts have been forward looking, rather than on supporting the current wire protocol used by Selenium WebDriver. For now, the best advice we can offer is for you to try the latest release of &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a> and Selenium together.&lt;/p>
 &lt;p>These are exciting times for browser automation! Selenium 3.0 is a major release and we’re looking forward to improving things further, as well as tracking the ongoing work of the W3C spec. Our goal is to keep the changes your tests need to deal with to an absolute minimum, to continue preserving the hard work that’s gone into writing your existing tests.&lt;/p>
 &lt;p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make Selenium 3 possible. That’s not just the developers and contributors to the Open Source project (past and present), but also the engineers from Google, Microsoft, Mozilla, and Apple, and everyone involved with the W3C spec. I’d also like to say thank you to everyone who’s taken the time to report bugs, our users and our community. The project is great fun to work on and you’re the reason for that. A final thank you is due to the Software Freedom Conservancy, who have provided invaluable help with the logistics of running a large OSS project.&lt;/p>
-&lt;p>Happy hacking, everyone! May your tests run fast and true!&lt;/p></description></item><item><title>Blog: Selenium 3 is Coming</title><link>/blog/2016/selenium-3-is-coming/</link><pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate><guid>/blog/2016/selenium-3-is-coming/</guid><description>
+&lt;p>Happy hacking, everyone! May your tests run fast and true!&lt;/p></description></item><item><title>Blog: Selenium 3 is Coming</title><link>https://www.selenium.dev/blog/2016/selenium-3-is-coming/</link><pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2016/selenium-3-is-coming/</guid><description>
 &lt;p>&lt;a href="http://www.seleniumhq.org/download/">Selenium 3&lt;/a> is coming! As I write this, we think that “beta 4” will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.&lt;/p>
 &lt;h3 id="tldr">TL;DR:&lt;/h3>
 &lt;ul>
@@ -7262,7 +7262,7 @@ directly from the &lt;a href="/downloads">Selenium site&lt;/a>.&lt;/p></descript
 &lt;p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or later!). It’s strongly recommended that you do not do this unless you absolutely need to.&lt;br>
 If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project has made available for you to use that can be &lt;a href="http://www.seleniumhq.org/download/">downloaded&lt;/a> from the project’s website. It takes the same arguments as the old runner, and we’ve done our best to ensure the output of tests remains the same too.&lt;/p>
 &lt;p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As such, if you use Firefox for your testing, you’ll need to use the &lt;a href="https://github.com/mozilla/geckodriver/releases">geckodriver&lt;/a>, which is an executable similar to the &lt;a href="https://chromedriver.chromium.org/">chromedriver&lt;/a> and the &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft WebDriver&lt;/a> for Edge. You’ll need to start using geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone’s working flat out to give you the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with Firefox.&lt;/p>
-&lt;p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.&lt;/p></description></item><item><title>Blog: Announcing Selenium 3.0-beta1</title><link>/blog/2016/announcing-selenium-3-0-beta1/</link><pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate><guid>/blog/2016/announcing-selenium-3-0-beta1/</guid><description>
+&lt;p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.&lt;/p></description></item><item><title>Blog: Announcing Selenium 3.0-beta1</title><link>https://www.selenium.dev/blog/2016/announcing-selenium-3-0-beta1/</link><pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2016/announcing-selenium-3-0-beta1/</guid><description>
 &lt;p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.&lt;/p>
 &lt;p>We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.0 itself! Please remember that this is a beta release, so your feedback is incredibly helpful and valuable in order to help us smooth any rough edges.&lt;/p>
 &lt;p>For the last six years we’ve been advising users to switch to the newer WebDriver APIs and to stop using the original RC APIs. With Selenium 3.0, the original implementation of RC has been removed, replaced by one that sits on top of WebDriver. For many users, this change will go completely unnoticed, as they’re no longer using the RC APIs. For those of you who still are, we’ve done our best to make the change as smooth as possible, but &lt;a href="https://github.com/seleniumhq/selenium/issues">we welcome high quality bug reports&lt;/a> to help us fix any problems that occur. Maven users will need to add a dependency on the new “&lt;a href="http://docs.seleniumhq.org/download/maven.jsp">leg-rc&lt;/a>” package to access the old RC APIs.&lt;/p>
@@ -7274,14 +7274,14 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Support for Edge is provided by MS through their &lt;a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver server&lt;/a>.&lt;/li>
 &lt;li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as &lt;a href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support">MS no longer supports them&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then &lt;a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon&lt;/a> is a great place to start.&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.26: the “It’s Really Real” Release</title><link>/blog/2012/announcing-selenium-2-26/</link><pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate><guid>/blog/2012/announcing-selenium-2-26/</guid><description>
+&lt;p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then &lt;a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon&lt;/a> is a great place to start.&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.26: the “It’s Really Real” Release</title><link>https://www.selenium.dev/blog/2012/announcing-selenium-2-26/</link><pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2012/announcing-selenium-2-26/</guid><description>
 &lt;p>It’s been a long time since we announced a new Selenium release on this blog, as we moved to a model of quicker releases, but we’ve been working on 2.26 for far longer than normal — it’s out! &lt;a href="http://seleniumhq.org/download/">Download&lt;/a> it now! — so I thought it best to let you know. We’re aiming to head back to faster releases, so hopefully you won’t see another blog post about the release for a while (though I’m sure they’ll appear in the “Smatterings of Selenium” posts)&lt;/p>
 &lt;p>Some highlights that you might be interested in, include support for the latest and greatest versions of the popular browsers out there (including native events on Firefox 16!), the deletion of deprecated methods from the language bindings, better emulation of user input on IE when dealing with “&lt;a href="http://www.alistapart.com/articles/dropdowns">sucker fish&lt;/a>” style menus, and a slew of bug fixes. There’s more in the &lt;a href="https://code.google.com/p/selenium/source/browse/tags/selenium-2.26.0/java/CHANGELOG">changelog&lt;/a>!&lt;/p>
-&lt;p>The inimitable &lt;a href="https://twitter.com/jimevansmusic">Jim Evans&lt;/a> held the Release Bacon for what has become one of our most challenging releases to do, so a big “thank you!” to him. A “thank you”, also, to the rest of the core developers and &lt;a href="https://saucelabs.com/">Sauce Labs&lt;/a> team members who worked on fixing so many bugs and getting our continuous build green, especially Alexei Barantsev who did some amazingly detailed and painstaking work to help the release through. And a final “thank you” to our users: thanks for your feedback and support. 🙂&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.22</title><link>/blog/2012/announcing-selenium-2-22/</link><pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate><guid>/blog/2012/announcing-selenium-2-22/</guid><description>
+&lt;p>The inimitable &lt;a href="https://twitter.com/jimevansmusic">Jim Evans&lt;/a> held the Release Bacon for what has become one of our most challenging releases to do, so a big “thank you!” to him. A “thank you”, also, to the rest of the core developers and &lt;a href="https://saucelabs.com/">Sauce Labs&lt;/a> team members who worked on fixing so many bugs and getting our continuous build green, especially Alexei Barantsev who did some amazingly detailed and painstaking work to help the release through. And a final “thank you” to our users: thanks for your feedback and support. 🙂&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.22</title><link>https://www.selenium.dev/blog/2012/announcing-selenium-2-22/</link><pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2012/announcing-selenium-2-22/</guid><description>
 &lt;p>It’s been a while since the last Selenium release, but I’m happy to announce that Selenium 2.22 is now &lt;a href="http://seleniumhq.org/download/">available for download&lt;/a>. This is a big release for us and features two major changes.&lt;/p>
 &lt;p>The first is that &lt;strong>Selenium 2.22 is the first version that requires Java 6&lt;/strong> in order to run. This has been the case for the Selenium Server for some time, but this is the first time the client code has required Java 6. Since Java 5 was &lt;a href="http://www.oracle.com/technetwork/java/eol-135779.html">“end of lifed” in 2009&lt;/a>, we don’t expect this to impact many users.&lt;/p>
 &lt;p>The second major change is that &lt;strong>we are now providing a standalone IE server for use with the WebDriver API&lt;/strong>, similar to the one used by the chrome driver. You can get it from the normal download page. This will allow us to update our IE support independently of the rest of the library (again, mirroring how Chrome is supported) For now, there’s a legacy fallback mode you can use that’ll use the same DLL we’ve always used which can be activated by setting the DesiredCapability “useLegacyInternalServer” to boolean “true” when requesting your IE Driver instance.&lt;/p>
-&lt;p>Of course, as well as these major changes, there’s the usual host of updates and improvements. We’re continuing to refine the new SafariDriver, and we’re happy to announce native events for Firefox 12. You can check out the other updates in the &lt;a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG&lt;/a>.&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.19: the Prancing Unicorn release</title><link>/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</link><pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate><guid>/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</guid><description>
+&lt;p>Of course, as well as these major changes, there’s the usual host of updates and improvements. We’re continuing to refine the new SafariDriver, and we’re happy to announce native events for Firefox 12. You can check out the other updates in the &lt;a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG&lt;/a>.&lt;/p></description></item><item><title>Blog: Announcing Selenium 2.19: the Prancing Unicorn release</title><link>https://www.selenium.dev/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</link><pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/</guid><description>
 &lt;p>You might be pleased to hear that Selenium 2.19 has been released (&lt;a href="http://seleniumhq.org/download/">download it from here!&lt;/a>). There’s one big user facing changing that we’d like to tell you about: the webdriver-backed selenium can now be used in supported languages.&lt;/p>
 &lt;p>By providing this capability, it’s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">RemoteWebDriver&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">desired_capabilities&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">DesiredCapabilities&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">FIREFOX&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
@@ -7289,33 +7289,33 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">start&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Provided you keep a reference to the original webdriver and selenium objects you created you can use the two APIs interchangeably. You’ll see that the magic is the “*webdriver” browser name passed to the selenium instance, and that we pass the webdriver instance when calling start().&lt;/p>
 &lt;p>We hope you like it!&lt;/p>
-&lt;p>PS: I have no idea why this is the Prancing Unicorn release, but it’s been a while since we named one 🙂&lt;/p></description></item><item><title>Blog: Selenium 2.16 Released: Welcome to 2012!</title><link>/blog/2012/selenium-2-16-released-welcome-to-2012/</link><pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate><guid>/blog/2012/selenium-2-16-released-welcome-to-2012/</guid><description>
+&lt;p>PS: I have no idea why this is the Prancing Unicorn release, but it’s been a while since we named one 🙂&lt;/p></description></item><item><title>Blog: Selenium 2.16 Released: Welcome to 2012!</title><link>https://www.selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/</link><pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/</guid><description>
 &lt;p>It’s been a while since we last blogged about a Selenium release. Since the release of 2.0, we’ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we’re managing to get you one every 10 days on average). This allows you to pick the version that’s most suitable for you and your teams, but provides a route for quick feedback on how we’re doing. I think we’ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the &lt;a href="http://seleniumhq.org/download/">release of Selenium 2.16&lt;/a>.&lt;/p>
 &lt;p>If you’re unsure about what’s been happening since the last time we announced a release here, the best place to look is our &lt;a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">changelog&lt;/a>. The most notable feature in 2.16 is better support for Firefox 9, but if it’s been a while since you’ve last updated, we’ve been beavering away on bug fixes and making existing features work as flawlessly as possible. Now’s a great time to update!&lt;/p>
-&lt;p>One of the key tools we use for assessing whether it’s okay to push a release is our continuous build. This watches for each and every change made to the project’s source code, and runs an increasingly vast suite of tests to verify that nothing has broken. Our friends at &lt;a href="http://saucelabs.com/">Sauce Labs&lt;/a> have been extremely generous in providing support for this, and have worked closely with us to make the build as stable and quick as possible. Special kudos and thanks to them!&lt;/p></description></item><item><title>Blog: Selenium 2.9 Released</title><link>/blog/2011/selenium-2-9-released/</link><pubDate>Thu, 20 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-9-released/</guid><description>
+&lt;p>One of the key tools we use for assessing whether it’s okay to push a release is our continuous build. This watches for each and every change made to the project’s source code, and runs an increasingly vast suite of tests to verify that nothing has broken. Our friends at &lt;a href="http://saucelabs.com/">Sauce Labs&lt;/a> have been extremely generous in providing support for this, and have worked closely with us to make the build as stable and quick as possible. Special kudos and thanks to them!&lt;/p></description></item><item><title>Blog: Selenium 2.9 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-9-released/</link><pubDate>Thu, 20 Oct 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-9-released/</guid><description>
 &lt;p>We’re pleased to announce the release of &lt;a href="http://seleniumhq.org/download/">Selenium 2.9&lt;/a>. As well as improving the stability of Grid under high loads, we’ve added an experimental (and temporary!) feature that allows the Firefox driver to use a different mechanism for determining when a page is loaded. This is designed to handle the case where the driver appears to hang, as it’s waiting for all incoming requests to complete before continuing. How to enable this mode is listed in the &lt;a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">changelog&lt;/a>.&lt;/p>
-&lt;p>This release also includes an updated &lt;a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.9.apk">Android driver&lt;/a>, allowing your tests to run on Ice Cream Sandwich devices.&lt;/p></description></item><item><title>Blog: Selenium 2.8 Released</title><link>/blog/2011/selenium-2-8-released/</link><pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-8-released/</guid><description>
+&lt;p>This release also includes an updated &lt;a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.9.apk">Android driver&lt;/a>, allowing your tests to run on Ice Cream Sandwich devices.&lt;/p></description></item><item><title>Blog: Selenium 2.8 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-8-released/</link><pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-8-released/</guid><description>
 &lt;p>In keeping with our (roughly) weekly releases, Selenium 2.8 was &lt;a href="http://seleniumhq.org/download/">released today&lt;/a> (and on Maven too), &lt;a href="https://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">with a *huge* list of bug-fixes&lt;/a>! As well as improved stability, if you’re using the Java API, this release adds the ability to upload files to a RemoteWebDriver server (see &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/remote/RemoteWebDriver.html#setFileDetector(org.openqa.selenium.remote.FileDetector)">RemoteWebDriver.setFileDetector&lt;/a>).&lt;/p>
 &lt;p>Particular thanks have to go out to our two newest committers, Alexei Barancev and Ajay Kemparaj, for the copious bug-fixes they’ve contributed!&lt;/p>
-&lt;p>We’re already hard at work getting 2.9 ready for next week with even more more bug-fixes – watch this space!&lt;/p></description></item><item><title>Blog: Selenium 2.6 Released</title><link>/blog/2011/selenium-2-6-released/</link><pubDate>Fri, 16 Sep 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-6-released/</guid><description>
+&lt;p>We’re already hard at work getting 2.9 ready for next week with even more more bug-fixes – watch this space!&lt;/p></description></item><item><title>Blog: Selenium 2.6 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-6-released/</link><pubDate>Fri, 16 Sep 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-6-released/</guid><description>
 &lt;p>If you’ve been watching this blog carefully you’ll have noticed that the last release announcement we made was for 2.3, so it may come as a surprise that we’re announcing that &lt;a href="http://seleniumhq.org/download/">2.6 has been released&lt;/a> (even on Maven!). Don’t worry: 2.4 and 2.5 were released on time and without muss or fuss. 2.6, on the other hand has been almost three weeks brewing.&lt;/p>
 &lt;p>Selenium 2.6 introduces a raft of improvements and stability fixes. Kristian Rosenvold has been working wonders on &lt;a href="http://code.google.com/p/selenium/wiki/Grid2">Grid 2.0&lt;/a>, addressing many reported issues and cleaning up the implementation. In the &lt;a href="http://code.google.com/p/selenium/issues/detail?id=14">finest tradition of the project&lt;/a>, I now &lt;a href="http://code.google.com/p/selenium/issues/detail?id=2475">owe him a dinner&lt;/a> for his hard work. Thank you, Kristian!&lt;/p>
 &lt;p>For those of you not using Grid, as well as the normal suite of bug fixes, Selenium 2.6 now supports all versions of Firefox from 3.0 up to 7. For those of you using Java, there is an &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html">ExpectedConditions&lt;/a> class that supplies many useful criteria when using the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/support/ui/Wait.html">Wait&lt;/a> and &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/support/ui/WebDriverWait.html">WebDriverWait&lt;/a> classes. The packaged version of the &lt;a href="http://www.opera.com/developer/tools/operadriver/">OperaDriver&lt;/a> has also been bumped to 0.7.2, which works hand-in-hand with Opera 11.5 and above.&lt;/p>
 &lt;p>We’ve also spent a considerable amount of time and effort working out the kinks in the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/package-frame.html">Advanced User Interactions API&lt;/a>. We’d love to hear how you’re using it, and what the gaps are that you can see. For more details about what’s changed, have a look at the &lt;a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">release notes&lt;/a>.&lt;/p>
-&lt;p>The release frequency has dropped recently, but we’re planning to head back to weekly releases from here on in. 2.7 is just around the corner!&lt;/p></description></item><item><title>Blog: Selenium 2.3 Released</title><link>/blog/2011/selenium-2-3-released/</link><pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-3-released/</guid><description>
+&lt;p>The release frequency has dropped recently, but we’re planning to head back to weekly releases from here on in. 2.7 is just around the corner!&lt;/p></description></item><item><title>Blog: Selenium 2.3 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-3-released/</link><pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-3-released/</guid><description>
 &lt;p>Continuing our new tradition of weekly releases, we’re very pleased to announce the &lt;a href="http://seleniumhq.org/download/">release of Selenium 2.3&lt;/a>. The release notes for this version are pretty slim:&lt;/p>
 &lt;ul>
 &lt;li>Better detection of clickable areas in Firefox.&lt;/li>
 &lt;li>Merge of Google-contributed code into the underlying javascript libraries used by the drivers.&lt;/li>
 &lt;/ul>
 &lt;p>We’ve also fixed bugs, one of which was being a nuisance for users of IBM’s JRE. The complete changelog can be found in the zipped downloads or in &lt;a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">our source tree&lt;/a>.&lt;/p>
-&lt;p>If you’re a Chrome user, then it’s a great idea to head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> to pick up the executable used by the ChromeDriver. It’s recently been updated, and now includes support for handling alerts and prompts! Thanks, Google!&lt;/p></description></item><item><title>Blog: Selenium 2.2 Released</title><link>/blog/2011/selenium-2-2-released/</link><pubDate>Tue, 26 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-2-released/</guid><description>
+&lt;p>If you’re a Chrome user, then it’s a great idea to head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> to pick up the executable used by the ChromeDriver. It’s recently been updated, and now includes support for handling alerts and prompts! Thanks, Google!&lt;/p></description></item><item><title>Blog: Selenium 2.2 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-2-released/</link><pubDate>Tue, 26 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-2-released/</guid><description>
 &lt;p>The feedback from the last release was heard loud and clear: little and often it is!&lt;/p>
 &lt;p>We’re proud to announce the release of &lt;a href="http://seleniumhq.org/download/">Selenium 2.2&lt;/a>. What’s new this time? For many users, this is simply a bug fix release as there are no new major features. One thing you might appreciate is &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/IllegalLocatorException.html">better exceptions&lt;/a> being thrown when xpath searches return something other than a web element when using the WebDriver APIs, and we’re continuing to tweak the emulation of user events.&lt;/p>
-&lt;p>If you’re a .Net user, there is now an official &lt;a href="http://nuget.org/List/Packages/Selenium.WebDriver">NuGet package&lt;/a>, and if you’re a maven user then rest assured the release is heading to the central repo as quickly as we can manage.&lt;/p></description></item><item><title>Blog: Selenium 2.1 Released</title><link>/blog/2011/selenium-2-1-released/</link><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-1-released/</guid><description>
+&lt;p>If you’re a .Net user, there is now an official &lt;a href="http://nuget.org/List/Packages/Selenium.WebDriver">NuGet package&lt;/a>, and if you’re a maven user then rest assured the release is heading to the central repo as quickly as we can manage.&lt;/p></description></item><item><title>Blog: Selenium 2.1 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-1-released/</link><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-1-released/</guid><description>
 &lt;p>Now that Selenium 2 has &lt;a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">been released&lt;/a>, one of the goals of the project is to provide regular updates to our users and the community. The aim is for these updates to be small and manageable, incrementally addressing issues and problems raised by you. Selenium 2.1, which is &lt;a href="http://seleniumhq.org/download/">launched today&lt;/a>, marks the first of these regular, small releases.&lt;/p>
 &lt;p>&lt;a href="http://seleniumhq.org/download/">Selenium 2.1&lt;/a> is largely focused on improving Grid with a host of minor improvements including better tracking of “orphaned” browser instances. There are also some bug fixes in the Firefox and IE WebDrivers, particularly when dealing with elements that are &lt;em>just&lt;/em> off screen, and in making the Selenium RC emulation in the Java bindings more robust when confronted with pages that haven’t started loading.&lt;/p>
-&lt;p>As you can see, this is a “bite size” release, but we’d love to know: would you prefer these small, swift releases or larger ones? Please answer in the comments, or on the &lt;a href="groups.google.com/group/selenium-users">mailing list&lt;/a>!&lt;/p></description></item><item><title>Blog: Selenium 2.0: Out Now!</title><link>/blog/2011/selenium-2-0/</link><pubDate>Fri, 08 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0/</guid><description>
+&lt;p>As you can see, this is a “bite size” release, but we’d love to know: would you prefer these small, swift releases or larger ones? Please answer in the comments, or on the &lt;a href="groups.google.com/group/selenium-users">mailing list&lt;/a>!&lt;/p></description></item><item><title>Blog: Selenium 2.0: Out Now!</title><link>https://www.selenium.dev/blog/2011/selenium-2-0/</link><pubDate>Fri, 08 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0/</guid><description>
 &lt;p>We are very, very pleased to announce the &lt;a href="http://seleniumhq.org/download/">release of Selenium 2.0&lt;/a>. If you’ve been waiting for a stable release since 1.0.3, now’s the chance to update. And if you do, what will you find?&lt;/p>
 &lt;p>For users of Selenium 1, this is a drop-in replacement. You’ll find support for modern browsers such as &lt;a href="http://www.mozilla.com/en-US/firefox/new/">Firefox 5&lt;/a> and &lt;a href="http://windows.microsoft.com/en-GB/internet-explorer/products/ie/home">IE 9&lt;/a>, as well as a wealth of bug fixes and stability improvements. That’s one reason to update, but what other reasons are there?&lt;/p>
 &lt;p>The big feature of this release — and the reason for the new version number — are the new WebDriver APIs for &lt;a href="http://pypi.python.org/pypi/selenium">Python&lt;/a>, &lt;a href="http://rubygems.org/gems/selenium-webdriver">Ruby&lt;/a>, &lt;a href="http://code.google.com/p/selenium/downloads/list">Java and C#&lt;/a>. These have been in development for over four years, and are already widely used, trusted and depended on. The WebDriver APIs have been written by developers familiar with each language, so they feel like they belong there. We’re very proud of them, and hope you enjoy using them.&lt;/p>
@@ -7324,10 +7324,10 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>Advanced Selenium users will be pleased to hear that the standalone selenium server also includes support for distributed testing via &lt;a href="http://code.google.com/p/selenium/wiki/Grid2">Selenium Grid&lt;/a>. This new Grid implementation supports testing using both the original Selenium API and WebDriver, and has been developed as a collaboration between the current Grid maintainer and an engineer from eBay.&lt;/p>
 &lt;p>We’re working hard to ensure that Selenium IDE also supports all these new features and APIs. IDE version 1.1.0 should be released next week, with support for exporting to the four main languages supported by WebDriver. Please keep an eye on this blog for announcements! There will also be follow up posts, exploring and explaining each of the new features, and providing you with more information.&lt;/p>
 &lt;p>Of course, Selenium 2.0 is a major milestone, but we’re not done yet. This release marks the point where we expect our APIs to change very little from now on and where we believe it’s a solid release. Like all software, it has niggles and bugs, and we’ll be focusing on addressing these as your feedback comes in.&lt;/p>
-&lt;p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make this the best Selenium version yet. Not only the developers but also the team working on making our &lt;a href="http://seleniumhq.org/docs/">documentation&lt;/a> clear and easy to read, everyone who’s taken the time to &lt;a href="http://code.google.com/p/selenium/issues/list">report bugs&lt;/a>, and also to you; our &lt;a href="https://groups.google.com/group/webdriver">users&lt;/a> and &lt;a href="https://groups.google.com/group/selenium-users">community&lt;/a>. The project is great fun to work on, and you’re the reason for that. Thank you!&lt;/p></description></item><item><title>Blog: New ChromeDriver</title><link>/blog/2011/new-chromedriver/</link><pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/new-chromedriver/</guid><description>
-&lt;p>The ChromeDriver is composed of two major pieces. There are the client APIs, which you use in your tests, and there’s a server part, which the client APIs know how to start and run and which takes the form of an executable called “chromedriver”. The server piece is maintained by the Chromium team, and they’ve just released a new version, with support for Chrome 14 and with bug fixes. If you’re using Selenium 2.0rc3 and you’re also using the ChromeDriver, head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> for the latest and greatest!&lt;/p></description></item><item><title>Blog: Selenium IDE 1.0.12 – now with Firefox 5 support</title><link>/blog/2011/selenium-ide-1-0-12-firefox-5/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-ide-1-0-12-firefox-5/</guid><description>
+&lt;p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make this the best Selenium version yet. Not only the developers but also the team working on making our &lt;a href="http://seleniumhq.org/docs/">documentation&lt;/a> clear and easy to read, everyone who’s taken the time to &lt;a href="http://code.google.com/p/selenium/issues/list">report bugs&lt;/a>, and also to you; our &lt;a href="https://groups.google.com/group/webdriver">users&lt;/a> and &lt;a href="https://groups.google.com/group/selenium-users">community&lt;/a>. The project is great fun to work on, and you’re the reason for that. Thank you!&lt;/p></description></item><item><title>Blog: New ChromeDriver</title><link>https://www.selenium.dev/blog/2011/new-chromedriver/</link><pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/new-chromedriver/</guid><description>
+&lt;p>The ChromeDriver is composed of two major pieces. There are the client APIs, which you use in your tests, and there’s a server part, which the client APIs know how to start and run and which takes the form of an executable called “chromedriver”. The server piece is maintained by the Chromium team, and they’ve just released a new version, with support for Chrome 14 and with bug fixes. If you’re using Selenium 2.0rc3 and you’re also using the ChromeDriver, head over to the &lt;a href="http://code.google.com/p/chromium/downloads/list">Chromium project’s download page&lt;/a> for the latest and greatest!&lt;/p></description></item><item><title>Blog: Selenium IDE 1.0.12 – now with Firefox 5 support</title><link>https://www.selenium.dev/blog/2011/selenium-ide-1-0-12-firefox-5/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-ide-1-0-12-firefox-5/</guid><description>
 &lt;p>Last week we quietly released Selenium IDE 1.0.12 on the website. It has Firefox 5 support along with other improvements. See the &lt;a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">release notes&lt;/a> and &lt;a href="http://blog.reallysimplethoughts.com/2011/06/23/selenium-ide-v1-0-12-is-now-here/">unofficial announcement&lt;/a>. Download it &lt;a href="http://seleniumhq.org/download/">here&lt;/a> or ask Firefox to check for plugins updates.&lt;/p>
-&lt;p>And for those who did not download 1.0.11 (it was not pushed through the update system) you will want to &lt;a href="http://blog.reallysimplethoughts.com/2011/06/10/does-selenium-ide-v1-0-11-support-changing-formats/">read about the formatter change&lt;/a> that landed.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc3: The “Next One’s The Big One” Release</title><link>/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/</link><pubDate>Mon, 27 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/</guid><description>
+&lt;p>And for those who did not download 1.0.11 (it was not pushed through the update system) you will want to &lt;a href="http://blog.reallysimplethoughts.com/2011/06/10/does-selenium-ide-v1-0-11-support-changing-formats/">read about the formatter change&lt;/a> that landed.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc3: The “Next One’s The Big One” Release</title><link>https://www.selenium.dev/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/</link><pubDate>Mon, 27 Jun 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/</guid><description>
 &lt;p>When we pushed the 2.0rc1 live, we really hoped that the next release would be 2.0 final. We very quickly got some feedback that encouraged us to push a 2.0rc2. Now, after just under three weeks, we’re launching a third and final release candidate. You can download it from the &lt;a href="http://seleniumhq.org/download/">Selenium HQ&lt;/a> site or directly from &lt;a href="http://code.google.com/p/selenium/downloads/list">Google Code.&lt;/a>&lt;/p>
 &lt;p>We think we’ve addressed many of the common issues, added some polish and added a host of bug fixes and minor changes, and we hope to hear your feedback! The following headline changes have been made in Selenium 2rc3:&lt;/p>
 &lt;ul>
@@ -7338,9 +7338,9 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>The &lt;a href="http://www.opera.com/developer/tools/operadriver/">Opera driver&lt;/a>, developed by the lovely chaps at Opera Software, is bundled with this release.&lt;/li>
 &lt;li>Improvements in the way that mouse interactions are simulated, particularly when elements are outside the visible area of the page.&lt;/li>
 &lt;/ul>
-&lt;p>As with almost all releases, there are still some issues left to resolve, but we’re working hard to make Selenium 2.0 as good as it can be.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc2: The Better Working Release</title><link>/blog/2011/selenium-2-0rc2-the-better-working-release/</link><pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc2-the-better-working-release/</guid><description>
+&lt;p>As with almost all releases, there are still some issues left to resolve, but we’re working hard to make Selenium 2.0 as good as it can be.&lt;/p></description></item><item><title>Blog: Selenium 2.0rc2: The Better Working Release</title><link>https://www.selenium.dev/blog/2011/selenium-2-0rc2-the-better-working-release/</link><pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0rc2-the-better-working-release/</guid><description>
 &lt;p>You win some and you lose some. We’d been really pleased to get Selenium 2.0rc1 out, so we were pretty disappointed to hear that some of you were running into problems with the Java version of the IE driver not launching IE sometimes. That’s definitely not good, so we fixed the problems and have &lt;a href="http://code.google.com/p/selenium/downloads/list">released Selenium 2.0rc2&lt;/a>. It’s the same as rc1, but with fewer problems 🙂&lt;/p>
-&lt;p>We’re still very keen to hear your feedback! Let us know what you think!&lt;/p></description></item><item><title>Blog: Selenium 2.0rc1: The Grid Release</title><link>/blog/2011/selenium-2-0rc1-the-grid-release/</link><pubDate>Wed, 01 Jun 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0rc1-the-grid-release/</guid><description>
+&lt;p>We’re still very keen to hear your feedback! Let us know what you think!&lt;/p></description></item><item><title>Blog: Selenium 2.0rc1: The Grid Release</title><link>https://www.selenium.dev/blog/2011/selenium-2-0rc1-the-grid-release/</link><pubDate>Wed, 01 Jun 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0rc1-the-grid-release/</guid><description>
 &lt;p>We’re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! &lt;a href="http://code.google.com/p/selenium/downloads/list">Grab the downloads from the site&lt;/a>!&lt;/p>
 &lt;p>Highlights:&lt;/p>
 &lt;ul>
@@ -7356,12 +7356,12 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Native events on Linux may not work properly on tests that include alerts and prompts.&lt;/li>
 &lt;li>Mouse actions using the Advanced User Interactions API may not work properly for elements that have to be scrolled into view.&lt;/li>
 &lt;/ul>
-&lt;p>We plan on making our releases more frequent in the run up to 2.0final and polish off the bugs and issues. Stay tuned! This is going to be fun 🙂&lt;/p></description></item><item><title>Blog: Selenium IDE 1.0.11 – Now with Firefox 4 Support!</title><link>/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</link><pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</guid><description>
+&lt;p>We plan on making our releases more frequent in the run up to 2.0final and polish off the bugs and issues. Stay tuned! This is going to be fun 🙂&lt;/p></description></item><item><title>Blog: Selenium IDE 1.0.11 – Now with Firefox 4 Support!</title><link>https://www.selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</link><pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</guid><description>
 &lt;p>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the &lt;a href="http://seleniumhq.org/download/">seleniumhq download site&lt;/a>. The update will also be pushed to you automatically over the next couple days.&lt;/p>
 &lt;p>Other things of note around this release&lt;br>
 •&lt;a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">Release Notes&lt;br>
 &lt;/a>•&lt;a href="http://code.google.com/p/selenium/issues/list">Where to log bugs&lt;/a>&lt;br>
-•&lt;a href="http://blog.reallysimplethoughts.com/2011/05/30/welcome-selenium-ide-1-0-11-with-firefox-4-support/">Welcome Selenium IDE 1.0.11 (with Firefox 4 support)&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium 2.0b3: The Next Gen Browser Release</title><link>/blog/2011/selenium-2-0b3-the-next-gen-browser-release/</link><pubDate>Mon, 21 Mar 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0b3-the-next-gen-browser-release/</guid><description>
+•&lt;a href="http://blog.reallysimplethoughts.com/2011/05/30/welcome-selenium-ide-1-0-11-with-firefox-4-support/">Welcome Selenium IDE 1.0.11 (with Firefox 4 support)&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium 2.0b3: The Next Gen Browser Release</title><link>https://www.selenium.dev/blog/2011/selenium-2-0b3-the-next-gen-browser-release/</link><pubDate>Mon, 21 Mar 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0b3-the-next-gen-browser-release/</guid><description>
 &lt;p>It’s been about 5 weeks since the release of beta 2, so we’re very pleased to announce that Selenium 2.0b3 has just been released simultaneously for Java, .Net, Ruby and Python. You can &lt;a href="http://seleniumhq.org/download/">download it from Selenium HQ&lt;/a> or from the &lt;a href="http://code.google.com/p/selenium/downloads/list">Google Code site&lt;/a>. This release focused on providing excellent support for the next generation of browsers, particularly IE 9 and Firefox 4, and we think you’ll like what you’ll find.&lt;/p>
 &lt;ul>
 &lt;li>Restructured documentation at &lt;a href="http://seleniumhq.org/docs/">Selenium HQ&lt;/a>&lt;/li>
@@ -7386,7 +7386,7 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;/ul>
 &lt;p>As well as these changes, there’s also the regular clutch of bug fixes and tweaks. For the number crunchers, there were a total of &lt;a href="http://code.google.com/p/selenium/source/list?num=331&amp;amp;start=11749">331 changes&lt;/a> that landed in the 5 weeks since the last release, with the 5 most active contributors working on each of the different languages supported by Selenium.&lt;/p>
 &lt;p>In addition to the enormous thanks that go to the developers, I’d like to add a big thank you to the Mozilla engineers who chipped in on the IRC channel at the last minute to help us work through some issues with Core. We’d not have been able to get this release out when we did without their help. Thank you Mozilla!&lt;/p>
-&lt;p>The next release will be focused on stabilization work, reducing our bug count and adding support for Grid 2.0.&lt;/p></description></item><item><title>Blog: Selenium 2.0b2 Released</title><link>/blog/2011/selenium-2-0b2-released/</link><pubDate>Tue, 15 Feb 2011 00:00:00 +0000</pubDate><guid>/blog/2011/selenium-2-0b2-released/</guid><description>
+&lt;p>The next release will be focused on stabilization work, reducing our bug count and adding support for Grid 2.0.&lt;/p></description></item><item><title>Blog: Selenium 2.0b2 Released</title><link>https://www.selenium.dev/blog/2011/selenium-2-0b2-released/</link><pubDate>Tue, 15 Feb 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/selenium-2-0b2-released/</guid><description>
 &lt;p>We’ve just released Selenium 2.0b2. If you’re the impatient sort who loves to have the latest and greatest, head over to the &lt;a href="http://code.google.com/p/selenium/downloads/list">download site&lt;/a> and get it while it’s hot. If you’re a Python user, then all you need to do is a simple “pip install -U selenium”. Ruby users can, as ever, simply run “gem install selenium-webdriver”. Maven users need to wait just a little bit longer: we’re going to be checking the release in ASAP.&lt;/p>
 &lt;p>Between beta 1 and beta 2, we held a week-long Bug Bash, during which we closed a significant number of bugs. From a user’s perspective, other highlights include:&lt;/p>
 &lt;ul>

@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – java</title><link>/tags/java/</link><description>Recent content in java on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener</title><link>/blog/2023/java-removal-of-deprecated-events-classes/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-removal-of-deprecated-events-classes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – java</title><link>https://www.selenium.dev/tags/java/</link><description>Recent content in java on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Removal of AbstractEventListener + EventFiringWebDriver + WebDriverEventListener</title><link>https://www.selenium.dev/blog/2023/java-removal-of-deprecated-events-classes/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/java-removal-of-deprecated-events-classes/</guid><description>
 &lt;h3 id="upgrading-to-webdriverlistener-and-eventfiringdecorator">Upgrading to WebDriverListener and EventFiringDecorator&lt;/h3>
 &lt;p>Decorating the webdriver&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span> &lt;span style="color:#000">EventFiringWebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">);&lt;/span> &lt;span style="color:#8f5902;font-style:italic">// Old approach
@@ -127,7 +127,7 @@ One can override instances of WebDriver and derived objects( WebElement, Alert, 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>So that&amp;rsquo;s some general examples on how to transition your code!
-Happy testing!&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>/blog/2023/java-8-support/</guid><description>
+Happy testing!&lt;/p></description></item><item><title>Blog: Java 8 support in Selenium</title><link>https://www.selenium.dev/blog/2023/java-8-support/</link><pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/java-8-support/</guid><description>
 &lt;p>“If it ain’t broke, don’t fix it” is a saying you may have heard, but sometimes
 it’s necessary to move on from our old favorites. That’s why we’re announcing that
 &lt;strong>Selenium will stop supporting Java 8 on September 30, 2023&lt;/strong>. This applies for
@@ -137,7 +137,7 @@ the primary reasons for this change is that Java 8 reached the end of active sup
 &lt;a href="https://endoflife.date/java">over a year ago&lt;/a>. In addition, our default HTTP
 Client has not had a major release in several years, and a
 &lt;a href="https://github.com/SeleniumHQ/selenium/issues/9528">bug&lt;/a> has been found that we can not fix.
-We have decided to &lt;a href="/blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
+We have decided to &lt;a href="https://www.selenium.dev/blog/2022/using-java11-httpclient/">move to the native Java HTTP Client&lt;/a>,
 but it requires using Java 11 or greater. The sooner we make this change, the sooner
 we can avoid dealing with this issue.&lt;/p>
 &lt;p>Our new minimum version will be Java 11. September 30, 2023 is also the end of
@@ -152,7 +152,7 @@ higher. We understand that some may be hesitant or may find it difficult to make
 the switch, but we believe it will pay off in the long run.&lt;/p>
 &lt;p>Please let us know your questions, concerns, and feedback through our
 &lt;a href="https://www.selenium.dev/support/#ChatRoom">community chat&lt;/a>.&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: InvalidSelectorException has changed</title><link>/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>/blog/2023/invalid-selector-exception-has-changed/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: InvalidSelectorException has changed</title><link>https://www.selenium.dev/blog/2023/invalid-selector-exception-has-changed/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2023/invalid-selector-exception-has-changed/</guid><description>
 &lt;p>Before Selenium 4.8.2 in Java and C#, when an invalid locator was used to identify an element, the resulting behavior would be
 inconsistent in our bindings.&lt;/p>
 &lt;p>For example, let&amp;rsquo;s check the following code:&lt;/p>
@@ -178,7 +178,7 @@ and implemented through the pull request &lt;a href="https://github.com/Selenium
 &lt;p>Please note that this may have an impact on backwards compatibility if you are not expecting this exception to be thrown while
 handling invalid locators.&lt;/p>
 &lt;p>Stay tuned for updates by following &lt;a href="https://twitter.com/seleniumhq">SeleniumHQ&lt;/a>!&lt;/p>
-&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+&lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</guid><description>
 &lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of the core Selenium maintainers.
 One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
@@ -194,20 +194,20 @@ One huge advantage of BELLATRIX is its cross-technology readiness. It allows you
 &lt;p>&lt;a href="https://docs.java.bellatrix.solutions/overview/">&lt;strong>BELLATRIX Java Documentation&lt;/strong>&lt;/a>&lt;/p>
 &lt;p>Let&amp;rsquo;s investigate how easy it is to create your first test with BELLATRIX in 15 minutes. The sample will showcase how to create a very basic test login into a website:
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;ol>
 &lt;li>Open the &lt;strong>BellatrixTestFramework.sln&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
 &lt;/figure>
 &lt;ol start="2">
 &lt;li>Under the &lt;strong>starthere&lt;/strong> folder, find the project you prefer: web, mobile, desktop, API&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
 &lt;/figure>
 &lt;ol start="3">
 &lt;li>Open the &lt;strong>BellatrixLoginTest.cs&lt;/strong> file. There you will find a sample test automating the login.&lt;/li>
@@ -257,7 +257,7 @@ The sample code uses MSTest as the default test framework, but by changing the a
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="complex-controls">Complex Controls&lt;/h3>
 &lt;p>BELLATRIX provides API that makes handling HTML tables and grids much easier &lt;strong>&lt;a href="https://docs.bellatrix.solutions/web-automation/complex-components/">HTML tables and grids&lt;/a>&lt;/strong>.
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
 &lt;/figure>
 Here is an example for asserting grid cells:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ForEachCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">cell&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">cell&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AssertFontSize&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;14px&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">));&lt;/span>
@@ -278,7 +278,7 @@ You are not limited to PDFs only. You can use the same feature for extracting te
 &lt;strong>&lt;a href="https://docs.bellatrix.solutions/product-integrations/">All BELLATRIX Integrations&lt;/a>&lt;/strong>&lt;/p>
 &lt;p>Using BELLATRIX in your projects might save months/years of effort even if you have the required programming knowledge. This way, you can quickly focus on writing automated tests for your project.
 Usually, there are 4-6 major releases each year, including all bug fixes and new features. Check our &lt;strong>&lt;a href="https://bellatrix.solutions/roadmap/release-3-6-0-0-chamaeleon/">release notes history&lt;/a>&lt;/strong>. The framework is fully covered with over 4000 automated tests and offers rich documentation. We make sure to merge the new feature branches only when we are sure that everything is working. If some issue emerges after a major release, it is quickly fixed within a few days.&lt;/p>
-&lt;p>For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our &lt;strong>&lt;a href="https://bellatrix.solutions/contact-us/">contact us form&lt;/a>&lt;/strong>.&lt;/p></description></item><item><title>Blog: Removing Legacy Protocol Support</title><link>/blog/2022/legacy-protocol-support/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>/blog/2022/legacy-protocol-support/</guid><description>
+&lt;p>For feature requests or bug reports, you can submit them to our GitHub repositories. If you believe that the functionality you developed can be added to the CORE framework or you have a bug fix, please submit a PR so we can discuss it and potentially merge it. For anything else, you can reach us via our &lt;strong>&lt;a href="https://bellatrix.solutions/contact-us/">contact us form&lt;/a>&lt;/strong>.&lt;/p></description></item><item><title>Blog: Removing Legacy Protocol Support</title><link>https://www.selenium.dev/blog/2022/legacy-protocol-support/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/legacy-protocol-support/</guid><description>
 &lt;p>The Selenium team prides itself on how seriously it takes backwards compatibility.
 A lot of care has gone into the Java bindings, especially, to ensure very few breaking changes over the years.
 There is Selenium code written 15 years ago that can still run with Selenium 4 libraries!

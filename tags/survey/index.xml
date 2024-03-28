@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – survey</title><link>/tags/survey/</link><description>Recent content in survey on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/survey/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Results of the first ever selenium survey</title><link>/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>/blog/2021/selenium-survey-results/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – survey</title><link>https://www.selenium.dev/tags/survey/</link><description>Recent content in survey on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/survey/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Results of the first ever selenium survey</title><link>https://www.selenium.dev/blog/2021/selenium-survey-results/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/selenium-survey-results/</guid><description>
 &lt;p>Below is a summary of the Selenium survey that was collected.&lt;/p>
 &lt;h2 id="batteries-included">Batteries included&lt;/h2>
 &lt;h3 id="browser-management">Browser Management&lt;/h3>
@@ -76,12 +76,12 @@
 &lt;p>After reviewing the “What one thing would you improve about Selenium I was able to narrow most of the responses down to similar types.&lt;/p>
 &lt;p>Below is a breakdown of the issues that people would like to see improved.&lt;/p>
 &lt;figure>
-&lt;img src="/images/blog/2021/breakdown_of_answers.png"
+&lt;img src="https://www.selenium.dev/images/blog/2021/breakdown_of_answers.png"
 alt="Breakdown of answers of areas needing improvement. Main 3 areas are flakiness, documentation, Browser Management, Shadow DOM"/>
 &lt;/figure>
 &lt;h2 id="happiness">Happiness&lt;/h2>
 &lt;p>Of the 410 respondents, 219 had something nice to say about Selenium and were thankful for the product being around.&lt;/p>
-&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: A Quick Survey on Features</title><link>/blog/2011/a-quick-survey-on-features/</link><pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate><guid>/blog/2011/a-quick-survey-on-features/</guid><description>
+&lt;p>Some of the main reasons are simplicity of APIs, good backwards compatibility, and it being open source&lt;/p></description></item><item><title>Blog: A Quick Survey on Features</title><link>https://www.selenium.dev/blog/2011/a-quick-survey-on-features/</link><pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/a-quick-survey-on-features/</guid><description>
 &lt;p>Rather than surprising the general community in ways that we have become somewhat known for, I figured I would try something new. Actually asking about usage of things before changing them in fundamental ways.&lt;/p>
 &lt;p>To this end, I have created a quick(!) &lt;a href="http://www.surveymonkey.com/s/DZC89TF">survey&lt;/a> about changes that are under consideration regarding UI-Maps and how Se-IDE is opened.&lt;/p>
 &lt;p>The &lt;a href="http://www.surveymonkey.com/s/DZC89TF">survey&lt;/a> is only two questions, so I’m hoping for a large response. I’ll post the results next Monday (August 8, 2011).&lt;/p>

@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – framework</title><link>/tags/framework/</link><description>Recent content in framework on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/framework/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>/blog/2022/bellatrix-test-automation-framework/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – framework</title><link>https://www.selenium.dev/tags/framework/</link><description>Recent content in framework on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/framework/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: BELLATRIX Test Automation Framework for C# and JAVA</title><link>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</link><pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/</guid><description>
 &lt;p>Over the last decade, a large ecosystem of Open Source projects has sprouted up around Selenium. Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.
 Nowadays, Selenium Ecosystem initiatives try to give popularity to popular open-source test automation frameworks maintained by people outside of the core Selenium maintainers.
 One of these frameworks is BELLATRIX, invented by &lt;a href="https://www.linkedin.com/in/angelovstanton/">Anton Angelov&lt;/a>. It has two versions - C# and Java.
@@ -14,20 +14,20 @@ One huge advantage of BELLATRIX is its cross-technology readiness. It allows you
 &lt;p>&lt;a href="https://docs.java.bellatrix.solutions/overview/">&lt;strong>BELLATRIX Java Documentation&lt;/strong>&lt;/a>&lt;/p>
 &lt;p>Let&amp;rsquo;s investigate how easy it is to create your first test with BELLATRIX in 15 minutes. The sample will showcase how to create a very basic test login into a website:
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/login-form.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;ol>
 &lt;li>Open the &lt;strong>BellatrixTestFramework.sln&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/open_the_sln.png"/>
 &lt;/figure>
 &lt;ol start="2">
 &lt;li>Under the &lt;strong>starthere&lt;/strong> folder, find the project you prefer: web, mobile, desktop, API&lt;/li>
 &lt;/ol>
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/bellatrix-projects-structure.png"/>
 &lt;/figure>
 &lt;ol start="3">
 &lt;li>Open the &lt;strong>BellatrixLoginTest.cs&lt;/strong> file. There you will find a sample test automating the login.&lt;/li>
@@ -77,7 +77,7 @@ The sample code uses MSTest as the default test framework, but by changing the a
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="complex-controls">Complex Controls&lt;/h3>
 &lt;p>BELLATRIX provides API that makes handling HTML tables and grids much easier &lt;strong>&lt;a href="https://docs.bellatrix.solutions/web-automation/complex-components/">HTML tables and grids&lt;/a>&lt;/strong>.
 &lt;figure class="img-responsive w-50">
-&lt;img src="/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
+&lt;img src="https://www.selenium.dev/blog/2022/bellatrix-test-automation-framework/grid-html-example.png"/>
 &lt;/figure>
 Here is an example for asserting grid cells:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">TestGrid&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ForEachCell&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">cell&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">cell&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AssertFontSize&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;14px&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">));&lt;/span>

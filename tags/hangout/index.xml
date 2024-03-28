@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – hangout</title><link>/tags/hangout/</link><description>Recent content in hangout on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="/tags/hangout/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium Hangout 5 Recap</title><link>/blog/2014/selenium-hangout-6-recap/</link><pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate><guid>/blog/2014/selenium-hangout-6-recap/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – hangout</title><link>https://www.selenium.dev/tags/hangout/</link><description>Recent content in hangout on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/hangout/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</link><pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</guid><description>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/ASVqZPN3j7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
@@ -23,7 +23,7 @@ Highlights:&lt;br>
 &lt;a href="http://webconsistencytesting.com/how-it-works.html">Web Consistency Testing&lt;/a>&lt;br>
 &lt;a href="http://nirvdrum.com/2014/11/20/open-sourcing-mogotest.html">Why MogoTest won’t be open sourcing it’s code after shutting down&lt;/a>&lt;br>
 &lt;a href="https://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm’s GTAC talk on Fighting Layout Bugs&lt;/a>&lt;br>
-&lt;a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 5 Recap</title><link>/blog/2014/selenium-hangout-5-recap/</link><pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate><guid>/blog/2014/selenium-hangout-5-recap/</guid><description>
+&lt;a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</link><pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</guid><description>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/6TMIIw0NT44" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
@@ -43,7 +43,7 @@ Highlights:&lt;br>
 &lt;p>&lt;strong>24:11 – 39:00&lt;/strong> Discussion about 5 Hidden Costs Of Selenium Whitepaper from Telerik&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="http://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply.html">David Burns’ blog post rebuttal&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Selenium Hangout 4 Recap</title><link>/blog/2014/selenium-hangout-4-recap/</link><pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate><guid>/blog/2014/selenium-hangout-4-recap/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Selenium Hangout 4 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</link><pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</guid><description>
 &lt;p>Here’s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (&lt;a href="https://twitter.com/seleniumhangout">@seleniumhangout&lt;/a>) or e-mail us (&lt;a href="mailto:questions@seleniumhangout.com">questions@seleniumhangout.com&lt;/a>).&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/3IEqh7NmaEo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
@@ -98,7 +98,7 @@ Dave Haeffner (&lt;a href="https://github.com/tourdedave">@TourDeDave&lt;/a>)&lt
 &lt;li>&lt;a href="http://selendroid.io/">Selendroid&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>45:20-47:30 New Mobile Selenium Drivers&lt;br>
-&lt;em>tl;dr RIM (BlackBerry Smartphones) and Microsoft (Windows phones)&lt;/em>&lt;/p></description></item><item><title>Blog: Selenium Hangout 3 Recap</title><link>/blog/2013/selenium-hangout-3-recap/</link><pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate><guid>/blog/2013/selenium-hangout-3-recap/</guid><description>
+&lt;em>tl;dr RIM (BlackBerry Smartphones) and Microsoft (Windows phones)&lt;/em>&lt;/p></description></item><item><title>Blog: Selenium Hangout 3 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</link><pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</guid><description>
 &lt;p>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.&lt;/p>
 &lt;p>Be sure to tune into &lt;a href="https://twitter.com/seleniumhangout">our Twitter feed&lt;/a> to find out details about our next Hangout.&lt;/p>
 &lt;p>And if your question didn’t get answered, we encourage you to hop on IRC and ask it there. Not sure what that means or how to do it? Then &lt;a href="http://elementalselenium.com/tips/20-irc-chat">read this&lt;/a>.&lt;/p>
@@ -130,7 +130,7 @@ Dave Haeffner (&lt;a href="https://github.com/tourdedave">@TourDeDave&lt;/a>)&lt
 &lt;p>&lt;strong>Links mentioned&lt;/strong>&lt;/p>
 &lt;p>&lt;a href="http://elementalselenium.com/tips/18-what-to-test">Figuring Out What To Test&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://groups.google.com/forum/#!topic/selenium-developers/94UM1CYysbo">How to get involved with the Selenium Conference&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium-docs">Where to contribute to Selenium Documentation&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 2 Recap</title><link>/blog/2013/selenium-hangout-2-recap/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>/blog/2013/selenium-hangout-2-recap/</guid><description>
+&lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium-docs">Where to contribute to Selenium Documentation&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 2 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</guid><description>
 &lt;p>This is a recap from the most recent Selenium Hangout (a.k.a. &lt;a href="seleniumhq.wordpress.com/2013/08/09/the-worlds-best-selenium-meetup/">The World’s Best Selenium Meetup&lt;/a>). For info on future meetups, &lt;a href="https://twitter.com/SeleniumHangout">follow them on Twitter&lt;/a>.&lt;/p>
 &lt;p>Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go &lt;a href="http://bit.ly/sehovideos">here&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>Panel&lt;/strong>&lt;/p>
