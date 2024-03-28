@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.selenium.dev/"
 title = "Selenium"
 timeout = "60s"
 
