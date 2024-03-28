@@ -409,7 +409,7 @@ David Burns
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>Stay tuned for updates by following SeleniumHQ on &lt;a href="https://twitter.com/seleniumhq">X (Formerly Twitter&lt;/a> or &lt;a href="https://www.linkedin.com/company/selenium/">LinkedIn&lt;/a>!&lt;/p>
+&lt;p>Stay tuned for updates by following SeleniumHQ on &lt;a href="https://twitter.com/seleniumhq">X (Formerly Twitter)&lt;/a> or &lt;a href="https://www.linkedin.com/company/selenium/">LinkedIn&lt;/a>!&lt;/p>
 &lt;p>Happy testing!&lt;/p></description></item><item><title>Blog: Update imports to use BiDi Java</title><link>https://www.selenium.dev/blog/2024/bidi-java-breaking-change/</link><pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2024/bidi-java-breaking-change/</guid><description>
 &lt;h2 id="what-part-of-the-code-base-is-impacted">What part of the code base is impacted?&lt;/h2>
 &lt;p>Selenium WebDriver BiDi APIs in Java bindings are impacted.&lt;/p>
