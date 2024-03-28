@@ -228,9 +228,26 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
 ## Running Selenium File
 
-{{< alert-code >}}
-Add example for how to execute each of the above pages via command line
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/README.md#L36" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 
 ## Next Steps
