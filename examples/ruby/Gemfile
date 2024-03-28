@@ -15,5 +15,5 @@ if ENV['SE_NIGHTLY']
     gem selenium, '~> 4.19.0.nightly'
   end
 else
-  gem 'selenium-webdriver', '= 4.18.1'
+  gem 'selenium-webdriver', '= 4.19.0'
 end
