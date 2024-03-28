@@ -5,12 +5,13 @@ date: 2024-03-27
 tags: ["selenium"]
 categories: ["releases"]
 author: Diego Molina [@diemol](https://diemol.com)
-image: /images/blog/selenium_4.19.png
+images:
+  - "/images/blog/selenium_4.19.png"
 description: >
   Today we're happy to announce that Selenium 4.19 has been released!
 ---
 
-We're very happy to announce the release of Selenium 4.19.0 and 4.19.1 for 
+We're very happy to announce the release of Selenium 4.19.0 for 
 Javascript, Ruby, Python, .NET, Java and the Grid!
 Links to everything can be found on our [downloads page][downloads].
 
