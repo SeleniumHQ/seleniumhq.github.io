@@ -137,7 +137,7 @@ Links to everything can be found on our [downloads page][downloads].
   </div>
 </div>
 
-Stay tuned for updates by following SeleniumHQ on [X (Formerly Twitter](https://twitter.com/seleniumhq) or [LinkedIn](https://www.linkedin.com/company/selenium/)!
+Stay tuned for updates by following SeleniumHQ on [X (Formerly Twitter)](https://twitter.com/seleniumhq) or [LinkedIn](https://www.linkedin.com/company/selenium/)!
 
 Happy testing!
 
