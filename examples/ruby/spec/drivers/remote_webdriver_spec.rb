@@ -52,13 +52,11 @@ RSpec.describe 'Remote WebDriver' do
     files = driver.downloadable_files
 
     expect(files.sort).to eq file_names.sort
-    downloadable_file = files.first
+    downloadable_file = 'file_1.txt'
 
     driver.download_file(downloadable_file, target_directory)
 
-    file_content = File.open("#{target_directory}/#{downloadable_file}", "rb:UTF-8") do |f|
-      f.read.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
-    end.strip
+    file_content = File.read("#{target_directory}/#{downloadable_file}").strip
     expect(file_content).to eq('Hello, World!')
 
     driver.delete_downloadable_files
