@@ -51,7 +51,7 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-devtools (0.122.0)
+    selenium-devtools (0.123.0)
       selenium-webdriver (~> 4.2)
     selenium-webdriver (4.19.0)
       base64 (~> 0.2)
