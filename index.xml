@@ -1,5 +1,5 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – Selenium</title><link>/</link><description>Recent content on Selenium</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium 4.19 Released!</title><link>/blog/2024/selenium-4-19-released/</link><pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate><guid>/blog/2024/selenium-4-19-released/</guid><description>
-&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.19.0 and 4.19.1 for
+&lt;p>We&amp;rsquo;re very happy to announce the release of Selenium 4.19.0 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
 Links to everything can be found on our &lt;a href="/downloads">downloads page&lt;/a>.&lt;/p>
 &lt;h3 id="highlights">Highlights&lt;/h3>
