@@ -11,7 +11,7 @@
     <properties>
         <kotlin.version>1.9.23</kotlin.version>
 
-        <slf4j.version>1.7.36</slf4j.version>
+        <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.5.3</logback.version>
 
         <junit5.version>5.10.2</junit5.version>
