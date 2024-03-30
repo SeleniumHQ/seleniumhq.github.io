@@ -23,7 +23,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L31-L33" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -44,7 +44,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L46-L47" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L50-L52" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -65,7 +65,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L23-L26" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L27-L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -87,7 +87,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L38-L41" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
