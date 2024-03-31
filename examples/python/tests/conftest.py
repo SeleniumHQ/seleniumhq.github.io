@@ -133,7 +133,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.18.1.jar",
+        "selenium-server-4.19.1.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -191,7 +191,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.18.1.jar",
+        "selenium-server-4.19.1.jar",
     )
 
     args = [
