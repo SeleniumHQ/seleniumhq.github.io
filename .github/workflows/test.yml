@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f
+        uses: peaceiris/actions-hugo@1b06a03d2187c950c5a441dc45c80a01868eca5b
         with:
           hugo-version: '0.110.0'
           extended: true
