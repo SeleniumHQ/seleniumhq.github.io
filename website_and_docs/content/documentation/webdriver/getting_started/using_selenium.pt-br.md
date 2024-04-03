@@ -141,7 +141,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L24" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -165,10 +165,10 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 ### Set Up
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L5-L7" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
 
 ### Tear Down
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L9-L11" >}}
+{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

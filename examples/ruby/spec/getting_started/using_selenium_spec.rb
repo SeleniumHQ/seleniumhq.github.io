@@ -1,13 +1,11 @@
 # frozen_string_literal: true
+require 'spec_helper'
 require 'selenium-webdriver'
+
 
 RSpec.describe 'Using Selenium' do
   before do
     @driver = Selenium::WebDriver.for :chrome
-  end
-
-  after do
-    @driver.quit
   end
 
   it 'uses eight components' do
