@@ -159,7 +159,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}çΩ
+{{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
