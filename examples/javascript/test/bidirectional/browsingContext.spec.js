@@ -422,6 +422,16 @@ suite(function (env) {
             await browsingContext.forward()
 
             await driver.wait(until.titleIs('We Arrive Here'), 2500)
+        });
+
+        it.skip('Get All Top level browsing contexts', async () => {
+            const id = await driver.getWindowHandle()
+            const window1 = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+            await BrowsingContext(driver, { type: 'window' })
+            const res = await window1.getTopLevelContexts()
+            assert.equal(res.length, 2)
         })
     })
 }, {browsers: ['firefox']})
