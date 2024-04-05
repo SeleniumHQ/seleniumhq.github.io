@@ -11,13 +11,10 @@ aliases: [
 
 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 简便的方法
-driver.get("https://selenium.dev");
 
-// 更长的方法
-driver.navigate().to("https://selenium.dev");
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L14-L18" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 driver.get("https://selenium.dev")
@@ -47,9 +44,10 @@ driver.navigate().to("https://selenium.dev")
 ## 后退
 
 按下浏览器的后退按钮:
-
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.navigate().back();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L22-L23" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}driver.back(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
@@ -61,7 +59,9 @@ driver.navigate().to("https://selenium.dev")
 按下浏览器的前进键:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.navigate().forward();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L27-L28" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}driver.forward(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
@@ -73,7 +73,9 @@ driver.navigate().to("https://selenium.dev")
 刷新当前页面:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.navigate().refresh();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L32-L33" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
