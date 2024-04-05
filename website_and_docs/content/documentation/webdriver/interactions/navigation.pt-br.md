@@ -30,9 +30,9 @@ driver.get 'https://selenium.dev'
     # Longer Way
 driver.navigate.to 'https://selenium.dev'
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-await driver.get('https://selenium.dev');
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L16-L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Convenient
 driver.get("https://selenium.dev")
@@ -52,7 +52,9 @@ Pressionando o botão Voltar do navegador:
   {{< tab header="Python" >}}driver.back(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.navigate().back();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().back() {{< /tab >}}
 {{< /tabpane >}}
 
@@ -66,7 +68,9 @@ Pressionando o botão Avançar do navegador:
   {{< tab header="Python" >}}driver.forward(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.navigate().forward();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().forward(){{< /tab >}}
 {{< /tabpane >}}
 
@@ -81,6 +85,8 @@ Atualizando a página atual:
   {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.navigate().refresh();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().refresh(){{< /tab >}}
 {{< /tabpane >}}

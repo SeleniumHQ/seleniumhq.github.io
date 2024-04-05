@@ -29,8 +29,8 @@ driver.get 'https://selenium.dev'
     # 更长的方法
 driver.navigate.to 'https://selenium.dev'
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-await driver.get('https://selenium.dev');
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L16-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 简便的方法
@@ -51,7 +51,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" >}}driver.back(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.navigate().back();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.navigate().back() {{< /tab >}}
 {{< /tabpane >}}
 
@@ -65,7 +67,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" >}}driver.forward(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.navigate().forward();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.navigate().forward(){{< /tab >}}
 {{< /tabpane >}}
 
@@ -79,6 +83,8 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.navigate().refresh();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.navigate().refresh(){{< /tab >}}
 {{< /tabpane >}}
