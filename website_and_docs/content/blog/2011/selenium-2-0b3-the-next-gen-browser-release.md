@@ -20,7 +20,7 @@ It’s been about 5 weeks since the release of beta 2, so we’re very pleased t
     *   IOptions.Speed
 *   Even more improvements to the Java webdriver-backed selenium
     *   We’ll document the migration path before 2.0b4 is out!
-*   A significantly faster [Android Driver](http://selenium.googlecode.com/files/android-server-2.0b3.apk)
+*   A significantly faster Android Driver (`http://selenium.googlecode.com/files/android-server-2.0b3.apk`)
 
 As well as these changes, there’s also the regular clutch of bug fixes and tweaks. For the number crunchers, there were a total of [331 changes](http://code.google.com/p/selenium/source/list?num=331&start=11749) that landed in the 5 weeks since the last release, with the 5 most active contributors working on each of the different languages supported by Selenium.
 

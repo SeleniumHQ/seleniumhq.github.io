@@ -10,18 +10,18 @@ Technical and Project Leadership Committees).
 ### Participation
 
 People present included:
-* [Alex Rodionov](p0deje)
-* [Bill McGee](testbot206)
-* [Corina Pip](iamalittletester)
-* [Daniel Pono Takamori](pono)
-* [David Burns](AutomatedTester)
-* [Diego Molina](diemol)
-* [Maaret Pyhäjärvi](maaretp)
-* [Manoj Kumar](manoj9788)
-* [Marcus Merrell](mmerrell)
-* [Simon Stewart](shs96c)
-* [Sri Harsha](harsha509)
-* [Titus Fortner](titusfortner)
+* [Alex Rodionov]
+* [Bill McGee]
+* [Corina Pip]
+* [Daniel Pono Takamori]
+* [David Burns]
+* [Diego Molina]
+* [Maaret Pyhäjärvi]
+* [Manoj Kumar]
+* [Marcus Merrell]
+* [Simon Stewart]
+* [Sri Harsha]
+* [Titus Fortner]
 
 ## Agenda
 
@@ -79,15 +79,15 @@ editable rolling agenda and published minutes.
 
 Plan to discuss specifics of roles, community actions, marketing and training considerations in next meeting.
 
-[p0deje]: https://github.com/p0deje/
-[testbot206]: https://github.com/testbot206
-[iamalittletester]: https://github.com/iamalittletester
-[pono]: https://github.com/pono
-[AutomatedTester]: https://github.com/AutomatedTester/
-[diemol]: https://github.com/diemol/
-[maaretp]: https://github.com/maaretp
-[manoj9788]: https://github.com/manoj9788
-[mmerrell]: https://github.com/mmerrell
-[shs96c]: https://github.com/shs96c
-[harsha509]: https://github.com/harsha509/
-[titusfortner]: https://github.com/titusfortner/
+[Alex Rodionov]: https://github.com/p0deje/
+[Bill McGee]: https://github.com/testbot206
+[Corina Pip]: https://github.com/iamalittletester
+[Daniel Pono Takamori]: https://github.com/pono
+[David Burns]: https://github.com/AutomatedTester/
+[Diego Molina]: https://github.com/diemol/
+[Maaret Pyhäjärvi]: https://github.com/maaretp
+[Manoj Kumar]: https://github.com/manoj9788
+[Marcus Merrell]: https://github.com/mmerrell
+[Simon Stewart]: https://github.com/shs96c
+[Sri Harsha]: https://github.com/harsha509/
+[Titus Fortner]: https://github.com/titusfortner/

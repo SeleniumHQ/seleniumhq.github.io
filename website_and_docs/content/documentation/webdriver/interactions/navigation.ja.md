@@ -11,14 +11,11 @@ aliases: [
 
 ブラウザーを起動した後に最初に行うことは、Webサイトを開くことです。これは1行で実現できます。
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Convenient
-driver.get("https://selenium.dev");
 
-//Longer way
-driver.navigate().to("https://selenium.dev");
-  {{< /tab >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L14-L18" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 driver.get("https://selenium.dev")
   {{< /tab >}}
@@ -47,9 +44,10 @@ driver.navigate().to("https://selenium.dev")
 ## 戻る
 
 ブラウザーの戻るボタンを押す。
-
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().back();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L22-L23" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.back(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
@@ -61,8 +59,11 @@ driver.navigate().to("https://selenium.dev")
 
 ブラウザーの次へボタンを押す。
 
+
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().forward();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L27-L28" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.forward(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
@@ -74,8 +75,11 @@ driver.navigate().to("https://selenium.dev")
 
 現在のページを更新する。
 
+
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().refresh();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L32-L33" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
