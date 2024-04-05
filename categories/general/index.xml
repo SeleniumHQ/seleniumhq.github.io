@@ -1163,7 +1163,7 @@ or on one of the &lt;a href="https://selenium.dev/support">chat protocols&lt;/a>
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
 package manager of choice!&lt;/p>
 &lt;p>This has been the culmination of a lot of work by so many people, not
-only the &lt;a href="https://www.selenium.dev/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
+only the &lt;a href="https://www.selenium.dev/project/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
 205 since we released Selenium 3.141.59, at the last count. A big
 thank you to everybody who&amp;rsquo;s helped make this possible!&lt;/p>
 &lt;p>So, what&amp;rsquo;s changed since Selenium 3? The answer is both &amp;ldquo;&lt;strong>not much&lt;/strong>&amp;rdquo;

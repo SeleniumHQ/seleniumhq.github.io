@@ -26,11 +26,11 @@ belongs to &lt;a href="https://www.sahipro.com">Sahi&lt;/a> &amp;ndash; but if y
 you like them!&lt;/p>
 &lt;p>If you’re using &lt;a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox&lt;/a> or a browser that is derived from
 &lt;a href="https://www.chromium.org/Home">Chromium&lt;/a>, we’ve added a slew of new capabilities
-too. These include ways of handling &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#register-basic-auth">“basic” and “digest”
+too. These include ways of handling &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#basic-authentication">“basic” and “digest”
 authentication&lt;/a>, Network Interception (&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418">Are you an HTTP
 418?&lt;/a>), and also performing commonly requested tasks, like
-waiting for a &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
-look at &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/bidi_api/#listen-to-js-exceptions">Javascript errors&lt;/a>.&lt;/p>
+waiting for a &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#mutation-observation">change in the DOM&lt;/a>, or providing a way to
+look at &lt;a href="https://www.selenium.dev/documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#javascript-exceptions">Javascript errors&lt;/a>.&lt;/p>
 &lt;p>We’ve added these new features in a way that fits in with our existing
 APIs. There’s no need to rewrite your tests: just use the new features
 when it feels right to you.&lt;/p>
@@ -150,7 +150,7 @@ directly from the &lt;a href="https://www.selenium.dev/downloads">Selenium site&
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
 package manager of choice!&lt;/p>
 &lt;p>This has been the culmination of a lot of work by so many people, not
-only the &lt;a href="https://www.selenium.dev/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
+only the &lt;a href="https://www.selenium.dev/project/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
 205 since we released Selenium 3.141.59, at the last count. A big
 thank you to everybody who&amp;rsquo;s helped make this possible!&lt;/p>
 &lt;p>So, what&amp;rsquo;s changed since Selenium 3? The answer is both &amp;ldquo;&lt;strong>not much&lt;/strong>&amp;rdquo;

@@ -4,7 +4,7 @@
 so if you&amp;rsquo;re using any of those languages, go and grab it from your
 package manager of choice!&lt;/p>
 &lt;p>This has been the culmination of a lot of work by so many people, not
-only the &lt;a href="https://www.selenium.dev/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
+only the &lt;a href="https://www.selenium.dev/project/structure/#tlc">project TLC&lt;/a>, but also of literally hundreds of people:
 205 since we released Selenium 3.141.59, at the last count. A big
 thank you to everybody who&amp;rsquo;s helped make this possible!&lt;/p>
 &lt;p>So, what&amp;rsquo;s changed since Selenium 3? The answer is both &amp;ldquo;&lt;strong>not much&lt;/strong>&amp;rdquo;
@@ -79,9 +79,9 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>When we pushed the 2.0rc1 live, we really hoped that the next release would be 2.0 final. We very quickly got some feedback that encouraged us to push a 2.0rc2. Now, after just under three weeks, we’re launching a third and final release candidate. You can download it from the &lt;a href="http://seleniumhq.org/download/">Selenium HQ&lt;/a> site or directly from &lt;a href="http://code.google.com/p/selenium/downloads/list">Google Code.&lt;/a>&lt;/p>
 &lt;p>We think we’ve addressed many of the common issues, added some polish and added a host of bug fixes and minor changes, and we hope to hear your feedback! The following headline changes have been made in Selenium 2rc3:&lt;/p>
 &lt;ul>
-&lt;li>The deprecated RenderedWebElement interface has now been removed. Most of the functionality has been moved to either &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html">WebElement&lt;/a> or to the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions&lt;/a> class.&lt;/li>
-&lt;li>The deprecated WebElement.getValue() method has been removed. Use &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getAttribute(java.lang.String)">WebElement.getAttribute(“value”)&lt;/a> instead.&lt;/li>
-&lt;li>After some debate in the team, “&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#setSelected()">WebElement.setSelected&lt;/a>” and “&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#toggle()">WebElement.toggle&lt;/a>” have been deprecated. They will be removed in the final release.&lt;/li>
+&lt;li>The deprecated RenderedWebElement interface has now been removed. Most of the functionality has been moved to either WebElement (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html&lt;/code>) or to the Actions (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html&lt;/code>) class.&lt;/li>
+&lt;li>The deprecated WebElement.getValue() method has been removed. Use WebElement.getAttribute(“value”) (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getAttribute(java.lang.String)&lt;/code>) instead.&lt;/li>
+&lt;li>After some debate in the team, WebElement.setSelected (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#setSelected()&lt;/code>) and “&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#toggle()">WebElement.toggle&lt;/a>” have been deprecated. They will be removed in the final release.&lt;/li>
 &lt;li>Thanks to the hard work of Mozilla engineers, we now offer Firefox 5 support.&lt;/li>
 &lt;li>The &lt;a href="http://www.opera.com/developer/tools/operadriver/">Opera driver&lt;/a>, developed by the lovely chaps at Opera Software, is bundled with this release.&lt;/li>
 &lt;li>Improvements in the way that mouse interactions are simulated, particularly when elements are outside the visible area of the page.&lt;/li>
@@ -96,9 +96,9 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>New &lt;a href="http://code.google.com/p/selenium/wiki/ChromeDriver">ChromeDriver&lt;/a>: Following a complete rewrite of the ChromeDriver, Selenium 2 is now supported natively by the Chrome browser itself. In order to use this, you must download the &lt;a href="http://code.google.com/p/selenium/downloads/list">chromedriver executable&lt;/a> from the Selenium project site.&lt;/li>
 &lt;li>&lt;a href="http://www.opera.com/developer/tools/operadriver/">OperaDriver&lt;/a> support: We’ve bundled the most excellent OperaDriver into the release to make it easy to get started testing with &lt;a href="http://www.opera.com/browser/">Opera&lt;/a>.&lt;/li>
 &lt;li>Support for native events in Firefox 4.&lt;/li>
-&lt;li>&lt;a href="http://code.google.com/p/selenium/wiki/AdvancedUserInteractions">Advanced User Interactions&lt;/a>: An API that allows you to model complex user interactions, such as clicking on an element, holding the shift key, clicking on three more, and then dragging the four elements to a final destination. The entry point to this API is the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions&lt;/a> class.&lt;/li>
+&lt;li>&lt;a href="http://code.google.com/p/selenium/wiki/AdvancedUserInteractions">Advanced User Interactions&lt;/a>: An API that allows you to model complex user interactions, such as clicking on an element, holding the shift key, clicking on three more, and then dragging the four elements to a final destination. The entry point to this API is the Actions (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html&lt;/code>) class.&lt;/li>
 &lt;/ul>
-&lt;p>We’ve also deleted all methods that were deprecated in 2.0b3 and have marked a number of methods and classes (notably &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/RenderedWebElement.html">RenderedWebElement&lt;/a> and &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getValue()">WebElement.getValue&lt;/a>) deprecated. These will be deleted in the next release.&lt;/p>
+&lt;p>We’ve also deleted all methods that were deprecated in 2.0b3 and have marked a number of methods and classes (notably RenderedWebElement (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/RenderedWebElement.html&lt;/code>) and WebElement.getValue (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getValue()&lt;/code>)) deprecated. These will be deleted in the next release.&lt;/p>
 &lt;p>Known issues:&lt;/p>
 &lt;ul>
 &lt;li>Native events on Linux may not work properly on tests that include alerts and prompts.&lt;/li>
@@ -125,7 +125,7 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>We’ll document the migration path before 2.0b4 is out!&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>A significantly faster &lt;a href="http://selenium.googlecode.com/files/android-server-2.0b3.apk">Android Driver&lt;/a>&lt;/li>
+&lt;li>A significantly faster Android Driver (&lt;code>http://selenium.googlecode.com/files/android-server-2.0b3.apk&lt;/code>)&lt;/li>
 &lt;/ul>
 &lt;p>As well as these changes, there’s also the regular clutch of bug fixes and tweaks. For the number crunchers, there were a total of &lt;a href="http://code.google.com/p/selenium/source/list?num=331&amp;amp;start=11749">331 changes&lt;/a> that landed in the 5 weeks since the last release, with the 5 most active contributors working on each of the different languages supported by Selenium.&lt;/p>
 &lt;p>In addition to the enormous thanks that go to the developers, I’d like to add a big thank you to the Mozilla engineers who chipped in on the IRC channel at the last minute to help us work through some issues with Core. We’d not have been able to get this release out when we did without their help. Thank you Mozilla!&lt;/p>
@@ -136,10 +136,10 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>A more stable, capable iPhone driver.&lt;/li>
 &lt;li>Updated &lt;a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-2.0b2.zip&amp;amp;can=2&amp;amp;q=">Android driver&lt;/a>.&lt;/li>
 &lt;li>Improved python bindings for Selenium WebDriver. The namespace is now “selenium.webdriver”&lt;/li>
-&lt;li>Added “&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/com/thoughtworks/selenium/Selenium.html#getCssCount(java.lang.String)">Selenium.getCssCount&lt;/a>” to mirror “Selenium.getXpathCount”&lt;/li>
-&lt;li>“&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getText()">WebElement.getText()&lt;/a>” performs more consistently across different browsers.&lt;/li>
+&lt;li>Added Selenium.getCssCount (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/com/thoughtworks/selenium/Selenium.html#getCssCount(java.lang.String)&lt;/code>) to mirror “Selenium.getXpathCount”&lt;/li>
+&lt;li>WebElement.getText() (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getText()&lt;/code>) performs more consistently across different browsers.&lt;/li>
 &lt;li>Mono users can use the .Net bindings&lt;/li>
-&lt;li>Continued to improve the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html">WebDriverBackedSelenium&lt;/a>. If you’re looking to migrate from Selenium 1 to Selenium 2, and want to take your time, this is a useful stepping stone.&lt;/li>
+&lt;li>Continued to improve the WebDriverBackedSelenium (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html&lt;/code>). If you’re looking to migrate from Selenium 1 to Selenium 2, and want to take your time, this is a useful stepping stone.&lt;/li>
 &lt;li>Reworked the Advanced User Interactions APIs. The big change is that the WebDriver APIs no longer rely on classes from the AWT.&lt;/li>
 &lt;li>.Net users now have more support classes, to make writing tests less tiresome.&lt;/li>
 &lt;li>The remote webdriver makes better use of sockets, which improves stability and scalability on Windows.&lt;/li>
@@ -155,12 +155,12 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;p>We recently released the first of the betas for Selenium 2. It’s available for Java, C# and Ruby. If you’ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you’ll see is with the new WebDriver APIs, but there’s a lot more!&lt;/p>
 &lt;ul>
 &lt;li>A promise of relatively stable APIs&lt;/li>
-&lt;li>For Firefox only right now, an API for dealing with &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.TargetLocator.html#alert()">alerts, prompts and confirms&lt;/a>.&lt;/li>
+&lt;li>For Firefox only right now, an API for dealing with alerts, prompts and confirms (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.TargetLocator.html#alert()&lt;/code>).&lt;/li>
 &lt;li>A brand new IE driver.&lt;/li>
-&lt;li>Better &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html">selenium emulation&lt;/a> when using webdriver&lt;/li>
-&lt;li>And a better implementation of webdriver’s API backed by the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/SeleneseCommandExecutor.html">traditional Selenium technology&lt;/a>.&lt;/li>
+&lt;li>Better selenium emulation (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html&lt;/code>) when using webdriver&lt;/li>
+&lt;li>And a better implementation of webdriver’s API backed by the traditional Selenium technology (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/SeleneseCommandExecutor.html&lt;/code>).&lt;/li>
 &lt;li>Ubiquitous use of &lt;a href="http://sizzlejs.com/">Sizzle&lt;/a> for emulating CSS selectors where native CSS selectors aren’t supported&lt;/li>
-&lt;li>The &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/package-frame.html">advanced user interactions&lt;/a> API&lt;/li>
+&lt;li>The advanced user interactions (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/package-frame.html&lt;/code>) API&lt;/li>
 &lt;li>An update to the AndroidDriver’s Android app.&lt;/li>
 &lt;/ul>
 &lt;p>Of course, we’d love this release to be completely bug free, but this is, after all, a beta, so there are some known issues:&lt;/p>
@@ -171,7 +171,7 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;/ul>
 &lt;p>You can download it from here:&lt;/p>
 &lt;p>&lt;a href="http://code.google.com/p/selenium/downloads/list">http://code.google.com/p/selenium/downloads/list&lt;/a>&lt;/p>
-&lt;p>You can read the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/index.html">javadocs&lt;/a> and the &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html">ruby docs&lt;/a>.&lt;/p>
+&lt;p>You can read the javadocs (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/index.html&lt;/code>) and the ruby docs (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html&lt;/code>).&lt;/p>
 &lt;p>An obvious question is “When will the beta end?” The short answer is when we’ve implemented the alerts and prompts and advanced user interactions APIs in all supported browsers. We expect there to be some flex in some APIs (removing deprecated methods, and within the advanced user interactions API) but what you have here is basically what you’re going to get when we hit 2.0 final. I have no idea how long this will take, but if you’re interested in helping out, &lt;a href="http://groups.google.com/group/selenium-developers">let us know!&lt;/a>&lt;/p>
 &lt;p>Thanks are due to all the committers who have worked so hard to get this code into shape. Thanks are also due to all the people who have taken the time to file bugs, ask for features and participated on the mailing lists. Thank you to you too, for going out and trying this new beta of Selenium 2.&lt;/p>
 &lt;p>You rock. 🙂&lt;/p></description></item><item><title>Blog: Selenium 2.0a6 Released</title><link>https://www.selenium.dev/blog/2010/selenium-2-0a6-released/</link><pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2010/selenium-2-0a6-released/</guid><description>
@@ -181,18 +181,18 @@ If you’re someone who runs tests exported from IDE in the table format, there 
 &lt;li>Android support: you can now &lt;a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk">download the APK&lt;/a> and run webdriver tests using Android 1.6 to 2.2.&lt;/li>
 &lt;li>Firefox 4 support.&lt;/li>
 &lt;li>Experimental IE9 support&lt;/li>
-&lt;li>New APIs for dealing with &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html">HTML5 elements&lt;/a> (best implemented, for now, by the mobile webdrivers)&lt;/li>
+&lt;li>New APIs for dealing with HTML5 elements (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html&lt;/code>) (best implemented, for now, by the mobile webdrivers)&lt;/li>
 &lt;li>A richer .Net API&lt;/li>
 &lt;li>A move to &lt;a href="http://sizzlejs.com/">Sizzle&lt;/a> for locating elements using CSS in browsers that don’t have a native API for that.&lt;/li>
 &lt;li>Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.&lt;/li>
 &lt;/ul>
-&lt;p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html">FirefoxProfiles&lt;/a>, better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.&lt;/p>
+&lt;p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of FirefoxProfiles (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html&lt;/code>), better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.&lt;/p>
 &lt;p>Thank you to everyone who has taken the time to report a bug on our &lt;a href="http://code.google.com/p/selenium/issues/list">issue tracker&lt;/a>, or raised problems on one of our &lt;a href="https://groups.google.com/group/webdriver">mailing&lt;/a> &lt;a href="http://www.google.com/url?q=http://groups.google.com/group/selenium-users">lists&lt;/a>, or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn’t be half as much fun, and wouldn’t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)&lt;/p>
 &lt;p>Hope you like it!&lt;/p></description></item><item><title>Blog: Selenium 2.0a5 Released</title><link>https://www.selenium.dev/blog/2010/selenium-2-0a5-released/</link><pubDate>Wed, 14 Jul 2010 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2010/selenium-2-0a5-released/</guid><description>
 &lt;p>I’m pleased to announce the release of Selenium 2.0a5, available for &lt;a href="http://code.google.com/p/selenium/downloads/list">immediate download&lt;/a>. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:&lt;/p>
 &lt;ul>
-&lt;li>New &lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-frame.html">interfaces&lt;/a> for dealing with HTML 5 elements.&lt;/li>
-&lt;li>An API for “&lt;a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.Timeouts.html">implicit waits&lt;/a>“: quietly waiting until an element is present before continuing with a test. You can use them like this: &lt;code>driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS)&lt;/code>&lt;/li>
+&lt;li>New interfaces (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-frame.html&lt;/code>) for dealing with HTML 5 elements.&lt;/li>
+&lt;li>An API for implicit waits (&lt;code>http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.Timeouts.html&lt;/code>): quietly waiting until an element is present before continuing with a test. You can use them like this: &lt;code>driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS)&lt;/code>&lt;/li>
 &lt;li>A revamped Firefox driver.&lt;/li>
 &lt;li>More shared code between Selenium and WebDriver.&lt;/li>
 &lt;li>You can now pass firefox profiles to the remote webdriver (this includes extensions and proxy settings!)&lt;/li>
