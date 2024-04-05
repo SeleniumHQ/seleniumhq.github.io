@@ -210,7 +210,7 @@ but you can also delete all files during the session.
 
 ## Browser specific functionalities
 
-Each [browser](({{< ref "../browsers/" >}})) has implemented special functionality that is available only to that browser.
+Each [browser]({{< ref "../browsers/" >}}) has implemented special functionality that is available only to that browser.
 Each of the Selenium bindings has implemented a different way to use those features in a Remote Session
 
 {{< tabpane text=true >}}
