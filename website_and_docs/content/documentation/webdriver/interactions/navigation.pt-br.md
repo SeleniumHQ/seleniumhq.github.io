@@ -12,14 +12,11 @@ aliases: [
 A primeira coisa que você vai querer fazer depois de iniciar um navegador é
 abrir o seu site. Isso pode ser feito em uma única linha, utilize o seguinte comando:
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Convenient
-driver.get("https://selenium.dev");
 
-//Longer way
-driver.navigate().to("https://selenium.dev");
-  {{< /tab >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L14-L18" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 driver.get("https://selenium.dev")
   {{< /tab >}}
@@ -48,9 +45,10 @@ driver.navigate().to("https://selenium.dev")
 ## Voltar
 
 Pressionando o botão Voltar do navegador:
-
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().back();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L22-L23" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.back(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
@@ -62,7 +60,9 @@ Pressionando o botão Voltar do navegador:
 Pressionando o botão Avançar do navegador:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().forward();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L27-L28" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.forward(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
@@ -75,7 +75,9 @@ Pressionando o botão Avançar do navegador:
 Atualizando a página atual:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.navigate().refresh();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InformationTest.java#L32-L33" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.refresh(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
