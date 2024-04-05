@@ -212,7 +212,8 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.20.0" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L428-L433" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
