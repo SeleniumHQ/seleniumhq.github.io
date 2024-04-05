@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class browserNavigation {
+public class NavigationTest {
 
     @Test
     public void navigateBrowser() {
