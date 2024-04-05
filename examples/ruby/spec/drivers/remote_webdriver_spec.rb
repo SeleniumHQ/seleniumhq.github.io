@@ -47,12 +47,12 @@ RSpec.describe 'Remote WebDriver' do
     driver.get('https://www.selenium.dev/selenium/web/downloads/download.html')
     driver.find_element(id: 'file-1').click
     driver.find_element(id: 'file-2').click
-    wait.until { driver.downloadable_files.include? 'file_2.jpg' }
+    wait.until { driver.downloadable_files.include?('file_2.jpg') && driver.downloadable_files.include?('file_1.txt') }
 
     files = driver.downloadable_files
 
     expect(files.sort).to eq file_names.sort
-    downloadable_file = files.first
+    downloadable_file = 'file_1.txt'
 
     driver.download_file(downloadable_file, target_directory)
 

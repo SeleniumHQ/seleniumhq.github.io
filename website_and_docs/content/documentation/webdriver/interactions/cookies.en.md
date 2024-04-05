@@ -90,7 +90,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L13-L18">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -188,7 +188,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L28-L38">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L35-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -293,7 +293,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L40-L51">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L49-L51">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -406,7 +406,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L53-L67">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L61-L62">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -510,7 +510,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L69-L78">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L77-L78">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie
@@ -637,7 +637,7 @@ ensure
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L20-L26">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/cookies.spec.js#L24-L26">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie

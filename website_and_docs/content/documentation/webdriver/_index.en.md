@@ -3,7 +3,7 @@ title: "WebDriver"
 linkTitle: "WebDriver"
 weight: 2
 description: >
-  WebDriver drives a browser natively, learn more about it.
+  WebDriver drives a browser natively; learn more about it.
 aliases: ["/documentation/en/webdriver/"]
 ---
 
