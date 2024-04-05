@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NavigationTest {
-
     @Test
     public void navigateBrowser() {
         
