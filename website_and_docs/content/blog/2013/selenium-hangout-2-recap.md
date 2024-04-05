@@ -10,7 +10,7 @@ description: >
 ---
 
 
-This is a recap from the most recent Selenium Hangout (a.k.a. [The World’s Best Selenium Meetup](seleniumhq.wordpress.com/2013/08/09/the-worlds-best-selenium-meetup/)). For info on future meetups, [follow them on Twitter](https://twitter.com/SeleniumHangout).
+This is a recap from the most recent Selenium Hangout (a.k.a. [The World’s Best Selenium Meetup](../the-worlds-best-selenium-meetup/)). For info on future meetups, [follow them on Twitter](https://twitter.com/SeleniumHangout).
 
 Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go [here](http://bit.ly/sehovideos).
 
