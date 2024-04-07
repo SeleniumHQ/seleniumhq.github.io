@@ -30,7 +30,7 @@ npm test
 
 # Execute a javascript test
 
-Use this command to run a ruby script and follow the first script example
+Use this command to run a JavaScript and follow the first script example
 
 ```
 node example_script.spec.js
