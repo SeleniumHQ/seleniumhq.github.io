@@ -16,8 +16,8 @@ aliases: [
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L14-L18" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-driver.get("https://selenium.dev")
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 driver.Navigate().GoToUrl(@"https://selenium.dev");
@@ -48,7 +48,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L22-L23" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}driver.back(){{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L11" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
@@ -64,7 +66,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L27-L28" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}driver.forward(){{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L15" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
@@ -80,7 +84,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L32-L33" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}driver.refresh(){{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L19" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
