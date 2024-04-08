@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 > if you are on a different python version, for example python3.x you may have to replace `pip` with `pip3`
 
-4. Run all all tests
+4. Run all tests
 
 ```
 pytest
