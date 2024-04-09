@@ -21,7 +21,9 @@ Você pode ler o título da página atual no navegador:
   {{< tab header="Python" >}}driver.title{{< /tab >}}
   {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
   {{< tab header="Ruby" >}}driver.title{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.getTitle();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.title{{< /tab >}}
 {{< /tabpane >}}
 
@@ -35,6 +37,8 @@ Você pode ler a URL atual na barra de endereço do navegador usando:
 {{< tab header="Python" >}}driver.current_url{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
 {{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.getCurrentUrl();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.currentUrl{{< /tab >}}
 {{< /tabpane >}}
