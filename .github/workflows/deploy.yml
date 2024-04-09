@@ -24,7 +24,7 @@ jobs:
         env:
           SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.SELENIUM_CI_TOKEN }}
           publish_dir: ./website_and_docs/public
