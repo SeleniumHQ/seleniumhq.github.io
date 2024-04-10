@@ -145,7 +145,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -167,9 +167,13 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Ruby" %}}
+### Set Up
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
+
+### Tear Down
+{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
+{{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -201,9 +205,9 @@ gradle clean test
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Ruby" %}}
+{{< gh-codeblock path="examples/ruby/README.md#L26" >}}
+{{% /tab %}}
 {{% tab header="JavaScript" %}}
 ```shell
 mocha runningTests.spec.js

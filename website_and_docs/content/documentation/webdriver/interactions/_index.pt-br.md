@@ -18,10 +18,14 @@ Você pode ler o título da página atual no navegador:
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
-  {{< tab header="Python" >}}driver.title{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
   {{< tab header="Ruby" >}}driver.title{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.getTitle();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.title{{< /tab >}}
 {{< /tabpane >}}
 
@@ -32,9 +36,13 @@ Você pode ler a URL atual na barra de endereço do navegador usando:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
-{{< tab header="Python" >}}driver.current_url{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
 {{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.getCurrentUrl();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.currentUrl{{< /tab >}}
 {{< /tabpane >}}
