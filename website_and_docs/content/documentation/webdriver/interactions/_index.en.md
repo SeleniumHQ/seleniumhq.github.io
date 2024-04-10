@@ -17,7 +17,9 @@ You can read the current page title from the browser:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
 {{< /tab >}}
@@ -36,7 +38,9 @@ You can read the current URL from the browser's address bar using:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-{{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
 {{< /tab >}}
