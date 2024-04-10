@@ -40,7 +40,7 @@ Browser name is set by default when using an Options class instance.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -67,6 +67,7 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
