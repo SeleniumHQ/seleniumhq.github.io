@@ -32,5 +32,18 @@ RSpec.describe 'Chrome' do
       driver.get('https://www.google.com')
       driver.quit
     end
+
+    it 'sets remote capabilities' do
+      options = Selenium::WebDriver::Options.firefox
+      options.browser_version = 'latest'
+      options.platform_name = 'Windows 10'
+      cloud_options = {}
+      cloud_options[:build] = my_test_build
+      cloud_options[:name] = my_test_name
+      options.add_option('cloud:options', cloud_options)
+      driver = Selenium::WebDriver.for :remote, url: cloud_url, capabilities: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
   end
 end
