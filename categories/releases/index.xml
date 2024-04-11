@@ -6829,6 +6829,13 @@ announcements is crucial to ensure the user experience is intact.&lt;/p>
 version in a future release, for now we plan to introduce optional components that can take advantage
 of modern Java releases.&lt;/p>
 &lt;p>So as a first step towards this move, the Java 11+ HTTP client from Selenium 4.5.0 and above.&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Attention!&lt;/h4>
+If you are using Selenium 4.14 or higher, the
+Java 11 HTTP client is used by default. You do not
+need to make any changes to your setup. Feel free
+to skip the following section.
+&lt;/div>
 &lt;h3 id="using-java-11-http-client-in-selenium">Using Java 11+ HTTP Client in Selenium&lt;/h3>
 &lt;h4 id="prerequisites">Prerequisites:&lt;/h4>
 &lt;ul>
