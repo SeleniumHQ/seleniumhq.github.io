@@ -149,17 +149,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 	driver.find_element(name: 'email_input').send_keys 'admin@localhost.dev'
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-    // Enter text 
-    await driver.findElement(By.name('email_input')).sendKeys('admin@localhost.dev');
-  
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L21" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   
@@ -221,15 +212,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 	driver.find_element(name: 'email_input').clear
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-   
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   
