@@ -35,8 +35,8 @@ RSpec.describe 'Chrome' do
 
     it 'sets remote capabilities' do
       options = Selenium::WebDriver::Options.firefox
-      options.browser_version = 'latest'
       options.platform_name = 'Windows 10'
+      options.browser_version = 'latest'
       cloud_options = {}
       cloud_options[:build] = my_test_build
       cloud_options[:name] = my_test_name
