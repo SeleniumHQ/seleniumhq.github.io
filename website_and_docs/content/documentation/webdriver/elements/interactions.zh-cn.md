@@ -73,14 +73,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
   driver.find_element(name: 'color_input').click
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-    // Click the element
-    await driver.findElement(By.name('color_input')).click();
-  
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 

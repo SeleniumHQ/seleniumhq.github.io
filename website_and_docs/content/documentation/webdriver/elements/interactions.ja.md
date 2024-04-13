@@ -70,14 +70,8 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
   driver.find_element(name: 'color_input').click
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-    // Click the element
-    await driver.findElement(By.name('color_input')).click();
-  
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 
