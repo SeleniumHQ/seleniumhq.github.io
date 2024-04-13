@@ -7,7 +7,7 @@ driver.get("https://www.selenium.dev")
 title = driver.title
 assert title == "Selenium"
 
-title = driver.current_url
-assert title == "https://www.selenium.dev/"
+url = driver.current_url
+assert url == "https://www.selenium.dev/"
 
 driver.quit()
