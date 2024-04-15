@@ -18,18 +18,18 @@ known state with a new user profile, by default.
 A new browser per test can be achieved by using a test framework's "before each test" hook or fixture. This also implies using the "after each test" hook to close the browser.
 
 ```java
-# Using a class variable
+// Using a class variable
 public abstract class BaseTest {
 	protected WebDriver driver;
     ...
 
-    # Before each test hook
+    // Before each test hook
     public void setupTest() {
         driver = new FirefoxDriver();
         ...
     }
 
-    # After each test hook
+    // After each test hook
     public void teardownTest() {
         ...
         driver.quit();
@@ -37,9 +37,8 @@ public abstract class BaseTest {
 }
 ```
 
-Using python fixtures
-
 ```python
+# Using python fixtures
 @pytest.fixture(autouse=True, scope='function')
 def driver(self, request, page: Page):
     # Create the driver
@@ -64,7 +63,7 @@ A static WebDriver will cause multiple issues both with parallel test execution 
 public abstract class BaseTest {
 	protected ThreadLocal<WebDriver> driver;
     ...
-    # Before each test hook
+    // Before each test hook
     public void setupTest() {
         BaseTest.driver = ThreadLocal.withInitial(()->new FirefoxDriver());
         ...
