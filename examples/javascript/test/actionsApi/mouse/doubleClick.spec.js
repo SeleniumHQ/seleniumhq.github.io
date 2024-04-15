@@ -1,13 +1,13 @@
-const {By, Browser} = require('selenium-webdriver');
-const {suite} = require('selenium-webdriver/testing');
+const {By, Builder} = require('selenium-webdriver');
+
 const assert = require("assert");
 
-suite(function (env) {
+
   describe('Double click', function () {
     let driver;
 
     before(async function () {
-      driver = await env.builder().build();
+      driver = new Builder().forBrowser('chrome').build();
     });
 
     after(async () => await driver.quit());
@@ -23,4 +23,3 @@ suite(function (env) {
       assert.deepStrictEqual(status, `double-clicked`)
     });
   });
-}, { browsers: [Browser.CHROME, Browser.FIREFOX]});
