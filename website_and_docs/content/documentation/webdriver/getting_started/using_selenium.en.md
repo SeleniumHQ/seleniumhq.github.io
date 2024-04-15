@@ -165,9 +165,17 @@ then the test case is failed and execution is stopped.
 ### Setting Up and Tearing Down
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Java" %}}
+
+### Set Up
+
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/SetupAndTeardownTest.java#L28-L40" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/SetupAndTeardownTest.java#L67-L76" >}}
+
+{{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
 {{% /tab %}}
