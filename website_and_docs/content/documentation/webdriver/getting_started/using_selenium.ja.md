@@ -3,16 +3,16 @@ title: "Organizing and Executing Selenium Code"
 linkTitle: "Using Selenium"
 weight: 10
 description: >
-    Scaling Selenium execution with an IDE and a Test Runner library
+  Scaling Selenium execution with an IDE and a Test Runner library
 ---
 
-If you want to run more than a handful of one-off scripts, you need to 
+If you want to run more than a handful of one-off scripts, you need to
 be able to organize and work with your code. This page should give you
 ideas for how to actually do productive things with your Selenium code.
 
 ## Common Uses
 
-Most people use Selenium to execute automated tests for web applications, 
+Most people use Selenium to execute automated tests for web applications,
 but Selenium support any use case of browser automation.
 
 ### Repetitive Tasks
@@ -32,10 +32,9 @@ Running Selenium for testing requires making assertions on actions taken by Sele
 So a good assertion library is required. Additional features to provide structure for tests
 require use of [Test Runner](#test-runners).
 
-
 ## IDEs
 
-Regardless of how you use Selenium code, 
+Regardless of how you use Selenium code,
 you won't be very effective writing or executing it without a good
 Integrated Developer Environment. Here are some common options...
 
@@ -50,10 +49,11 @@ Integrated Developer Environment. Here are some common options...
 ## Test Runner
 
 Even if you aren't using Selenium for testing, if you have advanced use cases, it might make
-sense to use a test runner to better organize your code. Being able to use before/after hooks 
+sense to use a test runner to better organize your code. Being able to use before/after hooks
 and run things in groups or in parallel can be very useful.
 
 ### Choosing
+
 There are many different test runners available.
 
 All the code examples in this documentation can be found in (or is being moved to) our
@@ -63,35 +63,39 @@ that will be used for all examples on this page.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
+
 - [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
 - [TestNG](https://testng.org/) - Offers extra features like parallel test execution and parameterized tests.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="Python" %}}
+
 - [pytest](https://pytest.org/) - A preferred choice for many, thanks to its simplicity and powerful plugins.
 - [unittest](https://docs.python.org/3/library/unittest.html) - Python's standard library testing framework.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="CSharp" %}}
+
 - [NUnit](https://nunit.org/) - A popular unit-testing framework for .NET.
 - [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft's own unit testing framework.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="Ruby" %}}
+
 - [RSpec](https://rspec.info/) - The most widely used testing library for running Selenium tests in Ruby.
 - [Minitest](https://github.com/seattlerb/minitest) - A lightweight testing framework that comes with Ruby standard library.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="JavaScript" %}}
+
 - [Jest](https://jestjs.io/) - Primarily known as a testing framework for React, it can also be used for Selenium tests.
 - [Mocha](https://mochajs.org/) - The most common JS library for running Selenium tests.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
 
 {{% /tab %}}
 {{< /tabpane >}}
-
 
 ### Installing
 
@@ -130,9 +134,12 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Asserting
 
+Assertions are very important part of Selenium, as they determine whether the state
+of the application is same what we are expecting or not. If the assertion fails,
+then the test case is failed and execution is stopped.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/AssertionsTest.java#L20-L29" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
@@ -164,10 +171,13 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Ruby" %}}
+
 ### Set Up
+
 {{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
 
 ### Tear Down
+
 {{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
@@ -182,6 +192,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
+
 ### Maven
 
 ```shell
@@ -205,9 +216,11 @@ gradle clean test
 {{< gh-codeblock path="examples/ruby/README.md#L26" >}}
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
+
 ```shell
 mocha runningTests.spec.js
 ```
+
 {{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -242,7 +255,7 @@ Here's an example of that code using a test runner:
 
 ## Next Steps
 
-Take what you've learned and build out your Selenium code! 
+Take what you've learned and build out your Selenium code!
 
 As you find more functionality that you need, read up on the rest of our
 [WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
