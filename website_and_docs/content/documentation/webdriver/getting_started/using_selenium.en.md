@@ -143,7 +143,7 @@ of the application is same what we are expecting or not. If the assertion fails,
 then the test case is failed and execution is stopped.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/AssertionsTest.java#L20-L29" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
@@ -169,11 +169,11 @@ then the test case is failed and execution is stopped.
 
 ### Set Up
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/SetupAndTeardownTest.java#L28-L40" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L20-L35" >}}
 
 ### Tear Down
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/SetupAndTeardownTest.java#L67-L76" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L53-L64" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
