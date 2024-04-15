@@ -41,6 +41,27 @@ Esta capacidade é usada para definir o `browserName` para uma determinada sess�
 Se o navegador especificado não estiver instalado no
 extremidade remota, a criação da sessão falhará.
 
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L10" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## browserVersion
 
 Esta capacidade é opcional, é usada para
@@ -59,7 +80,7 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

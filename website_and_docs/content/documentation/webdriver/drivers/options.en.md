@@ -68,7 +68,6 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
