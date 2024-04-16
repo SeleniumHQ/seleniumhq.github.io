@@ -21,7 +21,7 @@ describe('Interactions - Windows', function () {
   it('Should be able to print page to pdf', async function () {
     await driver.get('https://www.selenium.dev/selenium/web/alerts.html');
     let base64 = await driver.printPage({pageRanges: ["1-2"]});
-    // page can be saved as PDF as below
+    // page can be saved as a PDF as below
     // await fs.writeFileSync('./test.pdf', base64, 'base64');
 
     base64Code = base64.slice(startIndex, endIndex)
