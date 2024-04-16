@@ -2,6 +2,10 @@ selenium:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: April 16, 2024
+    - logo: "/images/sponsors/bright-data.png"
+      url: "https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium"
+      name: "Bright Data"
     # Sponsorship start date: July 30, 2014, renewed January 2020
     - logo: "/images/sponsors/browserstack.png"
       url: "http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral"
