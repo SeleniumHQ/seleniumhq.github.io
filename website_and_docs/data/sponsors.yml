@@ -10,7 +10,7 @@ selenium:
     - logo: "/images/sponsors/saucelabs.png"
       url: "http://saucelabs.com"
       name: "Sauce Labs"
-    # Sponsorship start date: June 24, 2015, updated July 2023
+    # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
     - logo: "/images/sponsors/Digital.ai.jpg"
       url: "http://bit.ly/36uZ7ad"
       name: "Digital.ai"
