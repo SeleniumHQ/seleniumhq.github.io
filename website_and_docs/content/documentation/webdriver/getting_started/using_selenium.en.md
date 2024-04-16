@@ -138,12 +138,9 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Asserting
 
-Assertions are very important part of Selenium, as they determine whether the state
-of the application is same what we are expecting or not. If the assertion fails,
-then the test case is failed and execution is stopped.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L39-L40" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< badge-code >}}
@@ -169,11 +166,11 @@ then the test case is failed and execution is stopped.
 
 ### Set Up
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L20-L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
 
 ### Tear Down
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L53-L64" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
