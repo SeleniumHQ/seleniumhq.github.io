@@ -6,31 +6,44 @@ RSpec.describe 'Chrome' do
   describe 'Driver Options' do
     let(:chrome_location) { driver_finder && ENV.fetch('CHROME_BIN', nil) }
 
-  it 'page load strategy normal' do
+    it 'page load strategy normal' do
       options = Selenium::WebDriver::Options.chrome
       options.page_load_strategy = :normal
 
       driver = Selenium::WebDriver.for :chrome, options: options
       driver.get('https://www.google.com')
       driver.quit
-  end
+    end
 
-  it 'page load strategy eager' do
-       options = Selenium::WebDriver::Options.chrome
-       options.page_load_strategy = :eager
+    it 'page load strategy eager' do
+      options = Selenium::WebDriver::Options.chrome
+      options.page_load_strategy = :eager
 
-       driver = Selenium::WebDriver.for :chrome, options: options
-       driver.get('https://www.google.com')
-       driver.quit
-  end
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
 
-  it 'page load strategy none' do
+    it 'page load strategy none' do
       options = Selenium::WebDriver::Options.chrome
       options.page_load_strategy = :none
 
       driver = Selenium::WebDriver.for :chrome, options: options
       driver.get('https://www.google.com')
       driver.quit
-  end
+    end
+
+    it 'sets remote capabilities', skip: 'this is example code that will not execute' do
+      options = Selenium::WebDriver::Options.firefox
+      options.platform_name = 'Windows 10'
+      options.browser_version = 'latest'
+      cloud_options = {}
+      cloud_options[:build] = my_test_build
+      cloud_options[:name] = my_test_name
+      options.add_option('cloud:options', cloud_options)
+      driver = Selenium::WebDriver.for :remote, capabilities: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
   end
 end

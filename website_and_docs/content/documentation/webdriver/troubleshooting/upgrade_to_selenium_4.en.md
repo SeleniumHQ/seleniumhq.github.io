@@ -135,14 +135,7 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 var driver = new RemoteWebDriver(new Uri(CloudURL), browserOptions);
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::Options.firefox
-options.browser_version = 'latest'
-options.platform_name = 'Windows 10'
-cloud_options = {}
-cloud_options[:build] = my_test_build
-cloud_options[:name] = my_test_name
-options.add_option('cloud:options', cloud_options)
-driver = Selenium::WebDriver.for :remote, url: cloud_url, capabilities: options
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L37-L46">}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
