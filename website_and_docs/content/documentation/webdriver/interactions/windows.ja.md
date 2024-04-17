@@ -962,24 +962,8 @@ _Note: Chromium ブラウザがヘッドレスモードである必要があり�
 
     base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  const {Builder} = require('selenium-webdriver');
-  const chrome = require('selenium-webdriver/chrome');
-  let opts = new chrome.Options();
-  let fs = require('fs');
-  (async function example() {
-  let driver = new Builder()
-  .forBrowser('chrome')
-  .setChromeOptions(opts.headless())
-  .build();
-  await driver.get('https://www.selenium.dev');
-  try {
-  let base64 = await driver.printPage({pageRanges:["1-2"]});
-  await fs.writeFileSync('./test.pdf', base64, 'base64');
-  } catch (e) {
-  console.log(e)
-  }
-  await driver.quit();
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     driver.get("https://www.selenium.dev")
