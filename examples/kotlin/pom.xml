@@ -12,7 +12,7 @@
         <kotlin.version>1.9.23</kotlin.version>
 
         <slf4j.version>2.0.13</slf4j.version>
-        <logback.version>1.5.4</logback.version>
+        <logback.version>1.5.5</logback.version>
 
         <junit5.version>5.10.2</junit5.version>
         <wdm.version>5.2.3</wdm.version>
