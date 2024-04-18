@@ -10,8 +10,8 @@
       <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.5.1" />
       <PackageReference Include="MSTest.TestAdapter" Version="3.3.1" />
       <PackageReference Include="MSTest.TestFramework" Version="3.3.1" />
-      <PackageReference Include="Selenium.Support" Version="4.20.0-nightly202404181135" />
-      <PackageReference Include="Selenium.WebDriver" Version="4.20.0-nightly202404181135" />
+      <PackageReference Include="Selenium.Support" Version="4.20.0-nightly202404181318" />
+      <PackageReference Include="Selenium.WebDriver" Version="4.20.0-nightly202404181318" />
     </ItemGroup>
 
     <ItemGroup>
