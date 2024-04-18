@@ -46,7 +46,10 @@ jobs:
     - name: Set up .Net
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 6.x
+        source-url: https://nuget.pkg.github.com/seleniumhq/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
     - name: Set up Java
       uses: actions/setup-java@v4
       with:
