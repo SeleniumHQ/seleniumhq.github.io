@@ -803,22 +803,8 @@ ele = driver.find_element(:css, 'h1')
 ele.save_screenshot('./image.jpg')
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-let driver = await new Builder()
-.forBrowser('chrome')
-.build();
-
-await driver.get('https://www.example.com');
-let ele = await driver.findElement(By.css("h1"));
-// Captures the element screenshot
-let encodedString = await ele.takeScreenshot(true);
-await fs.writeFileSync('./image.png', encodedString, 'base64');
-await driver.quit();
-}())
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -885,12 +871,8 @@ result = driver.execute_script("return arguments[0].innerText", header)
     # Executing JavaScript directly
 driver.execute_script("alert('hello world')")
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// Stores the header element
-let header = await driver.findElement(By.css('h1'));
-
-// Executing JavaScript to capture innerText of header element
-let text = await driver.executeScript('return arguments[0].innerText', header);
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Stores the header element

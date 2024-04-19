@@ -44,6 +44,8 @@ describe('Interactions - Windows', function () {
     let header = await driver.findElement(By.css('h1'));
     // Captures the element screenshot
     let encodedString = await header.takeScreenshot(true);
+    // save screenshot as below
+    // await fs.writeFileSync('./image.png', encodedString, 'base64');
     base64Code = encodedString.slice(startIndex, endIndex)
     assert.strictEqual(base64Code, imgMagicNumber)
   });
