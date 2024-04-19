@@ -943,13 +943,9 @@ result = driver.execute_script("return arguments[0].innerText", header)
     # Executing JavaScript directly
 driver.execute_script("alert('hello world')")
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Stores the header element
-let header = await driver.findElement(By.css('h1'));
-
-// Executing JavaScript to capture innerText of header element
-let text = await driver.executeScript('return arguments[0].innerText', header);
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Stores the header element
 val header = driver.findElement(By.cssSelector("h1"))
