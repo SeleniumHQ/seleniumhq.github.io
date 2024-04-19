@@ -334,7 +334,7 @@ effect for the entire session.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L50-L51" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -463,7 +463,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L59-L60" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -488,7 +488,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L68-L69" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -516,7 +516,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L77-L78" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -603,12 +603,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-
-proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
-cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
-
-driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
-driver.get('http://google.com')
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L86-L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let webdriver = require('selenium-webdriver');

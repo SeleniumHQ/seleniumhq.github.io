@@ -45,5 +45,50 @@ RSpec.describe 'Chrome' do
       driver.get('https://www.google.com')
       driver.quit
     end
+
+    it 'accepts untrusted certificates' do
+      options = Selenium::WebDriver::Options.chrome
+      options.accept_insecure_certs = true
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://expired.badssl.com/')
+      driver.quit
+    end
+
+    it 'sets unhandled prompt behavior' do
+      options = Selenium::WebDriver::Options.chrome
+      options.unhandled_prompt_behavior = :accept
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
+
+    it 'sets window rect' do
+      options = Selenium::WebDriver::Options.firefox
+      options.set_window_rect = true
+
+      driver = Selenium::WebDriver.for :firefox, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
+
+    it 'sets strict file interactability' do
+      options = Selenium::WebDriver::Options.chrome
+      options.strict_file_interactability = true
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
+
+    it 'sets the proxy' do
+      options = Selenium::WebDriver::Options.chrome
+      options.proxy = Selenium::WebDriver::Proxy.new(http: 'myproxy.com:8080')
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
   end
 end

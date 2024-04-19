@@ -337,7 +337,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L50-L51" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -465,7 +465,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L59-L60" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -492,7 +492,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L68-L69" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -521,7 +521,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L77-L78" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -606,13 +606,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-# this code was written with Selenium 4
-
-proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
-cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
-
-driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
-driver.get('http://google.com')
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L86-L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let webdriver = require('selenium-webdriver');
