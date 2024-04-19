@@ -840,22 +840,8 @@ begin
   ele.save_screenshot('./image.jpg')
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-   let driver = await new Builder()
-       .forBrowser('chrome')
-       .build();
-
-   await driver.get('https://www.example.com');
-   let ele = await driver.findElement(By.css("h1"));
-   // Captures the element screenshot
-   let encodedString = await ele.takeScreenshot(true);
-   await fs.writeFileSync('./image.png', encodedString, 'base64');
-   await driver.quit();
-}())
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
