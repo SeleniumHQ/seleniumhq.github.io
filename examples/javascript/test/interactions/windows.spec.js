@@ -49,4 +49,15 @@ describe('Interactions - Windows', function () {
     base64Code = encodedString.slice(startIndex, endIndex)
     assert.strictEqual(base64Code, imgMagicNumber)
   });
+
+  it('Should be able to takeScreenshot', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/javascriptPage.html');
+
+    // Captures the screenshot
+    let encodedString = await driver.takeScreenshot();
+    // save screenshot as below
+    // await fs.writeFileSync('./image.png', encodedString, 'base64');
+    base64Code = encodedString.slice(startIndex, endIndex)
+    assert.strictEqual(base64Code, imgMagicNumber)
+  });
 });
