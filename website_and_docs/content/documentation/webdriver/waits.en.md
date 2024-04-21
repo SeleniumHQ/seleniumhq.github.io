@@ -92,7 +92,7 @@ _Explicit waits_ are loops added to the code that poll the application
 for a specific condition to evaluate as true before it exits the loop and
 continues to the next command in the code. If the condition is not met before a designated timeout value, 
 the code will give a timeout error. Since there are many ways for the application not to be in the desired state,
-so explicit waits are a great choice to specify the exact condition to wait for
+explicit waits are a great choice to specify the exact condition to wait for
 in each place it is needed. 
 Another nice feature is that, by default, the Selenium Wait class automatically waits for the designated element to exist.
 
