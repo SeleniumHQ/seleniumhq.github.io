@@ -60,4 +60,29 @@ describe('Interactions - Windows', function () {
     base64Code = encodedString.slice(startIndex, endIndex)
     assert.strictEqual(base64Code, imgMagicNumber)
   });
+
+  it('Should be able to switch to newWindow and newTab and close', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+    const initialWindow = await driver.getAllWindowHandles();
+    assert.strictEqual(initialWindow.length, 1)
+
+    // Opens a new tab and switches to new tab
+    await driver.switchTo().newWindow('tab');
+    const browserTabs = await driver.getAllWindowHandles();
+    assert.strictEqual(browserTabs.length, 2)
+
+    // Opens a new window and switches to new window
+    await driver.switchTo().newWindow('window');
+    const windows = await driver.getAllWindowHandles();
+    assert.strictEqual(windows.length, 3)
+
+    //Close the tab or window
+    await driver.close();
+
+    //Switch back to the old tab or window
+    await driver.switchTo().window(windows[1]);
+
+    const windowsAfterClose = await driver.getAllWindowHandles();
+    assert.strictEqual(windowsAfterClose.length, 2);
+  });
 });
