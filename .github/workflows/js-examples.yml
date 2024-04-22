@@ -96,7 +96,7 @@ jobs:
     - name: Use Nightly package.json in Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
       working-directory: ./examples/javascript
-      run: Move-Item -Path package.nightly.json -Destination package.json
+      run: Move-Item -Path package.nightly.json -Destination package.json -Force
     - name: Install Requirements
       working-directory: ./examples/javascript
       run: npm install
