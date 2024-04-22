@@ -58,8 +58,8 @@ jobs:
           cd examples/ruby
           bundle install
           bundle remove selenium-webdriver selenium-devtools
-          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
-          bundle add selenium-devtools --version $latest_nightly_devtools --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
+          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
+          bundle add selenium-devtools --version $latest_nightly_devtools --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Nightly Windows
@@ -71,8 +71,8 @@ jobs:
           cd examples/ruby
           bundle install
           bundle remove selenium-webdriver selenium-devtools
-          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
-          bundle add selenium-devtools --version $latest_nightly_devtools --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
+          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
+          bundle add selenium-devtools --version $latest_nightly_devtools --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Stable
