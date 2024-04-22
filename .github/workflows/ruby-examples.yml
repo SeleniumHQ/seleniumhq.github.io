@@ -51,11 +51,11 @@ jobs:
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
-        working-directory: ./examples/ruby
         run: 
           |
           latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
           latest_nightly_devtools=$(./scripts/latest-nightly-version.sh rubygems selenium-devtools)
+          cd examples/ruby
           bundle install
           bundle remove selenium-webdriver selenium-devtools
           bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
@@ -64,11 +64,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Nightly Windows
         if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
-        working-directory: ./examples/ruby
         run: 
           |
           $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
           $latest_nightly_devtools = ./scripts/latest-nightly-version.ps1 rubygems selenium-devtools
+          cd examples/ruby
           bundle install
           bundle remove selenium-webdriver selenium-devtools
           bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${GITHUB_TOKEN}@rubygems.pkg.github.com/seleniumhq"
