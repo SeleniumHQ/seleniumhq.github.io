@@ -7,13 +7,5 @@ gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 1.35'
 gem 'rubocop-rspec', '~> 2.12'
-gem 'selenium-devtools', '~> 0.122'
-
-if ENV['SE_NIGHTLY']
-  source 'https://rubygems.pkg.github.com/seleniumhq' do
-    selenium = 'selenium-webdriver'
-    gem selenium, '~> 4.19.0.nightly'
-  end
-else
-  gem 'selenium-webdriver', '= 4.19.0'
-end
+gem 'selenium-devtools', '= 0.123'
+gem 'selenium-webdriver', '= 4.19.0'
