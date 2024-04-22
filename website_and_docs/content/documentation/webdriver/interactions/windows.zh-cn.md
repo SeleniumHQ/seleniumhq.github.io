@@ -225,12 +225,12 @@ driver.SwitchTo().NewWindow(WindowType.Window)
 打开一个新窗口并切换到新窗口
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 // 打开新标签页并切换到新标签页
-await driver.switchTo().newWindow('tab');
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
 // 打开一个新窗口并切换到新窗口
-await driver.switchTo().newWindow('window');
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
 
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
