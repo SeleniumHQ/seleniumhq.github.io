@@ -26,6 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
+        release: [ stable, nightly ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout GitHub repo
@@ -77,6 +78,25 @@ jobs:
     - name: Start Xvfb
       if: matrix.os == 'ubuntu-latest'
       run: Xvfb :99 &
+    - name: Setup Node Stable
+      if: matrix.release == 'stable'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+    - name: Setup Node Nightly
+      if: matrix.release == 'nightly'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        registry-url: 'https://npm.pkg.github.com'
+    - name: Use Nightly package.json in Ubuntu/macOS
+      if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
+      working-directory: ./examples/javascript
+      run: mv package.nightly.json package.json
+    - name: Use Nightly package.json in Windows
+      if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
+      working-directory: ./examples/javascript
+      run: Move-Item -Path package.nightly.json -Destination package.json
     - name: Install Requirements
       working-directory: ./examples/javascript
       run: npm install
