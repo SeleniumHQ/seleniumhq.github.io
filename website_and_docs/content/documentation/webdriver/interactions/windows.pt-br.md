@@ -238,14 +238,13 @@ Opens a new tab and switches to new tab
 Opens a new window and switches to new window
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
-  {{< tab header="JavaScript" >}}
-// Opens a new tab and switches to new tab
-await driver.switchTo().newWindow('tab');
+{{< tab header="JavaScript" text=true >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
-// Opens a new window and switches to new window
-await driver.switchTo().newWindow('window');
-
-  {{< /tab >}}
+Opens a new window and switches to new window:
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Opens a new tab and switches to new tab
 driver.switchTo().newWindow(WindowType.TAB)
