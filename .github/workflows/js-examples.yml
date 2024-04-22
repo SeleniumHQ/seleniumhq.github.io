@@ -95,12 +95,16 @@ jobs:
         |
         latest_nightly=$(./scripts/latest-nightly-version.sh npm selenium-webdriver)
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Use Nightly package.json in Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
       run:
         |
         $latest_nightly = ./scripts/latest-nightly-version.ps1 npm selenium-webdriver
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Install Requirements
       working-directory: ./examples/javascript
       run: npm install
