@@ -92,11 +92,17 @@ jobs:
     - name: Use Nightly package.json in Ubuntu/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
       working-directory: ./examples/javascript
-      run: mv package.nightly.json package.json
+      run:
+        |
+        latest_nightly=$(./scripts/latest-nightly-version.sh npm selenium-webdriver)
+        npm install --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
     - name: Use Nightly package.json in Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
       working-directory: ./examples/javascript
-      run: Move-Item -Path package.nightly.json -Destination package.json -Force
+      run:
+        |
+        $latest_nightly = ./scripts/latest-nightly-version.ps1 npm selenium-webdriver
+        npm install --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
     - name: Install Requirements
       working-directory: ./examples/javascript
       run: npm install
