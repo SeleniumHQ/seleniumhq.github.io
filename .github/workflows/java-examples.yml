@@ -49,7 +49,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-    - name: Run Tests Nightly
+    - name: Run Tests Stable
       if: matrix.release == 'stable'
       uses: nick-invision/retry@v3.0.0
       with:
