@@ -66,4 +66,4 @@ jobs:
         max_attempts: 3
         command: |
           cd examples/java
-          mvn -B -U test -Dselenium.version=4.20-SNAPSHOT
+          mvn -B -U test -Dselenium.version=4.20.0-SNAPSHOT
