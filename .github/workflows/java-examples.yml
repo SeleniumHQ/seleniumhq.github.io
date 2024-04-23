@@ -48,7 +48,8 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-    - name: Run Tests
+    - name: Run Tests Nightly
+      if: matrix.release == 'stable'
       uses: nick-invision/retry@v3.0.0
       with:
         timeout_minutes: 20
@@ -56,3 +57,12 @@ jobs:
         command: |
           cd examples/java
           mvn -B test
+    - name: Run Tests Nightly
+      if: matrix.release == 'nightly'
+      uses: nick-invision/retry@v3.0.0
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          cd examples/java
+          mvn -B -U test -Dselenium.version=4.20-SNAPSHOT
