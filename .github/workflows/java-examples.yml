@@ -26,6 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
+        release: [ stable, nightly ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout GitHub repo
