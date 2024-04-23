@@ -237,6 +237,7 @@ pull request updating this page.
 | `--service-host` | string | `localhost` | Host name where the service that supports WebDriver commands is running |
 | `--service-port` | int | `4723` | Port where the service that supports WebDriver commands is running |
 | `--service-status-endpoint` | string | `/status` | Optional, endpoint to query the WebDriver service status, an HTTP 200 response is expected |
+| `--service-protocol-version` | string | `HTTP/1.1` | Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status |
 | `--service-configuration` | string[] | `max-sessions=2 stereotype='{"browserName": "safari", "platformName": "iOS", "appium:platformVersion": "14.5"}}'` | Configuration for the service where calls will be relayed to. It is recommended to provide this type of configuration through a toml config file to improve readability. |
 
 ### Router

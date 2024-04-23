@@ -1,0 +1,16 @@
+{
+    "name": "javascript-examples",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "npx mocha test/**/*.spec.js --timeout 60000"
+    },
+    "author": "The Selenium project",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "assert": "2.1.0",
+        "selenium-webdriver": "npm:@seleniumhq/selenium-webdriver@4.20.0-nightly202404221125"
+    },
+    "devDependencies": {
+        "mocha": "10.4.0"
+    }
+}
