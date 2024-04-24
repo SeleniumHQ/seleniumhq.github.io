@@ -90,5 +90,32 @@ RSpec.describe 'Chrome' do
       driver.get('https://www.google.com')
       driver.quit
     end
+
+    it 'sets the implicit timeout' do
+      options = Selenium::WebDriver::Options.chrome
+      options.timeouts = {implicit: 1}
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
+
+    it 'sets the page load timeout' do
+      options = Selenium::WebDriver::Options.chrome
+      options.timeouts = {page_load: 400_000}
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
+
+    it 'sets the script timeout' do
+      options = Selenium::WebDriver::Options.chrome
+      options.timeouts = {script: 40_000}
+
+      driver = Selenium::WebDriver.for :chrome, options: options
+      driver.get('https://www.google.com')
+      driver.quit
+    end
   end
 end
