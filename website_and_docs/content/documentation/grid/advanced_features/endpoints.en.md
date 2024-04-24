@@ -19,6 +19,17 @@ For every Node, the status includes information regarding Node availability, ses
 cURL GET 'http://localhost:4444/status'
 ```
 
+### Delete session
+
+Deleting the session terminates the WebDriver session, quits the driver and removes it from the active sessions map.
+Any request using the removed session-id or reusing the driver instance will throw an error.
+
+```shell
+cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+```
+
+### Which URL should I use?
+
 In the Standalone mode, the Grid URL is the Standalone server address.
 
 In the Hub-Node mode, the Grid URL is the Hub server address. 
