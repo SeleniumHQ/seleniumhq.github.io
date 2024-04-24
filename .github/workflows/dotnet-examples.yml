@@ -56,7 +56,26 @@ jobs:
         dotnet-version: 6.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Update Nightly version non-Windows
+      if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
+      run:
+        |
+        latest_nightly=$(./scripts/latest-nightly-version.sh nuget Selenium.WebDriver)
+        dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
+        dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Update Nightly version Windows
+      if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
+      shell: pwsh
+      run:
+        |
+        $latest_nightly = ./scripts/latest-nightly-version.ps1 nuget Selenium.WebDriver
+        dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
+        dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Set up Java
       uses: actions/setup-java@v4
       with:
@@ -70,5 +89,3 @@ jobs:
         command: |
           cd examples/dotnet/SeleniumDocs
           dotnet test
-      env:
-        SE_RELEASE: ${{ matrix.release }}
