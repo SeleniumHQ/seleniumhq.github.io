@@ -236,6 +236,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--service-host`            | string   | `localhost`                                                                                                       | WebDriver コマンドをサポートしてるサービスが稼働しているホスト名。                                          |
 | `--service-port`            | int      | `4723`                                                                                                            | WebDriver コマンドをサポートしてるサービスが稼働しているポート番号。                                        |
 | `--service-status-endpoint` | string   | `/status`                                                                                                         | WebDriver サービスの状態を問い合わせるエンドポイント、オプショナルです。HTTP 200 レスポンスが期待されます。 |
+| `--service-protocol-version` | string | `HTTP/1.1` | Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status |
 | `--service-configuration`   | string[] | `max-sessions=2 stereotype='{"browserName": "safari", "platformName": "iOS", "appium:platformVersion": "14.5"}}'` | 呼び出しの中継先となるサービスの設定。可読性向上のため、TOML ファイルで設定することを推奨します。           |
 
 ### Router
