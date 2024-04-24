@@ -49,4 +49,70 @@ describe('Interactions - Windows', function () {
     base64Code = encodedString.slice(startIndex, endIndex)
     assert.strictEqual(base64Code, imgMagicNumber)
   });
+
+  it('Should be able to takeScreenshot', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/javascriptPage.html');
+
+    // Captures the screenshot
+    let encodedString = await driver.takeScreenshot();
+    // save screenshot as below
+    // await fs.writeFileSync('./image.png', encodedString, 'base64');
+    base64Code = encodedString.slice(startIndex, endIndex)
+    assert.strictEqual(base64Code, imgMagicNumber)
+  });
+
+  it('Should be able to switch to newWindow and newTab and close', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+    const initialWindow = await driver.getAllWindowHandles();
+    assert.strictEqual(initialWindow.length, 1)
+
+    // Opens a new tab and switches to new tab
+    await driver.switchTo().newWindow('tab');
+    const browserTabs = await driver.getAllWindowHandles();
+    assert.strictEqual(browserTabs.length, 2)
+
+    // Opens a new window and switches to new window
+    await driver.switchTo().newWindow('window');
+    const windows = await driver.getAllWindowHandles();
+    assert.strictEqual(windows.length, 3)
+
+    //Close the tab or window
+    await driver.close();
+
+    //Switch back to the old tab or window
+    await driver.switchTo().window(windows[1]);
+
+    const windowsAfterClose = await driver.getAllWindowHandles();
+    assert.strictEqual(windowsAfterClose.length, 2);
+  });
+
+  it('Should be able to getWindow Size', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+
+    // Access each dimension individually
+    const { width, height } = await driver.manage().window().getRect();
+
+    // Or store the dimensions and query them later
+    const rect = await driver.manage().window().getRect();
+    const windowWidth = rect.width;
+    const windowHeight = rect.height;
+
+    assert.ok(windowWidth>0);
+    assert.ok(windowHeight>0);
+  });
+
+  it('Should be able to getWindow position', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+
+    // Access each dimension individually
+    const { x, y } = await driver.manage().window().getRect();
+
+    // Or store the dimensions and query them later
+    const rect = await driver.manage().window().getRect();
+    const x1 = rect.x;
+    const y1 = rect.y;
+
+    assert.ok(x1>=0);
+    assert.ok(y1>=0);
+  });
 });

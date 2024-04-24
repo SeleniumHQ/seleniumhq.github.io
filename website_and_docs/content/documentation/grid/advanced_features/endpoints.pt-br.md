@@ -19,6 +19,17 @@ Para cada nó, o status inclui informações sobre a disponibilidade, sessões e
 cURL GET 'http://localhost:4444/status'
 ```
 
+### Deletar sessão
+
+A exclusão da sessão encerra a sessão do WebDriver, fecha o driver e o remove do mapa de sessões ativas.
+Qualquer solicitação usando o id de sessão removido ou reutilizando a instância do driver gerará um erro.
+
+```shell
+cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+```
+
+### Which URL should I use?
+
 No modo Standalone, o URL da Grid é o endereço do servidor Standalone.
 
 No modo Hub-Node, a URL da Grid é o endereço do servidor Hub.

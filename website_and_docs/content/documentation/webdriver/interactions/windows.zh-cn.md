@@ -225,12 +225,12 @@ driver.SwitchTo().NewWindow(WindowType.Window)
 打开一个新窗口并切换到新窗口
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 // 打开新标签页并切换到新标签页
-await driver.switchTo().newWindow('tab');
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
 // 打开一个新窗口并切换到新窗口
-await driver.switchTo().newWindow('window');
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
 
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -468,14 +468,12 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {width, height} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -546,14 +544,12 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {x, y} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -700,21 +696,8 @@ driver.save_screenshot('./image.png')
 
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-let {Builder} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-let driver = await new Builder()
-.forBrowser('chrome')
-.build();
-
-    await driver.get('https://www.example.com');
-    // Returns base64 encoded string
-    let encodedString = await driver.takeScreenshot();
-    await fs.writeFileSync('./image.png', encodedString, 'base64');
-    await driver.quit();
-}())
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
