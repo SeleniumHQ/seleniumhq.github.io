@@ -468,14 +468,12 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {width, height} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -546,14 +544,12 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {x, y} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸

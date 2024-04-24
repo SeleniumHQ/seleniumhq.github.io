@@ -487,15 +487,13 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { width, height } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Access each dimension individually
 val width = driver.manage().window().size.width
@@ -566,15 +564,13 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { x, y } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Access each dimension individually
 val x = driver.manage().window().position.x
