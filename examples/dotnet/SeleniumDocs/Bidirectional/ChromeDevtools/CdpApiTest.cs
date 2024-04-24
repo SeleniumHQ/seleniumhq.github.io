@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
-using OpenQA.Selenium.DevTools.V121.Network;
-using OpenQA.Selenium.DevTools.V121.Performance;
+using OpenQA.Selenium.DevTools.V124.Network;
+using OpenQA.Selenium.DevTools.V124.Performance;
 
 namespace SeleniumDocs.Bidirectional.ChromeDevtools
 {
@@ -23,8 +23,8 @@ namespace SeleniumDocs.Bidirectional.ChromeDevtools
         public async Task SetCookie()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V121.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V121.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V124.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V124.Network.EnableCommandSettings());
 
             var cookieCommandSettings = new SetCookieCommandSettings
             {
@@ -47,8 +47,8 @@ namespace SeleniumDocs.Bidirectional.ChromeDevtools
             driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
 
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V121.DevToolsSessionDomains>();
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V121.Performance.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V124.DevToolsSessionDomains>();
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings());
 
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
@@ -68,8 +68,8 @@ namespace SeleniumDocs.Bidirectional.ChromeDevtools
         public async Task BasicAuth()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V121.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V121.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V124.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V124.Network.EnableCommandSettings());
 
             var encodedAuth = Convert.ToBase64String(Encoding.Default.GetBytes("admin:admin"));
             var headerSettings = new SetExtraHTTPHeadersCommandSettings

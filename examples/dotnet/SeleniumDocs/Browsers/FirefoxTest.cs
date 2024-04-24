@@ -201,7 +201,7 @@ namespace SeleniumDocs.Browsers
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).BrowserPath();
+            return new DriverFinder(options).GetBrowserPath();
         }
     }
 }
