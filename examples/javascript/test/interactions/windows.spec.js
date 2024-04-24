@@ -85,4 +85,34 @@ describe('Interactions - Windows', function () {
     const windowsAfterClose = await driver.getAllWindowHandles();
     assert.strictEqual(windowsAfterClose.length, 2);
   });
+
+  it('Should be able to getWindow Size', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+
+    // Access each dimension individually
+    const { width, height } = await driver.manage().window().getRect();
+
+    // Or store the dimensions and query them later
+    const rect = await driver.manage().window().getRect();
+    const windowWidth = rect.width;
+    const windowHeight = rect.height;
+
+    assert.ok(windowWidth>0);
+    assert.ok(windowHeight>0);
+  });
+
+  it('Should be able to getWindow position', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/');
+
+    // Access each dimension individually
+    const { x, y } = await driver.manage().window().getRect();
+
+    // Or store the dimensions and query them later
+    const rect = await driver.manage().window().getRect();
+    const x1 = rect.x;
+    const y1 = rect.y;
+
+    assert.ok(x1>=0);
+    assert.ok(y1>=0);
+  });
 });
