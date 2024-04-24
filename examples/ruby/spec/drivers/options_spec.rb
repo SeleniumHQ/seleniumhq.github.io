@@ -5,13 +5,14 @@ require 'spec_helper'
 RSpec.describe 'Chrome' do
   describe 'Driver Options' do
     let(:chrome_location) { driver_finder && ENV.fetch('CHROME_BIN', nil) }
+    let(:url) { 'https://www.selenium.dev/selenium/web/' }
 
     it 'page load strategy normal' do
       options = Selenium::WebDriver::Options.chrome
       options.page_load_strategy = :normal
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -20,7 +21,7 @@ RSpec.describe 'Chrome' do
       options.page_load_strategy = :eager
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -29,7 +30,7 @@ RSpec.describe 'Chrome' do
       options.page_load_strategy = :none
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -42,7 +43,7 @@ RSpec.describe 'Chrome' do
       cloud_options[:name] = my_test_name
       options.add_option('cloud:options', cloud_options)
       driver = Selenium::WebDriver.for :remote, capabilities: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -51,7 +52,7 @@ RSpec.describe 'Chrome' do
       options.accept_insecure_certs = true
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://expired.badssl.com/')
+      driver.get(url)
       driver.quit
     end
 
@@ -60,7 +61,7 @@ RSpec.describe 'Chrome' do
       options.unhandled_prompt_behavior = :accept
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -69,7 +70,7 @@ RSpec.describe 'Chrome' do
       options.set_window_rect = true
 
       driver = Selenium::WebDriver.for :firefox, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -78,7 +79,7 @@ RSpec.describe 'Chrome' do
       options.strict_file_interactability = true
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -87,7 +88,7 @@ RSpec.describe 'Chrome' do
       options.proxy = Selenium::WebDriver::Proxy.new(http: 'myproxy.com:8080')
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -96,7 +97,7 @@ RSpec.describe 'Chrome' do
       options.timeouts = {implicit: 1}
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -105,7 +106,7 @@ RSpec.describe 'Chrome' do
       options.timeouts = {page_load: 400_000}
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
 
@@ -114,7 +115,7 @@ RSpec.describe 'Chrome' do
       options.timeouts = {script: 40_000}
 
       driver = Selenium::WebDriver.for :chrome, options: options
-      driver.get('https://www.google.com')
+      driver.get(url)
       driver.quit
     end
   end
