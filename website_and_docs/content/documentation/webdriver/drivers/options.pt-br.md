@@ -52,7 +52,7 @@ extremidade remota, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L10" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -80,7 +80,7 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -152,7 +152,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -208,7 +208,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -263,7 +263,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -307,7 +307,7 @@ setting `platformName` sets the OS at the remote-end.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L37-L38" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -345,7 +345,7 @@ effect for the entire session.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L50-L51" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
