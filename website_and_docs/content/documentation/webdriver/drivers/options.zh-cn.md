@@ -372,7 +372,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L113-L114" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -400,7 +400,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L104-L105" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -426,7 +426,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L95-L96" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -465,7 +465,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L59-L60" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -492,7 +492,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L68-L69" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -521,7 +521,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L77-L78" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -606,7 +606,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L86-L87" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let webdriver = require('selenium-webdriver');

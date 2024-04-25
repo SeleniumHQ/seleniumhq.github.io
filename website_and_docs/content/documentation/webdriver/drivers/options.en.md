@@ -369,7 +369,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L113-L114" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -398,7 +398,7 @@ _TimeoutException_.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L104-L105" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -425,7 +425,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L95-L96" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -463,7 +463,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L59-L60" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -488,7 +488,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L68-L69" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -516,7 +516,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L77-L78" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -603,7 +603,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L86-L87" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let webdriver = require('selenium-webdriver');
