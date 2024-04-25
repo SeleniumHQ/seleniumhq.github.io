@@ -83,3 +83,5 @@ jobs:
           $xml_content = Invoke-WebRequest -Uri "https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/"
           $latest_snapshot = $xml_content.Content | xq '.content.data.\"content-item\"' | jq -r 'sort_by(.lastModified) | reverse | .[0] | .text'
           Write-Output $latest_snapshot
+          cd examples/java
+          mvn -B -U test -Dselenium.version="$latest_snapshot"
