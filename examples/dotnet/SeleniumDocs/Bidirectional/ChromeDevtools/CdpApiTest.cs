@@ -16,7 +16,7 @@ namespace SeleniumDocs.Bidirectional.ChromeDevtools
         [TestInitialize]
         public void Startup()
         {
-            StartDriver("121");
+            StartDriver("124");
         }
 
         [TestMethod]
