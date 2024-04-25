@@ -26,6 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
+        release: [ stable, nightly ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout GitHub repo
@@ -48,7 +49,30 @@ jobs:
         with:
           ruby-version: 3.0
           bundler-cache: true
-      - name: Install Gems
+      - name: Install Gems Nightly non-Windows
+        if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
+        run: 
+          |
+          latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
+          cd examples/ruby
+          bundle install
+          bundle remove selenium-webdriver
+          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Gems Nightly Windows
+        if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
+        run: 
+          |
+          $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
+          cd examples/ruby
+          bundle install
+          bundle remove selenium-webdriver
+          bundle add selenium-webdriver --version $latest_nightly_webdriver --source "https://token:${{secrets.GITHUB_TOKEN}}@rubygems.pkg.github.com/seleniumhq"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Gems Stable
+        if: matrix.release == 'stable'
         working-directory: ./examples/ruby
         run: bundle install
       - name: Set up Java
