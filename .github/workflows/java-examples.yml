@@ -25,8 +25,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-        release: [ stable, nightly ]
+        os: [ windows-latest ]
+        release: [ nightly ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout GitHub repo
@@ -81,7 +81,9 @@ jobs:
         command: |
           pip install yq          
           $xml_content = Invoke-WebRequest -Uri "https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/"
-          $latest_snapshot = $xml_content.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'content' | Select-Object -ExpandProperty 'data' | Select-Object -ExpandProperty 'content-item' | Sort-Object lastModified -Descending | Select-Object -First 1 | Select-Object -ExpandProperty 'text'
-          Write-Output $latest_snapshot          
-          cd examples/java
-          mvn -B -U test -Dselenium.version="$latest_snapshot"
+          Write-Output $xml_content
+#          $latest_snapshot = $xml_content.Content | xq '.content.data."content-item"' | jq -r 'sort_by(.lastModified) | reverse | .[0] | .text')
+          $latest_snapshot = $xml_content.Content | xq '.content.data."content-item"'
+          Write-Output $latest_snapshot
+#          cd examples/java
+#          mvn -B -U test -Dselenium.version="$latest_snapshot"
