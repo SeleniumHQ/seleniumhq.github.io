@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.manager.SeleniumManagerOutput;
 import org.openqa.selenium.remote.service.DriverFinder;
 
 public class ServiceTest extends BaseTest {
@@ -38,9 +37,8 @@ public class ServiceTest extends BaseTest {
   private void setBinaryPaths() {
     ChromeOptions options = new ChromeOptions();
     options.setBrowserVersion("stable");
-    SeleniumManagerOutput.Result location =
-        DriverFinder.getPath(ChromeDriverService.createDefaultService(), options);
-    driverPath = new File(location.getDriverPath());
-    browserPath = new File(location.getBrowserPath());
+    DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
+    driverPath = new File(finder.getDriverPath());
+    browserPath = new File(finder.getBrowserPath());
   }
 }
