@@ -26,7 +26,7 @@ def chromedriver_bin():
     service = webdriver.chrome.service.Service()
     options = webdriver.ChromeOptions()
     options.browser_version = 'stable'
-    yield webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_driver_path()
 
 
 @pytest.fixture(scope='function')
@@ -34,8 +34,7 @@ def chrome_bin():
     service = webdriver.chrome.service.Service()
     options = webdriver.ChromeOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
@@ -43,8 +42,7 @@ def edge_bin():
     service = webdriver.edge.service.Service()
     options = webdriver.EdgeOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
@@ -52,8 +50,7 @@ def firefox_bin():
     service = webdriver.firefox.service.Service()
     options = webdriver.FirefoxOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
