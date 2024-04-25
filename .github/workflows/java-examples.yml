@@ -58,12 +58,30 @@ jobs:
         command: |
           cd examples/java
           mvn -B test
-    - name: Run Tests Nightly
-      if: matrix.release == 'nightly'
+    - name: Run Tests Nightly Linux/macOS
+      if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
       uses: nick-invision/retry@v3.0.0
       with:
         timeout_minutes: 20
         max_attempts: 3
         command: |
+          pip install yq
+          xml_content=$(curl -sf https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/)
+          latest_snapshot=$(echo $xml_content | xq '.content.data."content-item"' | jq -r 'sort_by(.lastModified) | reverse | .[0] | .text')
+          echo $latest_snapshot
           cd examples/java
-          mvn -B -U test -Dselenium.version=4.20.0-SNAPSHOT
+          mvn -B -U test -Dselenium.version="$latest_snapshot"
+
+    - name: Run Tests Nightly Windows
+      if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
+      uses: nick-invision/retry@v3.0.0
+      with:
+        timeout_minutes: 20
+        max_attempts: 3
+        command: |
+          pip install yq          
+          $xml_content = Invoke-WebRequest -Uri "https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/"
+          $latest_snapshot = $xml_content.Content | xq '.content.data.\"content-item\"' | jq -r 'sort_by(.lastModified) | reverse | .[0] | .text'
+          Write-Output $latest_snapshot
+          cd examples/java
+          mvn -B -U test "-Dselenium.version=$latest_snapshot"
