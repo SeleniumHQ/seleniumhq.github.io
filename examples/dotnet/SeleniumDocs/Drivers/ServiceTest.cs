@@ -38,7 +38,7 @@ namespace SeleniumDocs.Drivers
         
         private static string GetDriverLocation(ChromeOptions options)
         {
-            return new DriverFinder(options).DriverPath();
+            return new DriverFinder(options).GetDriverPath();
         }
 
         private static ChromeOptions GetLatestChromeOptions()
