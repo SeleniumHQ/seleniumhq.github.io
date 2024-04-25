@@ -65,5 +65,6 @@ jobs:
         timeout_minutes: 20
         max_attempts: 3
         command: |
+          latest_snapshot=$(curl -sf https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/ | xq '.content.data."content-item"' | jq -r 'sort_by(.lastModified) | reverse | .[0] | .text')
           cd examples/java
-          mvn -B -U test -Dselenium.version=4.20.0-SNAPSHOT
+          mvn -B -U test -Dselenium.version="$latest_snapshot"
