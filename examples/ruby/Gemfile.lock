@@ -28,7 +28,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.0)
-    rubocop (1.63.2)
+    rubocop (1.63.3)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -54,9 +54,9 @@ GEM
       rubocop (~> 1.40)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-devtools (0.123.0)
+    selenium-devtools (0.124.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.19.0)
+    selenium-webdriver (4.20.1)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -77,8 +77,8 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
-  selenium-devtools (~> 0.122)
-  selenium-webdriver (= 4.19.0)
+  selenium-devtools (= 0.124.0)
+  selenium-webdriver (= 4.20.1)
 
 BUNDLED WITH
    2.5.6

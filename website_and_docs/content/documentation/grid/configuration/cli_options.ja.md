@@ -161,6 +161,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--reject-unsupported-caps`    | boolean | `false`                                                             | Grid がサポートしていない capabilities をリクエストされた時、ディストリビューターがリクエストを即座に今日できるようにします。これはオンデマンドでノードを立ち上げをしない Grid の設定に適しています。 |
 | `--slot-matcher`               | string  | `org.openqa.selenium.grid.data.DefaultSlotMatcher`                  | デフォルト以外で使用するスロットマッチャーの完全なクラス名。これはノードが特定のセッションをサポートできるかを判断するために使用されます。                                                            |
 | `--slot-selector`              | string  | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | デフォルト以外のスロットセレクターの完全なクラス名。これは、ノードがマッチした後ノード内のスロットを選択するために使用されます。                                                                      |
+| `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 
 ### Docker
 
@@ -173,6 +174,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--docker-port`        | int      | `2375`                                                            | Docker デーモンが動作しているポート名。                                                                                                                                                          |
 | `--docker-url`         | string   | `http://localhost:2375`                                           | Docker デーモンに接続するための URL。                                                                                                                                                            |
 | `--docker-video-image` | string   | `selenium/video:latest`                                           | ビデオレコーディングが有効になっているときに利用される Docker イメージ。                                                                                                                         |
+| `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
 
 ### Events
 
@@ -234,6 +236,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--service-host`            | string   | `localhost`                                                                                                       | WebDriver コマンドをサポートしてるサービスが稼働しているホスト名。                                          |
 | `--service-port`            | int      | `4723`                                                                                                            | WebDriver コマンドをサポートしてるサービスが稼働しているポート番号。                                        |
 | `--service-status-endpoint` | string   | `/status`                                                                                                         | WebDriver サービスの状態を問い合わせるエンドポイント、オプショナルです。HTTP 200 レスポンスが期待されます。 |
+| `--service-protocol-version` | string | `HTTP/1.1` | Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status |
 | `--service-configuration`   | string[] | `max-sessions=2 stereotype='{"browserName": "safari", "platformName": "iOS", "appium:platformVersion": "14.5"}}'` | 呼び出しの中継先となるサービスの設定。可読性向上のため、TOML ファイルで設定することを推奨します。           |
 
 ### Router
@@ -243,6 +246,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--password` | string | `myStrongPassword` | クライアントがサーバーに接続する際に使用するパスワード。このパスワードとユーザー名の両方が設定されていないと使用できません。 |
 | `--username` | string | `admin`            | クライアントがサーバーに接続する際に使用するユーザー名。このユーザー名とパスワードの両方が設定されていないと使用できません。 |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
+| `--disable-ui` | boolean | `true` | Disable the Grid UI. |
 
 ### Server
 

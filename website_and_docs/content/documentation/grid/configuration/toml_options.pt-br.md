@@ -143,6 +143,8 @@ detect-drivers = false
 # Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
+# Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status (e.g. HTTP/1.1, HTTP/2)
+protocol-version = "HTTP/1.1"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
 # that many test slots to that particular configuration
 configs = [

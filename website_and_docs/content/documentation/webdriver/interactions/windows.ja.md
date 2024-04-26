@@ -232,14 +232,13 @@ Opens a new tab and switches to new tab
 Opens a new window and switches to new window
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
-  {{< tab header="JavaScript" >}}
-// Opens a new tab and switches to new tab
-await driver.switchTo().newWindow('tab');
+{{< tab header="JavaScript" text=true >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
-// Opens a new window and switches to new window
-await driver.switchTo().newWindow('window');
-
-  {{< /tab >}}
+Opens a new window and switches to new window:
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Opens a new tab and switches to new tab
 driver.switchTo().newWindow(WindowType.TAB)
@@ -488,15 +487,13 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { width, height } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Access each dimension individually
 val width = driver.manage().window().size.width
@@ -567,15 +564,13 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { x, y } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Access each dimension individually
 val x = driver.manage().window().position.x
@@ -721,22 +716,9 @@ begin
 
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-let {Builder} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-    let driver = await new Builder()
-      .forBrowser('chrome')
-      .build();
-
-    await driver.get('https://www.example.com');
-    // Returns base64 encoded string
-    let encodedString = await driver.takeScreenshot();
-    await fs.writeFileSync('./image.png', encodedString, 'base64');
-    await driver.quit();
-}())
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
 import org.openqa.selenium.*
@@ -823,22 +805,8 @@ begin
   ele.save_screenshot('./image.jpg')
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-   let driver = await new Builder()
-       .forBrowser('chrome')
-       .build();
-
-   await driver.get('https://www.example.com');
-   let ele = await driver.findElement(By.css("h1"));
-   // Captures the element screenshot
-   let encodedString = await ele.takeScreenshot(true);
-   await fs.writeFileSync('./image.png', encodedString, 'base64');
-   await driver.quit();
-}())
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -905,13 +873,9 @@ result = driver.execute_script("return arguments[0].innerText", header)
     # Executing JavaScript directly
 driver.execute_script("alert('hello world')")
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Stores the header element
-let header = await driver.findElement(By.css('h1'));
-
-// Executing JavaScript to capture innerText of header element
-let text = await driver.executeScript('return arguments[0].innerText', header);
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Stores the header element
 val header = driver.findElement(By.cssSelector("h1"))

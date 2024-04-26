@@ -171,6 +171,7 @@ pull request updating this page.
 | `--reject-unsupported-caps` | boolean | `false` | Allow the Distributor to reject a request immediately if the Grid does not support the requested capability. Rejecting requests immediately is suitable for a Grid setup that does not spin up Nodes on demand. |
 | `--slot-matcher` | string | `org.openqa.selenium.grid.data.DefaultSlotMatcher` | Full class name of non-default slot matcher to use. This is used to determine whether a Node can support a particular session. |
 | `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Full class name of non-default slot selector. This is used to select a slot in a Node once the Node has been matched. |
+| `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 
 ### Docker
 
@@ -183,6 +184,7 @@ pull request updating this page.
 | `--docker-port` | int | `2375` | Port where the Docker daemon is running |
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
+| `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
 
 ### Events
 
@@ -244,6 +246,7 @@ pull request updating this page.
 | `--service-host` | string | `localhost` | Host name where the service that supports WebDriver commands is running |
 | `--service-port` | int | `4723` | Port where the service that supports WebDriver commands is running |
 | `--service-status-endpoint` | string | `/status` | Optional, endpoint to query the WebDriver service status, an HTTP 200 response is expected |
+| `--service-protocol-version` | string | `HTTP/1.1` | Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status |
 | `--service-configuration` | string[] | `max-sessions=2 stereotype='{"browserName": "safari", "platformName": "iOS", "appium:platformVersion": "14.5"}}'` | Configuration for the service where calls will be relayed to. It is recommended to provide this type of configuration through a toml config file to improve readability. |
 
 ### Router
@@ -253,6 +256,7 @@ pull request updating this page.
 | `--password` | string | `myStrongPassword` | Password clients must use to connect to the server. Both this and the username need to be set in order to be used. |
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
+| `--disable-ui` | boolean | `true` | Disable the Grid UI. |
 
 
 ### Server
