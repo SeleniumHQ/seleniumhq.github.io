@@ -115,7 +115,9 @@ RSpec.describe 'Edge' do
 
   def driver_finder
     options = Selenium::WebDriver::Options.edge(browser_version: 'stable')
-    ENV['EDGEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Edge::Service)
-    ENV['EDGE_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.edge
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['EDGEDRIVER_BIN'] = finder.driver_path
+    ENV['EDGE_BIN'] = finder.browser_path
   end
 end
