@@ -122,7 +122,8 @@ RSpec.describe 'Firefox' do
 
   def driver_finder
     options = Selenium::WebDriver::Options.firefox(browser_version: 'stable')
-    finder = Selenium::WebDriver::DriverFinder.new(options, Selenium::WebDriver::Firefox::Service.new)
+    service = Selenium::WebDriver::Service.firefox
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
     ENV['GECKODRIVER_BIN'] = finder.driver_path
     ENV['FIREFOX_BIN'] = finder.browser_path
   end
