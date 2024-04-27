@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumDocumentation.SeleniumPRs
+namespace SeleniumDocumentation.SeleniumInteractions
 {
     [TestClass]
     public class NavigationTest
