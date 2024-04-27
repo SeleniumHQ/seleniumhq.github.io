@@ -521,8 +521,10 @@ Seleniumを使用した自動化スクリプト用のプロキシサーバーは
 Selenium WebDriverは設定をプロキシする方法を提供します。
 
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane text=true >}}
+{{< badge-examples >}}
+{{% tab header="Java" %}}
+```java
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -540,8 +542,10 @@ public class ProxyTest {
     driver.quit();
   }
 }
-{{< /tab >}}
-{{< tab header="Python" >}}
+```
+{{% /tab %}}
+{{% tab header="Python" %}}
+```python
 from selenium import webdriver
 
 PROXY = "<HOST:PORT>"
@@ -554,11 +558,11 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-# Open URL
     driver.get("https://selenium.dev")
-
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+```
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+```CSharp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -575,11 +579,13 @@ IWebDriver driver = new ChromeDriver(options);
 driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 }
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% tab header="JavaScript" %}}
+```javascript
 let webdriver = require('selenium-webdriver');
 let chrome = require('selenium-webdriver/chrome');
 let proxy = require('selenium-webdriver/proxy');
@@ -598,8 +604,10 @@ finally {
 await driver.quit();
 }
 }());
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+```
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+```kotlin
 import org.openqa.selenium.Proxy
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -618,5 +626,6 @@ fun main() {
         driver.quit()
     }
 }
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< /tabpane >}}
