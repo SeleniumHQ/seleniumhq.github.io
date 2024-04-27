@@ -20,7 +20,7 @@ aliases: [
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
-driver.Navigate().GoToUrl(@"https://selenium.dev");
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
     # Convenient way
@@ -51,7 +51,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L11" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
+   {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L24-L25" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
@@ -71,7 +73,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L15" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
+  {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L29-L30" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
@@ -91,7 +95,9 @@ driver.navigate().to("https://selenium.dev")
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L19" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
+  {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L34-L35" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
