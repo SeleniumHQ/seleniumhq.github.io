@@ -21,7 +21,7 @@ abrir o seu site. Isso pode ser feito em uma única linha, utilize o seguinte co
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
-driver.Navigate().GoToUrl(@"https://selenium.dev");
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions#L17-L20" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
     # Convenient way
@@ -52,7 +52,9 @@ Pressionando o botão Voltar do navegador:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L11" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Back();{{< /tab >}}
+  {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions#L24-L25" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
@@ -70,7 +72,9 @@ Pressionando o botão Avançar do navegador:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L15" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Forward();{{< /tab >}}
+  {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions#L29-L30" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
@@ -89,7 +93,9 @@ Atualizando a página atual:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L19" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Navigate().Refresh();{{< /tab >}}
+  {{< tab header="CSharp" >}}
+ {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions#L34-L35" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
