@@ -132,7 +132,7 @@ browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 var driver = new RemoteWebDriver(new Uri(CloudURL), browserOptions);
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L37-L46">}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L47">}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium.webdriver.firefox.options import Options as FirefoxOptions

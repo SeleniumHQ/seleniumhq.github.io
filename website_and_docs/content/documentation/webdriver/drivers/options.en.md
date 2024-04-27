@@ -40,7 +40,7 @@ Browser name is set by default when using an Options class instance.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L10" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -67,7 +67,7 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -139,7 +139,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -196,7 +196,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -252,7 +252,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -296,7 +296,7 @@ setting `platformName` sets the OS at the remote-end.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L37-L38" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -334,7 +334,7 @@ effect for the entire session.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -369,7 +369,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -398,7 +398,7 @@ _TimeoutException_.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -425,7 +425,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -463,7 +463,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -488,7 +488,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -516,7 +516,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -603,12 +603,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-
-proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
-cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
-
-driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
-driver.get('http://google.com')
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let webdriver = require('selenium-webdriver');
