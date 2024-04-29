@@ -118,5 +118,16 @@ RSpec.describe 'Chrome' do
       driver.get(url)
       driver.quit
     end
+
+    it 'sets capabilities in the pre-selenium 4 way', skip: 'this is example code that will not execute' do
+      caps = Selenium::WebDriver::Remote::Capabilities.firefox
+      caps[:platform] = 'Windows 10'
+      caps[:version] = '92'
+      caps[:build] = my_test_build
+      caps[:name] = my_test_name
+      driver = Selenium::WebDriver.for :remote, url: cloud_url, desired_capabilities: caps
+      driver.get(url)
+      driver.quit
+    end
   end
 end
