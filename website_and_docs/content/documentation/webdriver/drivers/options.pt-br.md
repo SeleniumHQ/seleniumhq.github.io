@@ -80,7 +80,7 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L40" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
