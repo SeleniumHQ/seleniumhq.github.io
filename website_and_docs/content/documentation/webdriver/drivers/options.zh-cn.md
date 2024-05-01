@@ -43,7 +43,7 @@ Browser name is set by default when using an Options class instance.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L10" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -71,7 +71,7 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L35" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -147,7 +147,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L10-L11">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L28-L34">}}
@@ -203,7 +203,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L19-L20">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L8-L14">}}
@@ -258,7 +258,7 @@ namespace pageLoadStrategy {
 }
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L28-L29">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true  >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L18-L24">}}
@@ -302,7 +302,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L37-L38" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -337,7 +337,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -372,7 +372,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -400,7 +400,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -426,7 +426,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -465,7 +465,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -492,7 +492,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -521,7 +521,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -550,8 +550,10 @@ WebDriver创建新会话时,
 
 Selenium WebDriver提供了如下设置代理的方法
 
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane text=true >}}
+{{< badge-examples >}}
+{{% tab header="Java" %}}
+```java
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -569,8 +571,10 @@ public class ProxyTest {
     driver.quit();
   }
 }
-{{< /tab >}}
-{{< tab header="Python" >}}
+```
+{{% /tab %}}
+{{% tab header="Python" %}}
+```python
 from selenium import webdriver
 
 PROXY = "<HOST:PORT>"
@@ -583,11 +587,11 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 with webdriver.Firefox() as driver:
-# Open URL
     driver.get("https://selenium.dev")
-
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+```
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+```CSharp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -604,17 +608,13 @@ IWebDriver driver = new ChromeDriver(options);
 driver.Navigate().GoToUrl("https://www.selenium.dev/");
 }
 }
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< tab header="Ruby" >}}
-# this code was written with Selenium 4
-
-proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
-cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
-
-driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
-driver.get('http://google.com')
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{% tab header="JavaScript" %}}
+```javascript
 let webdriver = require('selenium-webdriver');
 let chrome = require('selenium-webdriver/chrome');
 let proxy = require('selenium-webdriver/proxy');
@@ -633,8 +633,10 @@ finally {
 await driver.quit();
 }
 }());
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
+```
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+```kotlin
 import org.openqa.selenium.Proxy
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -653,5 +655,6 @@ fun main() {
         driver.quit()
     }
 }
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< /tabpane >}}
