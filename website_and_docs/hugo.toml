@@ -53,35 +53,40 @@ anchor = "smart"
 [languages]
 [languages.en]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="English"
 weight = 1
+[languages.en.params]
+description = "Selenium automates browsers. That's it!"
 [languages.pt-br]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="Português (Brasileiro)"
 weight = 2
+[languages.pt-br.params]
+description = "Selenium automates browsers. That's it!"
 [languages.zh-cn]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "中文简体"
 weight = 3
+[languages.zh-cn.params]
+description = "Selenium automates browsers. That's it!"
 [languages.ja]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "日本語"
 weight = 4
+[languages.ja.params]
+description = "Selenium automates browsers. That's it!"
 [languages.other]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="Other"
 weight = 5
+[languages.other.params]
+description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
-  # replacements = "github.com/google/docsy -> ../../docsy"
+  #replacements = "github.com/google/docsy -> ../../docsy"
   [module.hugoVersion]
     extended = true
     min = "0.73.0"
