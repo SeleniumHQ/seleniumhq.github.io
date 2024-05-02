@@ -1,28 +1,3 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – bug-bash</title><link>https://www.selenium.dev/tags/bug-bash/</link><description>Recent content in bug-bash on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 31 Jan 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/bug-bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Bug Bash Aftermath</title><link>https://www.selenium.dev/blog/2011/bug-bash-aftermath/</link><pubDate>Mon, 31 Jan 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/bug-bash-aftermath/</guid><description>
-&lt;p>What a week! I’m almost (almost!) sorry that the Bug Bash is over. I’d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?&lt;/p>
-&lt;ol>
-&lt;li>Jari Bakken (24 issues)&lt;/li>
-&lt;li>Simon Stewart (21 issues)&lt;/li>
-&lt;li>David Burns, aka: AutomatedTester (11 issues)&lt;/li>
-&lt;li>Jim Evans (10 issues)&lt;/li>
-&lt;li>Michael Tamm (6 issues)&lt;/li>
-&lt;/ol>
-&lt;p>Some interesting nuggets of information:&lt;/p>
-&lt;ul>
-&lt;li>We closed 85 issues over the course of the week (that’s about 20% of all open Selenium issues)&lt;/li>
-&lt;li>There were 111 checkins last week alone&lt;/li>
-&lt;li>All of the major languages supported by Selenium 2 are represented here.&lt;/li>
-&lt;li>Jari Bakken needs to be bought a &lt;a href="http://twitter.com/#!/chris_mcmahon/status/30372577704681473">steak as big as his head.&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>What does this mean? It means that the next release of Selenium is set to be very solid. We’re going to be spending another week or so making sure that everything is stable after the influx of changes, but you can expect 2.0b2 to be out “real soon now”&lt;/p>
-&lt;p>If you missed the Bug Bash but still want to contribute, it’s never too late. Feel free to drop by the IRC channel, or &lt;a href="http://code.google.com/p/selenium/source/checkout">checkout the source&lt;/a>, &lt;a href="http://code.google.com/p/selenium/issues/list">find a bug&lt;/a> and start building!&lt;/p></description></item><item><title>Blog: Bug Bash: 24-30 January</title><link>https://www.selenium.dev/blog/2011/bug-bash/</link><pubDate>Fri, 21 Jan 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/bug-bash/</guid><description>
-&lt;p>When the Selenium (&lt;code>http://selenium.googlecode.com/&lt;/code>) and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a &lt;em>lot&lt;/em> of bugs and feature requests.&lt;/p>
-&lt;p>In the run up for the 2.0b2 release, we’ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January. The aim will be to focus on clearing our bug list as much as possible, so that beta2 will be the best release of Selenium yet. We will, of course, be recognizing people who squash the most bugs here on the blog, and we’re hunting out goodies to mail to the top bug bashers once the week is over.&lt;/p>
-&lt;p>If you’d like to get involved, it’s easy:&lt;/p>
-&lt;ol>
-&lt;li>&lt;a href="http://code.google.com/p/selenium/source/checkout">Check out&lt;/a> the source code&lt;/li>
-&lt;li>Find a bug you’d like to squash in the &lt;a href="http://code.google.com/p/selenium/issues/list">issue tracker&lt;/a>&lt;/li>
-&lt;li>Fix it, attaching your patch to the issue&lt;/li>
-&lt;/ol>
-&lt;p>That’s it. Easy! For help, and to ask questions of the core development team, please hop on to the &lt;a href="http://seleniumhq.org/support/">IRC channel&lt;/a> or email the &lt;a href="http://groups.google.com/group/selenium-developers">selenium-developers&lt;/a> group.&lt;/p>
-&lt;p>&lt;strong>Update:&lt;/strong> The Bug Bash is now complete. All we have to do is count up the scores!&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bug-Bash on Selenium</title><link>https://www.selenium.dev/tags/bug-bash/</link><description>Recent content in Bug-Bash on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 05 Apr 2024 05:24:49 -0500</lastBuildDate><atom:link href="https://www.selenium.dev/tags/bug-bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Bug Bash Aftermath</title><link>https://www.selenium.dev/blog/2011/bug-bash-aftermath/</link><pubDate>Mon, 31 Jan 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/bug-bash-aftermath/</guid><description>What a week! I’m almost (almost!) sorry that the Bug Bash is over. I’d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?
+Jari Bakken (24 issues) Simon Stewart (21 issues) David Burns, aka: AutomatedTester (11 issues) Jim Evans (10 issues) Michael Tamm (6 issues) Some interesting nuggets of information:</description></item><item><title>Bug Bash: 24-30 January</title><link>https://www.selenium.dev/blog/2011/bug-bash/</link><pubDate>Fri, 21 Jan 2011 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2011/bug-bash/</guid><description>When the Selenium (http://selenium.googlecode.com/) and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a lot of bugs and feature requests.
+In the run up for the 2.0b2 release, we’ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January.</description></item></channel></rss>

@@ -1,198 +1,26 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium – hangout</title><link>https://www.selenium.dev/tags/hangout/</link><description>Recent content in hangout on Selenium</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 23 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.selenium.dev/tags/hangout/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</link><pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/ASVqZPN3j7k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>&lt;strong>01:35 – 9:45 W3C Update&lt;/strong>&lt;br>
-&lt;a href="http://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014.html">Notes from most recent W3C Meeting&lt;/a>&lt;br>
-Highlights:&lt;br>
-– changes to the get_attribute method call&lt;br>
-– screenshots (changing to viewport only, eventually will support whole page)&lt;br>
-– &lt;a href="https://github.com/w3c/webdriver">The WebDriver W3C working group has a GitHub repo now&lt;/a>&lt;br>
-– WebDriver will move from a “REST-ish” to a more “RESTful” interface&lt;/p>
-&lt;p>&lt;strong>11:23 – 16:00 Selenium 3 Status Update&lt;/strong>&lt;/p>
-&lt;p>&lt;strong>16:05 – 17:10 Marionette (FirefoxdDiver rewrite) testing help&lt;/strong>&lt;br>
-&lt;a href="https://wiki.mozilla.org/Auto-tools/Projects/Marionette/Auto-tools/Projects/Marionette/Roadmap#Roadmap">Marionette Roadmap&lt;/a>&lt;/p>
-&lt;p>&lt;strong>17:20 – 19:27 ChemistryKit rewrite&lt;/strong>&lt;br>
-&lt;a href="http://davehaeffner.com/open-source/2014/12/21/chemistry-rewrite.html">Announcement blog post&lt;/a>&lt;/p>
-&lt;p>&lt;strong>17:28 – 20:24 Visual Testing Part 1&lt;/strong>&lt;br>
-&lt;a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing&lt;/a>&lt;br>
-&lt;a href="http://applitools.com">Applitools&lt;/a> (visual testing cloud solution built on top of WebDriver)&lt;/p>
-&lt;p>&lt;strong>20:25 – 23:47 Selenium Guidebook in Java!&lt;/strong>&lt;br>
-&lt;a href="http://davehaeffner.com/selenium-guidebook">The Selenium Guidebook&lt;/a>&lt;/p>
-&lt;p>&lt;strong>23:52 – 29:51 Visual Testing Part 2&lt;/strong>&lt;br>
-&lt;a href="http://webconsistencytesting.com/how-it-works.html">Web Consistency Testing&lt;/a>&lt;br>
-&lt;a href="http://nirvdrum.com/2014/11/20/open-sourcing-mogotest.html">Why MogoTest won’t be open sourcing it’s code after shutting down&lt;/a>&lt;br>
-&lt;a href="https://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm’s GTAC talk on Fighting Layout Bugs&lt;/a>&lt;br>
-&lt;a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</link><pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/6TMIIw0NT44" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>&lt;strong>0:00 – 01:10&lt;/strong> Intro&lt;/p>
-&lt;p>&lt;strong>1:11 – 13:00&lt;/strong> &lt;a href="http://www.w3.org/TR/webdriver/">WebDriver W3C Spec&lt;/a> &amp;amp; Selenium 3 Update&lt;/p>
-&lt;ul>
-&lt;li>Progress on the spec, still a work in progress&lt;/li>
-&lt;li>No user facing changes to the Selenium API as a result&lt;/li>
-&lt;li>Trying to pair the spec and Selenium 3 together&lt;/li>
-&lt;li>If all goes well, the spec and Selenium 3 could drop during Selenium Conf (fingers crossed)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>13:01 – 24:10&lt;/strong> &lt;a href="http://seleniumconf.org/">Selenium Conf 2014&lt;/a> Update&lt;/p>
-&lt;ul>
-&lt;li>Check out &lt;a href="http://seleniumconf.org">the new and shiny conference site&lt;/a>&lt;/li>
-&lt;li>Dates posted (e.g., call for talk submissions, early bird tickets going on sale, etc.)&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>24:11 – 39:00&lt;/strong> Discussion about 5 Hidden Costs Of Selenium Whitepaper from Telerik&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply.html">David Burns’ blog post rebuttal&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Selenium Hangout 4 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</link><pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</guid><description>
-&lt;p>Here’s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (&lt;a href="https://twitter.com/seleniumhangout">@seleniumhangout&lt;/a>) or e-mail us (&lt;a href="mailto:questions@seleniumhangout.com">questions@seleniumhangout.com&lt;/a>).&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/3IEqh7NmaEo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>&lt;strong>Panel&lt;/strong>&lt;br>
-David Burns (&lt;a href="https://twitter.com/AutomatedTester">@AutomatedTester&lt;/a>)&lt;br>
-Kevin Menard (&lt;a href="https://twitter.com/nirvdrum">@nirvdrum&lt;/a>)&lt;br>
-Dave Haeffner (&lt;a href="https://github.com/tourdedave">@TourDeDave&lt;/a>)&lt;/p>
-&lt;p>&lt;strong>Timeline&lt;/strong>&lt;/p>
-&lt;p>1:30-16:51: How to handle screenshots across different drivers&lt;br>
-&lt;em>tl;dr driver specific issues due to a lacking standard and missing API&lt;/em>&lt;/p>
-&lt;ul>
-&lt;li>This is getting addressed in World Wide Web Consortium (W3C) spec which is under development&lt;/li>
-&lt;li>E-mail use-cases you would like to see in the spec to &lt;a href="mailto:automatedtester@mozilla.com">automatedtester@mozilla.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>17:30-22:40 : Internet Explorer (IE) 9 pitfalls and how to avoid them&lt;br>
-&lt;em>tl;dr use 32-bit IE (if you’re not) and report issues to Selenium Issues&lt;/em>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://code.google.com/p/selenium/issues/list">Selenium Issue tracker&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://jimevansmusic.blogspot.com/2012/12/not-providing-html-page-is-bogus.html">A good blog post on how to submit an acceptable Selenium issue&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>22:50-28:30 How do you do image and video comparison testing?&lt;br>
-&lt;em>tl;dr straight image comparison is a flawed strategy, but there’s a better way — also, Selenium’s not the best tool for the job&lt;/em>&lt;/p>
-&lt;p>Resources mentioned:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://webconsistencytesting.com/">webconsistencytesting.com&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://www.youtube.com/watch?v=_6fV-6eMSUM">Kevin Menard’s GTAC talk&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm’s GTAC video&lt;/a>&lt;/li>
-&lt;li>Image capture library from Mozilla (&lt;a href="https://github.com/mozilla/eideticker">the library&lt;/a> and &lt;a href="https://blog.mozilla.org/futurereleases/2012/06/26/mobile-firefox-measuring-how-a-browser-feels/">a blog post about it&lt;/a>)&lt;/li>
-&lt;/ul>
-&lt;p>28:58-38:15 How do you get started with Selenium?&lt;br>
-&lt;em>tl;dr pick a language you feel comfortable with, choose an editor that makes you productive, and dig into the available resources&lt;/em>&lt;/p>
-&lt;p>Recommended resources:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://www.amazon.com/Selenium-Testing-Tools-Beginners-Guide/dp/1849518300">Selenium 2 Testing Tools (David Burns’ book)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://seleniumguidebook.com">The Selenium Guidebook (Dave Haeffner’s new book)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://elementalselenium.com">Free, weekly tip newsletter on how to use Selenium&lt;/a> (also by Dave Haeffner)&lt;/li>
-&lt;li>&lt;a href="http://seleniumhq.org/">Selenium HQ&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://groups.google.com/forum/#!forum/selenium-users">Selenium Users Group&lt;/a>&lt;/li>
-&lt;li>Selenium IRC chat channel (&lt;a href="http://elementalselenium.com/tips/20-irc-chat">here’s a write-up on what it is and how to access it&lt;/a>)&lt;/li>
-&lt;/ul>
-&lt;p>38:23-42:50 Selenium 3 Update&lt;br>
-&lt;em>tl;dr still a work in progress, steadily moving forward, a big update will likely be required&lt;/em>&lt;/p>
-&lt;p>43:15-44:00 Conference Update&lt;br>
-&lt;em>tl;dr nothing finalized, hoping to do it internationally, but US is a fallback; still working on options (will know soon)&lt;/em>&lt;/p>
-&lt;p>44:10-45:20 Mobile Changes to the Selenium project&lt;br>
-&lt;em>tl;dr Android and iPhone Selenium drivers deprecated in favor of other compatible libraries&lt;/em>&lt;/p>
-&lt;p>Compatible libraries:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://appium.io/">Appium&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://ios-driver.github.io/ios-driver/">ios-driver&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://selendroid.io/">Selendroid&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>45:20-47:30 New Mobile Selenium Drivers&lt;br>
-&lt;em>tl;dr RIM (BlackBerry Smartphones) and Microsoft (Windows phones)&lt;/em>&lt;/p></description></item><item><title>Blog: Selenium Hangout 3 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</link><pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</guid><description>
-&lt;p>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.&lt;/p>
-&lt;p>Be sure to tune into &lt;a href="https://twitter.com/seleniumhangout">our Twitter feed&lt;/a> to find out details about our next Hangout.&lt;/p>
-&lt;p>And if your question didn’t get answered, we encourage you to hop on IRC and ask it there. Not sure what that means or how to do it? Then &lt;a href="http://elementalselenium.com/tips/20-irc-chat">read this&lt;/a>.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/qS67YxxREME" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>&lt;strong>Panel&lt;/strong>&lt;/p>
-&lt;p>David Burns (&lt;a href="https://twitter.com/AutomatedTester">@AutomatedTester&lt;/a>)&lt;/p>
-&lt;p>Dave Haeffner (&lt;a href="https://github.com/tourdedave">@TourDeDave&lt;/a>)&lt;/p>
-&lt;p>Jim Evans (@&lt;a href="https://twitter.com/jimevansmusic">jimevansmusic&lt;/a>)&lt;/p>
-&lt;p>Kevin Menard (&lt;a href="https://twitter.com/nirvdrum">@nirvdrum&lt;/a>)&lt;/p>
-&lt;p>&lt;strong>Timeline&lt;/strong>&lt;/p>
-&lt;p>&lt;em>00:00 – 05:50&lt;/em>&lt;/p>
-&lt;p>Preamble and Introductions&lt;/p>
-&lt;p>&lt;em>05:51 – 18:09&lt;/em>&lt;/p>
-&lt;p>Question 1 – For a team getting started with Selenium what are some typical workflows for how product code is built, and Selenium tests built, as well as for when product code is modified and Selenium test modified?&lt;/p>
-&lt;p>&lt;em>18:10 – 34:15&lt;/em>&lt;/p>
-&lt;p>Question 2 – Recommendations for testing responsive design?&lt;/p>
-&lt;p>&lt;em>34:15 – 37:44&lt;/em>&lt;/p>
-&lt;p>Question 3 – Was VerifyText removed?&lt;/p>
-&lt;p>&lt;em>37:45 – 46:20&lt;/em>&lt;/p>
-&lt;p>Question 4 – Why is IE9 slow and hard to use and recommendations for alleviate this?&lt;/p>
-&lt;p>&lt;em>46:21 – 50:11&lt;/em>&lt;/p>
-&lt;p>Question 5 – ChromeDriver2 seems less robust than it’s predecessor, thoughts on this?&lt;/p>
-&lt;p>&lt;em>50:12 – 53:39&lt;/em>&lt;/p>
-&lt;p>Question 6 – The Selenium documentation is out of date, how can I contribute a fix for this?&lt;/p>
-&lt;p>&lt;em>53:40 – 54:31&lt;/em>&lt;/p>
-&lt;p>How to help out with the Selenium Conference?&lt;/p>
-&lt;p>&lt;strong>Links mentioned&lt;/strong>&lt;/p>
-&lt;p>&lt;a href="http://elementalselenium.com/tips/18-what-to-test">Figuring Out What To Test&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://groups.google.com/forum/#!topic/selenium-developers/94UM1CYysbo">How to get involved with the Selenium Conference&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/SeleniumHQ/selenium-docs">Where to contribute to Selenium Documentation&lt;/a>&lt;/p></description></item><item><title>Blog: Selenium Hangout 2 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</guid><description>
-&lt;p>This is a recap from the most recent Selenium Hangout (a.k.a. &lt;a href="../the-worlds-best-selenium-meetup/">The World’s Best Selenium Meetup&lt;/a>). For info on future meetups, &lt;a href="https://twitter.com/SeleniumHangout">follow them on Twitter&lt;/a>.&lt;/p>
-&lt;p>Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go &lt;a href="http://bit.ly/sehovideos">here&lt;/a>.&lt;/p>
-&lt;p>&lt;strong>Panel&lt;/strong>&lt;/p>
-&lt;p>David Burns (&lt;a href="https://twitter.com/AutomatedTester">@AutomatedTester&lt;/a>)&lt;br>
-Dave Haeffner (&lt;a href="https://github.com/tourdedave">@TourDeDave&lt;/a>)&lt;br>
-Kevin Menard (&lt;a href="https://twitter.com/nirvdrum">@nirvdrum&lt;/a>)&lt;br>
-Simon Stewart (&lt;a href="https://twitter.com/shs96c">@shs96c&lt;/a>)&lt;/p>
-&lt;p>&lt;strong>Video&lt;/strong>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/Li6xeYnjyUQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;/p>
-&lt;p>&lt;strong>Minutes&lt;/strong>&lt;/p>
-&lt;p>00:00 – 05:04&lt;/p>
-&lt;p>Goal and items for today’s conversation&lt;br>
-Feedback review from last meetup&lt;br>
-Intros&lt;/p>
-&lt;p>05:05 – 07:34&lt;/p>
-&lt;p>API changes&lt;br>
-Packaging&lt;br>
-Gradual approach to phasing out Selenium RC&lt;br>
-Support for Selenium IDE HTML Suite running&lt;/p>
-&lt;p>07:35 – 09:55&lt;/p>
-&lt;p>Selenium Builder, how it will replace Selenium IDE, and when&lt;/p>
-&lt;p>09:56 – 11:30&lt;/p>
-&lt;p>Firefox Driver 2 release (a.k.a. “M day”)&lt;/p>
-&lt;p>11:31 – 12:00&lt;/p>
-&lt;p>Tasks required to complete WebDriver W3C standard&lt;/p>
-&lt;p>12:01 – 14:30&lt;/p>
-&lt;p>Upgrade concerns for enterprise users of Selenium&lt;br>
-Recommended watching: &lt;a href="http://www.youtube.com/watch?v=cSLmfegT36A">Jason Leyba’s talk at SeConf about upgrading Selenium at Google&lt;/a>&lt;br>
-Reasons why companies should make the jump&lt;/p>
-&lt;p>14:31 – 14:55&lt;/p>
-&lt;p>Why we need browser vendors to help&lt;br>
-Why the W3C standard makes sense&lt;/p>
-&lt;p>14:56 – 21:40&lt;/p>
-&lt;p>Lessons learned and challenges found when a large scale practitioner upgraded from RC to WebDriver&lt;br>
-Things they would like to see cleaned in Selenium 3&lt;br>
-A nod in support of Selenium RC as a separate download&lt;br>
-Simon attempts a joke&lt;/p>
-&lt;p>21:41 – 25:15&lt;/p>
-&lt;p>Other changes in Selenium 3&lt;br>
-– all or nothing upgrade&lt;br>
-– exception handling (changing from status codes to status strings)&lt;br>
-– how commands are getting sent across the wire&lt;br>
-– philosophy behind approach to Selenium RC approach&lt;/p>
-&lt;p>25:16 – 27:29&lt;/p>
-&lt;p>Mobile support in Selenium 3&lt;/p>
-&lt;p>27:30 – 37:05&lt;/p>
-&lt;p>Firefox Driver and Firefox OS&lt;br>
-Recommended watching: &lt;a href="http://www.youtube.com/watch?v=cU6GML70cR4">Jonathan Griffin &amp;amp; David Burns’ talk at SeConf on Firefox Driver/Marionette&lt;/a>&lt;br>
-Creating a common set of Desired Capabilities&lt;br>
-Recommended watching: &lt;a href="http://www.youtube.com/watch?v=Ro0k-btUZDM">David Burns’ talk at SeConf on adding mobile gestures to WebDriver&lt;/a>&lt;/p>
-&lt;p>37:06 – 38:20&lt;/p>
-&lt;p>Documentation&lt;/p>
-&lt;p>38:21 – 49:40&lt;/p>
-&lt;p>Brief history of Selenium project&lt;br>
-Recommendation for RC users to look at the stable and brilliant new and shiny&lt;br>
-Plan for Selenium RC in depth and rough timeline&lt;br>
-Another recommendation to watch &lt;a href="http://www.youtube.com/watch?v=cSLmfegT36A">Jason Leyba’s talk at SeConf about upgrading Selenium at Google&lt;/a>&lt;/p>
-&lt;p>49:41 – 50:45&lt;/p>
-&lt;p>Encouragement for folks to hop on Selenium IRC chat channel (especially if your question wasn’t asked/answered)&lt;br>
-Recommended reading: &lt;a href="http://elementalselenium.com/tips/20-irc-chat">Elemental Selenium’s write-up on what IRC is, how to use it, and how to connect to the Selenium IRC chat channel&lt;/a>&lt;/p>
-&lt;p>50:46 – 51:45&lt;/p>
-&lt;p>Where to &lt;a href="http://bit.ly/sehofeedback">submit feedback and request topics for future meetups&lt;/a>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hangout on Selenium</title><link>https://www.selenium.dev/tags/hangout/</link><description>Recent content in Hangout on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 05 Apr 2024 05:24:49 -0500</lastBuildDate><atom:link href="https://www.selenium.dev/tags/hangout/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</link><pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-6-recap/</guid><description>01:35 – 9:45 W3C Update
+Notes from most recent W3C Meeting
+Highlights:
+– changes to the get_attribute method call
+– screenshots (changing to viewport only, eventually will support whole page)
+– The WebDriver W3C working group has a GitHub repo now
+– WebDriver will move from a “REST-ish” to a more “RESTful” interface
+11:23 – 16:00 Selenium 3 Status Update
+16:05 – 17:10 Marionette (FirefoxdDiver rewrite) testing help
+Marionette Roadmap</description></item><item><title>Selenium Hangout 5 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</link><pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-5-recap/</guid><description>0:00 – 01:10 Intro
+1:11 – 13:00 WebDriver W3C Spec &amp;amp; Selenium 3 Update
+Progress on the spec, still a work in progress No user facing changes to the Selenium API as a result Trying to pair the spec and Selenium 3 together If all goes well, the spec and Selenium 3 could drop during Selenium Conf (fingers crossed) 13:01 – 24:10 Selenium Conf 2014 Update
+Check out the new and shiny conference site Dates posted (e.</description></item><item><title>Selenium Hangout 4 Recap</title><link>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</link><pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2014/selenium-hangout-4-recap/</guid><description>Here’s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (@seleniumhangout) or e-mail us (questions@seleniumhangout.com).
+Panel
+David Burns (@AutomatedTester)
+Kevin Menard (@nirvdrum)
+Dave Haeffner (@TourDeDave)
+Timeline
+1:30-16:51: How to handle screenshots across different drivers
+tl;dr driver specific issues due to a lacking standard and missing API
+This is getting addressed in World Wide Web Consortium (W3C) spec which is under development E-mail use-cases you would like to see in the spec to automatedtester@mozilla.</description></item><item><title>Selenium Hangout 3 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</link><pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-3-recap/</guid><description>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.
+Be sure to tune into our Twitter feed to find out details about our next Hangout.
+And if your question didn’t get answered, we encourage you to hop on IRC and ask it there.</description></item><item><title>Selenium Hangout 2 Recap</title><link>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2013/selenium-hangout-2-recap/</guid><description>This is a recap from the most recent Selenium Hangout (a.k.a. The World’s Best Selenium Meetup). For info on future meetups, follow them on Twitter.
+Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go here.
+Panel
+David Burns (@AutomatedTester)</description></item></channel></rss>
