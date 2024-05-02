@@ -21,6 +21,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.service.DriverFinder;
 
+
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
 

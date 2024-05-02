@@ -1,7 +1,7 @@
 {{/* Avoiding showing extra sections for home page and sponsors */}}
 {{ if and (ne .Kind "home") (ne .Section "sponsors" ) }}
 {{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "selenium-container.html" (dict "title" "Support the Selenium Project" "text" "Want to support the Selenium project? Learn more or view the full list of sponsors." "color_bg" "selenium-cyan" "color_btn" "selenium-white-cyan" "btn_text" "Learn more") }}
+{{ partial "selenium-container.html" (dict "title" "Support the Selenium Project" "text" "Learn more or view the full list of sponsors." "color_bg" "selenium-cyan" "color_btn" "selenium-white-cyan" "btn_text" "Learn more") }}
 {{ end }}
 
 {{ $links := .Site.Params.links }}
