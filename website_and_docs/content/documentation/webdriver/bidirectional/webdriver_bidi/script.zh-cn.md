@@ -16,9 +16,11 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
+
+## Commands
 This section contains the APIs related to script commands. 
 
-## Call function in a browsing context
+### Call function in a browsing context
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -37,7 +39,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Call function in a sandbox
+### Call function in a sandbox
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -56,7 +58,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Call function in a realm
+### Call function in a realm
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -75,7 +77,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Evaluate script in a browsing context
+### Evaluate script in a browsing context
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -94,7 +96,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Evaluate script in a sandbox
+### Evaluate script in a sandbox
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -113,7 +115,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Evaluate script in a realm
+### Evaluate script in a realm
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -132,7 +134,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Disown handles in a browsing context
+### Disown handles in a browsing context
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -151,7 +153,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Disown handles in a realm
+### Disown handles in a realm
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -170,7 +172,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get all realms
+### Get all realms
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -189,7 +191,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get realm by type
+### Get realm by type
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -208,7 +210,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get browsing context realms
+### Get browsing context realms
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -227,7 +229,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get browsing context realms by type
+### Get browsing context realms by type
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -246,7 +248,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Preload a script 
+### Preload a script 
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -265,7 +267,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Remove a preloaded script 
+### Remove a preloaded script 
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -278,6 +280,66 @@ This section contains the APIs related to script commands.
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L471-L471" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+## Events
+This section contains the APIs related to script events. 
+
+### Message
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L52-L75" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L26-L43" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Realm Created 
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L55-L62" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L52-L65" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Realm Destroyed
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L72-L79" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.19" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L73-L86" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
