@@ -76,7 +76,6 @@ Links to everything can be found on our [downloads page][downloads].
 {{< gh-user "https://api.github.com/users/bastimeyer" >}} 
 {{< gh-user "https://api.github.com/users/djbrown" >}} 
 {{< gh-user "https://api.github.com/users/vedanthvdev" >}}
-{{< gh-user "https://api.github.com/users/Hyphenhypen" >}}
 {{< gh-user "https://api.github.com/users/baflQA" >}} 
 {{< gh-user "https://api.github.com/users/AdamPDotty" >}} 
 {{< gh-user "https://api.github.com/users/jlucartc" >}}
