@@ -97,3 +97,36 @@ and have destroyed the context in which the element was located.
 You can't just relocate it from the current context,
 and you can't switch back to an active context where it is valid. If this is the reason
 for your error, you must both navigate back to the correct location and relocate it.
+
+## ElementClickInterceptedException
+
+This exception occurs when an attempt to click on an element is intercepted by another element on the page. Essentially, the element you're trying to interact with is either hidden or obscured by another element, such as a popup, overlay, or some other UI element.
+
+When Selenium tries to click on an element, it checks whether the element is clickable, visible, and not obscured by other elements. If it finds that the element is not clickable due to being overlapped by another element, it raises the ElementClickInterceptedException.
+
+### Common Causes
+
+**Overlapping UI Elements:** One of the common causes for this exception to occur is when another element in a web page partially or fully covers the element we are trying to interact with. These overlapping elements can be buttons, images, divs, etc, with a higher “z-index” value.
+
+**Element Visibility:** If the element is not visible when we try to interact, we can encounter this issue. Elements with display: none; or visibility: hidden; styles are not clickable until they become visible.
+
+**Animations and Transitions:** Most web pages include animations or transitions that modify or move the elements. We may encounter this exception if we try to click an element in the middle of an animation or transition.
+
+**Dynamic Content Loading:** The web pages that dynamically load the content using AJAX or JavaScript may not need an element when we try to access it.
+
+**Popup Windows or Modals:** When clicking an element triggers the opening of a popup window or modal dialog.
+
+**Slow Page Loading:** If the web page is slow to load, and you attempt to click an element before it’s fully loaded and ready for interaction.
+
+
+### Common Solutions
+
+**Use Explicit Waits:** Use explicit waits with conditions like ExpectedConditions.elementToBeClickable to ensure the element is ready for interaction before clicking it. 
+
+**Scroll to Element:** There could be cases when the desired element is not in the browser’s viewport, and Selenium is unable to find it. To fix this, scroll to the element using JavaScript or Selenium’s built-in scrolling functionality and then try to click on it.
+
+**Check for Overlapping Elements:** You can inspect the web page’s HTML DOM structure and check if other elements overlap the intended element. If you see an overlap, make the necessary changes to the test script.
+
+**Increase Wait Time:** Sometimes, the page may take longer to load or render elements, and when the Selenium script tries to access it, it fails. Use the explicit wait to give the page more time so that all the elements are fully loaded and present for interaction.
+
+**Use Retry Mechanism:** Implement a retry mechanism to click the element multiple times with short pauses between attempts. Sometimes, the issue may be intermittent, and retrying can help.
