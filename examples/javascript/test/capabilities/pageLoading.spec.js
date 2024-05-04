@@ -34,5 +34,14 @@ suite(function (env) {
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');
       await driver.quit();
     });
+    it('Should be able to accept certs', async function () {
+      let driver = await env
+        .builder()
+        .setChromeOptions(options.setAcceptInsecureCerts(true))
+        .build();
+
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+      await driver.quit();
+    });
   });
 }, { browsers: [Browser.CHROME, Browser.FIREFOX]});
