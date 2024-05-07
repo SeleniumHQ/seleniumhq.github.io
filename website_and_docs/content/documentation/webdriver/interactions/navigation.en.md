@@ -20,7 +20,7 @@ open your website. This can be achieved in a single line:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
@@ -50,7 +50,7 @@ Pressing the browser's back button:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L11" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L24-L25" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
@@ -70,7 +70,7 @@ Pressing the browser's forward button:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L15" >}}
 {{< /tab >}}
-   {{< tab header="CSharp" >}}
+   {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L29-L30" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
@@ -91,7 +91,7 @@ Refresh the current page:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L19" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
+  {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L34-L35" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
