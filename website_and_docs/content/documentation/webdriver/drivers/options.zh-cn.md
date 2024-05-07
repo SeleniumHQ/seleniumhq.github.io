@@ -339,8 +339,8 @@ fun main() {
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L38-L41">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

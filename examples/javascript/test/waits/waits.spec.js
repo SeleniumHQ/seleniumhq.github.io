@@ -47,7 +47,7 @@ suite(function (env) {
             await driver.get('https://www.selenium.dev/selenium/web/dynamic.html');
             let revealed = await driver.findElement(By.id("revealed"));
             await driver.findElement(By.id("reveal")).click();
-            await driver.wait(until.elementIsVisible(revealed), 2000);
+            await driver.wait(until.elementIsDisabled(revealed), 2000);
             await revealed.sendKeys("Displayed");
             assert.equal(await revealed.getAttribute("value"), "Displayed")
         })
