@@ -1,7 +1,8 @@
-const {Browser} = require('selenium-webdriver');
+const {Browser, By} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const edge = require('selenium-webdriver/edge');
 const options = new edge.Options();
+const assert = require("assert");
 
 suite(function (env) {
   describe('Should be able to Test Command line arguments', function () {
@@ -45,6 +46,18 @@ suite(function (env) {
         .build();
 
       await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+      await driver.quit();
+    });
+
+    it('Add Extension', async function () {
+      let driver = await env
+        .builder()
+        .setEdgeOptions(options.addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
+        .build();
+
+      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+      let injected = await driver.findElement(By.id('webextensions-selenium-example'));
+      assert.equal(await injected.getText(), `Content injected by webextensions-selenium-example`)
       await driver.quit();
     });
   });
