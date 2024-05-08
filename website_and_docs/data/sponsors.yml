@@ -12,7 +12,7 @@ selenium:
       name: "BrowserStack"
     # Sponsorship start date: August 23, 2014 - Renewed April 2024 under the "Development" level
     - logo: "/images/sponsors/saucelabs.png"
-      url: "http://saucelabs.com"
+      url: "https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25"
       name: "Sauce Labs"
     # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
     - logo: "/images/sponsors/Digital.ai.jpg"
