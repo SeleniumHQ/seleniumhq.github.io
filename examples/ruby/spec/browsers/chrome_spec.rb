@@ -116,9 +116,7 @@ RSpec.describe 'Chrome' do
   describe 'Special Features' do
     it 'casts' do
       @driver = Selenium::WebDriver.for :chrome
-      # Does not get list correctly the first time for some reason
       @driver.cast_sinks
-      sleep 2
       sinks = @driver.cast_sinks
       unless sinks.empty?
         device_name = sinks.first['name']
