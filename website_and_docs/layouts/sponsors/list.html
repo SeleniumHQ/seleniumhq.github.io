@@ -2,9 +2,10 @@
 
 <a class="td-offset-anchor"></a>
 <div class="td-content">
-	{{ .Content }}
+  {{ .Content }}
 </div>
 
+{{ partial "development-level-sponsors.html" (dict "Data" $.Site.Data) }}
 {{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data) }}
 {{ partial "platinum-level-sponsors.html" (dict "Data" $.Site.Data) }}
 {{ partial "gold-level-sponsors.html" (dict "Data" $.Site.Data) }}
@@ -16,8 +17,9 @@
     <div class="card-body">
       <h2 class="card-title">Sponsoring</h2>
       <p class="card-text pb-4 w-lg-75">
-				Would you like your company to be listed on this page? <a href="/sponsor">Learn more about sponsoring Selenium.</a>
-			</p>
+        Would you like your company to be listed on this page? <a href="/sponsor">Learn more about sponsoring
+          Selenium.</a>
+      </p>
     </div>
   </div>
 </div>
