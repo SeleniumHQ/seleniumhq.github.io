@@ -20,7 +20,7 @@ cd seleniumhq.github.io/examples/ruby
 bundler install
 ```
 
-4. Run all all tests
+4. Run all tests
 
 ```
 bundle exec rspec

@@ -7,9 +7,10 @@ aliases: [
 ]
 ---
 
+## Commands 
 This section contains the APIs related to browsing context commands. 
 
-## Open a new window
+### Open a new window
 
 Creates a new browsing context in a new window.
 
@@ -30,7 +31,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Open a new tab
+### Open a new tab
 
 Creates a new browsing context in a new tab.
 
@@ -51,7 +52,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Use existing window handle
+### Use existing window handle
 
 Creates a browsing context for the existing tab/window to run commands.
 
@@ -73,7 +74,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tabpane >}}
 
 
-## Open a window with a reference browsing context
+### Open a window with a reference browsing context
 A reference browsing context is a [top-level browsing context](https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context). 
 The API allows to pass the reference browsing context, which is used to create a new window. The implementation is operating system specific.
 
@@ -94,7 +95,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Open a tab with a reference browsing context
+### Open a tab with a reference browsing context
 A reference browsing context is a [top-level browsing context](https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context). 
 The API allows to pass the reference browsing context, which is used to create a new tab. The implementation is operating system specific.
 
@@ -115,7 +116,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Navigate to a URL
+### Navigate to a URL
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -134,7 +135,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Navigate to a URL with readiness state
+### Navigate to a URL with readiness state
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -153,7 +154,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get browsing context tree
+### Get browsing context tree
 
 Provides a tree of all browsing contexts descending from the parent browsing context, including the parent browsing context.
 
@@ -174,7 +175,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get browsing context tree with depth
+### Get browsing context tree with depth
 
 Provides a tree of all browsing contexts descending from the parent browsing context, including the parent browsing context upto the depth value passed.
 
@@ -195,7 +196,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Get All Top level browsing contexts
+### Get All Top level browsing contexts
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -214,7 +215,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Close a tab/window
+### Close a tab/window
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -233,7 +234,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Activate a browsing context
+### Activate a browsing context
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -253,7 +254,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tabpane >}}
 
 
-## Reload a browsing context
+### Reload a browsing context
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -272,7 +273,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Handle user prompt
+### Handle user prompt
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -291,7 +292,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Capture Screenshot
+### Capture Screenshot
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -310,7 +311,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Capture Viewport Screenshot
+### Capture Viewport Screenshot
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -329,7 +330,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Capture Element Screenshot
+### Capture Element Screenshot
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -348,7 +349,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Set Viewport
+### Set Viewport
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -368,7 +369,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tabpane >}}
 
 
-## Print page
+### Print page
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -387,7 +388,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Navigate back
+### Navigate back
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -406,7 +407,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Navigate forward
+### Navigate forward
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -425,7 +426,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Traverse history
+### Traverse history
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -438,6 +439,158 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L380-L380" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+## Events 
+This section contains the APIs related to browsing context events. 
+
+### Browsing Context Created Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L34-L41" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.9.2" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContextInspector.spec.js#L24-L29" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Dom Content loaded Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L54-L63" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.9.2" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContextInspector.spec.js#L54-L63" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Browsing Context Loaded Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L81-88" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.9.2" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContextInspector.spec.js#L71-L79" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Navigated Started Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L97-104" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Fragment Navigated Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L113-123" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.15.0" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContextInspector.spec.js#L87-L98" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### User Prompt Opened Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L113-123" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### User Prompt Closed Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L150-163" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### Browsing Context Destroyed Event
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L170-L181" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.18.0" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContextInspector.spec.js#106-L114" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
