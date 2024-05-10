@@ -54,7 +54,8 @@ namespace SeleniumDocs.Browsers
             _driver = new InternetExplorerDriver(service);
             _driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
-            Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Started InternetExplorerDriver server")));
+            Console.WriteLine("Lines: {0}", lines);
+            Assert.IsTrue(lines.Contains("Started InternetExplorerDriver server"));
         }
 
         [TestMethod]
