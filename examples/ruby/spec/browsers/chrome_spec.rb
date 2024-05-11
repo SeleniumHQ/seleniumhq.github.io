@@ -113,6 +113,18 @@ RSpec.describe 'Chrome' do
     end
   end
 
+  describe 'Special Features' do
+    it 'casts' do
+      @driver = Selenium::WebDriver.for :chrome
+      sinks = @driver.cast_sinks
+      unless sinks.empty?
+        device_name = sinks.first['name']
+        @driver.start_cast_tab_mirroring(device_name)
+        expect { @driver.stop_casting(device_name) }.not_to raise_exception
+      end
+    end
+  end
+
   def driver_finder
     options = Selenium::WebDriver::Options.chrome(browser_version: 'stable')
     service = Selenium::WebDriver::Service.chrome
