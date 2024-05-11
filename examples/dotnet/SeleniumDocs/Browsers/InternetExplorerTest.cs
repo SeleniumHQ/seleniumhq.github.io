@@ -11,7 +11,7 @@ namespace SeleniumDocs.Browsers
     [EnabledOnOs("WINDOWS")]
     public class InternetExplorerTest
     {
-        private InternetExplorerDriver driver;
+        private InternetExplorerDriver _driver;
         private string _logLocation;
         private string _tempPath;
 
@@ -26,7 +26,7 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_tempPath);
             }
-            driver.Quit();
+            _driver.Quit();
         }
 
         [TestMethod]
@@ -35,27 +35,27 @@ namespace SeleniumDocs.Browsers
             var options = new InternetExplorerOptions();
             options.AttachToEdgeChrome = true;
             options.EdgeExecutablePath = GetEdgeLocation();
-            driver = new InternetExplorerDriver(options);
+            _driver = new InternetExplorerDriver(options);
         }
 
         [TestMethod]
         public void BasicOptionsWin11()
         {
             var options = new InternetExplorerOptions();
-            driver = new InternetExplorerDriver(options);
+            _driver = new InternetExplorerDriver(options);
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
         public void LogsToFile()
         {
             var service = InternetExplorerDriverService.CreateDefaultService();
             service.LogFile = GetLogLocation();
 
-            driver = new InternetExplorerDriver(service);
-            driver.Quit(); // Close the Service log file before reading
+            _driver = new InternetExplorerDriver(service);
+            _driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
-            Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("geckodriver	INFO	Listening on")));
+            Console.WriteLine("Lines: {0}", lines);
+            Assert.IsTrue(lines.Contains("Started InternetExplorerDriver server"));
         }
 
         [TestMethod]
@@ -70,7 +70,7 @@ namespace SeleniumDocs.Browsers
 
             //service.LogToConsole = true;
 
-            driver = new InternetExplorerDriver(service);
+            _driver = new InternetExplorerDriver(service);
             Assert.IsTrue(stringWriter.ToString().Contains("geckodriver	INFO	Listening on"));
             Console.SetOut(originalOutput);
             stringWriter.Dispose();
@@ -84,8 +84,8 @@ namespace SeleniumDocs.Browsers
 
             service.LoggingLevel = InternetExplorerDriverLogLevel.Warn;
 
-            driver = new InternetExplorerDriver(service);
-            driver.Quit(); // Close the Service log file before reading
+            _driver = new InternetExplorerDriver(service);
+            _driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Invalid capability setting: timeouts is type null")));
         }
@@ -97,7 +97,7 @@ namespace SeleniumDocs.Browsers
 
             service.LibraryExtractionPath = GetTempDirectory();
 
-            driver = new InternetExplorerDriver(service);
+            _driver = new InternetExplorerDriver(service);
             Assert.IsTrue(File.Exists(GetTempDirectory() + "/IEDriver.tmp"));
         }
 
