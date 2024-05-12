@@ -382,7 +382,7 @@ Property value: `"true"` or `"false"`
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/chrome_spec.rb#L119-L124" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L119-L124" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
