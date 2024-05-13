@@ -190,7 +190,14 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+
+### Set Up
+
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
