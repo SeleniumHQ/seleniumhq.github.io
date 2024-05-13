@@ -132,7 +132,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
