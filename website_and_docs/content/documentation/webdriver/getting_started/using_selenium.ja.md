@@ -229,8 +229,16 @@ gradle clean test
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
 
+### Mocha
+
 ```shell
 mocha runningTests.spec.js
+```
+
+### npx
+
+```shell
+npx mocha runningTests.spec.js
 ```
 
 {{% /tab %}}
