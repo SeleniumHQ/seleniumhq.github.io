@@ -46,6 +46,7 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
+        [Ignore("Not implemented")]
         public void LogsToFile()
         {
             var service = InternetExplorerDriverService.CreateDefaultService();
