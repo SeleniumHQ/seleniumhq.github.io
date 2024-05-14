@@ -123,6 +123,16 @@ RSpec.describe 'Chrome' do
         expect { @driver.stop_casting(device_name) }.not_to raise_exception
       end
     end
+
+    it 'gets and sets network conditions' do
+      @driver = Selenium::WebDriver.for :chrome
+      @driver.network_conditions = {offline: false, latency: 100, throughput: 200}
+      expect(@driver.network_conditions).to eq(
+        'offline' => false,
+        'latency' => 100,
+        'download_throughput' => 200,
+        'upload_throughput' => 200)
+    end
   end
 
   def driver_finder
