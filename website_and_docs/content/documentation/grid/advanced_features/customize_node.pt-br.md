@@ -91,7 +91,7 @@ public class DecoratedLoggingNode extends Node {
   private Node node;
 
   protected DecoratedLoggingNode(Tracer tracer, NodeId nodeId, URI uri, Secret registrationSecret, Duration sessionTimeout) {
-  super(tracer, nodeId, uri, registrationSecret, sessionTimeout);
+    super(tracer, nodeId, uri, registrationSecret, sessionTimeout);
   }
 
   public static Node create(Config config) {
