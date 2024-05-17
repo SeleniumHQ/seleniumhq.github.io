@@ -109,8 +109,7 @@ public class DecoratedLoggingNode extends Node {
         node.getId(),
         uri,
         secretOptions.getRegistrationSecret(),
-        sessionTimeout
-        );
+        sessionTimeout);
     wrapper.node = node;
     return wrapper;
   }
