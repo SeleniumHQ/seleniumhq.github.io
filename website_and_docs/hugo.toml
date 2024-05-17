@@ -220,11 +220,6 @@ enable = false
 	url = "https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"
 	icon = "fab fa-youtube"
         desc = "Check all the conference talks and learn from the community!"
-[[params.links.user]]
-	name = "Selenium in Facebook"
-	url = "https://www.facebook.com/Selenium2.WebDriver"
-	icon = "fab fa-facebook"
-        desc = "Get news and updates in Facebook!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Software Freedom Conservancy"
