@@ -96,7 +96,7 @@ public class DecoratedLoggingNode extends Node {
   private Node node;
 
   protected DecoratedLoggingNode(Tracer tracer, NodeId nodeId, URI uri, Secret registrationSecret) {
-	super(tracer, nodeId, uri, registrationSecret);
+	super(tracer, nodeId, uri, registrationSecret, Duration sessionTimeout);
   }
 
   public static Node create(Config config) {
@@ -104,6 +104,8 @@ public class DecoratedLoggingNode extends Node {
     BaseServerOptions serverOptions = new BaseServerOptions(config);
     URI uri = serverOptions.getExternalUri();
     SecretOptions secretOptions = new SecretOptions(config);
+    NodeOptions nodeOptions = new NodeOptions(config);
+    Duration sessionTimeout = nodeOptions.getSessionTimeout();
 
     // Refer to the foot notes for additional context on this line.
     Node node = LocalNodeFactory.create(config);
@@ -111,7 +113,9 @@ public class DecoratedLoggingNode extends Node {
     DecoratedLoggingNode wrapper = new DecoratedLoggingNode(loggingOptions.getTracer(),
 				node.getId(),
 				uri,
-				secretOptions.getRegistrationSecret());
+				secretOptions.getRegistrationSecret(),
+        sessionTimeout
+        );
     wrapper.node = node;
     return wrapper;
   }
