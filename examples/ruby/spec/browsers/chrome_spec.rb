@@ -135,6 +135,15 @@ RSpec.describe 'Chrome' do
     end
   end
 
+  it 'gets the browser logs' do
+    @driver = Selenium::WebDriver.for :chrome
+    @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+    sleep 1
+    logs = @driver.logs.get(:browser)
+
+    expect(logs.first.message).to include 'Failed to load resource'
+  end
+
   def driver_finder
     options = Selenium::WebDriver::Options.chrome(browser_version: 'stable')
     service = Selenium::WebDriver::Service.chrome
