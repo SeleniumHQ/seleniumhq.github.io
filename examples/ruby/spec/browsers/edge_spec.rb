@@ -29,11 +29,11 @@ RSpec.describe 'Edge' do
 
     it 'add extensions' do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.crx', __dir__)
-      options = Selenium::WebDriver::Options.chrome
+      options = Selenium::WebDriver::Options.edge
 
       options.add_extension(extension_file_path)
 
-      @driver = Selenium::WebDriver.for :chrome, options: options
+      @driver = Selenium::WebDriver.for :edge, options: options
       @driver.get('https://www.selenium.dev/selenium/web/blank.html')
       injected = @driver.find_element(:id, 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
@@ -115,7 +115,9 @@ RSpec.describe 'Edge' do
 
   def driver_finder
     options = Selenium::WebDriver::Options.edge(browser_version: 'stable')
-    ENV['EDGEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Edge::Service)
-    ENV['EDGE_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.edge
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['EDGEDRIVER_BIN'] = finder.driver_path
+    ENV['EDGE_BIN'] = finder.browser_path
   end
 end

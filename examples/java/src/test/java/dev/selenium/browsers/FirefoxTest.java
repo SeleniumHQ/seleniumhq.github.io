@@ -19,8 +19,8 @@ import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxDriverService;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
-import org.openqa.selenium.manager.SeleniumManagerOutput;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
@@ -165,8 +165,7 @@ public class FirefoxTest extends BaseTest {
   private Path getFirefoxLocation() {
     FirefoxOptions options = new FirefoxOptions();
     options.setBrowserVersion("stable");
-    SeleniumManagerOutput.Result output =
-        DriverFinder.getPath(GeckoDriverService.createDefaultService(), options);
-    return Path.of(output.getBrowserPath());
+    DriverFinder finder = new DriverFinder(GeckoDriverService.createDefaultService(), options);
+    return Path.of(finder.getBrowserPath());
   }
 }

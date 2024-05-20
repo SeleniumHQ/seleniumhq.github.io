@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.bidi.Network;
+import org.openqa.selenium.bidi.module.Network;
 import org.openqa.selenium.bidi.network.AddInterceptParameters;
 import org.openqa.selenium.bidi.network.InterceptPhase;
 import org.openqa.selenium.firefox.FirefoxDriver;

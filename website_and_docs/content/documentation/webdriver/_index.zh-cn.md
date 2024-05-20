@@ -3,7 +3,7 @@ title: "WebDriver"
 linkTitle: "WebDriver"
 weight: 2
 description: >
-  WebDriver以原生的方式驱动浏览器, 在此了解更多内容.
+  WebDriver以原生的方式驱动浏览器; 在此了解更多内容.
 aliases: ["/documentation/zh-cn/webdriver/"]
 ---
 

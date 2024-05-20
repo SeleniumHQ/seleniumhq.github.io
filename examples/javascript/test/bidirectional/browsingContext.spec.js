@@ -7,6 +7,10 @@ const {By, until} = require("selenium-webdriver");
 suite(function (env) {
     describe('Browsing Context', function () {
         let driver
+        let startIndex = 0
+        let endIndex = 5
+        let pdfMagicNumber = 'JVBER'
+        let pngMagicNumber = 'iVBOR'
 
         beforeEach(async function () {
             driver = await env
@@ -335,6 +339,99 @@ suite(function (env) {
             const result = await driver.executeScript('return [window.innerWidth, window.innerHeight];')
             assert.equal(result[0], 250)
             assert.equal(result[1], 300)
+        })
+
+        it('can reload a browsing context', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            const result = await browsingContext.navigate(
+                'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html', 'complete')
+
+            await browsingContext.reload(undefined, 'complete')
+            assert.notEqual(result.navigationId, null)
+            assert(result.url.includes('/bidi/logEntryAdded.html'))
+        })
+
+        it('can take screenshot', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            const response = await browsingContext.captureScreenshot()
+            const base64code = response.slice(startIndex, endIndex)
+            assert.equal(base64code, pngMagicNumber)
+        })
+
+        it('can traverse browser history', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await browsingContext.navigate('https://www.selenium.dev/selenium/web/formPage.html', 'complete')
+
+            await driver.wait(until.elementLocated(By.id('imageButton'))).submit()
+            await driver.wait(until.titleIs('We Arrive Here'), 2500)
+
+            await browsingContext.traverseHistory(-1)
+
+            const source = await driver.getPageSource()
+
+            assert.equal(source.includes('We Leave From Here'), true)
+        })
+
+        it('can navigate back in browser history', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await browsingContext.navigate('https://www.selenium.dev/selenium/web/formPage.html', 'complete')
+
+            await driver.wait(until.elementLocated(By.id('imageButton'))).submit()
+            await driver.wait(until.titleIs('We Arrive Here'), 2500)
+
+            await browsingContext.back()
+
+            const source = await driver.getPageSource()
+
+            assert.equal(source.includes('We Leave From Here'), true)
+        })
+
+        it('can navigate forward in browser history', async function () {
+            const id = await driver.getWindowHandle()
+            const browsingContext = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+
+            await browsingContext.navigate('https://www.selenium.dev/selenium/web/formPage.html', 'complete')
+
+            await driver.wait(until.elementLocated(By.id('imageButton'))).submit()
+            await driver.wait(until.titleIs('We Arrive Here'), 2500)
+
+            await browsingContext.back()
+
+            const source = await driver.getPageSource()
+
+            assert.equal(source.includes('We Leave From Here'), true)
+
+            await browsingContext.forward()
+
+            await driver.wait(until.titleIs('We Arrive Here'), 2500)
+        });
+
+        it.skip('Get All Top level browsing contexts', async () => {
+            const id = await driver.getWindowHandle()
+            const window1 = await BrowsingContext(driver, {
+                browsingContextId: id,
+            })
+            await BrowsingContext(driver, { type: 'window' })
+            const res = await window1.getTopLevelContexts()
+            assert.equal(res.length, 2)
         })
     })
 }, {browsers: ['firefox']})

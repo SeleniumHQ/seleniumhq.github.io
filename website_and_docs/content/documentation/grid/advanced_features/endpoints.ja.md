@@ -19,6 +19,17 @@ Grid ステータスは Grid の現在の状態を提供します。 登録さ�
 cURL GET 'http://localhost:4444/status'
 ```
 
+### セッションの削除
+
+セッションを削除すると、WebDriver セッションが終了し、ドライバがアクティブなセッションマップから削除されます。
+削除されたセッション ID を使用するリクエストや、ドライバのインスタンスを再利用しようとすると、エラーとなります。
+
+```shell
+cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+```
+
+### Which URL should I use?
+
 スタンドアロンモードでは、Grid URL は スタンドアロンサーバーのアドレスになります。
 
 ハブ&ノードモードでは、Grid URL は ハブのアドレスになります。

@@ -26,7 +26,7 @@ def chromedriver_bin():
     service = webdriver.chrome.service.Service()
     options = webdriver.ChromeOptions()
     options.browser_version = 'stable'
-    yield webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_driver_path()
 
 
 @pytest.fixture(scope='function')
@@ -34,8 +34,7 @@ def chrome_bin():
     service = webdriver.chrome.service.Service()
     options = webdriver.ChromeOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
@@ -43,8 +42,7 @@ def edge_bin():
     service = webdriver.edge.service.Service()
     options = webdriver.EdgeOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
@@ -52,8 +50,7 @@ def firefox_bin():
     service = webdriver.firefox.service.Service()
     options = webdriver.FirefoxOptions()
     options.browser_version = 'stable'
-    webdriver.common.driver_finder.DriverFinder().get_path(service=service, options=options)
-    yield options.binary_location
+    yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
 
 @pytest.fixture(scope='function')
@@ -94,11 +91,31 @@ def log_path():
 
 
 @pytest.fixture(scope='function')
-def addon_path():
+def addon_path_xpi():
     if os.path.abspath("").endswith("tests"):
         path = os.path.abspath("extensions/webextensions-selenium-example.xpi")
     else:
         path = os.path.abspath("tests/extensions/webextensions-selenium-example.xpi")
+
+    yield path
+
+
+@pytest.fixture(scope='function')
+def addon_path_dir():
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath("extensions/webextensions-selenium-example")
+    else:
+        path = os.path.abspath("tests/extensions/webextensions-selenium-example")
+
+    yield path
+
+
+@pytest.fixture(scope='function')
+def addon_path_dir_slash():
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath("extensions/webextensions-selenium-example/")
+    else:
+        path = os.path.abspath("tests/extensions/webextensions-selenium-example/")
 
     yield path
 
@@ -113,7 +130,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.16.1.jar",
+        "selenium-server-4.20.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -171,7 +188,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.16.1.jar",
+        "selenium-server-4.20.0.jar",
     )
 
     args = [

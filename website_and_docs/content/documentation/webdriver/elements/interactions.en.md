@@ -73,14 +73,8 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
   driver.find_element(name: 'color_input').click
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-    // Click the element
-    await driver.findElement(By.name('color_input')).click();
-  
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 
@@ -149,17 +143,8 @@ possible keystrokes that WebDriver Supports.
 	driver.find_element(name: 'email_input').send_keys 'admin@localhost.dev'
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-    // Enter text 
-    await driver.findElement(By.name('email_input')).sendKeys('admin@localhost.dev');
-  
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L21" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   
@@ -220,15 +205,8 @@ with a`content-editable` attribute. If these conditions are not met,
 	driver.find_element(name: 'email_input').clear
 
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-   
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   

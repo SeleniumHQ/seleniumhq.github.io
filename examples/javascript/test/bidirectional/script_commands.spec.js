@@ -27,6 +27,34 @@ suite(function (env) {
             await driver.quit()
         })
 
+        it('can call function', async function () {
+            const id = await driver.getWindowHandle()
+            const manager = await ScriptManager(id, driver)
+
+            let argumentValues = []
+            let value = new ArgumentValue(LocalValue.createNumberValue(22))
+            argumentValues.push(value)
+
+            let mapValue = {some_property: LocalValue.createNumberValue(42)}
+            let thisParameter = new ArgumentValue(LocalValue.createObjectValue(mapValue)).asMap()
+
+            const result = await manager.callFunctionInBrowsingContext(
+                id,
+                'function processWithPromise(argument) {' +
+                'return new Promise((resolve, reject) => {' +
+                'setTimeout(() => {' +
+                'resolve(argument + this.some_property);' +
+                '}, 1000)' +
+                '})' +
+                '}',
+                true,
+                argumentValues,
+                thisParameter,
+                ResultOwnership.ROOT)
+            assert.equal(result.resultType, EvaluateResultType.SUCCESS)
+            assert.equal(result.result.value, 64)
+        })
+
         it('can call function with declaration', async function () {
             const id = await driver.getWindowHandle()
             const manager = await ScriptManager(id, driver)

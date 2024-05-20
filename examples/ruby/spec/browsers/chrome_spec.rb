@@ -113,9 +113,42 @@ RSpec.describe 'Chrome' do
     end
   end
 
+  describe 'Special Features' do
+    it 'casts' do
+      @driver = Selenium::WebDriver.for :chrome
+      sinks = @driver.cast_sinks
+      unless sinks.empty?
+        device_name = sinks.first['name']
+        @driver.start_cast_tab_mirroring(device_name)
+        expect { @driver.stop_casting(device_name) }.not_to raise_exception
+      end
+    end
+
+    it 'gets and sets network conditions' do
+      @driver = Selenium::WebDriver.for :chrome
+      @driver.network_conditions = {offline: false, latency: 100, throughput: 200}
+      expect(@driver.network_conditions).to eq(
+        'offline' => false,
+        'latency' => 100,
+        'download_throughput' => 200,
+        'upload_throughput' => 200)
+    end
+  end
+
+  it 'gets the browser logs' do
+    @driver = Selenium::WebDriver.for :chrome
+    @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+    sleep 1
+    logs = @driver.logs.get(:browser)
+
+    expect(logs.first.message).to include 'Failed to load resource'
+  end
+
   def driver_finder
     options = Selenium::WebDriver::Options.chrome(browser_version: 'stable')
-    ENV['CHROMEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Chrome::Service)
-    ENV['CHROME_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.chrome
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['CHROMEDRIVER_BIN'] = finder.driver_path
+    ENV['CHROME_BIN'] = finder.browser_path
   end
 end

@@ -22,8 +22,8 @@ import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.manager.SeleniumManagerOutput;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 public class ChromeTest extends BaseTest {
   @AfterEach
@@ -177,8 +177,7 @@ public class ChromeTest extends BaseTest {
   private File getChromeLocation() {
     ChromeOptions options = new ChromeOptions();
     options.setBrowserVersion("stable");
-    SeleniumManagerOutput.Result output =
-        DriverFinder.getPath(ChromeDriverService.createDefaultService(), options);
-    return new File(output.getBrowserPath());
+    DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
+    return new File(finder.getBrowserPath());
   }
 }
