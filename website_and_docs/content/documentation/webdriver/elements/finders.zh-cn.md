@@ -1,6 +1,6 @@
 ---
-title: "查询网络元素"
-linkTitle: "查询器"
+title: "查找网页元素"
+linkTitle: "查找器"
 weight: 2
 needsTranslation: true
 aliases: [
@@ -8,14 +8,10 @@ aliases: [
 "/zh-cn/documentation/webdriver/locating_elements/"
 ]
 description: >
-  根据提供的定位值定位元素.
+  通过定位器的值确定元素的位置.
 ---
 
-One of the most fundamental aspects of using Selenium is obtaining element references to work with.
-Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
-
+获得元素的引用是使用`Selenium`最重要且最基本的应用。`Selenium`提供内置定位器策略用来唯一地标识一个元素。在非常复杂的场景中有很多种方式使用定位器。为了表达这篇文档的目的，让我们探讨下这段`HTML`片段。
 
 ```html
 <ol id="vegetables">
@@ -30,17 +26,13 @@ let's consider this HTML snippet:
 </ul>
 ```
 
-## First matching element 
+## 匹配第一个元素 
 
-Many locators will match multiple elements on the page. The singular find element method will return a reference to the
-first element found within a given context.
+在网页中许多定位器会匹配到多个元素。单个元素查找方法将会返回在给定上下文范围内找到的第一个元素的索引。
 
-### Evaluating entire DOM
+### 计算整个`DOM`
 
-When the find element method is called on the driver instance, it 
-returns a reference to the first element in the DOM that matches with the provided locator. 
-This value can be stored and used for future element actions. In our example HTML above, there are 
-two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
+当查找元素方法被驱动实例调用时，它会返回使用提供的定位器在文档中匹配到的第一个元素的引用。这个值可以存储和以后的元素操作中使用。在我们的`HTML`示例上，有两个元素的样式类名是`tomatoes`，所以这个方法会返回`vegetables`列表中的元素。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -64,14 +56,11 @@ val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
 {{< /tabpane >}}
 
 
-### Evaluating a subset of the DOM
+### 计算`DOM`的一个子集
 
-Rather than finding a unique locator in the entire DOM, it is often useful to narrow the search to the scope
-of another located element. In the above example there are two elements with a class name of "tomatoes" and 
-it is a little more challenging to get the reference for the second one.
+而不是在整个文档中查找一个唯一的定位器，在另一个已经定位元素范围内缩小查找范围是常常有用的。在示例上有两个元素使用了`tomatoes`的样式类名，获得第二个元素的引用就有些困难了。
 
-One solution is to locate an element with a unique attribute that is an ancestor of the desired element and not an
-ancestor of the undesired element, then call find element on that object:
+一种解决方案是使用唯一属性定位元素，这个元素是需要被定位元素的父元素而不是不需要被定位元素的父元素，然后用对象调用查找元素方法：
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -108,16 +97,13 @@ driver implementation supports a given feature. These interfaces are clearly def
 to adhere to having only a single role of responsibility.
 {{% /pageinfo %}}
 
-### Optimized locator
+### 优化定位器
 
-A nested lookup might not be the most effective location strategy since it requires two
-separate commands to be issued to the browser.
+嵌套查找可能不是最高效的定位策略，因为它会向浏览器发送两条独立的命令。
 
-To improve the performance slightly, we can use either CSS or XPath to find this element in a single command.
-See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}}) in our
-[Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) section.
+为了尽量提高查找性能，我们可以使用一个命令，`CSS`或者`XPath`中的其中一个查找这个元素。详情见[Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}})中的[Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}})部分。
 
-For this example, we'll use a CSS Selector:
+这个示例中，我们使用`CSS`选择器：
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -141,12 +127,9 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
 {{< /tabpane >}}
 
 
-## All matching elements
+## 匹配所有元素
 
-There are several use cases for needing to get references to all elements that match a locator, rather
-than just the first one. The plural find elements methods return a collection of element references. 
-If there are no matches, an empty list is returned. In this case, 
-references to all fruits and vegetable list items will be returned in a collection. 
+有几个用例需要获得匹配定位器的所有元素的引用，而不只是获得第一个匹配到元素。查找多个元素的方法会返回一个元素引用集合。如果没有匹配，这返回一个空的列表。在这个用例中，将返回所有`fruits`和`vegetable`的列表项元素引用的集合。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -169,10 +152,9 @@ val plants: List<WebElement> = driver.findElements(By.tagName("li"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Get element
-Often you get a collection of elements but want to work with a specific element, which means you
-need to iterate over the collection and identify the one you want.
+### 获得元素
 
+常常你想从获得的元素集合中获得指定的元素，意思是你需要遍历集合和识别出你想要的那个。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -279,10 +261,9 @@ fun main() {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Find Elements From Element
+## 从单个元素中查找多个元素
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+它用于在父元素上下文内查找匹配子元素的列表，实现这个，父元素使用`findElements`访问子元素。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -418,9 +399,9 @@ namespace FindElementsFromElement {
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Active Element
+## 获得活动元素
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+它使用跟踪查找`DOM`元素，这种元素在当前浏览的上下文内处于焦点。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
