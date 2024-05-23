@@ -2,7 +2,7 @@
     "name": "javascript-examples",
     "version": "1.0.0",
     "scripts": {
-        "test": "npx mocha test/**/keysTest.spec.js --timeout 60000"
+        "test": "npx mocha test/**/*.spec.js --timeout 60000"
     },
     "author": "The Selenium project",
     "license": "Apache-2.0",
