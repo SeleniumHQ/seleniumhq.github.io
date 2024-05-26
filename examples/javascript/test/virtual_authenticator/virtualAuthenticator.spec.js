@@ -195,8 +195,7 @@ suite(function(env) {
 
         it('Set is user verified', async function() {
             options.setIsUserVerified(true);
-           
-            assert(options['_isUserVerified'] === true);
+            assert.equal(options.getIsUserVerified(), true);
         }); 
     });
 }, { browsers: [Browser.CHROME]});
