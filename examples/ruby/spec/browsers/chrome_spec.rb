@@ -133,6 +133,25 @@ RSpec.describe 'Chrome' do
         'download_throughput' => 200,
         'upload_throughput' => 200)
     end
+
+    it 'gets the browser logs' do
+      @driver = Selenium::WebDriver.for :chrome
+      @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+      sleep 1
+      logs = @driver.logs.get(:browser)
+
+      expect(logs.first.message).to include 'Failed to load resource'
+    end
+
+    it 'sets permissions' do
+      @driver = Selenium::WebDriver.for :chrome
+      @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+      @driver.add_permission('camera', 'denied')
+      @driver.add_permissions('clipboard-read' => 'denied', 'clipboard-write' => 'prompt')
+      expect(permission('camera')).to eq('denied')
+      expect(permission('clipboard-read')).to eq('denied')
+      expect(permission('clipboard-write')).to eq('prompt')
+    end
   end
 
   def driver_finder
@@ -141,5 +160,10 @@ RSpec.describe 'Chrome' do
     finder = Selenium::WebDriver::DriverFinder.new(options, service)
     ENV['CHROMEDRIVER_BIN'] = finder.driver_path
     ENV['CHROME_BIN'] = finder.browser_path
+  end
+
+  def permission(name)
+    @driver.execute_async_script('callback = arguments[arguments.length - 1];' \
+                                 'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
   end
 end
