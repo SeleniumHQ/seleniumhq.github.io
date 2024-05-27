@@ -57,7 +57,7 @@ GEM
     rubyzip (2.3.2)
     selenium-devtools (0.125.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.20.1)
+    selenium-webdriver (4.21.1)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -80,7 +80,7 @@ DEPENDENCIES
   rubocop (~> 1.35)
   rubocop-rspec (~> 2.12)
   selenium-devtools (= 0.125.0)
-  selenium-webdriver (= 4.20.1)
+  selenium-webdriver (= 4.21.1)
 
 BUNDLED WITH
    2.5.6
