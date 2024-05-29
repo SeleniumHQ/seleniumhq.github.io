@@ -1,10 +1,6 @@
-using System;
-using System.IO;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 using SeleniumDocs.TestSupport;
 
 namespace SeleniumDocs.Drivers
@@ -19,8 +15,8 @@ namespace SeleniumDocs.Drivers
             driver = new ChromeDriver(service);
         }
 
-        [TestMethod]
-        [EnabledOnOs("OSX")]
+        [TestMethodCustom]
+        [DisabledOnOs("WINDOWS")]
         public void DriverLocation()
         {
             var options = GetLatestChromeOptions();
