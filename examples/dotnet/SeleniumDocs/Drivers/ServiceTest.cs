@@ -16,7 +16,7 @@ namespace SeleniumDocs.Drivers
         }
 
         [TestMethodCustom]
-        [DisabledOnOs("WINDOWS")]
+        [EnabledOnOs("OSX")]
         public void DriverLocation()
         {
             var options = GetLatestChromeOptions();
