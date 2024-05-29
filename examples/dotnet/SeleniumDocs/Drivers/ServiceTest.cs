@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using SeleniumDocs.TestSupport;
 
 namespace SeleniumDocs.Drivers
 {
@@ -19,6 +20,7 @@ namespace SeleniumDocs.Drivers
         }
 
         [TestMethod]
+        [EnabledOnOs("OSX")]
         public void DriverLocation()
         {
             var options = GetLatestChromeOptions();
