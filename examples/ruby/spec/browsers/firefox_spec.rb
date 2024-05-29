@@ -134,6 +134,15 @@ RSpec.describe 'Firefox' do
     end
   end
 
+  describe 'Profile' do
+    it 'creates a new profile' do
+      profile = Selenium::WebDriver::Firefox::Profile.new
+      profile['browser.download.dir'] = '/tmp/webdriver-downloads'
+      options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
+      expect(options.profile).to eq(profile)
+    end
+  end
+
   def driver_finder
     options = Selenium::WebDriver::Options.firefox(browser_version: 'stable')
     service = Selenium::WebDriver::Service.firefox
