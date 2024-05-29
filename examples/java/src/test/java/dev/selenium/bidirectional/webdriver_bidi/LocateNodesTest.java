@@ -47,7 +47,7 @@ class LocateNodesTest extends BaseTest {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
 
-        LocateNodeParameters parameters = new LocateNodeParameters.Builder(Locator.css("div")).build();
+        LocateNodeParameters parameters = new LocateNodeParameters(Locator.css("div"));
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
         Assertions.assertEquals(13, elements.size());
@@ -81,9 +81,8 @@ class LocateNodesTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("div.extraDiv, div.content"))
-                        .setMaxNodeCount(1)
-                        .build();
+                new LocateNodeParameters(Locator.css("div.extraDiv, div.content"))
+                        .setMaxNodeCount(1);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
 
@@ -101,9 +100,7 @@ class LocateNodesTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.xpath("/html/body/div[2]"))
-                        .setMaxNodeCount(1)
-                        .build();
+                new LocateNodeParameters(Locator.xpath("/html/body/div[2]")).setMaxNodeCount(1);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
 
@@ -121,9 +118,7 @@ class LocateNodesTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.innerText("Spaced out"))
-                        .setMaxNodeCount(1)
-                        .build();
+                new LocateNodeParameters(Locator.innerText("Spaced out")).setMaxNodeCount(1);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
 
@@ -139,42 +134,10 @@ class LocateNodesTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("div")).setMaxNodeCount(4).build();
+                new LocateNodeParameters(Locator.css("div")).setMaxNodeCount(4);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
         Assertions.assertEquals(4, elements.size());
-    }
-
-    @Test
-    @Disabled
-    void canLocateNodesWithNoneOwnershipParameter() {
-        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
-        driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
-
-        LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("div"))
-                        .setOwnership(ResultOwnership.NONE)
-                        .build();
-
-        List<RemoteValue> elements = browsingContext.locateNodes(parameters);
-        Assertions.assertFalse(elements.get(0).getHandle().isPresent());
-    }
-
-    @Test
-    @Disabled
-    void canLocateNodesWithRootOwnershipParameter() {
-        BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
-        driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
-
-        LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("div"))
-                        .setOwnership(ResultOwnership.ROOT)
-                        .build();
-
-        List<RemoteValue> elements = browsingContext.locateNodes(parameters);
-        Assertions.assertTrue(elements.get(0).getHandle().isPresent());
     }
 
     @Test
@@ -205,10 +168,9 @@ class LocateNodesTest extends BaseTest {
                                 new RemoteReference(RemoteReference.Type.SHARED_ID, value.getSharedId().get())));
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("input"))
+                new LocateNodeParameters(Locator.css("input"))
                         .setStartNodes(startNodes)
-                        .setMaxNodeCount(50)
-                        .build();
+                        .setMaxNodeCount(50);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
         Assertions.assertEquals(35, elements.size());
@@ -223,10 +185,9 @@ class LocateNodesTest extends BaseTest {
         browsingContext.navigate("https://www.selenium.dev/selenium/web/xhtmlTest.html", ReadinessState.COMPLETE);
 
         LocateNodeParameters parameters =
-                new LocateNodeParameters.Builder(Locator.css("div"))
+                new LocateNodeParameters(Locator.css("div"))
                         .setSandbox(sandbox)
-                        .setMaxNodeCount(1)
-                        .build();
+                        .setMaxNodeCount(1);
 
         List<RemoteValue> elements = browsingContext.locateNodes(parameters);
 
