@@ -118,6 +118,20 @@ RSpec.describe 'Firefox' do
       injected = driver.find_element(id: 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
+
+    it 'takes full page screenshot' do
+      driver.navigate.to 'https://www.selenium.dev/selenium/web/blank.html'
+      Dir.mktmpdir('screenshot_test') do |dir|
+        screenshot = driver.save_full_page_screenshot(File.join(dir, 'screenshot.png'))
+
+        expect(screenshot).to be_a File
+      end
+    end
+
+    it 'sets the context' do
+      driver.context = 'content'
+      expect(driver.context).to eq 'content'
+    end
   end
 
   def driver_finder
