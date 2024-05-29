@@ -25,7 +25,7 @@ To start a driver with a default service instance:
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L5-L6" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L17-L18" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L14-L15" >}}
@@ -53,7 +53,7 @@ If you can not update Selenium or have an advanced use case here is how to speci
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L25" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -80,7 +80,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L23" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L34" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L32" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
