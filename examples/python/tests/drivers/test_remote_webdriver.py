@@ -7,12 +7,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 def test_start_remote(server):
-    assert True
-    # options = webdriver.ChromeOptions()
-    # driver = webdriver.Remote(command_executor=server, options=options)
-    #
-    # assert "localhost" in driver.command_executor._url
-    # driver.quit()
+    options = webdriver.ChromeOptions()
+    driver = webdriver.Remote(command_executor=server, options=options)
+
+    assert "localhost" in driver.command_executor._url
+    driver.quit()
 
 
 # def test_uploads(server):
