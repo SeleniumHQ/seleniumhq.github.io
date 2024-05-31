@@ -206,7 +206,7 @@ def server():
 
     process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    def wait_for_server(url, timeout=20):
+    def wait_for_server(url, timeout=60):
         start = time.time()
         while time.time() - start < timeout:
             try:
