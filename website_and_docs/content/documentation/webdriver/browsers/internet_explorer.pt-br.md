@@ -114,10 +114,8 @@ var options = new InternetExplorerOptions();
 options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.file_upload_dialog_timeout = 2000
-driver = Selenium::WebDriver.for(:ie, options: options)
+  {{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L22-L24" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -169,11 +167,9 @@ var options = new InternetExplorerOptions();
 options.EnsureCleanSession = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ensure_clean_session = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L29-L31" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().ensureCleanSession(true);
@@ -219,11 +215,9 @@ var options = new InternetExplorerOptions();
 options.IgnoreZoomLevel = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ignore_zoom_level = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L36-L38" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().ignoreZoomSetting(true);
@@ -279,11 +273,9 @@ var options = new InternetExplorerOptions();
 options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ignore_protected_mode_settings = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L43-L45" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().introduceFlakinessByIgnoringProtectedModeSettings(true);
@@ -328,9 +320,9 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Por favor inclua um PR para adicionar uma amostra de código
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L50-L51" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
 let caps = Capabilities.ie();
@@ -438,21 +430,9 @@ namespace ieTest {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::IE::Options.new
-options.force_create_process_api = true
-options.add_argument('-k')
-driver = Selenium::WebDriver.for(:ie, options: options)
-
-begin
-  # Navegar para URL
-  driver.get 'https://google.com'
-  puts(driver.capabilities.to_json)
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L106-L117" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options();
