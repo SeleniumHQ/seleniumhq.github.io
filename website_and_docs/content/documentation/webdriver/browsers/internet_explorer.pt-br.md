@@ -431,7 +431,7 @@ namespace ieTest {
 }
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L106-L117" >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L105-L107" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -523,20 +523,9 @@ namespace ieTest {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::IE::Options.new
-options.force_create_process_api = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-
-begin
-  # Navegar para Url
-  driver.get 'https://google.com'
-  puts(driver.capabilities.to_json)
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L114-L116" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options();
@@ -597,7 +586,7 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L34" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L68" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -628,7 +617,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L43" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L77" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -657,7 +646,7 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L54" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L88" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -685,7 +674,7 @@ Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L64" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
+RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
   describe 'Options' do
     let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
 
@@ -48,8 +48,8 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
 
     it 'adds the silent option' do
       options = Selenium::WebDriver::IE::Options.new
-      options.add_option('silent', {silent: true})
-      expect(options.instance_variable_get(:@options)['silent']).to eq({silent: true})
+      options.add_option('silent', { silent: true })
+      expect(options.instance_variable_get(:@options)['silent']).to eq({ silent: true })
     end
   end
 
@@ -101,20 +101,25 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
     end
   end
 
-  describe 'Command line options' do
-    it 'sets the command line options' do
-      require 'selenium-webdriver'
-      options = Selenium::WebDriver::IE::Options.new
-      options.force_create_process_api = true
-      options.add_argument('-k')
-      driver = Selenium::WebDriver.for(:ie, options: options)
+  it 'sets the command line options' do
+    options = Selenium::WebDriver::IE::Options.new
+    options.add_argument('-k')
+    driver = Selenium::WebDriver.for(:ie, options: options)
+    driver.get 'https://google.com'
+    puts(driver.capabilities.to_json)
+    driver.quit
+  end
 
-      begin
-        driver.get 'https://google.com'
-        puts(driver.capabilities.to_json)
-      ensure
-        driver.quit
-      end
+  it 'launches ie with the create process api' do
+    options = Selenium::WebDriver::IE::Options.new
+    options.force_create_process_api = true
+    driver = Selenium::WebDriver.for(:ie, options: options)
+
+    begin
+      driver.get 'https://google.com'
+      puts(driver.capabilities.to_json)
+    ensure
+      driver.quit
     end
   end
 end
