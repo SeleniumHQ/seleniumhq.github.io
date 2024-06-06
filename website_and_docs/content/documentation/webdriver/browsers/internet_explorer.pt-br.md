@@ -38,7 +38,7 @@ usando um conjunto de opções básicas:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L35-L38" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L10-L13" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -68,7 +68,7 @@ So, if IE is not on the system, you only need:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L44-L45" >}}
 {{% /tab %}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L17-L18" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L24-L25" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let driver = await new Builder()
@@ -115,7 +115,7 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L22-L24" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L29-L30" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -168,7 +168,7 @@ options.EnsureCleanSession = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L29-L31" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L35-L36" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -216,7 +216,7 @@ options.IgnoreZoomLevel = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L36-L38" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L41-L42" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -274,7 +274,7 @@ options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L43-L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L47-L48" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -321,7 +321,7 @@ options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L50-L51" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L53-L54" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
@@ -431,7 +431,7 @@ namespace ieTest {
 }
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L105-L107" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L59-L60" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -524,7 +524,7 @@ namespace ieTest {
 }
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-    {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L114-L116" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L64-L65" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -586,7 +586,7 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L68" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L83" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -617,7 +617,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L77" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L101" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -646,7 +646,7 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L88" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L103" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -674,7 +674,7 @@ Property value: String representing path to supporting files directory
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L98" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L113" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

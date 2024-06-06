@@ -5,9 +5,16 @@ require 'spec_helper'
 RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
   describe 'Options' do
     let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
+    let(:url) { 'https://www.selenium.dev/selenium/web/' }
+
+    before do
+      @options = Selenium::WebDriver::IE::Options.new
+      @options.attach_to_edge_chrome = true
+      @options.edge_executable_path = edge_location
+    end
 
     it 'basic options Win10' do
-      options = Selenium::WebDriver::Options.ie
+      options = Selenium::WebDriver::IE::Options.new
       options.attach_to_edge_chrome = true
       options.edge_executable_path = edge_location
       @driver = Selenium::WebDriver.for :ie, options: options
@@ -19,37 +26,45 @@ RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
     end
 
     it 'sets the file upload dialog timeout' do
-      options = Selenium::WebDriver::IE::Options.new
-      options.file_upload_dialog_timeout = 2000
-      driver = Selenium::WebDriver.for(:ie, options: options)
+      @options.file_upload_dialog_timeout = 2000
+      driver = Selenium::WebDriver.for(:ie, options: @options)
       driver.quit
     end
 
     it 'ensures a clean session' do
-      options = Selenium::WebDriver::IE::Options.new
-      options.ensure_clean_session = true
-      driver = Selenium::WebDriver.for(:ie, options: options)
+      @options.ensure_clean_session = true
+      driver = Selenium::WebDriver.for(:ie, options: @options)
       driver.quit
     end
 
     it 'ignores the zoom setting' do
-      options = Selenium::WebDriver::IE::Options.new
-      options.ignore_zoom_level = true
-      driver = Selenium::WebDriver.for(:ie, options: options)
+      @options.ignore_zoom_level = true
+      driver = Selenium::WebDriver.for(:ie, options: @options)
       driver.quit
     end
 
     it 'ignores the protected mode settings' do
-      options = Selenium::WebDriver::IE::Options.new
-      options.ignore_protected_mode_settings = true
-      driver = Selenium::WebDriver.for(:ie, options: options)
+      @options.ignore_protected_mode_settings = true
+      driver = Selenium::WebDriver.for(:ie, options: @options)
       driver.quit
     end
 
     it 'adds the silent option' do
-      options = Selenium::WebDriver::IE::Options.new
-      options.add_option('silent', { silent: true })
-      expect(options.instance_variable_get(:@options)['silent']).to eq({ silent: true })
+      @options.add_option('silent', {silent: true})
+      Selenium::WebDriver.for(:ie, options: @options)
+      expect(@options.instance_variable_get(:@options)['silent']).to eq({silent: true})
+    end
+
+    it 'sets the command line options' do
+      @options.add_argument('-k')
+      Selenium::WebDriver.for(:ie, options: @options)
+    end
+
+    it 'launches ie with the create process api' do
+      @options.force_create_process_api = true
+      Selenium::WebDriver.for(:ie, options: @options)
+      expect(@options.instance_variable_get(:@options)['force_create_process_api'])
+        .to eq({force_create_process_api: true})
     end
   end
 
@@ -98,28 +113,6 @@ RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
       service.args << "–extract-path=#{root_directory}"
 
       @driver = Selenium::WebDriver.for :ie, service: service
-    end
-  end
-
-  it 'sets the command line options' do
-    options = Selenium::WebDriver::IE::Options.new
-    options.add_argument('-k')
-    driver = Selenium::WebDriver.for(:ie, options: options)
-    driver.get 'https://google.com'
-    puts(driver.capabilities.to_json)
-    driver.quit
-  end
-
-  it 'launches ie with the create process api' do
-    options = Selenium::WebDriver::IE::Options.new
-    options.force_create_process_api = true
-    driver = Selenium::WebDriver.for(:ie, options: options)
-
-    begin
-      driver.get 'https://google.com'
-      puts(driver.capabilities.to_json)
-    ensure
-      driver.quit
     end
   end
 end
