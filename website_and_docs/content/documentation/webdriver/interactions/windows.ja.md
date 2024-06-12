@@ -17,7 +17,9 @@ WebDriverは、ウィンドウとタブを区別しません。
 次のコードを使用して、現在のウィンドウのウィンドウハンドルを取得できます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
   {{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
@@ -34,30 +36,9 @@ WebDriverは、ウィンドウとタブを区別しません。
 ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI [NewWindow](#新しいウィンドウまたは新しいタブを作成して切り替える) が用意されています。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Store the ID of the original window
-String originalWindow = driver.getWindowHandle();
-
-//Check we don't have other windows open already
-assert driver.getWindowHandles().size() == 1;
-
-//Click the link which opens in a new window
-driver.findElement(By.linkText("new window")).click();
-
-//Wait for the new window or tab
-wait.until(numberOfWindowsToBe(2));
-
-//Loop through until we find a new window handle
-for (String windowHandle : driver.getWindowHandles()) {
-    if(!originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle);
-        break;
-    }
-}
-
-//Wait for the new tab to finish loading content
-wait.until(titleIs("Selenium documentation"));
-  {{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -195,59 +176,6 @@ wait.until(titleIs("Selenium documentation"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### 新しいウィンドウ（または）新しいタブを作成して切り替える
-
-新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
-新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
-新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
-
-__注意: この機能は、Selenium 4以降のバージョンで機能します。__
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB);
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Opens a new tab and switches to new tab
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// Opens a new window and switches to new window
-driver.SwitchTo().NewWindow(WindowType.Window)
-  {{< /tab >}}
-  {{% tab header="Ruby" text=true %}}
-Opens a new tab and switches to new tab
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
-
-Opens a new window and switches to new window
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
-  {{% /tab %}}
-{{< tab header="JavaScript" text=true >}}
-Opens a new tab and switches to new tab
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
-
-Opens a new window and switches to new window:
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
-{{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB)
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW)
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ### ウィンドウまたはタブを閉じる
 
 ウィンドウまたはタブでの作業が終了し、 _かつ_ ブラウザーで最後に開いたウィンドウまたはタブではない場合、それを閉じて、以前使用していたウィンドウに切り替える必要があります。
@@ -255,13 +183,9 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 これをまとめると以下のようになります。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Close the tab or window
-driver.close();
-
-//Switch back to the old tab or window
-driver.switchTo().window(originalWindow);
-  {{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     #Close the tab or window
 driver.close()
@@ -302,12 +226,64 @@ driver.switchTo().window(originalWindow)
 
 ウィンドウを閉じた後に別のウィンドウハンドルに切り替えるのを忘れると、現在閉じられているページでWebDriverが実行されたままになり、 **No Such Window Exception** が発行されます。実行を継続するには、有効なウィンドウハンドルに切り替える必要があります。
 
+### 新しいウィンドウ（または）新しいタブを作成して切り替える
+
+新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
+新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
+新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
+
+__注意: この機能は、Selenium 4以降のバージョンで機能します。__
+
+{{< tabpane langEqualsHeader=true >}}
+   {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< /tab >}}
+  {{< tab header="Python" >}}
+    # Opens a new tab and switches to new tab
+driver.switch_to.new_window('tab')
+
+    # Opens a new window and switches to new window
+driver.switch_to.new_window('window')
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+// Opens a new tab and switches to new tab
+driver.SwitchTo().NewWindow(WindowType.Tab)
+
+// Opens a new window and switches to new window
+driver.SwitchTo().NewWindow(WindowType.Window)
+  {{< /tab >}}
+  {{% tab header="Ruby" text=true %}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+
+Opens a new window and switches to new window
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
+{{< tab header="JavaScript" text=true >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+
+Opens a new window and switches to new window:
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB)
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW)
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
 ### セッションの終了時にブラウザーを終了する
 
 ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.quit();{{< /tab >}}
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
