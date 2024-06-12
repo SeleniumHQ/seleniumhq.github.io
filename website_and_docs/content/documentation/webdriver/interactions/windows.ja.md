@@ -281,7 +281,7 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
-    {{< tab header="Java" text=true >}}
+ {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
