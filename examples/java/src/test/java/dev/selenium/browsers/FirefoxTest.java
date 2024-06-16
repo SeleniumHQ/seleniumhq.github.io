@@ -28,7 +28,7 @@ public class FirefoxTest extends BaseTest {
   @AfterEach
   public void clearProperties() {
     System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY);
-    System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY);
+    System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY);driver.quit();
   }
 
   @Test
