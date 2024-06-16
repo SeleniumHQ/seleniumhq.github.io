@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
+RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
   describe 'Options' do
     let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
     let(:url) { 'https://www.selenium.dev/selenium/web/' }
@@ -50,9 +50,9 @@ RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
     end
 
     it 'adds the silent option' do
-      @options.add_option('silent', {silent: true})
+      @options.add_option('silent', true)
       Selenium::WebDriver.for(:ie, options: @options)
-      expect(@options.instance_variable_get(:@options)['silent']).to eq({silent: true})
+      expect(@options.instance_variable_get(:@options)['silent']).to eq(true)
     end
 
     it 'sets the command line options' do
@@ -60,7 +60,7 @@ RSpec.describe 'Internet Explorer', exclusive: { platform: :windows } do
       Selenium::WebDriver.for(:ie, options: @options)
     end
 
-    it 'launches ie with the create process api' do
+    it 'launches ie with the create process api', skip: 'When using with IE 8 or higher, it needs a registry value' do
       @options.force_create_process_api = true
       Selenium::WebDriver.for(:ie, options: @options)
       expect(@options.instance_variable_get(:@options)['force_create_process_api'])
