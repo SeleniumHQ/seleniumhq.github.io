@@ -89,7 +89,7 @@ RSpec.describe 'Firefox' do
   describe 'Features' do
     let(:driver) { start_firefox }
 
-    it 'installs addon' do
+    it 'installs addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
 
       driver.install_addon(extension_file_path)
@@ -99,7 +99,7 @@ RSpec.describe 'Firefox' do
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
 
-    it 'uninstalls addon' do
+    it 'uninstalls addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
       extension_id = driver.install_addon(extension_file_path)
 
@@ -109,7 +109,7 @@ RSpec.describe 'Firefox' do
       expect(driver.find_elements(id: 'webextensions-selenium-example')).to be_empty
     end
 
-    it 'installs unsigned addon' do
+    it 'installs unsigned addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_dir_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example/', __dir__)
 
       driver.install_addon(extension_dir_path, true)

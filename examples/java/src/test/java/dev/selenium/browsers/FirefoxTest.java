@@ -20,7 +20,7 @@ import org.openqa.selenium.firefox.FirefoxDriverService;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.service.DriverFinder;
-
+import org.junit.jupiter.api.Disabled;
 
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
@@ -125,6 +125,7 @@ public class FirefoxTest extends BaseTest {
   }
 
   @Test
+  @Disabled("Skipping tests until Firefox 127 is released")
   public void installAddon() {
     driver = startFirefoxDriver();
     Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
@@ -138,6 +139,7 @@ public class FirefoxTest extends BaseTest {
   }
 
   @Test
+  @Disabled("Skipping tests until Firefox 127 is released")
   public void uninstallAddon() {
     driver = startFirefoxDriver();
     Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
@@ -150,6 +152,7 @@ public class FirefoxTest extends BaseTest {
   }
 
   @Test
+  @Disabled("Skipping tests until Firefox 127 is released")
   public void installUnsignedAddonPath() {
     driver = startFirefoxDriver();
     Path path = Paths.get("src/test/resources/extensions/selenium-example");
