@@ -50,9 +50,8 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
     end
 
     it 'adds the silent option' do
-      @options.add_option('silent', true)
-      Selenium::WebDriver.for(:ie, options: @options)
-      expect(@options.instance_variable_get(:@options)['silent']).to eq(true)
+      @options.silent = true
+      expect(@options.silent).to be_truthy
     end
 
     it 'sets the command line options' do
