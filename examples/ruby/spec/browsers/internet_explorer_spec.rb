@@ -49,7 +49,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       driver.quit
     end
 
-    it 'adds the silent option' do
+    it 'adds the silent option', skip: 'This capability will be added on the release 4.22.0' do
       @options.silent = true
       expect(@options.silent).to be_truthy
     end
