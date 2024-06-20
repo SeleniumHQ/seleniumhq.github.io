@@ -51,7 +51,7 @@ public class OptionsTest extends BaseTest {
   @Test
   public void setAcceptInsecureCerts() {
     ChromeOptions chromeOptions = new ChromeOptions();
-    options.setAcceptInsecureCerts(true);
+    chromeOptions.setAcceptInsecureCerts(true);
     WebDriver driver = new ChromeDriver(chromeOptions);
     try {
       // Navigate to Url
