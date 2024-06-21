@@ -23,7 +23,9 @@ current window by using:
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-  {{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
+  {{< tab header="CSharp" >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18" >}}
+   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
