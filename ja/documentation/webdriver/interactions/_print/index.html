@@ -1045,7 +1045,69 @@ Kotlin</button></li></ul><div class=tab-content id=tabs-0-content><div class="ta
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>        </span><span style=color:#8f5902;font-style:italic>//fetch handle of this</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>        </span><span style=color:#000>String</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>currHandle</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#c4a000>getWindowHandle</span><span style=color:#000;font-weight:700>();</span><span style=color:#f8f8f8;text-decoration:underline>
 </span></span></span><span style=display:flex><span><span style=color:#f8f8f8;text-decoration:underline>        </span><span style=color:#000>assertNotNull</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>currHandle</span><span style=color:#000;font-weight:700>);</span></span></span></code></pre></div><div class="text-end pb-2"><a href=https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20 target=_blank><i class="fas fa-external-link-alt pl-2"></i>
-<strong>View full example on GitHub</strong></a></div></div><div class="tab-pane fade" id=tabs-00-01 role=tabpanel aria-labelled-by=tabs-00-01-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>current_window_handle</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-02 role=tabpanel aria-labelled-by=tabs-00-02-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>CurrentWindowHandle</span><span style=color:#000;font-weight:700>;</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-03 role=tabpanel aria-labelled-by=tabs-00-03-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>window_handle</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-04 role=tabpanel aria-labelled-by=tabs-00-04-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=display:flex><span><span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getWindowHandle</span><span style=color:#000;font-weight:700>();</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-05 role=tabpanel aria-labelled-by=tabs-00-05-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>windowHandle</span></span></span></code></pre></div></div></div><h3 id=ウィンドウまたはタブの切り替え>ウィンドウまたはタブの切り替え</h3><p><a href=https://seleniumhq.github.io target=_blank>新しいウィンドウ</a>で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
+<strong>View full example on GitHub</strong></a></div></div><div class="tab-pane fade" id=tabs-00-01 role=tabpanel aria-labelled-by=tabs-00-01-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>current_window_handle</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-02 role=tabpanel aria-labelled-by=tabs-00-02-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-CSharp data-lang=CSharp><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>div</span> <span style=color:#000>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;highlight&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;</span><span style=color:#000>pre</span> <span style=color:#000>tabindex</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;0&#34;</span> <span style=color:#000>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;</span><span style=color:#000>code</span> <span style=color:#000>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;language-cs&#34;</span> <span style=color:#000>data</span><span style=color:#000;font-weight:700>-</span><span style=color:#000>lang</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;cs&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#000>code</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#000>pre</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#000>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>div</span> <span style=color:#000>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;text-end pb-2&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>a</span> <span style=color:#000>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18&#34;</span> <span style=color:#000>target</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;_blank&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>i</span> <span style=color:#000>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;fas fa-external-link-alt pl-2&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#000>i</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>strong</span><span style=color:#000;font-weight:700>&gt;</span><span style=color:#000>View</span> <span style=color:#000>full</span> <span style=color:#000>example</span> <span style=color:#204a87;font-weight:700>on</span> <span style=color:#000>GitHub</span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#000>strong</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#000>a</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#000>div</span><span style=color:#000;font-weight:700>&gt;</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    </span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-03 role=tabpanel aria-labelled-by=tabs-00-03-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Ruby data-lang=Ruby><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>window_handle</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-04 role=tabpanel aria-labelled-by=tabs-00-04-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=display:flex><span><span style=color:#204a87;font-weight:700>await</span> <span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getWindowHandle</span><span style=color:#000;font-weight:700>();</span></span></span></code></pre></div></div><div class="tab-pane fade" id=tabs-00-05 role=tabpanel aria-labelled-by=tabs-00-05-tab tabindex=0><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Kotlin data-lang=Kotlin><span style=display:flex><span><span style=color:#000>driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>windowHandle</span></span></span></code></pre></div></div></div><h3 id=ウィンドウまたはタブの切り替え>ウィンドウまたはタブの切り替え</h3><p><a href=https://seleniumhq.github.io target=_blank>新しいウィンドウ</a>で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
 新しいウィンドウで作業するには、それに切り替える必要があります。
 開いているタブまたはウィンドウが2つしかなく、どちらのウィンドウから開始するかがわかっている場合、削除のプロセスによって、WebDriverが表示できる両方のウィンドウまたはタブをループし、元のウィンドウまたはタブに切り替えることができます。</p><p>ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI <a href=/ja/documentation/webdriver/interactions/windows/#新しいウィンドウまたは新しいタブを作成して切り替える>NewWindow</a> が用意されています。</p><ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item><button class="nav-link active" id=tabs-01-00-tab data-bs-toggle=tab data-bs-target=#tabs-01-00 role=tab data-td-tp-persist=java aria-controls=tabs-01-00 aria-selected=true>
 Java</button></li><li class=nav-item><button class=nav-link id=tabs-01-01-tab data-bs-toggle=tab data-bs-target=#tabs-01-01 role=tab data-td-tp-persist=python aria-controls=tabs-01-01 aria-selected=false>
