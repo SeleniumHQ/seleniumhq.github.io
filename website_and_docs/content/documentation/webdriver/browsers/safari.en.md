@@ -102,7 +102,7 @@ Apple provides a development version of their browser — [Safari Technology Pre
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L36-L37" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
