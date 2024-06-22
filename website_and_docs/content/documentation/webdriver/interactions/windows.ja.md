@@ -21,9 +21,9 @@ WebDriverは、ウィンドウとタブを区別しません。
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-  {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18" >}}
-    {{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -75,31 +75,12 @@ with webdriver.Firefox() as driver:
     # Wait for the new tab to finish loading content
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Store the ID of the original window
-string originalWindow = driver.CurrentWindowHandle;
-
-//Check we don't have other windows open already
-Assert.AreEqual(driver.WindowHandles.Count, 1);
-
-//Click the link which opens in a new window
-driver.FindElement(By.LinkText("new window")).Click();
-
-//Wait for the new window or tab
-wait.Until(wd => wd.WindowHandles.Count == 2);
-
-//Loop through until we find a new window handle
-foreach(string window in driver.WindowHandles)
-{
-    if(originalWindow != window)
-    {
-        driver.SwitchTo().Window(window);
-        break;
-    }
-}
-//Wait for the new tab to finish loading content
-wait.Until(wd => wd.Title == "Selenium documentation");
+  
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
   {{< /tab >}}
+  
+  
   {{< tab header="Ruby" >}}
     #Store the ID of the original window
 original_window = driver.window_handle
@@ -195,13 +176,12 @@ driver.close()
     #Switch back to the old tab or window
 driver.switch_to.window(original_window)
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Close the tab or window
-driver.Close();
 
-//Switch back to the old tab or window
-driver.SwitchTo().Window(originalWindow);
+   {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
   {{< /tab >}}
+  
+
   {{< tab header="Ruby" >}}
     #Close the tab or window
 driver.close
@@ -247,13 +227,12 @@ driver.switch_to.new_window('tab')
     # Opens a new window and switches to new window
 driver.switch_to.new_window('window')
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Opens a new tab and switches to new tab
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// Opens a new window and switches to new window
-driver.SwitchTo().NewWindow(WindowType.Window)
+    
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
   {{< /tab >}}
+  
+  
   {{% tab header="Ruby" text=true %}}
 Opens a new tab and switches to new tab
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
@@ -261,6 +240,7 @@ Opens a new tab and switches to new tab
 Opens a new window and switches to new window
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
   {{% /tab %}}
+  
 {{< tab header="JavaScript" text=true >}}
 Opens a new tab and switches to new tab
 {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
@@ -268,6 +248,7 @@ Opens a new tab and switches to new tab
 Opens a new window and switches to new window:
 {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
 {{< /tab >}}
+
   {{< tab header="Kotlin" >}}
 // Opens a new tab and switches to new tab
 driver.switchTo().newWindow(WindowType.TAB)
@@ -275,6 +256,7 @@ driver.switchTo().newWindow(WindowType.TAB)
 // Opens a new window and switches to new window
 driver.switchTo().newWindow(WindowType.WINDOW)
   {{< /tab >}}
+  
 {{< /tabpane >}}
 
 
@@ -287,7 +269,9 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
