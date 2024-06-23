@@ -51,7 +51,7 @@ jobs:
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
-        run: 
+        run:
           |
           latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
           cd examples/ruby
@@ -62,7 +62,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Nightly Windows
         if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
-        run: 
+        run:
           |
           $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
           cd examples/ruby
