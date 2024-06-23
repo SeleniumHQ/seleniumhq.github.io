@@ -15,9 +15,10 @@ cd seleniumhq.github.io/examples/java
 ```
 
 3. Install dependencies using maven
+Ensure that JDK and Maven is installed on the system.
 
 ```
-mvn compile
+mvn test-compile
 ```
 
 4. Run all tests
