@@ -35,6 +35,7 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           brew install --cask safari-technology-preview
+          sudo safaridriver --enable
       - name: Remove driver directories Windows
         if: matrix.os == 'windows-latest'
         run: |
@@ -55,7 +56,7 @@ jobs:
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
-        run: 
+        run:
           |
           latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
           cd examples/ruby
@@ -66,7 +67,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Nightly Windows
         if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
-        run: 
+        run:
           |
           $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
           cd examples/ruby
@@ -88,7 +89,7 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           # Check if safaridriver exists
-          if [[ ! -f "/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver" ]]; then
+          if [[ ! -x "/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver" ]]; then
             echo "safaridriver not found. Exiting."
             exit 1
           fi
