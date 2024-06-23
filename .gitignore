@@ -11,3 +11,5 @@ website_and_docs/resources
 .settings
 .gitignore
 .pydevproject
+**/.gradle/*
+**/bin/*

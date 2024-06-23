@@ -14,6 +14,13 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
 }
 
+// application {
+//     mainClassName = project.hasProperty('mainClass') ? project.getProperty('mainClass') : 'dev.selenium.getting_started.FirstScript'
+// }
+
+// gradle run -PmainClass=dev.selenium.getting_started.FirstScript
+
+
 test {
     useJUnitPlatform()
 }
