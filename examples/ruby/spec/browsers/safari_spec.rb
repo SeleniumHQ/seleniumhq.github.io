@@ -33,7 +33,7 @@ RSpec.describe 'Safari', exclusive: {platform: :macosx} do
   end
 end
 
-RSpec.describe 'Safari Technology Preview' do
+RSpec.describe 'Safari Technology Preview', skip: "This test is being skipped as GitHub Actions have no support for Safari Technology Preview" do
   it 'sets the technology preview' do
     Selenium::WebDriver::Safari.technology_preview!
     local_driver = Selenium::WebDriver.for :safari

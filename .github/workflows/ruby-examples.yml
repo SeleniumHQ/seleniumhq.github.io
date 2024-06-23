@@ -31,11 +31,6 @@ jobs:
     steps:
       - name: Checkout GitHub repo
         uses: actions/checkout@v4
-      - name: Install Safari Technology Preview
-        if: matrix.os == 'macos-latest'
-        run: |
-          brew install --cask safari-technology-preview
-          sudo safaridriver --enable
       - name: Remove driver directories Windows
         if: matrix.os == 'windows-latest'
         run: |
@@ -85,14 +80,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 11
-      - name: Install and Configure Safari and WebDriver
-        if: matrix.os == 'macos-latest'
-        run: |
-          # Check if safaridriver exists
-          if [[ ! -x "/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver" ]]; then
-            echo "safaridriver not found. Exiting."
-            exit 1
-          fi
       - name: Run tests
         uses: nick-invision/retry@v3.0.0
         with:
