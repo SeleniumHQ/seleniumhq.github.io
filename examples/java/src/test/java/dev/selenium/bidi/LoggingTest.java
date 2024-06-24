@@ -1,4 +1,4 @@
-package dev.selenium.bidirectional.webdriver_bidi;
+package dev.selenium.bidi;
 
 import dev.selenium.BaseTest;
 
@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-class LogTest extends BaseTest {
+class LoggingTest extends BaseTest {
 
     @BeforeEach
     public void setup() {

@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumDocs.Bidirectional.ChromeDevTools
+namespace SeleniumDocs.BiDi.CDP
 {
     [TestClass]
     public class ScriptTest : BaseChromeTest

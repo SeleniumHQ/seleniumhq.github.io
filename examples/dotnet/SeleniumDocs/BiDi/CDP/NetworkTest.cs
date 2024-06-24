@@ -8,7 +8,7 @@ using OpenQA.Selenium.DevTools.V126.Network;
 using OpenQA.Selenium.DevTools.V126.Performance;
 
 
-namespace SeleniumDocs.BiDi.ChromeDevTools
+namespace SeleniumDocs.BiDi.CDP
 {
     [TestClass]
     public class NetworkTest : BaseTest

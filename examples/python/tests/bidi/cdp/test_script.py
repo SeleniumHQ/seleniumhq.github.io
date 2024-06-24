@@ -6,9 +6,7 @@ from selenium.webdriver.common.log import Log
 @pytest.mark.trio
 async def test_mutation(driver):
     async with driver.bidi_connection() as session:
-        log = Log(driver, session)
-
-        async with log.mutation_events() as event:
+        async with Log(driver, session).mutation_events() as event:
             driver.get('https://www.selenium.dev/selenium/web/dynamic.html')
             driver.find_element(By.ID, "reveal").click()
 
