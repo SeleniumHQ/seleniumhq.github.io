@@ -54,7 +54,6 @@ RSpec.describe 'Network' do
     driver.get('https://www.selenium.dev/selenium/web/frameset.html')
 
     driver.devtools.performance.enable
-
     metric_list = driver.devtools.performance.get_metrics.dig('result', 'metrics')
 
     metrics = metric_list.each_with_object({}) do |metric, hash|
@@ -63,6 +62,18 @@ RSpec.describe 'Network' do
 
     expect(metrics['DevToolsCommandDuration']).to be > 0
     expect(metrics['Frames']).to eq 12
+  end
+
+  it 'sets cookie' do
+    driver.devtools.network.set_cookie(name: 'cheese',
+                                       value: 'gouda',
+                                       domain: 'www.selenium.dev',
+                                       secure: true)
+
+    driver.get('https://www.selenium.dev')
+    cheese = driver.manage.cookie_named('cheese')
+
+    expect(cheese[:value]).to eq 'gouda'
   end
 
   it 'waits for downloads', except: {platform: :windows} do
@@ -79,17 +90,5 @@ RSpec.describe 'Network' do
     driver.find_element(id: 'file-2').click
 
     expect { Selenium::WebDriver::Wait.new.until { @completed } }.not_to raise_exception
-  end
-
-  it 'sets cookie' do
-    driver.devtools.network.set_cookie(name: 'cheese',
-                                       value: 'gouda',
-                                       domain: 'www.selenium.dev',
-                                       secure: true)
-
-    driver.get('https://www.selenium.dev')
-    cheese = driver.manage.cookie_named('cheese')
-
-    expect(cheese[:value]).to eq 'gouda'
   end
 end

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Scripts' do
+RSpec.describe 'Script' do
   let(:driver) { start_session }
 
   it 'pins script' do
