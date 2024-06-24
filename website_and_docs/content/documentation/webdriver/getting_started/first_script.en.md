@@ -183,7 +183,7 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L19" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L26" >}}
