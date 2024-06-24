@@ -19,7 +19,6 @@ namespace SeleniumDocs.BiDi.CDP
             var element = driver.FindElement(By.Id("id1"));
 
             var key = await new JavaScriptEngine(driver).PinScript("return arguments;");
-
             var arguments = ((WebDriver)driver).ExecuteScript(key, 1, true, element);
 
             var expected = new List<object>
@@ -35,15 +34,14 @@ namespace SeleniumDocs.BiDi.CDP
         public async Task MutatedElements()
         {
             driver.Url = "https://www.selenium.dev/selenium/web/dynamic.html";
-
             var mutations = new List<IWebElement>();
+
             using IJavaScriptEngine monitor = new JavaScriptEngine(driver);
             monitor.DomMutated += (_, e) =>
             {
                 var locator = By.CssSelector($"*[data-__webdriver_id='{e.AttributeData.TargetId}']");
                 mutations.Add(driver.FindElement(locator));
             };
-
             await monitor.StartEventMonitoring();
             await monitor.EnableDomMutationMonitoring();
 

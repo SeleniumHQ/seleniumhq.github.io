@@ -1,4 +1,4 @@
-package dev.selenium.bidirectional.chrome_devtools;
+package dev.selenium.bidi.cdp;
 
 import com.google.common.collect.ImmutableMap;
 import dev.selenium.BaseTest;
@@ -43,26 +43,6 @@ public class CdpApiTest extends BaseTest {
   }
 
   @Test
-  @Disabled("4.15 broke the casting")
-  public void performanceMetrics() {
-    driver.get("https://www.selenium.dev/selenium/web/frameset.html");
-
-    devTools = ((HasDevTools) driver).getDevTools();
-    devTools.createSession();
-    devTools.send(Performance.enable(Optional.empty()));
-
-    List<Metric> metricList = devTools.send(Performance.getMetrics());
-
-    Map<String, Number> metrics = new HashMap<>();
-    for (Metric metric : metricList) {
-      metrics.put(metric.getName(), metric.getValue());
-    }
-
-    Assertions.assertTrue(metrics.get("DevToolsCommandDuration").doubleValue() > 0);
-    Assertions.assertEquals(12, metrics.get("Frames").intValue());
-  }
-
-  @Test
   public void basicAuth() {
     devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
@@ -78,23 +58,6 @@ public class CdpApiTest extends BaseTest {
     Assertions.assertEquals(
         "Congratulations! You must have the proper credentials.",
         driver.findElement(By.tagName("p")).getText());
-  }
-
-  @Test
-  public void jsErrors() {
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
-
-    DevTools devTools = ((HasDevTools) driver).getDevTools();
-    devTools.createSession();
-    devTools.send(Runtime.enable());
-
-    CopyOnWriteArrayList<JavascriptException> errors = new CopyOnWriteArrayList<>();
-    devTools.getDomains().events().addJavascriptExceptionListener(errors::add);
-
-    driver.findElement(By.id("jsException")).click();
-
-    wait.until(_d -> !errors.isEmpty());
-    Assertions.assertTrue(errors.get(0).getMessage().contains("Error: Not working"));
   }
 
   @Test

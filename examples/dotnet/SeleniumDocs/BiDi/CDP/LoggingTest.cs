@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
@@ -23,8 +22,8 @@ namespace SeleniumDocs.BiDi.CDP
             {
                 messages.Add(e.MessageContent);
             };
-
             await monitor.StartEventMonitoring();
+
             driver.FindElement(By.Id("consoleLog")).Click();
             driver.FindElement(By.Id("consoleError")).Click();
             new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(_ => messages.Count > 1);
@@ -45,8 +44,8 @@ namespace SeleniumDocs.BiDi.CDP
             {
                 messages.Add(e.Message);
             };
-
             await monitor.StartEventMonitoring();
+
             driver.FindElement(By.Id("jsException")).Click();
             new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(_ => !messages.IsNullOrEmpty());
             monitor.StopEventMonitoring();

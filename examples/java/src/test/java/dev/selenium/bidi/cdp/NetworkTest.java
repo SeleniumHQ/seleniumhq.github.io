@@ -1,29 +1,34 @@
-package dev.selenium.bidirectional.chrome_devtools;
-
-import static org.openqa.selenium.devtools.events.CdpEventTypes.consoleEvent;
-import static org.openqa.selenium.devtools.events.CdpEventTypes.domMutation;
+package dev.selenium.bidi.cdp;
 
 import com.google.common.net.MediaType;
 import dev.selenium.BaseTest;
 import java.net.*;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
-import org.openqa.selenium.logging.HasLogEvents;
+import org.openqa.selenium.devtools.v124.browser.Browser;
+import org.openqa.selenium.devtools.v124.network.Network;
+import org.openqa.selenium.devtools.v124.performance.Performance;
+import org.openqa.selenium.devtools.v124.performance.model.Metric;
 import org.openqa.selenium.remote.http.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BidiApiTest extends BaseTest {
+public class NetworkTest extends BaseTest {
 
   @BeforeEach
   public void createSession() {
@@ -35,7 +40,6 @@ public class BidiApiTest extends BaseTest {
   public void basicAuthentication() {
     Predicate<URI> uriPredicate = uri -> uri.toString().contains("herokuapp.com");
     Supplier<Credentials> authentication = UsernameAndPassword.of("admin", "admin");
-
     ((HasAuthentication) driver).register(uriPredicate, authentication);
 
     driver.get("https://the-internet.herokuapp.com/basic_auth");
@@ -79,7 +83,6 @@ public class BidiApiTest extends BaseTest {
                                 .setStatus(200)
                                 .addHeader("Content-Type", MediaType.HTML_UTF_8.toString())
                                 .setContent(Contents.utf8String("Creamy, delicious cheese!"))))) {
-
       driver.get("https://www.selenium.dev/selenium/web/blank.html");
     }
 
@@ -88,7 +91,6 @@ public class BidiApiTest extends BaseTest {
   }
 
   @Test
-  @Disabled("Not working yet")
   public void interceptRequests() {
     AtomicBoolean completed = new AtomicBoolean(false);
 
@@ -111,5 +113,75 @@ public class BidiApiTest extends BaseTest {
     }
 
     Assertions.assertEquals("two", driver.findElement(By.id("result")).getText());
+  }
+
+  @Test
+  public void performanceMetrics() {
+    driver.get("https://www.selenium.dev/selenium/web/frameset.html");
+
+    DevTools devTools = ((HasDevTools) driver).getDevTools();
+    devTools.createSession();
+
+    devTools.send(Performance.enable(Optional.empty()));
+    List<Metric> metricList = devTools.send(Performance.getMetrics());
+
+    Map<String, Number> metrics = new HashMap<>();
+    for (Metric metric : metricList) {
+      metrics.put(metric.getName(), metric.getValue());
+    }
+
+    Assertions.assertTrue(metrics.get("DevToolsCommandDuration").doubleValue() > 0);
+    Assertions.assertEquals(12, metrics.get("Frames").intValue());
+  }
+
+  @Test
+  public void setCookie() {
+    DevTools devTools = ((HasDevTools) driver).getDevTools();
+    devTools.createSession();
+
+    devTools.send(
+            Network.setCookie(
+                    "cheese",
+                    "gouda",
+                    Optional.empty(),
+                    Optional.of("www.selenium.dev"),
+                    Optional.empty(),
+                    Optional.of(true),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty(),
+                    Optional.empty()));
+
+    driver.get("https://www.selenium.dev");
+    Cookie cheese = driver.manage().getCookieNamed("cheese");
+    Assertions.assertEquals("gouda", cheese.getValue());
+  }
+
+  @Test
+  public void waitForDownload() {
+    driver.get("https://www.selenium.dev/selenium/web/downloads/download.html");
+
+    DevTools devTools = ((HasDevTools) driver).getDevTools();
+    devTools.createSession();
+
+    devTools.send(
+            Browser.setDownloadBehavior(
+                    Browser.SetDownloadBehaviorBehavior.ALLOWANDNAME,
+                    Optional.empty(),
+                    Optional.of(""),
+                    Optional.of(true)));
+
+    AtomicBoolean completed = new AtomicBoolean(false);
+    devTools.addListener(
+            Browser.downloadProgress(),
+            e -> completed.set(Objects.equals(e.getState().toString(), "completed")));
+
+    driver.findElement(By.id("file-2")).click();
+
+    Assertions.assertDoesNotThrow(() -> wait.until(_d -> completed));
   }
 }

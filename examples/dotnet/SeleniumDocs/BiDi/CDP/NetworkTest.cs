@@ -27,11 +27,10 @@ namespace SeleniumDocs.BiDi.CDP
                 UriMatcher = uri => uri.AbsoluteUri.Contains("herokuapp"),
                 Credentials = new PasswordCredentials("admin", "admin")
             };
-
             var networkInterceptor = driver.Manage().Network;
             networkInterceptor.AddAuthenticationHandler(handler);
-
             await networkInterceptor.StartMonitoring();
+
             driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/basic_auth");
             await networkInterceptor.StopMonitoring();
 
@@ -49,8 +48,8 @@ namespace SeleniumDocs.BiDi.CDP
             {
                 contentType.Add(e.ResponseHeaders["content-type"]);
             };
-
             await networkInterceptor.StartMonitoring();
+
             driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/blank.html");
             await networkInterceptor.StopMonitoring();
 
@@ -69,11 +68,10 @@ namespace SeleniumDocs.BiDi.CDP
                     Body = "Creamy, delicious cheese!"
                 }
             };
-
             INetwork networkInterceptor = driver.Manage().Network;
             networkInterceptor.AddResponseHandler(handler);
-
             await networkInterceptor.StartMonitoring();
+
             driver.Navigate().GoToUrl("https://www.selenium.dev");
             await networkInterceptor.StopMonitoring();
 
@@ -94,11 +92,10 @@ namespace SeleniumDocs.BiDi.CDP
                     return request;
                 }
             };
-
             INetwork networkInterceptor = driver.Manage().Network;
             networkInterceptor.AddRequestHandler(handler);
-
             await networkInterceptor.StartMonitoring();
+
             driver.Url = "https://www.selenium.dev/selenium/web/devToolsRequestInterceptionTest.html";
             driver.FindElement(By.TagName("button")).Click();
             await networkInterceptor.StopMonitoring();
@@ -106,6 +103,29 @@ namespace SeleniumDocs.BiDi.CDP
             Assert.AreEqual("two", driver.FindElement(By.Id("result")).Text);
         }
         
+        [TestMethod]
+        public async Task PerformanceMetrics()
+        {
+            driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
+
+            var session = ((IDevTools)driver).GetDevToolsSession();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V126.DevToolsSessionDomains>();
+
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V126.Performance.EnableCommandSettings());
+            var metricsResponse =
+                await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
+                    new GetMetricsCommandSettings()
+                );
+
+            var metrics = metricsResponse.Metrics.ToDictionary(
+                dict => dict.Name,
+                dict => dict.Value
+            );
+
+            Assert.IsTrue(metrics["DevToolsCommandDuration"] > 0);
+            Assert.AreEqual(12, metrics["Frames"]);
+        }
+
         [TestMethod]
         public async Task SetCookie()
         {
@@ -120,35 +140,11 @@ namespace SeleniumDocs.BiDi.CDP
                 Domain = "www.selenium.dev",
                 Secure = true
             };
-
             await domains.Network.SetCookie(cookieCommandSettings);
 
             driver.Url = "https://www.selenium.dev";
             OpenQA.Selenium.Cookie cheese = driver.Manage().Cookies.GetCookieNamed("cheese");
             Assert.AreEqual("gouda", cheese.Value);
-        }
-
-        [TestMethod]
-        public async Task PerformanceMetrics()
-        {
-            driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
-
-            var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V126.DevToolsSessionDomains>();
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V126.Performance.EnableCommandSettings());
-
-            var metricsResponse =
-                await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
-                    new GetMetricsCommandSettings()
-                );
-
-            var metrics = metricsResponse.Metrics.ToDictionary(
-                dict => dict.Name,
-                dict => dict.Value
-            );
-
-            Assert.IsTrue(metrics["DevToolsCommandDuration"] > 0);
-            Assert.AreEqual(12, metrics["Frames"]);
         }
 
     }
