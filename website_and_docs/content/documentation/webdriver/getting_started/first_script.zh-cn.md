@@ -16,7 +16,7 @@ Selenium所做的一切,
 您将使用Selenium执行的大部分操作,
 都是以下基本命令的组合
 
-单击 "View full example on GitHub" 的链接以查看上下文中的代码.
+点击 "View full example on GitHub" 的链接以查看上下文中的代码.
 
 ### 1. 使用驱动实例开启会话
 
