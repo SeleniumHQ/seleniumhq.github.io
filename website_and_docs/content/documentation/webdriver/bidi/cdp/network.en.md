@@ -122,7 +122,7 @@ Both requests and responses can be recorded or transformed.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L125-L126" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_logging.py#L26-L28" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L26-L28" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L114-L118" >}}
@@ -146,7 +146,7 @@ Both requests and responses can be recorded or transformed.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L142-L157" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_logging.py#L37-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L37-L44" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L136-L143" >}}
