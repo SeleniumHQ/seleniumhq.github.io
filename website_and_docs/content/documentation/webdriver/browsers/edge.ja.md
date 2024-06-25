@@ -465,4 +465,4 @@ You can simulate various network conditions.
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using DevTools in Edge
+See the [Chrome DevTools] section for more information about using DevTools in Edge

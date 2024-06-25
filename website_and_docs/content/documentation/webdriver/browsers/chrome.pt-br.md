@@ -466,4 +466,4 @@ please refer to the
 
 ### DevTools
 
-Veja a secção [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) para mais informação em como usar Chrome DevTools
+Veja a secção [Chrome DevTools] para mais informação em como usar Chrome DevTools

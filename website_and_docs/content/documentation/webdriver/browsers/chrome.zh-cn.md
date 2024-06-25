@@ -465,4 +465,4 @@ please refer to the
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using Chrome DevTools
+See the [Chrome DevTools] section for more information about using Chrome DevTools

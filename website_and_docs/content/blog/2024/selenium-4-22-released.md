@@ -20,7 +20,8 @@ Links to everything can be found on our [downloads page][downloads].
     * The numbers only represent users who have Selenium Manager enabled and are using Selenium v4.17 or greater.
     * Python, Chrome and Windows all see the majority of use.
 * Chrome DevTools support is now: v124, v125, and v126 (Firefox still uses v85 for all versions)
-* The first implementations of the final BiDi API have rolled out.
+* The first implementations of the new [BiDi API](https://www.selenium.dev/documentation/webdriver/bidi/logging)
+have rolled out in Ruby, Python and JavaScript
 
 #### Noteworthy changes per language
 
@@ -101,12 +102,11 @@ Links to everything can be found on our [downloads page][downloads].
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/alaahong" >}}
 {{< gh-user "https://api.github.com/users/aguspe" >}}
-{{< gh-user "https://api.github.com/users/digitalvoice-nz
-{{< gh-user "https://api.github.com/users/josh-pinwheelapi
+{{< gh-user "https://api.github.com/users/digitalvoice-nz" >}}
+{{< gh-user "https://api.github.com/users/josh-pinwheelapi" >}}
 {{< gh-user "https://api.github.com/users/pallavigitwork" >}}
 {{< gh-user "https://api.github.com/users/Pexpe" >}}
 {{< gh-user "https://api.github.com/users/sangcnguyen" >}}
-" >}}
     </div>
   </div>
 </div>
