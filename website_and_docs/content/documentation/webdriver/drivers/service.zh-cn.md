@@ -1,20 +1,20 @@
 ---
-title: "Driver Service Class"
+title: "驱动服务类"
 linkTitle: "服务"
 weight: 3
 ---
 
 服务类用于管理驱动程序的启动和停止.
-They can not be used with a Remote WebDriver session.
+它们不能与远程 WebDriver 会话一起使用.
 
-Service classes allow you to specify information about the driver,
-like location and which port to use.
-They also let you specify what arguments get passed
-to the command line. Most of the useful arguments are related to logging.
+服务类允许您指定有关驱动程序的信息,
+诸如位置和要使用的端口.
+它们还允许您指定传递哪些参数到命令行.
+大多数有用的参数都与日志记录有关.
 
-## Default Service instance
+## 默认服务实例
 
-To start a driver with a default service instance:
+使用默认服务实例启动驱动程序:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -38,10 +38,12 @@ To start a driver with a default service instance:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Driver location
+## 驱动程序位置
 
-**Note:** If you are using Selenium 4.6 or greater, you shouldn't need to set a driver location.
-If you can not update Selenium or have an advanced use case here is how to specify the driver location:
+**注意:** 如果您使用的是 Selenium 4.6 或更高版本, 
+则无需设置驱动程序位置.
+如果您无法更新 Selenium 或有高阶用法需求, 
+以下是指定驱动程序位置的方法:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -67,9 +69,10 @@ If you can not update Selenium or have an advanced use case here is how to speci
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Driver port
+## 驱动程序端口
 
-If you want the driver to run on a specific port, you may specify it as follows:
+如果希望驱动程序在特定端口上运行, 
+可以按如下方式指定:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -95,10 +98,11 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< /tabpane >}}
 
 <span id="setting-log-output"></span>
-## Logging
+## 日志
 
-Logging functionality varies between browsers. Most browsers allow you to
-specify location and level of logs. Take a look at the respective browser page:
+日志记录功能因浏览器而异.
+大多数浏览器都允许您指定日志的位置和级别.
+请查看相应的浏览器页面:
 * [Chrome]({{< ref "../browsers/chrome#service" >}})
 * [Edge]({{< ref "../browsers/edge#service" >}})
 * [Firefox]({{< ref "../browsers/firefox#service" >}})
