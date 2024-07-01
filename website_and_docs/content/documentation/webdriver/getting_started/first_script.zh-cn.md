@@ -16,7 +16,7 @@ Selenium所做的一切,
 您将使用Selenium执行的大部分操作,
 都是以下基本命令的组合
 
-Click on the link to "View full example on GitHub" to see the code in context.
+点击 "View full example on GitHub" 的链接以查看上下文中的代码.
 
 ### 1. 使用驱动实例开启会话
 
@@ -217,7 +217,7 @@ Click on the link to "View full example on GitHub" to see the code in context.
 默认情况下, 该进程也会关闭浏览器. 
 无法向此驱动程序实例发送更多命令. 
 
-See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
+详见 [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -241,7 +241,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< /tabpane >}}
 
 
-## Running Selenium File
+## 运行 Selenium 文件
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -267,6 +267,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
 ## 接下来的步骤
 
-Most Selenium users execute many sessions and need to organize them to minimize duplication and keep the code
-more maintainable. Read on to learn about how to put this code into context for your use case with
-[Using Selenium]({{< ref "using_selenium.md" >}}).
+大多数 Selenium 用户执行许多会话，
+需要组织它们以最大限度地减少重复并维持代码更易于维护.
+请继续阅读，了解如何将此代码放入您用例的上下文中
+[使用 Selenium]({{< ref "using_selenium.md" >}}).
