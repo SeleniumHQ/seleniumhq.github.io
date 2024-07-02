@@ -17,7 +17,7 @@ the community has managed to garner over [2.5 million active](https://plausible.
 Selenium users monthly.
 
 We could not have achieved Selenium's 20th anniversary without the collective efforts of numerous 
-volunteers and the invaluable assistance of corporations such as [Sauce Labs](https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25).
+volunteers and the invaluable assistance of a company like [Sauce Labs](https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25).
 
 In 2008, Jason Huggins, Selenium's creator, established Sauce Labs, a company that has since 
 played a crucial role in Selenium's expansion.
