@@ -48,8 +48,8 @@ enabling these contributions to be part of their daily work.
 
 This unwavering support has nurtured a project governed openly, not by a single entity, but 
 by the community. This model has welcomed diverse contributors, including Google Chrome, 
-Microsoft, Apple, BrowserStack, and Mozilla Firefox teams. Together, they have developed WebDriver 
-BiDi, the next generation of WebDriver.
+Microsoft, Apple, LambdaTest, Applitools, BrowserStack, and Mozilla Firefox teams. Together, they 
+have developed WebDriver BiDi, the next generation of WebDriver.
 
 The project's open governance and collaborative nature have allowed continuous work on client 
 bindings, particularly WebDriver BiDi, community support, documentation improvements, and 
