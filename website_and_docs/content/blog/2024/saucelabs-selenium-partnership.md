@@ -5,6 +5,8 @@ date: 2024-07-02
 tags: ["selenium"]
 categories: ["general"]
 author: David Burns [@automatedtester](https://www.linkedin.com/in/theautomatedtester/)
+images:
+  - "/images/blog/saucelabs-selenium-partnership.jpeg"
 description: >
     Announcing a new Development partnership tier with Sauce Labs, celebrating our supporters!
 ---
