@@ -47,5 +47,18 @@ public class OptionsTest extends BaseTest {
       driver.quit();
     }
   }
+
+  @Test
+  public void setAcceptInsecureCerts() {
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.setAcceptInsecureCerts(true);
+    WebDriver driver = new ChromeDriver(chromeOptions);
+    try {
+      // Navigate to Url
+      driver.get("https://selenium.dev");
+    } finally {
+      driver.quit();
+    }
+  }
 }
 

@@ -19,9 +19,13 @@ current window by using:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-  {{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
+  {{< tab header="CSharp" >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18" >}}
+   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -33,40 +37,15 @@ Clicking a link which opens in a
 <a href="https://seleniumhq.github.io" target="_blank"> new window</a>
 will focus the new window or tab on screen, but WebDriver will not know which
 window the Operating System considers active.  To work with the new window
-you will need to switch to it. If you have only two tabs or windows open,
-and you know which window you start with, by the process of elimination
-you can loop over both windows or tabs that WebDriver can see, and switch
-to the one which is not the original.
-
-However, Selenium 4 provides a new api [NewWindow](#create-new-window-or-new-tab-and-switch) 
-which creates a new tab (or) new window and automatically switches to it.
+you will need to switch to it. For this, we fetch all window handles,
+and store them in an array. The array position fills in the order the
+window is launched. So first position will be default browser, and so on.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Store the ID of the original window
-String originalWindow = driver.getWindowHandle();
-
-//Check we don't have other windows open already
-assert driver.getWindowHandles().size() == 1;
-
-//Click the link which opens in a new window
-driver.findElement(By.linkText("new window")).click();
-
-//Wait for the new window or tab
-wait.until(numberOfWindowsToBe(2));
-
-//Loop through until we find a new window handle
-for (String windowHandle : driver.getWindowHandles()) {
-    if(!originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle);
-        break;
-    }
-}
-
-//Wait for the new tab to finish loading content
-wait.until(titleIs("Selenium documentation"));
-  {{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -204,60 +183,6 @@ wait.until(titleIs("Selenium documentation"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Create new window (or) new tab and switch
-Creates a new window (or) tab and will focus the new window or tab on screen.
-You don't need to switch to work with the new window (or) tab. If you have more than two windows
-(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
-and switch to the one which is not the original.
-
-__Note: This feature works with Selenium 4 and later versions.__
-
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB);
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Opens a new tab and switches to new tab
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// Opens a new window and switches to new window
-driver.SwitchTo().NewWindow(WindowType.Window)
-  {{< /tab >}}
-  {{% tab header="Ruby" text=true %}}
-Opens a new tab and switches to new tab:
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
-
-Opens a new window and switches to new window:
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
-  {{% /tab %}}
-{{< tab header="JavaScript" text=true >}}
-Opens a new tab and switches to new tab
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
-
-Opens a new window and switches to new window:
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
-{{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB)
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW)
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ### Closing a window or tab
 
 When you are finished with a window or tab _and_ it is not the
@@ -268,13 +193,9 @@ handle stored in a variable. Put this together and you will get:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Close the tab or window
-driver.close();
-
-//Switch back to the old tab or window
-driver.switchTo().window(originalWindow);
-  {{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     #Close the tab or window
 driver.close()
@@ -318,6 +239,58 @@ window will leave WebDriver executing on the now closed page, and will
 trigger a **No Such Window Exception**. You must switch
 back to a valid window handle in order to continue execution.
 
+### Create new window (or) new tab and switch
+Creates a new window (or) tab and will focus the new window or tab on screen.
+You don't need to switch to work with the new window (or) tab. If you have more than two windows
+(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
+and switch to the one which is not the original.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+   {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< /tab >}}
+  {{< tab header="Python" >}}
+    # Opens a new tab and switches to new tab
+driver.switch_to.new_window('tab')
+
+    # Opens a new window and switches to new window
+driver.switch_to.new_window('window')
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+// Opens a new tab and switches to new tab
+driver.SwitchTo().NewWindow(WindowType.Tab)
+
+// Opens a new window and switches to new window
+driver.SwitchTo().NewWindow(WindowType.Window)
+  {{< /tab >}}
+  {{% tab header="Ruby" text=true %}}
+Opens a new tab and switches to new tab:
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+
+Opens a new window and switches to new window:
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
+{{< tab header="JavaScript" text=true >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+
+Opens a new window and switches to new window:
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB)
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW)
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
+
 ### Quitting the browser at the end of a session
 
 When you are finished with the browser session you should call quit,
@@ -325,7 +298,9 @@ instead of close:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}driver.quit();{{< /tab >}}
+     {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
   {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}

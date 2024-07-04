@@ -2,7 +2,7 @@
 title: "入门指南"
 linkTitle: "入门指南"
 weight: 2
-needsTranslation: true
+needsTranslation: false
 description: >
   如果你是Selenium的新手, 我们有一些资源帮助你快速入门.
 aliases: [
@@ -16,7 +16,7 @@ aliases: [
 
 
 Selenium 通过使用 _WebDriver_ 支持市场上所有主流浏览器的自动化。
-Webdriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。
+WebDriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。
 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。
 驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。
 
@@ -28,15 +28,15 @@ Selenium 框架通过一个面向用户的界面将所有这些部分连接在�
 该界面允许透明地使用不同的浏览器后端，
 从而实现跨浏览器和跨平台自动化。
 
-Selenium setup is quite different from the setup of other commercial tools.
-Before you can start writing Selenium code, you have to 
-install the language bindings libraries for your language of choice, the browser you
-want to use, and the driver for that browser.
+Selenium的设置与其他商业工具有很大不同.
+在开始编写 Selenium 代码之前, 
+您必须安装所选语言的相关类库,
+目标浏览器的驱动程序.
 
-***Follow the links below to get up and going with Selenium WebDriver.***
+***请点击以下链接，开始使用 Selenium WebDriver.***
 
-If you wish to start with a low-code/record and playback tool, please check
+如果您希望从低代码/录制和播放工具开始，请查看
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-Once you get things working, if you want to scale up your tests, check out the 
+开始工作后，如果想扩展您的测试，请查看 
 [Selenium Grid]({{< ref "/documentation/grid" >}}).
