@@ -17,7 +17,7 @@ namespace SeleniumDocs
         protected IWebDriver driver;
         protected Uri GridUrl;
         private Process _webserverProcess;
-        private const string ServerJarName = "selenium-server-4.21.0.jar";
+        private const string ServerJarName = "selenium-server-4.22.0.jar";
         private static readonly string BaseDirectory = AppContext.BaseDirectory;
         private const string RelativePathToGrid = "../../../../../";
         private readonly string _examplesDirectory = Path.GetFullPath(Path.Combine(BaseDirectory, RelativePathToGrid));

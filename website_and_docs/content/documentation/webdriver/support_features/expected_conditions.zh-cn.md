@@ -1,23 +1,23 @@
 ---
-title: "Waiting with Expected Conditions"
-linkTitle: "Expected Conditions"
+title: "期望状态的等待"
+linkTitle: "期望状态"
 weight: 1
 description: >
-  These are classes used to describe what needs to be waited for.
+  本文档描述了一系列类, 这些类用于明确指定在测试中需要等待的各种条件.
 ---
 
-Expected Conditions are used with [Explicit Waits]({{< ref "../waits#explicit-waits" >}}).
-Instead of defining the block of code to be executed with a _lambda_, an expected
-conditions method can be created to represent common things that get waited on. Some
-methods take locators as arguments, others take elements as arguments.
+期望状态与 [显示等待]({{< ref "../waits#explicit-waits" >}}) 一起使用.
+与其定义要使用 _lambda_ 执行的代码块, 
+不如使用 _lambda_ 执行可以创建 Conditions 方法来表示等待的常见事物.
+有些方法将定位器作为参数, 有些方法将元素作为参数.
 
-These methods can include conditions such as:
+这些方法可以包括以下条件:
 
-* element exists
-* element is stale
-* element is visible
-* text is visible
-* title contains specified value
+* 元素存在
+* 元素已过期
+* 元素可见
+* 文本可见
+* 标题包含特定值
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
