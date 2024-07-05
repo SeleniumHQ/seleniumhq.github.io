@@ -1,9 +1,9 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $col_id := .Get "color" | default .Ordinal }}
 {{ $height := .Get "height" | default "auto"  }}
-{{ $type   := .Get "type" | default "" }} 
+{{ $type   := .Get "type" | default "" }}
 <a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
-<section class="row td-box td-box--gradient -bg-{{ $col_id }} p-2">
+<section class="row td-box td-box--gradient -bg-{{ $col_id }} p-2" {{ if not .Site.Params.banner_flag }}style="margin-top: 50px;"{{end}}>
 	<div class="col">
 		<div class="row {{ $type }}">
 			{{ if eq .Page.File.Ext "md" }}
