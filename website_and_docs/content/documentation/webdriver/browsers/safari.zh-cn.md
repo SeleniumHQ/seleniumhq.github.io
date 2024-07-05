@@ -106,7 +106,7 @@ Apple 提供了其浏览器的开发版本 — [Safari Technology Preview](https
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L36-L37" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
