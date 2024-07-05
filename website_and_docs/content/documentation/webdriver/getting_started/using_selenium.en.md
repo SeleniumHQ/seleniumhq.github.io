@@ -143,16 +143,16 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L10-L11" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L27" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -190,7 +190,14 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+
+### Set Up
+
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -226,8 +233,16 @@ gradle clean test
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
 
+### Mocha
+
 ```shell
 mocha runningTests.spec.js
+```
+
+### npx
+
+```shell
+npx mocha runningTests.spec.js
 ```
 
 {{% /tab %}}

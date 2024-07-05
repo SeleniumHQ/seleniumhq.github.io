@@ -118,7 +118,7 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--browser-path <BROWSER_PATH>`|`browser-path = "BROWSER_PATH"`|`SE_BROWSER_PATH=BROWSER_PATH`|Browser path (absolute) for browser version detection (e.g., `/usr/bin/google-chrome`, `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, `C:\Program Files\Google\Chrome\Application\chrome.exe`)|
 |`--driver-mirror-url <DRIVER_MIRROR_URL>`|`driver-mirror-url = "DRIVER_MIRROR_URL"`|`SE_DRIVER_MIRROR_URL=DRIVER_MIRROR_URL`|Mirror URL for driver repositories|
 |`--browser-mirror-url <BROWSER_MIRROR_URL>`|`browser-mirror-url = "BROWSER_MIRROR_URL"`|`SE_BROWSER_MIRROR_URL=BROWSER_MIRROR_URL`|Mirror URL for browser repositories|
-|`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), or `SHELL` (Unix-like). Default: `LOGGER`|
+|`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), `SHELL` (Unix-like), or `MIXED` (`INFO`, `WARN`, `DEBUG`, etc. to stderr and minimal `JSON` to stdout). Default: `LOGGER`|
 |`--os <OS>`|`os = "OS"`|`SE_OS=OS`|Operating system for drivers and browsers (i.e., `windows`, `linux`, or `macos`)|
 |`--arch <ARCH>`|`arch = "ARCH"`|`SE_ARCH=ARCH`|System architecture for drivers and browsers (i.e., `x32`, `x64`, or `arm64`)|
 |`--proxy <PROXY>`|`proxy = "PROXY"`|`SE_PROXY=PROXY`|HTTP proxy for network connection (e.g., `myproxy:port`, `myuser:mypass@myproxy:port`)|
@@ -159,8 +159,8 @@ Let's consider an example. A Selenium binding asks Selenium Manager to resolve c
 
 Selenium Manager includes two additional arguments two handle the cache, namely:
 
-- `--clear-cache`: To remove the cache folder.
-- `--clear-metadata`: To remove the metadata file.
+- `--clear-cache`: To remove the cache folder (equivalent to the environment variable `SE_CLEAR_CACHE=true`).
+- `--clear-metadata`: To remove the metadata file (equivalent to the environment variable `SE_CLEAR_METADATA=true`).
 
 ## Versioning
 Selenium Manager follows the same versioning schema as Selenium. Nevertheless, we use the major version 0 for Selenium Manager releases because it is still in beta. For example, the Selenium Manager binaries shipped with Selenium 4.12.0 corresponds to version 0.4.12.

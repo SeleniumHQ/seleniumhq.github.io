@@ -130,7 +130,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.20.0.jar",
+        "selenium-server-4.22.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -188,7 +188,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.20.0.jar",
+        "selenium-server-4.22.0.jar",
     )
 
     args = [
@@ -206,7 +206,7 @@ def server():
 
     process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    def wait_for_server(url, timeout=20):
+    def wait_for_server(url, timeout=60):
         start = time.time()
         while time.time() - start < timeout:
             try:

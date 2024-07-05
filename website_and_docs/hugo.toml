@@ -164,7 +164,8 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-announcement_banner = true
+banner_flag = false
+announcement_banner = false
 
 # Enable Algolia DocSearch
 [params.search.algolia]
@@ -220,11 +221,6 @@ enable = false
 	url = "https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"
 	icon = "fab fa-youtube"
         desc = "Check all the conference talks and learn from the community!"
-[[params.links.user]]
-	name = "Selenium in Facebook"
-	url = "https://www.facebook.com/Selenium2.WebDriver"
-	icon = "fab fa-facebook"
-        desc = "Get news and updates in Facebook!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Software Freedom Conservancy"

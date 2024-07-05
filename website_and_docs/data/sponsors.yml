@@ -3,7 +3,7 @@ development:
   item:
       # Sponsorship start date: July 30, 2014 - Renewed April 2024 under the "Development" level
     - logo: "/images/sponsors/browserstack.png"
-      url: "http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral"
+      url: "https://www.browserstack.com/automate?utm_campaign=open-source-sponsor&utm_campaigncode=701OW000009sQwVYAU&utm_medium=partnered&utm_source=seleniumorg"
       name: "BrowserStack"
     # Sponsorship start date: August 23, 2014 - Renewed April 2024 under the "Development" level
     - logo: "/images/sponsors/saucelabs.png"

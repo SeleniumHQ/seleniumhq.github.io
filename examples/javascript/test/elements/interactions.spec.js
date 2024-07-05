@@ -19,7 +19,8 @@ suite(function (env) {
         let inputField = await driver.findElement(By.name('no_type'));
         await inputField.clear();
         await inputField.sendKeys('Selenium');
-        assert.strictEqual(await inputField.getText(), "Selenium");
+        const text = await inputField.getAttribute('value');
+        assert.strictEqual(text, "Selenium");
       } catch (e) {
         console.log(e)
       }

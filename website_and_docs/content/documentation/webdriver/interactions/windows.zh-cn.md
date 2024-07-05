@@ -13,9 +13,13 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 每个窗口都有一个唯一的标识符，该标识符在单个会话中保持持久性。你可以使用以下方法获得当前窗口的窗口句柄:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-{{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
+  {{< tab header="CSharp" >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18" >}}
+    {{< /tab >}}
 {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -33,29 +37,8 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 它创建一个新选项卡 (或) 新窗口并自动切换到它。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 存储原始窗口的 ID
-String originalWindow = driver.getWindowHandle();
-
-// 检查一下，我们还没有打开其他的窗口
-assert driver.getWindowHandles().size() == 1;
-
-// 点击在新窗口中打开的链接
-driver.findElement(By.linkText("new window")).click();
-
-// 等待新窗口或标签页
-wait.until(numberOfWindowsToBe(2));
-
-// 循环执行，直到找到一个新的窗口句柄
-for (String windowHandle : driver.getWindowHandles()) {
-	if(!originalWindow.contentEquals(windowHandle)) {
-		driver.switchTo().window(windowHandle);
-		break;
-	}
-}
-
-// 等待新标签完成加载内容
-wait.until(titleIs("Selenium documentation"));
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium import webdriver
@@ -189,71 +172,14 @@ wait.until(titleIs("Selenium documentation"))
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 创建新窗口(或)新标签页并且切换
-
-创建一个新窗口 (或) 标签页，屏幕焦点将聚焦在新窗口或标签在上。您不需要切换到新窗口 (或) 标签页。如果除了新窗口之外，
-您打开了两个以上的窗口 (或) 标签页，您可以通过遍历 WebDriver 看到两个窗口或选项卡，并切换到非原始窗口。
-
-_注意: 该特性适用于 Selenium 4 及其后续版本。_
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 打开新标签页并切换到新标签页
-driver.switchTo().newWindow(WindowType.TAB);
-
-// 打开一个新窗口并切换到新窗口
-driver.switchTo().newWindow(WindowType.WINDOW);
-{{< /tab >}}
-{{< tab header="Python" >}}
-    # 打开新标签页并切换到新标签页
-driver.switch_to.new_window('tab')
-
-    # 打开一个新窗口并切换到新窗口
-driver.switch_to.new_window('window')
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// 打开新标签页并切换到新标签页
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// 打开一个新窗口并切换到新窗口
-driver.SwitchTo().NewWindow(WindowType.Window)
-{{< /tab >}}
-  {{% tab header="Ruby" text=true %}}
-打开新标签页并切换到新标签页
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
-
-打开一个新窗口并切换到新窗口
-{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
-  {{% /tab %}}
-{{< tab header="JavaScript" text=true >}}
-// 打开新标签页并切换到新标签页
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
-
-// 打开一个新窗口并切换到新窗口
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
-
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 打开新标签页并切换到新标签页
-driver.switchTo().newWindow(WindowType.TAB)
-
-// 打开一个新窗口并切换到新窗口
-driver.switchTo().newWindow(WindowType.WINDOW)
-{{< /tab >}}
-{{< /tabpane >}}
-
 ### 关闭窗口或标签页
 
 当你完成了一个窗口或标签页的工作时，_并且_它不是浏览器中最后一个打开的窗口或标签页时，你应该关闭它并切换回你之前使用的窗口。
 假设您遵循了前一节中的代码示例，您将把前一个窗口句柄存储在一个变量中。把这些放在一起，你会得到:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-//关闭标签页或窗口
-driver.close();
-
-//切回到之前的标签页或窗口
-driver.switchTo().window(originalWindow);
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
     #关闭标签页或窗口
@@ -296,11 +222,66 @@ driver.switchTo().window(originalWindow)
 如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个
 **No Such Window Exception 无此窗口异常**。必须切换回有效的窗口句柄才能继续执行。
 
+### 创建新窗口(或)新标签页并且切换
+
+创建一个新窗口 (或) 标签页，屏幕焦点将聚焦在新窗口或标签在上。您不需要切换到新窗口 (或) 标签页。如果除了新窗口之外，
+您打开了两个以上的窗口 (或) 标签页，您可以通过遍历 WebDriver 看到两个窗口或选项卡，并切换到非原始窗口。
+
+_注意: 该特性适用于 Selenium 4 及其后续版本。_
+
+{{< tabpane langEqualsHeader=true >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+    # 打开新标签页并切换到新标签页
+driver.switch_to.new_window('tab')
+
+    # 打开一个新窗口并切换到新窗口
+driver.switch_to.new_window('window')
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+// 打开新标签页并切换到新标签页
+driver.SwitchTo().NewWindow(WindowType.Tab)
+
+// 打开一个新窗口并切换到新窗口
+driver.SwitchTo().NewWindow(WindowType.Window)
+{{< /tab >}}
+  {{% tab header="Ruby" text=true %}}
+打开新标签页并切换到新标签页
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+
+打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
+{{< tab header="JavaScript" text=true >}}
+// 打开新标签页并切换到新标签页
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+
+// 打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// 打开新标签页并切换到新标签页
+driver.switchTo().newWindow(WindowType.TAB)
+
+// 打开一个新窗口并切换到新窗口
+driver.switchTo().newWindow(WindowType.WINDOW)
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+
 ### 在会话结束时退出浏览器
 
 当你完成了浏览器会话，你应该调用 quit 退出，而不是 close 关闭:
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.quit();{{< /tab >}}
+
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< /tab >}}
+
 {{< tab header="Python" >}}driver.quit(){{< /tab >}}
 {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
 {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
