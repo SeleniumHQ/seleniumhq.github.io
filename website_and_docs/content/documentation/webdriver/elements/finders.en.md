@@ -52,9 +52,9 @@ vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" text=true>}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10" >}}
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const vegetable = await driver.findElement(By.className('tomatoes'));
   {{< /tab >}}
@@ -87,8 +87,8 @@ fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
 IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true>}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15" >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruits = await driver.findElement(By.id('fruits'));
@@ -130,7 +130,7 @@ fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true>}}
+{{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
@@ -160,7 +160,7 @@ plants = driver.find_elements(By.TAG_NAME, "li")
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true>}}
+{{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L23" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
@@ -226,7 +226,7 @@ namespace FindElementsExample {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" text=true>}}
+   {{< tab header="Ruby" text=true >}}
    {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
@@ -344,7 +344,7 @@ namespace FindElementsFromElement {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" text=true>}}
+   {{< tab header="Ruby" text=true >}}
    {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
@@ -452,7 +452,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
      }
     }
   {{< /tab >}}
-  {{< tab header="Ruby" text=true>}}
+  {{< tab header="Ruby" text=true >}}
   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
