@@ -21,28 +21,28 @@ env:
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
-  test_examples:
+  tests:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        os: [ ubuntu, windows, macos ]
         release: [ stable, nightly ]
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
       - name: Checkout GitHub repo
         uses: actions/checkout@v4
       - name: Remove driver directories Windows
-        if: matrix.os == 'windows-latest'
+        if: matrix.os == 'windows'
         run: |
           rm "$env:ChromeWebDriver" -r -v
           rm "$env:EdgeWebDriver" -r -v
           rm "$env:GeckoWebDriver" -r -v
       - name: Remove driver directories Non-Windows
-        if: matrix.os != 'windows-latest'
+        if: matrix.os != 'windows'
         run: |
           sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
       - name: Start Xvfb
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu'
         run: Xvfb :99 &
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -50,7 +50,7 @@ jobs:
           ruby-version: 3.0
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
-        if: matrix.release == 'nightly' && matrix.os != 'windows-latest'
+        if: matrix.release == 'nightly' && matrix.os != 'windows'
         run:
           |
           latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
@@ -61,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Gems Nightly Windows
-        if: matrix.release == 'nightly' && matrix.os == 'windows-latest'
+        if: matrix.release == 'nightly' && matrix.os == 'windows'
         run:
           |
           $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
