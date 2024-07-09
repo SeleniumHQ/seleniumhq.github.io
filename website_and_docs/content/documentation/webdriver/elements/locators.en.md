@@ -34,7 +34,7 @@ Selenium provides support for these 8 traditional location strategies in WebDriv
 ## Creating Locators
 
 To work on a web element using Selenium, we need to first locate it on the web page.
-Selenium provides us above mentioned ways, using which we can locate an element on the 
+Selenium provides the above-mentioned methods, which we can use to locate an element on the 
 page. To understand how to create a locator we will use the following HTML snippet.
 
 ```html
@@ -295,7 +295,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 
 ## xpath 
 
-A HTML document can be considered as a XML document, and then we can use XPath
+An HTML document can be considered as an XML document, and then we can use XPath
 which will be the path traversed to reach the element of interest to locate the element.
 The XPath could be absolute xpath, which is created from the root of the document.
 For example, /html/form/input[1]. This will return the male radio button.
@@ -343,8 +343,7 @@ Selenium uses the JavaScript function
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 to determine the size and position of elements on the page, and can use this information to locate neighboring elements.
 
-Relative locator methods can take either a previously located element reference, 
-or another locator, as the argument for the point of origin. In these examples we'll be using locators only, but you could swap the locator in the final method with
+Relative locator methods can take a previously located element reference, or another locator, as the argument for the point of origin. In these examples we'll be using locators only, but you could swap the locator in the final method with
 an element object and it will work the same.
 
 Let us consider the below example for understanding the relative locators.
