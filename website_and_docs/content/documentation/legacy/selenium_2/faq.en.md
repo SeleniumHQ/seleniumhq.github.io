@@ -35,7 +35,7 @@ A: We believe that within a software application's development team, the people 
 
 A: We believe that most of the time there is a requirement to execute Javascript there is a failing in the tool being used: it hasn't emitted the correct events, has not interacted with a page correctly, or has failed to react when an XmlHttpRequest returns. We would rather fix WebDriver to work consistently and correctly than rely on testers working out which Javascript method to call.
 
-We also realise that there will be times when this is a limitation. As a result, for those browsers that support it, you can execute Javascript by casting the WebDriver instance to a [JavascriptExecutor](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/JavascriptExecutor.html). In Java, this looks like:
+We also realise that there will be times when this is a limitation. As a result, for those browsers that support it, you can execute Javascript by casting the WebDriver instance to a JavascriptExecutor (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/JavascriptExecutor.html`). In Java, this looks like:
 
 ```
 WebDriver driver; // Assigned elsewhere
@@ -87,7 +87,7 @@ A: WebDriver offers the ability to cope with multiple windows. This is done by u
 
 ### Q: Does WebDriver support Javascript alerts and prompts?
 
-A: Yes, using the [Alerts API](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Alert.html):
+A: Yes, using the Alerts API (`http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/Alert.html`):
 
 ```
 // Get a handle to the open alert, prompt or confirmation

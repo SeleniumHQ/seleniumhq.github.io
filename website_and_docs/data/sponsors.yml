@@ -1,19 +1,27 @@
+development:
+  enable: true
+  item:
+      # Sponsorship start date: July 30, 2014 - Renewed April 2024 under the "Development" level
+    - logo: "/images/sponsors/browserstack.png"
+      url: "https://www.browserstack.com/automate?utm_campaign=open-source-sponsor&utm_campaigncode=701OW000009sQwVYAU&utm_medium=partnered&utm_source=seleniumorg"
+      name: "BrowserStack"
+    # Sponsorship start date: August 23, 2014 - Renewed April 2024 under the "Development" level
+    - logo: "/images/sponsors/saucelabs.png"
+      url: "https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25"
+      name: "Sauce Labs"
+
 selenium:
   # Set to false if no items are present
   enable: true
   item:
-    # Sponsorship start date: July 30, 2014, renewed January 2020
-    - logo: "/images/sponsors/browserstack.png"
-      url: "http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral"
-      name: "BrowserStack"
-    # Sponsorship start date: August 23, 2014
-    - logo: "/images/sponsors/saucelabs.png"
-      url: "http://saucelabs.com"
-      name: "Sauce Labs"
-    # Sponsorship start date: June 24, 2015
-    - logo: "/images/sponsors/experitest.png"
+    # Sponsorship start date: April 16, 2024
+    - logo: "/images/sponsors/bright-data.png"
+      url: "https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium"
+      name: "Bright Data"
+    # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
+    - logo: "/images/sponsors/Digital.ai.jpg"
       url: "http://bit.ly/36uZ7ad"
-      name: "Experitest"
+      name: "Digital.ai"
     # Sponsorship start date: March 21, 2017
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
@@ -24,7 +32,7 @@ selenium:
       name: "Perfecto"
     # Sponsorship start date: July 08, 2021
     - logo: "/images/sponsors/lambda-test.png"
-      url: "https://www.lambdatest.com/selenium-automation"
+      url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
       name: "LambdaTest"
     # Added: December 17, 2017
     - logo: "/images/sponsors/subject7_logo.png"
@@ -86,6 +94,14 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Jul 5, 2024
+    - logo: "/images/sponsors/rtts-logo.jpg"
+      url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
+      name: "Real-Time Technology Solutions Inc."
+    # Sponsorship start date: Mar 20, 2023
+    - logo: "/images/sponsors/kiwiqa-logo.png"
+      url: "https://www.kiwiqa.com/"
+      name: "KiwiQA"
     # Sponsorship start date: Sep 3, 2022
     - logo: "/images/sponsors/SelectorsHub_logo.png"
       url: "https://selectorshub.com/"

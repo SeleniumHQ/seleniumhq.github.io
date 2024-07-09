@@ -6,7 +6,7 @@ weight: 4
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
    Page being translated from 
    English to Japanese. Do you speak Japanese? Help us to translate
    it by sending us pull requests!
@@ -100,8 +100,8 @@ public class DecoratedLoggingNode extends Node {
 
   private Node node;
 
-  protected DecoratedLoggingNode(Tracer tracer, URI uri, Secret registrationSecret) {
-    super(tracer, new NodeId(UUID.randomUUID()), uri, registrationSecret);
+  protected DecoratedLoggingNode(Tracer tracer, NodeId nodeId, URI uri, Secret registrationSecret, Duration sessionTimeout) {
+    super(tracer, nodeId, uri, registrationSecret, sessionTimeout);
   }
 
   public static Node create(Config config) {
@@ -109,12 +109,17 @@ public class DecoratedLoggingNode extends Node {
     BaseServerOptions serverOptions = new BaseServerOptions(config);
     URI uri = serverOptions.getExternalUri();
     SecretOptions secretOptions = new SecretOptions(config);
+    NodeOptions nodeOptions = new NodeOptions(config);
+    Duration sessionTimeout = nodeOptions.getSessionTimeout();
 
     // Refer to the foot notes for additional context on this line.
     Node node = LocalNodeFactory.create(config);
 
     DecoratedLoggingNode wrapper = new DecoratedLoggingNode(loggingOptions.getTracer(),
-        uri, secretOptions.getRegistrationSecret());
+        node.getId(),
+        uri,
+        secretOptions.getRegistrationSecret(),
+        sessionTimeout);
     wrapper.node = node;
     return wrapper;
   }

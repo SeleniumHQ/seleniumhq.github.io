@@ -13,7 +13,7 @@ Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目
 该 规范 允许您为所有主要 Web 浏览器编写可互换的代码。
 
 这个项目是由志愿者贡献者实现的，他们投入了自己数千小时的时间，
-并使源代码[免费提供]({{< ref "/copyright.md#license" >}})给任何人使用、享受和改进。
+并使源代码[免费提供]({{< ref "/copyright.md#许可" >}})给任何人使用、享受和改进。
 
 Selenium 汇集了浏览器供应商，工程师和爱好者，以进一步围绕 Web 平台自动化进行公开讨论。
 该项目组织了[一次年度会议](//seleniumconf.com/)，以教学和培养社区。
@@ -23,7 +23,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 
 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
@@ -31,7 +31,7 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
@@ -56,4 +56,3 @@ Selenium 的核心是 [WebDriver]({{< ref "/webdriver.md" >}})，这是一个编
 在大型分布式环境,
 以及不同操作系统上的环境上
 运行多个浏览器的测试.
-

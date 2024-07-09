@@ -13,9 +13,13 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 每个窗口都有一个唯一的标识符，该标识符在单个会话中保持持久性。你可以使用以下方法获得当前窗口的窗口句柄:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< /tab >}}
 {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-{{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< /tab >}}
 {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -33,27 +37,8 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 它创建一个新选项卡 (或) 新窗口并自动切换到它。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 存储原始窗口的 ID
-String originalWindow = driver.getWindowHandle();
-
-// 检查一下，我们还没有打开其他的窗口
-assert driver.getWindowHandles().size() == 1;
-
-// 点击在新窗口中打开的链接
-driver.findElement(By.linkText("new window")).click();
-
-// 等待新窗口或标签页
-wait.until(numberOfWindowsToBe(2));
-
-// 循环执行，直到找到一个新的窗口句柄
-for (String windowHandle : driver.getWindowHandles()) {if(!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle);
-break;
-}
-}
-
-// 等待新标签完成加载内容
-wait.until(titleIs("Selenium documentation"));
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium import webdriver
@@ -89,29 +74,11 @@ driver.get("https://seleniumhq.github.io")
     # 等待新标签页完成加载内容
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 存储原始窗口的 ID
-string originalWindow = driver.CurrentWindowHandle;
 
-// 检查一下，我们还没有打开其他的窗口
-Assert.AreEqual(driver.WindowHandles.Count, 1);
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
+  {{< /tab >}}
 
-// 单击在新窗口中打开的链接
-driver.FindElement(By.LinkText("new window")).Click();
-
-// 等待新窗口或标签页
-wait.Until(wd => wd.WindowHandles.Count == 2);
-
-// 循环执行，直到找到一个新的窗口句柄
-foreach(string window in driver.WindowHandles)
-{if(originalWindow != window)
-{driver.SwitchTo().Window(window);
-break;
-}
-}
-// 等待新标签页完成加载内容
-wait.Until(wd => wd.Title == "Selenium documentation");
-{{< /tab >}}
 {{< tab header="Ruby" >}}
     # 存储原始窗口的 ID
 original_window = driver.window_handle
@@ -187,74 +154,14 @@ wait.until(titleIs("Selenium documentation"))
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 创建新窗口(或)新标签页并且切换
-
-创建一个新窗口 (或) 标签页，屏幕焦点将聚焦在新窗口或标签在上。您不需要切换到新窗口 (或) 标签页。如果除了新窗口之外，
-您打开了两个以上的窗口 (或) 标签页，您可以通过遍历 WebDriver 看到两个窗口或选项卡，并切换到非原始窗口。
-
-_注意: 该特性适用于 Selenium 4 及其后续版本。_
-
-{{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 打开新标签页并切换到新标签页
-driver.switchTo().newWindow(WindowType.TAB);
-
-// 打开一个新窗口并切换到新窗口
-driver.switchTo().newWindow(WindowType.WINDOW);
-{{< /tab >}}
-{{< tab header="Python" >}}
-    # 打开新标签页并切换到新标签页
-driver.switch_to.new_window('tab')
-
-    # 打开一个新窗口并切换到新窗口
-driver.switch_to.new_window('window')
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-// 打开新标签页并切换到新标签页
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// 打开一个新窗口并切换到新窗口
-driver.SwitchTo().NewWindow(WindowType.Window)
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-    # 注意：ruby 中的 new_window 只打开一个新标签页(或)窗口，不会自动切换
-    # 用户必须切换到新选项卡 (或) 新窗口
-
-    # 打开新标签页并切换到新标签页
-driver.manage.new_window(:tab)
-
-    # 打开一个新窗口并切换到新窗口
-driver.manage.new_window(:window)
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 打开新标签页并切换到新标签页
-await driver.switchTo().newWindow('tab');
-
-// 打开一个新窗口并切换到新窗口
-await driver.switchTo().newWindow('window');
-
-{{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 打开新标签页并切换到新标签页
-driver.switchTo().newWindow(WindowType.TAB)
-
-// 打开一个新窗口并切换到新窗口
-driver.switchTo().newWindow(WindowType.WINDOW)
-{{< /tab >}}
-{{< /tabpane >}}
-
 ### 关闭窗口或标签页
 
 当你完成了一个窗口或标签页的工作时，_并且_它不是浏览器中最后一个打开的窗口或标签页时，你应该关闭它并切换回你之前使用的窗口。
 假设您遵循了前一节中的代码示例，您将把前一个窗口句柄存储在一个变量中。把这些放在一起，你会得到:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-//关闭标签页或窗口
-driver.close();
-
-//切回到之前的标签页或窗口
-driver.switchTo().window(originalWindow);
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
     #关闭标签页或窗口
@@ -263,13 +170,11 @@ driver.close()
     #切回到之前的标签页或窗口
 driver.switch_to.window(original_window)
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-//关闭标签页或窗口
-driver.Close();
 
-//切回到之前的标签页或窗口
-driver.SwitchTo().Window(originalWindow);
-{{< /tab >}}
+   {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
+  {{< /tab >}}
+
 {{< tab header="Ruby" >}}
     #关闭标签页或窗口
 driver.close
@@ -297,13 +202,69 @@ driver.switchTo().window(originalWindow)
 如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个
 **No Such Window Exception 无此窗口异常**。必须切换回有效的窗口句柄才能继续执行。
 
+### 创建新窗口(或)新标签页并且切换
+
+创建一个新窗口 (或) 标签页，屏幕焦点将聚焦在新窗口或标签在上。您不需要切换到新窗口 (或) 标签页。如果除了新窗口之外，
+您打开了两个以上的窗口 (或) 标签页，您可以通过遍历 WebDriver 看到两个窗口或选项卡，并切换到非原始窗口。
+
+_注意: 该特性适用于 Selenium 4 及其后续版本。_
+
+{{< tabpane langEqualsHeader=true >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+    # 打开新标签页并切换到新标签页
+driver.switch_to.new_window('tab')
+
+    # 打开一个新窗口并切换到新窗口
+driver.switch_to.new_window('window')
+{{< /tab >}}
+  
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< /tab >}}
+  
+  
+  {{% tab header="Ruby" text=true %}}
+打开新标签页并切换到新标签页
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+
+打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
+{{< tab header="JavaScript" text=true >}}
+// 打开新标签页并切换到新标签页
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+
+// 打开一个新窗口并切换到新窗口
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+// 打开新标签页并切换到新标签页
+driver.switchTo().newWindow(WindowType.TAB)
+
+// 打开一个新窗口并切换到新窗口
+driver.switchTo().newWindow(WindowType.WINDOW)
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+
 ### 在会话结束时退出浏览器
 
 当你完成了浏览器会话，你应该调用 quit 退出，而不是 close 关闭:
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.quit();{{< /tab >}}
+
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< /tab >}}
+
 {{< tab header="Python" >}}driver.quit(){{< /tab >}}
-{{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< /tab >}}
 {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
@@ -324,11 +285,12 @@ driver.switchTo().window(originalWindow)
 /**
 * 使用 JUnit 的例子
 * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-  */
-  @AfterAll
-  public static void tearDown() {driver.quit();
-  }
-  {{< /tab >}}
+*/
+@AfterAll
+public static void tearDown() {
+    driver.quit();
+}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # unittest teardown
     # https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
@@ -365,11 +327,12 @@ end
 /**
 * 使用 JUnit 的例子
 * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-  */
-  @AfterAll
-  fun tearDown() {driver.quit()
-  }
-  {{< /tab >}}
+*/
+@AfterAll
+fun tearDown() {
+	driver.quit()
+}
+{{< /tab >}}
   {{< /tabpane >}}
 
 如果不在测试上下文中运行 WebDriver，您可以考虑使用 `try / finally`，这是大多数语言都提供的，
@@ -377,7 +340,10 @@ end
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-try {//WebDriver 代码…} finally {driver.quit();
+try {
+    //WebDriver 代码…
+} finally {
+    driver.quit();
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -464,14 +430,12 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {width, height} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -542,14 +506,12 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// 分别获取每个尺寸
-const {x, y} = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+分别获取每个尺寸
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// 或者存储尺寸并在以后查询它们
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
+或者存储尺寸并在以后查询它们
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -652,13 +614,13 @@ import java.io.*;
 import org.openqa.selenium.*;
 
 public class SeleniumTakeScreenshot {
-public static void main(String args[]) throws IOException {
-WebDriver driver = new ChromeDriver();
-driver.get("http://www.example.com");
-File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(scrFile, new File("./image.png"));
-driver.quit();
-}
+	public static void main(String args[]) throws IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.example.com");
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("./image.png"));
+		driver.quit();
+	}
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -696,21 +658,8 @@ driver.save_screenshot('./image.png')
 
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-let {Builder} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-let driver = await new Builder()
-.forBrowser('chrome')
-.build();
-
-    await driver.get('https://www.example.com');
-    // Returns base64 encoded string
-    let encodedString = await driver.takeScreenshot();
-    await fs.writeFileSync('./image.png', encodedString, 'base64');
-    await driver.quit();
-}())
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
@@ -745,13 +694,13 @@ import java.io.IOException;
 
 public class SeleniumelementTakeScreenshot {
 public static void main(String args[]) throws IOException {
-WebDriver driver = new ChromeDriver();
-driver.get("https://www.example.com");
-WebElement element = driver.findElement(By.cssSelector("h1"));
-File scrFile = element.getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(scrFile, new File("./image.png"));
-driver.quit();
-}
+	WebDriver driver = new ChromeDriver();
+		driver.get("https://www.example.com");
+		WebElement element = driver.findElement(By.cssSelector("h1"));
+		File scrFile = element.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("./image.png"));
+		driver.quit();
+	}
 }
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -799,22 +748,8 @@ ele = driver.find_element(:css, 'h1')
 ele.save_screenshot('./image.jpg')
 end
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-let driver = await new Builder()
-.forBrowser('chrome')
-.build();
-
-await driver.get('https://www.example.com');
-let ele = await driver.findElement(By.css("h1"));
-// Captures the element screenshot
-let encodedString = await ele.takeScreenshot(true);
-await fs.writeFileSync('./image.png', encodedString, 'base64');
-await driver.quit();
-}())
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -881,12 +816,8 @@ result = driver.execute_script("return arguments[0].innerText", header)
     # Executing JavaScript directly
 driver.execute_script("alert('hello world')")
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-// Stores the header element
-let header = await driver.findElement(By.css('h1'));
-
-// Executing JavaScript to capture innerText of header element
-let text = await driver.executeScript('return arguments[0].innerText', header);
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Stores the header element
@@ -911,14 +842,14 @@ _注意: 此功能需要无头模式下的Chromium浏览器_
 {{< tab header="Java" >}}
 import org.openqa.selenium.print.PrintOptions;
 
-    driver.get("https://www.selenium.dev");
-    printer = (PrintsPage) driver;
+driver.get("https://www.selenium.dev");
+printer = (PrintsPage) driver;
 
-    PrintOptions printOptions = new PrintOptions();
-    printOptions.setPageRanges("1-2");
+PrintOptions printOptions = new PrintOptions();
+printOptions.setPageRanges("1-2");
 
-    Pdf pdf = printer.print(printOptions);
-    String content = pdf.getContent();
+Pdf pdf = printer.print(printOptions);
+String content = pdf.getContent();
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium.webdriver.common.print_page_options import PrintOptions
@@ -938,24 +869,8 @@ driver.navigate_to 'https://www.selenium.dev'
 
     base64encodedContent = driver.print_page(orientation: 'landscape')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-let opts = new chrome.Options();
-let fs = require('fs');
-(async function example() {
-let driver = new Builder()
-.forBrowser('chrome')
-.setChromeOptions(opts.headless())
-.build();
-await driver.get('https://www.selenium.dev');
-try {
-let base64 = await driver.printPage({pageRanges:["1-2"]});
-await fs.writeFileSync('./test.pdf', base64, 'base64');
-} catch (e) {
-console.log(e)
-}
-await driver.quit();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 driver.get("https://www.selenium.dev")

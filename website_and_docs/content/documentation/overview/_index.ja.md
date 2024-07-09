@@ -1,7 +1,7 @@
 ---
 title: "概要"
 linkTitle: "概要"
-weight: 2
+weight: 1
 description: >
   Seleniumはあなたに適していますか？さまざまなプロジェクトのコンポーネントの概要を参照してください。
 aliases: ["/documentation/ja/introduction/"]

@@ -17,9 +17,13 @@ WebDriverは、ウィンドウとタブを区別しません。
 次のコードを使用して、現在のウィンドウのウィンドウハンドルを取得できます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.getWindowHandle();{{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-  {{< tab header="CSharp" >}}driver.CurrentWindowHandle;{{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -34,30 +38,9 @@ WebDriverは、ウィンドウとタブを区別しません。
 ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI [NewWindow](#新しいウィンドウまたは新しいタブを作成して切り替える) が用意されています。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Store the ID of the original window
-String originalWindow = driver.getWindowHandle();
-
-//Check we don't have other windows open already
-assert driver.getWindowHandles().size() == 1;
-
-//Click the link which opens in a new window
-driver.findElement(By.linkText("new window")).click();
-
-//Wait for the new window or tab
-wait.until(numberOfWindowsToBe(2));
-
-//Loop through until we find a new window handle
-for (String windowHandle : driver.getWindowHandles()) {
-    if(!originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle);
-        break;
-    }
-}
-
-//Wait for the new tab to finish loading content
-wait.until(titleIs("Selenium documentation"));
-  {{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -92,31 +75,12 @@ with webdriver.Firefox() as driver:
     # Wait for the new tab to finish loading content
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Store the ID of the original window
-string originalWindow = driver.CurrentWindowHandle;
-
-//Check we don't have other windows open already
-Assert.AreEqual(driver.WindowHandles.Count, 1);
-
-//Click the link which opens in a new window
-driver.FindElement(By.LinkText("new window")).Click();
-
-//Wait for the new window or tab
-wait.Until(wd => wd.WindowHandles.Count == 2);
-
-//Loop through until we find a new window handle
-foreach(string window in driver.WindowHandles)
-{
-    if(originalWindow != window)
-    {
-        driver.SwitchTo().Window(window);
-        break;
-    }
-}
-//Wait for the new tab to finish loading content
-wait.Until(wd => wd.Title == "Selenium documentation");
+  
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
   {{< /tab >}}
+  
+  
   {{< tab header="Ruby" >}}
     #Store the ID of the original window
 original_window = driver.window_handle
@@ -195,63 +159,6 @@ wait.until(titleIs("Selenium documentation"))
   {{< /tab >}}
 {{< /tabpane >}}
 
-### 新しいウィンドウ（または）新しいタブを作成して切り替える
-
-新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
-新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
-新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
-
-__注意: この機能は、Selenium 4以降のバージョンで機能します。__
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB);
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Opens a new tab and switches to new tab
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// Opens a new window and switches to new window
-driver.SwitchTo().NewWindow(WindowType.Window)
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
-    # The user has to switch to new tab (or) new window
-
-    # Opens a new tab and switches to new tab
-driver.manage.new_window(:tab)
-
-    # Opens a new window and switches to new window
-driver.manage.new_window(:window)
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Opens a new tab and switches to new tab
-await driver.switchTo().newWindow('tab');
-
-// Opens a new window and switches to new window
-await driver.switchTo().newWindow('window');
-
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Opens a new tab and switches to new tab
-driver.switchTo().newWindow(WindowType.TAB)
-
-// Opens a new window and switches to new window
-driver.switchTo().newWindow(WindowType.WINDOW)
-  {{< /tab >}}
-{{< /tabpane >}}
-
 ### ウィンドウまたはタブを閉じる
 
 ウィンドウまたはタブでの作業が終了し、 _かつ_ ブラウザーで最後に開いたウィンドウまたはタブではない場合、それを閉じて、以前使用していたウィンドウに切り替える必要があります。
@@ -259,13 +166,9 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 これをまとめると以下のようになります。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Close the tab or window
-driver.close();
-
-//Switch back to the old tab or window
-driver.switchTo().window(originalWindow);
-  {{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     #Close the tab or window
 driver.close()
@@ -273,13 +176,12 @@ driver.close()
     #Switch back to the old tab or window
 driver.switch_to.window(original_window)
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Close the tab or window
-driver.Close();
 
-//Switch back to the old tab or window
-driver.SwitchTo().Window(originalWindow);
+   {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
   {{< /tab >}}
+  
+
   {{< tab header="Ruby" >}}
     #Close the tab or window
 driver.close
@@ -306,14 +208,70 @@ driver.switchTo().window(originalWindow)
 
 ウィンドウを閉じた後に別のウィンドウハンドルに切り替えるのを忘れると、現在閉じられているページでWebDriverが実行されたままになり、 **No Such Window Exception** が発行されます。実行を継続するには、有効なウィンドウハンドルに切り替える必要があります。
 
+### 新しいウィンドウ（または）新しいタブを作成して切り替える
+
+新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
+新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
+新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
+
+__注意: この機能は、Selenium 4以降のバージョンで機能します。__
+
+{{< tabpane langEqualsHeader=true >}}
+   {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< /tab >}}
+  {{< tab header="Python" >}}
+    # Opens a new tab and switches to new tab
+driver.switch_to.new_window('tab')
+
+    # Opens a new window and switches to new window
+driver.switch_to.new_window('window')
+  {{< /tab >}}
+    
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< /tab >}}
+  
+  
+  {{% tab header="Ruby" text=true %}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
+
+Opens a new window and switches to new window
+{{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L15" >}}
+  {{% /tab %}}
+  
+{{< tab header="JavaScript" text=true >}}
+Opens a new tab and switches to new tab
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+
+Opens a new window and switches to new window:
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< /tab >}}
+
+  {{< tab header="Kotlin" >}}
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB)
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW)
+  {{< /tab >}}
+  
+{{< /tabpane >}}
+
+
 ### セッションの終了時にブラウザーを終了する
 
 ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.quit();{{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< /tab >}}
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
@@ -491,15 +449,13 @@ size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { width, height } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const width1 = rect.width;
-const height1 = rect.height;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Access each dimension individually
 val width = driver.manage().window().size.width
@@ -570,15 +526,13 @@ rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Access each dimension individually
-const { x, y } = await driver.manage().window().getRect();
+{{< tab header="JavaScript" text=true >}}
+Access each dimension individually
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
-// Or store the dimensions and query them later
-const rect = await driver.manage().window().getRect();
-const x1 = rect.x;
-const y1 = rect.y;
-  {{< /tab >}}
+(or) store the dimensions and query them later
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Access each dimension individually
 val x = driver.manage().window().position.x
@@ -724,22 +678,9 @@ begin
 
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-let {Builder} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-    let driver = await new Builder()
-      .forBrowser('chrome')
-      .build();
-
-    await driver.get('https://www.example.com');
-    // Returns base64 encoded string
-    let encodedString = await driver.takeScreenshot();
-    await fs.writeFileSync('./image.png', encodedString, 'base64');
-    await driver.quit();
-}())
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
 import org.openqa.selenium.*
@@ -826,22 +767,8 @@ begin
   ele.save_screenshot('./image.jpg')
 end
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-let fs = require('fs');
-
-(async function example() {
-   let driver = await new Builder()
-       .forBrowser('chrome')
-       .build();
-
-   await driver.get('https://www.example.com');
-   let ele = await driver.findElement(By.css("h1"));
-   // Captures the element screenshot
-   let encodedString = await ele.takeScreenshot(true);
-   await fs.writeFileSync('./image.png', encodedString, 'base64');
-   await driver.quit();
-}())
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -908,13 +835,9 @@ result = driver.execute_script("return arguments[0].innerText", header)
     # Executing JavaScript directly
 driver.execute_script("alert('hello world')")
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-// Stores the header element
-let header = await driver.findElement(By.css('h1'));
-
-// Executing JavaScript to capture innerText of header element
-let text = await driver.executeScript('return arguments[0].innerText', header);
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Stores the header element
 val header = driver.findElement(By.cssSelector("h1"))
@@ -965,24 +888,8 @@ _Note: Chromium ブラウザがヘッドレスモードである必要があり�
 
     base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-  const {Builder} = require('selenium-webdriver');
-  const chrome = require('selenium-webdriver/chrome');
-  let opts = new chrome.Options();
-  let fs = require('fs');
-  (async function example() {
-  let driver = new Builder()
-  .forBrowser('chrome')
-  .setChromeOptions(opts.headless())
-  .build();
-  await driver.get('https://www.selenium.dev');
-  try {
-  let base64 = await driver.printPage({pageRanges:["1-2"]});
-  await fs.writeFileSync('./test.pdf', base64, 'base64');
-  } catch (e) {
-  console.log(e)
-  }
-  await driver.quit();
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     driver.get("https://www.selenium.dev")

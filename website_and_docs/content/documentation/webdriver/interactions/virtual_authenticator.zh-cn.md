@@ -20,214 +20,240 @@ Web 应用程序可以启用基于公钥的身份验证机制（称为 Web 身�
 虚拟身份验证器具有 [一组属性](https://www.w3.org/TR/webauthn-2/#sctn-automation-virtual-authenticators)。
 这些属性在 Selenium 绑定中映射为 VirtualAuthenticatorOptions。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L72-78" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L55-L61" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L48-55" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L48-55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L40-L46" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L10-L16" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L11-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 
 ## 添加虚拟身份验证器
 
 它使用提供的属性创建一个新的虚拟身份验证器。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L85-92" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L68-L73" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L63-71" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L63-71" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L53-L58" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 删除虚拟身份验证器
 
 删除之前添加的虚拟身份验证器。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L101-105" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L86" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#80-86" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#80-86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L68-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 创建永久凭据
 
 使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个永久(有状态的)凭据。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L120-123" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L100-L103" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#103-107" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#103-107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L80-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L80-L94" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 创建临时凭据
 
 使用给定的所需凭据 [参数](https://w3c.github.io/webauthn/#sctn-automation-add-credential) 创建一个常驻(无状态)凭据。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L163-165" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L143-L145" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L145-148" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L145-148" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L136-L140" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 添加凭据
 
 向身份验证器注册凭据。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L157-166" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L137-L146" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L139-150" >}}   
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L139-150" >}}   
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L131-L142" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 获取凭据
 
 返回身份验证者拥有的凭据列表。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L177-191" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L157-L171" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L162-178" >}}  
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L162-178" >}}  
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L154-L170" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 
 ## 删除凭据
 
 根据传递的凭据ID从身份验证器中删除凭据。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L201-210" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L181-L190" >}}
 {{< /tab >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L189-198" >}} 
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L189-198" >}} 
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 
 ## 删除所有凭据
 
 从身份验证器中删除所有凭据。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L216-225" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L196-L205" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L207-216" >}} 
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L207-216" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L181-L190" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}
 
 ## 设置用户验证状态
 
 设置身份验证器是模拟用户验证成功还是失败。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/virtual_authenticator/VirtualAuthenticatorTest.java#L231-232" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L211-L212" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/VirtualAuthentication/VirtualAuthenticatorTest.cs#L224-225" >}} 
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L224-225" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L197-L197" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< /tab >}}
-{{< /tabpane >}}
+{{< badge-code >}}
+{{< /tab >}}{{< /tabpane >}}

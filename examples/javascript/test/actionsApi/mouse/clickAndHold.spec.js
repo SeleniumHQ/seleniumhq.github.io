@@ -1,12 +1,12 @@
-const {By, Browser} = require('selenium-webdriver');
-const {suite} = require('selenium-webdriver/testing');
+const {By, Builder} = require('selenium-webdriver');
 
-suite(function (env) {
+
+
   describe('Click and hold', function () {
     let driver;
 
     before(async function () {
-      driver = await env.builder().build();
+      driver = new Builder().forBrowser('chrome').build();
     });
 
     after(() => driver.quit());
@@ -19,4 +19,3 @@ suite(function (env) {
     });
 
   });
-}, { browsers: [Browser.CHROME, Browser.FIREFOX]});

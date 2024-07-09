@@ -98,7 +98,7 @@ our users.
 **We hope you enjoy Selenium 4, and we can’t wait to see what you do
 with it!**
 
-[auth]: /documentation/webdriver/bidi_apis/#register-basic-auth
+[auth]: /documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#basic-authentication
 [browserstack]: https://www.browserstack.com/
 [chromium]: https://www.chromium.org/Home
 [docker]: https://hub.docker.com/u/selenium
@@ -106,8 +106,8 @@ with it!**
 [firefox]: https://www.mozilla.org/en-GB/firefox/new/
 [github]: https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.0.0
 [grid]: /documentation/grid/
-[js errors]: /documentation/webdriver/bidi_apis/#listen-to-js-exceptions
-[mutation]: /documentation/webdriver/bidi_apis/#mutation-observation
+[js errors]: /documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#javascript-exceptions
+[mutation]: /documentation/webdriver/bidirectional/chrome_devtools/bidi_api/#mutation-observation
 [otel]: https://opentelemetry.io
 [pr]: https://github.com/SeleniumHQ/selenium/pulls
 [relative locators]: /documentation/webdriver/locating_elements/#relative-locators

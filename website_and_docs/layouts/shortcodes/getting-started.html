@@ -4,8 +4,10 @@
 {{ $type   := .Get "type" | default "" }} 
 <a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
 {{ with .Get "title" }}
-<div class="row justify-content-center td-box--{{ $col_id }} pt-5">
+<div class="row">
+<div class="d-flex justify-content-center td-box--{{ $col_id }} pt-5">
   <h2>{{ . }}</h2>
+</div>
 </div>
 {{ end }}
 <section class="row td-box td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }} pt-3">

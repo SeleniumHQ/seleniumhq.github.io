@@ -16,21 +16,21 @@ aliases: [
 
 ## Requirements by language
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
 ### Maven
-Specify the dependency in the project's `pom.xml` file:
+Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L29-L33" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -154,4 +154,4 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tabpane >}}
 
 ## Next Step
-[Install the browser drivers]({{< ref "install_drivers.md" >}})
+[Create your first Selenium script]({{< ref "first_script.md" >}})

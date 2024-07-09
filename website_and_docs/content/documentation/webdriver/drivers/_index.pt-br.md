@@ -15,7 +15,7 @@ The session is created automatically by initializing a new Driver class object.
 Each language allows a session to be created with arguments from one of these classes (or equivalent):
 
 * [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but this is required for remote
-* Some form of [CommandExecutor]({{< ref "executors.md" >}}) (the implementation varies between languages)
+* Some form of [Http Client Configuration]({{< ref "http_client.md" >}}) (the implementation varies between languages)
 * [Listeners]({{< ref "listeners.md" >}})
 
 ### Local Driver
@@ -25,9 +25,26 @@ on the local machine.
 
 * [Service]({{< ref "service.md" >}}) object applies only to local drivers and provides information about the browser driver
 
-{{< alert-code >}}
-Show Starting Local driver with multiple arguments.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### Remote Driver
 
@@ -42,6 +59,23 @@ Quitting a session corresponds to W3C command for [Deleting a Session](https://w
 Important note: the `quit` method is different from the `close` method, 
 and it is recommended to always use `quit` to end the session
 
-{{< alert-code >}}
-Show quitting a session.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L15" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}

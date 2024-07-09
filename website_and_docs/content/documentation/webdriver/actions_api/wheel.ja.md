@@ -22,7 +22,7 @@ This method takes a web element as the sole argument.
 Regardless of whether the element is above or below the current viewscreen,
 the viewport will be scrolled so the bottom of the element is at the bottom of the screen.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L17-L20" >}}
 {{< /tab >}}
@@ -48,7 +48,7 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 This is the second most common scenario for scrolling. Pass in an delta x and a delta y value for how much to scroll
 in the right and down directions. Negative values represent left and up, respectively.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L29-L33" >}}
 {{< /tab >}}
@@ -81,7 +81,7 @@ If the element is out of the viewport,
 it will be scrolled to the bottom of the screen, then the page will be scrolled by the provided
 delta x and delta y values.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
 {{< /tab >}}
@@ -120,7 +120,7 @@ the page will be scrolled by the provided delta x and delta y values.
 Note that if the offset from the center of the element falls outside of the viewport,
 it will result in an exception.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L57-L61" >}}
 {{< /tab >}}
@@ -154,12 +154,12 @@ the page will be scrolled by the provided delta x and delta y values.
 Note that if the offset from the upper left corner of the viewport falls outside of the screen,
 it will result in an exception.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L68-L70" >}}
+{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L66-L70" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L89-L97" >}}

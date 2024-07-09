@@ -21,6 +21,16 @@ Grid状态提供Grid的当前状态.
 cURL GET 'http://localhost:4444/status'
 ```
 
+### 检查会话所有者
+
+要检查会话是否属于某一节点, 请使用下面列出的cURL命令. 
+
+```shell
+cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+```
+
+### Which URL should I use?
+
 在独立模式下, Grid URL是独立服务器的地址.
 
 在集线器节点模式下, Grid URL是集线器服务器的地址.

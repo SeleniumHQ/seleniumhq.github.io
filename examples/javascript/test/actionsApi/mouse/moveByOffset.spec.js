@@ -1,13 +1,13 @@
-const {By, Origin, Browser} = require('selenium-webdriver');
-const {suite} = require('selenium-webdriver/testing');
+const {By, Origin, Builder} = require('selenium-webdriver');
+
 const assert = require('assert');
 
-suite(function (env) {
+
   describe('Mouse move by offset', function () {
     let driver;
 
     before(async function () {
-      driver = await env.builder().build();
+      driver = new Builder().forBrowser('chrome').build();
     });
 
     after(async () => await driver.quit());
@@ -47,4 +47,3 @@ suite(function (env) {
       assert.deepStrictEqual(Math.abs(parseInt(result[1]) - 3 - 15) < 2, true)
     });
   });
-}, { browsers: [Browser.CHROME, Browser.FIREFOX]});

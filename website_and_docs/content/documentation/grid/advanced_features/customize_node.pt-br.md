@@ -1,70 +1,60 @@
 ---
-title: "Customizing a Node"
-linkTitle: "Customize Node"
+title: "Personalizando um Nó"
+linkTitle: "Personalizando um Nó"
 weight: 4
 ---
+## Como personalizar um Nó
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language display-4"></i> 
-   Page being translated from 
-   English to Portugese. Do you speak Portugese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+Há momentos em que gostaríamos de personalizar um Nó de acordo com nossas necessidades.
 
-## How to customize a Node
+Por exemplo, podemos desejar fazer alguma configuração adicional antes que uma sessão comece a ser executada e executar alguma limpeza após o término de uma sessão.
 
-There are times when we would like a Node to be customized to our needs. 
+Os seguintes passos podem ser seguidos para isso:
 
-For e.g., we may like to do some additional setup before a session begins execution and some clean-up after a session runs to completion.
-
-Following steps can be followed for this:
-
-* Create a class that extends `org.openqa.selenium.grid.node.Node`
-* Add a static method (this will be our factory method) to the newly created class whose signature looks like this: 
+- Crie uma classe que estenda `org.openqa.selenium.grid.node.Node`.
+- Adicione um método estático (este será nosso método de fábrica) à classe recém-criada, cuja assinatura se parece com esta:
 
   `public static Node create(Config config)`. Here:
 
-    * `Node` is of type `org.openqa.selenium.grid.node.Node`
-    * `Config` is of type `org.openqa.selenium.grid.config.Config`
-* Within this factory method, include logic for creating your new Class.
-* To wire in this new customized logic into the hub, start the node and pass in the fully qualified class name of the above class to the argument `--node-implementation`
+    * `Node` é do tipo `org.openqa.selenium.grid.node.Node`
+    * `Config` é do tipo `org.openqa.selenium.grid.config.Config`
+* Dentro deste método de fábrica, inclua a lógica para criar sua nova classe..
+* TPara incorporar esta nova lógica personalizada no hub, inicie o nó e passe o nome da classe totalmente qualificado da classe acima como argumento. `--node-implementation`
 
-Let's see an example of all this:
+Vamos ver um exemplo de tudo isso:
 
-### Custom Node as an uber jar
+### Node personalizado como um uber jar
 
-1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below dependency to your sample project.
+1. Crie um projeto de exemplo usando sua ferramenta de construção favorita. (**Maven**|**Gradle**).
+2. Adicione a seguinte dependência ao seu projeto de exemplo..
     * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
-3. Add your customized Node to the project.
-4. Build an [uber jar](https://imagej.net/develop/uber-jars) to be able to start the Node using `java -jar` command.
-5. Now start the Node using the command:
+3. Adicione o seu nó personalizado ao projeto.
+4. Construir algo. [uber jar](https://imagej.net/develop/uber-jars) Para ser capaz de iniciar o Node usando o comando `java -jar`.
+5. Agora inicie o nó usando o comando:
 
 ```bash
 java -jar custom_node-server.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
+**Observação:** Se estiver usando o Maven como ferramenta de construção, é preferível usar o [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin) em vez do [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin) porque o plugin maven-assembly parece ter problemas para mesclar vários arquivos de Service Provider Interface (`META-INF/services`).
 
-**Note:** If you are using Maven as a build tool, please prefer using [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin) instead of [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin) because maven-assembly plugin seems to have issues with being able to merge multiple Service Provider Interface files (`META-INF/services`)
 
-### Custom Node as a regular jar
+### Node personalizado como jar
 
-1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below dependency to your sample project.
-    * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
-3. Add your customized Node to the project.
-4. Build a jar of your project using your build tool.
-5. Now start the Node using the command:
+1. Crie um projeto de exemplo usando a sua ferramenta de construção favorita (**Maven**|**Gradle**).
+2. Adicione a seguinte dependência ao seu projeto de exemplo:
+   * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
+3. Adicione o seu Node personalizado ao projeto.
+4. Construa um arquivo JAR do seu projeto usando a sua ferramenta de construção.
+5. Agora, inicie o Node usando o seguinte comando:
+
 
 ```bash
 java -jar selenium-server-4.6.0.jar \
 --ext custom_node-1.0-SNAPSHOT.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
-Below is a sample that just prints some messages on to the console whenever there's an activity of interest (session created, session deleted, a webdriver command executed etc.,) on the Node.
-
+Aqui está um exemplo que apenas imprime algumas mensagens no console sempre que houver uma atividade de interesse (sessão criada, sessão excluída, execução de um comando do webdriver, etc.) no Node.
 
 <details>
 <summary>Sample customized node</summary>
@@ -100,8 +90,8 @@ public class DecoratedLoggingNode extends Node {
 
   private Node node;
 
-  protected DecoratedLoggingNode(Tracer tracer, URI uri, Secret registrationSecret) {
-    super(tracer, new NodeId(UUID.randomUUID()), uri, registrationSecret);
+  protected DecoratedLoggingNode(Tracer tracer, NodeId nodeId, URI uri, Secret registrationSecret, Duration sessionTimeout) {
+    super(tracer, nodeId, uri, registrationSecret, sessionTimeout);
   }
 
   public static Node create(Config config) {
@@ -109,12 +99,17 @@ public class DecoratedLoggingNode extends Node {
     BaseServerOptions serverOptions = new BaseServerOptions(config);
     URI uri = serverOptions.getExternalUri();
     SecretOptions secretOptions = new SecretOptions(config);
+    NodeOptions nodeOptions = new NodeOptions(config);
+    Duration sessionTimeout = nodeOptions.getSessionTimeout();
 
     // Refer to the foot notes for additional context on this line.
     Node node = LocalNodeFactory.create(config);
 
     DecoratedLoggingNode wrapper = new DecoratedLoggingNode(loggingOptions.getTracer(),
-        uri, secretOptions.getRegistrationSecret());
+        node.getId(),
+        uri,
+        secretOptions.getRegistrationSecret(),
+        sessionTimeout);
     wrapper.node = node;
     return wrapper;
   }
@@ -234,21 +229,21 @@ public class DecoratedLoggingNode extends Node {
 ```
 </details>
 
-**_Foot Notes:_**
+**_Notas de Rodapé:_**
 
-In the above example, the line `Node node = LocalNodeFactory.create(config);` explicitly creates a `LocalNode`.
+No exemplo acima, a linha `Node node = LocalNodeFactory.create(config);` cria explicitamente um `LocalNode`.
 
-There are basically 2 types of *user facing implementations* of `org.openqa.selenium.grid.node.Node` available. 
+Basicamente, existem 2 tipos de implementações *visíveis para o usuário* de `org.openqa.selenium.grid.node.Node` disponíveis. 
 
-These classes are good starting points to learn how to build a custom Node and also to learn the internals of a Node.
+Essas classes são bons pontos de partida para aprender como criar um Node personalizado e também para compreender os detalhes internos de um Node.
 
-* `org.openqa.selenium.grid.node.local.LocalNode` - Used to represent a long running Node and is the default implementation that gets wired in when you start a `node`. 
-    * It can be created by calling `LocalNodeFactory.create(config);`, where:
-      * `LocalNodeFactory` belongs to `org.openqa.selenium.grid.node.local`
-      * `Config` belongs to `org.openqa.selenium.grid.config`
-* `org.openqa.selenium.grid.node.k8s.OneShotNode` - This is a special reference implementation wherein the Node gracefully shuts itself down after servicing one test session. This class is currently not available as part of any pre-built maven artifact.
-  *  You can refer to the source code [here](https://github.com/SeleniumHQ/selenium/blob/trunk/java/src/org/openqa/selenium/grid/node/k8s/OneShotNode.java) to understand its internals. 
-  *  To build it locally refer [here](https://github.com/SeleniumHQ/selenium/blob/trunk/deploys/k8s/README.md). 
-  *  It can be created by calling `OneShotNode.create(config)`, where:
-      * `OneShotNode` belongs to `org.openqa.selenium.grid.node.k8s`
-      * `Config` belongs to `org.openqa.selenium.grid.config`
+* `org.openqa.selenium.grid.node.local.LocalNode` - Usado para representar um Node de execução contínua e é a implementação padrão que é usada quando você inicia um `node`. 
+    * Pode ser criado chamando `LocalNodeFactory.create(config);`, onde:
+      * `LocalNodeFactory` pertence a `org.openqa.selenium.grid.node.local`
+      * `Config` pertence a `org.openqa.selenium.grid.config`
+* `org.openqa.selenium.grid.node.k8s.OneShotNode` - Esta é uma implementação de referência especial em que o Node encerra-se graciosamente após atender a uma sessão de teste. Esta classe atualmente não está disponível como parte de nenhum artefato Maven pré-construído.
+  * Você pode consultar o código-fonte [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/java/src/org/openqa/selenium/grid/node/k8s/OneShotNode.java) para entender seus detalhes internos.
+  * Para construí-lo localmente, consulte [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/deploys/k8s/README.md). 
+  * Pode ser criado chamando `OneShotNode.create(config)`, onde:
+      * `OneShotNode` pertence a `org.openqa.selenium.grid.node.k8s`
+      * `Config` pertence a `org.openqa.selenium.grid.config`

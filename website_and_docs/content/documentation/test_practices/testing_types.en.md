@@ -42,6 +42,16 @@ done directly with Selenium by simulating expected returns.
 This simulation could be done by record/playback or through 
 the different supported languages as explained in this documentation.
 
+### Integration Tests
+
+Integration tests verify the interactions between different components or modules of a system. Several modules are together tested. The purpose of Integration tests is to make sure that all modules integrate and work together as expected. Automated integration tests help ensure that these interactions work as expected and that integrated components function properly together.
+>For example,  **_Testing the flow of placing the order for an item in an ecommerce website along with payment._**
+
+### System Tests
+
+System Testing is a complete fully integrated product Testing. It is an end-to-end testing where in testing environment is similar to the production environment. Here, we navigate through all the features of the software and test if the end business / end feature works. We just test the end feature and don’t check for data flow or do functional testing and all.
+>For example,  **_Testing the end to end flow from login to placing an order and rechecking the order in My Orders page and logoff from an ecommerce website._**
+
 ### Performance testing
 As its name indicates, performance tests are done 
 to measure how well an application is performing.
@@ -66,7 +76,7 @@ This is generally done by other tools that retrieve the metrics.
 One such tool is **_JMeter_**.
 
 For a web application, details to measure include 
-throughput, latency, data loss, individual component loading times...
+throughput, latency, data loss, individual component loading times, etc.
 
 Note 1: All browsers have a performance tab in their
 developers' tools section (accessible by pressing F12)

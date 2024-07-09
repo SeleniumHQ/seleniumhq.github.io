@@ -15,7 +15,7 @@ weight: 3
 每种语言都允许使用来自这些类 (或等效类) 之一的参数创建会话:
 
 * [选项]({{< ref "options.md" >}}) 描述您想要的会话类型; 默认值为local，但是对于remote则是必须设置的
-* 各种形式的 [命令执行器]({{< ref "executors.md" >}}) (实现因语言而异)
+* 各种形式的 [HTTP Client configuration]({{< ref "http_client.md" >}}) (实现因语言而异)
 * [监听器]({{< ref "listeners.md" >}})
 
 ### 本地驱动
@@ -25,9 +25,26 @@ weight: 3
 
 * [服务]({{< ref "service.md" >}}) 对象仅适用于本地驱动，并提供有关浏览器驱动的信息
 
-{{< alert-code >}}
-显示具有多个参数的启动本地驱动方式.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### 远程驱动
 
@@ -42,6 +59,23 @@ weight: 3
 重要提示: `quit` 方法与 `close` 方法不同,
 建议始终使用 `quit` 来结束会话
 
-{{< alert-code >}}
-显示退出会话.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L15" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}

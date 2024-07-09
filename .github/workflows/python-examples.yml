@@ -21,38 +21,53 @@ env:
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
-  test_examples:
+  tests:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-    runs-on: ${{ matrix.os }}
+        os: [ ubuntu, windows, macos ]
+        release: [ stable, nightly ]
+    runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
+    - name: Remove driver directories Windows
+      if: matrix.os == 'windows'
+      run: |
+        rm "$env:ChromeWebDriver" -r -v
+        rm "$env:EdgeWebDriver" -r -v
+        rm "$env:GeckoWebDriver" -r -v
+    - name: Remove driver directories Non-Windows
+      if: matrix.os != 'windows'
+      run: |
+        sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu'
       run: Xvfb :99 &
-    - name: Install Chrome
-      uses: browser-actions/setup-chrome@latest
-    - name: Install Edge
-      uses: browser-actions/setup-edge@latest
-    - name: Install Firefox
-      uses: abhi1693/setup-browser@v0.3.4
-      with:
-        browser: firefox
-        version: latest
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: 3.8
-    - name: Install dependencies
+    - name: Install dependencies nightly
+      if: matrix.release == 'nightly'
       working-directory: ./examples/python
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --force-reinstall -v selenium
+    - name: Install dependencies stable
+      if: matrix.release == 'stable'
+      working-directory: ./examples/python
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: 11
     - name: Run tests
-      uses: nick-invision/retry@v2.8.2
+      uses: nick-invision/retry@v3.0.0
       with:
         timeout_minutes: 20
         max_attempts: 3

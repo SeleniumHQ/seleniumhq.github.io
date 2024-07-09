@@ -1,15 +1,15 @@
 ---
 title: "Selenium Overview"
 linkTitle: "Overview"
-weight: 2
+weight: 1
 description: >
   Is Selenium for you? See an overview of the different project components.
 aliases: ["/documentation/en/introduction/"]
 ---
 
 
-Selenium is not just one tool or API
-but it composes many tools.
+Selenium is not just one tool or API;
+it comprises many tools.
 
 ## WebDriver
 
@@ -18,7 +18,7 @@ are going to be using WebDriver APIs. [WebDriver](/documentation/webdriver)
 uses browser automation APIs provided by browser vendors to control the browser and
 run tests. This is as if a real user is operating the browser. Since
 WebDriver does not require its API to be compiled with application
-code; It is not intrusive. Hence, you are testing the
+code, it is not intrusive. Hence, you are testing the
 same application which you push live.
 
 

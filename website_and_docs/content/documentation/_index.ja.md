@@ -18,7 +18,7 @@ Seleniumの中核は[WebDriver]({{< ref "/webdriver.md" >}})であり、様々�
 インストラクションの一つです:
 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
@@ -26,7 +26,7 @@ Seleniumの中核は[WebDriver]({{< ref "/webdriver.md" >}})であり、様々�
 {{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Hello/HelloSelenium.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
@@ -48,6 +48,3 @@ Seleniumが適切なツールであるかどうかを判断してください。
 Seleniumをインストールし、テスト自動化ツールとして正常に使用する方法を理解し、
 このような単純なテストをスケーリングして、複数のブラウザー、
 複数の異なるオペレーティングシステムの大規模な分散環境で実行する必要があります。
-
-
-

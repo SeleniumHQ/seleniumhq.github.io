@@ -13,95 +13,85 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
    Page being translated from English to Chinese. 
    Do you speak Chinese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
 
-## Quick start
+## 快速开始
 
-1. Prerequisites
-    * Java 11 or higher installed
-    * Browser(s) installed
-    * Browser driver(s)
-      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
-      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
-    * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
-1. Start the Grid
+1. 先决条件
+    * 需要安装 Java 11 或更高版本
+    * 需要安装浏览器
+    * 需要安装浏览器驱动程序
+      * [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
+      * [需要已经安装并配置了 PATH 环境变量]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}})
+    * 从[最新的发布版本](https://github.com/SeleniumHQ/selenium/releases/latest)下载 Selenium Server jar 文件
+1. 启动 Grid
     * `java -jar selenium-server-<version>.jar standalone`
-1. Point* your WebDriver tests to [http://localhost:4444](http://localhost:4444)
-1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
+1. 将您的 WebDriver 测试指向 [http://localhost:4444](http://localhost:4444)
+1. (可选) 通过在浏览器中打开 [http://localhost:4444](http://localhost:4444) 检查正在运行的测试和可用的功能
 
-*Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+*想知道如何将您的测试指向 [http://localhost:4444](http://localhost:4444)吗? 
+请查看 [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#远程驱动" >}})。
 
-To learn more about the different configuration options, go through the sections below.
+要了解更多不同的配置选项，请查看以下各小节。
 
-## Grid roles
+## Grid 角色
 
-Grid is composed by six different [components]({{< ref "components.md" >}}), which gives
-you the option to deploy it in different ways.
+Grid由六个不同的[组件]({{< ref "components.md" >}})组成，这使您可以以不同的方式部署它。
 
-Depending on your needs, you can start each one of them on its own (Distributed), group
-them in Hub & Node, or all in one on a single machine (Standalone).
+根据您的需求，您可以单独启动每个组件（分布式），将它们分组为Hub和Node，或者全部在单个机器上运行（独立）。
 
-### Standalone
+### 单机部署（Standalone）
 
-**Standalone** combines all Grid [components]({{< ref "components.md" >}}) seamlessly 
-into one. Running a Grid in **Standalone** mode gives you a fully functional Grid 
-with a single command, within a single process. **Standalone** can only run on a 
-single machine.
+**Standalone** 可以将所有 Grid [组件]({{< ref "components.md" >}}) 无缝地整合成一个单独的实体。在 **Standalone** 模式下运行 Grid，只需一个命令即可获得一个完整的 Grid，并在一个进程中运行。**Standalone** 只能在一台机器上运行。
 
-**Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
-will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
-By default, the server will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
+**Standalone** 模式也是最容易启动 Selenium Grid 的模式。默认情况下，服务器将在 [http://localhost:4444](http://localhost:4444) 上监听 `RemoteWebDriver` 请求，并且服务器将从系统 [PATH]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}}) 中检测可以使用的驱动程序。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
 ```
 
-After starting successfully the Grid in Standalone mode, point your WebDriver tests 
-to [http://localhost:4444](http://localhost:4444).
+成功启动 Standalone 模式的 Grid 后，将你的 WebDriver 测试指向  [http://localhost:4444](http://localhost:4444)。
 
-Common use cases for **Standalone** are:
-* Develop or debug tests using `RemoteWebDriver` locally
-* Running quick test suites before pushing code
-* Have a easy to setup Grid in a CI/CD tool (GitHub Actions, Jenkins, etc...)
-
+**Standalone** 的常见用途包括：
+* 本地使用 `RemoteWebDriver` 开发或调试测试
+* 推送代码之前运行快速测试套件
+* 在 CI/CD 工具（GitHub Actions、Jenkins 等）中设置简单的 Grid
 
 ### Hub and Node
 
-**Hub and Node** is the most used role because it allows to:
-* Combine different machines in a single Grid
-  * Machines with different operating systems and/or browser versions, for example
-* Have a single entry point to run WebDriver tests in different environments
-* Scaling capacity up or down without tearing down the Grid
+**Hub和Node**是最常用的角色，因为它允许：
+* 将不同的机器组合成一个单一的Grid
+  * 例如拥有不同操作系统和/或浏览器版本的机器
+* 在不同的环境中运行WebDriver测试有一个单一的入口点
+* 在不破坏Grid的情况下增加或减少容量。
 
 #### Hub
 
-A Hub is composed by the following [components]({{< ref "components.md" >}}):
-Router, Distributor, Session Map, New Session Queue, and Event Bus.
+一个Hub由以下[组件]({{< ref "components.md" >}})组成：
+路由器（Router）、分发器（Distributor）、会话映射（Session Map）、新会话队列（New Session Queue）和事件总线（Event Bus）。
 
 ```shell
 java -jar selenium-server-<version>.jar hub
 ```
 
-By default, the server will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444).
+默认情况下，服务器将在 [http://localhost:4444](http://localhost:4444) 上监听`RemoteWebDriver`请求。
 
 #### Node
 
-During startup time, the **Node** will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
+在启动时，**Node**将从系统的[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}})中检测可用的驱动程序。
 
-The command below assumes the **Node** is running on the same machine where the **Hub** is running.
+以下命令假设**Node**正在运行的机器与**Hub**在同一台机器上。
+
 ```shell
 java -jar selenium-server-<version>.jar node
 ```
 
-##### More than one Node on the same machine
+##### 同一台机器上的多个Node
 
 **Node** 1
 ```shell
@@ -113,90 +103,88 @@ java -jar selenium-server-<version>.jar node --port 5555
 java -jar selenium-server-<version>.jar node --port 6666
 ```
 
-##### Node and Hub on different machines
+##### 不同机器上的Node和Hub
 
-**Hub** and **Nodes** talk to each other via HTTP and the [**Event Bus**]({{< ref "components.md#event-bus" >}})
-(the **Event Bus** lives inside the **Hub**). A **Node** sends a message to the **Hub** via the **Event Bus** to 
-start the registration process. When the **Hub** receives the message, reaches out to the **Node** via HTTP to 
-confirm its existence.
+**Hub**和**Nodes**通过HTTP和[**事件总线**]({{< ref "components.md#event-bus" >}})（**事件总线**位于**Hub**内部）进行通信。
 
-To successfully register a **Node** to a **Hub**, it is important to expose the **Event Bus** ports (4442 and 4443 by 
-default) on the **Hub** machine. This also applies for the **Node** port. With that, both **Hub** and **Node** will
-be able to communicate.
+**Node**通过事件总线向**Hub**发送消息以开始注册过程。当**Hub**收到消息时，通过HTTP与**Node**联系以确认其存在。
 
-If the **Hub** is using the default ports, the `--hub` flag can be used to register the **Node**
+要成功将**Node**注册到**Hub**，重要的是要在**Hub**机器上公开**事件总线**端口（默认为4442和4443）。这也适用于**Node**端口。有了这个，**Hub**和**Node**都能够通信。
+
+如果**Hub**使用默认端口，则可以使用 `--hub` 注册**Node**。
 ```shell
 java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444
 ```
 
-When the **Hub** is not using the default ports, the `--publish-events` and `--subscribe-events` flags are needed.
+当**Hub**未使用默认端口时，需要使用`--publish-events`和`--subscribe-events`。
 
-For example, if the **Hub** uses ports `8886`, `8887`, and `8888`
+例如，如果**Hub**使用端口8886、8887和8888。
 ```shell
 java -jar selenium-server-<version>.jar hub --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887 --port 8888
 ```
-The **Node** needs to use those ports to register successfully
+**Node**需要使用这些端口才能成功注册。
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<hub-ip>:8886 --subscribe-events tcp://<hub-ip>:8887
 ```
 
-### Distributed 
+### 分部署部署（Distributed） 
 
-When using a Distributed Grid, each component is started separately, and ideally on different machines.
+在使用分布式Grid时，每个组件都需要单独启动，并且理想情况下应该在不同的机器上。
 
 {{% alert color="primary" %}}
-It is important to expose all ports properly in order to allow fluent communication between all components.
+重要的是要正确暴露所有端口，以允许所有组件之间的流畅通信。
 {{% /alert %}}
 
-1. **Event Bus**: enables internal communication between different Grid components.
+1. **事件总线（Event Bus）**: 使不同网格组件之间的内部通信成为可能。
 
-Default ports are: `4442`, `4443`, and `5557`.
+默认端口为：`4442`、`4443`和`5557`。
 ```shell
 java -jar selenium-server-<version>.jar event-bus --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5557
 ```
 
-2. **New Session Queue**: adds new session requests to a queue, which will be queried by the Distributor
+2. **新会话队列（New Session Queue）**: 将新的会话请求添加到一个队列中，Distributor将查询该队列。
 
-Default port is `5559`.
+默认端口为`5559`。
 ```shell
 java -jar selenium-server-<version>.jar sessionqueue --port 5559
 ```
 
-3. **Session Map**: maps session IDs to the **Node** where the session is running
+3. **会话映射（Session Map）**: 将会话ID映射到运行该会话的节点。
 
-Default **Session Map** port is `5556`. **Session Map** interacts with the **Event Bus**. 
+默认**会话映射**端口为`5556`。**会话映射**与**事件总线**进行交互。
+
 ```shell
 java -jar selenium-server-<version>.jar sessions --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --port 5556
 ```
 
-4. **Distributor**: queries the **New Session Queue** for new session requests, and assigns them to a **Node** when the capabilities match. **Nodes** register to the **Distributor** the way they register to the **Hub** in a **Hub/Node** Grid.
+4. **分配器（Distributor）**: 查询新 **会话队列（New Session Queue）** 以获取新会话请求，并在能力匹配时将其分配给 **Node**。 **Nodes** 注册到 **Distributor** 的方式与在 **Hub/Node** 网格中注册到 **Hub** 相同。
 
-Default **Distributor** port is `5553`. **Distributor** interacts with **New Session Queue**, **Session Map**, **Event Bus**, and the **Node(s)**.
+默认**分配器**端口为`5553`。**分配器** 与 **新会话队列**、**会话映射**、**事件总线** 和 **Node(s)** 进行交互。
 
 ```shell
 java -jar selenium-server-<version>.jar distributor --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443 --sessions http://<sessions-ip>:5556 --sessionqueue http://<new-session-queue-ip>:5559 --port 5553 --bind-bus false
 ```
 
-5. **Router**: redirects new session requests to the queue, and redirects running sessions requests to the **Node** running that session.
+5. **路由器（Router）**: 将新会话请求重定向到队列，并将正在运行的会话请求重定向到运行该会话的**Node**。
 
-Default **Router** port is `4444`. **Router** interacts with **New Session Queue**, **Session Map**, and **Distributor**.
+默认**路由器**端口为`4444`。**路由器** 与 **新会话队列**、**会话映射**和**分配器** 进行交互。
+
 ```shell
 java -jar selenium-server-<version>.jar router --sessions http://<sessions-ip>:5556 --distributor http://<distributor-ip>:5553 --sessionqueue http://<new-session-queue-ip>:5559 --port 4444
 ```
 
 6. **Node(s)**
 
-Default **Node** port is `5555`.
+默认 **Node** 端口是 `5555`.
 ```shell
 java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-ip>:4442 --subscribe-events tcp://<event-bus-ip>:4443
 ```
 
-## Metadata in tests
+## 测试中的 Metadata
 
-Add metadata to your tests and consume it via [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
-or visualize parts of it (like `se:name`) through the Selenium Grid UI. 
+向测试中添加 `Metadata` 并通过[GraphQL]({{< ref "advanced_features/graphql_support.md" >}})进行消费，或通过 `Selenium Grid UI` 可视化其部分内容（例如`se:name`）。
 
-Metadata can be added by prefixing a capability with `se:`. Here is a quick example in Java showing that.
+可以通过在 `capability` 前加上 `se:` 来添加元数据。以下是一个Java的快速示例。
 
 ```java
 ChromeOptions chromeOptions = new ChromeOptions();
@@ -212,115 +200,83 @@ driver.get("http://www.google.com");
 driver.quit();
 ```
 
-## Querying Selenium Grid
+## 查询 Selenium Grid 相关状态
 
-After starting a Grid, there are mainly two ways of querying its status, through the Grid 
-UI or via an API call.
+启动 `Grid` 后，主要有两种方式查询其状态，通过 `Grid UI` 或通过 `API` 调用。
 
-The Grid UI can be reached by opening your preferred browser and heading to 
-[http://localhost:4444](http://localhost:4444).
+可以通过打开您喜欢的浏览器并前往[http://localhost:4444](http://localhost:4444)。
 
-API calls can be done through the [http://localhost:4444/status](http://localhost:4444/status)
-endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
+`API` 调用可以通过 [http://localhost:4444/status](http://localhost:4444/status) 端点或使用 [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 
 {{% pageinfo color="primary" %}}
-For simplicity, all command examples shown in this page assume that components are running
-locally. More detailed examples and usages can be found in the
-[Configuring Components]({{< ref "/configuration" >}}) section.
+为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
 {{% /pageinfo %}}
 
-## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
+## 使用 Java 11 中的 HTTP Client {{% badge-version version="4.5" %}}
 
-By default, Grid will use [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client). 
-AsyncHttpClient is an open-source library built on top of Netty. It allows the execution of HTTP 
-requests and responses asynchronously. Additionally it also provides WebSocket support. Hence it 
-is a good fit. 
+默认情况下，Grid 将使用 [AsyncHttpClient](https://github.com/AsyncHttpClient/async-http-client)。 AsyncHttpClient 是一个建立在 Netty 之上的开源库。 它允许异步执行 HTTP 请求和响应。 此外，它还提供 WebSocket 支持。 因此它很合适。
 
-However, AsyncHttpClient is not been actively maintained since June 2021. It coincides with the 
-fact that Java 11+ provides a built-in HTTP and WebSocket client. Currently, Selenium 
-has plans to upgrade the minimum version supported to Java 11. However, it is a sizeable effort. 
-Aligning it with major releases and accompanied announcements  is crucial to ensure the user 
-experience is intact.
+然而，AsyncHttpClient 从 2021 年 6 月开始就没有主动维护了。恰逢 Java 11+ 提供了内置的 HTTP 和 WebSocket 客户端。
 
-To do use the Java 11 client, you will need to download the `selenium-http-jdk-client` jar file 
-and use the `--ext` flag to make it available in the Grid jar's classpath.
+目前，Selenium 计划将支持的最低版本升级到 Java 11。然而，这需要大量的工作。为了确保用户体验不受影响，将其与主要发布版本和相应的公告对齐是至关重要的。
 
-The jar file can be downloaded directly from [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/)
-and then start the Grid in the following way:
+要使用 Java 11 客户端，您需要下载 `selenium-http-jdk-client` jar文件并使用 `--ext` 参数使其在 Grid jar 的类路径中可用。
+
+jar文件可以直接从 [repo1.maven.org](https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http-jdk-client/) 下载，然后使用以下方式启动Grid：
 
 ```bash
 java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
-An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
+下载 `selenium-http-jdk-client` jar 文件的替代方法是使用 [Coursier](https://get-coursier.io/docs/cli-installation)。
 
 ```bash
 java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
-If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` 
-and `--ext` flags needs to be done for each one of the components.
+如果您使用的是集线器/节点模式或分布式模式，则需要为每个组件设置 `-Dwebdriver.http.factory=jdk-http-client` 和 `--ext` 参数。
 
-## Grid sizes
+## Grid 的规模
 
-Choosing a Grid role depends on what operating systems and browsers need to be supported, 
-how many parallel sessions need to be executed, the amount of available machines, and how 
-powerful (CPU, RAM) those machines are.
+选择 `Grid` 角色取决于需要支持什么操作系统和浏览器、需要执行多少个并行会话、可用机器的数量以及这些机器的配置（CPU、RAM）。
 
-Creating sessions concurrently relies on the available processors to the **Distributor**. 
-For example, if a machine has 4 CPUs, the **Distributor** will only be able to create up
-to 4 sessions concurrently.
+并发创建会话依赖于 **分配器** 的可用处理器。 例如，如果一台机器有 4 个 CPU，则 **分配器** 最多只能同时创建 4 个会话。
 
-By default, the maximum amount of concurrent sessions a **Node** supports is limited by
-the number of CPUs available. For example, if the **Node** machine has 8CPUs, it can run
-up to 8 concurrent browser sessions (with the exception of Safari, which is always one).
-Additionally, it is expected that each browser session should use around 1GB RAM. 
+默认情况下，**Node** 支持的最大并发会话数受可用 CPU 数量的限制。 例如，如果 **Node** 机器有 8 个 CPU，它最多可以运行 8 个并发浏览器会话（Safari 除外，它始终是一个）。 此外，预计每个浏览器会话应使用大约 1GB 的 RAM。
 
-In general, it is a recommended to have **Nodes** as small as possible. Instead of having
-a machine with 32CPUs and 32GB RAM to run 32 concurrent browser sessions, it is better to
-have 32 small **Nodes** in order to better isolate processes. With this, if a **Node**
-fails, it will do it in an isolated way. Docker is a good tool to achieve this approach.
+通常，建议 **Nodes** 尽可能小。 与其让机器有 32 个 CPU 和 32GB RAM 来运行 32 个并发浏览器会话，不如有 32 个小的 **Node**，以便更好地隔离进程。 有了这个，如果一个 **Node** 发生故障，它将以孤立的方式进行。 Docker 是实现这种方法的好工具。
 
-Note that the default values (1CPU/1GB RAM per browser) are a recommendation and they could
-not apply to your context. It is recommended to use them as a reference, but measuring 
-performance continuously will help to determine the ideal values for your environment.
+请注意，默认值（每个浏览器 1 个 CPU/1GB RAM）是建议值，它们不适用于您的上下文。 建议将它们用作参考，但持续测量性能将有助于确定您的环境的理想值。
 
-Grid sizes are relative to the amount of supported concurrent sessions and amount of 
-**Nodes**, and there is no "one size fits all". Sizes mentioned below are rough estimations
-thay can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
-might work well when the **Hub** has enough resources. Values below are not set on stone,
-and feedback is welcomed!
+`Grid` 大小与支持的并发会话数量和 **Node** 数量有关，没有“一刀切”的说法。 下面提到的尺寸是粗略的估计，不同环境之间可能会有所不同。 例如，当 **Hub** 具有足够的资源时，具有 120 个 **Nodes** 的 **Hub/Node** 可能运行良好。 以下值并非一成不变，欢迎提供反馈！
 
-### Small
+### 小规模
 
-**Standalone** or **Hub/Node** with 5 or less **Nodes**.
+**Standalone** 或 **Hub/Node** 不超过5个 **Nodes**.
 
-### Middle
+### 中等规模
 
-**Hub/Node** between 6 and 60 **Nodes**.
+**Hub/Node** 介于6到60个 **Nodes** 之间。
 
-### Large
+### 大规模
 
-**Hub/Node** between 60 and 100 **Nodes**. **Distributed** with over 100 **Nodes**.
+**Hub/Node** 介于60到100个 **Nodes** 之间， **Distributed** 超过100个 **Nodes**。
 
-## Warning
+## 请注意
 
-Selenium Grid must be protected from external access using appropriate
-firewall permissions.
+必须使用适当的防火墙权限保护Selenium Grid免受外部访问。
 
-Failure to protect your Grid could result in one or more of the following occurring:
+以下一种或多种情况可能会导致你的 `Grid` 处于一个不安全的状态：
 
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
+* 您提供对您的 `Grid` 基础设施的开放访问
+* 您允许第三方访问内部网络应用程序和文件
+* 您允许第三方运行自定义二进制文件
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good
-overview of how a publicly exposed Grid could be misused:
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
+请参阅 [Detectify](//labs.detectify.com) 上的这篇博文，它提供了一个很好的公开暴露的 `Grid` 如何被滥用的概述：[不要让你的 `Grid` 暴露在外](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
-## Further reading
+## 延伸阅读
 
-* [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
-* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
-* [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
+* [Components]({{< ref "components.md" >}})：了解 `Grid` 的内部组件如何相互关联。
+* [Configuration]({{< ref "/configuration" >}}): 自定义您的 `Grid` 设置。
+* [Architecture]({{< ref "architecture.md" >}}): 理解 `Grid` 中的关键概念。
+* [Advanced Features]({{< ref "/advanced_features" >}}): 通过Grid的特性探索更多的可能性。

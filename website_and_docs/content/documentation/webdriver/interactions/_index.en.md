@@ -16,11 +16,18 @@ aliases: [
 You can read the current page title from the browser:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
-  {{< tab header="Python" >}}driver.title{{< /tab >}}
+{{< badge-examples >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
   {{< tab header="Ruby" >}}driver.title{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.getTitle();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.title{{< /tab >}}
 {{< /tabpane >}}
 
@@ -30,10 +37,17 @@ You can read the current page title from the browser:
 You can read the current URL from the browser's address bar using:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
-{{< tab header="Python" >}}driver.current_url{{< /tab >}}
+{{< badge-examples >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
 {{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.getCurrentUrl();{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.currentUrl{{< /tab >}}
 {{< /tabpane >}}

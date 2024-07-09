@@ -1,8 +1,8 @@
 ---
 title: "WebDriver"
 linkTitle: "WebDriver"
-weight: 4
-description: WebDriver manipula um navegador nativamente, aprenda mais sobre isso.
+weight: 2
+description: WebDriver manipula um navegador nativamente; aprenda mais sobre isso.
 aliases: ["/documentation/pt-br/webdriver/"]
 ---
 

@@ -1,24 +1,22 @@
 ---
-title: "Pen actions"
-linkTitle: "Pen"
+title: "Ações de Caneta"
+linkTitle: "Caneta"
 weight: 5
 description: >
-  A representation of a pen stylus kind of pointer input for interacting with a web page.
+  Uma representação de uma entrada de ponteiro do tipo caneta stylus para interagir com uma página da web.
 ---
 
 {{< badge-browser browser=Chromium wpt="perform_actions/pointer.py" >}}
+Uma caneta é um tipo de entrada de ponteiro que possui a maior parte do mesmo comportamento que um mouse, mas também pode ter propriedades de evento únicas para uma caneta stylus. Além disso, enquanto um mouse possui 5 botões, uma caneta possui 3 estados equivalentes de botão:
 
-A Pen is a type of pointer input that has most of the same behavior as a mouse, but can
-also have event properties unique to a stylus. Additionally, while a mouse
-has 5 buttons, a pen has 3 equivalent button states:
+* 0 — Contato por Toque (o padrão; equivalente a um clique com o botão esquerdo)
+* 2 — Botão do Barril (equivalente a um clique com o botão direito)
+* 5 — Botão de Borracha (atualmente não suportado pelos drivers)
 
-* 0 — Touch Contact (the default; equivalent to a left click)
-* 2 — Barrel Button (equivalent to a right click)
-* 5 — Eraser Button (currently unsupported by drivers)
 
-## Using a Pen
+## Usando uma Caneta
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.2" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L26-L33" >}}
@@ -42,11 +40,11 @@ has 5 buttons, a pen has 3 equivalent button states:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Adding Pointer Event Attributes
+## Adicionando Atributos de Evento de Ponteiro
 
 {{< badge-version version="4.2" >}}
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/PenTest.java#L67-L81" >}}
 {{< /tab >}}

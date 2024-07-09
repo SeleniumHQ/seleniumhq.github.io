@@ -13,28 +13,23 @@ aliases:
             "/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/"
           ]
 ---
-
-{{< blocks/cover title="Ecosystem" image_anchor="top" height="min" color="selenium-purple">}}
-
-<p class="lead mt-2 text-left">
-  Over the last decade, a large ecosystem of Open Source projects have sprouted up around Selenium.
-  This page attempts to capture some of those projects that make use of Selenium WebDriver as a
-  central part of what they do.
-</p>
-
-<p class="lead mt-2 text-left">
-  Selenium can be extended in different ways. Here are a number of drivers, bindings, plugins,
-  and frameworks created and maintained by third parties.
-</p>
-
-{{< /blocks/cover >}}
+{{< blocks/section color="selenium-purple" height="min" >}}
+<div class="mx-auto p-4">
+	<h1 class="d-1 text-center">Ecosystem</h1>
+	<p class="lead mt-3 mb-0">
+    There is an ecosystem full of Open Source projects around Selenium and WebDriver, and some 
+    of them are featured on this page. Here are a number of drivers, bindings, plugins,
+    and frameworks created and maintained by third parties.
+  </p>
+</div>
+{{< /blocks/section >}}
 
 {{% blocks/section color="selenium-yellow" %}}
 
 <div class="card bg-transparent border-0">
   <div class="row no-gutters align-items-center">
     <div class="col-md-1 text-danger ">
-      <p class="display-1 text-center">
+      <p class="d-1 text-center">
         <i class="fas fa-exclamation"></i>
       </p>
     </div>
@@ -55,7 +50,7 @@ aliases:
 
 {{% /blocks/section %}}
 
-<div class="row justify-content-left pt-5 pl-5 td-box--100">
+<div class="row justify-content-left pt-5 ps-5 td-box--100">
   <h2 id="browser-drivers">Browser Drivers</h2>
 </div>
 <div class="row justify-content-center td-box--100 px-5 pb-4">
@@ -65,7 +60,7 @@ aliases:
         <img class="w-100 shadow-1-strong rounded" style="max-width: 100px;" src="/images/browsers/firefox.svg" alt="Firefox"/>
       </div>
       <div class="card-body px-0">
-        <p class="card-title font-weight-bold text-center h6">
+        <p class="card-title fw-bold text-center h6">
           <a href="https://github.com/mozilla/geckodriver/">
             Mozilla GeckoDriver
           </a>
@@ -94,7 +89,7 @@ aliases:
         <img class="w-100 shadow-1-strong rounded" style="max-width: 100px;" src="/images/browsers/edge.svg" alt="Edge"/>
       </div>
       <div class="card-body px-0">
-        <p class="card-title font-weight-bold text-center h6">
+        <p class="card-title fw-bold text-center h6">
           <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">
             Microsoft EdgeDriver
           </a>
@@ -118,7 +113,7 @@ aliases:
         <img class="w-100 shadow-1-strong rounded" style="max-width: 100px;" src="/images/browsers/chrome.svg" alt="Chrome"/>
       </div>
       <div class="card-body px-0">
-        <p class="card-title font-weight-bold text-center h6">
+        <p class="card-title fw-bold text-center h6">
           <a href="https://chromedriver.chromium.org/">
             Google ChromeDriver
           </a>
@@ -142,7 +137,7 @@ aliases:
         <img class="w-100 shadow-1-strong rounded" style="max-width: 100px;" src="/images/browsers/opera.svg" alt="Opera"/>
       </div>
       <div class="card-body px-0">
-        <p class="card-title font-weight-bold text-center h6">
+        <p class="card-title fw-bold text-center h6">
           <a href="https://github.com/operasoftware/operachromiumdriver">
             Opera ChromiumDriver
           </a>
@@ -166,7 +161,7 @@ aliases:
         <img class="w-100 shadow-1-strong rounded" style="max-width: 100px;" src="/images/browsers/safari.svg" alt="Safari"/>
       </div>
       <div class="card-body px-0">
-        <p class="card-title font-weight-bold text-center h6">
+        <p class="card-title fw-bold text-center h6">
           <a href="https://developer.apple.com/documentation/webkit/about_webdriver_for_safari">
             Apple SafariDriver
           </a>
@@ -181,7 +176,7 @@ aliases:
   </div>
 </div>
 
-<div class="row justify-content-left pt-5 pl-5">
+<div class="row justify-content-left pt-5 ps-5">
   <h2 id="language-bindings">Language Bindings</h2>
 </div>
 <div class="row justify-content-center p-5">
@@ -290,7 +285,7 @@ aliases:
 
 <div class="row justify-content-left px-5 pt-5 td-box--100">
   <div class="card border-0 w-100 bg-transparent">
-    <div class="card-body pl-0">
+    <div class="card-body ps-0">
       <h2 class="card-title" id="frameworks">Frameworks</h2>
       <p class="card-text w-lg-75">
         Programming languages are supported through Selenium drivers.
@@ -316,6 +311,17 @@ aliases:
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <th scope="row">
+            <p>
+              <a href="https://github.com/atata-framework/atata">
+                Atata
+              </a>
+            </p>
+          </th>
+          <td>C#</td>
+          <td>Yevgeniy Shunevych</td>
+        </tr>
         <tr>
           <th scope="row">
             <p>
@@ -402,7 +408,7 @@ aliases:
             </p>
           </th>
           <td>Java</td>
-          <td>Selenide</td>
+          <td>Andrei Solntsev & Co</td>
         </tr>
         <tr>
           <th scope="row">
@@ -414,6 +420,17 @@ aliases:
           </th>
           <td>Python</td>
           <td>Michael Mintz</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <p>
+              <a href="https://github.com/robotframework/SeleniumLibrary#seleniumlibrary">
+                SeleniumLibrary
+              </a>
+            </p>
+          </th>
+          <td>Robot Framework, Python</td>
+          <td>Robot Framework Community</td>
         </tr>
         <tr>
           <th scope="row">
@@ -459,6 +476,57 @@ aliases:
           <td>Java</td>
           <td>Mohab Mohie</td>
         </tr>
+        <tr>
+          <th scope="row">
+            <p>
+              <a href="https://github.com/vaadin/testbench">
+                TestBench
+              </a>
+            </p>
+          </th>
+          <td>Java</td>
+          <td>Vaadin</td>
+        </tr>
+	<tr>
+          <th scope="row">
+            <p>
+              <a href="https://yapoml.dev/selenium">
+                Yapoml
+              </a>
+            </p>
+          </th>
+          <td>C#</td>
+          <td>Nikolay Borisenko</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row justify-content-left pt-5 ps-5">
+  <h2 id="tools">Tools</h2>
+</div>
+<div class="row justify-content-center p-5">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Language</th>
+        <th scope="col">Author</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">
+          <p>
+            <a href="https://testcontainers.com/">
+              Testcontainers
+            </a>
+          </p>
+        </th>
+        <td>.NET, Java, Python, Node.js</td>
+      </tr>
       </tbody>
     </table>
   </div>

@@ -1,37 +1,23 @@
 ---
-title: "Actions API"
-linkTitle: "Actions API"
+title: "Ações API"
+linkTitle: "Ações API"
 weight: 14
 description: >
-    A low-level interface for providing virtualized device input actions to the web browser.
+    Uma interface de baixo nível para fornecer ações de entrada de dispositivo virtualizadas para o navegador da web..
 ---
+Além das [interações de alto nível]({{< ref "/documentation/webdriver/elements/interactions.md" >}}), a [API de Ações](https://w3c.github.io/webdriver/#dfn-actions) oferece controle detalhado sobre o que dispositivos de entrada designados podem fazer. O Selenium fornece uma interface para 3 tipos de fontes de entrada: entrada de teclado para dispositivos de teclado, entrada de ponteiro para mouse, caneta ou dispositivos de toque, e entrada de roda para dispositivos de roda de rolagem (introduzida no Selenium 4.2). O Selenium permite que você construa comandos de ação individuais atribuídos a entradas específicas, encadeie-os e chame o método de execução associado para executá-los todos de uma vez.
 
-In addition to the high-level [element interactions]({{< ref "/documentation/webdriver/elements/interactions.md" >}}), 
-the [Actions API](https://w3c.github.io/webdriver/#dfn-actions) provides granular control over
-exactly what designated input devices can do. Selenium provides an interface for 3 kinds of input sources: 
-a key input for keyboard devices, a pointer input for a mouse, pen or touch devices, 
-and wheel inputs for scroll wheel devices (introduced in Selenium 4.2). 
-Selenium allows you to construct individual action commands assigned to specific
-inputs and chain them together and call the associated perform method to execute them all at once.
+## Construtor de Ações
 
-## Action Builder
+Na transição do antigo Protocolo JSON Wire para o novo Protocolo W3C WebDriver, os componentes de construção de ações de baixo nível se tornaram especialmente detalhados. Isso é extremamente poderoso, mas cada dispositivo de entrada possui várias maneiras de ser utilizado e, se você precisa gerenciar mais de um dispositivo, é responsável por garantir a sincronização adequada entre eles.
 
-In the move from the legacy JSON Wire Protocol to the new W3C WebDriver Protocol,
-the low level building blocks of actions became especially detailed. It is extremely
-powerful, but each input device has a number of ways to use it and if you need to 
-manage more than one device, you are responsible for ensuring proper synchronization between them.
+Felizmente, provavelmente você não precisa aprender a usar os comandos de baixo nível diretamente, uma vez que quase tudo o que você pode querer fazer foi fornecido com um método de conveniência que combina os comandos de nível inferior para você. Todos esses métodos estão documentados nas páginas de [teclado]({{< ref "keyboard" >}}), [mouse]({{< ref "mouse" >}}), [caneta]({{< ref "pen" >}}) e [roda]({{< ref "wheel" >}}).
 
-Thankfully, you likely do not need to learn how to use the low level commands directly, since
-almost everything you might want to do has been given a convenience method that combines the 
-lower level commands for you. These are all documented in 
-[keyboard]({{< ref "keyboard" >}}), [mouse]({{< ref "mouse" >}}), [pen]({{< ref "pen" >}}), and [wheel]({{< ref "wheel" >}}) pages.
+## Pausa
 
-## Pause
+Movimentos de ponteiro e rolagem da roda permitem que o usuário defina uma duração para a ação, mas às vezes você só precisa esperar um momento entre as ações para que as coisas funcionem corretamente.
 
-Pointer movements and Wheel scrolling allow the user to set a duration for the action, but sometimes you just need
-to wait a beat between actions for things to work correctly.
-
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -54,17 +40,13 @@ to wait a beat between actions for things to work correctly.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Release All Actions
+## Liberar Todas as Ações
 
-An important thing to note is that the driver remembers the state of all the input
-items throughout a session. Even if you create a new instance of an actions class, the depressed keys and
-the location of the pointer will be in whatever state a previously performed action left them.
+Um ponto importante a ser observado é que o driver lembra o estado de todos os itens de entrada ao longo de uma sessão. Mesmo se você criar uma nova instância de uma classe de ações, as teclas pressionadas e a posição do ponteiro permanecerão no estado em que uma ação previamente executada os deixou.
 
-There is a special method to release all currently depressed keys and pointer buttons.
-This method is implemented differently in each of the languages because
-it does not get executed with the perform method.
+Existe um método especial para liberar todas as teclas pressionadas e botões do ponteiro atualmente pressionados. Esse método é implementado de maneira diferente em cada uma das linguagens porque não é executado com o método de execução (perform).
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}

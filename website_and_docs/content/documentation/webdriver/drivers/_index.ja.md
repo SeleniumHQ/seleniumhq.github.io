@@ -15,7 +15,7 @@ weight: 3
 各言語では、次のいずれかのクラス (または同等のもの) の引数を使用してセッションを作成することができます。
 
 * [オプション]({{< ref "options.md" >}}) 作成を希望するセッションの種類 ;  ローカルにはデフォルト値を使用しますが、リモートには必須です。
-* 何らかの形の[コマンドエグゼキューター]({{< ref "executors.md" >}})  (実装は言語によって異なります)
+* 何らかの形の[HTTP Client configuration]({{< ref "http_client.md" >}})  (実装は言語によって異なります)
 * [リスナー]({{< ref "listeners.md" >}})
   
 ### ローカルドライバー
@@ -25,9 +25,26 @@ weight: 3
 
 * [Service]({{< ref "service.md" >}})オブジェクトはローカルドライバーにのみ適用され、ブラウザーのドライバーに関する情報を提供します。
 
-{{< alert-code >}}
-Show Starting Local driver with multiple arguments.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ### リモートドライバー
 
@@ -41,6 +58,23 @@ Show Starting Local driver with multiple arguments.
 重要:  `quit` メソッドは `close` メソッドとは異なり、
 セッションを終了するには常に `quit` を使用することをお勧めします。
 
-{{< alert-code >}}
-Show quitting a session.
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L15" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}

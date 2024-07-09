@@ -59,7 +59,7 @@ This only applies to `<select>` elements with the `multiple` attribute.
 First locate a `<select>` element, then use it to initialize a `Select` object.
 Note that as of Selenium 4.5, you can't create a `Select` object if the `<select>` element is disabled.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L23-L24" >}}
 {{< /tab >}}
@@ -70,7 +70,7 @@ Note that as of Selenium 4.5, you can't create a `Select` object if the `<select
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L13-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L18-L19" >}}
@@ -88,7 +88,7 @@ There are two lists that can be obtained:
 
 Get a list of all options in the `<select>` element:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L51" >}}
 {{< /tab >}}
@@ -99,7 +99,7 @@ Get a list of all options in the `<select>` element:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L41" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L45" >}}
@@ -115,7 +115,7 @@ Get a list of selected options in the `<select>` element. For a standard select 
 this will only be a list with one element, for a multiple select list it can contain
 zero or many elements.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L54" >}}
 {{< /tab >}}
@@ -126,7 +126,7 @@ zero or many elements.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L56" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L51" >}}
@@ -146,7 +146,7 @@ for each element you want to select.
 
 Select the option based on its visible text
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L30" >}}
 {{< /tab >}}
@@ -157,7 +157,7 @@ Select the option based on its visible text
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L21" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L25" >}}
@@ -171,7 +171,7 @@ Select the option based on its visible text
 
 Select the option based on its value attribute
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L33" >}}
 {{< /tab >}}
@@ -182,7 +182,7 @@ Select the option based on its value attribute
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L24" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L23" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L28" >}}
@@ -196,7 +196,7 @@ Select the option based on its value attribute
 
 Select the option based on its position in the list
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L36" >}}
 {{< /tab >}}
@@ -207,7 +207,7 @@ Select the option based on its position in the list
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L31" >}}
@@ -230,7 +230,7 @@ Options with a `disabled` attribute may not be selected.
     </select>
 ```
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L77-L79" >}}
 {{< /tab >}}
@@ -241,7 +241,7 @@ Options with a `disabled` attribute may not be selected.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L77" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L63-L65" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L62-L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L73-L76" >}}
@@ -256,7 +256,7 @@ Options with a `disabled` attribute may not be selected.
 Only multiple select type select lists can have options de-selected. 
 You can repeat these methods for each element you want to select.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/SelectListTest.java#L66" >}}
 {{< /tab >}}
@@ -267,7 +267,7 @@ You can repeat these methods for each element you want to select.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Support/SelectListTest.cs#L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/select_list_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/select/selectListTest.spec.js#L63" >}}

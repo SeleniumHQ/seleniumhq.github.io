@@ -15,13 +15,6 @@ convenience method to set this execution mode while setting the browser options.
 [Selenium 4.8.0](https://www.selenium.dev/blog/2023/selenium-4-8-0-released/) will be deprecated this method 
 and now users need to set it through arguments when setting the browser options.
 
-
-
-Now that we got your attention, 
-We're very happy to announce the release of Selenium 4.8.0 for Java, 
-.NET, Ruby, Python, and Javascript as well as the Grid and Internet Explorer Driver.
-Links to everything can be found on our [downloads page](https://www.selenium.dev/downloads/).
-
 ### Why is Selenium doing this?
 
 Chromium based browsers have now two different headless modes (the original one, and one with more 
@@ -42,6 +35,7 @@ Using `--headless=new` should bring a better experience when using headless with
 Thanks to [Michael Mintz](https://github.com/mdmintz) for the detailed 
 [explanation](https://stackoverflow.com/questions/45631715/downloading-with-chrome-headless-and-selenium/73840130#73840130)!
 
+Check more details about the [new headleass mode at the official Chrome blog](https://developer.chrome.com/articles/new-headless/).
 
 ### How can I set headless mode from now on?
 
@@ -89,7 +83,7 @@ driver.quit()
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless=new");
 WebDriver driver = new ChromeDriver(options);
-driver.get("https://selenium.dev);
+driver.get("https://selenium.dev");
 driver.quit();
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
