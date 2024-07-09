@@ -149,7 +149,7 @@ in the following example of a page object for a Sign-in page.</p><div class=high
 </span></span></span></code></pre></div><p>There is a lot of flexibility in how the page objects may be designed, but
 there are a few basic rules for getting the desired maintainability of your
 test code.</p><h2 id=assertions-in-page-objects>Assertions in Page Objects</h2><p>Page objects themselves should never make verifications or assertions. This is
-part of your test and should always be within the test’s code, never in an page
+part of your test and should always be within the test’s code, never in a page
 object. The page object will contain the representation of the page, and the
 services the page provides via methods but no code related to what is being
 tested should be within the page object.</p><p>There is one, single, verification which can, and should, be within the page
