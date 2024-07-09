@@ -17,9 +17,9 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
-  {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L14-L18" >}}
-    {{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< /tab >}}
 {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.windowHandle{{< /tab >}}
@@ -74,29 +74,11 @@ driver.get("https://seleniumhq.github.io")
     # 等待新标签页完成加载内容
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 存储原始窗口的 ID
-string originalWindow = driver.CurrentWindowHandle;
 
-// 检查一下，我们还没有打开其他的窗口
-Assert.AreEqual(driver.WindowHandles.Count, 1);
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
+  {{< /tab >}}
 
-// 单击在新窗口中打开的链接
-driver.FindElement(By.LinkText("new window")).Click();
-
-// 等待新窗口或标签页
-wait.Until(wd => wd.WindowHandles.Count == 2);
-
-// 循环执行，直到找到一个新的窗口句柄
-foreach(string window in driver.WindowHandles)
-{if(originalWindow != window)
-{driver.SwitchTo().Window(window);
-break;
-}
-}
-// 等待新标签页完成加载内容
-wait.Until(wd => wd.Title == "Selenium documentation");
-{{< /tab >}}
 {{< tab header="Ruby" >}}
     # 存储原始窗口的 ID
 original_window = driver.window_handle
@@ -188,13 +170,11 @@ driver.close()
     #切回到之前的标签页或窗口
 driver.switch_to.window(original_window)
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-//关闭标签页或窗口
-driver.Close();
 
-//切回到之前的标签页或窗口
-driver.SwitchTo().Window(originalWindow);
-{{< /tab >}}
+   {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
+  {{< /tab >}}
+
 {{< tab header="Ruby" >}}
     #关闭标签页或窗口
 driver.close
@@ -240,13 +220,12 @@ driver.switch_to.new_window('tab')
     # 打开一个新窗口并切换到新窗口
 driver.switch_to.new_window('window')
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 打开新标签页并切换到新标签页
-driver.SwitchTo().NewWindow(WindowType.Tab)
-
-// 打开一个新窗口并切换到新窗口
-driver.SwitchTo().NewWindow(WindowType.Window)
-{{< /tab >}}
+  
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< /tab >}}
+  
+  
   {{% tab header="Ruby" text=true %}}
 打开新标签页并切换到新标签页
 {{< gh-codeblock path="/examples/ruby/spec/interactions/windows_spec.rb#L9" >}}
@@ -283,7 +262,9 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 {{< /tab >}}
 
 {{< tab header="Python" >}}driver.quit(){{< /tab >}}
-{{< tab header="CSharp" >}}driver.Quit();{{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< /tab >}}
 {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.quit(){{< /tab >}}
