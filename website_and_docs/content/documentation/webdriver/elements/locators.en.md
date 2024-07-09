@@ -298,8 +298,8 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 A HTML document can be considered as a XML document, and then we can use XPath
 which will be the path traversed to reach the element of interest to locate the element.
 The XPath could be absolute xpath, which is created from the root of the document.
-Example - /html/form/input[1]. This will return the male radio button.
-Or the Xpath could be relative. Example - //input[@name='fname']. This will return the
+For example, /html/form/input[1]. This will return the male radio button.
+Alternatively, the XPath can be relative. For example, //input[@name='fname'] will return the
 first name text box. Let us create a locator for female radio button using XPath. 
 
 {{< tabpane langEqualsHeader=true >}}
