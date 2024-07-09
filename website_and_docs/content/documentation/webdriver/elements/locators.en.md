@@ -34,8 +34,8 @@ Selenium provides support for these 8 traditional location strategies in WebDriv
 ## Creating Locators
 
 To work on a web element using Selenium, we need to first locate it on the web page.
-Selenium provides us above mentioned ways, using which we can locate element on the 
-page. To understand and create locator we will use the following HTML snippet.
+Selenium provides us above mentioned ways, using which we can locate an element on the 
+page. To understand how to create a locator we will use the following HTML snippet.
 
 ```html
 <html>
@@ -105,7 +105,7 @@ available in Selenium.
 CSS is the language used to style HTML pages. We can use css selector locator strategy
 to identify the element on the page. If the element has an id, we create the locator
 as css = #id. Otherwise the format we follow is css =[attribute=value] .
-Let us see an example from above HTML snippet. We will create locator for First Name 
+Let us see an example from above HTML snippet. We will create a locator for First Name 
 textbox, using css. 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -295,12 +295,12 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 
 ## xpath 
 
-A HTML document can be considered as a XML document, and then we can use xpath
+A HTML document can be considered as a XML document, and then we can use XPath
 which will be the path traversed to reach the element of interest to locate the element.
 The XPath could be absolute xpath, which is created from the root of the document.
 Example - /html/form/input[1]. This will return the male radio button.
-Or the xpath could be relative. Example- //input[@name='fname']. This will return the
-first name text box. Let us create locator for female radio button using xpath. 
+Or the Xpath could be relative. Example - //input[@name='fname']. This will return the
+first name text box. Let us create a locator for female radio button using XPath. 
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
@@ -343,8 +343,8 @@ Selenium uses the JavaScript function
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 to determine the size and position of elements on the page, and can use this information to locate neighboring elements.
 
-Relative locator methods can take as the argument for the point of origin, either a previously located element reference, 
-or another locator. In these examples we'll be using locators only, but you could swap the locator in the final method with
+Relative locator methods can take either a previously located element reference, 
+or another locator, as the argument for the point of origin. In these examples we'll be using locators only, but you could swap the locator in the final method with
 an element object and it will work the same.
 
 Let us consider the below example for understanding the relative locators.
@@ -437,7 +437,7 @@ val cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("s
 #### Right of
 
 If the submit button is not easily identifiable for some reason, but the cancel button element is,
-we can locate the submit button element using the fact that it is a "button" element "to the right of" the cancel element.
+we can locate the submit button element using the fact that it is a "button" element to the "right of" the cancel element.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
