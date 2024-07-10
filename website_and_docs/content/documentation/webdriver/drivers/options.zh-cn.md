@@ -30,7 +30,7 @@ aliases: [
 
 ## browserName
 
-Browser name is set by default when using an Options class instance.
+默认情况下，使用 Options 类实例时会设置浏览器名称.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -56,9 +56,10 @@ Browser name is set by default when using an Options class instance.
 
 ## browserVersion
 
-This capability is optional, this is used to set the available browser version at remote end.
-In recent versions of Selenium, if the version is not found on the system,
-it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
+此功能是可选的，用于在远程端设置可用的浏览器版本.
+在最新版本的 Selenium 中，如果在系统上找不到该版本,
+它将被 [Selenium Manager]({{< ref "../../selenium_manager" >}}) 自动下载
+
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

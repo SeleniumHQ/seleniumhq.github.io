@@ -36,7 +36,7 @@ weight: 3
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L13" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
