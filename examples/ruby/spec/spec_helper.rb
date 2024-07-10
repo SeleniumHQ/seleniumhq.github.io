@@ -31,6 +31,11 @@ RSpec.configure do |config|
     @driver = Selenium::WebDriver.for :chrome
   end
 
+  def start_bidi_session
+    options = Selenium::WebDriver::Chrome::Options.new(web_socket_url: true)
+    @driver = Selenium::WebDriver.for :chrome, options: options
+  end
+
   def start_firefox
     options = Selenium::WebDriver::Options.firefox(timeouts: {implicit: 1500})
     @driver = Selenium::WebDriver.for :firefox, options: options
