@@ -7,7 +7,7 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
-      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.2" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.3" />
       <PackageReference Include="MSTest.TestAdapter" Version="3.4.3" />
       <PackageReference Include="MSTest.TestFramework" Version="3.4.3" />
       <PackageReference Include="Selenium.Support" Version="4.22.0" />
