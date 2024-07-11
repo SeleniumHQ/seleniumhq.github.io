@@ -164,8 +164,8 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-banner_flag = false
-announcement_banner = false
+banner_flag = true
+announcement_banner = true
 
 # Enable Algolia DocSearch
 [params.search.algolia]
