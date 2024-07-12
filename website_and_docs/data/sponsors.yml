@@ -94,6 +94,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Jul 12, 2024
+    - logo: "/images/sponsors/route4me-logo.png"
+      url: "https://route4me.com/"
+      name: "Route Planner and Route Optimizer - Route4Me Inc."
     # Sponsorship start date: Jul 5, 2024
     - logo: "/images/sponsors/rtts-logo.png"
       url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
