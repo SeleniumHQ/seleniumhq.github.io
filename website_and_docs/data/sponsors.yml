@@ -95,7 +95,7 @@ bronze:
   enable: true
   item:
     # Sponsorship start date: Jul 5, 2024
-    - logo: "/images/sponsors/rtts-logo.jpg"
+    - logo: "/images/sponsors/rtts-logo.png"
       url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
       name: "Real-Time Technology Solutions Inc."
     # Sponsorship start date: Mar 20, 2023
