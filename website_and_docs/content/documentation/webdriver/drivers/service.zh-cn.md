@@ -76,7 +76,7 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L33" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L32" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
