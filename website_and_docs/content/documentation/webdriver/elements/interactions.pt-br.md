@@ -58,15 +58,9 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L17-L21" >}}
   {{< /tab >}}
 
-  {{< tab header="Ruby" >}}
-
-    # Navigate to URL
-  driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
-
-    # Click the element
-  driver.find_element(name: 'color_input').click
-
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L11" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
@@ -116,18 +110,9 @@ possible keystrokes that WebDriver Supports.
 	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L27-L33" >}}
   {{< /tab >}}
 
-  {{< tab header="Ruby" >}}
-
-    # Navigate to URL
-	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
-
-    # Clear field to empty it from any previous data
-	driver.find_element(name: 'email_input').clear
-	
-	# Enter Text
-	driver.find_element(name: 'email_input').send_keys 'admin@localhost.dev'
-
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L16" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L21" >}}
   {{< /tab >}}
@@ -173,16 +158,10 @@ with a`content-editable` attribute. If these conditions are not met,
    {{< tab header="CSharp" text=true >}}
 	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L40-L43" >}}
   {{< /tab >}}
-  
-  {{< tab header="Ruby" >}}
 
-    # Navigate to URL
-	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
-
-    # Clear field to empty it from any previous data
-	driver.find_element(name: 'email_input').clear
-
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L15" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L20" >}}
   {{< /tab >}}
