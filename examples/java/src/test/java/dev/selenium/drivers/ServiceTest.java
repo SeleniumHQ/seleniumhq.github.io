@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.service.DriverFinder;
 
 public class ServiceTest extends BaseTest {
+  
   @Test
   public void defaultService() {
     ChromeDriverService service = new ChromeDriverService.Builder().build();
