@@ -15,7 +15,7 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.9.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -49,7 +49,7 @@ GEM
     rubyzip (2.3.2)
     selenium-devtools (0.126.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.22.0)
+    selenium-webdriver (4.23.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -57,7 +57,7 @@ GEM
       websocket (~> 1.0)
     strscan (3.1.0)
     unicode-display_width (2.5.0)
-    websocket (1.2.10)
+    websocket (1.2.11)
 
 PLATFORMS
   arm64-darwin-21
@@ -73,7 +73,7 @@ DEPENDENCIES
   rubocop (~> 1.35)
   rubocop-rspec (~> 3.0)
   selenium-devtools (= 0.126.0)
-  selenium-webdriver (= 4.22.0)
+  selenium-webdriver (= 4.23.0)
 
 BUNDLED WITH
    2.5.6
