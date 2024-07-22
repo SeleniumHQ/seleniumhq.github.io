@@ -16,9 +16,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v127.browser.Browser;
-import org.openqa.selenium.devtools.v127.network.Network;
-import org.openqa.selenium.devtools.v127.network.model.Headers;
+import org.openqa.selenium.devtools.v125.browser.Browser;
+import org.openqa.selenium.devtools.v125.network.Network;
+import org.openqa.selenium.devtools.v125.network.model.Headers;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CdpApiTest extends BaseTest {
