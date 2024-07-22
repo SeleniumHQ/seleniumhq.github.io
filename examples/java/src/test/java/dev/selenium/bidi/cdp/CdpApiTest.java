@@ -4,31 +4,21 @@ import com.google.common.collect.ImmutableMap;
 import dev.selenium.BaseTest;
 import java.time.Duration;
 import java.util.Base64;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v124.browser.Browser;
-import org.openqa.selenium.devtools.v124.network.Network;
-import org.openqa.selenium.devtools.v124.network.model.Headers;
-import org.openqa.selenium.devtools.v124.performance.Performance;
-import org.openqa.selenium.devtools.v124.performance.model.Metric;
-import org.openqa.selenium.devtools.v124.runtime.Runtime;
+import org.openqa.selenium.devtools.v127.browser.Browser;
+import org.openqa.selenium.devtools.v127.network.Network;
+import org.openqa.selenium.devtools.v127.network.model.Headers;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CdpApiTest extends BaseTest {
