@@ -24,7 +24,7 @@ Record or take actions on `console.log` events.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_logging.py#L11" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
