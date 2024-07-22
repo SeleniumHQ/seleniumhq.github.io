@@ -8,13 +8,13 @@
   color: $selenium-cyan-color;
 }
 
-p > a, main a {
+p > a, main a, div > a {
   color: $primary !important;
   border-bottom: 2px solid;
   transition: 0.3s;
 }
 
-p > a:hover, main a:hover {
+p > a:hover, main a:hover, div > a:hover {
   color: $selenium-cyan-color !important;
 }
 

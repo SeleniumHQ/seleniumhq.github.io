@@ -3,7 +3,7 @@ const { By, Browser, until } = require('selenium-webdriver');
 const assert = require("node:assert");
 
 suite(function (env) {
-    describe('Element Interactions', function () {
+    describe('Waits', function () {
         let driver;
 
         before(async function () {

@@ -44,10 +44,11 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 
 
 {{< tabpane langEqualsHeader=true >}}
+
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
+{{< tab header="Python" >}}
 
     # Navigate to url
 	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
@@ -55,32 +56,15 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
     # Click on the element 
 	driver.find_element(By.NAME, "color_input").click()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-
-  // Navigate to Url
-  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-  // Click the element
-  driver.FindElement(By.Name("color_input")).Click();
   
+  {{< tab header="CSharp" text=true >}}
+	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L17-L21" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-
-    # Navigate to URL
-  driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
-
-    # Click the element
-  driver.find_element(name: 'color_input').click
-
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-    // Click the element
-    await driver.findElement(By.name('color_input')).click();
-  
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L11" >}}
+{{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 
@@ -123,43 +107,17 @@ possible keystrokes that WebDriver Supports.
 	driver.find_element(By.NAME, "email_input").send_keys("admin@localhost.dev" )
 
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-
-  // Navigate to Url
-  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-  // Clear field to empty it from any previous data
-  driver.FindElement(By.Name("email_input")).Clear();
   
-  //Enter Text
-  driver.FindElement(By.Name("email_input")).SendKeys("admin@localhost.dev");
-  
-  
-}
+   {{< tab header="CSharp" text=true >}}
+	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L27-L33" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
 
-    # Navigate to URL
-	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-    # Clear field to empty it from any previous data
-	driver.find_element(name: 'email_input').clear
-	
-	# Enter Text
-	driver.find_element(name: 'email_input').send_keys 'admin@localhost.dev'
-
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-    // Enter text 
-    await driver.findElement(By.name('email_input')).sendKeys('admin@localhost.dev');
-  
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L16" >}}
+{{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L21" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   
@@ -199,36 +157,18 @@ with a`content-editable` attribute. If these conditions are not met,
 
 	
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-
-  // Navigate to Url
-  driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-  // Clear field to empty it from any previous data
-  driver.FindElement(By.Name("email_input")).Clear();
   
  
-  
-}
+   {{< tab header="CSharp" text=true >}}
+	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L40-L43" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
 
-    # Navigate to URL
-	driver.get 'https://www.selenium.dev/selenium/web/inputs.html'
 
-    # Clear field to empty it from any previous data
-	driver.find_element(name: 'email_input').clear
-
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-
-    // Navigate to Url
-    await driver.get('https://www.selenium.dev/selenium/web/inputs.html');
-
-	//Clear field to empty it from any previous data
-	await driver.findElement(By.name('email_input')).clear();
-
-   
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L15" >}}
+{{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   

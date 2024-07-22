@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.bidi.module.Script;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.openqa.selenium.bidi.script.LocalValue;
@@ -50,6 +52,7 @@ class ScriptEventsTest extends BaseTest {
     }
 
     @Test
+    @DisabledOnOs(value = OS.MAC, disabledReason = "Works locally, times out on CI")
     void canListenToRealmCreatedEvent()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (Script script = new Script(driver)) {

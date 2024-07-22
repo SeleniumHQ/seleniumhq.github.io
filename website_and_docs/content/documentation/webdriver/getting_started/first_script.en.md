@@ -183,7 +183,7 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L19" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L26" >}}
@@ -228,9 +228,26 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 
 ## Running Selenium File
 
-{{< alert-code >}}
-Add example for how to execute each of the above pages via command line
-{{< /alert-code >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/README.md#L60" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/README.md#L36" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="examples/javascript/README.md#L36" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 
 ## Next Steps

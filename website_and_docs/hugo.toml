@@ -53,35 +53,40 @@ anchor = "smart"
 [languages]
 [languages.en]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="English"
 weight = 1
+[languages.en.params]
+description = "Selenium automates browsers. That's it!"
 [languages.pt-br]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="Português (Brasileiro)"
 weight = 2
+[languages.pt-br.params]
+description = "Selenium automates browsers. That's it!"
 [languages.zh-cn]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "中文简体"
 weight = 3
+[languages.zh-cn.params]
+description = "Selenium automates browsers. That's it!"
 [languages.ja]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "日本語"
 weight = 4
+[languages.ja.params]
+description = "Selenium automates browsers. That's it!"
 [languages.other]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="Other"
 weight = 5
+[languages.other.params]
+description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
-  # replacements = "github.com/google/docsy -> ../../docsy"
+  #replacements = "github.com/google/docsy -> ../../docsy"
   [module.hugoVersion]
     extended = true
     min = "0.73.0"
@@ -159,6 +164,7 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
+banner_flag = true
 announcement_banner = true
 
 # Enable Algolia DocSearch
@@ -215,11 +221,6 @@ enable = false
 	url = "https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"
 	icon = "fab fa-youtube"
         desc = "Check all the conference talks and learn from the community!"
-[[params.links.user]]
-	name = "Selenium in Facebook"
-	url = "https://www.facebook.com/Selenium2.WebDriver"
-	icon = "fab fa-facebook"
-        desc = "Get news and updates in Facebook!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Software Freedom Conservancy"

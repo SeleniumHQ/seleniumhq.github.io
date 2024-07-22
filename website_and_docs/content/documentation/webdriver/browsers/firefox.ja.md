@@ -126,11 +126,8 @@ var profile = new FirefoxProfile();
 options.Profile = profile;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
-driver = Selenium::WebDriver.for :firefox, options: options
+  {{< tab header="Ruby" text=true >}}
+  {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L139-L141" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const { Builder } = require("selenium-webdriver");
@@ -433,7 +430,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L125" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -460,7 +457,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L132" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

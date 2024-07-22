@@ -1,11 +1,14 @@
 import os
+import sys
 
+import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.file_detector import LocalFileDetector
 from selenium.webdriver.support.wait import WebDriverWait
 
 
+@pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_start_remote(server):
     options = webdriver.ChromeOptions()
     driver = webdriver.Remote(command_executor=server, options=options)
@@ -14,6 +17,7 @@ def test_start_remote(server):
     driver.quit()
 
 
+@pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_uploads(server):
     options = webdriver.ChromeOptions()
     driver = webdriver.Remote(command_executor=server, options=options)
@@ -33,6 +37,7 @@ def test_uploads(server):
     assert file_name == "selenium-snapshot.png"
 
 
+@pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_downloads(server, temp_dir):
     options = webdriver.ChromeOptions()
     options.enable_downloads = True

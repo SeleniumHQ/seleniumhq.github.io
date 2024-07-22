@@ -89,7 +89,7 @@ RSpec.describe 'Firefox' do
   describe 'Features' do
     let(:driver) { start_firefox }
 
-    it 'installs addon' do
+    it 'installs addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
 
       driver.install_addon(extension_file_path)
@@ -99,7 +99,7 @@ RSpec.describe 'Firefox' do
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
 
-    it 'uninstalls addon' do
+    it 'uninstalls addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.xpi', __dir__)
       extension_id = driver.install_addon(extension_file_path)
 
@@ -109,7 +109,7 @@ RSpec.describe 'Firefox' do
       expect(driver.find_elements(id: 'webextensions-selenium-example')).to be_empty
     end
 
-    it 'installs unsigned addon' do
+    it 'installs unsigned addon', :skip => "Skipping tests until Firefox 127 is released" do
       extension_dir_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example/', __dir__)
 
       driver.install_addon(extension_dir_path, true)
@@ -118,11 +118,36 @@ RSpec.describe 'Firefox' do
       injected = driver.find_element(id: 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
+
+    it 'takes full page screenshot' do
+      driver.navigate.to 'https://www.selenium.dev/selenium/web/blank.html'
+      Dir.mktmpdir('screenshot_test') do |dir|
+        screenshot = driver.save_full_page_screenshot(File.join(dir, 'screenshot.png'))
+
+        expect(screenshot).to be_a File
+      end
+    end
+
+    it 'sets the context' do
+      driver.context = 'content'
+      expect(driver.context).to eq 'content'
+    end
+  end
+
+  describe 'Profile' do
+    it 'creates a new profile' do
+      profile = Selenium::WebDriver::Firefox::Profile.new
+      profile['browser.download.dir'] = '/tmp/webdriver-downloads'
+      options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
+      expect(options.profile).to eq(profile)
+    end
   end
 
   def driver_finder
     options = Selenium::WebDriver::Options.firefox(browser_version: 'stable')
-    ENV['GECKODRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Firefox::Service)
-    ENV['FIREFOX_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.firefox
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['GECKODRIVER_BIN'] = finder.driver_path
+    ENV['FIREFOX_BIN'] = finder.browser_path
   end
 end

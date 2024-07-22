@@ -29,11 +29,11 @@ RSpec.describe 'Edge' do
 
     it 'add extensions' do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.crx', __dir__)
-      options = Selenium::WebDriver::Options.chrome
+      options = Selenium::WebDriver::Options.edge
 
       options.add_extension(extension_file_path)
 
-      @driver = Selenium::WebDriver.for :chrome, options: options
+      @driver = Selenium::WebDriver.for :edge, options: options
       @driver.get('https://www.selenium.dev/selenium/web/blank.html')
       injected = @driver.find_element(:id, 'webextensions-selenium-example')
       expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
@@ -113,9 +113,57 @@ RSpec.describe 'Edge' do
     end
   end
 
+  describe 'Special Features' do
+    it 'casts' do
+      @driver = Selenium::WebDriver.for :edge
+      sinks = @driver.cast_sinks
+      unless sinks.empty?
+        device_name = sinks.first['name']
+        @driver.start_cast_tab_mirroring(device_name)
+        expect { @driver.stop_casting(device_name) }.not_to raise_exception
+      end
+    end
+
+    it 'gets and sets network conditions' do
+      @driver = Selenium::WebDriver.for :edge
+      @driver.network_conditions = {offline: false, latency: 100, throughput: 200}
+      expect(@driver.network_conditions).to eq(
+        'offline' => false,
+        'latency' => 100,
+        'download_throughput' => 200,
+        'upload_throughput' => 200)
+    end
+
+    it 'gets the browser logs' do
+      @driver = Selenium::WebDriver.for :edge
+      @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+      sleep 1
+      logs = @driver.logs.get(:browser)
+
+      expect(logs.first.message).to include 'Failed to load resource'
+    end
+
+    it 'sets permissions' do
+      @driver = Selenium::WebDriver.for :edge
+      @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
+      @driver.add_permission('camera', 'denied')
+      @driver.add_permissions('clipboard-read' => 'denied', 'clipboard-write' => 'prompt')
+      expect(permission('camera')).to eq('denied')
+      expect(permission('clipboard-read')).to eq('denied')
+      expect(permission('clipboard-write')).to eq('prompt')
+    end
+  end
+
   def driver_finder
     options = Selenium::WebDriver::Options.edge(browser_version: 'stable')
-    ENV['EDGEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Edge::Service)
-    ENV['EDGE_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.edge
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['EDGEDRIVER_BIN'] = finder.driver_path
+    ENV['EDGE_BIN'] = finder.browser_path
+  end
+
+  def permission(name)
+    @driver.execute_async_script('callback = arguments[arguments.length - 1];' \
+                                   'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
   end
 end

@@ -193,5 +193,9 @@ suite(function(env) {
             assert.equal(0, credentialList.length);
         });
 
+        it('Set is user verified', async function() {
+            options.setIsUserVerified(true);
+            assert.equal(options.getIsUserVerified(), true);
+        }); 
     });
 }, { browsers: [Browser.CHROME]});

@@ -9,7 +9,7 @@ description: >
   When the Selenium and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code.
 ---
 
-When the [Selenium](http://selenium.googlecode.com/) and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a _lot_ of bugs and feature requests.
+When the Selenium (`http://selenium.googlecode.com/`) and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a _lot_ of bugs and feature requests.
 
 In the run up for the 2.0b2 release, we’ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January. The aim will be to focus on clearing our bug list as much as possible, so that beta2 will be the best release of Selenium yet. We will, of course, be recognizing people who squash the most bugs here on the blog, and we’re hunting out goodies to mail to the top bug bashers once the week is over.
 

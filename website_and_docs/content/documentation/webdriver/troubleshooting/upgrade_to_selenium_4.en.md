@@ -54,25 +54,30 @@ For example, if your cloud vendor uses `build` and `name` capabilities for your 
 to wrap them in a `cloud:options` block (check with your cloud vendor for the appropriate prefix).
 
 #### Before 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< badge-examples >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
+```java
 DesiredCapabilities caps = DesiredCapabilities.firefox();
 caps.setCapability("platform", "Windows 10");
 caps.setCapability("version", "92");
 caps.setCapability("build", myTestBuild);
 caps.setCapability("name", myTestName);
 WebDriver driver = new RemoteWebDriver(new URL(cloudUrl), caps);
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+```
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+```javascript
 caps = {};
 caps['browserName'] = 'Firefox';
 caps['platform'] = 'Windows 10';
 caps['version'] = '92';
 caps['build'] = myTestBuild;
 caps['name'] = myTestName;
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+```
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+```CSharp
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.SetCapability("browserName", "firefox");
 caps.SetCapability("platform", "Windows 10");
@@ -80,16 +85,13 @@ caps.SetCapability("version", "92");
 caps.SetCapability("build", myTestBuild);
 caps.SetCapability("name", myTestName);
 var driver = new RemoteWebDriver(new Uri(CloudURL), caps);
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< tab header="Ruby" >}}
-caps = Selenium::WebDriver::Remote::Capabilities.firefox
-caps[:platform] = 'Windows 10'
-caps[:version] = '92'
-caps[:build] = my_test_build
-caps[:name] = my_test_name
-driver = Selenium::WebDriver.for :remote, url: cloud_url, desired_capabilities: caps
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L123-L130">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{% tab header="Python" %}}
+```python
 caps = {}
 caps['browserName'] = 'firefox'
 caps['platform'] = 'Windows 10'
@@ -97,13 +99,15 @@ caps['version'] = '92'
 caps['build'] = my_test_build
 caps['name'] = my_test_name
 driver = webdriver.Remote(cloud_url, desired_capabilities=caps)
-{{< /tab >}}
+````
+{{% /tab %}}
 {{< /tabpane >}}
 
 #### After
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< badge-examples >}}
-{{< tab header="Java" >}}
+{{% tab header="Java" %}}
+```java
 FirefoxOptions browserOptions = new FirefoxOptions();
 browserOptions.setPlatformName("Windows 10");
 browserOptions.setBrowserVersion("92");
@@ -112,8 +116,10 @@ cloudOptions.put("build", myTestBuild);
 cloudOptions.put("name", myTestName);
 browserOptions.setCapability("cloud:options", cloudOptions);
 WebDriver driver = new RemoteWebDriver(new URL(cloudUrl), browserOptions);
-{{< /tab >}}
-{{< tab header="JavaScript" >}}
+```
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+```javascript
 capabilities = {
   browserName: 'firefox',
   browserVersion: '92',
@@ -123,8 +129,10 @@ capabilities = {
      name: myTestName,
   }
 }
-{{< /tab >}}
-{{< tab header="CSharp" >}}
+````
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+```CSharp
 var browserOptions = new FirefoxOptions();
 browserOptions.PlatformName = "Windows 10";
 browserOptions.BrowserVersion = "92";
@@ -133,18 +141,13 @@ cloudOptions.Add("build", myTestBuild);
 cloudOptions.Add("name", myTestName);
 browserOptions.AddAdditionalOption("cloud:options", cloudOptions);
 var driver = new RemoteWebDriver(new Uri(CloudURL), browserOptions);
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::Options.firefox
-options.browser_version = 'latest'
-options.platform_name = 'Windows 10'
-cloud_options = {}
-cloud_options[:build] = my_test_build
-cloud_options[:name] = my_test_name
-options.add_option('cloud:options', cloud_options)
-driver = Selenium::WebDriver.for :remote, url: cloud_url, capabilities: options
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L47">}}
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{% tab header="Python" %}}
+```python
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 options = FirefoxOptions()
 options.browser_version = '92'
@@ -154,7 +157,8 @@ cloud_options['build'] = my_test_build
 cloud_options['name'] = my_test_name
 options.set_capability('cloud:options', cloud_options)
 driver = webdriver.Remote(cloud_url, options=options)
-{{< /tab >}}
+```
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### Find element(s) utility methods in Java

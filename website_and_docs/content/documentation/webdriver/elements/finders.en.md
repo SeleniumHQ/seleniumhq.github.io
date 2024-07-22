@@ -52,9 +52,9 @@ vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-vegetable = driver.find_element(class: 'tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const vegetable = await driver.findElement(By.className('tomatoes'));
   {{< /tab >}}
@@ -87,10 +87,9 @@ fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
 IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-fruits = driver.find_element(id: 'fruits')
-fruit = fruits.find_element(class: 'tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruits = await driver.findElement(By.id('fruits'));
 const fruit = fruits.findElement(By.className('tomatoes'));
@@ -131,9 +130,9 @@ fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-fruit = driver.find_element(css: '#fruits .tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L19" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruit = await driver.findElement(By.css('#fruits .tomatoes'));
   {{< /tab >}}
@@ -161,9 +160,9 @@ plants = driver.find_elements(By.TAG_NAME, "li")
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-plants = driver.find_elements(tag_name: 'li')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L23" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const plants = await driver.findElements(By.tagName('li'));
   {{< /tab >}}
@@ -227,23 +226,9 @@ namespace FindElementsExample {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :firefox
-begin
-     # Navigate to URL
-  driver.get 'https://www.example.com'
-
-     # Get all the elements available with tag name 'p'
-  elements = driver.find_elements(:tag_name,'p')
-
-  elements.each { |e|
-    puts e.text
-  }
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
 (async function example() {
@@ -359,26 +344,9 @@ namespace FindElementsFromElement {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  require 'selenium-webdriver'
-  driver = Selenium::WebDriver.for :chrome
-  begin
-    # Navigate to URL
-    driver.get 'https://www.example.com'
-
-    # Get element with tag name 'div'
-    element = driver.find_element(:tag_name,'div')
-
-    # Get all the elements available with tag name 'p'
-    elements = element.find_elements(:tag_name,'p')
-
-    elements.each { |e|
-      puts e.text
-    }
-  ensure
-    driver.quit
-  end
-  {{< /tab >}}
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
 
@@ -484,19 +452,8 @@ It is used to track (or) find DOM element which has the focus in the current bro
      }
     }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  require 'selenium-webdriver'
-  driver = Selenium::WebDriver.for :chrome
-  begin
-    driver.get 'https://www.google.com'
-    driver.find_element(css: '[name="q"]').send_keys('webElement')
-
-    # Get attribute of current active element
-    attr = driver.switch_to.active_element.attribute('title')
-    puts attr
-  ensure
-    driver.quit
-  end
+  {{< tab header="Ruby" text=true >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');

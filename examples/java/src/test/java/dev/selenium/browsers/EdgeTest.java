@@ -22,8 +22,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.manager.SeleniumManagerOutput;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 public class EdgeTest extends BaseTest {
   @AfterEach
@@ -171,8 +171,7 @@ public class EdgeTest extends BaseTest {
   private File getEdgeLocation() {
     EdgeOptions options = new EdgeOptions();
     options.setBrowserVersion("stable");
-    SeleniumManagerOutput.Result output =
-        DriverFinder.getPath(EdgeDriverService.createDefaultService(), options);
-    return new File(output.getBrowserPath());
+    DriverFinder finder = new DriverFinder(EdgeDriverService.createDefaultService(), options);
+    return new File(finder.getBrowserPath());
   }
 }

@@ -64,7 +64,7 @@ Add an argument to options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L11">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L12">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -121,7 +121,7 @@ Add an extension to options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L55">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -147,7 +147,7 @@ so long as the quit command is not sent to the driver.
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L32">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -178,7 +178,7 @@ Set excluded arguments on options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L20-L23">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -380,7 +380,7 @@ You can drive Chrome Cast devices with Edge, including sharing tabs
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L119-L123" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -405,7 +405,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L129" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -428,7 +428,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L141" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -451,7 +451,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L149-L150" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -463,4 +463,4 @@ You can simulate various network conditions.
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using DevTools in Edge
+See the [Chrome DevTools]({{< ref "../bidi/cdp/" >}}) section for more information about using DevTools in Edge

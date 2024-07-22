@@ -6,14 +6,6 @@ gem 'ffi', '~> 1.15', '>= 1.15.5' if Gem.win_platform? # Windows only
 gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 1.35'
-gem 'rubocop-rspec', '~> 2.12'
-gem 'selenium-devtools', '~> 0.122'
-
-if ENV['SE_NIGHTLY']
-  source 'https://rubygems.pkg.github.com/seleniumhq' do
-    selenium = 'selenium-webdriver'
-    gem selenium, '~> 4.19.0.nightly'
-  end
-else
-  gem 'selenium-webdriver', '= 4.19.0'
-end
+gem 'rubocop-rspec', '~> 3.0'
+gem 'selenium-devtools', '= 0.126.0'
+gem 'selenium-webdriver', '= 4.22.0'

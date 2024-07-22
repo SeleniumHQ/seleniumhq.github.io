@@ -47,25 +47,28 @@ val driver = SafariDriver(options)
 {{< /tabpane >}}
 
 ### 移动端
-那些希望在iOS上自动化Safari的人可以参考 [Appium project](//appium.io/).
+那些希望在iOS上自动化Safari的人可以参考 [Appium 项目](//appium.io/).
 
 
-## Service
+## 服务
 
-Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+所有浏览器通用的服务设置在 [服务页面]({{< ref "../drivers/service.md" >}}).
 
-### Logging
+### 日志
 
-Unlike other browsers, Safari doesn't let you choose where logs are output, or change levels. The one option
-available is to turn logs off or on. If logs are toggled on, they can be found at:`~/Library/Logs/com.apple.WebDriver/`.
+与其他浏览器不同,
+Safari 浏览器不允许您选择日志的输出位置或更改级别.
+一个可用选项是关闭或打开日志.
+如果日志处于打开状态，
+则可以在以下位置找到它们: `~/Library/Logs/com.apple.WebDriver/`.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L31" >}}
-**Note**: Java also allows setting console output by System Property;\
-Property key: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
-Property value: `"true"` or `"false"`
+**注意**: Java也允许使用环境变量进行设置;\
+属性键: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
+属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L17" >}}
@@ -88,8 +91,9 @@ Property value: `"true"` or `"false"`
 
 ## Safari Technology Preview
 
-Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-To use this version in your code:
+Apple 提供了其浏览器的开发版本 — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
+
+在代码中使用此版本:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -102,7 +106,7 @@ To use this version in your code:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
