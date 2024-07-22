@@ -49,7 +49,7 @@ You need to store the ID returned when adding the handler to delete it.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_logging.py#L23-24" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L23-24" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -76,7 +76,7 @@ Record or take actions on JavaScript exception events.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_logging.py#L35" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -101,7 +101,7 @@ You need to store the ID returned when adding the handler to delete it.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_logging.py#L47-48" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L47-48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
