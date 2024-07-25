@@ -105,7 +105,6 @@ have rolled out in Ruby, Python and JavaScript
 {{< gh-user "https://api.github.com/users/digitalvoice-nz" >}}
 {{< gh-user "https://api.github.com/users/josh-pinwheelapi" >}}
 {{< gh-user "https://api.github.com/users/pallavigitwork" >}}
-{{< gh-user "https://api.github.com/users/Pexpe" >}}
 {{< gh-user "https://api.github.com/users/sangcnguyen" >}}
     </div>
   </div>
