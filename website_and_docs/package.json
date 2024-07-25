@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
+    "postcss": "^8.4.40",
     "postcss-cli": "^11.0.0"
   }
 }
