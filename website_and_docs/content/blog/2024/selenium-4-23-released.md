@@ -50,10 +50,6 @@ Links to everything can be found on our [downloads page][downloads].
 
   <br>
 
-  * Rust
-    * Include mixed output (INFO, WARN, DEBUG, etc. to stderr and minimal JSON to stdout.
-    * Display driver path in error trace when driver is unavailable.
-    * [See all changes](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md)
 
 ### Contributors
 
