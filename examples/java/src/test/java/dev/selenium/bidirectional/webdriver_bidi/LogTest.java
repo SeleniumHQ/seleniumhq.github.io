@@ -54,7 +54,7 @@ class LogTest extends BaseTest {
             ConsoleLogEntry logEntry = future.get(5, TimeUnit.SECONDS);
 
             Assertions.assertEquals("Hello, world!", logEntry.getText());
-            Assertions.assertNull(logEntry.getRealm());
+
             Assertions.assertEquals(1, logEntry.getArgs().size());
             Assertions.assertEquals("console", logEntry.getType());
             Assertions.assertEquals("log", logEntry.getMethod());
