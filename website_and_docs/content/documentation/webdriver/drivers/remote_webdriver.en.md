@@ -28,7 +28,7 @@ and an options instance are both required.
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L10-L11" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L13-L14" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
@@ -62,7 +62,7 @@ Java does not include a Local File Detector by default, so you must always add o
 {{< /tab >}}
 {{% tab header="Python" %}}
 Python adds a local file detector to remote webdriver instances by default, but you can also create your own class.
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L25-L28" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L29-L32" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 .NET adds a local file detector to remote webdriver instances by default, but you can also create your own class.
@@ -105,7 +105,7 @@ Each of the bindings have a method in the options class to set this.
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L60-L62" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L37-L39" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L42-L44" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L59-L64" >}}
@@ -131,7 +131,7 @@ so the list is an immediate snapshot of what file names are currently in the dir
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L73" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L47" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L52" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L72" >}}
@@ -156,7 +156,7 @@ Selenium looks for the name of the provided file in the list and downloads it to
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L53" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L58" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L78" >}}
@@ -182,7 +182,7 @@ but you can also delete all files during the session.
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L88" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L59" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L64" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L84" >}}
