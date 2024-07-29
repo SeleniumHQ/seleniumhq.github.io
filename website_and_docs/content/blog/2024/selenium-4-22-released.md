@@ -1,7 +1,7 @@
 ---
 title: "Selenium 4.22 Released!"
 linkTitle: "Selenium 4.22 Released!"
-date: 2024-05-16
+date: 2024-06-21
 tags: ["selenium"]
 categories: ["releases"]
 author: Titus Fortner [@titusfortner](https://titusfortner.com)
@@ -27,7 +27,7 @@ have rolled out in Ruby, Python and JavaScript
 
   * Java 
     * Enabling BiDi can now be accomplished by calling `enableBiDi()` on an Options class instance.
-    * Video file name in Dynamic Grid can be seet with `se:videoName` capability.
+    * Video file name in Dynamic Grid can be set with `se:videoName` capability.
     * [See all changes](https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG)
 
   <br>
