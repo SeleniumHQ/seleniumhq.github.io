@@ -87,6 +87,7 @@ Links to everything can be found on our [downloads page][downloads].
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/VietND96" >}}
 {{< gh-user "https://api.github.com/users/slhck" >}}
+{{< gh-user "https://api.github.com/users/StegSchreck" >}}
     </div>
   </div>
 </div>
