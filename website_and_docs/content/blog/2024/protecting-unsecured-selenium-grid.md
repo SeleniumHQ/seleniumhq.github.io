@@ -17,7 +17,11 @@ Selenium Grid 3.14. Please upgrade as some of the security items have been added
 
 Selenium Grid by default doesn't have any authentication as the assumption has always been that we want you to put
 this behind a secure network to prevent people from abusing your resources. There are ways that you can secure the grid,
-and we have documentation available on how to do this in our [help section](https://www.selenium.dev/documentation/grid/configuration/help/#security).
+and we have documentation available on how to do this in our [help section](https://www.selenium.dev/documentation/grid/configuration/help/#security). You can see more details if you run
+
+```
+java -jar selenium-server-<version>.jar info security
+```
 
 Another way to combat this is to use a cloud provider to run your Selenium Grid. We have numerous vendors that sponsor us
 so have a look at our [sponsors](https://www.selenium.dev/sponsors/) page. If you need help, after reading the [help section](https://www.selenium.dev/documentation/grid/configuration/help/#security)
