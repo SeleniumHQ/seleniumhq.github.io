@@ -25,5 +25,4 @@ java -jar selenium-server-<version>.jar info security
 
 Another way to combat this is to use a cloud provider to run your Selenium Grid. We have numerous vendors that sponsor us
 so have a look at our [sponsors](https://www.selenium.dev/sponsors/) page. If you need help, after reading the [help section](https://www.selenium.dev/documentation/grid/configuration/help/#security)
-please come into our [chat rooms](https://www.selenium.dev/support/#ChatRoom) and we will try guide you through making your
-grid more secure.
+please come into our [chat rooms](https://www.selenium.dev/support/#ChatRoom) and we will try guide you through making your grid more secure.
