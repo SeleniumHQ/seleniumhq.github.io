@@ -21,7 +21,7 @@ This section contains the APIs related to input commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L29-L31" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L27-L29" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -40,7 +40,7 @@ This section contains the APIs related to input commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L57-57" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
