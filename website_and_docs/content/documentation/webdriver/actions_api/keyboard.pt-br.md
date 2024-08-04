@@ -54,7 +54,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L19-L22" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L19-L22" >}}
@@ -77,7 +77,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L34-L39" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L32-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L32-L37" >}}
@@ -106,7 +106,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L47-L48" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L48-L50" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L47-L49" >}}
@@ -130,7 +130,7 @@ primarily this gets used when needing to type multiple characters in the middle 
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.5.0" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L61-L65" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L59-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L60-L63" >}}
@@ -155,7 +155,7 @@ Aqui está um exemplo de uso de todos os métodos acima para realizar uma ação
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L75-L87" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L73-L85" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L74-L86" >}}

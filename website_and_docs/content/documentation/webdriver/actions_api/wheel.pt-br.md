@@ -33,7 +33,7 @@ Independentemente de o elemento estar acima ou abaixo da tela de visualização 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L11-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L18-L22" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L16-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L18-L21" >}}
@@ -58,7 +58,7 @@ Este é o segundo cenário mais comum para a rolagem. Passe um valor delta x e u
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L22-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L30-L35" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L26-L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L30-L34" >}}
@@ -87,7 +87,7 @@ Se o elemento estiver fora da janela de visualização, ele será rolado para a 
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L34-L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L45-L49" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L40-L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L43-L47" >}}
@@ -118,7 +118,7 @@ Observe que se o deslocamento a partir do centro do elemento estiver fora da jan
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L48-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L62-L66" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L57-L61" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L59-L63" >}}
@@ -147,7 +147,7 @@ Observe que se o deslocamento a partir do canto superior esquerdo da janela de v
 {{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L80-L82" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L75-L77" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L75-L78" >}}

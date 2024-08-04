@@ -33,7 +33,7 @@ Movimentos de ponteiro e rolagem da roda permitem que o usuário defina uma dura
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
@@ -60,7 +60,7 @@ Existe um método especial para liberar todas as teclas pressionadas e botões d
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
