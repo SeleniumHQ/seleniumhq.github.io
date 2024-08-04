@@ -24,7 +24,9 @@ Você pode ler o título da página atual no navegador:
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
-  {{< tab header="Ruby" >}}driver.title{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L8" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
 {{< /tab >}}
@@ -44,7 +46,9 @@ Você pode ler a URL atual na barra de endereço do navegador usando:
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
-{{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L14" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
 {{< /tab >}}
