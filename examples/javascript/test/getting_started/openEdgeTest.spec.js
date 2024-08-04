@@ -1,22 +1,21 @@
-const {Browser} = require('selenium-webdriver');
-const {suite} = require('selenium-webdriver/testing');
+const {Browser, Builder} = require('selenium-webdriver');
 const edge = require('selenium-webdriver/edge');
 
-suite(function (env) {
-  describe('Open Edge', function () {
-    let driver;
 
-    before(async function () {
-      let options = new edge.Options();
-      driver = await env.builder()
-        .setEdgeOptions(options)
-        .build();
-    });
+describe('Open Edge', function () {
+  let driver;
 
-    after(async () => await driver.quit());
-
-    it('Basic Edge test', async function () {
-      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
-    });
+  before(async function () {
+    let options = new edge.Options();
+    driver = new Builder()
+      .forBrowser(Browser.EDGE)
+      .setEdgeOptions(options)
+      .build();
   });
-}, { browsers: [Browser.EDGE]});
+
+  after(async () => await driver.quit());
+
+  it('Basic Edge test', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  });
+});
