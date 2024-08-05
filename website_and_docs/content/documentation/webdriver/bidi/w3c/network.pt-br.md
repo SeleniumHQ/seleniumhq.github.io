@@ -32,7 +32,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L29-L29" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L29" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

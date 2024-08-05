@@ -23,12 +23,14 @@ You can read the current page title from the browser:
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
-  {{< tab header="Ruby" >}}driver.title{{< /tab >}}
+{{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L8" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
 {{< /tab >}}
-  {{< tab header="Kotlin" >}}driver.title{{< /tab >}}
+{{< tab header="Kotlin" >}}driver.title{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -45,7 +47,9 @@ You can read the current URL from the browser's address bar using:
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
-{{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L14" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
 {{< /tab >}}

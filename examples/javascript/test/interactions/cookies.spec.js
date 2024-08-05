@@ -1,82 +1,82 @@
-const { suite } = require('selenium-webdriver/testing');
-const {Browser} = require("selenium-webdriver");
 
-suite(function(env) {
-    describe('Cookies', function() {
-        let driver;
+const {Browser, Builder} = require("selenium-webdriver");
 
-        before(async function() {
-            driver = await env.builder().build();
-        });
 
-        after(async () => await driver.quit());
+describe('Cookies', function() {
+  let driver;
 
-        it('Create a cookie', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  before(async function() {
+    driver = new Builder()
+      .forBrowser(Browser.CHROME)
+      .build();
+  });
 
-            // set a cookie on the current domain
-            await driver.manage().addCookie({ name: 'key', value: 'value' });
-        });
+  after(async () => await driver.quit());
 
-        it('Create cookies with sameSite', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  it('Create a cookie', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
-            // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
-            await driver.manage().addCookie({ name: 'key', value: 'value', sameSite: 'Strict' });
-            await driver.manage().addCookie({ name: 'key', value: 'value', sameSite: 'Lax' });
-        });
+    // set a cookie on the current domain
+    await driver.manage().addCookie({ name: 'key', value: 'value' });
+  });
 
-        it('Read cookie', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  it('Create cookies with sameSite', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
-            // set a cookie on the current domain
-            await driver.manage().addCookie({ name: 'foo', value: 'bar' });
+    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
+    await driver.manage().addCookie({ name: 'key', value: 'value', sameSite: 'Strict' });
+    await driver.manage().addCookie({ name: 'key', value: 'value', sameSite: 'Lax' });
+  });
 
-            // Get cookie details with named cookie 'foo'
-            await driver.manage().getCookie('foo').then(function(cookie) {
-                console.log('cookie details => ', cookie);
-            });
-        });
+  it('Read cookie', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
 
-        it('Read all cookies', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+    // set a cookie on the current domain
+    await driver.manage().addCookie({ name: 'foo', value: 'bar' });
 
-            // Add few cookies
-            await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
-            await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
-
-            // Get all Available cookies
-            await driver.manage().getCookies().then(function(cookies) {
-                console.log('cookie details => ', cookies);
-            });
-        });
-
-        it('Delete a cookie', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
-
-            // Add few cookies
-            await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
-            await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
-
-            // Delete a cookie with name 'test1'
-            await driver.manage().deleteCookie('test1');
-
-            // Get all Available cookies
-            await driver.manage().getCookies().then(function(cookies) {
-                console.log('cookie details => ', cookies);
-            });
-        });
-
-        it('Delete all cookies', async function() {
-            await driver.get('https://www.selenium.dev/selenium/web/blank.html');
-
-            // Add few cookies
-            await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
-            await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
-
-            // Delete all cookies
-            await driver.manage().deleteAllCookies();
-        });
-
+    // Get cookie details with named cookie 'foo'
+    await driver.manage().getCookie('foo').then(function(cookie) {
+      console.log('cookie details => ', cookie);
     });
-}, { browsers: [Browser.CHROME, Browser.FIREFOX]});
+  });
+
+  it('Read all cookies', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+
+    // Add few cookies
+    await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
+    await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
+
+    // Get all Available cookies
+    await driver.manage().getCookies().then(function(cookies) {
+      console.log('cookie details => ', cookies);
+    });
+  });
+
+  it('Delete a cookie', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+
+    // Add few cookies
+    await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
+    await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
+
+    // Delete a cookie with name 'test1'
+    await driver.manage().deleteCookie('test1');
+
+    // Get all Available cookies
+    await driver.manage().getCookies().then(function(cookies) {
+      console.log('cookie details => ', cookies);
+    });
+  });
+
+  it('Delete all cookies', async function() {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+
+    // Add few cookies
+    await driver.manage().addCookie({ name: 'test1', value: 'cookie1' });
+    await driver.manage().addCookie({ name: 'test2', value: 'cookie2' });
+
+    // Delete all cookies
+    await driver.manage().deleteAllCookies();
+  });
+});
