@@ -23,9 +23,9 @@ open your website. This can be achieved in a single line:
   {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-driver.navigate.to 'https://selenium.dev'
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L7-L9" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L16-L20" >}}
   {{< /tab >}}
@@ -53,7 +53,9 @@ Pressing the browser's back button:
   {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L24-L25" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}driver.navigate.back{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L15" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
   {{< /tab >}}
@@ -73,7 +75,9 @@ Pressing the browser's forward button:
    {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L29-L30" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}driver.navigate.forward{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L23" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
 {{< /tab >}}
@@ -94,7 +98,9 @@ Refresh the current page:
   {{< tab header="CSharp" text=true >}}
  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L34-L35" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}driver.navigate.refresh{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L29" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
 {{< /tab >}}
