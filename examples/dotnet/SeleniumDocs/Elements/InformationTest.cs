@@ -3,7 +3,7 @@ using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace SeleniumDocs.Elements
 {
