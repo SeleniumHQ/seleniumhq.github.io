@@ -37,11 +37,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-//Navigate to the url
-driver.Url = "https://www.selenium.dev/selenium/web/inputs.html";
-
-//Get boolean value for is element display
-Boolean is_email_visible = driver.FindElement(By.Name("email_input")).Displayed;
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L12">}}
@@ -76,16 +72,9 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns true if element is enabled else returns false
 value = driver.find_element(By.NAME, 'button_input').is_enabled()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Store the WebElement
-IWebElement element = driver.FindElement(By.Name("button_input"));
-
-// Prints true if element is enabled else returns false
-System.Console.WriteLine(element.Enabled);
-  {{< /tab >}}
+   {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L28" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L17">}}
 {{< /tab >}}
@@ -119,13 +108,9 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns true if element is checked else returns false
 value = driver.find_element(By.NAME, "checkbox_input").is_selected()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Returns true if element ins checked else returns false
-bool value = driver.FindElement(By.Name("checkbox_input")).Selected;
-  {{< /tab >}}
+      {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L33" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L22">}}
 {{< /tab >}}
@@ -158,12 +143,8 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 attr = driver.find_element(By.NAME, "email_input").tag_name
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-// Returns TagName of the element
-string attr = driver.FindElement(By.Name("email_input")).TagName;
-  {{< /tab >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L38" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L27">}}
 {{< /tab >}}
@@ -201,16 +182,9 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(By.NAME, "range_input").rect
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/inputs.html");
-
-var res = driver.FindElement(By.Name("range_input"));
-// Return x and y coordinates referenced element
-System.Console.WriteLine(res.Location);
-// Returns height, width
-System.Console.WriteLine(res.Size);
-  {{< /tab >}}
+        {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L47" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L32">}}
 {{< /tab >}}
@@ -246,15 +220,9 @@ driver.get('https://www.selenium.dev/selenium/web/colorPage.html')
 cssValue = driver.find_element(By.ID, "namedColor").value_of_css_property('background-color')
 
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/colorPage.html");
-
-// Retrieves the computed style property 'color' of linktext
-String cssValue = driver.FindElement(By.Id("namedColor")).GetCssValue("background-color");
-
-  {{< /tab >}}
+      {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L51" >}}
+{{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L38">}}
   {{< /tab >}}
@@ -288,13 +256,9 @@ driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
     # Retrieves the text of the element
 text = driver.find_element(By.ID, "justanotherlink").text
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Navigate to url
-driver.Url="https://www.selenium.dev/selenium/web/linked_image.html";
-
-// Retrieves the text of the element
-String text = driver.FindElement(By.Id("justanotherlink")).Text;
-  {{< /tab >}}
+        {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L56" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L43">}}
 {{< /tab >}}
@@ -330,16 +294,9 @@ email_txt = driver.find_element(By.NAME, "email_input")
 # Fetch the value property associated with the textbox
 value_info = email_txt.get_attribute("value")
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
- //Navigate to the url
-driver.Url="https://www.selenium.dev/selenium/web/inputs.html";
-
-//identify the email text box
-IWebElement emailTxt = driver.FindElement(By.Name(("email_input")));
-
-//fetch the value property associated with the textbox
-String valueInfo = eleSelLink.GetAttribute("value");
-  {{< /tab >}}
+         {{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L63" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}
 {{< /tab >}}
