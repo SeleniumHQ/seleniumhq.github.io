@@ -70,7 +70,7 @@ and it is recommended to always use `quit` to end the session
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L15" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
