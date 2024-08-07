@@ -30,7 +30,7 @@ on the local machine.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -64,7 +64,7 @@ and it is recommended to always use `quit` to end the session
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L13" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

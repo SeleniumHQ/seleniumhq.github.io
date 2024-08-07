@@ -46,7 +46,7 @@ extremidade remota, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L36" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -74,7 +74,7 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L37" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -130,7 +130,7 @@ event fire is returned.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L9-L10">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -186,7 +186,7 @@ event fire is returned.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L17-L18">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L19-L20">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -241,7 +241,7 @@ WebDriver only waits until the initial page is downloaded.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L27-L28">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L29-L30">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -301,7 +301,7 @@ setting `platformName` sets the OS at the remote-end.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L38">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -339,7 +339,7 @@ effect for the entire session.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L39-40">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -375,7 +375,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L47-48">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -404,7 +404,7 @@ _TimeoutException_.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L55-56">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -431,7 +431,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L63-64">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -470,7 +470,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L71-72">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -496,7 +496,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -525,7 +525,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L87-88">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -587,21 +587,7 @@ public class ProxyTest {
 ```
 {{% /tab %}}
 {{% tab header="Python" %}}
-```python
-from selenium import webdriver
-
-PROXY = "<HOST:PORT>"
-webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
-"httpProxy": PROXY,
-"ftpProxy": PROXY,
-"sslProxy": PROXY,
-"proxyType": "MANUAL",
-
-}
-
-with webdriver.Firefox() as driver:
-    driver.get("https://selenium.dev")
-```
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L95-96">}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 ```CSharp
