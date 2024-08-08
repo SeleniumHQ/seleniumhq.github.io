@@ -9,7 +9,7 @@ def test_page_load_strategy_normal():
     options.page_load_strategy = 'normal'
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 
@@ -19,7 +19,7 @@ def test_page_load_strategy_eager():
     options.page_load_strategy = 'eager'
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 
@@ -29,7 +29,7 @@ def test_page_load_strategy_none():
     options.page_load_strategy = 'none'
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_capabilities():
@@ -39,7 +39,7 @@ def test_capabilities():
     options.accept_insecure_certs = True
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_timeouts_script():
@@ -47,7 +47,7 @@ def test_timeouts_script():
     options.timeouts = { 'script': 5000 }
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_timeouts_page_load():
@@ -55,7 +55,7 @@ def test_timeouts_page_load():
     options.timeouts = { 'pageLoad': 5000 }
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_timeouts_implicit_wait():
@@ -63,7 +63,7 @@ def test_timeouts_implicit_wait():
     options.timeouts = { 'implicit': 5000 }
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_unhandled_prompt():
@@ -71,7 +71,7 @@ def test_unhandled_prompt():
     options.unhandled_prompt_behavior = 'accept'
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_set_window_rect():
@@ -79,7 +79,7 @@ def test_set_window_rect():
     options.set_window_rect = True # Full support in Firefox
     driver = webdriver.Firefox(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_strict_file_interactability():
@@ -87,7 +87,7 @@ def test_strict_file_interactability():
     options.strict_file_interactability = True
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
 
 def test_proxy():
@@ -95,5 +95,5 @@ def test_proxy():
     options.proxy = Proxy({ 'proxyType': ProxyType.MANUAL, 'httpProxy' : 'http.proxy:1234'})
     driver = webdriver.Chrome(options=options)
 
-    driver.get("http://www.google.com")
+    driver.get("https://www.selenium.dev/")
     driver.quit()
