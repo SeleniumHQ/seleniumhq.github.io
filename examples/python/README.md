@@ -28,3 +28,11 @@ pytest
 ```
 
 > Please keep some patience - If you are doing it for the first time, it will take a little while to verify and download the browser drivers
+
+# Execute a python script
+
+Use this command to run a python script and follow the first script example
+
+```
+python example_script.py
+```
