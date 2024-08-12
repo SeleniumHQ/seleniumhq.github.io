@@ -121,7 +121,7 @@ options.Profile = profile;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L139-L141" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L139-L141" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const { Builder } = require("selenium-webdriver");
