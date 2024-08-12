@@ -272,7 +272,7 @@ options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L119" >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L119" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -361,7 +361,7 @@ public class ieTest {
 }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L130-131" >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L130-L131" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;

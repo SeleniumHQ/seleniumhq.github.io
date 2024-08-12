@@ -376,7 +376,7 @@ Property value: `"true"` or `"false"`
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L160-164" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L160-L164" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

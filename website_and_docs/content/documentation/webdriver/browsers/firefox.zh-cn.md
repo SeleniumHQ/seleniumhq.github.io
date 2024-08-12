@@ -111,7 +111,7 @@ options.setProfile(profile);
 driver = new RemoteWebDriver(options);
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L155-158" >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L152-L155" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
@@ -414,7 +414,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L141-142" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L138-L139" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -441,7 +441,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L149" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L146" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
