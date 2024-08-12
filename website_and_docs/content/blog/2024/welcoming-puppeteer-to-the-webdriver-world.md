@@ -14,7 +14,7 @@ of the web that we use. We started with the [WebDriver Specification](https://w3
 with the Safari, Edge, Chrome, and Firefox teams on the [WebDriver-BiDi specification](https://w3c.github.io/webdriver-bidi).
 
 Today, we are celebrating that [Puppeteer](https://pptr.dev) has moved over to using [WebDriver-BiDi](https://w3c.github.io/webdriver-bidi), the new WebDriver Specification
-that allows WebDriver clients to have event driven APIs instead of the synchronise way Selenium has done it before.
+that allows WebDriver clients to have event driven APIs instead of the synchronous way Selenium has done it before.
 
 This new protocol allows us to be able to do things Selenium always wanted to do but was never surfaced to us in a
 meaningful way. We have documented all the latest additions to Selenium, thanks to WebDriver-BiDi, in our [documentation](https://www.selenium.dev/documentation/webdriver/bidi/)
