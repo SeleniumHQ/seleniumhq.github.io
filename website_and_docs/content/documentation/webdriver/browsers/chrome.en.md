@@ -373,7 +373,7 @@ You can drive Chrome Cast devices, including sharing tabs
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L160-164" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -399,7 +399,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L128" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -422,7 +422,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L137" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -445,7 +445,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L148" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

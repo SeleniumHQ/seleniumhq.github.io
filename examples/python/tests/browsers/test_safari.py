@@ -28,6 +28,7 @@ def test_technology_preview():
         executable_path='/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver'
     )
     driver = webdriver.Safari(options=options, service=service)
+    driver.get('http://selenium.dev')
 
     driver.quit()
 
