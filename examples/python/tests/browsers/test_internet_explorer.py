@@ -102,7 +102,7 @@ def test_ignore_zoom_setting():
     driver.quit()
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
-def test_protected_mode_settings():
+def test_ignore_protected_mode_settings():
     options = webdriver.IeOptions()
     
     options.ignore_protected_mode_settings = True
@@ -113,10 +113,10 @@ def test_protected_mode_settings():
     driver.quit()
 
 @pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
-def test_protected_mode_settings():
+def test_silent_capability():
     options = webdriver.IeOptions()
     
-    options.set_capability('silent', True)
+    options.add_argument('-silent', True)
 
     driver = webdriver.Ie(options=options)
     driver.get('https://www.selenium.dev/')
