@@ -467,4 +467,4 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 ### DevTools
 
-详见 [Chrome DevTools] 部分以获取有关使用Chrome DevTools的更多信息
+详见 [Chrome DevTools]({{< ref "../bidi/cdp/" >}})  部分以获取有关使用Chrome DevTools的更多信息
