@@ -19,7 +19,7 @@ aliases: [
 <p class="lead">
    <i class="fas fa-language d-4"></i>
    Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
+   English to Japanese. Do you speak Japanese? Help us to translate
    it by sending us pull requests!
 </p>
 {{% /pageinfo %}}
