@@ -71,30 +71,29 @@ public class OptionsTest extends BaseTest {
 	@Test
 	public void setBrowserVersion() {
 		ChromeOptions chromeOptions = new ChromeOptions();
-		String expected = "latest";
-		chromeOptions.setBrowserVersion(expected);
-		assert expected.equals(chromeOptions.getBrowserVersion());
+		String version = "latest";
+		chromeOptions.setBrowserVersion(version);
+		assert version.equals(chromeOptions.getBrowserVersion());
 	}
 
 	@Test
 	public void setPlatformName() {
 		ChromeOptions chromeOptions = new ChromeOptions();
-		String expected = "OS X 10.6";
-		chromeOptions.setPlatformName(expected);
-		Platform name = chromeOptions.getPlatformName();
-		assert name.toString().equals(expected);
+		String platform = "OS X 10.6";
+		chromeOptions.setPlatformName(platform);
+		assert platform.toString().equals(chromeOptions.getPlatformName());
 	}
 
 	@Test
 	public void setScriptTimeout() {
 		ChromeOptions chromeOptions = new ChromeOptions();
-		Duration expected = Duration.of(5, ChronoUnit.SECONDS);
-		chromeOptions.setScriptTimeout(expected);
+		Duration duration = Duration.of(5, ChronoUnit.SECONDS);
+		chromeOptions.setScriptTimeout(duration);
 
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
 			Duration timeout = driver.manage().timeouts().getScriptTimeout();
-			assert timeout.equals(expected);
+			assert timeout.equals(duration);
 		} finally {
 			driver.quit();
 		}
@@ -103,13 +102,13 @@ public class OptionsTest extends BaseTest {
 	@Test
 	public void setPageLoadTimeout() {
 		ChromeOptions chromeOptions = new ChromeOptions();
-		Duration expected = Duration.of(5, ChronoUnit.SECONDS);
-		chromeOptions.setPageLoadTimeout(expected);
+		Duration duration = Duration.of(5, ChronoUnit.SECONDS);
+		chromeOptions.setPageLoadTimeout(duration);
 
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
 			Duration timeout = driver.manage().timeouts().getPageLoadTimeout();
-			assert timeout.equals(expected);
+			assert timeout.equals(duration);
 		} finally {
 			driver.quit();
 		}
@@ -118,13 +117,13 @@ public class OptionsTest extends BaseTest {
 	@Test
 	public void setImplicitWaitTimeout() {
 		ChromeOptions chromeOptions = new ChromeOptions();
-		Duration expected = Duration.of(5, ChronoUnit.SECONDS);
-		chromeOptions.setImplicitWaitTimeout(expected);
+		Duration duration = Duration.of(5, ChronoUnit.SECONDS);
+		chromeOptions.setImplicitWaitTimeout(duration);
 
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		try {
 			Duration timeout = driver.manage().timeouts().getImplicitWaitTimeout();
-			assert timeout.equals(expected);
+			assert timeout.equals(duration);
 		} finally {
 			driver.quit();
 		}
