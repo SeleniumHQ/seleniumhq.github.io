@@ -28,3 +28,11 @@ pytest
 ```
 
 > Please keep some patience - If you are doing it for the first time, it will take a little while to verify and download the browser drivers
+
+## Execute a specific example
+To run a specific Selenium Python example, use the following command:
+```bash
+python first_script.py
+```
+
+Make sure to replace `first_script.py` with the path and name of the example you want to run.
