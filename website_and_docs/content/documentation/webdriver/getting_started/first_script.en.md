@@ -233,6 +233,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< gh-codeblock path="examples/java/README.md#L60" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/README.md#L35" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
