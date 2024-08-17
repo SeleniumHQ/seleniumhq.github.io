@@ -43,7 +43,7 @@ extremidade remota, a criação da sessão falhará.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L66-67" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L36" >}}
@@ -71,7 +71,7 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-75" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L37" >}}
@@ -298,7 +298,7 @@ setting `platformName` sets the OS at the remote-end.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L81-L83">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L38">}}
@@ -336,7 +336,7 @@ effect for the entire session.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L53-L54">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L39-40">}}
@@ -372,7 +372,7 @@ is imposed when a new session is created by WebDriver.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L90-L92">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L47-48">}}
@@ -401,7 +401,7 @@ _TimeoutException_.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L105-L107">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L55-56">}}
@@ -428,7 +428,7 @@ is imposed when a new session is created by WebDriver.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L120-L122">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L63-64">}}
@@ -467,7 +467,7 @@ user prompt encounters at the remote-end. This is defined by
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L134-L135">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L71-72">}}
@@ -493,7 +493,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80">}}
@@ -522,7 +522,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L148-L149">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L87-88">}}
