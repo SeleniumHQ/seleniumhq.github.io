@@ -81,7 +81,7 @@ public class OptionsTest extends BaseTest {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		String platform = "OS X 10.6";
 		chromeOptions.setPlatformName(platform);
-		assert platform.toString().equals(chromeOptions.getPlatformName());
+		assert platform.equals(chromeOptions.getPlatformName());
 	}
 
 	@Test
