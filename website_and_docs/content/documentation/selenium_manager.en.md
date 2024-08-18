@@ -209,6 +209,29 @@ INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\117.0.5938
 INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
 ```
 
+### Implementing Selenium Manager in Your Scripts
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+**Previously**
+{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## Selenium Grid
 Selenium Manager allows you to configure the drivers automatically when setting up Selenium Grid. To that aim, you need to include the argument `--selenium-manager true` in the command to start Selenium Grid. For more details, visit the [Selenium Grid starting page](https://www.selenium.dev/documentation/grid/getting_started/).
 
