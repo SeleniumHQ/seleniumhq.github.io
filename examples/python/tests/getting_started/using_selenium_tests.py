@@ -23,3 +23,11 @@ def test_eight_components():
     assert value == "Received!"
 
     driver.quit()
+
+def setup():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/web-form.html")
+    return driver
+
+def teardown(driver):
+    driver.quit()
