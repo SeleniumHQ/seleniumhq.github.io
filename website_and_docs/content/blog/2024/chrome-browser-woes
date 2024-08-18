@@ -19,7 +19,7 @@ To bypass this, use the argument below when specifying the browser options.
 --disable-search-engine-choice-screen
 ```
 
-## Chrome wastes over 60MB of you bandwidth downloading language plugins
+## Chrome wastes over 60MB of your bandwidth downloading language plugins
 
 The second feature is something that has been with Chrome for quite a while now, but I have only recently became aware of it.
 
