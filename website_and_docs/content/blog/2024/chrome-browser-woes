@@ -7,7 +7,7 @@ author: Marek Andreansky [@skyhirider](https://www.linkedin.com/in/marekandreans
 description: This blog post lists two problematic Chrome features that can affect your automation as well as a quick way to disable them.
 ---
 
-## Search engine selections creen
+## Search engine selection screen
 
 Starting with version 127 of Chrome, the browser [now asks which search engine you would like to use](https://www.google.com/chrome/choicescreen/), which is great for normal users.
 
