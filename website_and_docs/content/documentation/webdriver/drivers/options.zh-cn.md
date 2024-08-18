@@ -34,7 +34,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L66-67" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L36" >}}
@@ -63,7 +63,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-75" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L37" >}}
@@ -123,7 +123,7 @@ WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Wi
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L14-L16">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L21-L23">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L9-L10">}}
@@ -179,7 +179,7 @@ WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/doc
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L27-L29">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L34-L36">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L19-L20">}}
@@ -234,7 +234,7 @@ WebDriver 仅等待初始页面已下载.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L40-L42">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L47-L49">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L29-L30">}}
@@ -294,7 +294,7 @@ fun main() {
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L81-L83">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L88-L90">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L38">}}
@@ -329,7 +329,7 @@ fun main() {
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L53-L54">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L60-L61">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L39-40">}}
@@ -364,7 +364,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L90-L92">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L96-L98">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L47-48">}}
@@ -392,7 +392,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L105-L107">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L111-L113">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L55-56">}}
@@ -418,7 +418,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L120-L122">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L126-L128">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L63-64">}}
@@ -457,7 +457,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L134-L135">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L71-72">}}
@@ -484,7 +484,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L151-L152">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80">}}
@@ -513,7 +513,7 @@ WebDriver创建新会话时,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L148-L149">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L163-L164">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L87-88">}}
