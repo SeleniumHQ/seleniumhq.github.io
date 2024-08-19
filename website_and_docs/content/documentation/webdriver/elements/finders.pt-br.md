@@ -293,17 +293,24 @@ Para realizar isso, o WebElement pai é encadeado com o 'findElements' para aces
   }
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
+##get elements from parent element using TAG_NAME
 
     # Obtém o elemento com o nome da tag 'div'
 element = driver.find_element(By.TAG_NAME, 'div')
 
     # Obtém todos os elementos disponíveis com o nome da tag 'p'
+    # NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
 elements = element.find_elements(By.TAG_NAME, 'p')
+for e in elements:
+    print(e.text)
+
+##get elements from parent element using XPATH
+
+    # Get first element of tag 'ul'
+element = driver.find_element(By.XPATH, '//ul')
+
+    # get children of tag 'ul' with tag 'li'
+elements  = driver.find_elements(By.XPATH, './/li')
 for e in elements:
     print(e.text)
   {{< /tab >}}
