@@ -228,6 +228,7 @@ gradle clean test
 
 {{% /tab %}}
 {{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/README.md#L35" >}}
 {{< badge-code >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
