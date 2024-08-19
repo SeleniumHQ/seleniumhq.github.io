@@ -28,7 +28,9 @@ RSpec.configure do |config|
   config.after { @driver&.quit }
 
   def start_session
-    @driver = Selenium::WebDriver.for :chrome
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('disable-search-engine-choice-screen')
+    @driver = Selenium::WebDriver.for(:chrome, options: options)
   end
 
   def start_bidi_session
