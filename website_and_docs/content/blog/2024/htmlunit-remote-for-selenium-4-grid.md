@@ -81,4 +81,4 @@ The `grid-extension` artifact provides all of the specifications and service pro
 
 In operation, **HtmlUnitDriverService** is instantiated by **Selenium 4 Grid** node servers that are configured to support **HtmlUnitDriver**. Unlike other driver services, which launch a new process for each created driver session, **HtmlUnitDriverService** starts a single in-process server that hosts all of the driver sessions it creates.
 
-> Written with [StackEdit](https://stackedit.io/).
+_This is a guest blog post by [Scott Babcock](https://www.github.com/sbabcoc)_
