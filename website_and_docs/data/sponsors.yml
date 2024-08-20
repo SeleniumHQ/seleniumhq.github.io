@@ -94,6 +94,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Aug 13, 2024
+    - logo: "/images/sponsors/testingbot.png"
+      url: "https://testingbot.com/"
+      name: "Selenium Cloud Testing - TestingBot"
     # Sponsorship start date: Jul 12, 2024
     - logo: "/images/sponsors/route4me-logo.png"
       url: "https://route4me.com/"
