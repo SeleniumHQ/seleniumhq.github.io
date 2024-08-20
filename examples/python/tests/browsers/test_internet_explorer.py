@@ -116,7 +116,7 @@ def test_ignore_protected_mode_settings():
 def test_silent_capability():
     options = webdriver.IeOptions()
     
-    options.add_argument('-silent', True)
+    options.add_argument('-silent')
 
     driver = webdriver.Ie(options=options)
     driver.get('https://www.selenium.dev/')
