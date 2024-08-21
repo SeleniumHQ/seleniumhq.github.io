@@ -39,9 +39,9 @@ This standardized configuration API has been incorporated directly into **HtmlUn
 ### W3C Remote Protocol Wrapper
 
 With full standardized configurability in place, the next step was to create a server that implements the [W3C WebDriver protocol](https://www.w3.org/TR/webdriver2). The **HtmlUnitDriverServer** functions as a remote protocol wrapper around one or more **HtmlUnitDriver** sessions, performing the following tasks:
-	* Create and manage driver sessions
-	* Route driver commands to specified driver sessions
-	* Package driver method results into HTTP responses
+* Create and manage driver sessions
+* Route driver commands to specified driver sessions
+* Package driver method results into HTTP responses
 
 ### HtmlUnit Remote Packaging
 
