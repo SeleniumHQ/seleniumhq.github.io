@@ -123,7 +123,7 @@ def test_silent_capability():
 
     driver.quit()
 
-@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+@pytest.mark.skip(reason="TabProcGrowth is required to be set to 0 value")
 def test_command_line_options():
     options = webdriver.IeOptions()
     
@@ -135,13 +135,3 @@ def test_command_line_options():
 
     driver.quit()
 
-@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
-def test_force_create_proces_api():
-    options = webdriver.IeOptions()
-    
-    options.force_create_process_api = True
-
-    driver = webdriver.Ie(options=options)
-    driver.get('https://www.selenium.dev/')
-
-    driver.quit()

@@ -356,7 +356,7 @@ public class ieTest {
 }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L130-L131" >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L130" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -441,7 +441,7 @@ public class ieTest {
 }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L142" >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L131" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
