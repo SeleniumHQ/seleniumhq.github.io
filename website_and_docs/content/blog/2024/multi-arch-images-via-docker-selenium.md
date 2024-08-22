@@ -5,6 +5,8 @@ date: 2024-05-23
 tags: [ "Grid", "Docker", "Kubernetes" ]
 categories: [ "Docker" ]
 author: Viet Nguyen Duc [@VietND96](https://github.com/VietND96)
+images:
+  - "/images/blog/2024/multi-arch-docker-selenium.jpeg"
 description: >
   This blog post announces the availability of Multi-Arch Images for Selenium Grid Server on the official Selenium Docker Hub registry.
 ---
