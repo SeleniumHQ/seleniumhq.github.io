@@ -314,12 +314,12 @@ driver.get("https://www.example.com")
 element = driver.find_element(By.TAG_NAME, 'div')
 
     # Get all the elements available with tag name 'p'
-    # NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
 elements = element.find_elements(By.TAG_NAME, 'p')
 for e in elements:
     print(e.text)
 
 ##get elements from parent element using XPATH
+##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
 
     # Get first element of tag 'ul'
 element = driver.find_element(By.XPATH, '//ul')
