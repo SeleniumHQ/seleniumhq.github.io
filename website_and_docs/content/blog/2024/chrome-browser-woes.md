@@ -5,6 +5,8 @@ date: 2024-08-18
 tags: ["chrome"]
 categories: ["general"]
 author: Marek Andreansky [@skyhirider](https://www.linkedin.com/in/marekandreansky/)
+images:
+  - "/images/blog/2024/chrome-woes.jpeg"
 description: This blog post lists two problematic Chrome features that can affect your automation as well as a quick way to disable them.
 ---
 
