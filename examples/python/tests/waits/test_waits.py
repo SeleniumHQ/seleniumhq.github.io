@@ -3,6 +3,7 @@ import time
 from selenium.common import NoSuchElementException, ElementNotInteractableException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_fails(driver):
@@ -55,3 +56,13 @@ def test_explicit_options(driver):
     wait.until(lambda d : revealed.send_keys("Displayed") or True)
 
     assert revealed.get_property("value") == "Displayed"
+
+def test_explicity_expected_conditions(driver):
+    driver.get("https://www.selenium.dev/selenium/web/dynamic.html")
+    revealed=driver.find_element(by=By.ID,value="revealed")
+    driver.find_element(by=By.ID,value="reveal").click()
+    
+    wait=WebDriverWait(driver,timeout=2)
+    wait.until(EC.visibility_of(revealed))
+    revealed.send_keys("Displayed")
+    assert revealed.get_property("value")=="Displayed"
