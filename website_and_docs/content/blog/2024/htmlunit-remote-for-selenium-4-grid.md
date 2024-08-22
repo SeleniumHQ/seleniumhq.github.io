@@ -5,6 +5,8 @@ date: 2024-08-19
 tags: ["Grid", "HtmlUnitDriver"]
 categories: ["Grid"]
 author: Scott Babcock [@sbabcoc](https://www.github.com/sbabcoc)
+images:
+  - "/images/blog/2024/html-unit-remote.jpg"
 description: >
    This post describes 'HtmlUnit Remote', a wrapper for HtmlUnitDriver that enables Selenium 4 Grid to manage remote instances of this "headless" browser.
 ---
