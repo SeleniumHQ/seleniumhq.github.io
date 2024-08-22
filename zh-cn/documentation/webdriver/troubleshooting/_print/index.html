@@ -47,7 +47,7 @@ WebDriver并不会自动重新定位，
 您无法仅从当前上下文重新定位它，
 也无法切换回元素有效的活动上下文。
 如果这是您的错误原因，
-您必须回到正确的位置并重新定位元素。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-65b4566cad18a000d8a33a1e9db619c8>1.1 - Unable to Locate Driver Error</h1><div class=lead>Troubleshooting missing path to driver executable.</div><p>Historically, this is the most common error beginning Selenium users get
+您必须回到正确的位置并重新定位元素。</p><h2 id=无效-sessionid-异常>无效 SessionId 异常</h2><p>有时您尝试访问的会话与当前可用的会话不同。</p><h3 id=可能原因>可能原因</h3><p>通常发生在会话被删除时（例如：<code>driver.quit()</code>）或会话发生更改时，例如最后一个标签页/浏览器已关闭（例如：<code>driver.close()</code>）。</p><h3 id=可能的解决方案>可能的解决方案</h3><p>检查脚本中是否有 <code>driver.close()</code> 和 <code>driver.quit()</code> 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-65b4566cad18a000d8a33a1e9db619c8>1.1 - Unable to Locate Driver Error</h1><div class=lead>Troubleshooting missing path to driver executable.</div><p>Historically, this is the most common error beginning Selenium users get
 when trying to run code for the first time:</p><ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><button class="nav-link active" id=tabs-00-00-tab data-bs-toggle=tab data-bs-target=#tabs-00-00 role=tab data-td-tp-persist=java aria-controls=tabs-00-00 aria-selected=true>
 Java</button></li><li class=nav-item><button class=nav-link id=tabs-00-01-tab data-bs-toggle=tab data-bs-target=#tabs-00-01 role=tab data-td-tp-persist=python aria-controls=tabs-00-01 aria-selected=false>
 Python</button></li><li class=nav-item><button class=nav-link id=tabs-00-02-tab data-bs-toggle=tab data-bs-target=#tabs-00-02 role=tab data-td-tp-persist=csharp aria-controls=tabs-00-02 aria-selected=false>
