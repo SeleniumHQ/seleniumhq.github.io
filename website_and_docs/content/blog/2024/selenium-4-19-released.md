@@ -6,7 +6,7 @@ tags: ["selenium"]
 categories: ["releases"]
 author: Diego Molina [@diemol](https://diemol.com)
 images:
-  - "/images/blog/selenium_4.19.png"
+  - "/images/blog/2024/selenium_4.19.png"
 description: >
   Today we're happy to announce that Selenium 4.19 has been released!
 ---

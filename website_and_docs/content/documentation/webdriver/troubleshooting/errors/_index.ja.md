@@ -91,3 +91,15 @@ and have destroyed the context in which the element was located.
 You can't just relocate it from the current context,
 and you can't switch back to an active context where it is valid. If this is the reason
 for your error, you must both navigate back to the correct location and relocate it.
+
+## Invalid SessionId Exception
+
+Sometimes the session you're trying to access is different than what's currently available
+
+### Likely Cause
+
+This usually occurs when the session has been deleted (e.g. `driver.quit()`) or if the session has changed, like when the last tab/browser has closed (e.g. `driver.close()`)
+
+### Possible Solutions
+
+Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes of closed tabs/browsers. It could be that you are locating an element before you should/can.
