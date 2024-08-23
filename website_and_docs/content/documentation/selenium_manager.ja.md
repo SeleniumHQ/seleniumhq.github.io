@@ -219,7 +219,6 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
 **Selenium Manager**
 {{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< /tab >}}
