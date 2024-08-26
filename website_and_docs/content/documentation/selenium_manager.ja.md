@@ -213,6 +213,7 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
@@ -221,10 +222,13 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
