@@ -143,7 +143,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L10-L11" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L8-L9" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
@@ -177,13 +177,12 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Set Up
 
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L27-L30" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
 
 ### Tear Down
 
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L32-33" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
 
-{{< badge-code >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
