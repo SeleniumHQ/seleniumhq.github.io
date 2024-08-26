@@ -163,7 +163,6 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 {{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L32-33" >}}
 
-{{< badge-code >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
