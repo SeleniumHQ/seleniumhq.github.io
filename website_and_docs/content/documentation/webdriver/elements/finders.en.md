@@ -108,6 +108,40 @@ driver implementation supports a given feature. These interfaces are clearly def
 to adhere to having only a single role of responsibility.
 {{% /pageinfo %}}
 
+### Evaluating the Shadow DOM
+
+The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
+With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree with 
+easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+{{< tab header="Java" >}}
+WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
+SearchContext shadowRoot = shadowHost.getShadowRoot();
+WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Python" >}}
+shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
+var shadowRoot = shadowHost.GetShadowRoot();
+var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+shadow_host = @driver.find_element(css: '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Optimized locator
 
 A nested lookup might not be the most effective location strategy since it requires two
