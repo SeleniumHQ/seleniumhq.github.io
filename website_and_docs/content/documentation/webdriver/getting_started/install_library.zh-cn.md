@@ -44,6 +44,7 @@ aliases: [
 ```shell
 pip install selenium
 ```
+<br>
 
 ### 下载
 
@@ -53,6 +54,7 @@ pip install selenium
 ```shell
 python setup.py install
 ```
+<br>
 
 ### 在项目中使用
 
@@ -71,12 +73,14 @@ Selenium 所支持的所有平台的列表一览
 ```shell
 Install-Package Selenium.WebDriver
 ```
+<br>
 
 ### .NET CLI
 
 ```shell
 dotnet add package Selenium.WebDriver
 ```
+<br>
 
 ### CSProj
 
@@ -123,6 +127,7 @@ Selenium 可以使用两种不同方法安装.
 ```shell
 gem install selenium-webdriver
 ```
+<br>
 
 ### 加入项目的 gemfile
 
@@ -141,6 +146,7 @@ Selenium is typically installed using npm.
 ```shell
 npm install selenium-webdriver
 ```
+<br>
 
 ### 加入项目
 
