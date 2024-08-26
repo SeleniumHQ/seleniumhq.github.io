@@ -110,7 +110,9 @@ to adhere to having only a single role of responsibility.
 
 ### Evaluating the Shadow DOM
 
-The Shadow DOM is an encapsulated DOM tree hidden inside an element. With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree with easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
+With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree with 
+easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
