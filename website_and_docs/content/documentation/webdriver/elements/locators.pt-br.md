@@ -325,7 +325,9 @@ first name text box. Let us create locator for female radio button using xpath.
 
 ## Utilizing Locators
 
-The FindElement makes using locators a breeze! For most languages, all you need to do is utilize `webdriver.common.by.By`, however in others it's as simple as setting a parameter in the FindElement function>
+The FindElement makes using locators a breeze! For most languages, 
+all you need to do is utilize `webdriver.common.by.By`, however in 
+others it's as simple as setting a parameter in the FindElement function
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
