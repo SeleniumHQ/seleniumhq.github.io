@@ -104,6 +104,42 @@ implementação de driver suporta um recurso específico. Essas interfaces são 
 aderir a ter apenas um único papel de responsabilidade.
 {{% /pageinfo %}}
 
+### Evaluating the Shadow DOM
+
+The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
+With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree 
+with easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+{{< tab header="Java" >}}
+WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
+SearchContext shadowRoot = shadowHost.getShadowRoot();
+WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Python" >}}
+shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
+var shadowRoot = shadowHost.GetShadowRoot();
+var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+shadow_host = @driver.find_element(css: '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Localizador otimizado
 Uma pesquisa aninhada pode não ser a estratégia de localização mais eficaz, pois requer dois
 comandos separados a serem emitidos para o navegador.
@@ -293,17 +329,24 @@ Para realizar isso, o WebElement pai é encadeado com o 'findElements' para aces
   }
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
+##get elements from parent element using TAG_NAME
 
     # Obtém o elemento com o nome da tag 'div'
 element = driver.find_element(By.TAG_NAME, 'div')
 
     # Obtém todos os elementos disponíveis com o nome da tag 'p'
 elements = element.find_elements(By.TAG_NAME, 'p')
+for e in elements:
+    print(e.text)
+
+##get elements from parent element using XPATH
+##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
+
+    # Get first element of tag 'ul'
+element = driver.find_element(By.XPATH, '//ul')
+
+    # get children of tag 'ul' with tag 'li'
+elements  = driver.find_elements(By.XPATH, './/li')
 for e in elements:
     print(e.text)
   {{< /tab >}}

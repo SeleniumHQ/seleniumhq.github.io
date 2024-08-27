@@ -245,10 +245,10 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{{< gh-codeblock path="examples/java/README.md#L60" >}}
+{{< gh-codeblock path="examples/java/README.md#L60" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/README.md#L35" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

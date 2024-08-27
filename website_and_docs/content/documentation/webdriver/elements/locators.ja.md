@@ -320,6 +320,42 @@ first name text box. Let us create locator for female radio button using xpath.
   {{< /tab >}}
 {{< /tabpane >}} 
 
+## Utilizing Locators
+
+The FindElement makes using locators a breeze! For most languages, 
+all you need to do is utilize `webdriver.common.by.By`, however in 
+others it's as simple as setting a parameter in the FindElement function
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+  {{< tab header="Java" >}}
+    import org.openqa.selenium.By;
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.className("information"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    from selenium.webdriver.common.by import By
+    driver = webdriver.Chrome()
+	driver.find_element(By.CLASS_NAME, "information")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.ClassName("information"));
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L7" >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.className('information'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    import org.openqa.selenium.By
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.className("information"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
 
 
 ## 相対ロケーター
