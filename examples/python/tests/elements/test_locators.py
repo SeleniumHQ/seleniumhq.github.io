@@ -84,22 +84,3 @@ def find_by_relative_locators():
 
     submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_right_of({By.ID: "cancel"})
 
-
-# def test_find_by_relative_locators():
-#     driver = webdriver.Chrome()
-#     driver.get("https://www.selenium.dev/selenium/web/formPage.html")
-
-#     locate_with(By.TAG_NAME, "input").above({ By.ID: "checkedchecky" })
-
-#     locate_with(By.TAG_NAME, "input").below({ By.ID: "checkedchecky" })
-
-#     locate_with(By.TAG_NAME, "select").to_left_of({ By.ID: "multi" })
-
-#     locate_with(By.TAG_NAME, "select").to_right_of({ By.NAME: "no-select" })
-
-#     locate_with(By.TAG_NAME, "p").near({By.ID: "lone_disabled_selected_radio"})
-
-#     locate_with(By.TAG_NAME, "select").to_right_of({ By.NAME: "no-select" }).below({ By.TAG_NAME: "form" })
-
-#     driver.quit()
-
