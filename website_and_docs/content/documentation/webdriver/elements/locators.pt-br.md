@@ -329,6 +329,8 @@ The FindElement makes using locators a breeze! For most languages,
 all you need to do is utilize `webdriver.common.by.By`, however in 
 others it's as simple as setting a parameter in the FindElement function
 
+### By
+
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
@@ -358,6 +360,48 @@ others it's as simple as setting a parameter in the FindElement function
 	val loc: WebElement = driver.findElement(By.className("information"))
   {{< /tab >}}
 {{< /tabpane >}} 
+
+### ByChained
+
+Say, for example, you had the following html:
+
+```html
+<html>
+    <body>
+        <div id="parentDiv">
+            <input id="phoneNumber" class="el-input" type="text"/>
+        </div>
+        <input id="phoneNumber" class="el-input" type="number"/>
+    </body>
+</html>
+```
+
+and you need to access the input of type text, instead of the input of type number. With ByChained you can access the desired input by chaining two Bys together, first to the div with `id="parentDiv"` and from that div to its child: `id="phoneNumber"`.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+  {{< tab header="Java" >}}
+    import org.openqa.selenium.By;
+    import org.openqa.selenium.support.pagefactory.ByChained;
+    By example = new ByChained(By.id("parentDiv"), By.id("phoneNumber"));
+    driver.findElements(example);
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
+  {{< /tab >}}
+{{< /tabpane >}}
 
 ## Relative Locators
 
