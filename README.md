@@ -34,7 +34,7 @@ Please check all the information available at https://selenium.dev/getinvolved/
 
 ## For Selenium Site and Documentation maintainers
 
-### How does the site and docs get build?
+### How does the site and docs get built?
 
 GitHub actions runs for every commit on each PR and protected branch. The regular CI execution will
 build the site with Hugo to verify that the commit works. The description of these steps can be seen
