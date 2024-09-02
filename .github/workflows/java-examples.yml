@@ -68,6 +68,7 @@ jobs:
           pip install yq
           xml_content=$(curl -sf https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/)
           latest_snapshot=$(echo $xml_content | xq '.content.data."content-item"' | jq -r .text)
+          echo "XML Content: $xml_content" 
           echo "Latest Selenium Snapshot: $latest_snapshot"
           cd examples/java
           mvn -B -U test -Dselenium.version="$latest_snapshot"
@@ -81,6 +82,7 @@ jobs:
         command: |
           pip install yq          
           $xml_content = Invoke-WebRequest -Uri "https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/"
+           Write-Output "xml Snapshot: $xml_content"
           $latest_snapshot = $xml_content.Content | xq '.content.data.\"content-item\"' | jq -r .text
           Write-Output "Latest Selenium Snapshot: $latest_snapshot"
           cd examples/java
