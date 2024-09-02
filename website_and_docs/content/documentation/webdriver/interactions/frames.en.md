@@ -61,8 +61,9 @@ However, if there are no buttons outside of the iframe, you might
 instead get a _no such element_ error. This happens because Selenium is
 only aware of the elements in the top level document. To interact with
 the button, we will need to first switch to the frame, in a similar way
-to how we switch windows. WebDriver offers three ways of switching to
-a frame.
+to how we switch windows. 
+WebDriver offers three ways of switching to a frame. Following example code
+shows how we can do that, using a live web example. 
 
 ## Using a WebElement
 
@@ -71,16 +72,9 @@ find the frame using your preferred selector and switch to it.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Store the web element
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
-
-//Switch to the frame
-driver.switchTo().frame(iframe);
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click();
-  {{< /tab >}}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Store iframe web element
 iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
@@ -140,15 +134,8 @@ one found will be switched to.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Using the ID
-driver.switchTo().frame("buttonframe");
-
-//Or using the name instead
-driver.switchTo().frame("myframe");
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click();
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
   {{< tab header="Python" >}}
     # Switch frame by id
@@ -203,10 +190,11 @@ queried using _window.frames_ in JavaScript.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-// Switches to the second frame
-driver.switchTo().frame(1);
+
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
+
   {{< tab header="Ruby" >}}
     # Switch to the second frame
 driver.switch_to.frame(1)
@@ -240,10 +228,10 @@ like so:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-// Return to the top level
-driver.switchTo().defaultContent();
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
+
   {{< tab header="Python" >}}
     # switch back to default content
 driver.switch_to.default_content()
