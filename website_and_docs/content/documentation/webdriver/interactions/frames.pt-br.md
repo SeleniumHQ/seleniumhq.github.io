@@ -69,16 +69,9 @@ Alternar usando um WebElement é a opção mais flexível. Você pode
 encontrar o quadro usando seu seletor preferido e mudar para ele.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Store the web element
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
-
-//Switch to the frame
-driver.switchTo().frame(iframe);
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click();
-  {{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+{{< /tab >}}
   {{< tab header="Python" >}}
     # Store iframe web element
 iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
@@ -137,15 +130,8 @@ usado alternativamente. Se o name ou ID não for exclusivo na página, o
 primeiro encontrado será utilizado.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Using the ID
-driver.switchTo().frame("buttonframe");
-
-//Or using the name instead
-driver.switchTo().frame("myframe");
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click();
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
   {{< tab header="Python" >}}
     # Switch frame by id
@@ -199,9 +185,8 @@ Também é possível usar o índice do frame, podendo ser
 consultado usando _window.frames_ em JavaScript.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Switches to the second frame
-driver.switchTo().frame(1);
+         {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
     # Switch to the second frame
@@ -235,9 +220,8 @@ Para deixar um iframe ou frameset, volte para o conteúdo padrão
 como a seguir:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-// Return to the top level
-driver.switchTo().defaultContent();
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
   {{< tab header="Python" >}}
     # switch back to default content

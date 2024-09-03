@@ -15,7 +15,7 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.9.2)
-    rexml (3.3.4)
+    rexml (3.3.6)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -47,9 +47,9 @@ GEM
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-devtools (0.127.0)
+    selenium-devtools (0.128.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.23.0)
+    selenium-webdriver (4.24.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -73,8 +73,8 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 3.0)
-  selenium-devtools (= 0.127.0)
-  selenium-webdriver (= 4.23.0)
+  selenium-devtools (= 0.128.0)
+  selenium-webdriver (= 4.24.0)
 
 BUNDLED WITH
    2.5.6

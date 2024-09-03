@@ -17,10 +17,10 @@
         <junit5.version>5.11.0</junit5.version>
         <wdm.version>5.2.3</wdm.version>
 
-        <maven-surefire-plugin.version>3.4.0</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.0</maven-surefire-plugin.version>
 
         <java.version>1.8</java.version>
-        <selenium.version>4.23.1</selenium.version>
+        <selenium.version>4.24.0</selenium.version>
 
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>

@@ -130,14 +130,16 @@ var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
 var shadowRoot = shadowHost.GetShadowRoot();
 var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
 {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
+{{< tab header="Ruby" >}}
 shadow_host = @driver.find_element(css: '#shadow_host')
 shadow_root = shadow_host.shadow_root
 shadow_content = shadow_root.find_element(css: '#shadow_content')
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
+{{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" text=true >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
