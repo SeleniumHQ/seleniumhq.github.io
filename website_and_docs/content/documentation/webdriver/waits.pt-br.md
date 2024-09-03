@@ -115,7 +115,7 @@ This example shows the condition being waited for as a _lambda_. Python also sup
   {{< /tab >}}
   {{% tab header="JavaScript" %}}
 JavaScript also supports [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L50" >}}
+{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}
