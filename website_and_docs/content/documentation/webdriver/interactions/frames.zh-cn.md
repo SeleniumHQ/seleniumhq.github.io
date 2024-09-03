@@ -60,16 +60,11 @@ driver.findElement(By.tagName("button")).click()
 使用 WebElement 进行切换是最灵活的选择。您可以使用首选的选择器找到框架并切换到它。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 存储网页元素
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
 
-// 切换到 frame
-driver.switchTo().frame(iframe);
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+  {{< /tab >}}
 
-// 现在可以点击按钮
-driver.findElement(By.tagName("button")).click();
-{{< /tab >}}
 {{< tab header="Python" >}}
     # 存储网页元素
 iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
@@ -128,16 +123,9 @@ driver.findElement(By.tagName("button")).click()
 那么将切换到找到的第一个。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 使用 ID
-driver.switchTo().frame("buttonframe");
-
-// 或者使用 name 代替
-driver.switchTo().frame("myframe");
-
-// 现在可以点击按钮
-driver.findElement(By.tagName("button")).click();
-{{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
+  {{< /tab >}}
 {{< tab header="Python" >}}
     # 通过 id 切换框架
 driver.switch_to.frame('buttonframe')
@@ -191,10 +179,9 @@ driver.findElement(By.tagName("button")).click()
 _window.frames_ 进行查询.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 切换到第 2 个框架
-driver.switchTo().frame(1);
-{{< /tab >}}
+         {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
+  {{< /tab >}}
 {{< tab header="Ruby" >}}
     # 切换到第 2 个框架
 driver.switch_to.frame(1)
@@ -226,10 +213,9 @@ driver.switchTo().frame(1)
 离开 iframe 或 frameset，切换回默认内容，如下所示:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
-// 回到顶层
-driver.switchTo().defaultContent();
-{{< /tab >}}
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
+  {{< /tab >}}
 {{< tab header="Python" >}}
     # 切回到默认内容
 driver.switch_to.default_content()
