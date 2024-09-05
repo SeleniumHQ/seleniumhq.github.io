@@ -378,7 +378,10 @@ Once these abstractions have been built and duplication in your tests identified
 
 ## Example
 
-An example of `python + pytest + selenium`. 
+An example of `python + pytest + selenium` 
+which implemented "**Action Bot**, **Loadable Component** and **Page Object**".
+
+A `pytest` fixture `chrome_driver`.
 
 ```python
 import pytest
@@ -397,13 +400,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 @pytest.fixture(scope="function")
 def chrome_driver():
-    driver = webdriver.Chrome()
-    driver.set_window_size(1024, 768)
-    driver.implicitly_wait(0.5)
-    yield driver
-    driver.quit()
+    with webdriver.Chrome() as driver:
+        driver.set_window_size(1024, 768)
+        driver.implicitly_wait(0.5)
+        yield driver
+```
 
+"**Action Bot**" implementation.
 
+```python
 class ActionBot:
     def __init__(self, driver) -> None:
         self.driver = driver
@@ -427,11 +432,6 @@ class ActionBot:
 
     def hover(self, locator: tuple) -> None:
         element = self.element(locator)
-        # hover_script = """
-        #     var event = new MouseEvent('mouseover', {bubbles: true, cancelable: true});
-        #     arguments[0].dispatchEvent(event);
-        # """
-        # self.driver.execute_script(hover_script, element)
         ActionChains(self.driver).move_to_element(element).perform()
 
     def click(self, locator: tuple) -> None:
@@ -446,8 +446,11 @@ class ActionBot:
     def text(self, locator: tuple) -> str:
         element = self.element(locator)
         return element.text
+```
 
+"**Loadable Component** definition.
 
+```python
 class LoadableComponent:
     def load(self):
         raise NotImplementedError("Subclasses must implement this method")
@@ -461,8 +464,11 @@ class LoadableComponent:
         if not self.is_loaded():
             raise Exception("Page not loaded properly.")
         return self
+```
 
+"**Loadable Component** and **Page Object**" implementation. 
 
+```python
 class TodoPage(LoadableComponent):
     url = "https://todomvc.com/examples/react/dist/"
 
@@ -499,8 +505,7 @@ class TodoPage(LoadableComponent):
         p = f"{using}/../button[@class='destroy']"
         return by, p
 
-    @staticmethod
-    def build_count_todo_left(count: int) -> str:
+    def build_count_todo_left(self, count: int) -> str:
         if count == 1:
             return "1 item left!"
         else:
@@ -536,9 +541,6 @@ class TodoPage(LoadableComponent):
         self.bot.click(self.build_todo_item_toggle_by(s))
 
     def hover_todo(self, s: str) -> None:
-        """
-        should hover on the <li> tag with specific label `s`
-        """
         self.bot.hover(self.build_todo_by(s))
 
     def delete_todo(self, s: str):
@@ -559,8 +561,11 @@ class TodoPage(LoadableComponent):
 
     def view_completed_todo(self):
         self.bot.click(self.view_completed_by)
+```
 
+Test cases implementation with `pytest`.
 
+```python
 @pytest.fixture
 def page(chrome_driver) -> TodoPage:
     driver = chrome_driver
@@ -569,6 +574,7 @@ def page(chrome_driver) -> TodoPage:
 
 class TestTodoPage:
     def test_new_todo(self, page: TodoPage):
+        assert page.todo_count() == 0
         page.new_todo("aaa")
         assert page.count_todo_items_left() == page.build_count_todo_left(1)
 
@@ -653,5 +659,4 @@ class TestTodoPage:
         page.view_completed_todo()
         assert page.count_todo_items_left() == page.build_count_todo_left(6)
         assert page.todo_count() == 4
-
 ```
