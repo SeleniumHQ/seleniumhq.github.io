@@ -15,7 +15,7 @@ to use Hugo 0.125.4
 
 Steps needed to have this working locally and work on it:
 
-- Follow the [Install Hugo](https://www.docsy.dev/docs/get-started/other-options/#install-hugo) instructions from Docsy
+- [Install Hugo](https://gohugo.io/installation/) and follow the [Get Started](https://www.docsy.dev/docs/get-started/) instructions from Docsy
 - [Install go](https://go.dev/doc/install)
 - Clone this repository
 - Run `cd website_and_docs`
