@@ -1,7 +1,7 @@
 ---
 title: "Types of Testing"
 linkTitle: "Testing Types"
-weight: 2
+weight: 4
 aliases: [
 "/documentation/en/introduction/types_of_testing/",
 "/documentation/guidelines/types_of_testing/"
