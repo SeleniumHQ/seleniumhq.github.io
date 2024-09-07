@@ -557,7 +557,7 @@ public class DownloadsSample {
 			List<String> names = (List<String>) value.get("names");
 			// Let's say there were "n" files downloaded for the current session, we would like
 			// to retrieve ONLY the first file.
-			fileToDownload = names.get(1);
+			fileToDownload = names.reversed().getFirst();
 		}
 
 		// Now, let's download the file
