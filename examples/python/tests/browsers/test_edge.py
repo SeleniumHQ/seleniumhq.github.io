@@ -140,7 +140,7 @@ def test_logs():
     driver.quit()
 
 def test_permissions():
-    driver = webdriver.Chrome()
+    driver = webdriver.Edge()
     
     driver.get('https://www.selenium.dev')
     driver.set_permissions('geolocation', 'denied')
