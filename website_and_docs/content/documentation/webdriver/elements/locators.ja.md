@@ -378,10 +378,7 @@ and you need to access the input of type text, instead of the input of type numb
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    import org.openqa.selenium.By;
-    import org.openqa.selenium.support.pagefactory.ByChained;
-    By example = new ByChained(By.id("parentDiv"), By.id("phoneNumber"));
-    driver.findElements(example);
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L12-15" >}}
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
