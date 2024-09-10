@@ -2,7 +2,6 @@
 using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace SeleniumDocs.BiDi.BrowsingContext;
@@ -13,6 +12,8 @@ partial class BrowsingContextTest
     public async Task FragmentNavigatedEvent()
     {
         var browsingContext = await driver.AsBidirectionalContextAsync();
+
+        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html", new() { Wait = ReadinessState.Complete });
 
         TaskCompletionSource<NavigationInfo> tcs = new();
 
