@@ -368,7 +368,7 @@ The `ByChained` class enables you to _chain_ two By locators together. For examp
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#11-25" >}}
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#17-19" >}}
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
