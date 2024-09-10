@@ -13,11 +13,13 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        BrowsingContextInfo info = null;
+        TaskCompletionSource<BrowsingContextInfo> tcs = new();
 
-        await bidi.OnBrowsingContextCreatedAsync(e => info = e);
+        await bidi.OnBrowsingContextCreatedAsync(tcs.SetResult);
 
         driver.SwitchTo().NewWindow(OpenQA.Selenium.WindowType.Window);
+
+        var info = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
 
         Assert.IsNotNull(info);
         Console.WriteLine(info);
