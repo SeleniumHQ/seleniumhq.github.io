@@ -363,25 +363,12 @@ others it's as simple as setting a parameter in the FindElement function
 
 ### ByChained
 
-Say, for example, you had the following html:
-
-```html
-<html>
-    <body>
-        <div id="parentDiv">
-            <input id="phoneNumber" class="el-input" type="text"/>
-        </div>
-        <input id="phoneNumber" class="el-input" type="number"/>
-    </body>
-</html>
-```
-
-and you need to access the input of type text, instead of the input of type number. With ByChained you can access the desired input by chaining two Bys together, first to the div with `id="parentDiv"` and from that div to its child: `id="phoneNumber"`.
+The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to locate a parent element, and then a child element of that parent, you can instead combine those two `FindElement` functions into one.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L12-15" >}}
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#11-25" >}}
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
