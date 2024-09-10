@@ -37,7 +37,8 @@ namespace SeleniumDocs
         {
             ChromeOptions options = new ChromeOptions
             {
-                BrowserVersion = browserVersion
+                BrowserVersion = browserVersion,
+                UseWebSocketUrl = true,
             };
             driver = new ChromeDriver(options);
         }
