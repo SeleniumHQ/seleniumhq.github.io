@@ -8,8 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LocatorsTest extends BaseTest {
 
-    public String ByChainedTest() 
-    {
+    public String ByChainedTest() {
         // Create instance of ChromeDriver
         WebDriver driver = new ChromeDriver();
         // Navigate to Url
@@ -23,5 +22,4 @@ public class LocatorsTest extends BaseTest {
         String placeholder = username_input.getAttribute("placeholder");
         return placeholder;
     }
-
 }
