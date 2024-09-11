@@ -87,7 +87,7 @@ part of the registration message.
 
 By default, the **Node** auto-registers all browser drivers available on the path of the machine where it runs. 
 It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is 
-created. Through a specific [configuration]({{< ref "/configuration" >}}), it can run sessions in Docker 
+created. Through a specific [configuration]({{< ref "configuration" >}}), it can run sessions in Docker 
 containers or relay commands.
 
 A **Node** only executes the received commands, it does not evaluate, make judgments, or control anything other
