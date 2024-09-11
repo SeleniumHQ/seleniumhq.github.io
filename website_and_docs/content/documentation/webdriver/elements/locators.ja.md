@@ -326,6 +326,8 @@ The FindElement makes using locators a breeze! For most languages,
 all you need to do is utilize `webdriver.common.by.By`, however in 
 others it's as simple as setting a parameter in the FindElement function
 
+### By
+
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
@@ -356,7 +358,31 @@ others it's as simple as setting a parameter in the FindElement function
   {{< /tab >}}
 {{< /tabpane >}} 
 
+### ByChained
 
+The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to locate a parent element, and then a child element of that parent, you can instead combine those two `FindElement` functions into one.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+  {{< tab header="Java" >}}
+    {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#17-19" >}}
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
+  {{< /tab >}}
+{{< /tabpane >}} 
 
 ## 相対ロケーター
 
