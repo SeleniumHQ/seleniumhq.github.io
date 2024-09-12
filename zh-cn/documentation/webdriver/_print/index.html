@@ -8514,7 +8514,21 @@ WebDriver并不会自动重新定位，
 您无法仅从当前上下文重新定位它，
 也无法切换回元素有效的活动上下文。
 如果这是您的错误原因，
-您必须回到正确的位置并重新定位元素。</p><h2 id=无效-sessionid-异常>无效 SessionId 异常</h2><p>有时您尝试访问的会话与当前可用的会话不同。</p><h3 id=可能原因>可能原因</h3><p>通常发生在会话被删除时（例如：<code>driver.quit()</code>）或会话发生更改时，例如最后一个标签页/浏览器已关闭（例如：<code>driver.close()</code>）。</p><h3 id=可能的解决方案>可能的解决方案</h3><p>检查脚本中是否有 <code>driver.close()</code> 和 <code>driver.quit()</code> 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-65b4566cad18a000d8a33a1e9db619c8>11.1.1 - Unable to Locate Driver Error</h1><div class=lead>Troubleshooting missing path to driver executable.</div><p>Historically, this is the most common error beginning Selenium users get
+您必须回到正确的位置并重新定位元素。</p><h2 id=elementclickinterceptedexception>ElementClickInterceptedException</h2><p>This exception occurs when Selenium tries to click an element, but the click would instead
+be received by a different element. Before Selenium will click an element, it checks if the
+element is visible, unobscured by any other elements, and enabled - if the element is obscured,
+it will raise this exception.</p><h3 id=likely-cause>Likely Cause</h3><p><strong>UI Elements Overlapping</strong></p><p>Elements on the UI are typically placed next to each other, but occasionally elements may overlap.
+For example, a navbar always staying at the top of your window as you scroll a page. If that navbar
+happens to be covering an element we are trying to click, Selenium might believe it to be visible
+and enabled, but when you try to click it will throw this exception. Pop-ups and Modals are also
+common offenders here.</p><p><strong>Animations</strong></p><p>Elements with animations have the potential to cause this exception as well - it is recommended
+to wait for animations to cease before attempting to click an element.</p><h3 id=possible-solutions>Possible Solutions</h3><p><strong>Use Explicit Waits</strong></p><p><a href=https://www.selenium.dev/zh-cn/documentation/webdriver/waits/>Explicit Waits</a> will likely be your best friend
+in these instances. A great way is to use <code>ExpectedCondition.ToBeClickable()</code>
+with <code>WebDriverWait</code> to wait until the right moment.</p><p><strong>Scroll the Element into View</strong></p><p>In instances where the element is out of view, but Selenium still registers the element as visible
+(e.g. navbars overlapping a section at the top of your screen), you can use the
+<code>WebDriver.executeScript()</code> method to execute a javascript function to scroll
+(e.g. <code>WebDriver.executeScript('window.scrollBy(0,-250)')</code>) or you can utilize the
+Actions class with <code>Actions.moveToElement(element)</code>.</p><h2 id=无效-sessionid-异常>无效 SessionId 异常</h2><p>有时您尝试访问的会话与当前可用的会话不同。</p><h3 id=可能原因>可能原因</h3><p>通常发生在会话被删除时（例如：<code>driver.quit()</code>）或会话发生更改时，例如最后一个标签页/浏览器已关闭（例如：<code>driver.close()</code>）。</p><h3 id=可能的解决方案>可能的解决方案</h3><p>检查脚本中是否有 <code>driver.close()</code> 和 <code>driver.quit()</code> 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-65b4566cad18a000d8a33a1e9db619c8>11.1.1 - Unable to Locate Driver Error</h1><div class=lead>Troubleshooting missing path to driver executable.</div><p>Historically, this is the most common error beginning Selenium users get
 when trying to run code for the first time:</p><ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><button class="nav-link active" id=tabs-00-00-tab data-bs-toggle=tab data-bs-target=#tabs-00-00 role=tab data-td-tp-persist=java aria-controls=tabs-00-00 aria-selected=true>
 Java</button></li><li class=nav-item><button class=nav-link id=tabs-00-01-tab data-bs-toggle=tab data-bs-target=#tabs-00-01 role=tab data-td-tp-persist=python aria-controls=tabs-00-01 aria-selected=false>
 Python</button></li><li class=nav-item><button class=nav-link id=tabs-00-02-tab data-bs-toggle=tab data-bs-target=#tabs-00-02 role=tab data-td-tp-persist=csharp aria-controls=tabs-00-02 aria-selected=false>
