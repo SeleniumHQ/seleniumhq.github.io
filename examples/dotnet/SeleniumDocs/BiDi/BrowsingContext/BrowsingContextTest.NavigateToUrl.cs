@@ -30,4 +30,18 @@ partial class BrowsingContextTest
         Assert.IsNotNull(info.Navigation);
         StringAssert.Contains(info.Url, "/bidi/logEntryAdded.html");
     }
+
+    [TestMethod]
+    public async Task Reload()
+    {
+        var browsingContext = await driver.AsBidirectionalContextAsync();
+
+        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+
+        var info = await browsingContext.ReloadAsync();
+
+        Assert.IsNotNull(info);
+        Assert.IsNotNull(info.Navigation);
+        StringAssert.Contains(info.Url, "/bidi/logEntryAdded.html");
+    }
 }
