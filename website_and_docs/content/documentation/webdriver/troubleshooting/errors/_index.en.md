@@ -138,8 +138,10 @@ Sometimes the session you're trying to access is different than what's currently
 
 ### Likely Cause
 
-This usually occurs when the session has been deleted (e.g. `driver.quit()`) or if the session has changed, like when the last tab/browser has closed (e.g. `driver.close()`)
+This usually occurs when the session has been deleted (e.g. `driver.quit()`) or if the session has changed, 
+like when the last tab/browser has closed (e.g. `driver.close()`)
 
 ### Possible Solutions
 
-Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes of closed tabs/browsers. It could be that you are locating an element before you should/can.
+Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes 
+of closed tabs/browsers. It could be that you are locating an element before you should/can.
