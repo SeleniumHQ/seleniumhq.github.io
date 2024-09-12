@@ -100,27 +100,37 @@ for your error, you must both navigate back to the correct location and relocate
 
 ## ElementClickInterceptedException
 
-This exception occurs when Selenium tries to click an element, but the click would instead be received by a different element. Before Selenium will click an element, it checks if the element is visible, unobscured by any other elements, and enabled - if the element is obscured, it will raise this exception.
+This exception occurs when Selenium tries to click an element, but the click would instead be received 
+by a different element. Before Selenium will click an element, it checks if the element is visible, 
+unobscured by any other elements, and enabled - if the element is obscured, it will raise this exception.
 
 ### Likely Cause
 
 **UI Elements Overlapping** 
 
-Elements on the UI are typically placed next to each other, but occasionally elements may overlap. For example, a navbar always staying at the top of your window as you scroll a page. If that navbar happens to be covering an element we are trying to click, Selenium might believe it to be visible and enabled, but when you try to click it will throw this exception. Pop-ups and Modals are also common offenders here.
+Elements on the UI are typically placed next to each other, but occasionally elements may overlap. For example, 
+a navbar always staying at the top of your window as you scroll a page. If that navbar happens to be covering 
+an element we are trying to click, Selenium might believe it to be visible and enabled, but when you try to click 
+it will throw this exception. Pop-ups and Modals are also common offenders here.
 
 **Animations** 
 
-Elements with animations have the potential to cause this exception as well - it is recommended to wait for animations to cease before attempting to click an element.
+Elements with animations have the potential to cause this exception as well - it is recommended to wait for 
+animations to cease before attempting to click an element.
 
 ### Possible Solutions
 
 **Use Explicit Waits** 
 
-Explicit waits will likely be your best friend in these instances. A great way is to use `ExpectedCondition.ToBeClickable()` with `WebDriverWait` to wait until the right moment.
+[Explicit Waits]({{< ref "/documentation/webdriver/waits" >}}) will likely be your best friend in these instances. 
+A great way is to use `ExpectedCondition.ToBeClickable()` with `WebDriverWait` to wait until the right moment.
 
 **Scroll the Element into View** 
 
-In instances where the element is out of view, but Selenium still registers the element as visible (e.g. navbars overlapping a section at the top of your screen), you can use the `WebDriver.executeScript()` method to execute a javascript function to scroll (e.g. `WebDriver.executeScript('window.scrollBy(0,-250)')`) or you can utilize the Actions class with `Actions.moveToElement(element)`.
+In instances where the element is out of view, but Selenium still registers the element as visible 
+(e.g. navbars overlapping a section at the top of your screen), you can use the `WebDriver.executeScript()` 
+method to execute a javascript function to scroll (e.g. `WebDriver.executeScript('window.scrollBy(0,-250)')`) 
+or you can utilize the Actions class with `Actions.moveToElement(element)`.
 
 ## Invalid SessionId Exception
 
