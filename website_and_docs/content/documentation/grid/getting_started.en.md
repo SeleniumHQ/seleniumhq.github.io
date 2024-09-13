@@ -216,7 +216,7 @@ endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 {{% pageinfo color="primary" %}}
 For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-[Configuring Components]({{< ref "/configuration" >}}) section.
+[Configuring Components]({{< ref "configuration" >}}) section.
 {{% /pageinfo %}}
 
 ## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
@@ -311,6 +311,6 @@ overview of how a publicly exposed Grid could be misused:
 ## Further reading
 
 * [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
-* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
+* [Configuration]({{< ref "configuration" >}}): customize your Grid setup.
 * [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
+* [Advanced Features]({{< ref "advanced_features" >}}): explore more possibilities through Grid's features.
