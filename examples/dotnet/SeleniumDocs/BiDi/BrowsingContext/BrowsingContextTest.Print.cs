@@ -11,7 +11,7 @@ partial class BrowsingContextTest
     {
         var context = await driver.AsBidirectionalContextAsync();
 
-        var pdf = await context.PrintAsync(new() { PageRanges = [1, 2, new(3, 5)] });
+        var pdf = await context.PrintAsync(new() { PageRanges = [1, 2, 3..5, new(3, 5), 7..] });
 
         Assert.IsNotNull(pdf);
         Assert.IsNotNull(pdf.Data);
