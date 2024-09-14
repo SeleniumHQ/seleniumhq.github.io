@@ -13,18 +13,18 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<BrowsingContextInfo> tcs = new();
 
-        await bidi.OnBrowsingContextDestroyedAsync(tcs.SetResult);
+        await bidi.OnContextDestroyedAsync(tcs.SetResult);
 
-        await browsingContext.CloseAsync();
+        await context.CloseAsync();
 
-        var browsingContextInfo = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
+        var contextInfo = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
 
-        Assert.IsNotNull(browsingContextInfo);
-        Assert.AreEqual(browsingContext, browsingContextInfo.Context);
-        Console.WriteLine(browsingContextInfo);
+        Assert.IsNotNull(contextInfo);
+        Assert.AreEqual(context, contextInfo.Context);
+        Console.WriteLine(contextInfo);
     }
 }

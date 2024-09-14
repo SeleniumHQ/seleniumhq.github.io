@@ -10,11 +10,11 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task Reload()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
-        var info = await browsingContext.ReloadAsync();
+        var info = await context.ReloadAsync();
 
         Assert.IsNotNull(info);
         Assert.IsNotNull(info.Navigation);

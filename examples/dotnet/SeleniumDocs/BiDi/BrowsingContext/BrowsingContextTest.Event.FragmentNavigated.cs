@@ -11,15 +11,15 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task FragmentNavigatedEvent()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html", new() { Wait = ReadinessState.Complete });
 
         TaskCompletionSource<NavigationInfo> tcs = new();
 
-        await browsingContext.OnFragmentNavigatedAsync(tcs.SetResult);
+        await context.OnFragmentNavigatedAsync(tcs.SetResult);
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html#linkToAnchorOnThisPage", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html#linkToAnchorOnThisPage", new() { Wait = ReadinessState.Complete });
 
         var navigationInfo = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
 

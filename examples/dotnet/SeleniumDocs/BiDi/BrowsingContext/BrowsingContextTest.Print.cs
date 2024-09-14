@@ -9,9 +9,9 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task PrintPage()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        var pdf = await browsingContext.PrintAsync(new() { PageRanges = [1, 2, new(3, 5)] });
+        var pdf = await context.PrintAsync(new() { PageRanges = [1, 2, new(3, 5)] });
 
         Assert.IsNotNull(pdf);
         Assert.IsNotNull(pdf.Data);

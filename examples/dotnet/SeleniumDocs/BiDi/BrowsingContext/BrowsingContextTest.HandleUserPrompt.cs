@@ -14,12 +14,12 @@ partial class BrowsingContextTest
         // temporary use firefox because of chrome automatically handle prompts
         using var driver = new FirefoxDriver(new FirefoxOptions() { UseWebSocketUrl = true });
 
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
         driver.Url = "https://www.selenium.dev/selenium/web/alerts.html";
 
         driver.FindElement(By.Id("prompt-with-default")).Click();
 
-        await browsingContext.HandleUserPromptAsync(new() { Accept = true, UserText = "Selenium automates browsers" });
+        await context.HandleUserPromptAsync(new() { Accept = true, UserText = "Selenium automates browsers" });
     }
 }

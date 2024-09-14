@@ -11,13 +11,13 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task BrowsingContextLoadedEvent()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<NavigationInfo> tcs = new();
 
-        await browsingContext.OnLoadAsync(tcs.SetResult);
+        await context.OnLoadAsync(tcs.SetResult);
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         var navigationInfo = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
 

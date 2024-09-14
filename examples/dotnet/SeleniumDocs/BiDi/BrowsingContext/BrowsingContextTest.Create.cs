@@ -12,9 +12,9 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Tab);
+        var context = await bidi.CreateContextAsync(BrowsingContextType.Tab);
 
-        Assert.IsNotNull(browsingContext);
+        Assert.IsNotNull(context);
     }
 
     [TestMethod]
@@ -22,9 +22,9 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Window);
+        var context = await bidi.CreateContextAsync(BrowsingContextType.Window);
 
-        Assert.IsNotNull(browsingContext);
+        Assert.IsNotNull(context);
     }
 
     [TestMethod]
@@ -32,11 +32,11 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext1 = await driver.AsBidirectionalContextAsync();
+        var context1 = await driver.AsBidirectionalContextAsync();
 
-        var browsingContext2 = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Tab, new() { ReferenceContext = browsingContext1 });
+        var context2 = await bidi.CreateContextAsync(BrowsingContextType.Tab, new() { ReferenceContext = context1 });
 
-        Assert.IsNotNull(browsingContext2);
+        Assert.IsNotNull(context2);
     }
 
     [TestMethod]
@@ -44,18 +44,18 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext1 = await driver.AsBidirectionalContextAsync();
+        var context1 = await driver.AsBidirectionalContextAsync();
 
-        var browsingContext2 = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Window, new() { ReferenceContext = browsingContext1 });
+        var context2 = await bidi.CreateContextAsync(BrowsingContextType.Window, new() { ReferenceContext = context1 });
 
-        Assert.IsNotNull(browsingContext2);
+        Assert.IsNotNull(context2);
     }
 
     [TestMethod]
     public async Task UseExistingWindowHandle()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        Assert.IsNotNull(browsingContext);
+        Assert.IsNotNull(context);
     }
 }

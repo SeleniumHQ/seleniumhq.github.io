@@ -15,7 +15,7 @@ partial class BrowsingContextTest
 
         TaskCompletionSource<BrowsingContextInfo> tcs = new();
 
-        await bidi.OnBrowsingContextCreatedAsync(tcs.SetResult);
+        await bidi.OnContextCreatedAsync(tcs.SetResult);
 
         driver.SwitchTo().NewWindow(OpenQA.Selenium.WindowType.Window);
 

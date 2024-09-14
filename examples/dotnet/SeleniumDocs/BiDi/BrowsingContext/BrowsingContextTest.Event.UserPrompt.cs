@@ -14,11 +14,11 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<UserPromptOpenedEventArgs> tcs = new();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
         await bidi.OnUserPromptOpenedAsync(tcs.SetResult);
 
@@ -35,17 +35,17 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<UserPromptClosedEventArgs> tcs = new();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
         await bidi.OnUserPromptClosedAsync(tcs.SetResult);
 
         driver.FindElement(By.Id("prompt")).Click();
 
-        //await browsingContext.HandleUserPromptAsync();
+        //await context.HandleUserPromptAsync();
 
         var userPromptClosedEventArgs = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
 

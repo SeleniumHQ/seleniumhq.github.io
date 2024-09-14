@@ -12,7 +12,7 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var tab = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Tab);
+        var tab = await bidi.CreateContextAsync(BrowsingContextType.Tab);
 
         await tab.ActivateAsync();
     }

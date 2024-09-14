@@ -10,9 +10,9 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateToUrl()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        var info = await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+        var info = await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
         Assert.IsNotNull(info);
         Assert.IsNotNull(info.Navigation);
@@ -22,9 +22,9 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateToUrlWithReadinessState()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        var info = await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        var info = await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         Assert.IsNotNull(info);
         Assert.IsNotNull(info.Navigation);
@@ -34,13 +34,13 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateBack()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
-        await browsingContext.NavigateBackAsync();
+        await context.NavigateBackAsync();
 
-        var url = (await browsingContext.GetTreeAsync())[0].Url;
+        var url = (await context.GetTreeAsync())[0].Url;
 
         Assert.AreEqual("about:blank", url);
     }
@@ -48,15 +48,15 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateForward()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
-        await browsingContext.NavigateBackAsync();
+        await context.NavigateBackAsync();
 
-        await browsingContext.NavigateForwardAsync();
+        await context.NavigateForwardAsync();
 
-        var url = (await browsingContext.GetTreeAsync())[0].Url;
+        var url = (await context.GetTreeAsync())[0].Url;
 
         Assert.AreEqual("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", url);
     }
@@ -64,13 +64,13 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task TraverseHistory()
     {
-        var browsingContext = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBidirectionalContextAsync();
 
-        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
+        await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
-        await browsingContext.TraverseHistoryAsync(-1);
+        await context.TraverseHistoryAsync(-1);
 
-        var url = (await browsingContext.GetTreeAsync())[0].Url;
+        var url = (await context.GetTreeAsync())[0].Url;
 
         Assert.AreEqual("about:blank", url);
     }
