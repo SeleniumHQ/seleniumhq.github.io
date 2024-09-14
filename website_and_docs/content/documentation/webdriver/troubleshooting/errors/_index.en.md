@@ -12,7 +12,7 @@ aliases: [
 ]
 ---
 
-## Invalid Selector Exception
+## InvalidSelectorException
 
 CSS and XPath Selectors are sometimes difficult to get correct.
 
@@ -29,7 +29,7 @@ Run your selector through a validator service:
 Or use a browser extension to get a known good value:
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## No Such Element Exception
+## NoSuchElementException
 
 The element can not be found at the exact moment you attempted to locate it.
 
@@ -46,7 +46,7 @@ The element can not be found at the exact moment you attempted to locate it.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## Stale Element Reference Exception 
+## StaleElementReferenceException 
 
 An element goes stale when it was previously located, but can not be currently accessed.
 Elements do not get relocated automatically; the driver creates a reference ID for the element and
@@ -98,7 +98,7 @@ You can't just relocate it from the current context,
 and you can't switch back to an active context where it is valid. If this is the reason
 for your error, you must both navigate back to the correct location and relocate it.
 
-## Invalid SessionId Exception
+## InvalidSessionIdException
 
 Sometimes the session you're trying to access is different than what's currently available
 

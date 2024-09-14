@@ -6,7 +6,7 @@ description: >
   如何处理Selenium代码中的各种问题.
 ---
 
-## 无效选择器的异常 (Invalid Selector Exception)
+## 无效选择器的异常 (InvalidSelectorException)
 
 某些时候难以获得正确的CSS以及XPath选择器。
 
@@ -23,7 +23,7 @@ description: >
 或者使用浏览器扩展程序来获取已知的良好值：
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## 没有这样元素的异常 (No Such Element Exception)
+## 没有这样元素的异常 (NoSuchElementException)
 
 在您尝试找到该元素的当前时刻无法定位元素。
 
@@ -40,7 +40,7 @@ description: >
 * 使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## 过时元素引用的异常 (Stale Element Reference Exception)
+## 过时元素引用的异常 (StaleElementReferenceException)
 
 当成功定位到元素时，
 WebDriver会为其设置一个引用ID作为标记，
@@ -99,7 +99,7 @@ WebDriver并不会自动重新定位，
 如果这是您的错误原因，
 您必须回到正确的位置并重新定位元素。
 
-## 无效 SessionId 异常
+## 无效SessionId异常
 有时您尝试访问的会话与当前可用的会话不同。
 
 ### 可能原因
