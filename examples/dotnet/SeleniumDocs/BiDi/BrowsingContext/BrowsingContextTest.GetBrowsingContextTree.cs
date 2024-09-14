@@ -10,19 +10,40 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task GetBrowsingContextTree()
     {
+        var browsingContext = await driver.AsBidirectionalContextAsync();
+
+        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/iframes.html", new() { Wait = ReadinessState.Complete });
+
+        var contexts = await browsingContext.GetTreeAsync();
+
+        Assert.AreEqual(1, contexts.Count);
+        Assert.IsNotNull(contexts[0].Children);
+        Assert.IsTrue(contexts[0].Children.Count >= 1, "Context should contain iframes as children");
+    }
+
+    [TestMethod]
+    public async Task GetBrowsingContextTreeWithDepth()
+    {
+        var browsingContext = await driver.AsBidirectionalContextAsync();
+
+        await browsingContext.NavigateAsync("https://www.selenium.dev/selenium/web/iframes.html", new() { Wait = ReadinessState.Complete });
+
+        var contexts = await browsingContext.GetTreeAsync(new() { MaxDepth = 0 });
+
+        Assert.AreEqual(1, contexts.Count);
+        Assert.IsNull(contexts[0].Children, "Context should not contain iframes as children since depth is 0");
+    }
+
+    [TestMethod]
+    public async Task GetAllTopLevelBrowingContexts()
+    {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var parentBrowsingContext = await driver.AsBidirectionalContextAsync();
+        var window2 = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Window);
 
-        var browsingContext = await bidi.CreateBrowsingContextAsync(BrowsingContextType.Tab, new() { ReferenceContext = parentBrowsingContext });
+        var contexts = await bidi.GetBrowsingContextTreeAsync();
 
-        var tree = await bidi.GetBrowsingContextTreeAsync(new() { Root = parentBrowsingContext });
-
-        Assert.IsNotNull(tree);
-        Assert.AreEqual(1, tree.Count);
-        Assert.AreEqual(parentBrowsingContext, tree[0].Context);
-        Assert.IsNotNull(tree[0].Children);
-        Assert.AreEqual(1, tree[0].Children.Count);
-        Assert.AreEqual(browsingContext, tree[0].Children[0].Context);
+        Assert.AreEqual(2, contexts.Count);
+        Assert.AreEqual(contexts[1].Context, window2);
     }
 }
