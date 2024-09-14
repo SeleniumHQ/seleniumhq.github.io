@@ -47,7 +47,7 @@ Elements do not get relocated automatically; the driver creates a reference ID f
 has a particular place it expects to find it in the DOM. If it can not find the element
 in the current DOM, any action using that element will result in this exception.
 
-### Common Causes
+### Likely Cause
 
 This can happen when:
 
@@ -55,7 +55,7 @@ This can happen when:
 * You have navigated to a different page.
 * You have switched to another window or into or out of a frame or iframe.
 
-### Common Solutions
+### Likely Solutions
 
 **The DOM has changed**
 
@@ -103,3 +103,17 @@ This usually occurs when the session has been deleted (e.g. `driver.quit()`) or 
 ### Possible Solutions
 
 Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes of closed tabs/browsers. It could be that you are locating an element before you should/can.
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: using an explicit wait, or interacting with the page in such a way to make the element visible (scrolling, clicking a button, etc.)
