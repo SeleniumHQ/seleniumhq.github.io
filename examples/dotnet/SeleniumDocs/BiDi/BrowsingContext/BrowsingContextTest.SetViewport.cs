@@ -11,6 +11,6 @@ partial class BrowsingContextTest
     {
         var context = await driver.AsBidirectionalContextAsync();
 
-        await context.SetViewportAsync(new() { Viewport = new(250, 300), DevicePixelRatio = 5 });
+        await context.SetViewportAsync(new() { Viewport = new(Width: 250, Height: 300), DevicePixelRatio = 5 });
     }
 }

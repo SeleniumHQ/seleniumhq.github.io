@@ -12,15 +12,14 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptOpenedEvent()
     {
-        await using var bidi = await driver.AsBidirectionalAsync();
-
         var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<UserPromptOpenedEventArgs> tcs = new();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
-        await bidi.OnUserPromptOpenedAsync(tcs.SetResult);
+        //TODO; THhis event can be a part of context
+        await context.BiDi.OnUserPromptOpenedAsync(tcs.SetResult);
 
         driver.FindElement(By.Id("prompt")).Click();
 
@@ -33,15 +32,14 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptClosedEvent()
     {
-        await using var bidi = await driver.AsBidirectionalAsync();
-
         var context = await driver.AsBidirectionalContextAsync();
 
         TaskCompletionSource<UserPromptClosedEventArgs> tcs = new();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
-        await bidi.OnUserPromptClosedAsync(tcs.SetResult);
+        //TODO; THhis event can be a part of context
+        await context.BiDi.OnUserPromptClosedAsync(tcs.SetResult);
 
         driver.FindElement(By.Id("prompt")).Click();
 
