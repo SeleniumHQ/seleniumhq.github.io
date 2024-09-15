@@ -12,7 +12,7 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var context = await bidi.CreateContextAsync(BrowsingContextType.Tab);
+        var context = await bidi.CreateContextAsync(ContextType.Tab);
 
         Assert.IsNotNull(context);
     }
@@ -22,7 +22,7 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var context = await bidi.CreateContextAsync(BrowsingContextType.Window);
+        var context = await bidi.CreateContextAsync(ContextType.Window);
 
         Assert.IsNotNull(context);
     }
@@ -34,7 +34,7 @@ partial class BrowsingContextTest
 
         var context1 = await driver.AsBidirectionalContextAsync();
 
-        var context2 = await bidi.CreateContextAsync(BrowsingContextType.Tab, new() { ReferenceContext = context1 });
+        var context2 = await bidi.CreateContextAsync(ContextType.Tab, new() { ReferenceContext = context1 });
 
         Assert.IsNotNull(context2);
     }
@@ -46,7 +46,7 @@ partial class BrowsingContextTest
 
         var context1 = await driver.AsBidirectionalContextAsync();
 
-        var context2 = await bidi.CreateContextAsync(BrowsingContextType.Window, new() { ReferenceContext = context1 });
+        var context2 = await bidi.CreateContextAsync(ContextType.Window, new() { ReferenceContext = context1 });
 
         Assert.IsNotNull(context2);
     }

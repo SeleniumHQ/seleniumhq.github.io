@@ -39,7 +39,7 @@ partial class BrowsingContextTest
     {
         await using var bidi = await driver.AsBidirectionalAsync();
 
-        var window2 = await bidi.CreateContextAsync(BrowsingContextType.Window);
+        var window2 = await bidi.CreateContextAsync(ContextType.Window);
 
         var contexts = await bidi.GetTreeAsync();
 
