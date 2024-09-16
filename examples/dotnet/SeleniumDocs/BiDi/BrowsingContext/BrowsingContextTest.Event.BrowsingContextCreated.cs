@@ -11,7 +11,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task BrowsingContextCreatedEvent()
     {
-        await using var bidi = await driver.AsBidirectionalAsync();
+        await using var bidi = await driver.AsBiDirectionalAsync();
 
         TaskCompletionSource<BrowsingContextInfo> tcs = new();
 

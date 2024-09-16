@@ -10,7 +10,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CaptureScreenshot()
     {
-        var context = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBiDirectionalContextAsync();
 
         var screenshot = await context.CaptureScreenshotAsync();
 
@@ -22,7 +22,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CaptureViewportScreenshot()
     {
-        var context = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBiDirectionalContextAsync();
 
         var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new BoxClipRectangle(5, 5, 10, 10) });
 
@@ -33,7 +33,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CaptureElementScreenshot()
     {
-        var context = await driver.AsBidirectionalContextAsync();
+        var context = await driver.AsBiDirectionalContextAsync();
 
         driver.Url = "https://www.selenium.dev/selenium/web/formPage.html";
 
