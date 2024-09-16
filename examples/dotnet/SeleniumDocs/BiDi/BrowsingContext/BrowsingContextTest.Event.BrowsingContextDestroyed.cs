@@ -11,9 +11,9 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task BrowsingContextDestroyedEvent()
     {
-        await using var bidi = await driver.AsBiDirectionalAsync();
+        await using var bidi = await driver.AsBiDiAsync();
 
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         TaskCompletionSource<BrowsingContextInfo> tcs = new();
 

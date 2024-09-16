@@ -10,7 +10,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CloseTab()
     {
-        await using var bidi = await driver.AsBiDirectionalAsync();
+        await using var bidi = await driver.AsBiDiAsync();
 
         var context = await bidi.CreateContextAsync(ContextType.Tab);
 
@@ -20,7 +20,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CloseWindow()
     {
-        await using var bidi = await driver.AsBiDirectionalAsync();
+        await using var bidi = await driver.AsBiDiAsync();
 
         var context = await bidi.CreateContextAsync(ContextType.Window);
 

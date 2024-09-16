@@ -11,7 +11,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigationStartedEvent()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         TaskCompletionSource<NavigationInfo> tcs = new();
 

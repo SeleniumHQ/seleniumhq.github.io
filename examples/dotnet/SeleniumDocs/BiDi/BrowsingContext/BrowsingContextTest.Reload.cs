@@ -10,7 +10,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task Reload()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 

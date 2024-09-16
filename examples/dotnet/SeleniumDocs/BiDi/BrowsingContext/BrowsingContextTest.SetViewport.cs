@@ -9,7 +9,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task SetViewport()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         await context.SetViewportAsync(new() { Viewport = new(Width: 250, Height: 300), DevicePixelRatio = 5 });
     }

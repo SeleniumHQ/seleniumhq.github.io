@@ -9,7 +9,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task PrintPage()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         var pdf = await context.PrintAsync(new() { PageRanges = [1, 2, 3..5, new(3, 5), 7..] });
 

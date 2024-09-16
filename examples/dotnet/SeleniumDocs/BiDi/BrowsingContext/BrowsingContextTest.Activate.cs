@@ -9,7 +9,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task Activate()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         await context.ActivateAsync();
     }

@@ -12,7 +12,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptOpenedEvent()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         TaskCompletionSource<UserPromptOpenedEventArgs> tcs = new();
 
@@ -32,7 +32,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptClosedEvent()
     {
-        var context = await driver.AsBiDirectionalContextAsync();
+        var context = await driver.AsBiDiContextAsync();
 
         TaskCompletionSource<UserPromptClosedEventArgs> tcs = new();
 
