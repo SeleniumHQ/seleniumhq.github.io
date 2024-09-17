@@ -120,4 +120,6 @@ This can occur in several situations:
 
 ### Possible Solutions
 
-This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: using an explicit wait, or interacting with the page in such a way to make the element visible (scrolling, clicking a button, etc.)
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)
