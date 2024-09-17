@@ -370,7 +370,8 @@ others it's as simple as setting a parameter in the FindElement function
 
 ### ByChained
 
-The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to locate a parent element, and then a child element of that parent, you can instead combine those two `FindElement()` functions into one.
+The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to locate a parent element, 
+and then a child element of that parent, you can instead combine those two `FindElement()` functions into one.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
