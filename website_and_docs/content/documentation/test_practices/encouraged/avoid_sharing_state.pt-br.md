@@ -21,3 +21,5 @@ teste, por exemplo registros de pedidos inválidos.
 
 * Crie uma nova instância do WebDriver por teste. Isso ajuda a garantir o isolamento do teste
 e torna a paralelização mais simples.
+
+    * Se você escolher o [pytest](https://pytest.org/) como seu executor de testes, isso pode ser facilmente feito retornando seu driver em um fixture global. Dessa forma, cada teste terá sua própria instância de driver, e você pode garantir que os drivers sempre sejam encerrados após a conclusão de um teste (seja ele aprovado ou reprovado)
