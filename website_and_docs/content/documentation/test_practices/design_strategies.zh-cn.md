@@ -64,18 +64,58 @@ public class EditIssue {
     this.driver = driver;
   }
 
-  public void setSummary(String summary) {
-    WebElement field = driver.findElement(By.name("summary"));
-    clearAndType(field, summary);
+  public void getStarted() {
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
+    field.click()
   }
 
-  public void enterDescription(String description) {
-    WebElement field = driver.findElement(By.name("comment"));
-    clearAndType(field, description);
+  public void setTitle(String title) {
+    WebElement field = driver.findElement(By.id("issue_title")));
+    clearAndType(field, title);
+  }
+
+  public void setWhatHappened(String whatHappened) {
+    WebElement field = driver.findElement(By.id("issue_body"));
+    clearAndType(field, whatHappened);
+  }
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
+  }
+
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    driver.findElement(By.id("submit")).click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -166,16 +206,58 @@ public class EditIssue extends LoadableComponent<EditIssue> {
     assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
   }
   
-  public void setSummary(String issueSummary) {
-    clearAndType(summary, issueSummary);
+  public void getStarted() {
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
+    field.click()
   }
 
-  public void enterDescription(String issueDescription) {
-    clearAndType(description, issueDescription);
+  public void setTitle(String title) {
+    WebElement field = driver.findElement(By.id("issue_title")));
+    clearAndType(field, title);
+  }
+
+  public void setWhatHappened(String whatHappened) {
+    WebElement field = driver.findElement(By.id("issue_body"));
+    clearAndType(field, whatHappened);
+  }
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
+  }
+
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    submit.click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -337,8 +419,16 @@ public class FooTest {
   public void demonstrateNestedLoadableComponents() {
     editIssue.get();
 
-    editIssue.setSummary("Summary");
-    editIssue.enterDescription("This is an example");
+    editIssue.getStarted()
+    editIssue.setTitle('Title')
+    editIssue.setWhatHappened('What Happened')
+    editIssue.setHowToReproduce('How to Reproduce')
+    editIssue.setLogOutput('Log Output')
+    editIssue.setOperatingSystem('Operating System')
+    editIssue.setSeleniumVersion('Selenium Version')
+    editIssue.setBrowserVersion('Browser Version')
+    editIssue.setDriverVersion('Driver Version')
+    editIssue.setUsingGrid('I Am Using Grid')
   }
 }
 ```
