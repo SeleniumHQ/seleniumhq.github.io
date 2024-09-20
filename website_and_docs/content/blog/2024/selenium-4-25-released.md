@@ -15,8 +15,6 @@ We're very happy to announce the release of Selenium 4.25 for
 Javascript, Ruby, Python, .NET, Java and the Grid!
 Links to everything can be found on our [downloads page][downloads].
 
-# Selenium 4.25.0 Release Notes
-
 Selenium 4.25.0 introduces several important changes and improvements across multiple programming 
 languages and build systems. Below are the key highlights from this release.
 
