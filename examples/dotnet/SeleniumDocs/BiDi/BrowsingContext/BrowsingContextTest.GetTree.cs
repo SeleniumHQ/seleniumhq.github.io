@@ -37,7 +37,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task GetAllTopLevelBrowingContexts()
     {
-        await using var bidi = await driver.AsBiDiAsync();
+        var bidi = await driver.AsBiDiAsync();
 
         var window = await bidi.CreateContextAsync(ContextType.Window);
 

@@ -10,7 +10,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task OpenNewTab()
     {
-        await using var bidi = await driver.AsBiDiAsync();
+        var bidi = await driver.AsBiDiAsync();
 
         var context = await bidi.CreateContextAsync(ContextType.Tab);
 
@@ -20,7 +20,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task OpenNewWindow()
     {
-        await using var bidi = await driver.AsBiDiAsync();
+        var bidi = await driver.AsBiDiAsync();
 
         var context = await bidi.CreateContextAsync(ContextType.Window);
 

@@ -11,7 +11,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task BrowsingContextDestroyedEvent()
     {
-        await using var bidi = await driver.AsBiDiAsync();
+        var bidi = await driver.AsBiDiAsync();
 
         var context = await driver.AsBiDiContextAsync();
 
