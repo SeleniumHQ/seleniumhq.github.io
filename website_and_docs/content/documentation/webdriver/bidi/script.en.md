@@ -13,7 +13,7 @@ aliases: [
 The implementation of these features is being tracked here: [#13992](https://github.com/SeleniumHQ/selenium/issues/13992)
 
 Remember that to use WebDriver BiDi, you must enable it in Options.
-For more details, see [Enabling BiDi in Selenium]({{< ref "BiDi" >}})
+For more details, see [Enabling BiDi]({{< ref "BiDi" >}})
 
 ## Script Pinning
 

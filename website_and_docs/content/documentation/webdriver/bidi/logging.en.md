@@ -12,7 +12,7 @@ aliases: [
 ---
 
 Remember that to use WebDriver BiDi, you must enable it in Options. 
-For more details, see [Enabling BiDi in Selenium]({{< ref "BiDi" >}})
+For more details, see [Enabling BiDi]({{< ref "BiDi" >}})
 
 ## Console Message Handlers
 
