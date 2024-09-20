@@ -40,6 +40,9 @@ namespace SeleniumDocs
                 BrowserVersion = browserVersion,
                 UseWebSocketUrl = true,
             };
+
+            options.AddArgument("--no-sandbox");
+
             driver = new ChromeDriver(options);
         }
 
