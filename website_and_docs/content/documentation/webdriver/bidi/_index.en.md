@@ -26,7 +26,33 @@ communication for enhanced browser automation and testing functionality,
 including streaming events from the user agent to the controlling software via WebSockets.
 Users will be able to listen for and record or manipulate events as they happen during the course of a Selenium session.
 
-To use WebDriver BiDi, you must [enable it in Options](http://www.example.com)
+### Enabling BiDi in Selenium
+
+In order to use WebDriver BiDi, setting the capability in the browser options will enable the required functionality:
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" >}}
+ options.setCapability("webSocketUrl", true);
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+{{< badge-code >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+UseWebSocketUrl = true,
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+options.web_socket_url = true
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+Options().enableBidi();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+options.setCapability("webSocketUrl", true);
+{{< /tab >}}
+{{< /tabpane >}}
+
+This enables the WebSocket connection for bidirectional communication, 
+unlocking the full potential of the WebDriver BiDi protocol.
 
 Note that Selenium is updating its entire implementation from WebDriver Classic to WebDriver BiDi (while
 maintaining backwards compatibility as much as possible), but this section of documentation focuses on the new
