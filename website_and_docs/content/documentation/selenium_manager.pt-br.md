@@ -326,5 +326,24 @@ In this case, the library to be installed is the following:
 sudo apt-get install libatk-bridge2.0-0
 ```
 
+### Using an environment variable for the driver path
+It's possible to use an environment variable to specify the driver path without using Selenium Manager.
+The following environment variables are supported:
+
+* SE_CHROMEDRIVER
+* SE_EDGEDRIVER
+* SE_GECKODRIVER
+* SE_IEDRIVER
+* SE_SAFARIDRIVER
+
+For example, to specify the path to the chromedriver,
+you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
+The following bindings allow you to specify the driver path using an environment variable:
+
+* Ruby
+* Java
+
+This feature is available in the Selenium Ruby binding starting from version 4.25.0.
+
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).
