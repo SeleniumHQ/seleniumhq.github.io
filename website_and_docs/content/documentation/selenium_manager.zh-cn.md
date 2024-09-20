@@ -336,7 +336,8 @@ The following environment variables are supported:
 * SE_IEDRIVER
 * SE_SAFARIDRIVER
 
-For example, to specify the path to the chromedriver, you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
+For example, to specify the path to the chromedriver,
+you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
 The following bindings allow you to specify the driver path using an environment variable:
 
 * Ruby
