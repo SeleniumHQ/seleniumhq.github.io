@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
@@ -67,7 +66,6 @@ def test_find_by_xpath():
 
     driver.quit()
 
-pytest.mark.skip(reason='the examples are tied to an image with an example, on the site')
 def find_by_relative_locators():
     driver = webdriver.Chrome()
     driver.get("https://www.selenium.dev/")
