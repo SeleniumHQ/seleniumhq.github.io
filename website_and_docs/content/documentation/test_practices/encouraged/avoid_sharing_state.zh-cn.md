@@ -20,4 +20,7 @@ aliases: [
 * 每次测试都创建一个新的WebDriver实例. 
 这在确保测试隔离的同时可以保障并行化更为简单.
 
-    * 如果你选择 [pytest](https://pytest.org/) 作为你的测试运行器，可以通过在全局 fixture 中返回你的驱动程序轻松完成。这样，每个测试都会获得自己的驱动程序实例，并且可以确保测试完成后（无论通过还是失败）驱动程序始终会退出
+    * If you choose [pytest](https://pytest.org/) as your test runner, this can be 
+    easily done by yielding your driver in a global fixture. This way each test gets its own 
+    driver instance, and you can ensure that drivers always quit after a test is finished 
+    (pass or fail).
