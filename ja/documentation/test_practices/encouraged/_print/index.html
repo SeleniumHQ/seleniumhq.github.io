@@ -447,7 +447,10 @@ WebDriverでDOM構造のトラバースを行うのは重い処理となりま�
 テストが互いに分離されていることを確認してください。</p><ul><li><p>テストデータを共有しないでください。
 アクションを実行する1つを選択する前に、それぞれが有効な注文をデータベースに照会するいくつかのテストを想像してください。
 2つのテストで同じ順序を選択すると、予期しない動作が発生する可能性があります。</p></li><li><p>別のテストで取得される可能性のあるアプリケーション内の古いデータを削除します。 例: 無効な注文レコード</p></li><li><p>テストごとに新しいWebDriverインスタンスを作成します。
-これにより、テストの分離が保証され、並列化がより簡単になります。</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-6d60e52a318221cb890ffeae48c949d5>8 - テストの独立性</h1><p>各テストを独自のユニットとして記述します。
+これにより、テストの分離が保証され、並列化がより簡単になります。</p><ul><li>If you choose <a href=https://pytest.org/>pytest</a> as your test runner, this can be
+easily done by yielding your driver in a global fixture. This way each test gets its own
+driver instance, and you can ensure that drivers always quit after a test is finished
+(pass or fail).</li></ul></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-6d60e52a318221cb890ffeae48c949d5>8 - テストの独立性</h1><p>各テストを独自のユニットとして記述します。
 他のテストに依存しない方法でテストを記述してください。</p><p>公開後にモジュールとしてWebサイトに表示されるカスタムコンテンツを作成できるコンテンツ管理システム（CMS）があり、CMSとアプリケーション間の同期に時間がかかる場合があるとします。</p><p>モジュールをテストする間違った方法は、1つのテストでコンテンツが作成および公開され、別のテストでモジュールをチェックすることです。
 コンテンツは公開後、他のテストですぐに利用できない可能性があるため、この方法はふさわしくありません。</p><p>代わりに、影響を受けるテスト内でオン/オフできるスタブコンテンツを作成し、それをモジュールの検証に使用できます。
 ただし、コンテンツの作成については、別のテストを行うことができます。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-29a52db54ab1f274413bf1630d2644e6>9 - Fluent APIの使用を検討する</h1><p>マーチン・ファウラーは<a href=//www.martinfowler.com/bliki/FluentInterface.html>&ldquo;Fluent API&rdquo;</a>という用語を作り出しました。

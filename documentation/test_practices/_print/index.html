@@ -1125,7 +1125,10 @@ We must ensure that the tests are isolated from one another.</p><ul><li><p>Do no
 for valid orders before picking one to perform an action on. Should two tests
 pick up the same order you are likely to get unexpected behavior.</p></li><li><p>Clean up stale data in the application that might be picked up by another
 test e.g. invalid order records.</p></li><li><p>Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelization simpler.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-84640ae953713c14fe36c508f185cc39>4.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=https://www.selenium.dev/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>In general, if HTML IDs are available, unique, and consistently
+and makes parallelization simpler.</p><ul><li>If you choose <a href=https://pytest.org/>pytest</a> as your test runner, this can be
+easily done by yielding your driver in a global fixture. This way each test gets its own
+driver instance, and you can ensure that drivers always quit after a test is finished
+(pass or fail).</li></ul></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-84640ae953713c14fe36c508f185cc39>4.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=https://www.selenium.dev/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>In general, if HTML IDs are available, unique, and consistently
 predictable, they are the preferred method for locating an element on
 a page. They tend to work very quickly, and forego much processing
 that comes with complicated DOM traversals.</p><p>If unique IDs are unavailable, a well-written CSS selector is the

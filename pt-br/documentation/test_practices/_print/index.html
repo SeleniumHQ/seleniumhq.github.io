@@ -1067,7 +1067,10 @@ os testes são isolados uns dos outros.</p><ul><li><p>Não compartilhe dados de 
 para pedidos válidos antes de escolher um para executar uma ação. Caso dois testes
 peguem a mesma ordem, provavelmente você obterá um comportamento inesperado.</p></li><li><p>Limpe dados desatualizados no aplicativo que podem ser obtidos por outro
 teste, por exemplo registros de pedidos inválidos.</p></li><li><p>Crie uma nova instância do WebDriver por teste. Isso ajuda a garantir o isolamento do teste
-e torna a paralelização mais simples.</p></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-51a63c6ce7dd64b1ecddf236663ecb74>4.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=https://www.selenium.dev/pt-br/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
+e torna a paralelização mais simples.</p><ul><li>If you choose <a href=https://pytest.org/>pytest</a> as your test runner, this can be
+easily done by yielding your driver in a global fixture. This way each test gets its own
+driver instance, and you can ensure that drivers always quit after a test is finished
+(pass or fail).</li></ul></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-51a63c6ce7dd64b1ecddf236663ecb74>4.7 - Tips on working with locators</h1><div class=lead>When to use which locators and how best to manage them in your code.</div><p>Take a look at examples of the <a href=https://www.selenium.dev/pt-br/documentation/webdriver/elements/locators/>supported locator strategies</a>.</p><p>No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
 previsíveis, eles são o método preferido para localizar um elemento
 uma página. Eles tendem a trabalhar muito rapidamente e dispensar muito processamento
 que vem com travessias de DOM complicadas.</p><p>Se IDs exclusivos não estiverem disponíveis, um seletor CSS bem escrito é o
