@@ -65,8 +65,8 @@ public class EditIssue {
   }
 
   public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
-    field.click()
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
+    field.click();
   }
 
   public void setTitle(String title) {
@@ -207,8 +207,8 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   }
   
   public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
-    field.click()
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
+    field.click();
   }
 
   public void setTitle(String title) {
@@ -419,16 +419,16 @@ public class FooTest {
   public void demonstrateNestedLoadableComponents() {
     editIssue.get();
 
-    editIssue.getStarted()
-    editIssue.setTitle('Title')
-    editIssue.setWhatHappened('What Happened')
-    editIssue.setHowToReproduce('How to Reproduce')
-    editIssue.setLogOutput('Log Output')
-    editIssue.setOperatingSystem('Operating System')
-    editIssue.setSeleniumVersion('Selenium Version')
-    editIssue.setBrowserVersion('Browser Version')
-    editIssue.setDriverVersion('Driver Version')
-    editIssue.setUsingGrid('I Am Using Grid')
+    editIssue.getStarted();
+    editIssue.setTitle('Title');
+    editIssue.setWhatHappened('What Happened');
+    editIssue.setHowToReproduce('How to Reproduce');
+    editIssue.setLogOutput('Log Output');
+    editIssue.setOperatingSystem('Operating System');
+    editIssue.setSeleniumVersion('Selenium Version');
+    editIssue.setBrowserVersion('Browser Version');
+    editIssue.setDriverVersion('Driver Version');
+    editIssue.setUsingGrid('I Am Using Grid');
   }
 }
 ```
