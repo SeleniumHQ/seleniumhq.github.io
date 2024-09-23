@@ -53,8 +53,8 @@ public class EditIssue {
   }
 
   public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
-    field.click()
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
+    field.click();
   }
 
   public void setTitle(String title) {
@@ -193,8 +193,8 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   }
   
   public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"))
-    field.click()
+    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
+    field.click();
   }
 
   public void setTitle(String title) {
