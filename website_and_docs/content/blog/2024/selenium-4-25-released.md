@@ -67,6 +67,19 @@ languages and build systems. Below are the key highlights from this release.
 - Reused driver mirror URLs to discover Firefox versions ([#14493](https://github.com/SeleniumHQ/selenium/commit/64590084bc4baa5a00c8b7709b80c75e77de818a))
 - [See all changes](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md)
 
+### Docker Selenium
+- KEDA Scaler in Kubernetes:
+  - Enhanced KEDA scaler behavior, addressing:
+    - Node with different platformName scaling: Fixed incorrect scaling behavior when both Linux and Windows node stereotypes are present ([#1925](https://github.com/SeleniumHQ/docker-selenium/issues/1925)).
+    - Excessive autoscaling: Resolved over-scaling of browser nodes ([#2160](https://github.com/SeleniumHQ/docker-selenium/issues/2160)).
+  - Added separate parameters for basic authentication (`username`, `password`) for the Grid GraphQL endpoint ([#2401](https://github.com/SeleniumHQ/docker-selenium/pull/2401)).
+  - Added support for `nodeMaxSessions` parameter to control maximum concurrent sessions per node, aligning with the node config `--max-sessions` ([#2402](https://github.com/SeleniumHQ/docker-selenium/pull/2402)).
+
+  > Note: The above KEDA scaler updates are available experimentally via our built images approach. Check out [this](https://github.com/SeleniumHQ/docker-selenium/blob/4.25.0-20240922/.keda/README.md) for more details.
+
+- Selenium Grid Helm Chart: Updated to support the new KEDA scaler enhancements.
+- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases/tag/4.25.0-20240922)
+
 ## Contributors
 
 **Special shout-out to everyone who helped the Selenium Team get this release out!**
