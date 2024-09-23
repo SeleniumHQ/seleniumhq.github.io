@@ -22,4 +22,7 @@ teste, por exemplo registros de pedidos inválidos.
 * Crie uma nova instância do WebDriver por teste. Isso ajuda a garantir o isolamento do teste
 e torna a paralelização mais simples.
 
-    * Se você escolher o [pytest](https://pytest.org/) como seu executor de testes, isso pode ser facilmente feito retornando seu driver em um fixture global. Dessa forma, cada teste terá sua própria instância de driver, e você pode garantir que os drivers sempre sejam encerrados após a conclusão de um teste (seja ele aprovado ou reprovado)
+    * If you choose [pytest](https://pytest.org/) as your test runner, this can be 
+    easily done by yielding your driver in a global fixture. This way each test gets its own 
+    driver instance, and you can ensure that drivers always quit after a test is finished 
+    (pass or fail).
