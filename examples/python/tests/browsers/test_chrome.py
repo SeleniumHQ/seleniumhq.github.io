@@ -121,3 +121,51 @@ def test_build_checks(capfd):
     assert expected in err
 
     driver.quit()
+
+def test_network_conditions():
+    driver = webdriver.Chrome()
+
+    driver.set_network_conditions(offline=False, latency=250, throughput=500*1024)
+    driver.get('http://selenium.dev')
+
+    driver.quit()
+
+def test_logs():
+    driver = webdriver.Chrome()
+
+    driver.get('https://www.selenium.dev/webs')
+    browser_logs = driver.get_log('browser')
+
+    assert 'Failed to load' in browser_logs[0]['message']
+
+    driver.quit()
+
+def test_permissions():
+    driver = webdriver.Chrome()
+
+    driver.get('https://www.selenium.dev')
+    
+    driver.set_permissions('geolocation', 'denied')
+
+    geolocation_permissions = driver.execute_script('return await navigator.permissions.query({name: \'geolocation\'})')
+    assert geolocation_permissions['state'] == 'denied'
+
+    driver.quit()
+
+def test_casting():
+
+    driver = webdriver.Chrome()
+
+    try:
+        sinks = driver.get_sinks()
+        if len(sinks) > 0:
+            device_name = sinks[0]['name']
+            driver.start_tab_mirroring(device_name)
+            driver.stop_casting(device_name)
+    except:
+        assert False, 'Exception when starting or stopping casting'
+
+    driver.get('http://selenium.dev')
+
+    driver.quit()
+    

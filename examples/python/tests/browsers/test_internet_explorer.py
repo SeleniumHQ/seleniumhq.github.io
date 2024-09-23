@@ -67,3 +67,71 @@ def test_supporting_files(temp_dir):
     driver = webdriver.Ie(service=service)
 
     driver.quit()
+
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+def test_file_upload_dialog_timeout():
+    options = webdriver.IeOptions()
+    
+    options.file_upload_dialog_timeout = 2000
+    
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+def test_ensure_clean_session():
+    options = webdriver.IeOptions()
+    
+    options.ensure_clean_session = True
+
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+def test_ignore_zoom_setting():
+    options = webdriver.IeOptions()
+    
+    options.ignore_zoom_level = True
+
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+def test_ignore_protected_mode_settings():
+    options = webdriver.IeOptions()
+    
+    options.ignore_protected_mode_settings = True
+
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+
+@pytest.mark.skipif(sys.platform != "win32", reason="requires Windows")
+def test_silent_capability():
+    options = webdriver.IeOptions()
+    
+    options.add_argument('-silent')
+
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+
+@pytest.mark.skip(reason="TabProcGrowth is required to be set to 0 value")
+def test_command_line_options():
+    options = webdriver.IeOptions()
+    
+    options.add_argument('-private')
+    options.force_create_process_api = True
+
+    driver = webdriver.Ie(options=options)
+    driver.get('https://www.selenium.dev/')
+
+    driver.quit()
+

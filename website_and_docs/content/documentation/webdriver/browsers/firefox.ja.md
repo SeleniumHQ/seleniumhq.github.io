@@ -112,13 +112,8 @@ FirefoxOptions options = new FirefoxOptions();
 options.setProfile(profile);
 driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L152-155" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
@@ -424,7 +419,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L138-139" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -451,7 +446,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L146" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

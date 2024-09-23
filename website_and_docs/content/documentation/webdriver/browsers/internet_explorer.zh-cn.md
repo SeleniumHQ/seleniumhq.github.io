@@ -94,16 +94,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
 WebDriver driver = new RemoteWebDriver(options); 
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.file_upload_dialog_timeout = 2000
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L75" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -146,16 +138,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.destructivelyEnsureCleanSession();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ensure_clean_session = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L86" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -194,16 +178,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.ignoreZoomSettings();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_zoom_level = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L97" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -251,16 +227,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.introduceFlakinessByIgnoringSecurityDomains();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_protected_mode_settings = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L108" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -297,16 +265,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.set_capability("silent", True)
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L119" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -397,17 +357,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.add_argument('-private')
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L130" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -491,16 +442,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L131" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
