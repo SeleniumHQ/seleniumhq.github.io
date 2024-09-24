@@ -212,8 +212,11 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 ### Implementing Selenium Manager in Your Scripts
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
+{{% tab header="Java" %}}
+**Previously**
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/usage.java#L10-L15" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/usage.java#L18-L22" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
