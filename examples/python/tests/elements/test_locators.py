@@ -12,17 +12,17 @@ def test_find_by_classname():
 
 def test_find_by_css_selector():
     driver = webdriver.Chrome()
-    driver.get("https://www.selenium.dev/")
+    driver.get("https://www.selenium.dev/documentation/")
 
-    driver.find_element(By.CSS_SELECTOR, "#announcement-banner")
+    driver.find_element(By.CSS_SELECTOR, "#td-sidebar-menu")
 
     driver.quit()
 
 def test_find_by_id():
     driver = webdriver.Chrome()
-    driver.get("https://www.selenium.dev/")
+    driver.get("https://www.selenium.dev/documentation/")
 
-    driver.find_element(By.ID, "announcement-banner")
+    driver.find_element(By.ID, "td-sidebar-menu")
 
     driver.quit()
 
@@ -66,19 +66,57 @@ def test_find_by_xpath():
 
     driver.quit()
 
-def find_by_relative_locators():
+def test_relative_locators_above():
     driver = webdriver.Chrome()
-    driver.get("https://www.selenium.dev/")
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-    email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
+    email_input = driver.find_element(locate_with(By.TAG_NAME, "input").above({ By.NAME: "password_input" }))
+    email_input.send_keys("test@test.com")
 
-    password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
+    driver.quit()
 
-    cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"})
+def test_relative_locators_below():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-    submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"})
+    password_input = driver.find_element(locate_with(By.TAG_NAME, "input").below({ By.NAME: "email_input" }))
+    password_input.send_keys("randompassword")
 
-    email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
+    driver.quit()
 
-    submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_right_of({By.ID: "cancel"})
+def test_relative_locators_to_the_left_of():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    button = driver.find_element(locate_with(By.TAG_NAME, "input").to_left_of({ By.NAME: "submit_input" }))
+    button.click()
+
+    driver.quit()
+
+def test_relative_locators_to_the_right_of():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    button = driver.find_element(locate_with(By.TAG_NAME, "input").to_right_of({ By.NAME: "reset_input" }))
+    button.click()
+
+    driver.quit()
+
+def test_relative_locators_near():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    button = driver.find_element(locate_with(By.TAG_NAME, "input").near({ By.NAME: "week_input" }))
+    button.send_keys('someweek')
+
+    driver.quit()
+
+def test_relative_locators_below_and_right_of():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/inputs.html")
+
+    button = driver.find_element(locate_with(By.TAG_NAME, "input").below({ By.NAME: "week_input" }).to_right_of({ By.NAME: "button_input" }))
+    button.click()
+    
+    driver.quit()
 
