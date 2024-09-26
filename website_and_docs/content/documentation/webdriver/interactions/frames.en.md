@@ -85,16 +85,9 @@ driver.switch_to.frame(iframe)
     # Now click on button
 driver.find_element(By.TAG_NAME, 'button').click()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Store the web element
-IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
-
-//Switch to the frame
-driver.SwitchTo().Frame(iframe);
-
-//Now we can click the button
-driver.FindElement(By.TagName("button")).Click();
-  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
+{{< /tab >}}
   {{< tab header="Ruby" >}}
     # Store iframe web element
 iframe = driver.find_element(:css,'#modal > iframe')
@@ -144,16 +137,9 @@ driver.switch_to.frame('buttonframe')
     # Now, Click on the button
 driver.find_element(By.TAG_NAME, 'button').click()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Using the ID
-driver.SwitchTo().Frame("buttonframe");
-
-//Or using the name instead
-driver.SwitchTo().Frame("myframe");
-
-//Now we can click the button
-driver.FindElement(By.TagName("button")).Click();
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
+{{< /tab >}}
   {{< tab header="Ruby" >}}
     # Switch by ID
 driver.switch_to.frame 'buttonframe'
@@ -199,17 +185,9 @@ queried using _window.frames_ in JavaScript.
     # Switch to the second frame
 driver.switch_to.frame(1)
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Switches to the second frame
-driver.SwitchTo().Frame(1);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    # switching to second iframe based on index
-iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
-
-    # switch to selected iframe
-driver.switch_to.frame(iframe)
-  {{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 // Switches to the second frame
 await driver.switchTo().frame(1);
@@ -236,10 +214,9 @@ like so:
     # switch back to default content
 driver.switch_to.default_content()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Return to the top level
-driver.SwitchTo().DefaultContent();
-  {{< /tab >}}
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
+{{< /tab >}}
   {{< tab header="Ruby" >}}
     # Return to the top level
 driver.switch_to.default_content
