@@ -378,8 +378,7 @@ Once these abstractions have been built and duplication in your tests identified
 
 ## Example
 
-An example of `python + pytest + selenium` 
-which implemented "**Action Bot**, **Loadable Component** and **Page Object**".
+An example of `python + pytest + selenium` which implemented "**Action Bot**, **Loadable Component** and **Page Object**".
 
 A `pytest` fixture `chrome_driver`.
 

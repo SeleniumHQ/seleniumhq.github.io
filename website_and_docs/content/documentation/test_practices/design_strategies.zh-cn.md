@@ -393,8 +393,7 @@ identified, it's possible to layer PageObjects on top of bots.
 
 ## Example
 
-一个用例 使用 `python + pytest + selenium` 实现了设计策略 "**Action Bot**, **Loadable Component** 
-和 **Page Object**".
+一个用例 使用 `python + pytest + selenium` 实现了设计策略 "**Action Bot**, **Loadable Component** 和 **Page Object**".
 
 A `pytest` fixture `chrome_driver`.
 
