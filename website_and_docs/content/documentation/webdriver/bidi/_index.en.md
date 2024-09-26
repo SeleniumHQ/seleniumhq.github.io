@@ -32,10 +32,10 @@ In order to use WebDriver BiDi, setting the capability in the browser options wi
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
- options.setCapability("webSocketUrl", true);
+options.setCapability("webSocketUrl", true);
 {{< /tab >}}
-{{% tab header="Python" text=true %}}
-{{< badge-code >}}
+{{< tab header="Python" >}}
+options.enable_bidi = True
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 UseWebSocketUrl = true,
