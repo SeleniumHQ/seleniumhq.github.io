@@ -75,15 +75,8 @@ driver.switch_to.frame(iframe)
     # 单击按钮
 driver.find_element(By.TAG_NAME, 'button').click()
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 存储网页元素
-IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
-
-// 切换到 frame
-driver.SwitchTo().Frame(iframe);
-
-// 现在可以点击按钮
-driver.FindElement(By.TagName("button")).Click();
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
     # Store iframe web element
@@ -133,15 +126,8 @@ driver.switch_to.frame('buttonframe')
     # 单击按钮
 driver.find_element(By.TAG_NAME, 'button').click()
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 使用 ID
-driver.SwitchTo().Frame("buttonframe");
-
-// 或者使用 name 代替
-driver.SwitchTo().Frame("myframe");
-
-// 现在可以点击按钮
-driver.FindElement(By.TagName("button")).Click();
+   {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
     # Switch by ID
@@ -186,9 +172,8 @@ _window.frames_ 进行查询.
     # 切换到第 2 个框架
 driver.switch_to.frame(1)
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 切换到第 2 个框架
-driver.SwitchTo().Frame(1);
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
     # 基于索引切换到第 2 个 iframe
@@ -220,9 +205,8 @@ driver.switchTo().frame(1)
     # 切回到默认内容
 driver.switch_to.default_content()
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-// 回到顶层
-driver.SwitchTo().DefaultContent();
+        {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
     # 回到顶层

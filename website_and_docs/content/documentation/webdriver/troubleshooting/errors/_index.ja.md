@@ -6,7 +6,7 @@ description: >
   How to get deal with various problems in your Selenium code.
 ---
 
-## Invalid Selector Exception
+## InvalidSelectorException
 
 CSS and XPath Selectors are sometimes difficult to get correct.
 
@@ -23,7 +23,7 @@ Run your selector through a validator service:
 Or use a browser extension to get a known good value:
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## No Such Element Exception
+## NoSuchElementException
 
 The element can not be found at the exact moment you attempted to locate it.
 
@@ -40,7 +40,7 @@ The element can not be found at the exact moment you attempted to locate it.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## Stale Element Reference Exception 
+## StaleElementReferenceException 
 
 An element goes stale when it was previously located, but can not be currently accessed.
 Elements do not get relocated automatically; the driver creates a reference ID for the element and
@@ -128,7 +128,7 @@ In instances where the element is out of view, but Selenium still registers the 
 method to execute a javascript function to scroll (e.g. `WebDriver.executeScript('window.scrollBy(0,-250)')`) 
 or you can utilize the Actions class with `Actions.moveToElement(element)`.
 
-## Invalid SessionId Exception
+## InvalidSessionIdException
 
 Sometimes the session you're trying to access is different than what's currently available
 
