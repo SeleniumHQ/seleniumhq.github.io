@@ -21,19 +21,9 @@ WebDriverは、JavaScriptが提供する3種類のネイティブポップアッ
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See an example alert")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert text in a variable
-String text = alert.getText();
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+ {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L51-L56" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
@@ -81,22 +71,9 @@ alert.accept()
 この例は、アラートを保存する別の方法も示しています。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample confirm")).click();
-
-//Wait for the alert to be displayed
-wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert in a variable
-Alert alert = driver.switchTo().alert();
-
-//Store the alert in a variable for reuse
-String text = alert.getText();
-
-//Press the Cancel button
-alert.dismiss();
-  {{< /tab >}}
+   {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L66-L71" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
@@ -151,19 +128,9 @@ alert.dismiss()
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample prompt")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Type your message
-alert.sendKeys("Selenium");
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+      {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L80-L87" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
