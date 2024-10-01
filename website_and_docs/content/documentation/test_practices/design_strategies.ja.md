@@ -30,7 +30,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 
 ### 簡単な使用方法
 
-モデル化するUIの例として、[新しいissue](https://github.com/SeleniumHQ/selenium/issues/new)のページをご覧ください。 
+モデル化するUIの例として、[新しいissue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+)のページをご覧ください。 
 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 
 基本的なページオブジェクトは次のようになります。
 
@@ -49,19 +49,14 @@ public class EditIssue {
     this.driver = driver;
   }
 
-  public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
-    field.click();
-  }
-
   public void setTitle(String title) {
     WebElement field = driver.findElement(By.id("issue_title")));
     clearAndType(field, title);
   }
 
-  public void setWhatHappened(String whatHappened) {
+  public void setBody(String body) {
     WebElement field = driver.findElement(By.id("issue_body"));
-    clearAndType(field, whatHappened);
+    clearAndType(field, body);
   }
 
   public void setHowToReproduce(String howToReproduce) {
@@ -126,7 +121,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 ```java
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
@@ -158,16 +153,13 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   private final WebDriver driver;
   
   // By default the PageFactory will locate elements with the same name or id
-  // as the field. Since the summary element has a name attribute of "summary"
+  // as the field. Since the issue_title element has an id attribute of "issue_title"
   // we don't need any additional annotations.
-  private WebElement summary;
+  private WebElement issue_title;
   
-  // Same with the submit element, which has the ID "submit"
-  private WebElement submit;
-  
-  // But we'd prefer a different name in our code than "comment", so we use the
+  // But we'd prefer a different name in our code than "issue_body", so we use the
   // FindBy annotation to tell the PageFactory how to locate the element.
-  @FindBy(name = "comment") private WebElement description;
+  @FindBy(id = "issue_body") private WebElement body;
   
   public EditIssue(WebDriver driver) {
     this.driver = driver;
@@ -178,28 +170,13 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
   protected void isLoaded() throws Error {
     String url = driver.getCurrentUrl();
     assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
-  }
-  
-  public void getStarted() {
-    WebElement field = driver.findElement(By.xpath("//*[contains(text(), 'Get Started')]"));
-    field.click();
-  }
-
-  public void setTitle(String title) {
-    WebElement field = driver.findElement(By.id("issue_title")));
-    clearAndType(field, title);
-  }
-
-  public void setWhatHappened(String whatHappened) {
-    WebElement field = driver.findElement(By.id("issue_body"));
-    clearAndType(field, whatHappened);
   }
 
   public void setHowToReproduce(String howToReproduce) {
@@ -376,7 +353,7 @@ EditIssueの "load" メソッドは次のようになります。
   protected void load() {
     securedPage.get();
 
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 ```
 
@@ -401,9 +378,8 @@ public class FooTest {
   public void demonstrateNestedLoadableComponents() {
     editIssue.get();
 
-    editIssue.getStarted();
-    editIssue.setTitle('Title');
-    editIssue.setWhatHappened('What Happened');
+    editIssue.title.sendKeys('Title');
+    editIssue.body.sendKeys('What Happened');
     editIssue.setHowToReproduce('How to Reproduce');
     editIssue.setLogOutput('Log Output');
     editIssue.setOperatingSystem('Operating System');
