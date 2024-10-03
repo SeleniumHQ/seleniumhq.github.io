@@ -22,6 +22,10 @@ selenium:
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"
+    # Sponsorship in renewal process
+    - logo: "/images/sponsors/lambda-test.png"
+      url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
+      name: "LambdaTest"
     # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
     # - logo: "/images/sponsors/Digital.ai.jpg"
     #   url: "http://bit.ly/36uZ7ad"
@@ -30,10 +34,6 @@ selenium:
     # - logo: "/images/sponsors/perfecto-perforce.jpg"
     #   url: "https://www.perfecto.io/"
     #   name: "Perfecto"
-    # Sponsorship start date: July 08, 2021
-    # - logo: "/images/sponsors/lambda-test.png"
-    #   url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
-    #   name: "LambdaTest"
     # Added: December 17, 2017
     # - logo: "/images/sponsors/subject7_logo.png"
     #   url: "https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product"
