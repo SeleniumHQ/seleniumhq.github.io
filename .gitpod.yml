@@ -6,7 +6,7 @@ tasks:
       sudo rm hugo_extended_0.125.4_linux-amd64.deb
     command: |
       cd website_and_docs
-      hugo server --baseUrl $(gp url 1313) --appendPort=false
+      hugo server --baseURL $(gp url 1313) --appendPort=false
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
 ports:
