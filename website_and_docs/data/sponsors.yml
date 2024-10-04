@@ -18,30 +18,30 @@ selenium:
     - logo: "/images/sponsors/bright-data.png"
       url: "https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium"
       name: "Bright Data"
-    # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
-    - logo: "/images/sponsors/Digital.ai.jpg"
-      url: "http://bit.ly/36uZ7ad"
-      name: "Digital.ai"
-    # Sponsorship start date: March 21, 2017
+    # Sponsorship in renewal process
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"
-    # Sponsorship start date: August 13, 2020
-    - logo: "/images/sponsors/perfecto-perforce.jpg"
-      url: "https://www.perfecto.io/"
-      name: "Perfecto"
-    # Sponsorship start date: July 08, 2021
+    # Sponsorship in renewal process
     - logo: "/images/sponsors/lambda-test.png"
       url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
       name: "LambdaTest"
+    # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
+    # - logo: "/images/sponsors/Digital.ai.jpg"
+    #   url: "http://bit.ly/36uZ7ad"
+    #   name: "Digital.ai"
+    # Sponsorship start date: August 13, 2020
+    # - logo: "/images/sponsors/perfecto-perforce.jpg"
+    #   url: "https://www.perfecto.io/"
+    #   name: "Perfecto"
     # Added: December 17, 2017
-    - logo: "/images/sponsors/subject7_logo.png"
-      url: "https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product"
-      name: "Subject7"
+    # - logo: "/images/sponsors/subject7_logo.png"
+    #   url: "https://www.subject-7.com/unified-testing/?utm_source=selenium&utm_medium=unifiedtesting&utm_campaign=product"
+    #   name: "Subject7"
     # Added: November 30, 2021
-    - logo: "/images/sponsors/Avo_logo.png"
-      url: "https://www.avoautomation.ai/why-avo//?utm_source=SeleniumHQ&utm_medium=listing&utm_campaign=SeleniumHQ"
-      name: "Avo Automation"
+    # - logo: "/images/sponsors/Avo_logo.png"
+    #   url: "https://www.avoautomation.ai/why-avo//?utm_source=SeleniumHQ&utm_medium=listing&utm_campaign=SeleniumHQ"
+    #   name: "Avo Automation"
 
 platinum:
   # Set to false if no items are present
@@ -50,45 +50,45 @@ platinum:
 
 gold:
   # Set to false if no items are present
-  enable: true
+  enable: false
   item:
     # Added: September 12, 2017
-    - logo: "/images/sponsors/microfocus_logo.png"
-      url: "https://software.microfocus.com/en-us/software/leanft"
-      name: "MicroFocus"
+    # - logo: "/images/sponsors/microfocus_logo.png"
+    #   url: "https://software.microfocus.com/en-us/software/leanft"
+    #   name: "MicroFocus"
 
 silver:
   # Set to false if no items are present
-  enable: true
+  enable: false
   item:
     # Sponsorship start date: May 18, 2020
-    - logo: "/images/sponsors/alpi.jpg"
-      url: "http://www.alpi.com/courses-opensource/index.cfm"
-      name: "Alpi"
+    # - logo: "/images/sponsors/alpi.jpg"
+    #   url: "http://www.alpi.com/courses-opensource/index.cfm"
+    #   name: "Alpi"
     # Sponsorship start date: Nov 05, 2020
-    - logo: "/images/sponsors/Cigniti.jpg"
-      url: "http://www.cigniti.com/"
-      name: "Cigniti"
+    # - logo: "/images/sponsors/Cigniti.jpg"
+    #   url: "http://www.cigniti.com/"
+    #   name: "Cigniti"
     # Sponsorship start date: Nov 05, 2020
-    - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
-      url: "https://www.gridlastic.com/?utm_source=seleniumhq&utm_campaign=seleniumhq-sponsorship&utm_medium=bannerad"
-      name: "GridLastic"
+    # - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
+    #   url: "https://www.gridlastic.com/?utm_source=seleniumhq&utm_campaign=seleniumhq-sponsorship&utm_medium=bannerad"
+    #   name: "GridLastic"
     # Sponsorship start date: Aug 04, 2021
-    - logo: "/images/sponsors/QaseLogo2X.png"
-      url: "https://qase.io/?utm_source=selenium&utm_medium=sponsorship&utm_campaign=promo"
-      name: "Qase"
+    # - logo: "/images/sponsors/QaseLogo2X.png"
+    #   url: "https://qase.io/?utm_source=selenium&utm_medium=sponsorship&utm_campaign=promo"
+    #   name: "Qase"
     # Sponsorship start date: Sep 04, 2020
-    - logo: "/images/sponsors/testmo.svg"
-      url: "https://www.testmo.com/"
-      name: "Testmo Test Management"
+    # - logo: "/images/sponsors/testmo.svg"
+    #   url: "https://www.testmo.com/"
+    #   name: "Testmo Test Management"
     # Sponsorship start date: May 30, 2021
-    - logo: "/images/sponsors/TopBargains_Website_Logo.png"
-      url: "https://www.topbargains.com.au/"
-      name: "Top Bargains"
+    # - logo: "/images/sponsors/TopBargains_Website_Logo.png"
+    #   url: "https://www.topbargains.com.au/"
+    #   name: "Top Bargains"
      # Sponsorship start date: Feb 08, 2022
-    - logo: "/images/sponsors/Scraping_Bee_Logo.png"
-      url: "https://www.scrapingbee.com/?utm_source=selenium_sponsor&utm_medium=selenium_sponsor&utm_campaign=selenium_sponsor&utm_id=selenium_sponsor"
-      name: "ScrapingBee"
+    # - logo: "/images/sponsors/Scraping_Bee_Logo.png"
+    #   url: "https://www.scrapingbee.com/?utm_source=selenium_sponsor&utm_medium=selenium_sponsor&utm_campaign=selenium_sponsor&utm_id=selenium_sponsor"
+    #   name: "ScrapingBee"
 
 bronze:
   # Set to false if no items are present
@@ -107,58 +107,58 @@ bronze:
       url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
       name: "Real-Time Technology Solutions Inc."
     # Sponsorship start date: Mar 20, 2023
-    - logo: "/images/sponsors/kiwiqa-logo.png"
-      url: "https://www.kiwiqa.com/"
-      name: "KiwiQA"
+    # - logo: "/images/sponsors/kiwiqa-logo.png"
+    #   url: "https://www.kiwiqa.com/"
+    #   name: "KiwiQA"
     # Sponsorship start date: Sep 3, 2022
-    - logo: "/images/sponsors/SelectorsHub_logo.png"
-      url: "https://selectorshub.com/"
-      name: "SelectorsHub"
+    # - logo: "/images/sponsors/SelectorsHub_logo.png"
+    #   url: "https://selectorshub.com/"
+    #   name: "SelectorsHub"
     # Sponsorship start date: April 20, 2022
-    - logo: "/images/sponsors/AdsPower.png"
-      url: "https://www.adspower.com/?source=selenium"
-      name: "AdsPower"
+    # - logo: "/images/sponsors/AdsPower.png"
+    #   url: "https://www.adspower.com/?source=selenium"
+    #   name: "AdsPower"
     # Sponsorship start date: 2020-03-11
-    - logo: "/images/sponsors/landingi_logo.png"
-      url: "https://landingi.com/"
-      name: "Landingi"
+    # - logo: "/images/sponsors/landingi_logo.png"
+    #   url: "https://landingi.com/"
+    #   name: "Landingi"
     # Sponsorship start date: 2019-12-22
-    - logo: "/images/sponsors/luminati_logo.png"
-      url: "https://luminati.io/?cam=tb_selenium&bizdev=L_yariv"
-      name: "Luminati"
+    # - logo: "/images/sponsors/luminati_logo.png"
+    #   url: "https://luminati.io/?cam=tb_selenium&bizdev=L_yariv"
+    #   name: "Luminati"
     # Sponsorship start date: 2019-09-30
-    - logo: "/images/sponsors/zenscrape.png"
-      url: "https://zenscrape.com/"
-      name: "Zenscrape"
+    # - logo: "/images/sponsors/zenscrape.png"
+    #   url: "https://zenscrape.com/"
+    #   name: "Zenscrape"
     # Sponsorship start date: 2019-09-23
-    - logo: "/images/sponsors/ScienceSoft.png"
-      url: "https://www.scnsoft.com/services/software-testing/automated"
-      name: "Science Soft"
+    # - logo: "/images/sponsors/ScienceSoft.png"
+    #   url: "https://www.scnsoft.com/services/software-testing/automated"
+    #   name: "Science Soft"
     # Sponsorship start date: 2020-12-18
-    - logo: "/images/sponsors/Selenium-cloud.png"
-      url: "https://selenium.cloud/"
-      name: "Selenium Cloud"
+    # - logo: "/images/sponsors/Selenium-cloud.png"
+    #   url: "https://selenium.cloud/"
+    #   name: "Selenium Cloud"
     # Sponsorship start date: 2021-04-16
-    - logo: "/images/sponsors/autify_logo.png"
-      url: "https://autify.com/"
-      name: "Autify"
+    # - logo: "/images/sponsors/autify_logo.png"
+    #   url: "https://autify.com/"
+    #   name: "Autify"
     # Sponsorship start date: February 2, 2017
-    - logo: "/images/sponsors/testbirds.png"
-      url: "https://www.testbirds.com/services/quality-assurance/testing-environment/?utm_source=seleniumhq&utm_campaign=int-cloud-logo-sponsoring-seleniumhq&utm_medium=logo-sponsoring"
-      name: "TestBirds"
+    # - logo: "/images/sponsors/testbirds.png"
+    #   url: "https://www.testbirds.com/services/quality-assurance/testing-environment/?utm_source=seleniumhq&utm_campaign=int-cloud-logo-sponsoring-seleniumhq&utm_medium=logo-sponsoring"
+    #   name: "TestBirds"
     # Sponsorship start date: December 3, 2019
-    - logo: "/images/sponsors/multilogin.png"
-      url: "https://multilogin.com/"
-      name: "Multilogin"
+    # - logo: "/images/sponsors/multilogin.png"
+    #   url: "https://multilogin.com/"
+    #   name: "Multilogin"
     # Sponsorship start date: April 26, 2015, Renewal & Upgrade: January 30, 2017
-    - logo: "/images/sponsors/CBT.png"
-      url: "https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp"
-      name: "CrossBrowserTesting"
+    # - logo: "/images/sponsors/CBT.png"
+    #   url: "https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp"
+    #   name: "CrossBrowserTesting"
     # Sponsorship start date: May 12, 2017
-    - logo: "/images/sponsors/selocity_banner_seleniumhq.png"
-      url: "https://www.ranorex.com/selocity/browser-extension.html"
-      name: "Ranorex - Selocity"
+    # - logo: "/images/sponsors/selocity_banner_seleniumhq.png"
+    #   url: "https://www.ranorex.com/selocity/browser-extension.html"
+    #   name: "Ranorex - Selocity"
     # Sponsorship start date: June 7, 2016
-    - logo: "/images/sponsors/synthetics.png"
-      url: "https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo"
-      name: "NewRelic - Synthetics"
+    # - logo: "/images/sponsors/synthetics.png"
+    #   url: "https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo"
+    #   name: "NewRelic - Synthetics"
