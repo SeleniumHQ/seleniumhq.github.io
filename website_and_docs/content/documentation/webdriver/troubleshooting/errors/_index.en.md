@@ -3,7 +3,7 @@ title: "Understanding Common Errors"
 linkTitle: "Errors"
 weight: 2
 description: >
-  How to get deal with various problems in your Selenium code.
+  How to solve various problems in your Selenium code.
 aliases: [
 "/exceptions/",
 "/exceptions/invalid_selector_exception.html",
