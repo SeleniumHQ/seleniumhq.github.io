@@ -3,7 +3,7 @@ title: "Troubleshooting Assistance"
 linkTitle: "Troubleshooting"
 weight: 20
 description: >
-  How to get manage WebDriver problems.
+  How to solve WebDriver problems.
 ---
 
 It is not always obvious the root cause of errors in Selenium.
