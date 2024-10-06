@@ -61,21 +61,21 @@ and it is recommended to always use `quit` to end the session
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L13" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{< gh-codeblock path="examples/dotnet/HelloSelenium.cs#L13" >}
+{{< gh-codeblock path="examples/dotnet/HelloSelenium.cs#L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
