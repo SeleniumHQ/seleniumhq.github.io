@@ -17,7 +17,7 @@
         <junit5.version>5.11.0</junit5.version>
         <wdm.version>5.2.3</wdm.version>
 
-        <maven-surefire-plugin.version>3.5.0</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.1</maven-surefire-plugin.version>
 
         <java.version>1.8</java.version>
         <selenium.version>4.25.0</selenium.version>
