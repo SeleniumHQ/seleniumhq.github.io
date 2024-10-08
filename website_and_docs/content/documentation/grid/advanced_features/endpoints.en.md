@@ -54,13 +54,13 @@ In the Hub-Node mode, the Distributor URL is the Hub server address.
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-In the fully distributed mode, the URL is the Distributor server address. 
+In the fully distributed mode, the URL is the Router server address. 
 ```shell
-cURL --request DELETE 'http://localhost:5553/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request DELETE 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Drain Node
@@ -75,13 +75,13 @@ In the Hub-Node mode, the Distributor URL is the Hub server address.
 ```shell
 cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-In the fully distributed mode, the URL is the Distributor server address. 
+In the fully distributed mode, the URL is the Router server address. 
 ```shell
-cURL --request POST 'http://localhost:5553/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
+cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## Node
@@ -159,14 +159,14 @@ In the Hub-Node mode, the Queue URL is the Hub server address.
 cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
-In the fully distributed mode, the Queue URL is New Session Queue server address.
+In the fully distributed mode, the Queue URL is Router server address.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Get New Session Queue Requests
@@ -183,6 +183,6 @@ In the Hub-Node mode, the Queue URL is the Hub server address.
 cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
 
-In the fully distributed mode, the Queue URL is New Session Queue server address.
+In the fully distributed mode, the Queue URL is Router server address.
 ```shell
-cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
