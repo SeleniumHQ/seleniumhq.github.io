@@ -7,12 +7,9 @@ aliases: [
 ]
 ---
 
-Sometimes you need to print the website you are using - whether that be your 
-grandmother printing mapquest directions, or a judge needing to print court
-records. Luckily, Selenium provides an easy way to automate that!
-
-The `PrintOptions()` class provides an intuitive and multifaceted way of printing
-webpages to pdf so that you may enhance your tests, scripts, and software further.
+Printing a website is a common requirement, whether for sharing information or archiving records. 
+Selenium offers a straightforward way to automate this process through the `PrintOptions()` class.
+This class provides an intuitive and multifaceted way of printing webpages.
 
 ## Orientation
 Using the `getOrientation()` and `setOrientation()` methods, you can get/set the page orientation --- either `PORTRAIT` or `LANDSCAPE`.
