@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.24.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.2'
 }
 
 test {

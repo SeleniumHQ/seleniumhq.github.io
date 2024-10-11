@@ -79,7 +79,7 @@ Solving our example with an implicit wait looks like this:
 {{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L28" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L37" >}}
+{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}

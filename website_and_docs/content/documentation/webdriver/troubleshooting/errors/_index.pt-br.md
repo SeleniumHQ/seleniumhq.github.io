@@ -6,7 +6,7 @@ description: >
   How to get deal with various problems in your Selenium code.
 ---
 
-## Invalid Selector Exception
+## InvalidSelectorException
 
 CSS and XPath Selectors are sometimes difficult to get correct.
 
@@ -23,7 +23,7 @@ Run your selector through a validator service:
 Or use a browser extension to get a known good value:
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## No Such Element Exception
+## NoSuchElementException
 
 The element can not be found at the exact moment you attempted to locate it.
 
@@ -40,14 +40,14 @@ The element can not be found at the exact moment you attempted to locate it.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## Stale Element Reference Exception 
+## StaleElementReferenceException 
 
 An element goes stale when it was previously located, but can not be currently accessed.
 Elements do not get relocated automatically; the driver creates a reference ID for the element and
 has a particular place it expects to find it in the DOM. If it can not find the element
 in the current DOM, any action using that element will result in this exception.
 
-### Common Causes
+### Likely Cause
 
 This can happen when:
 
@@ -55,7 +55,7 @@ This can happen when:
 * You have navigated to a different page.
 * You have switched to another window or into or out of a frame or iframe.
 
-### Common Solutions
+### Possible Solutions
 
 **The DOM has changed**
 
@@ -92,7 +92,45 @@ You can't just relocate it from the current context,
 and you can't switch back to an active context where it is valid. If this is the reason
 for your error, you must both navigate back to the correct location and relocate it.
 
-## Invalid SessionId Exception
+## ElementClickInterceptedException
+
+This exception occurs when Selenium tries to click an element, but the click would instead 
+be received by a different element. Before Selenium will click an element, it checks if the 
+element is visible, unobscured by any other elements, and enabled - if the element is obscured, 
+it will raise this exception.
+
+### Likely Cause
+
+**UI Elements Overlapping** 
+
+Elements on the UI are typically placed next to each other, but occasionally elements may overlap. 
+For example, a navbar always staying at the top of your window as you scroll a page. If that navbar 
+happens to be covering an element we are trying to click, Selenium might believe it to be visible 
+and enabled, but when you try to click it will throw this exception. Pop-ups and Modals are also 
+common offenders here.
+
+**Animations** 
+
+Elements with animations have the potential to cause this exception as well - it is recommended 
+to wait for animations to cease before attempting to click an element.
+
+### Possible Solutions
+
+**Use Explicit Waits** 
+
+[Explicit Waits]({{< ref "/documentation/webdriver/waits" >}}) will likely be your best friend in these instances. 
+A great way is to use `ExpectedCondition.ToBeClickable()` with `WebDriverWait` 
+to wait until the right moment.
+
+**Scroll the Element into View** 
+
+In instances where the element is out of view, but Selenium still registers the element as visible 
+(e.g. navbars overlapping a section at the top of your screen), you can use the 
+`WebDriver.executeScript()` method to execute a javascript function to scroll 
+(e.g. `WebDriver.executeScript('window.scrollBy(0,-250)')`) or you can utilize the Actions 
+class with `Actions.moveToElement(element)`.
+
+## InvalidSessionIdException
 
 Sometimes the session you're trying to access is different than what's currently available
 

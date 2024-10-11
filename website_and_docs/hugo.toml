@@ -164,8 +164,8 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-banner_flag = true
-announcement_banner = true
+banner_flag = false
+announcement_banner = false
 
 # Enable Algolia DocSearch
 [params.search.algolia]
@@ -340,7 +340,7 @@ year = "year"
 [security]
   enableInlineShortcodes = false
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
   [security.funcs]

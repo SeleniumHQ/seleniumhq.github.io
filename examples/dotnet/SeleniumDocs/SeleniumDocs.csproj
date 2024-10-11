@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <GenerateProgramFile>false</GenerateProgramFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
       <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.7.1" />
-      <PackageReference Include="MSTest.TestAdapter" Version="3.5.2" />
-      <PackageReference Include="MSTest.TestFramework" Version="3.5.2" />
-      <PackageReference Include="Selenium.Support" Version="4.24.0" />
-      <PackageReference Include="Selenium.WebDriver" Version="4.24.0" />
+      <PackageReference Include="MSTest.TestAdapter" Version="3.6.0" />
+      <PackageReference Include="MSTest.TestFramework" Version="3.6.0" />
+      <PackageReference Include="Selenium.Support" Version="4.25.0" />
+      <PackageReference Include="Selenium.WebDriver" Version="4.25.0" />
     </ItemGroup>
 
     <ItemGroup>

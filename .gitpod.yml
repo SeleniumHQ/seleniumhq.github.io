@@ -1,12 +1,12 @@
 tasks:
   - name: Install Hugo, init submodules and start website
     init: |
-      curl -LO https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_linux-amd64.deb && \
-      sudo dpkg -i hugo_extended_0.110.0_linux-amd64.deb && \
-      sudo rm hugo_extended_0.110.0_linux-amd64.deb
+      curl -LO https://github.com/gohugoio/hugo/releases/download/v0.125.4/hugo_extended_0.125.4_linux-amd64.deb && \
+      sudo dpkg -i hugo_extended_0.125.4_linux-amd64.deb && \
+      sudo rm hugo_extended_0.125.4_linux-amd64.deb
     command: |
       cd website_and_docs
-      hugo server --baseUrl $(gp url 1313) --appendPort=false
+      hugo server --baseURL $(gp url 1313) --appendPort=false
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
 ports:

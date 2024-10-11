@@ -211,7 +211,7 @@ através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}}).
 
 {{% pageinfo color="primary" %}}
 Para simplificar, todos os exemplos apresentados assumem que os componentes estão a ser executados localmente.
-Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "/configuration" >}}).
+Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "configuration" >}}).
 {{% /pageinfo %}}
 
 ## Usando o cliente HTTP nativo Java 11 {{% badge-version version="4.5" %}}
@@ -307,6 +307,6 @@ de como uma Grid exposta publicamente pode ser abusada:
 ## Leituras adicionais
 
 * [Componentes]({{< ref "components.md" >}}): compreender como usar os componentes da Grid
-* [Configuração]({{< ref "/configuration" >}}): personalize a sua configuração Grid.
+* [Configuração]({{< ref "configuration" >}}): personalize a sua configuração Grid.
 * [Arquitectura]({{< ref "architecture.md" >}}): entenda conceitos chave da Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore mais possibilidades da Grid.
+* [Advanced Features]({{< ref "advanced_features" >}}): explore mais possibilidades da Grid.
