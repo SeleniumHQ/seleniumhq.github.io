@@ -31,7 +31,7 @@ Whether you're new to automation or an experienced professional, this conference
 ## Mark Your Calendar 🗓️ 
 
 - **Call for Proposals** and **ticket sales** open on **October 15, 2024**. Take your chance to submit a talk or secure your spot at this exciting event!
-- The **conference workshops** will be posted on **October 15, 2025**, so stay tuned! In the meantime, visit **[www.seleniumconf.com](https://www.seleniumconf.com)** for more details and to plan your trip.
+- The **conference workshops** will be posted on **October 15, 2024**, so stay tuned! In the meantime, visit **[www.seleniumconf.com](https://www.seleniumconf.com)** for more details and to plan your trip.
 
 ## Help Spread the Word!
 
