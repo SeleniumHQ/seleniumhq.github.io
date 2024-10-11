@@ -182,7 +182,7 @@ Both requests and responses can be recorded or transformed.
 {{< badge-implementation >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L158-L168" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L82-L88" >}}

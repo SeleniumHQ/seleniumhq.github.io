@@ -1,11 +1,17 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using System.Linq;
+
+using System.Threading;
+using OpenQA.Selenium.DevTools.V129.Browser;
 using OpenQA.Selenium.DevTools.V129.Network;
 using OpenQA.Selenium.DevTools.V129.Performance;
+
 
 
 namespace SeleniumDocs.BiDi.CDP
@@ -37,14 +43,14 @@ namespace SeleniumDocs.BiDi.CDP
             Assert.AreEqual("Congratulations! You must have the proper credentials.",
                 driver.FindElement(By.TagName("p")).Text);
         }
-        
+
         [TestMethod]
         public async Task RecordNetworkResponse()
         {
             var contentType = new List<string>();
 
             INetwork networkInterceptor = driver.Manage().Network;
-            networkInterceptor.NetworkResponseReceived += (_, e)  =>
+            networkInterceptor.NetworkResponseReceived += (_, e) =>
             {
                 contentType.Add(e.ResponseHeaders["content-type"]);
             };
@@ -102,7 +108,7 @@ namespace SeleniumDocs.BiDi.CDP
 
             Assert.AreEqual("two", driver.FindElement(By.Id("result")).Text);
         }
-        
+
         [TestMethod]
         public async Task PerformanceMetrics()
         {
@@ -147,5 +153,45 @@ namespace SeleniumDocs.BiDi.CDP
             Assert.AreEqual("gouda", cheese.Value);
         }
 
+        [TestMethod]
+        public async Task WaitForDownload()
+        {
+            driver.Url = "https://www.selenium.dev/selenium/web/downloads/download.html";
+            var session = ((IDevTools)driver).GetDevToolsSession();
+
+            var downloadPath = Path.GetTempPath();
+            var downloadBehaviorCommandSettings = new SetDownloadBehaviorCommandSettings
+            {
+                Behavior = "allowAndName",
+                BrowserContextId = null,
+                DownloadPath = downloadPath,
+                EventsEnabled = true
+            };
+            await session.SendCommand(downloadBehaviorCommandSettings);
+
+            var downloadCompleted = new ManualResetEvent(false);
+            string? downloadId = null;
+            bool downloaded = false;
+            session.DevToolsEventReceived += (sender, args) =>
+            {
+                var downloadState = args.EventData["state"]?.ToString();
+                if (args.EventName == "downloadProgress" &&
+                    (string.Equals(downloadState, "completed") ||
+                     string.Equals(downloadState, "canceled")))
+                {
+                    downloadId = args.EventData["guid"].ToString();
+                    downloaded = downloadState.Equals("completed");
+                    downloadCompleted.Set();
+                }
+            };
+
+            driver.FindElement(By.Id("file-1")).Click();
+
+            Assert.IsTrue(downloadCompleted.WaitOne(TimeSpan.FromSeconds(10)));
+            Assert.IsTrue(downloaded);
+            var downloadedFilePath = Path.Combine(downloadPath, downloadId);
+            Assert.IsTrue(File.Exists(downloadedFilePath));
+            File.Delete(downloadedFilePath);
+        }
     }
 }
