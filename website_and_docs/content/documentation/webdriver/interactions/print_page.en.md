@@ -2,9 +2,7 @@
 title: "Print Page"
 linkTitle: "Print Page"
 weight: 7
-aliases: [
-"/documentation/en/support_packages/print_page/",
-]
+aliases: ["/documentation/en/support_packages/print_page/"]
 ---
 
 Printing a website is a common requirement, whether for sharing information or archiving records. 
@@ -23,10 +21,9 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -48,10 +45,9 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L24" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -73,10 +69,9 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L26-L31" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -98,10 +93,9 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L33-L424" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -123,10 +117,9 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L44-L49" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -148,10 +141,9 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L51-L56" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -173,10 +165,9 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
-{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L58-L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
