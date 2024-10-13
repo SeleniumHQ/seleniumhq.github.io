@@ -145,3 +145,19 @@ Actions class with `Actions.moveToElement(element)`.
 
 ### 可能的解决方案
 检查脚本中是否有 `driver.close()` 和 `driver.quit()` 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)
