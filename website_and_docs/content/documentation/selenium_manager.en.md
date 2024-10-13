@@ -227,8 +227,11 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{% tab header="JavaScript" %}}
+**Previously**
+{{< gh-codeblock path="examples/javascript/test/selenium_manager/usage.spec.js#L17-L33" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/javascript/test/selenium_manager/usage.spec.js#L7-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
