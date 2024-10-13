@@ -224,8 +224,11 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{% tab header="Ruby" %}}
+**Previously**
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L3-L8" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L10-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
