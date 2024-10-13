@@ -45,7 +45,7 @@ but the approach used is simple enough to be implemented in any language.
 ### Simple Usage
 
 As an example of a UI that we'd like to model, take a look at 
-the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. 
+the [new issue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+) page. 
 From the point of view of a test author, this offers the service of being 
 able to file a new issue. A basic Page Object would look like:
 
@@ -64,18 +64,53 @@ public class EditIssue {
     this.driver = driver;
   }
 
-  public void setSummary(String summary) {
-    WebElement field = driver.findElement(By.name("summary"));
-    clearAndType(field, summary);
+  public void setTitle(String title) {
+    WebElement field = driver.findElement(By.id("issue_title")));
+    clearAndType(field, title);
   }
 
-  public void enterDescription(String description) {
-    WebElement field = driver.findElement(By.name("comment"));
-    clearAndType(field, description);
+  public void setBody(String body) {
+    WebElement field = driver.findElement(By.id("issue_body"));
+    clearAndType(field, body);
+  }
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
+  }
+
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    driver.findElement(By.id("submit")).click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -102,7 +137,7 @@ By extending this base class, we need to implement two new methods:
 ```java
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
@@ -137,16 +172,13 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   private final WebDriver driver;
   
   // By default the PageFactory will locate elements with the same name or id
-  // as the field. Since the summary element has a name attribute of "summary"
+  // as the field. Since the issue_title element has an id attribute of "issue_title"
   // we don't need any additional annotations.
-  private WebElement summary;
+  private WebElement issue_title;
   
-  // Same with the submit element, which has the ID "submit"
-  private WebElement submit;
-  
-  // But we'd prefer a different name in our code than "comment", so we use the
+  // But we'd prefer a different name in our code than "issue_body", so we use the
   // FindBy annotation to tell the PageFactory how to locate the element.
-  @FindBy(name = "comment") private WebElement description;
+  @FindBy(id = "issue_body") private WebElement body;
   
   public EditIssue(WebDriver driver) {
     this.driver = driver;
@@ -157,7 +189,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
@@ -165,17 +197,44 @@ public class EditIssue extends LoadableComponent<EditIssue> {
     String url = driver.getCurrentUrl();
     assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
   }
-  
-  public void setSummary(String issueSummary) {
-    clearAndType(summary, issueSummary);
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
   }
 
-  public void enterDescription(String issueDescription) {
-    clearAndType(description, issueDescription);
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    submit.click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -313,7 +372,7 @@ The "load" method in EditIssue now looks like:
   protected void load() {
     securedPage.get();
 
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 ```
 
@@ -337,8 +396,15 @@ public class FooTest {
   public void demonstrateNestedLoadableComponents() {
     editIssue.get();
 
-    editIssue.setSummary("Summary");
-    editIssue.enterDescription("This is an example");
+    editIssue.title.sendKeys('Title');
+    editIssue.body.sendKeys('What Happened');
+    editIssue.setHowToReproduce('How to Reproduce');
+    editIssue.setLogOutput('Log Output');
+    editIssue.setOperatingSystem('Operating System');
+    editIssue.setSeleniumVersion('Selenium Version');
+    editIssue.setBrowserVersion('Browser Version');
+    editIssue.setDriverVersion('Driver Version');
+    editIssue.setUsingGrid('I Am Using Grid');
   }
 }
 ```
