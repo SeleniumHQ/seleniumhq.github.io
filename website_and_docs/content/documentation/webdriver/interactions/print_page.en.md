@@ -19,10 +19,9 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L12-L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -44,10 +43,9 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L21-L27" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L22-L29" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -69,10 +67,9 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L30-L36" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L32-L38" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -94,10 +91,9 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L40-L49" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L51-L57" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -119,10 +115,9 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L52-L58" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L61-L68" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -144,10 +139,9 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L61-L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -169,10 +163,9 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L70-L76" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L71-L78" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
