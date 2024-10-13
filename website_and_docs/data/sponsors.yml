@@ -106,6 +106,10 @@ bronze:
     - logo: "/images/sponsors/rtts-logo.png"
       url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
       name: "Real-Time Technology Solutions Inc."
+    # Sponsorship start date: Oct 9, 2024
+    - logo: "/images/sponsors/mailsac-logo.png"
+      url: "https://mailsac.com/?utm_source=selenium&utm_medium=ads&utm_campaign=selenium-sponsor&utm_content=logolink"
+      name: "Mailsac - Receive test emails with confidence"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"
