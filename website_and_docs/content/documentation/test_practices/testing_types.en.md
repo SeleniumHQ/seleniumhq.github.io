@@ -63,9 +63,13 @@ Load testing is done to verify how well the
 application works under different defined loads 
 (usually a particular number of users connected at once).
 
+>For example,  **_Testing that the site can handle numerous orders/users at once._**
+
 #### Stress testing
 Stress testing is done to verify how well the
 application works under stress (or above the maximum supported load).
+
+>For example,  **_Testing that your ecommerce site can handle Black Friday_**
 
 Generally, performance tests are done by executing some 
 Selenium written tests simulating different users 
@@ -89,6 +93,8 @@ This testing is generally done after a change, fix or feature addition.
 
 To ensure that the change has not broken any of the existing 
 functionality, some already executed tests are executed again. 
+
+>For example,  **_Testing that your new search bar doesn't break the other buttons on the menu_**
             
 The set of re-executed tests can be full or partial
 and can include several different types, depending

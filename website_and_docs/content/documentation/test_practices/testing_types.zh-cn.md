@@ -47,9 +47,13 @@ aliases: [
 以验证应用程序在各种特定的负载
  (通常是同时连接一定数量的用户) 下的运行状况
 
+>For example,  **_Testing that the site can handle numerous orders/users at once._**
+
 #### 压力测试
 进行压力测试, 
 以验证应用程序在压力 (或高于最大支持负载) 下的运行状况.
+
+>For example,  **_Testing that your ecommerce site can handle Black Friday_**
 
 通常, 性能测试是通过执行一些Selenium书写的测试来完成的, 
 这些测试模拟了不同的用户
@@ -74,6 +78,8 @@ aliases: [
 
 为了确保所做的更改没有破坏任何现有功能, 
 将再次执行一些已经执行过的测试.
+
+>For example,  **_Testing that your new search bar doesn't break the other buttons on the menu_**
 
 重新执行的测试集可以是全部或部分, 
 并且可以包括几种不同的类型, 
