@@ -20,16 +20,16 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -44,16 +44,16 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L24" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -68,16 +68,16 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L26-L31" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -92,16 +92,16 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L33-L424" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -116,16 +116,16 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L44-L49" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -140,16 +140,16 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L51-L56" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -164,15 +164,15 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L58-L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< badge-implementation >}}
 {{< /tab >}}
 {{< /tabpane >}}
