@@ -21,7 +21,7 @@ open your website. This can be achieved in a single line:
 {{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L22" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L7-L9" >}}
