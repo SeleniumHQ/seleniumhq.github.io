@@ -23,7 +23,7 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L16" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -47,7 +47,7 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L24" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L17-L21" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -71,7 +71,7 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L26-L31" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L23-L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -95,7 +95,7 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L33-L424" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L29-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -119,7 +119,7 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L44-L49" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L41-L46" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -143,7 +143,7 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L51-L56" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L48-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -167,7 +167,7 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L58-L63" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L54-L58" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
