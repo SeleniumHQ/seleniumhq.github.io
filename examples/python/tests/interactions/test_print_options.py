@@ -17,7 +17,7 @@ def test_orientation(driver):
 def test_range(driver):
     driver.get("https://www.selenium.dev/")
     print_options = PrintOptions()
-    print_options.page_ranges = ["1-3"] ## ["1", "2", "3"] or ["1-3"]
+    print_options.page_ranges = ["1, 2, 3"] ## ["1", "2", "3"] or ["1-3"]
     assert print_options.page_ranges == ["1", "2", "3"]
 
 def test_size(driver):
