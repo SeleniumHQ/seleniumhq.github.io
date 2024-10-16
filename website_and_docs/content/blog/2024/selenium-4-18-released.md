@@ -74,7 +74,6 @@ but you should still switch to `--headless=new` (see: [Headless is going away](/
 <div class="d-flex justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/RevealOscar" >}}
 {{< gh-user "https://api.github.com/users/Trigtrig" >}}
 {{< gh-user "https://api.github.com/users/manuelsblanco" >}}
 {{< gh-user "https://api.github.com/users/mtrea" >}}
