@@ -15,6 +15,7 @@ aliases: [
 ## InvalidSelectorException
 
 CSS and XPath Selectors are sometimes difficult to get correct.
+This issue can also arise if you've placed an XPATH value as a parameter to an ID selector. 
 
 ### Likely Cause
 
