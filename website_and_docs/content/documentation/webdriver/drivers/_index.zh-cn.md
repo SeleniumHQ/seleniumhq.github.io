@@ -8,7 +8,7 @@ weight: 3
 
 ## 创建会话
 
-创建会话对应于W3C的命令 [新建会话](https://w3c.github.io/webdriver/#new-session) 
+创建会话对应于W3C的命令 [新建会话](https://w3c.github.io/webdriver/#new-session)
 
 会话是通过初始化新的驱动类对象自动创建的.
 
@@ -27,19 +27,19 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L23" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/BaseTest.cs#L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/drivers/service.spec.js#L32-L36" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -50,7 +50,6 @@ weight: 3
 
 用于启动远程驱动的首要唯一参数包括有关在何处执行代码的信息.
 请浏览 [远程驱动章节]({{< ref "remote_webdriver.md" >}})中的详细信息
-
 
 ## 退出会话
 
