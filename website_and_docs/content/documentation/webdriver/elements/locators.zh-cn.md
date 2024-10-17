@@ -81,9 +81,8 @@ available in Selenium.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CLASS_NAME, "information")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L9" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -114,9 +113,8 @@ textbox, using css.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.cssSelector("#fname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CSS_SELECTOR, "#fname")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L17" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -145,9 +143,8 @@ We will identify the Last Name field using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.id("lname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.ID, "lname")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L25" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -177,9 +174,8 @@ We will identify the Newsletter checkbox using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.name("newsletter"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.NAME, "newsletter")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L33" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -207,9 +203,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.linkText("Selenium Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.LINK_TEXT, "Selenium Official Page")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L41" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -238,9 +233,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.partialLinkText("Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.PARTIAL_LINK_TEXT, "Official Page")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L49" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -267,9 +261,8 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.tagName("a"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.TAG_NAME, "a")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L57" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -302,9 +295,8 @@ first name text box. Let us create locator for female radio button using xpath.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.xpath("//input[@value='f']"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.XPATH, "//input[@value='f']")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L65" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -338,10 +330,8 @@ others it's as simple as setting a parameter in the FindElement function
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    from selenium.webdriver.common.by import By
-    driver = webdriver.Chrome()
-	driver.find_element(By.CLASS_NAME, "information")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L9" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -448,8 +438,8 @@ we can locate the text field element using the fact that it is an "input" elemen
 {{< tab header="Java" >}}
 By emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L73" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("password"));
@@ -474,8 +464,8 @@ we can locate the text field element using the fact that it is an "input" elemen
 {{< tab header="Java" >}}
 By passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("email"));
@@ -500,8 +490,8 @@ we can locate the cancel button element using the fact that it is a "button" ele
 {{< tab header="Java" >}}
 By cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L91" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
@@ -526,8 +516,8 @@ we can locate the submit button element using the fact that it is a "button" ele
 {{< tab header="Java" >}}
 By submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L100" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("cancel"));
@@ -554,8 +544,8 @@ but its associated [input label element](https://developer.mozilla.org/en-US/doc
 {{< tab header="Java" >}}
 By emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L109" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-email"));
@@ -579,8 +569,8 @@ You can also chain locators if needed. Sometimes the element is most easily iden
 {{< tab header="Java" >}}
 By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_right_of({By.ID: "cancel"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_locators.py#L118" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
