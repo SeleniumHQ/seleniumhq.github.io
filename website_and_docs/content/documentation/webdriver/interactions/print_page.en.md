@@ -7,11 +7,15 @@ aliases: [
 ]
 ---
 
-Printing a website is a common requirement, whether for sharing information or archiving records. 
-Selenium offers a straightforward way to automate this process through the `PrintOptions()` class.
-This class provides an intuitive and multifaceted way of printing webpages.
+Printing a webpage is a common task, whether for sharing information or maintaining archives. 
+Selenium simplifies this process through its PrintOptions, PrintsPage, and browsingContext 
+classes, which provide a flexible and intuitive interface for automating the printing of web pages. 
+These classes enable you to configure printing preferences, such as page layout, margins, and scaling, 
+ensuring that the output meets your specific requirements.
 
-## Orientation
+## Configuring
+
+### Orientation
 Using the `getOrientation()` and `setOrientation()` methods, you can get/set the page orientation --- either `PORTRAIT` or `LANDSCAPE`.
 
 {{< tabpane text=true >}}
@@ -35,7 +39,7 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Range
+### Range
 Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the range of pages to print --- e.g. "2-4".
 
 {{< tabpane text=true >}}
@@ -59,7 +63,7 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Size
+### Size
 Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the paper size to print --- e.g. "A0", "A6", "Legal", "Tabloid", etc.
 
 {{< tabpane text=true >}}
@@ -83,7 +87,7 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Margins
+### Margins
 Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margin sizes of the page you wish to print --- i.e. top, bottom, left, and right margins.
 
 {{< tabpane text=true >}}
@@ -107,7 +111,7 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scale
+### Scale
 Using `getScale()` and `setScale()` methods, you can get/set the scale of the page you wish to print --- e.g. 1.0 is 100% or default, 0.25 is 25%, etc.
 
 {{< tabpane text=true >}}
@@ -131,7 +135,7 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Background
+### Background
 Using `getBackground()` and `setBackground()` methods, you can get/set whether background colors and images appear --- boolean `true` or `false`.
 
 {{< tabpane text=true >}}
@@ -155,7 +159,7 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< /tab >}}
 {{< /tabpane >}}
 
-## ShrinkToFit
+### ShrinkToFit
 Using `getBackground()` and `setBackground()` methods, you can get/set whether the page will shrink-to-fit content on the page --- boolean `true` or `false`.
 
 {{< tabpane text=true >}}
@@ -170,6 +174,43 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L54-L58" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+## Printing
+
+Once you've configured your PrintOptions, you're ready to print the page. To do this, 
+you can invoke the print function, which generates a PDF representation of the web page. 
+The resulting PDF can be saved to your local storage for further use or distribution. 
+Using `PrintsPage()`, the print command will return the PDF data in base64-encoded format, which can be decoded 
+and written to a file in your desired location, and using `BrowsingContext()` will return a String. `BrowsingContext()`
+is part of Selenium's BiDi implementation.
+
+There may currently be multiple implementations depending on your language of choice. For example, with Java you have
+have the ability to print using either `BrowingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
+parameter.
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+**PrintsPage()**
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L13-L20" >}}
+**BrowsingContext()**
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L23-L30" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
