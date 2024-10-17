@@ -14,10 +14,13 @@ namespace SeleniumDocumentation.SeleniumInteractions
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
 
-            //Convenient
+            //Convenient (driver.Url only accepts string arg)
             driver.Url = "https://selenium.dev";
-            //Longer
+            //Longer (driver.Navigate().GoToUrl(arg) accepts both string and Uri args)
             driver.Navigate().GoToUrl("https://selenium.dev");
+            //or even this
+            //driver.Navigate().GoToUrl(new Uri("https://selenium.dev"));
+            
             var title = driver.Title;
             Assert.AreEqual("Selenium", title);
 
