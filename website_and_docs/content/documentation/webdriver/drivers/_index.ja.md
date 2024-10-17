@@ -26,19 +26,19 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L23" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L10" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/BaseTest.cs#L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/drivers/service.spec.js#L32-L36" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
