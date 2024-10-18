@@ -145,3 +145,20 @@ Actions class with `Actions.moveToElement(element)`.
 
 ### 可能的解决方案
 检查脚本中是否有 `driver.close()` 和 `driver.quit()` 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。
+
+## ElementNotInteractableException
+
+This occurs when Selenium is unable to interact with a WebElement.
+
+### Likely Cause
+
+This usually occurs when one of three things happens:
+* An element is not displayed
+* An element is neither pointer nor keyboard interactable
+* An element's center point can not be scrolled into the viewport
+
+### Possible Solutions
+
+Depending on the circumstance, there might _not_ be anything you can do. However, possible 
+things to try are setting [Explicit Waits]({{< ref "../waits#explicit-waits" >}}) or interacting 
+with another element/clicking a button on the page that might change state of the DOM.
