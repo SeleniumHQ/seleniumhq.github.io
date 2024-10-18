@@ -189,12 +189,13 @@ Once you've configured your PrintOptions, you're ready to print the page. To do 
 you can invoke the print function, which generates a PDF representation of the web page. 
 The resulting PDF can be saved to your local storage for further use or distribution. 
 Using `PrintsPage()`, the print command will return the PDF data in base64-encoded format, which can be decoded 
-and written to a file in your desired location, and using `BrowsingContext()` will return a String. `BrowsingContext()`
-is part of Selenium's BiDi implementation.
+and written to a file in your desired location, and using `BrowsingContext()` will return a String. 
 
-There may currently be multiple implementations depending on your language of choice. For example, with Java you have
+There may currently be multiple implementations depending on your language of choice. For example, with Java you
 have the ability to print using either `BrowingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
 parameter.
+
+Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable BiDi see [Enabling Bidi]({{< ref "../bidi/_index.md" >}}) 
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
