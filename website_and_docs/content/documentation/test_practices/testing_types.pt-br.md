@@ -63,9 +63,13 @@ O teste de carga é feito para verificar o quão bem o
 aplicativo funciona sob diferentes cargas definidas
 (geralmente um determinado número de usuários conectados ao mesmo tempo).
 
+>For example,  **_Testing that the site can handle numerous orders/users at once._**
+
 #### Teste de estresse
 O teste de estresse é feito para verificar o quão bem
 a aplicação funciona sob estresse (ou acima da carga máxima suportada).
+
+>For example,  **_Testing that your ecommerce site can handle Black Friday_**
 
 Geralmente, os testes de estresse são feitos executando alguns
 testes escritos com Selenium simulando diferentes usuários
@@ -89,6 +93,8 @@ Esse teste geralmente é feito após uma alteração, correção ou adição de 
 
 Para garantir que a mudança não quebrou nenhumas das
 funcionalidades, alguns testes já executados são executados novamente.
+
+>For example,  **_Testing that your new search bar doesn't break the other buttons on the menu_**
             
 O conjunto de testes re-executados pode ser total ou parcial
 e pode incluir vários tipos diferentes, dependendo
