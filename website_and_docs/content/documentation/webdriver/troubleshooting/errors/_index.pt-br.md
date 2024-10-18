@@ -141,3 +141,19 @@ This usually occurs when the session has been deleted (e.g. `driver.quit()`) or 
 ### Possible Solutions
 
 Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes of closed tabs/browsers. It could be that you are locating an element before you should/can.
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)
