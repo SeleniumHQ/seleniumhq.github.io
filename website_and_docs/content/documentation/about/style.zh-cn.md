@@ -6,7 +6,7 @@ description: >-
   Conventions for contributions to the Selenium documentation and code examples
 ---
 
-Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on 
+Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on
 how to add content to this documentation.
 
 ## Alerts
@@ -68,7 +68,7 @@ Selenium now has official translators for each of the supported languages.
   also add it to `important_documentation.ja.md`, `important_documentation.pt-br.md`,
   `important_documentation.zh-cn.md`.
 * If you make text changes in the English version, just make a Pull Request.
-  The new process is for issues to be created and tagged as needs translation based on 
+  The new process is for issues to be created and tagged as needs translation based on
   changes made in a given PR.
 
 ## Code examples
@@ -81,24 +81,24 @@ and the code itself should be placed inside code tabs.
 The Docsy code tabs look like this:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-    val driver = ChromeDriver()
-  {{< /tab >}}
+{{< tab header="Java" >}}
+WebDriver driver = new ChromeDriver();
+{{< /tab >}}
+{{< tab header="Python" >}}
+driver = webdriver.Chrome()
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+var driver = new ChromeDriver();
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+driver = Selenium::WebDriver.for :chrome
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+let driver = await new Builder().forBrowser('chrome').build();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+val driver = ChromeDriver()
+{{< /tab >}}
 {{< /tabpane >}}
 
 To generate the above tabs, this is what you need to write.
@@ -132,7 +132,7 @@ and ensures that all tabs on the page with a language are set to the same thing.
 To ensure that all code is kept up to date, our goal is to write the code in the repo where it
 can be executed when Selenium versions are updated to ensure that everything is correct.
 
-All code examples to be in our 
+All code examples to be in our
 [example directories](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
 
 This code can be automatically displayed in the documentation using the `gh-codeblock` shortcode.
@@ -149,22 +149,22 @@ A basic comparison of code looks like:
 
     {{</* tabpane text=true */>}}
     {{</* tab header="Java" */>}}
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L46-L47" */>}}
+    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" */>}}
     {{</* /tab */>}}
     {{</* tab header="Python" */>}}
-    {{</* gh-codeblock path="examples/python/tests/getting_started/first_script.py#L17-L18" */>}}
+    {{</* gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-L19" */>}}
     {{</* /tab */>}}
     {{</* tab header="CSharp" */>}}
-    {{</* gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L39-L40" */>}}
+    {{</* gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" */>}}
     {{</* /tab */>}}
     {{</* tab header="Ruby" */>}}
-    {{</* gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L16-L17" */>}}
+    {{</* gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-L18" */>}}
     {{</* /tab */>}}
     {{</* tab header="JavaScript" */>}}
-    {{</* gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" */>}}
+    {{</* gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" */>}}
     {{</* /tab */>}}
     {{</* tab header="Kotlin" */>}}
-    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" */>}}
+    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" */>}}
     {{</* /tab */>}}
     {{</* /tabpane */>}}
 
@@ -172,29 +172,29 @@ Which looks like this:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L46-L47" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L17-L18" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L39-L40" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L16-L17" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23-L24" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
 ### Using Markdown in a Tab
 
 If you want your example to include something other than code (default) or html (from `gh-codeblock`),
-you need to first set `text=true`, 
+you need to first set `text=true`,
 then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with curly braces:
 
     {{</* tabpane text=true */>}}
@@ -213,14 +213,15 @@ This produces:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
+
 1. Start the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
+   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 2. Navigate to a page
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
+   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 3. Quit the driver
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
-{{% /tab %}}
-{{< /tabpane >}}
+   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
+   {{% /tab %}}
+   {{< /tabpane >}}
 
 This is preferred to writing code comments because those will not be translated.
 Only include the code that is needed for the documentation, and avoid over-explaining.
