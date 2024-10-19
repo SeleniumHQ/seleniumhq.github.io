@@ -195,7 +195,7 @@ There may currently be multiple implementations depending on your language of ch
 have the ability to print using either `BrowingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
 parameter.
 
-Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable BiDi see [Enabling Bidi]({{< ref "../bidi/_index.md" >}}) 
+Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable BiDi see [Enabling Bidi]({{< ref "bidi/" >}}) 
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
