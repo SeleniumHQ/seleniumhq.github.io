@@ -4,12 +4,22 @@ import org.openqa.selenium.Pdf;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.print.PageMargin;
 import org.openqa.selenium.print.PrintOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.PrintsPage;
-import dev.selenium.BaseChromeTest;
+import dev.selenium.BaseTest;
 
-public class PrintsPageTest extends BaseChromeTest {
+public class PrintsPageTest extends BaseTest{
+
+    @BeforeEach
+    public void setup() {
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("webSocketUrl", true);
+        driver = new ChromeDriver(options);
+    }
 
     @Test
     public void PrintWithPrintsPageTest() 
