@@ -1,12 +1,12 @@
 package dev.selenium.interactions;
 
 import org.openqa.selenium.Pdf;
-import org.openqa.selenium.BrowsingContext;
+import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.print.PageMargin;
 import org.openqa.selenium.print.PrintOptions;
-import org.openqa.selenium.print.PrintsPage;
+import org.openqa.selenium.PrintsPage;
 import dev.selenium.BaseChromeTest;
 
 public class PrintsPageTest extends BaseChromeTest {
