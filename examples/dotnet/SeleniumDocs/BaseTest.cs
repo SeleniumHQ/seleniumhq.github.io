@@ -39,6 +39,7 @@ namespace SeleniumDocs
             {
                 BrowserVersion = browserVersion
             };
+            options.AddArgument("--no-sandbox");
             driver = new ChromeDriver(options);
         }
 
