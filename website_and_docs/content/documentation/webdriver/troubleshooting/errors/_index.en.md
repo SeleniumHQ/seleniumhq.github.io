@@ -145,3 +145,20 @@ like when the last tab/browser has closed (e.g. `driver.close()`)
 
 Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes 
 of closed tabs/browsers. It could be that you are locating an element before you should/can.
+
+## ElementNotInteractableException
+
+This occurs when Selenium is unable to interact with a WebElement.
+
+### Likely Cause
+
+This usually occurs when one of three things happens:
+* An element is not displayed
+* An element is neither pointer nor keyboard interactable
+* An element's center point can not be scrolled into the viewport
+
+### Possible Solutions
+
+Depending on the circumstance, there might _not_ be anything you can do. However, possible 
+things to try are setting [Explicit Waits]({{< ref "../waits#explicit-waits" >}}) or interacting 
+with another element/clicking a button on the page that might change state of the DOM.
