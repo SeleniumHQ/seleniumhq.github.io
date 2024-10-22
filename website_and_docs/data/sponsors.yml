@@ -22,7 +22,7 @@ selenium:
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"
-    # Sponsorship in renewal process
+    # Sponsorship renewed October 16, 2024. 
     - logo: "/images/sponsors/lambda-test.png"
       url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
       name: "LambdaTest"
