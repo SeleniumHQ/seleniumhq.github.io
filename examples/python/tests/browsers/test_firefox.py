@@ -1,9 +1,9 @@
 import os
 import subprocess
-import sys
+import pathlib
 
-import pytest
 from selenium import webdriver
+
 
 
 def test_basic_options():
@@ -129,3 +129,31 @@ def test_install_unsigned_addon_directory_slash(firefox_driver, addon_path_dir_s
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
 
     assert injected.text == "Content injected by webextensions-selenium-example"
+
+def test_full_page_screenshots():
+    driver = webdriver.Firefox()
+
+    driver.get("https://www.selenium.dev/")
+
+    path_for_screenshot = str(pathlib.Path().absolute()) + 'screenshot.png'
+    driver.save_full_page_screenshot(path_for_screenshot)
+
+    driver.quit()
+
+def test_context():
+    driver = webdriver.Firefox()
+    
+    driver.context = 'content'
+    driver.get("https://www.selenium.dev/")
+
+    driver.quit()
+
+def test_profiles():
+    options = webdriver.FirefoxOptions()
+    firefox_profile = webdriver.FirefoxProfile()
+    firefox_profile.set_preference("javascript.enabled", False)
+    options.profile = firefox_profile
+
+    driver = webdriver.Firefox(options)
+
+    driver.quit()

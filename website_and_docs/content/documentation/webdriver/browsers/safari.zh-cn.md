@@ -100,7 +100,7 @@ Apple 提供了其浏览器的开发版本 — [Safari Technology Preview](https
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L26" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
