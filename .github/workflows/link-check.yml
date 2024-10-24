@@ -42,7 +42,7 @@ jobs:
 
       - name: Link check
         continue-on-error: true # <- If set to false, run fails with broken links
-        uses: untitaker/hyperlink@0.1.32
+        uses: untitaker/hyperlink@0.1.35
         with:
           args: website_and_docs/public/ --check-anchors
 
