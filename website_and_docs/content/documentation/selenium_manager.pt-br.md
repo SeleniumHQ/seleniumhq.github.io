@@ -345,5 +345,17 @@ The following bindings allow you to specify the driver path using an environment
 
 This feature is available in the Selenium Ruby binding starting from version 4.25.0.
 
+## Building a Custom Selenium Manager
+In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
+utilize the following steps:
+
+1. Install Rust Dev Environment
+2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
+3. Navigate into your clone `cd selenium/rust`
+4. Build selenium `cargo build --release`
+5. Set the following environment variable for the driver path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+6. Put the driver you want in a location on your system PATH
+7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
+
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).
