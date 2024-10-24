@@ -55,9 +55,9 @@ def test_unhandled_prompt():
     driver.quit()
 
 def test_set_window_rect():
-    options = webdriver.ChromeOptions()
+    options = webdriver.FirefoxOptions()
     options.set_window_rect = True # Full support in Firefox
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Firefox(options=options)
     driver.get("https://www.selenium.dev/")
     driver.quit()
 
