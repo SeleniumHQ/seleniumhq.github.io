@@ -210,8 +210,9 @@ Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable B
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-{{< badge-code >}}
+{{% tab header="Python" %}}
+**print_page()**
+{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L11-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
