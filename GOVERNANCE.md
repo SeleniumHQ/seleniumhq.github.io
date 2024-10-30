@@ -1,3 +1,3 @@
 # Governance
 
-Content moved to https://www.selenium.dev/governance/
+Content moved to <https://www.selenium.dev/governance/>
