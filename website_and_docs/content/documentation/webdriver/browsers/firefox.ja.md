@@ -1,9 +1,9 @@
 ---
-title: "Firefox 固有のCapability"
+title: "Firefox特有の機能"
 linkTitle: "Firefox"
 weight: 6
 description: >-
-    Mozilla Firefox ブラウザーに固有のCapabilityです。
+    これらは、Mozilla Firefoxブラウザに特有の機能と機能です。
 aliases: [
 "/ja/documentation/capabilities/firefox"
 ]
@@ -150,25 +150,24 @@ driver = RemoteWebDriver(options)
 </div>
 
 
-## Service
+## サービス
 
-Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+すべてのブラウザに共通するサービス設定は、[Service page]({{< ref "../drivers/service.md" >}})に記載されています。
 
-### Log output
+### ログ出力
 
-Getting driver logs can be helpful for debugging various issues. The Service class lets you
-direct where the logs will go. Logging output is ignored unless the user directs it somewhere.
+ドライバーログを取得することは、さまざまな問題のデバッグに役立ちます。サービスクラスを使用すると、ログの保存先を指定できます。ログ出力は、ユーザーがどこかに指定しない限り無視されます。
 
-#### File output
+#### ファイル出力
 
-To change the logging output to save to a specific file:
+特定のファイルにログ出力を保存するには:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
-**Note**: Java also allows setting file output by System Property:\
-Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
-Property value: String representing path to log file
+**注**: Java では、システムプロパティによってファイル出力を設定することもできます。\
+プロパティキー:`GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
+プロパティ値: ログファイルへのパスを表す文字列
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
@@ -189,17 +188,17 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< /tabpane >}}
 
-#### Console output
+#### コンソール出力
 
-To change the logging output to display in the console:
+ログ出力をコンソールに表示するには、以下のようにします:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
-**Note**: Java also allows setting console output by System Property;\
-Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
-Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
+**注意**: Javaは、システムプロパティを使用してコンソール出力を設定することもできます;\
+プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
+プロパティ値: `DriverService.LOG_STDOUT` または `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
@@ -220,20 +219,20 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log level
-There are 7 available log levels: `fatal`, `error`, `warn`, `info`, `config`, `debug`, `trace`.
-If logging is specified the level defaults to `info`.
+### ログレベル
+利用可能なログレベルは7つあります: `fatal`, `error`, `warn`, `info`, `config`, `debug`, `trace`。
+ロギングが指定されている場合、デフォルトのレベルは `info`になります。
 
-Note that `-v` is equivalent to `-log debug` and `-vv` is equivalent to `log trace`,
-so this examples is just for setting the log level generically:
+`-v` iは `-log debug` と同等であり、`-vv` は `log trace`と同等です。
+したがって、この例は一般的にログレベルを設定するためのものです:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
-**Note**: Java also allows setting log level by System Property:\
-Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
-Property value: String representation of `FirefoxDriverLogLevel` enum
+**注意**: Javaは、システムプロパティによってログレベルの設定も可能です:\
+プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
+プロパティ値:`FirefoxDriverLogLevel`列挙型の文字列表現
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
@@ -254,18 +253,17 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Truncated Logs
+### トランケートログ
 
-The driver logs everything that gets sent to it, including string representations of large binaries, so
-Firefox truncates lines by default. To turn off truncation:
+ドライバーは、大きなバイナリの文字列表現を含む、送信されたすべてのものをログに記録します。そのため、Firefoxではデフォルトで行が切り捨てられます。切り捨てを無効にするには:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
-**Note**: Java also allows setting log level by System Property:\
-Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
-Property value: `"true"` or `"false"`
+**注意**: Javaでは、システムプロパティによってログレベルを設定することもできます。\
+プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
+プロパティ値: `"true"` または `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
@@ -286,18 +284,17 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Profile Root
+### プロファイルルート
 
-The default directory for profiles is the system temporary directory. If you do not have access to that directory,
-or want profiles to be created some place specific, you can change the profile root directory:
+プロファイルのデフォルトディレクトリは、システムの一時ディレクトリです。そのディレクトリにアクセスできない場合や、特定の場所にプロファイルを作成したい場合は、プロファイルルートディレクトリを変更できます:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
-**Note**: Java also allows setting log level by System Property:\
-Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
-Property value: String representing path to profile root directory
+**注意**: Javaでは、システムプロパティを使用してログレベルを設定することもできます：  \
+プロパティキー: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
+プロパティ値: プロファイルルートディレクトリへのパスを表す文字列
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L81" >}}
@@ -318,19 +315,15 @@ Property value: String representing path to profile root directory
 {{< /tabpane >}}
 
 
-## Special Features
+## 特別な機能
 
 ### アドオン
 
 Chromeとは異なり、Firefoxの拡張機能はCapabilityの一部として追加されるのではなく、ドライバーの起動後に作成されます。
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
-[this issue](https://github.com/mozilla/geckodriver/issues/1476),
-they are created after starting the driver.
+Chromeとは異なり、Firefoxの拡張機能は[この問題](https://github.com/mozilla/geckodriver/issues/1476)に記載されているように、機能の一部として追加されるのではなく、ドライバーの起動後に作成されます。
 
-The following examples are for local webdrivers. For remote webdrivers,
-please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+T以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
 
 #### インストール
 
@@ -415,9 +408,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 
 ### ページ全体のスクリーンショット
 
-The following examples are for local webdrivers. For remote webdrivers,
-please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -442,9 +433,7 @@ please refer to the
 
 ### コンテキスト
 
-The following examples are for local webdrivers. For remote webdrivers,
-please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
