@@ -1,42 +1,38 @@
 ---
-title: "Organizing and Executing Selenium Code"
-linkTitle: "Using Selenium"
+title: "Seleniumコードの整理と実行"
+linkTitle: "Seleniumの使用"
 weight: 10
 description: >
-  Scaling Selenium execution with an IDE and a Test Runner library
+  IDEとテストランナーライブラリを使用したSelenium実行のスケーリング
 ---
 
-If you want to run more than a handful of one-off scripts, you need to
-be able to organize and work with your code. This page should give you
-ideas for how to actually do productive things with your Selenium code.
+一握り以上の 1 回限りのスクリプトを実行する場合は、コードを整理して操作できる必要があります。このページでは、Seleniumコードを使用して実際に生産的なことを行う方法についてのアイデアを提供します。
 
-## Common Uses
+## 一般的な用途
 
-Most people use Selenium to execute automated tests for web applications,
-but Selenium support any use case of browser automation.
+ほとんどの人はSeleniumを使用してWebアプリケーションの自動テストを実行します。
+しかし、Seleniumはブラウザ自動化のあらゆるユースケースをサポートします。
 
-### Repetitive Tasks
+### 反復タスク
 
-Perhaps you need to log into a website and download something, or submit a form.
-You can create a Selenium script to run with a service at preset times.
+おそらく、Webサイトにログインして何かをダウンロードするか、フォームを送信する必要があります。
+Selenium スクリプトを作成して、あらかじめ設定された時間にサービスと共に実行できます。
 
-### Web Scraping
+### Webスクレイピング
 
-Are you looking to collect data from a site that doesn't have an API? Selenium
-will let you do this, but please make sure you are familiar with the website's
-terms of service as some websites do not permit it and others will even block Selenium.
+APIがないサイトからデータを収集したいとお考えですか?セレン
+これを行うことができますが、Webサイトに精通していることを確認してください。
+一部のWebサイトでは許可されておらず、他のWebサイトではSeleniumがブロックされることさえあります。
 
-### Testing
+### テスティング
 
-Running Selenium for testing requires making assertions on actions taken by Selenium.
-So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners).
+テストのためにSeleniumを実行するには、Seleniumが実行したアクションに対してアサーションを行う必要があります。
+したがって、優れたアサーションライブラリが必要です。テストの構造を提供する追加機能
+使用する必要があります [Test Runner](#test-runners).
 
 ## IDEs
 
-Regardless of how you use Selenium code,
-you won't be very effective writing or executing it without a good
-Integrated Developer Environment. Here are some common options...
+Seleniumコードの使用方法に関係なく、優れた統合開発環境がなければ、Seleniumコードの作成や実行はあまり効果的ではありません。一般的なオプションを次に示します...
 
 - [Eclipse](https://www.eclipse.org/)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
@@ -48,48 +44,46 @@ Integrated Developer Environment. Here are some common options...
 
 ## Test Runner
 
-Even if you aren't using Selenium for testing, if you have advanced use cases, it might make
-sense to use a test runner to better organize your code. Being able to use before/after hooks
-and run things in groups or in parallel can be very useful.
+テストにSeleniumを使用していない場合でも、高度なユースケースがある場合は、テストランナーを使用してコードをより適切に整理するのが理にかなっている場合があります。before/after フックを使用して、グループまたは並行して物事を実行できると非常に便利です。
 
-### Choosing
+### 卜
 
-There are many different test runners available.
+さまざまなテストランナーが利用可能です。
 
-All the code examples in this documentation can be found in (or is being moved to) our
-example directories that use test runners and get executed every release to ensure all the code is correct and updated.
-Here is a list of test runners with links. The first item is the one that is used by this repository and the one
-that will be used for all examples on this page.
+このドキュメントのすべてのコード例は、
+テストランナーを使用し、すべてのコードが正しく更新されていることを確認するためにリリースごとに実行されるディレクトリの例。
+リンク付きのテストランナーのリストを次に示します。最初の項目は、このリポジトリで使用される項目と
+このページのすべての例で使用されます。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-- [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
-- [TestNG](https://testng.org/) - Offers extra features like parallel test execution and parameterized tests.
+- [JUnit](https://junit.org/junit5/) - JavaベースのSeleniumテストで広く使用されているテストフレームワーク。
+- [TestNG](https://testng.org/) - 並列テスト実行やパラメーター化されたテストなどの追加機能を提供します。
   {{% /tab %}}
 
 {{% tab header="Python" %}}
 
-- [pytest](https://pytest.org/) - A preferred choice for many, thanks to its simplicity and powerful plugins.
-- [unittest](https://docs.python.org/3/library/unittest.html) - Python's standard library testing framework.
+- [pytest](https://pytest.org/) - そのシンプルさと強力なプラグインのおかげで、多くの人に好まれる選択肢です。
+- [unittest](https://docs.python.org/3/library/unittest.html) - Python の標準ライブラリテストフレームワーク。
   {{% /tab %}}
 
 {{% tab header="CSharp" %}}
 
-- [NUnit](https://nunit.org/) - A popular unit-testing framework for .NET.
-- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft's own unit testing framework.
+- [NUnit](https://nunit.org/) - .NET の一般的な単体テスト フレームワーク。
+- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft 独自の単体テスト フレームワーク。
   {{% /tab %}}
 
 {{% tab header="Ruby" %}}
 
-- [RSpec](https://rspec.info/) - The most widely used testing library for running Selenium tests in Ruby.
-- [Minitest](https://github.com/seattlerb/minitest) - A lightweight testing framework that comes with Ruby standard library.
+- [RSpec](https://rspec.info/) - RubyでSeleniumテストを実行するために最も広く使用されているテストライブラリ。
+- [Minitest](https://github.com/seattlerb/minitest) - Ruby標準ライブラリに付属する軽量なテストフレームワークです。
   {{% /tab %}}
 
 {{% tab header="JavaScript" %}}
 
-- [Jest](https://jestjs.io/) - Primarily known as a testing framework for React, it can also be used for Selenium tests.
-- [Mocha](https://mochajs.org/) - The most common JS library for running Selenium tests.
+- [Jest](https://jestjs.io/) - 主にReactのテストフレームワークとして知られていますが、Seleniumのテストにも使用できます。
+- [Mocha](https://mochajs.org/) - Seleniumテストを実行するための最も一般的なJSライブラリ。
   {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
@@ -97,10 +91,9 @@ that will be used for all examples on this page.
 {{% /tab %}}
 {{< /tabpane >}}
 
-### Installing
+### 装着
 
-This is very similar to what was required in [Install a Selenium Library]({{< ref "install_library.md" >}}).
-This code is only showing examples for what is being used in our Documentation Examples project.
+これは、で必要とされたものと非常によく似ています [Seleniumライブラリのインストール]({{< ref "install_library.md" >}})。このコードは、私たちのドキュメント例プロジェクトで使用されているものの例を示しているだけです。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -112,27 +105,27 @@ This code is only showing examples for what is being used in our Documentation E
 {{% /tab %}}
 {{% tab header="Python" %}}
 
-To use it in a project, add it to the `requirements.txt` file:
+プロジェクトで使用するには、requirements.txt ファイルに追加します:
 
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+プロジェクトの 'csproj' ファイルで、依存関係を 'ItemGroup' の 'PackageReference' として指定します:
 
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 
-Add to project's gemfile
+プロジェクトの gemfile に追加
 
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
-In your project's `package.json`, add requirement to `dependencies`:
+プロジェクトの 'package.json' で、要件を 'dependencies' に追加します。:
 
 {{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Asserting
+### 主張
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -155,27 +148,27 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Setting Up and Tearing Down
+### セットアップとティアダウン
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-### Set Up
+### 並べる
 
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
 
-### Tear Down
+### 取り壊す
 
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
 
-### Set Up
+### 並べる
 
 {{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
 
-### Tear Down
+### 取り壊す
 
 {{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
 
@@ -185,21 +178,21 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 
-### Set Up
+### 並べる
 
 {{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
 
-### Tear Down
+### 取り壊す
 
 {{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
-### Set Up
+### 並べる
 
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
 
-### Tear Down
+### 取り壊す
 
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
@@ -208,7 +201,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Executing
+### 実行
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -255,10 +248,9 @@ npx mocha runningTests.spec.js
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Examples
+### 例
 
-In [First script]({{< ref "first_script.md" >}}), we saw each of the components of a Selenium script.
-Here's an example of that code using a test runner:
+[最初のスクリプト]({{< ref "first_script.md" >}})のトピックでは、Seleniumスクリプトの各コンポーネントを見ました。こちらが、テストランナーを使用したそのコードの例です。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -281,9 +273,9 @@ Here's an example of that code using a test runner:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Steps
+## 次のステップ
 
-Take what you've learned and build out your Selenium code!
+学んだことを活かして、Seleniumコードを構築します!
 
-As you find more functionality that you need, read up on the rest of our
-[WebDriver documentation]({{< ref "/documentation/webdriver/" >}}).
+必要な機能が他にも見つかったら、残りの機能をお読みください
+[WebDriver ドキュメント]({{< ref "/documentation/webdriver/" >}}).
