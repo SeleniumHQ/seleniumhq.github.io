@@ -84,8 +84,8 @@ def test_set_browser_name():
     
 def test_set_browser_version():
     options = webdriver.ChromeOptions()
-    options.browser_version = 'latest'
-    assert options.capabilities['browserVersion'] == 'latest'
+    options.browser_version = 'stable'
+    assert options.capabilities['browserVersion'] == 'stable'
     driver = webdriver.Chrome(options=options)
     driver.get("https://www.selenium.dev/")
     driver.quit()

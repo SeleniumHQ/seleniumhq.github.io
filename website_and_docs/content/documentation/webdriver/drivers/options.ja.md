@@ -3,7 +3,7 @@ title: "ブラウザーオプション"
 linkTitle: "オプション"
 weight: 2
 description: >-
-  これらのCapabilityはすべてのブラウザで共通です。
+  これらの機能はすべてのブラウザで共有されています。
 aliases: [
 "/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
 "/ja/documentation/webdriver/capabilities/shared_capabilities/",
@@ -27,7 +27,7 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 ## browserName
 
-Browser name is set by default when using an Options class instance.
+オプションクラスのインスタンスを使用すると、ブラウザ名はデフォルトで設定されます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -53,9 +53,7 @@ Browser name is set by default when using an Options class instance.
 
 ## browserVersion
 
-This capability is optional, this is used to set the available browser version at remote end.
-In recent versions of Selenium, if the version is not found on the system,
-it will be automatically downloaded by [Selenium Manager]({{< ref "../../selenium_manager" >}})
+この機能はオプションであり、リモート側で使用可能なブラウザのバージョンを設定するために使用されます。最近のSeleniumのバージョンでは、システムにバージョンが見つからない場合、[Selenium Manager]({{< ref "../../selenium_manager" >}}) によって自動的にダウンロードされます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
