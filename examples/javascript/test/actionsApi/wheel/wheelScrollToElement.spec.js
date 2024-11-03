@@ -7,7 +7,7 @@ describe('Wheel scroll to element', function() {
     driver = await new Builder().forBrowser('chrome').build();
   });
 
-  after(() => driver.quit());
+  after(async () => await driver.quit());
 
   it('Scroll to the element', async function() {
     // Navigate to the url

@@ -11,6 +11,6 @@
         "selenium-webdriver": "4.26.0"
     },
     "devDependencies": {
-        "mocha": "10.7.3"
+        "mocha": "10.8.2"
     }
 }

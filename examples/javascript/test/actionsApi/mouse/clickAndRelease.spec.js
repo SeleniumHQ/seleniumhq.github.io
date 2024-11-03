@@ -7,7 +7,7 @@ describe('Click and release', function () {
     driver = new Builder().forBrowser('chrome').build();
   });
 
-  after(() => driver.quit());
+  after(async () => await driver.quit());
 
   it('Mouse move and click on an element', async function () {
     await driver.get('https://www.selenium.dev/selenium/web/mouse_interaction.html');
