@@ -10,16 +10,16 @@ description: >
 [Seleniumをインストール]({{< ref "install_library.md" >}})し、
 すると、Seleniumコードを書く準備が整います。
 
-## Eight Basic Components
+## 8つの基本コンポーネント
 
 Seleniumが行うことはすべて、ブラウザコマンドを送信して、何かを実行したり、情報の要求を送信したりすることです。 
 Seleniumで行うことのほとんどは、次の基本的なコマンドの組み合わせです。
 
-Click on the link to "View full example on GitHub" to see the code in context.
+[GitHub で完全な例を表示] へのリンクをクリックして、コンテキスト内のコードを表示します。
 
 ### 1. ドライバーインスタンスでセッションを開始します
 
-For more details on starting a session read our documentation on  [driver sessions]({{< ref "../drivers/" >}})
+セッションの開始の詳細については、次のドキュメントをお読みください [driver sessions]({{< ref "../drivers/" >}})
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -43,7 +43,7 @@ For more details on starting a session read our documentation on  [driver sessio
 {{< /tabpane >}}
 
 ### 2. Take action on browser
-In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/webdriver/interactions/navigation.md" >}})するコマンドを送信します
+こちらの例では、[ナビゲート]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) してウェブページに移動しています。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -68,8 +68,7 @@ In this example we are ブラウザが[ナビゲート]({{< ref "/documentation/
 
 ### 3. [ブラウザに関する情報]({{< ref "/documentation/webdriver/interactions" >}})をリクエストします
 
-There are a bunch of types of [information about the browser]({{< ref "/documentation/webdriver/interactions" >}}) you
-can request, including window handles, browser size / position, cookies, alerts, etc.
+ブラウザに関する [情報]({{< ref "/documentation/webdriver/interactions" >}}) として、ウィンドウハンドル、ブラウザのサイズ/位置、クッキー、アラートなど、さまざまな種類のデータをリクエストできます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -92,18 +91,18 @@ can request, including window handles, browser size / position, cookies, alerts,
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 4. Establish Waiting Strategy
+### 4. 待機戦略の確立
 
-Synchronizing the code with the current state of the browser is one of the biggest challenges
-with Selenium, and doing it well is an advanced topic.
+コードをブラウザの現在の状態と同期させることは、最大の課題の 1 つです
+Seleniumを使用して、それをうまく行うことは高度なトピックです。
 
-Essentially you want to make sure that the element is on the page before you attempt to locate it
-and the element is in an interactable state before you attempt to interact with it.
+基本的には、要素を見つける前に、その要素がページ上にあることを確認する必要があります
+また、要素は、操作を試みる前に対話可能な状態にあります。
 
-An implicit wait is rarely the best solution, but it's the easiest to demonstrate here, so
-we'll use it as a placeholder.
+暗黙的な待機が最善の解決策になることはめったにありませんが、ここで示すのが最も簡単なので、
+プレースホルダーとして使用します。
 
-Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
+[待機戦略] についてさらに読む({{< ref "/documentation/webdriver/waits.md" >}}).
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -127,8 +126,7 @@ Read more about [Waiting strategies]({{< ref "/documentation/webdriver/waits.md"
 {{< /tabpane >}}
 
 ### 5. [要素を検索する]({{< ref "/documentation/webdriver/elements" >}})ためのコマンドを送信します
-The majority of commands in most Selenium sessions are element related, and you can't interact
-with one without first [finding an element]({{< ref "/documentation/webdriver/elements" >}})
+ほとんどのSeleniumセッションにおけるコマンドの大部分は要素に関連しており、[要素を見つける]({{< ref "/documentation/webdriver/elements" >}}) ことなしにはそれと対話することができません。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -152,8 +150,8 @@ with one without first [finding an element]({{< ref "/documentation/webdriver/el
 {{< /tabpane >}}
 
 ### 6. 要素に対してアクションを実行する
-There are only a handful of [actions to take on an element]({{< ref "/documentation/webdriver/elements/interactions.md" >}}),
-but you will use them frequently. 
+
+要素に対して行う [アクション]({{< ref "/documentation/webdriver/elements/interactions.md" >}})はわずかしかありませんが、それらは頻繁に使用されます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -177,7 +175,8 @@ but you will use them frequently.
 {{< /tabpane >}}
 
 ### 7. 要素に関する情報をリクエストします
-Elements store a lot of [information that can be requested]({{< ref "/documentation/webdriver/elements/information" >}}).
+
+要素には [リクエスト可能な情報]({{< ref "/documentation/webdriver/elements/information" >}}) が多く保存されています。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -202,10 +201,9 @@ Elements store a lot of [information that can be requested]({{< ref "/documentat
 
 ### 8. セッションを終了します 
 
-This ends the driver process, which by default closes the browser as well. 
-No more commands can be sent to this driver instance. 
+これにより、ドライバー プロセスが終了し、既定ではブラウザーも閉じます。このドライバー インスタンスにこれ以上コマンドを送信することはできません。
 
-See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
+[セッションの終了]({{< ref "../drivers/#quitting-sessions" >}}) を参照.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -229,7 +227,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< /tabpane >}}
 
 
-## Running Selenium File
+## Seleniumファイルの実行
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -253,8 +251,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< /tabpane >}}
 
 
-## Next Steps
+## 次のステップ
 
-Most Selenium users execute many sessions and need to organize them to minimize duplication and keep the code
-more maintainable. Read on to learn about how to put this code into context for your use case with
-[Using Selenium]({{< ref "using_selenium.md" >}}).
+
+ほとんどのSeleniumユーザーは多くのセッションを実行し、重複を最小限に抑え、コードをより保守しやすくするために整理する必要があります。このコードをユースケースのコンテキストに配置する方法については、以下をお読みください [Seleniumの使用]({{< ref "using_selenium.md" >}})。

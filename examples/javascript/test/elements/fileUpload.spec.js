@@ -13,7 +13,7 @@ describe('File Upload Test', function() {
       .build();
   });
 
-  after(() => driver.quit());
+  after(async() => await driver.quit());
 
   it('Should be able to upload a file successfully', async function() {
     const image = path.resolve('./test/resources/selenium-snapshot.png')
