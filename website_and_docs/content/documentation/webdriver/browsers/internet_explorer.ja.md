@@ -1,9 +1,9 @@
 ---
-title: "IE specific functionality"
+title: "IE特有の機能"
 linkTitle: "Internet Explorer"
 weight: 8
 description: >-
-    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+    これらは、Microsoft Internet Explorerブラウザに特有の機能と機能です。
 aliases: [
 "/ja/documentation/capabilities/internet_explorer"
 ]

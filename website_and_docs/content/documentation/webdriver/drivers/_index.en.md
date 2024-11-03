@@ -65,7 +65,7 @@ and it is recommended to always use `quit` to end the session
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L13" >}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}

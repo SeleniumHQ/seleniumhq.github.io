@@ -1,6 +1,6 @@
 ---
-title: "Remote WebDriver"
-linkTitle: "Remote WebDriver"
+title: "リモートWebDriver"
+linkTitle: "リモートWebDriver"
 weight: 10
 aliases: [
 "/documentation/ja/remote_webdriver/",
@@ -10,18 +10,11 @@ aliases: [
 
 ---
 
-Selenium lets you automate browsers on remote computers if
-there is a [Selenium Grid]({{< ref "../../grid" >}}) running on them. The computer that
-executes the code is referred to as the client computer, and the computer with the browser and driver is 
-referred to as the remote computer or sometimes as an end-node.
-To direct Selenium tests to the remote computer, you need to use a Remote WebDriver class
-and pass the URL including the port of the grid on that machine. Please see the grid documentation
-for all the various ways the grid can be configured.
+Seleniumは、リモートコンピュータ上でブラウザを自動化することができます。これには、リモートコンピュータ上で [Selenium Grid]({{< ref "../../grid" >}}) が実行されている必要があります。コードを実行するコンピュータはクライアントコンピュータと呼ばれ、ブラウザとドライバーがあるコンピュータはリモートコンピュータまたは時々エンドノードと呼ばれます。Seleniumテストをリモートコンピュータに向けるには、Remote WebDriverクラスを使用し、そのマシンのグリッドのポートを含むURLを渡す必要があります。グリッドの設定方法については、グリッドのドキュメントを参照してください。 
 
-## Basic Example
+## 基本的な例
 
-The driver needs to know where to send commands to and which browser to start on the Remote computer. So an address
-and an options instance are both required.
+ドライバーは、コマンドを送信する場所と、リモートコンピュータ上で開始するブラウザを知る必要があります。そのため、アドレスとオプションインスタンスの両方が必要です。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -45,31 +38,25 @@ and an options instance are both required.
 {{< /tabpane >}}
 
 
-## Uploads
+## アップロード
 
-[Uploading a file]() is more complicated for Remote WebDriver sessions because the file you want to 
-upload is likely on the computer executing the code, but the driver on the
-remote computer is looking for the provided path on its local file system.
-The solution is to use a Local File Detector. When one is set, Selenium will bundle
-the file, and send it to the remote machine, so the driver can see the reference to it.
-Some bindings include a basic local file detector by default, and all of them allow 
-for a custom file detector.
+[ファイルのアップロード]() は、リモートWebDriverセッションではより複雑です。アップロードしたいファイルはコードを実行しているコンピュータ上にあることが多いですが、リモートコンピュータ上のドライバーはそのローカルファイルシステム上で指定されたパスを探しています。この解決策として、ローカルファイルディテクターを使用します。これを設定すると、Seleniumはファイルをパッケージ化し、リモートマシンに送信するため、ドライバーはその参照を認識できるようになります。一部のバインディングでは、デフォルトで基本的なローカルファイルディテクターが含まれており、すべてのバインディングでカスタムファイルディテクターを設定できます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-Java does not include a Local File Detector by default, so you must always add one to do uploads.
+Javaにはデフォルトでローカルファイルディテクターが含まれていないため、アップロードを行う際には必ず追加する必要があります。
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L49-L52" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-Python adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+Pythonでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のクラスを作成することも可能です。
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#LL29-L32" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-.NET adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+.NETでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のクラスを作成することも可能です。
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-Ruby adds a local file detector to remote webdriver instances by default, but you can also create your own lambda:
+Rubyでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のラムダを作成することも可能です。
 {{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
@@ -81,24 +68,20 @@ Ruby adds a local file detector to remote webdriver instances by default, but yo
 {{< /tabpane >}}
 
 
-## Downloads
+## ダウンロード
 
-Chrome, Edge and Firefox each allow you to set the location of the download directory.
-When you do this on a remote computer, though, the location is on the remote computer's local file system. 
-Selenium allows you to enable downloads to get these files onto the client computer.
+Chrome、Edge、およびFirefoxでは、それぞれダウンロードディレクトリの場所を設定できます。 ただし、リモートコンピュータでこれを行う場合、その場所はリモートコンピュータのローカルファイルシステム上にあります。Seleniumを使用すると、クライアントコンピュータにこれらのファイルをダウンロードできるように設定することが可能です。
 
-### Enable Downloads in the Grid
+### グリッドでのダウンロードを有効化
 
-Regardless of the client, when starting the grid in node or standalone mode, 
-you must add the flag: 
+クライアントに関係なく、ノードまたはスタンドアロンモードでグリッドを起動する際には、次のフラグを追加する必要があります:
 ```
 --enable-managed-downloads true
 ``` 
 
-### Enable Downloads in the Client
+### クライアントでのダウンロードを有効化
 
-The grid uses the `se:downloadsEnabled` capability to toggle whether to be responsible for managing the browser location.
-Each of the bindings have a method in the options class to set this.
+グリッドは、`se:downloadsEnabled` 機能を使用して、ブラウザの場所を管理する責任を持つかどうかを切り替えます。各バインディングには、これを設定するためのオプションクラスのメソッドがあります。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -121,10 +104,9 @@ Each of the bindings have a method in the options class to set this.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### List Downloadable Files
+### ダウンロード可能なファイルの一覧
 
-Be aware that Selenium is not waiting for files to finish downloading, 
-so the list is an immediate snapshot of what file names are currently in the directory for the given session.
+Seleniumはファイルのダウンロードが完了するのを待たないため、リストは指定されたセッションのディレクトリに現在存在するファイル名の即時スナップショットであることに注意してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -147,9 +129,9 @@ so the list is an immediate snapshot of what file names are currently in the dir
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Download a File
+### ファイルをダウンロード
 
-Selenium looks for the name of the provided file in the list and downloads it to the provided target directory.
+Seleniumは、提供されたファイルの名前をリストの中で探し、指定されたターゲットディレクトリにダウンロードします。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -172,10 +154,9 @@ Selenium looks for the name of the provided file in the list and downloads it to
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Delete Downloaded Files
+### ダウンロードしたファイルの削除
 
-By default, the download directory is deleted at the end of the applicable session,
-but you can also delete all files during the session.
+デフォルトでは、ダウンロードディレクトリは該当するセッションの終了時に削除されますが、セッション中にすべてのファイルを削除することもできます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -199,19 +180,16 @@ but you can also delete all files during the session.
 {{< /tabpane >}}
 
 
-## Browser specific functionalities
+## ブラウザ特有の機能
 
-Each [browser]({{< ref "../browsers/" >}}) has implemented special functionality that is available only to that browser.
-Each of the Selenium bindings has implemented a different way to use those features in a Remote Session
+各 [ブラウザ]({{< ref "../browsers/" >}}) は、そのブラウザにのみ利用可能な特別な機能を実装しています。各Seleniumバインディングは、リモートセッションでそれらの機能を使用するための異なる方法を実装しています。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-Java requires you to use the Augmenter class, which allows it to automatically pull in implementations for
-all interfaces that match the capabilities used with the RemoteWebDriver
+Javaでは、Augmenterクラスを使用する必要があります。これにより、RemoteWebDriverで使用される機能に一致するすべてのインターフェースの実装を自動的に取り込むことができます。
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L98" >}}
 
-Of interest, using the `RemoteWebDriverBuilder` automatically augments the driver, so it is a great way
-to get all the functionality by default:
+興味深いことに、RemoteWebDriverBuilderを使用すると、ドライバーが自動的に拡張されるため、デフォルトで全ての機能を取得するのに最適な方法です。
 
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L106-L111" >}}
 {{% /tab %}}
@@ -219,12 +197,12 @@ to get all the functionality by default:
 {{< badge-implementation >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-.NET uses a custom command executor for executing commands that are valid for the given browser in the remote driver.
+
+.NETでは、リモートドライバーで指定されたブラウザに対して有効なコマンドを実行するために、カスタムコマンドエグゼキュータを使用します。
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L96-L100" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-Ruby uses mixins to add applicable browser specific methods to the Remote WebDriver session; 
-the methods should always just work for you.
+Rubyでは、ミキシンを使用してリモートWebDriverセッションに適用可能なブラウザ特有のメソッドを追加します。これらのメソッドは常にそのまま機能するはずです。
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -290,7 +268,7 @@ driver.quit();
 詳細については、下記URLを参照してください。
 
 * OpenTelemetry: https://opentelemetry.io
-* Configuring OpenTelemetry:
+* OpenTelemetryの構成::
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid 可観測性]({{< ref "observability.md" >}}) 
