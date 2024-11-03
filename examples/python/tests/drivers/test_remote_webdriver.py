@@ -13,7 +13,7 @@ def test_start_remote(server):
     options = webdriver.ChromeOptions()
     driver = webdriver.Remote(command_executor=server, options=options)
 
-    assert "localhost" in driver.command_executor._url
+    assert "localhost" in driver.command_executor._client_config.remote_server_addr
     driver.quit()
 
 

@@ -24,15 +24,14 @@ Seleniumは可能な場合これらのサードパーティ製のdriverを使い
 
 Seleniumフレームワークはこれら全ての要素をユーザ向けのインターフェイスを通して結びつけます。このインターフェイスは異なるブラウザバックエンドを透過的に使えるようにし、クロスブラウザ・クロスプラットフォームの自動化を可能にします。
 
-Selenium setup is quite different from the setup of other commercial tools.
-Before you can start writing Selenium code, you have to 
-install the language bindings libraries for your language of choice, the browser you
-want to use, and the driver for that browser.
+Seleniumのセットアップは、他の商用ツールのセットアップとはかなり異なります。
+Seleniumコードの記述を開始する前に、次のことを行う必要があります
+選択した言語、つまりブラウザーの言語バインディングライブラリをインストールします
+使用したい、そのブラウザのドライバ。
 
-***Follow the links below to get up and going with Selenium WebDriver.***
+***以下のリンクをたどって、Selenium WebDriverを起動してください。***
 
-If you wish to start with a low-code/record and playback tool, please check
+ローコード/録音および再生ツールから始めたい場合は、確認してください
 [Selenium IDE](https://selenium.dev/selenium-ide)
 
-Once you get things working, if you want to scale up your tests, check out the 
-[Selenium Grid]({{< ref "/documentation/grid" >}}).
+物事がうまくいったら、テストをスケールアップしたい場合は、[Selenium Grid]({{< ref "/documentation/grid" >}}).
