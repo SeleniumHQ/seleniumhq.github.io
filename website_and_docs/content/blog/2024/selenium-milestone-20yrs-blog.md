@@ -42,3 +42,14 @@ Join Us in Celebrating Selenium’s Incredible Journey!
 For 20 years, Selenium has helped shape how we test, automate, and innovate on the web. This is your opportunity to celebrate that legacy and learn what the future holds for browser automation. We can’t wait to see you there!
 Event Organizers - **<a href="https://www.linkedin.com/in/maaret/" target="_blank">Maaret</a>**, **<a href="https://www.linkedin.com/in/diemol/" target="_blank">Diego</a>**, and **<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi</a>**. 
 
+## Watch the Recording of Our 20th Anniversary Event
+
+Couldn’t join us live? Watch the entire **"Celebrating 20 Years of Selenium"** 
+event on YouTube. Relive the milestone moments, hear directly from 
+the Selenium leadership team, and get insights into the future of browser automation.
+
+📹 Recording Link: [Watch the Event Recording on YouTube](https://www.youtube.com/watch?v=TO-ZCl2LZ50)
+
+This recording covers the highlights, including discussions on Selenium’s evolution, 
+its role in the testing ecosystem, and the exciting advancements in WebDriver BiDi.
+

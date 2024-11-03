@@ -1,5 +1,5 @@
 ---
-title: "BiDirectional functionality"
+title: "双方向機能"
 linkTitle: "BiDi"
 weight: 16
 aliases: [
