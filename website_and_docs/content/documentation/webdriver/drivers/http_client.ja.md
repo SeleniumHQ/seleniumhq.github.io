@@ -1,10 +1,10 @@
 ---
-title: "HTTP Client Configuration"
-linkTitle: "HTTP Client"
+title: "HTTPクライアントの設定"
+linkTitle: "HTTPクライアント"
 weight: 3
 ---
 
-These allow you to set various parameters for the HTTP library
+これにより、HTTPライブラリのさまざまなパラメーターを設定できます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

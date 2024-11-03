@@ -8,7 +8,7 @@ describe('Actions API - Pause and Release All Actions', function() {
     driver = await new Builder().forBrowser('chrome').build();
   })
 
-  after(() => driver.quit())
+  after(async () => await driver.quit())
 
   it('Pause', async function() {
     await driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
