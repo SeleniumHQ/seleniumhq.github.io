@@ -1,9 +1,9 @@
 ---
-title: "Safari specific functionality"
+title: "Safari特有の機能"
 linkTitle: "Safari"
 weight: 10
 description: >-
-    These are capabilities and features specific to Apple Safari browsers.
+    これらは、Apple Safariブラウザに特有の機能と機能です。
 aliases: [
 "/ja/documentation/capabilities/safari"
 ]

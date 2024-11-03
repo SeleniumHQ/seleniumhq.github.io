@@ -221,13 +221,14 @@ pull request updating this page.
 | `--register-cycle` | int | `10` | How often, in seconds, the Node will try to register itself for the first time to the Distributor. |
 | `--register-period` | int | `120` | How long, in seconds, will the Node try to register to the Distributor for the first time. After this period is completed, the Node will not attempt to register again. |
 | `--session-timeout` | int | `300` | Let X be the session-timeout in seconds. The Node will automatically kill a session that has not had any activity in the last X seconds. This will release the slot for other tests. |
-| `--vnc-env-var`| string | `START_XVFB` | Environment variable to check in order to determine if a vnc stream is available or not. |
+| `--vnc-env-var`| string[] | `SE_START_XVFB SE_START_VNC SE_START_NO_VNC` | Environment variable to check in order to determine if a vnc stream is available or not. |
 | `--no-vnc-port`| int | `7900` | If VNC is available, sets the port where the local noVNC stream can be obtained |
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
 | `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
 | `--enable-managed-downloads`| boolean | `false` | This causes the Node to auto manage files downloaded for a given session on the Node. |
 | `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
+| `--connection-limit-per-session` | int | `10` | Let X be the maximum number of websocket connections per session.This will ensure one session is not able to exhaust the connection limit of the host. |
 
 ### Relay
 

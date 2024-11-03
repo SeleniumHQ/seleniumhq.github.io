@@ -14,30 +14,29 @@ aliases: [
 最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
 インストールの方法は選択した言語によって異なります。
 
-## Requirements by language
+## 言語別の要件
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
-Installation of Selenium libraries for Java is accomplished using a build tool.
+Java用のSeleniumライブラリのインストールは、ビルドツールを使用して行います。
 
 ### Maven
-Specify the dependencies in the project's `pom.xml` file:
+プロジェクトの 'pom.xml' ファイルで依存関係を指定します:
 
 {{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
 
 ### Gradle
-Specify the dependency in the project `build.gradle` file as `testImplementation`:
+プロジェクトの 'build.gradle' ファイル内の依存関係を 'testImplementation' として指定します:
 
 {{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
-The minimum supported Python version for each Selenium version can be found
-in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+各 Selenium バージョンでサポートされている最小 Python バージョンについては、次の場所にあります `サポートされている Python バージョン` オン [PyPi](https://pypi.org/project/selenium/)。
 
-There are a couple different ways to install Selenium.
+Seleniumをインストールするには、いくつかの方法があります。
 
 ### Pip
 
@@ -46,29 +45,29 @@ pip install selenium
 ```
 <br>
 
-### Download
+### ダウンロード
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+または、ダウンロードすることもできます[PyPI ソースアーカイブ](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) を使用してインストールします _setup.py_
 
 ```shell
 python setup.py install
 ```
 <br>
 
-### Require in project
+### プロジェクトで必要
 
-To use it in a project, add it to the `requirements.txt` file:
+プロジェクトで使用するには、requirements.txt ファイルに追加します:
 {{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-A list of all supported frameworks for each version of Selenium 
-is available on [Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
+Seleniumの各バージョンでサポートされているすべてのフレームワークのリスト
+で利用可能です[Nuget](https://www.nuget.org/packages/Selenium.WebDriver)
 
-There are a few options for installing Selenium.
+Seleniumのインストールにはいくつかのオプションがあります。
 
-### Packet Manager
+### パケットマネージャー
 
 ```shell
 Install-Package Selenium.WebDriver
@@ -84,22 +83,21 @@ dotnet add package Selenium.WebDriver
 
 ### CSProj
 
-in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
+プロジェクトの `csproj`ファイルで、`ItemGroup` の `PackageReference`として依存関係を指定します。:
 
 {{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
-### Additional considerations
+### その他の考慮事項
 
-Further items of note for using Visual Studio Code (vscode) and C#
+その他、使用上の注意点 Visual Studio Code (vscode) そして C#
 
-Install the compatible .NET SDK as per the section above.
-Also install the vscode extensions (Ctrl-Shift-X) for C# and NuGet.
-Follow the [instruction here](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)
-to create and run the "Hello World" console project using C#.
-You may also create a NUnit starter project using the command line `dotnet new NUnit`.
-Make sure the file `%appdata%\NuGet\nuget.config` is configured properly as some developers reported that it will be empty due to some issues.
-If `nuget.config` is empty, or not configured properly, then .NET builds will fail for Selenium Projects.
-Add the following section to the file `nuget.config` if it is empty:
+上記のセクションに従って、互換性のある .NET SDK をインストールします。
+また、C# と NuGet の vscode 拡張機能 (Ctrl-Shift-X) もインストールします。に従ってください[指示はこちら](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-5-0)
+C# を使用して "Hello World" コンソール プロジェクトを作成および実行します。
+コマンドラインを使用してNUnitスタータープロジェクトを作成することもできます `dotnet new NUnit`.
+ファイルを確認してください `%appdata%\NuGet\nuget.config`一部の開発者がいくつかの問題のために空になると報告したため、適切に構成されています。
+もし`nuget.config`が空であるか、正しく構成されていない場合、Selenium プロジェクトの .NET ビルドは失敗します。
+次のセクションをファイルに追加します`nuget.config` 空の場合:
 ```
 <configuration>
   <packageSources>
@@ -108,56 +106,55 @@ Add the following section to the file `nuget.config` if it is empty:
   </packageSources>
 ...
 ```
-For more info about `nuget.config` [click here](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
-You may have to customize `nuget.config` to meet you needs.
+詳細については、`nuget.config` [ここをクリック](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file).
+カスタマイズする必要があるかもしれません `nuget.config` あなたのニーズを満たすために。
 
-Now, go back to vscode, press Ctrl-Shift-P, and type "NuGet Add Package", and enter the required Selenium packages such as `Selenium.WebDriver`.
-Press Enter and select the version.
-Now you can use the examples in the documentation related to C# with vscode.
+さて、戻ってください vscode、プレス Ctrl-Shift-P、およびタイプ "NuGet Add Package"をクリックし、必要な Selenium パッケージ `Selenium.WebDriver`.
+Enter キーを押して、バージョンを選択します。
+これで、C# と vscode に関連するドキュメントの例を使用できるようになりました。
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-You can see the minimum required version of Ruby for any given Selenium version 
-on [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+特定の Selenium バージョンに対して最低限必要な Ruby のバージョンを確認できます
+オン [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
 
-Selenium can be installed two different ways.
+Seleniumは2つの異なる方法でインストールできます。
 
-### Install manually
+### 手動でインストールする
 
 ```shell
 gem install selenium-webdriver
 ```
 <br>
 
-### Add to project's gemfile
+### プロジェクトの gemfile に追加
 
 {{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-You can find the minimum required version of Node for any given version of Selenium in the
-`Node Support Policy` section on [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+Seleniumの特定のバージョンに最低限必要なNodeのバージョンは、`Node Support Policy` 節 オン [npmjs](https://www.npmjs.com/package/selenium-webdriver)
 
-Selenium is typically installed using npm.
+Seleniumは通常、npmを使用してインストールされます。
 
-### Install locally
+### ローカルにインストールする
 
 ```shell
 npm install selenium-webdriver
 ```
 <br>
 
-### Add to project
+### プロジェクトに加える
 
-In your project's `package.json`, add requirement to `dependencies`:
+プロジェクトの `package.json`で、要件を `dependencies`:
 
 {{< gh-codeblock path="examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-    Use the Java bindings for Kotlin.
+    Kotlin の Java バインディングを使用します。
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Next Step
-[Create your first Selenium script]({{< ref "first_script.md" >}})
+## 次のステップ
+[初めてのSeleniumスクリプトを作成する]({{< ref "first_script.md" >}})
