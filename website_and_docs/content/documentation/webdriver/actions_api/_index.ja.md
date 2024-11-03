@@ -1,9 +1,9 @@
 ---
-title: "Actions API"
-linkTitle: "Actions API"
+title: "アクション API"
+linkTitle: "アクション API"
 weight: 14
 description: >
-    A low-level interface for providing virtualized device input actions to the web browser.
+    仮想化されたデバイス入力アクションを Web ブラウザーに提供するための低レベルのインターフェイス。
 ---
 
 In addition to the high-level [element interactions]({{< ref "/documentation/webdriver/elements/interactions.md" >}}), 

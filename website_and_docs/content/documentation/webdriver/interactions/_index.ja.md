@@ -1,5 +1,5 @@
 ---
-title: "Browser interactions"
+title: "ブラウザのインタラクション"
 linkTitle: "Interactions"
 weight: 10
 aliases: [

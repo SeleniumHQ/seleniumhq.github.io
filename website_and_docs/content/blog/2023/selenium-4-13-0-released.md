@@ -75,7 +75,6 @@ Please upgrade to at least Java 11.
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/JefferyVin" >}} 
 {{< gh-user "https://api.github.com/users/KrishnaSuravarapu" >}}
-{{< gh-user "https://api.github.com/users/RevealOscar" >}}
 {{< gh-user "https://api.github.com/users/Sean-Gomez" >}}
 {{< gh-user "https://api.github.com/users/manuelsblanco" >}}
 {{< gh-user "https://api.github.com/users/mdmintz" >}}
