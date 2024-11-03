@@ -39,7 +39,7 @@ describe('Virtual authenticator', function() {
     driver = await new Builder().forBrowser('chrome').build();
   });
 
-  after(() => driver.quit());
+  after(async() => await driver.quit());
 
   function arraysEqual(array1, array2) {
     return (array1.length === array2.length &&
@@ -187,7 +187,7 @@ describe('Virtual authenticator', function() {
       0);
 
     await driver.addCredential(nonResidentCredential);
-    driver.removeAllCredentials();
+    await driver.removeAllCredentials();
 
     let credentialList = await driver.getCredentials();
     assert.equal(0, credentialList.length);
