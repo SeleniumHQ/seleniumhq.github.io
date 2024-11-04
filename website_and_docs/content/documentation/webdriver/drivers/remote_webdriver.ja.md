@@ -141,7 +141,7 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 {{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L58" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L78" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L79" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
