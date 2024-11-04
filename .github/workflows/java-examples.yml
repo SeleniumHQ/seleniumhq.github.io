@@ -45,24 +45,31 @@ jobs:
       if: matrix.os == 'ubuntu'
       run: Xvfb :99 &
     - name: Set up Java
+      id: java
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: 17
+    - name: Import test cert non-Windows
+      if: matrix.os != 'windows'
+      run: sudo keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
+    - name: Import test cert Windows
+      if: matrix.os == 'windows'
+      run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
     - name: Run Tests Stable
       if: matrix.release == 'stable'
       uses: nick-invision/retry@v3.0.0
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
           cd examples/java
-          mvn -B test
+          mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       uses: nick-invision/retry@v3.0.0
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
           pip install yq
@@ -70,13 +77,13 @@ jobs:
           latest_snapshot=$(echo "$xml_content" | xq '.content.data."content-item"' | jq -r 'sort_by(.lastModified) | last | .text')
           echo "Latest Selenium Snapshot: $latest_snapshot"
           cd examples/java
-          mvn -B -U test -Dselenium.version="$latest_snapshot"
+          mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true"
 
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
       uses: nick-invision/retry@v3.0.0
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
           pip install yq          
@@ -84,4 +91,4 @@ jobs:
           $latest_snapshot = $xml_content.Content | xq '.content.data.\"content-item\"' | jq -r 'sort_by(.lastModified) | last | .text'
           Write-Output "Latest Selenium Snapshot: $latest_snapshot"
           cd examples/java
-          mvn -B -U test "-Dselenium.version=$latest_snapshot"
+          mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true"

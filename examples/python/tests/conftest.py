@@ -7,6 +7,8 @@ import time
 from selenium.webdriver.common.utils import free_port
 from datetime import datetime
 from urllib.request import urlopen
+import requests
+from requests.auth import HTTPBasicAuth
 
 import pytest
 from selenium import webdriver
@@ -230,6 +232,91 @@ def server():
         raise RuntimeError(f"Selenium server did not start within the allotted time.")
 
     yield f"http://{_host}:{_port}"
+
+    process.terminate()
+    try:
+        process.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        process.kill()
+
+
+def _get_resource_path(file_name: str):
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath(f"resources/{file_name}")
+    else:
+        path = os.path.join(
+                os.path.dirname(
+                    os.path.dirname(
+                        os.path.abspath(__file__)
+                    )
+            ),
+            f"tests/resources/{file_name}",
+        )
+    return path
+
+
+@pytest.fixture(scope="function")
+def grid_server():
+    _host = "localhost"
+    _port = free_port()
+    _username = "admin"
+    _password = "myStrongPassword"
+    _path_cert = _get_resource_path("tls.crt")
+    _path_key = _get_resource_path("tls.key")
+    _path_jks = _get_resource_path("server.jks")
+    _truststore_pass = "seleniumkeystore"
+    _path = os.path.join(
+        os.path.dirname(
+            os.path.dirname(
+                os.path.dirname(
+                    os.path.abspath(__file__)
+                )
+            )
+        ),
+        "selenium-server-4.26.0.jar",
+    )
+
+    args = [
+        "java",
+        f"-Djavax.net.ssl.trustStore={_path_jks}",
+        f"-Djavax.net.ssl.trustStorePassword={_truststore_pass}",
+        "-Djdk.internal.httpclient.disableHostnameVerification=true",
+        "-jar",
+        _path,
+        "standalone",
+        "--port",
+        str(_port),
+        "--selenium-manager",
+        "true",
+        "--enable-managed-downloads",
+        "true",
+        "--username",
+        _username,
+        "--password",
+        _password,
+        "--https-certificate",
+        _path_cert,
+        "--https-private-key",
+        _path_key,
+    ]
+
+    process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    def wait_for_server(url, timeout=60):
+        start = time.time()
+        while time.time() - start < timeout:
+            try:
+                requests.get(url, verify=_path_cert, auth=HTTPBasicAuth(_username, _password))
+                return True
+            except OSError as e:
+                print(e)
+                time.sleep(0.2)
+        return False
+
+    if not wait_for_server(f"https://{_host}:{_port}/status"):
+        raise RuntimeError(f"Selenium server did not start within the allotted time.")
+
+    yield f"https://{_host}:{_port}"
 
     process.terminate()
     try:

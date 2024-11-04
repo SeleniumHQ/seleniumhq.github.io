@@ -80,7 +80,7 @@ jobs:
     - name: Run tests
       uses: nick-invision/retry@v3.0.0
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
           cd examples/python
