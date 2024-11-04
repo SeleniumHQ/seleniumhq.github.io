@@ -48,13 +48,24 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: 3.8
-    - name: Install dependencies nightly
-      if: matrix.release == 'nightly'
-      working-directory: ./examples/python
+    - name: Install dependencies nightly non-Windows
+      if: matrix.release == 'nightly' && matrix.os != 'windows'
       run: |
+        pip install -r ./scripts/requirements.txt
+        latest_nightly_python=$(python ./scripts/latest-python-nightly-version.py)
+        cd examples/python
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple --force-reinstall -v selenium
+        pip install --index-url https://test.pypi.org/simple/ selenium==$latest_nightly_python --extra-index-url https://pypi.org/simple/ --upgrade --force-reinstall --break-system-packages
+    - name: Install dependencies nightly Windows
+      if: matrix.release == 'nightly' && matrix.os == 'windows'
+      run: |
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly_python = python ./scripts/latest-python-nightly-version.py
+        cd examples/python
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install --index-url https://test.pypi.org/simple/ selenium==$latest_nightly_python --extra-index-url https://pypi.org/simple/ --upgrade --force-reinstall --break-system-packages
     - name: Install dependencies stable
       if: matrix.release == 'stable'
       working-directory: ./examples/python

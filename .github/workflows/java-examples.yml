@@ -48,7 +48,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: 11
+        java-version: 17
     - name: Run Tests Stable
       if: matrix.release == 'stable'
       uses: nick-invision/retry@v3.0.0
