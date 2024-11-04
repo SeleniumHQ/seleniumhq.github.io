@@ -10,18 +10,20 @@ aliases: [
 
 ---
 
-Selenium lets you automate browsers on remote computers if
-there is a [Selenium Grid]({{< ref "../../grid" >}}) running on them. The computer that
-executes the code is referred to as the client computer, and the computer with the browser and driver is 
-referred to as the remote computer or sometimes as an end-node.
-To direct Selenium tests to the remote computer, you need to use a Remote WebDriver class
-and pass the URL including the port of the grid on that machine. Please see the grid documentation
-for all the various ways the grid can be configured.
+如果远程计算机上正在运行 [Selenium Grid]({{< ref "../../grid" >}}), 
+则 Selenium 允许您自动化远程计算机上的浏览器.
+执行代码的计算机称为客户端计算机, 
+具有浏览器和驱动程序的计算机称为远程计算机, 
+有时也称为终端节点.
+要将 Selenium 测试指向到远程计算机, 
+您需要使用 Remote WebDriver 类并传递包含该机器上网格端口的URL.
+请参阅网格文档, 了解配置网格的全部方式.
 
-## Basic Example
+## 基本样例
 
-The driver needs to know where to send commands to and which browser to start on the Remote computer. So an address
-and an options instance are both required.
+驱动程序需要知道在远程计算机上向何处发送命令, 
+以及启动哪个浏览器.
+所以地址和选项实例都是必需的.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -45,15 +47,16 @@ and an options instance are both required.
 {{< /tabpane >}}
 
 
-## Uploads
+## 上传
 
-[Uploading a file]() is more complicated for Remote WebDriver sessions because the file you want to 
-upload is likely on the computer executing the code, but the driver on the
-remote computer is looking for the provided path on its local file system.
-The solution is to use a Local File Detector. When one is set, Selenium will bundle
-the file, and send it to the remote machine, so the driver can see the reference to it.
-Some bindings include a basic local file detector by default, and all of them allow 
-for a custom file detector.
+对于远程WebDriver会话, [上传文件]({{< ref "../elements/file_upload" >}}) 更为复杂, 
+因为要上传的文件可能在执行代码的计算机上, 
+但远程计算机上的驱动程序正在其本地文件系统上查找提供的路径.
+解决方案是使用本地文件检测器.
+设置一个后, Selenium将捆绑文件, 
+并将其发送到远程计算机, 以便驱动程序可以看到对它的引用.
+默认情况下, 某些实现包含一个基本的本地文件检测器, 
+并且所有这些实现都允许自定义文件检测器.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -81,24 +84,24 @@ Ruby adds a local file detector to remote webdriver instances by default, but yo
 {{< /tabpane >}}
 
 
-## Downloads
+## 下载
 
-Chrome, Edge and Firefox each allow you to set the location of the download directory.
-When you do this on a remote computer, though, the location is on the remote computer's local file system. 
-Selenium allows you to enable downloads to get these files onto the client computer.
+Chrome、Edge和Firefox都允许您设置下载目录的位置.
+但是, 当您在远程计算机上执行此操作时, 位置在远程计算机的本地文件系统上.
+Selenium允许您启用下载功能, 将这些文件下载到客户端计算机上.
 
-### Enable Downloads in the Grid
+### 在网格中启用下载
 
-Regardless of the client, when starting the grid in node or standalone mode, 
-you must add the flag: 
+当以节点或独立模式启动网格时, 
+你必须添加参数: 
 ```
 --enable-managed-downloads true
 ``` 
 
-### Enable Downloads in the Client
+### 在客户端中启用下载
 
-The grid uses the `se:downloadsEnabled` capability to toggle whether to be responsible for managing the browser location.
-Each of the bindings have a method in the options class to set this.
+网格使用 `se:downloadsEnabled` 功能来切换是否负责管理浏览器位置.
+每个实现在options类中都有一个方法来设置.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -121,10 +124,10 @@ Each of the bindings have a method in the options class to set this.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### List Downloadable Files
+### 列出可下载文件
 
-Be aware that Selenium is not waiting for files to finish downloading, 
-so the list is an immediate snapshot of what file names are currently in the directory for the given session.
+请注意, Selenium不会等待文件下载完成, 
+因此, 该列表是给定会话目录中当前文件名的即时快照.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -147,9 +150,10 @@ so the list is an immediate snapshot of what file names are currently in the dir
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Download a File
+### 下载文件
 
-Selenium looks for the name of the provided file in the list and downloads it to the provided target directory.
+Selenium在列表中查找提供的文件的名称, 
+并将其下载到提供的目标目录.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -172,10 +176,10 @@ Selenium looks for the name of the provided file in the list and downloads it to
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Delete Downloaded Files
+### 删除已下载的文件
 
-By default, the download directory is deleted at the end of the applicable session,
-but you can also delete all files during the session.
+默认情况下, 下载目录在可用会话结束时被删除, 
+但您也可以在会话期间删除所有文件.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -199,10 +203,10 @@ but you can also delete all files during the session.
 {{< /tabpane >}}
 
 
-## Browser specific functionalities
+## 浏览器特定功能
 
-Each [browser]({{< ref "../browsers/" >}}) has implemented special functionality that is available only to that browser.
-Each of the Selenium bindings has implemented a different way to use those features in a Remote Session
+每个[浏览器]({{< ref "../browsers/" >}}) 都实现了仅对该浏览器可用的特殊功能.
+每种Selenium实现都实现了在远程会话中使用这些功能的不同方式
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
