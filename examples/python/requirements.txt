@@ -3,3 +3,4 @@ pytest
 trio
 pytest-trio
 flake8
+requests
