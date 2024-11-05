@@ -1,17 +1,19 @@
+import pytest
 from time import sleep
-
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.mouse_button import MouseButton
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_click_and_hold(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     clickable = driver.find_element(By.ID, "clickable")
-    ActionChains(driver)\
-        .click_and_hold(clickable)\
+    ActionChains(driver) \
+        .click_and_hold(clickable) \
         .perform()
 
     sleep(0.5)
@@ -22,8 +24,8 @@ def test_click_and_release(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     clickable = driver.find_element(By.ID, "click")
-    ActionChains(driver)\
-        .click(clickable)\
+    ActionChains(driver) \
+        .click(clickable) \
         .perform()
 
     assert "resultPage.html" in driver.current_url
@@ -33,8 +35,8 @@ def test_right_click(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     clickable = driver.find_element(By.ID, "clickable")
-    ActionChains(driver)\
-        .context_click(clickable)\
+    ActionChains(driver) \
+        .context_click(clickable) \
         .perform()
 
     sleep(0.5)
@@ -72,8 +74,8 @@ def test_double_click(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     clickable = driver.find_element(By.ID, "clickable")
-    ActionChains(driver)\
-        .double_click(clickable)\
+    ActionChains(driver) \
+        .double_click(clickable) \
         .perform()
 
     assert driver.find_element(By.ID, "click-status").text == "double-clicked"
@@ -83,8 +85,8 @@ def test_hover(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     hoverable = driver.find_element(By.ID, "hover")
-    ActionChains(driver)\
-        .move_to_element(hoverable)\
+    ActionChains(driver) \
+        .move_to_element(hoverable) \
         .perform()
 
     assert driver.find_element(By.ID, "move-status").text == "hovered"
@@ -94,8 +96,8 @@ def test_move_by_offset_from_element(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
 
     mouse_tracker = driver.find_element(By.ID, "mouse-tracker")
-    ActionChains(driver)\
-        .move_to_element_with_offset(mouse_tracker, 8, 0)\
+    ActionChains(driver) \
+        .move_to_element_with_offset(mouse_tracker, 8, 0) \
         .perform()
 
     coordinates = driver.find_element(By.ID, "relative-location").text.split(", ")
@@ -104,7 +106,7 @@ def test_move_by_offset_from_element(driver):
 
 def test_move_by_offset_from_viewport_origin_ab(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
-
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "absolute-location")))
     action = ActionBuilder(driver)
     action.pointer_action.move_to_location(8, 0)
     action.perform()
@@ -121,8 +123,8 @@ def test_move_by_offset_from_current_pointer_ab(driver):
     action.pointer_action.move_to_location(6, 3)
     action.perform()
 
-    ActionChains(driver)\
-        .move_by_offset( 13, 15)\
+    ActionChains(driver) \
+        .move_by_offset(13, 15) \
         .perform()
 
     coordinates = driver.find_element(By.ID, "absolute-location").text.split(", ")
@@ -136,8 +138,8 @@ def test_drag_and_drop_onto_element(driver):
 
     draggable = driver.find_element(By.ID, "draggable")
     droppable = driver.find_element(By.ID, "droppable")
-    ActionChains(driver)\
-        .drag_and_drop(draggable, droppable)\
+    ActionChains(driver) \
+        .drag_and_drop(draggable, droppable) \
         .perform()
 
     assert driver.find_element(By.ID, "drop-status").text == "dropped"
@@ -149,15 +151,8 @@ def test_drag_and_drop_by_offset(driver):
     draggable = driver.find_element(By.ID, "draggable")
     start = draggable.location
     finish = driver.find_element(By.ID, "droppable").location
-    ActionChains(driver)\
-        .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y'])\
+    ActionChains(driver) \
+        .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y']) \
         .perform()
 
     assert driver.find_element(By.ID, "drop-status").text == "dropped"
-
-
-
-
-
-
-
