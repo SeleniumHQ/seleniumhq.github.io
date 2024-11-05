@@ -159,6 +159,12 @@ BiDi, and exciting prospects for the future. If you’d like to learn more about
 incredible journey and future plans, head to the official blog post 
 [here](https://www.selenium.dev/blog/2024/selenium-milestone-20yrs-blog/).
 
+Special thanks to the Selenium community for your continued support and contributions, to
+the entire Selenium team for their dedication and hard work, 
+and to [Pallavi Sharma](https://www.linkedin.com/in/pallavimuse/) and 
+[Maaret Pyhäjärvi](https://www.linkedin.com/in/maaret/) for organizing and leading this event.
+
+
 
 Stay tuned for updates by following SeleniumHQ on [X (Formerly Twitter)](https://twitter.com/seleniumhq) or [LinkedIn](https://www.linkedin.com/company/selenium/)!
 
