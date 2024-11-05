@@ -46,7 +46,7 @@ the most important updates:
   <br>
 
 ### Python
-- Added more internal logging for CDP, and configured WebDriver HTTP client settings for enhanced performance ([#14668](https://github.com/SeleniumHQ/selenium/pull/14668), [#13286](https://github.com/SeleniumHQ/selenium/pull/13286)).
+- Added more internal logging for CDP, and configured WebDriver HTTP client settings for enhanced performance ([#14668](https://github.com/SeleniumHQ/selenium/pull/14668), [#13286](https://github.com/SeleniumHQ/selenium/pull/13286)). Explore the various configuration parameters for the [WebDriver HTTP client](https://www.selenium.dev/documentation/webdriver/drivers/http_client/).
 - Removed deprecated EdgeService parameters and eliminated Python 2.x code from various test files ([#14563](https://github.com/SeleniumHQ/selenium/pull/14563), [#14502](https://github.com/SeleniumHQ/selenium/pull/14502)).
 - Set consistent polling for `WebDriverWait` methods to align behavior between Java and Python implementations ([#14626](https://github.com/SeleniumHQ/selenium/pull/14626)).
 - Improves binding extensibility for seamless integration of Selenium into Appium's Python client. ([#14587](https://github.com/SeleniumHQ/selenium/pull/14587)).
@@ -69,6 +69,15 @@ the most important updates:
 - New Grid UI features for sorting and WebSocket management, adding clarity and control to session management ([#14571](https://github.com/SeleniumHQ/selenium/pull/14571)).
 - Enabled async requests in `httpclient` to enhance request handling performance ([#14409](https://github.com/SeleniumHQ/selenium/pull/14409)).
 - Improved node handling for better scalability and stability ([#14628](https://github.com/SeleniumHQ/selenium/pull/14628)).
+
+  <br>
+
+### Docker Selenium
+- Updated FFmpeg v7.1 in video recorder ([#2439](https://github.com/SeleniumHQ/docker-selenium/pull/2439)).
+- Updated in Helm chart for Selenium Grid deployment to Kubernetes
+  - Add GraphQL metrics exporter for monitoring ([#2425](https://github.com/SeleniumHQ/docker-selenium/pull/2425)).
+  - Add templates for Relay node ([#2453](https://github.com/SeleniumHQ/docker-selenium/pull/2453)).
+  - Allow to overwrite config videoRecorder in each node ([#2445](https://github.com/SeleniumHQ/docker-selenium/pull/2445)).
 
   <br>
 
