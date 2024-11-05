@@ -49,6 +49,7 @@ the most important updates:
 - Added more internal logging for CDP, and configured WebDriver HTTP client settings for enhanced performance ([#14668](https://github.com/SeleniumHQ/selenium/pull/14668), [#13286](https://github.com/SeleniumHQ/selenium/pull/13286)).
 - Removed deprecated EdgeService parameters and eliminated Python 2.x code from various test files ([#14563](https://github.com/SeleniumHQ/selenium/pull/14563), [#14502](https://github.com/SeleniumHQ/selenium/pull/14502)).
 - Set consistent polling for `WebDriverWait` methods to align behavior between Java and Python implementations ([#14626](https://github.com/SeleniumHQ/selenium/pull/14626)).
+- Improves binding extensibility for seamless integration of Selenium into Appium's Python client. ([#14587](https://github.com/SeleniumHQ/selenium/pull/14587)).
 
   <br>
 
