@@ -26,23 +26,8 @@ uma alternativa é encontrar uma página menor no site (normalmente a página 40
 por exemplo http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class addCookie {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-
-            // Adds the cookie into current browser context
-            driver.manage().addCookie(new Cookie("key", "value"));
-        } finally {
-            driver.quit();
-        }
-    }
-}
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium import webdriver
@@ -114,25 +99,8 @@ fun main() {
 Retorna os dados do cookie serializado correspondentes ao nome do cookie entre todos os cookies associados.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class getCookieNamed {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("foo", "bar"));
-
-            // Get cookie details with named cookie 'foo'
-            Cookie cookie1 = driver.manage().getCookieNamed("foo");
-            System.out.println(cookie1);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+     {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
  {{< tab header="Python" >}}
 from selenium import webdriver
@@ -214,28 +182,8 @@ Retorna 'dados de cookie serializados com sucesso' para o contexto de navegaçã
 Se o navegador não estiver mais disponível, ele retornará um erro. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.Set;
-
-public class getAllCookies {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            // Add few cookies
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            driver.manage().addCookie(new Cookie("test2", "cookie2"));
-
-            // Get All available cookies
-            Set<Cookie> cookies = driver.manage().getCookies();
-            System.out.println(cookies);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+          {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
  {{< tab header="Python" >}}
 from selenium import webdriver
@@ -319,32 +267,8 @@ fun main() {
 Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class deleteCookie {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            Cookie cookie1 = new Cookie("test2", "cookie2");
-            driver.manage().addCookie(cookie1);
-
-            // delete a cookie with name 'test1'
-            driver.manage().deleteCookieNamed("test1");
-
-            /*
-             Selenium Java bindings also provides a way to delete
-             cookie by passing cookie object of current browsing context
-             */
-            driver.manage().deleteCookie(cookie1);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+            {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
  {{< tab header="Python" >}}
 from selenium import webdriver
@@ -434,25 +358,8 @@ fun main() {
 Exclui todos os cookies do contexto de navegação atual.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class deleteAllCookies {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            driver.manage().addCookie(new Cookie("test2", "cookie2"));
-
-            // deletes all cookies
-            driver.manage().deleteAllCookies();
-        } finally {
-            driver.quit();
-        }
-    }
-}
+                  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
  {{< tab header="Python" >}}
 from selenium import webdriver
