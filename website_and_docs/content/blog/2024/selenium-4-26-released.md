@@ -67,7 +67,7 @@ the most important updates:
   <br>
 
 ### Selenium Grid
-- New Grid UI features for sorting and WebSocket management, adding clarity and control to session management ([#14571](https://github.com/SeleniumHQ/selenium/pull/14571)).
+- New Grid UI features for sorting and WebSocket management, adding clarity and control to session management ([#14571](https://github.com/SeleniumHQ/selenium/pull/14571), [#14598](https://github.com/SeleniumHQ/selenium/pull/14598), [#14599](https://github.com/SeleniumHQ/selenium/pull/14599)).
 - Enabled async requests in `httpclient` to enhance request handling performance ([#14409](https://github.com/SeleniumHQ/selenium/pull/14409)).
 - Improved node handling for better scalability and stability ([#14628](https://github.com/SeleniumHQ/selenium/pull/14628)).
 
