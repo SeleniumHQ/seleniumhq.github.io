@@ -129,3 +129,15 @@ def test_install_unsigned_addon_directory_slash(firefox_driver, addon_path_dir_s
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
 
     assert injected.text == "Content injected by webextensions-selenium-example"
+
+
+def test_full_page_screenshot(firefox_driver):
+    driver = firefox_driver
+
+    driver.get("https://www.selenium.dev")
+
+    driver.save_full_page_screenshot("full_page_screenshot.png")
+
+    assert os.path.exists("full_page_screenshot.png")
+
+    driver.quit()
