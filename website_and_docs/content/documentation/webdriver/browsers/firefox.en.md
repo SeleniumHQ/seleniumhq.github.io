@@ -417,7 +417,7 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L140" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L139" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
