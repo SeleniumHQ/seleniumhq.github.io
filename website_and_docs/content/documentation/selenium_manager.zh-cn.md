@@ -141,6 +141,13 @@ In addition to the configuration keys specified in the table before, there are s
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
+### se-config.toml Example
+{{< tabpane text=true >}}
+{{< tab header="se-config.toml" >}}
+{{< gh-codeblock path="examples/python/tests/selenium_manager/example_se-config.toml#L1-L21" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
 
