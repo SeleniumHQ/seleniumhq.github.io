@@ -158,7 +158,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< /tabpane >}}
 
 ### 缩放至合适大小
-通过 `getBackground()` 和 `setBackground()` 方法，可以获取/设置页面是否会根据页面内容缩小，其为布尔值 `true` 或 `false`。
+通过 `getShrinkToFit()` 和 `setShrinkToFit()` 方法，可以获取/设置页面是否会根据页面内容缩小，其为布尔值 `true` 或 `false`。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
