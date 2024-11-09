@@ -9,14 +9,14 @@ from selenium.webdriver.remote.client_config import ClientConfig
 
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
-@pytest.mark.sanity
 def test_start_remote_with_client_config(grid_server):
     proxy = Proxy({"proxyType": ProxyType.AUTODETECT})
     retries = Retry(connect=2, read=2, redirect=2)
     timeout = Timeout(connect=300, read=3600)
     client_config = ClientConfig(remote_server_addr=grid_server,
                                  proxy=proxy,
-                                 init_args_for_pool_manager={"retries": retries, "timeout": timeout},
+                                 init_args_for_pool_manager={
+                                     "init_args_for_pool_manager": {"retries": retries, "timeout": timeout}},
                                  ca_certs=_get_resource_path("tls.crt"),
                                  username="admin", password="myStrongPassword")
     options = webdriver.ChromeOptions()
@@ -26,7 +26,6 @@ def test_start_remote_with_client_config(grid_server):
 
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
-@pytest.mark.sanity
 def test_start_remote_ignore_certs(grid_server):
     proxy = Proxy({"proxyType": ProxyType.AUTODETECT})
     client_config = ClientConfig(remote_server_addr=grid_server,

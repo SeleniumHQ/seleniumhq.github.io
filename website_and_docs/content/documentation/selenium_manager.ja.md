@@ -141,6 +141,13 @@ In addition to the configuration keys specified in the table before, there are s
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
+### se-config.toml Example
+{{< tabpane text=true >}}
+{{< tab header="se-config.toml" >}}
+{{< gh-codeblock path="examples/python/tests/selenium_manager/example_se-config.toml#L1-L21" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
 
@@ -344,6 +351,18 @@ The following bindings allow you to specify the driver path using an environment
 * Java
 
 This feature is available in the Selenium Ruby binding starting from version 4.25.0.
+
+## Building a Custom Selenium Manager
+In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
+utilize the following steps:
+
+1. Install Rust Dev Environment
+2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
+3. Navigate into your clone `cd selenium/rust`
+4. Build selenium `cargo build --release`
+5. Set the following environment variable for the driver path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+6. Put the driver you want in a location on your system PATH
+7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).
