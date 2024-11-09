@@ -111,7 +111,7 @@ namespace SeleniumDocs.BiDi.CDP
             var session = ((IDevTools)driver).GetDevToolsSession();
             var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V130.DevToolsSessionDomains>();
 
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V13.Performance.EnableCommandSettings());
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V130.Performance.EnableCommandSettings());
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
                     new GetMetricsCommandSettings()

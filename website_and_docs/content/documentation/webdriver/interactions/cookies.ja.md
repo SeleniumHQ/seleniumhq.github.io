@@ -37,26 +37,8 @@ driver.get("http://www.example.com")
 # Adds the cookie into current browser context
 driver.add_cookie({"name": "key", "value": "value"})
   {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace AddCookie {
- class AddCookie {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-
-    // Adds the cookie into current browser context
-    driver.Manage().Cookies.AddCookie(new Cookie("key", "value"));
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -114,28 +96,8 @@ driver.add_cookie({"name": "foo", "value": "bar"})
 # Get cookie details with named cookie 'foo'
 print(driver.get_cookie("foo"))
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace GetCookieNamed {
- class GetCookieNamed {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("foo", "bar"));
-
-    // Get cookie details with named cookie 'foo'
-    var cookie = driver.Manage().Cookies.GetCookieNamed("foo");
-    System.Console.WriteLine(cookie);
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+    {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -197,28 +159,8 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Get all available cookies
 print(driver.get_cookies())
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace GetAllCookies {
- class GetAllCookies {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
-
-    // Get All available cookies
-    var cookies = driver.Manage().Cookies.AllCookies;
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -280,33 +222,8 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 # Delete a cookie with name 'test1'
 driver.delete_cookie("test1")
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace DeleteCookie {
- class DeleteCookie {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    var cookie = new Cookie("test2", "cookie2");
-    driver.Manage().Cookies.AddCookie(cookie);
-
-    // delete a cookie with name 'test1'	
-    driver.Manage().Cookies.DeleteCookieNamed("test1");
-
-    // Selenium .net bindings also provides a way to delete
-    // cookie by passing cookie object of current browsing context
-    driver.Manage().Cookies.DeleteCookie(cookie);
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+            {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -371,28 +288,8 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 #  Deletes all cookies
 driver.delete_all_cookies()
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace DeleteAllCookies {
- class DeleteAllCookies {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
-
-    // deletes all cookies
-    driver.Manage().Cookies.DeleteAllCookies();
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+ {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'

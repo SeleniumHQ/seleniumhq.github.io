@@ -36,7 +36,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 # Get boolean value for is element display
 is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -75,7 +75,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns true if element is enabled else returns false
 value = driver.find_element(By.NAME, 'button_input').is_enabled()
   {{< /tab >}}
- {{< tab header="CSharp"  >}}
+ {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -113,7 +113,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns true if element is checked else returns false
 value = driver.find_element(By.NAME, "checkbox_input").is_selected()
   {{< /tab >}}
- {{< tab header="CSharp"  >}}
+ {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -147,7 +147,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns TagName of the element
 attr = driver.find_element(By.NAME, "email_input").tag_name
   {{< /tab >}}
-     {{< tab header="CSharp" >}}
+     {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L38" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -187,7 +187,7 @@ driver.get("https://www.selenium.dev/selenium/web/inputs.html")
     # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(By.NAME, "range_input").rect
   {{< /tab >}}
-       {{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L47" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -225,7 +225,7 @@ driver.get('https://www.selenium.dev/selenium/web/colorPage.html')
     # Retrieves the computed style property 'color' of linktext
 cssValue = driver.find_element(By.ID, "namedColor").value_of_css_property('background-color')
 {{< /tab >}}
-    {{< tab header="CSharp"  >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L51" >}}
 {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
@@ -260,7 +260,7 @@ driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
     # Retrieves the text of the element
 text = driver.find_element(By.ID, "justanotherlink").text
   {{< /tab >}}
-      {{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L56" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -300,7 +300,7 @@ email_txt = driver.find_element(By.NAME, "email_input")
 # Fetch the value property associated with the textbox
 value_info = email_txt.get_attribute("value")
   {{< /tab >}}
-        {{< tab header="CSharp"  >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L63" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
