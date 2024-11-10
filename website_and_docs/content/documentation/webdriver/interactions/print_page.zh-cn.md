@@ -8,7 +8,7 @@ aliases: [
 ---
 
 无论是共享信息还是维护档案，打印网页都是一项常见任务。
-Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这一过程，这些类为自动打印网页提供了灵活直观的界面。
+Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这一过程，这些类为网页自动打印提供了灵活直观的接口。
 这些类使得用户可以配置打印首选项，如页面布局、页边距和缩放比例，以确保输出满足特定要求。
 
 ## 配置
