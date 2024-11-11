@@ -392,9 +392,9 @@ Chrome Castデバイスを操作することができ、タブの共有も含ま
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L129-L135" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
