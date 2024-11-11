@@ -93,7 +93,7 @@ Apple provides a development version of their browser — [Safari Technology Pre
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L25-L30" >}}
