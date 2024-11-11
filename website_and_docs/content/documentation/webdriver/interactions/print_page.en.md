@@ -160,7 +160,7 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< /tabpane >}}
 
 ### ShrinkToFit
-Using `getBackground()` and `setBackground()` methods, you can get/set whether the page will shrink-to-fit content on the page --- boolean `true` or `false`.
+Using `getShrinkToFit()` and `setShrinkToFit()` methods, you can get/set whether the page will shrink-to-fit content on the page --- boolean `true` or `false`.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
