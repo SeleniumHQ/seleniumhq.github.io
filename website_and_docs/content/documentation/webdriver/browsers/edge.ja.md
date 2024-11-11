@@ -384,9 +384,9 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L129-L135" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
