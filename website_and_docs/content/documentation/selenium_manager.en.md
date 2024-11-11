@@ -351,7 +351,7 @@ The following bindings allow you to specify the driver path using an environment
 * Java
 * Python
 
-This feature is available in the Selenium Ruby and Python binding starting from version 4.25.0 and 4.26.0.
+This feature is available in the Selenium Ruby binding starting from version 4.25.0 and in the Python binding from version 4.26.0.
 
 ## Building a Custom Selenium Manager
 In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
