@@ -140,3 +140,24 @@ def test_set_network_conditions():
     assert driver.get_network_conditions() == network_conditions
 
     driver.quit()
+
+
+def test_set_permissions():
+    driver = webdriver.Chrome()
+    driver.get('https://www.selenium.dev')
+
+    driver.set_permissions('camera', 'denied')
+
+    assert get_permission_state(driver, 'camera') == 'denied'
+    driver.quit()
+
+
+def get_permission_state(driver, name):
+    """Helper function to query the permission state."""
+    script = """
+    const callback = arguments[arguments.length - 1];
+    navigator.permissions.query({name: arguments[0]}).then(permissionStatus => {
+        callback(permissionStatus.state);
+    });
+    """
+    return driver.execute_async_script(script, name)
