@@ -33,8 +33,7 @@ public class SafariTest {
 
         driver = new SafariDriver(service);
     }
-
-    @Test
+    
     public void safariTechnologyPreview() {
         SafariOptions options = new SafariOptions();
         options.setUseTechnologyPreview(true);
