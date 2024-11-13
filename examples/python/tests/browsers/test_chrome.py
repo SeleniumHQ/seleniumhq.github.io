@@ -121,3 +121,22 @@ def test_build_checks(capfd):
     assert expected in err
 
     driver.quit()
+
+
+def test_set_network_conditions():
+    driver = webdriver.Chrome()
+
+    network_conditions = {
+        "offline": False,
+        "latency": 20,  # 20 ms of latency
+        "download_throughput": 2000 * 1024 / 8,  # 2000 kbps
+        "upload_throughput": 2000 * 1024 / 8,    # 2000 kbps
+    }
+    driver.set_network_conditions(**network_conditions)
+
+    driver.get("https://www.selenium.dev")
+
+    # check whether the network conditions are set
+    assert driver.get_network_conditions() == network_conditions
+
+    driver.quit()
