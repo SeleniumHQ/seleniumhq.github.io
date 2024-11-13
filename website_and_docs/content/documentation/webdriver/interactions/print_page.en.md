@@ -205,7 +205,7 @@ Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable B
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L35-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
