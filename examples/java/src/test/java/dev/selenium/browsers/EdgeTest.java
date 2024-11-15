@@ -183,10 +183,8 @@ public class EdgeTest extends BaseTest {
     driver.setPermission("camera", "denied");
 
     // Verify the permission state is 'denied'
-    String script = """
-            return navigator.permissions.query({ name: 'camera' })
-                .then(permissionStatus => permissionStatus.state);
-        """;
+    String script = "return navigator.permissions.query({ name: 'camera' })" +
+            "    .then(permissionStatus => permissionStatus.state);";
     String permissionState = (String) driver.executeScript(script);
 
     Assertions.assertEquals("denied", permissionState);
