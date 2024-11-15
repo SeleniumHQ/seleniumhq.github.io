@@ -180,4 +180,22 @@ public class ChromeTest extends BaseTest {
     DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
   }
+
+  @Test
+  public void setPermission() {
+    ChromeDriver driver = new ChromeDriver();
+    driver.get("https://www.selenium.dev");
+
+    driver.setPermission("camera", "denied");
+
+    // Verify the permission state is 'denied'
+    String script = """
+            return navigator.permissions.query({ name: 'camera' })
+                .then(permissionStatus => permissionStatus.state);
+        """;
+    String permissionState = (String) driver.executeScript(script);
+
+    Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
 }

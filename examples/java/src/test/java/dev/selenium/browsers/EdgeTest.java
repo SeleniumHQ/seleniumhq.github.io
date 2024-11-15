@@ -174,4 +174,22 @@ public class EdgeTest extends BaseTest {
     DriverFinder finder = new DriverFinder(EdgeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
   }
+
+  @Test
+  public void setPermissions() {
+    EdgeDriver driver = new EdgeDriver();
+    driver.get("https://www.selenium.dev");
+
+    driver.setPermission("camera", "denied");
+
+    // Verify the permission state is 'denied'
+    String script = """
+            return navigator.permissions.query({ name: 'camera' })
+                .then(permissionStatus => permissionStatus.state);
+        """;
+    String permissionState = (String) driver.executeScript(script);
+
+    Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
 }
