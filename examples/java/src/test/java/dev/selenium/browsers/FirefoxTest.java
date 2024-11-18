@@ -185,6 +185,7 @@ public class FirefoxTest extends BaseTest {
 
     // Verify the screenshot file exists
     Assertions.assertTrue(targetFile.exists(), "The full page screenshot file should exist");
+    Files.deleteIfExists(targetFile.toPath());
 
     driver.quit();
   }
