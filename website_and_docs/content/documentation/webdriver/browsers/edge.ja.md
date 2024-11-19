@@ -229,7 +229,8 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 プロパティ値:`DriverService.LOG_STDOUT` または  `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
