@@ -15,12 +15,12 @@ import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
-import org.openqa.selenium.firefox.FirefoxDriverService;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
+
+
+
 
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
@@ -186,6 +186,22 @@ public class FirefoxTest extends BaseTest {
     // Verify the screenshot file exists
     Assertions.assertTrue(targetFile.exists(), "The full page screenshot file should exist");
     Files.deleteIfExists(targetFile.toPath());
+
+    driver.quit();
+  }
+
+  @Test
+  public void setContext() {
+    driver = startFirefoxDriver();
+
+    ((HasContext) driver).setContext(FirefoxCommandContext.CHROME);
+    driver.executeScript("console.log('Inside Chrome context');");
+
+    // Verify the context is back to "content"
+    Assertions.assertEquals(
+            FirefoxCommandContext.CHROME, ((HasContext) driver).getContext(),
+            "The context should be 'chrome'"
+    );
 
     driver.quit();
   }
