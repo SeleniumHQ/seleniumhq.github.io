@@ -383,7 +383,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L129-L135" >}}

@@ -396,7 +396,7 @@ You can simulate various network conditions.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L204-L210" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L129-L135" >}}
