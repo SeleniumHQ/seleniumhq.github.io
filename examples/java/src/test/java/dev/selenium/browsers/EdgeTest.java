@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
+import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -23,7 +24,6 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.service.DriverFinder;
-
 
 public class EdgeTest extends BaseTest {
   @AfterEach
@@ -188,6 +188,31 @@ public class EdgeTest extends BaseTest {
     String permissionState = (String) driver.executeScript(script);
 
     Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
+
+  @Test
+  public void setNetworkConditions() {
+    driver = new EdgeDriver();
+
+    ChromiumNetworkConditions networkConditions = new ChromiumNetworkConditions();
+    networkConditions.setOffline(false);
+    networkConditions.setLatency(java.time.Duration.ofMillis(20)); // 20 ms of latency
+    networkConditions.setDownloadThroughput(2000 * 1024 / 8); // 2000 kbps
+    networkConditions.setUploadThroughput(2000 * 1024 / 8);   // 2000 kbps
+
+    ((EdgeDriver) driver).setNetworkConditions(networkConditions);
+
+    driver.get("https://www.selenium.dev");
+
+    // Assert the network conditions are set as expected
+    ChromiumNetworkConditions actualConditions = ((EdgeDriver) driver).getNetworkConditions();
+    Assertions.assertAll(
+            () -> Assertions.assertEquals(networkConditions.getOffline(), actualConditions.getOffline()),
+            () -> Assertions.assertEquals(networkConditions.getLatency(), actualConditions.getLatency()),
+            () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
+            () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
+    );
     driver.quit();
   }
 }

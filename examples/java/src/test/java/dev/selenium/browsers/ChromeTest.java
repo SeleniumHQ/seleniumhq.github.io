@@ -19,11 +19,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
+import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.service.DriverFinder;
-
 
 public class ChromeTest extends BaseTest {
   @AfterEach
@@ -194,6 +194,31 @@ public class ChromeTest extends BaseTest {
     String permissionState = (String) driver.executeScript(script);
 
     Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
+
+  @Test
+  public void setNetworkConditions() {
+    driver = new ChromeDriver();
+
+    ChromiumNetworkConditions networkConditions = new ChromiumNetworkConditions();
+    networkConditions.setOffline(false);
+    networkConditions.setLatency(java.time.Duration.ofMillis(20)); // 20 ms of latency
+    networkConditions.setDownloadThroughput(2000 * 1024 / 8); // 2000 kbps
+    networkConditions.setUploadThroughput(2000 * 1024 / 8);   // 2000 kbps
+
+    ((ChromeDriver) driver).setNetworkConditions(networkConditions);
+
+    driver.get("https://www.selenium.dev");
+
+    // Assert the network conditions are set as expected
+    ChromiumNetworkConditions actualConditions = ((ChromeDriver) driver).getNetworkConditions();
+    Assertions.assertAll(
+        () -> Assertions.assertEquals(networkConditions.getOffline(), actualConditions.getOffline()),
+        () -> Assertions.assertEquals(networkConditions.getLatency(), actualConditions.getLatency()),
+        () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
+        () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
+    );
     driver.quit();
   }
 }
