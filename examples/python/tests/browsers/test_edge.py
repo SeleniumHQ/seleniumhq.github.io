@@ -1,7 +1,7 @@
 import os
 import re
 import subprocess
-
+import pytest
 from selenium import webdriver
 
 
@@ -161,3 +161,18 @@ def get_permission_state(driver, name):
     });
     """
     return driver.execute_async_script(script, name)
+
+
+def test_cast_features():
+    driver = webdriver.Edge()
+
+    try:
+        sinks = driver.get_sinks()
+        if sinks:
+            sink_name = sinks[0]['name']
+            driver.start_tab_mirroring(sink_name)
+            driver.stop_casting(sink_name)
+        else:
+            pytest.skip("No available Cast sinks to test with.")
+    finally:
+        driver.quit()
