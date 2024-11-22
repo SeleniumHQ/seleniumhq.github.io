@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -213,6 +214,7 @@ public class EdgeTest extends BaseTest {
             () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
             () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
+    ((EdgeDriver) driver).deleteNetworkConditions();
     driver.quit();
   }
 }

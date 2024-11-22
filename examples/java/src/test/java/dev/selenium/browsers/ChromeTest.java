@@ -219,6 +219,7 @@ public class ChromeTest extends BaseTest {
         () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
         () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
+    ((ChromeDriver) driver).deleteNetworkConditions();
     driver.quit();
   }
 }
