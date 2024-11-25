@@ -142,7 +142,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.26.0.jar",
+        "selenium-server-4.27.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -200,7 +200,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.26.0.jar",
+        "selenium-server-4.27.0.jar",
     )
 
     args = [
@@ -273,7 +273,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.26.0.jar",
+        "selenium-server-4.27.0.jar",
     )
 
     args = [
