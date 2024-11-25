@@ -371,7 +371,7 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L230-L235" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L170-L174" >}}

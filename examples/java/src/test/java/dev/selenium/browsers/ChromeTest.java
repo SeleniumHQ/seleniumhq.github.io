@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
@@ -31,7 +32,6 @@ public class ChromeTest extends BaseTest {
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
   }
-
   @Test
   public void basicOptions() {
     ChromeOptions options = new ChromeOptions();
@@ -220,6 +220,20 @@ public class ChromeTest extends BaseTest {
         () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
     ((ChromeDriver) driver).deleteNetworkConditions();
+    driver.quit();
+  }
+
+  @Test
+  public void castFeatures() {
+    ChromeDriver driver = new ChromeDriver();
+
+    List<Map<String, String>> sinks = driver.getCastSinks();
+    if (!sinks.isEmpty()) {
+      String sinkName = sinks.get(0).get("name");
+      driver.startTabMirroring(sinkName);
+      driver.stopCasting(sinkName);
+    }
+
     driver.quit();
   }
 }
