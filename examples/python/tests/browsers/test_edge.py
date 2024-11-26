@@ -176,3 +176,15 @@ def test_cast_features():
             pytest.skip("No available Cast sinks to test with.")
     finally:
         driver.quit()
+
+
+def test_get_browser_logs():
+    driver = webdriver.Edge()
+
+    driver.get("https://www.selenium.dev/")
+
+    logs = driver.get_log("browser")
+
+    # Assert that at least one log contains the expected message
+    assert any("Uncaught TypeError" in log['message'] for log in logs), "No matching log message found."
+    driver.quit()

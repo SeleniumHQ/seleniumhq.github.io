@@ -424,9 +424,9 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L186" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
