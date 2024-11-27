@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
@@ -15,7 +16,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -215,6 +215,20 @@ public class EdgeTest extends BaseTest {
             () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
     ((EdgeDriver) driver).deleteNetworkConditions();
+    driver.quit();
+  }
+
+  @Test
+  public void castFeatures() {
+    EdgeDriver driver = new EdgeDriver();
+
+    List<Map<String, String>> sinks = driver.getCastSinks();
+    if (!sinks.isEmpty()) {
+      String sinkName = sinks.get(0).get("name");
+      driver.startTabMirroring(sinkName);
+      driver.stopCasting(sinkName);
+    }
+
     driver.quit();
   }
 }
