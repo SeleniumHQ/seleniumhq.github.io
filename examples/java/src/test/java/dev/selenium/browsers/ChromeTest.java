@@ -21,10 +21,9 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.chromium.ChromiumNetworkConditions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 public class ChromeTest extends BaseTest {
   @AfterEach
@@ -32,6 +31,7 @@ public class ChromeTest extends BaseTest {
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
   }
+
   @Test
   public void basicOptions() {
     ChromeOptions options = new ChromeOptions();
@@ -234,6 +234,28 @@ public class ChromeTest extends BaseTest {
       driver.stopCasting(sinkName);
     }
 
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    ChromeDriver driver = new ChromeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
     driver.quit();
   }
 }

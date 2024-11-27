@@ -21,10 +21,10 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
+
 
 public class EdgeTest extends BaseTest {
   @AfterEach
@@ -229,6 +229,28 @@ public class EdgeTest extends BaseTest {
       driver.stopCasting(sinkName);
     }
 
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    EdgeDriver driver = new EdgeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
     driver.quit();
   }
 }
