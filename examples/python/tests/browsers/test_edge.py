@@ -3,7 +3,7 @@ import re
 import subprocess
 import pytest
 from selenium import webdriver
-
+from selenium.webdriver.common.by import By
 
 def test_basic_options():
     options = webdriver.EdgeOptions()
@@ -180,11 +180,11 @@ def test_cast_features():
 
 def test_get_browser_logs():
     driver = webdriver.Edge()
-
-    driver.get("https://www.selenium.dev/")
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    driver.find_element(By.ID, "consoleError").click()
 
     logs = driver.get_log("browser")
 
     # Assert that at least one log contains the expected message
-    assert any("Uncaught TypeError" in log['message'] for log in logs), "No matching log message found."
+    assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
