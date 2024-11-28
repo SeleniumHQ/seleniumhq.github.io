@@ -31,7 +31,9 @@ alertas.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
 {{< /tab >}}
-
+  {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L39-L51" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
 {{< /tab >}}
@@ -70,24 +72,8 @@ Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample confirm")).Click();
-
-//Wait for the alert to be displayed
-wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Store the alert in a variable
-IAlert alert = driver.SwitchTo().Alert();
-
-//Store the alert in a variable for reuse
-string text = alert.Text;
-
-//Press the Cancel button
-alert.Dismiss();
-  {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L54-L64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
@@ -129,19 +115,11 @@ Veja um exemplo de prompt </a>.
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample prompt")).Click();
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L66-L78" >}}
+{{< /tab >}}
 
-//Wait for the alert to be displayed and store it in a variable
-IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
 
-//Type your message
-alert.SendKeys("Selenium");
-
-//Press the OK button
-alert.Accept();
-  {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
