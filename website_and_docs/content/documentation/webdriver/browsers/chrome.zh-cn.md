@@ -371,12 +371,11 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L230-L235" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
-{{< tab header="CSharp" >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L170-L174" >}}
+{{< /tab >}}{{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
@@ -400,7 +399,7 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L204-L210" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L129-L135" >}}
@@ -423,11 +422,11 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L247" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L186" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -446,11 +445,11 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L189" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L149" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}

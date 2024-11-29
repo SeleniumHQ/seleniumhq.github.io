@@ -170,7 +170,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L20-L23">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L22">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -229,7 +229,8 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 プロパティ値:`DriverService.LOG_STDOUT` または  `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< badge-implementation >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -357,11 +358,11 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L225-L230" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L170-L174" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -382,7 +383,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L129-L135" >}}
@@ -405,11 +406,11 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L242" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L186" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -428,11 +429,11 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L183" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L149" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}

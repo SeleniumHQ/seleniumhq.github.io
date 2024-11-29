@@ -1,6 +1,7 @@
-selenium==4.26.1
+selenium==4.27.1
 pytest
 trio
 pytest-trio
+pytest-rerunfailures
 flake8
 requests

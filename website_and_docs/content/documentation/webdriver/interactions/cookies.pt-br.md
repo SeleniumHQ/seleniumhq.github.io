@@ -29,15 +29,8 @@ por exemplo http://example.com/some404page)
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-driver.get("http://www.example.com")
-
-# Adds the cookie into current browser context
-driver.add_cookie({"name": "key", "value": "value"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
@@ -84,19 +77,8 @@ Retorna os dados do cookie serializado correspondentes ao nome do cookie entre t
      {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-
-# Adds the cookie into current browser context
-driver.add_cookie({"name": "foo", "value": "bar"})
-
-# Get cookie details with named cookie 'foo'
-print(driver.get_cookie("foo"))
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
       {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
@@ -147,19 +129,8 @@ Se o navegador não estiver mais disponível, ele retornará um erro.
           {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-# Get all available cookies
-print(driver.get_cookies())
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
         {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
@@ -212,17 +183,8 @@ Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
             {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-# Delete a cookie with name 'test1'
-driver.delete_cookie("test1")
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
   {{< /tab >}}
               {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
@@ -278,17 +240,8 @@ Exclui todos os cookies do contexto de navegação atual.
                   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-#  Deletes all cookies
-driver.delete_all_cookies()
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
   {{< /tab >}}
    {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
@@ -374,19 +327,8 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-driver.get("http://www.example.com")
-# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
-driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
-driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
-cookie1 = driver.get_cookie('foo')
-cookie2 = driver.get_cookie('foo1')
-print(cookie1)
-print(cookie2)
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}  
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
