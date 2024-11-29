@@ -39,7 +39,6 @@ handling in .NET to critical deprecations like CDP methods for Firefox.
 - Introduced backward compatibility for `AppiumConnection`. ([3a3c46b3c1](https://github.com/SeleniumHQ/selenium/commit/3a3c46b3c144b0a350dea3598481edd2761f11c5))
 - Added user agent and extra headers via `ClientConfig`. ([e2023893c7](https://github.com/SeleniumHQ/selenium/commit/e2023893c7f37f69b2f7106a3907e0275bd9fbe1))
 - Addressed `DetachedShadowRoot` exception handling. ([7aabb8d1b4](https://github.com/SeleniumHQ/selenium/commit/7aabb8d1b48c1cae74ae97710009daea960dc9a3))
-- **Deprecated `get_attribute` method** for WebElements. ([bb3053ba23](https://github.com/SeleniumHQ/selenium/commit/bb3053ba23a5798fa65fd2bb52bbb174ac0a98d2))
 
 <br>
 
@@ -82,7 +81,7 @@ handling in .NET to critical deprecations like CDP methods for Firefox.
 
 <br>
 
-## Selenium Grid
+### Selenium Grid
 - Improved retry logic for session creation in distributed grids. ([e4ab299ea4](https://github.com/SeleniumHQ/selenium/commit/e4ab299ea4d16943c18e8c31e9db1f7738ed9493))
 - Improved session handling in Selenium Grid and reduced test flakiness. ([b0464e1adf](https://github.com/SeleniumHQ/selenium/commit/b0464e1adf8b4367dab9a98c26c800a7172cc0f8))
 - Enhanced server shutdown for faster termination. ([62aa0e551e](https://github.com/SeleniumHQ/selenium/commit/62aa0e551e79176f21e3e1658518bc40855f81ae))
@@ -92,11 +91,8 @@ handling in .NET to critical deprecations like CDP methods for Firefox.
   <br>
 
 ### Docker Selenium
-- Updated FFmpeg v7.1 in video recorder ([#2439](https://github.com/SeleniumHQ/docker-selenium/pull/2439)).
-- Updated in Helm chart for Selenium Grid deployment to Kubernetes
-  - Add GraphQL metrics exporter for monitoring ([#2425](https://github.com/SeleniumHQ/docker-selenium/pull/2425)).
-  - Add templates for Relay node ([#2453](https://github.com/SeleniumHQ/docker-selenium/pull/2453)).
-  - Allow to overwrite config videoRecorder in each node ([#2445](https://github.com/SeleniumHQ/docker-selenium/pull/2445)).
+- K8s: Allow multiple nodes of the same type in Helm configuration ([#2475](https://github.com/SeleniumHQ/docker-selenium/pull/2475))
+- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases/tag/4.27.0-20241127)
 
   <br>
 
