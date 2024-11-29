@@ -3,7 +3,7 @@ import re
 import subprocess
 import pytest
 from selenium import webdriver
-
+from selenium.webdriver.common.by import By
 
 def test_basic_options():
     options = webdriver.ChromeOptions()
@@ -176,3 +176,15 @@ def test_cast_features():
             pytest.skip("No available Cast sinks to test with.")
     finally:
         driver.quit()
+
+
+def test_get_browser_logs():
+    driver = webdriver.Chrome()
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    driver.find_element(By.ID, "consoleError").click()
+
+    logs = driver.get_log("browser")
+
+    # Assert that at least one log contains the expected message
+    assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
+    driver.quit()

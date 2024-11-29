@@ -45,12 +45,7 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Click on the element 
-	driver.find_element(By.NAME, "color_input").click()
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L12-L17" >}}
   {{< /tab >}}
  
  {{< tab header="CSharp" text=true >}}
@@ -92,17 +87,7 @@ possible keystrokes that WebDriver Supports.
 {{< /tab >}}
 
   {{< tab header="Python" >}}
-
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Clear field to empty it from any previous data
-	driver.find_element(By.NAME, "email_input").clear()
-
-	# Enter Text
-	driver.find_element(By.NAME, "email_input").send_keys("admin@localhost.dev" )
-
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L22-L27" >}}
   {{< /tab >}}
   
    {{< tab header="CSharp" text=true >}}
@@ -143,15 +128,7 @@ with a`content-editable` attribute. If these conditions are not met,
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
-
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Clear field to empty it from any previous data
-	driver.find_element(By.NAME, "email_input").clear()
-
-	
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L34" >}}
   {{< /tab >}}
  
    {{< tab header="CSharp" text=true >}}

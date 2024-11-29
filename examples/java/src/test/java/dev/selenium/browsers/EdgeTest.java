@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
@@ -15,16 +16,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
+
 
 public class EdgeTest extends BaseTest {
   @AfterEach
@@ -215,6 +215,42 @@ public class EdgeTest extends BaseTest {
             () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
     ((EdgeDriver) driver).deleteNetworkConditions();
+    driver.quit();
+  }
+
+  @Test
+  public void castFeatures() {
+    EdgeDriver driver = new EdgeDriver();
+
+    List<Map<String, String>> sinks = driver.getCastSinks();
+    if (!sinks.isEmpty()) {
+      String sinkName = sinks.get(0).get("name");
+      driver.startTabMirroring(sinkName);
+      driver.stopCasting(sinkName);
+    }
+
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    EdgeDriver driver = new EdgeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
     driver.quit();
   }
 }
