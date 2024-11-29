@@ -29,7 +29,7 @@ por exemplo http://example.com/some404page)
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
@@ -77,7 +77,7 @@ Retorna os dados do cookie serializado correspondentes ao nome do cookie entre t
      {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
       {{< tab header="CSharp" text=true >}}
@@ -129,7 +129,7 @@ Se o navegador não estiver mais disponível, ele retornará um erro.
           {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
         {{< tab header="CSharp" text=true >}}
@@ -183,7 +183,7 @@ Exclui os dados do cookie que correspondem ao nome do cookie fornecido.
             {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
   {{< /tab >}}
               {{< tab header="CSharp" text=true >}}
@@ -240,7 +240,7 @@ Exclui todos os cookies do contexto de navegação atual.
                   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
   {{< /tab >}}
    {{< tab header="CSharp" text=true >}}
@@ -327,7 +327,7 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}  
   {{< /tab >}}
   {{< tab header="CSharp" >}}

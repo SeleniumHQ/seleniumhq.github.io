@@ -27,7 +27,7 @@ Cookieの追加では、一連の定義済みのシリアル化可能なJSONオ�
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
@@ -75,7 +75,7 @@ fun main() {
    {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
     {{< tab header="CSharp" text=true >}}
@@ -127,7 +127,7 @@ fun main() {
         {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
       {{< tab header="CSharp" text=true >}}
@@ -181,7 +181,7 @@ fun main() {
           {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
   {{< /tab >}}
             {{< tab header="CSharp" text=true >}}
@@ -238,7 +238,7 @@ fun main() {
                 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
@@ -323,7 +323,7 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
