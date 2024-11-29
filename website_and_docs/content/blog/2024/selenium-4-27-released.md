@@ -83,7 +83,7 @@ handling in .NET to critical deprecations like CDP methods for Firefox.
 <br>
 
 ## Selenium Grid
-- Improved retry logic for session creation in distributed grids. ([e4ab299ea4](https://github.com/SeleniumHQ/selenium/commit/e4ab299ea
+- Improved retry logic for session creation in distributed grids. ([e4ab299ea4](https://github.com/SeleniumHQ/selenium/commit/e4ab299ea4d16943c18e8c31e9db1f7738ed9493))
 - Improved session handling in Selenium Grid and reduced test flakiness. ([b0464e1adf](https://github.com/SeleniumHQ/selenium/commit/b0464e1adf8b4367dab9a98c26c800a7172cc0f8))
 - Enhanced server shutdown for faster termination. ([62aa0e551e](https://github.com/SeleniumHQ/selenium/commit/62aa0e551e79176f21e3e1658518bc40855f81ae))
 - Implemented graceful handling of stale sessions and client timeouts. ([b0464e1adf](https://github.com/SeleniumHQ/selenium/commit/b0464e1adf8b4367dab9a98c26c800a7172cc0f8))
