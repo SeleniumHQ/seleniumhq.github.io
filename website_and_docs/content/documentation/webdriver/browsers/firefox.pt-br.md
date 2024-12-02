@@ -105,20 +105,12 @@ Existem várias formas de trabalhar com perfis Firefox
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxProfile profile = new FirefoxProfile();
-FirefoxOptions options = new FirefoxOptions();
-options.setProfile(profile);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
-  {{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L211-L216" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L157-L165" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
 var profile = new FirefoxProfile();
