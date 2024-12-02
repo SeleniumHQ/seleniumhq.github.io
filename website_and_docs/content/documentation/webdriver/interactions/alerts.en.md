@@ -34,19 +34,9 @@ alerts.
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See an example alert")).Click();
-
-//Wait for the alert to be displayed and store it in a variable
-IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Store the alert text in a variable
-string text = alert.Text;
-
-//Press the OK button
-alert.Accept();
-  {{< /tab >}}
+ {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L51-L55" >}}
+{{< /tab >}}
   {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
   {{< /tab >}}
@@ -86,22 +76,10 @@ This example also shows a different approach to storing an alert:
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample confirm")).Click();
+ {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L73-L78" >}}
+{{< /tab >}}
 
-//Wait for the alert to be displayed
-wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Store the alert in a variable
-IAlert alert = driver.SwitchTo().Alert();
-
-//Store the alert in a variable for reuse
-string text = alert.Text;
-
-//Press the Cancel button
-alert.Dismiss();
-  {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
 {{< /tab >}}
@@ -146,19 +124,10 @@ See a sample prompt</a>.
 {{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample prompt")).Click();
+ {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L96-L103" >}}
+{{< /tab >}}
 
-//Wait for the alert to be displayed and store it in a variable
-IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Type your message
-alert.SendKeys("Selenium");
-
-//Press the OK button
-alert.Accept();
-  {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
