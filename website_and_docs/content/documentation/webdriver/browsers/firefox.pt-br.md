@@ -105,10 +105,10 @@ Existem várias formas de trabalhar com perfis Firefox
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L211-L216" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L157-L165" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
