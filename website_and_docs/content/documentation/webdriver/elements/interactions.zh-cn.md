@@ -47,7 +47,7 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L12-L17" >}}
   {{< /tab >}}
  
@@ -89,7 +89,7 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
 {{< /tab >}}
 
-  {{< tab header="Python" >}}
+  {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L22-L27" >}}
   {{< /tab >}}
    
@@ -132,7 +132,7 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
+  {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L34" >}}
   {{< /tab >}}
   
