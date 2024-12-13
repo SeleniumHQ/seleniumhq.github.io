@@ -97,7 +97,6 @@ WebDriver driver = new RemoteWebDriver(options);
   {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L28-L29" >}}
   {{< /tab >}}
-  {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
 options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
