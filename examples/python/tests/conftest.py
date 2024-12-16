@@ -9,6 +9,8 @@ from datetime import datetime
 from urllib.request import urlopen
 import requests
 from requests.auth import HTTPBasicAuth
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+from threading import Thread
 
 import pytest
 from selenium import webdriver
@@ -186,6 +188,24 @@ def server_old(request):
         process.terminate()
         process.wait()
         print("Selenium server has been terminated")
+
+
+@pytest.fixture(scope="session")
+def html_server():
+    """
+    Start an HTTP server to serve files from the `tests/` directory.
+    """
+    elements_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+    os.chdir(elements_dir)
+    port = free_port()
+    server = HTTPServer(("localhost", port), SimpleHTTPRequestHandler)
+
+    thread = Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+
+    yield f"http://localhost:{port}"
+
+    server.shutdown()
 
 
 @pytest.fixture(scope="function")
