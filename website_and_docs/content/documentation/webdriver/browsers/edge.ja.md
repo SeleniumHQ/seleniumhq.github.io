@@ -21,7 +21,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L38-L38" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L10" >}}
@@ -52,7 +52,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L46" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L18" >}}
@@ -79,7 +79,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L54" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L55" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L29">}}
@@ -106,7 +106,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L66" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L40" >}}
@@ -158,7 +158,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L78" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L79" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L62" >}}
@@ -193,7 +193,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L100" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
 **注意**: Javaでもシステムプロパティを使用してファイル出力を設定できます:\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 プロパティ値: ログファイルのパスを表す文字列
@@ -223,7 +223,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L113" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L114" >}}
 **注**: Javaでは、システムプロパティを使用してコンソール出力を設定することもできます。\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 プロパティ値:`DriverService.LOG_STDOUT` または  `DriverService.LOG_STDERR`
@@ -254,7 +254,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L126-L127" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L127-L128" >}}
 **注意**: Javaでは、システムプロパティを使用してログレベルを設定することもできます：\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
 プロパティ値:`ChromiumDriverLogLevel` 列挙型の文字列表現
@@ -287,7 +287,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L142-L143" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L143-L144" >}}
 **注意**: Javaでは、これらの機能をSystem Propertyによって切り替えることもできます：\
 プロパティキー:`EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` および `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
 プロパティ値: `"true"` または  `"false"`
@@ -318,7 +318,7 @@ Edge ブラウザとmsedgedriverのバージョンは一致する必要があり
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L160-L161" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L161-L162" >}}
 **注**: Javaでは、システムプロパティを使用してビルドチェックを無効にすることもできます：\
 プロパティキー:`EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
 プロパティ値: `"true"` または  `"false"`
@@ -429,7 +429,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L183" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L149" >}}
