@@ -48,7 +48,7 @@ page. To understand and create locator we will use the following HTML snippet.
 </style>
 <h2>Contact Selenium</h2>
 
-<form action="/action_page.php">
+<form>
   <input type="radio" name="gender" value="m" />Male &nbsp;
   <input type="radio" name="gender" value="f" />Female <br>
   <br>
@@ -79,7 +79,7 @@ available in Selenium.
 	driver.findElement(By.className("information"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -111,7 +111,7 @@ textbox, using css.
 	driver.findElement(By.cssSelector("#fname"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L22" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -141,7 +141,7 @@ We will identify the Last Name field using it.
 	driver.findElement(By.id("lname"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -172,7 +172,7 @@ We will identify the Newsletter checkbox using it.
 	driver.findElement(By.name("newsletter"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L32" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -201,7 +201,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 	driver.findElement(By.linkText("Selenium Official Page"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -231,7 +231,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 	driver.findElement(By.partialLinkText("Official Page"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L42" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -259,7 +259,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 	driver.findElement(By.tagName("a"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
@@ -293,7 +293,7 @@ first name text box. Let us create locator for female radio button using xpath.
 	driver.findElement(By.xpath("//input[@value='f']"));
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L52" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
