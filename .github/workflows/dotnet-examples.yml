@@ -61,7 +61,9 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       run:
         |
-        latest_nightly=$(./scripts/latest-nightly-version.sh nuget Selenium.WebDriver)
+        pip install -r ./scripts/requirements.txt
+        latest_nightly=$(python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver)
+        echo $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:
@@ -71,7 +73,8 @@ jobs:
       shell: pwsh
       run:
         |
-        $latest_nightly = ./scripts/latest-nightly-version.ps1 nuget Selenium.WebDriver
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly = python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:

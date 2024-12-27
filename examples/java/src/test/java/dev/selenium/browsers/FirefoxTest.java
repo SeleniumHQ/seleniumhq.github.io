@@ -13,14 +13,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
-import org.openqa.selenium.firefox.FirefoxDriverService;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.service.DriverFinder;
-import org.junit.jupiter.api.Disabled;
+
+
+
+
 
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
@@ -124,8 +124,8 @@ public class FirefoxTest extends BaseTest {
     Assertions.assertTrue(location.contains(profileDirectory.getAbsolutePath()));
   }
 
+
   @Test
-  @Disabled("Skipping tests until Firefox 127 is released")
   public void installAddon() {
     driver = startFirefoxDriver();
     Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
@@ -138,8 +138,8 @@ public class FirefoxTest extends BaseTest {
         "Content injected by webextensions-selenium-example", injected.getText());
   }
 
+
   @Test
-  @Disabled("Skipping tests until Firefox 127 is released")
   public void uninstallAddon() {
     driver = startFirefoxDriver();
     Path xpiPath = Paths.get("src/test/resources/extensions/selenium-example.xpi");
@@ -151,8 +151,8 @@ public class FirefoxTest extends BaseTest {
     Assertions.assertEquals(driver.findElements(By.id("webextensions-selenium-example")).size(), 0);
   }
 
+
   @Test
-  @Disabled("Skipping tests until Firefox 127 is released")
   public void installUnsignedAddonPath() {
     driver = startFirefoxDriver();
     Path path = Paths.get("src/test/resources/extensions/selenium-example");
@@ -170,5 +170,51 @@ public class FirefoxTest extends BaseTest {
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(GeckoDriverService.createDefaultService(), options);
     return Path.of(finder.getBrowserPath());
+  }
+
+  @Test
+  public void fullPageScreenshot() throws Exception {
+    driver = startFirefoxDriver();
+
+    driver.get("https://www.selenium.dev");
+
+    File screenshot = driver.getFullPageScreenshotAs(OutputType.FILE);
+
+    File targetFile = new File("full_page_screenshot.png");
+    Files.move(screenshot.toPath(), targetFile.toPath());
+
+    // Verify the screenshot file exists
+    Assertions.assertTrue(targetFile.exists(), "The full page screenshot file should exist");
+    Files.deleteIfExists(targetFile.toPath());
+
+    driver.quit();
+  }
+
+  @Test
+  public void setContext() {
+    driver = startFirefoxDriver();
+
+    ((HasContext) driver).setContext(FirefoxCommandContext.CHROME);
+    driver.executeScript("console.log('Inside Chrome context');");
+
+    // Verify the context is back to "content"
+    Assertions.assertEquals(
+            FirefoxCommandContext.CHROME, ((HasContext) driver).getContext(),
+            "The context should be 'chrome'"
+    );
+
+    driver.quit();
+  }
+
+  @Test
+  public void firefoxProfile() {
+    FirefoxProfile profile = new FirefoxProfile();
+    FirefoxOptions options = new FirefoxOptions();
+    profile.setPreference("javascript.enabled", "False");
+    options.setProfile(profile);
+
+    driver = new FirefoxDriver(options);
+
+    driver.quit();
   }
 }

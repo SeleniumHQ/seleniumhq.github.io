@@ -104,7 +104,7 @@ Cria uma resident (stateful) credential com os requeridos [parâmetros](https://
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L80-L97" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L89-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L80-L94" >}}
@@ -128,7 +128,7 @@ Cria uma resident (stateless) credential com os requeridos [parâmetros](https:/
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L140-L147" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L136-L140" >}}
@@ -152,7 +152,7 @@ Registra a credencial com o autenticador.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L150" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L131-L142" >}}
@@ -176,7 +176,7 @@ Retorna a lista de credenciais que o autenticador possui.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L183" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L154-L170" >}}
@@ -201,7 +201,7 @@ Remove a credencial do autenticador baseado na id da credencial passado.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L209" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -225,7 +225,7 @@ Remove todas as credenciais do autenticador.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L239" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L181-L190" >}}
@@ -249,7 +249,7 @@ Diz se o autenticador simulará sucesso ou falha na verificação de usuário.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L245-L247" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L197-L197" >}}

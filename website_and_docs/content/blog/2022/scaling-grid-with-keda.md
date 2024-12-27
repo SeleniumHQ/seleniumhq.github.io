@@ -49,6 +49,7 @@ triggers:
     metadata:
       url: 'http://selenium-grid-url-or-ip:4444/graphql'
       browserName: 'chrome'
+      platformName: 'Linux'
 ```
 
 All of this gets saved as a Scaled-Object like so:
@@ -69,8 +70,17 @@ spec:
   triggers:
     - type: selenium-grid
       metadata:
-        url: 'https://selenium-grid-url-or-ip:4444/graphql'
+        url: 'http://selenium-grid-url-or-ip:4444/graphql'
         browserName: 'chrome'
+        platformName: 'Linux'
+```
+
+Send the request to Grid, for example in Python client:
+
+```python
+options = ChromeOptions()
+options.set_capability('platformName', 'Linux')
+driver = webdriver.Remote(options=options, command_executor='http://selenium-grid-url-or-ip:4444/wd/hub')
 ```
 
 As an added bonus KEDA allows us to scale our deployments down to 
