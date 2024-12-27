@@ -53,7 +53,9 @@ jobs:
         if: matrix.release == 'nightly' && matrix.os != 'windows'
         run:
           |
-          latest_nightly_webdriver=$(./scripts/latest-nightly-version.sh rubygems selenium-webdriver)
+          pip install -r ./scripts/requirements.txt
+          latest_nightly_webdriver=$(python ./scripts/latest-nightly-version.py rubygems selenium-webdriver)
+          echo $latest_nightly_webdriver
           cd examples/ruby
           bundle install
           bundle remove selenium-webdriver
@@ -64,7 +66,8 @@ jobs:
         if: matrix.release == 'nightly' && matrix.os == 'windows'
         run:
           |
-          $latest_nightly_webdriver = ./scripts/latest-nightly-version.ps1 rubygems selenium-webdriver
+          pip install -r ./scripts/requirements.txt
+          $latest_nightly_webdriver = python ./scripts/latest-nightly-version.py rubygems selenium-webdriver
           cd examples/ruby
           bundle install
           bundle remove selenium-webdriver

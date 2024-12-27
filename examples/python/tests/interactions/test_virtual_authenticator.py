@@ -48,7 +48,7 @@ def test_virtual_authenticator_options():
     assert len(options.to_dict()) == 6
 
 
-def test_create_authenticator(driver):
+def test_add_authenticator(driver):
     # Create virtual authenticator options
     options = VirtualAuthenticatorOptions()
     options.protocol = VirtualAuthenticatorOptions.Protocol.U2F
@@ -93,7 +93,7 @@ def test_create_and_add_resident_key(driver):
     privatekey = urlsafe_b64decode(BASE64__ENCODED_PK)
     sign_count = 0
 
-    # create a  resident credential using above parameters
+    # create a resident credential using above parameters
     resident_credential = Credential.create_resident_credential(credential_id, rp_id, user_handle, privatekey, sign_count)
 
     # add the credential created to virtual authenticator

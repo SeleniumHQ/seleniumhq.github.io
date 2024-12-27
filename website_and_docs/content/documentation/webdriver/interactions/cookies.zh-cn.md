@@ -22,54 +22,14 @@ WebDriver API提供了一种使用内置的方法与Cookie进行交互:
 例如 http://example.com/some404page)
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class addCookie {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-
-            // Adds the cookie into current browser context
-            driver.manage().addCookie(new Cookie("key", "value"));
-        } finally {
-            driver.quit();
-        }
-    }
-}
+    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-driver.get("http://www.example.com")
-
-# Adds the cookie into current browser context
-driver.add_cookie({"name": "key", "value": "value"})
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-9" >}}
   {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace AddCookie {
- class AddCookie {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-
-    // Adds the cookie into current browser context
-    driver.Manage().Cookies.AddCookie(new Cookie("key", "value"));
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+  {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -110,62 +70,14 @@ fun main() {
 此方法返回与cookie名称匹配的序列化cookie数据中所有关联的cookie.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class getCookieNamed {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("foo", "bar"));
-
-            // Get cookie details with named cookie 'foo'
-            Cookie cookie1 = driver.manage().getCookieNamed("foo");
-            System.out.println(cookie1);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+     {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-
-# Adds the cookie into current browser context
-driver.add_cookie({"name": "foo", "value": "bar"})
-
-# Get cookie details with named cookie 'foo'
-print(driver.get_cookie("foo"))
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace GetCookieNamed {
- class GetCookieNamed {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("foo", "bar"));
-
-    // Get cookie details with named cookie 'foo'
-    var cookie = driver.Manage().Cookies.GetCookieNamed("foo");
-    System.Console.WriteLine(cookie);
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+        {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -209,65 +121,14 @@ fun main() {
 此方法会针对当前访问上下文返回“成功的序列化cookie数据”. 如果浏览器不再可用, 则返回错误. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.Set;
-
-public class getAllCookies {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            // Add few cookies
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            driver.manage().addCookie(new Cookie("test2", "cookie2"));
-
-            // Get All available cookies
-            Set<Cookie> cookies = driver.manage().getCookies();
-            System.out.println(cookies);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+           {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-# Get all available cookies
-print(driver.get_cookies())
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace GetAllCookies {
- class GetAllCookies {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
-
-    // Get All available cookies
-    var cookies = driver.Manage().Cookies.AllCookies;
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+         {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -314,72 +175,14 @@ fun main() {
 此方法删除与提供的cookie名称匹配的cookie数据.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class deleteCookie {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            Cookie cookie1 = new Cookie("test2", "cookie2");
-            driver.manage().addCookie(cookie1);
-
-            // delete a cookie with name 'test1'
-            driver.manage().deleteCookieNamed("test1");
-
-            /*
-             Selenium Java bindings also provides a way to delete
-             cookie by passing cookie object of current browsing context
-             */
-            driver.manage().deleteCookie(cookie1);
-        } finally {
-            driver.quit();
-        }
-    }
-}
+              {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-# Delete a cookie with name 'test1'
-driver.delete_cookie("test1")
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace DeleteCookie {
- class DeleteCookie {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    var cookie = new Cookie("test2", "cookie2");
-    driver.Manage().Cookies.AddCookie(cookie);
-
-    // delete a cookie with name 'test1'	
-    driver.Manage().Cookies.DeleteCookieNamed("test1");
-
-    // Selenium .net bindings also provides a way to delete
-    // cookie by passing cookie object of current browsing context
-    driver.Manage().Cookies.DeleteCookie(cookie);
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+                {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -429,60 +232,14 @@ fun main() {
 此方法删除当前访问上下文的所有cookie.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class deleteAllCookies {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        try {
-            driver.get("http://www.example.com");
-            driver.manage().addCookie(new Cookie("test1", "cookie1"));
-            driver.manage().addCookie(new Cookie("test2", "cookie2"));
-
-            // deletes all cookies
-            driver.manage().deleteAllCookies();
-        } finally {
-            driver.quit();
-        }
-    }
-}
+                    {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-driver = webdriver.Chrome()
-
-# Navigate to url
-driver.get("http://www.example.com")
-driver.add_cookie({"name": "test1", "value": "cookie1"})
-driver.add_cookie({"name": "test2", "value": "cookie2"})
-
-#  Deletes all cookies
-driver.delete_all_cookies()
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
   {{< /tab >}}
-  {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace DeleteAllCookies {
- class DeleteAllCookies {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
-    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
-
-    // deletes all cookies
-    driver.Manage().Cookies.DeleteAllCookies();
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+     {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
 require 'selenium-webdriver'
@@ -564,19 +321,8 @@ public class cookieTest {
   }
 }
   {{< /tab >}}
- {{< tab header="Python" >}}
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-
-driver.get("http://www.example.com")
-# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
-driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
-driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
-cookie1 = driver.get_cookie('foo')
-cookie2 = driver.get_cookie('foo1')
-print(cookie1)
-print(cookie2)
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

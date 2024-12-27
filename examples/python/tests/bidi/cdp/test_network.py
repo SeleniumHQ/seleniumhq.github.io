@@ -2,7 +2,7 @@ import base64
 
 import pytest
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.devtools.v128.network import Headers
+from selenium.webdriver.common.devtools.v131.network import Headers
 
 
 @pytest.mark.trio

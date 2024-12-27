@@ -42,7 +42,7 @@ methods will eventually be removed when WebDriver BiDi implemented.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L44" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_script.py#L8-L9" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_script.py#L10-L11" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/ScriptTest.cs#L39-L46" >}}

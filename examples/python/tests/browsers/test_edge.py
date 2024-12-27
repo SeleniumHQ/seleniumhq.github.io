@@ -1,9 +1,9 @@
 import os
 import re
 import subprocess
-
+import pytest
 from selenium import webdriver
-
+from selenium.webdriver.common.by import By
 
 def test_basic_options():
     options = webdriver.EdgeOptions()
@@ -122,3 +122,69 @@ def test_build_checks(log_path):
 
     driver.quit()
 
+
+def test_set_network_conditions():
+    driver = webdriver.Edge()
+
+    network_conditions = {
+        "offline": False,
+        "latency": 20,  # 20 ms of latency
+        "download_throughput": 2000 * 1024 / 8,  # 2000 kbps
+        "upload_throughput": 2000 * 1024 / 8,    # 2000 kbps
+    }
+    driver.set_network_conditions(**network_conditions)
+
+    driver.get("https://www.selenium.dev")
+
+    # check whether the network conditions are set
+    assert driver.get_network_conditions() == network_conditions
+
+    driver.quit()
+
+
+def test_set_permissions():
+    driver = webdriver.Edge()
+    driver.get('https://www.selenium.dev')
+
+    driver.set_permissions('camera', 'denied')
+
+    assert get_permission_state(driver, 'camera') == 'denied'
+    driver.quit()
+
+
+def get_permission_state(driver, name):
+    """Helper function to query the permission state."""
+    script = """
+    const callback = arguments[arguments.length - 1];
+    navigator.permissions.query({name: arguments[0]}).then(permissionStatus => {
+        callback(permissionStatus.state);
+    });
+    """
+    return driver.execute_async_script(script, name)
+
+
+def test_cast_features():
+    driver = webdriver.Edge()
+
+    try:
+        sinks = driver.get_sinks()
+        if sinks:
+            sink_name = sinks[0]['name']
+            driver.start_tab_mirroring(sink_name)
+            driver.stop_casting(sink_name)
+        else:
+            pytest.skip("No available Cast sinks to test with.")
+    finally:
+        driver.quit()
+
+
+def test_get_browser_logs():
+    driver = webdriver.Edge()
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    driver.find_element(By.ID, "consoleError").click()
+
+    logs = driver.get_log("browser")
+
+    # Assert that at least one log contains the expected message
+    assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
+    driver.quit()
