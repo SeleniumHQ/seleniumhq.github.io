@@ -93,7 +93,9 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       run:
         |
-        latest_nightly=$(./scripts/latest-nightly-version.sh npm selenium-webdriver)
+        pip install -r ./scripts/requirements.txt
+        latest_nightly=$(python ./scripts/latest-nightly-version.py npm selenium-webdriver)
+        echo $latest_nightly
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +104,8 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os == 'windows'
       run:
         |
-        $latest_nightly = ./scripts/latest-nightly-version.ps1 npm selenium-webdriver
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly = python ./scripts/latest-nightly-version.py npm selenium-webdriver
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

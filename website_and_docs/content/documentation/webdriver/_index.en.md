@@ -9,8 +9,8 @@ aliases: ["/documentation/en/webdriver/"]
 
 
 WebDriver drives a browser natively, as a user would, either locally
-or on a remote machine using the Selenium server,
-marks a leap forward in terms of browser automation.
+or on a remote machine using the Selenium server.
+It marks a leap forward in terms of browser automation.
 
 Selenium WebDriver refers to both the language bindings
 and the implementations of the individual browser controlling code.

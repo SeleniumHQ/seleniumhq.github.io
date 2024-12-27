@@ -1,22 +1,20 @@
 ---
-title: "Print Page"
-linkTitle: "Print Page"
+title: "打印页面"
+linkTitle: "打印页面"
 weight: 7
 aliases: [
 "/documentation/zh-cn/support_packages/print_page/",
 ]
 ---
 
-Printing a webpage is a common task, whether for sharing information or maintaining archives. 
-Selenium simplifies this process through its PrintOptions, PrintsPage, and browsingContext 
-classes, which provide a flexible and intuitive interface for automating the printing of web pages. 
-These classes enable you to configure printing preferences, such as page layout, margins, and scaling, 
-ensuring that the output meets your specific requirements.
+无论是共享信息还是维护档案，打印网页都是一项常见任务。
+Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这一过程，这些类为网页自动打印提供了灵活直观的接口。
+这些类使得用户可以配置打印首选项，如页面布局、页边距和缩放比例，以确保输出满足特定要求。
 
-## Configuring
+## 配置
 
-### Orientation
-Using the `getOrientation()` and `setOrientation()` methods, you can get/set the page orientation --- either `PORTRAIT` or `LANDSCAPE`.
+### 方向
+通过 `getOrientation()` 和 `setOrientation()` 方法，可以获取/设置页面方向（`PORTRAIT` 或 `LANDSCAPE`）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -39,8 +37,8 @@ Using the `getOrientation()` and `setOrientation()` methods, you can get/set the
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Range
-Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the range of pages to print --- e.g. "2-4".
+### 范围
+通过 `getPageRanges()` 和 `setPageRanges()` 方法，可以获取设置要打印页面的范围（如 "2-4"）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -63,8 +61,8 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Size
-Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the paper size to print --- e.g. "A0", "A6", "Legal", "Tabloid", etc.
+### 尺寸
+通过 `getPaperSize()` 和 `setPaperSize()` 方法，可以获取/设置要打印页面的纸张尺寸（如"A0"、"A6"、"Legal"、"Tabloid" 等）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -87,8 +85,8 @@ Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the pap
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Margins
-Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margin sizes of the page you wish to print --- i.e. top, bottom, left, and right margins.
+### 边距
+通过 `getPageMargin()` 和 `setPageMargin()` 方法，可以获取/设置要打印页面的边距大小（也就是上、下、左右边距）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -111,8 +109,8 @@ Using the `getPageMargin()` and `setPageMargin()` methods, you can set the margi
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Scale
-Using `getScale()` and `setScale()` methods, you can get/set the scale of the page you wish to print --- e.g. 1.0 is 100% or default, 0.25 is 25%, etc.
+### 缩放
+通过 `getScale()` 和 `setScale()` 方法，可以获取/设置要打印页面的缩放尺寸（如 1.0 为 100% 或默认缩放，0.25 为 25% 等）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -135,8 +133,8 @@ Using `getScale()` and `setScale()` methods, you can get/set the scale of the pa
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Background
-Using `getBackground()` and `setBackground()` methods, you can get/set whether background colors and images appear --- boolean `true` or `false`.
+### 背景
+通过 `getBackground()` 和 `setBackground()` 方法，可以获取/设置背景色和图片出现，其为布尔值 `true` 或 `false`。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -159,8 +157,8 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether b
 {{< /tab >}}
 {{< /tabpane >}}
 
-### ShrinkToFit
-Using `getBackground()` and `setBackground()` methods, you can get/set whether the page will shrink-to-fit content on the page --- boolean `true` or `false`.
+### 缩放至合适大小
+通过 `getShrinkToFit()` 和 `setShrinkToFit()` 方法，可以获取/设置页面是否会根据页面内容缩小，其为布尔值 `true` 或 `false`。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -183,19 +181,17 @@ Using `getBackground()` and `setBackground()` methods, you can get/set whether t
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Printing
+## 打印
 
-Once you've configured your PrintOptions, you're ready to print the page. To do this, 
-you can invoke the print function, which generates a PDF representation of the web page. 
-The resulting PDF can be saved to your local storage for further use or distribution. 
-Using `PrintsPage()`, the print command will return the PDF data in base64-encoded format, which can be decoded 
-and written to a file in your desired location, and using `BrowsingContext()` will return a String. 
+配置好打印选项后，就可以打印页面了。为此，您可以调用打印功能，生成网页的 PDF 表示形式。
+生成的 PDF 文件可以保存到本地存储器中，以便进一步使用或分发。
+使用 `PrintsPage()` 时，打印命令将以 base64 编码格式返回 PDF
+数据，该格式可以解码并写入所需位置的文件，而使用 `BrowsingContext()` 时将返回字符串。
 
-There may currently be multiple implementations depending on your language of choice. For example, with Java you
-have the ability to print using either `BrowingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
-parameter.
+目前可能有多种实现方式，这取决于您所选择的语言。例如，Java 可以使用 `BrowingContext()`
+或 `PrintsPage()` 进行打印。两者都将 `PrintOptions()` 对象作为一个参数。
 
-Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable BiDi see [Enabling Bidi]({{< ref "bidi/" >}}) 
+注意：`BrowsingContext()` 是 Selenium BiDi 实现的一部分。为启用 BiDi，请参见[启用 Bidi]({{< ref "bidi/" >}}) 
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -205,7 +201,7 @@ Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable B
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L35-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}

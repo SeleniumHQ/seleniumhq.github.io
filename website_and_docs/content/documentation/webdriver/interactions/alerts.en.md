@@ -25,9 +25,8 @@ WebDriver can get the text from the popup and accept or dismiss these
 alerts.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L51-L56" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L51-L57" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -77,9 +76,8 @@ a sample confirm</a>.
 This example also shows a different approach to storing an alert:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L66-L71" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L66-L72" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -137,9 +135,8 @@ See a sample prompt</a>.
 
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L80-L87" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L80-L88" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
