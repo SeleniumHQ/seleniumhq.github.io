@@ -22,7 +22,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão d
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L22-L25" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L12-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L14-L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L17-L20" >}}
@@ -47,7 +47,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão e
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L34-L37" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L24-L27" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L26-L29" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L30-L33" >}}
@@ -82,7 +82,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão e
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L35-L38" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L37-L40" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
@@ -108,7 +108,7 @@ Este termo pode se referir a um clique com o botão X1 (botão de voltar) do mou
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L49-L52" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L51-L54" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.2" >}}
@@ -137,7 +137,7 @@ Este termo se refere a um clique com o botão X2 (botão de avançar) do mouse. 
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L63-L66" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L65-L68" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.2" >}}
@@ -165,7 +165,7 @@ Este método combina mover o mouse para o centro de um elemento com a pressão e
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L93-L96" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L74-L77" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L76-L79" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L91-L94" >}}
@@ -190,7 +190,7 @@ Este método move o mouse para o ponto central do elemento que está visível na
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L105-L108" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L85-L88" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L87-L90" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L104-L107" >}}
@@ -219,7 +219,7 @@ Este método move o mouse para o ponto central do elemento visível na tela e, e
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L96-L99" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L98-L101" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
@@ -244,7 +244,7 @@ Este método move o mouse a partir do canto superior esquerdo da janela de visua
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L108-L110" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L110-L112" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
@@ -270,7 +270,7 @@ Observe que o primeiro argumento, X, especifica o movimento para a direita quand
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L124-L126" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L126-L128" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
@@ -295,7 +295,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L137-L141" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L139-L143" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
@@ -320,7 +320,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L149-L154" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L151-L156" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
