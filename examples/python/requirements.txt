@@ -1,7 +1,7 @@
 selenium==4.27.1
-pytest
-trio
-pytest-trio
-pytest-rerunfailures
-flake8
-requests
+pytest==8.3.4
+trio==0.27.0
+pytest-trio==0.8.0
+pytest-rerunfailures==14.0
+flake8==7.1.1
+requests==2.32.3
