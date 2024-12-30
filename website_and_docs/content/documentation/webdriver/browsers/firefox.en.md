@@ -61,7 +61,7 @@ Add an argument to options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L12-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L12">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -102,20 +102,12 @@ There are several ways to work with Firefox profiles.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-FirefoxProfile profile = new FirefoxProfile();
-FirefoxOptions options = new FirefoxOptions();
-options.setProfile(profile);
-driver = new FirefoxDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L211-L216" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L157-L165" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
 var profile = new FirefoxProfile();
@@ -414,7 +406,7 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L181" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L139" >}}
@@ -441,7 +433,7 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L197-L198" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L149-L150" >}}

@@ -39,7 +39,7 @@ Starting a Safari session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L8-L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L10-L12" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L8-L11" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
   val options = SafariOptions()
@@ -93,7 +93,7 @@ Apple provides a development version of their browser — [Safari Technology Pre
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L25-L30" >}}

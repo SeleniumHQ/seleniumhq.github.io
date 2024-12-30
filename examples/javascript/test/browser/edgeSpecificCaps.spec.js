@@ -4,6 +4,7 @@ const options = new edge.Options();
 const assert = require("assert");
 
 
+
 describe('Should be able to Test Command line arguments', function () {
   it('headless', async function () {
     let driver = new Builder()

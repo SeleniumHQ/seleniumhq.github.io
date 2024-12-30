@@ -29,12 +29,8 @@ nature and relationship in the tree to return a value.
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L25" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-# Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-# Get boolean value for is element display
-is_email_visible = driver.find_element(By.NAME, "email_input").is_displayed()
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L12-L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L23" >}}
@@ -68,12 +64,8 @@ Returns a boolean value, **True** if the connected element is
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L30" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Returns true if element is enabled else returns false
-value = driver.find_element(By.NAME, 'button_input').is_enabled()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L19" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L28" >}}
@@ -106,12 +98,8 @@ Returns a boolean value, **True** if referenced element is
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L35" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Returns true if element is checked else returns false
-value = driver.find_element(By.NAME, "checkbox_input").is_selected()
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L23" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L33" >}}
@@ -140,12 +128,8 @@ of the referenced Element which has the focus in the current browsing context.
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L40" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Returns TagName of the element
-attr = driver.find_element(By.NAME, "email_input").tag_name
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L27" >}}
   {{< /tab >}}
      {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L38" >}}
@@ -180,12 +164,8 @@ The fetched data body contain the following details:
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L46" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Returns height, width, x and y coordinates referenced element
-res = driver.find_element(By.NAME, "range_input").rect
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L31" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L47" >}}
@@ -217,13 +197,8 @@ of an element in the current browsing context.
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L51" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-
-    # Navigate to Url
-driver.get('https://www.selenium.dev/selenium/web/colorPage.html')
-
-    # Retrieves the computed style property 'color' of linktext
-cssValue = driver.find_element(By.ID, "namedColor").value_of_css_property('background-color')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L51" >}}
@@ -253,12 +228,8 @@ Retrieves the rendered text of the specified element.
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L57" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Navigate to url
-driver.get("https://www.selenium.dev/selenium/web/linked_image.html")
-
-    # Retrieves the text of the element
-text = driver.find_element(By.ID, "justanotherlink").text
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L41" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L56" >}}
@@ -290,15 +261,8 @@ with the DOM attribute or property of the element.
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L65" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-# Navigate to the url
-driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-# Identify the email text box
-email_txt = driver.find_element(By.NAME, "email_input")
-
-# Fetch the value property associated with the textbox
-value_info = email_txt.get_attribute("value")
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L44-L46" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L63" >}}

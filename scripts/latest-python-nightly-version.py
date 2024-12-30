@@ -1,12 +1,12 @@
 import requests
 import json
-import re
 
 response = requests.get("https://test.pypi.org/pypi/selenium/json")
 data = response.json()
 
-versions = data['releases'].keys()
-sorted_versions = sorted(versions, key=lambda s: [int(part) if part.isdigit() else part for part in re.split(r'(\d+)', s)])
-latest_version = sorted_versions[-1]
+# Extract versions and their upload times
+versions = data['releases']
+sorted_versions = sorted(versions.items(), key=lambda item: item[1][0]['upload_time'], reverse=True)
+latest_version = sorted_versions[0][0]
 
 print(latest_version)

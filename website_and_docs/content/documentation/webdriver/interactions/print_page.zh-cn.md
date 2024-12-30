@@ -27,7 +27,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L15" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -51,7 +51,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L17-L21" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -75,7 +75,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L23-L27" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L24-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -99,7 +99,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L29-L39" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -123,7 +123,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L41-L46" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -147,7 +147,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L48-L52" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L49-L51" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -171,7 +171,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L54-L58" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L55-L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -201,14 +201,14 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L35-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **print_page()**
-{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L11-L15" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
