@@ -1,6 +1,5 @@
 const Chrome = require('selenium-webdriver/chrome');
 const {Browser, Builder} = require("selenium-webdriver");
-const {getBinaryPaths} = require("selenium-webdriver/common/driverFinder");
 const options = new Chrome.Options();
 
 describe('Usage Test', function () {
@@ -15,7 +14,6 @@ describe('Usage Test', function () {
   });
 
   it('Before Selenium Manager', async function () {
-    let paths = getBinaryPaths(options)
     let driverPath = paths.driverPath;
     let browserPath = paths.browserPath;
 
