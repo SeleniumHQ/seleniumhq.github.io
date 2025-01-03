@@ -3,7 +3,7 @@ package dev.selenium.interactions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.print.PageMargin;
 import org.openqa.selenium.print.PrintOptions;
-
+import org.openqa.selenium.print.PageSize;
 import dev.selenium.BaseChromeTest;
 
 public class PrintOptionsTest extends BaseChromeTest {
@@ -31,8 +31,8 @@ public class PrintOptionsTest extends BaseChromeTest {
     {
         driver.get("https://www.selenium.dev/");
         PrintOptions printOptions = new PrintOptions();
-        printOptions.setScale(.50);
-        double current_scale = printOptions.getScale();
+        printOptions.setPageSize(new PageSize(27.94, 21.59)); // A4 size in cm
+        double currentHeight = printOptions.getPageSize().getHeight(); // use getWidth() to retrieve width
     }
 
     @Test
