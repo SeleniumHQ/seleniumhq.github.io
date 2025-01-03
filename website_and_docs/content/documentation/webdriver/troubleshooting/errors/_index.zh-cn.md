@@ -145,3 +145,19 @@ Actions class with `Actions.moveToElement(element)`.
 
 ### 可能的解决方案
 检查脚本中是否有 `driver.close()` 和 `driver.quit()` 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。
+
+## SessionNotCreatedException
+
+此异常发生在 WebDriver 无法为浏览器创建新会话时。通常由于版本不匹配、系统级限制或配置问题导致。
+
+### 可能的原因
+
+- 浏览器版本和 WebDriver 版本不兼容（例如 ChromeDriver v113 和 Chrome v115）。
+- macOS 隐私设置可能会阻止 WebDriver 运行。
+- WebDriver 二进制文件丢失、不可访问或没有执行权限。
+
+### 可能的解决方案
+
+- 确保 WebDriver 版本与浏览器版本匹配。对于 Chrome，请在浏览器中访问 `chrome://settings/help` 检查浏览器版本，并从 [ChromeDriver 下载](https://chromedriver.chromium.org/downloads)页面下载匹配的驱动程序。
+- 在 macOS 上，转到 **系统设置 > 隐私与安全性**，并允许驱动程序运行（如果被阻止）。
+- 验证驱动程序二进制文件是否可执行（在 Linux/macOS 上运行 `chmod +x /path/to/driver`）。
