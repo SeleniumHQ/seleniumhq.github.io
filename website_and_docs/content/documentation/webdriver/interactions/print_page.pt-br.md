@@ -64,7 +64,7 @@ Using the `getPageRanges()` and `setPageRanges()` methods, you can get/set the r
 {{< /tabpane >}}
 
 ### Size
-Using the `getPaperSize()` and `setPaperSize()` methods, you can get/set the paper size to print --- e.g. "A0", "A6", "Legal", "Tabloid", etc.
+Using the `getPageSize()` and `setPageSize()` methods, you can get/set the paper size to print --- e.g. "A0", "A6", "Legal", "Tabloid", etc.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
