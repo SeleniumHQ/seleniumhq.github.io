@@ -70,6 +70,30 @@ public class HttpClientTest extends BaseTest {
         driver.quit();
     }
 
+    @Test
+    public void remoteWebDriverWithEmbedAuthUrl() throws Exception {
+        ClientConfig clientConfig = ClientConfig.defaultConfig()
+                .withRetries()
+                .sslContext(createSSLContextWithCA(Path.of("src/test/resources/tls.crt").toAbsolutePath().toString()))
+                .connectionTimeout(Duration.ofSeconds(300))
+                .readTimeout(Duration.ofSeconds(3600))
+                .version(HTTP_1_1.toString());
+        ChromeOptions options = new ChromeOptions();
+        options.setEnableDownloads(true);
+        driver = RemoteWebDriver.builder()
+                .oneOf(options)
+                .address(embedAuthToUrl(gridUrl, "admin", "myStrongPassword"))
+                .config(clientConfig)
+                .build();
+        driver.quit();
+    }
+
+    private URL embedAuthToUrl(URL url, String username, String password) throws Exception {
+        String userInfo = username + ":" + password;
+        String urlWithAuth = url.getProtocol() + "://" + userInfo + "@" + url.getHost() + ":" + url.getPort() + url.getPath();
+        return new URL(urlWithAuth);
+    }
+
     public static SSLContext createSSLContextWithCA(String caCertPath) throws Exception {
         FileInputStream fis = new FileInputStream(caCertPath);
         CertificateFactory cf = CertificateFactory.getInstance("X.509");
