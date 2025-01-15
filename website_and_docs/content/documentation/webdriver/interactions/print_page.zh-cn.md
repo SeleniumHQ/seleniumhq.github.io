@@ -62,7 +62,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< /tabpane >}}
 
 ### 尺寸
-通过 `getPaperSize()` 和 `setPaperSize()` 方法，可以获取/设置要打印页面的纸张尺寸（如"A0"、"A6"、"Legal"、"Tabloid" 等）。
+通过 `getPageSize()` 和 `setPageSize()` 方法，可以获取/设置要打印页面的纸张尺寸（如"A0"、"A6"、"Legal"、"Tabloid" 等）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

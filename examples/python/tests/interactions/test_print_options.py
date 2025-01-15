@@ -23,8 +23,8 @@ def test_range(driver):
 def test_size(driver):
     driver.get("https://www.selenium.dev/")
     print_options = PrintOptions()
-    print_options.scale = 0.5 ## 0.1 to 2.0``
-    assert print_options.scale == 0.5
+    print_options.page_height = 27.94  # Use page_width to assign width
+    assert print_options.page_height == 27.94
 
 def test_margin(driver):
     driver.get("https://www.selenium.dev/")

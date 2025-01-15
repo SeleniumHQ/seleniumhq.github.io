@@ -161,3 +161,20 @@ Actions class with `Actions.moveToElement(element)`.
 - 确保 WebDriver 版本与浏览器版本匹配。对于 Chrome，请在浏览器中访问 `chrome://settings/help` 检查浏览器版本，并从 [ChromeDriver 下载](https://chromedriver.chromium.org/downloads)页面下载匹配的驱动程序。
 - 在 macOS 上，转到 **系统设置 > 隐私与安全性**，并允许驱动程序运行（如果被阻止）。
 - 验证驱动程序二进制文件是否可执行（在 Linux/macOS 上运行 `chmod +x /path/to/driver`）。
+
+## ElementNotInteractableException
+
+当 Selenium 尝试与当前状态下无法交互的元素进行交互时，会发生此异常。
+
+### 可能的原因
+
+1. **不支持的操作**：尝试对不支持操作的元素执行操作，例如对 `<form>` 或 `<label>` 使用 `sendKeys`。  
+2. **多个元素匹配定位器**：定位器匹配到非可交互的元素，例如 `<td>` 标签，而不是目标的 `<input>` 字段。  
+3. **隐藏的元素**：元素存在于 DOM 中，但由于 CSS、`hidden` 属性或元素超出可见视口范围而不可见。
+
+### 可能的解决方案
+
+1. 根据元素类型使用适当的操作（例如，仅对 `<input>` 字段使用 `sendKeys`）。  
+2. 确保定位器唯一标识目标元素，以避免错误匹配。  
+3. 在与元素交互之前，检查其是否在页面上可见。如果需要，将元素滚动到视图中。  
+4. 使用显式等待以确保元素在执行操作前可交互。
