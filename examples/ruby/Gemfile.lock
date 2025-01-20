@@ -8,7 +8,7 @@ GEM
     language_server-protocol (3.17.0.3)
     logger (1.6.1)
     parallel (1.26.3)
-    parser (3.3.6.0)
+    parser (3.3.7.0)
       ast (~> 2.4.1)
       racc
     racc (1.8.1)
@@ -41,7 +41,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 4.0)
     rubocop-ast (1.37.0)
       parser (>= 3.3.1.0)
-    rubocop-rspec (3.3.0)
+    rubocop-rspec (3.4.0)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
