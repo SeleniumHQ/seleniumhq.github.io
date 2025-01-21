@@ -16,7 +16,7 @@ public class PrintsPageTest extends BaseTest{
 
     @BeforeEach
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = getDefaultChromeOptions();
         options.setCapability("webSocketUrl", true);
         driver = new ChromeDriver(options);
     }
