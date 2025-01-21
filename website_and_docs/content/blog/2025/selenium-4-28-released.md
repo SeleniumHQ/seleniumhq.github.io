@@ -62,14 +62,18 @@ Links to everything can be found on our [downloads page][downloads].
 
 ### **Grid**
 - **Improved Session Management**: Enhanced slot matching and session queue handling ([#14914](https://github.com/SeleniumHQ/selenium/pull/14914)).
-- **Dynamic Grid Enhancements**: Added video recording capabilities on node restart ([#15047](https://github.com/SeleniumHQ/selenium/pull/15047)).
+- **Dynamic Grid Enhancements**: Added video recording capabilities on browser node ([#15047](https://github.com/SeleniumHQ/selenium/pull/15047)).
 - **Reliability Boost**: Improved HTTP request retries and node health checks ([#14924](https://github.com/SeleniumHQ/selenium/pull/14924)).
 
 <br>
 
 ### Docker Selenium
-- K8s: Allow multiple nodes of the same type in Helm configuration ([#2475](https://github.com/SeleniumHQ/docker-selenium/pull/2475))
-- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases/tag/4.28.0-20241127)
+- Update procedure to install Firefox in Node/Standalone Firefox ([#2550](https://github.com/SeleniumHQ/docker-selenium/discussions/2550))
+- Enable video recorder in Node/Standalone containers ([#2539](https://github.com/SeleniumHQ/docker-selenium/discussions/2539))
+- Env var `SE_ENABLE_TRACING=false` is not required when starting the container anymore ([#2549](https://github.com/SeleniumHQ/docker-selenium/discussions/2549))
+- Env var `SE_NODE_PLATFORM_NAME` & `SE_NODE_BROWSER_VERSION` to adjust default Node stereotypes for autoscaling ([#2520](https://github.com/SeleniumHQ/docker-selenium/pull/2520), [#2525](https://github.com/SeleniumHQ/docker-selenium/pull/2525))
+- Selenium Grid scaler in KEDA improvements ([KEDA#6437](https://github.com/kedacore/keda/pull/6437), [KEDA#6477](https://github.com/kedacore/keda/pull/6477))
+- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
   <br>
 
