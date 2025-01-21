@@ -15,6 +15,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
+import dev.selenium.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,12 +27,12 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AlertsTest {
+public class AlertsTest extends BaseTest {
 
     @Test
     public void testForAlerts() throws Exception {
 
-        ChromeOptions chromeOptions = new ChromeOptions();
+        ChromeOptions chromeOptions = getDefaultChromeOptions();
         chromeOptions.addArguments("disable-search-engine-choice-screen");
         WebDriver driver = new ChromeDriver(chromeOptions);
 
