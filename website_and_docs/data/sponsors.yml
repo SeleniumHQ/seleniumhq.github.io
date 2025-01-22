@@ -18,7 +18,7 @@ selenium:
     - logo: "/images/sponsors/bright-data.png"
       url: "https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium"
       name: "Bright Data"
-    # Sponsorship in renewal process
+    # Sponsorship renewal date: Jan 21, 2025
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"

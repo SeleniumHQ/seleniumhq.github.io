@@ -16,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.grid.Main;
@@ -55,6 +56,18 @@ public class BaseTest {
   protected ChromeDriver startChromeDriver(ChromeOptions options) {
     driver = new ChromeDriver(options);
     return (ChromeDriver) driver;
+  }
+
+  protected static ChromeOptions getDefaultChromeOptions() {
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--no-sandbox");
+    return options;
+  }
+
+  protected static EdgeOptions getDefaultEdgeOptions() {
+    EdgeOptions options = new EdgeOptions();
+    options.addArguments("--no-sandbox");
+    return options;
   }
 
   protected File getTempDirectory(String prefix) {

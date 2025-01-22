@@ -13,8 +13,8 @@ for FILE_PATH in "${FILES[@]}"; do
     sed -i '' -E "s/4\.$OLD_VERSION\.[0-9]+/4.$NEW_VERSION.0/g" "$FILE_PATH"
 done
 
-OLD_BLOG="website_and_docs/content/blog/2024/selenium-4-$OLD_VERSION-released.md"
-NEW_BLOG="website_and_docs/content/blog/2024/selenium-4-$NEW_VERSION-released.md"
+OLD_BLOG="website_and_docs/content/blog/2025/selenium-4-$OLD_VERSION-released.md"
+NEW_BLOG="website_and_docs/content/blog/2025/selenium-4-$NEW_VERSION-released.md"
 cp "$OLD_BLOG" "$NEW_BLOG"
 git add "$NEW_BLOG"
 

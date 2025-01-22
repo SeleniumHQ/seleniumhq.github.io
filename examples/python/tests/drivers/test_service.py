@@ -9,7 +9,7 @@ def test_basic_service():
 
 
 def test_driver_location(chromedriver_bin, chrome_bin):
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.binary_location = chrome_bin
 
     service = webdriver.ChromeService(executable_path=chromedriver_bin)
@@ -25,3 +25,8 @@ def test_driver_port():
     driver = webdriver.Chrome(service=service)
 
     driver.quit()
+
+def get_default_chrome_options():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    return options
