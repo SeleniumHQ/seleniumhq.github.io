@@ -20,7 +20,7 @@ def driver(request):
     driver_type = marker.args[0] if marker else None
 
     if driver_type == "bidi":
-        options = webdriver.ChromeOptions()
+        options = get_default_chrome_options()
         options.enable_bidi = True
         driver = webdriver.Chrome(options=options)
     elif driver_type == "firefox":
@@ -36,7 +36,7 @@ def driver(request):
 @pytest.fixture(scope='function')
 def chromedriver_bin():
     service = webdriver.ChromeService()
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_driver_path()
 
@@ -44,7 +44,7 @@ def chromedriver_bin():
 @pytest.fixture(scope='function')
 def chrome_bin():
     service = webdriver.ChromeService()
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
@@ -52,7 +52,7 @@ def chrome_bin():
 @pytest.fixture(scope='function')
 def edge_bin():
     service = webdriver.EdgeService()
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
@@ -142,7 +142,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.27.0.jar",
+        "selenium-server-4.28.1.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -200,7 +200,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.27.0.jar",
+        "selenium-server-4.28.1.jar",
     )
 
     args = [
@@ -273,7 +273,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.27.0.jar",
+        "selenium-server-4.28.1.jar",
     )
 
     args = [
@@ -323,3 +323,13 @@ def grid_server():
         process.wait(timeout=10)
     except subprocess.TimeoutExpired:
         process.kill()
+
+def get_default_chrome_options():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    return options
+
+def get_default_edge_options():
+    options = webdriver.EdgeOptions()
+    options.add_argument("--no-sandbox")
+    return options

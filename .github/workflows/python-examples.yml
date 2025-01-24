@@ -28,7 +28,7 @@ jobs:
         include:
         - os: ubuntu
           release: stable
-          python: '3.8'
+          python: '3.9'
         - os: ubuntu
           release: nightly
           python: '3.11'

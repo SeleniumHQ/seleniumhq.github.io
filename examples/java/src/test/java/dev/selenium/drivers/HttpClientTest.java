@@ -41,7 +41,7 @@ public class HttpClientTest extends BaseTest {
                 .readTimeout(Duration.ofSeconds(3600))
                 .authenticateAs(new UsernameAndPassword("admin", "myStrongPassword"))
                 .version(HTTP_1_1.toString());
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = getDefaultChromeOptions();
         options.setEnableDownloads(true);
         driver = RemoteWebDriver.builder()
                 .oneOf(options)
@@ -60,7 +60,7 @@ public class HttpClientTest extends BaseTest {
                 .readTimeout(Duration.ofSeconds(3600))
                 .authenticateAs(new UsernameAndPassword("admin", "myStrongPassword"))
                 .version(HTTP_1_1.toString());
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = getDefaultChromeOptions();
         options.setEnableDownloads(true);
         driver = RemoteWebDriver.builder()
                 .oneOf(options)
@@ -78,7 +78,7 @@ public class HttpClientTest extends BaseTest {
                 .connectionTimeout(Duration.ofSeconds(300))
                 .readTimeout(Duration.ofSeconds(3600))
                 .version(HTTP_1_1.toString());
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = getDefaultChromeOptions();
         options.setEnableDownloads(true);
         driver = RemoteWebDriver.builder()
                 .oneOf(options)
