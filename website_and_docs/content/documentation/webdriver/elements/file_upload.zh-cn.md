@@ -7,9 +7,9 @@ aliases: [
 ]
 ---
 
-Because Selenium cannot interact with the file upload dialog, it provides a way
-to upload files without opening the dialog. If the element is an `input` element with type `file`, 
-you can use the send keys method to send the full path to the file that will be uploaded.
+由于 Selenium 不能与文件上传对话框交互，因此它提供了一种无需打开对话框即可上传文件的方法。
+如果该元素是一个类型为 `file` 的 `input` 元素，则可以使用
+send keys 方法发送将要上传文件的完整路径。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
