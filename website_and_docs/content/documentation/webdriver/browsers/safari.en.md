@@ -69,6 +69,7 @@ Property key: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
+{{< badge-version version="4.26" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
