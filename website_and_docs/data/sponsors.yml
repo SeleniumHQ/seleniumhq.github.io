@@ -94,6 +94,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship start date: Jan 24, 2025
+    - logo: "/images/sponsors/gwenify-logo.png"
+      url: "https://www.gwenify.com/"
+      name: "Gwenify - Robotic Process Automation"
     # Sponsorship start date: Aug 21, 2024
     - logo: "/images/sponsors/testingbot.png"
       url: "https://testingbot.com/"
