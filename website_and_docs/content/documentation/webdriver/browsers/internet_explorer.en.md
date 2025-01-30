@@ -97,16 +97,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.file_upload_dialog_timeout = 2000
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L28-L29" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -150,16 +142,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.destructivelyEnsureCleanSession();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ensure_clean_session = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L38-L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -198,16 +182,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.ignoreZoomSettings();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_zoom_level = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L48-L49" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -256,16 +232,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.introduceFlakinessByIgnoringSecurityDomains();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_protected_mode_settings = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L58-L59" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
@@ -303,16 +271,8 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.set_capability("silent", True)
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L68-L69" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -400,17 +360,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.add_argument('-private')
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L76-L79" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -495,16 +446,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L87-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -575,8 +518,8 @@ To change the logging output to save to a specific file:
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
-{{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L29" >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L97-L99" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -605,9 +548,9 @@ To change the logging output to display in the console as STDOUT:
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L41" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L109-L111" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -635,8 +578,8 @@ If logging output is specified, the default level is `FATAL`
 Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
 Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
 {{% /tab %}}
-{{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L53" >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L121-L123" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
@@ -662,9 +605,9 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
 Property value: String representing path to supporting files directory
 {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L65" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L133-L135" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}

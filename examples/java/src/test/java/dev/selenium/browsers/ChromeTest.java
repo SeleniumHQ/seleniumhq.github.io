@@ -21,10 +21,9 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.openqa.selenium.chromium.ChromiumNetworkConditions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 public class ChromeTest extends BaseTest {
   @AfterEach
@@ -32,15 +31,16 @@ public class ChromeTest extends BaseTest {
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY);
     System.clearProperty(ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY);
   }
+
   @Test
   public void basicOptions() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new ChromeDriver(options);
   }
 
   @Test
   public void arguments() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.addArguments("--start-maximized");
 
@@ -49,7 +49,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void setBrowserLocation() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.setBinary(getChromeLocation());
 
@@ -58,7 +58,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void extensionOptions() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
     File extensionFilePath = new File(path.toUri());
 
@@ -73,7 +73,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void excludeSwitches() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
@@ -82,7 +82,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void loggingPreferences() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     LoggingPreferences logPrefs = new LoggingPreferences();
     logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
     options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
@@ -175,7 +175,7 @@ public class ChromeTest extends BaseTest {
   }
 
   private File getChromeLocation() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
@@ -234,6 +234,28 @@ public class ChromeTest extends BaseTest {
       driver.stopCasting(sinkName);
     }
 
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    ChromeDriver driver = new ChromeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
     driver.quit();
   }
 }

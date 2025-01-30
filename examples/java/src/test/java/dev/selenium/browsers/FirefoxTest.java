@@ -205,4 +205,16 @@ public class FirefoxTest extends BaseTest {
 
     driver.quit();
   }
+
+  @Test
+  public void firefoxProfile() {
+    FirefoxProfile profile = new FirefoxProfile();
+    FirefoxOptions options = new FirefoxOptions();
+    profile.setPreference("javascript.enabled", "False");
+    options.setProfile(profile);
+
+    driver = new FirefoxDriver(options);
+
+    driver.quit();
+  }
 }

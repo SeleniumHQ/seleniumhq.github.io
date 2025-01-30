@@ -47,13 +47,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Click on the element 
-	driver.find_element(By.NAME, "color_input").click()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L12-L17" >}}
   {{< /tab >}}
  
   {{< tab header="CSharp" text=true >}}
@@ -94,18 +89,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
 {{< /tab >}}
 
-  {{< tab header="Python" >}}
-
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Clear field to empty it from any previous data
-	driver.find_element(By.NAME, "email_input").clear()
-
-	# Enter Text
-	driver.find_element(By.NAME, "email_input").send_keys("admin@localhost.dev" )
-
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L22-L27" >}}
   {{< /tab >}}
    
    {{< tab header="CSharp" text=true >}}
@@ -147,16 +132,8 @@ Selenium将返回一个 [元素点击中断](https://w3c.github.io/webdriver/#df
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-
-
-    # Navigate to url
-	driver.get("https://www.selenium.dev/selenium/web/inputs.html")
-
-    # Clear field to empty it from any previous data
-	driver.find_element(By.NAME, "email_input").clear()
-
-	
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L34" >}}
   {{< /tab >}}
   
      {{< tab header="CSharp" text=true >}}

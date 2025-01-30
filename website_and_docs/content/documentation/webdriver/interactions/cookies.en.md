@@ -30,7 +30,7 @@ e.g. http://example.com/some404page)
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
@@ -79,7 +79,7 @@ It returns the serialized cookie data matching with the cookie name among all as
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
@@ -132,7 +132,7 @@ If browser is no longer available it returns error.
       {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
+ {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
     {{< tab header="CSharp" text=true >}}
@@ -187,8 +187,8 @@ It deletes the cookie data matching with the provided cookie name.
         {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" text=true >}}
   {{< /tab >}}
           {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
@@ -245,8 +245,8 @@ It deletes all the cookies of the current browsing context.
               {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" text=true >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
@@ -312,29 +312,11 @@ Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class cookieTest {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      driver.get("http://www.example.com");
-      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
-      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
-      driver.manage().addCookie(cookie);
-      driver.manage().addCookie(cookie1);
-      System.out.println(cookie.getSameSite());
-      System.out.println(cookie1.getSameSite());
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
   {{< /tab >}}
- {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" text=true >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

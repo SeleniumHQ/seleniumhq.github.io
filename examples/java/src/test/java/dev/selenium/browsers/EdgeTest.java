@@ -21,10 +21,10 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
+
+
 
 public class EdgeTest extends BaseTest {
   @AfterEach
@@ -35,13 +35,13 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void basicOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     driver = new EdgeDriver(options);
   }
 
   @Test
   public void arguments() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.addArguments("--start-maximized");
 
@@ -50,7 +50,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void setBrowserLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setBinary(getEdgeLocation());
 
@@ -59,7 +59,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void extensionOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
     File extensionFilePath = new File(path.toUri());
 
@@ -74,7 +74,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void excludeSwitches() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
@@ -83,7 +83,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void loggingPreferences() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     LoggingPreferences logPrefs = new LoggingPreferences();
     logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
     options.setCapability(EdgeOptions.LOGGING_PREFS, logPrefs);
@@ -170,7 +170,7 @@ public class EdgeTest extends BaseTest {
   }
 
   private File getEdgeLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(EdgeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
@@ -229,6 +229,28 @@ public class EdgeTest extends BaseTest {
       driver.stopCasting(sinkName);
     }
 
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    EdgeDriver driver = new EdgeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
     driver.quit();
   }
 }
