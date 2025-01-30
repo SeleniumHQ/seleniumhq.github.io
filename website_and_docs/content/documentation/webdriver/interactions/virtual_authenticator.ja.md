@@ -113,7 +113,7 @@ Creates a resident (stateful) credential with the given required credential [par
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L80-L97" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L89-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L80-L94" >}}
@@ -137,7 +137,7 @@ Creates a resident (stateless) credential with the given required credential [pa
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L140-L147" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L136-L140" >}}
@@ -161,7 +161,7 @@ Registers the credential with the authenticator.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L150" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L131-L142" >}}
@@ -185,7 +185,7 @@ Returns the list of credentials owned by the authenticator.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L183" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L154-L170" >}}
@@ -210,7 +210,7 @@ Removes a credential from the authenticator based on the passed credential id.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L209" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -234,7 +234,7 @@ Removes all the credentials from the authenticator.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L239" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L181-L190" >}}
@@ -258,7 +258,7 @@ Sets whether the authenticator will simulate success or fail on user verificatio
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L245-L247" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L197-L197" >}}

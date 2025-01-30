@@ -312,26 +312,8 @@ Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class cookieTest {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    try {
-      driver.get("http://www.example.com");
-      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
-      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
-      driver.manage().addCookie(cookie);
-      driver.manage().addCookie(cookie1);
-      System.out.println(cookie.getSameSite());
-      System.out.println(cookie1.getSameSite());
-    } finally {
-      driver.quit();
-    }
-  }
-}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" text=true >}}
