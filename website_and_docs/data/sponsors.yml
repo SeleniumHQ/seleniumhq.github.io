@@ -61,10 +61,6 @@ silver:
   # Set to false if no items are present
   enable: false
   item:
-    # Sponsorship start date: May 18, 2020
-    # - logo: "/images/sponsors/alpi.jpg"
-    #   url: "http://www.alpi.com/courses-opensource/index.cfm"
-    #   name: "Alpi"
     # Sponsorship start date: Nov 05, 2020
     # - logo: "/images/sponsors/Cigniti.jpg"
     #   url: "http://www.cigniti.com/"
@@ -91,6 +87,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship renewal date: Feb 4, 2025
+    - logo: "/images/sponsors/alpi.jpg"
+      url: "http://www.alpi.com/courses-opensource/index.cfm"
+      name: "Alpi"
     # Sponsorship renewed date: Jan 25, 2025
     - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
       url: "https://www.gridlastic.com/"
