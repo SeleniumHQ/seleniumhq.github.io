@@ -88,7 +88,10 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 {{% tab header="Kotlin" %}}
 
+- [Kotest](https://kotest.io/) - Kotlin専用に設計された、柔軟で包括的なテストフレームワークです。
+- [JUnit5](https://junit.org/junit5/) - 標準的なJavaテストフレームワークであり、Kotlinと完全に互換性があります。
 {{% /tab %}}
+
 {{< /tabpane >}}
 
 ### 装着
