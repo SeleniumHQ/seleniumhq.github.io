@@ -39,7 +39,7 @@ def test_explicit(driver):
     driver.find_element(By.ID, "reveal").click()
 
     wait = WebDriverWait(driver, timeout=2)
-    wait.until(lambda d : revealed.is_displayed())
+    wait.until(lambda _ : revealed.is_displayed())
 
     revealed.send_keys("Displayed")
     assert revealed.get_property("value") == "Displayed"
@@ -52,6 +52,6 @@ def test_explicit_options(driver):
 
     errors = [NoSuchElementException, ElementNotInteractableException]
     wait = WebDriverWait(driver, timeout=2, poll_frequency=.2, ignored_exceptions=errors)
-    wait.until(lambda d : revealed.send_keys("Displayed") or True)
+    wait.until(lambda _ : revealed.send_keys("Displayed") or True)
 
     assert revealed.get_property("value") == "Displayed"
