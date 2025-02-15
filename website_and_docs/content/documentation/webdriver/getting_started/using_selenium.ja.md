@@ -144,7 +144,8 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
+
 {{< /tab >}}
 {{< /tabpane >}}
 
