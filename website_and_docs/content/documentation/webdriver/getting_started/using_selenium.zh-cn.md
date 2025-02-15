@@ -78,7 +78,8 @@ description: >
   {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
-
+- [Kotest](https://kotest.io/) - 个灵活且全面的测试框架，专为 Kotlin 设计。
+- [JUnit5](https://junit.org/junit5/) -标准的 Java 测试框架，完全兼容 Kotlin。
 {{% /tab %}}
 {{< /tabpane >}}
 
@@ -135,7 +136,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
