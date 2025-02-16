@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Internal.Logging;
 using SeleniumDocs.TestSupport;
 
 namespace SeleniumDocs.Browsers
@@ -125,6 +126,25 @@ namespace SeleniumDocs.Browsers
         private string GetEdgeLocation()
         {
             return Environment.GetEnvironmentVariable("EDGE_BIN");
+        }
+
+        [TestMethod]
+        [DoNotParallelize]
+        public void PrintOutputToConsole()
+        {
+            var stringWriter = new StringWriter();
+            var originalOutput = Console.Error;
+            Console.SetError(stringWriter);
+
+            using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+            {
+                // logs will be emitted to STDERR
+                _driver = new InternetExplorerDriver();
+            }
+
+            Assert.IsTrue(stringWriter.ToString().Contains("Executing command: []: newSession"));
+            Console.SetError(originalOutput);
+            stringWriter.Dispose();
         }
     }
 }

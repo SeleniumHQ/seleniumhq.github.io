@@ -35,7 +35,7 @@ usando um conjunto de opções básicas:
 {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L11-L14" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L35-L38" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L36-L39" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L17-L20" >}}
@@ -65,7 +65,7 @@ So, if IE is not on the system, you only need:
 {{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L21-L22" >}}
 {{% /tab %}}
 {{% tab header="CSharp" text=true %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L44-L45" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L45-L46" >}}
 {{% /tab %}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L24-L25" >}}
@@ -549,7 +549,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L109-L111" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L139-L143" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
@@ -578,7 +578,7 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L121-123" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
@@ -606,7 +606,7 @@ Property value: String representing path to supporting files directory
 {{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L133-135" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L99" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}

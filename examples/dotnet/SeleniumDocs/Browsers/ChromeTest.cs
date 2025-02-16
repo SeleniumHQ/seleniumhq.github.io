@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Internal.Logging;
 
 namespace SeleniumDocs.Browsers
 {
@@ -178,6 +179,27 @@ namespace SeleniumDocs.Browsers
                 BrowserVersion = "stable"
             };
             return new DriverFinder(options).GetBrowserPath();
+        }
+
+        [TestMethod]
+        [DoNotParallelize]
+        public void PrintOutputToConsole()
+        {
+            var stringWriter = new StringWriter();
+            var originalOutput = Console.Error;
+            Console.SetError(stringWriter);
+
+            driver = new ChromeDriver();
+
+            using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+            {
+                // logs will be emitted to STDERR
+                driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
+            }
+
+            Assert.IsTrue(stringWriter.ToString().Contains("get {\"url\":\"https://www.selenium.dev/selenium/web/blank.html\"}"));
+            Console.SetError(originalOutput);
+            stringWriter.Dispose();
         }
     }
 }
