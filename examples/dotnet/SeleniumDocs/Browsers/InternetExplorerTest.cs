@@ -135,16 +135,21 @@ namespace SeleniumDocs.Browsers
             var stringWriter = new StringWriter();
             var originalOutput = Console.Error;
             Console.SetError(stringWriter);
-
-            using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+            try
             {
-                // logs will be emitted to STDERR
-                _driver = new InternetExplorerDriver();
-            }
+                using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+                {
+                    // logs will be emitted to STDERR
+                    _driver = new InternetExplorerDriver();
+                }
 
-            Assert.IsTrue(stringWriter.ToString().Contains("Executing command: []: newSession"));
-            Console.SetError(originalOutput);
-            stringWriter.Dispose();
+                Assert.IsTrue(stringWriter.ToString().Contains("Executing command: []: newSession"));
+            }
+            finally
+            {
+                Console.SetError(originalOutput);
+                stringWriter.Dispose();
+            }
         }
     }
 }

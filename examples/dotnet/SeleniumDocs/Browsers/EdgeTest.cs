@@ -188,18 +188,22 @@ namespace SeleniumDocs.Browsers
             var stringWriter = new StringWriter();
             var originalOutput = Console.Error;
             Console.SetError(stringWriter);
-
-            driver = new EdgeDriver();
-
-            using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+            try
             {
-                // logs will be emitted to STDERR
-                driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
-            }
+                driver = new EdgeDriver();
+                using (var ctx = Log.CreateContext(LogEventLevel.Debug).Handlers.Add(new ConsoleLogHandler()))
+                {
+                    // logs will be emitted to STDERR
+                    driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
+                }
 
-            Assert.IsTrue(stringWriter.ToString().Contains("get {\"url\":\"https://www.selenium.dev/selenium/web/blank.html\"}"));
-            Console.SetError(originalOutput);
-            stringWriter.Dispose();
+                Assert.IsTrue(stringWriter.ToString().Contains("get {\"url\":\"https://www.selenium.dev/selenium/web/blank.html\"}"));
+            }
+            finally
+            {
+                Console.SetError(originalOutput);
+                stringWriter.Dispose();
+            }
         }
     }
 }
