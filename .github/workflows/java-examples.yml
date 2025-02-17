@@ -58,7 +58,7 @@ jobs:
       run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
     - name: Run Tests Stable
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.1
       with:
         timeout_minutes: 40
         max_attempts: 3
@@ -67,7 +67,7 @@ jobs:
           mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.1
       with:
         timeout_minutes: 40
         max_attempts: 3
@@ -81,7 +81,7 @@ jobs:
 
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.1
       with:
         timeout_minutes: 40
         max_attempts: 3
