@@ -163,6 +163,7 @@ pull request updating this page.
 | `--slot-matcher` | string | `org.openqa.selenium.grid.data.DefaultSlotMatcher` | Full class name of non-default slot matcher to use. This is used to determine whether a Node can support a particular session. |
 | `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Full class name of non-default slot selector. This is used to select a slot in a Node once the Node has been matched. |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
+| `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
 
 ### Docker
 
@@ -273,6 +274,7 @@ pull request updating this page.
 | `--sessionqueue-port` | int | `1234` | Port on which the session queue server is listening. |
 | `--session-request-timeout` | int | `300` | Timeout in seconds. A new incoming session request is added to the queue. Requests sitting in the queue for longer than the configured time will timeout. |
 | `--session-retry-interval` | int | `5` | Retry interval in seconds. If all slots are busy, new session request will be retried after the given interval. |
+| `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
 
 ### Sessions
 
