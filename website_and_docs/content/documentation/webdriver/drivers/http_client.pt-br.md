@@ -1,5 +1,5 @@
 ---
-title: "HTTP Client Configuration"
+title: "Configuração do Cliente HTTP"
 linkTitle: "HTTP Client"
 weight: 3
 ---

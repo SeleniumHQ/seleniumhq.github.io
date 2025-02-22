@@ -1,31 +1,29 @@
 ---
-title: "Driver Sessions"
+title: "Sessões de Driver"
 linkTitle: "Drivers"
 weight: 3
 ---
 
-Starting and stopping a session is for opening and closing a browser.
+Iniciar e encerrar uma sessão serve para abrir e fechar um navegador.
 
-## Creating Sessions
+## Criando Sessões
 
-Creating a new session corresponds with the W3C command for [New session](https://w3c.github.io/webdriver/#new-session)
+Criar uma nova sessão corresponde ao comando W3C para [Nova sessão](https://w3c.github.io/webdriver/#new-session)
 
-The session is created automatically by initializing a new Driver class object.
+A sessão é criada automaticamente ao inicializar um novo objeto da classe Driver. 
 
-Each language allows a session to be created with arguments from one of these classes (or equivalent):
+Cada linguagem permite que uma sessão seja criada com argumentos de uma dessas classes (ou equivalentes):
 
 * [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but
   this is required for remote
-* Some form of [Http Client Configuration]({{< ref "http_client.md" >}}) (the implementation varies between languages)
-* [Listeners]({{< ref "listeners.md" >}})
+* Alguma forma de [configuração do cliente HTTP]({{< ref "http_client.md" >}}) (a implementação varia entre as linguagens)
+* [Ouvintes]({{< ref "listeners.md" >}})
 
 ### Local Driver
 
-The primary unique argument for starting a local driver includes information about starting the required driver service
-on the local machine.
+O principal argumento exclusivo para iniciar um driver local inclui informações sobre a inicialização do serviço de driver necessário na máquina local.
 
-* [Service]({{< ref "service.md" >}}) object applies only to local drivers and provides information about the browser
-  driver
+* Objeto de [Serviço]({{< ref "service.md" >}}) se aplica apenas a drivers locais e fornece informações sobre o driver do navegador.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -48,17 +46,15 @@ on the local machine.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Remote Driver
+### Driver Remoto
 
-The primary unique argument for starting a remote driver includes information about where to execute the code.
-Read the details in the [Remote Driver Section]({{< ref "remote_webdriver.md" >}})
+O principal argumento exclusivo para iniciar um driver remoto inclui informações sobre onde executar o código. Leia os detalhes na [seção Driver Remoto]({{< ref "remote_webdriver.md" >}})
 
-## Quitting Sessions
+## Encerrando Sessões
 
-Quitting a session corresponds to W3C command for [Deleting a Session](https://w3c.github.io/webdriver/#delete-session).
+Encerrar uma sessão corresponde ao comando W3C para [Excluir uma Sessão](https://w3c.github.io/webdriver/#delete-session).
 
-Important note: the `quit` method is different from the `close` method,
-and it is recommended to always use `quit` to end the session
+Nota importante: o método `quit` é diferente do método `close`, e é recomendável sempre usar `quit` para finalizar a sessão.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

@@ -1,9 +1,9 @@
 ---
-title: "Selenium Manager (Beta)"
-linkTitle: "Selenium Manager"
+title: "Gerenciador do Selenium (Beta)"
+linkTitle: "Gerenciador do Selenium"
 weight: 3
 description: >
-    Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+    O Selenium Manager é uma ferramenta de linha de comando implementada em Rust que fornece gerenciamento automatizado de drivers e navegadores para o Selenium. As bibliotecas do Selenium usam essa ferramenta por padrão, portanto, você não precisa baixá-la, adicionar nada ao seu código ou realizar qualquer outra ação para utilizá-la.
 ---
 
 ## Motivation
