@@ -27,7 +27,7 @@ nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L25" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L24" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L12-L15" >}}
@@ -61,7 +61,7 @@ nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L30" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L29" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L19" >}}
@@ -93,7 +93,7 @@ nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L35" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L34" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L23" >}}
@@ -123,7 +123,7 @@ val attr =  driver.findElement(By.name("checkbox_input")).isSelected()
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L40" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L39" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L27" >}}
@@ -159,7 +159,7 @@ val attr =  driver.findElement(By.name("email_input")).getTagName()
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L46" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L44" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L31" >}}
@@ -191,7 +191,7 @@ println(res.getX())
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L51" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L50" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L35-L37" >}}
@@ -220,7 +220,7 @@ val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-c
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L57" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L56" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L41" >}}
@@ -251,7 +251,7 @@ with the DOM attribute or property of the element.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L65" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L64" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L44-L46" >}}
