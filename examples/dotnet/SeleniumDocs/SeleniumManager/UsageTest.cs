@@ -14,7 +14,7 @@ namespace SeleniumDocs.Support
     {
         public void TestWithoutSeleniumManager()
         {
-            ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
+            using driver = new ChromeDriver("path/to/ChromeDriver");
             driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
             driver.Quit();
         }
