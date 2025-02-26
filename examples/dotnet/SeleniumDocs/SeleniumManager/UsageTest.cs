@@ -10,13 +10,13 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumDocs.Support
 {
     [TestClass]
-    public class UsageTest : BaseChromeTest
+    public class UsageTest
     {
-        public void TestWithoutSeleniumManager()
-        {
-            using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
-            driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
-        }
+        // public void TestWithoutSeleniumManager()
+        // {
+        //     using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
+        //     driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
+        // }
 
         public void TestWithSeleniumManager()
         {
