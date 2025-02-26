@@ -85,7 +85,7 @@ jobs:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-fields/retry@v3.0.0
+      uses: nick-fields/retry@v3.0.1
       with:
         timeout_minutes: 20
         max_attempts: 3
