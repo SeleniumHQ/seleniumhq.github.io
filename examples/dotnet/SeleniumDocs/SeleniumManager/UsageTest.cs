@@ -14,13 +14,13 @@ namespace SeleniumDocs.Support
     {
         public void TestWithoutSeleniumManager()
         {
-            using driver = new ChromeDriver("path/to/ChromeDriver");
+            using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
             driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
         }
 
         public void TestWithSeleniumManager()
         {
-            using driver = new ChromeDriver();
+            using ChromeDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
         }
     }
