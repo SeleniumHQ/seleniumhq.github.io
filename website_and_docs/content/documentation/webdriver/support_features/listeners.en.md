@@ -14,7 +14,7 @@ These allow you to execute custom actions in every time specific Selenium comman
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/support/test_listener.py#L1-L25" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
