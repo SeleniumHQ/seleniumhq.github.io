@@ -12,14 +12,10 @@ namespace SeleniumDocs.Support
     [TestClass]
     public class UsageTest
     {
-        // public void TestWithoutSeleniumManager()
-        // {
-        //     using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
-        //     driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
-        // }
-
         public void TestWithSeleniumManager()
         {
+            // Before
+            // using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
             using ChromeDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
         }
