@@ -11,7 +11,7 @@ aliases: [
 
 ## 定义
 
-自定义的Listener需要继承selenium中的AbstractEventListener同时重写AbstractEventListener中的方法,
+自定义的Listener需要继承selenium中的AbstractEventListener同时重写AbstractEventListener中的方法.  
 有一个简单打印和记录事件的例子:
 
 {{< tabpane text=true >}}

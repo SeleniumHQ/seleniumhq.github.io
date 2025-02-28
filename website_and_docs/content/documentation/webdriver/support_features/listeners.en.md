@@ -12,15 +12,15 @@ These allow you to execute custom actions in every time specific Selenium comman
 
 ## Define
 
-A custom Listener needs to inherit from AbstractEventListener in Selenium and override the methods in AbstractEventListener.
- Here’s a simple example to print and log events:
+A custom Listener needs to inherit from AbstractEventListener in Selenium and override the methods in AbstractEventListener.  
+Here’s a simple example to print and log events:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/support/test_listener.py" >}}
+{{< gh-codeblock path="examples/python/tests/support/test_listener.py#L1-L33" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
