@@ -16,6 +16,7 @@ namespace SeleniumDocs.Support
         {
             // Before
             // using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
+            
             using ChromeDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.selenium.dev/documentation/selenium_manager/");
         }
