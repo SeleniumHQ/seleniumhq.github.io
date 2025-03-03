@@ -1,5 +1,5 @@
 ---
-title: "BiDirectional functionality"
+title: "双向功能"
 linkTitle: "BiDi"
 weight: 16
 aliases: [
@@ -12,23 +12,27 @@ aliases: [
 ]
 ---
 
-BiDirectional means that communication is happening in two directions simultaneously.
-The traditional WebDriver model involves strict request/response commands which only allows for communication to
-happen in one direction at any given time. In most cases this is what you want; it ensures that the browser is
-doing the expected things in the right order, but there are a number of interesting things that can be done with 
-asynchronous interactions.
 
-This functionality is currently available in a limited fashion with the [Chrome DevTools Protocol] (CDP), 
-but to address some of its drawbacks, the Selenium team, along with the major
-browser vendors, have worked to create the new [WebDriver BiDi Protocol](https://w3c.github.io/webdriver-bidi/).
-This specification aims to create a stable, cross-browser API that leverages bidirectional
-communication for enhanced browser automation and testing functionality, 
-including streaming events from the user agent to the controlling software via WebSockets.
-Users will be able to listen for and record or manipulate events as they happen during the course of a Selenium session.
+双向是指通信同时在两个方向上进行. 
+传统的 WebDriver 模型涉及严格的请求/响应命令, 
+在任何时候都只允许单向通信. 
+在大多数情况下, 这正是您想要的；它能确保浏览器以正确的顺序执行预期的操作, 
+但异步交互也有许多有趣的地方. 
 
-### Enabling BiDi in Selenium
 
-In order to use WebDriver BiDi, setting the capability in the browser options will enable the required functionality:
+目前, [Chrome DevTools Protocol] (CDP) 可以有限地提供这种功能, 
+但为了解决它的一些缺点, 
+Selenium 团队与主要浏览器供应商一起创建了新的 [WebDriver BiDi 协议](https://w3c.github.io/webdriver-bidi/).
+该规范旨在创建一个稳定的跨浏览器 API, 
+利用双向通信增强浏览器自动化和测试功能、
+包括通过 WebSockets 从用户代理到控制软件的流式事件. 
+用户将能在 Selenium 会话过程中监听、记录或操作事件. 
+
+
+### 在Selenium中启用 BiDi
+
+为了使用 WebDriver BiDi, 
+在浏览器选项中设置该功能将启用所需的功能:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -51,17 +55,25 @@ options.setCapability("webSocketUrl", true);
 {{< /tab >}}
 {{< /tabpane >}}
 
-This enables the WebSocket connection for bidirectional communication, 
-unlocking the full potential of the WebDriver BiDi protocol.
 
-Note that Selenium is updating its entire implementation from WebDriver Classic to WebDriver BiDi (while
-maintaining backwards compatibility as much as possible), but this section of documentation focuses on the new
-functionality that bidirectional communication allows. 
-The low-level BiDi domains will be accessible in the code to the end user, but the goal is to provide
-high-level APIs that are straightforward methods of real-world use cases. As such, the low-level
-components will not be documented, and this section will focus only on the user-friendly
-features that we encourage users to take advantage of.
 
-If there is additional functionality you'd like to see, please raise a
-[feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+这将启用用于双向通信的 WebSocket 连接、
+释放 WebDriver BiDi 协议的全部潜能. 
+
+
+
+请注意, Selenium 正在将其整个实现从 WebDriver Classic 
+升级到 WebDriver BiDi (同时尽可能保持向后兼容性) , 
+但本部分文档的重点是双向通信所允许的新功能. 
+
+
+
+终端用户可以在代码中访问低级 BiDi 域, 
+但我们的目标是提供高级应用程序接口, 
+这些应用程序接口是真实世界用例的直接方法. 
+因此, 我们将不对底层组件进行记录, 本节将只关注我们鼓励使用者利用的用户友好功能. 
+
+
+如果您希望看到其他功能, 请提出
+[功能请求](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md). 
 

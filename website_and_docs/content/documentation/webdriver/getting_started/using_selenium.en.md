@@ -98,7 +98,10 @@ that will be used for all examples on this page.
 
 {{% tab header="Kotlin" %}}
 
+- [Kotest](https://kotest.io/) - A flexible and comprehensive testing framework specifically designed for Kotlin.
+- [JUnit5](https://junit.org/junit5/) - The standard Java testing framework, fully compatible with Kotlin.
 {{% /tab %}}
+
 {{< /tabpane >}}
 
 ### Installing
