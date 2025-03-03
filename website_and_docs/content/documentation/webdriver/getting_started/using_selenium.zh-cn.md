@@ -49,36 +49,37 @@ description: >
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-- [JUnit](https://junit.org/junit5/) - A widely-used testing framework for Java-based Selenium tests.
-- [TestNG](https://testng.org/) - Offers extra features like parallel test execution and parameterized tests.
+- [JUnit](https://junit.org/junit5/) - 个广泛使用的用于基于 Java 的 Selenium 测试的测试框架。
+- [TestNG](https://testng.org/) - 提供诸如并行测试执行和参数化测试等额外功能。
   {{% /tab %}}
 
 {{% tab header="Python" %}}
 
-- [pytest](https://pytest.org/) - A preferred choice for many, thanks to its simplicity and powerful plugins.
-- [unittest](https://docs.python.org/3/library/unittest.html) - Python's standard library testing framework.
+- [pytest](https://pytest.org/) - 由于其简单性和强大的插件，它成为许多人的首选。
+- [unittest](https://docs.python.org/3/library/unittest.html) - Python 的标准测试库
   {{% /tab %}}
 
 {{% tab header="CSharp" %}}
 
-- [NUnit](https://nunit.org/) - A popular unit-testing framework for .NET.
-- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - Microsoft's own unit testing framework.
+- [NUnit](https://nunit.org/) - .NET的流行单元测试框架
+- [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - 微软自己的单元测试框架
   {{% /tab %}}
 
 {{% tab header="Ruby" %}}
 
-- [RSpec](https://rspec.info/) - The most widely used testing library for running Selenium tests in Ruby.
-- [Minitest](https://github.com/seattlerb/minitest) - A lightweight testing framework that comes with Ruby standard library.
+- [RSpec](https://rspec.info/) - Ruby中运行Selenium测试最广泛使用的测试库
+- [Minitest](https://github.com/seattlerb/minitest) - 一个随Ruby标准库附带的轻量级测试框架
   {{% /tab %}}
 
 {{% tab header="JavaScript" %}}
 
-- [Jest](https://jestjs.io/) - Primarily known as a testing framework for React, it can also be used for Selenium tests.
-- [Mocha](https://mochajs.org/) - The most common JS library for running Selenium tests.
+- [Jest](https://jestjs.io/) - 主要作为React的测试框架而闻名，但也可以用于Selenium测试
+- [Mocha](https://mochajs.org/) -最常用的运行Selenium测试的JavaScript库。
   {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
-
+- [Kotest](https://kotest.io/) - 个灵活且全面的测试框架，专为 Kotlin 设计。
+- [JUnit5](https://junit.org/junit5/) -标准的 Java 测试框架，完全兼容 Kotlin。
 {{% /tab %}}
 {{< /tabpane >}}
 
@@ -135,7 +136,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
