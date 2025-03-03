@@ -232,10 +232,7 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
 {{< /tab >}}
 {{% tab header="CSharp" %}}
-**Previously**
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L15-L20" >}}
-**Selenium Manager**
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L22-L27" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L10-L18" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
