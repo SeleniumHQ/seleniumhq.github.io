@@ -19,7 +19,7 @@ def test_start_remote_with_client_config(grid_server):
                                      "init_args_for_pool_manager": {"retries": retries, "timeout": timeout}},
                                  ca_certs=_get_resource_path("tls.crt"),
                                  username="admin", password="myStrongPassword")
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     driver = webdriver.Remote(command_executor=grid_server, options=options, client_config=client_config)
     driver.get("https://www.selenium.dev")
     driver.quit()
@@ -33,7 +33,7 @@ def test_start_remote_ignore_certs(grid_server):
                                  timeout=3600,
                                  ignore_certificates=True,
                                  username="admin", password="myStrongPassword")
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     driver = webdriver.Remote(command_executor=grid_server, options=options, client_config=client_config)
     driver.get("https://www.selenium.dev")
     driver.quit()
@@ -45,3 +45,8 @@ def _get_resource_path(file_name: str):
     else:
         path = os.path.abspath(f"tests/resources/{file_name}")
     return path
+
+def get_default_chrome_options():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    return options

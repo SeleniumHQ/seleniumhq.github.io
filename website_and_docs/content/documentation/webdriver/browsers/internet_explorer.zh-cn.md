@@ -1,31 +1,34 @@
 ---
-title: "IE specific functionality"
+title: "IE 特定功能"
 linkTitle: "Internet Explorer"
 weight: 8
 description: >-
-    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+    这些是 Microsoft Internet Explorer 浏览器特有的功能和特性.
 aliases: [
 "/zh-cn/documentation/capabilities/internet_explorer"
 ]
 ---
 
-As of June 2022, Selenium officially no longer supports standalone Internet Explorer.
-The Internet Explorer driver still supports running Microsoft Edge in "IE Compatibility Mode."
+自2022年6月起, Selenium 正式不再支持独立的 Internet Explorer.
+Internet Explorer 驱动程序仍支持在 "IE 兼容模式" 下运行 Microsoft Edge.
 
-## Special considerations
+## 特别注意事项
 
-The IE Driver is the only driver maintained by the Selenium Project directly.
-While binaries for both the 32-bit and 64-bit
-versions of Internet Explorer are available, there are some
-[known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+IE 驱动程序是 Selenium 项目直接维护的唯一驱动程序.
+虽然 32 位和 64 位版本的版本的二进制文件, 
+但有一些64位驱动程序的
+[已知限制](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html).
+因此, 建议使用 32 位驱动程序.
 
-Additional information about using Internet Explorer can be found on the
-[IE Driver Server page]({{< ref "/documentation/ie_driver_server/" >}})
+有关使用 Internet Explorer 的其他信息, 请参见
+[IE 驱动程序服务器页面]({{< ref "/documentation/ie_driver_server/" >}})
 
-## Options
+## 选项
 
-Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
+在 Internet Explorer 兼容模式下启动 Microsoft Edge 浏览器, 
+并使用基本定义的选项, 
+看起来就像这样:
+
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -48,13 +51,14 @@ Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with b
 {{< /tab >}}
 {{< /tabpane >}}
 
-As of Internet Explorer Driver v4.5.0:
-* If IE is not present on the system (default in Windows 11), you do not need to 
-use the two parameters above. IE Driver will use Edge and will automatically locate it. 
-* If IE and Edge are both present on the system, you only need to set attaching to Edge,
-IE Driver will automatically locate Edge on your system.
 
-So, if IE is not on the system, you only need:
+截至 Internet Explorer 驱动程序 v4.5.0:
+* 如果系统中没有 IE（Windows 11 中的默认设置）, 则无需使用上述两个参数.
+  使用上述两个参数.IE 驱动程序将使用 Edge, 并自动对其进行定位.
+* 如果系统上同时存在 IE 和 Edge, 则只需设置附加到 Edge、
+  IE 驱动程序将自动在系统中定位 Edge.
+
+因此, 如果系统中没有 IE, 您只需要:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
@@ -82,7 +86,8 @@ val driver = InternetExplorerDriver(options)
 {{< /tab >}}
 {{< /tabpane >}}
 
-Here are a few common use cases with different capabilities:
+
+以下是几种具有不同功能的常见用例:
 
 ### fileUploadDialogTimeout
 
@@ -125,7 +130,7 @@ val driver = RemoteWebDriver(options)
 此功能将清除InternetExplorer所有正在运行实例的
  _缓存, 浏览器历史记录和Cookies_ 
  (包括手动启动或由驱动程序启动的实例) .
-默认情况下，此设置为 `false`.
+默认情况下, 此设置为 `false`.
 
 使用此功能将导致启动浏览器时性能下降, 
 因为驱动程序将等待直到缓存清除后再启动IE浏览器.   
@@ -216,7 +221,7 @@ val driver = RemoteWebDriver(options)
 但是, 到目前为止, 
 这仍然是第二好的选择, 
 并且第一选择应该 *始终* 是手动实际设置每个区域的保护模式设置.
-如果用户正在使用此属性，
+如果用户正在使用此属性, 
 则只会给予 "尽力而为" 的支持.
 
 此功能接受一个布尔值作为参数. 
@@ -495,18 +500,22 @@ fun main() {
 
 
 
-## Service
+## 服务
 
-Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+[Service page]({{< ref "../drivers/service.md" >}})
+描述了所有浏览器通用的服务设置.
 
-### Log output
+### 日志输出
 
-Getting driver logs can be helpful for debugging various issues. The Service class lets you
-direct where the logs will go. Logging output is ignored unless the user directs it somewhere.
+获取驱动程序日志有助于调试各种问题.
+服务类可让您指示日志的去向.
+除非用户指定了日志输出的位置, 
+否则日志输出将被忽略.
 
-#### File output
+#### 文件输出
 
-To change the logging output to save to a specific file:
+更改日志输出以保存到特定文件:
+
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -534,9 +543,12 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< /tabpane >}}
 
-#### Console output
+#### 控制台输出
 
-To change the logging output to display in the console as STDOUT:
+
+要更改日志输出, 使其在控制台中显示为标准输出:
+
+
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -565,9 +577,12 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log Level
-There are 6 available log levels: `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`
-If logging output is specified, the default level is `FATAL`
+
+### 日志级别
+有 6 种可用的日志级别:`FATAL`、`ERROR`、`WARN`、`INFO`、`DEBUG` 和 `TRACE`
+如果指定了日志输出, 默认级别为`FATAL`.
+
+
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -594,7 +609,9 @@ Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.t
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Supporting Files Path
+
+### 辅助文件路径
+
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

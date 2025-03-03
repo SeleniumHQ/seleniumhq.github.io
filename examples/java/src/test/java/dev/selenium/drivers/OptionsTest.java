@@ -18,7 +18,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setPageLoadStrategyNormal() {
-    ChromeOptions chromeOptions = new ChromeOptions();
+    ChromeOptions chromeOptions = getDefaultChromeOptions();
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
     WebDriver driver = new ChromeDriver(chromeOptions);
     try {
@@ -31,7 +31,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setPageLoadStrategyEager() {
-    ChromeOptions chromeOptions = new ChromeOptions();
+    ChromeOptions chromeOptions = getDefaultChromeOptions();
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
     WebDriver driver = new ChromeDriver(chromeOptions);
     try {
@@ -44,7 +44,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setPageLoadStrategyNone() {
-    ChromeOptions chromeOptions = new ChromeOptions();
+    ChromeOptions chromeOptions = getDefaultChromeOptions();
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
     WebDriver driver = new ChromeDriver(chromeOptions);
     try {
@@ -57,7 +57,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setAcceptInsecureCerts() {
-    ChromeOptions chromeOptions = new ChromeOptions();
+    ChromeOptions chromeOptions = getDefaultChromeOptions();
     chromeOptions.setAcceptInsecureCerts(true);
     WebDriver driver = new ChromeDriver(chromeOptions);
     try {
@@ -70,14 +70,14 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void getBrowserName() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	String name = chromeOptions.getBrowserName();
 	Assertions.assertFalse(name.isEmpty(), "Browser name should not be empty");
   }
 
   @Test
   public void setBrowserVersion() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	String version = "latest";
 	chromeOptions.setBrowserVersion(version);
 	Assertions.assertEquals(version, chromeOptions.getBrowserVersion());
@@ -85,7 +85,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setPlatformName() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	String platform = "OS X 10.6";
 	chromeOptions.setPlatformName(platform);
 	Assertions.assertEquals(platform, chromeOptions.getPlatformName().toString());
@@ -93,7 +93,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setScriptTimeout() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	Duration duration = Duration.of(5, ChronoUnit.SECONDS);
 	chromeOptions.setScriptTimeout(duration);
 
@@ -108,7 +108,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setPageLoadTimeout() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	Duration duration = Duration.of(5, ChronoUnit.SECONDS);
 	chromeOptions.setPageLoadTimeout(duration);
 
@@ -123,7 +123,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setImplicitWaitTimeout() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	Duration duration = Duration.of(5, ChronoUnit.SECONDS);
 	chromeOptions.setImplicitWaitTimeout(duration);
 
@@ -138,7 +138,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setUnhandledPromptBehaviour() {
-	ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = getDefaultChromeOptions();
 	chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.DISMISS_AND_NOTIFY);
 	//verify the capability object is not null
 	Object capabilityObject = chromeOptions.getCapability(CapabilityType.UNHANDLED_PROMPT_BEHAVIOUR);
@@ -148,7 +148,7 @@ public class OptionsTest extends BaseTest {
 
   @Test
   public void setWindowRect() {
-   	ChromeOptions chromeOptions = new ChromeOptions();
+   	ChromeOptions chromeOptions = getDefaultChromeOptions();
    	chromeOptions.setCapability(CapabilityType.SET_WINDOW_RECT, true);
    	//verify the capability object is not null
    	Object capabilityObject = chromeOptions.getCapability(CapabilityType.SET_WINDOW_RECT);
@@ -160,7 +160,7 @@ public class OptionsTest extends BaseTest {
 	
   @Test
   public void setStrictFileInteractability() {
-    ChromeOptions chromeOptions = new ChromeOptions();
+    ChromeOptions chromeOptions = getDefaultChromeOptions();
     chromeOptions.setCapability(CapabilityType.STRICT_FILE_INTERACTABILITY, true);
 	//verify the capability object is not null
     Object capabilityObject = chromeOptions.getCapability(CapabilityType.STRICT_FILE_INTERACTABILITY);
