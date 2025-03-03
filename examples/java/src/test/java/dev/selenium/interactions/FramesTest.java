@@ -41,7 +41,7 @@ public class FramesTest{
          driver.switchTo().frame(iframe);
          assertEquals(true, driver.getPageSource().contains("We Leave From Here"));
          //Now we can type text into email field
-         WebElement emailE= driver.findElement(By.id("email"));
+         WebElement emailE = driver.findElement(By.id("email"));
          emailE.sendKeys("admin@selenium.dev");
          emailE.clear();
          driver.switchTo().defaultContent();
@@ -52,7 +52,7 @@ public class FramesTest{
          //Switch to the frame
          driver.switchTo().frame(iframe);
          assertEquals(true, driver.getPageSource().contains("We Leave From Here"));
-         WebElement email=driver.findElement(By.id("email"));
+         WebElement email = driver.findElement(By.id("email"));
          //Now we can type text into email field
          email.sendKeys("admin@selenium.dev");
          email.clear();

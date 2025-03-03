@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_start_remote(server):
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     driver = webdriver.Remote(command_executor=server, options=options)
 
     assert "localhost" in driver.command_executor._client_config.remote_server_addr
@@ -19,7 +19,7 @@ def test_start_remote(server):
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_uploads(server):
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     driver = webdriver.Remote(command_executor=server, options=options)
 
     driver.get("https://the-internet.herokuapp.com/upload")
@@ -39,7 +39,7 @@ def test_uploads(server):
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
 def test_downloads(server, temp_dir):
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.enable_downloads = True
     driver = webdriver.Remote(command_executor=server, options=options)
 
@@ -64,3 +64,8 @@ def test_downloads(server, temp_dir):
     driver.delete_downloadable_files()
 
     assert not driver.get_downloadable_files()
+
+def get_default_chrome_options():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    return options

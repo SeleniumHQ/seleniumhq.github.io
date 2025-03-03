@@ -71,6 +71,7 @@ Safari 浏览器不允许您选择日志的输出位置或更改级别.
 属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
+{{< badge-version version="4.26" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
