@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumDocs.Support
+namespace SeleniumDocs.SeleniumManager
 {
     [TestClass]
     public class UsageTest
