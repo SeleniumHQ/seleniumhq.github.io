@@ -12,6 +12,7 @@ namespace SeleniumDocs.Support
     [TestClass]
     public class UsageTest
     {
+        [TestMethod]
         public void TestWithSeleniumManager()
         {
             // Before
