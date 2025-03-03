@@ -86,7 +86,7 @@ namespace SeleniumDocs.VirtualAuthentication
             ((WebDriver)driver).RemoveVirtualAuthenticator(virtualAuthenticatorId);
 
             // Since the authenticator was removed, any operation using it will throw an error
-            Assert.ThrowsException<WebDriverArgumentException>(() => ((WebDriver)driver).GetCredentials());
+            Assert.ThrowsException<InvalidOperationException>(() => ((WebDriver)driver).GetCredentials());
         }
 
         [TestMethod]

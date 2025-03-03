@@ -162,6 +162,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--slot-matcher`               | string  | `org.openqa.selenium.grid.data.DefaultSlotMatcher`                  | デフォルト以外で使用するスロットマッチャーの完全なクラス名。これはノードが特定のセッションをサポートできるかを判断するために使用されます。                                                            |
 | `--slot-selector`              | string  | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | デフォルト以外のスロットセレクターの完全なクラス名。これは、ノードがマッチした後ノード内のスロットを選択するために使用されます。                                                                      |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
+| `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
 
 ### Docker
 
@@ -270,6 +271,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--sessionqueue-port`       | int    | `1234`                  | 新規セッションキューがリッスンするポート                                                                                            |
 | `--session-request-timeout` | int    | `300`                   | タイムアウト(秒)。 新規セッションリクエストはキューに追加され、設定された時間以上キューに残っているリクエストはタイムアウトします。 |
 | `--session-retry-interval`  | int    | `5`                     | リトライ間隔(秒)。すべてのスロットがビジーな場合、 新規セッションリクエストはこの時間の間隔をおいてからリトライされます。           |
+| `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
 
 ### Sessions
 
