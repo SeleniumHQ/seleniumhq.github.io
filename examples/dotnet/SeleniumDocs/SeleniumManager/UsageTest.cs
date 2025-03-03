@@ -15,7 +15,7 @@ namespace SeleniumDocs.Support
         public void TestWithSeleniumManager()
         {
             // Before
-            // using ChromeDriver driver = new ChromeDriver("path/to/ChromeDriver");
+            // using var driver = new ChromeDriver("path/to/chromedriver");
 
             // Now
             using var driver = new ChromeDriver();
