@@ -18,11 +18,11 @@ selenium:
     - logo: "/images/sponsors/bright-data.png"
       url: "https://brightdata.com/?utm_source=brand&utm_campaign=brnd-mkt_partners_selenium"
       name: "Bright Data"
-    # Sponsorship in renewal process
+    # Sponsorship renewal date: Jan 21, 2025
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"
-    # Sponsorship renewed October 16, 2024. 
+    # Sponsorship renewed October 16, 2024.
     - logo: "/images/sponsors/lambda-test.png"
       url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
       name: "LambdaTest"
@@ -61,18 +61,11 @@ silver:
   # Set to false if no items are present
   enable: false
   item:
-    # Sponsorship start date: May 18, 2020
-    # - logo: "/images/sponsors/alpi.jpg"
-    #   url: "http://www.alpi.com/courses-opensource/index.cfm"
-    #   name: "Alpi"
     # Sponsorship start date: Nov 05, 2020
     # - logo: "/images/sponsors/Cigniti.jpg"
     #   url: "http://www.cigniti.com/"
     #   name: "Cigniti"
     # Sponsorship start date: Nov 05, 2020
-    # - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
-    #   url: "https://www.gridlastic.com/?utm_source=seleniumhq&utm_campaign=seleniumhq-sponsorship&utm_medium=bannerad"
-    #   name: "GridLastic"
     # Sponsorship start date: Aug 04, 2021
     # - logo: "/images/sponsors/QaseLogo2X.png"
     #   url: "https://qase.io/?utm_source=selenium&utm_medium=sponsorship&utm_campaign=promo"
@@ -94,6 +87,18 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship renewal date: Feb 4, 2025
+    - logo: "/images/sponsors/alpi.jpg"
+      url: "http://www.alpi.com/courses-opensource/index.cfm"
+      name: "Alpi"
+    # Sponsorship renewed date: Jan 25, 2025
+    - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
+      url: "https://www.gridlastic.com/"
+      name: "Gridlastic"
+    # Sponsorship start date: Jan 24, 2025
+    - logo: "/images/sponsors/gwenify-logo.png"
+      url: "https://www.gwenify.com/"
+      name: "Gwenify - Robotic Process Automation"
     # Sponsorship start date: Aug 21, 2024
     - logo: "/images/sponsors/testingbot.png"
       url: "https://testingbot.com/"

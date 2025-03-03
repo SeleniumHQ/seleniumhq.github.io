@@ -28,7 +28,7 @@ jobs:
         include:
         - os: ubuntu
           release: stable
-          python: '3.8'
+          python: '3.9'
         - os: ubuntu
           release: nightly
           python: '3.11'
@@ -95,7 +95,7 @@ jobs:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.2
       with:
         timeout_minutes: 60
         max_attempts: 3

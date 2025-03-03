@@ -207,15 +207,39 @@ enable = false
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
+	name = "Selenium Linkedin"
+	url = "https://www.linkedin.com/company/4826427/"
+	icon = "fab fa-linkedin-in"
+        desc = "Check all the Community talks!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name ="Selenium X"
+	url = "https://x.com/SeleniumHQ"
+	icon = "fab fa-twitter"
+        desc = "Follow us on X to get the latest news!"
+[[params.links.user]]
+	name = "Selenium Community YouTube Channel"
+	url = "https://www.youtube.com/@SeleniumHQProject/streams"
+	icon = "fab fa-youtube"
+        desc = "Check all the Community talks!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = "Selenium Mastodon"
+	url = "https://mastodon.social/@seleniumHQ@fosstodon.org"
+	icon = "fab fa-mastodon"
+        desc = "Selenium mastodon!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = "Selenium BlueSky"
+	url = "https://bsky.app/profile/seleniumconf.bsky.social"
+	icon = "fab fa-bluesky"
+        desc = "Selenium BlueSky!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
 	name = "User mailing list"
 	url = "https://groups.google.com/group/selenium-users"
 	icon = "fas fa-mail-bulk"
         desc = "Discussion and help from your fellow users"
-[[params.links.user]]
-	name ="Selenium in Twitter"
-	url = "https://twitter.com/SeleniumHQ"
-	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
 [[params.links.user]]
 	name = "SeleniumConf YouTube Channel"
 	url = "https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"

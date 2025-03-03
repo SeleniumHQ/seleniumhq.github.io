@@ -82,12 +82,12 @@ jobs:
       if: matrix.release == 'stable'
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '22.x'
     - name: Setup Node Nightly
       if: matrix.release == 'nightly'
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '22.x'
         registry-url: 'https://npm.pkg.github.com'
     - name: Use Nightly package.json in Ubuntu/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -116,7 +116,7 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run tests
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.2
       with:
         timeout_minutes: 20
         max_attempts: 3
