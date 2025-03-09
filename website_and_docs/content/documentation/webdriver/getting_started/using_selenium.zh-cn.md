@@ -22,7 +22,7 @@ description: >
 
 ### 测试
 
-使用 Selenium 做测试需要在 Selenium 执行操作后进行断言，所以一个好的断言类库是很有必要的。至于组织测试用例结构的一些额外特性则需要[Test Runner](#test-runners)来完成。
+使用 Selenium 做测试需要在 Selenium 执行操作后进行断言，所以一个好的断言类库是很有必要的。至于组织测试用例结构的一些额外特性则需要[Test Runner](#test-runner)来完成。
 
 ## IDEs
 
