@@ -28,7 +28,7 @@ APIがないサイトからデータを収集したいとお考えですか?セ�
 
 テストのためにSeleniumを実行するには、Seleniumが実行したアクションに対してアサーションを行う必要があります。
 したがって、優れたアサーションライブラリが必要です。テストの構造を提供する追加機能
-使用する必要があります [Test Runner](#test-runners).
+使用する必要があります [Test Runner](#test-runner).
 
 ## IDEs
 
@@ -88,7 +88,10 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 {{% tab header="Kotlin" %}}
 
+- [Kotest](https://kotest.io/) - Kotlin専用に設計された、柔軟で包括的なテストフレームワークです。
+- [JUnit5](https://junit.org/junit5/) - 標準的なJavaテストフレームワークであり、Kotlinと完全に互換性があります。
 {{% /tab %}}
+
 {{< /tabpane >}}
 
 ### 装着
@@ -144,7 +147,8 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
+
 {{< /tab >}}
 {{< /tabpane >}}
 
