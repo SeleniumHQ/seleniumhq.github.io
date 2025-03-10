@@ -34,7 +34,7 @@ terms of service as some websites do not permit it and others will even block Se
 
 Running Selenium for testing requires making assertions on actions taken by Selenium.
 So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners).
+require use of [Test Runner](#test-runner).
 
 ## IDEs
 
