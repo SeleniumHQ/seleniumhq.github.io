@@ -27,7 +27,7 @@ description: >
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L12-L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L23" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L22" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L12">}}
@@ -59,7 +59,7 @@ val flag = driver.findElement(By.name("email_input")).isDisplayed()
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L28" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L17">}}
@@ -92,7 +92,7 @@ val attr = driver.findElement(By.name("button_input")).isEnabled()
   {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L23" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L33" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L32" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L22">}}
@@ -123,7 +123,7 @@ val attr =  driver.findElement(By.name("checkbox_input")).isSelected()
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L27" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L38" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L27">}}
@@ -161,7 +161,7 @@ val attr =  driver.findElement(By.name("email_input")).getTagName()
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L31" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L47" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L32">}}
@@ -195,7 +195,7 @@ println(res.getX())
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L51" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L38">}}
@@ -227,7 +227,7 @@ val cssValue = driver.findElement(By.id("namedColor")).getCssValue("background-c
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L56" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L43">}}
@@ -259,7 +259,7 @@ val text = driver.findElement(By.id("justanotherlink")).getText()
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L44-L46" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L63" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}

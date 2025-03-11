@@ -33,7 +33,7 @@ nature and relationship in the tree to return a value.
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L12-L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L23" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L22" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L12">}}
@@ -68,7 +68,7 @@ Returns a boolean value, **True** if the connected element is
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L19" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L28" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L17">}}
@@ -102,7 +102,7 @@ Returns a boolean value, **True** if referenced element is
   {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L23" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L33" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L32" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L22">}}
@@ -132,7 +132,7 @@ of the referenced Element which has the focus in the current browsing context.
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L27" >}}
   {{< /tab >}}
      {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L38" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L27">}}
@@ -168,7 +168,7 @@ The fetched data body contain the following details:
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L31" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L47" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L32">}}
@@ -201,7 +201,7 @@ of an element in the current browsing context.
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L51" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L50" >}}
 {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L38">}}
@@ -232,7 +232,7 @@ Retrieves the rendered text of the specified element.
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L41" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L56" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L43">}}
@@ -265,7 +265,7 @@ with the DOM attribute or property of the element.
 {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L44-L46" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L63" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}
