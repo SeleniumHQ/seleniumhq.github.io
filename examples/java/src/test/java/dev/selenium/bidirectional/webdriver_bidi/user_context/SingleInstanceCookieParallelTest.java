@@ -18,7 +18,11 @@ import org.openqa.selenium.bidi.script.RemoteValue;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
+
+import java.net.URL;
 
 class SingleInstanceCookieParallelTest {
 
@@ -30,6 +34,15 @@ class SingleInstanceCookieParallelTest {
     FirefoxOptions options = new FirefoxOptions();
     options.setCapability("webSocketUrl", true);
     driver = new FirefoxDriver(options);
+
+//    To use Grid uncomment the lines below
+
+//    driver = new RemoteWebDriver(
+//            new URL("http://localhost:4444"),
+//            options, false);
+//
+//    Augmenter augmenter = new Augmenter();
+//    driver = augmenter.augment(driver);
   }
 
   @BeforeEach
