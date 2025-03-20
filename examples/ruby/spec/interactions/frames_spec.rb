@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'Frames Test' do
+RSpec.describe 'Frames Test' do
   it 'interacts with elements inside iframes' do
     driver = Selenium::WebDriver.for :chrome
     driver.manage.timeouts.implicit_wait = 0.5
