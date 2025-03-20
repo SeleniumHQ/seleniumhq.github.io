@@ -18,11 +18,7 @@ import org.openqa.selenium.bidi.script.RemoteValue;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.Augmenter;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
-
-import java.net.URL;
 
 class SingleInstanceCookieParallelTest {
 
