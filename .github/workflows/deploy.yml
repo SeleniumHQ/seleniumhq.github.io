@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - trunk
+  workflow_dispatch:
 
 jobs:
   deploy:
-    if: contains(toJson(github.event.commits), '[deploy site]') == true
+    if: contains(toJson(github.event.commits), '[deploy site]') == true || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repo

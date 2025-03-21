@@ -141,3 +141,37 @@ This usually occurs when the session has been deleted (e.g. `driver.quit()`) or 
 ### Possible Solutions
 
 Check your script for instances of `driver.close()` and `driver.quit()`, and any other possible causes of closed tabs/browsers. It could be that you are locating an element before you should/can.
+
+## SessionNotCreatedException
+
+This exception occurs when the WebDriver is unable to create a new session for the browser. This often happens due to version mismatches, system-level restrictions, or configuration issues.
+
+### Likely Cause
+
+- The browser version and WebDriver version are incompatible (e.g., ChromeDriver v113 with Chrome v115).
+- macOS privacy settings may block the WebDriver from running.
+- The WebDriver binary is missing, inaccessible, or lacks the necessary execution permissions (e.g., on Linux/macOS, the driver file may not be executable).
+
+
+### Possible Solutions
+
+- Ensure the WebDriver version matches the browser version. For Chrome, check the browser version at `chrome://settings/help` and download the matching driver from [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads).
+- On macOS, go to **System Settings > Privacy & Security**, and allow the driver to run if blocked.
+- Verify the driver binary is executable (`chmod +x /path/to/driver` on Linux/macOS).
+
+## ElementNotInteractableException
+
+This exception occurs when Selenium tries to interact with an element that is not interactable in its current state.
+
+### Likely Cause
+
+1. **Unsupported Operation**: Performing an action, like `sendKeys`, on an element that doesn’t support it (e.g., `<form>` or `<label>`).  
+2. **Multiple Elements Matching Locator**: The locator targets a non-interactable element, such as a `<td>` tag, instead of the intended `<input>` field.  
+3. **Hidden Elements**: The element is present in the DOM but not visible on the page due to CSS, the `hidden` attribute, or being outside the visible viewport.
+
+### Possible Solutions
+
+1. Use actions appropriate for the element type (e.g., use `sendKeys` with `<input>` fields only).  
+2. Ensure locators uniquely identify the intended element to avoid incorrect matches.  
+3. Check if the element is visible on the page before interacting with it. Use scrolling to bring the element into view, if required.  
+4. Use explicit waits to ensure the element is interactable before performing actions.

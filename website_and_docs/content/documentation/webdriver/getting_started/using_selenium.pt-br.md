@@ -30,7 +30,7 @@ termos de serviço do site, pois alguns sites não permitem isso e outros até b
 
 Executar o Selenium para testes requer fazer asserções sobre as ações tomadas pelo Selenium.
 Então uma boa biblioteca de asserções é necessária. Características adicionais para prover estrutura para testes
-requerem o uso de [Test Runner] (#test-runners).
+requerem o uso de [Executador de teste](#executador-de-teste).
 
 ## IDEs
 
@@ -93,7 +93,8 @@ que será usado para todos os exemplos nesta página.
   {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
-
+- [Kotest](https://kotest.io/) - Uma estrutura de testes flexível e abrangente, projetada especificamente para Kotlin.
+- [JUnit5](https://junit.org/junit5/) - A estrutura de testes padrão do Java, totalmente compatível com Kotlin.
 {{% /tab %}}
 {{< /tabpane >}}
 
@@ -151,7 +152,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
