@@ -36,19 +36,11 @@ e.g. http://example.com/some404page)
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
   
-  # Adds the cookie into current browser context
-  driver.manage.add_cookie(name: "key", value: "value")
-ensure
-  driver.quit
-end
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L14-L17" >}}
   {{< /tab >}}
+  
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
   {{< /tab >}}
@@ -85,20 +77,11 @@ It returns the serialized cookie data matching with the cookie name among all as
   {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "foo", value: "bar")
-
-  # Get cookie details with named cookie 'foo'
-  puts driver.manage.cookie_named('foo')
-ensure
-  driver.quit
-end
+  
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L19-L24" >}}
   {{< /tab >}}
+  
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L35-L38">}}
   {{< /tab >}}
@@ -138,21 +121,11 @@ If browser is no longer available it returns error.
     {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # Get all available cookies
-  puts driver.manage.all_cookies
-ensure
-  driver.quit
-end
+  
+    {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L26-L37" >}}
   {{< /tab >}}
+  
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L49-L51">}}
   {{< /tab >}}
@@ -193,21 +166,11 @@ It deletes the cookie data matching with the provided cookie name.
           {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # delete a cookie with name 'test1'
-  driver.manage.delete_cookie('test1')
-ensure
-  driver.quit
-end
+  
+   {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L39-L44" >}}
   {{< /tab >}}
+  
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L61-L62">}}
   {{< /tab >}}
@@ -251,21 +214,11 @@ It deletes all the cookies of the current browsing context.
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # deletes all cookies
-  driver.manage.delete_all_cookies
-ensure
-  driver.quit
-end
+  
+     {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L54-L60" >}}
   {{< /tab >}}
+  
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L77-L78">}}
   {{< /tab >}}
@@ -349,21 +302,11 @@ namespace SameSiteCookie {
   }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
+  
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples\ruby\spec\interactions\cookies_spec.rb#L62-L81" >}}
+{{< /tab >}}
 
-begin
-  driver.get 'https://www.example.com'
-  # Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
-  driver.manage.add_cookie(name: "foo", value: "bar", same_site: "Strict")
-  driver.manage.add_cookie(name: "foo1", value: "bar", same_site: "Lax")
-  puts driver.manage.cookie_named('foo')
-  puts driver.manage.cookie_named('foo1')
-ensure
-  driver.quit
-end
-  {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L24-L26">}}
   {{< /tab >}}
