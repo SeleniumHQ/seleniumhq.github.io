@@ -19,7 +19,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CaptureViewportScreenshot()
     {
-        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new ClipRectangle.Box(5, 5, 10, 10) });
+        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new BoxClipRectangle(5, 5, 10, 10) });
 
         Assert.IsNotNull(screenshot);
         Assert.IsNotNull(screenshot.Data);
@@ -30,9 +30,9 @@ partial class BrowsingContextTest
     {
         driver.Url = "https://www.selenium.dev/selenium/web/formPage.html";
 
-        var element = (await context.LocateNodesAsync(new Locator.Css("#checky")))[0];
+        var element = (await context.LocateNodesAsync(new CssLocator("#checky")))[0];
 
-        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new ClipRectangle.Element(element) });
+        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new ElementClipRectangle(element) });
 
         Assert.IsNotNull(screenshot);
         Assert.IsNotNull(screenshot.Data);
