@@ -1,6 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe 'Logging' do
+RSpec.describe 'Logging', exclusive: {bidi: true, reason: 'only executed when bidi is enabled'},
+                          only: {browser: %i[chrome edge firefox]} do
   let(:driver) { start_bidi_session }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
 
