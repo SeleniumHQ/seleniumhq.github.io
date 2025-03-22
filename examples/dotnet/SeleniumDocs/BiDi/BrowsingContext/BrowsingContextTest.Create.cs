@@ -30,7 +30,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task OpenTabWithReferenceBrowsingContext()
     {
-        var context1 = await driver.AsBiDiContextAsync();
+        var context1 = context;
 
         var context2 = await context1.BiDi.BrowsingContext.CreateAsync(ContextType.Tab, new() { ReferenceContext = context1 });
 
@@ -40,7 +40,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task OpenWindowWithReferenceBrowsingContext()
     {
-        var context1 = await driver.AsBiDiContextAsync();
+        var context1 = context;
 
         var context2 = await context1.BiDi.BrowsingContext.CreateAsync(ContextType.Window, new() { ReferenceContext = context1 });
 
@@ -50,7 +50,7 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UseExistingWindowHandle()
     {
-        var context = await driver.AsBiDiContextAsync();
+        var context = (await bidi.BrowsingContext.GetTreeAsync())[0].Context;
 
         Assert.IsNotNull(context);
     }

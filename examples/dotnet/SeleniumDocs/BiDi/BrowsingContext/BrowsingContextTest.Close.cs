@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System.Threading.Tasks;
 
@@ -10,8 +9,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CloseTab()
     {
-        var bidi = await driver.AsBiDiAsync();
-
         var context = await bidi.BrowsingContext.CreateAsync(ContextType.Tab);
 
         await context.CloseAsync();
@@ -20,8 +17,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task CloseWindow()
     {
-        var bidi = await driver.AsBiDiAsync();
-
         var context = await bidi.BrowsingContext.CreateAsync(ContextType.Window);
 
         await context.CloseAsync();

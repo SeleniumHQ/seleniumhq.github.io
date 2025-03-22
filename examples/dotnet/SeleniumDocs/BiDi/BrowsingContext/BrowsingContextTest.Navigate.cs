@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System.Threading.Tasks;
 
@@ -10,8 +9,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateToUrl()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         var info = await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
         Assert.IsNotNull(info);
@@ -22,8 +19,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateToUrlWithReadinessState()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         var info = await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         Assert.IsNotNull(info);
@@ -34,8 +29,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateBack()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         await context.NavigateBackAsync();
@@ -48,8 +41,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task NavigateForward()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         await context.NavigateBackAsync();
@@ -64,8 +55,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task TraverseHistory()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         await context.TraverseHistoryAsync(-1);

@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System;
 using System.Threading.Tasks;
@@ -12,8 +11,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptOpenedEvent()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         TaskCompletionSource<UserPromptOpenedEventArgs> tcs = new();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
@@ -32,8 +29,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptClosedEvent()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         TaskCompletionSource<UserPromptClosedEventArgs> tcs = new();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });

@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System.Threading.Tasks;
 
@@ -10,8 +9,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task Reload()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 
         var info = await context.ReloadAsync();

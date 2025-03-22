@@ -10,8 +10,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task GetBrowsingContextTree()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/iframes.html", new() { Wait = ReadinessState.Complete });
 
         var contexts = await context.GetTreeAsync();
@@ -24,8 +22,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task GetBrowsingContextTreeWithDepth()
     {
-        var context = await driver.AsBiDiContextAsync();
-
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/iframes.html", new() { Wait = ReadinessState.Complete });
 
         var contexts = await context.GetTreeAsync(new() { MaxDepth = 0 });
@@ -37,8 +33,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task GetAllTopLevelBrowingContexts()
     {
-        var bidi = await driver.AsBiDiAsync();
-
         var window = await bidi.BrowsingContext.CreateAsync(ContextType.Window);
 
         var contexts = await bidi.BrowsingContext.GetTreeAsync();

@@ -14,7 +14,9 @@ partial class BrowsingContextTest
         // temporary use firefox because of chrome automatically handle prompts
         using var driver = new FirefoxDriver(new FirefoxOptions() { UseWebSocketUrl = true });
 
-        var context = await driver.AsBiDiContextAsync();
+        var bidi = await driver.AsBiDiAsync();
+
+        var context = (await bidi.BrowsingContext.GetTreeAsync())[0].Context;
 
         driver.Url = "https://www.selenium.dev/selenium/web/alerts.html";
 

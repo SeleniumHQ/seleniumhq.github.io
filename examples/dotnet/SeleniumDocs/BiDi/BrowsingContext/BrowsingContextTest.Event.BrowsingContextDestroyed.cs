@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using System;
 using System.Threading.Tasks;
@@ -11,10 +10,6 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task BrowsingContextDestroyedEvent()
     {
-        var bidi = await driver.AsBiDiAsync();
-
-        var context = await driver.AsBiDiContextAsync();
-
         TaskCompletionSource<BrowsingContextInfo> tcs = new();
 
         await bidi.BrowsingContext.OnContextDestroyedAsync(tcs.SetResult);
