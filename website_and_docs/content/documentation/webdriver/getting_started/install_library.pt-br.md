@@ -37,7 +37,7 @@ Especifique a dependência no `build.gradle` do seu projeto como `testImplementa
   {{% /tab %}}
   {{% tab header="Python" %}}
 A mínima versão suportada do Python para cada versão do Selenium pode ser encontrada 
-em "Supported Python Versions" no [PyPi](https://pypi.org/project/selenium/)
+em "Supported Python Versions" no [PyPi](https://pypi.org/project/selenium/).
 
 Existe muitas formas diferentes de instalar Selenium.
 
