@@ -22,7 +22,7 @@ RSpec.describe 'Frames Test' do
     driver.switch_to.default_content
     
     # Switch to iframe using name
-    driver.find_element(name: 'iframe1-name')
+    iframe=driver.find_element(name: 'iframe1-name')
     driver.switch_to.frame(iframe)
     expect(driver.page_source.include?('We Leave From Here')).to be true
     
