@@ -31,7 +31,7 @@ They allow you to programmatically provide credentials or modify the authenticat
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L8-L10" >}}
+{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L7-L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -55,7 +55,6 @@ Request handlers are essential for testing and debugging scenarios where you nee
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L14-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -76,7 +75,6 @@ They are particularly useful for testing scenarios involving response data, such
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L20-L22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -94,7 +92,6 @@ They are particularly useful for testing scenarios involving response data, such
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L26-L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -112,7 +109,6 @@ They are particularly useful for testing scenarios involving response data, such
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/bidi/network_spec.rb#L33-L37" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
