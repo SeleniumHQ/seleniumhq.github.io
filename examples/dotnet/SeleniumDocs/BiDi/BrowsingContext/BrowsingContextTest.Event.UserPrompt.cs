@@ -16,7 +16,7 @@ partial class BrowsingContextTest
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
         //TODO; THhis event can be a part of context
-        await context.BiDi.BrowsingContext.OnUserPromptOpenedAsync(tcs.SetResult);
+        await bidi.BrowsingContext.OnUserPromptOpenedAsync(tcs.SetResult);
 
         driver.FindElement(By.Id("prompt")).Click();
 
@@ -34,8 +34,8 @@ partial class BrowsingContextTest
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
         //TODO; THhis event can be a part of context
-        await context.BiDi.BrowsingContext.OnUserPromptClosedAsync(tcs.SetResult);
-
+        await bidi.BrowsingContext.OnUserPromptClosedAsync(tcs.SetResult);
+        
         driver.FindElement(By.Id("prompt")).Click();
 
         //await context.HandleUserPromptAsync();
