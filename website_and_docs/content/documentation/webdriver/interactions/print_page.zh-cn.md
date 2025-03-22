@@ -18,7 +18,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L12-L18" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L14-L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L12-L19" >}}
@@ -27,7 +27,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L11-L15" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -42,7 +42,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L21-L27" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L23-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L22-L29" >}}
@@ -51,7 +51,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L17-L21" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -62,11 +62,11 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< /tabpane >}}
 
 ### 尺寸
-通过 `getPaperSize()` 和 `setPaperSize()` 方法，可以获取/设置要打印页面的纸张尺寸（如"A0"、"A6"、"Legal"、"Tabloid" 等）。
+通过 `getPageSize()` 和 `setPageSize()` 方法，可以获取/设置要打印页面的纸张尺寸（如"A0"、"A6"、"Legal"、"Tabloid" 等）。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L30-L36" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L32-L35" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L32-L38" >}}
@@ -75,7 +75,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L23-L27" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L24-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -90,7 +90,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L40-L49" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L51-L57" >}}
@@ -99,7 +99,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L29-L39" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -114,7 +114,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L52-L58" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L53-L57" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L61-L68" >}}
@@ -123,7 +123,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L41-L46" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -138,7 +138,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L61-L67" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L41-L48" >}}
@@ -147,7 +147,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L48-L52" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L49-L51" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -162,7 +162,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L70-L76" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L72-L75" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L71-L78" >}}
@@ -171,7 +171,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L54-L58" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L55-L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -196,9 +196,9 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **PrintsPage()**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L25-L32" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L27-L31" >}}
 **BrowsingContext()**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L35-L42" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L37-L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
@@ -208,7 +208,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< /tab >}}
 {{% tab header="Python" %}}
 **print_page()**
-{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L11-L15" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}

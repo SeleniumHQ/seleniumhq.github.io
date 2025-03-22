@@ -35,13 +35,13 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void basicOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     driver = new EdgeDriver(options);
   }
 
   @Test
   public void arguments() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.addArguments("--start-maximized");
 
@@ -50,7 +50,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void setBrowserLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setBinary(getEdgeLocation());
 
@@ -59,7 +59,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void extensionOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
     File extensionFilePath = new File(path.toUri());
 
@@ -74,7 +74,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void excludeSwitches() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
@@ -83,7 +83,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void loggingPreferences() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     LoggingPreferences logPrefs = new LoggingPreferences();
     logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
     options.setCapability(EdgeOptions.LOGGING_PREFS, logPrefs);
@@ -170,7 +170,7 @@ public class EdgeTest extends BaseTest {
   }
 
   private File getEdgeLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(EdgeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
