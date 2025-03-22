@@ -4,8 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using System.Linq;
-using OpenQA.Selenium.DevTools.V131.Network;
-using OpenQA.Selenium.DevTools.V131.Performance;
+using OpenQA.Selenium.DevTools.V132.Network;
+using OpenQA.Selenium.DevTools.V132.Performance;
 
 
 namespace SeleniumDocs.BiDi.CDP
@@ -16,7 +16,7 @@ namespace SeleniumDocs.BiDi.CDP
         [TestInitialize]
         public void Startup()
         {
-            StartDriver("131");
+            StartDriver("132");
         }
 
         [TestMethod]
@@ -37,7 +37,7 @@ namespace SeleniumDocs.BiDi.CDP
             Assert.AreEqual("Congratulations! You must have the proper credentials.",
                 driver.FindElement(By.TagName("p")).Text);
         }
-        
+
         [TestMethod]
         public async Task RecordNetworkResponse()
         {
@@ -102,16 +102,16 @@ namespace SeleniumDocs.BiDi.CDP
 
             Assert.AreEqual("two", driver.FindElement(By.Id("result")).Text);
         }
-        
+
         [TestMethod]
         public async Task PerformanceMetrics()
         {
             driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
 
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V131.DevToolsSessionDomains>();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V132.DevToolsSessionDomains>();
 
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V131.Performance.EnableCommandSettings());
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V132.Performance.EnableCommandSettings());
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
                     new GetMetricsCommandSettings()
@@ -130,8 +130,8 @@ namespace SeleniumDocs.BiDi.CDP
         public async Task SetCookie()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V131.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V131.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V132.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V132.Network.EnableCommandSettings());
 
             var cookieCommandSettings = new SetCookieCommandSettings
             {

@@ -6,14 +6,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def test_basic_options():
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
     driver = webdriver.Edge(options=options)
 
     driver.quit()
 
 
 def test_args():
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
 
     options.add_argument("--start-maximized")
 
@@ -24,7 +24,7 @@ def test_args():
 
 
 def test_set_browser_location(edge_bin):
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
 
     options.binary_location = edge_bin
 
@@ -34,7 +34,7 @@ def test_set_browser_location(edge_bin):
 
 
 def test_add_extension():
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
     extension_file_path = os.path.abspath("tests/extensions/webextensions-selenium-example.crx")
 
     options.add_extension(extension_file_path)
@@ -46,7 +46,7 @@ def test_add_extension():
 
 
 def test_keep_browser_open():
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
 
     options.add_experimental_option("detach", True)
 
@@ -57,7 +57,7 @@ def test_keep_browser_open():
 
 
 def test_exclude_switches():
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
 
     options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
 
@@ -188,3 +188,8 @@ def test_get_browser_logs():
     # Assert that at least one log contains the expected message
     assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
+
+def get_default_edge_options():
+    options = webdriver.EdgeOptions()
+    options.add_argument("--no-sandbox")
+    return options
