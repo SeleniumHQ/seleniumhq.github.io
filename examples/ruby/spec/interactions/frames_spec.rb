@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Frames Test' do
+RSpec.describe 'Frames' do
   #set session
   let(:driver) { start_session }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
