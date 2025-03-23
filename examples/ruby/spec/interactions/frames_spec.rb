@@ -3,13 +3,13 @@
 require 'spec_helper'
 
 RSpec.describe 'Frames Test' do
+  #set session
   let(:driver) { start_session }
-
-  before do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/iframes.html'
-  end
+  let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
 
   it 'interacts with elements inside iframes' do
+    #navigate to web page
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/iframes.html'
     # Switch to iframe using WebElement
     iframe = driver.find_element(id: 'iframe1')
     driver.switch_to.frame(iframe)
