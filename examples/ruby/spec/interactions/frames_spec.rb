@@ -3,13 +3,13 @@
 require 'spec_helper'
 
 RSpec.describe 'Frames Test' do
+  let(:driver) { start_session }
+
+  before do
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/iframes.html'
+  end
+
   it 'interacts with elements inside iframes' do
-    driver = Selenium::WebDriver.for :chrome
-    driver.manage.timeouts.implicit_wait = 0.5
-    
-    # Navigate to URL
-    driver.get('https://www.selenium.dev/selenium/web/iframes.html')
-    
     # Switch to iframe using WebElement
     iframe = driver.find_element(id: 'iframe1')
     driver.switch_to.frame(iframe)
@@ -38,8 +38,5 @@ RSpec.describe 'Frames Test' do
     # Leave frame
     driver.switch_to.default_content
     expect(driver.page_source.include?('This page has iframes')).to be true
-    
-    # Quit the browser
-    driver.quit
   end
 end
