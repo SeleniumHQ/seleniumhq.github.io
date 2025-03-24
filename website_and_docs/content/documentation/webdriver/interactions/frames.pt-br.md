@@ -72,16 +72,9 @@ encontrar o quadro usando seu seletor preferido e mudar para ele.
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Store iframe web element
-iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
-
-    # switch to selected iframe
-driver.switch_to.frame(iframe)
-
-    # Now click on button
-driver.find_element(By.TAG_NAME, 'button').click()
-  {{< /tab >}}
+     {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L37" >}}
+{{< /tab >}}
       {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
 {{< /tab >}}
@@ -126,13 +119,11 @@ primeiro encontrado será utilizado.
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Switch frame by id
-driver.switch_to.frame('buttonframe')
 
-    # Now, Click on the button
-driver.find_element(By.TAG_NAME, 'button').click()
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L34-L42" >}}
+{{< /tab >}}
+
    {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
 {{< /tab >}}
@@ -174,6 +165,12 @@ consultado usando _window.frames_ em JavaScript.
          {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
+  
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L45-L46" >}}
+{{< /tab >}}
+
+
   {{< tab header="Ruby" >}}
     # Switch to the second frame
 driver.switch_to.frame(1)
@@ -208,10 +205,11 @@ como a seguir:
     {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    # switch back to default content
-driver.switch_to.default_content()
-  {{< /tab >}}
+
+    {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L49-L50" >}}
+{{< /tab >}}
+
         {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
 {{< /tab >}}
