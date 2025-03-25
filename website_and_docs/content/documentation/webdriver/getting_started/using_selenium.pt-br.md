@@ -30,7 +30,7 @@ termos de serviço do site, pois alguns sites não permitem isso e outros até b
 
 Executar o Selenium para testes requer fazer asserções sobre as ações tomadas pelo Selenium.
 Então uma boa biblioteca de asserções é necessária. Características adicionais para prover estrutura para testes
-requerem o uso de [Test Runner] (#test-runners).
+requerem o uso de [Executador de teste](#executador-de-teste).
 
 ## IDEs
 
