@@ -48,11 +48,11 @@ pip install selenium
 
 ### 下载
 
-此外你可以从这里下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) 并通过: _setup.py_ 文件安装:
+此外你可以从这里下载 [PyPI Built Distribution](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.-py3-none-any.whl) 并通过: _pip_ 文件安装:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
 <br>
 
