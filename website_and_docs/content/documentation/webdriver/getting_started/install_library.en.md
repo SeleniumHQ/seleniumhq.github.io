@@ -37,7 +37,7 @@ Specify the dependency in the project `build.gradle` file as `testImplementation
   {{% /tab %}}
   {{% tab header="Python" %}} 
 The minimum supported Python version for each Selenium version can be found 
-in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+in "Supported Python Versions" on [PyPi](https://pypi.org/project/selenium/).
 
 There are a couple different ways to install Selenium.
 
@@ -50,11 +50,11 @@ pip install selenium
 
 ### Download
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+Alternatively you can download the [PyPI Built Distribution](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.-py3-none-any.whl) and install it using _pip_:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
 <br>
 
