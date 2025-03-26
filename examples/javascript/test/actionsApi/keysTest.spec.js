@@ -9,7 +9,7 @@ describe('Keyboard Action - Keys test', function() {
     driver = await new Builder().forBrowser('chrome').build();
   })
 
-  after(() => driver.quit())
+  after(async () => await driver.quit())
 
   it('KeyDown', async function() {
     await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html')

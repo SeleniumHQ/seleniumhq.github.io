@@ -33,8 +33,7 @@ Links to everything can be found on our [downloads page][downloads].
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/atrnh" >}} 
-{{< gh-user "https://api.github.com/users/nvborisenko" >}} 
-{{< gh-user "https://api.github.com/users/dev-ardi" >}}
+{{< gh-user "https://api.github.com/users/nvborisenko" >}}
 {{< gh-user "https://api.github.com/users/arnonax-tr" >}}
 {{< gh-user "https://api.github.com/users/robotdana" >}}
 {{< gh-user "https://api.github.com/users/iampopovich" >}}

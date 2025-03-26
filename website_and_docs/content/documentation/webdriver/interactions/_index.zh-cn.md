@@ -22,7 +22,9 @@ aliases: [
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/InteractionsTest.cs#L37" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L8" >}}
 {{< /tab >}}
@@ -43,7 +45,9 @@ aliases: [
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/InteractionsTest.cs#L41" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L14" >}}
 {{< /tab >}}

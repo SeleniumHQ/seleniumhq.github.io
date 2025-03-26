@@ -1,9 +1,9 @@
 ---
-title: "Troubleshooting Assistance"
+title: "トラブルシューティングの支援"
 linkTitle: "Troubleshooting"
 weight: 20
 description: >
-  How to get manage WebDriver problems.
+  WebDriverの問題を管理する方法。
 ---
 
 It is not always obvious the root cause of errors in Selenium.

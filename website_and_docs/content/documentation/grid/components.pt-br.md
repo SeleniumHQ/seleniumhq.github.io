@@ -85,7 +85,7 @@ como parte da mensagem de registo.
 
 Por omissão, o **Node** regista automaticamente todos os navegadores que estejam disponíveis no PATH da máquina onde
 executa. Cria também um slot de execução por cada CPU para os navegadores Chrome e Firefox. Para Safari,
-apenas é criado um slot. Usando uma [configuração]({{< ref "/configuration" >}}) específica, é também
+apenas é criado um slot. Usando uma [configuração]({{< ref "configuration" >}}) específica, é também
 possível executar sessões em containers Docker.
 
 O **Node** apenas executa os comandos que recebe, não avalia, faz julgamentos ou controla mais nada que não seja

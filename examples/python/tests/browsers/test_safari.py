@@ -14,7 +14,7 @@ def test_basic_options():
 
 @pytest.mark.skipif(sys.platform != "darwin", reason="requires Mac")
 def test_enable_logging():
-    service = webdriver.SafariService(service_args=["--diagnose"])
+    service = webdriver.SafariService(enable_logging=True)
 
     driver = webdriver.Safari(service=service)
 

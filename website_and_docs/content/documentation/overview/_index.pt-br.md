@@ -13,7 +13,7 @@ mas sim uma composição de várias ferramentas.
 ## WebDriver
 
 Se você está começando com automação de testes de um site de desktop ou site para celular, então
-vai usar as APIs WebDriver. O [WebDriver]({{< ref "/webdriver.md" >}})
+vai usar as APIs WebDriver. O [WebDriver]({{< ref "webdriver.md" >}})
 usa APIs de automação de navegador disponibilizadas por fornecedores de navegador para o controlar e
 executar testes. É como se um usuário real o estivesse operando. Como o
 WebDriver não exige que sua API seja compilada com o código do aplicativo,
@@ -42,4 +42,4 @@ executados pela extremidade remota.
 Após o desenvolvimento dos testes WebDriver, você pode enfrentar
 a necessidade de executar seus testes em vários navegadores e
 combinações de sistemas operacionais.
-É aqui que o [Grid]({{< ref "/grid.md" >}}) entra em cena.
+É aqui que o [Grid]({{< ref "grid.md" >}}) entra em cena.

@@ -34,7 +34,7 @@ terms of service as some websites do not permit it and others will even block Se
 
 Running Selenium for testing requires making assertions on actions taken by Selenium.
 So a good assertion library is required. Additional features to provide structure for tests
-require use of [Test Runner](#test-runners).
+require use of [Test Runner](#test-runner).
 
 ## IDEs
 
@@ -98,7 +98,10 @@ that will be used for all examples on this page.
 
 {{% tab header="Kotlin" %}}
 
+- [Kotest](https://kotest.io/) - A flexible and comprehensive testing framework specifically designed for Kotlin.
+- [JUnit5](https://junit.org/junit5/) - The standard Java testing framework, fully compatible with Kotlin.
 {{% /tab %}}
+
 {{< /tabpane >}}
 
 ### Installing
@@ -232,7 +235,6 @@ gradle clean test
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="examples/python/README.md#L35" >}}
-{{< badge-code >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

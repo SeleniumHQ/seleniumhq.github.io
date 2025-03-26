@@ -32,7 +32,7 @@ pytest
 ## Execute a specific example
 To run a specific Selenium Python example, use the following command:
 ```bash
-python first_script.py
+pytest path/to/test_script.py
 ```
 
-Make sure to replace `first_script.py` with the path and name of the example you want to run.
+Make sure to replace `path/to/test_script.py` with the path and name of the example you want to run.

@@ -58,13 +58,13 @@ cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>'
 完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:5553/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request DELETE 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### ノードのドレイン
@@ -84,13 +84,13 @@ cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/dr
 完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
 
 ```shell
-cURL --request POST 'http://localhost:5553/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
+cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## ノード
@@ -178,13 +178,13 @@ cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --he
 完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### 新規セッションリクエストの取得
@@ -204,5 +204,5 @@ cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
 
 ```shell
-cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```

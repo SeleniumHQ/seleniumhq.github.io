@@ -209,7 +209,7 @@ driver.quit();
 `API` 调用可以通过 [http://localhost:4444/status](http://localhost:4444/status) 端点或使用 [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 
 {{% pageinfo color="primary" %}}
-为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "/configuration" >}}) 部分。
+为简单起见，本页中显示的所有命令示例均假定组件正在运行在本地。更详细的示例和用法可以在[配置组件]({{< ref "configuration" >}}) 部分。
 {{% /pageinfo %}}
 
 ## 使用 Java 11 中的 HTTP Client {{% badge-version version="4.5" %}}
@@ -277,6 +277,6 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 ## 延伸阅读
 
 * [Components]({{< ref "components.md" >}})：了解 `Grid` 的内部组件如何相互关联。
-* [Configuration]({{< ref "/configuration" >}}): 自定义您的 `Grid` 设置。
+* [Configuration]({{< ref "configuration" >}}): 自定义您的 `Grid` 设置。
 * [Architecture]({{< ref "architecture.md" >}}): 理解 `Grid` 中的关键概念。
-* [Advanced Features]({{< ref "/advanced_features" >}}): 通过Grid的特性探索更多的可能性。
+* [Advanced Features]({{< ref "advanced_features" >}}): 通过Grid的特性探索更多的可能性。

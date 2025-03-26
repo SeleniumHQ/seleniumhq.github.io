@@ -310,6 +310,6 @@ Grid を保護しないと、以下のような問題が発生する可能性が
 ## 参考文献
 
 - [Components]({{< ref "components.md" >}}): 内部のコンポーネントの仕組みを知る
-- [Configuration]({{< ref "/configuration" >}}): Grid の設定をカスタマイズする
+- [Configuration]({{< ref "configuration" >}}): Grid の設定をカスタマイズする
 - [Architecture]({{< ref "architecture.md" >}}): Grid のコンセプトを理解する
-- [Advanced Features]({{< ref "/advanced_features" >}}): Grid のさらなる可能性を探る
+- [Advanced Features]({{< ref "advanced_features" >}}): Grid のさらなる可能性を探る

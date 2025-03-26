@@ -61,12 +61,12 @@ cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>'
 在完全分布式模式下, URL是分发器的地址.
 
 ```shell
-cURL --request DELETE 'http://localhost:5553/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 如果在设置Grid时未配置注册密码, 
 则使用
 ```shell
-cURL --request DELETE 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### 放空节点
@@ -83,12 +83,12 @@ cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/dr
 ```
 在完全分布式模式下, URL是分发服务器的地址.
 ```shell
-cURL --request POST 'http://localhost:5553/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 如果在设置Grid时未配置注册密码, 
 则使用
 ```shell
-cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
+cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## 节点
@@ -189,13 +189,13 @@ cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --he
 在完全分布式模式下,
 队列URL是新会话队列服务器的地址.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 如果在设置Grid时未配置注册密码, 
 则使用
 ```shell
-cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### 获取新会话队列请求
@@ -218,4 +218,4 @@ cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 在完全分布式模式下,
 队列URL是新会话队列服务器的地址.
 ```shell
-cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'

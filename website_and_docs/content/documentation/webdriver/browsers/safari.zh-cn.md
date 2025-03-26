@@ -38,7 +38,7 @@ Safari独有的Capabilities可以在Apple的页面[关于Safari的WebDriver](htt
 {{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L8-L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L10-L12" >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/safariSpecificCap.spec.js#L8-L11" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 val options = SafariOptions()
@@ -71,6 +71,7 @@ Safari 浏览器不允许您选择日志的输出位置或更改级别.
 属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
+{{< badge-version version="4.26" >}}
 {{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
@@ -97,10 +98,10 @@ Apple 提供了其浏览器的开发版本 — [Safari Technology Preview](https
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L25-L30" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

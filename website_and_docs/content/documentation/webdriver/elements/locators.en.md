@@ -49,7 +49,7 @@ page. To understand and create locator we will use the following HTML snippet.
 </style>
 <h2>Contact Selenium</h2>
 
-<form action="/action_page.php">
+<form>
   <input type="radio" name="gender" value="m" />Male &nbsp;
   <input type="radio" name="gender" value="f" />Female <br>
   <br>
@@ -80,10 +80,9 @@ available in Selenium.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CLASS_NAME, "information")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.ClassName("information"));
@@ -114,10 +113,9 @@ textbox, using css.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.cssSelector("#fname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CSS_SELECTOR, "#fname")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.CssSelector("#fname"));
@@ -146,10 +144,9 @@ We will identify the Last Name field using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.id("lname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.ID, "lname")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.Id("lname"));
@@ -179,10 +176,9 @@ We will identify the Newsletter checkbox using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.name("newsletter"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.NAME, "newsletter")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.Name("newsletter"));
@@ -210,10 +206,9 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.linkText("Selenium Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.LINK_TEXT, "Selenium Official Page")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.LinkText("Selenium Official Page"));
@@ -242,10 +237,9 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.partialLinkText("Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.PARTIAL_LINK_TEXT, "Official Page")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.PartialLinkText("Official Page"));
@@ -272,10 +266,9 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.tagName("a"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.TAG_NAME, "a")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.TagName("a"));
@@ -308,10 +301,9 @@ first name text box. Let us create locator for female radio button using xpath.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.xpath("//input[@value='f']"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.XPATH, "//input[@value='f']")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	  driver.FindElement(By.Xpath("//input[@value='f']"));
@@ -335,6 +327,8 @@ first name text box. Let us create locator for female radio button using xpath.
 The FindElement makes using locators a breeze! For most languages, 
 all you need to do is utilize `webdriver.common.by.By`, however in 
 others it's as simple as setting a parameter in the FindElement function
+
+### By
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
@@ -363,6 +357,59 @@ others it's as simple as setting a parameter in the FindElement function
     import org.openqa.selenium.By
     val driver = ChromeDriver()
 	val loc: WebElement = driver.findElement(By.className("information"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+### ByChained
+
+The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to locate a parent element, 
+and then a child element of that parent, you can instead combine those two `FindElement()` functions into one.
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" text=true >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L37-L38">}}
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+### ByAll
+
+The `ByAll` class enables you to utilize two By locators at once, finding elements that mach _either_ of your By locators. 
+For example, instead of having to utilize two `FindElement()` functions to find the username and password input fields 
+seperately, you can instead find them together in one clean `FindElements()`
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" text=true >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L22-L23">}}
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}} 
 

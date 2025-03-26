@@ -1,20 +1,16 @@
 ---
-title: "Driver Service Class"
-linkTitle: "Service"
+title: "ドライバーサービスクラス"
+linkTitle: "サービス"
 weight: 3
 ---
 
-The Service classes are for managing the starting and stopping of drivers.
-They can not be used with a Remote WebDriver session.
+サービスクラスは、ドライバーの起動と停止を管理するためのものです。リモートWebDriverセッションでは使用できません。
 
-Service classes allow you to specify information about the driver,
-like location and which port to use.
-They also let you specify what arguments get passed
-to the command line. Most of the useful arguments are related to logging.
+サービスクラスを使用すると、ドライバーに関する情報（場所や使用するポートなど）を指定できます。また、コマンドラインに渡される引数を指定することもできます。便利な引数のほとんどは、ログに関連しています。
 
-## Default Service instance
+## デフォルトサービスインスタンス
 
-To start a driver with a default service instance:
+デフォルトサービスインスタンスを使用してドライバーを起動するには：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -38,10 +34,9 @@ To start a driver with a default service instance:
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Driver location
+## ドライバーの場所
 
-**Note:** If you are using Selenium 4.6 or greater, you shouldn't need to set a driver location.
-If you can not update Selenium or have an advanced use case here is how to specify the driver location:
+**注意:** Selenium 4.6以上を使用している場合、ドライバーの場所を設定する必要はありません。Seleniumを更新できない場合や、特別な使用ケースがある場合は、ドライバーの場所を指定する方法は次のとおりです：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -67,9 +62,9 @@ If you can not update Selenium or have an advanced use case here is how to speci
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Driver port
+## ドライバーのポート
 
-If you want the driver to run on a specific port, you may specify it as follows:
+ドライバーを特定のポートで実行したい場合は、次のように指定できます：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -95,10 +90,9 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< /tabpane >}}
 
 <span id="setting-log-output"></span>
-## Logging
+## ログ記録
 
-Logging functionality varies between browsers. Most browsers allow you to
-specify location and level of logs. Take a look at the respective browser page:
+ログ記録機能はブラウザによって異なります。ほとんどのブラウザでは、ログの場所とレベルを指定できます。各ブラウザのページを確認してください：
 * [Chrome]({{< ref "../browsers/chrome#service" >}})
 * [Edge]({{< ref "../browsers/edge#service" >}})
 * [Firefox]({{< ref "../browsers/firefox#service" >}})

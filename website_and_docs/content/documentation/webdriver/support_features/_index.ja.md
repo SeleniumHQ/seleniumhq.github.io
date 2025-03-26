@@ -1,9 +1,9 @@
 ---
-title: "Support features"
-linkTitle: "Support Features"
+title: "サポート機能"
+linkTitle: "サポート機能"
 weight: 18
 description: >
-  Support classes provide optional higher level features.
+  サポート クラスは、オプションの上位レベル機能を提供します。
 aliases: [
 "/documentation/ja/support_packages/",
 "/ja/documentation/support_packages/",
