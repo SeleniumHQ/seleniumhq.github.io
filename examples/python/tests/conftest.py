@@ -14,6 +14,12 @@ import pytest
 from selenium import webdriver
 
 
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers", "driver_type(type): marks tests to use driver type ('bidi', 'firefox', etc)"
+    )
+
+
 @pytest.fixture(scope='function')
 def driver(request):
     marker = request.node.get_closest_marker("driver_type")

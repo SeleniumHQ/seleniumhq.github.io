@@ -456,3 +456,5 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+**Note**: As of Firefox 138, geckodriver needs to be started with the argument `--allow-system-access` to switch the context to `CHROME`.
