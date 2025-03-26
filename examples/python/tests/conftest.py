@@ -14,6 +14,12 @@ import pytest
 from selenium import webdriver
 
 
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers", "driver_type(type): marks tests to use driver type ('bidi', 'firefox', etc)"
+    )
+
+
 @pytest.fixture(scope='function')
 def driver(request):
     marker = request.node.get_closest_marker("driver_type")
@@ -142,7 +148,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.29.0.jar",
+        "selenium-server-4.30.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -200,7 +206,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.29.0.jar",
+        "selenium-server-4.30.0.jar",
     )
 
     args = [
@@ -273,7 +279,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.29.0.jar",
+        "selenium-server-4.30.0.jar",
     )
 
     args = [

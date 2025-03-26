@@ -47,7 +47,7 @@ class ActionsTest : BaseTest() {
         (driver as RemoteWebDriver).resetInputState()
 
         actions.sendKeys("a").perform()
-        Assertions.assertEquals("A", clickable.getAttribute("value").get(0).toString())
-        Assertions.assertEquals("a", clickable.getAttribute("value").get(1).toString())
+        Assertions.assertEquals("A", clickable.getAttribute("value")!!.get(0).toString())
+        Assertions.assertEquals("a", clickable.getAttribute("value")!!.get(1).toString())
     }
 }
