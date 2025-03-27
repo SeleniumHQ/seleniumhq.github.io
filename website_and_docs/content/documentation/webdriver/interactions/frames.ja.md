@@ -147,34 +147,27 @@ driver.findElement(By.tagName("button")).click()
 JavaScriptの _window.frames_ を使用して照会できるように、Frameのインデックスを使用することもできます。
 
 {{< tabpane langEqualsHeader=true >}}
-         {{< tab header="Java" text=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
-  {{< /tab >}}
-  
+{{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L45-L46" >}}
 {{< /tab >}}
-
-
-  {{< tab header="Ruby" >}}
-    # Switch to the second frame
+{{< tab header="Ruby" >}}
+# Switch to the second frame
 driver.switch_to.frame(1)
-  {{< /tab >}}
-      {{< tab header="CSharp" text=true >}}
+{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
 {{< /tab >}}
-   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L49-L50" >}}
-{{< /tab >}}
-  
-  {{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" >}}
 // Switches to the second frame
 await driver.switchTo().frame(1);
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 // Switches to the second frame
 driver.switchTo().frame(1)
-  {{< /tab >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 

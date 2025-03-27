@@ -162,37 +162,27 @@ Também é possível usar o índice do frame, podendo ser
 consultado usando _window.frames_ em JavaScript.
 
 {{< tabpane langEqualsHeader=true >}}
-         {{< tab header="Java" text=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
-  {{< /tab >}}
-  
+{{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L45-L46" >}}
 {{< /tab >}}
-
-
-  {{< tab header="Ruby" >}}
-    # Switch to the second frame
+{{< tab header="Ruby" >}}
+# Switch to the second frame
 driver.switch_to.frame(1)
-  {{< /tab >}}
-      {{< tab header="CSharp" text=true >}}
+{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # switching to second iframe based on index
-iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
-
-    # switch to selected iframe
-driver.switch_to.frame(iframe)
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" >}}
 // Switches to the second frame
 await driver.switchTo().frame(1);
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 // Switches to the second frame
 driver.switchTo().frame(1)
-  {{< /tab >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -202,27 +192,25 @@ Para deixar um iframe ou frameset, volte para o conteúdo padrão
 como a seguir:
 
 {{< tabpane langEqualsHeader=true >}}
-    {{< tab header="Java" text=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
-  {{< /tab >}}
-
-    {{< tab header="Python" text=true >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
 {{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L49-L50" >}}
 {{< /tab >}}
-
-        {{< tab header="CSharp" text=true >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
 {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Return to the top level
+{{< tab header="Ruby" >}}
+# Return to the top level
 driver.switch_to.default_content
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
 // Return to the top level
 await driver.switchTo().defaultContent();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 // Return to the top level
 driver.switchTo().defaultContent()
-  {{< /tab >}}
+{{< /tab >}}
 {{< /tabpane >}}
