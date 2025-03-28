@@ -51,3 +51,5 @@ assert "This page has iframes" in driver.page_source
 
 #quit the driver
 driver.quit()
+
+#live demo preparation
