@@ -73,7 +73,7 @@ encontrar o quadro usando seu seletor preferido e mudar para ele.
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
 {{< /tab >}}
      {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L37" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L32" >}}
 {{< /tab >}}
       {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
