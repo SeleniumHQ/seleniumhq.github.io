@@ -77,7 +77,7 @@ find the frame using your preferred selector and switch to it.
 {{< /tab >}}
   
    {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L37" >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L32" >}}
 {{< /tab >}}
   
   
