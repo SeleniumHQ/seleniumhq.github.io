@@ -116,6 +116,7 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--browser-version <BROWSER_VERSION>`|`browser-version = "BROWSER_VERSION"`|`SE_BROWSER_VERSION=BROWSER_VERSION`|Major browser version (e.g., `105`, `106`, etc. Also: `beta`, `dev`, `canary` -or `nightly`-, and `esr` -in Firefox- are accepted)|
 |`--driver-version <DRIVER_VERSION>`|`driver-version = "DRIVER_VERSION"`|`SE_DRIVER_VERSION=DRIVER_VERSION`|Driver version (e.g., `106.0.5249.61, 0.31.0`, etc.)|
 |`--browser-path <BROWSER_PATH>`|`browser-path = "BROWSER_PATH"`|`SE_BROWSER_PATH=BROWSER_PATH`|Browser path (absolute) for browser version detection (e.g., `/usr/bin/google-chrome`, `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, `C:\Program Files\Google\Chrome\Application\chrome.exe`)|
+|`--skip-driver-in-path`|`skip-driver-in-path = true`|`SE_SKIP_DRIVER_IN_PATH=true`|Not using drivers found in the PATH|
 |`--driver-mirror-url <DRIVER_MIRROR_URL>`|`driver-mirror-url = "DRIVER_MIRROR_URL"`|`SE_DRIVER_MIRROR_URL=DRIVER_MIRROR_URL`|Mirror URL for driver repositories|
 |`--browser-mirror-url <BROWSER_MIRROR_URL>`|`browser-mirror-url = "BROWSER_MIRROR_URL"`|`SE_BROWSER_MIRROR_URL=BROWSER_MIRROR_URL`|Mirror URL for browser repositories|
 |`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), `SHELL` (Unix-like), or `MIXED` (`INFO`, `WARN`, `DEBUG`, etc. to stderr and minimal `JSON` to stdout). Default: `LOGGER`|
