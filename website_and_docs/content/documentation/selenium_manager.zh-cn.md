@@ -131,7 +131,7 @@ edge can only be installed in Windows with administrator permissions
 ```
 
 因此, 通过 Selenium Manager 在 Windows 系统中自动安装 Edge 浏览器需要管理员权限, 
-并且 Edge 最终会被安装在通常的程序文件夹中(例如 `C:\Program Files (x86)\Microsoft\Edge ). 
+并且 Edge 最终会被安装在通常的程序文件夹中(例如 `C:\Program Files (x86)\Microsoft\Edge` ). 
 
 ## 数据收集
 Selenium Manager会向 [Plausible](https://plausible.io/manager.selenium.dev) 报送匿名使用[statistics](https://plausible.io/privacy-focused-web-analytics) 数据. 
