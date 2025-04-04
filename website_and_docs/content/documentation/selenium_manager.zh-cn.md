@@ -418,7 +418,7 @@ Selenium 绑定的每次发布都包含三个独立的 Selenium Manager 二进�
 如果您在 arm64/aarch64、32 位架构或树莓派上运行 Linux, Selenium Manager 将无法为您服务.  
 对于用户来说, 最大的问题在于他们过去常常获取自定义构建的驱动程序并将其放在 PATH 上, 然后就能正常工作.  
 现在由于 Selenium Manager 负责在 PATH 上查找驱动程序, 
-这种方法不再奏效, 用户需要使用   `Service`   类并[set the location directly](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location)..  
+这种方法不再奏效, 用户需要使用 `Service` 类并[直接设置位置](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location) .
 让 Selenium Manager 在 PATH 上查找驱动程序而不是在每个绑定中管理该逻辑, 有诸多优势, 所以目前这是我们愿意接受的权衡. 
 
 然而, 从 Selenium 4.13.0 版本开始, 
