@@ -198,7 +198,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Tear Down
 
-{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
+{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L30" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
