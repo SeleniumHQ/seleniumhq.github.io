@@ -176,3 +176,11 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+Drivers released in approximately 2024 and later automatically dismiss beforeunload prompts by default. If the old behavior is needed, [enable bidi]({{< ref "../bidi/" >}}).
+
+NOTE: ChromeDriver still dismisses prompts unless `options.unhandled_prompt_behavior = 'ignore'` is also specified, in addition to enabling bidi (as recently as version 134 or later).
+
+NOTE: ChromeDriver implemented automatically dismissing beforeunload prompts in approximately version 126 but enabling bidi had no effect on beforeunload prompts until approximately version 133.
