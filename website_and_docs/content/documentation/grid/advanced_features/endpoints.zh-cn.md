@@ -68,7 +68,7 @@ cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' -
 
 在 Standalone 模式下，分发器 URL 是独立服务器地址。
 
-在 Hub-Node 模式下, 分发器 URL 是 Hub 器服务器的地址。
+在 Hub-Node 模式下, 分发器 URL 是 Hub 服务器的地址。
 ```shell
 cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
