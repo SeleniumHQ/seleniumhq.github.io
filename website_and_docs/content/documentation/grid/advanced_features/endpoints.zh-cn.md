@@ -43,11 +43,11 @@ cURL --request DELETE 'http://localhost:4444/session/<session-id>'
 
 ### 删除节点
 
-要从网格中删除节点，请使用下面列出的 cURL 命令。该命令不会停止正在该节点上运行的任何会话。节点会继续运行，除非被明确杀死。分发器不再知道该节点，因此任何匹配的新会话请求都不会转发到该节点。
+要从网格中删除节点，请使用下面列出的 cURL 命令。该命令不会停止正在该节点上运行的任何会话。除非显式终止, 否则节点将继续运行。分发器不再知道该节点，因此任何匹配的新会话请求都不会转发到该节点。
 
 在 Standalone 模式下，分发器 URL 是独立服务器地址。
 
-在 Hub-Node 模式下, 分发器 URL 是 Hub 器服务器的地址。
+在 Hub-Node 模式下, 分发器 URL 是 Hub 服务器的地址。
 
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
@@ -142,7 +142,7 @@ cURL --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --he
 新会话请求队列保存新会话请求。要清除队列，请使用下面列出的 cURL 命令。清除队列会拒绝队列中的所有请求。对于每个此类请求，服务器都会向相应的客户端返回错误响应。清除命令的结果是被删除请求的总数。
 
 在 Standalone 模式下, 队列URL是独立服务器的地址。
-在 Hub-Node 模式下, 队列URL是集线器服务器的地址.。
+在 Hub-Node 模式下, 队列URL是集线器服务器的地址。
 
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
