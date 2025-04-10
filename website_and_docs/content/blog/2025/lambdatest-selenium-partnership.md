@@ -57,8 +57,6 @@ automation community. We invite you to join our upcoming workshops, webinars,
 and discussion forums to see firsthand how these collaborative projects will 
 shape the future of open source test automation.
 
-## Conclusion
-
 Formalizing LambdaTest as a Selenium development partner is a milestone that 
 celebrates our commitment to innovation and community spirit. With the dedicated 
 efforts from LambdaTest’s OSPO, we continue our mission to enhance the 
