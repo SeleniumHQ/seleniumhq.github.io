@@ -27,7 +27,7 @@ Selenium users around the world.
 
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com) platform that empowers businesses to 
+[LambdaTest](https://www.lambdatest.com) is a platform that empowers businesses to 
 accelerate time to market through intelligent, cloud-based test authoring, 
 orchestration, and execution. With over 15,000 customers and 2.3 million+ 
 users across 130+ countries, LambdaTest is the trusted choice for modern software testing.
