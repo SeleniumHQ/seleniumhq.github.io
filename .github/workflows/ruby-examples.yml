@@ -41,13 +41,17 @@ jobs:
         if: matrix.os != 'windows'
         run: |
           sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
-      - name: Start Xvfb
-        if: matrix.os == 'ubuntu'
-        run: Xvfb :99 &
+      - name: Setup Fluxbox and Xvfb
+        if: inputs.os == 'ubuntu'
+        run: |
+          sudo apt-get -y install fluxbox libxss1 libappindicator3-1 libindicator7
+          Xvfb :99 &
+          fluxbox -display :99 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 3.1
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -83,11 +87,26 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 11
-      - name: Run tests
+      - name: Run tests on Windows
+        if: matrix.os == 'windows'
         uses: nick-invision/retry@v3.0.2
         with:
           timeout_minutes: 20
-          max_attempts: 3
+          max_attempts: 2
           command: |
             cd examples/ruby
             bundle exec rspec
+          new_command_on_retry: |
+            cd examples/ruby; $env:DEBUG="true"; bundle exec rspec --only-failures
+      - name: Run tests on ${{ matrix.os }}
+        if: matrix.os != 'windows'
+        uses: nick-invision/retry@v3.0.2
+        with:
+          timeout_minutes: 20
+          max_attempts: 2
+          command: |
+            cd examples/ruby
+            bundle exec rspec
+          new_command_on_retry: |
+            cd examples/ruby
+            DEBUG=true bundle exec rspec --only-failures      
