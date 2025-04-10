@@ -5,6 +5,8 @@ date: 2025-04-10
 tags: ["selenium"]
 categories: ["general"]
 author: Sri Harsha [@harsha509](https://www.linkedin.com/in/sriharsha509/)
+images:
+  - "/images/blog/2024/lambdatest-selenium-development-partner.png"
 description: >
   The Selenium Project is pleased to welcome LambdaTest as an official Development Partner.
 ---
@@ -25,11 +27,10 @@ Selenium users around the world.
 
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/) is an intelligent and omnichannel software quality 
-assurance platform that enables businesses to accelerate time to 
-market through AI-powered cloud-based test authoring, orchestration, 
-and execution. Over 15,000+ customers and 2.3 million+ users across 
-130+ countries rely on LambdaTest for their testing needs.
+[LambdaTest](https://www.lambdatest.com) platform that empowers businesses to 
+accelerate time to market through intelligent, cloud-based test authoring, 
+orchestration, and execution. With over 15,000 customers and 2.3 million+ 
+users across 130+ countries, LambdaTest is the trusted choice for modern software testing.
 
 ## Key Points of the Partnership
 
