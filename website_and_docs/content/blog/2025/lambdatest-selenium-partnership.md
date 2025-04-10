@@ -12,7 +12,7 @@ description: >
 We are excited to share that [LambdaTest](https://www.lambdatest.com) has joined as a development 
 partner for Selenium. This partnership highlights our shared commitment 
 to innovation, community engagement, and collaborative progress in the 
-test automation space. LambdaTest’s dedicated open source partner office (OSPO) 
+test automation space. LambdaTest’s dedicated Open Source Program Office (OSPO) 
 is contributing valuable expertise and resources that will further enrich the Selenium ecosystem.
 
 ## A Partnership Rooted in Open Source Values
@@ -22,6 +22,14 @@ standards and continuous improvement. Our collaboration with LambdaTest
 is designed to strengthen the community by channeling focused contributions 
 from their OSPO—improving tools, integrations, and documentation for 
 Selenium users around the world.
+
+## About LambdaTest
+
+[LambdaTest](https://www.lambdatest.com/) is an intelligent and omnichannel software quality 
+assurance platform that enables businesses to accelerate time to 
+market through AI-powered cloud-based test authoring, orchestration, 
+and execution. Over 15,000+ customers and 2.3 million+ users across 
+130+ countries rely on LambdaTest for their testing needs.
 
 ## Key Points of the Partnership
 
