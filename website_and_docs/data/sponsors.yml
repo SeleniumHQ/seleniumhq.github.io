@@ -9,6 +9,10 @@ development:
     - logo: "/images/sponsors/saucelabs.png"
       url: "https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25"
       name: "Sauce Labs"
+    # Sponsorship renewed October 16, 2024. Renewed again on April 8, 2025, under the "Development" level
+    - logo: "/images/sponsors/lambda-test.png"
+      url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
+      name: "LambdaTest"
 
 selenium:
   # Set to false if no items are present
@@ -22,10 +26,6 @@ selenium:
     - logo: "/images/sponsors/applitools.png"
       url: "https://applitools.com/"
       name: "Applitools"
-    # Sponsorship renewed October 16, 2024.
-    - logo: "/images/sponsors/lambda-test.png"
-      url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
-      name: "LambdaTest"
     # Sponsorship start date: June 24, 2015, updated July 2023 (only logo, not the agreement)
     # - logo: "/images/sponsors/Digital.ai.jpg"
     #   url: "http://bit.ly/36uZ7ad"

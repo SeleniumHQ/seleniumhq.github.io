@@ -188,7 +188,7 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L28" >}}
+{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L30" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
