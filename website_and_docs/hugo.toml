@@ -258,7 +258,7 @@ enable = false
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-2stlcmc6b-Hww~3r3yAzquhSq4riOFxA"
+	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-32gueowdh-aShmy9tsU19wHXreKt~4~A"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]

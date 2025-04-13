@@ -1,6 +1,6 @@
 const assert = require("assert");
 const firefox = require('selenium-webdriver/firefox');
-const Network = require("selenium-webdriver/bidi/network");
+const { Network } = require("selenium-webdriver/bidi/network");
 const {until, Builder} = require("selenium-webdriver");
 
 
@@ -76,7 +76,7 @@ describe('Network events', function () {
     assert.equal(beforeRequestEvent[0].request.method, 'GET')
     assert(beforeRequestEvent[0].request.url.includes('redirected_http_equiv.html'))
     assert.equal(beforeRequestEvent[2].request.method, 'GET')
-    assert(beforeRequestEvent[2].request.url.includes('redirected.html'))
+    assert(beforeRequestEvent[3].request.url.includes('redirected.html'))
   })
 
   it('can subscribe to response started', async function () {

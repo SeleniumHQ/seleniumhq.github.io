@@ -9,6 +9,8 @@ RSpec.configure do |config|
 
   # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
+  Dir.mktmpdir('tmp')
+  config.example_status_persistence_file_path = "tmp/examples.txt"
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
@@ -30,6 +32,7 @@ RSpec.configure do |config|
   def start_session
     options = Selenium::WebDriver::Chrome::Options.new
     options.add_argument('disable-search-engine-choice-screen')
+    options.add_argument('--no-sandbox')
     @driver = Selenium::WebDriver.for(:chrome, options: options)
   end
 
