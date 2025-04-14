@@ -445,13 +445,23 @@ Once these abstractions have been built and duplication in your tests identified
 
 ## Example
 
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
 An example of `python + pytest + selenium` which implemented "**Action Bot**, **Loadable Component** and **Page Object**".
 
 A `pytest` fixture `chrome_driver`.
 
-{{< tabpane text=true >}}
-{{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L6-L26" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -462,6 +472,16 @@ A `pytest` fixture `chrome_driver`.
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L28-L65" >}}
 {{< /tab >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -470,6 +490,16 @@ A `pytest` fixture `chrome_driver`.
 {{< tabpane text=true >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L67-L80" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -480,12 +510,34 @@ A `pytest` fixture `chrome_driver`.
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L82-L172" >}}
 {{< /tab >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
-Test cases implementation with `pytest`.
+Test cases implementation.
 
 {{< tabpane text=true >}}
 {{< tab header="Python" >}}
+Test cases implementation with `pytest`.
+
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L174-" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
 {{< /tab >}}
 {{< /tabpane >}}
