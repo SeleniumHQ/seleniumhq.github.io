@@ -57,7 +57,7 @@ public class LocatorsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 
         // Find element by partial link text
-        WebElement element = driver.findElement(By.linkText("Official Page"));
+        WebElement element = driver.findElement(By.partialLinkText("Official Page"));
     }
 
     public void findElementByTagName() {
