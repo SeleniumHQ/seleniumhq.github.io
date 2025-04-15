@@ -139,6 +139,16 @@ driver = RemoteWebDriver(options)
 {{< /tabpane >}}
 </div>
 
+**Note**: Whether you create an empty `FirefoxProfile` or point it to the directory of your own profile, Selenium
+will create a temporary directory to store either the data of the new profile or a copy of your existing one. Every
+time you run your program, a different temporary directory will be created. These directories are not cleaned up
+explicitly by Selenium, they should eventually get removed by the operating system. However, if you want to remove
+the copy manually (e.g. if your profile is large in size), the path of the copy is exposed by the `FirefoxProfile`
+object. Check the language specific implementation to see how to retrieve that location.
+
+If you want to use an existing Firefox profile, you can pass in the path to that profile. Please refer to the official
+[Firefox documentation](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile)
+for instructions on how to find the directory of your profile.
 
 ## Service
 
