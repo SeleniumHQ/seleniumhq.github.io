@@ -31,7 +31,7 @@ Record or take actions on `console.log` events.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L13" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -56,7 +56,7 @@ You need to store the ID returned when adding the handler to delete it.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L22-L23" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L24-L25" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -83,7 +83,7 @@ Record or take actions on JavaScript exception events.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L33" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -108,7 +108,7 @@ You need to store the ID returned when adding the handler to delete it.
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L44-L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L46-L47" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
