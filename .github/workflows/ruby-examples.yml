@@ -42,7 +42,7 @@ jobs:
         run: |
           sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
       - name: Setup Fluxbox and Xvfb
-        if: inputs.os == 'ubuntu'
+        if: matrix.os == 'ubuntu'
         run: |
           sudo apt-get -y install fluxbox libxss1 libappindicator3-1 libindicator7
           Xvfb :99 &
@@ -97,7 +97,7 @@ jobs:
             cd examples/ruby
             bundle exec rspec
           new_command_on_retry: |
-            cd examples/ruby; $env:DEBUG="true"; bundle exec rspec --only-failures
+            cd examples/ruby; $env:DEBUG="true"; bundle exec rspec --only-failures --backtrace
       - name: Run tests on ${{ matrix.os }}
         if: matrix.os != 'windows'
         uses: nick-invision/retry@v3.0.2
@@ -109,4 +109,4 @@ jobs:
             bundle exec rspec
           new_command_on_retry: |
             cd examples/ruby
-            DEBUG=true bundle exec rspec --only-failures      
+            DEBUG=true bundle exec rspec --only-failures --backtrace
