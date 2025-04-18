@@ -30,19 +30,28 @@ RSpec.configure do |config|
   config.after { @driver&.quit }
 
   def start_session
-    options = Selenium::WebDriver::Chrome::Options.new
-    options.add_argument('disable-search-engine-choice-screen')
-    options.add_argument('--no-sandbox')
-    @driver = Selenium::WebDriver.for(:chrome, options: options)
+    @service = Selenium::WebDriver::Service.chrome
+    @driver = Selenium::WebDriver.for :chrome, options: default_chrome_options
   end
 
   def start_bidi_session
-    options = Selenium::WebDriver::Chrome::Options.new(web_socket_url: true)
+    options = default_chrome_options
+    options.web_socket_url = true
     @driver = Selenium::WebDriver.for :chrome, options: options
+  end
+
+  def default_chrome_options
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.browser_version = 'stable'
+    options.timeouts = {implicit: 500}
+    options.add_argument('disable-search-engine-choice-screen')
+    options.add_argument('--no-sandbox') if Selenium::WebDriver::Platform.os == :linux
+    options
   end
 
   def start_firefox
     options = Selenium::WebDriver::Options.firefox(timeouts: {implicit: 1500})
+    options.browser_version = 'stable'
     @driver = Selenium::WebDriver.for :firefox, options: options
   end
 end
