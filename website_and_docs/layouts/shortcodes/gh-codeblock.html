@@ -39,15 +39,14 @@
   {{ $content := base64Decode $apiResults.content }}
   {{ $codeSnippet := $content }}
 
-  {{ $parsedApiUrl := urls.Parse $webUrl }}
-  {{ with $parsedApiUrl.Fragment }}
-    {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
-    {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
-    {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
-    {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
-    {{ $splitContent := split $content "\n" }}
-    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
-  {{ end }}
+{{ if $hasFragment }}
+{{ $fragment := index (split $fullPath "#") 1 }}
+{{ $codeLines := split $fragment "-" }}
+{{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
+{{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
+{{ $splitContent := split $content "\n" }}
+{{ $codeSnippet = delimit (slice $splitContent $fromLine (add $toLine 1)) "\n" }}
+{{ end }}
 
   <div class="gh-codeblock-wrapper">
     {{ highlight $codeSnippet $language }}
@@ -55,7 +54,7 @@
     {{ if $hasFragment }}
     <details class="mt-3">
       <summary>Show full example</summary>
-      <div class="pt-2 highlight">
+      <div class="pt-2">
         {{ highlight $content $language }}
       </div>
     </details>
