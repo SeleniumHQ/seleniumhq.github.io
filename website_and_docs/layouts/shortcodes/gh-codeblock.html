@@ -50,9 +50,7 @@
   {{ end }}
 
   <div class="gh-codeblock-wrapper">
-    <div class="highlight">
-      {{ highlight $codeSnippet $language }}
-    </div>
+    {{ highlight $codeSnippet $language }}
 
     {{ if $hasFragment }}
     <details class="mt-3">
