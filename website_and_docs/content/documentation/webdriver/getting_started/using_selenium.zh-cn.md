@@ -130,7 +130,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L11-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
@@ -172,11 +172,11 @@ In your project's `package.json`, add requirement to `dependencies`:
 
 ### Set Up
 
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7" >}}
 
 ### Tear Down
 
-{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L30" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L26" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 

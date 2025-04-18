@@ -141,7 +141,7 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L11-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
@@ -184,11 +184,11 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ### 並べる
 
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7" >}}
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L30" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L26" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
