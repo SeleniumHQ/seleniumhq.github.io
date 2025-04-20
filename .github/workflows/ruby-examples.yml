@@ -110,3 +110,20 @@ jobs:
           new_command_on_retry: |
             cd examples/ruby
             DEBUG=true bundle exec rspec --only-failures --backtrace
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repo
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler-cache: true
+      - name: Install dependencies
+        working-directory: ./examples/ruby
+        run: bundle install
+      - name: Run RuboCop
+        working-directory: ./examples/ruby
+        run: bundle exec rubocop
