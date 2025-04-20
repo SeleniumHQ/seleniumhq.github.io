@@ -180,22 +180,22 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L27" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L19" >}}
+{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L26" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-26" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L18" >}}
+{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L23" >}}
+{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L32" >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
