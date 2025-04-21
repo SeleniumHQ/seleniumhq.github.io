@@ -10,17 +10,17 @@ description: >
   Selenium Conference and Appium Conference 2025, Valencia Spain
 ---
 
-Selenium and Appium projects joined hands together for the 2025 annual conference of both, which was held from March 26th - March 28th in Valencia, Spain. The offcial web page of the conference can be found **<a href="https://seleniumconf.com/" target="_blank">here</a>**
+Selenium and Appium projects joined hands together for the 2025 annual conference of both, which was held from March 26th - March 28th in Valencia, Spain. The official web page of the conference can be found **<a href="https://seleniumconf.com/" target="_blank">here</a>**
 
 The event took place at the beautiful venue of **<a href="https://veleseventsvalencia.es/" target="_blank">Veles e Vents</a>**.  
 
 On March 26th, there were **<a href="https://seleniumconf.com/workshops/" target="_blank">Workshops</a>**, which were enthusiastically attended by participants from across the globe. On the 26th March evening, the conference organised Speaker's Dinner, which provided a fun space to sit, talk and know other better. 
 
-We are thankful to our esteemeed speaker group, who joined us from all over the world and helped make the event a success. Details about the speakers for the event is available here -  **<a href="https://seleniumconf.com/speakers/" target="_blank">Speakers of the Conference</a>**
+We are thankful to our esteemed speaker group, who joined us from all over the world and helped make the event a success. Details about the speakers for the event is available here -  **<a href="https://seleniumconf.com/speakers/" target="_blank">Speakers of the Conference</a>**
 
 The main event started from 27th of March and ran through 28th March evening. The event was attended by close to 400 global participants. We are thankful to each of them, for their presence which made the event worthwhile. 
 
-Conference also provided scholarship to 4 people who were chosen after a tough selection process to attend the conference. We thank all our **<a href="https://seleniumconf.com/sponsor/" target="_blank">Sponsors</a>** sponsors who collaborated and helped make the event possible. 
+Conference also provided scholarship to 4 people who were chosen after a tough selection process to attend the conference. We thank all our **<a href="https://seleniumconf.com/sponsor/" target="_blank">Sponsors</a>** who collaborated and helped make the event possible. 
 
 The video recording, presentations and photographs from the main event can be found here - **<a href="https://seleniumconf.com/recordings-and-slides/" target="_blank">Videos, Photos and More..</a>**
 
