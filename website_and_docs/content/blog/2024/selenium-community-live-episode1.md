@@ -4,7 +4,7 @@ linkTitle: "Selenium Community Live - Episode 1"
 date: 2024-12-25
 tags: ["webinar", "meetup", "talks","community"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/muepallavi/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
 images:
 description: >
   Selenium Community Live - Episode 1
