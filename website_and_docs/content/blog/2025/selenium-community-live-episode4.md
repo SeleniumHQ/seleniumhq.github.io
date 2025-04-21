@@ -4,7 +4,7 @@ linkTitle: "Selenium Community Live - Episode 4"
 date: 2025-03-19
 tags: ["webinar", "meetup", "talks","community"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
 images:
 description: >
   Selenium Community Live - Episode 4
