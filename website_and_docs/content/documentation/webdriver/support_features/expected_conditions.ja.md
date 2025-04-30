@@ -24,10 +24,9 @@ These methods can include conditions such as:
 [Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
 {{< badge-code >}}
 {{% /tab %}}
-{{< tab header="Python" >}}
-[Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html)
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/support/test_expected_conditions.py#L14-L15" >}}
+{{% /tab %}}
 {{< tab header="CSharp" >}}
 .NET stopped supporting Expected Conditions in Selenium 4 to minimize maintenance hassle and redundancy.
 {{< /tab >}}
