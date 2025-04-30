@@ -72,7 +72,7 @@ aliases: [
 
 记录或对 JavaScript 异常事件采取行动.
 
-### 添加处理程序r
+### 添加处理程序
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
