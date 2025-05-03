@@ -342,9 +342,9 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 **Previously**
-{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L3-L8" >}}
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L5-L10" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L10-L14" >}}
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L12-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
