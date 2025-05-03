@@ -42,4 +42,4 @@ RSpec.describe 'Safari Technology Preview', skip: 'This test is being skipped as
     expect(local_driver.capabilities.browser_name).to eq 'Safari Technology Preview'
   end
 end
-# rubocop:disable RSpec/MultipleDescribes
+# rubocop:enable RSpec/MultipleDescribes
