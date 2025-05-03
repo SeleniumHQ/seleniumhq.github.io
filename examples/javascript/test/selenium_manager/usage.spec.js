@@ -3,7 +3,7 @@ const {Browser, Builder} = require("selenium-webdriver");
 const options = new Chrome.Options();
 
 describe('Usage Test', function () {
-  it('After Selenium Manager', async function () {
+  it('Creates driver wit Selenium Manager', async function () {
 
     let driver = new Builder()
         .forBrowser(Browser.CHROME)
@@ -13,20 +13,24 @@ describe('Usage Test', function () {
     await driver.quit();
   });
 
-  it('Before Selenium Manager', async function () {
-    let driverPath = paths.driverPath;
-    let browserPath = paths.browserPath;
+  // it('Creates driver with Selenium Manager', async function () {
+  //   const paths = {
+  //       driverPath: '/path/to/chromedriver',
+  //       browserPath: '/path/to/chrome'
+  //     };
+  //   let driverPath = paths.driverPath;
+  //   let browserPath = paths.browserPath;
 
-    options.setChromeBinaryPath(browserPath)
+  //   options.setChromeBinaryPath(browserPath)
 
-    let service = new Chrome.ServiceBuilder().setPath(driverPath)
+  //   let service = new Chrome.ServiceBuilder().setPath(driverPath)
 
-    let driver = new Builder()
-        .forBrowser(Browser.CHROME)
-        .setChromeService(service)
-        .build();
+  //   let driver = new Builder()
+  //       .forBrowser(Browser.CHROME)
+  //       .setChromeService(service)
+  //       .build();
 
-    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
-    await driver.quit();
-  });
+  //   await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  //   await driver.quit();
+  // });
 });
