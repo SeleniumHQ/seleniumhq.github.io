@@ -1,24 +1,26 @@
 ---
-title: "WebDriver BiDi Logging Features"
-linkTitle: "Logging"
+title: "WebDriver BiDi 日志功能"
+linkTitle: "日志"
 weight: 1
 description: >
-  These features are related to logging. Because "logging" can refer to so many
-  different things, these methods are made available via a "script" namespace.
+  这些功能与日志记录有关。
+  由于"logging"可以指代许多不同的事物,
+  因此这些方法通过"script"命名空间提供.
 aliases: [
   "/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log",
   "/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
 
-Remember that to use WebDriver BiDi, you must enable it in Options. 
-For more details, see [Enabling BiDi]({{< ref "BiDi" >}})
+请记住, 要使用 WebDriver BiDi,
+您必须在选项中启用它. 
+更多详情, 请参阅 [启用 BiDi]({{< ref "BiDi" >}}) .
 
-## Console Message Handlers
+## 控制台消息处理程序
 
-Record or take actions on `console.log` events.
+记录或对 `console.log` 事件采取行动.
 
-### Add Handler
+### 添加处理程序
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -41,9 +43,9 @@ Record or take actions on `console.log` events.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Remove Handler
+### 删除处理程序
 
-You need to store the ID returned when adding the handler to delete it.
+您需要存储添加处理程序时返回的 ID 以便将其删除.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -66,11 +68,11 @@ You need to store the ID returned when adding the handler to delete it.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## JavaScript Exception Handlers
+## JavaScript 异常处理程序
 
-Record or take actions on JavaScript exception events.
+记录或对 JavaScript 异常事件采取行动.
 
-### Add Handler
+### 添加处理程序
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -93,9 +95,9 @@ Record or take actions on JavaScript exception events.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Remove Handler
+### 删除处理程序
 
-You need to store the ID returned when adding the handler to delete it.
+您需要存储添加处理程序时返回的 ID 以便将其删除.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

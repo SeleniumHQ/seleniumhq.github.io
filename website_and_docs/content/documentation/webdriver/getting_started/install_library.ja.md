@@ -48,10 +48,10 @@ pip install selenium
 ### ダウンロード
 
 または、ダウンロードすることもできます[PyPI ソースアーカイブ](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) を使用してインストールします _setup.py_
+(selenium-x.x.x.-py3-none-any.whl) を使用してインストールします _pip_:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
 <br>
 
