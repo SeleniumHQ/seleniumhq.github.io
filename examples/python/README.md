@@ -1,38 +1,61 @@
-# Running all tests from Selenium python example
+# Running tests from Selenium Python examples
 
-Follow these steps to run all test example from selenium python
-
-1. Clone this repository
+#### 1. Clone this repository
 
 ```
 git clone https://github.com/SeleniumHQ/seleniumhq.github.io.git
 ```
 
-2. Navigate to `python` directory
+#### 2. Navigate to `python` directory
 
 ```
 cd seleniumhq.github.io/examples/python
 ```
 
-3. Install dependencies using pip
+#### 3. Create a virtual environment
+
+- On Windows:
+
+```
+py -m venv venv
+venv\Scripts\activate
+```
+
+- On Linux/Mac:
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### 4. Install dependencies:
 
 ```
 pip install -r requirements.txt
 ```
-> if you are on a different python version, for example python3.x you may have to replace `pip` with `pip3`
 
-4. Run all tests
+> for help, see: https://packaging.python.org/en/latest/tutorials/installing-packages
+
+#### 5. Run tests
+
+- Run all tests with the default Python interpreter:
 
 ```
 pytest
 ```
 
-> Please keep some patience - If you are doing it for the first time, it will take a little while to verify and download the browser drivers
+- Run all tests with every installed/supported Python interpreter:
 
-## Execute a specific example
-To run a specific Selenium Python example, use the following command:
-```bash
+```
+tox
+```
+
+> Please have some patience - If you are doing it for the first time, it will take a little while to download the browser drivers
+
+- Run a specific example:
+
+```
 pytest path/to/test_script.py
 ```
 
-Make sure to replace `path/to/test_script.py` with the path and name of the example you want to run.
+> Make sure to replace `path/to/test_script.py` with the path and name of the example you want to run

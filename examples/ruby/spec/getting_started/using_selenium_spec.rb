@@ -1,7 +1,7 @@
 # frozen_string_literal: true
+
 require 'spec_helper'
 require 'selenium-webdriver'
-
 
 RSpec.describe 'Using Selenium' do
   before do
