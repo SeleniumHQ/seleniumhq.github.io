@@ -14,12 +14,8 @@ describe('Usage Test', function () {
   });
 
   // it('Creates driver with Selenium Manager', async function () {
-  //   const paths = {
-  //       driverPath: '/path/to/chromedriver',
-  //       browserPath: '/path/to/chrome'
-  //     };
-  //   let driverPath = paths.driverPath;
-  //   let browserPath = paths.browserPath;
+  //   let driverPath = '/path/to/chromedriver';
+  //   let browserPath = '/path/to/chrome';
 
   //   options.setChromeBinaryPath(browserPath)
 
