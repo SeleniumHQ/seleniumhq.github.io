@@ -4,7 +4,7 @@ linkTitle: "Celebrating 20 Years of Selenium"
 date: 2024-10-18
 tags: ["webinar", "meetup", "talks"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
 images:
   - "/images/blog/2024/20-selenium"
 description: >

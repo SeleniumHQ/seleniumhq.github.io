@@ -1,7 +1,8 @@
-selenium==4.29.0
-pytest==8.3.4
-trio==0.29.0
+selenium==4.31.0
+pytest==8.3.5
+trio==0.30.0
 pytest-trio==0.8.0
-pytest-rerunfailures==14.0
-flake8==7.1.2
+pytest-rerunfailures==15.0
+flake8==7.2.0
 requests==2.32.3
+tox==4.25.0
