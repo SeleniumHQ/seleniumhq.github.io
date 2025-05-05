@@ -22,21 +22,21 @@ While many discussions around open source focus on code contributions and techni
 
 ### What motivates Open Source contributors?
 
-Ashley’s LinkedIn states that “My driving principle is simple: people first” and building on that, Ashley and Puja both highlight that open source is "by the community, for the community," where collaboration and human connections are foundational motivating factors for them.
+Ashley’s LinkedIn states that “My driving principle is simple: people first” and building on that, Ashley and Puja both highlight that open source is "by the community, for the community," where collaboration and human connections are key motivating factors for them.
 
 Ashley shares her journey with Selenium, highlighting how the warm, caring community has helped her build genuine friendships and good memories.
 
-"In the end, do people really remember what we build? They're going to remember how we made them feel." — Ashley Hunsburg”
+"In the end, do people really remember what we build? They're going to remember how we made them feel." — Ashley Hunsburg
 
 Ashley states that for her, a main motivational factor is community, and what she thinks drives people is the altruistic purpose of giving back to the community beyond their organisation and serving a great purpose. Accordingly to Ashley, motivation drives behaviour, and if you have clear motivation, that will drive your place in the community in the long run.
 
 Beyond altruism, Puja thinks there is a diversity of motivators, emphasising that contributions extend far beyond code. Contributions might include:
--  Helping with documentation 
+- Helping with documentation 
 - Managing continuous integration (CI) pipelines
 - Handling legal or financial aspects
 - Organising conferences or community events
 
-These roles are often in the spotlight but critical to the health and growth of open source projects. 
+These roles are often not in the spotlight but critical to the health and growth of open source projects. 
 
 A huge spectrum of motivators drives people’s behaviour and keeps the open source project breathing and growing.
 
@@ -60,12 +60,14 @@ She recounts a meaningful interaction at a conference where a newcomer thanked h
 This indicates that motivation in open source is ever evolving with experience and roles within the community. 
 
 ### Handling Conflict in Open Source 
-Both Ashley and Puja acknowledge that interactions on platforms like GitHub or chat channels can include harsh or unexpected comments, or the project itself can have some differences of opinion. This difference of opinion and thought diversity is what makes the group awesome, but certain situations need to be resolved with care..
+
+Both Ashley and Puja acknowledge that interactions on platforms like GitHub or chat channels can include harsh or unexpected comments, or the project itself can have some differences of opinion. This difference of opinion and thought diversity is what makes the group awesome, but certain situations need to be resolved with care.
 Ashley shares her first experience receiving a non-constructive code review and emphasises the importance of kindness and clarity in feedback:
 "Be kind, but clear. Clear is kind. You don't have to be nice, but be clear about what happened, why, and how to improve." — Ashley Hunsburg
 Effective conflict resolution involves open questions, understanding the intent, and focusing on shared goals. It’s important to remember that conflicts are natural in any group, but they can be handled constructively with the key focus being the what is important for the situation. It is also essential to make sure an open source project has a code of conduct that is implemented in such situations and that the community is aware they have a safe space to report their issue and that they will be heard.
 
 ### Inclusivity 
+
 Ashley distinguishes between mentorship and sponsorship as two pillars of inclusion:
 - Mentorship: Providing advice, guidance, and support to help someone grow and navigate the community.
 - Sponsorship: Actively advocating for someone, opening doors, and recommending them for opportunities
@@ -73,7 +75,8 @@ Ashley distinguishes between mentorship and sponsorship as two pillars of inclus
 Ashley further discussed that inclusivity needs to be beyond code. Such as ensuring inclusive language and removing any barriers of entry for new contributors. The key focus should be on building an inclusive environment and creating a welcoming space for new contributors and the community.
 
 ### Overcoming Impostor Syndrome
-Impostor syndrome is a common challenge for developers, especially when engaging in large, visible open-source projects. Ashley shares candidly about her own struggles and offers practical advice:
+
+Impostor syndrome is a common challenge for developers, especially when engaging in large, visible open-source projects. Ashley shares candidly about her own experience and offers practical advice:
 - Be kind to yourself and reframe negative thoughts. Add "yet" to statements like "I don’t know how to do this... yet."
 - Recognize that many others share the same fears and questions.
 - Build a support network of trusted friends, mentors, and peers who understand your journey.
