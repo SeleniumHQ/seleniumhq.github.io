@@ -87,6 +87,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship renewal date: Apr 12, 2026
+    - logo: "/images/sponsors/kualtee.png"
+      url: "http://www.kualitee.com/?utm_source=selenium&utm_medium=website&utm_campaign=seleniumpartnership"
+      name: "Kualitee"
     # Sponsorship renewal date: Feb 4, 2025
     - logo: "/images/sponsors/alpi.jpg"
       url: "http://www.alpi.com/courses-opensource/index.cfm"

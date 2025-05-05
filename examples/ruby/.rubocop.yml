@@ -1,9 +1,10 @@
 inherit_from: .rubocop_todo.yml
 
-require: rubocop-rspec
+plugins:
+  - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.1
   NewCops: enable
   SuggestExtensions:
     rubocop-rake: false

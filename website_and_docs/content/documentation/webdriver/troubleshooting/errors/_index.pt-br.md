@@ -175,3 +175,19 @@ This exception occurs when Selenium tries to interact with an element that is no
 2. Ensure locators uniquely identify the intended element to avoid incorrect matches.  
 3. Check if the element is visible on the page before interacting with it. Use scrolling to bring the element into view, if required.  
 4. Use explicit waits to ensure the element is interactable before performing actions.
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)
