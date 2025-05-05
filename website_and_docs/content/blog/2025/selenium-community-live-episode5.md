@@ -14,17 +14,17 @@ The fifth episode of Selenium Community Live happened on April 25th 2025.
 
 **<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>**, Founder 5 Elements Learning and a long time Selenium Committer hosted the fifth episode of the Selenium Community event featuring **<a href="https://www.linkedin.com/in/ashleyhunsberger/" target="_blank">Ashley Hunsberger </a>**, Director at NBCUniversal with close to 25 years of industry experience and a longtime friend of the Selenium, alongside **<a href="https://www.linkedin.com/in/pujajagani/">Puja Jagani</a>**, Open Source Engineer & Developer Advocate at BrowserStack and member of the Selenium leadership(TLC and PLC). 
 
-The theme of the community event was “Beyond Code: Understanding Developer Satisfaction in Open Source Contributions”.
+The theme of the community event was "Beyond Code: Understanding Developer Satisfaction in Open Source Contributions".
  
 While many discussions around open source have happened that focus on code contributions and technical aspects, there is a vital human element involved, something that keeps the contributions rolling for decades, i.e. developer satisfaction. This community event was dedicated to discussing the human factor in open source contributions. The speakers share their insights and experience on developer satisfaction in open source. 
 
 ### What motivates Open Source contributors?
 
-Ashley’s LinkedIn states that “My driving principle is simple: people first” and building on that, Ashley and Puja both highlight that open source is "by the community, for the community," where collaboration and human connections are foundational motivating factors for them.
+Ashley’s LinkedIn states that "My driving principle is simple: people first" and building on that, Ashley and Puja both highlight that open source is "by the community, for the community," where collaboration and human connections are foundational motivating factors for them.
 
 Ashley shares her journey with Selenium, highlighting how the warm, caring community has helped her build genuine friendships and good memories.
 
-"In the end, do people really remember what we build? They're going to remember how we made them feel." - Ashley Hunsberger”
+"In the end, do people really remember what we build? They're going to remember how we made them feel." - Ashley Hunsberger
 
 She states that for her, a main motivational factor is community, and what she thinks drives people is the altruistic purpose of giving back to the community beyond their organisation and serving a great purpose. According to her, motivation drives behaviour, and if you have clear motivation, that will drive your place in the community in the long run.
 
