@@ -88,9 +88,9 @@ EditIssue page = new EditIssue(driver).get();
 
 // Further Updates
 
-  @Override
-  protected void load() {
-    securedPage.get();
+  // @Override
+  // protected void load() {
+  //   securedPage.get();
 
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
+  //   driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
+  // }
