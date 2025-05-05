@@ -84,7 +84,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   }
 }
 
-EditIssue page = new EditIssue(driver).get();
+// EditIssue page = new EditIssue(driver).get();
 
 // Further Updates
 
