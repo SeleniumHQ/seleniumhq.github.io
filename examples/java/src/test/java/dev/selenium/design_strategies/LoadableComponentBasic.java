@@ -13,7 +13,7 @@ public class EditIssue {
   }
 
   public void setTitle(String title) {
-    WebElement field = driver.findElement(By.id("issue_title")));
+    WebElement field = driver.findElement(By.id("issue_title"));
     clearAndType(field, title);
   }
 
