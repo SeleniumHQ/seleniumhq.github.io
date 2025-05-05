@@ -10,9 +10,10 @@ description: >
   Selenium Community Live - Episode 5
 ---
 
-The fifth episode of Selenium Community Live happened on April 25th 2025.
+The fifth episode of Selenium Community Live happened on April 25th 2025. 
 
-**<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>**, Founder 5 Elements Learning and a long time Selenium Committer hosted the fifth episode of the Selenium Community event featuring **<a href="https://www.linkedin.com/in/ashleyhunsberger/" target="_blank">Ashley Hunsberger </a>**, Director at NBCUniversal with close to 25 years of industry experience and a longtime friend of the Selenium, alongside **<a href="https://www.linkedin.com/in/pujajagani/">Puja Jagani</a>**, Open Source Engineer & Developer Advocate at BrowserStack and member of the Selenium leadership(TLC and PLC). 
+The event featured speakers **<a href="https://www.linkedin.com/in/ashleyhunsberger/" target="_blank">Ashley Hunsberger </a>**, Director at NBCUniversal with close to 25 years of industry experience and a longtime friend of the Selenium, alongside **<a href="https://www.linkedin.com/in/pujajagani/">Puja Jagani</a>**, Open Source Engineer & Developer Advocate at BrowserStack and member of the Selenium leadership(TLC and PLC). The event was hosted by 
+**<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>**, Founder 5 Elements Learning and a long time Selenium Committer. 
 
 The theme of the community event was "Beyond Code: Understanding Developer Satisfaction in Open Source Contributions".
  
