@@ -75,21 +75,11 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### **Docker Selenium**
 
-- Publish Node/Standalone images with the latest Grid core version and browser backward versions
-- Update container environment to
-  JDK21 ([#2642](https://github.com/SeleniumHQ/docker-selenium/pull/2642))
-- Node base with share system certificate
-  support ([#2653](https://github.com/SeleniumHQ/docker-selenium/pull/2653))
-- Node container is able to restart and retry to register when `register-period`
-  exceeded  ([#2662](https://github.com/SeleniumHQ/docker-selenium/pull/2662))
-- Selenium Grid scaler in KEDA feature preview
-    - Add trigger param to set custom capabilities for matching specific
-      Nodes ([KEDA#6536](https://github.com/kedacore/keda/pull/6536))
-    - Add trigger param for Node enables managed downloads
-      capability ([KEDA#6570](https://github.com/kedacore/keda/pull/6570))
-- Helm config: Set K8s node IP to all components via env var KUBERNETES_NODE_HOST_IP in
-  template ([#2668](https://github.com/SeleniumHQ/docker-selenium/pull/2668))
+- Docker: Init python venv with non-root user ([#2769](https://github.com/SeleniumHQ/docker-selenium/pull/2769))
+- Docker: Remove Hub GraphQL dependency from video recorder ([#2813](https://github.com/SeleniumHQ/docker-selenium/pull/2813))
+- Docker: Fluxbox not rendering Chinese characters via VNC view ([#2817](https://github.com/SeleniumHQ/docker-selenium/pull/2817))
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
+
 
 <br>
 
