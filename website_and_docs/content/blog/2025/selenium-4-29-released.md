@@ -62,6 +62,7 @@ Links to everything can be found on our [downloads page][downloads].
 - Improved logging stability. ([#15257](https://github.com/SeleniumHQ/selenium/pull/15257))
 
 ### **Docker Selenium**
+
 - Publish Node/Standalone images with the latest Grid core version and browser backward versions
 - Update container environment to JDK21 ([#2642](https://github.com/SeleniumHQ/docker-selenium/pull/2642))
 - Node base with share system certificate support ([#2653](https://github.com/SeleniumHQ/docker-selenium/pull/2653))
@@ -109,7 +110,6 @@ For a detailed look at all changes, check out the [release notes](https://github
 {{< gh-user "https://api.github.com/users/AndreyJVM" >}}
 {{< gh-user "https://api.github.com/users/Delta456" >}}
 {{< gh-user "https://api.github.com/users/alaahong" >}}
-{{< gh-user "https://api.github.com/users/automatealchemist" >}}
 {{< gh-user "https://api.github.com/users/b2m" >}}
 {{< gh-user "https://api.github.com/users/pallavigitwork" >}}
     </div>
