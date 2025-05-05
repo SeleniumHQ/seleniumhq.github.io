@@ -447,14 +447,19 @@ A `pytest` fixture `chrome_driver`.
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L6-L26" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -466,14 +471,19 @@ A `pytest` fixture `chrome_driver`.
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L28-L65" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -485,14 +495,19 @@ A `pytest` fixture `chrome_driver`.
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L67-L80" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -504,14 +519,19 @@ A `pytest` fixture `chrome_driver`.
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L82-L172" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -525,13 +545,18 @@ Test cases implementation with `pytest`.
 {{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L174-" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
