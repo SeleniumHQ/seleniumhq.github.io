@@ -128,7 +128,7 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
 {{< gh-user "https://api.github.com/users/FFederi" >}}                                                                                                                                                                                   
 {{< gh-user "https://api.github.com/users/navin772" >}}                                                                                                                                                                                  
 {{< gh-user "https://api.github.com/users/shbenzer" >}}                                                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/yvsvarma" >}
+{{< gh-user "https://api.github.com/users/yvsvarma" >}}
     </div>
   </div>
 </div>
