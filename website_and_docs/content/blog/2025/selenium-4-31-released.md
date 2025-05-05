@@ -1,22 +1,20 @@
 ---
-title: "Selenium 4.30 Released!"
-linkTitle: "Selenium 4.30 Released!"
-date: 2025-03-21
+title: "Selenium 4.31 Released!"
+linkTitle: "Selenium 4.31 Released!"
+date: 2025-04-05
 tags: [ "selenium" ]
 categories: [ "releases" ]
 author: Diego Molina [@diemol](https://www.diemol.com)
 images:
-  - "/images/blog/2025/selenium_4.30.jpg"
+  - "/images/blog/2025/selenium_4.31.jpg"
 description: >
-  Today we're happy to announce that Selenium 4.30 has been released!
+  Today we're happy to announce that Selenium 4.31 has been released!
 ---
 
-We're very happy to announce the release of Selenium 4.30 for Javascript, Ruby, Python, .NET, Java
-and the Grid!
-This version brings key updates across the project, with improvements to the BiDi protocol,
-extensive nullability work in .NET, better error handling, and various bug fixes. It’s a great
-step forward as we continue strengthening Selenium’s stability, consistency, and support across
-all supported languages.
+We’re excited to announce the release of **Selenium 4.31** for Javascript, Ruby, Python, .NET, Java
+and the Grid! 🎉  
+This release focuses on improvements across the board, including better BiDi protocol support, test
+reliability, nullability enhancements, and cleanup of legacy code across languages.
 
 Links to all assets can be found on our [downloads page][downloads].
 
@@ -25,11 +23,10 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ## 🚀 Major Highlights
 
-- Continued enhancements to **BiDi (Bi-Directional Protocol)** support across Java, Ruby, .NET, JavaScript, and Python.
-- Extensive **nullability annotations** added throughout the .NET bindings.
-- Selenium Manager (Rust) now supports **nightly Grid builds**.
-- Improvements to testing infrastructure and developer experience, including better packaging, linting, and platform support.
-- Numerous bug fixes and refactors across the Grid, bindings, and devtools.
+- Continued work towards full BiDi support in all bindings
+- Cleanup of unused legacy components (like `wgxpath`)
+- Expanded test coverage and fixes for various environments (CI, RBE, MacOS)
+- Improvements in documentation and development tooling
 
 ---
 
@@ -37,19 +34,18 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### **Java**
 
-- Implemented BiDi commands: `getBidiSessionStatus` and `Permissions`.
-- Refined logger initialization.
-- Removed deprecated, non-W3C compliant `NetworkConnection` interface.
-- Added support for setting viewport and handling CDP warnings gracefully.
+- [Handle `getNamedCookie` and `deleteNamedCookie` for empty strings](https://github.com/SeleniumHQ/selenium/pull/15092)
+- [Add nullness for AppCacheStatus, Credential, and Either](https://github.com/SeleniumHQ/selenium/pull/15119)
+- [Add nullness for interactions](https://github.com/SeleniumHQ/selenium/pull/15118)
+- [Enable Safari for CookieImplementationTest](https://github.com/SeleniumHQ/selenium/pull/15544)
+- [Add test to add a cookie in a user context (BiDi)](https://github.com/SeleniumHQ/selenium/pull/15312)
 
 ### **Python**
 
-- Improved devtools test handling and documentation.
-- Fixed packaging issues and test discovery for `pytest`.
-- Added docstring updates for clarity and modernization.
-- Replaced strings with `By` class attributes.
-- Improved socket resource management and error handling.
-- Updated `expected_conditions` type annotations.
+- [Fix docstring issues that sphinx complains about](https://github.com/SeleniumHQ/selenium/pull/15466)
+- [Only shutdown service if process not already terminated](https://github.com/SeleniumHQ/selenium/pull/15183)
+- [Remove unused mocker arg in chrome options test](https://github.com/SeleniumHQ/selenium/pull/15540)
+- [Fix driver class name in test fixtures](https://github.com/SeleniumHQ/selenium/pull/15550)
 
 ### **JavaScript**
 
@@ -58,33 +54,22 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### **Ruby**
 
-- Fixed a compatibility issue with Ruby 3.1 ("no anonymous block parameter").
-- Added BiDi support for:
-  - Setting viewport
-  - Activating browser context
-  - Providing responses
-- Added a `target_type` parameter to devtools.
+- [Fix BiDi test errors](https://github.com/SeleniumHQ/selenium/pull/15482) 
+- [Allow symbols again to be passed on `delete_cookie`](https://github.com/SeleniumHQ/selenium/pull/15519)
 
 ### **.NET**
 
-- Enabled **nullable reference types** across many components.
-- Trimmed away CDP for **AOT** applications.
-- Enhanced BiDi support including:
-  - `SetFiles` command
-  - Support for `UnhandledPromptBehavior`
-  - Event support like `OnNavigationCommitted`
-  - Encapsulation of the transport layer
-- Improved `WebDriver`, `WebElement`, and capabilities types with nullability.
-- Introduced `SystemClock` singleton.
-- Revisited and fixed test execution on Windows/macOS.
-- Removed obsoleted members for 4.30.
+- [Decouple nested BiDi types across multiple modules](https://github.com/SeleniumHQ/selenium/pulls?q=is%3Apr+author%3Anvborisenko+label%3Adotnet)
+- [Fix null warnings in `RelativeBy` by sealing the type](https://github.com/SeleniumHQ/selenium/pull/15379)
+- [Simplify conversion to `LocalValue`](https://github.com/SeleniumHQ/selenium/pull/15441)
+- [Unify protected and internal Execute methods](https://github.com/SeleniumHQ/selenium/pull/15233)
+- [Make `ContinueWithAuthCommand` closer to spec (breaking change)](https://github.com/SeleniumHQ/selenium/pull/15545)
+- [Avoid intermediate JsonDocument allocation to improve performance](https://github.com/SeleniumHQ/selenium/pull/15555)
 
-### **Grid & Selenium Manager**
+### **Grid**
 
-- Added trace logging for session stop events in Grid.
-- Improved configuration options for server timeouts and session handling.
-- Added support in Selenium Manager (Rust) for **nightly Grid builds**.
-- Enhanced ability to trace and view live sessions.
+- [Expose register status via Node status response](https://github.com/SeleniumHQ/selenium/pull/15448)
+- [Add traces for event stop session in Node](https://github.com/SeleniumHQ/selenium/pull/15348)
 
 ### **Docker Selenium**
 
@@ -96,14 +81,13 @@ Links to all assets can be found on our [downloads page][downloads].
 - Node container is able to restart and retry to register when `register-period`
   exceeded  ([#2662](https://github.com/SeleniumHQ/docker-selenium/pull/2662))
 - Selenium Grid scaler in KEDA feature preview
-  - Add trigger param to set custom capabilities for matching specific
-    Nodes ([KEDA#6536](https://github.com/kedacore/keda/pull/6536))
-  - Add trigger param for Node enables managed downloads
-    capability ([KEDA#6570](https://github.com/kedacore/keda/pull/6570))
+    - Add trigger param to set custom capabilities for matching specific
+      Nodes ([KEDA#6536](https://github.com/kedacore/keda/pull/6536))
+    - Add trigger param for Node enables managed downloads
+      capability ([KEDA#6570](https://github.com/kedacore/keda/pull/6570))
 - Helm config: Set K8s node IP to all components via env var KUBERNETES_NODE_HOST_IP in
   template ([#2668](https://github.com/SeleniumHQ/docker-selenium/pull/2668))
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
-
 
 <br>
 
@@ -111,7 +95,7 @@ We thank all our contributors for their incredible efforts in making Selenium be
 release. ❤️
 
 For a detailed look at all changes, check out
-the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
+the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.31).
 
 <br>
 
@@ -125,14 +109,9 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/Delta456" >}}
-{{< gh-user "https://api.github.com/users/FloKNetcare" >}}
-{{< gh-user "https://api.github.com/users/ahalbrock" >}}
-{{< gh-user "https://api.github.com/users/allrob23" >}}
-{{< gh-user "https://api.github.com/users/jpawlyn" >}}
+{{< gh-user "https://api.github.com/users/PSandro" >}}
+{{< gh-user "https://api.github.com/users/mk868" >}}
 {{< gh-user "https://api.github.com/users/navin772" >}}
-{{< gh-user "https://api.github.com/users/smortex" >}}
-{{< gh-user "https://api.github.com/users/pallavigitwork" >}}
-{{< gh-user "https://api.github.com/users/ahalbrock" >}}
     </div>
   </div>
 </div>
@@ -142,11 +121,7 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/Delta456" >}}
-{{< gh-user "https://api.github.com/users/WasiqB" >}}
 {{< gh-user "https://api.github.com/users/alaahong" >}}
-{{< gh-user "https://api.github.com/users/beinghumantester" >}}
-{{< gh-user "https://api.github.com/users/franciscotrenco" >}}
 {{< gh-user "https://api.github.com/users/pallavigitwork" >}}
     </div>
   </div>
@@ -157,7 +132,8 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/VietND96" >}}
+{{< gh-user "https://api.github.com/users/KenHuPricer" >}}
+{{< gh-user "https://api.github.com/users/KyriosGN0" >}}
     </div>
   </div>
 </div>
