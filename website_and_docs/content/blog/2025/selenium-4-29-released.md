@@ -109,7 +109,6 @@ For a detailed look at all changes, check out the [release notes](https://github
 {{< gh-user "https://api.github.com/users/AndreyJVM" >}}
 {{< gh-user "https://api.github.com/users/Delta456" >}}
 {{< gh-user "https://api.github.com/users/alaahong" >}}
-{{< gh-user "https://api.github.com/users/automatealchemist" >}}
 {{< gh-user "https://api.github.com/users/b2m" >}}
 {{< gh-user "https://api.github.com/users/pallavigitwork" >}}
     </div>
