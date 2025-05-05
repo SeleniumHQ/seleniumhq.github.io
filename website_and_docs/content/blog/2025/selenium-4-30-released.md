@@ -14,8 +14,8 @@ description: >
 We're very happy to announce the release of Selenium 4.30 for Javascript, Ruby, Python, .NET, Java
 and the Grid!
 This version brings key updates across the project, with improvements to the BiDi protocol,
-extensive nullability work in .NET, better error handling, and various bug fixes. It’s a great 
-step forward as we continue strengthening Selenium’s stability, consistency, and support across 
+extensive nullability work in .NET, better error handling, and various bug fixes. It’s a great
+step forward as we continue strengthening Selenium’s stability, consistency, and support across
 all supported languages.
 
 Links to all assets can be found on our [downloads page][downloads].
@@ -96,10 +96,10 @@ Links to all assets can be found on our [downloads page][downloads].
 - Node container is able to restart and retry to register when `register-period`
   exceeded  ([#2662](https://github.com/SeleniumHQ/docker-selenium/pull/2662))
 - Selenium Grid scaler in KEDA feature preview
-    - Add trigger param to set custom capabilities for matching specific
-      Nodes ([KEDA#6536](https://github.com/kedacore/keda/pull/6536))
-    - Add trigger param for Node enables managed downloads
-      capability ([KEDA#6570](https://github.com/kedacore/keda/pull/6570))
+  - Add trigger param to set custom capabilities for matching specific
+    Nodes ([KEDA#6536](https://github.com/kedacore/keda/pull/6536))
+  - Add trigger param for Node enables managed downloads
+    capability ([KEDA#6570](https://github.com/kedacore/keda/pull/6570))
 - Helm config: Set K8s node IP to all components via env var KUBERNETES_NODE_HOST_IP in
   template ([#2668](https://github.com/SeleniumHQ/docker-selenium/pull/2668))
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
@@ -124,11 +124,15 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
 <div class="d-flex justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/Delta456" >}}                                                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/FFederi" >}}                                                                                                                                                                                   
-{{< gh-user "https://api.github.com/users/navin772" >}}                                                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/shbenzer" >}}                                                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/yvsvarma" >}}
+{{< gh-user "https://api.github.com/users/Delta456" >}}
+{{< gh-user "https://api.github.com/users/FloKNetcare" >}}
+{{< gh-user "https://api.github.com/users/ahalbrock" >}}
+{{< gh-user "https://api.github.com/users/allrob23" >}}
+{{< gh-user "https://api.github.com/users/jpawlyn" >}}
+{{< gh-user "https://api.github.com/users/navin772" >}}
+{{< gh-user "https://api.github.com/users/pallavigitwork" >}}
+{{< gh-user "https://api.github.com/users/shs96c" >}}
+{{< gh-user "https://api.github.com/users/titusfortner" >}}
     </div>
   </div>
 </div>
@@ -139,13 +143,11 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/Delta456" >}}
-{{< gh-user "https://api.github.com/users/HandyCC" >}}
-{{< gh-user "https://api.github.com/users/Ozoniuss" >}}
 {{< gh-user "https://api.github.com/users/WasiqB" >}}
 {{< gh-user "https://api.github.com/users/alaahong" >}}
+{{< gh-user "https://api.github.com/users/beinghumantester" >}}
 {{< gh-user "https://api.github.com/users/franciscotrenco" >}}
-{{< gh-user "https://api.github.com/users/manoj9788" >}}                                                                                                                                                                              
-{{< gh-user "https://api.github.com/users/noritaka1166" >}}
+{{< gh-user "https://api.github.com/users/pallavigitwork" >}}
     </div>
   </div>
 </div>
@@ -155,10 +157,7 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.30).
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/KenHuPricer" >}}
-{{< gh-user "https://api.github.com/users/KyriosGN0" >}}
-{{< gh-user "https://api.github.com/users/Trigtrig" >}}
-{{< gh-user "https://api.github.com/users/lermit" >}}
+{{< gh-user "https://api.github.com/users/VietND96" >}}
     </div>
   </div>
 </div>
