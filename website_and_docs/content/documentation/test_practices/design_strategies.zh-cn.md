@@ -563,7 +563,7 @@ Test cases implementation.
 {{< tab header="Python" >}}
 Test cases implementation with `pytest`.
 
-{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L174-" >}}
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L174-L240" >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
