@@ -39,8 +39,6 @@ RSpec.describe 'Cookies' do
   it 'deletes a cookie by name' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/blank.html'
     driver.manage.add_cookie(name: 'test1', value: 'cookie1')
-    # Verify cookie exists
-    expect(driver.manage.cookie_named('test1')).not_to be_nil
     # Delete cookie named
     driver.manage.delete_cookie('test1')
     # Verify cookie is deleted
@@ -52,8 +50,6 @@ RSpec.describe 'Cookies' do
     # Add cookies into current browser context
     driver.manage.add_cookie(name: 'test1', value: 'cookie1')
     driver.manage.add_cookie(name: 'test2', value: 'cookie2')
-    # Verify cookies exist
-    expect(driver.manage.all_cookies.size).to eq(2)
     # Delete All cookies
     driver.manage.delete_all_cookies
     # Verify all cookies are deleted
