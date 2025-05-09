@@ -74,16 +74,16 @@ class EditIssue {
   }
 }
 
-class IssueList extends LoadableComponent<IssueList> {
-    private final WebDriver driver;
+// class IssueList extends LoadableComponent<IssueList> {
+//     private final WebDriver driver;
 
-    public IssueList(WebDriver driver) {
-        this.driver = driver;
-    }
+//     public IssueList(WebDriver driver) {
+//         this.driver = driver;
+//     }
 
-}
+// }
 
-class EditIssueBetter extends LoadableComponent<EditIssue> {
+class EditIssueBetter extends LoadableComponent<EditIssueBetter> {
 
   private final WebDriver driver;
   
@@ -281,4 +281,23 @@ class ActionBot {
     element.clear();
     element.sendKeys(text + "\n");
   }
+}
+
+class IssueList extends LoadableComponent<IssueList> {
+  private final WebDriver driver;
+
+  public IssueList(WebDriver driver) {
+      this.driver = driver;
+  }
+
+  @Override
+  protected void load() {
+    return true;
+  }
+
+  @Override
+  protected void isLoaded() throws Error {
+    return true;
+  }
+
 }
