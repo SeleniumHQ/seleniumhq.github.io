@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 
-public class EditIssue {
+class EditIssue {
 
   private final WebDriver driver;
 
@@ -74,7 +74,7 @@ public class EditIssue {
   }
 }
 
-public class IssueList extends LoadableComponent<IssueList> {
+class IssueList extends LoadableComponent<IssueList> {
     private final WebDriver driver;
 
     public IssueList(WebDriver driver) {
@@ -83,7 +83,7 @@ public class IssueList extends LoadableComponent<IssueList> {
 
 }
 
-public class EditIssueBetter extends LoadableComponent<EditIssue> {
+class EditIssueBetter extends LoadableComponent<EditIssue> {
 
   private final WebDriver driver;
   
@@ -160,7 +160,7 @@ public class EditIssueBetter extends LoadableComponent<EditIssue> {
   }
 }
 
-public class ProjectPage extends LoadableComponent<ProjectPage> {
+class ProjectPage extends LoadableComponent<ProjectPage> {
 
   private final WebDriver driver;
   private final String projectName;
@@ -183,7 +183,7 @@ public class ProjectPage extends LoadableComponent<ProjectPage> {
   }
 }
 
-public class SecuredPage extends LoadableComponent<SecuredPage> {
+class SecuredPage extends LoadableComponent<SecuredPage> {
 
   private final WebDriver driver;
   private final LoadableComponent<?> parent;
@@ -256,7 +256,7 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
 
 // }
 
-public class ActionBot {
+class ActionBot {
   private final WebDriver driver;
 
   public ActionBot(WebDriver driver) {
