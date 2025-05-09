@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.Assert.assertTrue;
 
-public class EditIssueBetter extends LoadableComponent<EditIssue> {
+public class EditIssueBetter extends EditIssue {
 
   private final WebDriver driver;
   
@@ -55,7 +55,7 @@ public class EditIssueBetter extends LoadableComponent<EditIssue> {
 
   public void setSeleniumVersion(String seleniumVersion) {
     WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
-    clearAndType(field, logOutput);
+    clearAndType(field, seleniumVersion);
   }
 
   public void setBrowserVersion(String browserVersion) {
@@ -73,10 +73,10 @@ public class EditIssueBetter extends LoadableComponent<EditIssue> {
     clearAndType(field, usingGrid);
   }
 
-  public IssueList submit() {
-    driver.findElement(By.cssSelector("button[type='submit']")).click();
-    return new IssueList(driver);
-  }
+  // public IssueList submit() {
+  //   driver.findElement(By.cssSelector("button[type='submit']")).click();
+  //   return new IssueList(driver);
+  // }
 
   private void clearAndType(WebElement field, String text) {
     field.clear();

@@ -39,7 +39,7 @@ public class EditIssue {
 
   public void setSeleniumVersion(String seleniumVersion) {
     WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
-    clearAndType(field, logOutput);
+    clearAndType(field, seleniumVersion);
   }
 
   public void setBrowserVersion(String browserVersion) {

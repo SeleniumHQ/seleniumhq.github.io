@@ -271,7 +271,7 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/ActionBot.java#L1-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/ActionBot.java#L5-L30" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
