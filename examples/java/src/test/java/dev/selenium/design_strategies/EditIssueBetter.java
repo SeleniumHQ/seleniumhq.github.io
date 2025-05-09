@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Assertions;
 
 public class EditIssueBetter extends EditIssue {
 
@@ -35,7 +35,7 @@ public class EditIssueBetter extends EditIssue {
   @Override
   protected void isLoaded() throws Error {
     String url = driver.getCurrentUrl();
-    assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
+    Assertions.assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
   }
 
   public void setHowToReproduce(String howToReproduce) {

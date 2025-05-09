@@ -2,7 +2,7 @@ package com.example.webdriver;
 
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Assertions;
 
 public class ProjectPage {
 
@@ -23,6 +23,6 @@ public class ProjectPage {
   protected void isLoaded() throws Error {
     String url = driver.getCurrentUrl();
 
-    assertTrue(url.contains(projectName));
+    Assertions.assertTrue(url.contains(projectName));
   }
 }
