@@ -40,7 +40,7 @@ This webinar is more than just a celebration—it’s a chance to learn from the
 
 Join Us in Celebrating Selenium’s Incredible Journey!
 For 20 years, Selenium has helped shape how we test, automate, and innovate on the web. This is your opportunity to celebrate that legacy and learn what the future holds for browser automation. We can’t wait to see you there!
-Event Organizers - **<a href="https://www.linkedin.com/in/maaret/" target="_blank">Maaret</a>**, **<a href="https://www.linkedin.com/in/diemol/" target="_blank">Diego</a>**, and **<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi</a>**. 
+Event Organizers - **<a href="https://www.linkedin.com/in/maaret/" target="_blank">Maaret</a>**, **<a href="https://www.linkedin.com/in/diemol/" target="_blank">Diego</a>**, and **<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi</a>**. 
 
 ## Watch the Recording of Our 20th Anniversary Event
 

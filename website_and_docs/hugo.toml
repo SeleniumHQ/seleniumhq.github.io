@@ -165,7 +165,7 @@ prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
 banner_flag = false
-announcement_banner = false
+announcement_banner = true
 
 # Enable Algolia DocSearch
 [params.search.algolia]

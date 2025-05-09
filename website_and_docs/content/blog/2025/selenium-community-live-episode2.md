@@ -10,7 +10,7 @@ description: >
   Selenium Community Live - Episode 2
 ---
 
-The second episode of Selenium Community Live happened on Jan 21st, 2025, with speaker **<a href="https://www.linkedin.com/in/theautomatedtester/" target="_blank">David Burns</a>**, event hosted by  **<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>**
+The second episode of Selenium Community Live happened on Jan 21st, 2025, with speaker **<a href="https://www.linkedin.com/in/theautomatedtester/" target="_blank">David Burns</a>**, event hosted by  **<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>**
 
 You can watch the episode here-  **<a href="https://www.youtube.com/watch?v=0W_rYPxVIgA" target="_blank">Selenium Community Live - Episode 2</a>**
 
