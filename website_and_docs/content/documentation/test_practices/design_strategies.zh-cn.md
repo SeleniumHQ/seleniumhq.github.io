@@ -54,7 +54,7 @@ able to file a new issue. A basic Page Object would look like:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentBasic.java#L1-L69" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssue.java#L1-L69" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -77,7 +77,7 @@ In order to turn this into a LoadableComponent, all we need to do is to set that
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L10" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -103,7 +103,7 @@ By extending this base class, we need to implement two new methods:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L30-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L30-L39" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -134,7 +134,7 @@ With a little rework, our PageObject looks like:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L1-L85" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L1-L85" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -160,7 +160,7 @@ the code base. It also means that we can do this in our tests:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L87" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L87" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -231,7 +231,7 @@ The "load" method in EditIssue now looks like:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L91-L96" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L91-L96" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -292,7 +292,7 @@ for your app, it's easy to change them. As an example:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BotPattern.java#L1-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/ActionBot.java#L1-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.Assert.assertTrue;
 
-public class EditIssue extends LoadableComponent<EditIssue> {
+public class EditIssueBetter extends LoadableComponent<EditIssue> {
 
   private final WebDriver driver;
   

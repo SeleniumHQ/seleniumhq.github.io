@@ -39,7 +39,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentBasic.java#L1-L69" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssue.java#L1-L69" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -62,7 +62,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L10" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -87,7 +87,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L30-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L30-L39" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -115,7 +115,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L1-L85" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L1-L85" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -141,7 +141,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L87" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L87" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -212,7 +212,7 @@ EditIssueの "load" メソッドは次のようになります。
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/LoadableComponentExtended.java#L91-L96" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/EditIssueBetter.java#L91-L96" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -271,7 +271,7 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BotPattern.java#L1-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/ActionBot.java#L1-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
