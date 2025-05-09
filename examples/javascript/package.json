@@ -8,9 +8,9 @@
     "license": "Apache-2.0",
     "dependencies": {
         "assert": "2.1.0",
-        "selenium-webdriver": "4.31.0"
+        "selenium-webdriver": "4.32.0"
     },
     "devDependencies": {
-        "mocha": "11.1.0"
+        "mocha": "11.2.2"
     }
 }
