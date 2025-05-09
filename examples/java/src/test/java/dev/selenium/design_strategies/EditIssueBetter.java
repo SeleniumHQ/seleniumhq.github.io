@@ -20,7 +20,7 @@ public class EditIssueBetter extends LoadableComponent<EditIssue> {
   // FindBy annotation to tell the PageFactory how to locate the element.
   @FindBy(id = "issue_body") private WebElement body;
   
-  public EditIssue(WebDriver driver) {
+  public EditIssueBetter(WebDriver driver) {
     this.driver = driver;
     
     // This call sets the WebElement fields.
@@ -84,7 +84,7 @@ public class EditIssueBetter extends LoadableComponent<EditIssue> {
   }
 }
 
-// EditIssue page = new EditIssue(driver).get();
+// EditIssueBetter page = new EditIssueBetter(driver).get();
 
 // Further Updates
 
