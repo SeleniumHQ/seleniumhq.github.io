@@ -292,12 +292,12 @@ class IssueList extends LoadableComponent<IssueList> {
 
   @Override
   protected void load() {
-    return true;
+    driver.get("https://github.com/SeleniumHQ/selenium");
   }
 
   @Override
   protected void isLoaded() throws Error {
-    return true;
+    Assertions.assertTrue(true, "Dummy check");
   }
 
 }
