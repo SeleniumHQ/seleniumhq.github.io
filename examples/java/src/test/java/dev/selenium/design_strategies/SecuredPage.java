@@ -5,12 +5,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SecuredPage{
 
   private final WebDriver driver;
-  private final LoadableComponent<?> parent;
+  // private final LoadableComponent<?> parent;
   private final String username;
   private final String password;
 
