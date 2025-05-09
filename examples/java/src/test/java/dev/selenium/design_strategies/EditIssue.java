@@ -57,10 +57,10 @@ public class EditIssue {
     clearAndType(field, usingGrid);
   }
 
-  public IssueList submit() {
-    driver.findElement(By.cssSelector("button[type='submit']")).click();
-    return new IssueList(driver);
-  }
+  // public IssueList submit() {
+  //   driver.findElement(By.cssSelector("button[type='submit']")).click();
+  //   return new IssueList(driver);
+  // }
 
   private void clearAndType(WebElement field, String text) {
     field.clear();

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static junit.framework.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EditIssueBetter extends EditIssue {
 
@@ -21,7 +21,7 @@ public class EditIssueBetter extends EditIssue {
   @FindBy(id = "issue_body") private WebElement body;
   
   public EditIssueBetter(WebDriver driver) {
-    this.driver = driver;
+    super(driver);
     
     // This call sets the WebElement fields.
     PageFactory.initElements(driver, this);

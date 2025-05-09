@@ -7,21 +7,21 @@ import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.fail;
 
-public class SecuredPage extends LoadableComponent<SecuredPage> {
+public class SecuredPage{
 
   private final WebDriver driver;
   private final LoadableComponent<?> parent;
   private final String username;
   private final String password;
 
-  public SecuredPage(WebDriver driver, LoadableComponent<?> parent, String username, String password) {
+  public SecuredPage(WebDriver driver, String username, String password) {
     this.driver = driver;
     this.parent = parent;
     this.username = username;
     this.password = password;
   }
 
-  @Override
+  
   protected void load() {
     parent.get();
 
@@ -38,7 +38,7 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
     driver.get(originalUrl);
   }
 
-  @Override
+  
   protected void isLoaded() throws Error {
     // If you're signed in, you have the option of picking a different login.
     // Let's check for the presence of that.

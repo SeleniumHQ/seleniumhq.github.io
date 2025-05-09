@@ -2,9 +2,9 @@ package com.example.webdriver;
 
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ProjectPage extends LoadableComponent<ProjectPage> {
+public class ProjectPage {
 
   private final WebDriver driver;
   private final String projectName;
@@ -14,12 +14,12 @@ public class ProjectPage extends LoadableComponent<ProjectPage> {
     this.projectName = projectName;
   }
 
-  @Override
+  
   protected void load() {
     driver.get("http://" + projectName + ".googlecode.com/");
   }
 
-  @Override
+  
   protected void isLoaded() throws Error {
     String url = driver.getCurrentUrl();
 
