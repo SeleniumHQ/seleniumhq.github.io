@@ -1,0 +1,26 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+import time
+
+# ChromeDriverのパス（適宜変更してください）
+service = Service(executable_path="/path/to/chromedriver")
+
+# ブラウザ起動
+driver = webdriver.Chrome(service=service)
+
+# Airワーク採用管理のログインページにアクセス
+driver.get("https://airwork.recruit.co.jp/")  # URLを正確に入力してください
+
+# ページ読み込み待機（必要に応じて調整）
+time.sleep(2)
+
+# 「ログイン」ボタンをクリック（テキスト一致で取得）
+login_button = driver.find_element(By.XPATH, "//button[contains(text(), 'ログイン')]")
+login_button.click()
+
+# （必要に応じてログインフォーム入力に続く）
+
+# 終了処理（確認用に5秒待機して閉じる）
+time.sleep(5)
+driver.quit()
