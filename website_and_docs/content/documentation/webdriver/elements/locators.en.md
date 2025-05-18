@@ -91,8 +91,7 @@ available in Selenium.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L7" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.className('information'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L6-L8" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -124,8 +123,7 @@ textbox, using css.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.css('#fname'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L21-L23" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -155,8 +153,7 @@ We will identify the Last Name field using it.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L15" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.id('lname'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L36-L38" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -187,8 +184,7 @@ We will identify the Newsletter checkbox using it.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.name('newsletter'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L51-L53" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -217,8 +213,7 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L23" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.linkText('Selenium Official Page'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L94-L96" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -248,8 +243,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L27" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.partialLinkText('Official Page'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L106-L108" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -277,8 +271,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L31" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.tagName('a'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L81-L83" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -312,8 +305,7 @@ first name text box. Let us create locator for female radio button using xpath.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L35" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-    let driver = await new Builder().forBrowser('chrome').build();
-	const loc = await driver.findElement(By.xpath('//input[@value='f']'));
+{{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L66-L68" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     import org.openqa.selenium.By
