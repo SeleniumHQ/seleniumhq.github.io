@@ -123,7 +123,7 @@ textbox, using css.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L21-L23" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L20-L22" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -153,7 +153,7 @@ We will identify the Last Name field using it.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L15" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L36-L38" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L35-L37" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -184,7 +184,7 @@ We will identify the Newsletter checkbox using it.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L51-L53" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L50-L52" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -213,7 +213,7 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L23" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L94-L96" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L67-L69" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -243,7 +243,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L27" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L106-L108" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L80-L82" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -271,7 +271,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L31" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L81-L83" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L93-L95" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     val driver = ChromeDriver()
@@ -305,7 +305,7 @@ first name text box. Let us create locator for female radio button using xpath.
 {{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L35" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L66-L68" >}}
+{{< gh-codeblock path="examples/javascript/test/elements/locators.spec.js#L106-L108" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     import org.openqa.selenium.By

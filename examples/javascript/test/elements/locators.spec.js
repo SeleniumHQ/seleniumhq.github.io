@@ -6,7 +6,6 @@ describe('Element Locator Test', function () {
     let driver = await new Builder().forBrowser('chrome').build();
     await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
     const element = await driver.findElement(By.className('information'));
-
     const tag = await element.getTagName();
     const id = await element.getAttribute("id");
     const value = await element.getAttribute("value");
@@ -50,22 +49,7 @@ describe('Element Locator Test', function () {
   it('Check if element can be found by name', async function () {
     let driver = await new Builder().forBrowser('chrome').build();
     await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
-    const element = await driver.findElement(By.name("gender"));
-
-    const tag = await element.getTagName();
-    const type = await element.getAttribute("type");
-    const value = await element.getAttribute("value");
-
-    assert.equal(tag, "input");
-    assert.equal(type, "radio");
-    assert.equal(value, "m");
-    await driver.quit();
-  });
-
-  it('Check if element can be found by xpath', async function () {
-    let driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
-    const element = await driver.findElement(By.xpath('//input[@name="newsletter"]'));
+    const element = await driver.findElement(By.name("newsletter"));
 
     const tag = await element.getTagName();
     const type = await element.getAttribute("type");
@@ -77,18 +61,7 @@ describe('Element Locator Test', function () {
     await driver.quit();
   });
 
-  it('Check if element can be found by tag name', async function () {
-    let driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
-    const element = await driver.findElement(By.tagName("h2"));
 
-    const tag = await element.getTagName();
-    const text = await element.getText();
-
-    assert.equal(tag, "h2");
-    assert.equal(text, "Contact Selenium");
-    await driver.quit();
-  });
 
   it('Check if element can be found by link text', async function () {
     let driver = await new Builder().forBrowser('chrome').build();
@@ -113,6 +86,34 @@ describe('Element Locator Test', function () {
 
     assert.equal(tag, "a");
     assert.equal(href, "https://www.selenium.dev/");
+    await driver.quit();
+  });
+
+  it('Check if element can be found by tag name', async function () {
+    let driver = await new Builder().forBrowser('chrome').build();
+    await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+    const element = await driver.findElement(By.tagName("a"));
+
+    const tag = await element.getTagName();
+    const text = await element.getText();
+
+    assert.equal(tag, "a");
+    assert.equal(text, "Selenium Official Page");
+    await driver.quit();
+  });
+
+  it('Check if element can be found by xpath', async function () {
+    let driver = await new Builder().forBrowser('chrome').build();
+    await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+    const element = await driver.findElement(By.xpath('//input[@value="f"]'));
+
+    const tag = await element.getTagName();
+    const type = await element.getAttribute("type");
+    const value = await element.getAttribute("value");
+
+    assert.equal(tag, "input");
+    assert.equal(type, "radio");
+    assert.equal(value, "f");
     await driver.quit();
   });
 });
