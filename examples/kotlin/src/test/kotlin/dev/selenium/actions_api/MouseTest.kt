@@ -37,7 +37,7 @@ class MouseTest : BaseTest() {
                 .click(clickable)
                 .perform()
 
-        Assertions.assertTrue(driver.getCurrentUrl().contains("resultPage.html"))
+        Assertions.assertTrue(driver.getCurrentUrl()!!.contains("resultPage.html"))
     }
   
     @Test

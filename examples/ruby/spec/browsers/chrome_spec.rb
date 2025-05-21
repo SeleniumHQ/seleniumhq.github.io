@@ -131,7 +131,8 @@ RSpec.describe 'Chrome' do
         'offline' => false,
         'latency' => 100,
         'download_throughput' => 200,
-        'upload_throughput' => 200)
+        'upload_throughput' => 200
+      )
     end
 
     it 'gets the browser logs' do

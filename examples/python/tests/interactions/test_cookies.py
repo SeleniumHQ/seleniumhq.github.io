@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 
-def add_cookie():
+def test_add_cookie():
     driver = webdriver.Chrome()
     driver.get("http://www.example.com")
 
@@ -9,7 +9,7 @@ def add_cookie():
     driver.add_cookie({"name": "key", "value": "value"})
 
 
-def get_named_cookie():
+def test_get_named_cookie():
     driver = webdriver.Chrome()
     driver.get("http://www.example.com")
 
@@ -20,7 +20,7 @@ def get_named_cookie():
     print(driver.get_cookie("foo"))
 
 
-def get_all_cookies():
+def test_get_all_cookies():
     driver = webdriver.Chrome()
 
     driver.get("http://www.example.com")
@@ -31,7 +31,7 @@ def get_all_cookies():
     # Get all available cookies
     print(driver.get_cookies())
 
-def delete_cookie():
+def test_delete_cookie():
     driver = webdriver.Chrome()
 
     driver.get("http://www.example.com")
@@ -43,7 +43,7 @@ def delete_cookie():
     driver.delete_cookie("test1")
 
 
-def delete_all_cookies():
+def test_delete_all_cookies():
     driver = webdriver.Chrome()
 
     driver.get("http://www.example.com")
@@ -55,7 +55,7 @@ def delete_all_cookies():
     driver.delete_all_cookies()
 
 
-def same_side_cookie_attr():
+def test_same_side_cookie_attr():
     driver = webdriver.Chrome()
 
     driver.get("http://www.example.com")

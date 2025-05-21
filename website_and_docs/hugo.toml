@@ -164,7 +164,7 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-banner_flag = true
+banner_flag = false
 announcement_banner = true
 
 # Enable Algolia DocSearch
@@ -258,7 +258,7 @@ enable = false
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-2stlcmc6b-Hww~3r3yAzquhSq4riOFxA"
+	url = "https://inviter.co/seleniumhq"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
