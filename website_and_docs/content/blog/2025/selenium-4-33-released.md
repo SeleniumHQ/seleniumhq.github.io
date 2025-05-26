@@ -70,12 +70,12 @@ Links to all assets can be found on our [downloads page][downloads].
 - [3ef1c25fe8](https://github.com/SeleniumHQ/selenium/commit/3ef1c25fe8eef39b195550f7b5bf76d38f4f42ca) - Chrome capabilities test passes now in RBE.
 
 
-### **Docker Selenium**
+### Docker Selenium
 
 - K8s: Fix Helm chart template for deployment of video recording manager ([#2828](https://github.com/SeleniumHQ/docker-selenium/pull/2828), [#2831](https://github.com/SeleniumHQ/docker-selenium/pull/2831)).
 - K8s: Node enable readiness probe checks status registered to Hub ([#2833](https://github.com/SeleniumHQ/docker-selenium/pull/2833)).
 - K8s: Video recorder run as sidecar container is disabled by default ([#2843](https://github.com/SeleniumHQ/docker-selenium/pull/2843)).
-- K8s: Fix chart template issue that might occur when using Helm version v3.18.0.
+- K8s: Fix chart template issue that might occur when using Helm version v3.18.0 ([365c106](https://github.com/SeleniumHQ/docker-selenium/commit/365c10659905e6ad5e7e972fcb54225dc2a8c928)).
 - K8s: Update chart dependencies (KEDA core 2.17,1, and so on).
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
