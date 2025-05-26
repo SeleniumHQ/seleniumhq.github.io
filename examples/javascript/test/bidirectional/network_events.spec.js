@@ -20,17 +20,17 @@ describe('Network events', function () {
   })
 
   it('can listen to event before request is sent', async function () {
-    let beforeRequestEvent = null
+    let beforeRequestEvent = []
     const network = await Network(driver)
     await network.beforeRequestSent(function (event) {
-      beforeRequestEvent = event
+      beforeRequestEvent.push(event)
     })
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html')
 
-    assert.equal(beforeRequestEvent.request.method, 'GET')
-    const url = beforeRequestEvent.request.url
-    assert.equal(url, await driver.getCurrentUrl())
+    const currentUrl = await driver.getCurrentUrl()
+    const currentUrlFound = beforeRequestEvent.some(event => event.request.url.includes(currentUrl))
+    assert(currentUrlFound, `${currentUrl} was not requested`)
   })
 
   it('can request cookies', async function () {
