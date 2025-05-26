@@ -119,7 +119,7 @@ jobs:
       uses: nick-invision/retry@v3.0.2
       with:
         timeout_minutes: 20
-        max_attempts: 3
+        max_attempts: 2
         command: |
           cd examples/javascript
           npm test
