@@ -72,9 +72,11 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### **Docker Selenium**
 
-- Docker: Init python venv with non-root user ([#2769](https://github.com/SeleniumHQ/docker-selenium/pull/2769))
-- Docker: Remove Hub GraphQL dependency from video recorder ([#2813](https://github.com/SeleniumHQ/docker-selenium/pull/2813))
-- Docker: Fluxbox not rendering Chinese characters via VNC view ([#2817](https://github.com/SeleniumHQ/docker-selenium/pull/2817))
+- K8s: Fix Helm chart template for deployment of video recording manager ([#2828](https://github.com/SeleniumHQ/docker-selenium/pull/2828), [#2831](https://github.com/SeleniumHQ/docker-selenium/pull/2831)).
+- K8s: Node enable readiness probe checks status registered to Hub ([#2833](https://github.com/SeleniumHQ/docker-selenium/pull/2833)).
+- K8s: Video recorder run as sidecar container is disabled by default ([#2843](https://github.com/SeleniumHQ/docker-selenium/pull/2843)).
+- K8s: Fix chart template issue that might occur when using Helm version v3.18.0.
+- K8s: Update chart dependencies (KEDA core 2.17,1, and so on).
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
 
