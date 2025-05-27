@@ -1,5 +1,6 @@
 
 const {Browser, Builder} = require("selenium-webdriver");
+const assert = require('assert')
 
 
 describe('Cookies', function() {
@@ -36,7 +37,7 @@ describe('Cookies', function() {
 
     // Get cookie details with named cookie 'foo'
     await driver.manage().getCookie('foo').then(function(cookie) {
-      console.log('cookie details => ', cookie);
+      assert.equal(cookie.value, 'bar');
     });
   });
 
@@ -49,7 +50,7 @@ describe('Cookies', function() {
 
     // Get all Available cookies
     await driver.manage().getCookies().then(function(cookies) {
-      console.log('cookie details => ', cookies);
+      assert.equal(cookies.filter(cookie => cookie.name.startsWith('test')).length, 2);
     });
   });
 
@@ -65,7 +66,7 @@ describe('Cookies', function() {
 
     // Get all Available cookies
     await driver.manage().getCookies().then(function(cookies) {
-      console.log('cookie details => ', cookies);
+      assert.equal(cookies.filter(cookie => cookie.name.startsWith('test')).length, 1);
     });
   });
 

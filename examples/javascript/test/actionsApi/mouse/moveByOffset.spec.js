@@ -18,7 +18,6 @@ describe('Mouse move by offset', function () {
 
     await driver.wait(until.elementTextContains(await driver.findElement(By.id('relative-location')), ","), 2000);
     let result = await driver.findElement(By.id('relative-location')).getText();
-    console.log('Initial relative location:', result);
     result = result.split(', ');
     assert.deepStrictEqual((Math.abs(parseInt(result[0]) - 100 - 8) < 2), true)
   });
