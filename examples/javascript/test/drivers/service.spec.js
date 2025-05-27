@@ -27,7 +27,7 @@ describe('Service Test', function () {
 
     options.setChromeBinaryPath(browserPath)
 
-    let service = new Chrome.ServiceBuilder().setPath(driverPath)
+    let service = new Chrome.ServiceBuilder(driverPath)
 
     let driver = new Builder()
         .forBrowser(Browser.CHROME)
