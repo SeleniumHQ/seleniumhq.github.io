@@ -20,7 +20,9 @@ RSpec.describe 'Chrome' do
     end
 
     it 'sets location of binary' do
+      user_data_dir = Dir.mktmpdir('chrome-profile-')
       options = Selenium::WebDriver::Options.chrome
+      options.add_argument("--user-data-dir=#{user_data_dir}")
 
       options.binary = chrome_location
 

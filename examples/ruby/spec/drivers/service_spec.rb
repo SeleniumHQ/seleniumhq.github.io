@@ -16,7 +16,9 @@ RSpec.describe 'Service' do
   end
 
   it 'specifies driver location' do
+    user_data_dir = Dir.mktmpdir('chrome-profile-')
     options = Selenium::WebDriver::Options.chrome(binary: browser_path)
+    options.add_argument("--user-data-dir=#{user_data_dir}")
     service = Selenium::WebDriver::Service.chrome
 
     service.executable_path = driver_path
