@@ -61,7 +61,7 @@ If you cannot update Selenium or have an advanced use case, here is how to speci
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L24" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -88,7 +88,7 @@ If you want the driver to run on a specific port, you may specify it as follows:
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L31" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L33" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

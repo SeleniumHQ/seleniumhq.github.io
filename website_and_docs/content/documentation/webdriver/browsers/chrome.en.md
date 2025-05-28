@@ -92,7 +92,7 @@ Add a browser location to options:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
@@ -121,7 +121,7 @@ Add an extension to options:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L36" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
@@ -147,7 +147,7 @@ so long as the quit command is not sent to the driver.
 **Note**: This is already the default behavior in .NET.
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L47" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L49" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L29-L32">}}
@@ -178,7 +178,7 @@ Set excluded arguments on options:
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L55" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
@@ -219,7 +219,7 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L69" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L71" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -251,7 +251,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L78" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L80" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -283,7 +283,7 @@ Property value: String representation of `ChromiumDriverLogLevel` enum
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L89" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L91" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -317,7 +317,7 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L99-L100" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L101-L102" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -350,7 +350,7 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L110" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L112" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -379,7 +379,7 @@ You can drive Chrome Cast devices, including sharing tabs
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L121-L126" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L123-L128" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -405,7 +405,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L131" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L133" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -428,7 +428,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L143" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L145" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -451,7 +451,7 @@ You can simulate various network conditions.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L151-L152" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L153-L154" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

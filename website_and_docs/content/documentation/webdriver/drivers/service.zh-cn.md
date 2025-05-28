@@ -59,7 +59,7 @@ weight: 3
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L24" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -87,7 +87,7 @@ weight: 3
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L31" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L33" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
