@@ -19,8 +19,8 @@ RSpec.describe 'Service' do
     user_data_dir = Dir.mktmpdir('chrome-profile-')
     options = Selenium::WebDriver::Options.chrome(binary: browser_path)
     options.add_argument("--user-data-dir=#{user_data_dir}")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     service = Selenium::WebDriver::Service.chrome
 
     service.executable_path = driver_path

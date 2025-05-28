@@ -23,6 +23,8 @@ RSpec.describe 'Chrome' do
       user_data_dir = Dir.mktmpdir('chrome-profile-')
       options = Selenium::WebDriver::Options.chrome
       options.add_argument("--user-data-dir=#{user_data_dir}")
+      options.add_argument('--no-sandbox')
+      options.add_argument('--disable-dev-shm-usage')
 
       options.binary = chrome_location
 
