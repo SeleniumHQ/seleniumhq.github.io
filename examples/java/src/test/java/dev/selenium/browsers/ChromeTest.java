@@ -63,6 +63,7 @@ public class ChromeTest extends BaseTest {
     File extensionFilePath = new File(path.toUri());
 
     options.addExtensions(extensionFilePath);
+    options.addArguments("--disable-features=DisableLoadExtensionCommandLineSwitch");
 
     driver = new ChromeDriver(options);
     driver.get("https://www.selenium.dev/selenium/web/blank.html");

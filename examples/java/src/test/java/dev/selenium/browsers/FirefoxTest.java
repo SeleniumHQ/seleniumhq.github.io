@@ -192,7 +192,7 @@ public class FirefoxTest extends BaseTest {
 
   @Test
   public void setContext() {
-    driver = startFirefoxDriver();
+    driver = startFirefoxDriver(new FirefoxOptions().addArguments("-remote-allow-system-access"));
 
     ((HasContext) driver).setContext(FirefoxCommandContext.CHROME);
     driver.executeScript("console.log('Inside Chrome context');");

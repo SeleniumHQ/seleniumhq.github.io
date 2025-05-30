@@ -1,5 +1,6 @@
 package dev.selenium.selenium_manager;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SeleniumManagerUsageDemo {
 
     @Test
+    @Disabled("This test is just for demo purposes and should not be run in CI")
     public void testSetupWithoutManager() {
         System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
         WebDriver driver = new ChromeDriver();
@@ -20,5 +22,5 @@ public class SeleniumManagerUsageDemo {
         driver.get("https://www.selenium.dev/documentation/selenium_manager/");
         driver.quit();
     }
-    
+
 }
