@@ -44,7 +44,12 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void SetBrowserLocation()
         {
+            string userDataDir = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetRandomFileName());
+            System.IO.Directory.CreateDirectory(userDataDir);
             var options = new ChromeOptions();
+            options.AddArgument($"--user-data-dir={userDataDir}");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
 
             options.BinaryLocation = GetChromeLocation();
 
@@ -59,6 +64,7 @@ namespace SeleniumDocs.Browsers
             var extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.crx");
 
             options.AddExtension(extensionFilePath);
+            options.AddArgument("--disable-features=DisableLoadExtensionCommandLineSwitch");
 
             driver = new ChromeDriver(options);
 
@@ -117,7 +123,7 @@ namespace SeleniumDocs.Browsers
             var service = ChromeDriverService.CreateDefaultService();
             service.LogPath = GetLogLocation();
 
-            // service.LogLevel = ChromiumDriverLogLevel.Debug 
+            // service.LogLevel = ChromiumDriverLogLevel.Debug
 
             driver = new ChromeDriver(service);
 

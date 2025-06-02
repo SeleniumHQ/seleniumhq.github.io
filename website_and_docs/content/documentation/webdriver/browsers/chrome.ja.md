@@ -91,7 +91,7 @@ ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeO
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L27" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
@@ -120,7 +120,7 @@ The `extensions` パラメータはcrxファイルを受け入れます。解凍
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
