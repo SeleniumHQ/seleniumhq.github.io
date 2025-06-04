@@ -9251,7 +9251,7 @@ Couldn&#39;t load XPCOM.
 </code></pre><p>如果出现这种情况, 解决办法是安装相应的库, 例如, 可以按如下方式操作:</p><pre tabindex=0><code>sudo apt-get install libdbus-glib-1-2
 </code></pre><p>在 Linux 系统中尝试执行 Chrome for Testing 时可能会出现类似的问题:</p><pre tabindex=0><code>error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
 </code></pre><p>在这种情况下, 要安装的库是以下这个:</p><pre tabindex=0><code>sudo apt-get install libatk-bridge2.0-0
-</code></pre><h3 id=使用环境变量来指定驱动程序路径>使用环境变量来指定驱动程序路径</h3><p>可以使用环境变量来指定驱动程序路径, 而无需使用 Selenium Manager.<br>支持以下环境变量:</p><ul><li><code>SE_CHROMEDRIVER</code></li><li><code>SE_EDGEDRIVER</code></li><li><code>SE_GECKODRIVER</code></li><li><code>SE_IEDRIVER</code></li><li><code>SE_SAFARIDRIVER</code></li></ul><p>例如, 要指定 chromedriver 的路径,
+</code></pre><h3 id=使用环境变量来指定驱动程序路径>使用环境变量来指定驱动程序路径</h3><p>可以使用环境变量来指定驱动程序路径, 而无需使用 Selenium Manager.<br>支持以下环境变量:</p><ul><li><code>SE_CHROMEDRIVER</code></li><li><code>SE_EDGEDRIVER</code></li><li><code>SE_GECKODRIVER</code></li><li><code>SE_IEDRIVER</code></li></ul><p>例如, 要指定 chromedriver 的路径,
 您可以将 <code>SE_CHROMEDRIVER</code> 环境变量设置为 chromedriver 可执行文件的路径.
 以下绑定允许您使用环境变量指定驱动程序路径:</p><ul><li>Ruby</li><li>Java</li><li>Python</li></ul><p>此功能从 Selenium Ruby 绑定的 4.25.0 版本以及 Python 绑定的 4.26.0 版本开始可用.</p><h2 id=构建自定义-selenium-manager>构建自定义 Selenium Manager</h2><p>若要构建适用于我们当前不支持的架构的自定义 Selenium Manager,
 您可以按照以下步骤操作:</p><ol start=2><li>安装 Rust 开发环境</li><li>将 Selenium 克隆到您的本地机器上 <code>git clone https://github.com/SeleniumHQ/selenium.git --depth 1</code></li><li>进入您的下载目录 <code>cd selenium/rust</code></li><li>构建 Selenium <code>cargo build --release</code></li><li>设置以下环境变量以指定驱动程序路径 <code>SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager</code></li><li>将您想要的驱动程序放在系统路径中的某个位置.</li><li>Selenium 现在将使用内置的 Selenium Manager在 PATH 中定位手动下载的驱动程序.</li></ol><h2 id=路线图>路线图</h2><p>您可以在 <a href=https://github.com/orgs/SeleniumHQ/projects/5>Selenium Manager project dashboard</a> 中追踪正在进行的工作.
@@ -13832,7 +13832,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
 <span class=contributions>84 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1113081?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/cgoldberg>@cgoldberg</a></label>
-<span class=contributions>76 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>77 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/VietND96>@VietND96</a></label>
 <span class=contributions>75 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andrashatvani>@andrashatvani</a></label>
@@ -14048,7 +14048,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>538 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/VietND96>@VietND96</a></label>
-<span class=contributions>466 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>467 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>231 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
@@ -14250,11 +14250,11 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公�
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>811 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
-<span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
-<span class=contributions>243 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/titusfortner>@titusfortner</a></label>
+<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
 <span class=contributions>123 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>

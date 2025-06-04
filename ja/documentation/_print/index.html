@@ -9046,7 +9046,7 @@ Couldn&#39;t load XPCOM.
 </code></pre><p>A similar issue might happen when trying to execute Chrome for Testing in Linux:</p><pre tabindex=0><code>error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
 </code></pre><p>In this case, the library to be installed is the following:</p><pre tabindex=0><code>sudo apt-get install libatk-bridge2.0-0
 </code></pre><h3 id=using-an-environment-variable-for-the-driver-path>Using an environment variable for the driver path</h3><p>It&rsquo;s possible to use an environment variable to specify the driver path without using Selenium Manager.
-The following environment variables are supported:</p><ul><li><code>SE_CHROMEDRIVER</code></li><li><code>SE_EDGEDRIVER</code></li><li><code>SE_GECKODRIVER</code></li><li><code>SE_IEDRIVER</code></li><li><code>SE_SAFARIDRIVER</code></li></ul><p>For example, to specify the path to the chromedriver,
+The following environment variables are supported:</p><ul><li><code>SE_CHROMEDRIVER</code></li><li><code>SE_EDGEDRIVER</code></li><li><code>SE_GECKODRIVER</code></li><li><code>SE_IEDRIVER</code></li></ul><p>For example, to specify the path to the chromedriver,
 you can set the <code>SE_CHROMEDRIVER</code> environment variable to the path of the chromedriver executable.
 The following bindings allow you to specify the driver path using an environment variable:</p><ul><li>Ruby</li><li>Java</li><li>Python</li></ul><p>This feature is available in the Selenium Ruby binding starting from version 4.25.0 and in the Python binding from version 4.26.0.</p><h2 id=building-a-custom-selenium-manager>Building a Custom Selenium Manager</h2><p>In order to build your own custom Selenium Manager that works in an architecture we don&rsquo;t currently support, you can
 utilize the following steps:</p><ol><li>Install Rust Dev Environment</li><li>clone Selenium onto your local machine <code>git clone https://github.com/SeleniumHQ/selenium.git --depth 1</code></li><li>Navigate into your clone <code>cd selenium/rust</code></li><li>Build selenium <code>cargo build --release</code></li><li>Set the following environment variable for the driver path <code>SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager</code></li><li>Put the driver you want in a location on your system PATH</li><li>Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH</li></ol><h2 id=roadmap>Roadmap</h2><p>You can trace the work in progress in the <a href=https://github.com/orgs/SeleniumHQ/projects/5>Selenium Manager project dashboard</a>. Moreover, you can check the new features shipped with each Selenium Manager release in its <a href=https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md>changelog file</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-786b76b8c27e02c04871b4f86f6b5b96>4 - Grid</h1><div class=lead>複数のマシンで並行してテストを実行したいですか？ Grid が手助けします。</div><p>Selenium Grid を利用して、クライアントからリモートブラウザーインスタンスにコマンドを
@@ -12949,7 +12949,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
 <span class=contributions>84 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/1113081?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/cgoldberg>@cgoldberg</a></label>
-<span class=contributions>76 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>77 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/VietND96>@VietND96</a></label>
 <span class=contributions>75 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/695746?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/andrashatvani>@andrashatvani</a></label>
@@ -13165,7 +13165,7 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>538 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/23253546?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/VietND96>@VietND96</a></label>
-<span class=contributions>466 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>467 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>231 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
@@ -13367,11 +13367,11 @@ it by sending us pull requests!</p></div><h2 id=seleniumのドキュメント><s
 <label><a href=https://github.com/diemol>@diemol</a></label>
 <span class=contributions>811 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
-<span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
-<label><a href=https://github.com/titusfortner>@titusfortner</a></label>
-<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
-<span class=contributions>243 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<label><a href=https://github.com/titusfortner>@titusfortner</a></label>
+<span class=contributions>245 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3264250?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
 <span class=contributions>123 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
