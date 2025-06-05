@@ -29,7 +29,7 @@ aliases: ["/documentation/zh-cn/webdriver/waits/"]
 该元素必须既存在于页面上又处于[displayed]({{< ref "elements/information/#is-displayed">}}) 状态. 
 
 
-以这个页面为例：https: //www.selenium.dev/selenium/web/dynamic.html 
+以这个页面为例：https://www.selenium.dev/selenium/web/dynamic.html 
 当点击 "Add a box!" 按钮时, 
 会创建一个原本不存在的 "div" 元素.  
 当点击 "Reveal a new input" 按钮时, 
