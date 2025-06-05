@@ -64,7 +64,7 @@
         <div style="padding: 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
             <h5 style="margin: 0;">{{ $path }}</h5>
             <div>
-                <button onclick="copyCode('{{ $uniqueId }}')" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer;">
+                <button onclick="copyCode('{{ $uniqueId }}', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer;">
                     Copy
                 </button>
                 <button onclick="closeCodeModal('{{ $uniqueId }}')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer;">
@@ -89,7 +89,7 @@ window.closeCodeModal = window.closeCodeModal || function(id) {
     document.body.style.overflow = '';
 };
 
-window.copyCode = window.copyCode || function(id) {
+window.copyCode = window.copyCode || function(id, event) {
     const codeElement = document.getElementById('codeContent_' + id);
     const code = codeElement.textContent;
     
