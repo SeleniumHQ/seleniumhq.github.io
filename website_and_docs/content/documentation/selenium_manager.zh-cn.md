@@ -470,7 +470,6 @@ sudo apt-get install libatk-bridge2.0-0
 * `SE_EDGEDRIVER`
 * `SE_GECKODRIVER`
 * `SE_IEDRIVER`
-* `SE_SAFARIDRIVER`
 
 例如, 要指定 chromedriver 的路径, 
 您可以将  `SE_CHROMEDRIVER`  环境变量设置为 chromedriver 可执行文件的路径. 
