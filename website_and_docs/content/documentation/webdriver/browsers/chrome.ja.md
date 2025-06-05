@@ -22,7 +22,7 @@ ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeO
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L36-L37" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L10" >}}
@@ -54,7 +54,7 @@ ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeO
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L44" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L18" >}}
@@ -82,7 +82,7 @@ ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeO
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L54" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L53" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L29">}}
@@ -111,7 +111,7 @@ The `extensions` パラメータはcrxファイルを受け入れます。解凍
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L64" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L40">}}
