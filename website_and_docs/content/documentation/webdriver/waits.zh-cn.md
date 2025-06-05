@@ -1,8 +1,8 @@
 ---
-title:  "等待"
-linkTitle:  "等待"
-weight:  6
-aliases:  ["/documentation/zh-cn/webdriver/waits/"]
+title: "等待策略"
+linkTitle: "等待"
+weight: 6
+aliases: ["/documentation/zh-cn/webdriver/waits/"]
 ---
 
 
