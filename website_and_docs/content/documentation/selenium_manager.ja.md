@@ -350,7 +350,6 @@ The following environment variables are supported:
 * `SE_EDGEDRIVER`
 * `SE_GECKODRIVER`
 * `SE_IEDRIVER`
-* `SE_SAFARIDRIVER`
 
 For example, to specify the path to the chromedriver,
 you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
