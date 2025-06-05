@@ -53,10 +53,16 @@
 
 {{ if $hasFragment }}
 {{ $uniqueId := md5 $path }}
-<div class="mt-2">
-    <button class="btn btn-outline-secondary" onclick="showCodeModal('{{ $uniqueId }}')">
-        Show full example
-    </button>
+<div class="mt-4 pb-2">
+    <div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
+        <a onclick="showCodeModal('{{ $uniqueId }}')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+            View Complete Code
+        </a>
+        <a href="{{- $webUrl -}}" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+            <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+            View on GitHub
+        </a>
+    </div>
 </div>
 
 <div id="codeModal_{{ $uniqueId }}" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
@@ -146,14 +152,14 @@ document.addEventListener('keydown', function(e) {
     }
 });
 </script>
-{{ end }}
-
+{{ else }}
 <div class="text-end pb-2">
     <a href="{{- $webUrl -}}" target="_blank">
         <i class="fas fa-external-link-alt pl-2"></i>
-        <strong>View full example on GitHub</strong>
+        <strong>View on GitHub</strong>
     </a>
 </div>
+{{ end }}
 
 {{ else }}
 {{ partial "github-content.html" }}
