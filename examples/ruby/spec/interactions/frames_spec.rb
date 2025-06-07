@@ -24,7 +24,7 @@ RSpec.describe 'Frames' do
 
   it 'performs iframe switching operations' do
     # Set firefox and launch web page
-    #driver = Selenium::WebDriver.for :firefox
+    # driver = Selenium::WebDriver.for :firefox
     driver.get('https://www.selenium.dev/selenium/web/iframes.html')
     # --- Switch to iframe using WebElement ---
     iframe = driver.find_element(:id, 'iframe1')
@@ -37,7 +37,7 @@ RSpec.describe 'Frames' do
     driver.switch_to.default_content
 
     # --- Switch to iframe using name or ID ---
-    iframe1 = driver.find_element(:name, 'iframe1-name')  # (This line doesn't switch, just locates)
+    iframe1 = driver.find_element(:name, 'iframe1-name') # (This line doesn't switch, just locates)
     driver.switch_to.frame(iframe1)
     expect(driver.page_source).to include('We Leave From Here')
     
