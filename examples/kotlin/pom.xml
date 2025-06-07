@@ -14,7 +14,7 @@
         <slf4j.version>2.0.17</slf4j.version>
         <logback.version>1.5.18</logback.version>
 
-        <junit5.version>5.13.0</junit5.version>
+        <junit5.version>5.13.1</junit5.version>
 
         <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 
