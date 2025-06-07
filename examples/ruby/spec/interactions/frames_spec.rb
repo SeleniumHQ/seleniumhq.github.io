@@ -45,7 +45,6 @@ RSpec.describe 'Frames' do
     # --- Switch to iframe using index ---
     driver.switch_to.frame(0)
     expect(driver.page_source).to include('We Leave From Here')
-    
     # --- Final page content check ---
     driver.switch_to.default_content
     expect(driver.page_source).to include('This page has iframes')
