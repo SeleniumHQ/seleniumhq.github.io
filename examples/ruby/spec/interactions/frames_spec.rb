@@ -24,35 +24,35 @@ RSpec.describe 'Frames' do
 
   it 'performs iframe switching operations' do
     # Set firefox and launch web page
-    driver = Selenium::WebDriver.for :firefox
-    driver.get("https://www.selenium.dev/selenium/web/iframes.html")
+    #driver = Selenium::WebDriver.for :firefox
+    driver.get('https://www.selenium.dev/selenium/web/iframes.html')
     # --- Switch to iframe using WebElement ---
-    iframe = driver.find_element(:id, "iframe1")
+    iframe = driver.find_element(:id, 'iframe1')
     driver.switch_to.frame(iframe)
-    expect(driver.page_source).to include("We Leave From Here")
+    expect(driver.page_source).to include('We Leave From Here')
     
-    email_element = driver.find_element(:id, "email")
-    email_element.send_keys("admin@selenium.dev")
+    email_element = driver.find_element(:id, 'email')
+    email_element.send_keys('admin@selenium.dev')
     email_element.clear
     driver.switch_to.default_content
 
     # --- Switch to iframe using name or ID ---
-    iframe1 = driver.find_element(:name, "iframe1-name")  # (This line doesn't switch, just locates)
-    driver.switch_to.frame(iframe)
-    expect(driver.page_source).to include("We Leave From Here")
+    iframe1 = driver.find_element(:name, 'iframe1-name')  # (This line doesn't switch, just locates)
+    driver.switch_to.frame(iframe1)
+    expect(driver.page_source).to include('We Leave From Here')
     
-    email = driver.find_element(:id, "email")
-    email.send_keys("admin@selenium.dev")
+    email = driver.find_element(:id, 'email')
+    email.send_keys('admin@selenium.dev')
     email.clear
     driver.switch_to.default_content
 
     # --- Switch to iframe using index ---
     driver.switch_to.frame(0)
-    expect(driver.page_source).to include("We Leave From Here")
+    expect(driver.page_source).to include('We Leave From Here')
 
     # --- Final page content check ---
     driver.switch_to.default_content
-    expect(driver.page_source).to include("This page has iframes")
+    expect(driver.page_source).to include('This page has iframes')
     
     # Quit the driver
     driver.quit
