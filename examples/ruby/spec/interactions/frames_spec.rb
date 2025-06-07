@@ -26,7 +26,7 @@ RSpec.describe 'Frames' do
     iframe = driver.find_element(:id, 'iframe1')
     driver.switch_to.frame(iframe)
     expect(driver.page_source).to include('We Leave From Here')
-    
+
     email_element = driver.find_element(:id, 'email')
     email_element.send_keys('admin@selenium.dev')
     email_element.clear
@@ -36,7 +36,7 @@ RSpec.describe 'Frames' do
     iframe1 = driver.find_element(:name, 'iframe1-name')
     driver.switch_to.frame(iframe1)
     expect(driver.page_source).to include('We Leave From Here')
-    
+
     email = driver.find_element(:id, 'email')
     email.send_keys('admin@selenium.dev')
     email.clear
@@ -45,7 +45,7 @@ RSpec.describe 'Frames' do
     # --- Switch to iframe using index ---
     driver.switch_to.frame(0)
     expect(driver.page_source).to include('We Leave From Here')
-
+    
     # --- Final page content check ---
     driver.switch_to.default_content
     expect(driver.page_source).to include('This page has iframes')
