@@ -13,8 +13,6 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-
-
 # frozen_string_literal: true
 
 require 'spec_helper'
@@ -23,9 +21,7 @@ RSpec.describe 'Frames' do
   let(:driver) { start_session }
 
   it 'performs iframe switching operations' do
-    # Set firefox and launch web page
-    # driver = Selenium::WebDriver.for :firefox
-    driver.get('https://www.selenium.dev/selenium/web/iframes.html')
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/iframes.html'
     # --- Switch to iframe using WebElement ---
     iframe = driver.find_element(:id, 'iframe1')
     driver.switch_to.frame(iframe)
@@ -37,7 +33,7 @@ RSpec.describe 'Frames' do
     driver.switch_to.default_content
 
     # --- Switch to iframe using name or ID ---
-    iframe1 = driver.find_element(:name, 'iframe1-name') # (This line doesn't switch, just locates)
+    iframe1 = driver.find_element(:name, 'iframe1-name')
     driver.switch_to.frame(iframe1)
     expect(driver.page_source).to include('We Leave From Here')
     
@@ -53,8 +49,5 @@ RSpec.describe 'Frames' do
     # --- Final page content check ---
     driver.switch_to.default_content
     expect(driver.page_source).to include('This page has iframes')
-    
-    # Quit the driver
-    driver.quit
   end
 end
