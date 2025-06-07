@@ -74,7 +74,7 @@ WebElementを使用した切り替えは、最も柔軟なオプションです�
   
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L29-L37" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L26-L36" >}}
 {{< /tab >}}
 
 
@@ -121,7 +121,7 @@ FrameまたはiFrameにidまたはname属性がある場合、代わりにこれ
 
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L40-L47" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L36-L43" >}}
 {{< /tab >}}
 
 
@@ -166,7 +166,7 @@ JavaScriptの _window.frames_ を使用して照会できるように、Frameの
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L50-L51" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L46-L47" >}}
 {{< /tab >}}
 
 {{< tab header="JavaScript" >}}
@@ -197,7 +197,7 @@ driver.switch_to.default_content()
 {{< /tab >}}
 
  {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L54-L55" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L49-L50" >}}
 {{< /tab >}}
 
   {{< tab header="JavaScript" >}}

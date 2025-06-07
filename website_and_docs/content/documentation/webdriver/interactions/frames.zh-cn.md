@@ -74,7 +74,7 @@ driver.findElement(By.tagName("button")).click()
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L29-L37" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L26-L33" >}}
 {{< /tab >}}
 
 
@@ -120,7 +120,7 @@ driver.findElement(By.tagName("button")).click()
 
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L40-L47" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L36-L43" >}}
 {{< /tab >}}
 
 
@@ -168,7 +168,7 @@ _window.frames_ 进行查询.
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L50-L51" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L46-L47" >}}
 {{< /tab >}}
 
 {{< tab header="JavaScript" >}}
@@ -198,7 +198,7 @@ driver.switchTo().frame(1)
 {{< /tab >}}
 
  {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L54-L55" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L49-L50" >}}
 {{< /tab >}}
 
 

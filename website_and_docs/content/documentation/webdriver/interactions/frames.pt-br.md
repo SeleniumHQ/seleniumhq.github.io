@@ -80,7 +80,7 @@ encontrar o quadro usando seu seletor preferido e mudar para ele.
 {{< /tab >}}
   
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L29-L37" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L26-L33" >}}
 {{< /tab >}}
 
 
@@ -126,7 +126,7 @@ primeiro encontrado será utilizado.
  
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L40-L47" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L36-L43" >}}
 {{< /tab >}}
 
 
@@ -171,7 +171,7 @@ consultado usando _window.frames_ em JavaScript.
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L50-L51" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L46-L47" >}}
 {{< /tab >}}
 
 
@@ -203,7 +203,7 @@ como a seguir:
 {{< /tab >}}
 
  {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L54-L55" >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.cs#L49-L50" >}}
 {{< /tab >}}
 
 
