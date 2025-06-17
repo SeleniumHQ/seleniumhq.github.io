@@ -29,9 +29,12 @@ namespace SeleniumDocs.Drivers
             var chromeOptions = new ChromeOptions();
             chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
             IWebDriver driver = new ChromeDriver(chromeOptions);
-            try {
+            try
+            {
                 driver.Navigate().GoToUrl("https://selenium.dev");
-            } finally {
+            }
+            finally
+            {
                 driver.Quit();
             }
         }
@@ -41,9 +44,12 @@ namespace SeleniumDocs.Drivers
             var chromeOptions = new ChromeOptions();
             chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
             IWebDriver driver = new ChromeDriver(chromeOptions);
-            try {
+            try
+            {
                 driver.Navigate().GoToUrl("https://selenium.dev");
-            } finally {
+            }
+            finally
+            {
                 driver.Quit();
             }
         }
