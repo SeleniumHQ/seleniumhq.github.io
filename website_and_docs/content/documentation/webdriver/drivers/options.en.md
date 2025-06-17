@@ -119,7 +119,7 @@ event fire is returned.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -160,7 +160,7 @@ event fire is returned.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
@@ -200,7 +200,7 @@ WebDriver only waits until the initial page is downloaded.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
