@@ -1,0 +1,29 @@
+{{ if or .Site.Params.search.algolia .Site.Params.algolia_docsearch }}
+<script type="text/javascript">
+(function() {
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      const searchContainers = document.querySelectorAll('.td-search--algolia');
+      
+      if (searchContainers.length > 0 && typeof docsearch !== 'undefined') {
+        searchContainers.forEach((container) => {
+          if (container && !container.hasAttribute('data-docsearch-initialized')) {
+            try {
+              docsearch({
+                container: container,
+                appId: '{{ .Site.Params.search.algolia.appId | default .Site.Params.algolia_docsearch.appId }}',
+                apiKey: '{{ .Site.Params.search.algolia.apiKey | default .Site.Params.algolia_docsearch.apiKey }}',
+                indexName: '{{ .Site.Params.search.algolia.indexName | default .Site.Params.algolia_docsearch.indexName }}',
+              });
+              container.setAttribute('data-docsearch-initialized', 'true');
+            } catch (error) {
+              console.error('DocSearch initialization error:', error);
+            }
+          }
+        });
+      }
+    }, 100);
+  });
+})();
+</script>
+{{ end }}

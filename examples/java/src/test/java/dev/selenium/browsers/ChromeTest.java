@@ -24,7 +24,6 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
 
-
 public class ChromeTest extends BaseTest {
   @AfterEach
   public void clearProperties() {

@@ -1,69 +1,79 @@
 ---
-title: "等待"
+title: "等待策略"
 linkTitle: "等待"
 weight: 6
 aliases: ["/documentation/zh-cn/webdriver/waits/"]
 ---
 
-Perhaps the most common challenge for browser automation is ensuring
-that the web application is in a state to execute a particular
-Selenium command as desired. The processes often end up in
-a _race condition_ where sometimes the browser gets into the right
-state first (things work as intended) and sometimes the Selenium code
-executes first (things do not work as intended). This is one of the
-primary causes of _flaky tests_.
 
-All navigation commands wait for a specific `readyState` value
-based on the [page load strategy]({{< ref "drivers/options#pageloadstrategy" >}}) (the
-default value to wait for is `"complete"`) before the driver returns control to the code.
-The `readyState` only concerns itself with loading assets defined in the HTML, 
-but loaded JavaScript assets often result in changes to the site,
-and elements that need to be interacted with may not yet be on the page
-when the code is ready to execute the next Selenium command.
-
-Similarly, in a lot of single page applications, elements get dynamically
-added to a page or change visibility based on a click.
-An element must be both present and
-[displayed]({{< ref "elements/information/#is-displayed" >}}) on the page
-in order for Selenium to interact with it.
-
-Take this page for example: https://www.selenium.dev/selenium/web/dynamic.html
-When the "Add a box!" button is clicked, a "div" element that does not exist is created.
-When the "Reveal a new input" button is clicked, a hidden text field element is displayed.
-In both cases the transition takes a couple seconds.
-If the Selenium code is to click one of these buttons and interact with the resulting element,
-it will do so before that element is ready and fail.
-
-The first solution many people turn to is adding a sleep statement to
-pause the code execution for a set period of time.
-Because the code can't know exactly how long it needs to wait, this
-can fail when it doesn't sleep long enough. Alternately, if the value is set too high
-and a sleep statement is added in every place it is needed, the duration of
-the session can become prohibitive.
-
-Selenium provides two different mechanisms for synchronization that are better.
+或许浏览器自动化面临的最常见挑战在于,
+确保网络应用程序处于能够按预期执行特定 Selenium 命令的状态. 
+这些过程常常陷入一种 _竞态条件_ , 
+有时浏览器会先达到正确状态 (一切按预期运行) , 
+有时 Selenium 代码会先执行 (一切未按预期运行) . 
+这是导致 _不稳定测试_ 的主要原因之一. 
 
 
-## Implicit waits
-Selenium has a built-in way to automatically wait for elements called an _implicit wait_.
-An implicit wait value can be set either with the [timeouts]({{< ref "drivers/options#timeouts" >}})
-capability in the browser options, or with a driver method (as shown below).
+所有导航命令都会等待特定基于 [页面加载策略]({{< ref "drivers/options#pageloadstrategy">}}) 的值 `readyState` 
+ (默认等待的值为 `"complete"` ) , 
+然后驱动程序才会将控制权交还给代码. 
+`readyState`  仅关注 HTML 中定义的资源加载, 
+但加载的 JavaScript 资源常常会导致网站发生变化, 
+而当代码准备执行下一个 Selenium 命令时, 
+需要交互的元素可能尚未出现在页面上. 
 
-This is a global setting that applies to every element location call for the entire session.
-The default value is `0`, which means that if the element is not found, it will
-immediately return an error. If an implicit wait is set, the driver will wait for the 
-duration of the provided value before returning the error. Note that as soon as the 
-element is located, the driver will return the element reference and the code will continue executing, 
-so a larger implicit wait value won't necessarily increase the duration of the session.
 
-*Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
+同样, 在许多单页应用程序中, 
+元素会根据点击操作动态添加到页面上或改变可见性.  
+对于 Selenium 能够与之交互, 
+该元素必须既存在于页面上又处于[displayed]({{< ref "elements/information/#is-displayed">}}) 状态. 
 
-Solving our example with an implicit wait looks like this:
+
+以这个页面为例: https://www.selenium.dev/selenium/web/dynamic.html 
+当点击 "Add a box!" 按钮时, 
+会创建一个原本不存在的 "div" 元素.  
+当点击 "Reveal a new input" 按钮时, 
+一个隐藏的文本字段元素会被显示出来.  
+在这两种情况下, 过渡都需要几秒钟.  
+如果 Selenium 代码要点击其中一个按钮并与生成的元素进行交互,  
+它会在该元素准备好之前就执行操作, 从而导致失败. 
+
+
+许多人首先想到的解决办法是在代码中添加一个睡眠语句, 
+让代码暂停执行一段设定的时间. 
+由于代码无法确切知道需要等待多久, 
+如果设置的睡眠时间不够长, 
+这种方法可能会失败. 
+相反, 如果睡眠时间设置得过高, 并且在每个需要的地方都添加睡眠语句, 
+那么会话的持续时间可能会变得难以接受. 
+
+Selenium 提供了更好的两种不同的同步机制, 
+
+
+## 隐式等待
+Selenium 内置了一种自动等待元素出现的方式, 称为 _隐式等待_ .  
+隐式等待的值可以通过浏览器选项中的 [timeouts]({{< ref "drivers/options#timeouts">}}) 设置来设定, 
+也可以通过驱动程序的方法来设定 (如下所示) . 
+
+这是一个全局设置, 适用于整个会话期间的每个元素定位调用. 
+默认值为 `0` , 
+这意味着如果未找到元素, 
+将立即返回错误. 
+如果设置了隐式等待, 
+驱动程序将在返回错误之前等待所提供的时长. 
+请注意, 一旦定位到元素, 
+驱动程序将返回元素引用, 
+代码将继续执行, 
+因此较大的隐式等待值不一定增加会话的持续时间. 
+
+*警告:*
+请勿混合使用隐式等待和显式等待.  
+这样做可能会导致等待时间不可预测. 
+例如, 设置 10 秒的隐式等待和 15 秒的显式等待,  
+可能会导致在 20 秒后发生超时. 
+
+使用隐式等待解决我们的示例代码如下: 
+
 
 {{< tabpane text=true >}}
   {{< tab header="Java" >}}
@@ -86,15 +96,20 @@ Solving our example with an implicit wait looks like this:
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Explicit waits
 
-_Explicit waits_ are loops added to the code that poll the application
-for a specific condition to evaluate as true before it exits the loop and
-continues to the next command in the code. If the condition is not met before a designated timeout value,
-the code will give a timeout error. Since there are many ways for the application not to be in the desired state,
-explicit waits are a great choice to specify the exact condition to wait for
-in each place it is needed.
-Another nice feature is that, by default, the Selenium Wait class automatically waits for the designated element to exist.
+
+## 显式等待
+
+_显式等待_ 是在代码中添加的, 用于轮询应用程序的循环, 
+直到特定条件评估为真时, 才退出循环并继续执行代码中的下一个命令. 
+如果在指定的超时值之前条件未满足, 
+代码将给出超时错误. 
+由于应用程序未处于所需状态的方式有很多, 
+因此显式等待是为每个需要等待的地方指定确切等待条件的绝佳选择.  
+另一个不错的特性是, 默认情况下, 
+Selenium 等待类会自动等待指定的元素存在. 
+
+
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
@@ -122,23 +137,28 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Customization
 
-The Wait class can be instantiated with various parameters that will change how the conditions are evaluated.
 
-This can include:
-* Changing how often the code is evaluated (polling interval)
-* Specifying which exceptions should be handled automatically
-* Changing the total timeout length
-* Customizing the timeout message
+### 定制
 
-For instance, if the _element not interactable_ error is retried by default, then we can
-add an action on a method inside the code getting executed (we just need to 
-make sure that the code returns `true` when it is successful):
+Wait 类可以通过各种参数进行实例化, 
+这些参数会改变条件的评估方式. 
+
+这可以包括：
+* 更改代码的评估频率 (轮询间隔) 
+* 指定哪些异常应自动处理
+* 更改总超时时长
+* 自定义超时消息
+
+例如, 如果默认情况下对 _元素不可交互_ 错误进行重试, 
+那么我们可以在执行中的代码里的某个方法内添加一个操作
+ (我们只需要确保代码在成功时返回  `true`  即可)：
+
+
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-The easiest way to customize Waits in Java is to use the `FluentWait` class:
+The easiest way to customize Waits in Java is to use the `FluentWait` class: 
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L82-L92" >}}
   {{% /tab %}}
   {{< tab header="Python" >}}
@@ -157,3 +177,4 @@ The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< badge-code >}}
   {{< /tab >}}
 {{< /tabpane >}}
+

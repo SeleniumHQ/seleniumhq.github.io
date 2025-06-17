@@ -6,21 +6,22 @@
 
 {{ $defaultBranchFromEnv := (getenv "SELENIUM_EXAMPLES_BRANCH") }}
 {{ if $defaultBranchFromEnv }}
-  {{ $branch = $defaultBranchFromEnv }}
+{{ $branch = $defaultBranchFromEnv }}
 {{ end }}
 
 {{ $defaultOrgFromEnv := (getenv "SELENIUM_EXAMPLES_ORG") }}
 {{ if $defaultOrgFromEnv }}
-  {{ $org = $defaultOrgFromEnv }}
+{{ $org = $defaultOrgFromEnv }}
 {{ end }}
 
 {{ $defaultRepoFromEnv := (getenv "SELENIUM_EXAMPLES_REPO") }}
 {{ if $defaultRepoFromEnv }}
-  {{ $repo = $defaultRepoFromEnv }}
+{{ $repo = $defaultRepoFromEnv }}
 {{ end }}
 
 {{ $fullPath := .Get "path" }}
 {{ $path := index (split $fullPath "#") 0 }}
+{{ $hasFragment := in $fullPath "#" }}
 
 {{ $apiUrl := printf "%s/%s/%s/contents%s?ref=%s" $apiBaseUrl $org $repo $path $branch }}
 {{ $webUrl := printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $fullPath }}
@@ -30,34 +31,136 @@
 
 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
 {{ if $githubToken }}
-  {{ $toReplace := printf "://%s@" $githubToken }}
-  {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
-  {{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
+{{ $toReplace := printf "://%s@" $githubToken }}
+{{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
+{{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
 
-  {{ $apiResults := getJSON $apiUrlWithToken  }}
-  {{ $content := base64Decode $apiResults.content }}
-  {{ $codeSnippet := $content }}
+{{ $apiResults := getJSON $apiUrlWithToken  }}
+{{ $content := base64Decode $apiResults.content }}
+{{ $codeSnippet := $content }}
 
-  {{ $parsedApiUrl := urls.Parse $webUrl }}
-  {{ with $parsedApiUrl.Fragment }}
-    {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
-    {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
-    {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
-    {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
-    {{ $splitContent := split $content "\n" }}
-    {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
-  {{ end }}
-
-  {{ highlight $codeSnippet $language }}
-
-  <div class="text-end pb-2">
-    <a href="{{- $webUrl -}}" target="_blank">
-      <i class="fas fa-external-link-alt pl-2"></i>
-        <strong>View full example on GitHub</strong>
-    </a>
-  </div>
-{{ else }}
-  {{ partial "github-content.html" }}
+{{ $parsedApiUrl := urls.Parse $webUrl }}
+{{ with $parsedApiUrl.Fragment }}
+{{ $codeLines := split $parsedApiUrl.Fragment "-" }}
+{{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
+{{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
+{{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
+{{ $splitContent := split $content "\n" }}
+{{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
 {{ end }}
 
+{{ highlight $codeSnippet $language }}
 
+{{ if $hasFragment }}
+{{ $uniqueId := md5 $path }}
+<div class="mt-4 pb-2">
+    <div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
+        <a onclick="showCodeModal('{{ $uniqueId }}')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+            View Complete Code
+        </a>
+        <a href="{{- $webUrl -}}" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+            <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+            View on GitHub
+        </a>
+    </div>
+</div>
+
+<div id="codeModal_{{ $uniqueId }}" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; max-width: 90%; max-height: 90%; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <div style="padding: 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+            <h5 style="margin: 0;">{{ $path }}</h5>
+            <div>
+                <button onclick="copyCode('{{ $uniqueId }}', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer;">
+                    Copy
+                </button>
+                <button onclick="closeCodeModal('{{ $uniqueId }}')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer;">
+                    Close
+                </button>
+            </div>
+        </div>
+        <div style="padding: 20px;">
+            <div id="codeContent_{{ $uniqueId }}">{{ highlight $content $language }}</div>
+        </div>
+    </div>
+</div>
+
+<script>
+window.showCodeModal = window.showCodeModal || function(id) {
+    document.getElementById('codeModal_' + id).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeCodeModal = window.closeCodeModal || function(id) {
+    document.getElementById('codeModal_' + id).style.display = 'none';
+    document.body.style.overflow = '';
+};
+
+window.copyCode = window.copyCode || function(id, event) {
+    const codeElement = document.getElementById('codeContent_' + id);
+    const code = codeElement.textContent;
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(() => {
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.style.background = '#28a745';
+            btn.style.borderColor = '#28a745';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '#007bff';
+                btn.style.borderColor = '#007bff';
+            }, 2000);
+        });
+    } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = code;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = '#28a745';
+        btn.style.borderColor = '#28a745';
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '#007bff';
+            btn.style.borderColor = '#007bff';
+        }, 2000);
+    }
+};
+
+document.addEventListener('click', function(e) {
+    if (e.target.id && e.target.id.startsWith('codeModal_')) {
+        const id = e.target.id.replace('codeModal_', '');
+        closeCodeModal(id);
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const openModals = document.querySelectorAll('[id^="codeModal_"]');
+        openModals.forEach(modal => {
+            if (modal.style.display === 'block') {
+                const id = modal.id.replace('codeModal_', '');
+                closeCodeModal(id);
+            }
+        });
+    }
+});
+</script>
+{{ else }}
+<div class="text-end pb-2">
+    <a href="{{- $webUrl -}}" target="_blank">
+        <i class="fas fa-external-link-alt pl-2"></i>
+        <strong>View on GitHub</strong>
+    </a>
+</div>
+{{ end }}
+
+{{ else }}
+{{ partial "github-content.html" }}
+{{ end }}
