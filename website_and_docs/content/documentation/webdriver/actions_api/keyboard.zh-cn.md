@@ -23,7 +23,7 @@ aliases: [
 [这里](https://www.w3.org/TR/webdriver/#keyboard-actions)
 可以找到完整列表
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28)
 {{% /tab %}}
@@ -46,7 +46,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ## 按下按键
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
 {{< /tab >}}
@@ -60,7 +60,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L19-L22" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L19-L22" >}}
@@ -69,7 +69,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ## 释放按键
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
 {{< /tab >}}
@@ -83,7 +83,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L34-L39" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L32-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L32-L37" >}}
@@ -99,7 +99,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ### 活跃元素
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
 {{< /tab >}}
@@ -113,7 +113,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L47-L48" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L48-L50" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L47-L49" >}}
@@ -122,7 +122,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 ### 指定元素
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
 {{< /tab >}}
@@ -137,7 +137,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.5.0" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L61-L65" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L59-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L60-L63" >}}
@@ -150,7 +150,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 请注意, 用于此操作的键位会有所不同, 具体取决于它是否是 Mac OS.
 此代码将以文本收尾: `SeleniumSelenium!`
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
 {{< /tab >}}
@@ -164,7 +164,7 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L75-L87" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L73-L85" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L74-L86" >}}

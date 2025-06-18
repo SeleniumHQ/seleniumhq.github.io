@@ -56,7 +56,7 @@ A abordagem de design minimalista do Selenium lhe dá a
 versatilidade para ser incluído como um componente em aplicações maiores.
 A infraestrutura circundante fornecida sob o Selenium
 dá a você as ferramentas para montar
-sua [Grid de navegadores]({{< ref "/grid.md" >}})
+sua [Grid de navegadores]({{< ref "grid.md" >}})
 para que os testes possam ser executados em diferentes navegadores e sistemas operacionais
 em uma variedade de máquinas.
 

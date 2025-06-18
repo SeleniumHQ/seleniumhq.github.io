@@ -1,7 +1,7 @@
 ---
 title: "Grid"
 linkTitle: "Grid"
-weight: 6
+weight: 4
 description: >
   要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.
 aliases: 

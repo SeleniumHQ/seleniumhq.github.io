@@ -19,6 +19,17 @@ Para cada nó, o status inclui informações sobre a disponibilidade, sessões e
 cURL GET 'http://localhost:4444/status'
 ```
 
+### Deletar sessão
+
+A exclusão da sessão encerra a sessão do WebDriver, fecha o driver e o remove do mapa de sessões ativas.
+Qualquer solicitação usando o id de sessão removido ou reutilizando a instância do driver gerará um erro.
+
+```shell
+cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+```
+
+### Which URL should I use?
+
 No modo Standalone, o URL da Grid é o endereço do servidor Standalone.
 
 No modo Hub-Node, a URL da Grid é o endereço do servidor Hub.
@@ -43,13 +54,13 @@ No modo Hub-Node, a URL do Distribuidor é o endereço do servidor Hub.
 ```shell
 cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-No modo totalmente distribuído, a URL é o endereço do servidor Distribuidor.
+No modo totalmente distribuído, a URL é o endereço do servidor Router.
 ```shell
-cURL --request DELETE 'http://localhost:5553/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 Se nenhum segredo de registro foi configurado durante a configuração da Grid, use 
 ```shell
-cURL --request DELETE 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Drenar Nó
@@ -64,13 +75,13 @@ No modo Hub-Node, a URL do Distribuidor é o endereço do servidor Hub.
 ```shell
 cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
-No modo totalmente distribuído, a URL é o endereço do servidor Distribuidor. 
+No modo totalmente distribuído, a URL é o endereço do servidor Router. 
 ```shell
-cURL --request POST 'http://localhost:5553/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 Se nenhum segredo de registro foi configurado durante a configuração da Grid, use  
 ```shell
-cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
+cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## Nó
@@ -149,12 +160,12 @@ cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --he
 
 No modo totalmente distribuído, a URL do enfileirador é o endereço do servidor do Enfileirador de Sessões.
 ```shell
-cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 If no registration secret has been configured while setting up the Grid, then use 
 ```shell
-cURL --request DELETE 'http://<URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
+cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### Obter novos pedidos da Fila de Sessão
@@ -171,4 +182,4 @@ cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 
 No modo totalmente distribuido, a URL da Fila é a porta do servidor de Fila.
 ```shell
-cURL --request GET 'http://localhost:5559/se/grid/newsessionqueue/queue'
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'

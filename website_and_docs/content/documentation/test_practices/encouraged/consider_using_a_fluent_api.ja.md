@@ -16,66 +16,36 @@ Seleniumは既に、`FluentWait`クラスでこのようなものを実装して
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage();
-gsp.withFluent().setSearchString().clickSearchButton();
+GoogleSearchPage gsp = new GoogleSearchPage(driver);
+gsp.setSearchString().clickSearchButton();
 ```
 
 この流暢な動作を持つGoogleページオブジェクトクラスは次のようになります。
 
 ```java
-public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
-  private final WebDriver driver;
-  private GSPFluentInterface gspfi;
+public abstract class BasePage {
+    protected WebDriver driver;
 
-  public class GSPFluentInterface {
-    private GoogleSearchPage gsp;
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+}
 
-    public GSPFluentInterface(GoogleSearchPage googleSearchPage) {
-        gsp = googleSearchPage;
+public class GoogleSearchPage extends BasePage {
+    public GoogleSearchPage(WebDriver driver) {
+        super(driver);
+        // Generally do not assert within pages or components.
+        // Effectively throws an exception if the lambda condition is not met.
+        new WebDriverWait(driver, Duration.ofSeconds(3)).until(d -> d.findElement(By.id("logo")));
     }
 
-    public GSPFluentInterface clickSearchButton() {
-        gsp.searchButton.click();
+    public GoogleSearchPage setSearchString(String sstr) {
+        driver.findElement(By.id("gbqfq")).sendKeys(sstr);
         return this;
     }
 
-    public GSPFluentInterface setSearchString( String sstr ) {
-        clearAndType( gsp.searchField, sstr );
-        return this;
+    public void clickSearchButton() {
+        driver.findElement(By.id("gbqfb")).click();
     }
-  }
-
-  @FindBy(id = "gbqfq") private WebElement searchField;
-  @FindBy(id = "gbqfb") private WebElement searchButton;
-  public GoogleSearchPage(WebDriver driver) {
-    gspfi = new GSPFluentInterface( this );
-    this.get(); // If load() fails, calls isLoaded() until page is finished loading
-    PageFactory.initElements(driver, this); // Initialize WebElements on page
-  }
-
-  public GSPFluentInterface withFluent() {
-    return gspfi;
-  }
-
-  public void clickSearchButton() {
-    searchButton.click();
-  }
-
-  public void setSearchString( String sstr ) {
-    clearAndType( searchField, sstr );
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    Assert.assertTrue("Google search page is not yet loaded.", isSearchFieldVisible() );
-  }
-
-  @Override
-  protected void load() {
-    if ( isSFieldPresent ) {
-      Wait<WebDriver> wait = new WebDriverWait( driver, Duration.ofSeconds(3) );
-      wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
-    }
-  }
 }
 ```

@@ -42,6 +42,7 @@ This value can be stored and used for future element actions. In our example HTM
 two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
@@ -51,9 +52,9 @@ vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-vegetable = driver.find_element(class: 'tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const vegetable = await driver.findElement(By.className('tomatoes'));
   {{< /tab >}}
@@ -73,6 +74,7 @@ One solution is to locate an element with a unique attribute that is an ancestor
 ancestor of the undesired element, then call find element on that object:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
@@ -85,10 +87,9 @@ fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
 IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-fruits = driver.find_element(id: 'fruits')
-fruit = fruits.find_element(class: 'tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruits = await driver.findElement(By.id('fruits'));
 const fruit = fruits.findElement(By.className('tomatoes'));
@@ -107,6 +108,42 @@ driver implementation supports a given feature. These interfaces are clearly def
 to adhere to having only a single role of responsibility.
 {{% /pageinfo %}}
 
+### Evaluating the Shadow DOM
+
+The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
+With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree with 
+easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+{{< tab header="Java" >}}
+WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
+SearchContext shadowRoot = shadowHost.getShadowRoot();
+WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Python" >}}
+shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
+var shadowRoot = shadowHost.GetShadowRoot();
+var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+shadow_host = @driver.find_element(css: '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### Optimized locator
 
 A nested lookup might not be the most effective location strategy since it requires two
@@ -119,6 +156,7 @@ See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/en
 For this example, we'll use a CSS Selector:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
@@ -128,9 +166,9 @@ fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-fruit = driver.find_element(css: '#fruits .tomatoes')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L19" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const fruit = await driver.findElement(By.css('#fruits .tomatoes'));
   {{< /tab >}}
@@ -148,6 +186,7 @@ If there are no matches, an empty list is returned. In this case,
 references to all fruits and vegetable list items will be returned in a collection. 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
@@ -157,9 +196,9 @@ plants = driver.find_elements(By.TAG_NAME, "li")
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-plants = driver.find_elements(tag_name: 'li')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L23" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const plants = await driver.findElements(By.tagName('li'));
   {{< /tab >}}
@@ -174,6 +213,7 @@ need to iterate over the collection and identify the one you want.
 
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
 List<WebElement> elements = driver.findElements(By.tagName("li"));
 
@@ -222,23 +262,9 @@ namespace FindElementsExample {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :firefox
-begin
-     # Navigate to URL
-  driver.get 'https://www.example.com'
-
-     # Get all the elements available with tag name 'p'
-  elements = driver.find_elements(:tag_name,'p')
-
-  elements.each { |e|
-    puts e.text
-  }
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
 (async function example() {
@@ -284,6 +310,7 @@ It is used to find the list of matching child WebElements within the context of 
 To achieve this, the parent WebElement is chained with 'findElements' to access child elements
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
   import org.openqa.selenium.By;
   import org.openqa.selenium.WebDriver;
@@ -317,12 +344,24 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 driver.get("https://www.example.com")
+##get elements from parent element using TAG_NAME
 
     # Get element with tag name 'div'
 element = driver.find_element(By.TAG_NAME, 'div')
 
     # Get all the elements available with tag name 'p'
 elements = element.find_elements(By.TAG_NAME, 'p')
+for e in elements:
+    print(e.text)
+
+##get elements from parent element using XPATH
+##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
+
+    # Get first element of tag 'ul'
+element = driver.find_element(By.XPATH, '//ul')
+
+    # get children of tag 'ul' with tag 'li'
+elements  = driver.find_elements(By.XPATH, './/li')
 for e in elements:
     print(e.text)
   {{< /tab >}}
@@ -353,26 +392,9 @@ namespace FindElementsFromElement {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  require 'selenium-webdriver'
-  driver = Selenium::WebDriver.for :chrome
-  begin
-    # Navigate to URL
-    driver.get 'https://www.example.com'
-
-    # Get element with tag name 'div'
-    element = driver.find_element(:tag_name,'div')
-
-    # Get all the elements available with tag name 'p'
-    elements = element.find_elements(:tag_name,'p')
-
-    elements.each { |e|
-      puts e.text
-    }
-  ensure
-    driver.quit
-  end
-  {{< /tab >}}
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
 
@@ -422,6 +444,7 @@ namespace FindElementsFromElement {
 It is used to track (or) find DOM element which has the focus in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
   {{< tab header="Java" >}}
   import org.openqa.selenium.*;
   import org.openqa.selenium.chrome.ChromeDriver;
@@ -477,19 +500,8 @@ It is used to track (or) find DOM element which has the focus in the current bro
      }
     }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-  require 'selenium-webdriver'
-  driver = Selenium::WebDriver.for :chrome
-  begin
-    driver.get 'https://www.google.com'
-    driver.find_element(css: '[name="q"]').send_keys('webElement')
-
-    # Get attribute of current active element
-    attr = driver.switch_to.active_element.attribute('title')
-    puts attr
-  ensure
-    driver.quit
-  end
+  {{< tab header="Ruby" text=true >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');

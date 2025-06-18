@@ -1,5 +1,5 @@
 ---
-title: "Browser interactions"
+title: "ブラウザのインタラクション"
 linkTitle: "Interactions"
 weight: 10
 aliases: [
@@ -16,11 +16,21 @@ aliases: [
 ブラウザーから現在のページタイトルを読むことができます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}driver.getTitle();{{< /tab >}}
-  {{< tab header="Python" >}}driver.title{{< /tab >}}
-  {{< tab header="CSharp" >}}driver.Title;{{< /tab >}}
-  {{< tab header="Ruby" >}}driver.title{{< /tab >}}
-  {{< tab header="JavaScript" >}}await driver.getTitle();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L7" >}}
+{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/InteractionsTest.cs#L37" >}}
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L8" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L20" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}driver.title{{< /tab >}}
 {{< /tabpane >}}
 
@@ -30,10 +40,20 @@ aliases: [
 ブラウザーのアドレスバーから現在のURLを読むには、次を使用します。
 
 {{< tabpane langEqualsHeader=true >}}
-{{< tab header="Java" >}}driver.getCurrentUrl();{{< /tab >}}
-{{< tab header="Python" >}}driver.current_url{{< /tab >}}
-{{< tab header="CSharp" >}}driver.Url;{{< /tab >}}
-{{< tab header="Ruby" >}}driver.current_url{{< /tab >}}
-{{< tab header="JavaScript" >}}await driver.getCurrentUrl();{{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/interactions/test_interactions.py#L10" >}}
+{{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/InteractionsTest.cs#L41" >}}
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="examples/ruby/spec/interactions/browser_spec.rb#L14" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="examples/javascript/test/interactions/interactionsIndex.spec.js#L24" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}driver.currentUrl{{< /tab >}}
 {{< /tabpane >}}

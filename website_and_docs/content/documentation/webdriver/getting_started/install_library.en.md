@@ -18,26 +18,26 @@ you are using the latest version.
 
 ## Requirements by language
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
 ### Maven
-Specify the dependency in the project's `pom.xml` file:
+Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}} 
 The minimum supported Python version for each Selenium version can be found 
-in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+in "Supported Python Versions" on [PyPi](https://pypi.org/project/selenium/).
 
 There are a couple different ways to install Selenium.
 
@@ -46,15 +46,17 @@ There are a couple different ways to install Selenium.
 ```shell
 pip install selenium
 ```
+<br>
 
 ### Download
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+Alternatively you can download the [PyPI Built Distribution](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.-py3-none-any.whl) and install it using _pip_:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
+<br>
 
 ### Require in project
 
@@ -73,12 +75,14 @@ There are a few options for installing Selenium.
 ```shell
 Install-Package Selenium.WebDriver
 ```
+<br>
 
 ### .NET CLI
 
 ```shell
 dotnet add package Selenium.WebDriver
 ```
+<br>
 
 ### CSProj
 
@@ -125,6 +129,7 @@ Selenium can be installed two different ways.
 ```shell
 gem install selenium-webdriver
 ```
+<br>
 
 ### Add to project's gemfile
 
@@ -142,6 +147,7 @@ Selenium is typically installed using npm.
 ```shell
 npm install selenium-webdriver
 ```
+<br>
 
 ### Add to project
 
@@ -156,4 +162,4 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< /tabpane >}}
 
 ## Next Step
-[Install the browser drivers]({{< ref "install_drivers.md" >}})
+[Create your first Selenium script]({{< ref "first_script.md" >}})

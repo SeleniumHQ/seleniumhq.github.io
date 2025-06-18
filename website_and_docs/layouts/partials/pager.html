@@ -2,8 +2,8 @@
   <li>
     <div class="selenium-button-container">
       <a {{if .PrevInSection}}href="{{.PrevInSection.RelPermalink}}"aria-label="{{ T "ui_pager_prev" }} - {{.PrevInSection.Title}}"{{end}}
-        class="selenium-button selenium text-uppercase font-weight-bold {{if not .PrevInSection}} disabled{{end}}">
-        <i class="pr-2 fas fa-caret-left"></i>
+        class="selenium-button selenium text-uppercase fw-bold {{if not .PrevInSection}} disabled{{end}}">
+        <i class="pe-2 fas fa-caret-left"></i>
         {{ T "ui_pager_prev" }}
       </a>
     </div>			
@@ -11,9 +11,9 @@
   <li>
     <div class="selenium-button-container">
       <a {{if .NextInSection}}href="{{.NextInSection.RelPermalink}}"aria-label="{{ T "ui_pager_next" }} - {{.NextInSection.Title}}"{{end}}
-        class="selenium-button selenium text-uppercase font-weight-bold {{if not .NextInSection}} disabled{{end}}">
+        class="selenium-button selenium text-uppercase fw-bold {{if not .NextInSection}} disabled{{end}}">
         {{ T "ui_pager_next" }}
-        <i class="pl-2 fas fa-caret-right"></i>
+        <i class="ps-2 fas fa-caret-right"></i>
       </a>
     </div>			
   </li>

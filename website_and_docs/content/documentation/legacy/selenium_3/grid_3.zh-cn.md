@@ -15,7 +15,7 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
    Most of the documentation found in this section is still in English.
    Please note we are not accepting pull requests to translate this content
    as translating documentation of legacy components does not add value to

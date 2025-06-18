@@ -1,9 +1,9 @@
 ---
-title: "Actions API"
-linkTitle: "Actions API"
+title: "アクション API"
+linkTitle: "アクション API"
 weight: 14
 description: >
-    A low-level interface for providing virtualized device input actions to the web browser.
+    仮想化されたデバイス入力アクションを Web ブラウザーに提供するための低レベルのインターフェイス。
 ---
 
 In addition to the high-level [element interactions]({{< ref "/documentation/webdriver/elements/interactions.md" >}}), 
@@ -31,7 +31,7 @@ lower level commands for you. These are all documented in
 Pointer movements and Wheel scrolling allow the user to set a duration for the action, but sometimes you just need
 to wait a beat between actions for things to work correctly.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -47,7 +47,7 @@ to wait a beat between actions for things to work correctly.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
@@ -64,7 +64,7 @@ There is a special method to release all currently depressed keys and pointer bu
 This method is implemented differently in each of the languages because
 it does not get executed with the perform method.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}
@@ -78,7 +78,7 @@ it does not get executed with the perform method.
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}

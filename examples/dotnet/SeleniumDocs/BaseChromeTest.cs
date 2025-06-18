@@ -6,9 +6,9 @@ namespace SeleniumDocs
     public class BaseChromeTest : BaseTest
     {
         [TestInitialize]
-        public void CreateDriver()
+        public void AutoStartDriver()
         {
-            driver = new ChromeDriver();
+            StartDriver();
         }
     }
 }

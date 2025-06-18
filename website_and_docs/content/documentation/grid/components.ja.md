@@ -1,5 +1,5 @@
 ---
-title: "Serenium Grid のコンポーネント"
+title: "Selenium Grid のコンポーネント"
 linkTitle: "コンポーネント"
 weight: 6
 description: >
@@ -15,9 +15,7 @@ Selenium Grid 4 は以前のバージョンから一新し、全面的に作り�
 に適応するために機能ごとに分割されました。
 コンテナ化とクラウド上での分散スケーラビリティのために構築された、現代に適した全く新しいソリューションです。
 
-{{< card header="**Grid Components**" footer="完全分散型モードでのGridコンポーネント" >}}
-![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## ルーター
 
@@ -86,7 +84,7 @@ Grid は複数の**ノード**を持つことができます。
 デフォルトでは、**ノード**はマシンのパス上に存在する全てのブラウザドライバーを自動で登録します。
 また FireFox と Chromium ベースブラウザの場合、CPU1 つにつき 1 スロットを作成します。
 Safari の場合は 1 つのスロットのみ作成します。
-[特定の設定によって]({{< ref "/configuration" >}})セッションを Docker コンテナで実行したり、コマンドを中継したりすることも可能です。
+[特定の設定によって]({{< ref "configuration" >}})セッションを Docker コンテナで実行したり、コマンドを中継したりすることも可能です。
 
 **ノード**は受信したコマンドを実行するだけで、コマンドの評価・判断や、フロー制御以外の制御は行いません。
 **ノード**が実行されているマシンは、他のコンポーネントと同じ OS を持つ必要はありません。

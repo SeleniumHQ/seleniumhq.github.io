@@ -1,3 +1,9 @@
+@media (min-width: 991px) { 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}}
+
 .-bg-selenium-green {
   // https://www.svgbackgrounds.com/#liquid-cheese
   // https://cssgenerator.org/rgba-and-hex-color-generator.html used to get the values

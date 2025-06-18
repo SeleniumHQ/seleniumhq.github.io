@@ -8,10 +8,10 @@
     {{- template "breadcrumbnav" (dict "p1" . "p2" .) }}
 
     {{ if (in . "legacy") }}
-    <div class="ml-auto mr-3 font-weight-bold" data-toggle="tooltip" data-placement="bottom"
+    <div class="ml-auto mx-3 fw-bold" data-bs-toggle="tooltip" data-bs-placement="bottom"
          title="This code is for outdated versions of Selenium.">Legacy Code!</div>
     {{ else }}
-    <div class="ml-auto mr-3 font-weight-bold" data-toggle="tooltip" data-placement="bottom"
+    <div class="ml-auto mx-3 fw-bold" data-bs-toggle="tooltip" data-bs-placement="bottom"
          title="All examples work in Selenium 4.0+ unless otherwise indicated.">v4.0</div>
     {{ end }}
   </ol>

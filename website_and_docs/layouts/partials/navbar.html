@@ -1,28 +1,26 @@
-{{ $cover := .HasShortcode "blocks/cover" }}
-<nav class="js-navbar-scroll navbar navbar-expand-lg navbar-dark navbar-color {{ if $cover}} td-navbar-cover {{ end }} td-navbar">
-  <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+<nav class="js-navbar-scroll navbar navbar-expand-lg navbar-light bg-white flex-row td-navbar">
+	<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}</span>
 	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-  <div class="collapse navbar-collapse justify-content-end" id="main_navbar">
-    <ul class="navbar-nav mr-4 mb-2 mb-lg-0 pl-4 pl-lg-2">
+	<div class="collapse navbar-collapse justify-content-end" id="main_navbar">
+		<ul class="navbar-nav mr-4 mb-2 mb-lg-0 ps-4 ps-lg-2">
 			{{ $p := . }}
 			{{ range .Site.Menus.main }}
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
-				{{ with .Page }}
-				{{ $active = or $active ( $.IsDescendant .)  }}
-				{{ end }}
-				{{ $pre := .Pre }}
-				{{ $post := .Post }}
-				{{ $url := urls.Parse .URL }}
-				{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
-				{{ if .HasChildren }}
+			{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
+			{{ with .Page }}
+			{{ $active = or $active ( $.IsDescendant .)  }}
+			{{ end }}
+			{{ $pre := .Pre }}
+			{{ $post := .Post }}
+			{{ $url := urls.Parse .URL }}
+			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
+			{{ if .HasChildren }}
 				<li class="nav-item dropdown">
-					<a class="nav-link {{if $active }} active{{end}} dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link {{if $active }} active{{end}} dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{{ .Name }}
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -32,10 +30,11 @@
 					{{ end }}
 					</div>
 				</li>
-				{{ else }}
-				<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ with .Pre}}{{ $pre }}{{ end }}<span{{if $active }} class="active"{{end}}>{{ .Name }}</span>{{ with .Post}}{{ $post }}{{ end }}</a>
-				{{ end }}
-			</li>
+			{{ else }}
+			    <li class="nav-item mr-4 mb-2 mb-lg-0">
+				    <a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ with .Pre}}{{ $pre }}{{ end }}<span{{if $active }} class="active"{{end}}>{{ .Name }}</span>{{ with .Post}}{{ $post }}{{ end }}</a>
+			    </li>
+			{{ end }}
 			{{ end }}
 			{{ if  .Site.Params.versions }}
 			<li class="nav-item dropdown d-none d-lg-block">
@@ -47,7 +46,12 @@
 				{{ partial "navbar-lang-selector.html" . }}
 			</li>
 			{{ end }}
-    </ul>
+		</ul>
 		<div class="navbar-nav">{{ partial "search-input.html" . }}</div>
-  </div>
+	</div>
 </nav>
+
+{{ with .Site.Params.announcement_banner }}
+{{ partial "announcement-banner.html" }}
+{{ end }}
+

@@ -10,7 +10,7 @@ aliases: [
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i>
+   <i class="fas fa-language d-4"></i>
    Page being translated from
    English to Portuguese. Do you speak Portuguese? Help us to translate
    it by sending us pull requests!
@@ -143,6 +143,8 @@ detect-drivers = false
 # Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
+# Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status (e.g. HTTP/1.1, HTTP/2)
+protocol-version = "HTTP/1.1"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
 # that many test slots to that particular configuration
 configs = [
@@ -165,9 +167,14 @@ password = "myStrongPassword"
 Here is a Java example showing how to start a session using the configured user and password.
 
 ```java
-URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");
-RemoteWebDriver webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
+ClientConfig clientConfig = ClientConfig.defaultConfig()
+  .baseUrl(new URL("http://localhost:4444"))
+  .authenticateAs(new UsernameAndPassword("admin", "myStrongPassword"));
+HttpCommandExecutor executor = new HttpCommandExecutor(clientConfig);
+RemoteWebDriver driver = new RemoteWebDriver(executor, new ChromeOptions());
 ```
+
+In other languages, you can use the URL http://admin:myStrongPassword@localhost:4444
 
 ### Setting custom capabilities for matching specific Nodes
 
@@ -197,13 +204,14 @@ driver.get("https://selenium.dev");
 driver.quit();
 ```
 
-### Retrieving downloaded files from Node.
+### Enabling Managed downloads by the Node.
 
-To be able to retrieve the files that were downloaded by a test at the Node, its location can be specified as below:
+The Node can be instructed to manage downloads automatically. This will cause the Node to save all files that were downloaded for a particular session into a temp directory, which can later be retrieved from the node.
+To turn this capability on, use the below configuration:
 
 ```toml
 [node]
-downloads-path = "/usr/downloads"
+enable-managed-downloads = true
 ```
 
-Refer to the [CLI section]({{< ref "cli_options.md#sample-that-retrieves-the-downloaded-file" >}}) for a complete example.
+Refer to the [CLI section]({{< ref "cli_options.md#enabling-managed-downloads-by-the-node" >}}) for a complete example.

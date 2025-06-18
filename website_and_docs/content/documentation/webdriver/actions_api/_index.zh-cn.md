@@ -44,7 +44,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 但有时您只需要在操作之间等待一下, 
 即可正常工作.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
@@ -60,7 +60,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L20-L27" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
@@ -79,7 +79,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 此方法在每种语言中的实现方式不同, 
 因为它不会使用perform方法执行.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}
@@ -93,7 +93,7 @@ Selenium允许您构建分配给特定输入的独立操作命令,
 {{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L44" >}}
+{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}

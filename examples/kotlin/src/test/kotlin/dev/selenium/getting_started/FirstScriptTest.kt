@@ -1,6 +1,5 @@
 package dev.selenium.getting_started
 
-import io.github.bonigarcia.wdm.WebDriverManager
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.openqa.selenium.By
@@ -12,23 +11,10 @@ import java.time.Duration
 class FirstScriptTest {
     private lateinit var driver: WebDriver
 
-    @BeforeAll
-    fun setupAll() {
-        WebDriverManager.chromedriver().setup()
-    }
-
-    @BeforeEach
-    fun setup() {
-        driver = ChromeDriver()
-    }
-
-    @AfterEach
-    fun teardown() {
-        driver.quit()
-    }
-
     @Test
     fun eightComponents() {
+        driver = ChromeDriver()
+
         driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
         val title = driver.title
@@ -45,6 +31,8 @@ class FirstScriptTest {
         val message = driver.findElement(By.id("message"))
         val value = message.getText()
         assertEquals("Received!", value)
+
+        driver.quit()
     }
 
 }

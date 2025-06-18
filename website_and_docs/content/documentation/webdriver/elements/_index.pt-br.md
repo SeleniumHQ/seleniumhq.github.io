@@ -8,7 +8,8 @@ aliases: [
 "/pt-br/documentation/webdriver/web_element/"
 ]
 description: >
-    Identifying and working with element objects in the DOM.
+    Identificando e trabalhando com elementos no DOM.
 ---
 
-The majority of most people's Selenium code involves working with web elements.
+A maioria do código que é escrito recorrendo às bibliotecas Selenium envolve trabalhar com elementos.
+

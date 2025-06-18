@@ -1,16 +1,16 @@
 ---
 title: "WebDriver"
 linkTitle: "WebDriver"
-weight: 4
+weight: 2
 description: >
-  WebDriver drives a browser natively, learn more about it.
+  WebDriver drives a browser natively; learn more about it.
 aliases: ["/documentation/en/webdriver/"]
 ---
 
 
 WebDriver drives a browser natively, as a user would, either locally
-or on a remote machine using the Selenium server,
-marks a leap forward in terms of browser automation.
+or on a remote machine using the Selenium server.
+It marks a leap forward in terms of browser automation.
 
 Selenium WebDriver refers to both the language bindings
 and the implementations of the individual browser controlling code.

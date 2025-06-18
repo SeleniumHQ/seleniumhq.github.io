@@ -10,225 +10,232 @@ aliases: [
 
 ---
 
-您可以如本地一样, 使用远程WebDriver.
-主要区别在于需要配置远程WebDriver, 以便可以在不同的计算机上运行测试.
+如果远程计算机上正在运行 [Selenium Grid]({{< ref "../../grid" >}}), 
+则 Selenium 允许您自动化远程计算机上的浏览器.
+执行代码的计算机称为客户端计算机, 
+具有浏览器和驱动程序的计算机称为远程计算机, 
+有时也称为终端节点.
+要将 Selenium 测试指向到远程计算机, 
+您需要使用 Remote WebDriver 类并传递包含该机器上网格端口的URL.
+请参阅网格文档, 了解配置网格的全部方式.
 
-远程WebDriver由两部分组成：客户端和服务端. 客户端是您的WebDriver测试，而服务端仅仅是可以被托管于任何现代Java EE应用服务器的Java Servlet.
+## 基本样例
 
-要运行远程WebDriver客户端, 我们首先需要连接到RemoteWebDriver.
-为此, 我们将URL指向运行测试的服务器的地址. 
-为了自定义我们的配置, 我们设置了既定的功能. 
-下面是一个实例化样例, 
-其指向我们的远程Web服务器 _www.example.com_ 的远程WebDriver对象, 
-并在Firefox上运行测试.
+驱动程序需要知道在远程计算机上向何处发送命令, 
+以及启动哪个浏览器.
+所以地址和选项实例都是必需的.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxOptions firefoxOptions = new FirefoxOptions();
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions);
-driver.get("http://www.google.com");
-driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-firefox_options = webdriver.FirefoxOptions()
-driver = webdriver.Remote(
-    command_executor='http://www.example.com',
-    options=firefox_options
-)
-driver.get("http://www.google.com")
-driver.quit() 
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
- FirefoxOptions firefoxOptions = new FirefoxOptions();
- IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), firefoxOptions);
- driver.Navigate().GoToUrl("http://www.google.com");
- driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-
-driver = Selenium::WebDriver.for :remote, url: "http://www.example.com", desired_capabilities: :firefox
-driver.get "http://www.google.com"
-driver.close
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-var capabilities = Capabilities.firefox();
-(async function helloSelenium() {
-    let driver = new Builder()        
-        .usingServer("http://example.com")   
-        .withCapabilities(capabilities)
-        .build();
-    try {
-        await driver.get('http://www.google.com');
-    } finally {
-        await driver.quit();
-    }
-})();  
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-firefoxOptions = FirefoxOptions()
-driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions)
-driver.get("http://www.google.com")
-driver.quit()
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L13-L14" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
-为了进一步自定义测试配置, 我们可以添加其他既定的功能.
+## 上传
 
+对于远程WebDriver会话, [上传文件]({{< ref "../elements/file_upload" >}}) 更为复杂, 
+因为要上传的文件可能在执行代码的计算机上, 
+但远程计算机上的驱动程序正在其本地文件系统上查找提供的路径.
+解决方案是使用本地文件检测器.
+设置一个后, Selenium将捆绑文件, 
+并将其发送到远程计算机, 以便驱动程序可以看到对它的引用.
+默认情况下, 某些实现包含一个基本的本地文件检测器, 
+并且所有这些实现都允许自定义文件检测器.
 
-## 浏览器选项
-
-例如, 假设您想使用Chrome版本67
-在Windows XP上运行Chrome:
-
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-ChromeOptions chromeOptions = new ChromeOptions();
-chromeOptions.setCapability("browserVersion", "67");
-chromeOptions.setCapability("platformName", "Windows XP");
-WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions);
-driver.get("http://www.google.com");
-driver.quit();
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-chrome_options = webdriver.ChromeOptions()
-chrome_options.set_capability("browserVersion", "67")
-chrome_options.set_capability("platformName", "Windows XP")
-driver = webdriver.Remote(
-    command_executor='http://www.example.com',
-    options=chrome_options
-)
-driver.get("http://www.google.com")
-driver.quit()  
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var chromeOptions = new ChromeOptions();
-chromeOptions.BrowserVersion = "67";
-chromeOptions.PlatformName = "Windows XP";
-IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), chromeOptions);
-driver.Navigate().GoToUrl("http://www.google.com");
-driver.Quit();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-caps = Selenium::WebDriver::Remote::Capabilities.chrome
-caps.platform = Windows XP
-caps.version = 67
-
-driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-const { Builder } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
-let opts = new chrome.Options();
-opts.setAcceptInsecureCerts(true);
-opts.setBrowserVersion('67');
-opts.setPlatform('Windows XP');
-(async function helloSelenium() {
-    let driver = new Builder()
-        .usingServer("http://example.com")
-        .forBrowser('chrome')
-        .setChromeOptions(opts)
-        .build();
-    try {
-        await driver.get('http://www.google.com');
-    }
-    finally {
-        await driver.quit();
-    }
-})();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val chromeOptions = ChromeOptions()
-chromeOptions.setCapability("browserVersion", "67")
-chromeOptions.setCapability("platformName", "Windows XP")
-val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
-driver.get("http://www.google.com")
-driver.quit()
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+Java does not include a Local File Detector by default, so you must always add one to do uploads.
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L49-L52" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+Python adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#LL29-L32" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+.NET adds a local file detector to remote webdriver instances by default, but you can also create your own class.
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L47-L50" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+Ruby adds a local file detector to remote webdriver instances by default, but you can also create your own lambda:
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
-## 本地文件检测器
+## 下载
 
-本地文件检测器允许将文件从客户端计算机传输到远程服务器. 
-例如, 如果测试需要将文件上传到Web应用程序, 
-则远程WebDriver可以在运行时
-将文件从本地计算机自动传输到远程Web服务器. 
-这允许从运行测试的远程计算机上载文件. 
-默认情况下未启用它, 可以通过以下方式启用:
+Chrome、Edge和Firefox都允许您设置下载目录的位置.
+但是, 当您在远程计算机上执行此操作时, 位置在远程计算机的本地文件系统上.
+Selenium允许您启用下载功能, 将这些文件下载到客户端计算机上.
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-driver.setFileDetector(new LocalFileDetector());
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.remote.file_detector import LocalFileDetector
+### 在网格中启用下载
 
-driver.file_detector = LocalFileDetector()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-var allowsDetection = this.driver as IAllowsFileDetection;
-if (allowsDetection != null)
-{
-   allowsDetection.FileDetector = new LocalFileDetector();
-}
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-@driver.file_detector = lambda do |args|
-  # args => ["/path/to/file"]
-  str = args.first.to_s
-  str if File.exist?(str)
-end
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-var remote = require('selenium-webdriver/remote');
-driver.setFileDetector(new remote.FileDetector);   
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-driver.fileDetector = LocalFileDetector()
-  {{< /tab >}}
+当以节点或独立模式启动网格时, 
+你必须添加参数: 
+```
+--enable-managed-downloads true
+``` 
+
+### 在客户端中启用下载
+
+网格使用 `se:downloadsEnabled` 功能来切换是否负责管理浏览器位置.
+每个实现在options类中都有一个方法来设置.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L60-L62" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L42-L44" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L59-L64" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
-定义上述代码后, 
-您可以通过以下方式在测试中上传文件:
+### 列出可下载文件
 
-{{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-WebElement upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
+请注意, Selenium不会等待文件下载完成, 
+因此, 该列表是给定会话目录中当前文件名的即时快照.
 
-driver.find_element(By.ID, "myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-IWebElement upload = driver.FindElement(By.Id("myfile"));
-upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
-    element = @driver.find_element(:id, 'myfile')
-    element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
-  {{< /tab >}}
-  {{< tab header="JavaScript" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
-var upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");  
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
-val upload: WebElement = driver.findElement(By.id("myfile"))
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
-  {{< /tab >}}
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L73" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L52" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L72" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### 下载文件
+
+Selenium在列表中查找提供的文件的名称, 
+并将其下载到提供的目标目录.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L58" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L79" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### 删除已下载的文件
+
+默认情况下, 下载目录在可用会话结束时被删除, 
+但您也可以在会话期间删除所有文件.
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L88" >}}
+{{< /tab >}}
+{{% tab header="Python" %}}
+{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L64" >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L84" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+## 浏览器特定功能
+
+每个[浏览器]({{< ref "../browsers/" >}}) 都实现了仅对该浏览器可用的特殊功能.
+每种Selenium实现都实现了在远程会话中使用这些功能的不同方式
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+Java requires you to use the Augmenter class, which allows it to automatically pull in implementations for
+all interfaces that match the capabilities used with the RemoteWebDriver
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L98" >}}
+
+Of interest, using the `RemoteWebDriverBuilder` automatically augments the driver, so it is a great way
+to get all the functionality by default:
+
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L106-L111" >}}
+{{% /tab %}}
+{{% tab header="Python" %}}
+{{< badge-implementation >}}
+{{% /tab %}}
+{{< tab header="CSharp" >}}
+.NET uses a custom command executor for executing commands that are valid for the given browser in the remote driver.
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L96-L100" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+Ruby uses mixins to add applicable browser specific methods to the Remote WebDriver session; 
+the methods should always just work for you.
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## 追踪客户端请求
@@ -246,7 +253,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
 
 对于客户端设置, 请执行以下步骤.
 
-#### 添加所需依赖
+### 添加所需依赖
 
 可以使用Maven安装追踪导出器的外部库.
 在项目pom.xml中添加 _opentelemetry-exporter-jaeger_
@@ -265,7 +272,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
     </dependency>
 ``` 
  
-#### 在运行客户端时添加/传递所需的系统属性
+### 在运行客户端时添加/传递所需的系统属性
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
@@ -295,4 +302,3 @@ driver.quit();
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid 可观测性]({{< ref "observability.md" >}}) 
-

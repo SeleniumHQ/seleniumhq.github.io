@@ -1,7 +1,7 @@
 ---
 title: "同颜色一起工作"
 linkTitle: "颜色"
-weight: 1
+weight: 3
 aliases: [
 "/documentation/zh-cn/support_packages/working_with_colours/",
 "/zh-cn/documentation/support_packages/working_with_colours/",

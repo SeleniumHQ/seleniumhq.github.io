@@ -1,67 +1,93 @@
 ---
-title: "IE specific functionality"
+title: "IE 特定功能"
 linkTitle: "Internet Explorer"
 weight: 8
 description: >-
-    These are capabilities and features specific to Microsoft Internet Explorer browsers.
+    这些是 Microsoft Internet Explorer 浏览器特有的功能和特性.
 aliases: [
 "/zh-cn/documentation/capabilities/internet_explorer"
 ]
 ---
 
-As of June 2022, Selenium officially no longer supports standalone Internet Explorer.
-The Internet Explorer driver still supports running Microsoft Edge in "IE Compatibility Mode."
+自2022年6月起, Selenium 正式不再支持独立的 Internet Explorer.
+Internet Explorer 驱动程序仍支持在 "IE 兼容模式" 下运行 Microsoft Edge.
 
-## Special considerations
+## 特别注意事项
 
-The IE Driver is the only driver maintained by the Selenium Project directly.
-While binaries for both the 32-bit and 64-bit
-versions of Internet Explorer are available, there are some
-[known limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with the 64-bit driver. As such it is recommended to use the 32-bit driver.
+IE 驱动程序是 Selenium 项目直接维护的唯一驱动程序.
+虽然 32 位和 64 位版本的版本的二进制文件, 
+但有一些64位驱动程序的
+[已知限制](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html).
+因此, 建议使用 32 位驱动程序.
 
-Additional information about using Internet Explorer can be found on the
-[IE Driver Server page]({{< ref "/documentation/ie_driver_server/" >}})
+有关使用 Internet Explorer 的其他信息, 请参见
+[IE 驱动程序服务器页面]({{< ref "/documentation/ie_driver_server/" >}})
 
-## Options
+## 选项
 
-Starting a Microsoft Edge browser in Internet Explorer Compatibility mode with basic defined options looks like this:
+在 Internet Explorer 兼容模式下启动 Microsoft Edge 浏览器, 
+并使用基本定义的选项, 
+看起来就像这样:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+
+{{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#21-L22" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#38-L41" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L10-L11" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L11-L14" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L16-L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L35-L38" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L7-L8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L17-L20" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" code=true >}}
-  let driver = await new Builder()
-    .forBrowser('internet explorer')
-    .setIEOptions(options)
-    .build();
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Kotlin" code=true >}}
-  val options = InternetExplorerOptions()
-  val driver = InternetExplorerDriver(options)
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
-As of Internet Explorer Driver v4.5.0:
-* If IE is not present on the system (default in Windows 11), you do not need to 
-use the two parameters above. IE Driver will use Edge and will automatically locate it. 
-* If IE and Edge are both present on the system, you only need to set attaching to Edge,
-IE Driver will automatically locate Edge on your system.
 
-As of Internet Explorer Driver v4.7.0:
-* No longer need to set Ignore Zoom Level for Edge in IE Mode
+截至 Internet Explorer 驱动程序 v4.5.0:
+* 如果系统中没有 IE（Windows 11 中的默认设置）, 则无需使用上述两个参数.
+  使用上述两个参数.IE 驱动程序将使用 Edge, 并自动对其进行定位.
+* 如果系统上同时存在 IE 和 Edge, 则只需设置附加到 Edge、
+  IE 驱动程序将自动在系统中定位 Edge.
 
-Here are a few common use cases with different capabilities:
+因此, 如果系统中没有 IE, 您只需要:
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
+{{< /tab >}}
+{{% tab header="Python" text=true %}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L21-L22" >}}
+{{% /tab %}}
+{{% tab header="CSharp" text=true %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L44-L45" >}}
+{{% /tab %}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L24-L25" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+let driver = await new Builder()
+.forBrowser('internet explorer')
+.setIEOptions(options)
+.build();
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-examples >}}
+val options = InternetExplorerOptions()
+val driver = InternetExplorerDriver(options)
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+以下是几种具有不同功能的常见用例:
 
 ### fileUploadDialogTimeout
 
@@ -73,26 +99,16 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
 WebDriver driver = new RemoteWebDriver(options); 
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.file_upload_dialog_timeout = 2000
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L28-L29" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
 options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.file_upload_dialog_timeout = 2000
-driver = Selenium::WebDriver.for(:ie, options: options)
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L29" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -114,7 +130,7 @@ val driver = RemoteWebDriver(options)
 此功能将清除InternetExplorer所有正在运行实例的
  _缓存, 浏览器历史记录和Cookies_ 
  (包括手动启动或由驱动程序启动的实例) .
-默认情况下，此设置为 `false`.
+默认情况下, 此设置为 `false`.
 
 使用此功能将导致启动浏览器时性能下降, 
 因为驱动程序将等待直到缓存清除后再启动IE浏览器.   
@@ -127,27 +143,17 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.destructivelyEnsureCleanSession();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ensure_clean_session = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L38-L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
 options.EnsureCleanSession = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ensure_clean_session = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L35" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().ensureCleanSession(true);
@@ -177,27 +183,17 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.ignoreZoomSettings();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_zoom_level = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L48-L49" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
 options.IgnoreZoomLevel = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ignore_zoom_level = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L41" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().ignoreZoomSetting(true);
@@ -225,7 +221,7 @@ val driver = RemoteWebDriver(options)
 但是, 到目前为止, 
 这仍然是第二好的选择, 
 并且第一选择应该 *始终* 是手动实际设置每个区域的保护模式设置.
-如果用户正在使用此属性，
+如果用户正在使用此属性, 
 则只会给予 "尽力而为" 的支持.
 
 此功能接受一个布尔值作为参数. 
@@ -236,27 +232,17 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.introduceFlakinessByIgnoringSecurityDomains();
 WebDriver driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.ignore_protected_mode_settings = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L58-L59" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new InternetExplorerOptions();
 options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-options = Selenium::WebDriver::IE::Options.new
-options.ignore_protected_mode_settings = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L47" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options().introduceFlakinessByIgnoringProtectedModeSettings(true);
@@ -284,25 +270,17 @@ InternetExplorerOptions options = new InternetExplorerOptions();
 options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.set_capability("silent", True)
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L68-L69" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.AddAdditionalInternetExplorerOption("silent", true);
 IWebDriver driver = new InternetExplorerDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    {{< badge-code >}}
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L53" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder,By, Capabilities} = require('selenium-webdriver');
 let caps = Capabilities.ie();
@@ -384,17 +362,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.add_argument('-private')
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L76-L79" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -413,20 +382,9 @@ namespace ieTest {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::IE::Options.new
-options.force_create_process_api = true
-options.add_argument('-k')
-driver = Selenium::WebDriver.for(:ie, options: options)
-
-begin
-  driver.get 'https://google.com'
-  puts(driver.capabilities.to_json)
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L58" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options();
@@ -489,16 +447,8 @@ public class ieTest {
     }
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-
-options = webdriver.IeOptions()
-options.force_create_process_api = True
-driver = webdriver.Ie(options=options)
-
-driver.get("http://www.google.com")
-
-driver.quit()
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_internet_explorer.py#L87-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using System;
@@ -516,19 +466,9 @@ namespace ieTest {
  }
 }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-options = Selenium::WebDriver::IE::Options.new
-options.force_create_process_api = true
-driver = Selenium::WebDriver.for(:ie, options: options)
-
-begin
-  driver.get 'https://google.com'
-  puts(driver.capabilities.to_json)
-ensure
-  driver.quit
-end
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/internet_explorer_spec.rb#L63" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
 const ie = require('selenium-webdriver/ie');
 let options = new ie.Options();
@@ -557,3 +497,145 @@ fun main() {
 }
   {{< /tab >}}
 {{< /tabpane >}}
+
+
+
+## 服务
+
+[Service page]({{< ref "../drivers/service.md" >}})
+描述了所有浏览器通用的服务设置.
+
+### 日志输出
+
+获取驱动程序日志有助于调试各种问题.
+服务类可让您指示日志的去向.
+除非用户指定了日志输出的位置, 
+否则日志输出将被忽略.
+
+#### 文件输出
+
+更改日志输出以保存到特定文件:
+
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L53" >}}
+**Note**: Java also allows setting file output by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
+Property value: String representing path to log file
+{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L97-L99" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L82" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+#### 控制台输出
+
+
+要更改日志输出, 使其在控制台中显示为标准输出:
+
+
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L67" >}}
+**Note**: Java also allows setting console output by System Property;\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGFILE_PROPERTY`\
+Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
+{{% /tab %}}
+{{< tab header="Python" text=true >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L109-L111" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-implementation >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L91" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+### 日志级别
+有 6 种可用的日志级别:`FATAL`、`ERROR`、`WARN`、`INFO`、`DEBUG` 和 `TRACE`
+如果指定了日志输出, 默认级别为`FATAL`.
+
+
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L82" >}}
+**Note**: Java also allows setting log level by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_LOGLEVEL_PROPERTY`\
+Property value: String representation of `InternetExplorerDriverLogLevel.DEBUG.toString()` enum
+{{% /tab %}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L121-L123" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L85" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.10" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L102" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+### 辅助文件路径
+
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#L94" >}}
+**Note**: Java also allows setting log level by System Property:\
+Property key: `InternetExplorerDriverService.IE_DRIVER_EXTRACT_PATH_PROPERTY`\
+Property value: String representing path to supporting files directory
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< badge-version version="4.11" >}}
+{{< gh-codeblock path="examples/python/tests/browsers/test_internet_explorer.py#L133-L135" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/InternetExplorerTest.cs#L98" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="examples/ruby/spec/browsers/internet_explorer_spec.rb#L112" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+

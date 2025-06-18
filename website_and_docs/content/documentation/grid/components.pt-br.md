@@ -16,9 +16,7 @@ nova era de computação e desenvolvimento de software. Criada de raíz para con
 escalabilidade cloud, Selenium Grid 4 é uma nova solução para a era moderna.
 
 
-{{< card header="**Componentes Grid**" footer="Componentes Grid em modo distribuido" >}}
-![Componentes Selenium Grid 4](/images/documentation/grid/components.png "Componentes Selenium Grid 4")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## Router
 
@@ -87,7 +85,7 @@ como parte da mensagem de registo.
 
 Por omissão, o **Node** regista automaticamente todos os navegadores que estejam disponíveis no PATH da máquina onde
 executa. Cria também um slot de execução por cada CPU para os navegadores Chrome e Firefox. Para Safari,
-apenas é criado um slot. Usando uma [configuração]({{< ref "/configuration" >}}) específica, é também
+apenas é criado um slot. Usando uma [configuração]({{< ref "configuration" >}}) específica, é também
 possível executar sessões em containers Docker.
 
 O **Node** apenas executa os comandos que recebe, não avalia, faz julgamentos ou controla mais nada que não seja

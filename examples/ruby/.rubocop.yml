@@ -1,9 +1,10 @@
 inherit_from: .rubocop_todo.yml
 
-require: rubocop-rspec
+plugins:
+  - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.7.0
+  TargetRubyVersion: 3.1
   NewCops: enable
   SuggestExtensions:
     rubocop-rake: false
@@ -33,3 +34,6 @@ RSpec/MultipleExpectations:
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
 
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - spec/getting_started/first_script.rb

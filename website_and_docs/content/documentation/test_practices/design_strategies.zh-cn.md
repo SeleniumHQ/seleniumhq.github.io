@@ -6,7 +6,7 @@ weight: 1
 
 {{% pageinfo color="warning" %}}
 <p class="lead">
-   <i class="fas fa-language display-4"></i> 
+   <i class="fas fa-language d-4"></i> 
    Most of the documentation found in this section is still in English.
    Please note we are not accepting pull requests to translate this content
    as translating documentation of legacy components does not add value to
@@ -45,11 +45,11 @@ but the approach used is simple enough to be implemented in any language.
 ### Simple Usage
 
 As an example of a UI that we'd like to model, take a look at 
-the [new issue](https://github.com/SeleniumHQ/selenium/issues/new) page. 
+the [new issue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+) page. 
 From the point of view of a test author, this offers the service of being 
 able to file a new issue. A basic Page Object would look like:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -64,18 +64,53 @@ public class EditIssue {
     this.driver = driver;
   }
 
-  public void setSummary(String summary) {
-    WebElement field = driver.findElement(By.name("summary"));
-    clearAndType(field, summary);
+  public void setTitle(String title) {
+    WebElement field = driver.findElement(By.id("issue_title")));
+    clearAndType(field, title);
   }
 
-  public void enterDescription(String description) {
-    WebElement field = driver.findElement(By.name("comment"));
-    clearAndType(field, description);
+  public void setBody(String body) {
+    WebElement field = driver.findElement(By.id("issue_body"));
+    clearAndType(field, body);
+  }
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
+  }
+
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    driver.findElement(By.id("submit")).click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -88,7 +123,7 @@ public class EditIssue {
 
 In order to turn this into a LoadableComponent, all we need to do is to set that as the base type:
 
-```
+```java
 public class EditIssue extends LoadableComponent<EditIssue> {
   // rest of class ignored for now
 }
@@ -99,10 +134,10 @@ this class represents a LoadableComponent that loads the EditIssue page.
 
 By extending this base class, we need to implement two new methods:
 
-```
+```java
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
@@ -122,7 +157,7 @@ can be used to debug tests.
 
 With a little rework, our PageObject looks like:
 
-```
+```java
 package com.example.webdriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -137,16 +172,13 @@ public class EditIssue extends LoadableComponent<EditIssue> {
   private final WebDriver driver;
   
   // By default the PageFactory will locate elements with the same name or id
-  // as the field. Since the summary element has a name attribute of "summary"
+  // as the field. Since the issue_title element has an id attribute of "issue_title"
   // we don't need any additional annotations.
-  private WebElement summary;
+  private WebElement issue_title;
   
-  // Same with the submit element, which has the ID "submit"
-  private WebElement submit;
-  
-  // But we'd prefer a different name in our code than "comment", so we use the
+  // But we'd prefer a different name in our code than "issue_body", so we use the
   // FindBy annotation to tell the PageFactory how to locate the element.
-  @FindBy(name = "comment") private WebElement description;
+  @FindBy(id = "issue_body") private WebElement body;
   
   public EditIssue(WebDriver driver) {
     this.driver = driver;
@@ -157,7 +189,7 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
   @Override
   protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
@@ -165,17 +197,44 @@ public class EditIssue extends LoadableComponent<EditIssue> {
     String url = driver.getCurrentUrl();
     assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
   }
-  
-  public void setSummary(String issueSummary) {
-    clearAndType(summary, issueSummary);
+
+  public void setHowToReproduce(String howToReproduce) {
+    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
+    clearAndType(field, howToReproduce);
   }
 
-  public void enterDescription(String issueDescription) {
-    clearAndType(description, issueDescription);
+  public void setLogOutput(String logOutput) {
+    WebElement field = driver.findElement(By.id("issue_form_logs"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
+    clearAndType(field, operatingSystem);
+  }
+
+  public void setSeleniumVersion(String seleniumVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
+    clearAndType(field, logOutput);
+  }
+
+  public void setBrowserVersion(String browserVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
+    clearAndType(field, browserVersion);
+  }
+
+  public void setDriverVersion(String driverVersion) {
+    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
+    clearAndType(field, driverVersion);
+  }
+
+  public void setUsingGrid(String usingGrid) {
+    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
+    clearAndType(field, usingGrid);
   }
 
   public IssueList submit() {
-    submit.click();
+    driver.findElement(By.cssSelector("button[type='submit']")).click();
     return new IssueList(driver);
   }
 
@@ -192,7 +251,7 @@ is encapsulate the information about how to navigate to the page into
 the page itself, meaning that this information's not scattered through 
 the code base. It also means that we can do this in our tests:
 
-```
+```java
 EditIssue page = new EditIssue(driver).get();
 ```
 
@@ -218,7 +277,7 @@ the parent. The end result, in addition to the EditIssue class above is:
 
 ProjectPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.WebDriver;
@@ -251,7 +310,7 @@ public class ProjectPage extends LoadableComponent<ProjectPage> {
 
 and SecuredPage.java:
 
-```
+```java
 package com.example.webdriver;
 
 import org.openqa.selenium.By;
@@ -308,19 +367,19 @@ public class SecuredPage extends LoadableComponent<SecuredPage> {
 
 The "load" method in EditIssue now looks like:
 
-```
+```java
   @Override
   protected void load() {
     securedPage.get();
 
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new");
+    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 ```
 
 This shows that the components are all "nested" within each other. 
 A call to `get()` in EditIssue will cause all its dependencies to load too. The example usage:
 
-```
+```java
 public class FooTest {
   private EditIssue editIssue;
 
@@ -337,8 +396,15 @@ public class FooTest {
   public void demonstrateNestedLoadableComponents() {
     editIssue.get();
 
-    editIssue.setSummary("Summary");
-    editIssue.enterDescription("This is an example");
+    editIssue.title.sendKeys('Title');
+    editIssue.body.sendKeys('What Happened');
+    editIssue.setHowToReproduce('How to Reproduce');
+    editIssue.setLogOutput('Log Output');
+    editIssue.setOperatingSystem('Operating System');
+    editIssue.setSeleniumVersion('Selenium Version');
+    editIssue.setBrowserVersion('Browser Version');
+    editIssue.setDriverVersion('Driver Version');
+    editIssue.setUsingGrid('I Am Using Grid');
   }
 }
 ```
@@ -359,7 +425,7 @@ A "bot" is an action-oriented abstraction over the raw Selenium APIs.
 This means that if you find that commands aren't doing the Right Thing 
 for your app, it's easy to change them. As an example:
 
-```
+```java
 public class ActionBot {
   private final WebDriver driver;
 
@@ -390,3 +456,128 @@ public class ActionBot {
 
 Once these abstractions have been built and duplication in your tests 
 identified, it's possible to layer PageObjects on top of bots.
+
+
+## Example
+
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+一个用例 使用 `python + pytest + selenium` 实现了设计策略 "**Action Bot**, **Loadable Component** 和 **Page Object**".
+
+A `pytest` fixture `chrome_driver`.
+
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L6-L26" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+"**Action Bot**" implementation.
+
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L28-L65" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+"**Loadable Component** definition.
+
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L67-L80" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+
+"**Loadable Component** and **Page Object**" implementation. 
+
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L82-L172" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+Test cases implementation.
+
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+Test cases implementation with `pytest`.
+
+{{< gh-codeblock path="/examples/python/tests/design_strategy/using_best_practice.py#L174-L240" >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}

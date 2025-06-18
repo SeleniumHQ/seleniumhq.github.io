@@ -17,7 +17,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 
 ## Requisitos por linguagem
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true >}}
   {{% tab header="Java" %}}
 Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
 
@@ -27,17 +27,17 @@ A instalação da biblioteca Selenium para Java é feita a partir de uma build t
 ### Maven
 Especifique a dependência no `pom.xml` do seu projeto.
 
-{{< gh-codeblock path="examples/java/pom.xml#L22-L26" >}}
+{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
 
 ### Gradle
 Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13" >}}
+{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
 A mínima versão suportada do Python para cada versão do Selenium pode ser encontrada 
-em `Supported Python Versions` no [PyPi](https://pypi.org/project/selenium/)
+em "Supported Python Versions" no [PyPi](https://pypi.org/project/selenium/).
 
 Existe muitas formas diferentes de instalar Selenium.
 
@@ -46,15 +46,17 @@ Existe muitas formas diferentes de instalar Selenium.
 ```shell
 pip install selenium
 ```
+<br>
 
 ### Download
 
 Como uma alternativa você pode baixar o [código fonte PyPI](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) e instalar usando _setup.py_:
+(selenium-x.x.x.-py3-none-any.whl) e instalar usando _pip_:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
+<br>
 
 ### Exigir em um projeto
 
@@ -73,12 +75,14 @@ Existe algumas opções para instalar o Selenium.
 ```shell
 Install-Package Selenium.WebDriver
 ```
+<br>
 
 ### .NET CLI
 
 ```shell
 dotnet add package Selenium.WebDriver
 ```
+<br>
 
 ### CSProj
 
@@ -127,6 +131,7 @@ O Selenium pode ser instalado de duas formas diferentes.
 ```shell
 gem install selenium-webdriver
 ```
+<br>
 
 ### Adicione para o gemfile do projeto
 
@@ -144,6 +149,7 @@ Selenium é normalmente instalado usando npm.
 ```shell
 npm install selenium-webdriver
 ```
+<br>
 
 ### Adicione ao seu projeto
 
@@ -158,4 +164,4 @@ No `package.json` do seu projeto, adicione os requisitos em `dependencies`:
 {{< /tabpane >}}
 
 ## Próximo passo
-[Instale os drivers do navegador]({{< ref "install_drivers.md" >}})
+[Programando o seu primeiro script Selenium]({{< ref "first_script.md" >}})

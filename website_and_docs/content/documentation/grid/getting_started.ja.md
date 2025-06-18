@@ -18,8 +18,8 @@ aliases: [
    - Java 11 もしくはそれ以上がインストールされていること
    - ブラウザーがインストールされていること
    - ブラウザードライバー
-     - Selenium 4.6 を使用していれば、Chrome, Firefox, Edge ドライバーが [`PATH` から見つからない場合]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}) Selenium Manager がドライバーを設定します。
-     - [`PATH` が通っているインストール済みのもの]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
+     - [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
+     - [`PATH` が通っているインストール済みのもの]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
    - [最新の](https://github.com/SeleniumHQ/selenium/releases/latest) Selenium Server jar ファイルをダウンロードしていること
 
 1. Grid の起動
@@ -47,7 +47,7 @@ Grid は 6 つの異なる[コンポーネント]({{< ref "components.md" >}})�
 
 **スタンドアロン**は Selenium Grid を起動する最も簡単な方法でもあります。
 デフォルトではサーバーは[http://localhost:4444](http://localhost:4444) で `RemoteWebDriver` リクエストをリッスンします。
-サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
+サーバーはデフォルトでシステム[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})上の利用可能なドライバーを検出します。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -83,7 +83,7 @@ java -jar selenium-server-<version>.jar hub
 
 #### ノード
 
-**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}})
+**ノード**は起動時にシステムの[パス]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
 が通っている利用可能なドライバーを検出します。
 
 次のコマンドは**ノード**が**ハブ**と同じマシン上で動作していることを前提としています。
@@ -247,17 +247,17 @@ jar ファイルは[repo1.maven.org](https://repo1.maven.org/maven2/org/selenium
 Grid を起動する方法は以下の通りです:
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar -—ext selenium-http-jdk-client-<version>.jar standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
 `selenium-http-jdk-client`をダウンロードする別の方法として[Coursier](https://get-coursier.io/docs/cli-installation)を使う方法があります。
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
 ハブ&ノードか分散モードで動かす場合、`-Dwebdriver.http.factory=jdk-http-client`と
-`—-ext`フラグの設定が各コンポーネントに必要になります。
+`--ext`フラグの設定が各コンポーネントに必要になります。
 
 ## Grid サイズ
 
@@ -310,6 +310,6 @@ Grid を保護しないと、以下のような問題が発生する可能性が
 ## 参考文献
 
 - [Components]({{< ref "components.md" >}}): 内部のコンポーネントの仕組みを知る
-- [Configuration]({{< ref "/configuration" >}}): Grid の設定をカスタマイズする
+- [Configuration]({{< ref "configuration" >}}): Grid の設定をカスタマイズする
 - [Architecture]({{< ref "architecture.md" >}}): Grid のコンセプトを理解する
-- [Advanced Features]({{< ref "/advanced_features" >}}): Grid のさらなる可能性を探る
+- [Advanced Features]({{< ref "advanced_features" >}}): Grid のさらなる可能性を探る

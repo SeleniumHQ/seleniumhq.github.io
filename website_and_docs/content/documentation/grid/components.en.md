@@ -15,9 +15,7 @@ set of improvements to performance and standards compliance, the different funct
 broken out to reflect a more modern age of computing and software development. Purpose-build for containerization
 and cloud-distributed scalability, Selenium Grid 4 is a wholly new solution for the modern era. 
 
-{{< card header="**Grid Components**" footer="Grid components shown in the fully distributed mode" >}}
-![Selenium Grid 4 Components](/images/documentation/grid/components.png "Selenium Grid 4 Components")
-{{< /card >}}
+![Selenium Grid 4 Components](/images/documentation/grid/components.png)
 
 ## Router
 
@@ -41,7 +39,7 @@ The **Distributor** has two main responsibilities:
 
 A **Node** registers to the **Distributor** by sending a **Node** registration event through 
 the **Event Bus**. The **Distributor** reads it, and then tries to reach the **Node** via HTTP
-to confirm its existance. If the request is successfull, the **Distributor** registers the Node 
+to confirm its existence. If the request is successful, the **Distributor** registers the Node 
 and keeps track of all **Nodes** capabilities through the **GridModel**.
 
 #### Query the New Session Queue and process any pending new session requests
@@ -89,7 +87,7 @@ part of the registration message.
 
 By default, the **Node** auto-registers all browser drivers available on the path of the machine where it runs. 
 It also creates one slot per available CPU for Chromium based browsers and Firefox. For Safari, only one slot is 
-created. Through a specific [configuration]({{< ref "/configuration" >}}), it can run sessions in Docker 
+created. Through a specific [configuration]({{< ref "configuration" >}}), it can run sessions in Docker 
 containers or relay commands.
 
 A **Node** only executes the received commands, it does not evaluate, make judgments, or control anything other

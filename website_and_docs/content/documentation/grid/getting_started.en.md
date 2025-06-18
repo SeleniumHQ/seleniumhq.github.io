@@ -16,8 +16,8 @@ aliases: [
     * Java 11 or higher installed
     * Browser(s) installed
     * Browser driver(s)
-      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
-      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
+      * [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
+      * [Installed and on the `PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
     * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
 1. Start the Grid
     * `java -jar selenium-server-<version>.jar standalone`
@@ -47,7 +47,7 @@ single machine.
 **Standalone** is also the easiest mode to spin up a Selenium Grid. By default, the server 
 will listen for `RemoteWebDriver` requests on [http://localhost:4444](http://localhost:4444). 
 By default, the server will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}).
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -84,7 +84,7 @@ By default, the server will listen for `RemoteWebDriver` requests on [http://loc
 #### Node
 
 During startup time, the **Node** will detect the available drivers that it can use from the System 
-[`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#2-the-path-environment-variable" >}}). 
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}}). 
 
 The command below assumes the **Node** is running on the same machine where the **Hub** is running.
 ```shell
@@ -216,7 +216,7 @@ endpoint or using [GraphQL]({{< ref "advanced_features/graphql_support.md" >}})
 {{% pageinfo color="primary" %}}
 For simplicity, all command examples shown in this page assume that components are running
 locally. More detailed examples and usages can be found in the
-[Configuring Components]({{< ref "/configuration" >}}) section.
+[Configuring Components]({{< ref "configuration" >}}) section.
 {{% /pageinfo %}}
 
 ## Using the Java 11 HTTP Client {{% badge-version version="4.5" %}}
@@ -239,17 +239,17 @@ The jar file can be downloaded directly from [repo1.maven.org](https://repo1.mav
 and then start the Grid in the following way:
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar -—ext selenium-http-jdk-client-<version>.jar standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext selenium-http-jdk-client-<version>.jar standalone
 ```
 
 An alternative to downloading the `selenium-http-jdk-client` jar file is to use [Coursier](https://get-coursier.io/docs/cli-installation).
 
 ```bash
-java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar —-ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
+java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar --ext $(coursier fetch -p org.seleniumhq.selenium:selenium-http-jdk-client:<version>) standalone
 ```
 
 If you are using the Hub/Node(s) mode or the Distributed mode, setting the `-Dwebdriver.http.factory=jdk-http-client` 
-and `—-ext` flags needs to be done for each one of the components.
+and `--ext` flags needs to be done for each one of the components.
 
 ## Grid sizes
 
@@ -311,6 +311,6 @@ overview of how a publicly exposed Grid could be misused:
 ## Further reading
 
 * [Components]({{< ref "components.md" >}}): learn how Grid's internal components relate to each other.
-* [Configuration]({{< ref "/configuration" >}}): customize your Grid setup.
+* [Configuration]({{< ref "configuration" >}}): customize your Grid setup.
 * [Architecture]({{< ref "architecture.md" >}}): understand key concepts in Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore more possibilities through Grid's features.
+* [Advanced Features]({{< ref "advanced_features" >}}): explore more possibilities through Grid's features.

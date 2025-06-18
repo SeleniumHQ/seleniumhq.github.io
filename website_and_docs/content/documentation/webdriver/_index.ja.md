@@ -1,7 +1,7 @@
 ---
 title: "WebDriver"
 linkTitle: "WebDriver"
-weight: 4
+weight: 2
 description: >
   WebDriverはブラウザをネイティブに操作します。詳細については、こちらをご覧ください。
 aliases: ["/documentation/ja/webdriver/"]
