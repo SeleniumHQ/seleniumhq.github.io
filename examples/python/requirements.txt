@@ -1,5 +1,5 @@
 selenium==4.33.0
-pytest==8.4.0
+pytest==8.4.1
 trio==0.30.0
 pytest-trio==0.8.0
 pytest-rerunfailures==15.1
