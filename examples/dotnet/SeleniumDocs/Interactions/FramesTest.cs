@@ -48,9 +48,9 @@ namespace SeleniumDocs.Interactions
 
 
             //switch To IFrame using name or id
-            driver.FindElement(By.Name("iframe1-name"));
+            IWebElement iframe1=driver.FindElement(By.Name("iframe1-name"));
             //Switch to the frame
-            driver.SwitchTo().Frame(iframe);
+            driver.SwitchTo().Frame(iframe1);
             Assert.AreEqual(true, driver.PageSource.Contains("We Leave From Here"));
             IWebElement email = driver.FindElement(By.Id("email"));
             //Now we can type text into email field

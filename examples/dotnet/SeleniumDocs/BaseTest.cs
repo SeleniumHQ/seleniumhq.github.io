@@ -17,7 +17,7 @@ namespace SeleniumDocs
         protected IWebDriver driver;
         protected Uri GridUrl;
         private Process _webserverProcess;
-        private const string ServerJarName = "selenium-server-4.31.0.jar";
+        private const string ServerJarName = "selenium-server-4.33.0.jar";
         private static readonly string BaseDirectory = AppContext.BaseDirectory;
         private const string RelativePathToGrid = "../../../../../";
         private readonly string _examplesDirectory = Path.GetFullPath(Path.Combine(BaseDirectory, RelativePathToGrid));
@@ -33,12 +33,18 @@ namespace SeleniumDocs
             }
         }
 
-        protected void StartDriver(string browserVersion = "stable")
+        protected void StartDriver(string browserVersion = null)
         {
-            ChromeOptions options = new ChromeOptions
+            ChromeOptions options = new ChromeOptions();
+            if (browserVersion != null)
             {
-                BrowserVersion = browserVersion
-            };
+                options.BrowserVersion = browserVersion;
+                string userDataDir = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetRandomFileName());
+                System.IO.Directory.CreateDirectory(userDataDir);
+                options.AddArgument($"--user-data-dir={userDataDir}");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+            }
             driver = new ChromeDriver(options);
         }
 

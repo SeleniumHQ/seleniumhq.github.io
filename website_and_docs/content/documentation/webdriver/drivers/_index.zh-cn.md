@@ -39,7 +39,7 @@ weight: 3
 {{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/drivers/service.spec.js#L32-L36" >}}
+{{< gh-codeblock path="examples/javascript/test/drivers/service.spec.js#L46-L50" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

@@ -87,6 +87,10 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
+    # Sponsorship renewal date: Apr 12, 2026
+    - logo: "/images/sponsors/kualtee.png"
+      url: "http://www.kualitee.com/?utm_source=selenium&utm_medium=website&utm_campaign=seleniumpartnership"
+      name: "Kualitee"
     # Sponsorship renewal date: Feb 4, 2025
     - logo: "/images/sponsors/alpi.jpg"
       url: "http://www.alpi.com/courses-opensource/index.cfm"
@@ -115,6 +119,10 @@ bronze:
     - logo: "/images/sponsors/mailsac-logo.png"
       url: "https://mailsac.com/?utm_source=selenium&utm_medium=ads&utm_campaign=selenium-sponsor&utm_content=logolink"
       name: "Mailsac - Receive test emails with confidence"
+    # Sponsorship start date: June 02, 2025
+    - logo: "/images/sponsors/Jetify-Wordmark.svg"
+      url: "https://www.jetify.com/"
+      name: "AI Automation Agency"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"

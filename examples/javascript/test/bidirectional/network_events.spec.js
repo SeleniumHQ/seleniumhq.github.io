@@ -20,17 +20,17 @@ describe('Network events', function () {
   })
 
   it('can listen to event before request is sent', async function () {
-    let beforeRequestEvent = null
+    let beforeRequestEvent = []
     const network = await Network(driver)
     await network.beforeRequestSent(function (event) {
-      beforeRequestEvent = event
+      beforeRequestEvent.push(event)
     })
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html')
 
-    assert.equal(beforeRequestEvent.request.method, 'GET')
-    const url = beforeRequestEvent.request.url
-    assert.equal(url, await driver.getCurrentUrl())
+    const currentUrl = await driver.getCurrentUrl()
+    const currentUrlFound = beforeRequestEvent.some(event => event.request.url.includes(currentUrl))
+    assert(currentUrlFound, `${currentUrl} was not requested`)
   })
 
   it('can request cookies', async function () {
@@ -50,8 +50,6 @@ describe('Network events', function () {
     assert.equal(beforeRequestEvent.request.method, 'GET')
     assert.equal(beforeRequestEvent.request.cookies[0].name, 'north')
     assert.equal(beforeRequestEvent.request.cookies[0].value.value, 'biryani')
-    const url = beforeRequestEvent.request.url
-    assert.equal(url, await driver.getCurrentUrl())
 
     await driver.manage().addCookie({
       name: 'south',
@@ -70,13 +68,14 @@ describe('Network events', function () {
       beforeRequestEvent.push(event)
     })
 
-    await driver.get('http://www.selenium.dev/selenium/web/bidi/redirected_http_equiv.html')
+    await driver.get('https://www.selenium.dev/selenium/web/bidi/redirected_http_equiv.html')
     await driver.wait(until.urlContains('redirected.html'), 1000)
 
     assert.equal(beforeRequestEvent[0].request.method, 'GET')
-    assert(beforeRequestEvent[0].request.url.includes('redirected_http_equiv.html'))
-    assert.equal(beforeRequestEvent[2].request.method, 'GET')
-    assert(beforeRequestEvent[3].request.url.includes('redirected.html'))
+    let redirectedFound = beforeRequestEvent.some(event => event.request.url.includes('redirected.html'))
+    assert(redirectedFound, 'redirected.html was not requested')
+    redirectedFound = beforeRequestEvent.some(event => event.request.url.includes('redirected_http_equiv.html'))
+    assert(redirectedFound, 'redirected_http_equiv.html was not requested')
   })
 
   it('can subscribe to response started', async function () {

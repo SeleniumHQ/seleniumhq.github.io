@@ -6,7 +6,8 @@ description: >
   使用IDE和Test Runner库组织Selenium的执行
 ---
 
-如果你不仅仅只是想执行一小撮的一次性脚本，你需要能组织和安排好你的代码。这一页会启发你如何真正地使用 Selenium 代码做高效的事情。
+如果你不仅仅只是想执行一小撮的一次性脚本，你需要能组织并编排好你的代码。
+本章会启发你如何真正地使用 Selenium 代码做高效的事情。
 
 ## 常见用法
 
@@ -14,15 +15,19 @@ description: >
 
 ### 重复性任务
 
-有时候你需要往网站记录日志或者下载一些东西，或者提交一个表单，你可以在预设的时间创建一个 Selenium 脚本去执行一个服务。
+有时候你需要往网站记录日志或者下载一些东西，或者提交一个表单，
+你可以在预设的时间创建一个 Selenium 脚本去执行一个服务。
 
 ### 网页爬虫
 
-你是否期望从一个不提供 API 的网站收集数据？Selenium 可以满足你，但是请确保你了解该网站的服务条例，因为有些网站不允许你这样做，甚至有些网站会屏蔽 Selenium。
+你是否期望从一个不提供 API 的网站收集数据？Selenium 可以满足你，
+但是请确保你了解该网站的服务条例，
+因为有些网站不允许你这样做，甚至有些网站会屏蔽 Selenium。
 
 ### 测试
 
-使用 Selenium 做测试需要在 Selenium 执行操作后进行断言，所以一个好的断言类库是很有必要的。至于组织测试用例结构的一些额外特性则需要[Test Runner](#test-runner)来完成。
+使用 Selenium 做测试需要在 Selenium 执行操作后进行断言，所以一个好的断言类库是很有必要的。
+至于组织测试用例结构的一些额外特性则需要[Test Runner](#test-runner)来完成。
 
 ## IDEs
 
@@ -38,18 +43,21 @@ description: >
 
 ## Test Runner
 
-即使不使用 Selenium 做测试，如果你有高级用例，使用一个 test runner 去更好地组织你的代码是很有意义的。学会使用 before/after hooks 和分组执行或者并行执行将会非常有用。
+即使不使用 Selenium 做测试，如果你有高级用例，使用一个 test runner 去更好地组织你的代码是很有意义的。
+学会使用 before/after hooks 和分组执行或者并行执行将会非常有用。
 
-### 待选
+### 候选
 
 有非常多不同的 test runner 可供选择。
 
-这个教程中所有使用到 test runner 的代码示例都可以在我们的示例目录中找到（或者正在被迁移过去），而且这些示例在每一次发版都会被执行，以确保代码是正确的和最新的。下面是一份包含对应链接的 test runner 清单，其中第一项是被这个仓库和本页所有用例所使用的。
+这个教程中所有使用到 test runner 的代码示例都可以在我们的示例目录中找到（或者正在被迁移过去），
+而且这些示例在每一次发版都会被执行，以确保代码是正确的和最新的。
+下面是一份包含对应链接的 test runner 清单，其中第一项是被这个仓库和本页所有用例所使用的。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-- [JUnit](https://junit.org/junit5/) - 个广泛使用的用于基于 Java 的 Selenium 测试的测试框架。
+- [JUnit](https://junit.org/junit5/) - 一个广泛使用的用于基于 Java 的 Selenium 测试的测试框架。
 - [TestNG](https://testng.org/) - 提供诸如并行测试执行和参数化测试等额外功能。
   {{% /tab %}}
 
@@ -78,14 +86,15 @@ description: >
   {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
-- [Kotest](https://kotest.io/) - 个灵活且全面的测试框架，专为 Kotlin 设计。
-- [JUnit5](https://junit.org/junit5/) -标准的 Java 测试框架，完全兼容 Kotlin。
+- [Kotest](https://kotest.io/) - 一个灵活且全面的测试框架，专为 Kotlin 设计。
+- [JUnit5](https://junit.org/junit5/) - 标准的 Java 测试框架，完全兼容 Kotlin。
 {{% /tab %}}
 {{< /tabpane >}}
 
 ### 安装
 
-在[安装 Selenium 类库]({{< ref "install_library.md" >}})一节中详细说明了需要哪些东西。这里的代码只展示在我们的文档示例项目中用到的示例。
+在[安装 Selenium 类库]({{< ref "install_library.md" >}})一节中详细说明了需要哪些东西。
+这里的代码只展示在我们的文档示例项目中用到的示例。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -242,7 +251,8 @@ npx mocha runningTests.spec.js
 
 ### 示例
 
-在[第一个脚本]({{< ref "first_script.md" >}})一节中，我们了解了 Selenium 脚本的每一个组件。这里是使用 test runner 重新组织那个脚本的一个示例：
+在[第一个脚本]({{< ref "first_script.md" >}})一节中，我们了解了 Selenium 脚本的每一个组件。
+这里是使用 test runner 重新组织那个脚本的一个示例：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -267,6 +277,7 @@ npx mocha runningTests.spec.js
 
 ## 下一步
 
-使用你目前所学到的知识建立你自己的 Selenium 代码吧！
+使用你目前所学到的知识构建你自己的 Selenium 代码吧！
 
-想要了解更多的功能特性，请继续阅读我们接下来的[WebDriver 教程]({{< ref "/documentation/webdriver/" >}})
+想要了解更多的功能特性，
+请继续阅读我们接下来的[WebDriver 教程]({{< ref "/documentation/webdriver/" >}})

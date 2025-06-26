@@ -327,9 +327,9 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **Previously**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L10-L15" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L18-L22" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
@@ -337,14 +337,20 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 **Selenium Manager**
 {{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L10-L18" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{% tab header="Ruby" %}}
+**Previously**
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L5-L10" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/ruby/spec/selenium_manager/usage.rb#L12-L16" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{% tab header="JavaScript" %}}
+**Previously**
+{{< gh-codeblock path="examples/javascript/test/selenium_manager/usage.spec.js#L16-L31" >}}
+**Selenium Manager**
+{{< gh-codeblock path="examples/javascript/test/selenium_manager/usage.spec.js#L6-L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -464,7 +470,6 @@ sudo apt-get install libatk-bridge2.0-0
 * `SE_EDGEDRIVER`
 * `SE_GECKODRIVER`
 * `SE_IEDRIVER`
-* `SE_SAFARIDRIVER`
 
 例如, 要指定 chromedriver 的路径, 
 您可以将  `SE_CHROMEDRIVER`  环境变量设置为 chromedriver 可执行文件的路径. 
