@@ -5,6 +5,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.Base64;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.virtualauthenticator.Credential;
@@ -133,6 +134,7 @@ public class VirtualAuthenticatorTest extends BaseChromeTest {
 
 
   @Test
+  @Disabled("A fix was implemented and will be available in Selenium 4.34.")
   public void testCreateAndAddNonResidentialKey() {
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
       .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)

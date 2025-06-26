@@ -109,7 +109,7 @@ Existem várias formas de trabalhar com perfis Firefox
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L211-L216" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L157-L165" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L160-L168" >}}
 {{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
@@ -451,7 +451,7 @@ please refer to the
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L197-L198" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L149-L150" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L151-L152" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

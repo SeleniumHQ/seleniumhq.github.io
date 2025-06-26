@@ -221,9 +221,9 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **Previously**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L10-L15" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L18-L22" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
@@ -350,7 +350,6 @@ The following environment variables are supported:
 * `SE_EDGEDRIVER`
 * `SE_GECKODRIVER`
 * `SE_IEDRIVER`
-* `SE_SAFARIDRIVER`
 
 For example, to specify the path to the chromedriver, 
 you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.

@@ -21,10 +21,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
-import org.openqa.selenium.devtools.v134.browser.Browser;
-import org.openqa.selenium.devtools.v134.network.Network;
-import org.openqa.selenium.devtools.v134.performance.Performance;
-import org.openqa.selenium.devtools.v134.performance.model.Metric;
+import org.openqa.selenium.devtools.v137.browser.Browser;
+import org.openqa.selenium.devtools.v137.network.Network;
+import org.openqa.selenium.devtools.v137.performance.Performance;
+import org.openqa.selenium.devtools.v137.performance.model.Metric;
 import org.openqa.selenium.remote.http.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

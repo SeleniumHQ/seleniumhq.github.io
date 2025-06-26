@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.Disabled
 import org.openqa.selenium.InvalidArgumentException
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -107,6 +108,7 @@ class VirtualAuthenticatorTest {
     }
 
     @Test
+    @Disabled("A fix was implemented and will be available in Selenium 4.34.")
     fun testCreateAndAddNonResidentialKey() {
         val options = VirtualAuthenticatorOptions()
             .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)

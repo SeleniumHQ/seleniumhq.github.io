@@ -203,7 +203,7 @@ pull request updating this page.
 | `--http-logs` | boolean |  `false` | Enable http logging. Tracing should be enabled to log http logs. |
 | `--log-encoding` | string |  `UTF-8` | Log encoding |
 | `--log` | string | Windows path example : <br>`'\path\to\file\gridlog.log'` <br> or <br> `'C:\path\path\to\file\gridlog.log'`<br><br>Linux/Unix/MacOS path example :<br> `'/path/to/file/gridlog.log'` | File to write out logs. Ensure the file path is compatible with the operating system's file path. |
-| `--log-level` | string | `“INFO”` | Log level. Default logging level is INFO. Log levels are described here https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html |
+| `--log-level` | string | `“INFO”` | Log level. Default logging level is INFO. Log levels are described here https://docs.oracle.com/en/java/javase/11/docs/api/java.logging/java/util/logging/Level.html |
 | `--plain-logs` | boolean | `true` | Use plain log lines |
 | `--structured-logs` | boolean | `false` | Use structured logs |
 | `--tracing` | boolean | `true` | Enable trace collection |

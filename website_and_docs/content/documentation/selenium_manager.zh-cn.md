@@ -327,9 +327,9 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **Previously**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L10-L15" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L18-L22" >}}
+{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
@@ -470,7 +470,6 @@ sudo apt-get install libatk-bridge2.0-0
 * `SE_EDGEDRIVER`
 * `SE_GECKODRIVER`
 * `SE_IEDRIVER`
-* `SE_SAFARIDRIVER`
 
 例如, 要指定 chromedriver 的路径, 
 您可以将  `SE_CHROMEDRIVER`  环境变量设置为 chromedriver 可执行文件的路径. 
