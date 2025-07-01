@@ -10,7 +10,7 @@ description: >
   Selenium Community Live - Episode 7
 ---
 
-The seventh episode of Selenium Community Live happened on June 19th, 2025, with speaker **<a href="https://www.linkedin.com/in/christian-bromann/" target="_blank">Christian Bromann</a>**, event hosted by  **<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>**
+The seventh episode of Selenium Community Live happened on June 19th, 2025, with speaker **<a href="https://www.linkedin.com/in/christian-bromann/" target="_blank">Christian Bromann</a>**, event was hosted by  **<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>**
 
 You can watch the episode on YouTube here-  **<a href="https://www.youtube.com/live/zrQRWi9Gpdg" target="_blank">Episode 7 on YouTube</a>**
 or
