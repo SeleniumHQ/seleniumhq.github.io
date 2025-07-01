@@ -1,7 +1,7 @@
 ---
 title: "Selenium Community Live - Episode 7"
 linkTitle: "Selenium Community Live - Episode 7"
-date: 2025-07-1
+date: 2025-07-01
 tags: ["webinar", "meetup", "talks","community"]
 categories: ["webinar"]
 author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
@@ -20,7 +20,7 @@ You can watch the episode on LinkedIn here-  **<a href="https://www.linkedin.com
 
 Christian Bromann is a seasoned software engineer currently working at OutSystems where he contributes to the StencilJS project, a popular web component framework. He's the driving force behind WebdriverIO, a leading test automation framework that has revolutionized browser testing for countless development teams worldwide.
 
-Christian's GitHub Profile is here - **<a href="https://github.com/christian-bromann/christian-bromann" target="_blank">GitHub Profile</a>** 
+Christian's GitHub Profile is here - **<a href="https://github.com/christian-bromann" target="_blank">GitHub Profile</a>** 
 
 
 **Meet the Speakers:**
