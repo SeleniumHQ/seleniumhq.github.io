@@ -16,7 +16,7 @@ O status da Grid fornece o estado atual da grid. Consiste em detalhes sobre cada
 Para cada nó, o status inclui informações sobre a disponibilidade, sessões e slots do nó.
 
 ```shell
-curl GET 'http://localhost:4444/status'
+curl --request GET 'http://localhost:4444/status'
 ```
 
 ### Deletar sessão

@@ -16,7 +16,7 @@ Grid ステータスは Grid の現在の状態を提供します。 登録さ�
 各ノードのステータスには、ノードの稼働状況、セッション、およびスロットに関する情報が含まれます。
 
 ```shell
-curl GET 'http://localhost:4444/status'
+curl --request GET 'http://localhost:4444/status'
 ```
 
 ### セッションの削除

@@ -16,7 +16,7 @@ Grid status provides the current state of the Grid. It consists of details about
 For every Node, the status includes information regarding Node availability, sessions, and slots. 
 
 ```shell
-curl GET 'http://localhost:4444/status'
+curl --request GET 'http://localhost:4444/status'
 ```
 
 ### Delete session

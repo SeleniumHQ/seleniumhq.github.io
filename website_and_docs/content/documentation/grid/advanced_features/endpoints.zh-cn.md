@@ -18,7 +18,7 @@ Grid状态提供Grid的当前状态.
 状态包括有关节点可用性、会话和插槽的信息. 
 
 ```shell
-curl GET 'http://localhost:4444/status'
+curl --request GET 'http://localhost:4444/status'
 ```
 
 ### 删除会话
