@@ -16,7 +16,7 @@ Grid ステータスは Grid の現在の状態を提供します。 登録さ�
 各ノードのステータスには、ノードの稼働状況、セッション、およびスロットに関する情報が含まれます。
 
 ```shell
-cURL GET 'http://localhost:4444/status'
+curl GET 'http://localhost:4444/status'
 ```
 
 ### セッションの削除
@@ -25,7 +25,7 @@ cURL GET 'http://localhost:4444/status'
 削除されたセッション ID を使用するリクエストや、ドライバのインスタンスを再利用しようとすると、エラーとなります。
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/session/<session-id>'
+curl --request DELETE 'http://localhost:4444/session/<session-id>'
 ```
 
 ### Which URL should I use?
@@ -42,7 +42,7 @@ cURL --request DELETE 'http://localhost:4444/session/<session-id>'
 
 ### ノード削除
 
-ノードを Grid から削除するには、以下の cURL コマンドを使用します。
+ノードを Grid から削除するには、以下の curl コマンドを使用します。
 このコマンドは、そのノード上で実行中のセッションを停止させるものではありません。
 ノードは明示的に強制終了されない限り、そのまま動作し続けます。
 ディストリビューターはそのノードを認識しなくなるため、マッチする新しいセッションのリクエストは はその Node に転送されません。
@@ -52,19 +52,19 @@ cURL --request DELETE 'http://localhost:4444/session/<session-id>'
 ハブ&ノードモードでは、ディストリビューターの URL は ハブのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
+curl --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
 
 完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request DELETE 'http://localhost:4444/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
+curl --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### ノードのドレイン
@@ -78,19 +78,19 @@ cURL --request DELETE 'http://<Router-URL>/se/grid/distributor/node/<node-id>' -
 ハブ&ノードモードでは、ディストリビューターの URL は ハブのアドレスになります。
 
 ```shell
-cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
+curl --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret> '
 ```
 
 完全分散モードでは、ディストリビューター URL は ディストリビューターのアドレスになります。
 
 ```shell
-cURL --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request POST 'http://localhost:4444/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
+curl --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## ノード
@@ -106,38 +106,38 @@ cURL --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drai
 ステータスには稼働状況、セッション、およびスロットに関する情報が含まれます。
 
 ```shell
-cURL --request GET 'http://localhost:5555/status'
+curl --request GET 'http://localhost:5555/status'
 ```
 
 ### ドレイン
 
 ディストリビューターは [ドレイン](#ノードのドレイン)コマンドを適切なノードに渡します。
-ノードを直接ドレインするには以下の cURL コマンドを使います。
+ノードを直接ドレインするには以下の curl コマンドを使います。
 どちらのエンドポイントも有効であり、同じ結果になります。
 ドレインは、ノードを停止する前に進行中のセッションを終了させます。
 
 ```shell
-cURL --request POST 'http://localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request POST 'http://localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request POST 'http://<node-URL>/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'
+curl --request POST 'http://<node-URL>/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### セッションオーナーのチェック
 
-あるセッションがノードに属しているかどうかをチェックするには、以下の cURL コマンドを使います。
+あるセッションがノードに属しているかどうかをチェックするには、以下の curl コマンドを使います。
 
 ```shell
-cURL --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request GET 'http://localhost:5555/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
+curl --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 もしセッションがノードに属していたら true を返し、そうでなければ false が返ります。
@@ -148,13 +148,13 @@ cURL --request GET 'http://<node-URL>/se/grid/node/owner/<session-id>' --header 
 削除されたセッション ID を使用するリクエストや、ドライバのインスタンスを再利用しようとすると、エラーとなります。
 
 ```shell
-cURL --request DELETE 'http://localhost:5555/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request DELETE 'http://localhost:5555/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET;'
+curl --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ## 新規セッションキュー
@@ -162,7 +162,7 @@ cURL --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --he
 ### 新規セッションキューのクリア
 
 新規セッションキューには、新規セッションリクエストが格納されます。
-キューをクリアするには、以下に挙げる cURL コマンドを使用します。
+キューをクリアするには、以下に挙げる curl コマンドを使用します。
 キューを消去すると、キューにあるすべてのリクエストを拒否します。
 サーバーは各リクエストのそれぞれのクライアントにエラーレスポンスを返します。
 クリアコマンドの結果は、削除されたリクエストの数です。
@@ -172,25 +172,25 @@ cURL --request DELETE 'http://<node-URL>/se/grid/node/session/<session-id>' --he
 ハブ&ノードモードでは、キューの URL は ハブのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
 
 ```shell
-cURL --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
+curl --request DELETE 'http://localhost:4444/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET: <secret>'
 ```
 
 Grid の設定時に登録用の secret を設定していない場合は次のようにします:
 
 ```shell
-cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
+curl --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --header 'X-REGISTRATION-SECRET;'
 ```
 
 ### 新規セッションリクエストの取得
 
 新規セッションキューには、新規セッションリクエストが格納されます。
-キューにある現在のリクエストを取得するには、以下に挙げる cURL コマンドを使用します。
+キューにある現在のリクエストを取得するには、以下に挙げる curl コマンドを使用します。
 レスポンスはキュー内のリクエストの数とリクエストのペイロードを返します。
 
 スタンドアロンモードでは、キューの URL はスタンドアロンサーバーのアドレスとなります。
@@ -198,11 +198,11 @@ cURL --request DELETE 'http://<Router-URL>/se/grid/newsessionqueue/queue' --head
 ハブ&ノードモードでは、キューの URL は ハブのアドレスになります。
 
 ```shell
-cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
+curl --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
 
 完全分散モードでは、キューの URL は 新規セッションキューのアドレスになります。
 
 ```shell
-cURL --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
+curl --request GET 'http://localhost:4444/se/grid/newsessionqueue/queue'
 ```
