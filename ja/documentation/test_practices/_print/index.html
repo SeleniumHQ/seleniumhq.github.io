@@ -2721,7 +2721,7 @@ known state with a new user profile, by default.</p><div class=highlight><pre ta
 to tell Computers and Humans Apart</em> （コンピューターと人間を区別するための完全に自動化された公開チューリングテスト）の略で、自動化を防ぐように明示的に設計されているため、試さないでください！
 CAPTCHAチェックを回避するための2つの主要な戦略があります。</p><ul><li>テスト環境でCAPTCHAを無効にします</li><li>テストがCAPTCHAをバイパスできるようにするフックを追加します</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-13dc546cdf40904f2b8d17d2d10912b5>5.2 - ファイルダウンロード</h1><p>Seleniumの管理下にあるブラウザーでリンクをクリックしてダウンロードを開始することは可能ですが、APIはダウンロードの進行状況を公開しないため、ダウンロードしたファイルのテストには理想的ではありません。
 これは、ファイルのダウンロードは、Webプラットフォームとのユーザーインタラクションをエミュレートする重要な側面とは見なされないためです。
-代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 <a href=//curl.haxx.se/libcurl/>libcurl</a> などのHTTPリクエストライブラリに渡します。</p><p><a href=https://github.com/SeleniumHQ/htmlunit-driver>HtmlUnitドライバー</a>は、
+代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 <a href=https://curl.se/>curl</a> などのHTTPリクエストライブラリに渡します。</p><p><a href=https://github.com/SeleniumHQ/htmlunit-driver>HtmlUnitドライバー</a>は、
 <a href=https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html>AttachmentHandler</a> インターフェイスを実装することで、
 入力ストリームとして添付ファイルにアクセスすることによって、添付ファイルをダウンロードできます。
 AttachmentHandlerは、<a href=https://htmlunit.sourceforge.io/>HtmlUnit</a> に追加できます。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-cd608bb3235f3fdba483c5af1d7989e8>5.3 - HTTPレスポンスコード</h1><p>Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。
@@ -2748,7 +2748,7 @@ APIの使用は少し大変な作業のように思えるかもしれません�
 ただし、機能テストとパフォーマンステストには反対の目的があります。
 機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。</p><p>Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。
 このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。</p><p>使用する（オープンソース）パッケージの例は次のとおりです。: <a href=/ja/>JMeter</a></p></div><div class=td-content style=page-break-before:always><h1 id=pg-8314dd156c805a24994aecd6df02e160>5.7 - リンクスパイダー</h1><p>WebDriverを使用してリンクをスパイダーすることは、実行できないためではなく、最も理想的なツールではないため明らかに推奨される方法ではありません。
-WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。</p><p>このためにWebDriverを使用する代わりに、<a href=/ja/>curl</a> コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。
+WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。</p><p>このためにWebDriverを使用する代わりに、<a href=https://curl.se/>curl</a> コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。
 このタスクにWebDriverを使用しないことで、時間を大幅に節約できます。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-fb1bf62414b2a3444b5611af6d361a5f>5.8 - 二要素認証</h1><p><em>2FA</em> として知られている2要素認証は、&ldquo;Google Authenticator&rdquo; 、
 &ldquo;Microsoft Authenticator&rdquo; などの"Authenticator" モバイルアプリを使用して、
 またはSMS、電子メールで認証することにより、

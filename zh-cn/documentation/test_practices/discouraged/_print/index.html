@@ -15,7 +15,7 @@
 <a href=https://www.linkedin.com/events/seleniumcommunitylive-episode87345785775592042497/theater/ target=_blank aria-pressed=true>Join us!</a></h4></div></div></div></section></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>这是本节的多页打印视图。
 <a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/test_practices/discouraged/>返回本页常规视图</a>.</p></div><h1 class=title>不鼓励的行为</h1><div class=lead>使用Selenium自动化浏览器时应避免的事项.</div><ul><li>1: <a href=#pg-12a8f4e30343b86339acb24c22b1d4ae>验证码</a></li><li>2: <a href=#pg-1223ebcabcfa4c9b6ea24c5aaffbc509>文件下载</a></li><li>3: <a href=#pg-5f748c8597e92ebc444be6a9c4e7cdd3>HTTP响应码</a></li><li>4: <a href=#pg-9bdc1ce1d6b5b575d611d3c7acfc776b>Gmail, email 和 Facebook 登录</a></li><li>5: <a href=#pg-e1315c8ae4a385f5b3b8b028ce8d9ebb>测试依赖</a></li><li>6: <a href=#pg-819c58e35cb5b37daaf82700a073a9a0>性能测试</a></li><li>7: <a href=#pg-38d1959cdf1a7c403cb4f29ca535baa9>爬取链接</a></li><li>8: <a href=#pg-a18a4de15d62b2cf10d163ace06e1017>双因素认证</a></li></ul><div class=content></div></div><div class=td-content><h1 id=pg-12a8f4e30343b86339acb24c22b1d4ae>1 - 验证码</h1><p>验证码 (CAPTCHA), 是 <em>全自动区分计算机和人类的图灵测试</em> <em>(Completely Automated Public Turing test to tell Computers and Humans Apart)</em> 的简称,
 是被明确地设计用于阻止自动化的, 所以不要尝试!<br>规避验证码的检查, 主要有两个策略:</p><ul><li>在测试环境中禁用验证码</li><li>添加钩子以允许测试绕过验证码</li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-1223ebcabcfa4c9b6ea24c5aaffbc509>2 - 文件下载</h1><p>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式.
-因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如<a href=//curl.haxx.se/libcurl/>libcurl</a>这样的HTTP请求库.</p><p><a href=https://github.com/SeleniumHQ/htmlunit-driver>HtmlUnit driver</a>
+因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如<a href=/zh-cn/>curl</a>这样的HTTP请求库.</p><p><a href=https://github.com/SeleniumHQ/htmlunit-driver>HtmlUnit driver</a>
 可以通过实现<a href=https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html>AttachmentHandler</a>
 接口将附件作为输入流进行访问来下载附件.
 可以将AttachmentHandler添加到
@@ -71,7 +71,7 @@ API不会频繁更改, 但是网页和HTML定位符经常变化,
 并非因为无法完成，而是因为它绝对不是最理想的工具。
 WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间，
 具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.</p><p>除了使用WebDriver之外，
-您还可以通过执行 <a href=/zh-cn/>curl</a> 命令或
+您还可以通过执行 <a href=https://curl.se/>curl</a> 命令或
 使用诸如BeautifulSoup之类的库来节省大量时间，
 因为这些方法不依赖于创建浏览器和导航至页面.
 通过不使用WebDriver可以节省大量时间.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-a18a4de15d62b2cf10d163ace06e1017>8 - 双因素认证</h1><p>双因素认证通常简写成 <em>2FA</em> 是一种一次性密码（OTP）通常用在移动应用上例如“谷歌认证器”，
