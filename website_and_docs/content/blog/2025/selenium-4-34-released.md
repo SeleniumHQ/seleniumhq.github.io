@@ -93,11 +93,12 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### Docker Selenium
 
-- K8s: Fix Helm chart template for deployment of video recording manager ([#2828](https://github.com/SeleniumHQ/docker-selenium/pull/2828), [#2831](https://github.com/SeleniumHQ/docker-selenium/pull/2831)).
-- K8s: Node enable readiness probe checks status registered to Hub ([#2833](https://github.com/SeleniumHQ/docker-selenium/pull/2833)).
-- K8s: Video recorder run as sidecar container is disabled by default ([#2843](https://github.com/SeleniumHQ/docker-selenium/pull/2843)).
-- K8s: Fix chart template issue that might occur when using Helm version v3.18.0 ([365c106](https://github.com/SeleniumHQ/docker-selenium/commit/365c10659905e6ad5e7e972fcb54225dc2a8c928)).
-- K8s: Update chart dependencies (KEDA core 2.17,1, and so on).
+- K8s: Distributor uses Greedy as slot selector strategy in autoscaling ([#2875](https://github.com/SeleniumHQ/docker-selenium/pull/2875))
+- K8s: Fix video uploader secrets pass to Node single container ([#2886](https://github.com/SeleniumHQ/docker-selenium/pull/2886))
+- Docker: Update dependencies version for CVEs fix
+- Docker: Enable `SE_NODE_ENABLE_MANAGED_DOWNLOADS` in Node config by default ([#2869](https://github.com/SeleniumHQ/docker-selenium/pull/2869))
+- Docker: Session created in Node container can be deleted on UI by default ([#2871](https://github.com/SeleniumHQ/docker-selenium/pull/2871))
+- Docker: Environment variable flag to upgrade latest version of Chrome and ChromeDriver in container ([#2872](https://github.com/SeleniumHQ/docker-selenium/pull/2872))
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
 
