@@ -10,9 +10,12 @@ aliases: [
 These allow you to execute custom actions in every time specific Selenium commands are sent
 
 {{< tabpane text=true >}}
+
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/listeners/WebDriverListenerTest.java#L24-L40" >}}
 {{< /tab >}}
+
+
 {{% tab header="Python" %}}
 {{< badge-code >}}
 {{% /tab %}}
