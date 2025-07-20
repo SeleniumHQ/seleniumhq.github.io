@@ -63,10 +63,7 @@
                     <properties>
                         <configurationParameters> junit.jupiter.execution.parallel.enabled = true
                             junit.jupiter.execution.parallel.mode.default = concurrent
-                            junit.jupiter.execution.parallel.config.strategy = fixed <!-- Fix Failed
-                            to transform configuration parameter with key
-                            'junit.jupiter.execution.parallel.config.fixed.parallelism' and initial
-                            value ' -->
+                            junit.jupiter.execution.parallel.config.strategy = fixed 
                             junit.jupiter.execution.parallel.config.fixed.parallelism = 1
                             junit.jupiter.execution.parallel.config.fixed.max-pool-size = 1 </configurationParameters>
                     </properties>
