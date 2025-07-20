@@ -87,18 +87,6 @@ public class CustomWebDriverListener implements WebDriverListener {
 
     // -- FindElement hooks --
 
-    @Override
-    public void beforeFindElement(WebDriver driver, By locator) {
-        logger.info("BEFORE findElement -> Locator: " + locator);
-        try {
-            if (driver instanceof HasCapabilities) {
-                List<WebElement> elements = driver.findElements(locator);
-                logger.info("DEBUG: Number of elements matching '" + locator + "': " + elements.size());
-            }
-        } catch (Exception e) {
-            logger.warning("Error while counting elements for locator " + locator + ": " + e.getMessage());
-        }
-    }
 
     @Override
     public void afterFindElement(WebDriver driver, By locator, WebElement result) {
