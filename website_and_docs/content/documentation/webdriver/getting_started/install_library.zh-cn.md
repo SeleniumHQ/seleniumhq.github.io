@@ -18,7 +18,7 @@ aliases: [
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 应熟练掌握build tool以安装支持java的Selenium库
 
