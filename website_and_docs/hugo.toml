@@ -219,7 +219,7 @@ enable = false
         desc = "Follow us on X to get the latest news!"
 [[params.links.user]]
 	name = "Selenium Community YouTube Channel"
-	url = "https://www.youtube.com/@SeleniumHQProject/streams"
+	url = "https://www.youtube.com/@SeleniumHQProject/"
 	icon = "fab fa-youtube"
         desc = "Check all the Community talks!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.

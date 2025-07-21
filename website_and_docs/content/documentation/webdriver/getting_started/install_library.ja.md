@@ -18,7 +18,7 @@ aliases: [
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Java用のSeleniumライブラリのインストールは、ビルドツールを使用して行います。
 

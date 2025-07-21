@@ -19,7 +19,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 A instalação da biblioteca Selenium para Java é feita a partir de uma build tool.
 

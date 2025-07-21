@@ -20,7 +20,7 @@ you are using the latest version.
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
