@@ -25,7 +25,13 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_tempPath);
             }
-            driver.Quit();
+            try
+            {
+                driver.Quit();
+            }
+            catch (WebDriverException)
+            {
+            }
         }
 
         [TestMethod]
@@ -62,6 +68,7 @@ namespace SeleniumDocs.Browsers
             service.LogPath = GetLogLocation();
 
             driver = new FirefoxDriver(service);
+            driver.Quit();
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("geckodriver	INFO	Listening on")));
         }
@@ -91,6 +98,7 @@ namespace SeleniumDocs.Browsers
             service.LogLevel = FirefoxDriverLogLevel.Debug;
 
             driver = new FirefoxDriver(service);
+            driver.Quit();
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Marionette\tDEBUG")));
         }
