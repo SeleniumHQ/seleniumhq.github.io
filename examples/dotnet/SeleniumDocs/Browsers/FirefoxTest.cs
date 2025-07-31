@@ -56,11 +56,10 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
         public void LogsToFile()
         {
             var service = FirefoxDriverService.CreateDefaultService();
-            //service.LogFile = _logLocation
+            service.LogPath = GetLogLocation();
 
             driver = new FirefoxDriver(service);
             var lines = File.ReadLines(GetLogLocation());
@@ -85,12 +84,10 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("You can set it, just can't see it")]
         public void LogsLevel()
         {
             var service = FirefoxDriverService.CreateDefaultService();
-            //service.LogFile = _logLocation
-
+            service.LogPath = GetLogLocation();
             service.LogLevel = FirefoxDriverLogLevel.Debug;
 
             driver = new FirefoxDriver(service);
@@ -171,7 +168,7 @@ namespace SeleniumDocs.Browsers
         
         private string GetLogLocation()
         {
-            if (_logLocation != null && !File.Exists(_logLocation))
+            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
             {
                 _logLocation = Path.GetTempFileName();
             }
