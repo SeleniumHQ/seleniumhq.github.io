@@ -272,7 +272,7 @@ java -Dwebdriver.http.factory=jdk-http-client -jar selenium-server-<version>.jar
 * 您允许第三方访问内部网络应用程序和文件
 * 您允许第三方运行自定义二进制文件
 
-请参阅 [Detectify](//labs.detectify.com) 上的这篇博文，它提供了一个很好的公开暴露的 `Grid` 如何被滥用的概述：[不要让你的 `Grid` 暴露在外](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
+请参阅 Detectify Labs, 上的这篇博文，它提供了一个很好的公开暴露的 `Grid` 如何被滥用的概述：[不要让你的 `Grid` 暴露在外](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
 ## 延伸阅读
 
