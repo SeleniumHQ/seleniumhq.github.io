@@ -33,4 +33,4 @@ Christian's GitHub Profile is here - **<a href="https://github.com/christian-bro
 Couldn’t join us live? Watch the entire episode here -
 📹 Recording Link: [Watch the Event Recording on YouTube](https://www.youtube.com/live/zrQRWi9Gpdg)
 
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  

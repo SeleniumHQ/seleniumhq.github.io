@@ -32,4 +32,4 @@ Couldn’t join us live? Watch the entire episode here -
 David also runs a blog, and if you are interested in knowing internals of Selenium explore the link - 
 **<a href="https://www.theautomatedtester.co.uk/blog/how-selenium-works-transport/" target="_blank">Blog By David</a>** 
 
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  

@@ -37,4 +37,4 @@ To know more about Selenium Base, please follow the link
 **<a href="https://seleniumbase.io/help_docs/thank_you/" target="_blank">Explore more on Selenium Base</a>** 
 
 In case you were wondering what happened to episode 3, it was cancelled but will be scheduled in coming weeks. Thank you!
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
