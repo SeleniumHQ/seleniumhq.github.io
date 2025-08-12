@@ -36,4 +36,4 @@ Couldn’t join us live? Watch the entire episode here -
 To know more about Site Prism, please follow the link
 **<a href="https://github.com/site-prism/site_prism" target="_blank">Site Prism</a>** 
 
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  

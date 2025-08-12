@@ -46,4 +46,4 @@ A few links which you may wish to explore -
 
 **<a href="https://github.com/webdriverbidi-net/webdriverbidi-net/" target="_blank">WebDriver Bi-Di .net implementation by Jim Evans </a>** 
 
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
