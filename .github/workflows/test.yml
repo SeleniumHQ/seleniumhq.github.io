@@ -4,9 +4,13 @@ on:
   pull_request:
     branches:
       - trunk
+    paths:
+      - 'website_and_docs/**'
   push:
     branches:
       - trunk
+    paths:
+      - 'website_and_docs/**'
 
 jobs:
   test_build:
