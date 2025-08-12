@@ -52,11 +52,11 @@ GEM
     rubyzip (2.4.1)
     selenium-devtools (0.138.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.34.0)
+    selenium-webdriver (4.35.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2, < 3.0)
+      rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
     unicode-display_width (2.6.0)
     websocket (1.2.11)
@@ -78,7 +78,7 @@ DEPENDENCIES
   rubocop (~> 1.35)
   rubocop-rspec (~> 3.0)
   selenium-devtools (= 0.138.0)
-  selenium-webdriver (= 4.34.0)
+  selenium-webdriver (= 4.35.0)
 
 BUNDLED WITH
    2.5.6
