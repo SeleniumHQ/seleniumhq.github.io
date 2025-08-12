@@ -30,7 +30,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Remove driver directories Windows
         if: matrix.os == 'windows'
         run: |
@@ -91,7 +91,7 @@ jobs:
         if: matrix.os == 'windows'
         uses: nick-invision/retry@v3.0.2
         with:
-          timeout_minutes: 20
+          timeout_minutes: 40
           max_attempts: 2
           command: |
             cd examples/ruby
@@ -102,7 +102,7 @@ jobs:
         if: matrix.os != 'windows'
         uses: nick-invision/retry@v3.0.2
         with:
-          timeout_minutes: 20
+          timeout_minutes: 40
           max_attempts: 2
           command: |
             cd examples/ruby
@@ -115,7 +115,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
