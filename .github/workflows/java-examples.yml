@@ -103,5 +103,5 @@ jobs:
             $new_version = "$major.$next_minor.0-SNAPSHOT"
             Write-Output "Using selenium.version $new_version for tests"
             cd examples/java
-            mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true" -D"selenium.version=$new_version"
+            mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
           }
