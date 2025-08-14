@@ -31,16 +31,16 @@ Browser name is set by default when using an Options class instance.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L36" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -58,16 +58,16 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L37" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -117,26 +117,10 @@ event fire is returned.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L21-L23">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L9-L10">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -174,26 +158,10 @@ event fire is returned.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L34-L36">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L19-L20">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -230,26 +198,10 @@ WebDriver only waits until the initial page is downloaded.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L47-L49">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L29-L30">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -290,13 +242,13 @@ setting `platformName` sets the OS at the remote-end.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L88-L90">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L38">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-96">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -328,13 +280,13 @@ effect for the entire session.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L60-L61">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L39-40">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-103">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L38-L41">}}
@@ -363,13 +315,13 @@ is imposed when a new session is created by WebDriver.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L96-L98">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L47-48">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-32">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -392,13 +344,13 @@ _TimeoutException_.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L111-L113">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L55-56">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-39">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -419,13 +371,13 @@ is imposed when a new session is created by WebDriver.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L126-L128">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L63-64">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-46">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -457,13 +409,13 @@ user prompt encounters at the remote-end. This is defined by
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L71-72">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -482,13 +434,13 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L151-L152">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-60">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -510,13 +462,13 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L163-L164">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L87-88">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-67">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -571,7 +523,7 @@ public class ProxyTest {
 ```
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L95-96">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-74">}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 ```CSharp
@@ -594,7 +546,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
 ```javascript

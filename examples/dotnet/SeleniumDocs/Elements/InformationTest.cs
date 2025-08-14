@@ -22,27 +22,27 @@ namespace SeleniumDocs.Elements
             bool isEmailVisible = driver.FindElement(By.Name("email_input")).Displayed;
             Assert.AreEqual(isEmailVisible, true);
 
-            //isEnabled
-            //returns true if element is enabled else returns false
+            // isEnabled
+            // returns true if element is enabled else returns false
             bool isEnabledButton = driver.FindElement(By.Name("button_input")).Enabled;
             Assert.AreEqual(isEnabledButton, true);
 
-            //isSelected
-            //returns true if element is checked else returns false
+            // isSelected
+            // returns true if element is checked else returns false
             bool isSelectedCheck = driver.FindElement(By.Name("checkbox_input")).Selected;
             Assert.AreEqual(isSelectedCheck, true);
 
-            //TagName
-            //returns TagName of the element
+            // TagName
+            // returns TagName of the element
             string tagNameInp = driver.FindElement(By.Name("email_input")).TagName;
             Assert.AreEqual(tagNameInp, "input");
 
-            //Get Location and Size
-            //Get Location
+            // Get Location and Size
+            // Get Location
             IWebElement rangeElement = driver.FindElement(By.Name("range_input"));
             Point point = rangeElement.Location;
             Assert.IsNotNull(point.X);
-            //Get Size
+            // Get Size
             int height=rangeElement.Size.Height;
             Assert.IsNotNull(height);
 
@@ -50,15 +50,15 @@ namespace SeleniumDocs.Elements
             string cssValue = driver.FindElement(By.Name("color_input")).GetCssValue("font-size");
             Assert.AreEqual(cssValue, "13.3333px");
 
-            //GetText
+            // GetText
             // Retrieves the text of the element
             string text = driver.FindElement(By.TagName("h1")).Text;
             Assert.AreEqual(text, "Testing Inputs");
 
-            //FetchAttributes
-            //identify the email text box
+            // FetchAttributes
+            // identify the email text box
             IWebElement emailTxt = driver.FindElement(By.Name("email_input"));
-            //fetch the value property associated with the textbox
+            // fetch the value property associated with the textbox
             string valueInfo = emailTxt.GetAttribute("value");
             Assert.AreEqual(valueInfo, "admin@localhost");
             

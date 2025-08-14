@@ -14,11 +14,11 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
     {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
@@ -38,7 +38,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 from selenium import webdriver
@@ -76,7 +76,7 @@ driver.get("https://seleniumhq.github.io")
 {{< /tab >}}
 
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
   {{< /tab >}}
 
 {{< tab header="Ruby" >}}
@@ -161,7 +161,7 @@ wait.until(titleIs("Selenium documentation"))
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
     #关闭标签页或窗口
@@ -172,7 +172,7 @@ driver.switch_to.window(original_window)
 {{< /tab >}}
 
    {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
   {{< /tab >}}
 
 {{< tab header="Ruby" >}}
@@ -211,7 +211,7 @@ _注意: 该特性适用于 Selenium 4 及其后续版本。_
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
     # 打开新标签页并切换到新标签页
@@ -222,7 +222,7 @@ driver.switch_to.new_window('window')
 {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
   {{< /tab >}}
   
   
@@ -235,10 +235,10 @@ driver.switch_to.new_window('window')
   {{% /tab %}}
 {{< tab header="JavaScript" text=true >}}
 // 打开新标签页并切换到新标签页
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
 // 打开一个新窗口并切换到新窗口
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L75" >}}
 
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
@@ -258,12 +258,12 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 {{< tabpane langEqualsHeader=true >}}
 
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
 
 {{< tab header="Python" >}}driver.quit(){{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
 {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
@@ -432,10 +432,10 @@ height1 = size.height
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 分别获取每个尺寸
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
 或者存储尺寸并在以后查询它们
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -508,10 +508,10 @@ y1 = rect.y
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 分别获取每个尺寸
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
 或者存储尺寸并在以后查询它们
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // 分别获取每个尺寸
@@ -659,7 +659,7 @@ driver.save_screenshot('./image.png')
 end
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
@@ -749,7 +749,7 @@ ele.save_screenshot('./image.jpg')
 end
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -817,7 +817,7 @@ result = driver.execute_script("return arguments[0].innerText", header)
 driver.execute_script("alert('hello world')")
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Stores the header element
@@ -870,7 +870,7 @@ driver.navigate_to 'https://www.selenium.dev'
     base64encodedContent = driver.print_page(orientation: 'landscape')
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 driver.get("https://www.selenium.dev")

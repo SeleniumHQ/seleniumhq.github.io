@@ -1,3 +1,6 @@
 {{ with .Site.Params.plausible_analytics }}
 <script defer data-domain="selenium.dev" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}
+{{ if or .Site.Params.search.algolia .Site.Params.algolia_docsearch }}
+<script src="/js/docsearch-fix.js"></script>
+{{ end }}

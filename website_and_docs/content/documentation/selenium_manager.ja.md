@@ -141,6 +141,13 @@ In addition to the configuration keys specified in the table before, there are s
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
+### se-config.toml Example
+{{< tabpane text=true >}}
+{{< tab header="se-config.toml" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/example_se-config.toml#L1-L21" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
 
@@ -212,23 +219,32 @@ INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\c
 ### Implementing Selenium Manager in Your Scripts
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
+{{% tab header="Java" %}}
+**Previously**
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
-{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L10-L18" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{% tab header="Ruby" %}}
+**Previously**
+{{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L5-L10" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L12-L16" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{% tab header="JavaScript" %}}
+**Previously**
+{{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L16-L31" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L6-L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -325,6 +341,37 @@ In this case, the library to be installed is the following:
 ```
 sudo apt-get install libatk-bridge2.0-0
 ```
+
+### Using an environment variable for the driver path
+It's possible to use an environment variable to specify the driver path without using Selenium Manager.
+The following environment variables are supported:
+
+* `SE_CHROMEDRIVER`
+* `SE_EDGEDRIVER`
+* `SE_GECKODRIVER`
+* `SE_IEDRIVER`
+
+For example, to specify the path to the chromedriver,
+you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
+The following bindings allow you to specify the driver path using an environment variable:
+
+* Ruby
+* Java
+* Python
+
+This feature is available in the Selenium Ruby binding starting from version 4.25.0 and in the Python binding from version 4.26.0.
+
+## Building a Custom Selenium Manager
+In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
+utilize the following steps:
+
+1. Install Rust Dev Environment
+2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
+3. Navigate into your clone `cd selenium/rust`
+4. Build selenium `cargo build --release`
+5. Set the following environment variable for the driver path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+6. Put the driver you want in a location on your system PATH
+7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).

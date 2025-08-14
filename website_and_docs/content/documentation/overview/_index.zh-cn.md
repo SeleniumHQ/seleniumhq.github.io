@@ -13,7 +13,7 @@ Selenium 不仅仅是一个工具或 API, 它还包含许多工具.
 ## WebDriver
 
 如果您开始使用桌面网站测试自动化, 那么您将使用 WebDriver APIs. 
-[WebDriver]({{< ref "/webdriver.md" >}}) 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试. 
+[WebDriver]({{< ref "webdriver.md" >}}) 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试. 
 这就像真正的用户正在操作浏览器一样. 
 由于 WebDriver 不要求使用应用程序代码编译其 API, 因此它本质上不具有侵入性. 
 因此, 您测试的应用程序与实时推送的应用程序相同. 
@@ -35,4 +35,4 @@ Selenium Grid允许您在不同平台的不同机器上运行测试用例.
 
 当开发完WebDriver测试之后, 
 您可能需要在多个浏览器和操作系统的组合上运行测试. 
-这就是 [Grid]({{< ref "/grid.md" >}}) 的用途所在.
+这就是 [Grid]({{< ref "grid.md" >}}) 的用途所在.

@@ -1,3 +1,20 @@
+// Licensed to the Software Freedom Conservancy (SFC) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The SFC licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+
 package dev.selenium.interactions;
 
 import dev.selenium.BaseTest;
@@ -5,23 +22,24 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AlertsTest extends BaseTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    private AlertsTest() {
-    };
+public class AlertsTest extends BaseTest {
 
     @BeforeEach
     public void createSession() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
     }
 
     @AfterEach
@@ -34,7 +52,7 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
 
         driver.findElement(By.id("alert")).click();
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         Assertions.assertEquals("cheese", alert.getText());
@@ -47,7 +65,7 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
         driver.findElement(By.id("empty-alert")).click();
 
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
@@ -77,13 +95,11 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
 
         driver.findElement(By.id("prompt-with-default")).click();
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         Assertions.assertEquals("Enter something", alert.getText());
         alert.accept();
-        // Implementation needed to check teh default value is accepted.
-
     }
 
     @Test
@@ -91,7 +107,6 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
         driver.findElement(By.id("double-prompt")).click();
 
-        //Wait for the alert to be displayed and store it in a variable
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert1 = driver.switchTo().alert();
@@ -113,7 +128,6 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
         driver.findElement(By.id("slow-alert")).click();
 
-        //Wait for the alert to be displayed and store it in a variable
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
@@ -129,7 +143,7 @@ public class AlertsTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
 
         driver.findElement(By.id("confirm")).click();
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         Assertions.assertEquals("Are you sure?", alert.getText());
@@ -148,7 +162,7 @@ public class AlertsTest extends BaseTest {
 
         driver.findElement(By.id("alertInFrame")).click();
 
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
@@ -169,7 +183,7 @@ public class AlertsTest extends BaseTest {
 
         driver.findElement(By.id("alertInFrame")).click();
 
-        //Wait for the alert to be displayed and store it in a variable
+
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
@@ -179,4 +193,40 @@ public class AlertsTest extends BaseTest {
 
     }
 
+    @Test
+    public void testForAlerts() {
+
+        ChromeOptions chromeOptions = getDefaultChromeOptions();
+        chromeOptions.addArguments("disable-search-engine-choice-screen");
+        WebDriver driver = new ChromeDriver(chromeOptions);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("alert('Sample Alert');");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Sample Alert", alert.getText());
+        alert.accept();
+
+        js.executeScript("confirm('Are you sure?');");
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        alert = driver.switchTo().alert();
+        assertEquals("Are you sure?", alert.getText());
+        alert.dismiss();
+
+        js.executeScript("prompt('What is your name?');");
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+        assertEquals("What is your name?", alert.getText());
+        alert.sendKeys("Selenium");
+        alert.accept();
+        driver.quit();
+    }
 }

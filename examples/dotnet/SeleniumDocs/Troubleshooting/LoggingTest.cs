@@ -45,7 +45,7 @@ namespace SeleniumDocs.Troubleshooting
             // reset log to default
             Log.SetLevel(LogEventLevel.Info)
                 .Handlers.Clear()
-                .Handlers.Add(new ConsoleLogHandler());
+                .Handlers.Add(new TextWriterHandler(Console.Error));
         }
 
         // logging is only for internal usage

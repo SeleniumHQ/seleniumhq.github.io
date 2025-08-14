@@ -21,3 +21,8 @@ test e.g. invalid order records.
 
 * Create a new WebDriver instance per test. This helps ensure test isolation
 and makes parallelization simpler.
+
+    * If you choose [pytest](https://pytest.org/) as your test runner, this can be 
+    easily done by yielding your driver in a global fixture. This way each test gets its own 
+    driver instance, and you can ensure that drivers always quit after a test is finished 
+    (pass or fail).

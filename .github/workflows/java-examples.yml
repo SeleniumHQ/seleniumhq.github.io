@@ -30,7 +30,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -45,43 +45,63 @@ jobs:
       if: matrix.os == 'ubuntu'
       run: Xvfb :99 &
     - name: Set up Java
+      id: java
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: 11
+        java-version: 17
+    - name: Import test cert non-Windows
+      if: matrix.os != 'windows'
+      run: sudo keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
+    - name: Import test cert Windows
+      if: matrix.os == 'windows'
+      run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
     - name: Run Tests Stable
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.2
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
           cd examples/java
-          mvn -B test
+          mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.2
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
-          pip install yq
-          xml_content=$(curl -sf https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/)
-          latest_snapshot=$(echo "$xml_content" | xq '.content.data."content-item"' | jq -r 'sort_by(.lastModified) | last | .text')
-          echo "Latest Selenium Snapshot: $latest_snapshot"
-          cd examples/java
-          mvn -B -U test -Dselenium.version="$latest_snapshot"
-
+          # Get current selenium.version from Maven
+          current_version=$(mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout)
+          echo "Current selenium.version: $current_version"
+          # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
+          if [[ $current_version =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            major="${BASH_REMATCH[1]}"
+            minor="${BASH_REMATCH[2]}"
+            next_minor=$((minor + 1))
+            new_version="$major.$next_minor.0-SNAPSHOT"
+            echo "Using selenium.version $new_version for tests"
+            cd examples/java
+            mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true" -Dselenium.version=$new_version
+          fi
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v3.0.2
       with:
-        timeout_minutes: 20
+        timeout_minutes: 40
         max_attempts: 3
         command: |
-          pip install yq          
-          $xml_content = Invoke-WebRequest -Uri "https://oss.sonatype.org/service/local/repositories/snapshots/content/org/seleniumhq/selenium/selenium-java/"
-          $latest_snapshot = $xml_content.Content | xq '.content.data.\"content-item\"' | jq -r 'sort_by(.lastModified) | last | .text'
-          Write-Output "Latest Selenium Snapshot: $latest_snapshot"
-          cd examples/java
-          mvn -B -U test "-Dselenium.version=$latest_snapshot"
+          # Get current selenium.version from Maven
+          $current_version = & mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout
+          Write-Output "Current selenium.version: $current_version"
+          # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
+          if ($current_version -match '^([0-9]+)\.([0-9]+)\.([0-9]+)$') {
+            $major = $matches[1]
+            $minor = $matches[2]
+            $next_minor = [int]$minor + 1
+            $new_version = "$major.$next_minor.0-SNAPSHOT"
+            Write-Output "Using selenium.version $new_version for tests"
+            cd examples/java
+            mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
+          }

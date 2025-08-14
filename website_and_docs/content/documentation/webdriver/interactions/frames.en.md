@@ -73,38 +73,24 @@ find the frame using your preferred selector and switch to it.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Store iframe web element
-iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
+  
+   {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L24-L32" >}}
+{{< /tab >}}
+  
+  
+  {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
+{{< /tab >}}
+ 
 
-    # switch to selected iframe
-driver.switch_to.frame(iframe)
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L26-L33" >}}
+{{< /tab >}}
 
-    # Now click on button
-driver.find_element(By.TAG_NAME, 'button').click()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Store the web element
-IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
 
-//Switch to the frame
-driver.SwitchTo().Frame(iframe);
-
-//Now we can click the button
-driver.FindElement(By.TagName("button")).Click();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Store iframe web element
-iframe = driver.find_element(:css,'#modal > iframe')
-
-    # Switch to the frame
-driver.switch_to.frame iframe
-
-    # Now, Click on the button
-driver.find_element(:tag_name,'button').click
-  {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // Store the web element
 const iframe = driver.findElement(By.css('#modal > iframe'));
@@ -135,32 +121,22 @@ one found will be switched to.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Switch frame by id
-driver.switch_to.frame('buttonframe')
+  
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L34-L42" >}}
+{{< /tab >}}
+  
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
+{{< /tab >}}
+  
 
-    # Now, Click on the button
-driver.find_element(By.TAG_NAME, 'button').click()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-//Using the ID
-driver.SwitchTo().Frame("buttonframe");
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L36-L43" >}}
+{{< /tab >}}
 
-//Or using the name instead
-driver.SwitchTo().Frame("myframe");
-
-//Now we can click the button
-driver.FindElement(By.TagName("button")).Click();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Switch by ID
-driver.switch_to.frame 'buttonframe'
-
-    # Now, Click on the button
-driver.find_element(:tag_name,'button').click
-  {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // Using the ID
 await driver.switchTo().frame('buttonframe');
@@ -192,24 +168,27 @@ queried using _window.frames_ in JavaScript.
 {{< badge-examples >}}
 
     {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
+  
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L45-L46" >}}
+{{< /tab >}}
+  
+ 
 
-  {{< tab header="Ruby" >}}
-    # Switch to the second frame
-driver.switch_to.frame(1)
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Switches to the second frame
-driver.SwitchTo().Frame(1);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-    # switching to second iframe based on index
-iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
 
-    # switch to selected iframe
-driver.switch_to.frame(iframe)
-  {{< /tab >}}
+    {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
+{{< /tab >}}
+
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L46-L47" >}}
+{{< /tab >}}
+
+
+
+
   {{< tab header="JavaScript" >}}
 // Switches to the second frame
 await driver.switchTo().frame(1);
@@ -229,21 +208,23 @@ like so:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
     {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
 
-  {{< tab header="Python" >}}
-    # switch back to default content
-driver.switch_to.default_content()
-  {{< /tab >}}
-  {{< tab header="CSharp" >}}
-// Return to the top level
-driver.SwitchTo().DefaultContent();
-  {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    # Return to the top level
-driver.switch_to.default_content
-  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L49-L50" >}}
+{{< /tab >}}
+  
+  
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
+{{< /tab >}}
+ 
+
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L49-L50" >}}
+{{< /tab >}}
+
   {{< tab header="JavaScript" >}}
 // Return to the top level
 await driver.switchTo().defaultContent();

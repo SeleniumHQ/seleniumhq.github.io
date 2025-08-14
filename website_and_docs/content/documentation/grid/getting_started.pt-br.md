@@ -211,7 +211,7 @@ através de [GraphQL]({{< ref "advanced_features/graphql_support.md" >}}).
 
 {{% pageinfo color="primary" %}}
 Para simplificar, todos os exemplos apresentados assumem que os componentes estão a ser executados localmente.
-Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "/configuration" >}}).
+Exemplos mais detalhados podem ser encontrados na secção [Configurando Componentes]({{< ref "configuration" >}}).
 {{% /pageinfo %}}
 
 ## Usando o cliente HTTP nativo Java 11 {{% badge-version version="4.5" %}}
@@ -300,13 +300,13 @@ Se falhar em proteger a Grid uma ou mais coisas poderão ocorrer:
 * Permitir acesso de terceiros a aplicativos web e a ficheiros
 * Permitir execução remota de ficheiros binários por terceiros
 
-Leia este artigo (em Inglês) em [Detectify](//labs.detectify.com), que dá um bom resumo
+Leia este artigo (em Inglês) em Detectify Labs, que dá um bom resumo
 de como uma Grid exposta publicamente pode ser abusada:
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
 ## Leituras adicionais
 
 * [Componentes]({{< ref "components.md" >}}): compreender como usar os componentes da Grid
-* [Configuração]({{< ref "/configuration" >}}): personalize a sua configuração Grid.
+* [Configuração]({{< ref "configuration" >}}): personalize a sua configuração Grid.
 * [Arquitectura]({{< ref "architecture.md" >}}): entenda conceitos chave da Grid.
-* [Advanced Features]({{< ref "/advanced_features" >}}): explore mais possibilidades da Grid.
+* [Advanced Features]({{< ref "advanced_features" >}}): explore mais possibilidades da Grid.
