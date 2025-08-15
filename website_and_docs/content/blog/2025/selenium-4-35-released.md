@@ -110,12 +110,9 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### 🐳 Docker Selenium
 
-- K8s: Distributor uses Greedy as slot selector strategy in autoscaling ([#2875](https://github.com/SeleniumHQ/docker-selenium/pull/2875))
-- K8s: Fix video uploader secrets pass to Node single container ([#2886](https://github.com/SeleniumHQ/docker-selenium/pull/2886))
-- Docker: Update dependencies version for CVEs fix
-- Docker: Enable `SE_NODE_ENABLE_MANAGED_DOWNLOADS` in Node config by default ([#2869](https://github.com/SeleniumHQ/docker-selenium/pull/2869))
-- Docker: Session created in Node container can be deleted on UI by default ([#2871](https://github.com/SeleniumHQ/docker-selenium/pull/2871))
-- Docker: Environment variable flag to upgrade latest version of Chrome and ChromeDriver in container ([#2872](https://github.com/SeleniumHQ/docker-selenium/pull/2872))
+- K8s: Add config for over-provision ratio in autoscaling deployment of Nodes ([#2930](https://github.com/SeleniumHQ/docker-selenium/pull/2930))
+- Docker: Distributor uses Greedy as the slot selector strategy default in Hub-Node and Standalone mode ([#2915](https://github.com/SeleniumHQ/docker-selenium/pull/2915))
+- Docker: Update Google Noto font family to support better language character displays ([#2914](https://github.com/SeleniumHQ/docker-selenium/pull/2914))
 - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
 
