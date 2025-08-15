@@ -21,8 +21,8 @@ WebDriverは、JavaScriptが提供する3種類のネイティブポップアッ
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
 
 {{< tabpane langEqualsHeader=true >}}
- {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L45-L49" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -71,8 +71,8 @@ alert.accept()
 この例は、アラートを保存する別の方法も示しています。
 
 {{< tabpane langEqualsHeader=true >}}
-   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L55-L57" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -128,8 +128,8 @@ alert.dismiss()
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
 
 {{< tabpane langEqualsHeader=true >}}
-      {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L62-L65" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}

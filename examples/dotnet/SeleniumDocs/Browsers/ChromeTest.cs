@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Chromium;
 
 namespace SeleniumDocs.Browsers
 {
@@ -44,8 +45,8 @@ namespace SeleniumDocs.Browsers
         [TestMethod]
         public void SetBrowserLocation()
         {
-            string userDataDir = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetRandomFileName());
-            System.IO.Directory.CreateDirectory(userDataDir);
+            string userDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            Directory.CreateDirectory(userDataDir);
             var options = new ChromeOptions();
             options.AddArgument($"--user-data-dir={userDataDir}");
             options.AddArgument("--no-sandbox");
@@ -98,32 +99,12 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
-        public void LogsToConsole()
-        {
-            var stringWriter = new StringWriter();
-            var originalOutput = Console.Out;
-            Console.SetOut(stringWriter);
-
-            var service = ChromeDriverService.CreateDefaultService();
-
-            //service.LogToConsole = true;
-
-            driver = new ChromeDriver(service);
-
-            Assert.IsTrue(stringWriter.ToString().Contains("Starting ChromeDriver"));
-            Console.SetOut(originalOutput);
-            stringWriter.Dispose();
-        }
-
-        [TestMethod]
-        [Ignore("Not implemented")]
         public void LogsLevel()
         {
             var service = ChromeDriverService.CreateDefaultService();
             service.LogPath = GetLogLocation();
 
-            // service.LogLevel = ChromiumDriverLogLevel.Debug
+            service.LogLevel = ChromiumDriverLogLevel.Debug;
 
             driver = new ChromeDriver(service);
 
@@ -133,7 +114,6 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
         public void ConfigureDriverLogs()
         {
             var service = ChromeDriverService.CreateDefaultService();
@@ -141,14 +121,14 @@ namespace SeleniumDocs.Browsers
             service.EnableVerboseLogging = true;
 
             service.EnableAppendLog = true;
-            // service.readableTimeStamp = true;
+            service.ReadableTimestamp = true;
 
             driver = new ChromeDriver(service);
 
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
-            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d");
-            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches("").Count > 0));
+            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
+            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
 
         [TestMethod]
@@ -169,7 +149,7 @@ namespace SeleniumDocs.Browsers
 
         private string GetLogLocation()
         {
-            if (_logLocation == null || !File.Exists(_logLocation))
+            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
             {
                 _logLocation = Path.GetTempFileName();
             }

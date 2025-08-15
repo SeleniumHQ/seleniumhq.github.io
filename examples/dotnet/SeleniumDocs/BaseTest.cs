@@ -17,7 +17,7 @@ namespace SeleniumDocs
         protected IWebDriver driver;
         protected Uri GridUrl;
         private Process _webserverProcess;
-        private const string ServerJarName = "selenium-server-4.34.0.jar";
+        private const string ServerJarName = "selenium-server-4.35.0.jar";
         private static readonly string BaseDirectory = AppContext.BaseDirectory;
         private const string RelativePathToGrid = "../../../../../";
         private readonly string _examplesDirectory = Path.GetFullPath(Path.Combine(BaseDirectory, RelativePathToGrid));
@@ -87,7 +87,7 @@ namespace SeleniumDocs
 
         private async Task EnsureGridIsRunningAsync()
         {
-            DateTime timeout = DateTime.Now.Add(TimeSpan.FromSeconds(30));
+            DateTime timeout = DateTime.Now.Add(TimeSpan.FromSeconds(240));
             bool isRunning = false;
             HttpClient client = new HttpClient();
 
@@ -102,12 +102,12 @@ namespace SeleniumDocs
                     }
                     else
                     {
-                        await Task.Delay(500);
+                        await Task.Delay(1000);
                     }
                 }
                 catch (HttpRequestException)
                 {
-                    await Task.Delay(500);
+                    await Task.Delay(1000);
                 }
             }
 

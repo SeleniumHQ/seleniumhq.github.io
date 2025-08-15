@@ -422,7 +422,7 @@ describe('Browsing Context', function () {
     await driver.wait(until.titleIs('We Arrive Here'), 2500)
   });
 
-  it.skip('Get All Top level browsing contexts', async () => {
+  it('Get All Top level browsing contexts', async () => {
     const id = await driver.getWindowHandle()
     const window1 = await BrowsingContext(driver, {
       browsingContextId: id,
