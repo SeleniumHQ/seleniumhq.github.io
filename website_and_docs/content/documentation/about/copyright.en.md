@@ -20,7 +20,7 @@ The information provided is on an “as-is” basis.
 The authors and the publisher shall have
 neither liability nor responsibility to any person or entity
 with respect to any loss or damages arising
-from the information contained in this book.
+from the information contained herein.
 No patent liability is assumed with respect
 to the use of the information contained herein.
 

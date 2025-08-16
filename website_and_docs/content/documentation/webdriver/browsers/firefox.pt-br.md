@@ -63,7 +63,7 @@ Adicione uma opção:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L12-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L12">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -105,31 +105,20 @@ Existem várias formas de trabalhar com perfis Firefox
 
 <div>
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-FirefoxProfile profile = new FirefoxProfile();
-FirefoxOptions options = new FirefoxOptions();
-options.setProfile(profile);
-driver = new RemoteWebDriver(options);
-  {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-options=Options()
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", False)
-options.profile = firefox_profile
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L211-L216" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L160-L168" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
 var options = new FirefoxOptions();
 var profile = new FirefoxProfile();
 options.Profile = profile;
 var driver = new RemoteWebDriver(options);
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.download.dir'] = "/tmp/webdriver-downloads"
-options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
-driver = Selenium::WebDriver.for :firefox, options: options
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L139-L141" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const { Builder } = require("selenium-webdriver");
@@ -151,6 +140,16 @@ driver = RemoteWebDriver(options)
 {{< /tabpane >}}
 </div>
 
+**Note**: Whether you create an empty `FirefoxProfile` or point it to the directory of your own profile, Selenium
+will create a temporary directory to store either the data of the new profile or a copy of your existing one. Every
+time you run your program, a different temporary directory will be created. These directories are not cleaned up
+explicitly by Selenium, they should eventually get removed by the operating system. However, if you want to remove
+the copy manually (e.g. if your profile is large in size), the path of the copy is exposed by the `FirefoxProfile`
+object. Check the language specific implementation to see how to retrieve that location.
+
+If you want to use an existing Firefox profile, you can pass in the path to that profile. Please refer to the official
+[Firefox documentation](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile)
+for instructions on how to find the directory of your profile.
 
 ## Service
 
@@ -167,7 +166,7 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
@@ -181,7 +180,7 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -198,7 +197,7 @@ To change the logging output to display in the console:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
@@ -212,7 +211,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -232,7 +231,7 @@ so this examples is just for setting the log level generically:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `FirefoxDriverLogLevel` enum
@@ -246,7 +245,7 @@ Property value: String representation of `FirefoxDriverLogLevel` enum
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -264,7 +263,7 @@ Firefox truncates lines by default. To turn off truncation:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
 Property value: `"true"` or `"false"`
@@ -278,7 +277,7 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -296,20 +295,20 @@ or want profiles to be created some place specific, you can change the profile r
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
 Property value: String representing path to profile root directory
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L81" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L81" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -340,7 +339,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L132" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L133" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L94" >}}
@@ -352,7 +351,7 @@ Um arquivo xpi que pode ser obtido da [página Mozilla Extras](https://addons.mo
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L95" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L24">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L25">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -365,7 +364,7 @@ Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor 
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L146" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L148" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L106" >}}
@@ -378,7 +377,7 @@ Desinstalar uma extensão implica saber o seu id que pode ser obtido como valor 
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L22-L25">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L26">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -393,7 +392,7 @@ uma pasta, este é um exemplo com uma pasta:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L157" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L160" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L115" >}}
@@ -407,7 +406,7 @@ uma pasta, este é um exemplo com uma pasta:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.spec.js#L41">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -422,16 +421,16 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L181" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L139" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L125" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -449,16 +448,16 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L197-L198" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L151-L152" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L132" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -467,3 +466,5 @@ please refer to the
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+**Note**: As of Firefox 138, geckodriver needs to be started with the argument `--allow-system-access` to switch the context to `CHROME`.

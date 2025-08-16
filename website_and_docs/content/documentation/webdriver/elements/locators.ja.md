@@ -48,7 +48,7 @@ page. To understand and create locator we will use the following HTML snippet.
 </style>
 <h2>Contact Selenium</h2>
 
-<form action="/action_page.php">
+<form>
   <input type="radio" name="gender" value="m" />Male &nbsp;
   <input type="radio" name="gender" value="f" />Female <br>
   <br>
@@ -78,17 +78,15 @@ available in Selenium.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CLASS_NAME, "information")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.ClassName("information"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(class: 'information')
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -112,18 +110,16 @@ textbox, using css.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.cssSelector("#fname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.CSS_SELECTOR, "#fname")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.CssSelector("#fname"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(css: '#fname')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.css('#fname'));
@@ -144,18 +140,16 @@ We will identify the Last Name field using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.id("lname"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.ID, "lname")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.Id("lname"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(id: 'lname')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.id('lname'));
@@ -177,18 +171,16 @@ We will identify the Newsletter checkbox using it.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.name("newsletter"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.NAME, "newsletter")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.Name("newsletter"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(name: 'newsletter')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.name('newsletter'));
@@ -208,18 +200,16 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.linkText("Selenium Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.LINK_TEXT, "Selenium Official Page")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.LinkText("Selenium Official Page"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(link_text: 'Selenium Official Page')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.linkText('Selenium Official Page'));
@@ -240,18 +230,16 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.partialLinkText("Official Page"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.PARTIAL_LINK_TEXT, "Official Page")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.PartialLinkText("Official Page"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(partial_link_text: 'Official Page')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.partialLinkText('Official Page'));
@@ -270,18 +258,16 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.tagName("a"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.TAG_NAME, "a")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.TagName("a"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(tag_name: 'a')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.tagName('a'));
@@ -306,18 +292,16 @@ first name text box. Let us create locator for female radio button using xpath.
     WebDriver driver = new ChromeDriver();
 	driver.findElement(By.xpath("//input[@value='f']"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-    driver = webdriver.Chrome()
-	driver.find_element(By.XPATH, "//input[@value='f']")
-  {{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
+{{< /tab >}}
   {{< tab header="CSharp" >}}
     var driver = new ChromeDriver();
 	driver.FindElement(By.Xpath("//input[@value='f']"));
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-    driver = Selenium::WebDriver.for :chrome
-	driver.find_element(xpath: '//input[@value='f']')
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
+{{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
 	const loc = await driver.findElement(By.xpath('//input[@value='f']'));
@@ -328,7 +312,97 @@ first name text box. Let us create locator for female radio button using xpath.
   {{< /tab >}}
 {{< /tabpane >}} 
 
+## Utilizing Locators
 
+The FindElement makes using locators a breeze! For most languages, 
+all you need to do is utilize `webdriver.common.by.By`, however in 
+others it's as simple as setting a parameter in the FindElement function
+
+### By
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+  {{< tab header="Java" >}}
+    import org.openqa.selenium.By;
+    WebDriver driver = new ChromeDriver();
+	driver.findElement(By.className("information"));
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+    from selenium.webdriver.common.by import By
+    driver = webdriver.Chrome()
+	driver.find_element(By.CLASS_NAME, "information")
+  {{< /tab >}}
+  {{< tab header="CSharp" >}}
+    var driver = new ChromeDriver();
+	driver.FindElement(By.ClassName("information"));
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" >}}
+    let driver = await new Builder().forBrowser('chrome').build();
+	const loc = await driver.findElement(By.className('information'));
+  {{< /tab >}}
+  {{< tab header="Kotlin" >}}
+    import org.openqa.selenium.By
+    val driver = ChromeDriver()
+	val loc: WebElement = driver.findElement(By.className("information"))
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+### ByChained
+
+The `ByChained` class enables you to _chain_ two By locators together. For example, instead of having to 
+locate a parent element, and then a child element of that parent, you can instead combine those two `FindElement` 
+functions into one.
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" text=true >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L37-L38" >}}
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
+  {{< /tab >}}
+{{< /tabpane >}} 
+
+### ByAll
+
+The `ByAll` class enables you to utilize two By locators at once, finding elements that mach _either_ of your By locators. 
+For example, instead of having to utilize two `FindElement()` functions to find the username and password input fields seperately, 
+you can instead find them together in one clean `FindElements()`
+
+{{< tabpane langEqualsHeader=true >}}
+  {{< tab header="Java" text=true >}}
+    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L22-L23">}}
+  {{< /tab >}}
+  {{< tab header="Python" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="CSharp" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Ruby" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="JavaScript" text=true >}}
+  {{< badge-code >}}
+  {{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+    {{< badge-code >}}
+  {{< /tab >}}
+{{< /tabpane >}} 
 
 ## 相対ロケーター
 
@@ -369,8 +443,8 @@ email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
 {{< tab header="CSharp" >}}
 var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("password"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-email_locator = {relative: {tag_name: 'input', above: {id: 'password'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).above(By.id('password'));
@@ -395,8 +469,8 @@ password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
 {{< tab header="CSharp" >}}
 var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("email"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-password_locator = {relative: {tag_name: 'input', below: {id: 'email'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let passwordLocator = locateWith(By.tagName('input')).below(By.id('email'));
@@ -421,8 +495,8 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 {{< tab header="CSharp" >}}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-cancel_locator = {relative: {tag_name: 'button', left: {id: 'submit'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
@@ -447,8 +521,8 @@ submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"
 {{< tab header="CSharp" >}}
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("cancel"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-submit_locator = {relative: {tag_name: 'button', right: {id: 'cancel'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel'));
@@ -475,8 +549,8 @@ email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
 {{< tab header="CSharp" >}}
 var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-email"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-email_locator = {relative: {tag_name: 'input', near: {id: 'lbl-email'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L56" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email'));
@@ -500,8 +574,8 @@ submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_r
 {{< tab header="CSharp" >}}
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-submit_locator = {relative: {tag_name: 'button', below: {id: 'email'}, right: {id: 'cancel'}}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L60" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).below(By.id('email')).toRightOf(By.id('cancel'));

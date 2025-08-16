@@ -7,7 +7,7 @@ RSpec.describe 'Remote WebDriver' do
   let(:target_directory) { File.join(Dir.tmpdir, SecureRandom.uuid) }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
   let(:server) do
-    Selenium::Server.get(:latest,
+    Selenium::Server.new(File.expand_path(File.join('..', '..', '..', 'selenium-server-4.35.0.jar'), __dir__),
                          background: true,
                          args: %w[--selenium-manager true --enable-managed-downloads true])
   end
@@ -35,8 +35,8 @@ RSpec.describe 'Remote WebDriver' do
     file_input.send_keys(upload_file)
     driver.find_element(id: 'file-submit').click
 
-    file_name = driver.find_element(id: 'uploaded-files')
-    expect(file_name.text).to eq 'selenium-snapshot.png'
+    wait.until { driver.find_element(id: 'uploaded-files') }
+    expect(driver.find_element(id: 'uploaded-files').text).to eq 'selenium-snapshot.png'
   end
 
   it 'downloads' do
@@ -47,12 +47,12 @@ RSpec.describe 'Remote WebDriver' do
     driver.get('https://www.selenium.dev/selenium/web/downloads/download.html')
     driver.find_element(id: 'file-1').click
     driver.find_element(id: 'file-2').click
-    wait.until { driver.downloadable_files.include? 'file_2.jpg' }
+    wait.until { driver.downloadable_files.include?('file_2.jpg') && driver.downloadable_files.include?('file_1.txt') }
 
     files = driver.downloadable_files
 
-    expect(files).to eq file_names
-    downloadable_file = files.first
+    expect(files.sort).to eq file_names.sort
+    downloadable_file = 'file_1.txt'
 
     driver.download_file(downloadable_file, target_directory)
 

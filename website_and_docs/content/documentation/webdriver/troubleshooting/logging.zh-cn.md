@@ -30,11 +30,23 @@ Java日志并不简单直接,
 Python logs are typically created per module. You can match all submodules by referencing the top
 level module. So to work with all loggers in selenium module, you can do this:
 {{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L5" >}}
+You must also create and add a log handler (`StreamHandler`, `FileHandler`, etc).
+
+To save logs to a file, you can do this:
+```py
+log_path = '/path/to/log'
+handler = logging.FileHandler(log_path)
+logger.addHandler(handler)
+```
+
+To display logs in the console, you can do this:
+```py
+handler = logging.StreamHandler()
+logger.addHandler(handler)
+```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-```text
-.NET does not currently have a Logging implementation
-```
+.NET logger is managed with a static class, so all access to logging is managed simply by referencing `Log` from the `OpenQA.Selenium.Internal.Logging` namespace.
   {{% /tab %}}
   {{% tab header="Ruby" %}}
 If you want to see as much debugging as possible in all the classes,
@@ -95,9 +107,10 @@ logging.basicConfig(level=logging.WARN)
 ```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-```text
-.NET does not currently have a Logging implementation
-```
+.NET has 6 logger levels: `Error`, `Warn`, `Info`, `Debug`, `Trace` and `None`. The default level is `Warn`.
+
+To change the level of the logger:
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L18" >}}
   {{% /tab %}}
   {{% tab header="Ruby" %}}
   Ruby logger has 5 logger levels: `:debug`, `:info`, `:warn`, `:error`, `:fatal`. 
@@ -149,8 +162,11 @@ WARNING  selenium:test_logging.py:23 this is a warning
 ```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
+.NET logs actionable content at logger level `Warn`.
+
+Example:
 ```text
-.NET does not currently have a Logging implementation
+11:04:40.986 WARN LoggingTest: this is a warning
 ```
   {{% /tab %}}
   {{% tab header="Ruby" %}}
@@ -195,8 +211,11 @@ INFO     selenium:test_logging.py:22 this is useful information
 ```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
+.NET logs useful information at logger level `Info`.
+
+Example:
 ```text
-.NET does not currently have a Logging implementation
+11:04:40.986 INFO LoggingTest: this is useful information
 ```
   {{% /tab %}}
   {{% tab header="Ruby" %}}
@@ -239,8 +258,11 @@ DEBUG    selenium:test_logging.py:24 this is detailed debug information
 ```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
+.NET logs most debug content at logger level `Debug`.
+
+Example:
 ```text
-.NET does not currently have a Logging implementation
+11:04:40.986 DEBUG LoggingTest: this is detailed debug information
 ```
   {{% /tab %}}
   {{% tab header="Ruby" %}}
@@ -277,9 +299,8 @@ handler with either a `StreamHandler` or a `FileHandler`:
 {{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L9-L10" >}}
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-```text
-.NET does not currently have a Logging implementation
-```
+By default all logs are sent to `System.Console.Error` output. To direct output somewhere else, you need to add a handler with a `FileLogHandler`:
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L20" >}}
   {{% /tab %}}
   {{% tab header="Ruby" %}}
   By default, logs are sent to the console in `stdout`.  
@@ -316,9 +337,8 @@ different levels for different modules:
 {{< gh-codeblock path="/examples/python/tests/troubleshooting/test_logging.py#L12-L13" >}}
   {{< /tab >}}
   {{% tab header="CSharp" %}}
-```text
-.NET does not currently have a Logging implementation
-```
+.NET logging is managed on a per class level, set the level you want to use on a per-class basis:
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L22-L23" >}}
   {{% /tab %}}
   {{% tab header="Ruby" %}}
 Ruby's logger allows you to opt in ("allow") or opt out ("ignore") of log messages based on their IDs.

@@ -9,13 +9,15 @@ RSpec.configure do |config|
 
   # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
+  Dir.mktmpdir('tmp')
+  config.example_status_persistence_file_path = 'tmp/examples.txt'
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
 
   config.before do |example|
-    bug_tracker = 'https://gigithub.com/SeleniumHQ/seleniumhq.github.io/issues'
+    bug_tracker = 'https://github.com/SeleniumHQ/seleniumhq.github.io/issues'
     guards = Selenium::WebDriver::Support::Guards.new(example,
                                                       bug_tracker: bug_tracker)
     guards.add_condition(:platform, Selenium::WebDriver::Platform.os)
@@ -28,7 +30,15 @@ RSpec.configure do |config|
   config.after { @driver&.quit }
 
   def start_session
-    @driver = Selenium::WebDriver.for :chrome
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('disable-search-engine-choice-screen')
+    options.add_argument('--no-sandbox')
+    @driver = Selenium::WebDriver.for(:chrome, options: options)
+  end
+
+  def start_bidi_session
+    options = Selenium::WebDriver::Chrome::Options.new(web_socket_url: true)
+    @driver = Selenium::WebDriver.for :chrome, options: options
   end
 
   def start_firefox

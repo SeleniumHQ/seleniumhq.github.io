@@ -33,7 +33,7 @@ A automação do navegador tem a reputação de ser "instável",
 mas, na realidade, é porque os usuários freqüentemente exigem muito dele.
 Em capítulos posteriores, retornaremos às técnicas que você pode usar
 para mitigar problemas aparentemente intermitentes nos testes,
-em particular sobre como [superar as condições de corrida]({{< ref "/waits.md" >}})
+em particular sobre como [superar as condições de corrida]({{< ref "waits.md" >}})
 entre o navegador e o WebDriver.
 
 Mantendo seus testes curtos
@@ -218,7 +218,7 @@ para fornecer métodos como `createAdminUser ()` e `createUserWithPayment ()`.
 A questão é que essas duas linhas de código não o distraem do objetivo final deste teste:
 configurando um unicórnio.
 
-Os detalhes do [modelo de objeto de página]({{< relref "/page_object_models.md" >}})
+Os detalhes do [modelo de objeto de página]({{< relref "page_object_models.md" >}})
 será discutido em capítulos posteriores, mas vamos apresentar o conceito aqui:
 
 Seus testes devem ser compostos de ações,

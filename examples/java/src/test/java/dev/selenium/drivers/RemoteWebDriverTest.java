@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import org.junit.jupiter.api.Assertions;
@@ -34,13 +35,13 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void runRemote() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
   }
 
   @Test
   public void uploads() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
     driver.get("https://the-internet.herokuapp.com/upload");
     File uploadFile = new File("src/test/resources/selenium-snapshot.png");
@@ -56,7 +57,7 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void downloads() throws IOException {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setEnableDownloads(true);
     driver = new RemoteWebDriver(gridUrl, options);
 
@@ -71,6 +72,10 @@ public class RemoteWebDriverTest extends BaseTest {
 
     List<String> files = ((HasDownloads) driver).getDownloadableFiles();
 
+    // Sorting them to avoid differences when comparing the files
+    fileNames.sort(Comparator.naturalOrder());
+    files.sort(Comparator.naturalOrder());
+    
     Assertions.assertEquals(fileNames, files);
     String downloadableFile = files.get(0);
     Path targetDirectory = Files.createTempDirectory("download");
@@ -87,7 +92,7 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void augment() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
 
     driver = new Augmenter().augment(driver);
@@ -100,7 +105,7 @@ public class RemoteWebDriverTest extends BaseTest {
     driver =
         RemoteWebDriver.builder()
             .address(gridUrl)
-            .oneOf(new ChromeOptions())
+            .oneOf(getDefaultChromeOptions())
             .setCapability("ext:options", Map.of("key", "value"))
             .config(ClientConfig.defaultConfig())
             .build();

@@ -36,6 +36,13 @@ of modern Java releases.
 
 So as a first step towards this move, the Java 11+ HTTP client from Selenium 4.5.0 and above.
 
+{{% alert title="Attention!" color="warning" %}}
+If you are using Selenium 4.14 or higher, the 
+Java 11 HTTP client is used by default. You do not
+need to make any changes to your setup. Feel free
+to skip the following section.
+{{% /alert %}}
+
 ### Using Java 11+ HTTP Client in Selenium
 
 #### Prerequisites: 

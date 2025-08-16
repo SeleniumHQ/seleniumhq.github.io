@@ -3,7 +3,7 @@
 {{ $button_text := .btn_text }}
 <div class="row justify-content-center pt-2 pb-3 -bg-{{ $col_bg }}">
 	<div class="card text-center border-0 bg-transparent py-5">
-		<div class="card-body">
+		<div class="card-body text-white">
 			<h2 class="card-title">
         {{ if eq .Page.File.Ext "md" }}
           {{ .title | markdownify }}

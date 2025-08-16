@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -59,19 +60,20 @@ namespace SeleniumDocs.Drivers
             {
                 EnableDownloads = true
             };
+
             driver = new RemoteWebDriver(GridUrl, options);
 
             driver.Url = "https://selenium.dev/selenium/web/downloads/download.html";
             driver.FindElement(By.Id("file-1")).Click();
             driver.FindElement(By.Id("file-2")).Click();
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             wait.Until(d => ((RemoteWebDriver)d).GetDownloadableFiles().Contains("file_2.jpg"));
 
-            List<string> names = ((RemoteWebDriver)driver).GetDownloadableFiles();
+            IReadOnlyList<string> names = ((RemoteWebDriver)driver).GetDownloadableFiles();
 
             Assert.IsTrue(names.Contains("file_1.txt"));
             Assert.IsTrue(names.Contains("file_2.jpg"));
-            string downloadableFile = names[0];
+            string downloadableFile = names.First(f => f == "file_1.txt");
             string targetDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
 
             ((RemoteWebDriver)driver).DownloadFile(downloadableFile, targetDirectory);

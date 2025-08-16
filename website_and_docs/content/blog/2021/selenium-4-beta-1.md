@@ -72,4 +72,4 @@ directly from the [Selenium site][download].
 [graphql]: https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/graphql/selenium-grid-schema.graphqls
 [OpenTelemetry]: https://opentelemetry.io
 [se4]: /blog/2020/what-is-coming-in-selenium-4-new-tricks/
-[tlc]: /structure/#tlc
+[tlc]: /project/structure/#tlc

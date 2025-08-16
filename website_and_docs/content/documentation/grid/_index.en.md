@@ -1,7 +1,7 @@
 ---
 title: "Grid"
 linkTitle: "Grid"
-weight: 6
+weight: 4
 description: >
   Want to run tests in parallel across multiple machines? Then, Grid is for you.
 aliases: 

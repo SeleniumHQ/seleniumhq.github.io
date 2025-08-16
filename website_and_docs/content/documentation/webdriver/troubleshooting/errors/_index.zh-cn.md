@@ -6,13 +6,15 @@ description: >
   如何处理Selenium代码中的各种问题.
 ---
 
-## 无效选择器的异常 (Invalid Selector Exception)
+## 无效选择器的异常 (InvalidSelectorException)
 
 某些时候难以获得正确的CSS以及XPath选择器。
 
 ### 潜在原因
 
-您尝试使用的CSS或XPath选择器包含无效字符或无效查询。
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### 可行方案
 
@@ -23,7 +25,7 @@ description: >
 或者使用浏览器扩展程序来获取已知的良好值：
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## 没有这样元素的异常 (No Such Element Exception)
+## 没有这样元素的异常 (NoSuchElementException)
 
 在您尝试找到该元素的当前时刻无法定位元素。
 
@@ -40,7 +42,7 @@ description: >
 * 使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
-## 过时元素引用的异常 (Stale Element Reference Exception)
+## 过时元素引用的异常 (StaleElementReferenceException)
 
 当成功定位到元素时，
 WebDriver会为其设置一个引用ID作为标记，
@@ -98,3 +100,99 @@ WebDriver并不会自动重新定位，
 也无法切换回元素有效的活动上下文。
 如果这是您的错误原因，
 您必须回到正确的位置并重新定位元素。
+
+## ElementClickInterceptedException
+
+This exception occurs when Selenium tries to click an element, but the click would instead 
+be received by a different element. Before Selenium will click an element, it checks if the 
+element is visible, unobscured by any other elements, and enabled - if the element is obscured, 
+it will raise this exception.
+
+### Likely Cause
+
+**UI Elements Overlapping** 
+
+Elements on the UI are typically placed next to each other, but occasionally elements may overlap. 
+For example, a navbar always staying at the top of your window as you scroll a page. If that navbar 
+happens to be covering an element we are trying to click, Selenium might believe it to be visible 
+and enabled, but when you try to click it will throw this exception. Pop-ups and Modals are also 
+common offenders here.
+
+**Animations** 
+
+Elements with animations have the potential to cause this exception as well - it is recommended 
+to wait for animations to cease before attempting to click an element.
+
+### Possible Solutions
+
+**Use Explicit Waits** 
+
+[Explicit Waits]({{< ref "/documentation/webdriver/waits" >}}) will likely be your best friend 
+in these instances. A great way is to use `ExpectedCondition.ToBeClickable()` 
+with `WebDriverWait` to wait until the right moment.
+
+**Scroll the Element into View** 
+
+In instances where the element is out of view, but Selenium still registers the element as visible 
+(e.g. navbars overlapping a section at the top of your screen), you can use the 
+`WebDriver.executeScript()` method to execute a javascript function to scroll 
+(e.g. `WebDriver.executeScript('window.scrollBy(0,-250)')`) or you can utilize the 
+Actions class with `Actions.moveToElement(element)`.
+
+## 无效SessionId异常
+有时您尝试访问的会话与当前可用的会话不同。
+
+### 可能原因
+通常发生在会话被删除时（例如：`driver.quit()`）或会话发生更改时，例如最后一个标签页/浏览器已关闭（例如：`driver.close()`）。
+
+### 可能的解决方案
+检查脚本中是否有 `driver.close()` 和 `driver.quit()` 的实例，以及其他可能导致标签页/浏览器关闭的原因。可能是您在应该/能够定位元素之前就尝试定位了该元素。
+
+## SessionNotCreatedException
+
+此异常发生在 WebDriver 无法为浏览器创建新会话时。通常由于版本不匹配、系统级限制或配置问题导致。
+
+### 可能的原因
+
+- 浏览器版本和 WebDriver 版本不兼容（例如 ChromeDriver v113 和 Chrome v115）。
+- macOS 隐私设置可能会阻止 WebDriver 运行。
+- WebDriver 二进制文件丢失、不可访问或没有执行权限。
+
+### 可能的解决方案
+
+- 确保 WebDriver 版本与浏览器版本匹配。对于 Chrome，请在浏览器中访问 `chrome://settings/help` 检查浏览器版本，并从 [ChromeDriver 下载](https://chromedriver.chromium.org/downloads)页面下载匹配的驱动程序。
+- 在 macOS 上，转到 **系统设置 > 隐私与安全性**，并允许驱动程序运行（如果被阻止）。
+- 验证驱动程序二进制文件是否可执行（在 Linux/macOS 上运行 `chmod +x /path/to/driver`）。
+
+## ElementNotInteractableException
+
+当 Selenium 尝试与当前状态下无法交互的元素进行交互时，会发生此异常。
+
+### 可能的原因
+
+1. **不支持的操作**：尝试对不支持操作的元素执行操作，例如对 `<form>` 或 `<label>` 使用 `sendKeys`。  
+2. **多个元素匹配定位器**：定位器匹配到非可交互的元素，例如 `<td>` 标签，而不是目标的 `<input>` 字段。  
+3. **隐藏的元素**：元素存在于 DOM 中，但由于 CSS、`hidden` 属性或元素超出可见视口范围而不可见。
+
+### 可能的解决方案
+
+1. 根据元素类型使用适当的操作（例如，仅对 `<input>` 字段使用 `sendKeys`）。  
+2. 确保定位器唯一标识目标元素，以避免错误匹配。  
+3. 在与元素交互之前，检查其是否在页面上可见。如果需要，将元素滚动到视图中。  
+4. 使用显式等待以确保元素在执行操作前可交互。
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)

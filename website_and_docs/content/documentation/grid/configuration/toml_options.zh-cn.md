@@ -110,8 +110,8 @@ webdriver-executable = '/path/to/chromedriver/95/chromedriver'
 则最多有2个并发会话.
 原型配置需要映射一个Docker映像,
 Docker的守护进程需要通过http/tcp公开.
-此外，可以通过 `devices` 属性定义在主机上可访问的哪些设备文件将在容器中可用。
-有关 docker 设备映射如何工作的更多信息，请参阅 [docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device) 文档。
+此外, 可以通过 `devices` 属性定义在主机上可访问的哪些设备文件将在容器中可用. 
+有关 docker 设备映射如何工作的更多信息, 请参阅 [docker](https://docs.docker.com/engine/reference/commandline/run/#add-host-device-to-container---device) 文档. 
 
 ```toml
 [node]
@@ -149,6 +149,8 @@ detect-drivers = false
 # Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
+# Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status (e.g. HTTP/1.1, HTTP/2)
+protocol-version = "HTTP/1.1"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
 # that many test slots to that particular configuration
 configs = [
@@ -173,14 +175,18 @@ password = "myStrongPassword"
 下面是一个Java示例, 演示如何使用配置的用户和密码启动会话.
 
 ```java
-URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");
-RemoteWebDriver webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
+ClientConfig clientConfig = ClientConfig.defaultConfig()
+  .baseUrl(new URL("http://localhost:4444"))
+  .authenticateAs(new UsernameAndPassword("admin", "myStrongPassword"));
+HttpCommandExecutor executor = new HttpCommandExecutor(clientConfig);
+RemoteWebDriver driver = new RemoteWebDriver(executor, new ChromeOptions());
 ```
 
-### Setting custom capabilities for matching specific Nodes
+在其他语言中, 您可以使用 URL  http://admin:myStrongPassword@localhost:4444
 
-**Important:** Custom capabilities need to be set in the configuration in all Nodes. They also
-need to be included always in every session request.
+### 为匹配特定节点设置自定义功能
+
+**重要提示:** 自定义功能需要在所有节点的配置中进行设置. 并且在每次会话请求中都必须包含这些功能.
 
 ```toml
 [node]
@@ -192,7 +198,7 @@ stereotype = '{"browserName": "firefox", "platformName": "macOS", "browserVersio
 max-sessions = 5
 ```
 
-Here is a Java example showing how to match that Node
+这里有一个 Java 示例, 展示了如何匹配那个节点
 
 ```java
 FirefoxOptions options = new FirefoxOptions();
@@ -205,14 +211,16 @@ driver.get("https://selenium.dev");
 driver.quit();
 ```
 
-### Enabling Managed downloads by the Node.
+### 启用节点的托管下载功能.
 
-The Node can be instructed to manage downloads automatically. This will cause the Node to save all files that were downloaded for a particular session into a temp directory, which can later be retrieved from the node.
-To turn this capability on, use the below configuration:
+节点可以被设置为自动管理下载. 
+这将导致节点会把特定会话中下载的所有文件保存到一个临时目录中, 
+之后可以从节点中获取这些文件.  
+要启用此功能, 请使用以下配置:
 
 ```toml
 [node]
 enable-managed-downloads = true
 ```
 
-Refer to the [CLI section]({{< ref "cli_options.md#enabling-managed-downloads-by-the-node" >}}) for a complete example.
+有关完整示例, 请参阅[CLI章节]({{< ref "cli_options.md#enabling-managed-downloads-by-the-node" >}}) .

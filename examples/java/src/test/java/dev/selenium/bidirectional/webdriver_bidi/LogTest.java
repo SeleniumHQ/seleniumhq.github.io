@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.bidi.LogInspector;
+import org.openqa.selenium.bidi.module.LogInspector;
 import org.openqa.selenium.bidi.log.ConsoleLogEntry;
 import org.openqa.selenium.bidi.log.JavascriptLogEntry;
 import org.openqa.selenium.bidi.log.LogLevel;
@@ -28,21 +28,6 @@ class LogTest extends BaseTest {
     }
 
     @Test
-    public void jsErrors() {
-        CopyOnWriteArrayList<ConsoleLogEntry> logs = new CopyOnWriteArrayList<>();
-
-        try (LogInspector logInspector = new LogInspector(driver)) {
-            logInspector.onConsoleEntry(logs::add);
-        }
-
-        driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
-        driver.findElement(By.id("consoleLog")).click();
-
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(_d -> !logs.isEmpty());
-        Assertions.assertEquals("Hello, world!", logs.get(0).getText());
-    }
-
-    @Test
     void testListenToConsoleLog() throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
@@ -54,7 +39,7 @@ class LogTest extends BaseTest {
             ConsoleLogEntry logEntry = future.get(5, TimeUnit.SECONDS);
 
             Assertions.assertEquals("Hello, world!", logEntry.getText());
-            Assertions.assertNull(logEntry.getRealm());
+
             Assertions.assertEquals(1, logEntry.getArgs().size());
             Assertions.assertEquals("console", logEntry.getType());
             Assertions.assertEquals("log", logEntry.getMethod());

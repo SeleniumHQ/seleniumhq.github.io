@@ -68,7 +68,6 @@ Links to everything can be found on our [downloads page][downloads].
 <div class="d-flex justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/RevealOscar" >}}
 {{< gh-user "https://api.github.com/users/mdmintz" >}}
 {{< gh-user "https://api.github.com/users/nvborisenko" >}} 
 {{< gh-user "https://api.github.com/users/sandeepsuryaprasad" >}}
@@ -76,7 +75,6 @@ Links to everything can be found on our [downloads page][downloads].
 {{< gh-user "https://api.github.com/users/bastimeyer" >}} 
 {{< gh-user "https://api.github.com/users/djbrown" >}} 
 {{< gh-user "https://api.github.com/users/vedanthvdev" >}}
-{{< gh-user "https://api.github.com/users/Hyphenhypen" >}}
 {{< gh-user "https://api.github.com/users/baflQA" >}} 
 {{< gh-user "https://api.github.com/users/AdamPDotty" >}} 
 {{< gh-user "https://api.github.com/users/jlucartc" >}}

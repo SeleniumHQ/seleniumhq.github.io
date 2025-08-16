@@ -19,3 +19,8 @@ aliases: [
 
 * テストごとに新しいWebDriverインスタンスを作成します。
 これにより、テストの分離が保証され、並列化がより簡単になります。
+
+    * If you choose [pytest](https://pytest.org/) as your test runner, this can be 
+    easily done by yielding your driver in a global fixture. This way each test gets its own 
+    driver instance, and you can ensure that drivers always quit after a test is finished 
+    (pass or fail).

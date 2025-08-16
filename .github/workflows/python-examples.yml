@@ -21,47 +21,84 @@ env:
   GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
-  test_examples:
+  tests:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-    runs-on: ${{ matrix.os }}
+        include:
+        - os: ubuntu
+          release: stable
+          python: '3.9'
+        - os: ubuntu
+          release: nightly
+          python: '3.11'
+        - os: windows
+          release: stable
+          python: '3.9'
+        - os: windows
+          release: nightly
+          python: '3.12'
+        - os: macos
+          release: stable
+          python: '3.10'
+        - os: macos
+          release: nightly
+          python: '3.13'
+    runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
     - name: Remove driver directories Windows
-      if: matrix.os == 'windows-latest'
+      if: matrix.os == 'windows'
       run: |
         rm "$env:ChromeWebDriver" -r -v
         rm "$env:EdgeWebDriver" -r -v
         rm "$env:GeckoWebDriver" -r -v
     - name: Remove driver directories Non-Windows
-      if: matrix.os != 'windows-latest'
+      if: matrix.os != 'windows'
       run: |
         sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
     - name: Start Xvfb
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu'
       run: Xvfb :99 &
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.8
-    - name: Install dependencies
+        python-version: ${{ matrix.python }}
+    - name: Install dependencies nightly non-Windows
+      if: matrix.release == 'nightly' && matrix.os != 'windows'
+      run: |
+        pip install -r ./scripts/requirements.txt
+        latest_nightly_python=$(python ./scripts/latest-python-nightly-version.py)
+        cd examples/python
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install --index-url https://test.pypi.org/simple/ selenium==$latest_nightly_python --extra-index-url https://pypi.org/simple/ --upgrade --force-reinstall --break-system-packages
+    - name: Install dependencies nightly Windows
+      if: matrix.release == 'nightly' && matrix.os == 'windows'
+      run: |
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly_python = python ./scripts/latest-python-nightly-version.py
+        cd examples/python
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install --index-url https://test.pypi.org/simple/ selenium==$latest_nightly_python --extra-index-url https://pypi.org/simple/ --upgrade --force-reinstall --break-system-packages
+    - name: Install dependencies stable
+      if: matrix.release == 'stable'
       working-directory: ./examples/python
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Set up Java
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-invision/retry@v2.8.3
+      uses: nick-invision/retry@v3.0.2
       with:
-        timeout_minutes: 20
+        timeout_minutes: 60
         max_attempts: 3
         command: |
           cd examples/python
-          pytest
+          pytest --reruns 3

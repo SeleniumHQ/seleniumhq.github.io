@@ -113,7 +113,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.110.0 or higher.
+to use Hugo 0.125.4 .
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.

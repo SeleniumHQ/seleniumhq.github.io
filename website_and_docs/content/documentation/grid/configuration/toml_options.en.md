@@ -134,6 +134,8 @@ detect-drivers = false
 # Default Appium/Cloud server endpoint
 url = "http://localhost:4723/wd/hub"
 status-endpoint = "/status"
+# Optional, enforce a specific protocol version in HttpClient when communicating with the endpoint service status (e.g. HTTP/1.1, HTTP/2)
+protocol-version = "HTTP/1.1"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate 
 # that many test slots to that particular configuration
 configs = [
@@ -156,9 +158,14 @@ password = "myStrongPassword"
 Here is a Java example showing how to start a session using the configured user and password.
 
 ```java
-URL gridUrl = new URL("http://admin:myStrongPassword@localhost:4444");
-RemoteWebDriver webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
+ClientConfig clientConfig = ClientConfig.defaultConfig()
+  .baseUrl(new URL("http://localhost:4444"))
+  .authenticateAs(new UsernameAndPassword("admin", "myStrongPassword"));
+HttpCommandExecutor executor = new HttpCommandExecutor(clientConfig);
+RemoteWebDriver driver = new RemoteWebDriver(executor, new ChromeOptions());
 ```
+
+In other languages, you can use the URL http://admin:myStrongPassword@localhost:4444
 
 ### Setting custom capabilities for matching specific Nodes
 

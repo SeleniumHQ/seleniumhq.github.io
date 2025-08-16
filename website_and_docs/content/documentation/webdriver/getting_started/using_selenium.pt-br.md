@@ -3,16 +3,16 @@ title: "Organizando e executando o código Selenium"
 linkTitle: "Utilizando o Selenium"
 weight: 10
 description: >
-    Escalonamento da execução do Selenium com um IDE e uma biblioteca do Test Runner
+  Escalonamento da execução do Selenium com um IDE e uma biblioteca do Test Runner
 ---
 
-Se quiser executar mais do que um punhado de scripts pontuais, precisa de 
+Se quiser executar mais do que um punhado de scripts pontuais, precisa de
 ser capaz de organizar e trabalhar com seu código. Esta página deve dar a você
 ideias de como fazer coisas produtivas com seu código Selenium.
 
 ## Usos comuns
 
-A maioria das pessoas usa o Selenium para executar testes automatizados para aplicações web, 
+A maioria das pessoas usa o Selenium para executar testes automatizados para aplicações web,
 mas o Selenium suporta qualquer caso de uso de automação de navegador.
 
 ### Tarefas Repetitivas
@@ -30,12 +30,11 @@ termos de serviço do site, pois alguns sites não permitem isso e outros até b
 
 Executar o Selenium para testes requer fazer asserções sobre as ações tomadas pelo Selenium.
 Então uma boa biblioteca de asserções é necessária. Características adicionais para prover estrutura para testes
-requerem o uso de [Test Runner] (#test-runners).
-
+requerem o uso de [Executador de teste](#executador-de-teste).
 
 ## IDEs
 
-Independentemente de como você usa o código do Selenium, 
+Independentemente de como você usa o código do Selenium,
 não será muito eficaz escrevendo ou executando-o sem um bom
 ambiente de desenvolvimento integrado. Aqui estão algumas opções comuns...
 
@@ -50,10 +49,11 @@ ambiente de desenvolvimento integrado. Aqui estão algumas opções comuns...
 ## Executador de teste
 
 Mesmo que não esteja a usar o Selenium para testes, se tiver casos de uso avançado, pode fazer
-sentido usar um executor de testes para organizar melhor seu código. Ser capaz de usar hooks antes/depois 
+sentido usar um executor de testes para organizar melhor seu código. Ser capaz de usar hooks antes/depois
 e executar coisas em grupos ou em paralelo pode ser muito útil.
 
 ### Escolhendo
+
 Há muitos executores de teste diferentes disponíveis.
 
 Todos os exemplos de código nesta documentação podem ser encontrados em (ou estão sendo movidos para) nossos diretórios
@@ -63,35 +63,40 @@ que será usado para todos os exemplos nesta página.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
+
 - [JUnit](https://junit.org/junit5/) - Uma estrutura de teste amplamente utilizada para testes Selenium baseados em Java.
-- [TestNG](https://testng.org/doc/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
-{{% /tab %}}
+- [TestNG](https://testng.org/) - Oferece recursos extras, como execução de testes paralelos e testes parametrizados.
+  {{% /tab %}}
 
 {{% tab header="Python" %}}
+
 - [pytest](https://pytest.org/) -Uma escolha preferida por muitos, graças à sua simplicidade e aos seus poderosos plugins.
 - [unittest](https://docs.python.org/3/library/unittest.html) - A estrutura de testes da biblioteca padrão do Python.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="CSharp" %}}
+
 - [NUnit](https://nunit.org/) - Um popular framework de teste unitário para .NET.
 - [MS Test](https://docs.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2019) - O Framework de testes unitários da Microsoft.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="Ruby" %}}
+
 - [RSpec](https://rspec.info/) - A biblioteca de testes mais utilizada para executar testes Selenium em Ruby.
 - [Minitest](https://github.com/seattlerb/minitest) - Um framework de testes leve que vem com a biblioteca padrão do Ruby.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="JavaScript" %}}
+
 - [Jest](https://jestjs.io/) - Principalmente conhecido como um framework de teste para React, também pode ser utilizado para testes Selenium.
 - [Mocha](https://mochajs.org/) - A biblioteca JS mais comum para executar testes Selenium.
-{{% /tab %}}
+  {{% /tab %}}
 
 {{% tab header="Kotlin" %}}
-
+- [Kotest](https://kotest.io/) - Uma estrutura de testes flexível e abrangente, projetada especificamente para Kotlin.
+- [JUnit5](https://junit.org/junit5/) - A estrutura de testes padrão do Java, totalmente compatível com Kotlin.
 {{% /tab %}}
 {{< /tabpane >}}
-
 
 ### Instalando
 
@@ -132,42 +137,72 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L8-L9" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
 ### Configuarar e Desconfigurar
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Java" %}}
+
+### Set Up
+
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
+
+{{% /tab %}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+
+### Set Up
+
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
+
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Ruby" %}}
+
+### Set Up
+
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="/examples/ruby/spec/spec_helper.rb#L30" >}}
+{{% /tab %}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+
+### Set Up
+
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
+
+### Tear Down
+
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -178,6 +213,7 @@ In your project's `package.json`, adicionar requisito às `dependências`:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
+
 ### Maven
 
 ```shell
@@ -192,18 +228,28 @@ gradle clean test
 
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/README.md#L35" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
-{{< /tab >}}
+{{% tab header="Ruby" %}}
+{{< gh-codeblock path="/examples/ruby/README.md#L26" >}}
+{{% /tab %}}
 {{% tab header="JavaScript" %}}
+
+### Mocha
+
 ```shell
 mocha runningTests.spec.js
 ```
+
+### npx
+
+```shell
+npx mocha runningTests.spec.js
+```
+
 {{% /tab %}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -217,19 +263,19 @@ Here's an example of that code using a test runner:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

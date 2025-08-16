@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.selenium.dev/"
 title = "Selenium"
 timeout = "60s"
 
@@ -53,35 +53,34 @@ anchor = "smart"
 [languages]
 [languages.en]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="English"
 weight = 1
+[languages.en.params]
+description = "Selenium automates browsers. That's it!"
 [languages.pt-br]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName ="Português (Brasileiro)"
 weight = 2
+[languages.pt-br.params]
+description = "Selenium automates browsers. That's it!"
 [languages.zh-cn]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "中文简体"
 weight = 3
+[languages.zh-cn.params]
+description = "Selenium automates browsers. That's it!"
 [languages.ja]
 title = "Selenium"
-description = "Selenium automates browsers. That's it!"
 languageName = "日本語"
 weight = 4
-[languages.other]
-title = "Selenium"
+[languages.ja.params]
 description = "Selenium automates browsers. That's it!"
-languageName ="Other"
-weight = 5
 
 # Import docsy theme as module
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
-  # replacements = "github.com/google/docsy -> ../../docsy"
+  #replacements = "github.com/google/docsy -> ../../docsy"
   [module.hugoVersion]
     extended = true
     min = "0.73.0"
@@ -159,6 +158,7 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
+banner_flag = true
 announcement_banner = true
 
 # Enable Algolia DocSearch
@@ -201,25 +201,44 @@ enable = false
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
+	name = "Selenium Linkedin"
+	url = "https://www.linkedin.com/company/4826427/"
+	icon = "fab fa-linkedin-in"
+        desc = "Check all the Community talks!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name ="Selenium X"
+	url = "https://x.com/SeleniumHQ"
+	icon = "fab fa-twitter"
+        desc = "Follow us on X to get the latest news!"
+[[params.links.user]]
+	name = "Selenium Community YouTube Channel"
+	url = "https://www.youtube.com/@SeleniumHQProject/"
+	icon = "fab fa-youtube"
+        desc = "Check all the Community talks!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = "Selenium Mastodon"
+	url = "https://mastodon.social/@seleniumHQ@fosstodon.org"
+	icon = "fab fa-mastodon"
+        desc = "Selenium mastodon!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = "Selenium BlueSky"
+	url = "https://bsky.app/profile/seleniumconf.bsky.social"
+	icon = "fab fa-bluesky"
+        desc = "Selenium BlueSky!"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.user]]
 	name = "User mailing list"
 	url = "https://groups.google.com/group/selenium-users"
 	icon = "fas fa-mail-bulk"
         desc = "Discussion and help from your fellow users"
 [[params.links.user]]
-	name ="Selenium in Twitter"
-	url = "https://twitter.com/SeleniumHQ"
-	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]]
 	name = "SeleniumConf YouTube Channel"
 	url = "https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"
 	icon = "fab fa-youtube"
         desc = "Check all the conference talks and learn from the community!"
-[[params.links.user]]
-	name = "Selenium in Facebook"
-	url = "https://www.facebook.com/Selenium2.WebDriver"
-	icon = "fab fa-facebook"
-        desc = "Get news and updates in Facebook!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Software Freedom Conservancy"
@@ -233,7 +252,7 @@ enable = false
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-22b85hmhv-krEcWUFQCOWh8XfQTWOATQ"
+	url = "https://inviter.co/seleniumhq"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
@@ -296,6 +315,12 @@ url = "/sponsors"
 weight = 60
 
 [[menus.main]]
+name = "Sponsor Us"
+parent = "About"
+url = "/sponsor"
+weight = 70
+
+[[menus.main]]
 identifier = "Downloads"
 name = "Downloads"
 url = "/downloads"
@@ -333,7 +358,7 @@ year = "year"
 [security]
   enableInlineShortcodes = false
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
   [security.funcs]

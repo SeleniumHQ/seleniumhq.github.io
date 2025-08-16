@@ -185,7 +185,7 @@ test code.
 
 ## Assertions in Page Objects
 Page objects themselves should never make verifications or assertions. This is
-part of your test and should always be within the test’s code, never in an page
+part of your test and should always be within the test’s code, never in a page
 object. The page object will contain the representation of the page, and the
 services the page provides via methods but no code related to what is being
 tested should be within the page object.

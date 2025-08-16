@@ -2,6 +2,7 @@
 
 require 'spec_helper'
 
+# rubocop:disable RSpec/MultipleDescribes
 RSpec.describe 'Safari', exclusive: {platform: :macosx} do
   describe 'Options' do
     it 'basic options' do
@@ -13,7 +14,7 @@ RSpec.describe 'Safari', exclusive: {platform: :macosx} do
   describe 'Service' do
     let(:directory) { "#{Dir.home}/Library/Logs/com.apple.WebDriver/*" }
 
-    it 'enable logs' do
+    it 'enables logs' do
       original_count = Dir[directory].length
       service = Selenium::WebDriver::Service.safari
 
@@ -32,3 +33,13 @@ RSpec.describe 'Safari', exclusive: {platform: :macosx} do
     end
   end
 end
+
+RSpec.describe 'Safari Technology Preview', skip: 'This test is being skipped as GitHub Actions ' \
+                                                  'have no support for Safari Technology Preview' do
+  it 'sets the technology preview' do
+    Selenium::WebDriver::Safari.technology_preview!
+    local_driver = Selenium::WebDriver.for :safari
+    expect(local_driver.capabilities.browser_name).to eq 'Safari Technology Preview'
+  end
+end
+# rubocop:enable RSpec/MultipleDescribes

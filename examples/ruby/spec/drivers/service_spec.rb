@@ -16,7 +16,11 @@ RSpec.describe 'Service' do
   end
 
   it 'specifies driver location' do
+    user_data_dir = Dir.mktmpdir('chrome-profile-')
     options = Selenium::WebDriver::Options.chrome(binary: browser_path)
+    options.add_argument("--user-data-dir=#{user_data_dir}")
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     service = Selenium::WebDriver::Service.chrome
 
     service.executable_path = driver_path
@@ -33,7 +37,9 @@ RSpec.describe 'Service' do
 
   def driver_finder
     options = Selenium::WebDriver::Options.chrome(browser_version: 'stable')
-    ENV['CHROMEDRIVER_BIN'] = Selenium::WebDriver::DriverFinder.path(options, Selenium::WebDriver::Chrome::Service)
-    ENV['CHROME_BIN'] = options.binary
+    service = Selenium::WebDriver::Service.chrome
+    finder = Selenium::WebDriver::DriverFinder.new(options, service)
+    ENV['CHROMEDRIVER_BIN'] = finder.driver_path
+    ENV['CHROME_BIN'] = finder.browser_path
   end
 end

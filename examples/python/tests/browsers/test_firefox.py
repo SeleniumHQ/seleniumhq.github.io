@@ -88,10 +88,10 @@ def test_profile_location(temp_dir):
     driver.quit()
 
 
-def test_install_addon(firefox_driver, addon_path):
+def test_install_addon(firefox_driver, addon_path_xpi):
     driver = firefox_driver
 
-    driver.install_addon(addon_path)
+    driver.install_addon(addon_path_xpi)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
@@ -99,22 +99,72 @@ def test_install_addon(firefox_driver, addon_path):
     assert injected.text == "Content injected by webextensions-selenium-example"
 
 
-def test_uninstall_addon(firefox_driver, addon_path):
+def test_uninstall_addon(firefox_driver, addon_path_xpi):
     driver = firefox_driver
 
-    id = driver.install_addon(addon_path)
+    id = driver.install_addon(addon_path_xpi)
     driver.uninstall_addon(id)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     assert len(driver.find_elements(webdriver.common.by.By.ID, "webextensions-selenium-example")) == 0
 
 
-def test_install_unsigned_addon_directory(firefox_driver, addon_path):
+def test_install_unsigned_addon_directory(firefox_driver, addon_path_dir):
     driver = firefox_driver
 
-    driver.install_addon(addon_path, temporary=True)
+    driver.install_addon(addon_path_dir, temporary=True)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
 
     assert injected.text == "Content injected by webextensions-selenium-example"
+
+
+def test_install_unsigned_addon_directory_slash(firefox_driver, addon_path_dir_slash):
+    driver = firefox_driver
+
+    driver.install_addon(addon_path_dir_slash, temporary=True)
+
+    driver.get("https://www.selenium.dev/selenium/web/blank.html")
+    injected = driver.find_element(webdriver.common.by.By.ID, "webextensions-selenium-example")
+
+    assert injected.text == "Content injected by webextensions-selenium-example"
+
+
+def test_full_page_screenshot(firefox_driver):
+    driver = firefox_driver
+
+    driver.get("https://www.selenium.dev")
+
+    driver.save_full_page_screenshot("full_page_screenshot.png")
+
+    assert os.path.exists("full_page_screenshot.png")
+
+    driver.quit()
+
+
+def test_set_context():
+    options = webdriver.FirefoxOptions()
+    options.add_argument("-remote-allow-system-access")
+    driver = webdriver.Firefox(options=options)
+
+    with driver.context(driver.CONTEXT_CHROME):
+        driver.execute_script("console.log('Inside Chrome context');")
+
+    # Check if the context is back to content
+    assert driver.execute("GET_CONTEXT")["value"] == "content"
+    driver.quit()
+
+
+def test_firefox_profile():
+    from selenium.webdriver.firefox.options import Options
+    from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+
+    options = Options()
+    firefox_profile = FirefoxProfile()
+    firefox_profile.set_preference("javascript.enabled", False)
+    options.profile = firefox_profile
+
+    driver = webdriver.Firefox(options=options)
+
+    driver.quit()
