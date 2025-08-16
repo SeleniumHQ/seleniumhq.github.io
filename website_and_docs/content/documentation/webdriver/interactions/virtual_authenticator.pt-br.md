@@ -22,19 +22,19 @@ Essas propriedades são mapeadas como VirtualAuthenticatorOptions nos bindings d
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L55-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L55-L61" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L48-55" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L48-55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L40-L46" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L40-L46" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L11-L17" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticatorOptions.spec.js#L11-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -47,19 +47,19 @@ Cria um novo autenticador virtual com as propriedades fornecidas.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L68-L73" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L68-L73" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L63-71" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L63-71" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L53-L58" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L53-L58" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L51-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -71,19 +71,19 @@ Remove o autenticador virtual adicionado anteriormente.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L86" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L86" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#80-86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#80-86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L68-L74" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L68-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -95,19 +95,19 @@ Cria uma resident (stateful) credential com os requeridos [parâmetros](https://
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L100-L103" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L100-L103" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#103-107" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#103-107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L89-L97" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L89-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L80-L94" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L80-L94" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -119,19 +119,19 @@ Cria uma resident (stateless) credential com os requeridos [parâmetros](https:/
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L143-L145" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L143-L145" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L145-148" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L145-148" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L140-L147" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L140-L147" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L136-L140" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L136-L140" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -143,19 +143,19 @@ Registra a credencial com o autenticador.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L137-L146" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L137-L146" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L139-150" >}}   
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L139-150" >}}   
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L150" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L150" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L131-L142" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L131-L142" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -167,19 +167,19 @@ Retorna a lista de credenciais que o autenticador possui.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L157-L171" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L157-L171" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L162-178" >}}  
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L162-178" >}}  
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L183" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L183" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L154-L170" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L154-L170" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -192,16 +192,16 @@ Remove a credencial do autenticador baseado na id da credencial passado.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L181-L190" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L181-L190" >}}
 {{< /tab >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L189-198" >}} 
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L189-198" >}} 
 {{< tab header="CSharp" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L209" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L209" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< /tab >}}
@@ -216,19 +216,19 @@ Remove todas as credenciais do autenticador.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L196-L205" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L196-L205" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L207-216" >}} 
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L207-216" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L239" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L239" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L181-L190" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L181-L190" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -240,19 +240,19 @@ Diz se o autenticador simulará sucesso ou falha na verificação de usuário.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L211-L212" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/VirtualAuthenticatorTest.java#L211-L212" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L224-225" >}} 
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/VirtualAuthenticatorTest.cs#L224-225" >}} 
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_virtual_authenticator.py#L245-L247" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_virtual_authenticator.py#L245-L247" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L197-L197" >}}
+{{< gh-codeblock path="/examples/javascript/test/virtual_authenticator/virtualAuthenticator.spec.js#L197-L197" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

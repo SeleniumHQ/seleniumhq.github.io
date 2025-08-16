@@ -17,7 +17,7 @@ de emular a interação do usuário com a plataforma da web.
 Em vez disso, encontre o link usando Selenium
 (e todos os cookies necessários)
 e passe este cookie para uma biblioteca de solicitação HTTP como
-[libcurl](//curl.haxx.se/libcurl/).
+[curl](https://curl.se/).
 
 O [driver HtmlUnit](https://github.com/SeleniumHQ/htmlunit-driver) pode baixar 
 anexos acessando-os como fluxos de entrada, implementando o 

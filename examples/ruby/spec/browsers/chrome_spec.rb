@@ -20,7 +20,11 @@ RSpec.describe 'Chrome' do
     end
 
     it 'sets location of binary' do
+      user_data_dir = Dir.mktmpdir('chrome-profile-')
       options = Selenium::WebDriver::Options.chrome
+      options.add_argument("--user-data-dir=#{user_data_dir}")
+      options.add_argument('--no-sandbox')
+      options.add_argument('--disable-dev-shm-usage')
 
       options.binary = chrome_location
 
@@ -32,6 +36,7 @@ RSpec.describe 'Chrome' do
       options = Selenium::WebDriver::Options.chrome
 
       options.add_extension(extension_file_path)
+      options.add_argument('--disable-features=DisableLoadExtensionCommandLineSwitch')
 
       @driver = Selenium::WebDriver.for :chrome, options: options
       @driver.get('https://www.selenium.dev/selenium/web/blank.html')
@@ -131,7 +136,8 @@ RSpec.describe 'Chrome' do
         'offline' => false,
         'latency' => 100,
         'download_throughput' => 200,
-        'upload_throughput' => 200)
+        'upload_throughput' => 200
+      )
     end
 
     it 'gets the browser logs' do

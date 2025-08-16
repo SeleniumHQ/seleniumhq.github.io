@@ -24,22 +24,22 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L17-L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L11-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_wheel.py#L11-L14" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L17-L20" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L11-L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/wheel_spec.rb#L11-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L16-L19" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/wheelTest.spec.js#L16-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L18-L21" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L18-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -50,22 +50,22 @@ in the right and down directions. Negative values represent left and up, respect
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L29-L33" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L29-L33" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L22-L26" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_wheel.py#L22-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L31-L35" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L31-L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L22-L26" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/wheel_spec.rb#L22-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L26-L31" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/wheelTest.spec.js#L26-L31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L30-L34" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L30-L34" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -83,22 +83,22 @@ delta x and delta y values.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L42-L46" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L35-L39" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_wheel.py#L35-L39" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L46-L53" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L46-L53" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L34-L38" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/wheel_spec.rb#L34-L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L40-L44" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/wheelTest.spec.js#L40-L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L43-L47" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L43-L47" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -122,22 +122,22 @@ it will result in an exception.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L57-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L57-L61" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L50-L54" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_wheel.py#L50-L54" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L66-L75" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L66-L75" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L48-L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/wheel_spec.rb#L48-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L57-L61" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/wheelTest.spec.js#L57-L61" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L59-L63" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L59-L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -156,21 +156,21 @@ it will result in an exception.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/WheelTest.java#L73-L76" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_wheel.py#L66-L70" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_wheel.py#L66-L70" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L89-L97" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/WheelTest.cs#L89-L97" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/wheel_spec.rb#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/wheelTest.spec.js#L75-L77" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/wheelTest.spec.js#L75-L77" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L75-L78" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/WheelTest.kt#L75-L78" >}}
 {{< /tab >}}
 {{< /tabpane >}}

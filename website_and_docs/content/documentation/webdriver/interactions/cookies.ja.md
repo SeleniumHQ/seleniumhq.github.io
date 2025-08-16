@@ -25,26 +25,16 @@ Cookieの追加では、一連の定義済みのシリアル化可能なJSONオ�
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  
-  # Adds the cookie into current browser context
-  driver.manage.add_cookie(name: "key", value: "value")
-ensure
-  driver.quit
-end
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
   {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
@@ -73,27 +63,16 @@ fun main() {
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
     {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "foo", value: "bar")
-
-  # Get cookie details with named cookie 'foo'
-  puts driver.manage.cookie_named('foo')
-ensure
-  driver.quit
-end
+   {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L17-L21" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L35-L38">}}
@@ -125,28 +104,16 @@ fun main() {
 
 {{< tabpane langEqualsHeader=true >}}
         {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
       {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # Get all available cookies
-  puts driver.manage.all_cookies
-ensure
-  driver.quit
-end
+   {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L26-L31" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L49-L51">}}
@@ -179,28 +146,16 @@ fun main() {
 
 {{< tabpane langEqualsHeader=true >}}
           {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L35-L43" >}}
   {{< /tab >}}
             {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # delete a cookie with name 'test1'
-  driver.manage.delete_cookie('test1')
-ensure
-  driver.quit
-end
+     {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L40-L43" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L61-L62">}}
@@ -236,28 +191,16 @@ fun main() {
 
 {{< tabpane langEqualsHeader=true >}}
                 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L47-L55" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-require 'selenium-webdriver'
-driver = Selenium::WebDriver.for :chrome
-
-begin
-  driver.get 'https://www.example.com'
-  driver.manage.add_cookie(name: "test1", value: "cookie1")
-  driver.manage.add_cookie(name: "test2", value: "cookie2")
-
-  # deletes all cookies
-  driver.manage.delete_all_cookies
-ensure
-  driver.quit
-end
+   {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L49-L54" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L77-L78">}}
@@ -303,10 +246,10 @@ Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L59-L71" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;

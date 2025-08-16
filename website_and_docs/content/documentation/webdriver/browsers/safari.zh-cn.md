@@ -65,21 +65,21 @@ Safari 浏览器不允许您选择日志的输出位置或更改级别.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L31" >}}
 **注意**: Java也允许使用环境变量进行设置;\
 属性键: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
 属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.26" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L17" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_safari.py#L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L20" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -98,16 +98,16 @@ Apple 提供了其浏览器的开发版本 — [Safari Technology Preview](https
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L39-L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L39-L40" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_safari.py#L25-L30" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_safari.py#L25-L30" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/safari_spec.rb#L38-L39" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/safari_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

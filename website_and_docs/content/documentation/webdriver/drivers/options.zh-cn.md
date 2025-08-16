@@ -34,16 +34,16 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L79-80" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -63,16 +63,16 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L86-88" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -127,25 +127,8 @@ WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Wi
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
-{{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< /tab >}}{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -184,24 +167,8 @@ WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/doc
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -239,24 +206,8 @@ WebDriver 仅等待初始页面已下载.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -303,7 +254,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -338,7 +289,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L38-L41">}}
@@ -373,7 +324,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -401,7 +352,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -427,7 +378,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -466,7 +417,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -493,7 +444,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -522,7 +473,7 @@ WebDriver创建新会话时,
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -598,7 +549,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
 ```javascript
