@@ -101,4 +101,4 @@ jobs:
         max_attempts: 3
         command: |
           cd examples/python
-          pytest --reruns 3
+          pytest --reruns 3 -n auto
