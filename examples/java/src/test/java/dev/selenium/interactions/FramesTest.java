@@ -41,18 +41,18 @@ public class FramesTest{
          driver.switchTo().frame(iframe);
          assertEquals(true, driver.getPageSource().contains("We Leave From Here"));
          //Now we can type text into email field
-         WebElement emailE= driver.findElement(By.id("email"));
+         WebElement emailE = driver.findElement(By.id("email"));
          emailE.sendKeys("admin@selenium.dev");
          emailE.clear();
          driver.switchTo().defaultContent();
        
          
          //switch To IFrame using name or id
-         driver.findElement(By.name("iframe1-name"));
+         WebElement iframe1=driver.findElement(By.name("iframe1-name"));
          //Switch to the frame
-         driver.switchTo().frame(iframe);
+         driver.switchTo().frame(iframe1);
          assertEquals(true, driver.getPageSource().contains("We Leave From Here"));
-         WebElement email=driver.findElement(By.id("email"));
+         WebElement email = driver.findElement(By.id("email"));
          //Now we can type text into email field
          email.sendKeys("admin@selenium.dev");
          email.clear();

@@ -1,4 +1,10 @@
 [![GitHub Actions](https://github.com/seleniumhq/seleniumhq.github.io/workflows/Publish%20Selenium%20Site/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions?query=workflow%3A%22Publish+Selenium+Site%22)
+[![Run Java examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/java-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/java-examples.yml)
+[![Run Kotlin examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/kotlin-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/kotlin-examples.yml)
+[![Run Python examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/python-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/python-examples.yml)
+[![Run JavaScript examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/js-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/js-examples.yml)
+[![Run Ruby examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/ruby-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/ruby-examples.yml)
+[![Run DotNet examples](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/dotnet-examples.yml/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions/workflows/dotnet-examples.yml)
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="200" alt="Selenium"/></a>
 
@@ -15,7 +21,7 @@ to use **[Hugo 0.125.4](https://github.com/gohugoio/hugo/releases/tag/v0.125.4)*
 
 Steps needed to have this working locally and work on it:
 
-- Follow the [Install Hugo](https://www.docsy.dev/docs/get-started/other-options/#install-hugo) instructions from Docsy
+- [Install Hugo](https://gohugo.io/installation/) and follow the [Get Started](https://www.docsy.dev/docs/get-started/) instructions from Docsy
 - [Install go](https://go.dev/doc/install)
 - Clone this repository
 - Run `cd website_and_docs`

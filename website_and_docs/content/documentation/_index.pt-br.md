@@ -40,7 +40,7 @@ navegadores. Aqui está uma das instruções mais simples que você pode fazer:
 {{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
+{{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}

@@ -20,11 +20,11 @@ current window by using:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
@@ -44,7 +44,7 @@ window is launched. So first position will be default browser, and so on.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
 from selenium import webdriver
@@ -81,7 +81,7 @@ with webdriver.Firefox() as driver:
   {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
   {{< /tab >}}
   
   {{< tab header="Ruby" >}}
@@ -174,7 +174,7 @@ handle stored in a variable. Put this together and you will get:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
     #Close the tab or window
@@ -185,7 +185,7 @@ driver.switch_to.window(original_window)
   {{< /tab >}}
   
     {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
   {{< /tab >}}
   
   {{< tab header="Ruby" >}}
@@ -228,7 +228,7 @@ __Note: This feature works with Selenium 4 and later versions.__
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}
     # Opens a new tab and switches to new tab
@@ -240,7 +240,7 @@ driver.switch_to.new_window('window')
   
   
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
   {{< /tab >}}
   
   {{% tab header="Ruby" text=true %}}
@@ -252,10 +252,10 @@ Opens a new window and switches to new window:
   {{% /tab %}}
 {{< tab header="JavaScript" text=true >}}
 Opens a new tab and switches to new tab
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
 Opens a new window and switches to new window:
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L75" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Opens a new tab and switches to new tab
@@ -276,12 +276,12 @@ instead of close:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
      {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
   {{< tab header="Python" >}}driver.quit(){{< /tab >}}
     
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
   {{< /tab >}}
   
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
@@ -473,10 +473,10 @@ height1 = size.height
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 Access each dimension individually
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
 (or) store the dimensions and query them later
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Access each dimension individually
@@ -551,10 +551,10 @@ y1 = rect.y
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 Access each dimension individually
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
 (or) store the dimensions and query them later
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Access each dimension individually
@@ -708,7 +708,7 @@ begin
 end
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
@@ -797,7 +797,7 @@ begin
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
+  {{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -868,7 +868,7 @@ result = driver.execute_script("return arguments[0].innerText", header)
 driver.execute_script("alert('hello world')")
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Stores the header element
@@ -922,7 +922,7 @@ _Note: This requires Chromium Browsers to be in headless mode_
     base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
+  {{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     driver.get("https://www.selenium.dev")

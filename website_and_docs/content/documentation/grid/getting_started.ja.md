@@ -304,7 +304,7 @@ Grid を保護しないと、以下のような問題が発生する可能性が
 - サードパーティが内部 Web アプリケーションやファイルにアクセスすることを許可してしまう。
 - サードパーティにカスタムバイナリの実行を許可してしまう。
 
-[Detectify](//labs.detectify.com) のブログで公開されてしまった Grid が
+Detectify Labs, のブログで公開されてしまった Grid が
 どのように悪用されるかを紹介しています: [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
 ## 参考文献

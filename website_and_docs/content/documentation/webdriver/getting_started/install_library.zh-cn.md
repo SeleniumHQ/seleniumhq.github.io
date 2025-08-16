@@ -18,19 +18,19 @@ aliases: [
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+查看该库所支持java的最低版本 [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 应熟练掌握build tool以安装支持java的Selenium库
 
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -48,18 +48,18 @@ pip install selenium
 
 ### 下载
 
-此外你可以从这里下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) 并通过: _setup.py_ 文件安装:
+此外你可以从这里下载 [PyPI Built Distribution](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.-py3-none-any.whl) 并通过: _pip_ 文件安装:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
 <br>
 
 ### 在项目中使用
 
 为了在项目中使用它,需要将它添加到 `requirements.txt` 文件中:
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -86,7 +86,7 @@ dotnet add package Selenium.WebDriver
 
 在 `csproj` 文件里, 具体的依赖 `PackageReference`(包参数) 位于 `ItemGroup` (项目组)中:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### 其他附加思虑事项
 
@@ -131,7 +131,7 @@ gem install selenium-webdriver
 
 ### 加入项目的 gemfile
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -152,7 +152,7 @@ npm install selenium-webdriver
 
 在你的项目 `package.json`, 必须加入到 `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

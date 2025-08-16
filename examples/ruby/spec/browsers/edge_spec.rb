@@ -131,7 +131,8 @@ RSpec.describe 'Edge' do
         'offline' => false,
         'latency' => 100,
         'download_throughput' => 200,
-        'upload_throughput' => 200)
+        'upload_throughput' => 200
+      )
     end
 
     it 'gets the browser logs' do
@@ -164,6 +165,6 @@ RSpec.describe 'Edge' do
 
   def permission(name)
     @driver.execute_async_script('callback = arguments[arguments.length - 1];' \
-                                   'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
+                                 'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
   end
 end
