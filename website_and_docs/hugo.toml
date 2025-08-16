@@ -75,12 +75,6 @@ languageName = "日本語"
 weight = 4
 [languages.ja.params]
 description = "Selenium automates browsers. That's it!"
-#[languages.other]
-#title = "Selenium"
-#languageName ="Other"
-#weight = 5
-#[languages.other.params]
-#description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
 [module]
