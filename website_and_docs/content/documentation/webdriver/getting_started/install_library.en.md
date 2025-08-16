@@ -20,24 +20,24 @@ you are using the latest version.
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
 ### Maven
 Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}} 
 The minimum supported Python version for each Selenium version can be found 
-in `Supported Python Versions` on [PyPi](https://pypi.org/project/selenium/)
+in "Supported Python Versions" on [PyPi](https://pypi.org/project/selenium/).
 
 There are a couple different ways to install Selenium.
 
@@ -46,20 +46,22 @@ There are a couple different ways to install Selenium.
 ```shell
 pip install selenium
 ```
+<br>
 
 ### Download
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+Alternatively you can download the [PyPI Built Distribution](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.-py3-none-any.whl) and install it using _pip_:
 
 ```shell
-python setup.py install
+pip install selenium-x.x.x.-py3-none-any.whl
 ```
+<br>
 
 ### Require in project
 
 To use it in a project, add it to the `requirements.txt` file:
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -73,18 +75,20 @@ There are a few options for installing Selenium.
 ```shell
 Install-Package Selenium.WebDriver
 ```
+<br>
 
 ### .NET CLI
 
 ```shell
 dotnet add package Selenium.WebDriver
 ```
+<br>
 
 ### CSProj
 
 in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### Additional considerations
 
@@ -125,10 +129,11 @@ Selenium can be installed two different ways.
 ```shell
 gem install selenium-webdriver
 ```
+<br>
 
 ### Add to project's gemfile
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -142,12 +147,13 @@ Selenium is typically installed using npm.
 ```shell
 npm install selenium-webdriver
 ```
+<br>
 
 ### Add to project
 
 In your project's `package.json`, add requirement to `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

@@ -7,9 +7,17 @@ import time
 from selenium.webdriver.common.utils import free_port
 from datetime import datetime
 from urllib.request import urlopen
+import requests
+from requests.auth import HTTPBasicAuth
 
 import pytest
 from selenium import webdriver
+
+
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers", "driver_type(type): marks tests to use driver type ('bidi', 'firefox', etc)"
+    )
 
 
 @pytest.fixture(scope='function')
@@ -18,7 +26,7 @@ def driver(request):
     driver_type = marker.args[0] if marker else None
 
     if driver_type == "bidi":
-        options = webdriver.ChromeOptions()
+        options = get_default_chrome_options()
         options.enable_bidi = True
         driver = webdriver.Chrome(options=options)
     elif driver_type == "firefox":
@@ -34,7 +42,7 @@ def driver(request):
 @pytest.fixture(scope='function')
 def chromedriver_bin():
     service = webdriver.ChromeService()
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_driver_path()
 
@@ -42,7 +50,7 @@ def chromedriver_bin():
 @pytest.fixture(scope='function')
 def chrome_bin():
     service = webdriver.ChromeService()
-    options = webdriver.ChromeOptions()
+    options = get_default_chrome_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
@@ -50,7 +58,7 @@ def chrome_bin():
 @pytest.fixture(scope='function')
 def edge_bin():
     service = webdriver.EdgeService()
-    options = webdriver.EdgeOptions()
+    options = get_default_edge_options()
     options.browser_version = 'stable'
     yield webdriver.common.driver_finder.DriverFinder(service=service, options=options).get_browser_path()
 
@@ -140,7 +148,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.23.0.jar",
+        "selenium-server-4.35.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -198,7 +206,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.23.0.jar",
+        "selenium-server-4.35.0.jar",
     )
 
     args = [
@@ -236,3 +244,98 @@ def server():
         process.wait(timeout=10)
     except subprocess.TimeoutExpired:
         process.kill()
+
+
+def _get_resource_path(file_name: str):
+    if os.path.abspath("").endswith("tests"):
+        path = os.path.abspath(f"resources/{file_name}")
+    else:
+        path = os.path.join(
+                os.path.dirname(
+                    os.path.dirname(
+                        os.path.abspath(__file__)
+                    )
+            ),
+            f"tests/resources/{file_name}",
+        )
+    return path
+
+
+@pytest.fixture(scope="function")
+def grid_server():
+    _host = "localhost"
+    _port = free_port()
+    _username = "admin"
+    _password = "myStrongPassword"
+    _path_cert = _get_resource_path("tls.crt")
+    _path_key = _get_resource_path("tls.key")
+    _path_jks = _get_resource_path("server.jks")
+    _truststore_pass = "seleniumkeystore"
+    _path = os.path.join(
+        os.path.dirname(
+            os.path.dirname(
+                os.path.dirname(
+                    os.path.abspath(__file__)
+                )
+            )
+        ),
+        "selenium-server-4.35.0.jar",
+    )
+
+    args = [
+        "java",
+        f"-Djavax.net.ssl.trustStore={_path_jks}",
+        f"-Djavax.net.ssl.trustStorePassword={_truststore_pass}",
+        "-Djdk.internal.httpclient.disableHostnameVerification=true",
+        "-jar",
+        _path,
+        "standalone",
+        "--port",
+        str(_port),
+        "--selenium-manager",
+        "true",
+        "--enable-managed-downloads",
+        "true",
+        "--username",
+        _username,
+        "--password",
+        _password,
+        "--https-certificate",
+        _path_cert,
+        "--https-private-key",
+        _path_key,
+    ]
+
+    process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    def wait_for_server(url, timeout=60):
+        start = time.time()
+        while time.time() - start < timeout:
+            try:
+                requests.get(url, verify=_path_cert, auth=HTTPBasicAuth(_username, _password))
+                return True
+            except OSError as e:
+                print(e)
+                time.sleep(0.2)
+        return False
+
+    if not wait_for_server(f"https://{_host}:{_port}/status"):
+        raise RuntimeError(f"Selenium server did not start within the allotted time.")
+
+    yield f"https://{_host}:{_port}"
+
+    process.terminate()
+    try:
+        process.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        process.kill()
+
+def get_default_chrome_options():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    return options
+
+def get_default_edge_options():
+    options = webdriver.EdgeOptions()
+    options.add_argument("--no-sandbox")
+    return options

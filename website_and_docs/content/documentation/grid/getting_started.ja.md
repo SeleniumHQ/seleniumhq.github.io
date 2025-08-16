@@ -304,12 +304,12 @@ Grid を保護しないと、以下のような問題が発生する可能性が
 - サードパーティが内部 Web アプリケーションやファイルにアクセスすることを許可してしまう。
 - サードパーティにカスタムバイナリの実行を許可してしまう。
 
-[Detectify](//labs.detectify.com) のブログで公開されてしまった Grid が
+Detectify Labs, のブログで公開されてしまった Grid が
 どのように悪用されるかを紹介しています: [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 
 ## 参考文献
 
 - [Components]({{< ref "components.md" >}}): 内部のコンポーネントの仕組みを知る
-- [Configuration]({{< ref "/configuration" >}}): Grid の設定をカスタマイズする
+- [Configuration]({{< ref "configuration" >}}): Grid の設定をカスタマイズする
 - [Architecture]({{< ref "architecture.md" >}}): Grid のコンセプトを理解する
-- [Advanced Features]({{< ref "/advanced_features" >}}): Grid のさらなる可能性を探る
+- [Advanced Features]({{< ref "advanced_features" >}}): Grid のさらなる可能性を探る

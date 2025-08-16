@@ -33,4 +33,10 @@ public class SafariTest {
 
         driver = new SafariDriver(service);
     }
+    
+    public void safariTechnologyPreview() {
+        SafariOptions options = new SafariOptions();
+        options.setUseTechnologyPreview(true);
+        driver = new SafariDriver(options);
+    }
 }

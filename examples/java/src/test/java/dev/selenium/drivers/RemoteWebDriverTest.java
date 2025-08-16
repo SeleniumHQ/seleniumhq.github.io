@@ -35,13 +35,13 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void runRemote() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
   }
 
   @Test
   public void uploads() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
     driver.get("https://the-internet.herokuapp.com/upload");
     File uploadFile = new File("src/test/resources/selenium-snapshot.png");
@@ -57,7 +57,7 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void downloads() throws IOException {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setEnableDownloads(true);
     driver = new RemoteWebDriver(gridUrl, options);
 
@@ -92,7 +92,7 @@ public class RemoteWebDriverTest extends BaseTest {
 
   @Test
   public void augment() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new RemoteWebDriver(gridUrl, options);
 
     driver = new Augmenter().augment(driver);
@@ -105,7 +105,7 @@ public class RemoteWebDriverTest extends BaseTest {
     driver =
         RemoteWebDriver.builder()
             .address(gridUrl)
-            .oneOf(new ChromeOptions())
+            .oneOf(getDefaultChromeOptions())
             .setCapability("ext:options", Map.of("key", "value"))
             .config(ClientConfig.defaultConfig())
             .build();

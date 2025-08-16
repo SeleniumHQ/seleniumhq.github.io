@@ -25,23 +25,12 @@ WebDriver can get the text from the popup and accept or dismiss these
 alerts.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See an example alert")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert text in a variable
-String text = alert.getText();
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -58,10 +47,10 @@ string text = alert.Text;
 alert.Accept();
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -87,26 +76,12 @@ a sample confirm</a>.
 This example also shows a different approach to storing an alert:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample confirm")).click();
-
-//Wait for the alert to be displayed
-wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert in a variable
-Alert alert = driver.switchTo().alert();
-
-//Store the alert in a variable for reuse
-String text = alert.getText();
-
-//Press the Cancel button
-alert.dismiss();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -126,10 +101,10 @@ string text = alert.Text;
 alert.Dismiss();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -159,24 +134,13 @@ text. Pressing the cancel button will not submit any text.
 See a sample prompt</a>.
 
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample prompt")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Type your message
-alert.sendKeys("Selenium");
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+{{< tabpane langEqualsHeader=true text=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -193,10 +157,10 @@ alert.SendKeys("Selenium");
 alert.Accept();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert

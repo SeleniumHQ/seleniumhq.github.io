@@ -1,12 +1,16 @@
 {{ if .Data.sponsors.selenium.enable }}
 <div class="row justify-content-center p-5">
-  <h2 class="selenium text-center">Development Partners</h2>
+  <h2 class="selenium text-center" id="dev-partners">Development Partners</h2>
 </div>
 <div class="row justify-content-around pt-4 pb-5 px-5">
   {{ range .Data.sponsors.development.item }}
   <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 align-self-center px-5 py-3">
     <a href="{{ .url }}" class="border-0">
-      <img class="w-100 shadow-1-strong rounded selenium-backer-logo" src="{{ .logo }}" alt="{{ .name }}" />
+      <img class="w-100 shadow-1-strong rounded selenium-backer-logo"
+           src="{{ .logo }}"
+           alt="{{ .name }}"
+           title="{{ .name }}"
+      />
     </a>
   </div>
   {{ end }}

@@ -3,9 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 def test_eight_components():
-    driver = webdriver.Chrome()
-
-    driver.get("https://www.selenium.dev/selenium/web/web-form.html")
+    driver = setup()
 
     title = driver.title
     assert title == "Web form"
@@ -22,7 +20,7 @@ def test_eight_components():
     value = message.text
     assert value == "Received!"
 
-    driver.quit()
+    teardown(driver)
 
 def setup():
     driver = webdriver.Chrome()

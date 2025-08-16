@@ -1,10 +1,10 @@
 ---
-title: "Chrome DevTools Protocol"
+title: "Chrome DevTools 协议"
 linkTitle: "CDP"
 weight: 10
 description: >
-    Examples of working with Chrome DevTools Protocol in Selenium.
-    CDP support is temporary until WebDriver BiDi has been implemented.
+    使用 Selenium 操作 Chrome DevTools 协议的示例。
+    CDP 的支持是临时的，直到 WebDriver BiDi 实现为止。
 aliases: [
 "/documentation/en/support_packages/chrome_devtools/",
 "/documentation/support_packages/chrome_devtools/",
@@ -15,30 +15,16 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i>
-   Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
-Many browsers provide "DevTools" -- a set of tools that are integrated with the browser that 
-developers can use to debug web apps and explore the performance of their pages. Google Chrome's 
-DevTools make use of a protocol called the Chrome DevTools Protocol (or "CDP" for short). 
-As the name suggests, this is not designed for testing, nor to have a stable API, so functionality 
-is highly dependent on the version of the browser.
 
-Selenium is working to implement a standards-based, cross-browser, stable alternative to CDP called
-[WebDriver BiDi]. Until the support for this new protocol has finished, Selenium plans to provide access
-to CDP features where applicable.
+许多浏览器提供“开发者工具”（DevTools），这是与浏览器集成的一组工具，开发人员可以使用它们来调试网页应用程序并探索网页的性能。Google Chrome 的开发者工具使用一种称为 Chrome DevTools 协议（简称 "CDP"）的协议。顾名思义，该协议并非为测试设计，也没有稳定的 API，因此功能很大程度上取决于浏览器的版本。
 
-### Using Chrome DevTools Protocol with Selenium
+Selenium 正在致力于实现一种基于标准的、跨浏览器的、稳定的 CDP 替代方案，称为 [WebDriver BiDi]。在对该新协议的支持完成之前，Selenium 计划在适用的地方提供对 CDP 功能的访问。
 
-Chrome and Edge have a method to send basic CDP commands. 
-This does not work for features that require bidirectional communication, and you need to know what domains to enable when
-and the exact names and types of domains/methods/parameters. 
+### 在 Selenium 中使用 Chrome DevTools 协议
+
+Chrome 和 Edge 提供了发送基本 CDP 命令的方法。
+但对于需要双向通信的功能，这种方法无效。你需要知道在何时启用哪些域，以及域、方法和参数的确切名称和类型。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -62,21 +48,14 @@ and the exact names and types of domains/methods/parameters.
 {{< /tabpane >}}
 
 
-To make working with CDP easier, and to provide access to the more advanced features, Selenium bindings
-automatically generate classes and methods for the most common domains. 
-CDP methods and implementations can change from version to version, though, so you want to keep the
-version of Chrome and the version of DevTools matching. Selenium supports the 3 most
-recent versions of Chrome at any given time, 
-and tries to time releases to ensure that access to the latest versions are available.
+为简化 CDP 的使用并提供对更高级功能的访问，Selenium 绑定会自动为最常见的域生成类和方法。  
+不过，CDP 方法和实现可能会因版本而异，因此你需要确保 Chrome 版本和 DevTools 版本相匹配。  
+Selenium 在任何时间点支持 Chrome 的最近三个版本，并且尽量同步发布以确保可以访问最新版本。
 
-This limitation provides additional challenges for several bindings, where dynamically
-generated CDP support requires users to regularly update their code to reference the proper version of CDP.
-In some cases an idealized implementation has been created that should work for any version of CDP without the
-user needing to change their code, but that is not always available.
+这种限制给一些绑定带来了额外的挑战，动态生成的 CDP 支持要求用户定期更新代码，以引用正确版本的 CDP。  
+在某些情况下，已创建了一个理想化的实现，它应该适用于任何版本的 CDP，而无需用户更改代码，但这并非总是可用。
 
-Examples of how to use CDP in your Selenium tests can be found on the following pages, but 
-we want to call out a couple commonly cited examples that are of limited practical value.
-* **Geo Location** — almost all sites use the IP address to determine physical location, 
-so setting an emulated geolocation rarely has the desired effect.
-* **Overriding Device Metrics** — Chrome provides a great API for setting [Mobile Emulation](https://chromedriver.chromium.org/mobile-emulation)
-in the Options classes, which is generally superior to attempting to do this with CDP.
+关于如何在 Selenium 测试中使用 CDP 的示例可以在以下页面找到，但我们想提到一些常被引用但实际价值有限的例子：
+* **地理位置** ——几乎所有网站都使用 IP 地址来确定物理位置，因此设置模拟地理位置很少能达到预期效果。
+* **覆盖设备指标** ——Chrome 提供了一个很棒的 API 来在 Options 类中设置[移动模拟](https://chromedriver.chromium.org/mobile-emulation)，这通常比尝试使用 CDP 更优越。
+
