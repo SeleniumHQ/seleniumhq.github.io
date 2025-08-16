@@ -88,7 +88,7 @@ available in Selenium.
 	driver.FindElement(By.ClassName("information"));
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L7" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -121,7 +121,7 @@ textbox, using css.
 	driver.FindElement(By.CssSelector("#fname"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -152,7 +152,7 @@ We will identify the Last Name field using it.
 	driver.FindElement(By.Id("lname"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -184,7 +184,7 @@ We will identify the Newsletter checkbox using it.
 	driver.FindElement(By.Name("newsletter"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L19" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -214,7 +214,7 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 	driver.FindElement(By.LinkText("Selenium Official Page"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L23" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -245,7 +245,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 	driver.FindElement(By.PartialLinkText("Official Page"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -274,7 +274,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 	driver.FindElement(By.TagName("a"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L31" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -309,7 +309,7 @@ first name text box. Let us create locator for female radio button using xpath.
 	  driver.FindElement(By.Xpath("//input[@value='f']"));
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L35" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -347,7 +347,7 @@ others it's as simple as setting a parameter in the FindElement function
 	driver.FindElement(By.ClassName("information"));
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L7" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -453,7 +453,7 @@ email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
 var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("password"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).above(By.id('password'));
@@ -480,7 +480,7 @@ password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
 var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let passwordLocator = locateWith(By.tagName('input')).below(By.id('email'));
@@ -507,7 +507,7 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L48" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
@@ -534,7 +534,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel'));
@@ -563,7 +563,7 @@ email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
 var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L56" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L56" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email'));
@@ -589,7 +589,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_r
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/locators_spec.rb#L60" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L60" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).below(By.id('email')).toRightOf(By.id('cancel'));

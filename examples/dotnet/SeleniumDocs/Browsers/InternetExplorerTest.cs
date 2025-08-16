@@ -46,38 +46,6 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
-        public void LogsToFile()
-        {
-            var service = InternetExplorerDriverService.CreateDefaultService();
-            service.LogFile = GetLogLocation();
-
-            _driver = new InternetExplorerDriver(service);
-            _driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
-            Console.WriteLine("Lines: {0}", lines);
-            Assert.IsTrue(lines.Contains("Started InternetExplorerDriver server"));
-        }
-
-        [TestMethod]
-        [Ignore("Not implemented")]
-        public void LogsToConsole()
-        {
-            var stringWriter = new StringWriter();
-            var originalOutput = Console.Out;
-            Console.SetOut(stringWriter);
-
-            var service = InternetExplorerDriverService.CreateDefaultService();
-
-            //service.LogToConsole = true;
-
-            _driver = new InternetExplorerDriver(service);
-            Assert.IsTrue(stringWriter.ToString().Contains("geckodriver	INFO	Listening on"));
-            Console.SetOut(originalOutput);
-            stringWriter.Dispose();
-        }
-
-        [TestMethod]
         public void LogsLevel()
         {
             var service = InternetExplorerDriverService.CreateDefaultService();

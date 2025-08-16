@@ -19,24 +19,24 @@ Movimentos de ponteiro e rolagem da roda permitem que o usuário defina uma dura
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L21-L28" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_actions.py#L13-L20" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/actions_spec.rb#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L18-L25" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/actionsTest.spec.js#L18-L25" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L22-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -48,21 +48,21 @@ Existe um método especial para liberar todas as teclas pressionadas e botões d
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/ActionsTest.java#L46" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_actions.py#L37" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_actions.py#L37" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L44" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/ActionsTest.cs#L44" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/actions_spec.rb#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/actionsTest.spec.js#L42" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/actionsTest.spec.js#L42" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/ActionsTest.kt#L47" >}}
 {{< /tab >}}
 {{< /tabpane >}}

@@ -12,7 +12,9 @@ description: >
 
 ### 潜在原因
 
-您尝试使用的CSS或XPath选择器包含无效字符或无效查询。
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### 可行方案
 
@@ -178,3 +180,19 @@ Actions class with `Actions.moveToElement(element)`.
 2. 确保定位器唯一标识目标元素，以避免错误匹配。  
 3. 在与元素交互之前，检查其是否在页面上可见。如果需要，将元素滚动到视图中。  
 4. 使用显式等待以确保元素在执行操作前可交互。
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)

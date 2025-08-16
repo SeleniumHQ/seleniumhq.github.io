@@ -149,22 +149,22 @@ A basic comparison of code looks like:
 
     {{</* tabpane text=true */>}}
     {{</* tab header="Java" */>}}
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" */>}}
     {{</* /tab */>}}
     {{</* tab header="Python" */>}}
-    {{</* gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-L19" */>}}
+    {{</* gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L18-L19" */>}}
     {{</* /tab */>}}
     {{</* tab header="CSharp" */>}}
-    {{</* gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" */>}}
+    {{</* gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" */>}}
     {{</* /tab */>}}
     {{</* tab header="Ruby" */>}}
-    {{</* gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-L18" */>}}
+    {{</* gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L17-L18" */>}}
     {{</* /tab */>}}
     {{</* tab header="JavaScript" */>}}
-    {{</* gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" */>}}
+    {{</* gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" */>}}
     {{</* /tab */>}}
     {{</* tab header="Kotlin" */>}}
-    {{</* gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" */>}}
+    {{</* gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" */>}}
     {{</* /tab */>}}
     {{</* /tabpane */>}}
 
@@ -172,22 +172,22 @@ Which looks like this:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-L19" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L18-L19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-L26" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-L18" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L17-L18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L22-L23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-L32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -200,11 +200,11 @@ then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with 
     {{</* tabpane text=true */>}}
     {{%/* tab header="Java" */%}}
     1. Start the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" */>}}
     2. Navigate to a page
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" */>}}
     3. Quit the driver
-    {{</* gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" */>}}
     {{%/* /tab */%}}
     < ... >
     {{</* /tabpane */>}}
@@ -215,11 +215,11 @@ This produces:
 {{% tab header="Java" %}}
 
 1. Start the driver
-   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 2. Navigate to a page
-   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 3. Quit the driver
-   {{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
    {{% /tab %}}
    {{< /tabpane >}}
 

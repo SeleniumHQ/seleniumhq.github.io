@@ -1,10 +1,9 @@
 ---
-title: "Mouse actions"
-linkTitle: "Mouse"
+title: "鼠标操作"
+linkTitle: "鼠标"
 weight: 4
-needsTranslation: true
 description: >
-  A representation of any pointer device for interacting with a web page.
+  任何用于与网页进行交互的指针设备的表示形式.
 aliases: [
 "/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/",
 "/zh-cn/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
@@ -38,7 +37,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndHold.spec.js#L14-L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L23-L26" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L23-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -64,7 +63,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/clickAndRelease.spec.js#L14-L16" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L35-L38" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L35-L38" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -99,7 +98,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/rightClick.spec.js#L15-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L47-L50" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L47-L50" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -128,7 +127,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L61-L67" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L61-L67" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -157,7 +156,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/backAndForwardClick.spec.js#L32-L33" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L79-L85" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L79-L85" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -182,7 +181,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/doubleClick.spec.js#L15-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L94-L97" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L94-L97" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -209,7 +208,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveToElement.spec.js#L15-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L106-L109" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L106-L109" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -239,7 +238,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L15-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L119-L122" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L119-L122" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -264,7 +263,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L27-L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L132-L137" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L132-L137" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -293,7 +292,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L40" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L154-L156" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L154-L156" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -318,7 +317,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L27-L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L167-L171" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L167-L171" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -342,6 +341,6 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L15-L19" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L180-L185" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/MouseTest.kt#L180-L185" >}}
 {{< /tab >}}
 {{< /tabpane >}}

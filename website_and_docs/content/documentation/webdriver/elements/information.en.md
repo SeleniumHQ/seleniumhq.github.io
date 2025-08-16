@@ -27,13 +27,13 @@ nature and relationship in the tree to return a value.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L24" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L20-L24" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L12-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L12-L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L22" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L18-L22" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L12">}}
@@ -62,13 +62,13 @@ Returns a boolean value, **True** if the connected element is
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L27-L29" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L19" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L19" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L27" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L25-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L17">}}
@@ -96,13 +96,13 @@ Returns a boolean value, **True** if referenced element is
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L34" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L32-L34" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="examples/python/tests/elements/test_information.py#L23" >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L23" >}}
   {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L30-L32" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L22">}}
@@ -126,13 +126,13 @@ of the referenced Element which has the focus in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L37-L39" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L27" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L27" >}}
   {{< /tab >}}
      {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L37" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L27">}}
@@ -162,13 +162,13 @@ The fetched data body contain the following details:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L44" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L42-L44" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L31" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L31" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L43" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L40-L43" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L32">}}
@@ -195,13 +195,13 @@ of an element in the current browsing context.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L50" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L49-L50" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L35-L37" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L50" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L49-L50" >}}
 {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L38">}}
@@ -226,13 +226,13 @@ Retrieves the rendered text of the specified element.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L56" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L54-L56" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L41" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L41" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L55" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L43">}}
@@ -259,13 +259,13 @@ with the DOM attribute or property of the element.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L64" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L64" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_information.py#L44-L46" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L44-L46" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}
