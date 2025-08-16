@@ -18,12 +18,12 @@ WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原�
 WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 
 {{< tabpane langEqualsHeader=true >}}
-   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L51-L56" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -40,10 +40,10 @@ string text = alert.Text;
 alert.Accept();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -67,12 +67,12 @@ alert.accept()
 此示例还呈现了警告的另一种实现:
 
 {{< tabpane langEqualsHeader=true >}}
-    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L66-L71" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -92,10 +92,10 @@ string text = alert.Text;
 alert.Dismiss();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -123,12 +123,12 @@ alert.dismiss()
 
 
 {{< tabpane langEqualsHeader=true >}}
-        {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L80-L87" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -145,10 +145,10 @@ alert.SendKeys("Selenium");
 alert.Accept();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert

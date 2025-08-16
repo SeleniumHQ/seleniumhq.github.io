@@ -5,6 +5,8 @@ const edge = require('selenium-webdriver/edge');
 describe('Open Edge', function () {
   let driver;
 
+
+
   before(async function () {
     let options = new edge.Options();
     driver = new Builder()

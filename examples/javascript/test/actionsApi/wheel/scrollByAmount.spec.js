@@ -7,7 +7,7 @@ describe('Scroll by given amount from element', function() {
     driver = await new Builder().forBrowser('chrome').build();
   });
 
-  after(() => driver.quit());
+  after(async() => await driver.quit());
 
   it('Scroll to element by 300', async function() {
     await driver.manage().window().setRect({ width: 500, height: 400 });

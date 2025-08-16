@@ -126,6 +126,8 @@ The following table summarizes all the supported arguments supported by Selenium
 |`--offline`|`offline = true`|`SE_OFFLINE=true`|Offline mode (i.e., disabling network requests and downloads)|
 |`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser, e.g., when a browser is already installed in the system, but you want Selenium Manager to download and use it|
 |`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser, e.g., when a browser is supposed to be downloaded by Selenium Manager, but you prefer to avoid it|
+|`--skip-driver-in-path`|`skip-driver-in-path = true`|`SE_SKIP_DRIVER_IN_PATH=true`|Not using drivers found in the `PATH`|
+|`--skip-browser-in-path`|`skip-browser-in-path = true`|`SE_SKIP_BROWSER_IN_PATH=true`|Not using browsers found in the `PATH`|
 |`--debug`|`debug = true`|`SE_DEBUG=true`|Display `DEBUG` messages|
 |`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
 |`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`. For Windows paths in the TOML configuration file, double backslashes are required (e.g., `C:\\custom\\cache`).|
@@ -140,6 +142,13 @@ In addition to the configuration keys specified in the table before, there are s
 - Browser path. Following the same pattern, we can use `chrome-path`, `firefox-path`,  `edge-path`,  etc. (in the configuration file), and `SE_CHROME_PATH`, `SE_FIREFOX_PATH`, `SE_EDGE_PATH`,  etc. (as environment variables). The Selenium bindings also allow to specify a custom location of the browser path using options, namely: [Chrome](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location)), [Edge](https://www.selenium.dev/documentation/webdriver/browsers/edge/#start-browser-in-a-specified-location), or [Firefox](https://www.selenium.dev/documentation/webdriver/browsers/firefox/#start-browser-in-a-specified-location).
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
+
+### se-config.toml Example
+{{< tabpane text=true >}}
+{{< tab header="se-config.toml" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/example_se-config.toml#L1-L21" >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
@@ -177,16 +186,15 @@ Let's consider a typical example: we want to manage chromedriver automatically. 
 
 ```
 $ ./selenium-manager --browser chrome --debug
-DEBUG   chromedriver not found in PATH
-DEBUG   chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
-DEBUG   Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
-DEBUG   Output: "\r\r\n\r\r\nVersion=116.0.5845.111\r\r\n\r\r\n\r\r\n\r"
-DEBUG   Detected browser: chrome 116.0.5845.111
-DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 116.0.5845.96
-DEBUG   Downloading chromedriver 116.0.5845.96 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\116.0.5845.96\chromedriver.exe
-INFO    Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+DEBUG chromedriver not found in PATH
+DEBUG chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+DEBUG Detected browser: chrome 139.0.7258.67
+DEBUG Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG Required driver: chromedriver 139.0.7258.68
+DEBUG Acquiring lock: C:\Users\boni\.cache\selenium\chromedriver\win64\139.0.7258.68\sm.lock
+DEBUG Downloading chromedriver 139.0.7258.68 from https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.68/win64/chromedriver-win64.zip
+INFO  Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\139.0.7258.68\chromedriver.exe
+INFO  Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
 ```
 
 In this case, the local Chrome (in Windows) is detected by Selenium Manager. Then, using its version and the CfT endpoints, the proper chromedriver version (115, in this example) is downloaded to the local cache. Finally, Selenium Manager provides two results: i) the driver path (downloaded) and ii) the browser path (local).
@@ -195,40 +203,53 @@ Let's consider another example. Now we want to use Chrome beta. Therefore, we in
 
 ```
 $ ./selenium-manager --browser chrome --browser-version beta --debug
-DEBUG   chromedriver not found in PATH
-DEBUG   chrome not found in PATH
-DEBUG   chrome beta not found in the system
-DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
-DEBUG   Required browser: chrome 117.0.5938.22
-DEBUG   Downloading chrome 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chrome-win64.zip
-DEBUG   chrome 117.0.5938.22 has been downloaded at C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
-DEBUG   Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-DEBUG   Required driver: chromedriver 117.0.5938.22
-DEBUG   Downloading chromedriver 117.0.5938.22 from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/117.0.5938.22/win64/chromedriver-win64.zip
-INFO    Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\117.0.5938.22\chromedriver.exe
-INFO    Browser path: C:\Users\boni\.cache\selenium\chrome\win64\117.0.5938.22\chrome.exe
+DEBUG chromedriver not found in PATH
+DEBUG chrome not found in PATH
+DEBUG chrome beta not found in the system
+DEBUG Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json
+DEBUG Required browser: chrome 140.0.7339.16
+DEBUG Acquiring lock: C:\Users\boni\.cache\selenium\chrome\win64\140.0.7339.16\sm.lock
+DEBUG Downloading chrome 140.0.7339.16 from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.16/win64/chrome-win64.zip
+DEBUG chrome 140.0.7339.16 is available at C:\Users\boni\.cache\selenium\chrome\win64\140.0.7339.16\chrome.exe
+DEBUG Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+DEBUG Required driver: chromedriver 140.0.7339.16
+DEBUG Acquiring lock: C:\Users\boni\.cache\selenium\chromedriver\win64\140.0.7339.16\sm.lock
+DEBUG Downloading chromedriver 140.0.7339.16 from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.16/win64/chromedriver-win64.zip
+INFO  Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\140.0.7339.16\chromedriver.exe
+INFO  Browser path: C:\Users\boni\.cache\selenium\chrome\win64\140.0.7339.16\chrome.exe
 ```
 
-### Implementing Selenium Manager in Your Scripts
+### Using Selenium Manager from the bindings
+
+All Selenium binding languages (Java, JavaScript, Python, .Net, Ruby) use Selenium Manager internally to manage drivers and browsers. The automated management process starts before starting a new Selenium session, i.e., each time a Selenium script instantiates a driver object (e.g., `ChromeDriver`, `FirefoxDriver`, etc.). The following snippets illustrate the difference between the old-fashioned way of manually managing drivers and the built-in automated mechanism provided by Selenium Manager.
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< badge-code >}}
+{{% tab header="Java" %}}
+**Previously**
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **Previously**
-{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
 **Selenium Manager**
-{{< gh-codeblock path="examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
+{{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{% tab header="CSharp" %}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L10-L18" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{% tab header="Ruby" %}}
+**Previously**
+{{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L5-L10" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L12-L16" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{% tab header="JavaScript" %}}
+**Previously**
+{{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L16-L31" >}}
+**Selenium Manager**
+{{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L6-L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -330,11 +351,10 @@ sudo apt-get install libatk-bridge2.0-0
 It's possible to use an environment variable to specify the driver path without using Selenium Manager.
 The following environment variables are supported:
 
-* SE_CHROMEDRIVER
-* SE_EDGEDRIVER
-* SE_GECKODRIVER
-* SE_IEDRIVER
-* SE_SAFARIDRIVER
+* `SE_CHROMEDRIVER`
+* `SE_EDGEDRIVER`
+* `SE_GECKODRIVER`
+* `SE_IEDRIVER`
 
 For example, to specify the path to the chromedriver,
 you can set the `SE_CHROMEDRIVER` environment variable to the path of the chromedriver executable.
@@ -342,8 +362,21 @@ The following bindings allow you to specify the driver path using an environment
 
 * Ruby
 * Java
+* Python
 
-This feature is available in the Selenium Ruby binding starting from version 4.25.0.
+This feature is available in the Selenium Ruby binding starting from version 4.25.0 and in the Python binding from version 4.26.0.
+
+## Building a Custom Selenium Manager
+In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
+utilize the following steps:
+
+1. Install Rust Dev Environment
+2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
+3. Navigate into your clone `cd selenium/rust`
+4. Build selenium `cargo build --release`
+5. Set the following environment variable for the driver path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+6. Put the driver you want in a location on your system PATH
+7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).

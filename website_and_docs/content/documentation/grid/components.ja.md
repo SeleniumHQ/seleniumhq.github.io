@@ -1,5 +1,5 @@
 ---
-title: "Serenium Grid のコンポーネント"
+title: "Selenium Grid のコンポーネント"
 linkTitle: "コンポーネント"
 weight: 6
 description: >

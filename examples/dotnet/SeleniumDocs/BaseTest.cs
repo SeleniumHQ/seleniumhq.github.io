@@ -17,7 +17,7 @@ namespace SeleniumDocs
         protected IWebDriver driver;
         protected Uri GridUrl;
         private Process _webserverProcess;
-        private const string ServerJarName = "selenium-server-4.25.0.jar";
+        private const string ServerJarName = "selenium-server-4.35.0.jar";
         private static readonly string BaseDirectory = AppContext.BaseDirectory;
         private const string RelativePathToGrid = "../../../../../";
         private readonly string _examplesDirectory = Path.GetFullPath(Path.Combine(BaseDirectory, RelativePathToGrid));
@@ -33,13 +33,18 @@ namespace SeleniumDocs
             }
         }
 
-        protected void StartDriver(string browserVersion = "stable")
+        protected void StartDriver(string browserVersion = null)
         {
-            ChromeOptions options = new ChromeOptions
+            ChromeOptions options = new ChromeOptions();
+            if (browserVersion != null)
             {
-                BrowserVersion = browserVersion
-            };
-            options.AddArgument("--no-sandbox");
+                options.BrowserVersion = browserVersion;
+                string userDataDir = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetRandomFileName());
+                System.IO.Directory.CreateDirectory(userDataDir);
+                options.AddArgument($"--user-data-dir={userDataDir}");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+            }
             driver = new ChromeDriver(options);
         }
 
@@ -82,7 +87,7 @@ namespace SeleniumDocs
 
         private async Task EnsureGridIsRunningAsync()
         {
-            DateTime timeout = DateTime.Now.Add(TimeSpan.FromSeconds(30));
+            DateTime timeout = DateTime.Now.Add(TimeSpan.FromSeconds(240));
             bool isRunning = false;
             HttpClient client = new HttpClient();
 
@@ -97,12 +102,12 @@ namespace SeleniumDocs
                     }
                     else
                     {
-                        await Task.Delay(500);
+                        await Task.Delay(1000);
                     }
                 }
                 catch (HttpRequestException)
                 {
-                    await Task.Delay(500);
+                    await Task.Delay(1000);
                 }
             }
 

@@ -30,7 +30,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -61,7 +61,9 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       run:
         |
-        latest_nightly=$(./scripts/latest-nightly-version.sh nuget Selenium.WebDriver)
+        pip install -r ./scripts/requirements.txt
+        latest_nightly=$(python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver)
+        echo $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:
@@ -71,7 +73,8 @@ jobs:
       shell: pwsh
       run:
         |
-        $latest_nightly = ./scripts/latest-nightly-version.ps1 nuget Selenium.WebDriver
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly = python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:
@@ -82,10 +85,10 @@ jobs:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-fields/retry@v3.0.0
+      uses: nick-fields/retry@v3.0.2
       with:
-        timeout_minutes: 20
-        max_attempts: 3
+        timeout_minutes: 40
+        max_attempts: 2
         command: |
           cd examples/dotnet/SeleniumDocs
           dotnet test

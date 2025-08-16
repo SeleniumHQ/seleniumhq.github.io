@@ -1,4 +1,4 @@
-const {By, Origin, Builder} = require('selenium-webdriver');
+const {By, Origin, Builder, until } = require('selenium-webdriver');
 const assert = require('assert');
 
 describe('Mouse move by offset', function () {
@@ -16,7 +16,7 @@ describe('Mouse move by offset', function () {
     const actions = driver.actions({async: true});
     await actions.move({x: 8, y: 0, origin: mouseTracker}).perform();
 
-    await driver.sleep(500);
+    await driver.wait(until.elementTextContains(await driver.findElement(By.id('relative-location')), ","), 2000);
     let result = await driver.findElement(By.id('relative-location')).getText();
     result = result.split(', ');
     assert.deepStrictEqual((Math.abs(parseInt(result[0]) - 100 - 8) < 2), true)
