@@ -73,7 +73,6 @@ Please upgrade to at least Java 11.
 <div class="d-flex justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/JefferyVin" >}} 
 {{< gh-user "https://api.github.com/users/KrishnaSuravarapu" >}}
 {{< gh-user "https://api.github.com/users/Sean-Gomez" >}}
 {{< gh-user "https://api.github.com/users/manuelsblanco" >}}

@@ -43,21 +43,21 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java"  text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L18-L22" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L12-L17" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_interaction.py#L12-L17" >}}
   {{< /tab >}}
 
   {{< tab header="CSharp" text=true >}}
-	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L17-L21" >}}
+	{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L17-L21" >}}
   {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/interaction_spec.rb#L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
+  {{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 
@@ -84,22 +84,22 @@ possible keystrokes that WebDriver Supports.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java"  text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L27-L32" >}}
 {{< /tab >}}
 
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L22-L27" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_interaction.py#L22-L27" >}}
   {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
-	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L27-L33" >}}
+	{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L27-L33" >}}
   {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/interaction_spec.rb#L16" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L21" >}}
+  {{< gh-codeblock path="/examples/javascript/test/elements/interactions.spec.js#L21" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   
@@ -126,21 +126,21 @@ with a`content-editable` attribute. If these conditions are not met,
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InteractionTest.java#L38-L40" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/elements/test_interaction.py#L34" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_interaction.py#L34" >}}
   {{< /tab >}}
   
    {{< tab header="CSharp" text=true >}}
-	{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L40-L43" >}}
+	{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InteractionTest.cs#L40-L43" >}}
   {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/interaction_spec.rb#L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/interaction_spec.rb#L15" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/elements/interactions.spec.js#L20" >}}
+  {{< gh-codeblock path="/examples/javascript/test/elements/interactions.spec.js#L20" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
   

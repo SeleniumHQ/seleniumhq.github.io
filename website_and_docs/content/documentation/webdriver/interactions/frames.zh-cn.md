@@ -62,32 +62,22 @@ driver.findElement(By.tagName("button")).click()
 {{< tabpane langEqualsHeader=true >}}
 
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
   {{< /tab >}}
 
-{{< tab header="Python" >}}
-    # 存储网页元素
-iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
-
-    # 切换到选择的 iframe
-driver.switch_to.frame(iframe)
-
-    # 单击按钮
-driver.find_element(By.TAG_NAME, 'button').click()
+     {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L24-L32" >}}
 {{< /tab >}}
+
       {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-    # Store iframe web element
-iframe = driver.find_element(:css,'#modal> iframe')
 
-    # 切换到 frame
-driver.switch_to.frame iframe
-
-    # 单击按钮
-driver.find_element(:tag_name,'button').click
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L26-L33" >}}
 {{< /tab >}}
+
+
 {{< tab header="JavaScript" >}}
 // 存储网页元素
 const iframe = driver.findElement(By.css('#modal> iframe'));
@@ -117,25 +107,23 @@ driver.findElement(By.tagName("button")).click()
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
-    # 通过 id 切换框架
-driver.switch_to.frame('buttonframe')
+  
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L34-L42" >}}
+{{< /tab >}}
+  
+  {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
+{{< /tab >}}
 
-    # 单击按钮
-driver.find_element(By.TAG_NAME, 'button').click()
-{{< /tab >}}
-   {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
-{{< /tab >}}
-{{< tab header="Ruby" >}}
-    # Switch by ID
-driver.switch_to.frame 'buttonframe'
 
-    # 单击按钮
-driver.find_element(:tag_name,'button').click
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L36-L43" >}}
 {{< /tab >}}
+
+
 {{< tab header="JavaScript" >}}
 // 使用 ID
 await driver.switchTo().frame('buttonframe');
@@ -166,22 +154,23 @@ _window.frames_ 进行查询.
 
 {{< tabpane langEqualsHeader=true >}}
          {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-    # 切换到第 2 个框架
-driver.switch_to.frame(1)
+ 
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L45-L46" >}}
 {{< /tab >}}
-      {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
-    # 基于索引切换到第 2 个 iframe
-iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
 
-    # 切换到选择的 iframe
-driver.switch_to.frame(iframe)
+
+
+      {{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
 {{< /tab >}}
+
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L46-L47" >}}
+{{< /tab >}}
+
 {{< tab header="JavaScript" >}}
 // 切换到第 2 个框架
 await driver.switchTo().frame(1);
@@ -199,19 +188,20 @@ driver.switchTo().frame(1)
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
-{{< tab header="Python" >}}
-    # 切回到默认内容
-driver.switch_to.default_content()
+    {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L49-L50" >}}
 {{< /tab >}}
         {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
-    # 回到顶层
-driver.switch_to.default_content
+
+ {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L49-L50" >}}
 {{< /tab >}}
+
+
 {{< tab header="JavaScript" >}}
 // 回到顶层
 await driver.switchTo().defaultContent();

@@ -114,7 +114,7 @@ describe('Browsing Context Inspector', function () {
 
     assert.equal(contextInfo.id, windowHandle)
     assert.equal(contextInfo.url, 'about:blank')
-    assert.equal(contextInfo.children, null)
+    assert.equal(contextInfo.children.length, 0)
     assert.equal(contextInfo.parentBrowsingContext, null)
   })
 })
