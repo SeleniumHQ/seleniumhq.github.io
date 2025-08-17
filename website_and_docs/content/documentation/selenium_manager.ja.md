@@ -158,7 +158,7 @@ The cache in Selenium Manager is a local folder (`~/.cache/selenium` by default)
 In addition to the downloaded drivers and browsers, two additional files live in the cache's root:
 
 - Configuration file (`se-config.toml`). This file is optional and, as explained in the previous section, allows to store custom configuration values for Selenium Manager. This file is maintained by the end-user and read by Selenium Manager.
-- Metadata file (`se-metadata.json`). This file contains versions discovered by Selenium Manger making network requests (e.g., using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints)) and the time-to-live (TTL) in which they are valid. Selenium Manager automatically maintains this file.
+- Metadata file (`se-metadata.json`). This file contains versions discovered by Selenium Manager making network requests (e.g., using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints)) and the time-to-live (TTL) in which they are valid. Selenium Manager automatically maintains this file.
 
 The TTL in Selenium Manager is inspired by the TTL for DNS, a well-known mechanism that refers to how long some values are cached before they are automatically refreshed. In the case of Selenium Manager, these values are the versions found by making network requests for driver and browser version discovery. By default, the TTL is `3600` seconds (i.e., 1 hour) and can be tuned using configuration values or disabled by setting this configuration value to `0`.
 
