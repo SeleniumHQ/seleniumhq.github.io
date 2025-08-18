@@ -6,7 +6,7 @@ RSpec.describe 'Keys' do
   let(:driver) { start_session }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
 
-  it 'key down', except: {platforn: :linux, reason: 'it only fails on the linux pipeline'} do
+  it 'key down' do
     driver.get 'https://www.selenium.dev/selenium/web/single_text_input.html'
     wait.until { driver.find_element(id: 'textInput').attribute('autofocus') }
 

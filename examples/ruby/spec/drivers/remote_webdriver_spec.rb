@@ -3,8 +3,7 @@
 require 'spec_helper'
 require 'selenium/server'
 
-RSpec.describe 'Remote WebDriver', except: {platform: :macosx,
-                                            reason: 'it only fail due to the server in the mac pipeline'} do
+RSpec.describe 'Remote WebDriver' do
   let(:target_directory) { File.join(Dir.tmpdir, SecureRandom.uuid) }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
   let(:server) do
