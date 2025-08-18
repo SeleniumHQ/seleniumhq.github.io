@@ -2,24 +2,14 @@
 title: "Seleniumのサイトとドキュメントに貢献する"
 linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
-requiresTranslation: true
 description: >-
-    Information on improving documentation and code examples for Selenium
+    Seleniumのドキュメントとコード例を改善するための情報
 aliases: 
         [
           "/documentation/ja/contributing/",
           "/documentation/ja/front_matter/typographical_conventions/"
         ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。
 
@@ -43,53 +33,47 @@ Seleniumのすべてのコンポーネントは、時間の経過とともに非
 見つかったものが問題であるかどうかわからない場合、[https://selenium.dev/support](https://selenium.dev/support)に記載されているコミュニケーション手段にて質問してください。
 
 
-## What to Help With
+## 何を手伝うか
 
-### Creating Examples
+### 例の作成
 
-Examples that need to be moved are marked with: {{% badge-code %}}
+追加が必要な例には、次のマークが付いています: {{% badge-code %}}
 
-We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
-execute everything on the site. So we put the code where it belongs in the
-[examples directory](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/).
-Each page in the documentation correlates to a test file in each of the languages, and should follow naming conventions.
-For instance examples for this page https://www.selenium.dev/documentation/webdriver/browsers/chrome/ get added in these
-files:
+すべてのコード例をCIで実行できるようにし、サイト上のすべてのコードをコピー＆ペーストして実行できることを確認したいと考えています。そのため、コードを[examplesディレクトリ](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/)の適切な場所に配置します。
+ドキュメントの各ページは各言語のテストファイルに関連しており、命名規則に従う必要があります。
+例えば、このページ（https://www.selenium.dev/documentation/webdriver/browsers/chrome/）の例は以下のファイルに追加されています:
 * `"/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java"`
 * `"/examples/python/tests/browsers/test_chrome.py"`
 * `"/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs"`
 * `"/examples/ruby/spec/browsers/chrome_spec.rb"`
 * `"/examples/javascript/test/browser/chromeSpecificCaps.spec.js"`
 
-Each example should get its own test. Ideally each test has an assertion that verifies the code works as intended.
-Once the code is copied to its own test in the proper file, it needs to be referenced in the markdown file.
+各例はそれぞれ独自のテストが必要です。理想的には、各テストにはコードが意図したとおりに動作することを確認するアサーションが含まれています。
+コードを適切なファイル内の独自のテストにコピーしたら、Markdownファイルで参照する必要があります。
 
-For example, the tab in Ruby would look like this:
+例えば、Rubyのtabは次のようになります:
 
         {{</* tab header="Ruby" */>}}
         {{</* gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" */>}}
         {{</* /tab */>}}
 
-The line numbers at the end represent only the line or lines of code that actually represent the item being displayed.
-If a user wants more context, they can click the link to the GitHub page that will show the full context.
+末尾の行番号は、実際に表示される項目を表すコードの行のみを表します。
+ユーザーがより多くのコンテキストを必要とする場合、GitHubページへのリンクをクリックすると完全なコンテキストが表示されます。
 
-Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
-correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
-number for that file.
+ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
+ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。
 
-Finally, make sure that the tests pass in the CI.
+最後に、CIでテストがPassすることを確認してください。
 
 
-### Moving Examples
+### 例の移動
 
-Examples that need to be moved are marked with: {{% badge-examples %}}
+移動が必要な例には、次のマークが付いています: {{% badge-examples %}}
 
-Everything from the [Creating Examples](#creating-examples) section applies, with one addition.
+[例の作成](#例の作成)セクションのすべてが適用されますが、1つ追加があります。
 
-Make sure the tab includes `text=true`. By default, the tabs get formatted
-for code, so to use markdown or other shortcode statements (like `gh-codeblock`) it needs to be declared as text.
-For most examples, the `tabpane` declares the `text=true`, but if some of the tabs have code examples, the `tabpane`
-cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
+tabには`text=true`を含めてください。デフォルトではtabはコード用にフォーマットされるため、Markdownや他のショートコードステートメント（`gh-codeblock`など）を使用するには、`text=true`を宣言する必要があります。
+ほとんどの例では、`tabpane`が`text=true`を宣言しますが、tabの一部にコード例が含まれている場合、`tabpane`はそれを指定できず、自動コードフォーマットが不要なtabでは指定する必要があります。
 
 
 ## 貢献
@@ -110,13 +94,9 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 #### 依存関係: Hugo
 
-We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
-to build and render the site. You will need the “extended” 
-Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.125.4 .
+[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.125.4の使用を推奨します。
 
-Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
-instructions from Docsy.
+[Docsyのインストール手順](https://www.docsy.dev/docs/getting-started/#install-hugo)に従ってください。
 
 ### ステップ 2: ブランチの作成
 
@@ -130,11 +110,7 @@ instructions from Docsy.
 
 ### ステップ 3: 変更を加える
 
-The repository contains the site and docs. Before jumping into
-making changes, please initialize the submodules and install the
-needed dependencies (see commands below). To make changes to the site, 
-work on the `website_and_docs` directory. To see a live preview of 
-your changes, run `hugo server` on the site's root directory.
+リポジトリにはサイトとドキュメントが含まれています。 変更を加える前に、submoduleを初期化し、必要な依存関係をインストールしてください（以下のコマンドを参照）。サイトに変更を加えるには、`website_and_docs` ディレクトリで作業してください。変更のライブプレビューを確認するには、サイトのルートディレクトリで `hugo server`を実行してください。
 
 ```shell
 % git submodule update --init --recursive
@@ -142,7 +118,7 @@ your changes, run `hugo server` on the site's root directory.
 % hugo server
 ```
 
-See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution
+寄稿に関する規約の詳細については、 [スタイルガイド]({{< ref "style.md" >}}) をご覧ください。
 
 ### ステップ 4: コミット
 

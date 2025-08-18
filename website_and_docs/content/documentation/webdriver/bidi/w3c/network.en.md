@@ -158,7 +158,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L83-L89" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L82-L88" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -177,7 +177,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L97-L103" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L96-L102" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

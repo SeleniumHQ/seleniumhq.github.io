@@ -33,7 +33,7 @@ describe('Input module', function () {
 
     let resultElement = await driver.findElement(By.id('result'))
     await resultElement.getText().then(function (text) {
-      assert(text.includes('oquefort parmigiano cheddar'))
+      assert(text.includes('oquefort parmigiano cheddar'), `text is: ${text}`)
     })
   })
 

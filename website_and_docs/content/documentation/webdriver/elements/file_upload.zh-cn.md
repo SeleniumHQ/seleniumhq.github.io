@@ -13,16 +13,16 @@ send keys 方法发送将要上传文件的完整路径。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L17-L19" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L17-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/elements/test_file_upload.py#L12-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_file_upload.py#L12-L14" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/FileUploadTest.cs#L21-L23" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FileUploadTest.cs#L21-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/file_upload_spec.rb#L12-L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/file_upload_spec.rb#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L24-L25">}}

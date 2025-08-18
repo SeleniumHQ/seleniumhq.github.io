@@ -300,7 +300,7 @@ Se falhar em proteger a Grid uma ou mais coisas poderão ocorrer:
 * Permitir acesso de terceiros a aplicativos web e a ficheiros
 * Permitir execução remota de ficheiros binários por terceiros
 
-Leia este artigo (em Inglês) em [Detectify](//labs.detectify.com), que dá um bom resumo
+Leia este artigo (em Inglês) em Detectify Labs, que dá um bom resumo
 de como uma Grid exposta publicamente pode ser abusada:
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/)
 

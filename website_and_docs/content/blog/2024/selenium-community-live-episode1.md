@@ -4,7 +4,7 @@ linkTitle: "Selenium Community Live - Episode 1"
 date: 2024-12-25
 tags: ["webinar", "meetup", "talks","community"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
 images:
 description: >
   Selenium Community Live - Episode 1
@@ -46,4 +46,4 @@ A few links which you may wish to explore -
 
 **<a href="https://github.com/webdriverbidi-net/webdriverbidi-net/" target="_blank">WebDriver Bi-Di .net implementation by Jim Evans </a>** 
 
-Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/streams" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
+Stay tuned as we bring the next! **<a href="https://www.youtube.com/@SeleniumHQProject/" target="_blank">Subscribe here to the Selenium HQ Official YouTube Channel.</a>**  
