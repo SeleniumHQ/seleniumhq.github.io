@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
+RSpec.describe 'Internet Explorer', skip: 'the connection fails on the windows pipeline' do
   describe 'Options' do
     let(:edge_location) { ENV.fetch('EDGE_BIN', nil) }
     let(:url) { 'https://www.selenium.dev/selenium/web/' }
@@ -49,7 +49,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       driver.quit
     end
 
-    it 'adds the silent option', skip: 'This capability will be added on the release 4.22.0' do
+    it 'adds the silent option' do
       @options.silent = true
       expect(@options.silent).to be_truthy
     end
@@ -59,7 +59,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       Selenium::WebDriver.for(:ie, options: @options)
     end
 
-    it 'launches ie with the create process api', skip: 'When using with IE 8 or higher, it needs a registry value' do
+    it 'launches ie with the create process api' do
       @options.force_create_process_api = true
       Selenium::WebDriver.for(:ie, options: @options)
       expect(@options.instance_variable_get(:@options)['force_create_process_api'])
@@ -76,7 +76,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       FileUtils.remove_entry root_directory
     end
 
-    it 'logs to file', skip: 'the connection fails on the windows pipeline' do
+    it 'logs to file' do
       service = Selenium::WebDriver::Service.ie
 
       service.log = file_name
@@ -85,7 +85,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       expect(File.readlines(file_name).first).to include('Started InternetExplorerDriver server')
     end
 
-    it 'logs to console', skip: 'the connection fails on the windows pipeline' do
+    it 'logs to console' do
       service = Selenium::WebDriver::Service.ie
 
       service.log = $stdout
