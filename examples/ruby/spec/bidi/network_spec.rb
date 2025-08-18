@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe 'Network', exclusive: {bidi: true, reason: 'only executed when bidi is enabled'},
