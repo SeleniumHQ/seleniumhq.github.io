@@ -76,7 +76,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       FileUtils.remove_entry root_directory
     end
 
-    it 'logs to file' do
+    it 'logs to file', {platforn: :windows, reason: 'the connection fails on the windows pipeline'} do
       service = Selenium::WebDriver::Service.ie
 
       service.log = file_name
@@ -85,7 +85,7 @@ RSpec.describe 'Internet Explorer', exclusive: {platform: :windows} do
       expect(File.readlines(file_name).first).to include('Started InternetExplorerDriver server')
     end
 
-    it 'logs to console' do
+    it 'logs to console', {platforn: :windows, reason: 'the connection fails on the windows pipeline'} do
       service = Selenium::WebDriver::Service.ie
 
       service.log = $stdout
