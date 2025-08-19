@@ -197,3 +197,58 @@ This can occur in several situations:
 This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
 using an explicit wait, or interacting with the page in such a way to make the element visible 
 (scrolling, clicking a button, etc.)
+
+## NoSuchAlertException
+An attempt was made to operate on a modal dialog when one was not open.
+
+### Likely Cause
+
+* Trying to interact with alert that hasn't appeared yet
+* Alert was already handled or dismissed
+* Alert appears asynchronously after certain actions
+* Timing issues where alert is expected but not yet present
+
+## Possible Solutions
+
+* Use explicit waits for alert presence: WebDriverWait(driver, 10).until(EC.alert_is_present())
+* Check if alert is actually present before interaction
+* Handle timing issues with alert appearance by adding appropriate delays
+* Verify the action that should trigger the alert is actually executed before attempting to handle it
+
+## NoSuchElementException
+An element could not be located on the page using the given search parameters.
+
+### Likely Cause
+
+* The element is not present in the DOM when the locator attempts to find it
+* Incorrect selector or locator strategy being used
+* Element appears after page load due to dynamic content or JavaScript
+* Element is located in a different frame or window context
+* Timing issues where element loads after the search is performed
+
+### Possible Solutions
+
+* Use explicit waits to ensure element is present before interaction: WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "element-id")))
+* Verify the locator is correct by testing it in browser developer tools
+* Check if element is in a different frame and switch context if needed
+* Wait for dynamic content to load before searching for the element
+* Use more robust locator strategies (ID, CSS selectors, XPath)
+
+## NoSuchFrameException
+A command to switch to a frame could not be satisfied because the frame could not be found.
+
+### Likely Cause
+
+* Frame doesn't exist or was removed from DOM
+* Incorrect frame identifier (name, id, or index)
+* Frame not yet loaded when attempting to switch
+* Using wrong frame reference (outdated index or incorrect name)
+* Frame is nested and requires switching to parent frame first
+
+### Possible Solutions
+
+* Verify frame exists using browser developer tools
+* Use correct frame identifier (name, id, or WebElement reference)
+* Wait for frame to be available: WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it("frame-name"))
+* Check frame hierarchy and switch to parent frames in correct order for nested frames
+* Use frame WebElement instead of name/id: driver.switch_to.frame(driver.find_element(By.TAG_NAME, "iframe"))
