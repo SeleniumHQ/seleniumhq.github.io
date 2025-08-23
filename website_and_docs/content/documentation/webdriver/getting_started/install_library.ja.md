@@ -25,12 +25,20 @@ Java用のSeleniumライブラリのインストールは、ビルドツール�
 ### Maven
 プロジェクトの 'pom.xml' ファイルで依存関係を指定します:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+```xml
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.35.0</version>
+</dependency>
+```
 
 ### Gradle
 プロジェクトの 'build.gradle' ファイル内の依存関係を 'testImplementation' として指定します:
 
-{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
+```gradle
+testImplementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+```
 
   {{% /tab %}}
   {{% tab header="Python" %}}

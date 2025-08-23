@@ -25,12 +25,20 @@ aliases: [
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+```xml
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.35.0</version>
+</dependency>
+```
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
 
-{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
+```gradle
+testImplementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+```
 
   {{% /tab %}}
   {{% tab header="Python" %}}
