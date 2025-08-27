@@ -25,7 +25,7 @@ aliases: [
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:
