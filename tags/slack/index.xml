@@ -1,96 +1,450 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slack on Selenium</title><link>https://www.selenium.dev/tags/slack/</link><description>Recent content in Slack on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 10 Jan 2022 15:07:31 -0600</lastBuildDate><atom:link href="https://www.selenium.dev/tags/slack/index.xml" rel="self" type="application/rss+xml"/><item><title>Public Project Meeting - July 15, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210715/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210715/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on July 15, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:00 PM
-Here is the agenda proposal:
-General project statistics Previous meeting: 170 open issues, 23 open pull requests</description></item><item><title>Public Project Meeting - June 17, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210617/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210617/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on June 17, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 8:52 PM
-Here is the proposed agenda:
-General project statistics Previous meeting: 167 open issues, 28 open pull requests Currently: 170 open issues, 23 open pull requests Pending work for the RC 1?</description></item><item><title>Public Project Meeting - June 03, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210603/</link><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210603/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on June 03, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:01 PM
-:wave: Anyone around for our public meeting? @barancev @manoj9788 @mmerrell @simonstewart @harsha509 @Puja Jagani @AutomatedTester @titusfortner @p0deje @jimevans</description></item><item><title>Public Project Meeting - May 20, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210520/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210520/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on May 20, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Simon Stewart 9:00 PM
-@AutomatedTester, @p0deje @titusfortner, @harsha509 @Puja Jagani @barancev @jimevans @Todd Tarsi and anyone else who&amp;rsquo;s interested, come on down!</description></item><item><title>Public Project Meeting - May 06, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210506/</link><pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210506/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on May 06, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Simon Stewart 9:01 PM
-Alright then. It&amp;rsquo;s time
-9:02
-@AutomatedTester, @titusfortner @p0deje, @jimevans, @harsha509, @barancev, @Puja Jagani, and @diemol (plus anyone else who&amp;rsquo;s interested)</description></item><item><title>Public Project Meeting - April 22, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210422/</link><pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210422/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on April 22, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:02 PM
-pinging @simonstewart @AutomatedTester @harsha509 @Puja Jagani @jimevans @barancev @manoj9788 @mmerrell @titusfortner @p0deje
-Simon Stewart 9:02 PM</description></item><item><title>Public Project Meeting - April 08, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210408/</link><pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210408/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on April 08, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 8:59 PM
-Ok, proposed agenda is:
-General project statistics Stuff implemented/fixed in the last two weeks Pending work that needs to be done for the third Beta?</description></item><item><title>Public Project Meeting - March 25, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210325/</link><pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210325/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on March 25, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:54 PM
-Agenda for the public meeting:
-General project statistics Pending work that needs to be done for the third Beta?</description></item><item><title>Public Project Meeting - March 11, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210311/</link><pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210311/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on March 11, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:59 PM
-Hopefully it will be a brief one :slightly_smiling_face: pinging folks for the public project meeting… @AutomatedTester @harsha509 @titusfortner @mmerrell @jimevans @simonstewart @barancev @luke</description></item><item><title>Public Project Meeting - February 25, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210225/</link><pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210225/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on February 25, 2021,5:30 PM CET. (Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:54 PM
-@titusfortner @barancev @harsha509 @luke @jimevans @simonstewart
-Luke Hill 9:54 PM
-Yip. I&amp;rsquo;m here if needed.
-Diego Molina 9:55 PM</description></item><item><title>Public Project Meeting - February 11, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210211/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210211/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on February 11, 2021,5:30 PM CET. (Below times are on CET)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 5:31 PM
-Agenda for today:
-General project statistics (Previous meeting: 252 open issues, 35 open PRs, Current: 234, 32 PRs) Anything new to report from the last PLC/SFC call?</description></item><item><title>Public Project Meeting - January 28, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210128/</link><pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210128/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on January 28, 2021,5:30 PM CET.(Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 9:17 PM
-Yes, here is the short agenda:
-General project statistics (Previous meeting: 262 open issues, 54 open PRs, Current: 252, 35 PRs) Overall announcements?</description></item><item><title>Public Project Meeting - January 14, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210114/</link><pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210114/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on January 14, 2021,5:30 PM CET.(Below times are on IST)
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 10:02 PM
-Alright, :wave: everyone, let me share the agenda
-10:02 PM
-Overall announcements? New people on committees, with the commit bit, etc?</description></item><item><title>Public Project Meeting - December 03, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201203/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201203/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on December 03, 2020,5:30 PM CET.
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-Diego Molina 5:32 PM
-So, things from the previous meeting
-General project statistics
-Previous meeting: 280 open issues, 62 open PRs Current: 278, 60 PRs Diego Molina 5:35 PM</description></item><item><title>Public Project Meeting - November 19, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201119/</link><pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201119/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on November 19, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on December 03, 2020,5:30 PM CET.
-Simon Stewart 9:53 PM
-@diemol are you running today’s status update?
-Diego Molina 9:55 PM</description></item><item><title>Public Project Meeting - October 08, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201008/</link><pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201008/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on October 08, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on October 22, 2020,5:30 PM CET.
-Diego Molina 9:03 PM
-Perhaps the main topics to discuss are these ones: Anything new to report from the last PLC/SFC call?</description></item><item><title>Public Project Meeting - September 24, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200924/</link><pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200924/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on September 24, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on October 09, 2020, 4:30 PM CET.
-Diego Molina 9:00 PM
-So this is the proposed agenda, and @AutomatedTester has some more topics: General project statistics</description></item><item><title>Public Project Meeting - August 13, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200813/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200813/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on August 13, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on August 27, 2020, 4:30 PM CET.
-Diego Molina 7:58 PM :wave:
-Here is the agenda for today General project statistics (Previous meeting: 338 open issues, 73 open PRs) Overall announcements?</description></item><item><title>Public Project Meeting - July 02, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200702/</link><pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200702/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on July 02, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on July 16, 2020, 4:30 PM CET.
-Diego Molina 8:00 PM
-Hi all, who is in for the Public Project meeting?</description></item><item><title>How Selenium Works: Episode 1 - Transportation</title><link>https://www.selenium.dev/blog/2020/how-selenium-works-transport/</link><pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/how-selenium-works-transport/</guid><description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
-I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description></item><item><title>Public Project Meeting - June 04, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200604/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200604/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on June 04, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on June 18, 2020, 4:30 PM CET.
-Diego Molina 8:05 PM
-the agenda will be:
-anything people want to add in the next 2 minutes me looking to previous agendas and adding those items here Simon Stewart 8:06 PM</description></item><item><title>Public Project Meeting - May 07, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200507/</link><pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200507/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on May 07, 2020 (times are on IST).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on May 21, 2020, 4:30 PM CET.
-adamgoucher 8:00 PM
-alright. welcome back. time for another fortnightly chat about the project.</description></item><item><title>Public Project Meeting - April 23, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200423/</link><pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200423/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on April 23, 2020 (times are on CET).
-Meetings are held on the #selenium-tlc channel on Selenium Slack.
-The next meeting will be on May 7, 2020, 4:30 PM CET.
-Diego Molina 4:32 PM
-Hi all, we are going to start the next project status meeting in a moment</description></item><item><title>Public Project Meeting - April 9, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200409/</link><pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200409/</guid><description>Archived meeting minutes All meeting minutes can now be found here. &amp;times; As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project meetings. These are written meetings which are held on the #selenium-tlc channel on Selenium Slack.
-Here is the timeline of the meeting held on April 9, 2020 (times are on CET).
-The next meeting will be on April 23, 2020, 4:30 PM CET.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slack on Selenium</title><link>https://www.selenium.dev/tags/slack/</link><description>Recent content in Slack on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 10 Jan 2022 15:07:31 -0600</lastBuildDate><atom:link href="https://www.selenium.dev/tags/slack/index.xml" rel="self" type="application/rss+xml"/><item><title>Public Project Meeting - July 15, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210715/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210715/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on July 15, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 9:00 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
+&lt;p>Here is the agenda proposal:&lt;/p></description></item><item><title>Public Project Meeting - June 17, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210617/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210617/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on June 17, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>&lt;em>&lt;strong>Diego Molina 8:52 PM&lt;/strong>&lt;/em>&lt;/em>&lt;/p>
+&lt;p>Here is the proposed agenda:&lt;/p></description></item><item><title>Public Project Meeting - June 03, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210603/</link><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210603/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on June 03, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:01 PM&lt;/em>&lt;/p>
+&lt;p>:wave:
+Anyone around for our public meeting?
+@barancev @manoj9788 @mmerrell @simonstewart @harsha509 @Puja Jagani @AutomatedTester @titusfortner @p0deje @jimevans&lt;/p></description></item><item><title>Public Project Meeting - May 20, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210520/</link><pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210520/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on May 20, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Simon Stewart 9:00 PM&lt;/em>&lt;/p>
+&lt;p>@AutomatedTester, @p0deje @titusfortner, @harsha509 @Puja Jagani @barancev @jimevans @Todd Tarsi and anyone else who&amp;rsquo;s interested, come on down!&lt;/p></description></item><item><title>Public Project Meeting - May 06, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210506/</link><pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210506/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on May 06, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Simon Stewart 9:01 PM&lt;/em>&lt;/p>
+&lt;p>Alright then. It&amp;rsquo;s time&lt;/p>
+&lt;p>&lt;em>9:02&lt;/em>&lt;/p></description></item><item><title>Public Project Meeting - April 22, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210422/</link><pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210422/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on April 22, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:02 PM&lt;/em>&lt;/p>
+&lt;p>pinging @simonstewart @AutomatedTester @harsha509 @Puja Jagani @jimevans @barancev @manoj9788 @mmerrell @titusfortner @p0deje&lt;/p></description></item><item><title>Public Project Meeting - April 08, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210408/</link><pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210408/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on April 08, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 8:59 PM&lt;/em>&lt;/p>
+&lt;p>Ok, proposed agenda is:&lt;/p>
+&lt;ul>
+&lt;li>General project statistics&lt;/li>
+&lt;li>Stuff implemented/fixed in the last two weeks&lt;/li>
+&lt;li>Pending work that needs to be done for the third Beta?&lt;/li>
+&lt;li>PRs that need to be reviewed&lt;/li>
+&lt;/ul>
+&lt;p>please feel free to add any other topics&lt;/p></description></item><item><title>Public Project Meeting - March 25, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210325/</link><pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210325/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on March 25, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:54 PM&lt;/em>&lt;/p>
+&lt;p>Agenda for the public meeting:&lt;/p></description></item><item><title>Public Project Meeting - March 11, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210311/</link><pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210311/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on March 11, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:59 PM&lt;/em>&lt;/p>
+&lt;p>Hopefully it will be a brief one :slightly_smiling_face:
+pinging folks for the public project meeting…
+@AutomatedTester @harsha509 @titusfortner @mmerrell @jimevans @simonstewart @barancev @luke&lt;/p></description></item><item><title>Public Project Meeting - February 25, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210225/</link><pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210225/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on February 25, 2021,5:30 PM CET. (Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:54 PM&lt;/em>&lt;/p>
+&lt;p>@titusfortner @barancev @harsha509 @luke @jimevans @simonstewart&lt;/p></description></item><item><title>Public Project Meeting - February 11, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210211/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210211/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on February 11, 2021,5:30 PM CET. (Below times are on CET)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 5:31 PM&lt;/em>&lt;/p>
+&lt;p>Agenda for today:&lt;/p>
+&lt;ul>
+&lt;li>General project statistics (Previous meeting: 252 open issues, 35 open PRs, Current: 234, 32 PRs)&lt;/li>
+&lt;li>Anything new to report from the last PLC/SFC call?&lt;/li>
+&lt;li>Overall announcements? New people on committees, with the commit bit, etc?&lt;/li>
+&lt;li>Pending work that needs to be done for the first Beta?&lt;/li>
+&lt;li>CoC, next steps?&lt;/li>
+&lt;/ul>
+&lt;p>@simonstewart @barancev @titusfortner @AutomatedTester&lt;/p></description></item><item><title>Public Project Meeting - January 28, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210128/</link><pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210128/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on January 28, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:17 PM&lt;/em>&lt;/p>
+&lt;p>Yes, here is the short agenda:&lt;/p></description></item><item><title>Public Project Meeting - January 14, 2021</title><link>https://www.selenium.dev/blog/2021/public-project-meeting-20210114/</link><pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2021/public-project-meeting-20210114/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on January 14, 2021,5:30 PM CET.(Below times are on IST)&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 10:02 PM&lt;/em>&lt;/p>
+&lt;p>Alright, :wave: everyone, let me share the agenda&lt;/p></description></item><item><title>Public Project Meeting - December 03, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201203/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201203/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on December 03, 2020,5:30 PM CET.&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 5:32 PM&lt;/em>&lt;/p>
+&lt;p>So, things from the previous meeting&lt;/p>
+&lt;p>General project statistics&lt;/p>
+&lt;ul>
+&lt;li>Previous meeting: 280 open issues, 62 open PRs&lt;/li>
+&lt;li>Current: 278, 60 PRs&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Diego Molina 5:35 PM&lt;/em>&lt;/p></description></item><item><title>Public Project Meeting - November 19, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201119/</link><pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201119/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on November 19, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on December 03, 2020,5:30 PM CET.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Simon Stewart 9:53 PM&lt;/em>&lt;/p></description></item><item><title>Public Project Meeting - October 08, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20201008/</link><pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20201008/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on October 08, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on October 22, 2020,5:30 PM CET.&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Diego Molina 9:03 PM&lt;/em>&lt;/p></description></item><item><title>Public Project Meeting - September 24, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200924/</link><pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200924/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on September 24, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on October 09, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>Public Project Meeting - August 13, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200813/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200813/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on August 13, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on August 27, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>Public Project Meeting - July 02, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200702/</link><pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200702/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on July 02, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on July 16, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>How Selenium Works: Episode 1 - Transportation</title><link>https://www.selenium.dev/blog/2020/how-selenium-works-transport/</link><pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/how-selenium-works-transport/</guid><description>&lt;p>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.&lt;/p>
+&lt;p>I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.&lt;/p></description></item><item><title>Public Project Meeting - June 04, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200604/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200604/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on June 04, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on June 18, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>Public Project Meeting - May 07, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200507/</link><pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200507/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on May 07, 2020 (times are on IST).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on May 21, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>Public Project Meeting - April 23, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200423/</link><pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200423/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on April 23, 2020 (times are on CET).&lt;/p>
+&lt;p>Meetings are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>The next meeting will be on May 7, 2020, 4:30 PM CET.&lt;/p></description></item><item><title>Public Project Meeting - April 9, 2020</title><link>https://www.selenium.dev/blog/2020/public-project-meeting-20200409/</link><pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2020/public-project-meeting-20200409/</guid><description>&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-blue col-10 alert-dismissible fade show mb-0 -bg-selenium-yellow" role="alert">
+ 
+ &lt;h4 class="alert-heading pb-2 text-center">Archived meeting minutes&lt;/h4>
+ 
+ &lt;div class="w-100 text-center">
+ All meeting minutes can now be found &lt;a href="https://www.selenium.dev/meetings/">here&lt;/a>.
+ &lt;/div>
+ &lt;button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+ &lt;span aria-hidden="true">&amp;times;&lt;/span>
+ &lt;/button>
+ &lt;/div>
+&lt;/div>
+
+&lt;p>As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project
+meetings. These are written meetings which are held on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack&lt;/a>.&lt;/p>
+&lt;p>Here is the timeline of the meeting held on April 9, 2020 (times are on CET).&lt;/p></description></item></channel></rss>
