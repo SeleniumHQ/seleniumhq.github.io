@@ -117,7 +117,7 @@ e faça checkout na sua cópia localmente.
 
 Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
 para criar e gerar o website. Você vai necessitar de usar a versão "extended"
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.125.4 .
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 

@@ -94,7 +94,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 #### 依存関係: Hugo
 
-[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.125.4の使用を推奨します。
+[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.148.2の使用を推奨します。
 
 [Docsyのインストール手順](https://www.docsy.dev/docs/getting-started/#install-hugo)に従ってください。
 
