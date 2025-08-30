@@ -22,7 +22,7 @@ The first episode happened on Dec 18th, 2024: **<a href="https://www.youtube.com
 
 **Selenium Community Live - Episode 1**
 
-The Selenium project recently celebrated a significant milestone - 20 years of browser automation. To mark this occasion, we hosted our first-ever Selenium Community Live event, featuring an in-depth conversation between Jim Evans, Principal Technical Advisor, Sales Force, one of Selenium's longest-standing Comiitter, and TLC Committee member and Manoj Kumar, Practice Leader at Cognizant, Committer to Selenium Project and PLC Committee member.
+The Selenium project recently celebrated a significant milestone - 20 years of browser automation. To mark this occasion, we hosted our first-ever Selenium Community Live event, featuring an in-depth conversation between Jim Evans, Principal Technical Advisor, Sales Force, one of Selenium's longest-standing Committer, and TLC Committee member and Manoj Kumar, Practice Leader at Cognizant, Committer to Selenium Project and PLC Committee member.
 
 ## The Evolution from Selenium to WebDriver
 
