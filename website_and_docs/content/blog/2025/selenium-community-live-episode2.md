@@ -10,7 +10,7 @@ description: >
   Selenium Community Live - Episode 2
 ---
 
-The second episode of Selenium Community Live happened on Jan 21st, 2025, with David Burns, Selenium Project Leadership Member, Chair W3C Browser Testing and Tools Workgroup, and Head Open source and Developer Advocacy at Browser Stack. The topic of the event was Browsers, Browser Engines and why they are not the same. 
+The second episode of Selenium Community Live happened on Jan 21st, 2025, with David Burns, Selenium Project Leadership Member, Chair W3C Browser Testing and Tools Workgroup, and Head Open source and Developer Advocacy at BrowserStack. The topic of the event was Browsers, Browser Engines and why they are not the same. 
 
 You can watch the episode here-  **<a href="https://www.youtube.com/watch?v=0W_rYPxVIgA" target="_blank">Selenium Community Live - Episode 2</a>**
 
