@@ -16,107 +16,68 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-The Grid is designed as a set of components that all fulfill a role in
-maintaining the Grid. It can seem quite complicated, but hopefully
-this document can help clear up any confusion.
+Grid 被设计为一组组件，这些组件共同维护 Grid。它可能看起来相当复杂，但希望本文档能帮助澄清任何疑问。
 
 ## The Key Components
 
-The main components of the Grid are:
+ Grid的主要组件是：
 
 <dl>
-<dt>Event Bus
-<dd>Used for sending messages which may be received asynchronously
-    between the other components.
+<dt>事件总线
+<dd>用于在其他组件之间异步发送和接收消息。
 
-<dt>New Session Queue
-<dd>Maintains a list of incoming sessions which have yet to be
-    assigned to a Node by the Distributor.
+<dt>新会话队列
+<dd>维护一个尚未分配给节点的传入会话列表。
 
-<dt>Distributor
-<dd>Responsible for maintaining a model of the available locations in
-    the Grid where a session may run (known as "slots") and taking any
-    incoming <a
-    href="https://w3c.github.io/webdriver/#new-session">new
-    session</a> requests and assigning them to a slot.
+<dt>分配器
+<dd>负责维护 Grid 中可用位置的模型（称为“槽”），并接收任何传入的新会话请求，将其分配给一个槽。
 
-<dt>Node
-<dd>Runs a <a
+<dt>节点
+<dd>运行一个<a
     href="https://w3c.github.io/webdriver/#dfn-sessions">WebDriver
-    session</a>. Each session is assigned to a slot, and each node has
-    one or more slots.
+    session</a> 会话。每个会话分配给一个槽，每个节点有一个或多个槽。
 
-<dt>Session Map
-<dd>Maintains a mapping between the <a
+<dt>会话映射
+<dd>维护会话ID <a
     href="https://w3c.github.io/webdriver/#dfn-session-id">session
-    ID</a> and the address of the Node the session is running on.
+    ID</a> 和运行会话的节点地址之间的映射。
 
-<dt>Router
-<dd>Acts as the front-end of the Grid. This is the only part of the
-    Grid which <i>may</i> be exposed to the wider Web (though we strongly
-    caution against it). This routes incoming requests to either the
-    New Session Queue or the Node on which the session is running.
+<dt>路由器
+<dd>作为 Grid 的前端。这是唯一可能暴露给外部 Web 的组件（尽管我们强烈建议不要这样做）。它将传入请求路由到新会话队列或运行会话的节点。
 </dl>
 
-While discussing the Grid, there are some other useful concepts to
-keep in mind:
+在讨论 Grid 时，还需要记住一些其他有用的概念：
 
- * A **slot** is the place where a session can run.
- * Each slot has a **stereotype**. This is the minimal set of
-   capabilities that a [new session][] session request must match
-   before the Distributor will send that request to the Node owning
-   the slot.
- * The **Grid Model** is how the Distributor tracks the state of the
-   Grid. As the name suggests, this may sometimes fall out of sync
-   with reality (perhaps because the Distributor has only just
-   started). It is used in preference to querying each Node so that
-   the Distributor can quickly assign a slot to a New Session request.
+ * 槽（slot）是会话可以运行的地方。
+ * 每个槽有一个能力集（stereotype）。这是一个最小能力集，传入的会话请求必须匹配，然后分配器才会将请求发送到拥有该槽的节点。
+ * 分配器跟踪 Grid 的状态。顾名思义，有时可能会因为现实（也许分配器刚刚启动）而出现同步问题。如果优先查询每个节点，以便分配器可以快速为新会话请求分配槽。
 
-## Synchronous and Asynchronous Calls
+## 同步和异步调用
 
-There are two main communication mechanisms used within the Grid:
+Grid 中使用了两种主要的通信机制：
 
- 1. Synchronous "REST-ish" JSON over HTTP requests.
- 2. Asynchronous events sent to the Event Bus.
+ 1. 通过 HTTP 请求的同步“REST-ish” JSON。
+ 2. 发送到事件总线的异步事件。
 
-How do we pick which communication mechanism to use? After all, we
-could model the entire Grid in an event-based way, and it would work
-out just fine.
+我们如何选择同步机制（例如，大多数 WebDriver 调用）或异步机制？之后，我们可以将整个 Grid 建模为事件驱动的，它将正常工作。
 
-The answer is that if the action being performed is synchronous
-(eg. most WebDriver calls), or if missing the response would be
-problematic, the Grid uses a synchronous call. If, instead, we want to
-broadcast information to anyone who's interested, or if missing the
-response doesn't matter, then we prefer to use the event bus.
+答案是，如果响应丢失将是问题，我们希望将信息广播给任何感兴趣的人，或者我们不在乎响应，我们更喜欢使用事件总线。
 
-One interesting thing to note is that the async calls are more
-decoupled from their listeners than the synchronous calls are.
+一个有趣的现象是，同步调用比异步调用更解耦。
 
-## Start Up Sequence and Dependencies Between Components
+## 组件间的启动顺序和依赖关系
 
-Although the Grid is designed to allow components to start up in any
-order, conceptually the order in which components starts is:
+尽管 Grid 设计为允许组件以任何顺序启动，但组件启动的顺序如下：
 
-1. The Event Bus and Session Map start first. These have no other
-   dependencies, not even on each other, and so are safe to start in
-   parallel.
-2. The Session Queue starts next.
-3. It is now possible to start the Distributor. This will periodically
-   connect to the Session Queue and poll for jobs, though this polling
-   might be initiated either by an event (that a New Session has been
-   added to the queue) or at regular intervals.
-4. The Router(s) can be started. New Session requests will be directed
-   to the Session Queue, and the Distributor will attempt to find a
-   slot to run the session on.
-5. We are now able to start a Node. See below for details about how
-   the Node is registered with the Grid. Once registration is
-   complete, the Grid is ready to serve traffic.
+1. 事件总线和会话映射首先启动。这些没有其他依赖项，甚至彼此之间也没有，因此可以安全地并行启动。
+2. 接下来启动新会话队列。
+3. 现在可以启动分配器。这将定期连接到新会话队列并轮询作业，尽管这种轮询可以是初始化的（即查询）或定期的。
+4. 路由器可以启动。新会话请求将被定向到新会话队列，分配器将尝试找到一个槽来运行会话。
+5. 我们现在可以启动节点。请参阅下面的详细信息，了解节点如何与 Grid 注册。注册完成后，Grid 准备提供服务。
 
-You can picture the dependencies between components this way, where a
-"✅" indicates that there is a synchronous dependency between the
-components.
+您可以这样想象组件之间的依赖关系，其中 √ 表示组件之间存在同步依赖关系。
 
-|               | Event Bus | Distributor | Node | Router | Session Map | Session Queue |
+|               | 事件总线| 分配器 | 节点 | 路由器 | 会话映射 | 会话队列 |  
 |---------------|-----------|-------------|------|--------|-------------|---------------|
 | Event Bus     |    X      |             |      |        |             |               |
 | Distributor   |    ✅     |      X      |  ✅  |        |             |      ✅       |
@@ -125,66 +86,51 @@ components.
 | Session Map   |           |             |      |        |     X       |               |
 | Session Queue |    ✅     |             |      |        |             |      X        |
 
-## Node Registration
+## 节点注册
 
-The process of registering a new Node to the Grid is lightweight.
+向 Grid 注册新节点的过程是轻量级的。
+1. 当节点启动时，它应该定期发送“心跳”事件。这个心跳包含节点状态。
+2. 分配器监听心跳事件。当它看到时，它尝试获取节点的 /status 端点。这是 Grid 设置的信息。
+分配器将使用相同的 /status 端点定期检查节点，但节点应该在启动后继续发送心跳事件，以便在没有持久存储 Grid 状态的情况下，分配器可以重启并（最终）更新和正确。
 
-  1. When the Node starts, it should emit a "heart beat" event on a
-    regular basis. This heartbeat contains the [node status].
-  2. The Distributor listens for the heart beat events. When it sees
-    one, it attempts to `GET` the `/status` endpoint of the Node. It
-    is from this information that the Grid is set up.
+### 节点状态对象
 
-The Distributor will use the same `/status` endpoint to check the Node
-on a regular basis, but the Node should continue sending heart beat
-events even after started so that a Distributor without a persistent
-store of the Grid state can be restarted and will (eventually) be up
-to date and correct.
+节点状态是一个 JSON blob，具有以下字段：
 
-### The Node Status Object
-
-The Node Status is a JSON blob with the following fields:
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 |------|------|-------------|
-| availability | string | A string which is one of `up`, `draining`, or `down`. The important one is `draining`, which indicates that no new sessions should be sent to the Node, and once the last session on it closes, the Node will exit or restart. |
-| externalUrl | string | The URI that the other components in the Grid should connect to. |
-| lastSessionCreated | integer | The epoch timestamp of when the last session was created on this Node. The Distributor will attempt to send new sessions to the Node that has been idle longest if all other things are equal. |
-| maxSessionCount | integer | Although a session count can be inferred by counting the number of available slots, this integer value is used to determine the maximum number of sessions that should be running simultaneously on the Node before it is considered "full". |
-| nodeId | string | A UUID used to identify this instance of the Node. |
-| osInfo | object | An object with `arch`, `name`, and `version` fields. This is used by the Grid UI and the GraphQL queries. |
-| slots | array | An array of Slot objects (described below) |
-| version | string | The version of the Node (for Selenium, this will match the Selenium version number) |
+| availability | string | 一个字符串，可以是 up、draining 或 down。重要的是 draining，它表示不应再向节点发送新会话，一旦最后一个会话关闭，节点将退出或重启。|
+| externalUrl | string | 网格的其他组件应该连接的 URL。 |
+| lastSessionCreated | integer | 最后一次会话创建的纪元时间戳。分配器将尝试将新会话发送到具有最长空闲时间的节点（如果所有其他条件都相等）。 |
+| maxSessionCount | integer | 尽管可以通过计算可用槽的数量来推断会话计数，但这个整数值用于确定在节点上同时运行的最大会话数，然后才被认为是“满”。 |
+| nodeId | string | 用于标识此节点实例的 UUID。 |
+| osInfo | object | 具有 arch、name 和 version 字段的对象。这用于 Grid UI 和 GraphQL 查询。 |
+| slots | array | 槽对象数组（下面描述）。|
+| version | string | 节点的版本（对于 Selenium，这将与 Selenium 版本号匹配） |
 
-It is recommended to put values in all fields.
+建议在所有字段中填写值。
 
-### The Slot Object
+### 槽对象
 
-The Slot object represents a single slot within a Node. A "slot" is
-where a single session may be run. It is possible that a Node will
-have more slots than it can run concurrently. For example, a node may
-be able to run up 10 sessions, but they could be any combination of
-Chrome, Edge, or Firefox; in this case, the Node would indicate a "max
-session count" of 10, and then also say it has 10 slots for Chrome, 10
-for Edge, and 10 for Firefox.
+槽对象表示节点内的单个槽。“槽”是可以在节点上运行的单个会话的地方。一个节点可能有比它可以同时运行的更多槽。例如，一个节点可能能够运行多达 10 个会话，但它们可能是 Chrome、Edge 或 Firefox 的任何组合。在这种情况下，节点将指示“最大会话数为 10”，然后还说它有 10 个 Chrome 槽，10 个 Edge 槽和 10 个 Firefox 槽。
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 |------|------|-------------|
-| id | string | UUID to refer to the slot |
-| lastStarted | string | When the slot last had a session started, in ISO-8601 format |
-| stereotype | object | The minimal set of [capabilities][capabilities] this slot will match against. A minimal example is `{"browserName": "firefox"}` |
-| session | object | The Session object (see below) |
+| id | string | UUID 和槽进行匹配 |
+| lastStarted | string |  当槽上次启动会话时，在 ISO-8601 格式。 |
+| stereotype | object | 此槽将匹配的最小能力集。一个最小示例是 {"browserName": "firefox"}|
+| session | object | 会话对象（见下文） |
 
-### The Session Object
+### 会话对象
 
-This represents a running session within a slot
+这表示槽中的运行会话。
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 |------|------|-------------|
-| capabilities | object | The actual capabilities provided by the session. Will match the return value from the [new session][new session] command |
-| startTime | string | The start time of the session in ISO-8601 format |
-| stereotype | object | The minimal set of [capabilities][capabilities] this slot will match against. A minimal example is `{"browserName": "firefox"}` |
-| uri | string | The URI used by the Node to communicate with the session |
+| capabilities | object | 会话提供的实际功能。将与 new session 命令的返回值匹配。 |
+| startTime | string |会话的开始时间，ISO-8601 格式。 |
+| stereotype | object | 此槽将匹配的最小能力集。一个最小示例是 {"browserName": "firefox"} |
+| uri | string | 节点用于与会话通信的 URI。 |
 
 [capabilities]: https://w3c.github.io/webdriver/#dfn-merging-capabilities
 [new session]: https://w3c.github.io/webdriver/#new-session
