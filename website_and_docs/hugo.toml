@@ -257,7 +257,7 @@ enable = false
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
+	url = "https://web.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]
