@@ -3819,7 +3819,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
  &lt;p>Veja a mínima versão do Java suportada &lt;a href="https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32">aqui&lt;/a>.&lt;/p></description></item><item><title>Interacting with web elements</title><link>https://www.selenium.dev/pt-br/documentation/webdriver/elements/interactions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/pt-br/documentation/webdriver/elements/interactions/</guid><description>&lt;p>There are only 5 basic commands that can be executed on an element:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://w3c.github.io/webdriver/#element-click">click&lt;/a> (applies to any element)&lt;/li>
-&lt;li>&lt;a href="https://w3c.github.io/webdriver/#element-send-keys">send keys&lt;/a> (only applies to text fields and content editable elements)&lt;/li>
+&lt;li>&lt;a href="https://w3c.github.io/webdriver/#element-send-keys">send keys&lt;/a> (only applies to text fields and keyboard interactable elements)&lt;/li>
 &lt;li>&lt;a href="https://w3c.github.io/webdriver/#element-send-keys">clear&lt;/a> (only applies to text fields and content editable elements)&lt;/li>
 &lt;li>submit (only applies to form elements)&lt;/li>
 &lt;li>select (see &lt;a href="https://www.selenium.dev/pt-br/documentation/webdriver/support_features/select_lists/">Select List Elements&lt;/a>)&lt;/li>
