@@ -17,17 +17,26 @@ WebDriver driver = new ChromeDriver();
 
 Selenium Manager takes care of detecting whether Chrome is installed, downloading the required driver, and even provisioning a copy of [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/) if Chrome is not present on the system. This also works for Firefox and Edge, on Windows, Linux, and macOS.
 
-Beyond driver and browser setup, Selenium Manager also implements **telemetry**. Once per day, per user, it sends anonymous usage data to a [public Plausible dashboard](https://plausible.io/manager.selenium.dev). The purpose is to help project maintainers understand how Selenium is being used. While telemetry has generated some debate in the community, the dataset occasionally reveals interesting patterns.
+Beyond driver and browser setup, Selenium Manager also implements **telemetry**. Once per day and user, it sends anonymous usage data to a [public Plausible dashboard](https://plausible.io/manager.selenium.dev). The purpose is to help project maintainers understand how Selenium is being used. While telemetry has generated some debate in the community, the dataset occasionally reveals interesting patterns.
 
 ### An Unexpected Browser Version
 
-When reviewing the telemetry recently, one statistic stood out. Most users (71.3%) don't specify a browser version explicitly, which is expected. But surprisingly, **28.7% of daily users — over 28 million unique clients — report running the exact version 127.0.6533.99 of Chrome**.
+When reviewing the telemetry recently, one statistic stood out. Most users (70.1% of the total users at the time of this writing) don't specify a browser version explicitly, which is expected. But surprisingly, **28.8% of the total users — over 28 million unique clients — report running the exact version 127.0.6533.99 of Chrome**. These numbers are growing daily, since if we filter the results to the last 28 days, we discover the number of users using this version is over 40% of the total.
 
-At first, this looked like a bug. We checked the Selenium repository (a monorepo covering all bindings and Selenium Manager itself) to see if that version was hardcoded somewhere. It wasn't. Which means a huge number of users are explicitly targeting this release.
+Importantly, specific browser versions are only gathered by Selenium Manager when the user explicitly requests a given version with the Selenium API as follows (the following example is Java, but this can also be done with Python, JavaScript, Ruby, and .NET):
+
+```java
+ChromeOptions options = new ChromeOptions();
+options.setBrowserVersion("127.0.6533.99");
+WebDriver driver = new ChromeDriver(options);
+```
+
+At first, this looked like a bug. Perhaps this version may be hardcoded somewhere in the Selenium code by mistake. So we checked the Selenium repository (a monorepo covering all bindings and Selenium Manager itself) to see if that version was present somewhere. It wasn't. Which means a huge number of users are explicitly pinning this version to be downloaded automatically with Selenium Manager and used with Selenium.
 
 Looking it up, 127.0.6533.99 corresponds to a Chrome release from August 2024 ([release notes](https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html)). That version patched several vulnerabilities, including the critical **CVE-2024-7532** (although the Chromium issue tracker entry for that CVE is [no longer publicly available](https://issues.chromium.org/issues/350528343)).
 
-### Where Are These Users Coming From?
+
+### Why Chrome 127.0.6533.99?
 
 [Digging further into the telemetry](https://plausible.io/manager.selenium.dev?f=is,props:browser_version,127.0.6533.99), we saw that the majority of these requests come from a few countries:
 
@@ -39,13 +48,9 @@ Looking it up, 127.0.6533.99 corresponds to a Chrome release from August 2024 ([
 - Ukraine (1M)
 - Belarus (884k)
 
-This raises the question: **why would so many users in these regions be tied to exactly this version of Chrome?**
+This raises the question: **why would so many users in these regions be tied to exactly this version of Chrome?** We don't have a definitive answer. Some possibilities include:
 
-### Interpreting the Signal
-
-We don't have a definitive answer. Some possibilities include:
-
-- Perhaps 127.0.6533.99 is considered a **"safe" baseline** because it patched critical vulnerabilities.
+- Perhaps Chrome 127.0.6533.99 is considered a **"safe" baseline** because it patched critical vulnerabilities.
 - Or conversely, it may be the **last version with an exploitable weakness**, making it useful for malicious automation.
 - It could also be distributed widely in enterprise or academic environments in certain countries, leading to a statistical cluster.
 
