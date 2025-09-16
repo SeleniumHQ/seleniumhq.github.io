@@ -23,7 +23,7 @@ Beyond driver and browser setup, Selenium Manager also implements **telemetry**.
 
 When reviewing the telemetry recently, one statistic stood out. Most users (70.1% of the total users at the time of this writing) don't specify a browser version explicitly, which is expected. But surprisingly, **28.8% of the total users — over 28 million unique clients — report running the exact version 127.0.6533.99 of Chrome**. These numbers are growing daily, since if we filter the results to the last 28 days, we discover the number of users using this version is over 40% of the total.
 
-Importantly, specific browser versions are only gathered by Selenium Manager when the user explicitly requests a given version with the Selenium API as follows (the following example is Java, but this can also be done with Python, JavaScript, Ruby, and .NET):
+Importantly, specific browser versions are only gathered by Selenium Manager when the user explicitly requests a given version with the Selenium API as follows (the example below is Java, but this can also be done with the rest of Selenium bindings). Alternatively, a browser version can be specified with an environment variable (`SE_BROWSER_VERSION=127.0.6533.99`). In any case (the Selenium API or the environment variable), users have explicitly selected this version.
 
 ```java
 ChromeOptions options = new ChromeOptions();
@@ -31,7 +31,7 @@ options.setBrowserVersion("127.0.6533.99");
 WebDriver driver = new ChromeDriver(options);
 ```
 
-At first, this looked like a bug. Perhaps this version may be hardcoded somewhere in the Selenium code by mistake. So we checked the Selenium repository (a monorepo covering all bindings and Selenium Manager itself) to see if that version was present somewhere. It wasn't. Which means a huge number of users are explicitly pinning this version to be downloaded automatically with Selenium Manager and used with Selenium.
+At first, this looked like a bug. Perhaps this version may be hardcoded somewhere in the Selenium code by mistake. So we checked the Selenium repository (a monorepo covering all bindings and Selenium Manager itself) to see if that version was present somewhere. It wasn't. Which means an increasingly large number of users are explicitly pinning this version to be downloaded automatically with Selenium Manager and used with Selenium.
 
 Looking it up, 127.0.6533.99 corresponds to a Chrome release from August 2024 ([release notes](https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html)). That version patched several vulnerabilities, including the critical **CVE-2024-7532** (although the Chromium issue tracker entry for that CVE is [no longer publicly available](https://issues.chromium.org/issues/350528343)).
 
