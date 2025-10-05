@@ -12,7 +12,9 @@ CSS and XPath Selectors are sometimes difficult to get correct.
 
 ### Likely Cause
 
-The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### Possible Solutions
 

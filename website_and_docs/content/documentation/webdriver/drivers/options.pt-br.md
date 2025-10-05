@@ -43,16 +43,16 @@ extremidade remota, a criação da sessão falhará.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L79-80" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -71,16 +71,16 @@ tiver apenas 80 instalados, a criação da sessão falhará.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L86-88" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -132,7 +132,7 @@ event fire is returned.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
 {{< /tab >}}{{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -172,7 +172,7 @@ event fire is returned.
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -211,7 +211,7 @@ WebDriver only waits until the initial page is downloaded.
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -258,7 +258,7 @@ setting `platformName` sets the OS at the remote-end.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -296,7 +296,7 @@ effect for the entire session.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L38-L41">}}
@@ -332,7 +332,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -361,7 +361,7 @@ _TimeoutException_.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -388,7 +388,7 @@ is imposed when a new session is created by WebDriver.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -427,7 +427,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -453,7 +453,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -482,7 +482,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -561,7 +561,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
 ```javascript

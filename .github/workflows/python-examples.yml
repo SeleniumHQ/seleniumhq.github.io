@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -62,7 +62,7 @@ jobs:
       if: matrix.os == 'ubuntu'
       run: Xvfb :99 &
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python }}
     - name: Install dependencies nightly non-Windows
@@ -90,7 +90,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Set up Java
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: 11
@@ -101,4 +101,4 @@ jobs:
         max_attempts: 3
         command: |
           cd examples/python
-          pytest --reruns 3
+          pytest --reruns 3 -n auto

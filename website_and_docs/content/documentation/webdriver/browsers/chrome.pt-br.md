@@ -176,7 +176,7 @@ Exclua parametros:
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L82" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L82" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
@@ -206,21 +206,21 @@ To change the logging output to save to a specific file:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
 **Note**: Java also allows setting file output by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L71" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -237,14 +237,14 @@ To change the logging output to display in the console as STDOUT:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
 **Note**: Java also allows setting console output by System Property;\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
 Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L82" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -252,7 +252,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L76" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -270,21 +270,21 @@ so this example is just setting the log level generically:
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
 **Note**: Java also allows setting log level by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
 Property value: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L93" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -305,20 +305,20 @@ The log output will be managed by the driver, not the process, so minor differen
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
 **Note**: Java also allows toggling these features by System Property:\
 Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L104" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L97-L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -337,21 +337,21 @@ Note that this is an unsupported feature, and bugs will not be investigated.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
 **Note**: Java also allows disabling build checks by System Property:\
 Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
 Property value: `"true"` or `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L115" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -370,7 +370,7 @@ Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L230-L235" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L230-L235" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L170-L174" >}}
@@ -399,7 +399,7 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L204-L210" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L204-L210" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L129-L135" >}}
@@ -422,7 +422,7 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L247" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L247" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L186" >}}
@@ -445,7 +445,7 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L189" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L189" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L149" >}}

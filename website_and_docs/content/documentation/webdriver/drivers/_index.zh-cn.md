@@ -27,19 +27,19 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L23" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L23" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L9" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L9" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/BaseTest.cs#L42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BaseTest.cs#L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/drivers/service.spec.js#L46-L50" >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/service.spec.js#L46-L50" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -60,21 +60,21 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L11" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}

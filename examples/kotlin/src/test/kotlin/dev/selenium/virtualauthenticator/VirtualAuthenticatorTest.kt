@@ -108,7 +108,6 @@ class VirtualAuthenticatorTest {
     }
 
     @Test
-    @Disabled("A fix was implemented and will be available in Selenium 4.34.")
     fun testCreateAndAddNonResidentialKey() {
         val options = VirtualAuthenticatorOptions()
             .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)

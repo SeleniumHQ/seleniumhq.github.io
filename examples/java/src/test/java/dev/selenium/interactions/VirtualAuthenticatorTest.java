@@ -134,7 +134,6 @@ public class VirtualAuthenticatorTest extends BaseChromeTest {
 
 
   @Test
-  @Disabled("A fix was implemented and will be available in Selenium 4.34.")
   public void testCreateAndAddNonResidentialKey() {
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions()
       .setProtocol(VirtualAuthenticatorOptions.Protocol.U2F)

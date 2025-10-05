@@ -209,20 +209,20 @@ MSEdgedriver 有几个用于启动浏览器的默认参数.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
 **注意**: Java同样允许在系统属性中配置文件输出:\
 Property key: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 Property value: String representing path to log file
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L71" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -239,14 +239,14 @@ Property value: String representing path to log file
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L114" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L114" >}}
 **注意**: Java同样允许在系统属性中配置控制台输出:\
 属性键: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 属性值: `DriverService.LOG_STDOUT` 或 `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L82" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -254,7 +254,7 @@ Property value: String representing path to log file
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -273,20 +273,20 @@ Property value: String representing path to log file
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L127-L128" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L127-L128" >}}
 **注意**: Java同样允许在系统属性中配置日志级别:\
 属性键: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
 属性值: String representation of `ChromiumDriverLogLevel` enum
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L93" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -307,20 +307,20 @@ Property value: String representing path to log file
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L143-L144" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L143-L144" >}}
 **注意**: Java同样允许在系统属性中配置开闭这些功能:\
 属性键: `EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` 以及 `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
 属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L104" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -340,20 +340,20 @@ Edge 浏览器和 msedgedriver 版本应该匹配,
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L161-L162" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L161-L162" >}}
 **注意**: Java同样允许在系统属性中配置禁用构建检查:\
 属性键:  `EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
 属性值:  `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L115" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -380,7 +380,7 @@ Edge 浏览器和 msedgedriver 版本应该匹配,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L225-L230" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L225-L230" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L170-L174" >}}
@@ -405,7 +405,7 @@ Edge 浏览器和 msedgedriver 版本应该匹配,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L129-L135" >}}
@@ -428,7 +428,7 @@ Edge 浏览器和 msedgedriver 版本应该匹配,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L242" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L242" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L186" >}}
@@ -451,7 +451,7 @@ Edge 浏览器和 msedgedriver 版本应该匹配,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L184" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L149" >}}

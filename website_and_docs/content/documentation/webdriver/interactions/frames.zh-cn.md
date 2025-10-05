@@ -62,19 +62,19 @@ driver.findElement(By.tagName("button")).click()
 {{< tabpane langEqualsHeader=true >}}
 
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
   {{< /tab >}}
 
      {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L24-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L24-L32" >}}
 {{< /tab >}}
 
       {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L38-L46" >}}
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.rb#L26-L33" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L26-L33" >}}
 {{< /tab >}}
 
 
@@ -107,20 +107,20 @@ driver.findElement(By.tagName("button")).click()
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
   
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L34-L42" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L34-L42" >}}
 {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L50-L58" >}}
 {{< /tab >}}
 
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.rb#L36-L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L36-L43" >}}
 {{< /tab >}}
 
 
@@ -154,21 +154,21 @@ _window.frames_ 进行查询.
 
 {{< tabpane langEqualsHeader=true >}}
          {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
   {{< /tab >}}
  
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L45-L46" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L45-L46" >}}
 {{< /tab >}}
 
 
 
       {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L62-L63" >}}
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.rb#L46-L47" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L46-L47" >}}
 {{< /tab >}}
 
 {{< tab header="JavaScript" >}}
@@ -188,17 +188,17 @@ driver.switchTo().frame(1)
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
     {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_frames.py#L49-L50" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_frames.py#L49-L50" >}}
 {{< /tab >}}
         {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/FramesTest.cs#L66-L67" >}}
 {{< /tab >}}
 
  {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/frames_spec.rb#L49-L50" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L49-L50" >}}
 {{< /tab >}}
 
 

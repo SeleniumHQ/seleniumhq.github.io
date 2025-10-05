@@ -132,22 +132,22 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L30-L31" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L8-L9" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L8-L9" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 
 {{< /tab >}}
 {{< /tabpane >}}
@@ -159,22 +159,22 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ### 並べる
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
 
 ### 並べる
 
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
 
 {{% /tab %}}
 {{< tab header="CSharp" >}}
@@ -184,21 +184,21 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ### 並べる
 
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/ruby/spec/spec_helper.rb#L30" >}}
+{{< gh-codeblock path="/examples/ruby/spec/spec_helper.rb#L30" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
 ### 並べる
 
-{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
 
 ### 取り壊す
 
-{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -224,13 +224,13 @@ gradle clean test
 
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/README.md#L35" >}}
+{{< gh-codeblock path="/examples/python/README.md#L35" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{% tab header="Ruby" %}}
-{{< gh-codeblock path="examples/ruby/README.md#L26" >}}
+{{< gh-codeblock path="/examples/ruby/README.md#L26" >}}
 {{% /tab %}}
 {{% tab header="JavaScript" %}}
 
@@ -258,19 +258,19 @@ npx mocha runningTests.spec.js
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/using_selenium_tests.py" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/UsingSeleniumTest.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/runningTests.spec.js" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

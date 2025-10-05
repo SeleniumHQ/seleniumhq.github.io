@@ -31,7 +31,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canAddIntercept() {
         try (Network network = new Network(driver)) {
             String intercept =
@@ -41,7 +40,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canRemoveIntercept() {
         try (Network network = new Network(driver)) {
             String intercept =
@@ -52,7 +50,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canContinueWithAuthCredentials() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -69,7 +66,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canContinueWithoutAuthCredentials() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -85,7 +81,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canCancelAuth() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
@@ -99,7 +94,6 @@ class NetworkCommandsTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canFailRequest() {
         try (Network network = new Network(driver)) {
             network.addIntercept(new AddInterceptParameters(InterceptPhase.BEFORE_REQUEST_SENT));

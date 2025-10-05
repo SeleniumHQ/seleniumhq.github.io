@@ -45,7 +45,7 @@ https://selenium.dev/support.
 
 ### Creating Examples
 
-Examples that need to be moved are marked with: {{% badge-code %}}
+Examples that need to be added are marked with: {{% badge-code %}}
 
 We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
 execute everything on the site. So we put the code where it belongs in the
@@ -113,7 +113,7 @@ Selenium项目欢迎新的贡献者.
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站. 
 你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
-我们推荐使用Hugo 0.125.4 .
+我们推荐使用Hugo 0.148.2 .
 
 请参考来自Docsy的说明
 [安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .

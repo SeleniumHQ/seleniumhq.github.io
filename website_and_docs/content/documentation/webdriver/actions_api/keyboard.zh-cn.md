@@ -48,22 +48,22 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_keys.py#L10-L13" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L17-L20" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/keys_spec.rb#L13-L16" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L17-L20" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/keysTest.spec.js#L17-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L19-L22" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L19-L22" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -71,22 +71,22 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_keys.py#L21-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L30-L35" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/keys_spec.rb#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L32-L37" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/keysTest.spec.js#L32-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L32-L37" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L32-L37" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -101,22 +101,22 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L45-L47" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_keys.py#L34-L36" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L45-L47" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L45-L47" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/keys_spec.rb#L39-L41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L48-L50" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/keysTest.spec.js#L48-L50" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L47-L49" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L47-L49" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -124,23 +124,23 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L59-L62" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L45-L48" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_keys.py#L45-L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L58-L61" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L58-L61" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/keys_spec.rb#L51-L54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.5.0" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L59-L63" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/keysTest.spec.js#L59-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L60-L63" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L60-L63" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -152,21 +152,21 @@ Use the [Java Keys enum](https://github.com/SeleniumHQ/selenium/blob/selenium-4.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/KeysTest.java#L70-L84" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/actions_api/test_keys.py#L56-L67" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_keys.py#L56-L67" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L72-L82" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/KeysTest.cs#L72-L82" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/keys_spec.rb#L64-L74" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/actionsApi/keysTest.spec.js#L73-L85" >}}
+{{< gh-codeblock path="/examples/javascript/test/actionsApi/keysTest.spec.js#L73-L85" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L74-L86" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/actions_api/KeysTest.kt#L74-L86" >}}
 {{< /tab >}}
 {{< /tabpane >}}

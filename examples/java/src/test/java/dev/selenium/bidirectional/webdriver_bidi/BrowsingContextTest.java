@@ -1,6 +1,8 @@
 package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
+
+import java.time.Duration;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
@@ -31,6 +34,7 @@ class BrowsingContextTest extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test
@@ -235,7 +239,7 @@ class BrowsingContextTest extends BaseTest {
 
         String screenshot = browsingContext.captureScreenshot();
 
-        Assertions.assertTrue(screenshot.length() > 0);
+        Assertions.assertFalse(screenshot.isEmpty());
     }
 
     @Test
@@ -251,7 +255,7 @@ class BrowsingContextTest extends BaseTest {
                 browsingContext.captureBoxScreenshot(
                         elementRectangle.getX(), elementRectangle.getY(), 5, 5);
 
-        Assertions.assertTrue(screenshot.length() > 0);
+        Assertions.assertFalse(screenshot.isEmpty());
     }
 
     @Test
@@ -263,7 +267,7 @@ class BrowsingContextTest extends BaseTest {
 
         String screenshot = browsingContext.captureElementScreenshot(((RemoteWebElement) element).getId());
 
-        Assertions.assertTrue(screenshot.length() > 0);
+        Assertions.assertFalse(screenshot.isEmpty());
     }
 
     @Test
@@ -283,7 +287,6 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
-    @Disabled("Supported by Firefox Nightly 124")
     void textSetViewportWithDevicePixelRatio() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/formPage.html");
@@ -305,11 +308,10 @@ class BrowsingContextTest extends BaseTest {
 
         String printPage = browsingContext.print(printOptions);
 
-        Assertions.assertTrue(printPage.length() > 0);
+        Assertions.assertFalse(printPage.isEmpty());
     }
 
     @Test
-    @Disabled("Supported by Firefox Nightly 124")
     void testNavigateBackInTheBrowserHistory() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);
@@ -322,7 +324,6 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
-    @Disabled("Supported by Firefox Nightly 124")
     void canNavigateForwardInTheBrowserHistory() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);
@@ -338,7 +339,6 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
-    @Disabled("Supported by Firefox Nightly 124")
     void canTraverseBrowserHistory() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         browsingContext.navigate("https://www.selenium.dev/selenium/web/formPage.html", ReadinessState.COMPLETE);

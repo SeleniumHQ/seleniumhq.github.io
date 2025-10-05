@@ -24,22 +24,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L4" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L4" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L11" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L11" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L3" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L3" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L8" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L8" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L16" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -51,22 +51,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L6" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L6" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L13" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L13" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L5" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L5" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L9" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L9" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L18" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -77,22 +77,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#16" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#16" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L8" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L8" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L15" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L7" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L7" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L11" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L11" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -116,22 +116,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L18" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L10" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L10" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L17" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L17" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L14" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -142,22 +142,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L20-L21" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L20-L21" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L12-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L12-L13" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L19-L20" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L11-L12" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L11-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L16-L17" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L16-L17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L25-L26" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -168,22 +168,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L23-L24" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L15-L16" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L15-L16" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L22-L23" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L22-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L19-L20" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L19-L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L28-L29" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -192,22 +192,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-27" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-27" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L18-19" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L18-19" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-26" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L25-26" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L17-18" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L17-18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L22-23" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L22-23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-32" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L31-32" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -221,22 +221,22 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/getting_started/first_script.py#L21" >}}
+{{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L21" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/GettingStarted/FirstScript.cs#L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/getting_started/first_script.rb#L20" >}}
+{{< gh-codeblock path="/examples/ruby/spec/getting_started/first_script.rb#L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/firstScript.spec.js#L28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -245,19 +245,19 @@ Selenium所做的一切,
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/README.md#L60" >}}
+{{< gh-codeblock path="/examples/java/README.md#L60" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/README.md#L35" >}}
+{{< gh-codeblock path="/examples/python/README.md#L35" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/README.md#L36" >}}
+{{< gh-codeblock path="/examples/ruby/README.md#L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/README.md#L36" >}}
+{{< gh-codeblock path="/examples/javascript/README.md#L36" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

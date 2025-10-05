@@ -18,16 +18,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L14-L17" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L14-L17" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L12-L19" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L12-L19" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L12-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -42,16 +42,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L23-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L23-L26" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L22-L29" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L22-L29" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L18-L20" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L18-L20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -66,16 +66,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L32-L35" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L32-L35" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L32-L38" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L32-L38" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L24-L26" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L24-L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -90,16 +90,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L41-L48" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L51-L57" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L51-L57" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L30-L35" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -114,16 +114,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L53-L57" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L53-L57" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L61-L68" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L61-L68" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L42-L45" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -138,16 +138,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L63-L66" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L63-L66" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L41-L48" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L49-L51" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L49-L51" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -162,16 +162,16 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L72-L75" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintOptionsTest.java#L72-L75" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L71-L78" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L71-L78" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_print_options.py#L55-L57" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_print_options.py#L55-L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
@@ -196,19 +196,19 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 **PrintsPage()**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L27-L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L27-L31" >}}
 **BrowsingContext()**
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L37-L41" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/PrintsPageTest.java#L37-L41" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/PrintOptionsTest.cs#L81-L88" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 **print_page()**
-{{< gh-codeblock path="examples/python/tests/interactions/test_prints_page.py#L12-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_prints_page.py#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-implementation >}}
