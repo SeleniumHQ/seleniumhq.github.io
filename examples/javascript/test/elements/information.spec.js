@@ -57,6 +57,15 @@ describe('Element Information Test', function () {
     
     //fetch the attribute "name" associated with the textbox
     const nameAttribute = await emailElement.getAttribute("name");
+    
+    // New in Selenium 4.27+
+    // fetches the DOM attribute exactly as written in the HTML source
+    const domAttribute = await emailElement.getDomAttribute("name");
+    console.log("DOM Attribute:", domAttribute);
+
+    // fetches the live property value from the DOM object (may differ at runtime)
+    const domProperty = await emailElement.getDomProperty("name");
+    console.log("DOM Property:", domProperty);
   
     assert.equal(nameAttribute, "email_input")
   });

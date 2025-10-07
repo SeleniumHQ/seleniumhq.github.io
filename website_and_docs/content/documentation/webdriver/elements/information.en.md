@@ -253,9 +253,11 @@ val text = driver.findElement(By.id("justanotherlink")).getText()
 
 ## Fetching Attributes or Properties
 
-Fetches the run time value associated with a 
-DOM attribute. It returns the data associated 
-with the DOM attribute or property of the element. 
+To interact with element attributes and properties, Selenium provides specific methods for predictable results. It is important to understand the difference:
+* Attribute: The initial value defined in the HTML source code.
+* Property: The current value in the browser's DOM, which can be modified by JavaScript or user interaction. For instance, if a user types in an input field, the value property changes.
+
+For this reason, Selenium has two precise methods to get these values: getDomAttribute() and getDomProperty(). The older getAttribute() method is still available for backward compatibility, but its use is discouraged as it can lead to unpredictable results and slower execution.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
@@ -271,7 +273,7 @@ with the DOM attribute or property of the element.
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L55-L59">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L55-L68">}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Navigate to URL
