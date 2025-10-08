@@ -2,7 +2,7 @@
 title: "Ending Support for Python 3.9"
 linkTitle: "Ending Support for Python 3.9"
 date: 2025-10-08
-tags: ["selenium", "python", "chrome", "telemetry"]
+tags: ["selenium", "python"]
 categories: ["releases"]
 author: Corey Goldberg ([@cgoldberg](https://cgoldberg.github.io))
 description: >
