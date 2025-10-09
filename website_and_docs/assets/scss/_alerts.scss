@@ -76,6 +76,11 @@
     }
   }
 
+  // Ensure text is white for good contrast on colored backgrounds
+  .alert-heading {
+    color: $white !important;
+  }
+
   a {
     color: $white !important;
     text-decoration: underline;

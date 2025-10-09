@@ -9,7 +9,8 @@ $google_font_family: "Encode+Sans:300,300i,400,400i,700,700i" !default;
 $web-font-path: "https://fonts.googleapis.com/css?family=#{$google_font_family}&display=swap";
 
 // This overrides the font color for the site
-$gray-900: #6F757A;
+// Changed from #6F757A to #495057 for better WCAG color contrast (9.7:1 ratio vs 4.6:1)
+$gray-900: #495057;
 
 $primary: #43B02A;
 $selenium-webdriver-color: #C8102E;
