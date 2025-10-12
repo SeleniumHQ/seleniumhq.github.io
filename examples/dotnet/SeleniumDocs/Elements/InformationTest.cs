@@ -60,6 +60,14 @@ namespace SeleniumDocs.Elements
             IWebElement emailTxt = driver.FindElement(By.Name("email_input"));
             // fetch the value property associated with the textbox
             string valueInfo = emailTxt.GetAttribute("value");
+
+            // New in Selenium 4.27+
+            // fetches the DOM attribute exactly as written in the HTML source
+            string domAttribute = emailTxt.GetDomAttribute("name");
+
+            // fetches the live property value from the DOM object (may differ at runtime)
+            string domProperty = emailTxt.GetDomProperty("name");
+
             Assert.AreEqual(valueInfo, "admin@localhost");
             
             //Quit the driver

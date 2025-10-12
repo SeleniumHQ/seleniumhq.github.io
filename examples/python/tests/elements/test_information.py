@@ -44,4 +44,12 @@ def test_informarion():
     # FetchAttributes
     email_txt = driver.find_element(By.NAME, "email_input")
     value_info = email_txt.get_attribute("value")
+
+    # New in Selenium 4.27+
+    # fetches the DOM attribute exactly as written in the HTML source
+    dom_attribute = email_txt.get_dom_attribute("name")
+
+    # fetches the live property value from the DOM object (may differ at runtime)
+    dom_property = email_txt.get_dom_property("name")
+
     assert value_info == "admin@localhost"

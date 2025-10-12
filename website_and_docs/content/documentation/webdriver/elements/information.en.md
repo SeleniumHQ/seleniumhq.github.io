@@ -264,10 +264,10 @@ For this reason, Selenium has two precise methods to get these values: getDomAtt
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L71" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L44-L46" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L44-L53" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L69" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/information_spec.rb#L48">}}
@@ -276,10 +276,18 @@ For this reason, Selenium has two precise methods to get these values: getDomAtt
 {{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L55-L68">}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
+// FetchAttributes
 // Navigate to URL
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
-//fetch the value property associated with the textbox
+// fetch the value property associated with the textbox
 val attr = driver.findElement(By.name("email_input")).getAttribute("value")
+
+// New in Selenium 4.27+
+// fetches the DOM attribute exactly as written in the HTML source
+val domAttribute = driver.findElement(By.name("email_input")).getDomAttribute("name")
+
+// fetches the live property value from the DOM object (may differ at runtime)
+val domProperty = driver.findElement(By.name("email_input")).getDomProperty("name")
   {{< /tab >}}
 {{< /tabpane >}}
