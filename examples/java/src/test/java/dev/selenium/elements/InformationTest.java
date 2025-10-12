@@ -59,9 +59,17 @@ public class InformationTest {
 
       // FetchAttributes
       // identify the email text box
-      WebElement emailTxt = driver.findElement(By.name(("email_input")));
+      WebElement emailTxt = driver.findElement(By.name("email_input"));
       // fetch the value property associated with the textbox
       String valueInfo = emailTxt.getAttribute("value");
+
+      // New in Selenium 4.27+
+      // fetches the DOM attribute exactly as written in the HTML source
+      String domAttribute = emailTxt.getDomAttribute("name");
+
+      // fetches the live property value from the DOM object (may differ at runtime)
+      String domProperty = emailTxt.getDomProperty("name");
+
       assertEquals(valueInfo,"admin@localhost");
 
 

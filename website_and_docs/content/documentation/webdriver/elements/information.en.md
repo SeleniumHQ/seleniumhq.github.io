@@ -261,7 +261,7 @@ For this reason, Selenium has two precise methods to get these values: getDomAtt
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L64" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L71" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L44-L46" >}}
