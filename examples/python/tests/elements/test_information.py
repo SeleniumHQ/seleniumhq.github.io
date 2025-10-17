@@ -50,6 +50,6 @@ def test_informarion():
     dom_attribute = email_txt.get_dom_attribute("name")
 
     # fetches the live property value from the DOM object (may differ at runtime)
-    dom_property = email_txt.get_dom_property("name")
+    dom_property = email_txt.get_property("name")
 
     assert value_info == "admin@localhost"

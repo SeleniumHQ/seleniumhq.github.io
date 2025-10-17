@@ -64,8 +64,15 @@ describe('Element Information Test', function () {
     console.log("DOM Attribute:", domAttribute);
 
     // fetches the live property value from the DOM object (may differ at runtime)
-    const domProperty = await emailElement.getDomProperty("name");
+    // fallback to getProperty() for older Selenium JS bindings
+    let domProperty;
+    if (typeof emailElement.getDomProperty === "function") {
+      domProperty = await emailElement.getDomProperty("name");
+    } else {
+      domProperty = await emailElement.getProperty("name");
+    }
     console.log("DOM Property:", domProperty);
+
   
     assert.equal(nameAttribute, "email_input")
   });
