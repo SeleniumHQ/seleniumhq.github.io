@@ -3,7 +3,7 @@
 if [[ -z "$1" || -z "$2" || -z "$3"  || -z "$4" ]]; then
     echo -e "fatal: too few args\n"
     echo -e "usage:\n  update-versions.sh <old_version> <new_version> <old_cdp_version> <new_cdp_version>"
-    echo -e "example:\n  ./update-versions.sh 4.35 4.38 137 142"
+    echo -e "example:\n  ./update-versions.sh 4.35.0 4.38.0 137 142"
     exit 1
 fi
 
