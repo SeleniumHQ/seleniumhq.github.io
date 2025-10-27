@@ -1,9 +1,11 @@
 import os
 import re
 import subprocess
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
 
 def test_basic_options():
     options = get_default_chrome_options()
@@ -188,6 +190,7 @@ def test_get_browser_logs():
     # Assert that at least one log contains the expected message
     assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
+
 
 def get_default_chrome_options():
     options = webdriver.ChromeOptions()
