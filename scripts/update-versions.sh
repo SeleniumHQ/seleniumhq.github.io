@@ -9,8 +9,8 @@ fi
 
 
 if [[ "$1" != *.*.* || "$2" != *.*.* ]] ; then
-    echo "fatal: use major.minor.minor version numbers (e.g.: 4.38.0)"
-    exit
+    echo "fatal: use major.minor.patch version numbers (e.g.: 4.38.0)"
+    exit 1
 fi
 
 OLD_VERSION="$1"
