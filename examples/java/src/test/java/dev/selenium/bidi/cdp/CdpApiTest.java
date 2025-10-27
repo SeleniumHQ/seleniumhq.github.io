@@ -36,7 +36,7 @@ public class CdpApiTest extends BaseTest {
   public void basicAuth() {
     devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
-    devTools.send(Network.enable(Optional.of(100000), Optional.of(100000), Optional.of(100000)));
+    devTools.send(Network.enable(Optional.of(100000), Optional.of(100000), Optional.of(100000), Optional.of(false), Optional.empty()));
 
     String encodedAuth = Base64.getEncoder().encodeToString("admin:admin".getBytes());
     Map<String, Object> headers = ImmutableMap.of("Authorization", "Basic " + encodedAuth);
