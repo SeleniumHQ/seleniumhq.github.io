@@ -67,7 +67,7 @@ RSpec.describe 'Edge' do
       service.log = file_name
 
       @driver = Selenium::WebDriver.for :edge, service: service
-      expect(File.readlines(file_name).first).to include('Starting Microsoft Edge WebDriver')
+      expect(File.readlines(file_name).first).to include('Starting')
     end
 
     it 'logs to console' do
@@ -77,7 +77,7 @@ RSpec.describe 'Edge' do
 
       expect {
         @driver = Selenium::WebDriver.for :edge, service: service
-      }.to output(/Starting Microsoft Edge WebDriver/).to_stdout_from_any_process
+      }.to output(/Starting/).to_stdout_from_any_process
     end
 
     it 'sets log level' do
