@@ -30,6 +30,7 @@ def driver(request):
         options.enable_bidi = True
         driver = webdriver.Chrome(options=options)
     elif driver_type == "firefox":
+        os.environ["MOZ_ENABLE_WAYLAND"] = "0"
         driver = webdriver.Firefox()
     else:
         driver = webdriver.Chrome()
