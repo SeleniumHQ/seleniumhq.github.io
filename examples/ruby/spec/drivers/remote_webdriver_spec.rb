@@ -7,7 +7,7 @@ RSpec.describe 'Remote WebDriver' do
   let(:target_directory) { File.join(Dir.tmpdir, SecureRandom.uuid) }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 2) }
   let(:server) do
-    Selenium::Server.new(File.expand_path(File.join('..', '..', '..', 'selenium-server-4.35.0.jar'), __dir__),
+    Selenium::Server.new(File.expand_path(File.join('..', '..', '..', 'selenium-server-4.38.0.jar'), __dir__),
                          background: true,
                          args: %w[--selenium-manager true --enable-managed-downloads true])
   end
