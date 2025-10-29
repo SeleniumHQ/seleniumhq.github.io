@@ -1,6 +1,6 @@
 selenium==4.35.0
 pytest==8.4.1
-trio==0.30.0
+trio==0.31.0
 pytest-trio==0.8.0
 pytest-rerunfailures==15.1
 flake8==7.3.0
