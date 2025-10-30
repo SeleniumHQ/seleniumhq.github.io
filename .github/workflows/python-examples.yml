@@ -28,22 +28,22 @@ jobs:
         include:
         - os: ubuntu
           release: stable
-          python: '3.9'
+          python: '3.10'
         - os: ubuntu
           release: nightly
-          python: '3.11'
+          python: '3.14'
         - os: windows
           release: stable
-          python: '3.9'
+          python: '3.10'
         - os: windows
           release: nightly
-          python: '3.12'
+          python: '3.14'
         - os: macos
           release: stable
           python: '3.10'
         - os: macos
           release: nightly
-          python: '3.13'
+          python: '3.14'
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
