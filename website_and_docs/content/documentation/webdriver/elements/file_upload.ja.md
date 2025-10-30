@@ -1,7 +1,7 @@
 ---
 title: "File Upload"
 linkTitle: "File Upload"
-weight: 1
+weight: 5
 aliases: [
 "/ja/documentation/webdriver/additional_features/fileupload/"
 ]
