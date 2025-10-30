@@ -5156,7 +5156,7 @@ the &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Seleniu
 A Page Object only models these as objects within the test code.
 This reduces the amount of duplicated code and means that if the UI changes,
 the fix needs only to be applied in one place.&lt;/p>
-&lt;p>Page Object is a Design Pattern that has become popular in test automation for
+&lt;p>Page Object Model is a Design Pattern that has become popular in test automation for
 enhancing test maintenance and reducing code duplication. A page object is an
 object-oriented class that serves as an interface to a page of your AUT. The
 tests then use the methods of this page object class whenever they need to

@@ -3962,11 +3962,21 @@ div.code-toolbar > .toolbar {
 
 &lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
 &lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
- title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Modelos de objetos de página</title><link>https://www.selenium.dev/pt-br/documentation/test_practices/encouraged/page_object_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/pt-br/documentation/test_practices/encouraged/page_object_models/</guid><description>&lt;p>Nota: esta página reuniu conteúdos de várias fontes, incluindo
-o &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Selenium wiki&lt;/a>&lt;/p>
-&lt;h2 id="visão-geral">Visão geral&lt;/h2>
-&lt;p>Dentro da interface de usuário (UI) do seu aplicativo web, existem áreas com as quais seus testes interagem. O Page Object modela apenas essas áreas como objetos dentro do código de teste. Isso reduz a quantidade de código duplicado e significa que, se a UI mudar, a correção precisará ser aplicada apenas em um lugar.&lt;/p>
-&lt;p>Page Object é um padrão de design (Design Pattern) que se tornou popular na automação de testes para melhorar a manutenção de testes e reduzir a duplicação de código. Page Object é uma classe orientada a objetos que serve como interface para uma página do seu AUT (Aplicativo Sob Teste). Os testes usam então os métodos desta classe de Page Object sempre que precisam interagir com a UI dessa página. A vantagem é que, se a UI da página mudar, os próprios testes não precisam mudar, apenas o código dentro do Page Object precisa mudar. Subsequentemente, todas as mudanças para suportar essa nova UI estão localizadas em um lugar.&lt;/p></description></item><item><title>Rotas da Grid</title><link>https://www.selenium.dev/pt-br/documentation/grid/advanced_features/endpoints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/pt-br/documentation/grid/advanced_features/endpoints/</guid><description>&lt;h2 id="grid">Grid&lt;/h2>
+ title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Modelos de objetos de página</title><link>https://www.selenium.dev/pt-br/documentation/test_practices/encouraged/page_object_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/pt-br/documentation/test_practices/encouraged/page_object_models/</guid><description>&lt;p>Note: this page has merged contents from multiple sources, including
+the &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Selenium wiki&lt;/a>&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Within your web app&amp;rsquo;s UI, there are areas where your tests interact with.
+A Page Object only models these as objects within the test code.
+This reduces the amount of duplicated code and means that if the UI changes,
+the fix needs only to be applied in one place.&lt;/p>
+&lt;p>Page Object Model is a Design Pattern that has become popular in test automation for
+enhancing test maintenance and reducing code duplication. A page object is an
+object-oriented class that serves as an interface to a page of your AUT. The
+tests then use the methods of this page object class whenever they need to
+interact with the UI of that page. The benefit is that if the UI changes for
+the page, the tests themselves don’t need to change, only the code within the
+page object needs to change. Subsequently, all changes to support that new UI
+are located in one place.&lt;/p></description></item><item><title>Rotas da Grid</title><link>https://www.selenium.dev/pt-br/documentation/grid/advanced_features/endpoints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/pt-br/documentation/grid/advanced_features/endpoints/</guid><description>&lt;h2 id="grid">Grid&lt;/h2>
 &lt;h3 id="status-da-grid">Status da Grid&lt;/h3>
 &lt;p>O status da Grid fornece o estado atual da grid. Consiste em detalhes sobre cada nó registrado.
 Para cada nó, o status inclui informações sobre a disponibilidade, sessões e slots do nó.&lt;/p>

@@ -3566,7 +3566,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">300 commits&lt;/span>
+ &lt;span class="contributions">303 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3605,7 +3605,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/rpallavisharma">@rpallavisharma&lt;/a>&lt;/label
  >
- &lt;span class="contributions">88 commits&lt;/span>
+ &lt;span class="contributions">90 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3683,7 +3683,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">31 commits&lt;/span>
+ &lt;span class="contributions">32 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -14376,7 +14376,7 @@ the &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Seleniu
 A Page Object only models these as objects within the test code.
 This reduces the amount of duplicated code and means that if the UI changes,
 the fix needs only to be applied in one place.&lt;/p>
-&lt;p>Page Object is a Design Pattern that has become popular in test automation for
+&lt;p>Page Object Model is a Design Pattern that has become popular in test automation for
 enhancing test maintenance and reducing code duplication. A page object is an
 object-oriented class that serves as an interface to a page of your AUT. The
 tests then use the methods of this page object class whenever they need to
