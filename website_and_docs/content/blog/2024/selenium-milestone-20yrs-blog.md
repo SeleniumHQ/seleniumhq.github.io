@@ -1,10 +1,10 @@
 ---
 title: "Celebrating 20 Years of Selenium: A Journey of Innovation in Browser Automation"
 linkTitle: "Celebrating 20 Years of Selenium"
-date: 2024-10-18
+date: 2024-10-28
 tags: ["webinar", "meetup", "talks"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/rpallavisharma/" target="_blank">Pallavi Sharma</a>
 images:
   - "/images/blog/2024/20-selenium"
 description: >

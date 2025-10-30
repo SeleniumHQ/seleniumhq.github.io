@@ -16,9 +16,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v137.browser.Browser;
-import org.openqa.selenium.devtools.v137.network.Network;
-import org.openqa.selenium.devtools.v137.network.model.Headers;
+import org.openqa.selenium.devtools.v142.browser.Browser;
+import org.openqa.selenium.devtools.v142.network.Network;
+import org.openqa.selenium.devtools.v142.network.model.Headers;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CdpApiTest extends BaseTest {
@@ -27,7 +27,7 @@ public class CdpApiTest extends BaseTest {
   @BeforeEach
   public void createSession() {
     ChromeOptions options = getDefaultChromeOptions();
-    options.setBrowserVersion("139");
+    options.setBrowserVersion("142");
     driver = new ChromeDriver(options);
     wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }
@@ -36,7 +36,7 @@ public class CdpApiTest extends BaseTest {
   public void basicAuth() {
     devTools = ((HasDevTools) driver).getDevTools();
     devTools.createSession();
-    devTools.send(Network.enable(Optional.of(100000), Optional.of(100000), Optional.of(100000)));
+    devTools.send(Network.enable(Optional.of(100000), Optional.of(100000), Optional.of(100000), Optional.of(false), Optional.empty()));
 
     String encodedAuth = Base64.getEncoder().encodeToString("admin:admin".getBytes());
     Map<String, Object> headers = ImmutableMap.of("Authorization", "Basic " + encodedAuth);

@@ -30,6 +30,7 @@ def driver(request):
         options.enable_bidi = True
         driver = webdriver.Chrome(options=options)
     elif driver_type == "firefox":
+        os.environ["MOZ_ENABLE_WAYLAND"] = "0"
         driver = webdriver.Firefox()
     else:
         driver = webdriver.Chrome()
@@ -148,7 +149,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.38.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -206,7 +207,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.38.0.jar",
     )
 
     args = [
@@ -279,7 +280,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.38.0.jar",
     )
 
     args = [
