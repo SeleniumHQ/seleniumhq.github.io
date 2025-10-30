@@ -18,19 +18,19 @@ aliases: [
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Java用のSeleniumライブラリのインストールは、ビルドツールを使用して行います。
 
 ### Maven
 プロジェクトの 'pom.xml' ファイルで依存関係を指定します:
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 プロジェクトの 'build.gradle' ファイル内の依存関係を 'testImplementation' として指定します:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -58,7 +58,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 ### プロジェクトで必要
 
 プロジェクトで使用するには、requirements.txt ファイルに追加します:
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -85,7 +85,7 @@ dotnet add package Selenium.WebDriver
 
 プロジェクトの `csproj`ファイルで、`ItemGroup` の `PackageReference`として依存関係を指定します。:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### その他の考慮事項
 
@@ -129,7 +129,7 @@ gem install selenium-webdriver
 
 ### プロジェクトの gemfile に追加
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -148,7 +148,7 @@ npm install selenium-webdriver
 
 プロジェクトの `package.json`で、要件を `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

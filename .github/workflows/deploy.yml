@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ' 0.125.4'
+          hugo-version: ' 0.148.2'
           extended: true
       - name: Build
         run: chmod +x build-site.sh && ./build-site.sh

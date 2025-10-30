@@ -24,7 +24,6 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
 
-
 public class ChromeTest extends BaseTest {
   @AfterEach
   public void clearProperties() {
@@ -63,6 +62,7 @@ public class ChromeTest extends BaseTest {
     File extensionFilePath = new File(path.toUri());
 
     options.addExtensions(extensionFilePath);
+    options.addArguments("--disable-features=DisableLoadExtensionCommandLineSwitch");
 
     driver = new ChromeDriver(options);
     driver.get("https://www.selenium.dev/selenium/web/blank.html");

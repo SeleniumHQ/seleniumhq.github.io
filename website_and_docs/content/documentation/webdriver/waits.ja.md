@@ -67,19 +67,19 @@ Solving our example with an implicit wait looks like this:
 
 {{< tabpane text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L50" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L50" >}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/waits/test_waits.py#L27" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L27" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L39" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L39" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L28" >}}
+{{< gh-codeblock path="/examples/ruby/spec/waits/waits_spec.rb#L28" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L39" >}}
+{{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -100,22 +100,22 @@ Another nice feature is that, by default, the Selenium Wait class automatically 
   {{% tab header="Java" %}}
 This example shows the condition being waited for as a _lambda_. Java also supports
 [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L67-L68" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L67-L68" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
 This example shows the condition being waited for as a _lambda_. Python also supports
 [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="examples/python/tests/waits/test_waits.py#L41-L42" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L41-L42" >}}
   {{% /tab %}}
   {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L56-L57" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L56-L57" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L42-L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/waits/waits_spec.rb#L42-L43" >}}
   {{< /tab >}}
   {{% tab header="JavaScript" %}}
 JavaScript also supports [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="examples/javascript/test/waits/waits.spec.js#L52" >}}
+{{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -139,16 +139,16 @@ make sure that the code returns `true` when it is successful):
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
 The easiest way to customize Waits in Java is to use the `FluentWait` class:
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L82-L92" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L82-L92" >}}
   {{% /tab %}}
   {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/waits/test_waits.py#L53-L55" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L53-L55" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L70-L79" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L70-L79" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/waits/waits_spec.rb#L54-L60" >}}
+{{< gh-codeblock path="/examples/ruby/spec/waits/waits_spec.rb#L54-L60" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 {{< badge-code >}}

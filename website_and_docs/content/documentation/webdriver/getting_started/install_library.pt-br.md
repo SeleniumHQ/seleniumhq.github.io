@@ -19,7 +19,7 @@ O processo de instalação de bibliotecas depende da linguagem que você escolhe
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+Veja a mínima versão do Java suportada [aqui](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 A instalação da biblioteca Selenium para Java é feita a partir de uma build tool.
 
@@ -27,12 +27,12 @@ A instalação da biblioteca Selenium para Java é feita a partir de uma build t
 ### Maven
 Especifique a dependência no `pom.xml` do seu projeto.
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
@@ -61,7 +61,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 ### Exigir em um projeto
 
 Para usar em um projeto, adicione no arquivo `requirements.txt`.
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -88,7 +88,7 @@ dotnet add package Selenium.WebDriver
 
 No arquivo `csproj` do seu projeto, especifique a dependência como `PackageReference` no `ItemGroup`:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### Considerações adicionais
 
@@ -135,7 +135,7 @@ gem install selenium-webdriver
 
 ### Adicione para o gemfile do projeto
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -155,7 +155,7 @@ npm install selenium-webdriver
 
 No `package.json` do seu projeto, adicione os requisitos em `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}   

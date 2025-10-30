@@ -49,7 +49,7 @@ https://selenium.dev/support.
 
 ### Creating Examples
 
-Examples that need to be moved are marked with: {{% badge-code %}}
+Examples that need to be added are marked with: {{% badge-code %}}
 
 We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
 execute everything on the site. So we put the code where it belongs in the
@@ -117,7 +117,7 @@ and check out your copy locally.
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.125.4 .
+to use Hugo 0.148.2 .
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.

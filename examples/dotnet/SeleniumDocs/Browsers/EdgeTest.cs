@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chromium;
 using OpenQA.Selenium.Edge;
 
 namespace SeleniumDocs.Browsers
@@ -92,32 +93,12 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
-        public void LogsToConsole()
-        {
-            var stringWriter = new StringWriter();
-            var originalOutput = Console.Out;
-            Console.SetOut(stringWriter);
-
-            var service = EdgeDriverService.CreateDefaultService();
-
-            //service.LogToConsole = true;
-
-            driver = new EdgeDriver(service);
-
-            Assert.IsTrue(stringWriter.ToString().Contains("Starting Microsoft Edge WebDriver"));
-            Console.SetOut(originalOutput);
-            stringWriter.Dispose();
-        }
-
-        [TestMethod]
-        [Ignore("Not implemented")]
         public void LogsLevel()
         {
             var service = EdgeDriverService.CreateDefaultService();
             service.LogPath = GetLogLocation();
 
-            // service.LogLevel = ChromiumDriverLogLevel.Debug 
+            service.LogLevel = ChromiumDriverLogLevel.Debug; 
 
             driver = new EdgeDriver(service);
 
@@ -127,7 +108,6 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
         public void ConfigureDriverLogs()
         {
             var service = EdgeDriverService.CreateDefaultService();
@@ -135,14 +115,14 @@ namespace SeleniumDocs.Browsers
             service.EnableVerboseLogging = true;
 
             service.EnableAppendLog = true;
-            // service.readableTimeStamp = true;
+            service.ReadableTimestamp = true;
 
             driver = new EdgeDriver(service);
 
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
-            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d");
-            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches("").Count > 0));
+            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
+            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
 
         [TestMethod]
@@ -163,7 +143,7 @@ namespace SeleniumDocs.Browsers
         
         private string GetLogLocation()
         {
-            if (_logLocation == null || !File.Exists(_logLocation))
+            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
             {
                 _logLocation = Path.GetTempFileName();
             }

@@ -143,14 +143,17 @@ def test_full_page_screenshot(firefox_driver):
     driver.quit()
 
 
-def test_set_context(firefox_driver):
-    driver = firefox_driver
+def test_set_context():
+    options = webdriver.FirefoxOptions()
+    options.add_argument("-remote-allow-system-access")
+    driver = webdriver.Firefox(options=options)
 
     with driver.context(driver.CONTEXT_CHROME):
         driver.execute_script("console.log('Inside Chrome context');")
 
     # Check if the context is back to content
     assert driver.execute("GET_CONTEXT")["value"] == "content"
+    driver.quit()
 
 
 def test_firefox_profile():

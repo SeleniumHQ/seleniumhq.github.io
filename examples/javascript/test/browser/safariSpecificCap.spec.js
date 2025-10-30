@@ -4,7 +4,7 @@ const options = new safari.Options();
 const process  =  require('node:process');
 
 describe('Should be able to Test Command line arguments', function () {
-  (process.platform === 'darwin' ? it : it.skip)('headless', async function () {
+  (process.platform === 'darwin' ? it : it.skip)('safari caps', async function () {
     let driver = new Builder()
       .forBrowser(Browser.SAFARI)
       .setSafariOptions(options)

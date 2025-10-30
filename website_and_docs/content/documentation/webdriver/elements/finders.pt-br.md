@@ -346,7 +346,7 @@ for e in elements:
 element = driver.find_element(By.XPATH, '//ul')
 
     # get children of tag 'ul' with tag 'li'
-elements  = driver.find_elements(By.XPATH, './/li')
+elements  = element.find_elements(By.XPATH, './/li')
 for e in elements:
     print(e.text)
   {{< /tab >}}

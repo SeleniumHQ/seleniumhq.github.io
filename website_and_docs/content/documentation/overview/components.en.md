@@ -28,7 +28,7 @@ same system.) NOTE: _Some people refer to the drivers as proxies._
 * **Framework:** An additional library that is used as a support for WebDriver 
 suites. These frameworks may be test frameworks such as JUnit or NUnit. 
 They may also be frameworks supporting natural language features such 
-as Cucumber or Robotium. Frameworks may also be written and used for 
+as Cucumber or Robot Framework. Frameworks may also be written and used for 
 tasks such as manipulating or configuring the system under test, data 
 creation, test oracles, etc.
 

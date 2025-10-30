@@ -4,8 +4,6 @@ import dev.selenium.BaseTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
-import org.openqa.selenium.Rectangle
-import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
 import org.openqa.selenium.interactions.PointerInput
 import org.openqa.selenium.interactions.Sequence

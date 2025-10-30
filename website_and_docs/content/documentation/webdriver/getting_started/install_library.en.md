@@ -20,19 +20,19 @@ you are using the latest version.
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+View the minimum supported Java version [here](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Installation of Selenium libraries for Java is accomplished using a build tool.
 
 ### Maven
 Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}} 
@@ -61,7 +61,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 ### Require in project
 
 To use it in a project, add it to the `requirements.txt` file:
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -88,7 +88,7 @@ dotnet add package Selenium.WebDriver
 
 in the project's `csproj` file, specify the dependency as a `PackageReference` in `ItemGroup`:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### Additional considerations
 
@@ -133,7 +133,7 @@ gem install selenium-webdriver
 
 ### Add to project's gemfile
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
@@ -153,7 +153,7 @@ npm install selenium-webdriver
 
 In your project's `package.json`, add requirement to `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

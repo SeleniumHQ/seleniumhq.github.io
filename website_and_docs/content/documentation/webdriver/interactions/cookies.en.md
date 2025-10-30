@@ -28,16 +28,16 @@ e.g. http://example.com/some404page)
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L30-L32" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L5-L9" >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L32-L34" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
@@ -67,16 +67,16 @@ It returns the serialized cookie data matching with the cookie name among all as
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L38-L42" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L13-L20" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L40-L44" >}}
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/cookies_spec.rb#L17-L21" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L17-L21" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L35-L38">}}
@@ -109,16 +109,16 @@ If browser is no longer available it returns error.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
       {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L52-L66" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L24-L32" >}}
   {{< /tab >}}
     {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L51-L64" >}}
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/cookies_spec.rb#L26-L31" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L26-L31" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L49-L51">}}
@@ -152,16 +152,16 @@ It deletes the cookie data matching with the provided cookie name.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
         {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L74-L77" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L35-L43" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L35-L43" text=true >}}
   {{< /tab >}}
           {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L70-L73" >}}
   {{< /tab >}}
     {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/cookies_spec.rb#L40-L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L40-L43" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L61-L62">}}
@@ -198,16 +198,16 @@ It deletes all the cookies of the current browsing context.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
               {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L100-L105" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L47-L55" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L47-L55" text=true >}}
   {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/CookiesTest.cs#L92-L97" >}}
   {{< /tab >}}
      {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/cookies_spec.rb#L49-L54" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L49-L54" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L77-L78">}}
@@ -256,10 +256,10 @@ Firefox(79+version) and works with Selenium 4 and later versions.**
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/CookiesTest.java#L112-L121" >}}
   {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_cookies.py#L59-L71" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_cookies.py#L59-L71" text=true >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
