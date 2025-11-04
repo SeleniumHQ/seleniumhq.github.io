@@ -3385,7 +3385,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">231 commits&lt;/span>
+ &lt;span class="contributions">232 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3506,19 +3506,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/696749?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/freynaud">@freynaud&lt;/a>&lt;/label
- >
- &lt;span class="contributions">138 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/1113081?v=4"
  class="inline"
  width="100"
@@ -3527,6 +3514,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/cgoldberg">@cgoldberg&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">139 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/696749?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/freynaud">@freynaud&lt;/a>&lt;/label
  >
  &lt;span class="contributions">138 commits&lt;/span>
  &lt;/div>
@@ -3684,7 +3684,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/navin772">@navin772&lt;/a>&lt;/label
  >
- &lt;span class="contributions">75 commits&lt;/span>
+ &lt;span class="contributions">76 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3723,7 +3723,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/iampopovich">@iampopovich&lt;/a>&lt;/label
  >
- &lt;span class="contributions">57 commits&lt;/span>
+ &lt;span class="contributions">58 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5080,7 +5080,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/VietND96">@VietND96&lt;/a>&lt;/label
  >
- &lt;span class="contributions">550 commits&lt;/span>
+ &lt;span class="contributions">557 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5106,7 +5106,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">266 commits&lt;/span>
+ &lt;span class="contributions">270 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6441,7 +6441,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">303 commits&lt;/span>
+ &lt;span class="contributions">307 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6480,7 +6480,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/rpallavisharma">@rpallavisharma&lt;/a>&lt;/label
  >
- &lt;span class="contributions">90 commits&lt;/span>
+ &lt;span class="contributions">91 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -7017,6 +7017,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/28589393?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/kathyrollo">@kathyrollo&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">5 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/40999116?v=4"
  class="inline"
  width="100"
@@ -7090,19 +7103,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/peter-kinzelman">@peter-kinzelman&lt;/a>&lt;/label
- >
- &lt;span class="contributions">4 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/28589393?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/kathyrollo">@kathyrollo&lt;/a>&lt;/label
  >
  &lt;span class="contributions">4 commits&lt;/span>
  &lt;/div>
@@ -12863,12 +12863,8 @@ Selenium RCのサーバーがあるディレクトリに移動し、コマンド
 ユーザーがより多くのコンテキストを必要とする場合、GitHubページへのリンクをクリックすると完全なコンテキストが表示されます。&lt;/p>
 &lt;p>ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
 ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。&lt;/p>
-&lt;p>最後に、CIでテストがPassすることを確認してください。&lt;/p>
-&lt;h3 id="例の移動">例の移動&lt;/h3>
-&lt;p>移動が必要な例には、次のマークが付いています:&lt;/p>
-&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#moving-examples>
-&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
- title="One or more of these examples need to be implemented in the examples directory; click for details in the contribution guide">Move Code&lt;/span>&lt;/a>&lt;/p></description></item><item><title>ブラウザーオプション</title><link>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</guid><description>&lt;p>Selenium 3 では、Capabilitiesは Desired Capabilities クラスを使用してセッションで定義していました。
+&lt;p>Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
+it is recommended to use the test web pages available at &lt;a href="https://www.selenium.dev/selenium/web/">https://www.selenium.dev/selenium/web/&lt;/a>.&lt;/p></description></item><item><title>ブラウザーオプション</title><link>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</guid><description>&lt;p>Selenium 3 では、Capabilitiesは Desired Capabilities クラスを使用してセッションで定義していました。
 Selenium 4 以降、ブラウザ オプション クラスを使用する必要があります。
 リモート ドライバー セッションの場合、使用するブラウザーを決めるため、ブラウザーオプションインスタンスが必要です。&lt;/p>
 &lt;p>これらのオプションは、&lt;a href="https://w3c.github.io/webdriver/#capabilities">Capabilities&lt;/a> の w3c仕様で説明しています。&lt;/p>
