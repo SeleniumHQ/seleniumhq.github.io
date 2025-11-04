@@ -7,5 +7,7 @@
     "**/node_modules/**",
     "**/bower_components/**",
     "**/vendor/**"
-  ]  
+  ],
+  "prConcurrentLimit": 1,
+  "branchConcurrentLimit": 1  
 }
