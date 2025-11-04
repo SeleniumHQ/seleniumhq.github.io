@@ -75,6 +75,9 @@ Make sure that if you add a test to the page that all the other line numbers in 
 correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
 number for that file.
 
+Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
+it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
+
 Finally, make sure that the tests pass in the CI.
 
 
