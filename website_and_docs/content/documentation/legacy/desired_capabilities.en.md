@@ -14,7 +14,7 @@ See [JSON Wire Protocol]({{< ref "json_wire_protocol.md#capabilities-json-object
 ## Remote Driver Specific
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
 <tr><td> webdriver.remote.sessionid </td><td> string     </td><td> WebDriver session ID for the session. Readonly and only returned if the server implements a server-side webdriver-backed selenium. </td></tr>
-<tr><td> webdriver.remote.quietExceptions </td><td> boolean      </td><td> Disable automatic screnshot capture on exceptions. This is False by default. </td></tr></tbody></table>
+<tr><td> webdriver.remote.quietExceptions </td><td> boolean      </td><td> Disable automatic screenshot capture on exceptions. This is False by default. </td></tr></tbody></table>
 
 ## Grid Specific
 <table><thead><th> <b>Key</b> </th><th> <b>Type</b> </th><th> <b>Description</b> </th></thead><tbody>
@@ -78,7 +78,7 @@ Preferences accepted by the FirefoxProfile with special meaning, in the WebDrive
 ## Safari specific
 | Key                      | Type              | Description                                                                                                                   |
 |:-----|:-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| honorSystemProxy | boolean | Whether to honour the sysem proxy.                                                                                                                                                                                           |
+| honorSystemProxy | boolean | Whether to honour the system proxy.                                                                                                                                                                                          |
 | ensureCleanSession | boolean | Whether to make sure the session has no cookies, cache entries. And that any registry and proxy settings are restored after the session.                                                                                     |
 
 

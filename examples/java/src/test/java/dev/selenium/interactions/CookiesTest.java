@@ -15,6 +15,8 @@
 // specific language governing permissions and limitations
 // under the License.
 
+package dev.selenium.interactions;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Cookie;
@@ -34,21 +36,21 @@ public class CookiesTest {
 	}
 	    @Test
 	    public void getNamedCookie() {
-	     
+
 	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
 	        // Add cookie into current browser context
 	        driver.manage().addCookie(new Cookie("foo", "bar"));
 	        // Get cookie details with named cookie 'foo'
 	        Cookie cookie = driver.manage().getCookieNamed("foo");
 	        Assertions.assertEquals(cookie.getValue(), "bar");
-	     
+
 	        driver.quit();
 	      }
-	  
+
 
 	    @Test
 	    public void getAllCookies() {
-	      
+
 	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
 	        // Add cookies into current browser context
 	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
@@ -66,11 +68,11 @@ public class CookiesTest {
 	         }
 	         driver.quit();
 	      }
-	   
+
 
 	    @Test
 	    public void deleteCookieNamed() {
-	     
+
 	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
 	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
 	        // delete cookie named
@@ -80,7 +82,7 @@ public class CookiesTest {
 
 	    @Test
 	    public void deleteCookieObject() {
-	     
+
 	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
 	        Cookie cookie = new Cookie("test2", "cookie2");
 	        driver.manage().addCookie(cookie);
@@ -89,21 +91,21 @@ public class CookiesTest {
 	        cookie by passing cookie object of current browsing context
 	        */
 	        driver.manage().deleteCookie(cookie);
-	      
+
 	        driver.quit();
 	      }
-	  
+
 
 	    @Test
 	    public void deleteAllCookies() {
-	     
+
 	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
 	        // Add cookies into current browser context
 	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
 	        driver.manage().addCookie(new Cookie("test2", "cookie2"));
 	        // Delete All cookies
 	        driver.manage().deleteAllCookies();
-	     
+
 	        driver.quit();
 	      }
 

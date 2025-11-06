@@ -27,7 +27,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:filename/"
+blog = "/:section/:year/:contentbasename/"
 # blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
@@ -75,12 +75,6 @@ languageName = "日本語"
 weight = 4
 [languages.ja.params]
 description = "Selenium automates browsers. That's it!"
-#[languages.other]
-#title = "Selenium"
-#languageName ="Other"
-#weight = 5
-#[languages.other.params]
-#description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
 [module]
@@ -164,8 +158,8 @@ plausible_analytics = true
 prism_syntax_highlighting = true
 
 # Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-banner_flag = false
-announcement_banner = false
+banner_flag = true
+announcement_banner = true
 
 # Enable Algolia DocSearch
 [params.search.algolia]
@@ -263,7 +257,7 @@ enable = false
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
+	url = "https://web.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]

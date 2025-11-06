@@ -25,8 +25,8 @@ O WebDriver pode obter o texto do pop-up e aceitar ou dispensar esses
 alertas.
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L45-L49" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
@@ -62,8 +62,8 @@ uma amostra de confirmação </a>.
 Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 
 {{< tabpane langEqualsHeader=true >}}
-   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L55-L57" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -121,8 +121,8 @@ Veja um exemplo de prompt </a>.
 
 
 {{< tabpane langEqualsHeader=true >}}
-       {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L62-L65" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}

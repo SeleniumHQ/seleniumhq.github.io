@@ -18,8 +18,8 @@ WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原�
 WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 
 {{< tabpane langEqualsHeader=true >}}
-   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L45-L49" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -67,8 +67,8 @@ alert.accept()
 此示例还呈现了警告的另一种实现:
 
 {{< tabpane langEqualsHeader=true >}}
-    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L55-L57" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -123,8 +123,8 @@ alert.dismiss()
 
 
 {{< tabpane langEqualsHeader=true >}}
-        {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L62-L65" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}

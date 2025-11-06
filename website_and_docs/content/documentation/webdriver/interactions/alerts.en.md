@@ -26,7 +26,7 @@ alerts.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L45-L49" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -76,8 +76,8 @@ a sample confirm</a>.
 This example also shows a different approach to storing an alert:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L55-L57" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
@@ -134,9 +134,9 @@ text. Pressing the cancel button will not submit any text.
 See a sample prompt</a>.
 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L62-L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}

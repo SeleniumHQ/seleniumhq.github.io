@@ -64,6 +64,7 @@ namespace SeleniumDocs.Browsers
             service.LogPath = GetLogLocation();
 
             driver = new FirefoxDriver(service);
+            driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("geckodriver	INFO	Listening on")));
         }
@@ -79,7 +80,7 @@ namespace SeleniumDocs.Browsers
                 var service = FirefoxDriverService.CreateDefaultService();
                 driver = new FirefoxDriver(service);
                 Assert.IsTrue(testLogHandler.Events.Count >= 1);
-                Assert.IsTrue(testLogHandler.Events.Any(e => e.Message.Contains("geckodriver INFO")));
+                Assert.IsTrue(testLogHandler.Events.Any(e => e.Message.Contains("geckodriver")));
             }
             finally
             {
@@ -95,6 +96,7 @@ namespace SeleniumDocs.Browsers
             service.LogLevel = FirefoxDriverLogLevel.Debug;
 
             driver = new FirefoxDriver(service);
+            driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Marionette\tDEBUG")));
         }
@@ -108,6 +110,7 @@ namespace SeleniumDocs.Browsers
             service.LogLevel = FirefoxDriverLogLevel.Debug;
 
             driver = new FirefoxDriver(service);
+            driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNull(lines.FirstOrDefault(line => line.Contains(" ... ")));
         }

@@ -12,7 +12,9 @@ description: >
 
 ### 潜在原因
 
-您尝试使用的CSS或XPath选择器包含无效字符或无效查询。
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### 可行方案
 

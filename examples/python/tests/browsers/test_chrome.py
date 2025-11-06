@@ -189,6 +189,7 @@ def test_get_browser_logs():
     assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
 
+
 def get_default_chrome_options():
     options = webdriver.ChromeOptions()
     options.add_argument("--no-sandbox")

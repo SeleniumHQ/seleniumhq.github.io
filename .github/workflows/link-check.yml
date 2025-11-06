@@ -25,13 +25,13 @@ jobs:
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ' 0.125.4'
+          hugo-version: ' 0.148.2'
           extended: true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '22.18.0'
+          node-version: '22.21.1'
           cache: 'npm'
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
@@ -51,7 +51,7 @@ jobs:
           args: website_and_docs/public/ --check-anchors
 
       - name: Archive hyperlink results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: hyperlink-report
           path: website_and_docs/tmp/.hyperlink/hyperlink.log
