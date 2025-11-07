@@ -277,3 +277,55 @@ val attr = driver.findElement(By.name("email_input")).getAttribute("value")
 
 {{< /tab >}}
 {{< /tabpane >}}
+
+
+### Get Dom Property 
+
+This method retrieves the value of a specific DOM property of a web element.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L67-L69" >}}
+{{< /tab >}}
+  {{< tab header="Python" text=true >}}
+
+  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
+### Get Dom Attribute 
+
+This method retrieves the value of a specific HTML attribute of a web element
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L71-L73" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+
+  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+  {{< /tab >}}
+{{< /tabpane >}}

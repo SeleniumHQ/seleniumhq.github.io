@@ -258,7 +258,9 @@ val text = driver.findElement(By.id("justanotherlink")).getText()
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Fetching Attributes or Properties
+## Fetching Attributes and Properties
+
+### Get Attribute 
 
 Fetches the run time value associated with a 
 DOM attribute. It returns the data associated 
@@ -266,11 +268,11 @@ with the DOM attribute or property of the element.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L60-L64" >}}
 {{< /tab >}}
-{{< tab header="Python" text=true >}}
+  {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_information.py#L44-L46" >}}
-{{< /tab >}}
+  {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/InformationTest.cs#L58-L62" >}}
 {{< /tab >}}
@@ -280,13 +282,63 @@ with the DOM attribute or property of the element.
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/information.spec.js#L55-L59">}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
-
+  {{< tab header="Kotlin" >}}
 // Navigate to URL
 driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
 //fetch the value property associated with the textbox
 val attr = driver.findElement(By.name("email_input")).getAttribute("value")
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
+### Get Dom Property 
+
+This method retrieves the value of a specific DOM property of a web element.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L67-L69" >}}
+{{< /tab >}}
+  {{< tab header="Python" text=true >}}
+
+  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
 
 {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
+### Get Dom Attribute 
+
+This method retrieves the value of a specific HTML attribute of a web element
+
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/InformationTest.java#L71-L73" >}}
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+
+  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+
+{{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+
+{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+
+  {{< /tab >}}
 {{< /tabpane >}}

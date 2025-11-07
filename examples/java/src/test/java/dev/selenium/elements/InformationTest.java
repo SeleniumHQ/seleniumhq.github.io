@@ -64,6 +64,13 @@ public class InformationTest {
       String valueInfo = emailTxt.getAttribute("value");
       assertEquals(valueInfo,"admin@localhost");
 
+      // Fetch Dom Property
+      String propInfo = emailTxt.getDomProperty("value");
+      assertEquals(propInfo,"admin@localhost");
+
+      // Fetch Dom Attribute
+      String attrInfo = emailTxt.getDomAttribute("value");
+      assertEquals(attrInfo,"admin@localhost");
 
       driver.quit();
     }
