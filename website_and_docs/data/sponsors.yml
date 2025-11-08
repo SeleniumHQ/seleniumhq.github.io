@@ -123,6 +123,10 @@ bronze:
     - logo: "/images/sponsors/Jetify-Wordmark.svg"
       url: "https://www.jetify.com/"
       name: "AI Automation Agency"
+    # Sponsorship start date: October 28, 2025
+    - logo: "/images/sponsors/Hypeproxies_logo.png"
+      url: "https://hypeproxies.com/"
+      name: "HypeProxies – Fastest ISP & Residential Proxies, No Limits"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"
