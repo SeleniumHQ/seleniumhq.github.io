@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
