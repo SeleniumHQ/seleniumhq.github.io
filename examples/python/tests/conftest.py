@@ -4,14 +4,15 @@ import socket
 import subprocess
 import tempfile
 import time
-from selenium.webdriver.common.utils import free_port
+import uuid
 from datetime import datetime
 from urllib.request import urlopen
-import requests
-from requests.auth import HTTPBasicAuth
 
 import pytest
+import requests
+from requests.auth import HTTPBasicAuth
 from selenium import webdriver
+from selenium.webdriver.common.utils import free_port
 
 
 def pytest_configure(config):
@@ -96,8 +97,7 @@ def log():
 
 @pytest.fixture(scope='function')
 def log_path():
-    suffix = datetime.now().strftime("%y%m%d_%H%M%S")
-    log_path = 'log_file_' + suffix + '.log'
+    log_path = f'log_file_{uuid.uuid4()}.log'
 
     yield log_path
 

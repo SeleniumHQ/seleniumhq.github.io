@@ -127,6 +127,10 @@ bronze:
     - logo: "/images/sponsors/Hypeproxies_logo.png"
       url: "https://hypeproxies.com/"
       name: "HypeProxies – Fastest ISP & Residential Proxies, No Limits"
+    # Sponsorship start date: November 24, 2025
+    - logo: "/images/sponsors/shipfox-logo.svg"
+      url: "https://www.shipfox.io"
+      name: "Shipfox – Blazing fast GitHub Actions for half the cost"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"
