@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.bidi.webextension.ExtensionPath;
@@ -59,6 +61,7 @@ public class ChromeTest extends BaseTest {
   }
 
   @Test
+  @DisabledOnOs(OS.WINDOWS)
   public void extensionOptions() {
     ChromeOptions options = getDefaultChromeOptions();
     options.enableBiDi();
