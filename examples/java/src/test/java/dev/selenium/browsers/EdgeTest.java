@@ -21,7 +21,10 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.logging.*;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.service.DriverFinder;
 
 
@@ -116,7 +119,7 @@ public class EdgeTest extends BaseTest {
     driver = new EdgeDriver(service);
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
-    Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
+    Assertions.assertTrue(fileContent.contains("Starting msedgedriver"));
   }
 
   @Test

@@ -20,7 +20,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
@@ -29,9 +29,9 @@ jobs:
           extended: true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '22.19.0'
+          node-version: '22.21.1'
           cache: 'npm'
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
@@ -46,12 +46,12 @@ jobs:
 
       - name: Link check
         continue-on-error: true # <- If set to false, run fails with broken links
-        uses: untitaker/hyperlink@0.1.44
+        uses: untitaker/hyperlink@0.2.0
         with:
           args: website_and_docs/public/ --check-anchors
 
       - name: Archive hyperlink results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: hyperlink-report
           path: website_and_docs/tmp/.hyperlink/hyperlink.log

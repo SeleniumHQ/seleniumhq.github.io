@@ -9,57 +9,82 @@ aliases: [
 ]
 ---
 
-Nota: esta página reuniu conteúdos de várias fontes, incluindo
-o [Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) 
+Note: this page has merged contents from multiple sources, including
+the [Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) 
 
-## Visão geral
+## Overview
 
-Dentro da interface de usuário (UI) do seu aplicativo web, existem áreas com as quais seus testes interagem. O Page Object modela apenas essas áreas como objetos dentro do código de teste. Isso reduz a quantidade de código duplicado e significa que, se a UI mudar, a correção precisará ser aplicada apenas em um lugar.
+Within your web app's UI, there are areas where your tests interact with. 
+A Page Object only models these as objects within the test code. 
+This reduces the amount of duplicated code and means that if the UI changes, 
+the fix needs only to be applied in one place.
 
-Page Object é um padrão de design (Design Pattern) que se tornou popular na automação de testes para melhorar a manutenção de testes e reduzir a duplicação de código. Page Object é uma classe orientada a objetos que serve como interface para uma página do seu AUT (Aplicativo Sob Teste). Os testes usam então os métodos desta classe de Page Object sempre que precisam interagir com a UI dessa página. A vantagem é que, se a UI da página mudar, os próprios testes não precisam mudar, apenas o código dentro do Page Object precisa mudar. Subsequentemente, todas as mudanças para suportar essa nova UI estão localizadas em um lugar.
+Page Object Model is a Design Pattern that has become popular in test automation for
+enhancing test maintenance and reducing code duplication. A page object is an
+object-oriented class that serves as an interface to a page of your AUT. The
+tests then use the methods of this page object class whenever they need to
+interact with the UI of that page. The benefit is that if the UI changes for
+the page, the tests themselves don’t need to change, only the code within the
+page object needs to change. Subsequently, all changes to support that new UI
+are located in one place.
 
-### Vantagens
+### Advantages
 
-* Existe uma separação bem definida entre o código do teste e o código da página especifica.
-* Existe um repositório único para os serviços ou operações que a página oferece, em vez de ter esses serviços espalhados pelos testes.
+* There is a clean separation between the test code and page-specific code, such as
+  locators (or their use if you’re using a UI Map) and layout.
+* There is a single repository for the services or operations the page offers
+  rather than having these services scattered throughout the tests.
 
-Em ambos os casos, isso permite que quaisquer modificações necessárias devido a mudanças na UI sejam feitas em um lugar somente. Informações úteis sobre esta técnica podem ser encontradas em vários blogs, pois este 'padrão de design de teste (test design pattern)' está se tornando amplamente utilizado. Encorajamos os leitores que desejam saber mais a pesquisar na internet por blogs sobre este assunto. Muitos já escreveram sobre este padrão de design e podem fornecer dicas úteis além do escopo deste guia do usuário. Para começar, vamos ilustrar Page Object com um exemplo simples.
+In both cases, this allows any modifications required due to UI changes to all
+be made in one place. Helpful information on this technique can be found on
+numerous blogs as this ‘test design pattern’ is becoming widely used. We
+encourage readers who wish to know more to search the internet for blogs
+on this subject. Many have written on this design pattern and can provide
+helpful tips beyond the scope of this user guide. To get you started,
+we’ll illustrate page objects with a simple example.
 
-### Exemplos
-Primeiro, considere um exemplo, típico da automação de testes, que não usa um objeto de página:
+### Examples
+
+First, consider an example, typical of test automation, that does not use a
+page object:
 
 ```java
 /***
- * Testes da funcionalidade de login
+ * Tests login feature
  */
 public class Login {
 
   public void testLogin() {
-    // preencha os dados de login na página de entrada
+    // fill login data on sign-in page
     driver.findElement(By.name("user_name")).sendKeys("userName");
     driver.findElement(By.name("password")).sendKeys("my supersecret password");
     driver.findElement(By.name("sign-in")).click();
 
-    // verifique se a tag h1 é "Hello userName" após o login
+    // verify h1 tag is "Hello userName" after login
     driver.findElement(By.tagName("h1")).isDisplayed();
     assertThat(driver.findElement(By.tagName("h1")).getText(), is("Hello userName"));
   }
 }
 ```
 
-Existem dois problemas com essa abordagem.
+There are two problems with this approach.
 
-* Não há separação entre o método de teste e os localizadores do aplicativo em teste (IDs neste exemplo); ambos estão entrelaçados em um único método. Se a UI do aplicativo em teste muda seus identificadores, layout ou como um login é inserido e processado, o próprio teste deve mudar.
-* Os localizadores ID estariam espalhados em vários testes, em todos os testes que tivessem que usar esta página de login.
+* There is no separation between the test method and the AUT’s locators (IDs in 
+this example); both are intertwined in a single method. If the AUT’s UI changes 
+its identifiers, layout, or how a login is input and processed, the test itself 
+must change.
+* The ID-locators would be spread in multiple tests, in all tests that had to 
+use this login page.
 
-Aplicando as técnicas de Page Object, este exemplo poderia ser reescrito da seguinte forma no exemplo para uma página de login.
+Applying the page object model, this example could be rewritten like this
+in the following example of a page object for a Sign-in page.
 
 ```java
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Page Object encapsula a página de login.
+ * Page Object encapsulates the Sign-in page.
  */
 public class SignInPage {
   protected WebDriver driver;
@@ -80,11 +105,11 @@ public class SignInPage {
   }
 
   /**
-    * Faz login como um usuário válido
+    * Login as valid user
     *
     * @param userName
     * @param password
-    * @return pbjeto da Pagina Inicial
+    * @return HomePage object
     */
   public HomePage loginValidUser(String userName, String password) {
     driver.findElement(usernameBy).sendKeys(userName);
@@ -95,14 +120,14 @@ public class SignInPage {
 }
 ```
 
-E o objeto de página para uma página inicial poderia parecer assim.
+and page object for a Home page could look like this.
 
 ```java
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Page Object encapsula a Página Inicial
+ * Page Object encapsulates the Home Page
  */
 public class HomePage {
   protected WebDriver driver;
@@ -119,27 +144,29 @@ public class HomePage {
   }
 
   /**
-    * Obtém a mensagem (tag h1)
+    * Get message (h1 tag)
     *
-    * @return String da mensagem de texto
+    * @return String message text
     */
   public String getMessageText() {
     return driver.findElement(messageBy).getText();
   }
 
   public HomePage manageProfile() {
-    // Encapsulamento da página para gerenciar a funcionalidade do perfil
+    // Page encapsulation to manage profile functionality
     return new HomePage(driver);
   }
-  /* Mais métodos que oferecem os serviços representados pela Página inicial do usuário logado. Estes métodos por sua vez podem retornar mais Page Object, por exemplo, clicar no botão "Compor email" pode retornar um objeto da classe ComposeMail */
+  /* More methods offering the services represented by Home Page
+  of Logged User. These methods in turn might return more Page Objects
+  for example click on Compose mail button could return ComposeMail class object */
 }
 ```
 
-Então agora, o teste de login usaria esses dois objetos de página da seguinte maneira.
+So now, the login test would use these two page objects as follows.
 
 ```java
 /***
- * Testes da funcionalidade de login
+ * Tests login feature
  */
 public class TestLogin {
 
@@ -153,22 +180,40 @@ public class TestLogin {
 }
 ```
 
-Há muita flexibilidade em como o Page Object pode ser projetado, mas existem algumas regras básicas para obter a manutenibilidade desejada do seu código de teste.
+There is a lot of flexibility in how the page objects may be designed, but
+there are a few basic rules for getting the desired maintainability of your
+test code.
 
-## Afirmações em Page Objects
-Os Page Objects em si nunca devem fazer verificações ou afirmações. Isso faz parte do seu teste e sempre deve estar dentro do código do teste, nunca em um objeto de página. O objeto de página conterá a representação da página e os serviços que a página fornece por meio de métodos, mas nenhum código relacionado ao que está sendo testado deve estar dentro do objeto de página.
+## Assertions in Page Objects
 
-Há uma única verificação que pode e deve estar dentro do objeto de página, e isso é para verificar se a página e possivelmente elementos críticos na página, foram carregados corretamente. Essa verificação deve ser feita ao instanciar o objeto de página. Nos exemplos acima, tanto os construtores SignInPage quanto HomePage verificam se a página esperada está disponível e pronta para solicitações do teste.
+Page objects themselves should never make verifications or assertions. This is
+part of your test and should always be within the test’s code, never in a page
+object. The page object will contain the representation of the page, and the
+services the page provides via methods but no code related to what is being
+tested should be within the page object.
 
-## Objetos Componentes de Página (Page Component Object)
-Page Object não precisa necessariamente representar todas as partes de uma página. Isso foi [notado por Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) nos primeiros dias, enquanto cunhava o termo "objetos de painel (panel objects)".
+There is one, single, verification which can, and should, be within the page
+object and that is to verify that the page, and possibly critical elements on
+the page, were loaded correctly. This verification should be done while
+instantiating the page object. In the examples above, both the SignInPage and
+HomePage constructors check that the expected page is available and ready for
+requests from the test.
 
-Os mesmos princípios usados para objetos de página podem ser usados para criar "Objetos Componente de Página", como foi chamado mais tarde, que representam partes discretas da página e podem ser incluídos em Page Object. Esses objetos de componente podem fornecer referências aos elementos dentro dessas partes discretas e métodos para aproveitar a funcionalidade ou comportamento fornecidos por eles.
+## Page Component Objects
 
-Por exemplo, uma página de Produtos tem vários produtos.
+A page object does not necessarily need to represent all the parts of a
+page itself. This was [noted by Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) in the early days, while first coining the term "panel objects".
+
+The same principles used for page objects can be used to
+create "Page _Component_ Objects", as it was later called, that represent discrete chunks of the
+page and **can be included in page objects**. These component objects can
+provide references to the elements inside those discrete chunks, and
+methods to leverage the functionality or behavior provided by them.
+
+For example, a Products page has multiple products.
 
 ```html
-<!-- Página de Produtos -->
+<!-- Products Page -->
 <div class="header_container">
     <span class="title">Products</span>
 </div>
@@ -189,7 +234,8 @@ Por exemplo, uma página de Produtos tem vários produtos.
 </div>
 ```
 
-Cada produto é um componente da página de Produtos.
+Each product is a component of the Products page.
+
 
 ```html
 <!-- Inventory Item -->
@@ -202,7 +248,7 @@ Cada produto é um componente da página de Produtos.
 </div>
 ```
 
-A página de Produtos "TEM-UMA (HAS-A)" lista de produtos. This object relationship is called Composition. Essa relação de objeto é chamada de Composição. Em termos mais simples, algo é _composto de_ outra coisa.
+The Products page HAS-A list of products. This object relationship is called Composition. In simpler terms, something is _composed of_ another thing.
 
 ```java
 public abstract class BasePage {
@@ -217,32 +263,32 @@ public abstract class BasePage {
 public class ProductsPage extends BasePage {
     public ProductsPage(WebDriver driver) {
         super(driver);
-        // Sem afirmações, lança uma exceção se o elemento não for carregado
+        // No assertions, throws an exception if the element is not loaded
         new WebDriverWait(driver, Duration.ofSeconds(3))
             .until(d -> d.findElement(By.className​("header_container")));
     }
 
-    // Retornar uma lista de produtos é um serviço da página
+    // Returning a list of products is a service of the page
     public List<Product> getProducts() {
         return driver.findElements(By.className​("inventory_item"))
             .stream()
-            .map(e -> new Product(e)) // Mapeia WebElement para um componente do produto
+            .map(e -> new Product(e)) // Map WebElement to a product component
             .toList();
     }
 
-    // Retorna um produto específico usando uma função booleana (predicado)
-    // Este é o padrão de estratégia comportamental do GoF
+    // Return a specific product using a boolean-valued function (predicate)
+    // This is the behavioral Strategy Pattern from GoF
     public Product getProduct(Predicate<Product> condition) {
         return getProducts()
             .stream()
-            .filter(condition) // Filtra por nome de produto ou preço
+            .filter(condition) // Filter by product name or price
             .findFirst()
-            .orElseThrow();
+            .orElseThrow(() -> new RuntimeException("Product not found")); // Error thrown during actual test run
     }
 }
 ```
 
-O objeto do componente Produto é usado dentro do objeto de página Produtos.
+The Product component object is used inside the Products page object.
 
 ```java
 public abstract class BaseComponent {
@@ -253,15 +299,15 @@ public abstract class BaseComponent {
     }
 }
 
-// Objeto Componente da Página (Page Component Object)
+// Page Component Object
 public class Product extends BaseComponent {
-    // O elemento raiz contém todo o componente
+    // The root element contains the entire component
     public Product(WebElement root) {
         super(root); // inventory_item
     }
 
     public String getName() {
-        // A localização de um elemento começa na raiz do componente
+        // Locating an element begins at the root of the component
         return root.findElement(By.className("inventory_item_name")).getText();
     }
 
@@ -270,7 +316,7 @@ public class Product extends BaseComponent {
                 root.findElement(By.className("inventory_item_price"))
                     .getText()
                     .replace("$", "")
-            ).setScale(2, RoundingMode.UNNECESSARY); // Higienização e formatação
+            ).setScale(2, RoundingMode.UNNECESSARY); // Sanitation and formatting
     }
 
     public void addToCart() {
@@ -279,7 +325,7 @@ public class Product extends BaseComponent {
 }
 ```
 
-Agora, o teste dos produtos usaria o Page Objecto e o Page Component Obeject da seguinte maneira.
+So now, the products test would use the page object and the page component object as follows.
 
 ```java
 public class ProductsTest {
@@ -287,15 +333,15 @@ public class ProductsTest {
     public void testProductInventory() {
         var productsPage = new ProductsPage(driver); // page object
         var products = productsPage.getProducts();
-        assertEquals(6, products.size()); // esperado, atual
+        assertEquals(6, products.size()); // expected, actual
     }
     
     @Test
     public void testProductPrices() {
         var productsPage = new ProductsPage(driver);
 
-        // Passa uma expressão lambda (predicado) para filtrar a lista de produtos
-        // O predicado ou "estratégia" é o comportamento passado como parâmetro
+        // Pass a lambda expression (predicate) to filter the list of products
+        // The predicate or "strategy" is the behavior passed as parameter
         var backpack = productsPage.getProduct(p -> p.getName().equals("Backpack")); // page component object
         var bikeLight = productsPage.getProduct(p -> p.getName().equals("Bike Light"));
 
@@ -305,38 +351,47 @@ public class ProductsTest {
 }
 ```
 
-A página e o componente são representados por seus próprios objetos. Ambos os objetos têm apenas métodos para os **serviços** que oferecem, o que corresponde à aplicação do mundo real na programação orientada a objetos.
+The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application as is the core principle of object-oriented programming. When applications are built, they are not made of a massive page entity. They are built with components contained in a page. Page Component Objects implement the same approach.
 
-Você pode até aninhar objetos de componentes dentro de outros objetos de componentes para páginas mais complexas. Se uma página na AUT tiver vários componentes, ou componentes comuns usados em todo o site (por exemplo, uma barra de navegação), então isso pode melhorar a manutenibilidade e reduzir a duplicação de código.
+You can even
+nest component objects inside other component objects for more complex
+pages. If a page in the AUT has multiple components, or common
+components used throughout the site (e.g. a navigation bar), then it
+may improve maintainability and reduce code duplication.
 
-## Outros Padrões de Projeto (Design Patterns) Usados em Testes
-Existem outros padrões de projeto que também podem ser usados em testes. Discutir todos esses está além do escopo deste guia do usuário. Aqui, apenas queremos introduzir os conceitos para tornar o leitor ciente de algumas das coisas que podem ser feitas. Como foi mencionado anteriormente, muitos escreveram sobre este tópico e encorajamos o leitor a procurar blogs sobre esses tópicos.
+## Other Design Patterns Used in Testing
 
-## Notas de Implementação
+There are other design patterns that also may be used in testing. Discussing all of these is
+beyond the scope of this user guide. Here, we merely want to introduce the
+concepts to make the reader aware of some of the things that can be done. As
+was mentioned earlier, many have blogged on this topic and we encourage the
+reader to search for blogs on these topics.
 
-Page Objects podem ser pensados como se estivessem voltados para duas direções simultaneamente. Voltado para o desenvolvedor de um teste, eles representam os **serviços** oferecidos por uma página específica. Virado para longe do desenvolvedor, eles devem ser a única coisa que tem um conhecimento profundo da estrutura do HTML de uma página (ou parte de uma página). É mais simples pensar nos métodos de um Page Object como oferecendo os "serviços" que uma página oferece, em vez de expor os detalhes e a mecânica da página. Como exemplo, pense na caixa de entrada de qualquer sistema de email baseado na web. Entre os serviços que oferece estão a capacidade de compor um novo e-mail, escolher ler um único e-mail e listar as linhas de assunto dos e-mails na caixa de entrada. Como esses são implementados não deve importar para o teste.
+## Implementation Notes
 
-Porque estamos encorajando o desenvolvedor de um teste a tentar pensar sobre os serviços com os quais estão interagindo em vez da implementação, os Page Objects raramente devem expor a instância subjacente do WebDriver. Para facilitar isso, os métodos no Page Object devem retornar outros Page Objects. Isso significa que podemos efetivamente modelar a jornada do usuário em nosso aplicativo. Também significa que se a maneira como as páginas se relacionam entre si mudar (como quando a página de login pede ao usuário para alterar sua senha na primeira vez que eles entram em um serviço quando antes não fazia isso), simplesmente mudando a assinatura do método apropriado fará com que os testes falhem em compilação. Colocando de outra forma; podemos dizer quais testes falhariam sem precisar executá-los quando mudamos a relação entre as páginas e refletimos isso nos PageObjects.
+Page Objects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
 
-Uma consequência dessa abordagem é que pode ser necessário modelar (por exemplo) tanto um login bem-sucedido quanto um mal-sucedido; ou um clique poderia ter um resultado diferente dependendo do estado do aplicativo. Quando isso acontece, é comum ter vários métodos no PageObject:
+Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, Page Objects should seldom expose the underlying WebDriver instance. To facilitate this, **methods on the Page Object may return another Page Object, another Page Component Object, or even itself (this)**. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the Page Objects.
+
+One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the Page Object:
 
 ```java
 public class LoginPage {
     public HomePage loginAs(String username, String password) {
-        // ... mágica inteligente acontece aqui
+        // ... clever magic happens here
     }
     
     public LoginPage loginAsExpectingError(String username, String password) {
-        //  ... falha no login aqui, talvez porque o nome de usuário e/ou a senha estão incorretos
+        //  ... failed login here, maybe because one or both of the username and password are wrong
     }
     
     public String getErrorMessage() {
-        // Para que possamos verificar se o erro correto é mostrado
+        // So we can verify that the correct error is shown
     }
 }
 ```
 
-O código apresentado acima mostra um ponto importante: os testes, não os Page Objects, devem ser responsáveis por fazer asserções sobre o estado de uma página. Por exemplo:
+The code presented above shows an important point: the tests, not the Page Objects, should be responsible for making assertions about the state of a page. For example:
 
 ```java
 public void testMessagesAreReadOrUnread() {
@@ -356,18 +411,18 @@ public void testMessagesAreReadOrUnread() {
 }
 ```
 
-Claro, como em toda diretriz, existem exceções, e uma que é comumente vista com Page Objects é verificar se o WebDriver está na página correta quando instanciamos o Page Object. Isso é feito no exemplo abaixo.
+Of course, as with every guideline, there are exceptions, and one that is commonly seen with Page Objects is to check that the WebDriver is on the correct page when we instantiate the Page Object. This is done in the example below.
 
-Finalmente, um Page Object não precisa representar uma página inteira. Pode representar uma seção que aparece com frequência dentro de um site ou página, como a navegação do site. O princípio essencial é que há apenas um lugar em sua suíte de testes com conhecimento da estrutura do HTML de uma determinada (parte de uma) página.
+Finally, a Page Object need not represent an entire page and can be composed of Page Object Components. These components may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.
 
-## Resumo
+## Summary
 
-* Os métodos públicos representam os serviços que a página oferece
-* Tente não expor as entranhas da página
-* Geralmente não faça asserções
-* Métodos retornam outros PageObjects
-*Não precisa representar uma página inteira
-* Resultados diferentes para a mesma ação são modelados como métodos diferentes
+* The public methods represent the services that the page or component offers
+* Try not to expose the internals of the page or component
+* Generally don't make assertions
+* Methods return other Page Objects, Page Component Objects, or optionally themselves (for fluent syntax)
+* Need not represent an entire page all the time
+* Different results for the same action are modelled as different methods
 
 ## Example
 
@@ -378,62 +433,63 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
 
-        // Verifica se estamos na página correta.
+        // Check that we're on the right page.
         if (!"Login".equals(driver.getTitle())) {
-            // Alternativamente, poderíamos navegar para a página de login, talvez fazendo logout primeiro
+            // Alternatively, we could navigate to the login page, perhaps logging out first
             throw new IllegalStateException("This is not the login page");
         }
     }
 
-    // A página de login contém vários elementos HTML que serão representados como WebElements.
-    // Os localizadores para esses elementos devem ser definidos apenas uma vez.
+    // The login page contains several HTML elements that will be represented as WebElements.
+    // The locators for these elements should only be defined once.
         By usernameLocator = By.id("username");
         By passwordLocator = By.id("passwd");
         By loginButtonLocator = By.id("login");
 
-    // A página de login permite que o usuário digite seu nome de usuário no campo de nome de usuário
+    // The login page allows the user to type their username into the username field
     public LoginPage typeUsername(String username) {
-        // Este é o único lugar que "sabe" como entrar com um nome de usuário
+        // This is the only place that "knows" how to enter a username
         driver.findElement(usernameLocator).sendKeys(username);
 
-        // Retorna o objeto de página atual, já que esta ação não navega para uma página representada por outro Page Object
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
         return this;	
     }
-Este é o único lugar que "sabe" como entrar com uma senha
-    // A página de login permite que o usuário digite sua senha no campo de senha
+
+    // The login page allows the user to type their password into the password field
     public LoginPage typePassword(String password) {
-        // Este é o único lugar que "sabe" como entrar com uma senha
+        // This is the only place that "knows" how to enter a password
         driver.findElement(passwordLocator).sendKeys(password);
 
-        // Retorna o objeto de página atual, já que esta ação não navega para uma página representada por outro Page Object
+        // Return the current page object as this action doesn't navigate to a page represented by another PageObject
         return this;	
     }
 
-    // A página de login permite que o usuário envie o formulário de login
+    // The login page allows the user to submit the login form
     public HomePage submitLogin() {
-        // Este é o único lugar que envia o formulário de login e espera que o destino seja a página inicial.
-        // Um método separado deve ser criado para a instância de clicar em login enquanto espera uma falha de login.
+        // This is the only place that submits the login form and expects the destination to be the home page.
+        // A seperate method should be created for the instance of clicking login whilst expecting a login failure. 
         driver.findElement(loginButtonLocator).submit();
 
-        // Retorna um novo objeto de página representando o destino. Caso a página de login vá para algum outro lugar (por exemplo, um aviso legal),
-        // então a alteração da assinatura do método para este método significará que todos os testes que dependem deste comportamento não serão compilados.
+        // Return a new page object representing the destination. Should the login page ever
+        // go somewhere else (for example, a legal disclaimer) then changing the method signature
+        // for this method will mean that all tests that rely on this behaviour won't compile.
         return new HomePage(driver);	
     }
 
-    // A página de login permite que o usuário envie o formulário de login sabendo que um nome de usuário inválido e/ou senha foram inseridos
+    // The login page allows the user to submit the login form knowing that an invalid username and / or password were entered
     public LoginPage submitLoginExpectingFailure() {
-        // Este é o único lugar que envia o formulário de login e espera que o destino seja a página de login devido à falha no login.
+        // This is the only place that submits the login form and expects the destination to be the login page due to login failure.
         driver.findElement(loginButtonLocator).submit();
 
-        // Retorna um novo objeto de página representando o destino. Caso o usuário seja navegado para a página inicial depois de enviar um login com credenciais
-        // que se espera falhar no login, o script falhará quando tentar instanciar o PageObject LoginPage.
+        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submiting a login with credentials 
+        // expected to fail login, the script will fail when it attempts to instantiate the LoginPage PageObject.
         return new LoginPage(driver);	
     }
 
-    // Conceitualmente, a página de login oferece ao usuário o serviço de ser capaz de "entrar"
-    // no aplicativo usando um nome de usuário e senha. 
+    // Conceptually, the login page offers the user the service of being able to "log into"
+    // the application using a user name and password. 
     public HomePage loginAs(String username, String password) {
-        // Os métodos PageObject que inserem nome de usuário, senha e enviam login já foram definidos e não devem ser repetidos aqui.
+        // The PageObject methods that enter username, password & submit login have already defined and should not be repeated here.
         typeUsername(username);
         typePassword(password);
         return submitLogin();

@@ -30,7 +30,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Remove driver directories Windows
         if: matrix.os == 'windows'
         run: |
@@ -51,7 +51,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: 3.4.7
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -115,11 +115,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: 3.4.7
           bundler-cache: true
       - name: Install dependencies
         working-directory: ./examples/ruby

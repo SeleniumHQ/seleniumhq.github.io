@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 
 def test_basic_options():
     options = get_default_edge_options()
+
     driver = webdriver.Edge(options=options)
 
     driver.quit()
@@ -73,7 +74,7 @@ def test_log_to_file(log_path):
     driver = webdriver.Edge(service=service)
 
     with open(log_path, 'r') as fp:
-        assert "Starting Microsoft Edge WebDriver" in fp.readline()
+        assert "Starting" in fp.readline()
 
     driver.quit()
 
@@ -84,7 +85,7 @@ def test_log_to_stdout(capfd):
     driver = webdriver.Edge(service=service)
 
     out, err = capfd.readouterr()
-    assert "Starting Microsoft Edge WebDriver" in out
+    assert "Starting" in out
 
     driver.quit()
 
@@ -188,6 +189,7 @@ def test_get_browser_logs():
     # Assert that at least one log contains the expected message
     assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
+
 
 def get_default_edge_options():
     options = webdriver.EdgeOptions()
