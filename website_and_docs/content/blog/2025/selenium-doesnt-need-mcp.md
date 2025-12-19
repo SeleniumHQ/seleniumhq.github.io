@@ -21,7 +21,7 @@ At its heart, Selenium is a **browser automation tool**. Our job is to provide a
 
 The most common request we see is for a simple MCP server that exposes our API - `find_element`, `click`, `get_page_source` - as tools. While this sounds useful, in practice, it leads to immediate failure modes regarding _context window management_. 
 
-We can look at early adopters for evidence. The official GitHub MCP server provides a wide array of tools, which results in massive context consumption. Its initial implementation exposed 100+ tools that consumed 64,000 tokens. That’s before the agent does any work. This issue was [improved](https://github.com/github/github-mcp-server/discussions/1182) over time, but even today, the server still uses 30,000 tokens on load.
+We can look at early adopters for evidence. The official GitHub MCP server provides a wide array of tools, which results in massive context consumption. Its initial implementation exposed 100+ tools that consumed 64,000 tokens. That’s before the agent does any work. This issue was [improved](https://github.com/github/github-mcp-server/discussions/1182) over time, but even today, the server still uses 30,000 tokens on load. For reference, Claude Opus 4.5 - one of the best frontier models - context window is limited to 200,000 tokens.
 
 If we were to expose the full WebDriver API via MCP, we would flood the agent with dozens of low-level tool definitions. This triggers [Context Rot](https://research.trychroma.com/context-rot), where the model becomes distracted by the sheer volume of available tools, degrading its reasoning capabilities.
 
