@@ -1,6 +1,6 @@
 ---
 title: Selenium Doesn't Need MCP
-linkTitle: Why Selenium Doesn't Need MCP
+linkTitle: Selenium Doesn't Need MCP
 date: 2025-12-19
 tags: ["selenium", "mcp"]
 categories: ["technical"]
