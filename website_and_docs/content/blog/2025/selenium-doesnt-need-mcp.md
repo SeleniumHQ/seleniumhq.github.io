@@ -74,4 +74,4 @@ We believe these and new frameworks are the correct place for MCP servers to liv
 
 We are excited to see what the community builds with Selenium and AI. But we believe our contribution should be maintaining the stable, standard-compliant WebDriver protocol that underpins it all. This ensures we keep a focus on WebDriver BiDi as the next-gen browser automation standard that other projects can be based on. We’ll get back to this topic whenever the MCP limitations and context rot problems are in a better state.
 
-<sup>1</sup> _If you are familiar with an open source project based on the WebDriver ecosystem not listed there, please add it here and send us a pull request._
+<sup>1</sup> _If you are familiar with an open source project based on the WebDriver ecosystem not listed there, please add it [here](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/website_and_docs/content/ecosystem/_index.html) and send us a pull request._
