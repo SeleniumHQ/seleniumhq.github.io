@@ -6,7 +6,7 @@ tags: ["selenium", "mcp"]
 categories: ["technical"]
 author: Alex Rodionov ([@p0deje](https://twitter.com/p0deje))
 description: >
-   Selenium project stance on whether it should have an official MCP server
+   Technical explanation of why we won't create an official MCP Server
 ---
 
 Lately, our issue trackers and community channels have been buzzing with one recurring question: _"When will Selenium release an official Model Context Protocol (MCP) server?"_
