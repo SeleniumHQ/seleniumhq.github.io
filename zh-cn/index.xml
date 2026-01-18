@@ -276,7 +276,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>&lt;/label
  >
- &lt;span class="contributions">5365 commits&lt;/span>
+ &lt;span class="contributions">5366 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -315,7 +315,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">1770 commits&lt;/span>
+ &lt;span class="contributions">1832 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -458,7 +458,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>&lt;/label
  >
- &lt;span class="contributions">350 commits&lt;/span>
+ &lt;span class="contributions">351 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -484,7 +484,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>&lt;/label
  >
- &lt;span class="contributions">322 commits&lt;/span>
+ &lt;span class="contributions">325 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -510,7 +510,20 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">265 commits&lt;/span>
+ &lt;span class="contributions">267 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/16140691?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">225 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -524,19 +537,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  >&lt;a href="https://github.com/krosenvold">@krosenvold&lt;/a>&lt;/label
  >
  &lt;span class="contributions">225 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/16140691?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/joerg1985">@joerg1985&lt;/a>&lt;/label
- >
- &lt;span class="contributions">224 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -627,7 +627,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/cgoldberg">@cgoldberg&lt;/a>&lt;/label
  >
- &lt;span class="contributions">164 commits&lt;/span>
+ &lt;span class="contributions">166 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -757,7 +757,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/VietND96">@VietND96&lt;/a>&lt;/label
  >
- &lt;span class="contributions">97 commits&lt;/span>
+ &lt;span class="contributions">99 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -796,7 +796,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/navin772">@navin772&lt;/a>&lt;/label
  >
- &lt;span class="contributions">86 commits&lt;/span>
+ &lt;span class="contributions">87 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -826,6 +826,19 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/279773?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/asolntsev">@asolntsev&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">68 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/695746?v=4"
  class="inline"
  width="100"
@@ -849,19 +862,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  >&lt;a href="https://github.com/ajayk">@ajayk&lt;/a>&lt;/label
  >
  &lt;span class="contributions">63 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/279773?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/asolntsev">@asolntsev&lt;/a>&lt;/label
- >
- &lt;span class="contributions">61 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -2244,7 +2244,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">194 commits&lt;/span>
+ &lt;span class="contributions">196 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5386,19 +5386,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/16020123?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/yasinguzel">@yasinguzel&lt;/a>&lt;/label
- >
- &lt;span class="contributions">1 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/29984601?v=4"
  class="inline"
  width="100"
@@ -5529,6 +5516,32 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/10604335?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/agabrys">@agabrys&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">1 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/16020123?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/yasinguzel">@yasinguzel&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">1 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/5935107?v=4"
  class="inline"
  width="100"
@@ -5563,19 +5576,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  />
  &lt;label
  >&lt;a href="https://github.com/beckendorff">@beckendorff&lt;/a>&lt;/label
- >
- &lt;span class="contributions">1 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/5883591?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/daveOrleans">@daveOrleans&lt;/a>&lt;/label
  >
  &lt;span class="contributions">1 commits&lt;/span>
  &lt;/div>
@@ -5667,19 +5667,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  />
  &lt;label
  >&lt;a href="https://github.com/ygmarchi">@ygmarchi&lt;/a>&lt;/label
- >
- &lt;span class="contributions">1 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/10604335?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/agabrys">@agabrys&lt;/a>&lt;/label
  >
  &lt;span class="contributions">1 commits&lt;/span>
  &lt;/div>
