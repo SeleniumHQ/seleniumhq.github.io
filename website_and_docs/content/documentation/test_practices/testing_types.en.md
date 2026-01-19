@@ -115,31 +115,38 @@ This aims to speed up the development of an application
 based on the fact that defects are less costly the earlier they are found.
 
 ### Behavior-driven development (BDD)
-BDD is also an iterative development methodology
-based on the above TDD, in which the goal is to involve
-all the parties in the development of an application.
+Behavior-Driven Development (BDD) is an iterative methodology inspired by 
+TDD that focuses on defining system behavior through shared examples. 
+It emphasizes collaboration between business stakeholders, developers, 
+and testers to ensure a common understanding of requirements.
 
-Each cycle starts by creating some specifications 
-(which should fail). Then create the failing unit 
-tests (which should also fail) and then do the development. 
+Development begins by defining specifications in a ubiquitous language, 
+commonly expressed using **_Gherkin_**. These specifications describe 
+expected behavior and serve as acceptance criteria. 
+Scenarios may initially fail when automated, guiding development until 
+the behavior is implemented.
 
-This cycle is repeated until all types of tests are passing.
+BDD scenarios are supported by underlying code and tests, which may include:
+unit, integration, or UI-level automation. 
+Tools such as Cucumber and SpecFlow enable mapping specifications 
+to executable code, often integrating with automation tools like Selenium.
 
-In order to do so, a specification language is 
-used. It should be understandable by all parties and 
-simple, standard and explicit. 
-Most tools use **_Gherkin_** as this language.
+The primary goal of BDD is to prevent misunderstandings and acceptance-level 
+defects by ensuring the right software is built from the start.
+In common practice, Selenium is integrated with BDD frameworks 
+to automate browser-based behaviors described in BDD scenarios. In this setup:
 
-The goal is to be able to detect even more errors
-than TDD, by targeting potential acceptance errors
-too and make communication between parties smoother.
+BDD frameworks such as: **_JBehave, Capybara and Robot Framework_**
+are responsible for parsing and managing specifications
+**_Step definitions_** act as the bridge between human-readable scenarios
+and executable code
 
-A set of tools are currently available 
-to write the specifications and match them with code functions,
-such as **_Cucumber_** or **_SpecFlow._**
+Selenium as the automation engine to perform browser interactions 
+can be used in combination with the frameworks mentionated above as  
+an optional dependency that enables UI automation when browser-level validation is required.
 
-A set of tools are built on top of Selenium to make this process
-even faster by directly transforming the BDD specifications into 
-executable code.
-Some of these are **_JBehave, Capybara and Robot Framework_**.
-            
+
+
+
+
+
