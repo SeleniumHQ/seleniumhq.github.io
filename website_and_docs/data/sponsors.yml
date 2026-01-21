@@ -5,6 +5,10 @@ development:
     - logo: "/images/sponsors/browserstack.png"
       url: "https://www.browserstack.com/automate?utm_campaign=open-source-sponsor&utm_campaigncode=701OW000009sQwVYAU&utm_medium=partnered&utm_source=seleniumorg"
       name: "BrowserStack"
+    # Sponsorship start date: August 23, 2014 - Renewed April 2024 under the "Development" level
+    - logo: "/images/sponsors/saucelabs.png"
+      url: "https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25"
+      name: "Sauce Labs"
     # Sponsorship renewed October 16, 2024. Renewed again on April 8, 2025, under the "Development" level
     - logo: "/images/sponsors/lambda-test.png"
       url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
