@@ -59,15 +59,11 @@ public class BaseTest {
   }
 
   protected static ChromeOptions getDefaultChromeOptions() {
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--no-sandbox");
-    return options;
+      return new ChromeOptions().addArguments("--no-sandbox");
   }
 
   protected static EdgeOptions getDefaultEdgeOptions() {
-    EdgeOptions options = new EdgeOptions();
-    options.addArguments("--no-sandbox");
-    return options;
+      return new EdgeOptions().addArguments("--no-sandbox");
   }
 
   protected File getTempDirectory(String prefix) {
@@ -156,7 +152,7 @@ public class BaseTest {
   }
 
   @AfterEach
-  public void quit() {
+  public final void closeBrowser() {
     if (driver != null) {
       driver.quit();
     }
