@@ -65,6 +65,7 @@ jobs:
         command: |
           cd examples/java
           mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
+          ./gradlew test --tests 'dev.selenium.*UsingSeleniumTest'
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       uses: nick-invision/retry@v3.0.2
@@ -84,6 +85,7 @@ jobs:
             echo "Using selenium.version $new_version for tests"
             cd examples/java
             mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true" -Dselenium.version=$new_version
+            ./gradlew "-Dselenium.version=$new_version" test --tests 'dev.selenium.*UsingSeleniumTest'
           fi
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
@@ -104,6 +106,7 @@ jobs:
             Write-Output "Using selenium.version $new_version for tests"
             cd examples/java
             mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
+            ./gradlew "-Dselenium.version=$new_version" test --tests 'dev.selenium.*UsingSeleniumTest'
           }
     - name: Upload test report
       uses: actions/upload-artifact@v6
