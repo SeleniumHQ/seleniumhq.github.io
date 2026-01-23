@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/java/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
