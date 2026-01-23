@@ -28,12 +28,12 @@ public class InformationTest {
         assertTrue(isEmailVisible);
 
         // isEnabled
-        // returns true if element is enabled else returns false
+        // returns true if element is enabled
         boolean isEnabledButton = driver.findElement(By.name("button_input")).isEnabled();
         assertTrue(isEnabledButton);
 
         // isSelected
-        // returns true if element is checked else returns false
+        // returns true if element is checked
         boolean isSelectedCheck = driver.findElement(By.name("checkbox_input")).isSelected();
         assertTrue(isSelectedCheck);
 
