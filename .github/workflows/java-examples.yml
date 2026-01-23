@@ -105,3 +105,13 @@ jobs:
             cd examples/java
             mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
           }
+    - name: Upload test report
+      uses: actions/upload-artifact@v6
+      if: failure()
+      with:
+        name: test-report-${{matrix.os}}-${{matrix.release}}
+        retention-days: 14
+        path: |
+          examples/java/target/surefire-reports
+          examples/java/build/reports
+          examples/java/build/test-results

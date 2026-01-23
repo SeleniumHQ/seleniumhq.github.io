@@ -34,7 +34,7 @@ public class LoggingTest {
             handler.setLevel(Level.FINE);
         });
 
-        Handler handler = new FileHandler("selenium.xml");
+        Handler handler = new FileHandler("target/surefire-reports/selenium.xml");
         logger.addHandler(handler);
 
         Logger.getLogger(RemoteWebDriver.class.getName()).setLevel(Level.FINEST);
@@ -45,7 +45,7 @@ public class LoggingTest {
         localLogger.info("this is useful information");
         localLogger.fine("this is detailed debug information");
 
-        byte[] bytes = Files.readAllBytes(Paths.get("selenium.xml"));
+        byte[] bytes = Files.readAllBytes(Paths.get("target/surefire-reports/selenium.xml"));
         String fileContent = new String(bytes);
 
         Assertions.assertTrue(fileContent.contains("this is a warning"));

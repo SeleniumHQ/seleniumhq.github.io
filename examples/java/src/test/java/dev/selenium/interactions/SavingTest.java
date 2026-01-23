@@ -20,6 +20,6 @@ public class SavingTest extends BaseChromeTest {
 
         String content = ((RemoteWebDriver) driver).print(new PrintOptions()).getContent();
         byte[] bytes = Base64.getDecoder().decode(content);
-        Files.write(Paths.get("selenium.pdf"), bytes);
+        Files.write(Paths.get("target", "surefire-reports", "selenium.pdf"), bytes);
     }
 }
