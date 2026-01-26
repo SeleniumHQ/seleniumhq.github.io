@@ -10,9 +10,9 @@ development:
       url: "https://saucelabs.com/resources/topic-hub/selenium?utm_source=selenium&utm_medium=website&utm_campaign=selenium-sponsorship-fy25"
       name: "Sauce Labs"
     # Sponsorship renewed October 16, 2024. Renewed again on April 8, 2025, under the "Development" level
-    - logo: "/images/sponsors/lambda-test.png"
-      url: "https://www.lambdatest.com/selenium-automation?utm_source=selenium&utm_medium=open-source-sponsor&utm_campaign=nov_14&utm_term=sk&utm_content=web"
-      name: "LambdaTest"
+    - logo: "/images/sponsors/testmu-ai.png"
+      url: "https://www.testmu.ai/selenium-automation"
+      name: "TestMu AI (formerly LambdaTest)"
 
 selenium:
   # Set to false if no items are present
