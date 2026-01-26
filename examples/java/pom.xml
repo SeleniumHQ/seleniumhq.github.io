@@ -13,7 +13,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.version>4.38.0</selenium.version>
+        <selenium.version>4.40.0</selenium.version>
     </properties>
 
     <repositories>
@@ -44,13 +44,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.13.4</version>
+            <version>6.0.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.titusfortner</groupId>
             <artifactId>selenium-logger</artifactId>
             <version>2.4.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

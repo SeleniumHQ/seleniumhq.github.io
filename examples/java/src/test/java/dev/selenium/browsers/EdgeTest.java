@@ -218,7 +218,6 @@ public class EdgeTest extends BaseTest {
             () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
     ((EdgeDriver) driver).deleteNetworkConditions();
-    driver.quit();
   }
 
   @Test
