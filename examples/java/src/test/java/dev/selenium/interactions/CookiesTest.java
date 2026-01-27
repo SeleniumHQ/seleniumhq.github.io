@@ -17,111 +17,106 @@
 
 package dev.selenium.interactions;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.Set;
 
 public class CookiesTest {
 
-	WebDriver driver = new ChromeDriver();
-	@Test
-	  public void addCookie() {
-	      driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	      // Add cookie into current browser context
-	      driver.manage().addCookie(new Cookie("key", "value"));
-	      driver.quit();
-	}
-	    @Test
-	    public void getNamedCookie() {
+    WebDriver driver = new ChromeDriver();
 
-	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	        // Add cookie into current browser context
-	        driver.manage().addCookie(new Cookie("foo", "bar"));
-	        // Get cookie details with named cookie 'foo'
-	        Cookie cookie = driver.manage().getCookieNamed("foo");
-	        Assertions.assertEquals(cookie.getValue(), "bar");
+    @AfterEach
+    final void closeBrowser() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
-	        driver.quit();
-	      }
+    @Test
+    public void addCookie() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        // Add cookie into current browser context
+        driver.manage().addCookie(new Cookie("key", "value"));
+    }
 
-
-	    @Test
-	    public void getAllCookies() {
-
-	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	        // Add cookies into current browser context
-	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
-	        driver.manage().addCookie(new Cookie("test2", "cookie2"));
-	        // Get cookies
-	        Set<Cookie> cookies = driver.manage().getCookies();
-	         for (Cookie cookie : cookies) {
-	            if (cookie.getName().equals("test1")) {
-	                Assertions.assertEquals(cookie.getValue(), "cookie1");
-	            }
-
-	            if (cookie.getName().equals("test2")) {
-	                Assertions.assertEquals(cookie.getValue(), "cookie2");
-	            }
-	         }
-	         driver.quit();
-	      }
+    @Test
+    public void getNamedCookie() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        // Add cookie into current browser context
+        driver.manage().addCookie(new Cookie("foo", "bar"));
+        // Get cookie details with named cookie 'foo'
+        Cookie cookie = driver.manage().getCookieNamed("foo");
+        Assertions.assertEquals(cookie.getValue(), "bar");
+    }
 
 
-	    @Test
-	    public void deleteCookieNamed() {
+    @Test
+    public void getAllCookies() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        // Add cookies into current browser context
+        driver.manage().addCookie(new Cookie("test1", "cookie1"));
+        driver.manage().addCookie(new Cookie("test2", "cookie2"));
+        // Get cookies
+        Set<Cookie> cookies = driver.manage().getCookies();
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("test1")) {
+                Assertions.assertEquals(cookie.getValue(), "cookie1");
+            }
 
-	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
-	        // delete cookie named
-	        driver.manage().deleteCookieNamed("test1");
-	        driver.quit();
-	    }
+            if (cookie.getName().equals("test2")) {
+                Assertions.assertEquals(cookie.getValue(), "cookie2");
+            }
+        }
+    }
 
-	    @Test
-	    public void deleteCookieObject() {
 
-	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	        Cookie cookie = new Cookie("test2", "cookie2");
-	        driver.manage().addCookie(cookie);
+    @Test
+    public void deleteCookieNamed() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        driver.manage().addCookie(new Cookie("test1", "cookie1"));
+        // delete cookie named
+        driver.manage().deleteCookieNamed("test1");
+    }
+
+    @Test
+    public void deleteCookieObject() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        Cookie cookie = new Cookie("test2", "cookie2");
+        driver.manage().addCookie(cookie);
 	        /*
 	        Selenium Java bindings also provides a way to delete
 	        cookie by passing cookie object of current browsing context
 	        */
-	        driver.manage().deleteCookie(cookie);
-
-	        driver.quit();
-	      }
+        driver.manage().deleteCookie(cookie);
+    }
 
 
-	    @Test
-	    public void deleteAllCookies() {
+    @Test
+    public void deleteAllCookies() {
+        driver.get("https://www.selenium.dev/selenium/web/blank.html");
+        // Add cookies into current browser context
+        driver.manage().addCookie(new Cookie("test1", "cookie1"));
+        driver.manage().addCookie(new Cookie("test2", "cookie2"));
+        // Delete All cookies
+        driver.manage().deleteAllCookies();
+    }
 
-	        driver.get("https://www.selenium.dev/selenium/web/blank.html");
-	        // Add cookies into current browser context
-	        driver.manage().addCookie(new Cookie("test1", "cookie1"));
-	        driver.manage().addCookie(new Cookie("test2", "cookie2"));
-	        // Delete All cookies
-	        driver.manage().deleteAllCookies();
+    @Test
+    public void sameSiteCookie() {
+        driver.get("http://www.example.com");
 
-	        driver.quit();
-	      }
+        Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
+        Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
 
-		  @Test
-		  public void sameSiteCookie() {
-		    driver.get("http://www.example.com");
+        driver.manage().addCookie(cookie);
+        driver.manage().addCookie(cookie1);
 
-     	    Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
-            Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
-
-            driver.manage().addCookie(cookie);
-            driver.manage().addCookie(cookie1);
-
-            System.out.println(cookie.getSameSite());
-            System.out.println(cookie1.getSameSite());
-
-			driver.quit();
-		  }
+        System.out.println(cookie.getSameSite());
+        System.out.println(cookie1.getSameSite());
+    }
 }
