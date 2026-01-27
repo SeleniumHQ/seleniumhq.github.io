@@ -11,7 +11,7 @@ description: >
   The Selenium Project is pleased to welcome TestMu AI (formerly LambdaTest) as an official Development Partner.
 ---
 
-We are excited to share that [TestMu AI (formerly LambdaTest)](https://www.testmu.ai) has joined as a development
+We are excited to share that [TestMu AI (formerly LambdaTest)](https://www.testmuai.com) has joined as a development
 partner for Selenium. This partnership highlights our shared commitment
 to innovation, community engagement, and collaborative progress in the
 test automation space. TestMu AI's dedicated Open Source Program Office (OSPO)
@@ -27,7 +27,7 @@ Selenium users around the world.
 
 ## About TestMu AI
 
-[TestMu AI (Formerly LambdaTest)](https://www.testmu.ai) is a Full Stack Agentic AI Quality Engineering platform that empowers teams to test intelligently and ship faster. Engineered for scale, it offers end-to-end AI agents to plan, author, execute, and analyze software quality. AI-native by design, the platform enables testing of web, mobile, and enterprise applications at any scale across real devices, real browsers, and custom real-world environments.
+[TestMu AI (Formerly LambdaTest)](https://www.testmuai.com) is a Full Stack Agentic AI Quality Engineering platform that empowers teams to test intelligently and ship faster. Engineered for scale, it offers end-to-end AI agents to plan, author, execute, and analyze software quality. AI-native by design, the platform enables testing of web, mobile, and enterprise applications at any scale across real devices, real browsers, and custom real-world environments.
 
 ## Key Points of the Partnership
 
