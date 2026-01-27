@@ -6,7 +6,7 @@ tags: ["selenium"]
 categories: ["general"]
 author: Sri Harsha [@harsha509](https://www.linkedin.com/in/sriharsha509/)
 images:
-  - "/images/blog/2025/lambdatest-selenium-development-partner.png"
+  - "/images/blog/2025/testmu-ai-selenium-development-partner.png"
 description: >
   The Selenium Project is pleased to welcome TestMu AI (formerly LambdaTest) as an official Development Partner.
 ---
