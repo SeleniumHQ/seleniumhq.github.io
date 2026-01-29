@@ -1,7 +1,7 @@
 ---
-title: "Install a Selenium library"
+title: "Install a Selenium library for student's"
 linkTitle: "Install Library"
-weight: 2
+weight: 23
 description: >
   Setting up the Selenium library for your favourite programming language.
 aliases: [
