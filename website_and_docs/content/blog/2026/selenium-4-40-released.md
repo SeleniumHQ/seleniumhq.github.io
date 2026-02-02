@@ -71,10 +71,10 @@ Links to all assets can be found on our [downloads page][downloads].
 
 ### 🐳 Docker Selenium
 
-- K8s: Add transitionary support for FB_BASEURL to FB_BASE_URL (#3053)
-- Docker: Add package fonts-thai-tlwg-ttf for Thai language (#3052)
-- K8s: Template handle scaledJobOptions with value is zero (#3054)
-* - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
+- Docker: update video_graphQLQuery shell script to python (#3002)
+- Update ubuntu:noble Docker digest to cd1dba6 (#3063)
+- Update list new environment variables (#3062)
+- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
 <br>
 
