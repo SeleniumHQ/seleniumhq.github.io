@@ -1,5 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 14 Oct 2025 08:55:34 -0400</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Ending Support for Python 3.9</title><link>https://www.selenium.dev/blog/2025/python3.9-eol/</link><pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/python3.9-eol/</guid><description>&lt;p>From the upcoming 4.37 release, Selenium will no longer support Python 3.9 in the Python WebDriver language bindings. To install the &lt;a href="https://pypi.org/project/selenium">selenium package&lt;/a>, you will need Python 3.10+.&lt;/p>
-&lt;p>Selenium will continue to support all versions of Python that are actively receiving bugfix and security updates from the Python core maintainers. The end-of-life for each major Python version is 5 years after its first release. For more information on supported Python versions, see the &lt;a href="https://devguide.python.org/versions/#supported-versions">Python Developer&amp;rsquo;s Guide&lt;/a>.&lt;/p></description></item><item><title>A Curious Case of Selenium Manager Usage: What's Behind Chrome 127.0.6533.99?</title><link>https://www.selenium.dev/blog/2025/selenium_manager_usage_whats_behind_chrome_127.0.6533.99/</link><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium_manager_usage_whats_behind_chrome_127.0.6533.99/</guid><description>&lt;p>Over the past two years, Selenium has included &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a>, a CLI tool (written in Rust) that provides &lt;strong>automatic management of drivers and browsers&lt;/strong> across all official language bindings (Java, JavaScript, Python, .NET, and Ruby). Its purpose is to simplify the developer experience: if you create a driver object like this:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 02 Feb 2026 14:47:50 +0100</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium 4.40 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-40-released/</link><pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-40-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.40&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-440-released">Selenium 4.40 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Chrome DevTools support&lt;/strong> is now: v144, v143, and v142.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Expanded BiDi support: &lt;code>setScreenOrientationOverride&lt;/code>, &lt;code>setNetworkConditions&lt;/code>, and command return type changes.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Introduced &lt;code>LocalWebDriver&lt;/code> base class, improved docstring formatting and typing, removed deprecated code.&lt;/li>
+&lt;li>&lt;strong>[Ruby]&lt;/strong> Better test synchronization, clearer BiDi API boundaries, and internal improvements.&lt;/li>
+&lt;li>&lt;strong>[DotNet]&lt;/strong> BiDi improvements in Input, Emulation, and buffer pooling logic.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Improved dynamic Grid container handling, better concurrent session handling, and race condition fixes.&lt;/li>
+&lt;li>&lt;strong>[Build]&lt;/strong> Bazel-based documentation and release automation improvements across all bindings.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Added support for new BiDi emulation and network commands.&lt;/li>
+&lt;li>Deprecated unused logging and Guava collections.&lt;/li>
+&lt;li>Improved test infrastructure and flaky test fixes.&lt;/li>
+&lt;li>Improved Grid file upload, JSON parsing, and error handling.&lt;/li>
+&lt;li>Automatically save screenshots and page sources on failure.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Added &lt;code>LocalWebDriver&lt;/code> base class.&lt;/li>
+&lt;li>Removed deprecated &lt;code>FirefoxBinary&lt;/code> and &lt;code>FTP proxy&lt;/code> support.&lt;/li>
+&lt;li>Improved linting and typing with &lt;code>ruff&lt;/code> and &lt;code>mypy&lt;/code>.&lt;/li>
+&lt;li>Better grid test integration and SE_DEBUG logging.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Improved error handling and synchronization for socket interactions.&lt;/li>
+&lt;li>Marked BiDi internals as private.&lt;/li>
+&lt;li>Fixed various flaky test issues.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Support for &lt;code>SetScreenSettingsOverrideAsync&lt;/code>, &lt;code>FileDialogOpened&lt;/code>, and input module exposure.&lt;/li>
+&lt;li>Improved memory usage and buffer reuse in BiDi communication.&lt;/li>
+&lt;li>Removed obsolete or unstable APIs.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Smarter container naming and label handling in Dynamic Grid.&lt;/li>
+&lt;li>Race condition and concurrent session handling improvements.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>All bindings now support rerun on test failures.&lt;/li>
+&lt;li>Improved CI speed, clarity, and isolation.&lt;/li>
+&lt;li>Build/test infra modernized with Bazel rules and doc generation.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: update video_graphQLQuery shell script to python (#3002)&lt;/li>
+&lt;li>Update ubuntu:noble Docker digest to cd1dba6 (#3063)&lt;/li>
+&lt;li>Update list new environment variables (#3062)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.39 Released!</title><link>https://www.selenium.dev/blog/2025/selenium-4-39-released/</link><pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium-4-39-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.39&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-439-released">Selenium 4.39 Released&lt;/h1>
+&lt;p>Selenium 4.39 is a feature-rich release with numerous improvements across the board. It brings
+enhancements to BiDi across Java, Python, and .NET, more emulation commands, major updates to
+Dynamic Grid behavior, and continuous work on JSpecify annotations. It also includes docstring
+cleanups, test infra upgrades, and build system optimizations.&lt;/p></description></item><item><title>Selenium 4.38 Released!</title><link>https://www.selenium.dev/blog/2025/selenium-4-38-released/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium-4-38-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.38&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-438-released">Selenium 4.38 Released&lt;/h1>
+&lt;p>Selenium 4.38 is a maintenance-focused release with improvements in code quality, documentation
+formatting, and test infrastructure. The update includes ongoing work on BiDi features, cleanup of
+deprecated code, and expansion of JSpecify annotations for better type safety in Java.&lt;/p></description></item><item><title>Selenium 4.37 Released!</title><link>https://www.selenium.dev/blog/2025/selenium-4-37-released/</link><pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium-4-37-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.37&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-437-released">Selenium 4.37 Released&lt;/h1>
+&lt;p>Selenium 4.37 continues the work on WebDriver BiDi across bindings, improves CI reliability and
+platform support, and delivers several cleanups and internal refactors. This release also tightens
+type safety, modernizes APIs, and removes legacy functionality that had been deprecated for some
+time.&lt;/p></description></item><item><title>Ending Support for Python 3.9</title><link>https://www.selenium.dev/blog/2025/python3.9-eol/</link><pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/python3.9-eol/</guid><description>&lt;p>From the upcoming 4.37 release, Selenium will no longer support Python 3.9 in the Python WebDriver language bindings. To install the &lt;a href="https://pypi.org/project/selenium">selenium package&lt;/a>, you will need Python 3.10+.&lt;/p>
+&lt;p>Selenium will continue to support all versions of Python that are actively receiving bugfix and security updates from the Python core maintainers. The end-of-life for each major Python version is 5 years after its first release. For more information on supported Python versions, see the &lt;a href="https://devguide.python.org/versions/#supported-versions">Python Developer&amp;rsquo;s Guide&lt;/a>.&lt;/p></description></item><item><title>Selenium 4.36 Released!</title><link>https://www.selenium.dev/blog/2025/selenium-4-36-released/</link><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium-4-36-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.36&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-436-released">Selenium 4.36 Released&lt;/h1>
+&lt;p>Selenium 4.36 is out with updates across all language bindings and the Grid. This release focuses
+on expanding BiDi capabilities, improving developer experience through logging and debugging
+enhancements, and cleaning up deprecated code paths. It also includes dependency updates, new
+tests, and stability improvements.&lt;/p></description></item><item><title>A Curious Case of Selenium Manager Usage: What's Behind Chrome 127.0.6533.99?</title><link>https://www.selenium.dev/blog/2025/selenium_manager_usage_whats_behind_chrome_127.0.6533.99/</link><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium_manager_usage_whats_behind_chrome_127.0.6533.99/</guid><description>&lt;p>Over the past two years, Selenium has included &lt;a href="https://www.selenium.dev/documentation/selenium_manager/">Selenium Manager&lt;/a>, a CLI tool (written in Rust) that provides &lt;strong>automatic management of drivers and browsers&lt;/strong> across all official language bindings (Java, JavaScript, Python, .NET, and Ruby). Its purpose is to simplify the developer experience: if you create a driver object like this:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">new&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">ChromeDriver&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Selenium Manager takes care of detecting whether Chrome is installed, downloading the required driver, and even provisioning a copy of &lt;a href="https://googlechromelabs.github.io/chrome-for-testing/">Chrome for Testing (CfT)&lt;/a> if Chrome is not present on the system. This also works for Firefox and Edge, on Windows, Linux, and macOS.&lt;/p></description></item><item><title>Selenium 4.35 Released!</title><link>https://www.selenium.dev/blog/2025/selenium-4-35-released/</link><pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2025/selenium-4-35-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.35&lt;/strong> for Javascript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
