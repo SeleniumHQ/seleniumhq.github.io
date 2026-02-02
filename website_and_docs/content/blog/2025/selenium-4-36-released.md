@@ -30,6 +30,7 @@ tests, and stability improvements.
 
 ## 🚩 Highlights
 
+- **Chrome DevTools support** is now: v140, v139, and v138.
 - **Expanded BiDi Support**:
   - New events and modules added across Python, Java, .NET, and Ruby (e.g. `downloadEnd`, navigation, cookies, network collectors, WebExtensions).
 - **Selenium Grid**:
