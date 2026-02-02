@@ -131,11 +131,10 @@ cleanups, test infra upgrades, and build system optimizations.
 
 ### 🐳 Docker Selenium
 
-- [ci] Use test public site when test run via relay session to cloud
-- K8s: Remove triggerMetadata with empty value to prevent Unmatched input property from KEDA checks (#3005)
-- K8s: Expose config session request timeout in Helm chart values (#3006)
-- chore(deps): update helm release kube-prometheus-stack to v79 (#3007)
-- [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
+- K8s: Add transitionary support for FB_BASEURL to FB_BASE_URL (#3053)
+- Docker: Add package fonts-thai-tlwg-ttf for Thai language (#3052)
+- K8s: Template handle scaledJobOptions with value is zero (#3054)
+* - [See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)
 
 <br>
 
