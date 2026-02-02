@@ -6,7 +6,7 @@ tags: [ "selenium" ]
 categories: [ "releases" ]
 author: Diego Molina [@diemol](https://www.diemol.com)
 images:
-  - "/images/blog/2025/selenium_4.35.jpg"
+  - "/images/blog/2025/selenium_4.36.jpg"
 description: >
   Today we're happy to announce that Selenium 4.36 has been released!
 ---
@@ -169,23 +169,11 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium
 {{< gh-user "https://api.github.com/users/Osseta" >}}                                                                                                                                                      
 {{< gh-user "https://api.github.com/users/Paresh-0007" >}}                                                                                                                                                 
 {{< gh-user "https://api.github.com/users/VbhvGupta" >}}                                                                                                                                                   
-{{< gh-user "https://api.github.com/users/VietND96" >}}                                                                                                                                                    
-{{< gh-user "https://api.github.com/users/aguspe" >}}                                                                                                                                                      
-{{< gh-user "https://api.github.com/users/asolntsev" >}}                                                                                                                                                   
-{{< gh-user "https://api.github.com/users/bonigarcia" >}}                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/cgoldberg" >}}                                                                                                                                                   
-{{< gh-user "https://api.github.com/users/diemol" >}}                                                                                                                                                      
 {{< gh-user "https://api.github.com/users/giulong" >}}                                                                                                                                                     
 {{< gh-user "https://api.github.com/users/iampopovich" >}}                                                                                                                                                 
-{{< gh-user "https://api.github.com/users/joerg1985" >}}                                                                                                                                                   
 {{< gh-user "https://api.github.com/users/lauromoura" >}}                                                                                                                                                  
 {{< gh-user "https://api.github.com/users/mtrea" >}}                                                                                                                                                       
-{{< gh-user "https://api.github.com/users/navin772" >}}                                                                                                                                                    
-{{< gh-user "https://api.github.com/users/nvborisenko" >}}                                                                                                                                                 
-{{< gh-user "https://api.github.com/users/renovate[bot]" >}}                                                                                                                                               
 {{< gh-user "https://api.github.com/users/rpallavisharma" >}}                                                                                                                                              
-{{< gh-user "https://api.github.com/users/selenium-ci" >}}                                                                                                                                                 
-{{< gh-user "https://api.github.com/users/shs96c" >}}                                                                                                                                                      
 {{< gh-user "https://api.github.com/users/vicky-iv" >}}
     </div>
   </div>
@@ -198,17 +186,9 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/Anilkumar-Shrestha" >}}
 {{< gh-user "https://api.github.com/users/Tuscann" >}}                                                                                                                                                     
-{{< gh-user "https://api.github.com/users/aguspe" >}}                                                                                                                                                      
 {{< gh-user "https://api.github.com/users/beinghumantester" >}}                                                                                                                                            
-{{< gh-user "https://api.github.com/users/bonigarcia" >}}                                                                                                                                                  
-{{< gh-user "https://api.github.com/users/dependabot[bot]" >}}                                                                                                                                             
-{{< gh-user "https://api.github.com/users/diemol" >}}                                                                                                                                                      
-{{< gh-user "https://api.github.com/users/github-actions[bot]" >}}                                                                                                                                         
-{{< gh-user "https://api.github.com/users/harsha509" >}}                                                                                                                                                   
 {{< gh-user "https://api.github.com/users/noritaka1166" >}}                                                                                                                                                
-{{< gh-user "https://api.github.com/users/nvborisenko" >}}                                                                                                                                                 
 {{< gh-user "https://api.github.com/users/olleolleolle" >}}                                                                                                                                                
-{{< gh-user "https://api.github.com/users/renovate[bot]" >}}                                                                                                                                               
 {{< gh-user "https://api.github.com/users/rpallavisharma" >}}
     </div>
   </div>
@@ -219,12 +199,9 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium
 <div class="row justify-content-center">
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
-{{< gh-user "https://api.github.com/users/VietND96" >}}
 {{< gh-user "https://api.github.com/users/anwaramoon" >}}                                                                                                                                                  
 {{< gh-user "https://api.github.com/users/f-lopes" >}}                                                                                                                                                     
 {{< gh-user "https://api.github.com/users/pplulee" >}}                                                                                                                                                     
-{{< gh-user "https://api.github.com/users/renovate[bot]" >}}                                                                                                                                               
-{{< gh-user "https://api.github.com/users/selenium-ci" >}}
     </div>
   </div>
 </div>
@@ -237,6 +214,7 @@ the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium
   <div class="col-11 p-4 bg-transparent">
     <div class="row justify-content-center">
 {{< gh-user "https://api.github.com/users/aguspe" >}}
+{{< gh-user "https://api.github.com/users/asolntsev" >}} 
 {{< gh-user "https://api.github.com/users/AutomatedTester" >}}
 {{< gh-user "https://api.github.com/users/bonigarcia" >}}
 {{< gh-user "https://api.github.com/users/cgoldberg" >}}
