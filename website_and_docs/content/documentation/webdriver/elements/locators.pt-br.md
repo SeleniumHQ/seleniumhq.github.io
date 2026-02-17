@@ -78,8 +78,7 @@ above shown HTML snippet. We can identify these elements using the class name lo
 available in Selenium. 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.className("information"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L31" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
@@ -109,9 +108,8 @@ Let us see an example from above HTML snippet. We will create locator for First 
 textbox, using css. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.cssSelector("#fname"));
+ {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L38" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
@@ -140,8 +138,7 @@ We will identify the Last Name field using it.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.id("lname"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L45" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
@@ -171,8 +168,7 @@ We will identify the Newsletter checkbox using it.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.name("newsletter"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L52" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
@@ -199,9 +195,8 @@ If the element we want to locate is a link, we can use the link text locator
 to identify it on the web page. The link text is the text displayed of the link. 
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.linkText("Selenium Official Page"));
+   {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L59" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
@@ -230,8 +225,7 @@ We can pass partial text as value.
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.partialLinkText("Official Page"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L66" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
@@ -257,9 +251,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 We can use the HTML TAG itself as a locator to identify the web element on the page.
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.tagName("a"));
+    {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L73" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
@@ -291,9 +284,8 @@ Or the xpath could be relative. Example- //input[@name='fname']. This will retur
 first name text box. Let us create locator for female radio button using xpath. 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.xpath("//input[@value='f']"));
+    {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L80" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
