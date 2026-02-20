@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -43,7 +44,7 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBrowserLocation()
+        public async Task SetBrowserLocation()
         {
             string userDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             Directory.CreateDirectory(userDataDir);
@@ -52,7 +53,7 @@ namespace SeleniumDocs.Browsers
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-dev-shm-usage");
 
-            options.BinaryLocation = GetChromeLocation();
+            options.BinaryLocation = await GetChromeLocationAsync();
 
             driver = new ChromeDriver(options);
         }
@@ -157,13 +158,13 @@ namespace SeleniumDocs.Browsers
             return _logLocation;
         }
 
-        private static string GetChromeLocation()
+        private static async Task<string> GetChromeLocationAsync()
         {
             var options = new ChromeOptions
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPath();
+            return  await new DriverFinder(options).GetBrowserPathAsync();
         }
     }
 }

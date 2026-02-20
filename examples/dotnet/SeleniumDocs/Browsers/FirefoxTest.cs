@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -48,11 +49,11 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBinary()
+        public async Task SetBinary()
         {
             var options = new FirefoxOptions();
 
-            options.BinaryLocation = GetFirefoxLocation();
+            options.BinaryLocation = await GetFirefoxLocationAsync();
 
             driver = new FirefoxDriver(options);
         }
@@ -197,13 +198,13 @@ namespace SeleniumDocs.Browsers
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
 
-        private static string GetFirefoxLocation()
+        private static async Task<string> GetFirefoxLocationAsync()
         {
             var options = new FirefoxOptions()
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPath();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
 
         private void ResetGlobalLog()

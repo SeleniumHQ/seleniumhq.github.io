@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chromium;
@@ -43,11 +44,11 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBrowserLocation()
+        public async Task SetBrowserLocation()
         {
             var options = new EdgeOptions();
 
-            options.BinaryLocation = GetEdgeLocation();
+            options.BinaryLocation = await GetEdgeLocationAsync();
     
             driver = new EdgeDriver(options);
         }
@@ -151,13 +152,13 @@ namespace SeleniumDocs.Browsers
             return _logLocation;
         }
 
-        private static string GetEdgeLocation()
+        private static async Task<string> GetEdgeLocationAsync()
         {
             var options = new EdgeOptions
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPath();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
     }
 }
