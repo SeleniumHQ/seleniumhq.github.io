@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-ext['seleniumVersion'] = System.getProperty('selenium.version', '4.40.0')
+ext['seleniumVersion'] = System.getProperty('selenium.version', '4.41.0')
 
 dependencies {
     testImplementation "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
