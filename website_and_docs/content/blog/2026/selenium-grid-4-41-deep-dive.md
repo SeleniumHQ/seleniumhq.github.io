@@ -32,7 +32,7 @@ With 4.41.0, we introduce `KubernetesSessionFactory` — a full Kubernetes-aware
 
 ### What's new in the core (Java)
 
-Underpinning this entire feature is a new SPI: [`NodeSessionFactoryProvider`](https://github.com/SeleniumHQ/selenium/blob/selenium-4.41.0/java/src/org/openqa/selenium/grid/node/NodeSessionFactoryProvider.java). This interface lets anyone ship a custom session factory as an external jar, loaded at runtime via `--ext`, without touching `selenium-server.jar`:
+Underpinning this entire feature is a new Service Provider Interface (SPI): [`NodeSessionFactoryProvider`](https://github.com/SeleniumHQ/selenium/blob/selenium-4.41.0/java/src/org/openqa/selenium/grid/node/NodeSessionFactoryProvider.java). This interface lets anyone ship a custom session factory as an external jar, loaded at runtime via `--ext`, without touching `selenium-server.jar`:
 
 ```java
 public interface NodeSessionFactoryProvider {
