@@ -135,6 +135,10 @@ bronze:
     - logo: "/images/sponsors/shipfox-logo.svg"
       url: "https://www.shipfox.io"
       name: "Shipfox – Blazing fast GitHub Actions for half the cost"
+    # Sponsorship active: April 08, 2026 - April 07, 2027
+    - logo: "/images/sponsors/swiftproxy_logo.png"
+      url: "https://www.swiftproxy.net/?ref=selenium"
+      name: "Scalable Solutions for Web Data Access"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"
