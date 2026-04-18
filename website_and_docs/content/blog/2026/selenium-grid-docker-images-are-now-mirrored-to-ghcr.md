@@ -13,7 +13,7 @@ description: >
 
 The request started with a simple question in [issue #2939](https://github.com/SeleniumHQ/docker-selenium/issues/2939): can we publish Selenium Grid Docker images to GitHub Container Registry as well as Docker Hub?
 
-The answer is now yes.
+The answer is now, Yes.
 
 Official Selenium Grid Docker images are now available from **GitHub Container Registry (GHCR)** under:
 
@@ -27,16 +27,16 @@ This is a mirror, not a replacement. Docker Hub remains available, and existing 
 
 The original issue highlighted a problem many teams have run into over the last year: relying on a single public registry creates unnecessary friction.
 
-For some users, Docker Hub rate limits are the main concern. For others, the issue is policy. Some companies no longer allow pulls from Docker Hub in CI or on developer machines. Others want to stay closer to GitHub-hosted infrastructure because their build pipelines already run in GitHub Actions.
+Issue [#2939](https://github.com/SeleniumHQ/docker-selenium/issues/2939), opened on **August 27, 2025**, started with Docker Hub rate limits but quickly exposed a broader need. For some teams, Docker Hub is inconvenient. For others, it is restricted entirely by policy. The discussion also surfaced concrete use cases around GitHub Actions workflows, especially from forks, enterprise environments that disallow Docker Hub, and local development without Docker Hub authentication.
 
 Publishing to GHCR improves that situation in a few practical ways:
 
 - It gives users an official alternative registry for the same Selenium Grid images.
 - It reduces dependency on a single distribution channel.
 - It makes adoption easier for teams that already standardize on GitHub-hosted packages.
-- It improves resilience when one registry is slow, restricted, or temporarily unavailable.
+- It improves resilience during registry outages, service limits, or access restrictions.
 
-This was not just a theoretical request. The discussion on the issue included examples from users who needed GHCR for local development, fork-based GitHub Actions workflows, and enterprise environments where Docker Hub access is restricted.
+The result is a practical improvement to how Selenium Grid images are distributed: one image set, one familiar naming scheme, and more than one official place to pull from.
 
 ## What is available
 
@@ -94,19 +94,6 @@ This rollout is intentionally additive.
 - Users can adopt GHCR at their own pace.
 
 That matters because the goal here is flexibility, not churn. Teams that are happy with Docker Hub can stay where they are. Teams that need GHCR can move immediately without waiting for custom mirrors or maintaining internal rebuilds of Selenium Grid images.
-
-## From request to delivery
-
-Issue [#2939](https://github.com/SeleniumHQ/docker-selenium/issues/2939) was opened on **August 27, 2025** to propose dual publishing to Docker Hub and GHCR. The request was driven by Docker Hub rate limits, but the conversation quickly broadened into a more durable point: official images should be available from more than one registry.
-
-That feedback held up. Contributors and users pointed to several real-world reasons for supporting GHCR:
-
-- GitHub Actions workflows, especially from forks
-- enterprise environments that disallow Docker Hub
-- local development without Docker Hub authentication
-- better resilience during registry outages or service limits
-
-The result is a practical improvement to how Selenium Grid images are distributed: one image set, one familiar naming scheme, and more than one official place to pull from.
 
 ## Thank you
 
