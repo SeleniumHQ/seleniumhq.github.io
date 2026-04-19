@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Internal.Logging;
+using OpenQA.Selenium.Manager;
 using OpenQA.Selenium.Remote;
 using System;
 using System.IO;
