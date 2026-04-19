@@ -69,7 +69,7 @@ namespace SeleniumDocs.Troubleshooting
 
         private void LogMessage(string methodName, string message)
         {
-            var getLoggerMethod = typeof(Log).GetMethod("GetLogger", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic, new Type[] { typeof(Type) });
+            var getLoggerMethod = typeof(Log).GetMethod("GetLogger", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic, new Type[] { typeof(Type) });
 
             var logger = getLoggerMethod.Invoke(null, new object[] { typeof(LoggingTest) });
 

@@ -1,9 +1,13 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.BiDi;
+using OpenQA.Selenium.BiDi.WebExtension;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Chromium;
 
@@ -22,7 +26,7 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_logLocation);
             }
-            driver.Quit();
+            driver?.Quit();
         }
 
         [TestMethod]
@@ -58,16 +62,26 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void InstallExtension()
+        public async Task InstallExtension()
         {
-            var options = new ChromeOptions();
-            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            var extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.crx");
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Assert.Inconclusive("Extension install via BiDi is not supported on Windows");
+                return;
+            }
 
-            options.AddExtension(extensionFilePath);
-            options.AddArgument("--disable-features=DisableLoadExtensionCommandLineSwitch");
+            var options = new ChromeOptions();
+            options.UseWebSocketUrl = true;
+            options.AddArgument("--remote-debugging-pipe");
+            options.AddArgument("--enable-unsafe-extension-debugging");
 
             driver = new ChromeDriver(options);
+
+            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            var extensionDir = Path.GetFullPath(Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example"));
+
+            var bidi = await driver.AsBiDiAsync();
+            await bidi.WebExtension.InstallAsync(new ExtensionPath(extensionDir));
 
             driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
 
