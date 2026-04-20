@@ -77,8 +77,7 @@ available in Selenium.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.className("information"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L31" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
@@ -109,9 +108,8 @@ textbox, using css.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.cssSelector("#fname"));
+ {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L38" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
@@ -140,9 +138,8 @@ We will identify the Last Name field using it.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.id("lname"));
+ {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L45" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
@@ -173,8 +170,7 @@ We will identify the Newsletter checkbox using it.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.name("newsletter"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L52" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
@@ -203,8 +199,7 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.linkText("Selenium Official Page"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L59" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
@@ -234,8 +229,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.partialLinkText("Official Page"));
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L66" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
@@ -262,9 +256,8 @@ We can use the HTML TAG itself as a locator to identify the web element on the p
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.tagName("a"));
+   {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L73" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
@@ -297,9 +290,8 @@ first name text box. Let us create locator for female radio button using xpath.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
-    WebDriver driver = new ChromeDriver();
-	driver.findElement(By.xpath("//input[@value='f']"));
+   {{< tab header="Java" >}}
+   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L80" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
