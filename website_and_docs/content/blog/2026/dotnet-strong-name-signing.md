@@ -33,9 +33,10 @@ If you reference the `StrongNamed` packages, migrate as follows:
 
 1. Replace `Selenium.WebDriver.StrongNamed` → `Selenium.WebDriver`
 2. Replace `Selenium.Support.StrongNamed` → `Selenium.Support`
-3. Update assembly references from `WebDriver.StrongNamed` → `WebDriver`
+3. Update assembly references: `WebDriver.StrongNamed` → `WebDriver`, `WebDriver.Support.StrongNamed` → `WebDriver.Support`
 
-If you use the regular packages — nothing changes.
+If you use the regular packages — the assemblies are now signed but the API and assembly names
+are unchanged, so no code changes are required.
 
 ## Related Issues
 
