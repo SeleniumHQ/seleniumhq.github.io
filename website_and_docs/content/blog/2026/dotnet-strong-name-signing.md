@@ -22,7 +22,7 @@ all of which caused friction, especially in enterprise environments.
 
 ## What Changed
 
-- `Selenium.WebDriver` and `Selenium.Support` are signed with the project's `Selenium.snk` key.
+- `Selenium.WebDriver` and `Selenium.Support` are now strongly signed.
   Assembly names (`WebDriver` / `WebDriver.Support`) are **unchanged**.
 - `AssemblyVersion` stays at `4.0.0.0` (major-only) — no binding redirects needed between `4.x` releases.
 - `Selenium.WebDriver.StrongNamed` and `Selenium.Support.StrongNamed` are **retired**.
