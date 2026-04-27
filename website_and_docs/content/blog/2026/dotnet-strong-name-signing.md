@@ -23,7 +23,7 @@ all of which caused friction, especially in enterprise environments.
 ## What Changed
 
 - `Selenium.WebDriver` and `Selenium.Support` are now strongly signed.
-  Assembly names (`WebDriver` / `WebDriver.Support`) are **unchanged**.
+  Assembly names change: `WebDriver` → `Selenium.WebDriver`, `WebDriver.Support` → `Selenium.WebDriver.Support`.
 - `AssemblyVersion` stays at `4.0.0.0` (major-only) — no binding redirects needed between `4.x` releases.
 - `Selenium.WebDriver.StrongNamed` and `Selenium.Support.StrongNamed` are **retired**.
 
@@ -33,10 +33,11 @@ If you reference the `StrongNamed` packages, migrate as follows:
 
 1. Replace `Selenium.WebDriver.StrongNamed` → `Selenium.WebDriver`
 2. Replace `Selenium.Support.StrongNamed` → `Selenium.Support`
-3. Update assembly references: `WebDriver.StrongNamed` → `WebDriver`, `WebDriver.Support.StrongNamed` → `WebDriver.Support`
+3. Update assembly references: `WebDriver.StrongNamed` → `Selenium.WebDriver`, `WebDriver.Support.StrongNamed` → `Selenium.WebDriver.Support`
 
-If you use the regular packages — the assemblies are now signed but the API and assembly names
-are unchanged, so no code changes are required.
+If you use the regular packages — the assemblies are now signed but the assembly names change
+(`WebDriver.dll` → `Selenium.WebDriver.dll`, `WebDriver.Support.dll` → `Selenium.WebDriver.Support.dll`),
+so update any explicit assembly references accordingly. The public API is unchanged.
 
 ## Related Issues
 
