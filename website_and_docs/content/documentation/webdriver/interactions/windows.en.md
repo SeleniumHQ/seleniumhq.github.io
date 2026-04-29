@@ -49,7 +49,7 @@ window is launched. So first position will be default browser, and so on.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L30" >}}
   {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
@@ -148,12 +148,8 @@ handle stored in a variable. Put this together and you will get:
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    #Close the tab or window
-driver.close()
-
-    #Switch back to the old tab or window
-driver.switch_to.window(original_window)
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L35-L35" >}}
   {{< /tab >}}
   
     {{< tab header="CSharp" text=true >}}
@@ -202,12 +198,8 @@ __Note: This feature works with Selenium 4 and later versions.__
    {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L40-L43" >}}
   {{< /tab >}}
   
   
@@ -250,7 +242,9 @@ instead of close:
      {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}driver.quit(){{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L13-L13" >}}
+{{< /tab >}}
     
   {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
