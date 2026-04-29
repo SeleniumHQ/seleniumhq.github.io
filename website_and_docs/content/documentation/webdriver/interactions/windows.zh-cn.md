@@ -16,7 +16,9 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L16-L18" >}}
+{{< /tab >}}
     {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
   {{< /tab >}}
@@ -40,39 +42,8 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-    # 启动驱动程序
-with webdriver.Firefox() as driver:
-    # 打开网址
-driver.get("https://seleniumhq.github.io")
-
-    # 设置等待
-    wait = WebDriverWait(driver, 10)
-
-    # 存储原始窗口的 ID
-    original_window = driver.current_window_handle
-
-    # 检查一下，我们还没有打开其他的窗口
-    assert len(driver.window_handles) == 1
-
-    # 单击在新窗口中打开的链接
-    driver.find_element(By.LINK_TEXT, "new window").click()
-
-    # 等待新窗口或标签页
-    wait.until(EC.number_of_windows_to_be(2))
-
-    # 循环执行，直到找到一个新的窗口句柄
-    for window_handle in driver.window_handles:
-        if window_handle != original_window:
-            driver.switch_to.window(window_handle)
-            break
-
-    # 等待新标签页完成加载内容
-    wait.until(EC.title_is("SeleniumHQ Browser Automation"))
+ {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L30" >}}
 {{< /tab >}}
 
  {{< tab header="CSharp" text=true >}}
@@ -163,12 +134,8 @@ wait.until(titleIs("Selenium documentation"))
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-    #关闭标签页或窗口
-driver.close()
-
-    #切回到之前的标签页或窗口
-driver.switch_to.window(original_window)
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L35-L35" >}}
 {{< /tab >}}
 
    {{< tab header="CSharp" text=true >}}
@@ -213,12 +180,8 @@ _注意: 该特性适用于 Selenium 4 及其后续版本。_
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
-{{< tab header="Python" >}}
-    # 打开新标签页并切换到新标签页
-driver.switch_to.new_window('tab')
-
-    # 打开一个新窗口并切换到新窗口
-driver.switch_to.new_window('window')
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L40-L43" >}}
 {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
@@ -261,7 +224,9 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
 
-{{< tab header="Python" >}}driver.quit(){{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L13-L13" >}}
+{{< /tab >}}
   {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
   {{< /tab >}}
