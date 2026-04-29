@@ -20,25 +20,39 @@ def test_current_window_handle(driver):
 
 def test_switch_to_window(driver):
     driver.get(url)
-    original_window_handles = set(driver.window_handles)
-    assert len(original_window_handles) == 1
+    wait = WebDriverWait(driver, 10)
+
+    original_window_handle = driver.current_window_handle
+
     driver.find_element(By.LINK_TEXT, "Open new window").click()
-    new_handles = set(driver.window_handles) - original_window_handles
-    assert len(new_handles) == 1
-    new_window_handle = new_handles.pop()
+    wait.until(EC.number_of_windows_to_be(2))
+
+    new_window_handle = (set(driver.window_handles) - {original_window_handle}).pop()
     driver.switch_to.window(new_window_handle)
     assert driver.current_window_handle == new_window_handle
 
 def test_close_window(driver):
     driver.get(url)
-    driver.find_element(By.LINK_TEXT, "Open new window").click()
-    driver.close()
-    current_handles = driver.window_handles
-    assert len(current_handles) == 1
+    wait = WebDriverWait(driver, 10)
 
-def test_new_window(driver):
+    original_window_handle = driver.current_window_handle
+
+    driver.find_element(By.LINK_TEXT, "Open new window").click()
+    wait.until(EC.number_of_windows_to_be(2))
+
+    new_window_handle = (set(driver.window_handles) - {original_window_handle}).pop()
+    driver.switch_to.window(new_window_handle)
+
+    driver.close()
+    driver.switch_to.window(original_window_handle)
+
+    assert driver.current_window_handle == original_window_handle
+    assert len(driver.window_handles) == 1
+
+def test_create_new_window(driver):
     # Opens a new tab and switches to new tab
     driver.switch_to.new_window('tab')
+    assert driver.title == ""
     # Opens a new window and switches to new window
     driver.switch_to.new_window('window')
-    assert len(driver.window_handles) == 3
+    assert driver.title == ""

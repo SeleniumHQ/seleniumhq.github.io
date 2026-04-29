@@ -43,7 +43,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
  {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L30" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L32" >}}
 {{< /tab >}}
 
  {{< tab header="CSharp" text=true >}}
@@ -135,7 +135,7 @@ wait.until(titleIs("Selenium documentation"))
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L35-L35" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L46-L46" >}}
 {{< /tab >}}
 
    {{< tab header="CSharp" text=true >}}
@@ -181,7 +181,7 @@ _注意: 该特性适用于 Selenium 4 及其后续版本。_
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L40-L43" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L53-L58" >}}
 {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}

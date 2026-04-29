@@ -49,7 +49,7 @@ window is launched. So first position will be default browser, and so on.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L30" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L32" >}}
   {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
@@ -149,7 +149,7 @@ handle stored in a variable. Put this together and you will get:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L35-L35" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L46-L46" >}}
   {{< /tab >}}
   
     {{< tab header="CSharp" text=true >}}
@@ -199,7 +199,7 @@ __Note: This feature works with Selenium 4 and later versions.__
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L40-L43" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L53-L58" >}}
   {{< /tab >}}
   
   
