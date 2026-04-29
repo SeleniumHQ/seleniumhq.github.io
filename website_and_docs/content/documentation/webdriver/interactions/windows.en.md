@@ -23,7 +23,7 @@ current window by using:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L16-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L16-L18" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
