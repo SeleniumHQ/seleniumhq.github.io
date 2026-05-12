@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/java/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -56,7 +60,7 @@ jobs:
     - name: Import test cert Windows
       if: matrix.os == 'windows'
       run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
-    - name: Run Tests Stable
+    - name: Run Tests Stable (in Maven)
       if: matrix.release == 'stable'
       uses: nick-invision/retry@v3.0.2
       with:
@@ -65,6 +69,15 @@ jobs:
         command: |
           cd examples/java
           mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
+    - name: Run Tests Stable (in Gradle)
+      if: matrix.release == 'stable'
+      uses: nick-invision/retry@v3.0.2
+      with:
+        timeout_minutes: 40
+        max_attempts: 3
+        command: |
+          cd examples/java
+          ./gradlew test --tests 'dev.selenium.*UsingSeleniumTest'
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       uses: nick-invision/retry@v3.0.2
@@ -105,3 +118,13 @@ jobs:
             cd examples/java
             mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
           }
+    - name: Upload test report
+      uses: actions/upload-artifact@v6
+      if: failure()
+      with:
+        name: test-report-${{matrix.os}}-${{matrix.release}}
+        retention-days: 14
+        path: |
+          examples/java/target/surefire-reports
+          examples/java/build/reports
+          examples/java/build/test-results

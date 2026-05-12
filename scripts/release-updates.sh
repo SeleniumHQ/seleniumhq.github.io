@@ -14,7 +14,7 @@ for FILE_PATH in "${FILES[@]}"; do
 done
 
 OLD_BLOG="website_and_docs/content/blog/2025/selenium-4-$OLD_VERSION-released.md"
-NEW_BLOG="website_and_docs/content/blog/2025/selenium-4-$NEW_VERSION-released.md"
+NEW_BLOG="website_and_docs/content/blog/2026/selenium-4-$NEW_VERSION-released.md"
 cp "$OLD_BLOG" "$NEW_BLOG"
 git add "$NEW_BLOG"
 

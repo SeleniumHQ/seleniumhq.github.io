@@ -48,7 +48,6 @@ public class HttpClientTest extends BaseTest {
                 .address(gridUrl)
                 .config(clientConfig)
                 .build();
-        driver.quit();
     }
 
     @Test
@@ -67,7 +66,6 @@ public class HttpClientTest extends BaseTest {
                 .address(gridUrl)
                 .config(clientConfig)
                 .build();
-        driver.quit();
     }
 
     @Test
@@ -85,7 +83,6 @@ public class HttpClientTest extends BaseTest {
                 .address(embedAuthToUrl(gridUrl, "admin", "myStrongPassword"))
                 .config(clientConfig)
                 .build();
-        driver.quit();
     }
 
     private URL embedAuthToUrl(URL url, String username, String password) throws Exception {
