@@ -1,9 +1,9 @@
 ---
-title: "Browsing Context"
-linkTitle: "Browsing Context"
+title: "Input"
+linkTitle: "Input"
 weight: 1
 aliases: [
-  "/documentation/en/webdriver/bidirectional/bidirectional_w3c/browsing_context",
+  "/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/input",
 ]
 ---
 
@@ -26,11 +26,16 @@ This section contains the APIs related to input commands.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ActionsTest.java#L41-L44" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/input_spec.rb#L9-17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L27-L29" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_input.py#L7-23" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -45,11 +50,16 @@ This section contains the APIs related to input commands.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ActionsTest.java#L59-L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/input_spec.rb#L20-31" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/input.spec.js#L55" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_input.py#L25-43" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

@@ -48,6 +48,10 @@ This section contains the APIs related to network commands.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L34-L35" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-21" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -66,6 +70,10 @@ This section contains the APIs related to network commands.
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L42-L46" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L40-53" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -193,6 +201,10 @@ This section contains the APIs related to network events.
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L96-L102" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

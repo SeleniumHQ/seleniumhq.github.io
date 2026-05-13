@@ -479,7 +479,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L54-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L65-L75" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -498,7 +498,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L81-88" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L81-L91" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -517,7 +517,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L97-104" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L97-L107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -535,7 +535,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L113-123" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L113-L126" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -554,7 +554,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L113-123" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L132-L144" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -572,7 +572,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L150-163" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L150-L164" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -590,7 +590,7 @@ This section contains the APIs related to browsing context events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L170-L181" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L170-L183" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}

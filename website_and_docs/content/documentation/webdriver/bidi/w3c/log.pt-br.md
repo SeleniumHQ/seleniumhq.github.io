@@ -25,10 +25,15 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L33-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L9-18" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/logInspector.spec.js#L23-37" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L7-15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -45,10 +50,15 @@ and register callbacks to process the exception details.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L73-L78" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/logging_spec.rb#L31-40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/logInspector.spec.js#L44-54" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.8" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L31-39" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

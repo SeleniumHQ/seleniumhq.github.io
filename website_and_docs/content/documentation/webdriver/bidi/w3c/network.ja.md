@@ -34,6 +34,10 @@ This section contains the APIs related to network commands.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_commands.spec.js#L29" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.18" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-21" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -145,11 +149,16 @@ This section contains the APIs related to network events.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L30-L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L30-34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L23-L29" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -164,11 +173,16 @@ This section contains the APIs related to network events.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L45-L51" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L44-49" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L82-L88" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L55-70" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -189,6 +203,10 @@ This section contains the APIs related to network events.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/network_events.spec.js#L96-L102" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -202,10 +220,15 @@ This section contains the APIs related to network events.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L101-L106" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L16-20" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L40-53" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
