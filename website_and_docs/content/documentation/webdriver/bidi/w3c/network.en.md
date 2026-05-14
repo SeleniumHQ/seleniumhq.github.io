@@ -8,7 +8,7 @@ aliases: [
 ---
 ## Commands
 
-This section contains the APIs related to network commands. 
+This section contains the APIs related to network commands.
 
 ### Add network intercept
 
@@ -16,6 +16,10 @@ This section contains the APIs related to network commands.
 {{< tab header="Java" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L36-L38" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.32" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L21-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -36,6 +40,10 @@ This section contains the APIs related to network commands.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L46-L50" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.32" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L27-L31" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -54,6 +62,9 @@ This section contains the APIs related to network commands.
 {{< tab header="Java" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L57-L64" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -74,6 +85,9 @@ This section contains the APIs related to network commands.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L74-L80" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -92,6 +106,9 @@ This section contains the APIs related to network commands.
 {{< tab header="Java" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L90-L96" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -112,6 +129,10 @@ This section contains the APIs related to network commands.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L104-L108" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.32" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L34-L50" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -125,7 +146,7 @@ This section contains the APIs related to network commands.
 
 ## Events
 
-This section contains the APIs related to network events. 
+This section contains the APIs related to network events.
 
 ### Before Request Sent
 
@@ -133,6 +154,10 @@ This section contains the APIs related to network events.
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L30-L35" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.32" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L53-L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -153,6 +178,9 @@ This section contains the APIs related to network events.
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L45-L51" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -171,6 +199,9 @@ This section contains the APIs related to network events.
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L62-L68" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -191,6 +222,9 @@ This section contains the APIs related to network events.
 {{< badge-version version="4.17" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkEventsTest.java#L101-L106" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -201,5 +235,3 @@ This section contains the APIs related to network events.
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
-
-
