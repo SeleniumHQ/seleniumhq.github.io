@@ -20,12 +20,16 @@ import pytest
 
 @pytest.mark.driver_type("bidi")
 def test_add_intercept(driver):
+    # _add_intercept is currently the available Python API for BiDi network intercepts.
+    # This will be updated when a public API is stabilized.
     intercept = driver.network._add_intercept()
     assert intercept is not None
 
 
 @pytest.mark.driver_type("bidi")
 def test_remove_intercept(driver):
+    # _add_intercept/_remove_intercept are currently the available Python APIs.
+    # These will be updated when a public API is stabilized.
     intercept = driver.network._add_intercept()
     driver.network._remove_intercept(intercept["intercept"])
     assert driver.network.intercepts == []
@@ -71,3 +75,6 @@ def test_add_and_remove_request_handler(driver):
     assert callback_id is not None
 
     driver.network.remove_request_handler("before_request", callback_id)
+    assert callback_id not in [
+        h for h in driver.network._handlers.get("before_request", [])
+    ]
