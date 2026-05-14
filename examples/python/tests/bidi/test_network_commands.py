@@ -33,20 +33,28 @@ def test_remove_intercept(driver):
 
 @pytest.mark.driver_type("bidi")
 def test_fail_request(driver):
-    import time
     from selenium.webdriver.common.bidi.network import Request
 
-    failed = []
+    failed_requests = []
+
+    intercept = driver.network._add_intercept()
 
     def on_request(request: Request):
-        failed.append(request)
+        failed_requests.append(request)
+        driver.network.fail_request(request.request["requestId"])
 
     driver.network.add_request_handler("before_request", on_request)
+
     try:
         driver.get("https://www.selenium.dev/selenium/web/blank.html")
     except Exception:
         pass
+
+    import time
     time.sleep(1)
+
+    assert len(failed_requests) > 0
+    driver.network._remove_intercept(intercept["intercept"])
     driver.network.clear_request_handlers()
 
 
