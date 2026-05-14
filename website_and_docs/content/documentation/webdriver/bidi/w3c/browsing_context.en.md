@@ -21,7 +21,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L17-21" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L9-12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
@@ -29,7 +29,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L17-25" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L5-8" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -47,7 +47,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L24-28" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L14-17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
@@ -55,7 +55,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L27-35" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L11-14" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -73,7 +73,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L9-14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L5-12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
@@ -81,7 +81,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L6-15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L32-41" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -140,7 +140,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L31-42" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L19-30" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
@@ -148,7 +148,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L37-55" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L17-29" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -193,7 +193,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L57-71" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L32-41" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -249,7 +249,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L92-105" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L45-53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
@@ -257,7 +257,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L73-85" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L44-47" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -273,7 +273,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.14.1" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L108-113" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L55-58" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
@@ -282,7 +282,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.14.1" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L87-99" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L50-53" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -299,7 +299,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.13.0" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L116-125" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/browsing_context_spec.rb#L60-66" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
@@ -307,7 +307,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.13.0" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L101-117" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_browsing_context.py#L56-66" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -502,7 +502,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L5-13" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L5-15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -525,7 +525,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L29-41" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L31-46" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

@@ -19,7 +19,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L16-20" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L37-43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
@@ -27,7 +27,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-21" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -50,7 +50,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-21" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -73,7 +73,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L40-53" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L41-47" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -149,7 +149,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L30-34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L11-23" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
@@ -157,7 +157,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -173,7 +173,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L44-49" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L25-37" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
@@ -181,7 +181,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L55-70" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -204,7 +204,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L23-38" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L6-20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -220,14 +220,14 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L16-20" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/network_spec.rb#L50-57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L40-53" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_network.py#L41-47" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

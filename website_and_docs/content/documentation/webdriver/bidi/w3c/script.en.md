@@ -27,7 +27,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L7-18" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L6-18" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -70,7 +70,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L57-71" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -94,7 +94,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L20-28" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L21-28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -137,7 +137,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L57-71" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -161,7 +161,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L30-40" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L31-40" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -204,7 +204,7 @@ This section contains the APIs related to script commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L57-71" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -326,7 +326,7 @@ This section contains the APIs related to script events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.16" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L42-54" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L43-54" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -386,7 +386,7 @@ This section contains the APIs related to script events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.16" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L73-92" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L74-94" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
