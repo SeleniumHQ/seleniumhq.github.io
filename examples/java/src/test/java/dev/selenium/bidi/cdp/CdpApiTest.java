@@ -27,7 +27,6 @@ public class CdpApiTest extends BaseTest {
   @BeforeEach
   public void createSession() {
     ChromeOptions options = getDefaultChromeOptions();
-    options.setBrowserVersion("145");
     driver = new ChromeDriver(options);
     wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   }

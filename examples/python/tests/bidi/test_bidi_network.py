@@ -27,7 +27,7 @@ def test_intercept_network_responses(driver):
     def on_response(event):
         response_events.append(event)
 
-    driver.network.add_event_handler('response_started', on_response)
+    driver.network.add_request_handler('response_started', on_response)
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 

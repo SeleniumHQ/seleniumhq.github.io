@@ -16,7 +16,7 @@ namespace SeleniumDocs.BiDi.CDP
         [TestInitialize]
         public void Startup()
         {
-            StartDriver("145");
+            StartDriver();
         }
 
         [TestMethod]
