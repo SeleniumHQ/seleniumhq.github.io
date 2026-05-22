@@ -24,11 +24,10 @@ def test_intercept_network_requests(driver):
 def test_intercept_network_responses(driver):
     response_events = []
 
-    def on_response(request):
-        response_events.append(request)
-        request.continue_request()
+    def on_response(event):
+        response_events.append(event)
 
-    driver.network.add_request_handler('response_started', on_response)
+    driver.network.add_event_handler('response_started', on_response)
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
@@ -41,24 +40,25 @@ def test_intercept_network_responses(driver):
 @pytest.mark.driver_type("bidi")
 def test_intercept_network_auth_required(driver):
     # This high-level API automatically handles auth
-    driver.network.add_auth_handler("user", "pass")
+    driver.network.add_auth_handler("admin", "admin")
 
     # Navigate to a URL that requires authentication
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    driver.get("https://the-internet.herokuapp.com/basic_auth")
 
 
 @pytest.mark.driver_type("bidi")
 def test_continue_response(driver):
-    # This test demonstrates intercepting and continuing responses
+    # This test demonstrates intercepting and continuing requests
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    def on_response(request):
+    def on_request(request):
         # High level API handles continuation via continue_request
         request.continue_request()
 
-    driver.network.add_request_handler('response_started', on_response)
+    driver.network.add_request_handler('before_request', on_request)
 
     driver.get("https://www.selenium.dev/selenium/web/iframes.html")
+
 
 
 @pytest.mark.driver_type("bidi")

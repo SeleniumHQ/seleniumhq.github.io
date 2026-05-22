@@ -1,4 +1,5 @@
 import pytest
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 
 
@@ -6,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 def test_input_keyboard_actions(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    input_field = driver.find_element(id="textInput")
+    input_field = driver.find_element(By.ID, "textInput")
     input_field.send_keys("Hello World")
 
     assert input_field.get_attribute("value") == "Hello World"
@@ -16,7 +17,7 @@ def test_input_keyboard_actions(driver):
 def test_input_mouse_click(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    button = driver.find_element(id="consoleLog")
+    button = driver.find_element(By.ID, "consoleLog")
     button.click()
 
     # Verify click occurred
@@ -33,7 +34,7 @@ def test_dispatch_keyboard_events(driver):
         });
     """)
 
-    body = driver.find_element(tag_name="body")
+    body = driver.find_element(By.TAG_NAME, "body")
     body.send_keys("a")
 
 
@@ -41,7 +42,7 @@ def test_dispatch_keyboard_events(driver):
 def test_dispatch_mouse_events(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    button = driver.find_element(id="consoleLog")
+    button = driver.find_element(By.ID, "consoleLog")
 
     driver.execute_script("""
         arguments[0].addEventListener('mouseover', function(e) {
@@ -57,7 +58,7 @@ def test_dispatch_mouse_events(driver):
 def test_double_click(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    element = driver.find_element(tag_name="body")
+    element = driver.find_element(By.TAG_NAME, "body")
 
     actions = ActionChains(driver)
     actions.double_click(element).perform()
@@ -67,7 +68,7 @@ def test_double_click(driver):
 def test_right_click(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    element = driver.find_element(tag_name="body")
+    element = driver.find_element(By.TAG_NAME, "body")
 
     actions = ActionChains(driver)
     actions.context_click(element).perform()
@@ -77,7 +78,7 @@ def test_right_click(driver):
 def test_drag_and_drop(driver):
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
 
-    element = driver.find_element(tag_name="body")
+    element = driver.find_element(By.TAG_NAME, "body")
 
     actions = ActionChains(driver)
     actions.drag_and_drop(element, element).perform()

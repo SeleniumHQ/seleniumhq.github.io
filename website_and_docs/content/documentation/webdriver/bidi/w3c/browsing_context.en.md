@@ -17,7 +17,7 @@ Creates a new browsing context in a new window.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L44-L47" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L48-L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -25,7 +25,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L33-L35" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L32-L37" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
@@ -43,7 +43,7 @@ Creates a new browsing context in a new tab.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L58-L61" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L54-L58" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -51,7 +51,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L48-L50" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L47-L52" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
@@ -69,7 +69,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L37-L41" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L41-L46" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -77,7 +77,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L25-L28" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L24-L30" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
@@ -103,7 +103,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L40-L43" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L39-L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -124,7 +124,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L55-L58" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L54-L60" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -136,7 +136,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L72-L80" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L60-L70" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
@@ -144,7 +144,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L67" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L62-L72" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.8" >}}
@@ -160,14 +160,14 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L83-L92" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L71-L82" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L79-L82" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L74-L87" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -226,14 +226,14 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L126-L133" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L114-L122" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.20.0" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L426-L431" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L425-L432" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -491,18 +491,19 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LocateNodesTest.java#L46-L53" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LocateNodesTest.java#L44-L53" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/locate_nodes_spec.rb#L9-17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/locate_nodes_spec.rb#L9-15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/locateNodes.spec.js#L23-33" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L5-15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L6-17" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -514,18 +515,19 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LocateNodesTest.java#L107-113" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LocateNodesTest.java#L137-L170" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/ruby/spec/bidi/locate_nodes_spec.rb#L45-56" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/locate_nodes_spec.rb#L25-36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< badge-version version="4.17" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/locateNodes.spec.js#L136-L175" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L31-46" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_locate_nodes.py#L32-48" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
