@@ -3190,7 +3190,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">1976 commits&lt;/span>
+ &lt;span class="contributions">2059 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3242,7 +3242,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/AutomatedTester">@AutomatedTester&lt;/a>&lt;/label
  >
- &lt;span class="contributions">1247 commits&lt;/span>
+ &lt;span class="contributions">1255 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3333,7 +3333,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/nvborisenko">@nvborisenko&lt;/a>&lt;/label
  >
- &lt;span class="contributions">438 commits&lt;/span>
+ &lt;span class="contributions">445 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3359,7 +3359,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">332 commits&lt;/span>
+ &lt;span class="contributions">337 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3580,7 +3580,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/VietND96">@VietND96&lt;/a>&lt;/label
  >
- &lt;span class="contributions">119 commits&lt;/span>
+ &lt;span class="contributions">120 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3753,19 +3753,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/26169602?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/sandeepsuryaprasad">@sandeepsuryaprasad&lt;/a>&lt;/label
- >
- &lt;span class="contributions">50 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/33221555?v=4"
  class="inline"
  width="100"
@@ -3774,6 +3761,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/aguspe">@aguspe&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">51 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/26169602?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/sandeepsuryaprasad">@sandeepsuryaprasad&lt;/a>&lt;/label
  >
  &lt;span class="contributions">50 commits&lt;/span>
  &lt;/div>
@@ -5080,7 +5080,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/VietND96">@VietND96&lt;/a>&lt;/label
  >
- &lt;span class="contributions">597 commits&lt;/span>
+ &lt;span class="contributions">603 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5106,7 +5106,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">299 commits&lt;/span>
+ &lt;span class="contributions">302 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6402,7 +6402,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/harsha509">@harsha509&lt;/a>&lt;/label
  >
- &lt;span class="contributions">866 commits&lt;/span>
+ &lt;span class="contributions">867 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
