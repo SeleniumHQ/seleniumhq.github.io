@@ -16,7 +16,7 @@ namespace SeleniumDocs.BiDi.W3C
         {
             driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
             
-            var result = driver.ExecuteScript(
+            var result = ((IJavaScriptExecutor)driver).ExecuteScript(
                 "return (function(a, b) { return a + b; })(2, 3)"
             );
             
@@ -28,7 +28,7 @@ namespace SeleniumDocs.BiDi.W3C
         {
             driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
             
-            var result = driver.ExecuteScript("return 2 + 2");
+            var result = ((IJavaScriptExecutor)driver).ExecuteScript("return 2 + 2");
             
             Assert.AreEqual(4L, result);
         }
@@ -40,7 +40,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             var element = driver.FindElement(By.Id("consoleLog"));
             
-            var result = driver.ExecuteScript(
+            var result = ((IJavaScriptExecutor)driver).ExecuteScript(
                 "return arguments[0].tagName",
                 element
             );
@@ -55,7 +55,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             // Note: Getting realms requires BiDi module access
             // This is a conceptual example
-            var result = driver.ExecuteScript("return typeof window");
+            var result = ((IJavaScriptExecutor)driver).ExecuteScript("return typeof window");
             
             Assert.AreEqual("object", result);
         }
@@ -67,7 +67,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
             
-            driver.ExecuteScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteScript(@"
                 const div = document.createElement('div');
                 div.textContent = 'Hello';
                 document.body.appendChild(div);
@@ -84,7 +84,7 @@ namespace SeleniumDocs.BiDi.W3C
         {
             driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
             
-            var result = driver.ExecuteAsyncScript(@"
+            var result = ((IJavaScriptExecutor)driver).ExecuteAsyncScript(@"
                 var callback = arguments[arguments.length - 1];
                 setTimeout(function() {
                     callback(42);
@@ -102,10 +102,10 @@ namespace SeleniumDocs.BiDi.W3C
             var consoleMessages = new List<string>();
             
             // This would require BiDi module direct access in C#
-            driver.ExecuteScript("console.log('Test message')");
+            ((IJavaScriptExecutor)driver).ExecuteScript("console.log('Test message')");
             
             // Verify script execution
-            var result = driver.ExecuteScript("return 'Script executed'");
+            var result = ((IJavaScriptExecutor)driver).ExecuteScript("return 'Script executed'");
             Assert.AreEqual("Script executed", result);
         }
     }

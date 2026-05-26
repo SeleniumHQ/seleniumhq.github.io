@@ -80,7 +80,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             var fetchCalls = 0;
             
-            driver.ExecuteAsyncScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteAsyncScript(@"
                 var callback = arguments[arguments.length - 1];
                 fetch('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
                     .then(() => callback(1))
@@ -95,7 +95,7 @@ namespace SeleniumDocs.BiDi.W3C
         {
             driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
             
-            driver.ExecuteAsyncScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteAsyncScript(@"
                 var callback = arguments[arguments.length - 1];
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html');

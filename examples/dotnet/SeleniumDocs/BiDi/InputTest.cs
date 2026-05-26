@@ -43,7 +43,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             var element = driver.FindElement(By.TagName("body"));
             
-            driver.ExecuteScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteScript(@"
                 document.addEventListener('keydown', function(e) {
                     console.log('Key pressed: ' + e.key);
                 });
@@ -59,7 +59,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             var button = driver.FindElement(By.Id("consoleLog"));
             
-            driver.ExecuteScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteScript(@"
                 arguments[0].addEventListener('mouseover', function(e) {
                     console.log('Mouse over');
                 });
@@ -75,7 +75,7 @@ namespace SeleniumDocs.BiDi.W3C
             
             var element = driver.FindElement(By.TagName("body"));
             
-            driver.ExecuteScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteScript(@"
                 document.addEventListener('touchstart', function(e) {
                     console.log('Touch started');
                 });
@@ -87,7 +87,7 @@ namespace SeleniumDocs.BiDi.W3C
         {
             driver.Url = "https://www.selenium.dev/selenium/web/iframes.html";
             
-            driver.ExecuteScript(@"
+            ((IJavaScriptExecutor)driver).ExecuteScript(@"
                 window.addEventListener('wheel', function(e) {
                     console.log('Wheel event');
                 });
