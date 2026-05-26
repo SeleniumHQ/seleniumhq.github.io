@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.BiDi;
-using OpenQA.Selenium.BiDi.Modules;
 using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumDocs.BiDi.W3C

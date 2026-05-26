@@ -153,7 +153,6 @@ public class NetworkTest extends BaseTest {
                     Optional.empty(),
                     Optional.empty(),
                     Optional.empty(),
-                    Optional.empty(),
                     Optional.empty()));
 
     driver.get("https://www.selenium.dev");
