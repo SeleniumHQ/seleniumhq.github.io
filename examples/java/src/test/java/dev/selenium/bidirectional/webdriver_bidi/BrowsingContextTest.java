@@ -4,6 +4,8 @@ import dev.selenium.BaseTest;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -13,16 +15,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.bidi.BiDiException;
+import org.openqa.selenium.bidi.module.BrowsingContextInspector;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContextInfo;
 import org.openqa.selenium.bidi.browsingcontext.NavigationResult;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
+import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
@@ -166,80 +168,75 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
-    void testHandleUserPrompt() {
+    void testHandleUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
-
-        driver.findElement(By.id("alert")).click();
-
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-            .ignoring(BiDiException.class)
-            .until(d -> { browsingContext.handleUserPrompt(); return true; });
-
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
+            inspector.onUserPromptOpened(future::complete);
+            driver.findElement(By.id("alert")).click();
+            future.get(5, TimeUnit.SECONDS);
+            browsingContext.handleUserPrompt();
+        }
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
 
     @Test
-    void testAcceptUserPrompt() {
+    void testAcceptUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
-
-        driver.findElement(By.id("alert")).click();
-
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-            .ignoring(BiDiException.class)
-            .until(d -> { browsingContext.handleUserPrompt(true); return true; });
-
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
+            inspector.onUserPromptOpened(future::complete);
+            driver.findElement(By.id("alert")).click();
+            future.get(5, TimeUnit.SECONDS);
+            browsingContext.handleUserPrompt(true);
+        }
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
 
     @Test
-    void testDismissUserPrompt() {
+    void testDismissUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
-
-        driver.findElement(By.id("alert")).click();
-
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-            .ignoring(BiDiException.class)
-            .until(d -> { browsingContext.handleUserPrompt(false); return true; });
-
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
+            inspector.onUserPromptOpened(future::complete);
+            driver.findElement(By.id("alert")).click();
+            future.get(5, TimeUnit.SECONDS);
+            browsingContext.handleUserPrompt(false);
+        }
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
 
     @Test
-    void testPassUserTextToUserPrompt() {
+    void testPassUserTextToUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
-
-        driver.findElement(By.id("prompt-with-default")).click();
-
-        String userText = "Selenium automates browsers";
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-            .ignoring(BiDiException.class)
-            .until(d -> { browsingContext.handleUserPrompt(true, userText); return true; });
-
-        Assertions.assertTrue(driver.getPageSource().contains(userText));
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
+            inspector.onUserPromptOpened(future::complete);
+            driver.findElement(By.id("prompt-with-default")).click();
+            future.get(5, TimeUnit.SECONDS);
+            String userText = "Selenium automates browsers";
+            browsingContext.handleUserPrompt(true, userText);
+            Assertions.assertTrue(driver.getPageSource().contains(userText));
+        }
     }
 
     @Test
-    void testDismissUserPromptWithText() {
+    void testDismissUserPromptWithText() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
-
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
-
-        driver.findElement(By.id("prompt-with-default")).click();
-
-        String userText = "Selenium automates browsers";
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-            .ignoring(BiDiException.class)
-            .until(d -> { browsingContext.handleUserPrompt(false, userText); return true; });
-
-        Assertions.assertFalse(driver.getPageSource().contains(userText));
+        try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
+            CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
+            inspector.onUserPromptOpened(future::complete);
+            driver.findElement(By.id("prompt-with-default")).click();
+            future.get(5, TimeUnit.SECONDS);
+            String userText = "Selenium automates browsers";
+            browsingContext.handleUserPrompt(false, userText);
+            Assertions.assertFalse(driver.getPageSource().contains(userText));
+        }
     }
 
     @Test

@@ -17,11 +17,9 @@ import org.openqa.selenium.bidi.browsingcontext.NavigationInfo;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptClosed;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
-import java.time.Duration;
-import org.openqa.selenium.bidi.BiDiException;
+import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 class BrowsingContextInspectorTest extends BaseTest {
     @BeforeEach
@@ -29,7 +27,6 @@ class BrowsingContextInspectorTest extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test
@@ -152,20 +149,22 @@ class BrowsingContextInspectorTest extends BaseTest {
     void canListenToUserPromptClosedEvent()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
-            CompletableFuture<UserPromptClosed> future = new CompletableFuture<>();
+            CompletableFuture<UserPromptClosed> closedFuture = new CompletableFuture<>();
+            CompletableFuture<UserPromptOpened> openedFuture = new CompletableFuture<>();
 
             BrowsingContext context = new BrowsingContext(driver, driver.getWindowHandle());
-            inspector.onUserPromptClosed(future::complete);
+            inspector.onUserPromptClosed(closedFuture::complete);
+            inspector.onUserPromptOpened(openedFuture::complete);
 
             driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
             driver.findElement(By.id("prompt")).click();
 
-            new WebDriverWait(driver, Duration.ofSeconds(5))
-                .ignoring(BiDiException.class)
-                .until(d -> { context.handleUserPrompt(true, "selenium"); return true; });
+            openedFuture.get(5, TimeUnit.SECONDS);
 
-            UserPromptClosed userPromptClosed = future.get(5, TimeUnit.SECONDS);
+            context.handleUserPrompt(true, "selenium");
+
+            UserPromptClosed userPromptClosed = closedFuture.get(5, TimeUnit.SECONDS);
             Assertions.assertEquals(context.getId(), userPromptClosed.getBrowsingContextId());
         }
     }
