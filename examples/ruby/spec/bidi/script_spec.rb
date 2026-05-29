@@ -49,5 +49,4 @@ RSpec.describe 'Script' do
     driver.find_element(id: 'jsException').click
     expect(log_entries).to be_empty
   end
-
 end
