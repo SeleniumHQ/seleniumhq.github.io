@@ -11,7 +11,7 @@ RSpec.describe 'Locate Nodes' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
     nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
+      context_id: driver.window_handle,
       locator: {type: 'css', value: 'button'}
     )
 
@@ -22,7 +22,7 @@ RSpec.describe 'Locate Nodes' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
     nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
+      context_id: driver.window_handle,
       locator: {type: 'xpath', value: '//button'}
     )
 
@@ -33,7 +33,7 @@ RSpec.describe 'Locate Nodes' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
     nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
+      context_id: driver.window_handle,
       locator: {type: 'css', value: '#consoleLog'}
     )
 
@@ -44,7 +44,7 @@ RSpec.describe 'Locate Nodes' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
     nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
+      context_id: driver.window_handle,
       locator: {type: 'css', value: '.button-class'}
     )
 
@@ -55,7 +55,7 @@ RSpec.describe 'Locate Nodes' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
     nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
+      context_id: driver.window_handle,
       locator: {type: 'css', value: 'div'}
     )
 

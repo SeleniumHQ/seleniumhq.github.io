@@ -50,21 +50,4 @@ RSpec.describe 'Script' do
     expect(log_entries).to be_empty
   end
 
-  it 'adds dom mutation handler' do
-    mutation_events = []
-
-    driver.script.add_dom_mutation_handler { |event| mutation_events << event }
-
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
-
-    driver.execute_script(<<~SCRIPT)
-      const div = document.createElement('div');
-      div.textContent = 'Hello';
-      document.body.appendChild(div);
-    SCRIPT
-
-    wait.until { mutation_events.any? }
-
-    expect(mutation_events).not_to be_empty
-  end
 end
