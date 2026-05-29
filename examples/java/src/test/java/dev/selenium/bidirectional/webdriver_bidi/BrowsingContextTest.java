@@ -169,6 +169,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void testHandleUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
@@ -184,6 +185,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void testAcceptUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
@@ -199,6 +201,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void testDismissUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
@@ -214,6 +217,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void testPassUserTextToUserPrompt() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
@@ -230,6 +234,7 @@ class BrowsingContextTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void testDismissUserPromptWithText() throws Exception {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
