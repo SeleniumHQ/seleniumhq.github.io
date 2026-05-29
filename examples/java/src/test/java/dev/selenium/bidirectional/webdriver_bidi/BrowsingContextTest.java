@@ -175,7 +175,8 @@ class BrowsingContextTest extends BaseTest {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
             CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
             inspector.onUserPromptOpened(future::complete);
-            driver.findElement(By.id("alert")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('alert').click(), 0)");
             future.get(5, TimeUnit.SECONDS);
             browsingContext.handleUserPrompt();
         }
@@ -189,7 +190,8 @@ class BrowsingContextTest extends BaseTest {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
             CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
             inspector.onUserPromptOpened(future::complete);
-            driver.findElement(By.id("alert")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('alert').click(), 0)");
             future.get(5, TimeUnit.SECONDS);
             browsingContext.handleUserPrompt(true);
         }
@@ -203,7 +205,8 @@ class BrowsingContextTest extends BaseTest {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
             CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
             inspector.onUserPromptOpened(future::complete);
-            driver.findElement(By.id("alert")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('alert').click(), 0)");
             future.get(5, TimeUnit.SECONDS);
             browsingContext.handleUserPrompt(false);
         }
@@ -217,7 +220,8 @@ class BrowsingContextTest extends BaseTest {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
             CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
             inspector.onUserPromptOpened(future::complete);
-            driver.findElement(By.id("prompt-with-default")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('prompt-with-default').click(), 0)");
             future.get(5, TimeUnit.SECONDS);
             String userText = "Selenium automates browsers";
             browsingContext.handleUserPrompt(true, userText);
@@ -232,7 +236,8 @@ class BrowsingContextTest extends BaseTest {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
             CompletableFuture<UserPromptOpened> future = new CompletableFuture<>();
             inspector.onUserPromptOpened(future::complete);
-            driver.findElement(By.id("prompt-with-default")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('prompt-with-default').click(), 0)");
             future.get(5, TimeUnit.SECONDS);
             String userText = "Selenium automates browsers";
             browsingContext.handleUserPrompt(false, userText);

@@ -17,6 +17,7 @@ import org.openqa.selenium.bidi.browsingcontext.NavigationInfo;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptClosed;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -158,7 +159,8 @@ class BrowsingContextInspectorTest extends BaseTest {
 
             driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
-            driver.findElement(By.id("prompt")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('prompt').click(), 0)");
 
             openedFuture.get(5, TimeUnit.SECONDS);
 
