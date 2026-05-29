@@ -15,6 +15,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.bidi.module.BrowsingContextInspector;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContextInfo;
