@@ -17,8 +17,11 @@ import org.openqa.selenium.bidi.browsingcontext.NavigationInfo;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptClosed;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
+import java.time.Duration;
+import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 class BrowsingContextInspectorTest extends BaseTest {
     @BeforeEach
@@ -26,6 +29,7 @@ class BrowsingContextInspectorTest extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test
@@ -157,7 +161,9 @@ class BrowsingContextInspectorTest extends BaseTest {
 
             driver.findElement(By.id("prompt")).click();
 
-            context.handleUserPrompt(true, "selenium");
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                .ignoring(BiDiException.class)
+                .until(d -> { context.handleUserPrompt(true, "selenium"); return true; });
 
             UserPromptClosed userPromptClosed = future.get(5, TimeUnit.SECONDS);
             Assertions.assertEquals(context.getId(), userPromptClosed.getBrowsingContextId());

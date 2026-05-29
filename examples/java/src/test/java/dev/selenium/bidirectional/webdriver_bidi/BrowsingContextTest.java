@@ -22,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
@@ -172,7 +173,9 @@ class BrowsingContextTest extends BaseTest {
 
         driver.findElement(By.id("alert")).click();
 
-        browsingContext.handleUserPrompt();
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .ignoring(BiDiException.class)
+            .until(d -> { browsingContext.handleUserPrompt(); return true; });
 
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
@@ -185,7 +188,9 @@ class BrowsingContextTest extends BaseTest {
 
         driver.findElement(By.id("alert")).click();
 
-        browsingContext.handleUserPrompt(true);
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .ignoring(BiDiException.class)
+            .until(d -> { browsingContext.handleUserPrompt(true); return true; });
 
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
@@ -198,7 +203,9 @@ class BrowsingContextTest extends BaseTest {
 
         driver.findElement(By.id("alert")).click();
 
-        browsingContext.handleUserPrompt(false);
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .ignoring(BiDiException.class)
+            .until(d -> { browsingContext.handleUserPrompt(false); return true; });
 
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
     }
@@ -212,7 +219,9 @@ class BrowsingContextTest extends BaseTest {
         driver.findElement(By.id("prompt-with-default")).click();
 
         String userText = "Selenium automates browsers";
-        browsingContext.handleUserPrompt(true, userText);
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .ignoring(BiDiException.class)
+            .until(d -> { browsingContext.handleUserPrompt(true, userText); return true; });
 
         Assertions.assertTrue(driver.getPageSource().contains(userText));
     }
@@ -226,7 +235,9 @@ class BrowsingContextTest extends BaseTest {
         driver.findElement(By.id("prompt-with-default")).click();
 
         String userText = "Selenium automates browsers";
-        browsingContext.handleUserPrompt(false, userText);
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .ignoring(BiDiException.class)
+            .until(d -> { browsingContext.handleUserPrompt(false, userText); return true; });
 
         Assertions.assertFalse(driver.getPageSource().contains(userText));
     }
