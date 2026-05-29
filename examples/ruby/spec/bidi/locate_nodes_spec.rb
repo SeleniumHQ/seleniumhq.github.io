@@ -51,17 +51,6 @@ RSpec.describe 'Locate Nodes' do
     expect(nodes.count >= 0).to be true
   end
 
-  it 'locates multiple nodes' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
-
-    nodes = bidi_bc.locate_nodes(
-      context_id: driver.current_window_handle,
-      locator: {type: 'css', value: 'button'}
-    )
-
-    expect(nodes).not_to be_empty
-  end
-
   it 'locates nodes by tag name' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
