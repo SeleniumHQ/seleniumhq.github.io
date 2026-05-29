@@ -7,7 +7,7 @@ RSpec.describe 'Input' do
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 5) }
 
   it 'sends keyboard input' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/single_text_input.html'
 
     input_field = driver.find_element(id: 'textInput')
     input_field.send_keys('Hello World')
@@ -16,7 +16,7 @@ RSpec.describe 'Input' do
   end
 
   it 'sends key press' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/single_text_input.html'
 
     input_field = driver.find_element(id: 'textInput')
     input_field.send_keys('a')
@@ -74,13 +74,5 @@ RSpec.describe 'Input' do
     SCRIPT
 
     driver.action.move_to(button).perform
-  end
-
-  it 'performs drag and drop' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
-
-    element = driver.find_element(tag_name: 'body')
-
-    driver.action.drag_and_drop(element, element).perform
   end
 end

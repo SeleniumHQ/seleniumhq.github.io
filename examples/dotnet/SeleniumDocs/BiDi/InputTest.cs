@@ -13,12 +13,12 @@ namespace SeleniumDocs.BiDi.W3C
         [TestMethod]
         public void PerformKeyActions()
         {
-            driver.Url = "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html";
-            
+            driver.Url = "https://www.selenium.dev/selenium/web/single_text_input.html";
+
             var input = driver.FindElement(By.Id("textInput"));
-            
+
             input.SendKeys("Hello World");
-            
+
             Assert.AreEqual("Hello World", input.GetAttribute("value"));
         }
 

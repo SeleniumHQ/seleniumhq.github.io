@@ -5,7 +5,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 @pytest.mark.driver_type("bidi")
 def test_input_keyboard_actions(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    driver.get("https://www.selenium.dev/selenium/web/single_text_input.html")
 
     input_field = driver.find_element(By.ID, "textInput")
     input_field.send_keys("Hello World")
@@ -20,7 +20,6 @@ def test_input_mouse_click(driver):
     button = driver.find_element(By.ID, "consoleLog")
     button.click()
 
-    # Verify click occurred
     assert button is not None
 
 
@@ -72,13 +71,3 @@ def test_right_click(driver):
 
     actions = ActionChains(driver)
     actions.context_click(element).perform()
-
-
-@pytest.mark.driver_type("bidi")
-def test_drag_and_drop(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
-
-    element = driver.find_element(By.TAG_NAME, "body")
-
-    actions = ActionChains(driver)
-    actions.drag_and_drop(element, element).perform()

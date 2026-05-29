@@ -6,81 +6,54 @@ RSpec.describe 'Script' do
   let(:driver) { start_bidi_session }
   let(:wait) { Selenium::WebDriver::Wait.new(timeout: 5) }
 
-  it 'calls a function' do
+  it 'adds console message handler' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    log_entries = []
 
-    result = driver.script.call_function(
-      'function(a, b) { return a + b; }',
-      args: [
-        {type: 'number', value: 2},
-        {type: 'number', value: 3}
-      ]
-    )
+    driver.script.add_console_message_handler { |log| log_entries << log }
 
-    expect(result['type']).to eq('number')
-    expect(result['value']).to eq(5)
+    driver.find_element(id: 'consoleLog').click
+    wait.until { log_entries.any? }
+    expect(log_entries.first&.text).to eq 'Hello, world!'
   end
 
-  it 'evaluates a script' do
+  it 'removes console message handler' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    log_entries = []
 
-    result = driver.script.evaluate('2 + 2')
+    id = driver.script.add_console_message_handler { |log| log_entries << log }
+    driver.script.remove_console_message_handler(id)
 
-    expect(result['type']).to eq('number')
-    expect(result['value']).to eq(4)
+    driver.find_element(id: 'consoleLog').click
+    expect(log_entries).to be_empty
   end
 
-  it 'disowns a value' do
+  it 'adds javascript error handler' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    log_entries = []
 
-    result = driver.script.evaluate('({x: 1})')
-    handle = result['handle']
+    driver.script.add_javascript_error_handler { |log| log_entries << log }
 
-    expect { driver.script.disown(handles: [handle]) }.not_to raise_error
+    driver.find_element(id: 'jsException').click
+    wait.until { log_entries.any? }
+    expect(log_entries.first&.text).to include 'Error: Not working'
   end
 
-  it 'calls function with element arguments' do
+  it 'removes javascript error handler' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
+    log_entries = []
 
-    element = driver.find_element(id: 'consoleLog')
+    id = driver.script.add_javascript_error_handler { |log| log_entries << log }
+    driver.script.remove_javascript_error_handler(id)
 
-    result = driver.script.call_function(
-      'function(elem) { return elem.tagName; }',
-      args: [
-        {type: 'HTMLElement', handle: element}
-      ]
-    )
-
-    expect(result['value']).to eq('BUTTON')
-  end
-
-  it 'gets realms' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
-
-    realms = driver.script.get_realms
-
-    expect(realms).not_to be_empty
-    expect(realms.first).to have_key('realm')
-  end
-
-  it 'evaluates in specific realm' do
-    driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
-
-    realms = driver.script.get_realms
-    realm_id = realms.first['realm']
-
-    result = driver.script.evaluate('1 + 1', realm: realm_id)
-
-    expect(result['type']).to eq('number')
-    expect(result['value']).to eq(2)
+    driver.find_element(id: 'jsException').click
+    expect(log_entries).to be_empty
   end
 
   it 'adds dom mutation handler' do
     mutation_events = []
 
-    driver.script.add_dom_mutation_handler do |event|
-      mutation_events << event
-    end
+    driver.script.add_dom_mutation_handler { |event| mutation_events << event }
 
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 

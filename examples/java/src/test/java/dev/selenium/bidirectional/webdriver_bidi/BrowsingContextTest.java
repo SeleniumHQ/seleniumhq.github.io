@@ -24,7 +24,6 @@ import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
@@ -173,8 +172,6 @@ class BrowsingContextTest extends BaseTest {
 
         driver.findElement(By.id("alert")).click();
 
-        wait.until(alertIsPresent());
-
         browsingContext.handleUserPrompt();
 
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
@@ -187,8 +184,6 @@ class BrowsingContextTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
         driver.findElement(By.id("alert")).click();
-
-        wait.until(alertIsPresent());
 
         browsingContext.handleUserPrompt(true);
 
@@ -203,8 +198,6 @@ class BrowsingContextTest extends BaseTest {
 
         driver.findElement(By.id("alert")).click();
 
-        wait.until(alertIsPresent());
-
         browsingContext.handleUserPrompt(false);
 
         Assertions.assertTrue(driver.getPageSource().contains("Testing Alerts and Stuff"));
@@ -217,8 +210,6 @@ class BrowsingContextTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
         driver.findElement(By.id("prompt-with-default")).click();
-
-        wait.until(alertIsPresent());
 
         String userText = "Selenium automates browsers";
         browsingContext.handleUserPrompt(true, userText);
@@ -233,8 +224,6 @@ class BrowsingContextTest extends BaseTest {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
         driver.findElement(By.id("prompt-with-default")).click();
-
-        wait.until(alertIsPresent());
 
         String userText = "Selenium automates browsers";
         browsingContext.handleUserPrompt(false, userText);

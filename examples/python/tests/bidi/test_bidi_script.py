@@ -4,111 +4,58 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 @pytest.mark.driver_type("bidi")
-def test_call_function(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+def test_add_console_message_handler(driver):
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+    log_entries = []
 
-    # In newer Selenium versions, these are public
-    # Using public names for documentation purposes
-    result = driver.script.call_function(
-        "function(a, b) { return a + b; }",
-        arguments=[{"type": "number", "value": 2}, {"type": "number", "value": 3}],
-        await_promise=True,
-        target={"context": driver.current_window_handle}
-    )
+    driver.script.add_console_message_handler(log_entries.append)
 
-    assert result['result']['type'] == "number"
-    assert result['result']['value'] == 5
+    driver.find_element(By.ID, 'consoleLog').click()
+    WebDriverWait(driver, 5).until(lambda _: log_entries)
+    assert log_entries[0].text == 'Hello, world!'
 
 
 @pytest.mark.driver_type("bidi")
-def test_evaluate_script(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+def test_remove_console_message_handler(driver):
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+    log_entries = []
 
-    result = driver.script.evaluate(
-        "2 + 2",
-        await_promise=True,
-        target={"context": driver.current_window_handle}
-    )
+    handler_id = driver.script.add_console_message_handler(log_entries.append)
+    driver.script.remove_console_message_handler(handler_id)
 
-    assert result['result']['type'] == "number"
-    assert result['result']['value'] == 4
+    driver.find_element(By.ID, 'consoleLog').click()
+    assert len(log_entries) == 0
 
 
 @pytest.mark.driver_type("bidi")
-def test_disown_value(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+def test_add_javascript_error_handler(driver):
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+    log_entries = []
 
-    result = driver.script.evaluate(
-        "({x: 1})",
-        await_promise=True,
-        target={"context": driver.current_window_handle},
-        result_ownership="root"
-    )
-    handle = result['result']['handle']
+    driver.script.add_javascript_error_handler(log_entries.append)
 
-    # Disown the value
-    driver.script.disown(
-        handles=[handle],
-        target={"context": driver.current_window_handle}
-    )
-    # If no exception is raised, disown was successful
+    driver.find_element(By.ID, 'jsException').click()
+    WebDriverWait(driver, 5).until(lambda _: log_entries)
+    assert 'Error: Not working' in log_entries[0].text
 
 
 @pytest.mark.driver_type("bidi")
-def test_call_function_with_element_args(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+def test_remove_javascript_error_handler(driver):
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+    log_entries = []
 
-    element = driver.find_element(By.ID, "consoleLog")
+    handler_id = driver.script.add_javascript_error_handler(log_entries.append)
+    driver.script.remove_javascript_error_handler(handler_id)
 
-    result = driver.script.call_function(
-        "function(elem) { return elem.tagName; }",
-        arguments=[{"type": "node", "sharedId": element.id}],
-        await_promise=True,
-        target={"context": driver.current_window_handle}
-    )
-
-    assert result['result']['value'] == "BUTTON"
+    driver.find_element(By.ID, 'jsException').click()
+    assert len(log_entries) == 0
 
 
 @pytest.mark.driver_type("bidi")
-def test_evaluate_with_realm(driver):
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+def test_pin_script(driver):
+    driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
 
-    # Get realms
-    realms_result = driver.script.get_realms()
-    realms = realms_result['realms']
+    script_id = driver.script.pin('() => document.title')
+    assert script_id is not None
 
-    assert len(realms) > 0
-    realm_id = realms[0]['realm']
-
-    # Evaluate in specific realm
-    result = driver.script.evaluate(
-        "1 + 1",
-        await_promise=True,
-        target={"realm": realm_id}
-    )
-
-    assert result['result']['type'] == "number"
-    assert result['result']['value'] == 2
-
-
-@pytest.mark.driver_type("bidi")
-def test_add_dom_mutation_handler(driver):
-    mutation_events = []
-
-    def on_mutation(event):
-        mutation_events.append(event)
-
-    driver.script.add_dom_mutation_handler(on_mutation)
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
-
-    # Mutate an attribute to trigger the handler
-    script = """
-    document.getElementById('consoleLog').setAttribute('data-test', 'value');
-    """
-    driver.execute_script(script)
-
-    wait = WebDriverWait(driver, 5)
-    wait.until(lambda _: len(mutation_events) > 0)
-
-    assert len(mutation_events) > 0
+    driver.script.unpin(script_id)

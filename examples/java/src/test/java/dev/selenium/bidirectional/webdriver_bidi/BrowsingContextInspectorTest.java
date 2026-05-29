@@ -20,8 +20,6 @@ import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
-
 class BrowsingContextInspectorTest extends BaseTest {
     @BeforeEach
     public void setup() {
@@ -158,8 +156,6 @@ class BrowsingContextInspectorTest extends BaseTest {
             driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
             driver.findElement(By.id("prompt")).click();
-
-            wait.until(alertIsPresent());
 
             context.handleUserPrompt(true, "selenium");
 

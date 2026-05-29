@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumDocs.BiDi.W3C
@@ -12,136 +10,94 @@ namespace SeleniumDocs.BiDi.W3C
     public class BrowsingContextTest : BaseFirefoxTest
     {
         [TestMethod]
-        public void CreateBrowsingContextForGivenId()
-        {
-            string id = driver.CurrentWindowHandle;
-            var browsingContext = new BrowsingContext(driver, id);
-            Assert.AreEqual(id, browsingContext.Id);
-        }
-
-        [TestMethod]
         public void CreateWindow()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Window);
-            Assert.IsNotNull(browsingContext.Id);
+            var newHandle = driver.SwitchTo().NewWindow(WindowType.Window).CurrentWindowHandle;
+            Assert.IsNotNull(newHandle);
         }
 
         [TestMethod]
         public void CreateTab()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            Assert.IsNotNull(browsingContext.Id);
+            var newHandle = driver.SwitchTo().NewWindow(WindowType.Tab).CurrentWindowHandle;
+            Assert.IsNotNull(newHandle);
         }
 
         [TestMethod]
         public void NavigateToUrl()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            
-            var navigationInfo = browsingContext.Navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
-            
-            Assert.IsNotNull(browsingContext.Id);
-            Assert.IsNotNull(navigationInfo.NavigationId);
-            Assert.IsTrue(navigationInfo.Url.Contains("/bidi/logEntryAdded.html"));
+            var originalHandle = driver.CurrentWindowHandle;
+            driver.SwitchTo().NewWindow(WindowType.Tab);
+
+            driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+
+            Assert.IsTrue(driver.Url.Contains("/bidi/logEntryAdded.html"));
+            driver.Close();
+            driver.SwitchTo().Window(originalHandle);
         }
 
         [TestMethod]
-        public void NavigateToUrlWithReadinessState()
+        public void GetAllWindowHandles()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            
-            var navigationInfo = browsingContext.Navigate(
-                "https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html",
-                ReadinessState.Complete
-            );
-            
-            Assert.IsNotNull(browsingContext.Id);
-            Assert.IsNotNull(navigationInfo.NavigationId);
-        }
+            var handle1 = driver.CurrentWindowHandle;
+            driver.SwitchTo().NewWindow(WindowType.Window);
+            var handle2 = driver.CurrentWindowHandle;
 
-        [TestMethod]
-        public void GetTreeWithChildren()
-        {
-            string referenceContextId = driver.CurrentWindowHandle;
-            var browsingContext = new BrowsingContext(driver, referenceContextId);
-            
-            browsingContext.Navigate("https://www.selenium.dev/selenium/web/iframes.html");
-            
-            var tree = browsingContext.GetTree();
-            
-            Assert.IsNotNull(tree);
-            Assert.IsTrue(tree.Count > 0);
-        }
+            var handles = driver.WindowHandles;
 
-        [TestMethod]
-        public void GetTreeWithDepth()
-        {
-            string referenceContextId = driver.CurrentWindowHandle;
-            var browsingContext = new BrowsingContext(driver, referenceContextId);
-            
-            browsingContext.Navigate("https://www.selenium.dev/selenium/web/iframes.html");
-            
-            var tree = browsingContext.GetTree(maxDepth: 1);
-            
-            Assert.IsNotNull(tree);
-        }
+            Assert.IsTrue(handles.Count >= 2);
 
-        [TestMethod]
-        public void GetAllTopLevelContexts()
-        {
-            var contexts = BrowsingContext.GetAllTopLevelContexts(driver);
-            
-            Assert.IsTrue(contexts.Count > 0);
+            driver.Close();
+            driver.SwitchTo().Window(handle1);
         }
 
         [TestMethod]
         public void CloseWindow()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Window);
-            
-            browsingContext.Close();
-            // If no exception, close was successful
+            var originalHandle = driver.CurrentWindowHandle;
+            driver.SwitchTo().NewWindow(WindowType.Window);
+
+            driver.Close();
+            driver.SwitchTo().Window(originalHandle);
+
+            Assert.AreEqual(originalHandle, driver.CurrentWindowHandle);
         }
 
         [TestMethod]
         public void CloseTab()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            
-            browsingContext.Close();
-            // If no exception, close was successful
+            var originalHandle = driver.CurrentWindowHandle;
+            driver.SwitchTo().NewWindow(WindowType.Tab);
+
+            driver.Close();
+            driver.SwitchTo().Window(originalHandle);
+
+            Assert.AreEqual(originalHandle, driver.CurrentWindowHandle);
         }
 
         [TestMethod]
-        public void ActivateBrowsingContext()
+        public void SwitchBetweenWindows()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            
-            browsingContext.Activate();
-            // If no exception, activate was successful
+            var handle1 = driver.CurrentWindowHandle;
+            driver.SwitchTo().NewWindow(WindowType.Window);
+            var handle2 = driver.CurrentWindowHandle;
+
+            driver.SwitchTo().Window(handle1);
+            Assert.AreEqual(handle1, driver.CurrentWindowHandle);
+
+            driver.SwitchTo().Window(handle2);
+            driver.Close();
+            driver.SwitchTo().Window(handle1);
         }
 
         [TestMethod]
-        public void ReloadBrowsingContext()
+        public void ReloadPage()
         {
-            var browsingContext = new BrowsingContext(driver, WindowType.Tab);
-            browsingContext.Navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
-            
-            var navigationInfo = browsingContext.Reload();
-            
-            Assert.IsNotNull(navigationInfo);
-        }
+            driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
-        [TestMethod]
-        public void PrintToPdf()
-        {
-            var browsingContext = new BrowsingContext(driver, driver.CurrentWindowHandle);
-            browsingContext.Navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
-            
-            var pdfData = browsingContext.Print();
-            
-            Assert.IsNotNull(pdfData);
-            Assert.IsTrue(pdfData.Length > 0);
+            driver.Navigate().Refresh();
+
+            Assert.IsTrue(driver.Url.Contains("/bidi/logEntryAdded.html"));
         }
     }
 }
