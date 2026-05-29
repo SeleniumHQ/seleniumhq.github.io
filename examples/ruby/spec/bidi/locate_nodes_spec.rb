@@ -32,7 +32,7 @@ RSpec.describe 'Locate Nodes' do
   it 'locates nodes by tag name' do
     driver.navigate.to 'https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html'
 
-    nodes = driver.find_elements(tag_name: 'div')
+    nodes = driver.find_elements(tag_name: 'button')
 
     expect(nodes).not_to be_empty
   end
