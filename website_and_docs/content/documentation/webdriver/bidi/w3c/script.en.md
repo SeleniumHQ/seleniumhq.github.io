@@ -15,14 +15,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L52-L75" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L50-L79" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L9-22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L32-L53" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L30-L56" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L6-20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -34,14 +39,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L201-L210" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L199-L213" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L202-L204" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L202-L215" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -53,14 +58,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L219-L229" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L217-L232" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L68-76" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L222-L227" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L222-L233" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L74-90" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -72,14 +82,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L239-L242" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L235-L245" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L24-31" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L237-L239" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L237-L244" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L23-31" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -91,14 +106,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L280-L283" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L271-L280" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L279-L283" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L279-L290" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -110,14 +125,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L293-L299" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L283-L294" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L79-88" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L292-L299" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L292-L303" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L74-90" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -129,14 +149,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L322-L322" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L297-L322" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L33-41" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L330-L330" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L330-L342" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L34-47" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -148,14 +173,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L375-L375" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L340-L385" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L372-L372" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L372-L388" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -167,14 +192,19 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L391-L392" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L388-L395" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L68-76" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L383-L385" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L391-L397" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L74-90" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -186,14 +216,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L401-402" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L398-L405" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L393-L395" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L401-L407" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -205,14 +235,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L411-412" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L408-L415" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L403-L405" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L411-L417" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -224,14 +254,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L422-423" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L418-L425" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L416-L416" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L424-L430" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -243,14 +273,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L463-463" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L427-L445" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L424-L426" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L438-L454" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -262,14 +292,14 @@ This section contains the APIs related to script commands.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L486-486" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L465-L483" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L471-L471" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L476-L491" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -284,14 +314,19 @@ This section contains the APIs related to script events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.16" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L37-L51" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L35-L54" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L42-54" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L26-L43" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L24-L46" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L43-54" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -303,14 +338,14 @@ This section contains the APIs related to script events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.16" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L58-L68" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L58-L72" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.18" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L52-L65" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L50-L65" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -322,14 +357,37 @@ This section contains the APIs related to script events.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.16" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L75-L85" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptEventsTest.java#L75-L89" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.19" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L73-L86" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L71-L86" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
+### DOM Mutation
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L91-111" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/w3c/script.spec.js#L24-L40" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L93-113" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

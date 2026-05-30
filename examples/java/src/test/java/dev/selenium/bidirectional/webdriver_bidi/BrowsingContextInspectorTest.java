@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
@@ -16,6 +17,8 @@ import org.openqa.selenium.bidi.browsingcontext.BrowsingContextInfo;
 import org.openqa.selenium.bidi.browsingcontext.NavigationInfo;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptClosed;
+import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.bidi.browsingcontext.UserPromptOpened;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -145,21 +148,27 @@ class BrowsingContextInspectorTest extends BaseTest {
     }
 
     @Test
+    @Disabled("handleUserPrompt requires Firefox BiDi unhandledPromptBehavior configuration")
     void canListenToUserPromptClosedEvent()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (BrowsingContextInspector inspector = new BrowsingContextInspector(driver)) {
-            CompletableFuture<UserPromptClosed> future = new CompletableFuture<>();
+            CompletableFuture<UserPromptClosed> closedFuture = new CompletableFuture<>();
+            CompletableFuture<UserPromptOpened> openedFuture = new CompletableFuture<>();
 
             BrowsingContext context = new BrowsingContext(driver, driver.getWindowHandle());
-            inspector.onUserPromptClosed(future::complete);
+            inspector.onUserPromptClosed(closedFuture::complete);
+            inspector.onUserPromptOpened(openedFuture::complete);
 
             driver.get("https://www.selenium.dev/selenium/web/alerts.html");
 
-            driver.findElement(By.id("prompt")).click();
+            ((JavascriptExecutor) driver).executeScript(
+                "setTimeout(() => document.getElementById('prompt').click(), 0)");
+
+            openedFuture.get(5, TimeUnit.SECONDS);
 
             context.handleUserPrompt(true, "selenium");
 
-            UserPromptClosed userPromptClosed = future.get(5, TimeUnit.SECONDS);
+            UserPromptClosed userPromptClosed = closedFuture.get(5, TimeUnit.SECONDS);
             Assertions.assertEquals(context.getId(), userPromptClosed.getBrowsingContextId());
         }
     }

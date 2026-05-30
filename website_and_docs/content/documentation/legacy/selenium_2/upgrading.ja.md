@@ -7,12 +7,10 @@ aliases: [
 "/ja/documentation/legacy/migrating_from_rc_to_webdriver/"
 ]
 
-aliases: []
 ---
 
 
 ## Selenium WebDriverに移行する方法
-
 
 Selenium 2を採用する際によくある質問は、「既存のテストセットに新しいテストを追加するときに正しいことは何ですか？」ということです。
 フレームワークを初めて使用するユーザーは、新しいWebDriver APIを使用してテストを作成することから始めることができます。
@@ -27,7 +25,6 @@ Selenium 2を採用する際によくある質問は、「既存のテストセ�
 他の言語用のより優れたツールを提供するため、このガイドはそれらの言語を含むように拡張されます。
 
 ## WebDriverに移行する理由
-
 
 一連のテストをあるAPIから別のAPIに移動するには、多大な労力が必要です。
 なぜあなたとあなたのチームはこの動きを検討するのですか？
@@ -45,16 +42,12 @@ WebDriverを使用するためにSeleniumテストを移行することを検討
   多くの場合、これはWebDriverのサポートがブラウザー自体に組み込まれていることを意味します。
   テストは可能な限り高速で安定して実行されます。
 
-
 ## はじめる前に
-
 
 移行プロセスを可能な限り簡単にするために、すべてのテストが最新のSeleniumリリースで正しく実行されることを確認してください。
 これは当たり前のように聞こえるかもしれませんが、言ってもらうのが最善です！
 
-
 ## はじめに
-
 
 移行を開始する最初の手順は、Seleniumのインスタンスの取得方法を変更することです。
 Selenium RCを使用する場合、これは次のように行われます。
@@ -72,7 +65,6 @@ Selenium selenium = new WebDriverBackedSelenium(driver, "http://www.yoursite.com
 ```
 
 ## 次のステップ
-
 
 テストがエラーなしで実行されたら、次の段階は実際のテストコードを移行してWebDriver APIを使用することです。
 コードがどれだけ適切に抽象化されているかによって、これは短いプロセスまたは長いプロセスになります。
@@ -96,11 +88,9 @@ Selenium selenium = new WebDriverBackedSelenium(driver, baseUrl);
 
 ## 一般的な問題
 
-
 幸いなことに、この移行を最初に行ったのはあなたではないので、他の人が経験した一般的な問題とその解決方法を以下に示します。
 
 ### クリックと入力がより完全に
-
 
 Selenium RCテストの一般的なパターンは、以下のとおりです。
 
@@ -110,7 +100,6 @@ selenium.keyDown("name", "t");
 selenium.keyPress("name", "t");
 selenium.keyUp("name", "t");
 ```
-
 
 これは、ユーザーがページと対話した場合に通常発生するすべてのイベントも発生せずに、"type"が識別された要素のコンテンツを単に置き換えるという事実に依存しています。
 "key*" の最後の直接呼び出しにより、JSハンドラーが期待どおりに起動します。
@@ -155,7 +144,7 @@ public ExpectedCondition<WebElement> visibilityOfElementLocated(final By locator
   };
 }
 ```
- 
+
 これは複雑に見えるかもしれませんが、ほとんどすべての定型コードです。
 唯一の興味深い点は、 "apply" メソッドが "null" でもBoolean.FALSEでもないものを返すまで、 "ExpectedCondition" が繰り返し評価されることです。
 
@@ -210,7 +199,6 @@ String name = (String) ((JavascriptExecutor) driver).executeScript(
 
 ### Executing Javascript Doesn't Return Anything
 
-
 WebDriverのJavascriptExecutorは、すべてのJSをラップし、匿名式として評価します。
 これは、 "return" キーワードを使用する必要があることを意味します。
 
@@ -223,4 +211,3 @@ String title = selenium.getEval("browserbot.getCurrentWindow().document.title");
 ```java
 ((JavascriptExecutor) driver).executeScript("return document.title;");
 ```
-    

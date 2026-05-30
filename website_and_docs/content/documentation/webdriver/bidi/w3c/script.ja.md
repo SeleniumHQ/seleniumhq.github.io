@@ -34,6 +34,10 @@ This section contains the APIs related to script commands.
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L32-L53" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L7-18" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -72,6 +76,10 @@ This section contains the APIs related to script commands.
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L222-L227" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -90,6 +98,10 @@ This section contains the APIs related to script commands.
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L237-L239" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L20-28" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -129,6 +141,10 @@ This section contains the APIs related to script commands.
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L292-L299" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -148,10 +164,15 @@ This section contains the APIs related to script commands.
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L330-L330" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L30-40" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
 
 ### Disown handles in a realm
 
@@ -180,11 +201,16 @@ This section contains the APIs related to script commands.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/ScriptTest.java#L391-L392" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< badge-code >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L57-64" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.9" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_commands.spec.js#L383-L385" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L56-71" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -303,6 +329,10 @@ This section contains the APIs related to script events.
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/javascript/test/bidirectional/script_events.spec.js#L26-L43" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L42-54" >}}
+{{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -345,3 +375,26 @@ This section contains the APIs related to script events.
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+### DOM Mutation
+
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/ruby/spec/bidi/script_spec.rb#L78-96" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.16" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_script.py#L73-92" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
