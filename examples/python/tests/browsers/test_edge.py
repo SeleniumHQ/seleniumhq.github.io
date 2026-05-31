@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def test_basic_options():
-    options = get_default_edge_options()
+    options = webdriver.EdgeOptions()
 
     driver = webdriver.Edge(options=options)
 
