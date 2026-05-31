@@ -7,7 +7,6 @@ from selenium.webdriver.common.by import By
 
 def test_basic_options():
     options = webdriver.EdgeOptions()
-
     driver = webdriver.Edge(options=options)
 
     driver.quit()
