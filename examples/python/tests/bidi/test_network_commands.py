@@ -1,4 +1,5 @@
 import pytest
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -41,9 +42,10 @@ def test_fail_request(driver):
         request.fail_request()
 
     driver.network.add_request_handler("before_request", fail_request)
-    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
-
-    assert blocked_requests
+    driver.set_page_load_timeout(5)
+    with pytest.raises(TimeoutException):
+        driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    WebDriverWait(driver, 5).until(lambda _: blocked_requests)
 
 
 @pytest.mark.driver_type("bidi")

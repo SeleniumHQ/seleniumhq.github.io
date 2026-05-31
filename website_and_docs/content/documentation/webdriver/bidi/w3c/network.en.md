@@ -19,7 +19,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.41" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L13-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L9-L14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -42,7 +42,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.41" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L28-L30" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L25-L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -122,7 +122,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.41" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L40-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L40-L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
