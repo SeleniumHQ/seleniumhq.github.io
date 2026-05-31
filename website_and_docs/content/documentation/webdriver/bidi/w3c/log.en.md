@@ -18,6 +18,10 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L33-L39" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.41" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11-L15" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -37,6 +41,10 @@ and register callbacks to process the exception details.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L73-L78" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.41" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
