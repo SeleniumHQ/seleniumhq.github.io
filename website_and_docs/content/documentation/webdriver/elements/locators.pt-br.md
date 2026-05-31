@@ -376,7 +376,7 @@ combine those two `FindElement` functions into one.
 
 The `ByAll` class enables you to utilize two By locators at once, finding elements that mach _either_ of your By locators. 
 For example, instead of having to utilize two `FindElement()` functions to find the username and password input fields 
-seperately, you can instead find them together in one clean `FindElements()`
+separately, you can instead find them together in one clean `FindElements()`
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
