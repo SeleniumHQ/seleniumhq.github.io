@@ -20,7 +20,7 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.41" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L7-L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -44,7 +44,7 @@ and register callbacks to process the exception details.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.41" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35-L39" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L31-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
