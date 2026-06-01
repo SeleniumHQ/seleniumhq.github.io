@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/python/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -25,24 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
+        release: [ stable, nightly ]
         include:
-        - os: ubuntu
-          release: stable
+        - release: stable
           python: '3.10'
-        - os: ubuntu
-          release: nightly
-          python: '3.14'
-        - os: windows
-          release: stable
-          python: '3.10'
-        - os: windows
-          release: nightly
-          python: '3.14'
-        - os: macos
-          release: stable
-          python: '3.10'
-        - os: macos
-          release: nightly
+        - release: nightly
           python: '3.14'
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
