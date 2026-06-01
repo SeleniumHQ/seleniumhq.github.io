@@ -374,7 +374,7 @@ you can instead combine those two `FindElement` functions into one.
 
 ### ByAll
 
-The `ByAll` class enables you to utilize two By locators at once, finding elements that mach _either_ of your By locators. 
+The `ByAll` class enables you to utilize two By locators at once, finding elements that match _either_ of your By locators. 
 For example, instead of having to utilize two `FindElement()` functions to find the username and password input fields 
 separately, you can instead find them together in one clean `FindElements()`
 
