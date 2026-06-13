@@ -29,7 +29,7 @@ alertas.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L20" >}}
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
@@ -67,7 +67,7 @@ Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L34" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -126,7 +126,7 @@ Veja um exemplo de prompt </a>.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L49" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}

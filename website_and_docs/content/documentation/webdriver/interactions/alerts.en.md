@@ -30,7 +30,7 @@ alerts.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L20" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -81,7 +81,7 @@ This example also shows a different approach to storing an alert:
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L34" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -140,7 +140,7 @@ See a sample prompt</a>.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L49" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
