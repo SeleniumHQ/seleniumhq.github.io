@@ -209,7 +209,7 @@ enable = false
 [[params.links.user]]
 	name ="Selenium X"
 	url = "https://x.com/SeleniumHQ"
-	icon = "fab fa-twitter"
+	icon = "fab fa-x-twitter"
         desc = "Follow us on X to get the latest news!"
 [[params.links.user]]
 	name = "Selenium Community YouTube Channel"
