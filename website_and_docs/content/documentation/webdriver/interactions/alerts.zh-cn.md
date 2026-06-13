@@ -23,7 +23,7 @@ WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L20" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -72,7 +72,7 @@ alert.accept()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L34" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -128,7 +128,7 @@ alert.dismiss()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L49" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
