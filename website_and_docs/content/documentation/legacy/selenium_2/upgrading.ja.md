@@ -6,8 +6,6 @@ aliases: [
 "/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/",
 "/ja/documentation/legacy/migrating_from_rc_to_webdriver/"
 ]
-
-aliases: []
 ---
 
 
