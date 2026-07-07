@@ -18,6 +18,8 @@
   instruction overlay.
 - If `.local/agent/skills/` exists, inspect its `*/SKILL.md` files and treat them as
   additional user-defined skills.
+- Shared project skills live in `.agents/skills/`; inspect relevant `*/SKILL.md` files before
+  doing repeated or domain-specific workflows.
 
 ## Repository map
 
