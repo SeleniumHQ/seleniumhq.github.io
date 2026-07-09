@@ -43,7 +43,7 @@ By "**almost everything**", I mean that under the covers there have
 been substantial changes. We've rewritten the Selenium server to allow
 it to work not only in the familiar "standalone" and "hub and node"
 modes, but also in a new "distributed" mode, which makes it
-signifcantly easier to deploy to something such as Kubernetes in a way
+significantly easier to deploy to something such as Kubernetes in a way
 that scales well.
 
 The new server is also wired up with support for [OpenTelemetry][] and
