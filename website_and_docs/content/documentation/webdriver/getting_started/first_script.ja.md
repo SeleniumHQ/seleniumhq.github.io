@@ -102,7 +102,7 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 暗黙的な待機が最善の解決策になることはめったにありませんが、ここで示すのが最も簡単なので、
 プレースホルダーとして使用します。
 
-[待機戦略] についてさらに読む({{< ref "/documentation/webdriver/waits.md" >}}).
+[待機戦略]({{< ref "/documentation/webdriver/waits.md" >}})についてさらに読む。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
