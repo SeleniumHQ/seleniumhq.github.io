@@ -24,7 +24,7 @@ Creates a new browsing context in a new window.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L33-L35" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L35-L37" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -45,7 +45,7 @@ Creates a new browsing context in a new tab.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L48-L50" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L50-L52" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -66,7 +66,7 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L25-L28" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L27-L30" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -88,7 +88,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L40-L43" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -109,7 +109,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L55-L58" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L57-L60" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -128,7 +128,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L67" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L69" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -147,7 +147,7 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L79-L82" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L81-L84" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -168,7 +168,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L90-L96" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L92-L98" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -189,7 +189,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L103-L109" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L105-L111" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -208,7 +208,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.20.0" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L426-L431" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L428-L433" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -227,7 +227,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L115-L118" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L117-L120" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -246,8 +246,8 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L192-L194" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L204" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L194-L196" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L206" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -267,7 +267,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L351" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L353" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -286,7 +286,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L301" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L303" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -305,7 +305,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L362" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L364" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -324,7 +324,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L165-L169" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L167-L171" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -343,7 +343,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L184" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L186" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -362,7 +362,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.15" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L335" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L337" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -382,7 +382,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L145-L157" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L147-L159" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -401,7 +401,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L396" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L398" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -420,7 +420,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L420" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L422" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -439,7 +439,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-version version="4.17" >}}
-{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L378" >}}
+{{< gh-codeblock path="/examples/javascript/test/bidirectional/browsingContext.spec.js#L380" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
