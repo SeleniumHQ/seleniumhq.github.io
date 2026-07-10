@@ -15,7 +15,10 @@
 # specific language governing permissions and limitations
 # under the License.
 
+import time
+
 import pytest
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 @pytest.mark.driver_type("bidi")
@@ -50,16 +53,16 @@ def test_fail_request(driver):
     driver.network.add_request_handler("before_request", on_request)
 
     try:
-        driver.get("https://www.selenium.dev/selenium/web/blank.html")
-    except Exception:
-        pass
+        try:
+            driver.get("https://www.selenium.dev/selenium/web/blank.html")
+        except Exception:
+            pass
 
-    import time
-    time.sleep(1)
-
-    assert len(failed_requests) > 0
-    driver.network._remove_intercept(intercept["intercept"])
-    driver.network.clear_request_handlers()
+        time.sleep(1)
+        assert len(failed_requests) > 0
+    finally:
+        driver.network._remove_intercept(intercept["intercept"])
+        driver.network.clear_request_handlers()
 
 
 @pytest.mark.driver_type("bidi")
@@ -74,7 +77,12 @@ def test_add_and_remove_request_handler(driver):
     callback_id = driver.network.add_request_handler("before_request", callback)
     assert callback_id is not None
 
+    driver.get("https://www.selenium.dev/selenium/web/blank.html")
+    WebDriverWait(driver, 5).until(lambda _: requests)
+    assert len(requests) > 0
+
     driver.network.remove_request_handler("before_request", callback_id)
-    assert callback_id not in [
-        h for h in driver.network._handlers.get("before_request", [])
-    ]
+    request_count = len(requests)
+
+    driver.get("https://www.selenium.dev/selenium/web/blank.html")
+    assert len(requests) == request_count
