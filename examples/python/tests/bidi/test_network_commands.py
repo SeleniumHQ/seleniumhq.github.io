@@ -44,6 +44,8 @@ def test_fail_request(driver):
     failed_requests = []
 
     intercept = driver.network._add_intercept()
+    assert intercept is not None
+    intercept_id = intercept["intercept"]
 
     def on_request(request: Request):
         failed_requests.append(request)
@@ -57,7 +59,7 @@ def test_fail_request(driver):
             driver.get("https://www.selenium.dev/selenium/web/blank.html")
         assert len(failed_requests) > 0
     finally:
-        driver.network._remove_intercept(intercept["intercept"])
+        driver.network._remove_intercept(intercept_id)
         driver.network.clear_request_handlers()
 
 
