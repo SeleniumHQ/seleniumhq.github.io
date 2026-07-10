@@ -15,9 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-import time
-
 import pytest
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -53,12 +52,9 @@ def test_fail_request(driver):
     driver.network.add_request_handler("before_request", on_request)
 
     try:
-        try:
+        driver.set_page_load_timeout(5)
+        with pytest.raises(TimeoutException):
             driver.get("https://www.selenium.dev/selenium/web/blank.html")
-        except Exception:
-            pass
-
-        time.sleep(1)
         assert len(failed_requests) > 0
     finally:
         driver.network._remove_intercept(intercept["intercept"])
@@ -85,4 +81,5 @@ def test_add_and_remove_request_handler(driver):
     request_count = len(requests)
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
-    assert len(requests) == request_count
+    with pytest.raises(TimeoutException):
+        WebDriverWait(driver, 1).until(lambda _: len(requests) > request_count)
