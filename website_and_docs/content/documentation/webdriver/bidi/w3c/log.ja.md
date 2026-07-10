@@ -24,6 +24,10 @@ Listen to the `console.log` events and register callbacks to process the event.
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L33-L39" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L7-L15" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -44,6 +48,10 @@ and register callbacks to process the exception details.
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L73-L78" >}}
 {{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-version version="4.15" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L31-L39" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -63,6 +71,9 @@ Listen to all JS logs at all levels and register callbacks to process the log.
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L55-L60" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
