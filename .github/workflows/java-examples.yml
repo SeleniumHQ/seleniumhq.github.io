@@ -106,7 +106,7 @@ jobs:
         max_attempts: 3
         command: |
           # Get current selenium.version from Maven
-          $current_version = & mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout
+          $current_version = & mvn -f examples/java/pom.xml help:evaluate "-Dexpression=selenium.version" -q "-DforceStdout"
           Write-Output "Current selenium.version: $current_version"
           # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
           if ($current_version -match '^([0-9]+)\.([0-9]+)\.([0-9]+)$') {
