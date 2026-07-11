@@ -26,6 +26,7 @@ def test_add_intercept(driver):
     # This will be updated when a public API is stabilized.
     intercept = driver.network._add_intercept()
     assert intercept is not None
+    driver.network._remove_intercept(intercept["intercept"])
 
 
 @pytest.mark.driver_type("bidi")
@@ -49,7 +50,7 @@ def test_fail_request(driver):
 
     def on_request(request: Request):
         failed_requests.append(request)
-        driver.network.fail_request(request.request["requestId"])
+        request.fail_request()
 
     driver.network.add_request_handler("before_request", on_request)
 
@@ -57,6 +58,7 @@ def test_fail_request(driver):
         driver.set_page_load_timeout(5)
         with pytest.raises(TimeoutException):
             driver.get("https://www.selenium.dev/selenium/web/blank.html")
+        WebDriverWait(driver, 5).until(lambda _: len(failed_requests) > 0)
         assert len(failed_requests) > 0
     finally:
         driver.network._remove_intercept(intercept_id)
