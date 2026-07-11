@@ -9,9 +9,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 @pytest.mark.skipif(sys.platform == "win32", reason="Gets stuck on Windows, passes locally")
-def test_start_remote(server):
+def test_start_remote(grid_url):
     options = get_default_chrome_options()
-    driver = webdriver.Remote(command_executor=server, options=options)
+    driver = webdriver.Remote(command_executor=grid_url, options=options)
 
     assert "localhost" in driver.command_executor._client_config.remote_server_addr
     driver.quit()
