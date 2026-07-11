@@ -86,7 +86,7 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run tests
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 2
