@@ -3216,7 +3216,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">1404 commits&lt;/span>
+ &lt;span class="contributions">1405 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3337,6 +3337,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/3331063?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">359 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/5413013?v=4"
  class="inline"
  width="100"
@@ -3347,19 +3360,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  >&lt;a href="https://github.com/bonigarcia">@bonigarcia&lt;/a>&lt;/label
  >
  &lt;span class="contributions">358 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/3331063?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
- >
- &lt;span class="contributions">356 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6415,7 +6415,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">859 commits&lt;/span>
+ &lt;span class="contributions">862 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6441,7 +6441,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">317 commits&lt;/span>
+ &lt;span class="contributions">319 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6545,7 +6545,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">39 commits&lt;/span>
+ &lt;span class="contributions">40 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -10753,7 +10753,7 @@ GraphQLを使用すると、必要なデータのみをフェッチできます�
 &lt;p>These methods are designed to closely emulate a user&amp;rsquo;s experience, so,
 unlike the &lt;a href="https://www.selenium.dev/ja/documentation/webdriver/actions_api/">Actions API&lt;/a>, it attempts to perform two things
 before attempting the specified action.&lt;/p></description></item><item><title>Internet Explorer Driver Internals</title><link>https://www.selenium.dev/ja/documentation/ie_driver_server/internals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/ie_driver_server/internals/</guid><description>&lt;h2 id="client-code-into-the-driver">Client Code Into the Driver&lt;/h2>
-&lt;p>We use the W3C WebDriver protocol to communicate with a local instance of an HTTP server. This greatly simplifies the implementation of the language-specific code, and minimzes the number of entry points into the C++ DLL that must be called using a native-code interop technology such as &lt;a href="https://jna.dev.java.net/">JNA&lt;/a>, &lt;a href="http://docs.python.org/library/ctypes.html">ctypes&lt;/a>, &lt;a href="http://msdn.microsoft.com/en-us/library/aa446536.aspx">pinvoke&lt;/a> or &lt;a href="http://www.ruby-doc.org/stdlib/libdoc/dl/rdoc/index.html">DL&lt;/a>.&lt;/p>
+&lt;p>We use the W3C WebDriver protocol to communicate with a local instance of an HTTP server. This greatly simplifies the implementation of the language-specific code, and minimizes the number of entry points into the C++ DLL that must be called using a native-code interop technology such as &lt;a href="https://jna.dev.java.net/">JNA&lt;/a>, &lt;a href="http://docs.python.org/library/ctypes.html">ctypes&lt;/a>, &lt;a href="http://msdn.microsoft.com/en-us/library/aa446536.aspx">pinvoke&lt;/a> or &lt;a href="http://www.ruby-doc.org/stdlib/libdoc/dl/rdoc/index.html">DL&lt;/a>.&lt;/p>
 &lt;h3 id="memory-management">Memory Management&lt;/h3>
 &lt;p>The IE driver utilizes the Active Template Library (ATL) to take advantage of its implementation of smart pointers to COM objects. This makes reference counting and cleanup of COM objects much easier.&lt;/p></description></item><item><title>JavaScript アラート、プロンプトおよび確認</title><link>https://www.selenium.dev/ja/documentation/webdriver/interactions/alerts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/interactions/alerts/</guid><description>&lt;p>WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。
 これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。&lt;/p>
@@ -13636,7 +13636,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.source&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.source&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.target&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.target&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;project.build.sourceEncoding&amp;gt;&lt;/span>UTF-8&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/project.build.sourceEncoding&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.45.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.46.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;/properties&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;repositories&amp;gt;&lt;/span>
@@ -13683,7 +13683,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;plugin&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.maven.plugins&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;artifactId&amp;gt;&lt;/span>maven-surefire-plugin&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/artifactId&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;version&amp;gt;&lt;/span>3.5.5&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;version&amp;gt;&lt;/span>3.5.6&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;configuration&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;properties&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;configurationParameters&amp;gt;&lt;/span>
@@ -29452,7 +29452,7 @@ document.addEventListener('keydown', function(e) {
  &lt;div class="tab-body tab-pane fade"
  id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_chrome_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">command_executor&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">server&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">command_executor&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">grid_url&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;style>
 div.code-toolbar > .toolbar {
  display: none !important;
@@ -29494,9 +29494,9 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#5c35cc;font-weight:bold">@pytest.mark.skipif&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">sys&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">platform&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;win32&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">reason&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Gets stuck on Windows, passes locally&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">def&lt;/span> &lt;span style="color:#000">test_start_remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">server&lt;/span>&lt;span style="color:#000;font-weight:bold">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">def&lt;/span> &lt;span style="color:#000">test_start_remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">grid_url&lt;/span>&lt;span style="color:#000;font-weight:bold">):&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_chrome_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">command_executor&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">server&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Remote&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">command_executor&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">grid_url&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">assert&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;localhost&amp;#34;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">in&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">command_executor&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">_client_config&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">remote_server_addr&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
