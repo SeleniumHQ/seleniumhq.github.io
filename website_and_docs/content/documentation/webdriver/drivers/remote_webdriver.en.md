@@ -28,7 +28,7 @@ and an options instance are both required.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L16-L21" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L13-L14" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
