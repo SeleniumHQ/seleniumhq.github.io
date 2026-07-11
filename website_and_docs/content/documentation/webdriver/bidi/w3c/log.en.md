@@ -33,7 +33,7 @@ Listen to the JS Exceptions
 and register callbacks to process the exception details.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L73-L78" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L74-L79" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.15" >}}
@@ -54,7 +54,7 @@ Listen to all JS logs at all levels and register callbacks to process the log.
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L55-L60" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/LogTest.java#L56-L61" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-code >}}
