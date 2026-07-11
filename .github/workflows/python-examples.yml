@@ -21,8 +21,6 @@ concurrency:
 
 env:
   DISPLAY: :99
-  GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
-  GH_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
 jobs:
   tests:
@@ -87,10 +85,6 @@ jobs:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-invision/retry@v3.0.2
-      with:
-        timeout_minutes: 60
-        max_attempts: 3
-        command: |
-          cd examples/python
-          pytest --reruns 3 -n auto
+      timeout-minutes: 60
+      working-directory: ./examples/python
+      run: pytest --reruns 3 -n auto
