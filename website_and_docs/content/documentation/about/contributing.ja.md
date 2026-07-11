@@ -63,10 +63,10 @@ Seleniumのすべてのコンポーネントは、時間の経過とともに非
 ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
 ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。
 
-Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
-it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
+コード例では、シナリオを示すために関連するWebサイトやWebページが必要になる場合があります。
+例が安定して動作するように、https://www.selenium.dev/selenium/web/ で利用できるテスト用Webページを使用することを推奨します。
 
-最後に、CIでテストがPassすることを確認してください。
+最後に、CIでテストがパスすることを確認してください。
 
 
 ### 例の移動
