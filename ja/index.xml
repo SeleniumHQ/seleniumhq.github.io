@@ -3100,26 +3100,16 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>java -jar selenium-server-&amp;lt;version&amp;gt;.jar router --help
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ノード">ノード&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>java -jar selenium-server-&amp;lt;version&amp;gt;.jar node --help
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>著作権と帰属</title><link>https://www.selenium.dev/ja/documentation/about/copyright/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/about/copyright/</guid><description>&lt;div class="pageinfo pageinfo-warning">
-&lt;p class="lead">
- &lt;i class="fas fa-language d-4">&lt;/i> 
- Page being translated from 
- English to Japanese. Do you speak Japanese? Help us to translate
- it by sending us pull requests!
-&lt;/p>
-
-&lt;/div>
-
-&lt;h2 id="seleniumのドキュメント">&lt;strong>Seleniumのドキュメント&lt;/strong>&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>著作権と帰属</title><link>https://www.selenium.dev/ja/documentation/about/copyright/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/about/copyright/</guid><description>&lt;h2 id="seleniumのドキュメント">&lt;strong>Seleniumのドキュメント&lt;/strong>&lt;/h2>
 &lt;p>このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、
 保証または適合性は暗示されていません。
 提供される情報は「現状のまま」です。
 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、
-いかなる個人または団体に対しても責任も責任も負わないものとします。
+いかなる個人または団体に対しても責任を負わないものとします。
 ここに含まれる情報の使用に関して、特許責任は一切負いません。&lt;/p>
 &lt;h2 id="帰属">帰属&lt;/h2>
-&lt;h3 id="thanks-to">Thanks to:&lt;/h3>
-&lt;h4 id="selenium-メイン-repository">&lt;a href="//github.com/SeleniumHQ/selenium/">Selenium メイン Repository&lt;/a>&lt;/h4>
+&lt;h3 id="謝辞">謝辞&lt;/h3>
+&lt;h4 id="selenium-メインリポジトリ">&lt;a href="//github.com/SeleniumHQ/selenium/">Selenium メインリポジトリ&lt;/a>&lt;/h4>
 &lt;style type="text/css">
  .ghContributors {
  display: flex;
@@ -6370,7 +6360,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;span class="contributions">1 commits&lt;/span>
  &lt;/div>
 &lt;/div>
-&lt;h4 id="selenium-website--docs">&lt;a href="//github.com/SeleniumHQ/seleniumhq.github.io/">Selenium Website &amp;amp; Docs&lt;/a>&lt;/h4>
+&lt;h4 id="selenium-web-サイトとドキュメント">&lt;a href="//github.com/SeleniumHQ/seleniumhq.github.io/">Selenium Web サイトとドキュメント&lt;/a>&lt;/h4>
 &lt;style type="text/css">
  .ghContributors {
  display: flex;
@@ -6415,7 +6405,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">862 commits&lt;/span>
+ &lt;span class="contributions">863 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6744,6 +6734,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">14 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/69031386?v=4"
  class="inline"
  width="100"
@@ -6767,19 +6770,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  >&lt;a href="https://github.com/cgoldberg">@cgoldberg&lt;/a>&lt;/label
  >
  &lt;span class="contributions">12 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
- >
- &lt;span class="contributions">11 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6882,6 +6872,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/liushilive">@liushilive&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">6 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/27953094?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/rahuljhakant">@rahuljhakant&lt;/a>&lt;/label
  >
  &lt;span class="contributions">6 commits&lt;/span>
  &lt;/div>
@@ -6999,19 +7002,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/TamsilAmani">@TamsilAmani&lt;/a>&lt;/label
- >
- &lt;span class="contributions">5 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/27953094?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/rahuljhakant">@rahuljhakant&lt;/a>&lt;/label
  >
  &lt;span class="contributions">5 commits&lt;/span>
  &lt;/div>
@@ -7692,7 +7682,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
 &lt;/div>
-&lt;h4 id="previous-selenium-website">&lt;a href="//github.com/SeleniumHQ/www.seleniumhq.org/">Previous Selenium Website&lt;/a>&lt;/h4>
+&lt;h4 id="以前の-selenium-web-サイト">&lt;a href="//github.com/SeleniumHQ/www.seleniumhq.org/">以前の Selenium Web サイト&lt;/a>&lt;/h4>
 &lt;style type="text/css">
  .ghContributors {
  display: flex;
@@ -8819,7 +8809,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;span class="contributions">1 commits&lt;/span>
  &lt;/div>
 &lt;/div>
-&lt;h4 id="previous-documentation-rewrite-project">&lt;a href="//github.com/SeleniumHQ/docs/">Previous Documentation Rewrite Project&lt;/a>&lt;/h4>
+&lt;h4 id="以前のドキュメント書き直しプロジェクト">&lt;a href="//github.com/SeleniumHQ/docs/">以前のドキュメント書き直しプロジェクト&lt;/a>&lt;/h4>
 &lt;style type="text/css">
  .ghContributors {
  display: flex;
@@ -9742,9 +9732,9 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th>Software&lt;/th>
- &lt;th>Version&lt;/th>
- &lt;th>License&lt;/th>
+ &lt;th>ソフトウェア&lt;/th>
+ &lt;th>バージョン&lt;/th>
+ &lt;th>ライセンス&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
@@ -12845,8 +12835,11 @@ Selenium RCのサーバーがあるディレクトリに移動し、コマンド
 ユーザーがより多くのコンテキストを必要とする場合、GitHubページへのリンクをクリックすると完全なコンテキストが表示されます。&lt;/p>
 &lt;p>ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
 ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。&lt;/p>
-&lt;p>Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
-it is recommended to use the test web pages available at &lt;a href="https://www.selenium.dev/selenium/web/">https://www.selenium.dev/selenium/web/&lt;/a>.&lt;/p></description></item><item><title>ブラウザーオプション</title><link>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</guid><description>&lt;p>Selenium 3 では、Capabilitiesは Desired Capabilities クラスを使用してセッションで定義していました。
+&lt;p>コード例では、シナリオを示すために関連するWebサイトやWebページが必要になる場合があります。
+例が安定して動作するように、https://www.selenium.dev/selenium/web/ で利用できるテスト用Webページを使用することを推奨します。&lt;/p>
+&lt;p>最後に、CIでテストがパスすることを確認してください。&lt;/p>
+&lt;h3 id="例の移動">例の移動&lt;/h3>
+&lt;p>移動が必要な例には、次のマークが付いています:&lt;/p></description></item><item><title>ブラウザーオプション</title><link>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/drivers/options/</guid><description>&lt;p>Selenium 3 では、Capabilitiesは Desired Capabilities クラスを使用してセッションで定義していました。
 Selenium 4 以降、ブラウザ オプション クラスを使用する必要があります。
 リモート ドライバー セッションの場合、使用するブラウザーを決めるため、ブラウザーオプションインスタンスが必要です。&lt;/p>
 &lt;p>これらのオプションは、&lt;a href="https://w3c.github.io/webdriver/#capabilities">Capabilities&lt;/a> の w3c仕様で説明しています。&lt;/p>
@@ -25225,50 +25218,7 @@ document.addEventListener('keydown', function(e) {
  id="tabs-02-01" role="tabpanel" aria-labelled-by="tabs-02-01-tab" tabindex="2">
  &lt;p>&lt;a href=https://github.com/SeleniumHQ/selenium>
 &lt;span class="selenium-badge-implementation" data-bs-toggle="tooltip" data-bs-placement="right"
- title="This functionality is not available for this language">Implementation Missing&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Style guide for Selenium documentation</title><link>https://www.selenium.dev/ja/documentation/about/style/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/about/style/</guid><description>&lt;p>Read our &lt;a href="https://www.selenium.dev/ja/documentation/about/contributing/">contributing documentation&lt;/a> for complete instructions on
-how to add content to this documentation.&lt;/p>
-&lt;h2 id="alerts">Alerts&lt;/h2>
-&lt;p>Alerts have been added to direct potential contributors to where specific content is missing.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">/&amp;gt;&lt;/span>}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>or&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>}}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Additional information about what specific content is needed
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#000;font-weight:bold">/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>Which gets displayed like this:
-
-
-
-
-
-
-
-
-
-&lt;div class="row justify-content-center my-1">
- &lt;div class="alert alert-cyan -bg-selenium-cyan-20 col-10 ps-lg-5 mb-0 alert-dismissible fade show" role="alert">
- 
- &lt;h2 class="alert-heading pb-3 text-center">Content Help&lt;/h2>
- 
- &lt;div class="w-100">
- 
- &lt;strong>Note: &lt;/strong>
- 
- This section needs additional and/or updated content
- 
- &lt;br>&lt;br>
- Additional information about what specific content is needed
- 
- 
- &lt;br>&lt;br>
- Check our &lt;a href="https://www.selenium.dev/ja/documentation/about/contributing">contribution guidelines&lt;/a> if you&amp;rsquo;d like to help.
- 
- &lt;/div>
- &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&lt;/button>
- &lt;/div>
-&lt;/div>
-
-
-&lt;/p></description></item><item><title>ThreadGuard</title><link>https://www.selenium.dev/ja/documentation/webdriver/support_features/thread_guard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/support_features/thread_guard/</guid><description>&lt;div class="pageinfo pageinfo-info">
+ title="This functionality is not available for this language">Implementation Missing&lt;/span>&lt;/a>&lt;/p></description></item><item><title>ThreadGuard</title><link>https://www.selenium.dev/ja/documentation/webdriver/support_features/thread_guard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/support_features/thread_guard/</guid><description>&lt;div class="pageinfo pageinfo-info">
 &lt;p class="lead">
  このクラスは、Javaバインディングでのみ使用可能です。
 &lt;/p>
@@ -25390,7 +25340,66 @@ Windows上のノードは、Internet Explorerをブラウザーオプション�
 &lt;strong>ディストリビューター&lt;/strong>はリクエストをキューに戻します。
 リトライ中やキューに戻す最中にリクエストがタイムアウトした場合リクエストは拒否されます。&lt;/p>
 &lt;p>セッションの作成に成功すると、&lt;strong>ディストリビューター&lt;/strong>はセッションの情報を&lt;strong>新規セッションキュー&lt;/strong>に送信し、
-これが&lt;strong>ルーター&lt;/strong>へのレスポンスとして送信され、最終的にクライアントに返ります。&lt;/p></description></item><item><title>パフォーマンステスト</title><link>https://www.selenium.dev/ja/documentation/test_practices/discouraged/performance_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/test_practices/discouraged/performance_testing/</guid><description>&lt;p>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。
+これが&lt;strong>ルーター&lt;/strong>へのレスポンスとして送信され、最終的にクライアントに返ります。&lt;/p></description></item><item><title>Seleniumドキュメントのスタイルガイド</title><link>https://www.selenium.dev/ja/documentation/about/style/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/about/style/</guid><description>&lt;p>このドキュメントにコンテンツを追加する方法の詳細な手順については、
+&lt;a href="https://www.selenium.dev/ja/documentation/about/contributing/">コントリビューションのドキュメント&lt;/a>を参照してください。&lt;/p>
+&lt;h2 id="アラート">アラート&lt;/h2>
+&lt;p>アラートは、特定のコンテンツが不足している場所をコントリビュータ候補に示すために追加されています。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">/&amp;gt;&lt;/span>}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>または&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>必要な具体的なコンテンツに関する追加情報
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#000;font-weight:bold">/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">alert-content&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>これは次のように表示されます:
+
+
+
+
+
+
+
+
+
+&lt;div class="row justify-content-center my-1">
+ &lt;div class="alert alert-cyan -bg-selenium-cyan-20 col-10 ps-lg-5 mb-0 alert-dismissible fade show" role="alert">
+ 
+ &lt;h2 class="alert-heading pb-3 text-center">Content Help&lt;/h2>
+ 
+ &lt;div class="w-100">
+ 
+ &lt;strong>Note: &lt;/strong>
+ 
+ This section needs additional and/or updated content
+ 
+ &lt;br>&lt;br>
+ 必要な具体的なコンテンツに関する追加情報
+ 
+ 
+ &lt;br>&lt;br>
+ Check our &lt;a href="https://www.selenium.dev/ja/documentation/about/contributing">contribution guidelines&lt;/a> if you&amp;rsquo;d like to help.
+ 
+ &lt;/div>
+ &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&lt;/button>
+ &lt;/div>
+&lt;/div>
+
+
+&lt;/p>
+&lt;h2 id="タイトルの大文字小文字">タイトルの大文字小文字&lt;/h2>
+&lt;p>このドキュメントでは、短くするべき &lt;code>linkTitle&lt;/code> にはタイトルケースを使用し、
+より長く説明的にできる &lt;code>title&lt;/code> には文頭のみ大文字にする形式を使用します。
+例えば、&lt;code>linkTitle&lt;/code> が &lt;em>Special Heading&lt;/em> の場合、&lt;code>title&lt;/code> は
+&lt;em>The importance of a special heading in documentation&lt;/em> のようになります。&lt;/p>
+&lt;h2 id="行の長さ">行の長さ&lt;/h2>
+&lt;p>プレーンHTMLで書かれているドキュメントのソースを編集するときは、
+1行の長さをおおよそ100文字に制限してください。&lt;/p>
+&lt;p>私たちの一部はこれをさらに進めて、
+&lt;a href="//rhodesmill.org/brandon/2012/one-sentence-per-line">&lt;em>semantic linefeeds&lt;/em>&lt;/a>
+と呼ばれる手法を使っています。
+これは、一般には読まれないHTMLソースの行を、
+文章中の「自然な区切り」で分割する手法です。
+言い換えると、文を節と節の自然な区切りで分割します。
+各段落の行がすべて右端付近で終わるように調整する代わりに、
+考えの区切りがある場所であればどこにでも改行を入れられます。&lt;/p></description></item><item><title>パフォーマンステスト</title><link>https://www.selenium.dev/ja/documentation/test_practices/discouraged/performance_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/test_practices/discouraged/performance_testing/</guid><description>&lt;p>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。
 それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。&lt;/p>
 &lt;p>ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。
 たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。&lt;/p>
