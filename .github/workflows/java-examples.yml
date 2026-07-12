@@ -119,7 +119,7 @@ jobs:
             mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
           }
     - name: Upload test report
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       if: failure()
       with:
         name: test-report-${{matrix.os}}-${{matrix.release}}

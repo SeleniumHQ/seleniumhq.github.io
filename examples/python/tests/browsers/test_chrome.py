@@ -6,7 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def test_basic_options():
-    options = get_default_chrome_options()
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(options=options)
 
     driver.quit()
