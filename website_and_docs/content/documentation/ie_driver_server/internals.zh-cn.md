@@ -9,7 +9,7 @@ description: >
 
 ## Client Code Into the Driver
 
-We use the W3C WebDriver protocol to communicate with a local instance of an HTTP server. This greatly simplifies the implementation of the language-specific code, and minimzes the number of entry points into the C++ DLL that must be called using a native-code interop technology such as [JNA](https://jna.dev.java.net/), [ctypes](http://docs.python.org/library/ctypes.html), [pinvoke](http://msdn.microsoft.com/en-us/library/aa446536.aspx) or [DL](http://www.ruby-doc.org/stdlib/libdoc/dl/rdoc/index.html).
+We use the W3C WebDriver protocol to communicate with a local instance of an HTTP server. This greatly simplifies the implementation of the language-specific code, and minimizes the number of entry points into the C++ DLL that must be called using a native-code interop technology such as [JNA](https://jna.dev.java.net/), [ctypes](http://docs.python.org/library/ctypes.html), [pinvoke](http://msdn.microsoft.com/en-us/library/aa446536.aspx) or [DL](http://www.ruby-doc.org/stdlib/libdoc/dl/rdoc/index.html).
 
 ### Memory Management
 
@@ -21,7 +21,7 @@ IE 7 on Windows Vista introduced the concept of Protected Mode, which allows for
 
 In IE 7, this will usually manifest itself as a new top-level browser window; in IE 8, a new IExplore.exe process will be created, but it will usually (not always!) seamlessly attach it to the existing IE top-level frame window. Any browser automation framework that drives IE externally (as opposed to using a WebBrowser control) will run into these problems.
 
-In order to work around that problem, we dictate that to work with IE, all zones must have the same Protected Mode setting. As long as it's on for all zones, or off for all zones, we can prevent the transistions to different Protected Mode zones that would invalidate our browser object. It also allows users to continue to run with UAC turned on, and to run securely in the browser if they set Protected Mode "on" for all zones.
+In order to work around that problem, we dictate that to work with IE, all zones must have the same Protected Mode setting. As long as it's on for all zones, or off for all zones, we can prevent the transitions to different Protected Mode zones that would invalidate our browser object. It also allows users to continue to run with UAC turned on, and to run securely in the browser if they set Protected Mode "on" for all zones.
 
 In earlier releases of the IE driver, if the user's Protected Mode settings were not correctly set, we would launch IE, and the process would simply hang until the HTTP request timed out. This was suboptimal, as it gave no indication what needed to be set. Erring on the side of caution, we do not modify the user's Protected Mode settings. Current versions, however check that the Protected Mode settings are properly set, and will return an error response if they are not.
 
