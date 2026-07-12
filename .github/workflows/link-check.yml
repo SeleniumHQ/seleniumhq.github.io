@@ -46,12 +46,12 @@ jobs:
 
       - name: Link check
         continue-on-error: true # <- If set to false, run fails with broken links
-        uses: untitaker/hyperlink@0.2.0
+        uses: untitaker/hyperlink@0.3.2
         with:
           args: website_and_docs/public/ --check-anchors
 
       - name: Archive hyperlink results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: hyperlink-report
           path: website_and_docs/tmp/.hyperlink/hyperlink.log
