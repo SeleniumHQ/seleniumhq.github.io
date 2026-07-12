@@ -86,3 +86,4 @@ def test_add_and_remove_request_handler(driver):
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     assert not requests
+
