@@ -247,6 +247,11 @@ def server():
         process.kill()
 
 
+@pytest.fixture(scope="function")
+def grid_url(server):
+    return server
+
+
 def _get_resource_path(file_name: str):
     if os.path.abspath("").endswith("tests"):
         path = os.path.abspath(f"resources/{file_name}")
