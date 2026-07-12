@@ -23,7 +23,7 @@ Starting an Edge session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L38-L39" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L30-L31" >}}
@@ -64,7 +64,7 @@ Add an argument to options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L17" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L12">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -121,7 +121,7 @@ Add an extension to options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L34" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L55">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L56">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -147,7 +147,7 @@ so long as the quit command is not sent to the driver.
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L45" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L32">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L34">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -178,7 +178,7 @@ Set excluded arguments on options:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L22">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
