@@ -4042,19 +4042,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/2544132?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/rbri">@rbri&lt;/a>&lt;/label
- >
- &lt;span class="contributions">16 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/30122785?v=4"
  class="inline"
  width="100"
@@ -4063,6 +4050,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/manuelsblanco">@manuelsblanco&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">16 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/2544132?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/rbri">@rbri&lt;/a>&lt;/label
  >
  &lt;span class="contributions">16 commits&lt;/span>
  &lt;/div>
@@ -4081,27 +4081,27 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/864213?v=4"
+ src="https://avatars.githubusercontent.com/u/7040961?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/bayandin">@bayandin&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/ctoforaday">@ctoforaday&lt;/a>&lt;/label
  >
- &lt;span class="contributions">12 commits&lt;/span>
+ &lt;span class="contributions">15 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/5434964?v=4"
+ src="https://avatars.githubusercontent.com/u/19333856?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/carlosgcampos">@carlosgcampos&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/potapovDim">@potapovDim&lt;/a>&lt;/label
  >
  &lt;span class="contributions">12 commits&lt;/span>
  &lt;/div>
@@ -4120,14 +4120,27 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/19333856?v=4"
+ src="https://avatars.githubusercontent.com/u/5434964?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/potapovDim">@potapovDim&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/carlosgcampos">@carlosgcampos&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">12 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/864213?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/bayandin">@bayandin&lt;/a>&lt;/label
  >
  &lt;span class="contributions">12 commits&lt;/span>
  &lt;/div>
@@ -4237,27 +4250,14 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/2512?v=4"
+ src="https://avatars.githubusercontent.com/u/534772?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/redsquirrel">@redsquirrel&lt;/a>&lt;/label
- >
- &lt;span class="contributions">9 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/129603?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/whimboo">@whimboo&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/lauromoura">@lauromoura&lt;/a>&lt;/label
  >
  &lt;span class="contributions">9 commits&lt;/span>
  &lt;/div>
@@ -4276,14 +4276,27 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/534772?v=4"
+ src="https://avatars.githubusercontent.com/u/129603?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/lauromoura">@lauromoura&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/whimboo">@whimboo&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">9 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/2512?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/redsquirrel">@redsquirrel&lt;/a>&lt;/label
  >
  &lt;span class="contributions">9 commits&lt;/span>
  &lt;/div>
@@ -4302,79 +4315,14 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/14981592?v=4"
+ src="https://avatars.githubusercontent.com/u/6432195?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/Earlopain">@Earlopain&lt;/a>&lt;/label
- >
- &lt;span class="contributions">7 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/16775850?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/glibas">@glibas&lt;/a>&lt;/label
- >
- &lt;span class="contributions">7 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/29910324?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/SinghHrmn">@SinghHrmn&lt;/a>&lt;/label
- >
- &lt;span class="contributions">7 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/973873?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/llaskin">@llaskin&lt;/a>&lt;/label
- >
- &lt;span class="contributions">7 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/4109465?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/DrMarcII">@DrMarcII&lt;/a>&lt;/label
- >
- &lt;span class="contributions">7 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/100381276?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/dev-velo">@dev-velo&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/dratler">@dratler&lt;/a>&lt;/label
  >
  &lt;span class="contributions">7 commits&lt;/span>
  &lt;/div>
@@ -4393,40 +4341,92 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/6432195?v=4"
+ src="https://avatars.githubusercontent.com/u/100381276?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/dratler">@dratler&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/dev-velo">@dev-velo&lt;/a>&lt;/label
  >
  &lt;span class="contributions">7 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/22860775?v=4"
+ src="https://avatars.githubusercontent.com/u/4109465?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/shucon">@shucon&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/DrMarcII">@DrMarcII&lt;/a>&lt;/label
  >
- &lt;span class="contributions">6 commits&lt;/span>
+ &lt;span class="contributions">7 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/59292?v=4"
+ src="https://avatars.githubusercontent.com/u/973873?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/nikolas">@nikolas&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/llaskin">@llaskin&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">7 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/29910324?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/SinghHrmn">@SinghHrmn&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">7 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/16775850?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/glibas">@glibas&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">7 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/14981592?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/Earlopain">@Earlopain&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">7 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/797801?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/adamtheturtle">@adamtheturtle&lt;/a>&lt;/label
  >
  &lt;span class="contributions">6 commits&lt;/span>
  &lt;/div>
@@ -6552,19 +6552,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/in/15368?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/apps/github-actions">@github-actions[bot]&lt;/a>&lt;/label
- >
- &lt;span class="contributions">32 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/10259016?v=4"
  class="inline"
  width="100"
@@ -6573,6 +6560,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/boris779">@boris779&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">32 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/in/15368?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/apps/github-actions">@github-actions[bot]&lt;/a>&lt;/label
  >
  &lt;span class="contributions">32 commits&lt;/span>
  &lt;/div>
@@ -6708,6 +6708,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">15 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/191885?v=4"
  class="inline"
  width="100"
@@ -6729,19 +6742,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/shs96c">@shs96c&lt;/a>&lt;/label
- >
- &lt;span class="contributions">14 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
  >
  &lt;span class="contributions">14 commits&lt;/span>
  &lt;/div>
@@ -6838,6 +6838,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/27953094?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/rahuljhakant">@rahuljhakant&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">7 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/55232978?v=4"
  class="inline"
  width="100"
@@ -6872,19 +6885,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/liushilive">@liushilive&lt;/a>&lt;/label
- >
- &lt;span class="contributions">6 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/27953094?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/rahuljhakant">@rahuljhakant&lt;/a>&lt;/label
  >
  &lt;span class="contributions">6 commits&lt;/span>
  &lt;/div>
@@ -15447,7 +15447,8 @@ document.addEventListener('keydown', function(e) {
  &lt;/div>
  &lt;div class="tab-body tab-pane fade"
  id="tabs-01-01" role="tabpanel" aria-labelled-by="tabs-01-01-tab" tabindex="1">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_chrome_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--no-sandbox&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;style>
 div.code-toolbar > .toolbar {
@@ -15456,30 +15457,30 @@ div.code-toolbar > .toolbar {
 &lt;/style>
 &lt;div class="mt-4 pb-2">
  &lt;div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
- &lt;a onclick="showCodeModal('4b16f63f0d7e6b8ddc8f2511a1666372')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a onclick="showCodeModal('805ebc603045a1c4a288ba6670af3c92')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  View Complete Code
  &lt;/a>
- &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/browsers/test_chrome.py#L9-L10" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/browsers/test_chrome.py#L9-L11" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  &lt;i class="fas fa-external-link-alt" style="margin-right: 8px;">&lt;/i>
  View on GitHub
  &lt;/a>
  &lt;/div>
 &lt;/div>
-&lt;div id="codeModal_4b16f63f0d7e6b8ddc8f2511a1666372" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
+&lt;div id="codeModal_805ebc603045a1c4a288ba6670af3c92" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
  &lt;div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; max-width: 90%; max-height: 90%; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
  &lt;div style="position: sticky; top: 0; z-index: 10; background: white; box-shadow: 0 2px 2px rgba(0,0,0,0.1); padding: 10px 15px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; height: 50px;">
  &lt;h5 style="margin: 0;">/examples/python/tests/browsers/test_chrome.py&lt;/h5>
  &lt;div>
- &lt;button onclick="copyCode('4b16f63f0d7e6b8ddc8f2511a1666372', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="copyCode('805ebc603045a1c4a288ba6670af3c92', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Copy
  &lt;/button>
- &lt;button onclick="closeCodeModal('4b16f63f0d7e6b8ddc8f2511a1666372')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="closeCodeModal('805ebc603045a1c4a288ba6670af3c92')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Close
  &lt;/button>
  &lt;/div>
  &lt;/div>
  &lt;div style="padding: 20px;">
- &lt;div id="codeContent_4b16f63f0d7e6b8ddc8f2511a1666372">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">os&lt;/span>
+ &lt;div id="codeContent_805ebc603045a1c4a288ba6670af3c92">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">os&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">re&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">subprocess&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">pytest&lt;/span>
@@ -15487,7 +15488,8 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium.webdriver.common.by&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">By&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">def&lt;/span> &lt;span style="color:#000">test_basic_options&lt;/span>&lt;span style="color:#000;font-weight:bold">():&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_chrome_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">ChromeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--no-sandbox&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Chrome&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
@@ -20967,8 +20969,9 @@ document.addEventListener('keydown', function(e) {
  &lt;/div>
  &lt;div class="tab-body tab-pane fade"
  id="tabs-02-01" role="tabpanel" aria-labelled-by="tabs-02-01-tab" tabindex="2">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_edge_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">EdgeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--no-sandbox&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Edge&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;style>
 div.code-toolbar > .toolbar {
  display: none !important;
@@ -20976,30 +20979,30 @@ div.code-toolbar > .toolbar {
 &lt;/style>
 &lt;div class="mt-4 pb-2">
  &lt;div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
- &lt;a onclick="showCodeModal('3dab3cf04c90db20d03a745dcda59cf3')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a onclick="showCodeModal('84958ca402f355345cff1465b3d8aae0')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  View Complete Code
  &lt;/a>
- &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/browsers/test_edge.py#L9-L10" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/browsers/test_edge.py#L9-L11" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  &lt;i class="fas fa-external-link-alt" style="margin-right: 8px;">&lt;/i>
  View on GitHub
  &lt;/a>
  &lt;/div>
 &lt;/div>
-&lt;div id="codeModal_3dab3cf04c90db20d03a745dcda59cf3" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
+&lt;div id="codeModal_84958ca402f355345cff1465b3d8aae0" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
  &lt;div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; max-width: 90%; max-height: 90%; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
  &lt;div style="position: sticky; top: 0; z-index: 10; background: white; box-shadow: 0 2px 2px rgba(0,0,0,0.1); padding: 10px 15px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; height: 50px;">
  &lt;h5 style="margin: 0;">/examples/python/tests/browsers/test_edge.py&lt;/h5>
  &lt;div>
- &lt;button onclick="copyCode('3dab3cf04c90db20d03a745dcda59cf3', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="copyCode('84958ca402f355345cff1465b3d8aae0', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Copy
  &lt;/button>
- &lt;button onclick="closeCodeModal('3dab3cf04c90db20d03a745dcda59cf3')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="closeCodeModal('84958ca402f355345cff1465b3d8aae0')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Close
  &lt;/button>
  &lt;/div>
  &lt;/div>
  &lt;div style="padding: 20px;">
- &lt;div id="codeContent_3dab3cf04c90db20d03a745dcda59cf3">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">os&lt;/span>
+ &lt;div id="codeContent_84958ca402f355345cff1465b3d8aae0">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">os&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">re&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">subprocess&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">pytest&lt;/span>
@@ -21007,8 +21010,8 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium.webdriver.common.by&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">By&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">def&lt;/span> &lt;span style="color:#000">test_basic_options&lt;/span>&lt;span style="color:#000;font-weight:bold">():&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">get_default_edge_options&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">EdgeOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--no-sandbox&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Edge&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">quit&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
