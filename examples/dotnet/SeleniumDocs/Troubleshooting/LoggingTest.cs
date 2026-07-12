@@ -73,7 +73,7 @@ namespace SeleniumDocs.Troubleshooting
 
             var logger = getLoggerMethod.Invoke(null, new object[] { typeof(LoggingTest) });
 
-            var emitMethod = logger.GetType().GetMethod(methodName);
+            var emitMethod = logger.GetType().GetMethod(methodName, new Type[] { typeof(string) });
 
             emitMethod.Invoke(logger, new object[] { message });
         }
