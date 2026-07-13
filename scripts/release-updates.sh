@@ -13,15 +13,27 @@ for FILE_PATH in "${FILES[@]}"; do
     sed -i '' -E "s/4\.$OLD_VERSION\.[0-9]+/4.$NEW_VERSION.0/g" "$FILE_PATH"
 done
 
-OLD_BLOG="website_and_docs/content/blog/2025/selenium-4-$OLD_VERSION-released.md"
-NEW_BLOG="website_and_docs/content/blog/2026/selenium-4-$NEW_VERSION-released.md"
+OLD_BLOG=$(find website_and_docs/content/blog -mindepth 2 -maxdepth 2 -iname "selenium-4-$OLD_VERSION-released.md" | head -1)
+if [ -z "$OLD_BLOG" ]; then
+    echo "Could not find previous release blog post for 4.$OLD_VERSION" >&2
+    exit 1
+fi
+
+SINCE_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${OLD_VERSION}.0 --jq '.commit.committer.date')
+UNTIL_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${NEW_VERSION}.0 --jq '.commit.committer.date')
+NEW_BLOG_YEAR=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y" 2>/dev/null || date -u "+%Y")
+NEW_BLOG_DATE=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y-%m-%d" 2>/dev/null || date -u "+%Y-%m-%d")
+
+NEW_BLOG="website_and_docs/content/blog/$NEW_BLOG_YEAR/selenium-4-$NEW_VERSION-released.md"
+mkdir -p "website_and_docs/content/blog/$NEW_BLOG_YEAR"
 cp "$OLD_BLOG" "$NEW_BLOG"
 git add "$NEW_BLOG"
 
 sed -i '' "s/4\.$OLD_VERSION/4\.$NEW_VERSION/g" "$NEW_BLOG"
+sed -i '' -E "s/^date: [0-9]{4}-[0-9]{2}-[0-9]{2}$/date: $NEW_BLOG_DATE/" "$NEW_BLOG"
 
-SINCE_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${OLD_VERSION}.0 --jq '.commit.committer.date')
-UNTIL_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${NEW_VERSION}.0 --jq '.commit.committer.date')
+echo "New blog post: $NEW_BLOG (date: $NEW_BLOG_DATE)"
+echo
 
 echo "Selenium Contributors"
 gh api --method GET /repos/seleniumhq/selenium/commits -f since="$SINCE_COMMIT_DATE" -f until="$UNTIL_COMMIT_DATE" -f per_page=1000 \
