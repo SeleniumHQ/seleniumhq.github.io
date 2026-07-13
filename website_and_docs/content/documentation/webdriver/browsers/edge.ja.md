@@ -30,7 +30,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L30-L31" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L10-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L10-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L15">}}
@@ -58,10 +58,10 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L18" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L39" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L41" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L14">}}
@@ -85,10 +85,10 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L29">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L49" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L28" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -112,10 +112,10 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L40" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L61" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L56">}}
@@ -140,7 +140,7 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 **注意**: これはすでに.NETのデフォルトの動作です。
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L50" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L34">}}
@@ -164,10 +164,10 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L76" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L81" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L59" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L24">}}
@@ -202,11 +202,11 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L93" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L75" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -238,7 +238,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{% tab header="Ruby" %}}
 `$stdout` と `$stderr`はどちらも有効な値です。
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L86" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -267,7 +267,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L99" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -300,7 +300,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L111-L112" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -327,11 +327,11 @@ Edge ブラウザとmsedgedriverのバージョンは一致する必要があり
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L168" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L124" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -367,7 +367,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L119-L123" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L137-L141" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -392,7 +392,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L129" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L149" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -415,7 +415,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L141" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L163" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -438,7 +438,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L149-L150" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L173-L174" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
