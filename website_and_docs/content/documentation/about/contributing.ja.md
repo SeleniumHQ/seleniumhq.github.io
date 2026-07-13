@@ -82,7 +82,7 @@ tabには`text=true`を含めてください。デフォルトではtabはコー
 ## 貢献
 
 Seleniumプロジェクトは新しいコントリビュータを歓迎します。目立った価値ある貢献を継続的に行った個人は _コミッター_
-として認められ、プロジェクトへのコミットアクセス件が与えられます。
+として認められ、プロジェクトへのコミットアクセス権が与えられます。
 
 本ガイドでは、貢献のプロセスについて説明します。
 
@@ -177,7 +177,7 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-https://github.com/yourusername/seleniumhq.github.io.git を開き、_Pull Request_を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
+https://github.com/yourusername/seleniumhq.github.io.git を開き、 _Pull Request_ を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
 
 プルリクエストは通常数日以内にレビューされます。対応すべきコメントがある場合は、新しく(できれば
 [fixups](http://git-scm.com/docs/git-commit)で)コミットし、同じブランチにプッシュしてください。
