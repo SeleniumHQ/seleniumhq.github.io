@@ -12,9 +12,21 @@ fi
 
 SINCE_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${OLD_VERSION}.0 --jq '.commit.committer.date')
 UNTIL_COMMIT_DATE=$(gh api repos/seleniumhq/selenium/commits/selenium-4.${NEW_VERSION}.0 --jq '.commit.committer.date')
-NEW_BLOG_YEAR=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y" 2>/dev/null || date -u "+%Y")
-NEW_BLOG_DATE=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y-%m-%d" 2>/dev/null || date -u "+%Y-%m-%d")
-NEW_RELEASE_DATE_HUMAN=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%B %e, %Y" 2>/dev/null | tr -s ' ' || date -u "+%B %e, %Y" | tr -s ' ')
+
+if date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y" >/dev/null 2>&1; then
+    # BSD/macOS date
+    NEW_BLOG_YEAR=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y")
+    NEW_BLOG_DATE=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y-%m-%d")
+    NEW_RELEASE_DATE_HUMAN=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
+elif date -u -d "$UNTIL_COMMIT_DATE" "+%Y" >/dev/null 2>&1; then
+    # GNU date
+    NEW_BLOG_YEAR=$(date -u -d "$UNTIL_COMMIT_DATE" "+%Y")
+    NEW_BLOG_DATE=$(date -u -d "$UNTIL_COMMIT_DATE" "+%F")
+    NEW_RELEASE_DATE_HUMAN=$(date -u -d "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
+else
+    echo "Could not parse commit date '$UNTIL_COMMIT_DATE' with either BSD or GNU date" >&2
+    exit 1
+fi
 
 FILES=(
     "website_and_docs/layouts/partials/selenium-clients-and-webdriver-bindings.html"

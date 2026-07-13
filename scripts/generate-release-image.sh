@@ -45,8 +45,9 @@ if ! command -v magick >/dev/null 2>&1; then
     MAGICK=convert
 fi
 
-TMP_BG=$(mktemp -t release-image-bg).jpg
-trap 'rm -f "$TMP_BG"' EXIT
+TMP_DIR=$(mktemp -d -t release-image.XXXXXX)
+trap 'rm -rf "$TMP_DIR"' EXIT
+TMP_BG="$TMP_DIR/bg.jpg"
 
 if [ -n "$BACKGROUND" ]; then
     "$MAGICK" "$BACKGROUND" -resize "${WIDTH}x${HEIGHT}^" -gravity center -extent "${WIDTH}x${HEIGHT}" "$TMP_BG"
