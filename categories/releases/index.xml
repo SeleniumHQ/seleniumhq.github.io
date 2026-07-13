@@ -1,7 +1,386 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 08 Jul 2026 02:51:01 +0530</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium Grid 4.41.0: What's New and Why It Matters</title><link>https://www.selenium.dev/blog/2026/selenium-grid-4-41-deep-dive/</link><pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-grid-4-41-deep-dive/</guid><description>&lt;p>We are excited to ship Selenium Grid &lt;strong>4.41.0&lt;/strong> 🎉 — and this might be one of impactful releases in recent memory. Whether you are running Grid in a bare-metal lab, a Docker Compose stack, or a sprawling Kubernetes cluster, this release brings something meaningful for you. From a brand-new &lt;strong>Dynamic Grid for Kubernetes&lt;/strong>, a powerful &lt;strong>Session Event API&lt;/strong>, to smarter video recording and a rock-solid Distributor, let&amp;rsquo;s dig in.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 13 Jul 2026 14:49:54 +0200</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium 4.46 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-46-released/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-46-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.46&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-446-released">Selenium 4.46 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Security&lt;/strong> Selenium Manager (Rust) now guards against path traversal when extracting tar/pkg
+archives.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Hardened the JSON parser for RFC 8259 compliance (rejecting unescaped control
+characters, fixing an EOF sentinel collision, correcting comma handling), and marked all current
+BiDi classes as beta ahead of further changes.&lt;/li>
+&lt;li>&lt;strong>BiDi&lt;/strong> Continued unifying the BiDi protocol layer across bindings around a shared,
+binding-neutral CDDL-derived schema — now adopted by JavaScript and Ruby.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> BiDi creation moved to &lt;code>RemoteWebDriver&lt;/code>, with BiDi now enabled for Safari options and
+event subscriptions tracked by subscription ID.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Safari, Safari Technology Preview, and WebView2 now route to their own dedicated
+handlers.&lt;/li>
+&lt;li>&lt;strong>[Rust]&lt;/strong> Selenium Manager fixes for Firefox binary discovery on Linux and macOS &lt;code>.pkg&lt;/code>/pbzx
+payload support.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Fixed classpath packaging for the Redis-backed &lt;code>SessionQueue&lt;/code> introduced in 4.45.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Hardened the JSON parser: fixed an EOF sentinel collision with U+FFFF, rejected unescaped
+control characters, tightened the number lexer to RFC 8259, and corrected comma handling.&lt;/li>
+&lt;li>Marked all current BiDi classes as beta, moved BiDi creation to &lt;code>RemoteWebDriver&lt;/code>, and enabled
+BiDi for Safari options.&lt;/li>
+&lt;li>Deprecated methods that surfaced the internal BiDi connection on the driver, and now track event
+subscriptions by subscription ID.&lt;/li>
+&lt;li>Fixed the Docker version comparator, and system proxy handling for Selenium Manager arguments.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Routed Safari, Safari Technology Preview, and WebView2 to their own handlers.&lt;/li>
+&lt;li>Fixed the &lt;code>WebDriverWait&lt;/code> import example in a docstring.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Generated the BiDi protocol layer from the shared binding-neutral schema.&lt;/li>
+&lt;li>Added &lt;code>ClientConfig&lt;/code> for HTTP client customization, and trimmed whitespace around &lt;code>NO_PROXY&lt;/code>
+entries.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Made product info determination thread-safe.&lt;/li>
+&lt;li>Split event-stream-backed subscription and enumeration for BiDi, and continued test
+infrastructure cleanup.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Fixed classpath packaging for the Redis-backed &lt;code>SessionQueue&lt;/code> introduced in 4.45.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Added a design decision record (ADR) process and template for documenting significant changes.&lt;/li>
+&lt;li>Added a binding-neutral BiDi schema (JavaScript) and an &lt;code>update_cddl&lt;/code> script to refresh pinned
+w3c/webref CDDL files.&lt;/li>
+&lt;li>Bumped Rust build tooling (&lt;code>rules_rs&lt;/code>, &lt;code>@llvm&lt;/code>) and the Node.js toolchain.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Add Redis external datastore support for SessionQueue configuration (#3160)&lt;/li>
+&lt;li>Docker: Fix video.sh busy-loop when se:recordVideo=false (#3165)&lt;/li>
+&lt;li>Docker: Env var SE_VIDEO_SESSION_SUBFOLDER to standardize recording in dynamic grid (#3156)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.45 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-45-released/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-45-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.45&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-445-released">Selenium 4.45 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>[Java]&lt;/strong> New support for driving Electron apps via &lt;code>ElectronOptions&lt;/code>/&lt;code>ElectronDriver&lt;/code>, plus a
+published &lt;code>selenium-devtools-latest&lt;/code> artifact.&lt;/li>
+&lt;li>&lt;strong>Cross-binding&lt;/strong> Continued migration of shared &amp;ldquo;atoms&amp;rdquo; (&lt;code>isDisplayed&lt;/code>, &lt;code>getAttribute&lt;/code>,
+&lt;code>find-elements&lt;/code>) from Closure to TypeScript, now adopted across JavaScript, Ruby, Java, and .NET.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Hardened the WebSocket proxy (pre-handshake race, TCP backpressure, fast-path framing)
+and added Redis-backed &lt;code>SessionQueue&lt;/code> support alongside the already-bundled Redis &lt;code>SessionMap&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> New high-level BiDi network APIs for request/response/auth handling and extra
+headers, plus BiDi script module alignment with the cross-binding API design.&lt;/li>
+&lt;li>&lt;strong>[Ruby]&lt;/strong> Deprecated the &lt;code>curb&lt;/code> HTTP client and &lt;code>Chromium Profile&lt;/code> classes, and split
+responsibilities between &lt;code>Service&lt;/code>, &lt;code>DriverFinder&lt;/code>, and &lt;code>Options&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Rust]&lt;/strong> Selenium Manager now prunes cache entries older than 30 days and switched its TLS
+backend to &lt;code>ring&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Build]&lt;/strong> Broad CI/release modernization: Bazel bumped to 9.1 and a rerun-safe release
+pipeline.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Added support for driving Electron apps with &lt;code>ElectronOptions&lt;/code> and &lt;code>ElectronDriver&lt;/code>.&lt;/li>
+&lt;li>Published a &lt;code>selenium-devtools-latest&lt;/code> artifact and removed deprecated logging classes.&lt;/li>
+&lt;li>Corrected deprecation annotations for JSON Wire error code APIs, and skip browser-restricted
+ports when picking a free port.&lt;/li>
+&lt;li>Adopted the shared TypeScript atoms for &lt;code>isShown&lt;/code>/&lt;code>getAttribute&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Added high-level BiDi network APIs: request, response, and authentication handlers, plus extra
+headers support.&lt;/li>
+&lt;li>Aligned the BiDi script module with the cross-binding API design, and close the BiDi websocket
+on &lt;code>quit()&lt;/code>.&lt;/li>
+&lt;li>Extracted actions, alert, and color into dedicated libraries/subpackages.&lt;/li>
+&lt;li>Marked Safari tests broken by SafariDriver 26.5 as expected failures.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Deprecated &lt;code>curb&lt;/code> HTTP client support and the &lt;code>Chromium Profile&lt;/code> classes.&lt;/li>
+&lt;li>Separated concerns between &lt;code>Service&lt;/code>, &lt;code>DriverFinder&lt;/code>, and &lt;code>Options&lt;/code>.&lt;/li>
+&lt;li>Adopted the shared TypeScript atoms, added Safari tests, and upgraded to Steep 2.0.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Added support for using any external BiDi transport, plus a fake BiDi transport for tests.&lt;/li>
+&lt;li>Expanded JSON data available on BiDi commands, events, and results, and added a download ID to
+download events.&lt;/li>
+&lt;li>Made user-facing BiDi collections immutable, and improved exception messages for malformed
+capability URLs.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Closed a pre-handshake race and applied TCP backpressure and fast-path framing in the WebSocket
+proxy.&lt;/li>
+&lt;li>Bundled a Redis-backed &lt;code>SessionMap&lt;/code> by default and added Redis-backed &lt;code>SessionQueue&lt;/code> support.&lt;/li>
+&lt;li>Added debug logging for file downloads.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Bumped Bazel to 9.1 and made the release pipeline rerun-safe.&lt;/li>
+&lt;li>Set up trusted publishing from GitHub to npm, and generated release notes from the previous
+minor release tag.&lt;/li>
+&lt;li>Continued disk-space and Bazel cache monitoring improvements across CI jobs.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Add Redis external datastore support for Distributor configuration (#3137)&lt;/li>
+&lt;li>Docker: Video recording starts via session capability se:recordVideo (#3131)&lt;/li>
+&lt;li>K8s: Migrate subchart Redis to cloudpirates/redis from bitnami/redis (#3148)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.44 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-44-released/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-44-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.44&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-444-released">Selenium 4.44 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>[Build]&lt;/strong> Introduced a new Selenium CLI tool, plus an AI-assisted contribution policy and Rust
+commands to install &lt;code>skills.md&lt;/code>/&lt;code>rules.md&lt;/code> files for agent-based contributors.&lt;/li>
+&lt;li>&lt;strong>[.NET]&lt;/strong> A large batch of BiDi alignment work (statically declared commands/events, additional
+event streaming) alongside several breaking changes: obsolete member removal and
+&lt;code>UnhandledPromptBehavior&lt;/code> as a string or map.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Continued JSpecify nullability work in the &lt;code>remote&lt;/code> package, deprecated native
+&lt;code>HttpClient&lt;/code> methods, and fixed a &lt;code>NoSuchElementException&lt;/code> regression for custom &lt;code>By&lt;/code> locators.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Added a Redis-backed Distributor as a built-in option and fixed latent WebSocket proxy
+bugs.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Now generates BiDi files instead of hand-curating them, and added a CDDL 2 Python
+generator.&lt;/li>
+&lt;li>&lt;strong>[JavaScript]&lt;/strong> Converted the &lt;code>getAttribute&lt;/code> and &lt;code>isDisplayed&lt;/code> atoms from Closure to TypeScript.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Continued JSpecify nullability annotations in the &lt;code>remote&lt;/code> package.&lt;/li>
+&lt;li>Deprecated native methods on the &lt;code>HttpClient&lt;/code> interface.&lt;/li>
+&lt;li>Fixed a regression causing &lt;code>NoSuchElementException&lt;/code> for custom &lt;code>By&lt;/code> locators, and an NPE when a
+response status is null.&lt;/li>
+&lt;li>Removed the unused &lt;code>ChromiumDriver.capabilities&lt;/code> field, and bumped &lt;code>byte-buddy&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Switched to generated BiDi files instead of hand-curated ones, and added a CDDL 2 Python
+generator.&lt;/li>
+&lt;li>Implemented high-level APIs for script execution and improved generated BiDi module docstrings.&lt;/li>
+&lt;li>Added an Edge service argument to inherit browser I/O streams.&lt;/li>
+&lt;li>Updated docs with a pytest example and general formatting fixes.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Fixed a credential issue with private keys.&lt;/li>
+&lt;li>Fixed a conflict between Firefox&amp;rsquo;s &lt;code>-v&lt;/code> and &lt;code>--log&lt;/code> flags.&lt;/li>
+&lt;li>Standardized &lt;code>README&lt;/code> files across bindings.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Statically declared BiDi commands and events, and added additional event streaming (breaking
+change).&lt;/li>
+&lt;li>Removed members planned for deprecation in 4.44, and made &lt;code>UnhandledPromptBehavior&lt;/code> accept a
+string or map (breaking change).&lt;/li>
+&lt;li>Migrated tests to MTP and strongly signed assemblies.&lt;/li>
+&lt;li>Fixed network monitoring stop behavior and internal log truncation at error/warn levels.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Added a Redis-backed Distributor as built-in support.&lt;/li>
+&lt;li>Accept legacy session-closed event payloads.&lt;/li>
+&lt;li>Fixed latent bugs in the WebSocket proxy.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Introduced the Selenium CLI tool and an AI-assisted contribution policy, including Rust commands
+to install &lt;code>skills.md&lt;/code>/&lt;code>rules.md&lt;/code> files.&lt;/li>
+&lt;li>Hardened the release pipeline: trusted publishing for Python, GitHub release drafts before
+publish, and parallelized documentation releases.&lt;/li>
+&lt;li>Cleaned up GHA runner disk space and fixed several release/prerelease workflow issues.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Retain recordings for failed sessions only from session capabilities (#3111)&lt;/li>
+&lt;li>chart(selenium-grid): add ServiceMonitor and PodMonitor support for Prometheus Operator (#3121)&lt;/li>
+&lt;li>Docker: Cleanup CfT and Chromium profiles (#3123)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.43 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-43-released/</link><pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-43-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.43&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-443-released">Selenium 4.43 Released&lt;/h1>
+&lt;p>This is a quick follow-up patch to 4.42, fixing a Grid regression.&lt;/p>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Fixed a regression where a mobile slot&amp;rsquo;s stereotype &lt;code>browserName&lt;/code> leaked into merged
+session capabilities instead of being filtered out when an app-related capability was present.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Restored filtering so that merged session capabilities only include &lt;code>browserName&lt;/code> when no
+app-related capability is present.&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.42 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-42-released/</link><pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-42-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.42&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-442-released">Selenium 4.42 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>[.NET]&lt;/strong> A large BiDi consistency pass: unified event arguments, exposed BiDi functionality via interfaces, thread-safe event registration and processing, and commands/events that allocate close to nothing.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Implemented the BiDi &lt;code>speculation&lt;/code> module, continued JSpecify nullability coverage (chromium, browsers, grid, devtools, docker packages), and fixed several &lt;code>Keys&lt;/code>/&lt;code>ScriptKey&lt;/code> correctness issues.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Hardened the WebSocket router: a transparent TCP tunnel bypass path, handling for dropped close frames and idle disconnects, and a new &lt;code>NodeCommandInterceptor&lt;/code> for pluggable command interception via &lt;code>--ext&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Expanded BiDi test coverage and added type stubs for lazily imported classes.&lt;/li>
+&lt;li>&lt;strong>[JavaScript]&lt;/strong> Added a &lt;code>Color&lt;/code> class to the JavaScript library.&lt;/li>
+&lt;li>&lt;strong>[Build]&lt;/strong> Bumped to Bazel 9.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Implemented the BiDi &lt;code>speculation&lt;/code> module.&lt;/li>
+&lt;li>Continued JSpecify nullability annotations across the &lt;code>chrom*&lt;/code>, browsers, &lt;code>grid.*&lt;/code>, &lt;code>devtools&lt;/code>, and &lt;code>docker&lt;/code> packages.&lt;/li>
+&lt;li>Deduplicated Unicode PUA mappings in &lt;code>Keys&lt;/code>, made &lt;code>OPTION&lt;/code> an alias of &lt;code>ALT&lt;/code>, and deprecated &lt;code>FN&lt;/code>.&lt;/li>
+&lt;li>Fixed a regression that unnecessarily serialized binary streams in &lt;code>RemoteWebDriver.builder()&lt;/code>, and guarded against an NPE in &lt;code>Platform.extractFromSysProperty&lt;/code>.&lt;/li>
+&lt;li>Enhanced &lt;code>ScriptKey.toString()&lt;/code> and masked script content in &lt;code>UnpinnedScriptKey&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Expanded BiDi test coverage.&lt;/li>
+&lt;li>Added type stubs for lazily imported classes and modules.&lt;/li>
+&lt;li>Added a module for importing the latest DevTools version, and stopped closing externally provided &lt;code>log_output&lt;/code> streams.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Switched to portable Ruby.&lt;/li>
+&lt;li>Fixed a linter error in the &lt;code>./go authors&lt;/code> script.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Unified all BiDi event arguments to a consistent &lt;code>*EventArgs&lt;/code> type, and exposed BiDi functionality via interfaces.&lt;/li>
+&lt;li>Made event registration and command/event processing thread-safe, with close to zero allocation per command/event.&lt;/li>
+&lt;li>Properly handled the WebSocket close handshake, and made any &lt;code>WebDriver&lt;/code> disposable asynchronously.&lt;/li>
+&lt;li>Bumped the C# language version to 14.0.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Added a transparent TCP tunnel bypass path for the WebSocket data path in the Router.&lt;/li>
+&lt;li>Handled dropped close frames, idle disconnects, and high-latency proxying in the Router WebSocket.&lt;/li>
+&lt;li>Added &lt;code>NodeCommandInterceptor&lt;/code> for pluggable command interception via &lt;code>--ext&lt;/code>.&lt;/li>
+&lt;li>Fixed VNC capabilities not being propagated for sessions without a &lt;code>browserName&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Upgraded to Bazel 9.&lt;/li>
+&lt;li>Fixed several CI reliability issues (RBE tests, lint/format CI, skipped failing Firefox Beta tests).&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Mirror images to GitHub Container Registry (#3098)&lt;/li>
+&lt;li>Docker: Enable SE_VIDEO_EVENT_DRIVEN by default (#3084)&lt;/li>
+&lt;li>Unified configs for Dynamic Grid Docker and Kubernetes (#3088)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium Grid 4.41.0: What's New and Why It Matters</title><link>https://www.selenium.dev/blog/2026/selenium-grid-4-41-deep-dive/</link><pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-grid-4-41-deep-dive/</guid><description>&lt;p>We are excited to ship Selenium Grid &lt;strong>4.41.0&lt;/strong> 🎉 — and this might be one of impactful releases in recent memory. Whether you are running Grid in a bare-metal lab, a Docker Compose stack, or a sprawling Kubernetes cluster, this release brings something meaningful for you. From a brand-new &lt;strong>Dynamic Grid for Kubernetes&lt;/strong>, a powerful &lt;strong>Session Event API&lt;/strong>, to smarter video recording and a rock-solid Distributor, let&amp;rsquo;s dig in.&lt;/p>
 &lt;hr>
 &lt;h2 id="1-dynamic-grid-now-native-on-kubernetes">1. Dynamic Grid, Now Native on Kubernetes&lt;/h2>
-&lt;p>The headline feature of 4.41.0 is unambiguous: &lt;strong>Dynamic Grid now runs natively inside Kubernetes clusters&lt;/strong> (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17092">selenium#17092&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/docker-selenium/pull/3082">docker-selenium#3082&lt;/a>).&lt;/p></description></item><item><title>Selenium 4.40 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-40-released/</link><pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-40-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.40&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+&lt;p>The headline feature of 4.41.0 is unambiguous: &lt;strong>Dynamic Grid now runs natively inside Kubernetes clusters&lt;/strong> (&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17092">selenium#17092&lt;/a>, &lt;a href="https://github.com/SeleniumHQ/docker-selenium/pull/3082">docker-selenium#3082&lt;/a>).&lt;/p></description></item><item><title>Selenium 4.41 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-41-released/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-41-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.41&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-441-released">Selenium 4.41 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>[DotNet]&lt;/strong> Major BiDi expansion in the Emulation module (&lt;code>SetTouchOverride&lt;/code>, &lt;code>SetNetworkConditions&lt;/code>, expanded &lt;code>SetViewport&lt;/code>), a new &lt;code>Speculation&lt;/code> module, and async command dispatch throughout — including breaking changes that make Selenium Manager and the driver service start/stop asynchronously.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Continued JSpecify nullability coverage across all BiDi packages, plus a JSON parsing fix for numbers with an exponent.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Multiple Dynamic Grid fixes: a Distributor deadlock, WebSocket connection counter leaks, thread exhaustion in health checks, and new Kubernetes cluster and basic-auth support.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> New BiDi &lt;code>set_screen_settings_override&lt;/code> emulation command, Edge BiDi tests enabled, and a large Bazel/lint modernization pass.&lt;/li>
+&lt;li>&lt;strong>[Ruby]&lt;/strong> Debug logging on by default, generated atoms no longer stored in the repo, and dependency/lint updates.&lt;/li>
+&lt;li>&lt;strong>[Build]&lt;/strong> A sweeping overhaul of the release and CI pipeline, and the retirement of the legacy Rake/CrazyFun build system.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Expanded JSpecify nullability annotations across the &lt;code>bidi.browser&lt;/code>, &lt;code>bidi.browsingcontext&lt;/code>, &lt;code>bidi.emulation&lt;/code>, &lt;code>bidi.module&lt;/code>, &lt;code>bidi.log&lt;/code>, &lt;code>bidi.network&lt;/code>, and &lt;code>bidi.script&lt;/code> packages.&lt;/li>
+&lt;li>Implemented BiDi &lt;code>emulation.setScreenSettingsOverride&lt;/code>.&lt;/li>
+&lt;li>Added JSpecify annotations for &lt;code>LoadableComponent&lt;/code> and &lt;code>SlowLoadableComponent&lt;/code>.&lt;/li>
+&lt;li>Fixed JSON parsing of numbers with an exponent.&lt;/li>
+&lt;li>Improved the error message when the Grid dies, and fixed a secure/non-secure test failure.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Added BiDi &lt;code>set_screen_settings_override&lt;/code> emulation command and enabled Edge BiDi tests.&lt;/li>
+&lt;li>Modularized the Bazel build with per-module targets and integrated mypy type checking.&lt;/li>
+&lt;li>Switched to lazy imports in &lt;code>webdriver/__init__.py&lt;/code> and split &lt;code>ruff&lt;/code> into dedicated format/check targets.&lt;/li>
+&lt;li>Removed type stub packages from runtime dependencies and bumped dev dependencies to fix a vulnerability.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Driver logs now output by default when debug is enabled.&lt;/li>
+&lt;li>Removed stored atoms in favor of generating them at build time.&lt;/li>
+&lt;li>Updated lint configuration, fixed rubocop offenses, and added missing unit tests.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Added &lt;code>SetTouchOverride&lt;/code>, &lt;code>SetNetworkConditions&lt;/code>, and expanded &lt;code>SetViewport&lt;/code>/&lt;code>AddPreloadScript&lt;/code>/&lt;code>MovePointer&lt;/code> in the BiDi Emulation and Input modules.&lt;/li>
+&lt;li>Added a new BiDi &lt;code>Speculation&lt;/code> module and made commands/events fully immutable.&lt;/li>
+&lt;li>Made Selenium Manager and the driver service start/stop asynchronous (breaking changes), and added &lt;code>CancellationToken&lt;/code> support for async commands and event registration.&lt;/li>
+&lt;li>Fixed several logging issues: truncated internal log messages, streamed Selenium Manager output, and corrected devtools inline docs generation.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Fixed a potential deadlock in the Distributor and WebSocket connection counter leaks in &lt;code>ProxyNodeWebsockets&lt;/code>.&lt;/li>
+&lt;li>Added a session event API for server-side event bus integration.&lt;/li>
+&lt;li>Added Kubernetes cluster support and basic-auth credential passing for Dynamic Grid standalone.&lt;/li>
+&lt;li>Fixed thread exhaustion in the node health-check cycle and session retries when a RemoteNode executor is shutting down.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Continued the Bazel migration: per-language patch releases, consolidated nightly and pre-release workflows, and file-level test target indexing.&lt;/li>
+&lt;li>Removed the legacy Rake/CrazyFun build system entirely.&lt;/li>
+&lt;li>Added linting support for .NET and unified &lt;code>SE_DEBUG&lt;/code> warning behavior across Python, Java, and JavaScript.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Video recorder/uploader now listen on session events (#3070)&lt;/li>
+&lt;li>Docker: Fixed spurious warning messages when basic auth isn&amp;rsquo;t configured (#3071)&lt;/li>
+&lt;li>K8s: Updated KEDA to 2.19.0 in the Helm chart (#3068)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.40 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-40-released/</link><pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-40-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.40&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
