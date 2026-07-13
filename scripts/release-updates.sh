@@ -17,12 +17,12 @@ if date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y" >/dev/null 2>&1; t
     # BSD/macOS date
     NEW_BLOG_YEAR=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y")
     NEW_BLOG_DATE=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%Y-%m-%d")
-    NEW_RELEASE_DATE_HUMAN=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
+    NEW_RELEASE_DATE_HUMAN=$(LC_ALL=C date -j -f "%Y-%m-%dT%H:%M:%SZ" "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
 elif date -u -d "$UNTIL_COMMIT_DATE" "+%Y" >/dev/null 2>&1; then
     # GNU date
     NEW_BLOG_YEAR=$(date -u -d "$UNTIL_COMMIT_DATE" "+%Y")
     NEW_BLOG_DATE=$(date -u -d "$UNTIL_COMMIT_DATE" "+%F")
-    NEW_RELEASE_DATE_HUMAN=$(date -u -d "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
+    NEW_RELEASE_DATE_HUMAN=$(LC_ALL=C date -u -d "$UNTIL_COMMIT_DATE" "+%B %e, %Y" | tr -s ' ')
 else
     echo "Could not parse commit date '$UNTIL_COMMIT_DATE' with either BSD or GNU date" >&2
     exit 1
