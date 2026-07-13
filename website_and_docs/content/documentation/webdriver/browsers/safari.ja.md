@@ -54,6 +54,7 @@ val driver = SafariDriver(options)
 iOS 上の Safari を自動化する場合は、[Appium プロジェクト](//appium.io/)を参照してください。
 
 
+<span id="service"></span>
 ## サービス
 
 すべてのブラウザに共通するサービス設定は、[サービスページ]({{< ref "../drivers/service.md" >}})で
