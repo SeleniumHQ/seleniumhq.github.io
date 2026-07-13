@@ -20,8 +20,9 @@ scripts/release-updates.sh 4.41
 
 This, for version 4.41 (previous = 4.40):
 
-- Bumps `4.40.x` → `4.41.0` in `website_and_docs/layouts/partials/selenium-clients-and-webdriver-bindings.html`
-  and `website_and_docs/layouts/downloads/list.html`.
+- Bumps `4.40.x` → `4.41.0` (and the adjacent human-readable release date) in
+  `website_and_docs/layouts/partials/selenium-clients-and-webdriver-bindings.html` and
+  `website_and_docs/layouts/downloads/list.html`.
 - Copies the previous release's blog post to
   `website_and_docs/content/blog/<year-of-release>/selenium-4-41-released.md`, `git add`s it,
   replaces `4.40` → `4.41` throughout, and sets `date:` to the `selenium-4.41.0` tag's commit
