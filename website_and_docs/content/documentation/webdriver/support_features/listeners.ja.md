@@ -1,13 +1,13 @@
 ---
-title: "Command Listeners"
-linkTitle: "Listeners"
+title: "コマンドリスナー"
+linkTitle: "リスナー"
 weight: 2
 aliases: [
   "/ja/documentation/webdriver/drivers/listeners",
 ]
 ---
 
-These allow you to execute custom actions in every time specific Selenium commands are sent
+特定の Selenium コマンドが送信されるたびに、カスタムアクションを実行できます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
