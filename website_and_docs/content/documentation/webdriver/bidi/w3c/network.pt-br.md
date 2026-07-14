@@ -29,7 +29,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.32" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L23-L29" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L22-L28" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -52,7 +52,7 @@ This section contains the APIs related to network commands.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.32" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L32-L38" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L31-L37" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -140,8 +140,8 @@ This section contains the APIs related to network commands.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/NetworkCommandsTest.java#L104-L108" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< badge-version version="4.32" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L41-L65" >}}
+{{< badge-version version="4.46" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L40-L58" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -167,7 +167,7 @@ This section contains the APIs related to network events.
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.32" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L68-L89" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_network_commands.py#L61-L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
