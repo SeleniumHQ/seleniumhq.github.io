@@ -2529,6 +2529,7 @@ They allow you to programmatically provide credentials or modify the authenticat
 
 
 
+
 &lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
  &lt;li class="nav-item">
  &lt;button class="nav-link active"
@@ -2539,19 +2540,25 @@ They allow you to programmatically provide credentials or modify the authenticat
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
- data-td-tp-persist="ruby" aria-controls="tabs-01-01" aria-selected="false">
- Ruby
+ data-td-tp-persist="python" aria-controls="tabs-01-01" aria-selected="false">
+ Python
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
- data-td-tp-persist="javascript" aria-controls="tabs-01-02" aria-selected="false">
- JavaScript
+ data-td-tp-persist="ruby" aria-controls="tabs-01-02" aria-selected="false">
+ Ruby
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
- data-td-tp-persist="kotlin" aria-controls="tabs-01-03" aria-selected="false">
+ data-td-tp-persist="javascript" aria-controls="tabs-01-03" aria-selected="false">
+ JavaScript
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-04" role="tab"
+ data-td-tp-persist="kotlin" aria-controls="tabs-01-04" aria-selected="false">
  Kotlin
  &lt;/button>
  &lt;/li>

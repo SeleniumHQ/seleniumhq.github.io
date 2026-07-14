@@ -2359,6 +2359,7 @@ They allow you to programmatically provide credentials or modify the authenticat
 
 
 
+
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
  &lt;li class="nav-item">
  &lt;button class="nav-link active"
@@ -2369,19 +2370,25 @@ They allow you to programmatically provide credentials or modify the authenticat
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
- data-td-tp-persist="ruby" aria-controls="tabs-00-01" aria-selected="false">
- Ruby
+ data-td-tp-persist="python" aria-controls="tabs-00-01" aria-selected="false">
+ Python
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
- data-td-tp-persist="javascript" aria-controls="tabs-00-02" aria-selected="false">
- JavaScript
+ data-td-tp-persist="ruby" aria-controls="tabs-00-02" aria-selected="false">
+ Ruby
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
- data-td-tp-persist="kotlin" aria-controls="tabs-00-03" aria-selected="false">
+ data-td-tp-persist="javascript" aria-controls="tabs-00-03" aria-selected="false">
+ JavaScript
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
+ data-td-tp-persist="kotlin" aria-controls="tabs-00-04" aria-selected="false">
  Kotlin
  &lt;/button>
  &lt;/li>
@@ -2690,9 +2697,10 @@ document.addEventListener('keydown', function(e) {
 
 
 
-&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
-&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
- title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Observability in Selenium Grid</title><link>https://www.selenium.dev/documentation/grid/advanced_features/observability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/grid/advanced_features/observability/</guid><description>&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
+
+&lt;p>&lt;a href=https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.32.0>
+&lt;span class="selenium-badge-version" data-bs-toggle="tooltip" data-bs-placement="right"
+ title="This code requires Selenium v4.32 or greater">Selenium v4.32&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Observability in Selenium Grid</title><link>https://www.selenium.dev/documentation/grid/advanced_features/observability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/grid/advanced_features/observability/</guid><description>&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://www.selenium.dev/documentation/grid/advanced_features/observability/#selenium-grid">Selenium Grid&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.selenium.dev/documentation/grid/advanced_features/observability/#observability">Observability&lt;/a>

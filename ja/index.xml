@@ -266,6 +266,7 @@ They allow you to programmatically provide credentials or modify the authenticat
 
 
 
+
 &lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">
  &lt;li class="nav-item">
  &lt;button class="nav-link active"
@@ -276,19 +277,25 @@ They allow you to programmatically provide credentials or modify the authenticat
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-01" role="tab"
- data-td-tp-persist="ruby" aria-controls="tabs-01-01" aria-selected="false">
- Ruby
+ data-td-tp-persist="python" aria-controls="tabs-01-01" aria-selected="false">
+ Python
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-02" role="tab"
- data-td-tp-persist="javascript" aria-controls="tabs-01-02" aria-selected="false">
- JavaScript
+ data-td-tp-persist="ruby" aria-controls="tabs-01-02" aria-selected="false">
+ Ruby
  &lt;/button>
  &lt;/li>&lt;li class="nav-item">
  &lt;button class="nav-link"
  id="tabs-01-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-03" role="tab"
- data-td-tp-persist="kotlin" aria-controls="tabs-01-03" aria-selected="false">
+ data-td-tp-persist="javascript" aria-controls="tabs-01-03" aria-selected="false">
+ JavaScript
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-01-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-01-04" role="tab"
+ data-td-tp-persist="kotlin" aria-controls="tabs-01-04" aria-selected="false">
  Kotlin
  &lt;/button>
  &lt;/li>
@@ -3180,7 +3187,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2128 commits&lt;/span>
+ &lt;span class="contributions">2135 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3297,7 +3304,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/pujagani">@pujagani&lt;/a>&lt;/label
  >
- &lt;span class="contributions">561 commits&lt;/span>
+ &lt;span class="contributions">562 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3336,7 +3343,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">359 commits&lt;/span>
+ &lt;span class="contributions">360 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5109,7 +5116,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">219 commits&lt;/span>
+ &lt;span class="contributions">221 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6405,7 +6412,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">866 commits&lt;/span>
+ &lt;span class="contributions">867 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6643,6 +6650,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">22 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/28479139?v=4"
  class="inline"
  width="100"
@@ -6653,19 +6673,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  >&lt;a href="https://github.com/Delta456">@Delta456&lt;/a>&lt;/label
  >
  &lt;span class="contributions">22 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
- >
- &lt;span class="contributions">21 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -7306,6 +7313,110 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/1610147?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/mmerrell">@mmerrell&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/20457146?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/j3soon">@j3soon&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/1315816?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/1705624?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/jags14385">@jags14385&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/11490046?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/effeix">@effeix&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/79180173?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/gnatcatcher-bg">@gnatcatcher-bg&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/32103862?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/ArCiGo">@ArCiGo&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/43470915?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/Arc-Jung">@Arc-Jung&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">3 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/47086307?v=4"
  class="inline"
  width="100"
@@ -7332,209 +7443,14 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/43470915?v=4"
+ src="https://avatars.githubusercontent.com/u/19251569?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/Arc-Jung">@Arc-Jung&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/32103862?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/ArCiGo">@ArCiGo&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/79180173?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/gnatcatcher-bg">@gnatcatcher-bg&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/11490046?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/effeix">@effeix&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1705624?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/jags14385">@jags14385&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1315816?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/20457146?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/j3soon">@j3soon&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1610147?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/mmerrell">@mmerrell&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/244899711?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/urban-adeininger">@urban-adeininger&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/14201772?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/sangcnguyen">@sangcnguyen&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/3493745?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/sbabcoc">@sbabcoc&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/39815871?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/SparshKesari">@SparshKesari&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/350687?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/urig">@urig&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/65086710?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/sridhar-5">@sridhar-5&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/10154945?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1114078?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/YoshikiIto">@YoshikiIto&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/eaccmk">@eaccmk&lt;/a>&lt;/label
  >
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
@@ -7553,14 +7469,105 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/19251569?v=4"
+ src="https://avatars.githubusercontent.com/u/1114078?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/eaccmk">@eaccmk&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/YoshikiIto">@YoshikiIto&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/10154945?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/65086710?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/sridhar-5">@sridhar-5&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/350687?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/urig">@urig&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/39815871?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/SparshKesari">@SparshKesari&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/3493745?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/sbabcoc">@sbabcoc&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/14201772?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/sangcnguyen">@sangcnguyen&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/60065586?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/rushixdd">@rushixdd&lt;/a>&lt;/label
  >
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
@@ -11953,65 +11960,7 @@ a representation that can be pressed or released in designated sequences.&lt;/p>
 &lt;p>In addition to the keys represented by regular unicode,
 unicode values have been assigned to other keyboard keys for use with Selenium.
 Each language has its own way to reference these keys; the full list can be found
-&lt;a href="https://www.w3.org/TR/webdriver/#keyboard-actions">here&lt;/a>.&lt;/p></description></item><item><title>Command Listeners</title><link>https://www.selenium.dev/ja/documentation/webdriver/support_features/listeners/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/support_features/listeners/</guid><description>&lt;p>These allow you to execute custom actions in every time specific Selenium commands are sent&lt;/p>
-
-
-
-
-
-
-
-&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
- &lt;li class="nav-item">
- &lt;button class="nav-link active"
- id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
- data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
- Java
- &lt;/button>
- &lt;/li>&lt;li class="nav-item">
- &lt;button class="nav-link"
- id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
- data-td-tp-persist="python" aria-controls="tabs-00-01" aria-selected="false">
- Python
- &lt;/button>
- &lt;/li>&lt;li class="nav-item">
- &lt;button class="nav-link"
- id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
- data-td-tp-persist="csharp" aria-controls="tabs-00-02" aria-selected="false">
- CSharp
- &lt;/button>
- &lt;/li>&lt;li class="nav-item">
- &lt;button class="nav-link"
- id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
- data-td-tp-persist="ruby" aria-controls="tabs-00-03" aria-selected="false">
- Ruby
- &lt;/button>
- &lt;/li>&lt;li class="nav-item">
- &lt;button class="nav-link"
- id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
- data-td-tp-persist="javascript" aria-controls="tabs-00-04" aria-selected="false">
- JavaScript
- &lt;/button>
- &lt;/li>&lt;li class="nav-item">
- &lt;button class="nav-link"
- id="tabs-00-05-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-05" role="tab"
- data-td-tp-persist="kotlin" aria-controls="tabs-00-05" aria-selected="false">
- Kotlin
- &lt;/button>
- &lt;/li>
-&lt;/ul>
-
-&lt;div class="tab-content" id="tabs-0-content">
- &lt;div class="tab-body tab-pane fade show active"
- id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
- 
-
-
-
-
-&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
-&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
- title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Chrome DevTools Logging Features</title><link>https://www.selenium.dev/ja/documentation/webdriver/bidi/cdp/logging/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/bidi/cdp/logging/</guid><description>&lt;div class="pageinfo pageinfo-warning">
+&lt;a href="https://www.w3.org/TR/webdriver/#keyboard-actions">here&lt;/a>.&lt;/p></description></item><item><title>Chrome DevTools Logging Features</title><link>https://www.selenium.dev/ja/documentation/webdriver/bidi/cdp/logging/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/bidi/cdp/logging/</guid><description>&lt;div class="pageinfo pageinfo-warning">
 &lt;p class="lead">
  &lt;i class="fas fa-language d-4">&lt;/i> 
  Page being translated from English to Japanese. 
@@ -13772,7 +13721,65 @@ document.addEventListener('keydown', function(e) {
 });
 &lt;/script>
 &lt;h3 id="gradle">Gradle&lt;/h3>
-&lt;p>プロジェクトの &amp;lsquo;build.gradle&amp;rsquo; ファイル内の依存関係を &amp;rsquo;testImplementation&amp;rsquo; として指定します:&lt;/p></description></item><item><title>Web要素の検索</title><link>https://www.selenium.dev/ja/documentation/webdriver/elements/finders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/elements/finders/</guid><description>&lt;p>Seleniumを使用する最も基本的な側面の1つは、操作する要素の参照を取得することです。
+&lt;p>プロジェクトの &amp;lsquo;build.gradle&amp;rsquo; ファイル内の依存関係を &amp;rsquo;testImplementation&amp;rsquo; として指定します:&lt;/p></description></item><item><title>コマンドリスナー</title><link>https://www.selenium.dev/ja/documentation/webdriver/support_features/listeners/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/support_features/listeners/</guid><description>&lt;p>特定の Selenium コマンドが送信されるたびに、カスタムアクションを実行できます。&lt;/p>
+
+
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="java" aria-controls="tabs-00-00" aria-selected="true">
+ Java
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="python" aria-controls="tabs-00-01" aria-selected="false">
+ Python
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="csharp" aria-controls="tabs-00-02" aria-selected="false">
+ CSharp
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ data-td-tp-persist="ruby" aria-controls="tabs-00-03" aria-selected="false">
+ Ruby
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
+ data-td-tp-persist="javascript" aria-controls="tabs-00-04" aria-selected="false">
+ JavaScript
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-05-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-05" role="tab"
+ data-td-tp-persist="kotlin" aria-controls="tabs-00-05" aria-selected="false">
+ Kotlin
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ 
+
+
+
+
+&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
+&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
+ title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p></description></item><item><title>Web要素の検索</title><link>https://www.selenium.dev/ja/documentation/webdriver/elements/finders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/elements/finders/</guid><description>&lt;p>Seleniumを使用する最も基本的な側面の1つは、操作する要素の参照を取得することです。
 Seleniumは、要素を一意に識別するための多数の組み込み&lt;a href="https://www.selenium.dev/ja/documentation/webdriver/elements/locators/">ロケーター戦略&lt;/a>を提供します。
 非常に高度なシナリオでロケーターを使用する方法はたくさんあります。
 このドキュメントの目的のために、このHTMLスニペットについて考えてみましょう。&lt;/p>
@@ -27798,13 +27805,16 @@ Seleniumは既に、&lt;code>FluentWait&lt;/code>クラスでこのようなも�
 既存のSeleniumコマンドを使用してブラウザーでのユーザーのアクションを記録する、使いやすいブラウザー拡張機能です。
 これは、Seleniumの構文を学習するための優れた方法を提供します。
 Google Chrome、Mozilla Firefox、およびMicrosoftEdgeで利用できます。&lt;/p>
-&lt;p>詳細については、充実している&lt;a href="https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started">Selenium IDE ドキュメント&lt;/a>をご覧ください。&lt;/p></description></item><item><title>Safari特有の機能</title><link>https://www.selenium.dev/ja/documentation/webdriver/browsers/safari/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/browsers/safari/</guid><description>&lt;p>Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:&lt;/p>
+&lt;p>詳細については、充実している&lt;a href="https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started">Selenium IDE ドキュメント&lt;/a>をご覧ください。&lt;/p></description></item><item><title>Safari特有の機能</title><link>https://www.selenium.dev/ja/documentation/webdriver/browsers/safari/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/browsers/safari/</guid><description>&lt;p>Chromium および Firefox のドライバーとは異なり、safaridriver はオペレーティングシステムとともに
+インストールされています。
+Safari で自動化を有効にするには、ターミナルで次のコマンドを実行します。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>safaridriver --enable
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="options">Options&lt;/h2>
-&lt;p>Capabilities common to all browsers are described on the &lt;a href="https://www.selenium.dev/ja/documentation/webdriver/drivers/options/">Options page&lt;/a>.&lt;/p>
-&lt;p>Capabilities unique to Safari can be found at Apple&amp;rsquo;s page &lt;a href="https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227">About WebDriver for Safari&lt;/a>&lt;/p>
-&lt;p>Starting a Safari session with basic defined options looks like this:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="オプション">オプション&lt;/h2>
+&lt;p>すべてのブラウザに共通する機能は、&lt;a href="https://www.selenium.dev/ja/documentation/webdriver/drivers/options/">オプションページ&lt;/a>で説明しています。&lt;/p>
+&lt;p>Safari 固有の機能については、Apple の
+&lt;a href="https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227">About WebDriver for Safari&lt;/a>
+のページを参照してください。&lt;/p>
+&lt;p>基本的な定義済みオプションで Safari セッションを開始する場合は、次のようになります。&lt;/p>
 
 
 
@@ -28918,8 +28928,8 @@ document.addEventListener('keydown', function(e) {
  &lt;/div>
 &lt;/div>
 
-&lt;h3 id="mobile">Mobile&lt;/h3>
-&lt;p>Those looking to automate Safari on iOS should look to the &lt;a href="https://www.selenium.dev/ja/">Appium project&lt;/a>.&lt;/p></description></item><item><title>Selenium4にアップグレードする方法</title><link>https://www.selenium.dev/ja/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/</guid><description>&lt;p>公式にサポートされている言語（Ruby、JavaScript、C＃、Python、およびJava）のいずれかを使用している場合、
+&lt;h3 id="モバイル">モバイル&lt;/h3>
+&lt;p>iOS 上の Safari を自動化する場合は、&lt;a href="https://www.selenium.dev/ja/">Appium プロジェクト&lt;/a>を参照してください。&lt;/p></description></item><item><title>Selenium4にアップグレードする方法</title><link>https://www.selenium.dev/ja/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/</guid><description>&lt;p>公式にサポートされている言語（Ruby、JavaScript、C＃、Python、およびJava）のいずれかを使用している場合、
 Selenium4へのアップグレードは簡単なプロセスです。
 いくつかの問題が発生する可能性がある場合があるかもしれません。このガイドは、それらを整理するのに役立ちます。
 プロジェクトの依存関係をアップグレードする手順を実行し、バージョンのアップグレードによってもたらされる主な非推奨と変更を理解します。&lt;/p>
