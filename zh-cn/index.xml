@@ -3573,7 +3573,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">319 commits&lt;/span>
+ &lt;span class="contributions">320 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3629,6 +3629,19 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/in/29110?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">47 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/1148325?v=4"
  class="inline"
  width="100"
@@ -3639,19 +3652,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  >&lt;a href="https://github.com/kzhirata">@kzhirata&lt;/a>&lt;/label
  >
  &lt;span class="contributions">47 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/in/29110?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
- >
- &lt;span class="contributions">45 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3746,6 +3746,19 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">27 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/33221555?v=4"
  class="inline"
  width="100"
@@ -3780,19 +3793,6 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  />
  &lt;label
  >&lt;a href="https://github.com/manoj9788">@manoj9788&lt;/a>&lt;/label
- >
- &lt;span class="contributions">22 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
  >
  &lt;span class="contributions">22 commits&lt;/span>
  &lt;/div>

@@ -6438,7 +6438,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">319 commits&lt;/span>
+ &lt;span class="contributions">320 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6494,6 +6494,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/in/29110?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">47 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/1148325?v=4"
  class="inline"
  width="100"
@@ -6504,19 +6517,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  >&lt;a href="https://github.com/kzhirata">@kzhirata&lt;/a>&lt;/label
  >
  &lt;span class="contributions">47 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/in/29110?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
- >
- &lt;span class="contributions">45 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6611,6 +6611,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">27 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/33221555?v=4"
  class="inline"
  width="100"
@@ -6645,19 +6658,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/manoj9788">@manoj9788&lt;/a>&lt;/label
- >
- &lt;span class="contributions">22 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
  >
  &lt;span class="contributions">22 commits&lt;/span>
  &lt;/div>
@@ -28981,13 +28981,13 @@ W3CWebDriverの標準機能のリストは次のとおりです。&lt;/p>
 &lt;p>おそらく、Webサイトにログインして何かをダウンロードするか、フォームを送信する必要があります。
 Selenium スクリプトを作成して、あらかじめ設定された時間にサービスと共に実行できます。&lt;/p>
 &lt;h3 id="webスクレイピング">Webスクレイピング&lt;/h3>
-&lt;p>APIがないサイトからデータを収集したいとお考えですか?セレン
-これを行うことができますが、Webサイトに精通していることを確認してください。
-一部のWebサイトでは許可されておらず、他のWebサイトではSeleniumがブロックされることさえあります。&lt;/p>
+&lt;p>API がないサイトからデータを収集したいとお考えですか？
+Selenium では可能ですが、Web サイトの利用規約をよく理解しておいてください。
+許可していないサイトもあり、Selenium をブロックするサイトさえあります。&lt;/p>
 &lt;h3 id="テスティング">テスティング&lt;/h3>
-&lt;p>テストのためにSeleniumを実行するには、Seleniumが実行したアクションに対してアサーションを行う必要があります。
-したがって、優れたアサーションライブラリが必要です。テストの構造を提供する追加機能
-使用する必要があります &lt;a href="https://www.selenium.dev/ja/documentation/webdriver/getting_started/using_selenium/#test-runner">Test Runner&lt;/a>.&lt;/p>
+&lt;p>テストでSeleniumを実行するには、Seleniumが実行した操作に対してアサーションを行う必要があります。
+そのため、優れたアサーションライブラリが必要です。テストに構造を与える追加機能には、
+&lt;a href="https://www.selenium.dev/ja/documentation/webdriver/getting_started/using_selenium/#test-runner">テストランナー&lt;/a>を使用する必要があります。&lt;/p>
 &lt;h2 id="ides">IDEs&lt;/h2>
 &lt;p>Seleniumコードの使用方法に関係なく、優れた統合開発環境がなければ、Seleniumコードの作成や実行はあまり効果的ではありません。一般的なオプションを次に示します&amp;hellip;&lt;/p>
 &lt;ul>
@@ -29000,13 +29000,15 @@ Selenium スクリプトを作成して、あらかじめ設定された時間�
 &lt;li>&lt;a href="https://code.visualstudio.com/">VS Code&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="test-runner">Test Runner&lt;/h2>
-&lt;p>テストにSeleniumを使用していない場合でも、高度なユースケースがある場合は、テストランナーを使用してコードをより適切に整理するのが理にかなっている場合があります。before/after フックを使用して、グループまたは並行して物事を実行できると非常に便利です。&lt;/p>
-&lt;h3 id="卜">卜&lt;/h3>
+&lt;p>テストにSeleniumを使用していない場合でも、高度なユースケースでは、テストランナーを使うとコードを
+より適切に整理できる場合があります。before/afterフックを使用し、処理をグループ単位または並列で
+実行できることは、非常に便利です。&lt;/p>
+&lt;h3 id="テストランナーの選び方">テストランナーの選び方&lt;/h3>
 &lt;p>さまざまなテストランナーが利用可能です。&lt;/p>
-&lt;p>このドキュメントのすべてのコード例は、
-テストランナーを使用し、すべてのコードが正しく更新されていることを確認するためにリリースごとに実行されるディレクトリの例。
-リンク付きのテストランナーのリストを次に示します。最初の項目は、このリポジトリで使用される項目と
-このページのすべての例で使用されます。&lt;/p>
+&lt;p>このドキュメントのすべてのコード例は、テストランナーを使用するサンプルディレクトリに格納されているか、
+格納先を移行中です。すべてのコードが正しく更新されていることを確認するため、リリースのたびに実行されます。
+以下にテストランナーをリンクとともに示します。各リストの最初の項目は、このリポジトリと
+このページのすべての例で使用されているものです。&lt;/p>
 
 
 
@@ -29111,8 +29113,9 @@ Selenium スクリプトを作成して、あらかじめ設定された時間�
  &lt;/div>
 &lt;/div>
 
-&lt;h3 id="装着">装着&lt;/h3>
-&lt;p>これは、で必要とされたものと非常によく似ています &lt;a href="https://www.selenium.dev/ja/documentation/webdriver/getting_started/install_library/">Seleniumライブラリのインストール&lt;/a>。このコードは、私たちのドキュメント例プロジェクトで使用されているものの例を示しているだけです。&lt;/p></description></item><item><title>Grid アーキテクチャ</title><link>https://www.selenium.dev/ja/documentation/grid/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/grid/architecture/</guid><description>&lt;p>Grid は、Grid を運用するためのコンポーネントの集合体として設計されています。
+&lt;h3 id="インストール">インストール&lt;/h3>
+&lt;p>これは&lt;a href="https://www.selenium.dev/ja/documentation/webdriver/getting_started/install_library/">Seleniumライブラリのインストール&lt;/a>で必要な手順と非常によく似ています。
+このコードは、ドキュメント用のサンプルプロジェクトで使用しているものの例を示すだけです。&lt;/p></description></item><item><title>Grid アーキテクチャ</title><link>https://www.selenium.dev/ja/documentation/grid/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/ja/documentation/grid/architecture/</guid><description>&lt;p>Grid は、Grid を運用するためのコンポーネントの集合体として設計されています。
 非常に複雑に見えるかもしれませんが、
 このドキュメントが混乱を解消する手助けとなることを期待します。&lt;/p>
 &lt;h2 id="キーとなるコンポーネント">キーとなるコンポーネント&lt;/h2>
