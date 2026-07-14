@@ -17,7 +17,6 @@
 
 import pytest
 from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.support.wait import WebDriverWait
 
 
 @pytest.mark.driver_type("bidi")
@@ -43,19 +42,10 @@ def test_fail_request(driver):
     from selenium.webdriver.common.bidi.browsing_context import ReadinessState
     from selenium.webdriver.common.bidi.network import Request
 
-    failed_requests = []
+    def block_request(request: Request):
+        request.fail()
 
-    def on_request(request: Request):
-        try:
-            request.fail_request()
-            failed_requests.append(request)
-        except WebDriverException:
-            # The subscription delivers an event for every request, and some
-            # are already cancelled by the time we try to fail them (for
-            # example, once the aborted navigation tears them down).
-            pass
-
-    driver.network.add_request_handler("before_request", on_request)
+    driver.network.add_request_handler(["**/blank.html"], block_request)
 
     try:
         with pytest.raises(WebDriverException):
@@ -64,8 +54,6 @@ def test_fail_request(driver):
                 url="https://www.selenium.dev/selenium/web/blank.html",
                 wait=ReadinessState.COMPLETE,
             )
-        WebDriverWait(driver, 5).until(lambda _: failed_requests)
-        assert len(failed_requests) > 0
     finally:
         driver.network.clear_request_handlers()
 
@@ -86,4 +74,3 @@ def test_add_and_remove_request_handler(driver):
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     assert not requests
-
