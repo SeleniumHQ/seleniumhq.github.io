@@ -466,7 +466,7 @@ public class LoginPage {
     // The login page allows the user to submit the login form
     public HomePage submitLogin() {
         // This is the only place that submits the login form and expects the destination to be the home page.
-        // A seperate method should be created for the instance of clicking login whilst expecting a login failure. 
+        // A separate method should be created for the instance of clicking login whilst expecting a login failure. 
         driver.findElement(loginButtonLocator).submit();
 
         // Return a new page object representing the destination. Should the login page ever
@@ -480,7 +480,7 @@ public class LoginPage {
         // This is the only place that submits the login form and expects the destination to be the login page due to login failure.
         driver.findElement(loginButtonLocator).submit();
 
-        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submiting a login with credentials 
+        // Return a new page object representing the destination. Should the user ever be navigated to the home page after submitting a login with credentials 
         // expected to fail login, the script will fail when it attempts to instantiate the LoginPage PageObject.
         return new LoginPage(driver);	
     }
