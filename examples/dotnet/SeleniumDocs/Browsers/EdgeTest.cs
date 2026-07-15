@@ -16,6 +16,12 @@ namespace SeleniumDocs.Browsers
         private EdgeDriver driver;
         private string _logLocation;
 
+        [TestInitialize]
+        public void Initialize()
+        {
+            _logLocation = Path.GetTempFileName();
+        }
+
         [TestCleanup]
         public void Cleanup()
         {
@@ -92,11 +98,11 @@ namespace SeleniumDocs.Browsers
             var options = new EdgeOptions();
             options.AddArgument("--no-sandbox");
 
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
 
             driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
 
@@ -106,14 +112,14 @@ namespace SeleniumDocs.Browsers
             var service = EdgeDriverService.CreateDefaultService();
             var options = new EdgeOptions();
             options.AddArgument("--no-sandbox");
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
 
             service.LogLevel = ChromiumDriverLogLevel.Debug;
 
             driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
@@ -123,7 +129,7 @@ namespace SeleniumDocs.Browsers
             var service = EdgeDriverService.CreateDefaultService();
             var options = new EdgeOptions();
             options.AddArgument("--no-sandbox");
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
             service.EnableVerboseLogging = true;
 
             service.EnableAppendLog = true;
@@ -132,7 +138,7 @@ namespace SeleniumDocs.Browsers
             driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
@@ -143,7 +149,7 @@ namespace SeleniumDocs.Browsers
             var service = EdgeDriverService.CreateDefaultService();
             var options = new EdgeOptions();
             options.AddArgument("--no-sandbox");
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
             service.EnableVerboseLogging = true;
 
             service.DisableBuildCheck = true;
@@ -151,18 +157,8 @@ namespace SeleniumDocs.Browsers
             driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
-        }
-
-        private string GetLogLocation()
-        {
-            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
-            {
-                _logLocation = Path.GetTempFileName();
-            }
-
-            return _logLocation;
         }
 
         private static async Task<string> GetEdgeLocationAsync()
