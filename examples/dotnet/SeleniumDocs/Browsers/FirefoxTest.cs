@@ -171,7 +171,7 @@ namespace SeleniumDocs.Browsers
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
         }
-        
+
         private string GetLogLocation()
         {
             if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))

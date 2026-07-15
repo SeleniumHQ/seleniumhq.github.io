@@ -19,11 +19,11 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
             }
-            driver.Quit();
         }
 
         [TestMethod]
@@ -52,7 +52,7 @@ namespace SeleniumDocs.Browsers
             options.AddArgument("--no-sandbox");
 
             options.BinaryLocation = await GetEdgeLocationAsync();
-    
+
             driver = new EdgeDriver(options);
         }
 
