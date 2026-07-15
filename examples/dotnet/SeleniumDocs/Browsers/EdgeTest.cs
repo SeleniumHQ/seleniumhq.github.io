@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -138,6 +139,8 @@ namespace SeleniumDocs.Browsers
             driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
+            // Remove it
+            Thread.Sleep(10_000);
             var lines = File.ReadLines(_logLocation);
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
