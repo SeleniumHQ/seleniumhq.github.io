@@ -17,6 +17,12 @@ namespace SeleniumDocs.Browsers
         private string _logLocation;
         private string _tempPath;
 
+        [TestInitialize]
+        public void Initialize()
+        {
+            _logLocation = Path.GetTempFileName();
+        }
+
         [TestCleanup]
         public void Cleanup()
         {
@@ -62,11 +68,11 @@ namespace SeleniumDocs.Browsers
         public void LogsToFile()
         {
             var service = FirefoxDriverService.CreateDefaultService();
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("geckodriver	INFO	Listening on")));
         }
 
@@ -93,12 +99,12 @@ namespace SeleniumDocs.Browsers
         public void LogsLevel()
         {
             var service = FirefoxDriverService.CreateDefaultService();
-            service.LogPath = GetLogLocation();
+            service.LogPath = _logLocation;
             service.LogLevel = FirefoxDriverLogLevel.Debug;
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Marionette\tDEBUG")));
         }
 
@@ -112,7 +118,7 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = File.ReadLines(_logLocation);
             Assert.IsNull(lines.FirstOrDefault(line => line.Contains(" ... ")));
         }
 
@@ -170,16 +176,6 @@ namespace SeleniumDocs.Browsers
             driver.Url = "https://www.selenium.dev/selenium/web/blank.html";
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
-        }
-
-        private string GetLogLocation()
-        {
-            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
-            {
-                _logLocation = Path.GetTempFileName();
-            }
-
-            return _logLocation;
         }
 
         private string GetTempDirectory()
