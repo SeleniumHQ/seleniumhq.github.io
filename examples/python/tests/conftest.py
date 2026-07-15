@@ -149,7 +149,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.38.0.jar",
+        "selenium-server-4.46.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -207,7 +207,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.38.0.jar",
+        "selenium-server-4.46.0.jar",
     )
 
     args = [
@@ -247,6 +247,11 @@ def server():
         process.kill()
 
 
+@pytest.fixture(scope="function")
+def grid_url(server):
+    return server
+
+
 def _get_resource_path(file_name: str):
     if os.path.abspath("").endswith("tests"):
         path = os.path.abspath(f"resources/{file_name}")
@@ -280,7 +285,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.38.0.jar",
+        "selenium-server-4.46.0.jar",
     )
 
     args = [

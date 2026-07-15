@@ -29,12 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -62,7 +62,7 @@ jobs:
       run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
     - name: Run Tests Stable (in Maven)
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 3
@@ -71,7 +71,7 @@ jobs:
           mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
     - name: Run Tests Stable (in Gradle)
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 3
@@ -80,7 +80,7 @@ jobs:
           ./gradlew test --tests 'dev.selenium.*UsingSeleniumTest'
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 3
@@ -100,13 +100,13 @@ jobs:
           fi
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 3
         command: |
           # Get current selenium.version from Maven
-          $current_version = & mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout
+          $current_version = & mvn -f examples/java/pom.xml help:evaluate "-Dexpression=selenium.version" -q "-DforceStdout"
           Write-Output "Current selenium.version: $current_version"
           # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
           if ($current_version -match '^([0-9]+)\.([0-9]+)\.([0-9]+)$') {
@@ -119,7 +119,7 @@ jobs:
             mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
           }
     - name: Upload test report
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       if: failure()
       with:
         name: test-report-${{matrix.os}}-${{matrix.release}}

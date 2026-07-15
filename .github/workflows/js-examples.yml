@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/javascript/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -25,12 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -46,12 +50,12 @@ jobs:
       run: Xvfb :99 &
     - name: Setup Node Stable
       if: matrix.release == 'stable'
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: '22.x'
     - name: Setup Node Nightly
       if: matrix.release == 'nightly'
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version: '22.x'
         registry-url: 'https://npm.pkg.github.com'
@@ -82,7 +86,7 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run tests
-      uses: nick-invision/retry@v3.0.2
+      uses: nick-invision/retry@v4.0.0
       with:
         timeout_minutes: 40
         max_attempts: 2

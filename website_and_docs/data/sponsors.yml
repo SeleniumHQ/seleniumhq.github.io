@@ -11,7 +11,7 @@ development:
       name: "Sauce Labs"
     # Sponsorship renewed October 16, 2024. Renewed again on April 8, 2025, under the "Development" level
     - logo: "/images/sponsors/testmu-ai.png"
-      url: "https://www.testmuai.com/selenium-automation"
+      url: "https://www.testmuai.com"
       name: "TestMu AI (formerly LambdaTest)"
 
 selenium:
@@ -91,50 +91,54 @@ bronze:
   # Set to false if no items are present
   enable: true
   item:
-    # Sponsorship renewal date: Apr 12, 2026
+    # Sponsorship active: Apr 11, 2025 - Apr 11, 2026
     - logo: "/images/sponsors/kualtee.png"
       url: "http://www.kualitee.com/?utm_source=selenium&utm_medium=website&utm_campaign=seleniumpartnership"
       name: "Kualitee"
-    # Sponsorship renewal date: Feb 4, 2025
+    # Sponsorship active: Feb 4, 2025 - Jan 2, 2027
     - logo: "/images/sponsors/alpi.jpg"
       url: "http://www.alpi.com/courses-opensource/index.cfm"
       name: "Alpi"
-    # Sponsorship renewed date: Jan 25, 2025
+    # Sponsorship active: Jan 25, 2025 - Jan 2, 2027
     - logo: "/images/sponsors/gridlastic-selenium-grid-in-the-cloud.png"
       url: "https://www.gridlastic.com/"
       name: "Gridlastic"
-    # Sponsorship start date: Jan 24, 2025
+    # Sponsorship active: Jan 24, 2025 - Jan 2, 2027
     - logo: "/images/sponsors/gwenify-logo.png"
       url: "https://www.gwenify.com/"
       name: "Gwenify - Robotic Process Automation"
-    # Sponsorship start date: Aug 21, 2024
+    # Sponsorship active: Aug 21, 2024 - Jan 1, 2027
     - logo: "/images/sponsors/testingbot.png"
       url: "https://testingbot.com/"
       name: "Selenium Cloud Testing - TestingBot"
-    # Sponsorship start date: Jul 12, 2024
+    # Sponsorship active: Jul 12, 2024 - Jun 1, 2026
     - logo: "/images/sponsors/route4me-logo.png"
       url: "https://route4me.com/"
       name: "Route Planner and Route Optimizer - Route4Me Inc."
-    # Sponsorship start date: Jul 5, 2024
+    # Sponsorship active: Jul 5, 2024 - Jun 1, 2026
     - logo: "/images/sponsors/rtts-logo.png"
       url: "https://www.rttsweb.com/?utm_source=Selenium-org&utm_medium=ads&utm_campaign=Selenium-sponsor"
       name: "Real-Time Technology Solutions Inc."
-    # Sponsorship start date: Oct 9, 2024
+    # Sponsorship active: Oct 9, 2024 - Sep 2, 2026
     - logo: "/images/sponsors/mailsac-logo.png"
       url: "https://mailsac.com/?utm_source=selenium&utm_medium=ads&utm_campaign=selenium-sponsor&utm_content=logolink"
       name: "Mailsac - Receive test emails with confidence"
-    # Sponsorship start date: June 02, 2025
+    # Sponsorship active: June 02, 2025 - June 02, 2026
     - logo: "/images/sponsors/Jetify-Wordmark.svg"
       url: "https://www.jetify.com/"
       name: "AI Automation Agency"
-    # Sponsorship start date: October 28, 2025
+    # Sponsorship active: Oct 28, 2025 - Oct 28, 2026
     - logo: "/images/sponsors/Hypeproxies_logo.png"
       url: "https://hypeproxies.com/"
       name: "HypeProxies – Fastest ISP & Residential Proxies, No Limits"
-    # Sponsorship start date: November 24, 2025
+    # Sponsorship active: November 24, 2025 - November 24, 2026
     - logo: "/images/sponsors/shipfox-logo.svg"
       url: "https://www.shipfox.io"
       name: "Shipfox – Blazing fast GitHub Actions for half the cost"
+    # Sponsorship active: April 08, 2026 - April 07, 2027
+    - logo: "/images/sponsors/swiftproxy_logo.png"
+      url: "https://www.swiftproxy.net/?ref=selenium"
+      name: "Scalable Solutions for Web Data Access"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"

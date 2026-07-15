@@ -241,8 +241,8 @@ SameSite属性が **Strict** に設定されている場合、Cookieはサード
 CookieのSameSite属性を **Lax** に設定すると、CookieはサードパーティのWebサイトによって
 開始されたGETリクエストとともに送信されます。
 
-**Note**: **As of now this feature is landed in chrome(80+version), 
-Firefox(79+version) and works with Selenium 4 and later versions.**
+**注**: **現在、この機能は Chrome（バージョン 80 以降）および Firefox（バージョン 79 以降）で
+実装されており、Selenium 4 以降で動作します。**
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
