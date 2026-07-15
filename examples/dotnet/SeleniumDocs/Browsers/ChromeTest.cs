@@ -22,11 +22,11 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
             }
-            driver?.Quit();
         }
 
         [TestMethod]
@@ -177,7 +177,7 @@ namespace SeleniumDocs.Browsers
             {
                 BrowserVersion = "stable"
             };
-            return  await new DriverFinder(options).GetBrowserPathAsync();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
     }
 }
