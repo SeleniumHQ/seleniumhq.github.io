@@ -103,6 +103,8 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
+            // Remove it
+            Thread.Sleep(10_000);
             var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
@@ -120,6 +122,8 @@ namespace SeleniumDocs.Browsers
             driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
+            // Remove it
+            Thread.Sleep(10_000);
             var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
@@ -159,6 +163,8 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
+            // Remove it
+            Thread.Sleep(10_000);
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
             var lines = File.ReadLines(_logLocation);
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
