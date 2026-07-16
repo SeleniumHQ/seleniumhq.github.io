@@ -31,6 +31,10 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/Output:
+  Exclude:
+    - spec/elements/finders_spec.rb
+
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
 
