@@ -3187,7 +3187,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2135 commits&lt;/span>
+ &lt;span class="contributions">2141 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3343,7 +3343,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">360 commits&lt;/span>
+ &lt;span class="contributions">362 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3473,7 +3473,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/cgoldberg">@cgoldberg&lt;/a>&lt;/label
  >
- &lt;span class="contributions">192 commits&lt;/span>
+ &lt;span class="contributions">193 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5077,7 +5077,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/VietND96">@VietND96&lt;/a>&lt;/label
  >
- &lt;span class="contributions">613 commits&lt;/span>
+ &lt;span class="contributions">614 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -5103,7 +5103,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/selenium-ci">@selenium-ci&lt;/a>&lt;/label
  >
- &lt;span class="contributions">307 commits&lt;/span>
+ &lt;span class="contributions">309 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6412,7 +6412,20 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">867 commits&lt;/span>
+ &lt;span class="contributions">868 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/in/2740?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">334 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6429,19 +6442,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/in/2740?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
- >
- &lt;span class="contributions">320 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/u/777185?v=4"
  class="inline"
  width="100"
@@ -6451,7 +6451,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">250 commits&lt;/span>
+ &lt;span class="contributions">252 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6503,7 +6503,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">47 commits&lt;/span>
+ &lt;span class="contributions">48 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6598,6 +6598,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/189505037?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">28 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/13719696?v=4"
  class="inline"
  width="100"
@@ -6608,19 +6621,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  >&lt;a href="https://github.com/alenros">@alenros&lt;/a>&lt;/label
  >
  &lt;span class="contributions">28 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/189505037?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/noritaka1166">@noritaka1166&lt;/a>&lt;/label
- >
- &lt;span class="contributions">27 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -7326,92 +7326,14 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/20457146?v=4"
+ src="https://avatars.githubusercontent.com/u/103423714?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/j3soon">@j3soon&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1315816?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/1705624?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/jags14385">@jags14385&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/11490046?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/effeix">@effeix&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/79180173?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/gnatcatcher-bg">@gnatcatcher-bg&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/32103862?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/ArCiGo">@ArCiGo&lt;/a>&lt;/label
- >
- &lt;span class="contributions">3 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/43470915?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/Arc-Jung">@Arc-Jung&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/ajithrao2509">@ajithrao2509&lt;/a>&lt;/label
  >
  &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
@@ -7443,105 +7365,105 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/19251569?v=4"
+ src="https://avatars.githubusercontent.com/u/43470915?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/eaccmk">@eaccmk&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/Arc-Jung">@Arc-Jung&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/105614349?v=4"
+ src="https://avatars.githubusercontent.com/u/32103862?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/digitalvoice-nz">@digitalvoice-nz&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/ArCiGo">@ArCiGo&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/1114078?v=4"
+ src="https://avatars.githubusercontent.com/u/79180173?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/YoshikiIto">@YoshikiIto&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/gnatcatcher-bg">@gnatcatcher-bg&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/10154945?v=4"
+ src="https://avatars.githubusercontent.com/u/11490046?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/effeix">@effeix&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/65086710?v=4"
+ src="https://avatars.githubusercontent.com/u/1705624?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/sridhar-5">@sridhar-5&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/jags14385">@jags14385&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/350687?v=4"
+ src="https://avatars.githubusercontent.com/u/1315816?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/urig">@urig&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/jamesmortensen">@jamesmortensen&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/39815871?v=4"
+ src="https://avatars.githubusercontent.com/u/20457146?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/SparshKesari">@SparshKesari&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/j3soon">@j3soon&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2 commits&lt;/span>
+ &lt;span class="contributions">3 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/3493745?v=4"
+ src="https://avatars.githubusercontent.com/u/244899711?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/sbabcoc">@sbabcoc&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/urban-adeininger">@urban-adeininger&lt;/a>&lt;/label
  >
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
@@ -7560,14 +7482,105 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/60065586?v=4"
+ src="https://avatars.githubusercontent.com/u/3493745?v=4"
  class="inline"
  width="100"
  height="100"
  style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
  />
  &lt;label
- >&lt;a href="https://github.com/rushixdd">@rushixdd&lt;/a>&lt;/label
+ >&lt;a href="https://github.com/sbabcoc">@sbabcoc&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/39815871?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/SparshKesari">@SparshKesari&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/350687?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/urig">@urig&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/65086710?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/sridhar-5">@sridhar-5&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/10154945?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/YevgeniyShunevych">@YevgeniyShunevych&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/1114078?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/YoshikiIto">@YoshikiIto&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/105614349?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/digitalvoice-nz">@digitalvoice-nz&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">2 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
+ src="https://avatars.githubusercontent.com/u/19251569?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/eaccmk">@eaccmk&lt;/a>&lt;/label
  >
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
@@ -7672,19 +7685,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/k19810703">@k19810703&lt;/a>&lt;/label
- >
- &lt;span class="contributions">2 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/22449484?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/wannysim">@wannysim&lt;/a>&lt;/label
  >
  &lt;span class="contributions">2 commits&lt;/span>
  &lt;/div>
@@ -13981,6 +13981,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">find_elements&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">tag_name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;li&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">end&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic"># rubocop:disable RSpec/Output&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">it&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;gets an element from a collection&amp;#39;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">do&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">elements&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">find_elements&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">:tag_name&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;p&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">elements&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">each&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span>&lt;span style="color:#000">e&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span> &lt;span style="color:#204a87">puts&lt;/span> &lt;span style="color:#000">e&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
@@ -13991,6 +13992,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">elements&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">find_elements&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">:tag_name&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;p&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">elements&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">each&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span>&lt;span style="color:#000">e&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span> &lt;span style="color:#204a87">puts&lt;/span> &lt;span style="color:#000">e&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8f5902;font-style:italic"># rubocop:enable RSpec/Output&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">it&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;find active element&amp;#39;&lt;/span> &lt;span style="color:#204a87;font-weight:bold">do&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">find_element&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">css&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;[name=&amp;#34;q&amp;#34;]&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">send_keys&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;webElement&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
@@ -30096,7 +30098,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">let&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">:target_directory&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span> &lt;span style="color:#000">File&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">join&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">Dir&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">tmpdir&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">SecureRandom&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">uuid&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">let&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">:wait&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">WebDriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">new&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">timeout&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">let&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">:server&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#204a87;font-weight:bold">do&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Server&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">new&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">File&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">expand_path&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">File&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">join&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;selenium-server-4.44.0.jar&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">),&lt;/span> &lt;span style="color:#000">__dir__&lt;/span>&lt;span style="color:#000;font-weight:bold">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">Selenium&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#000">Server&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">new&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">File&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">expand_path&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">File&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">join&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;..&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;selenium-server-4.46.0.jar&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">),&lt;/span> &lt;span style="color:#000">__dir__&lt;/span>&lt;span style="color:#000;font-weight:bold">),&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">background&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">args&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">%w[--selenium-manager true --enable-managed-downloads true]&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">end&lt;/span>

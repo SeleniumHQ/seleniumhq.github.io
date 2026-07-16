@@ -9832,9 +9832,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">devtools&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">performance&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">enable&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">metric_list&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">devtools&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">performance&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">get_metrics&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">dig&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;result&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;metrics&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">metrics&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">metric_list&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">each_with_object&lt;/span>&lt;span style="color:#000;font-weight:bold">({})&lt;/span> &lt;span style="color:#204a87;font-weight:bold">do&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span>&lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#204a87">hash&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">hash&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;name&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;value&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">metrics&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">metric_list&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">to_h&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span>&lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">|&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;name&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">metric&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;value&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]]&lt;/span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">expect&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">metrics&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;DevToolsCommandDuration&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">to&lt;/span> &lt;span style="color:#000">be&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">expect&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">metrics&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;Frames&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">to&lt;/span> &lt;span style="color:#000">eq&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">12&lt;/span>
@@ -15577,7 +15575,31 @@ This documentation previously located &lt;a href="https://github.com/SeleniumHQ/
 &lt;p>&lt;strong>SimonStewart&lt;/strong>: Original WebDriver developer and leading the Selenium 2 effort. He works mainly with Java and can be seen all over the code base, patching holes and adding features. By day he works as a Software Engineer in Test at Google. By night, he hacks on the crazy fun build grammar.&lt;/p></description></item><item><title>Virtual Authenticator</title><link>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</guid><description>&lt;p>Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner.
 &lt;a href="https://www.w3.org/TR/webauthn-2/">Web Authentication&lt;/a> defines APIs that allows a user to create a public-key credential and register it with an authenticator.
 An authenticator can be a hardware device or a software entity that stores user&amp;rsquo;s public-key credentials and retrieves them on request.&lt;/p>
-&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>Selenium 4.46 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-46-released/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-46-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.46&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>TLC Meeting - July 16, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-07-16/</link><pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-07-16/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/p0deje/">p0deje&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/pujagani/">pujagani&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17717">Selenium 5 release charter&lt;/a>&lt;/li>
+&lt;li>Closing the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17709">three API layers proposal&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17670">BiDi implementation boundaries ADR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17685">Network async/event API ADR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17786">Behavioral contract for the low-level BiDi layer&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The TLC merged the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17717">Selenium 5 release charter&lt;/a> and the
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17670">BiDi implementation boundaries ADR&lt;/a>, and closed the competing
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17709">three API layers proposal&lt;/a>. Most of the meeting was spent reviewing the
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17685">network async/event API ADR&lt;/a> point by point, covering handler references, URL
+pattern filtering, authentication handlers, observation versus interception, and handler
+disposition. Several points will be revised based on the discussion and reviewed again at a
+future meeting.&lt;/p></description></item><item><title>Selenium 4.46 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-46-released/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-46-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.46&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
@@ -15649,7 +15671,75 @@ w3c/webref CDDL files.&lt;/li>
 &lt;/ul>
 &lt;br>
 &lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
-release. ❤️&lt;/p></description></item><item><title>Selenium 4.45 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-45-released/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-45-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.45&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+release. ❤️&lt;/p></description></item><item><title>TLC Meeting - July 2, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-07-02/</link><pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-07-02/</guid><description>&lt;p>Meetings are happening on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;p>The next meeting will be Thursday, July 9 at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India.&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/diemol/">diemol&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/p0deje/">p0deje&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/pujagani/">pujagani&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17717">Selenium 5 release charter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17741">Selenium Manager released API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17697">ADR implementation tracking update&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17670">BiDi implementation boundary&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/16336">Manual Java BiDi PR and CDDL generation&lt;/a>&lt;/li>
+&lt;li>Documentation and website maintenance planning&lt;/li>
+&lt;li>Selenium release and npm trusted publishing&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The TLC reviewed the Selenium 5 charter, Selenium Manager release status, ADR process updates,
+and BiDi implementation boundaries. The meeting also covered manual Java BiDi PRs, documentation
+planning, and npm trusted publishing work needed before the next Selenium release.&lt;/p></description></item><item><title>TLC Meeting - June 25, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-06-25/</link><pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-06-25/</guid><description>&lt;p>Meetings are happening on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;p>The next meeting will be Thursday, July 2 at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India.&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/p0deje/">p0deje&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/bonigarcia/">bonigarcia&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/diemol/">diemol&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/pujagani/">pujagani&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>Selenium 5 release charter&lt;/li>
+&lt;li>ADR format and process updates&lt;/li>
+&lt;li>BiDi implementation scope and Classic-command migration&lt;/li>
+&lt;li>Selenium Manager API and possible Selenium CLI rebrand&lt;/li>
+&lt;li>Public support boundaries for generated BiDi code and high-level APIs&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The TLC focused on using ADRs to make Selenium 5 scope explicit and durable. The clearest
+outcomes were to narrow the current fallback requirement and to keep ADR reasoning in PRs or
+issue comments instead of relying on Slack history.&lt;/p></description></item><item><title>TLC Meeting - June 18, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-06-18/</link><pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-06-18/</guid><description>&lt;p>Meetings are happening on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;p>The next meeting will be Thursday, June 25 at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India.&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/AutomatedTester/">AutomatedTester&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/p0deje/">p0deje&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/pujagani/">pujagani&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>ADR proposal&lt;/li>
+&lt;li>Selenium 5 API shape for BiDi browsing and user contexts&lt;/li>
+&lt;li>Network interception ADR and Python websocket transport&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The participants confirmed the design decision record process and template was agreed in principle.
+Most of the meeting focused on the public API shape for Selenium 5&amp;rsquo;s BiDi implementation,
+especially how much should be exposed through browsing context and user context objects
+versus existing driver-shaped APIs.&lt;/p></description></item><item><title>Selenium 4.45 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-45-released/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-45-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.45&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
@@ -15728,7 +15818,27 @@ minor release tag.&lt;/li>
 &lt;/ul>
 &lt;br>
 &lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
-release. ❤️&lt;/p></description></item><item><title>Selenium 4.44 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-44-released/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-44-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.44&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+release. ❤️&lt;/p></description></item><item><title>TLC Meeting - June 11, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-06-11/</link><pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-06-11/</guid><description>&lt;p>Meetings are happening on the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;p>The next meeting will be Thursday, June 18 at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India.&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/AutomatedTester/">AutomatedTester&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/diemol/">diemol&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17668/">Security CVE assessment for Selenium Manager archive extraction&lt;/a>&lt;/li>
+&lt;li>ADR proposal and process&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The meeting covered whether the Selenium Manager archive extraction hardening in
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17668/">selenium#17668&lt;/a> should be treated as a CVE, then focused on the proposed ADR
+process for cross-binding design decisions. The group treated the archive issue as code hardening
+rather than a security advisory, and agreed in principle to use ADRs as the durable GitHub record
+for design decisions.&lt;/p></description></item><item><title>Selenium 4.44 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-44-released/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-44-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.44&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
