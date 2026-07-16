@@ -21,6 +21,12 @@
 - Shared project skills live in `.agents/skills/`; inspect relevant `*/SKILL.md` files before
   doing repeated or domain-specific workflows.
 
+## Project-defined skills
+
+- `scripts/skills/` holds shared, repo-specific skills committed to the codebase (as opposed
+  to `.local/agent/skills/`, which is personal and untracked). Inspect its `*/SKILL.md` files
+  and treat them as additional skills available in this repo.
+
 ## Repository map
 
 - `website_and_docs/`: Hugo site root. Run local Hugo commands from here.
@@ -33,6 +39,7 @@
   static files, and structured data.
 - `examples/`: Runnable examples referenced from docs through `gh-codeblock`.
 - `scripts/`, `build-site.sh`, `netlify.toml`: Build, preview, release, and deploy support.
+  `scripts/skills/` holds committed, repo-specific Claude skills (see "Project-defined skills").
 - `website_and_docs/public/`, `website_and_docs/resources/`: Generated Hugo output/cache; avoid
   manual edits.
 

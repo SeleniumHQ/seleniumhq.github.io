@@ -29,6 +29,7 @@ namespace SeleniumDocs.Browsers
         public void BasicOptions()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             driver = new EdgeDriver(options);
         }
 
@@ -36,9 +37,10 @@ namespace SeleniumDocs.Browsers
         public void Arguments()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.AddArgument("--start-maximized");
-    
+
             driver = new EdgeDriver(options);
         }
 
@@ -46,9 +48,10 @@ namespace SeleniumDocs.Browsers
         public void SetBrowserLocation()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.BinaryLocation = GetEdgeLocation();
-    
+
             driver = new EdgeDriver(options);
         }
 
@@ -56,6 +59,7 @@ namespace SeleniumDocs.Browsers
         public void InstallExtension()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             var baseDir = AppDomain.CurrentDomain.BaseDirectory;
             var extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.crx");
 
@@ -73,6 +77,7 @@ namespace SeleniumDocs.Browsers
         public void ExcludeSwitch()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.AddExcludedArgument("disable-popup-blocking");
 
@@ -83,10 +88,12 @@ namespace SeleniumDocs.Browsers
         public void LogsToFile()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             service.LogPath = GetLogLocation();
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
@@ -96,11 +103,13 @@ namespace SeleniumDocs.Browsers
         public void LogsLevel()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
 
-            service.LogLevel = ChromiumDriverLogLevel.Debug; 
+            service.LogLevel = ChromiumDriverLogLevel.Debug;
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
@@ -111,13 +120,15 @@ namespace SeleniumDocs.Browsers
         public void ConfigureDriverLogs()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
             service.EnableVerboseLogging = true;
 
             service.EnableAppendLog = true;
             service.ReadableTimestamp = true;
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
 
             driver.Quit(); // Close the Service log file before reading
             var lines = File.ReadLines(GetLogLocation());
@@ -129,18 +140,20 @@ namespace SeleniumDocs.Browsers
         public void DisableBuildCheck()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
             service.EnableVerboseLogging = true;
 
             service.DisableBuildCheck = true;
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
             driver.Quit(); // Close the Service log file before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
             var lines = File.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
         }
-        
+
         private string GetLogLocation()
         {
             if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
