@@ -1,3 +1,4 @@
+import contextlib
 import logging
 import os
 import socket
@@ -106,7 +107,8 @@ def log_path():
         logger.removeHandler(handler)
         handler.close()
 
-    os.remove(log_path)
+    with contextlib.suppress(OSError):
+        os.remove(log_path)
 
 
 @pytest.fixture(scope='function')
