@@ -50,12 +50,12 @@ jobs:
       run: Xvfb :99 &
     - name: Set up .Net Stable
       if: matrix.release == 'stable'
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: 8.x
     - name: Set up .Net Nightly
       if: matrix.release == 'nightly'
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: 8.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
