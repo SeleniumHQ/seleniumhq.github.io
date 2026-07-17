@@ -9,7 +9,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <kotlin.version>2.2.21</kotlin.version>
+        <kotlin.version>2.4.10</kotlin.version>
 
         <slf4j.version>2.0.18</slf4j.version>
         <logback.version>1.5.38</logback.version>
