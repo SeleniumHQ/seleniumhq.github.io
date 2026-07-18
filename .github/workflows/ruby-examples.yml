@@ -34,7 +34,7 @@ jobs:
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Remove driver directories Windows
         if: matrix.os == 'windows'
         run: |
@@ -55,7 +55,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.7
+          ruby-version: 4.0.6
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -93,7 +93,7 @@ jobs:
           java-version: 11
       - name: Run tests on Windows
         if: matrix.os == 'windows'
-        uses: nick-invision/retry@v3.0.2
+        uses: nick-invision/retry@v4.0.0
         with:
           timeout_minutes: 40
           max_attempts: 2
@@ -104,7 +104,7 @@ jobs:
             cd examples/ruby; $env:DEBUG="true"; bundle exec rspec --only-failures --backtrace
       - name: Run tests on ${{ matrix.os }}
         if: matrix.os != 'windows'
-        uses: nick-invision/retry@v3.0.2
+        uses: nick-invision/retry@v4.0.0
         with:
           timeout_minutes: 40
           max_attempts: 2
@@ -119,11 +119,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.7
+          ruby-version: 4.0.6
           bundler-cache: true
       - name: Install dependencies
         working-directory: ./examples/ruby

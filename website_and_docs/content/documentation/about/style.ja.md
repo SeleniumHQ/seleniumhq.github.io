@@ -1,84 +1,78 @@
 ---
-title: "Style guide for Selenium documentation"
-linkTitle: "Style"
+title: "Seleniumドキュメントのスタイルガイド"
+linkTitle: "スタイル"
 weight: 6
 description: >-
-  Conventions for contributions to the Selenium documentation and code examples
+  Seleniumドキュメントとコード例へのコントリビューションに関する規約
 ---
 
-Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on
-how to add content to this documentation.
+このドキュメントにコンテンツを追加する方法の詳細な手順については、
+[コントリビューションのドキュメント]({{< ref contributing.md >}})を参照してください。
 
-## Alerts
+## アラート
 
-Alerts have been added to direct potential contributors to where specific content is missing.
+アラートは、特定のコンテンツが不足している場所をコントリビュータ候補に示すために追加されています。
 
 {{< highlight html >}}
 {{</* alert-content /*/>}}
 {{< /highlight >}}
 
-or
+または
 
 {{< highlight html >}}
 {{</* alert-content */>}}
-Additional information about what specific content is needed
+必要な具体的なコンテンツに関する追加情報
 {{</* /alert-content */>}}
 {{< /highlight >}}
 
-Which gets displayed like this:
+これは次のように表示されます:
 {{< alert-content >}}
-Additional information about what specific content is needed
+必要な具体的なコンテンツに関する追加情報
 {{< /alert-content >}}
 
-## Capitalization of titles
+## タイトルの大文字小文字
 
-Our documentation uses Title Capitalization for `linkTitle` which should be short
-and Sentence capitalization for `title` which can be longer and more descriptive.
-For example, a `linkTitle` of  _Special Heading_ might have a `title` of
-_The importance of a special heading in documentation_
+このドキュメントでは、短くするべき `linkTitle` にはタイトルケースを使用し、
+より長く説明的にできる `title` には文頭のみ大文字にする形式を使用します。
+例えば、`linkTitle` が _Special Heading_ の場合、`title` は
+_The importance of a special heading in documentation_ のようになります。
 
-## Line length
+## 行の長さ
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 100 characters.
+プレーンHTMLで書かれているドキュメントのソースを編集するときは、
+1行の長さをおおよそ100文字に制限してください。
 
-Some of us take this one step further
-and use what is called
-[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
+私たちの一部はこれをさらに進めて、
+[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line)
+と呼ばれる手法を使っています。
+これは、一般には読まれないHTMLソースの行を、
+文章中の「自然な区切り」で分割する手法です。
+言い換えると、文を節と節の自然な区切りで分割します。
+各段落の行がすべて右端付近で終わるように調整する代わりに、
+考えの区切りがある場所であればどこにでも改行を入れられます。
 
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+これにより、gitで共同作業をするときにdiffが非常に読みやすくなりますが、
+コントリビュータに使用を強制しているものではありません。
 
-## Translations
+## 翻訳
 
-Selenium now has official translators for each of the supported languages.
+Seleniumには現在、サポートされている各言語の公式翻訳者がいます。
 
-* If you add a code example to the `important_documentation.en.md` file,
-  also add it to `important_documentation.ja.md`, `important_documentation.pt-br.md`,
-  `important_documentation.zh-cn.md`.
-* If you make text changes in the English version, just make a Pull Request.
-  The new process is for issues to be created and tagged as needs translation based on
-  changes made in a given PR.
+* `important_documentation.en.md` ファイルにコード例を追加する場合は、
+  `important_documentation.ja.md`、`important_documentation.pt-br.md`、
+  `important_documentation.zh-cn.md` にも追加してください。
+* 英語版のテキストを変更する場合は、そのままPull Requestを作成してください。
+  新しいプロセスでは、該当PRで行われた変更に基づいてイシューが作成され、
+  needs translation としてタグ付けされます。
 
-## Code examples
+## コード例
 
-All references to code should be language independent,
-and the code itself should be placed inside code tabs.
+コードへのすべての参照は言語に依存しない形にし、
+コード自体はコードタブ内に配置してください。
 
-### Default Code Tabs
+### デフォルトのコードタブ
 
-The Docsy code tabs look like this:
+Docsyのコードタブは次のようになります:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" >}}
@@ -101,10 +95,10 @@ val driver = ChromeDriver()
 {{< /tab >}}
 {{< /tabpane >}}
 
-To generate the above tabs, this is what you need to write.
-Note that the `tabpane` includes `langEqualsHeader=true`.
-This auto-formats the code in each tab to match the header name,
-and ensures that all tabs on the page with a language are set to the same thing.
+上記のタブを生成するには、次のように記述します。
+`tabpane` に `langEqualsHeader=true` が含まれていることに注意してください。
+これにより、各タブのコードがヘッダー名に合わせて自動的にフォーマットされ、
+ページ上の言語付きタブがすべて同じ選択状態になることが保証されます。
 
     {{</* tabpane langEqualsHeader=true */>}}
       {{</* tab header="Java" */>}}
@@ -127,25 +121,30 @@ and ensures that all tabs on the page with a language are set to the same thing.
       {{</* /tab */>}}
     {{</* /tabpane */>}}
 
-#### Reference GitHub Examples
+#### GitHubの例を参照する
 
-To ensure that all code is kept up to date, our goal is to write the code in the repo where it
-can be executed when Selenium versions are updated to ensure that everything is correct.
+すべてのコードを最新に保つために、
+Seleniumのバージョン更新時に実行して正しいことを確認できるよう、
+リポジトリ内にコードを書くことを目標にしています。
 
-All code examples to be in our
-[example directories](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples).
+すべてのコード例は
+[exampleディレクトリ](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/dev/examples)
+内に配置してください。
 
-This code can be automatically displayed in the documentation using the `gh-codeblock` shortcode.
-The shortcode automatically generates its own html, so we do not want it to auto-format with the language header.
-If all tabs are using this shortcode, set `text=true` in the `tabpane` and remove `langEqualsHeader=true`.
-If only some tabs are using this shortcode, keep `langEqualsHeader=true` in the `tabpane` and add `text=true`
-to the `tab`. Note that the `gh-codeblock` line can not be indented at all.
+このコードは、`gh-codeblock` ショートコードを使用してドキュメントに自動表示できます。
+このショートコードは独自のhtmlを自動生成するため、
+言語ヘッダーによる自動フォーマットは行わないようにします。
+すべてのタブでこのショートコードを使用している場合は、
+`tabpane` に `text=true` を設定し、`langEqualsHeader=true` を削除してください。
+一部のタブだけでこのショートコードを使用している場合は、
+`tabpane` の `langEqualsHeader=true` は残し、対象の `tab` に `text=true` を追加してください。
+なお、`gh-codeblock` の行はまったくインデントできません。
 
-One great thing about using `gh-codeblock` is that it adds a link to the full example.
-This means you don't have to include any additional context code, just the line(s) that
-are needed, and the user can navigate to the repo to see how to use it.
+`gh-codeblock` を使う利点の1つは、完全な例へのリンクが追加されることです。
+つまり、追加のコンテキストコードを含める必要はなく、必要な行だけを含めれば、
+ユーザーはリポジトリに移動して使い方を確認できます。
 
-A basic comparison of code looks like:
+コードの基本的な比較は次のようになります:
 
     {{</* tabpane text=true */>}}
     {{</* tab header="Java" */>}}
@@ -168,7 +167,7 @@ A basic comparison of code looks like:
     {{</* /tab */>}}
     {{</* /tabpane */>}}
 
-Which looks like this:
+これは次のように表示されます:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -191,38 +190,39 @@ Which looks like this:
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Using Markdown in a Tab
+### タブ内でMarkdownを使用する
 
-If you want your example to include something other than code (default) or html (from `gh-codeblock`),
-you need to first set `text=true`,
-then change the Hugo syntax for the `tab`to use `%` instead of `<` and `>` with curly braces:
+例にコード（デフォルト）や `gh-codeblock` からのhtml以外のものを含めたい場合は、
+まず `text=true` を設定する必要があります。
+次に、`tab` のHugo構文を、波括弧内で `<` と `>` ではなく `%` を使う形に変更します:
 
     {{</* tabpane text=true */>}}
     {{%/* tab header="Java" */%}}
-    1. Start the driver
+    1. ドライバーを開始する
     {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" */>}}
-    2. Navigate to a page
+    2. ページに移動する
     {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" */>}}
-    3. Quit the driver
+    3. ドライバーを終了する
     {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" */>}}
     {{%/* /tab */%}}
     < ... >
     {{</* /tabpane */>}}
 
-This produces:
+これは次のように生成されます:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-1. Start the driver
+1. ドライバーを開始する
    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L12" >}}
-2. Navigate to a page
+2. ページに移動する
    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L14" >}}
-3. Quit the driver
+3. ドライバーを終了する
    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L29" >}}
    {{% /tab %}}
    {{< /tabpane >}}
 
-This is preferred to writing code comments because those will not be translated.
-Only include the code that is needed for the documentation, and avoid over-explaining.
-Finally, remember not to indent plain text or it will rendered as a codeblock.
+コードコメントは翻訳されないため、これはコードコメントを書くよりも望ましい方法です。
+ドキュメントに必要なコードだけを含め、過度な説明は避けてください。
+最後に、プレーンテキストをインデントするとコードブロックとしてレンダリングされるため、
+インデントしないようにしてください。

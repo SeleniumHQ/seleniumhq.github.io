@@ -416,7 +416,7 @@ options.setCapability("se:downloadsEnabled", true);
 In the response the list of file names appear under the key `names`.
 
 
-##### Dowloading a file:
+##### Downloading a file:
 
 * The endpoint to `POST` from is `/session/<sessionId>/se/files` with a payload of the form `{"name": "fileNameGoesHere}`
 * The session needs to be active in order for the command to work.

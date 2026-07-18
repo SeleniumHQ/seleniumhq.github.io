@@ -56,9 +56,7 @@ RSpec.describe 'Network' do
     driver.devtools.performance.enable
     metric_list = driver.devtools.performance.get_metrics.dig('result', 'metrics')
 
-    metrics = metric_list.each_with_object({}) do |metric, hash|
-      hash[metric['name']] = metric['value']
-    end
+    metrics = metric_list.to_h { |metric| [metric['name'], metric['value']] }
 
     expect(metrics['DevToolsCommandDuration']).to be > 0
     expect(metrics['Frames']).to eq 12

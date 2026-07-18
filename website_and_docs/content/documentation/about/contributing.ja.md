@@ -63,10 +63,10 @@ Seleniumのすべてのコンポーネントは、時間の経過とともに非
 ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
 ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。
 
-Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
-it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
+コード例では、シナリオを示すために関連するWebサイトやWebページが必要になる場合があります。
+例が安定して動作するように、https://www.selenium.dev/selenium/web/ で利用できるテスト用Webページを使用することを推奨します。
 
-最後に、CIでテストがPassすることを確認してください。
+最後に、CIでテストがパスすることを確認してください。
 
 
 ### 例の移動
@@ -82,7 +82,7 @@ tabには`text=true`を含めてください。デフォルトではtabはコー
 ## 貢献
 
 Seleniumプロジェクトは新しいコントリビュータを歓迎します。目立った価値ある貢献を継続的に行った個人は _コミッター_
-として認められ、プロジェクトへのコミットアクセス件が与えられます。
+として認められ、プロジェクトへのコミットアクセス権が与えられます。
 
 本ガイドでは、貢献のプロセスについて説明します。
 
@@ -177,7 +177,7 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-https://github.com/yourusername/seleniumhq.github.io.git を開き、_Pull Request_を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
+https://github.com/yourusername/seleniumhq.github.io.git を開き、 _Pull Request_ を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
 
 プルリクエストは通常数日以内にレビューされます。対応すべきコメントがある場合は、新しく(できれば
 [fixups](http://git-scm.com/docs/git-commit)で)コミットし、同じブランチにプッシュしてください。
