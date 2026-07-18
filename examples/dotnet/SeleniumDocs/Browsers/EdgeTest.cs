@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chromium;
@@ -103,7 +104,8 @@ namespace SeleniumDocs.Browsers
             service.LogPath = GetLogLocation();
 
             driver = new EdgeDriver(service, options);
-            var lines = File.ReadLines(GetLogLocation());
+            driver.Quit(); // Close the Service log file before reading
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
 
@@ -119,7 +121,8 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            var lines = File.ReadLines(GetLogLocation());
+            driver.Quit(); // Close the Service log file before reading
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
@@ -137,7 +140,8 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            var lines = File.ReadLines(GetLogLocation());
+            driver.Quit(); // Close the Service log file before reading
+            var lines = ReadLogLines(GetLogLocation());
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
@@ -154,9 +158,30 @@ namespace SeleniumDocs.Browsers
             service.DisableBuildCheck = true;
 
             driver = new EdgeDriver(service, options);
+            driver.Quit(); // Close the Service log file before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
+        }
+
+        private static string[] ReadLogLines(string path)
+        {
+            const int maxAttempts = 10;
+            for (var attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                try
+                {
+                    return File.ReadAllLines(path);
+                }
+                catch (IOException) when (attempt < maxAttempts)
+                {
+                    // On Windows, the driver service can still hold the log file open for a
+                    // moment after driver.Quit(), so retry until the handle is released.
+                    Thread.Sleep(200);
+                }
+            }
+
+            return File.ReadAllLines(path);
         }
 
         private string GetLogLocation()
