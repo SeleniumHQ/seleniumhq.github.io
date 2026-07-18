@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chromium;
@@ -104,8 +103,9 @@ namespace SeleniumDocs.Browsers
             service.LogPath = GetLogLocation();
 
             driver = new EdgeDriver(service, options);
-            driver.Quit(); // Close the Service log file before reading
-            var lines = ReadLogLines(GetLogLocation());
+            driver.Quit();
+            service.Dispose(); // Force the service log file to fully close before reading
+            var lines = File.ReadAllLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
 
@@ -121,8 +121,9 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            var lines = ReadLogLines(GetLogLocation());
+            driver.Quit();
+            service.Dispose(); // Force the service log file to fully close before reading
+            var lines = File.ReadAllLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
@@ -140,8 +141,9 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            var lines = ReadLogLines(GetLogLocation());
+            driver.Quit();
+            service.Dispose(); // Force the service log file to fully close before reading
+            var lines = File.ReadAllLines(GetLogLocation());
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
@@ -158,38 +160,11 @@ namespace SeleniumDocs.Browsers
             service.DisableBuildCheck = true;
 
             driver = new EdgeDriver(service, options);
-            driver.Quit(); // Close the Service log file before reading
+            driver.Quit();
+            service.Dispose(); // Force the service log file to fully close before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = ReadLogLines(GetLogLocation());
+            var lines = File.ReadAllLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
-        }
-
-        // HRESULTs for the Win32 sharing/lock violations raised when a file is still open
-        // in another process; see https://learn.microsoft.com/windows/win32/debug/system-error-codes--0-499-
-        private const int ErrorSharingViolation = unchecked((int)0x80070020);
-        private const int ErrorLockViolation = unchecked((int)0x80070021);
-
-        private static string[] ReadLogLines(string path)
-        {
-            const int maxAttempts = 20;
-            for (var attempt = 1; attempt <= maxAttempts; attempt++)
-            {
-                try
-                {
-                    return File.ReadAllLines(path);
-                }
-                catch (IOException ex) when (attempt < maxAttempts &&
-                    (ex.HResult == ErrorSharingViolation || ex.HResult == ErrorLockViolation))
-                {
-                    // On Windows, the driver service can still hold the log file open for
-                    // several seconds after driver.Quit(), so retry until the handle is released.
-                    // Any other IOException (missing file, permissions, etc.) is a real failure
-                    // and should surface immediately instead of being retried.
-                    Thread.Sleep(500);
-                }
-            }
-
-            return File.ReadAllLines(path);
         }
 
         private string GetLogLocation()
