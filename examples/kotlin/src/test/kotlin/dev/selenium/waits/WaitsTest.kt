@@ -48,7 +48,7 @@ class WaitsTest : BaseTest() {
         val revealed = driver.findElement(By.id("revealed"))
         driver.findElement(By.id("reveal")).click()
 
-        val wait: Wait<WebDriver?> =
+        val wait: Wait<WebDriver> =
             FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(2))
                 .pollingEvery(Duration.ofMillis(300))

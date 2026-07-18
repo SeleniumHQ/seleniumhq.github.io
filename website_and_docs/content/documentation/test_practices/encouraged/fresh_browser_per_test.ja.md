@@ -9,12 +9,10 @@ aliases: [
 ---
 
 
-クリーンな既知の状態から各テストを開始します。
-理想的には、テストごとに新しい仮想マシンを起動します。
-新しい仮想マシンの起動が実用的でない場合は、少なくともテストごとに新しいWebDriverを起動してください。
-Firefoxの場合、既知のプロファイルでWebDriverを起動します。
-Most browser drivers like GeckoDriver and ChromeDriver will start with a clean
-known state with a new user profile, by default.
+各テストは、クリーンで既知の状態から開始します。
+理想的には、テストごとに新しい仮想マシンを起動してください。
+新しい仮想マシンを起動することが現実的でない場合は、少なくともテストごとに新しい WebDriver を起動してください。
+GeckoDriver や ChromeDriver など、ほとんどのブラウザドライバーはデフォルトで、新しいユーザープロファイルを使用したクリーンで既知の状態で起動します。
 ```java
 WebDriver driver = new FirefoxDriver();
 ```
