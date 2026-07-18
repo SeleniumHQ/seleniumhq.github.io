@@ -19,7 +19,7 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
-            driver.Quit();
+            driver?.Quit();
 
             if (_logLocation != null && File.Exists(_logLocation))
             {
