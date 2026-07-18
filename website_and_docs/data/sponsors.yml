@@ -11,7 +11,7 @@ development:
       name: "Sauce Labs"
     # Sponsorship renewed October 16, 2024. Renewed again on April 8, 2025, under the "Development" level
     - logo: "/images/sponsors/testmu-ai.png"
-      url: "https://www.testmuai.com/selenium-automation"
+      url: "https://www.testmuai.com"
       name: "TestMu AI (formerly LambdaTest)"
 
 selenium:

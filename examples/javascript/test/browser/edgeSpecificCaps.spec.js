@@ -1,15 +1,17 @@
 const {Browser, By, Builder } = require('selenium-webdriver');
 const edge = require('selenium-webdriver/edge');
-const options = new edge.Options();
 const assert = require("assert");
 
 
+function getDefaultEdgeOptions() {
+  return new edge.Options().addArguments('--no-sandbox');
+}
 
 describe('Should be able to Test Command line arguments', function () {
   it('headless', async function () {
     let driver = new Builder()
       .forBrowser(Browser.EDGE)
-      .setEdgeOptions(options.addArguments('--headless=new'))
+      .setEdgeOptions(getDefaultEdgeOptions().addArguments('--headless=new'))
       .build();
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html');
@@ -19,7 +21,7 @@ describe('Should be able to Test Command line arguments', function () {
   it('exclude switches', async function () {
     let driver = new Builder()
       .forBrowser(Browser.EDGE)
-      .setEdgeOptions(options.excludeSwitches('enable-automation'))
+      .setEdgeOptions(getDefaultEdgeOptions().excludeSwitches('enable-automation'))
       .build();
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html');
@@ -29,7 +31,7 @@ describe('Should be able to Test Command line arguments', function () {
   it('Keep browser open - set detach to true ', async function () {
     let driver = new Builder()
       .forBrowser(Browser.EDGE)
-      .setEdgeOptions(options.detachDriver(true))
+      .setEdgeOptions(getDefaultEdgeOptions().detachDriver(true))
       .build();
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html');
@@ -39,10 +41,9 @@ describe('Should be able to Test Command line arguments', function () {
   });
 
   it('Basic edge test', async function () {
-    const Options = new edge.Options();
     let driver = new Builder()
       .forBrowser(Browser.EDGE)
-      .setEdgeOptions(Options)
+      .setEdgeOptions(getDefaultEdgeOptions())
       .build();
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html');
@@ -52,7 +53,7 @@ describe('Should be able to Test Command line arguments', function () {
   it('Add Extension', async function () {
     let driver = new Builder()
       .forBrowser(Browser.EDGE)
-      .setEdgeOptions(options.addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
+      .setEdgeOptions(getDefaultEdgeOptions().addExtensions(['./test/resources/extensions/webextensions-selenium-example.crx']))
       .build();
 
     await driver.get('https://www.selenium.dev/selenium/web/blank.html');

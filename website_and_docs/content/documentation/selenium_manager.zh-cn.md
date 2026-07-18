@@ -257,7 +257,9 @@ Selenium Manager检测到已安装 Chrome 115 版本,
 此版本会被存储在元数据文件中, 并在接下来的一小时内(TTL)被视为有效. 
 如果在此期间(在执行测试套件时很可能发生)再次请求 Selenium Manager解析 chromedriver, 
 那么将通过读取元数据文件来获取 chromedriver 版本, 而无需向 CfT 端点发出新的请求. 一小时后, 
-缓存中存储的 chromedriver 版本将被视为过期, Selenium Manager会通过向相应端点发出新的网络请求来刷新它. 
+缓存中存储的 chromedriver 版本将被视为过期, Selenium Manager会通过向相应端点发出新的网络请求来刷新它。
+
+为了在无需人工干预的情况下限制缓存大小，Selenium Manager 会自动清理旧的缓存条目。每次从缓存中解析驱动程序或浏览器时，元数据文件 (`se-metadata.json`) 中专用 `cached_assets` 区域里的 `last_used` Unix 时间戳都会被更新。在每次执行时，Selenium Manager 会自动从缓存中删除已超过 30 天未被使用的驱动程序或浏览器版本目录。
 
 Selenium Manager includes two additional arguments two handle the cache, namely:
 Selenium Manager包含两个用于处理缓存的附加参数, 分别是: 

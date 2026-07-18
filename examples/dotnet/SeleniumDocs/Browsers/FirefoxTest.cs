@@ -203,7 +203,7 @@ namespace SeleniumDocs.Browsers
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPath();
+            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
         }
 
         private void ResetGlobalLog()
