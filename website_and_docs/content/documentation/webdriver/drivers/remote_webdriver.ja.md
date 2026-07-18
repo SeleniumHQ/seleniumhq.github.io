@@ -268,7 +268,7 @@ driver.quit();
 詳細については、下記URLを参照してください。
 
 * OpenTelemetry: https://opentelemetry.io
-* OpenTelemetryの構成::
+* OpenTelemetryの構成:
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid 可観測性]({{< ref "observability.md" >}}) 

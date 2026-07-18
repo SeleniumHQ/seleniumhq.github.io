@@ -166,6 +166,8 @@ The TTL mechanism is a way to improve the overall performance of Selenium. It is
 
 Let's consider an example. A Selenium binding asks Selenium Manager to resolve chromedriver. Selenium Manager detects that Chrome 115 is installed, so it makes a network request to the CfT endpoints to discover the proper chromedriver version (115.0.5790.170, at that moment). This version is stored in the metadata file and considered valid during the next hour (TTL). If Selenium Manager is asked to resolve chromedriver during that time (which is likely to happen in the execution of a test suite), the chromedriver version is discovered by reading the metadata file instead of making a new request to the CfT endpoints. After one hour, the chromedriver version stored in the cache will be considered as *stale*, and Selenium Manager will refresh it by making a new network request to the corresponding endpoint.
 
+To bound the cache size without requiring manual intervention, Selenium Manager automatically prunes old cache entries. Every time a driver or browser is resolved from the cache, a `last_used` Unix timestamp is updated in a dedicated `cached_assets` section within the metadata file (`se-metadata.json`). On each execution, Selenium Manager automatically removes driver or browser version directories from the cache that have not been used in over 30 days.
+
 Selenium Manager includes two additional arguments two handle the cache, namely:
 
 - `--clear-cache`: To remove the cache folder (equivalent to the environment variable `SE_CLEAR_CACHE=true`).

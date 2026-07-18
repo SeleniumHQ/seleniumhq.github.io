@@ -20,15 +20,15 @@ Selenium スクリプトを作成して、あらかじめ設定された時間�
 
 ### Webスクレイピング
 
-APIがないサイトからデータを収集したいとお考えですか?セレン
-これを行うことができますが、Webサイトに精通していることを確認してください。
-一部のWebサイトでは許可されておらず、他のWebサイトではSeleniumがブロックされることさえあります。
+API がないサイトからデータを収集したいとお考えですか？
+Selenium では可能ですが、Web サイトの利用規約をよく理解しておいてください。
+許可していないサイトもあり、Selenium をブロックするサイトさえあります。
 
 ### テスティング
 
-テストのためにSeleniumを実行するには、Seleniumが実行したアクションに対してアサーションを行う必要があります。
-したがって、優れたアサーションライブラリが必要です。テストの構造を提供する追加機能
-使用する必要があります [Test Runner](#test-runner).
+テストでSeleniumを実行するには、Seleniumが実行した操作に対してアサーションを行う必要があります。
+そのため、優れたアサーションライブラリが必要です。テストに構造を与える追加機能には、
+[テストランナー](#test-runner)を使用する必要があります。
 
 ## IDEs
 
@@ -44,16 +44,18 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ## Test Runner
 
-テストにSeleniumを使用していない場合でも、高度なユースケースがある場合は、テストランナーを使用してコードをより適切に整理するのが理にかなっている場合があります。before/after フックを使用して、グループまたは並行して物事を実行できると非常に便利です。
+テストにSeleniumを使用していない場合でも、高度なユースケースでは、テストランナーを使うとコードを
+より適切に整理できる場合があります。before/afterフックを使用し、処理をグループ単位または並列で
+実行できることは、非常に便利です。
 
-### 卜
+### テストランナーの選び方
 
 さまざまなテストランナーが利用可能です。
 
-このドキュメントのすべてのコード例は、
-テストランナーを使用し、すべてのコードが正しく更新されていることを確認するためにリリースごとに実行されるディレクトリの例。
-リンク付きのテストランナーのリストを次に示します。最初の項目は、このリポジトリで使用される項目と
-このページのすべての例で使用されます。
+このドキュメントのすべてのコード例は、テストランナーを使用するサンプルディレクトリに格納されているか、
+格納先を移行中です。すべてのコードが正しく更新されていることを確認するため、リリースのたびに実行されます。
+以下にテストランナーをリンクとともに示します。各リストの最初の項目は、このリポジトリと
+このページのすべての例で使用されているものです。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -94,9 +96,10 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 {{< /tabpane >}}
 
-### 装着
+### インストール
 
-これは、で必要とされたものと非常によく似ています [Seleniumライブラリのインストール]({{< ref "install_library.md" >}})。このコードは、私たちのドキュメント例プロジェクトで使用されているものの例を示しているだけです。
+これは[Seleniumライブラリのインストール]({{< ref "install_library.md" >}})で必要な手順と非常によく似ています。
+このコードは、ドキュメント用のサンプルプロジェクトで使用しているものの例を示すだけです。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
@@ -128,7 +131,7 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 主張
+### アサーション
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -157,22 +160,22 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 
-### 並べる
+### セットアップ
 
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L19-L22" >}}
 
-### 取り壊す
+### ティアダウン
 
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/UsingSeleniumTest.java#L45-L48" >}}
 
 {{% /tab %}}
 {{% tab header="Python" %}}
 
-### 並べる
+### セットアップ
 
 {{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L25-L28" >}}
 
-### 取り壊す
+### ティアダウン
 
 {{< gh-codeblock path="/examples/python/tests/getting_started/using_selenium_tests.py#L30-31" >}}
 
@@ -182,21 +185,21 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 {{< /tab >}}
 {{% tab header="Ruby" %}}
 
-### 並べる
+### セットアップ
 
 {{< gh-codeblock path="/examples/ruby/spec/getting_started/using_selenium_spec.rb#L7-L9" >}}
 
-### 取り壊す
+### ティアダウン
 
 {{< gh-codeblock path="/examples/ruby/spec/spec_helper.rb#L30" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 
-### 並べる
+### セットアップ
 
 {{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L7-L9" >}}
 
-### 取り壊す
+### ティアダウン
 
 {{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L30" >}}
 {{< /tab >}}
@@ -224,7 +227,7 @@ gradle clean test
 
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/README.md#L35" >}}
+{{< gh-codeblock path="/examples/python/README.md#L44" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/README.md#L44" >}}

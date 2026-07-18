@@ -23,6 +23,7 @@ RSpec.describe 'Element Finders' do
       driver.find_elements(tag_name: 'li')
     end
 
+    # rubocop:disable RSpec/Output
     it 'gets an element from a collection' do
       elements = driver.find_elements(:tag_name, 'p')
       elements.each { |e| puts e.text }
@@ -33,6 +34,7 @@ RSpec.describe 'Element Finders' do
       elements = element.find_elements(:tag_name, 'p')
       elements.each { |e| puts e.text }
     end
+    # rubocop:enable RSpec/Output
 
     it 'find active element' do
       driver.find_element(css: '[name="q"]').send_keys('webElement')
